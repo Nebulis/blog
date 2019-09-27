@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React, { FunctionComponent } from "react"
 
 interface HeaderProps {
