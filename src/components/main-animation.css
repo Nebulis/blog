@@ -1,0 +1,12 @@
+@keyframes move-in-steps {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 80px);
+  }
+}
+.move-scooter {
+  animation: move-in-steps 8s infinite;
+  transform-origin: top left;
+}
