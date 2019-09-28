@@ -10,6 +10,7 @@ const Header: FunctionComponent<HeaderProps> = ({ siteTitle }) => (
     style={{
       background: `black`,
       marginBottom: `1.45rem`,
+      color: 'hotpink',
     }}
   >
     <div
