@@ -34,6 +34,7 @@ const Layout: FunctionComponent = ({ children }) => {
         }}
       >
         <main>{children}</main>
+        <div>Ola que tal</div>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
