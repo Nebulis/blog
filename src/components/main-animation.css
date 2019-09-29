@@ -3,10 +3,32 @@
     left: 0;
   }
   100% {
-    left: calc(100% - 80px);
+    left: 100%;
   }
 }
 .move-scooter {
-  animation: move-in-steps 8s infinite;
+  animation: move-in-steps 12s linear infinite;
   transform-origin: top left;
+}
+
+.selectedContinent {
+  animation: color-in 4s ease-in-out;
+}
+
+@keyframes color-in {
+  0% {
+    fill: #f2f2f2;
+  }
+  50% {
+    fill: lightblue;
+  }
+  100% {
+    fill: #f2f2f2;
+  }
+}
+
+@media (max-width: 550px) {
+  .title-temp-page {
+    font-size: 1rem;
+  }
 }
