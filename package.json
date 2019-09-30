@@ -53,7 +53,7 @@
     "lint:fix": "npm run lint -- --fix",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "jest --ci",
+    "test": "jest --ci --passWithNoTests",
     "test:coverage": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
     "type-check": "tsc --noEmit"

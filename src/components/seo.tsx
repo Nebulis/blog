@@ -15,12 +15,7 @@ interface SEOProps {
   meta?: any
   title: string
 }
-const SEO: FunctionComponent<SEOProps> = ({
-  description = "",
-  lang = "en",
-  meta = [],
-  title,
-}) => {
+const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta = [], title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
