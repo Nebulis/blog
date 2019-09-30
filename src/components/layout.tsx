@@ -6,8 +6,9 @@
  */
 
 import React, { FunctionComponent } from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import "./layout.css"
+import Header from "./header"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Layout: FunctionComponent = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,7 +23,7 @@ const Layout: FunctionComponent = ({ children }) => {
 
   return (
     <>
-      {/*<Header siteTitle={data.site.siteMetadata.title} />*/}
+      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
