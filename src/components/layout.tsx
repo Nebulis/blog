@@ -8,7 +8,6 @@
 import React, { FunctionComponent } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import "./layout.css"
-import "./main-animation.css"
 
 const Layout: FunctionComponent = ({ children }) => {
   const data = useStaticQuery(graphql`

@@ -1,8 +1,24 @@
 import React from "react"
+import { css } from "@emotion/core"
 
+const style = css`
+  @keyframes move-in-steps {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  &.move-scooter {
+    animation: move-in-steps 12s linear infinite;
+    transform-origin: top left;
+  }
+`
 export const Scooter = () => {
   return (
     <svg
+      css={style}
       id="svg"
       width="9%"
       height="9%"
