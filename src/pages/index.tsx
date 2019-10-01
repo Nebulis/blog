@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import { Maintenance } from "../components/maintenance"
 import { css } from "@emotion/core"
-import { FaFacebook, FaTwitter, FaInstagram, FaPinterest } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaPinterest, FaTwitter } from "react-icons/fa"
 import { FlagFrance } from "../components/icon/flag-france"
 import { FlagUK } from "../components/icon/flag-uk"
+import { Japan } from "../components/country/japan"
 
 const style = css`
   &.header {
@@ -75,6 +76,17 @@ const IndexPage = () => {
           height: 250px;
         `}
       />
+      <div
+        css={css`
+          text-align: center;
+          overflow: hidden;
+          @media (max-width: 767px) {
+            display: none;
+          }
+        `}
+      >
+        <Japan />
+      </div>
     </Maintenance>
   )
 }
