@@ -38,7 +38,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`${site.siteMetadata.title} | Blog voyage`}
       meta={[
         {
           name: `description`,
