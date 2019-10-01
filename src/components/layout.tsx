@@ -23,7 +23,6 @@ const Layout: FunctionComponent = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
