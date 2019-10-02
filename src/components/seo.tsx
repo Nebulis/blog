@@ -8,6 +8,8 @@
 import React, { FunctionComponent } from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
+// @ts-ignore
+import FontUrl1 from "../fonts/Ami-R-Regular.ttf"
 
 interface SEOProps {
   description?: string
@@ -37,12 +39,25 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
       htmlAttributes={{
         lang,
       }}
+      link={[
+        {
+          rel: "preload",
+          as: "font",
+          href: FontUrl1,
+          type: "font/ttf",
+          crossOrigin: "anonymous",
+        },
+      ]}
       title={title}
       titleTemplate={`${site.siteMetadata.title} | Blog voyage`}
       meta={[
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `viewport`,
+          content: "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no",
         },
         {
           property: `og:title`,

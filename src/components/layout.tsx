@@ -7,19 +7,17 @@
 
 import React, { FunctionComponent } from "react"
 import "./layout.css"
-import Header from "./header"
-import { graphql, useStaticQuery } from "gatsby"
 
 const Layout: FunctionComponent = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
