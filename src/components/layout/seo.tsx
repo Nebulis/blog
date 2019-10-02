@@ -9,7 +9,7 @@ import React, { FunctionComponent } from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
 // @ts-ignore
-import FontUrl1 from "../fonts/Ami-R-Regular.ttf"
+import FontUrl1 from "../../fonts/Ami-R-Regular.ttf"
 
 interface SEOProps {
   description?: string
@@ -33,7 +33,6 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
   )
 
   const metaDescription = description || site.siteMetadata.description
-
   return (
     <Helmet
       htmlAttributes={{
@@ -47,6 +46,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
           type: "font/ttf",
           crossOrigin: "anonymous",
         },
+        { rel: "stylesheet", href: "https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" },
       ]}
       title={title}
       titleTemplate={`${site.siteMetadata.title} | Blog voyage`}
@@ -57,7 +57,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
         },
         {
           name: `viewport`,
-          content: "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no",
+          content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
         },
         {
           property: `og:title`,

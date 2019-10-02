@@ -1,8 +1,8 @@
 import React from "react"
-import { Header } from "../components/layout/header"
-import { Maintenance } from "../components/layout/maintenance"
-import SEO from "../components/layout/seo"
-import { JapanLink } from "../components/core/link"
+import { Header } from "../../components/layout/header"
+import { Maintenance } from "../../components/layout/maintenance"
+import SEO from "../../components/layout/seo"
+import { JapanLink } from "../../components/core/link"
 
 const IndexPage = () => {
   return (
@@ -17,7 +17,7 @@ const Content = () => {
   return (
     <>
       <Header />
-      Index
+      Asia page
       <JapanLink to="/asia/japan">Japon</JapanLink>
     </>
   )
