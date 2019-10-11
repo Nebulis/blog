@@ -670,5 +670,6 @@ pre tt:after {
 }
 
 .gatsby-image-wrapper {
-  margin-bottom: 1.45rem;
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
 }

@@ -25,10 +25,6 @@ import { HimejiCastleWithCherryImage } from "../../../components/images/asia/jap
 import { HimejiCastleWithCherry2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry2Image"
 import { HimejiCastleGeishaImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleGeishaImage"
 import { HimejiCastleWithCherry3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
-import { HimejiCastle2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
-import { HimejiCastleWithTreeImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithTreeImage"
-import { HimejiCastle3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle3Image"
-import { HimejiCastleWithCherry4Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry4Image"
 import { HimejiCastleWithCherry6Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry6Image"
 import { HimejiCastleWithCherry5Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry5Image"
 import { Conclusion } from "../../../components/core/conclusion"
@@ -36,7 +32,7 @@ import { HimejiCastleTroup } from "../../../components/images/asia/japan/himeji/
 import { HimejiCastleMarket } from "../../../components/images/asia/japan/himeji/castle/himejiCastleMarket"
 import { HimejiGyuKaku } from "../../../components/images/asia/japan/himeji/castle/himejiGyukaku"
 import {
-  adaptiveImageMarginBottom,
+  GroupOfImages,
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
@@ -44,6 +40,10 @@ import {
   TwoImagesLeftBigger,
   TwoImagesSameSize,
 } from "../../../components/images/layout"
+import { HimejiCastleWithTreeImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithTreeImage"
+import { HimejiCastle3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle3Image"
+import { HimejiCastleWithCherry4Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry4Image"
+import { HimejiCastle2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
 
 const IndexPage = () => {
   return (
@@ -66,7 +66,9 @@ const Content = () => {
       />
       <div className="center blog-container">
         <JapanTitle title="Château de HIMEJI" categories={["asie", "japon", "himeji"]} />
-        <MainHimejiCastleImage />
+        <ImageAsLandscape>
+          <MainHimejiCastleImage />
+        </ImageAsLandscape>
         <JapanQuote>
           Construit au XVIIe siècle, le château de Himeji est l’un des rares châteaux du Japon à ne pas avoir été
           détruit ou endommagé lors de la guerre ou par des catastrophes naturelles.{" "}
@@ -130,33 +132,43 @@ const Content = () => {
             <HimejiGyuKaku />
           </ImageAsPortrait>
         </WhereToHave>
-        <Visit>
+        <Visit
+          css={css`
+            &.content {
+              margin-bottom: 0;
+            }
+          `}
+        >
           <p>
             Après avoir parcouru la rue principale, on arrive en face du château, il paraît encore si loin mais si
             proche à la fois. Traversé d’un petit pont en bois qui nous fait passer au dessus d’une sorte de douve
             rempli d’eau.
           </p>
-          <ImageAsPortrait css={adaptiveImageMarginBottom}>
-            <EntranceHimejiCastleImage />
-          </ImageAsPortrait>
-          <ImageAsPortrait>
-            <EntranceRiverHimejiCastleImage />
-          </ImageAsPortrait>
+          <GroupOfImages>
+            <ImageAsPortrait>
+              <EntranceHimejiCastleImage />
+            </ImageAsPortrait>
+            <ImageAsPortrait>
+              <EntranceRiverHimejiCastleImage />
+            </ImageAsPortrait>
+          </GroupOfImages>
           <p>
             On arrive enfin dans les jardins (gratuit) qui entoure le château, il y a déjà beaucoup de monde alors qu’il
             n’est que 9h, les fleurs des cerisiers sont timides mais quelques-unes sont déjà de sortie et nous font
             rêver et imaginer leurs beautés si c’était la pleine saison.
           </p>
-          <ImageAsLandscape css={adaptiveImageMarginBottom}>
-            <HimejiCastle1Image />
-          </ImageAsLandscape>
-          <TwoImagesSameSize css={adaptiveImageMarginBottom}>
-            <HimejiCastleWithCherryImage />
-            <HimejiCastleWithCherry2Image />
-          </TwoImagesSameSize>
-          <ImageAsLandscape>
-            <HimejiCastleGeishaImage />
-          </ImageAsLandscape>
+          <GroupOfImages>
+            <ImageAsLandscape>
+              <HimejiCastle1Image />
+            </ImageAsLandscape>
+            <TwoImagesSameSize>
+              <HimejiCastleWithCherryImage />
+              <HimejiCastleWithCherry2Image />
+            </TwoImagesSameSize>
+            <ImageAsLandscape>
+              <HimejiCastleGeishaImage />
+            </ImageAsLandscape>
+          </GroupOfImages>
           <p>
             Nous hésitons à rentrer, on se demande si on en vera vraiment plus en continuant, le château est déjà
             magnifique d’ici et les cerisiers ne sont pas vraiment en fleurs pour le moment. Et puis le monde, rha ce
@@ -183,31 +195,34 @@ const Content = () => {
             A l’extérieur, rien ne se ressemble. On passe du “désert”, aux cerisiers blancs puis roses. Des vues
             sublimes qui ne nous font pas regretter d’être rentré.
           </p>
-          <TwoImagesLeftBigger css={adaptiveImageMarginBottom}>
-            <HimejiCastle2Image />
-            <HimejiCastleWithTreeImage />
-          </TwoImagesLeftBigger>
-          <ImageAsPortrait css={adaptiveImageMarginBottom}>
-            <HimejiCastle3Image />
-          </ImageAsPortrait>
-
-          <ImageAsPortrait
-            css={css`
-              max-width: 800px;
-            `}
-          >
-            <HimejiCastleWithCherry4Image />
-          </ImageAsPortrait>
+          <GroupOfImages>
+            <TwoImagesLeftBigger>
+              <HimejiCastle2Image />
+              <HimejiCastleWithTreeImage />
+            </TwoImagesLeftBigger>
+            <ImageAsPortrait>
+              <HimejiCastle3Image />
+            </ImageAsPortrait>
+            <ImageAsPortrait
+              css={css`
+                max-width: 800px;
+              `}
+            >
+              <HimejiCastleWithCherry4Image />
+            </ImageAsPortrait>
+          </GroupOfImages>
           <p>
             Connu pour être un véritable spot pour admirer les cerisiers, Sakura. On vous conseille donc d’y aller
             plutôt au printemps quand les cerisiers sont en fleurs, pour admirer ce magnifique endroit si paisible.{" "}
           </p>
-          <ImageAsLandscapeOnTheLeft css={adaptiveImageMarginBottom}>
-            <HimejiCastleWithCherry5Image />
-          </ImageAsLandscapeOnTheLeft>
-          <ImageAsLandscapeOnTheRight>
-            <HimejiCastleWithCherry6Image />
-          </ImageAsLandscapeOnTheRight>
+          <GroupOfImages>
+            <ImageAsLandscapeOnTheLeft>
+              <HimejiCastleWithCherry5Image />
+            </ImageAsLandscapeOnTheLeft>
+            <ImageAsLandscapeOnTheRight>
+              <HimejiCastleWithCherry6Image />
+            </ImageAsLandscapeOnTheRight>
+          </GroupOfImages>
         </Visit>
         <Conclusion>
           Magnifique château, surnommé le château du Héron Blanc, il est considéré comme l’un des plus beaux châteaux du

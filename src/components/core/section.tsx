@@ -16,11 +16,11 @@ import {
 export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
   <h4 className={`mb0 flex ${className}`}>{children}</h4>
 )
-export const SectionContent: FunctionComponent = ({ children }) => {
+export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   const size = React.Children.count(children)
   return (
     <div
-      className="f5"
+      className={`f5 content ${className}`}
       css={css`
         line-height: 1.5em;
         margin-bottom: 1.45rem;
@@ -107,13 +107,13 @@ export const WhereToHave: FunctionComponent = ({ children }) => (
   </>
 )
 
-export const Visit: FunctionComponent = ({ children }) => (
+export const Visit: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
   <>
     <SectionTitle>
       <FaWalking />
       &nbsp;La visite
     </SectionTitle>
-    <SectionContent>{children}</SectionContent>
+    <SectionContent className={className}>{children}</SectionContent>
   </>
 )
 
