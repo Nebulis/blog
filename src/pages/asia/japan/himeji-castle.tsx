@@ -11,6 +11,7 @@ import {
   How,
   HowLong,
   HowMuch,
+  SectionTitle,
   Visit,
   When,
   Where,
@@ -99,7 +100,7 @@ const Content = () => {
           jardins au plus proche, il faudra payer 1 000 Yens (~ 8,50€) pour les adultes et 300 Yens (~ 2,50€) pour les
           enfants.
         </HowMuch>
-        <WhereToStay>
+        <WhereToStay location="à Himeji">
           <p>
             Himeji est particulièrement touristique, vous n’aurez donc pas de mal à trouver un hôtel. Reste à voir les
             prix, car comme partout au Japon, les hôtels ne sont pas donnés.

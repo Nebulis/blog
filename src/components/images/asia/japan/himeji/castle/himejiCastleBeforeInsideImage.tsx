@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import * as React from "react"
 
-export const HimejiCastleBeforeInsideImage = () => {
+export const HimejiCastleBeforeInsideImage = ({ className = "" }: { className?: string }) => {
   const data = useStaticQuery(graphql`
     query {
       file: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-before-inside.jpg" }) {
@@ -14,5 +14,11 @@ export const HimejiCastleBeforeInsideImage = () => {
       }
     }
   `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="Himeji castle building before being inside" />
+  return (
+    <Img
+      fluid={data.file.childImageSharp.fluid}
+      alt="Himeji castle building before being inside"
+      className={className}
+    />
+  )
 }

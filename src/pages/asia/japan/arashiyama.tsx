@@ -1,38 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Header } from "../../../components/layout/header"
 import { Maintenance } from "../../../components/layout/maintenance"
 import SEO from "../../../components/layout/seo"
 import css from "@emotion/css"
 import { JapanQuote } from "../../../components/core/quote"
-import { Where, When, How, HowLong, HowMuch, WhereToStay, Visit } from "../../../components/core/section"
+import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../components/core/section"
 import { JapanTitle } from "../../../components/core/title"
 import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
-import { JapanLink, JapanExternalLink } from "../../../components/core/link"
-import { HimejiGyuKaku } from "../../../components/images/asia/japan/himeji/castle/himejiGyukaku"
+import { JapanExternalLink, JapanLink } from "../../../components/core/link"
 import {
-  ImageAsPortrait,
-  TwoImagesSameSize,
-  adaptiveImageMarginBottom,
+  GroupOfImages,
   ImageAsLandscape,
-  TwoImagesLeftBigger,
+  ImageAsPortrait,
+  ImageAsTwoLandscapeLeftAndOnePortraitRight,
+  TwoImagesSameSize, TwoImagesSameSizeOrToGroup,
 } from "../../../components/images/layout"
 import { ArashiyamaTuktukImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaTuktukImage"
-import { HimejiCastleWithCherry2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry2Image"
-import { HimejiCastleWithCherry3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
 import { ArashiyamaGeishaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaGeishaImage"
 import { ArashiyamaPathTuktukImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaPathTuktukImage"
 import { ArashiyamaSkyBamboo1Image } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaSkyBamboo1Image"
 import { ArashiyamaSkyBamboo2Image } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaSkyBamboo2Image"
-import { HimejiCastle1Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle1Image"
 import { ArashiyamaSkyBamboo3Image } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaSkyBamboo3Image"
-import { EntranceHimejiCastleImage } from "../../../components/images/asia/japan/himeji/castle/entranceHimejiCastleImage"
 import { ArashiyamaBambooImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaBambooImage"
-import { HimejiCastle2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
-import { HimejiCastleWithTreeImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithTreeImage"
 import { ArashiyamaShrine1Image } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine1Image"
 import { ArashiyamaShrine2Image } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine2Image"
-import { HimejiCastle3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle3Image"
 import { ArashiyamaCherryImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaCherryImage"
 
 const IndexPage = () => {
@@ -76,14 +67,14 @@ const Content = () => {
           </ul>
           <p>
             Depuis la gare de Kyoto, prendre la San-In Line jusqu’à Saga-Arashiyama Station (17mins – 7 arrêts). Prendre
-            la sortie sud de la gare, puis se diriger vers l'ouest pendant environ 10mins. On arrive sur une rue où se
-            trouvent plusieurs restaurants, il suffit de traverser et l’entrée se situe sur votre gauche (direction
+            la sortie sud de la gare, puis se diriger vers l&apos;ouest pendant environ 10mins. On arrive sur une rue où
+            se trouvent plusieurs restaurants, il suffit de traverser et l’entrée se situe sur votre gauche (direction
             sud).
           </p>
         </How>
         <HowLong>Environ 2h.</HowLong>
         <HowMuch>Gratuit</HowMuch>
-        <WhereToStay>
+        <WhereToStay location="à Kyoto">
           <p>
             Kyoto est particulièrement cher de ce que nous avons pu voir. Partez sur un minimum de 100€ voir 200€ par
             nuit. Vérifiez bien les hôtels, on trouve un peu de tout et pas forcément très bien indiqué (des hôtels avec
@@ -106,13 +97,11 @@ const Content = () => {
             On marche pendant une dizaine de minutes dans des rues habitées avec quelques jolies façades, quelques
             jardins fleuries de cerisiers et temples.
           </p>
-          <TwoImagesLeftBigger css={adaptiveImageMarginBottom}>
+          <ImageAsTwoLandscapeLeftAndOnePortraitRight>
             <ArashiyamaShrine1Image />
-            <ArashiyamaShrine2Image />
-          </TwoImagesLeftBigger>
-          <ImageAsPortrait css={adaptiveImageMarginBottom}>
             <ArashiyamaCherryImage />
-          </ImageAsPortrait>
+            <ArashiyamaShrine2Image />
+          </ImageAsTwoLandscapeLeftAndOnePortraitRight>
           <p>Au bout de la rue, nous arrivons dans une rue animée où il y a déjà pas mal de mondes.</p>
           <p>
             Pour entrer dans le chemin d’Arashiyama vous pouvez y aller à pied ou en pousse-pousse. On a vu que
@@ -130,22 +119,24 @@ const Content = () => {
             En voyant le monde au début, on se disait que nous allions avoir du mal à profiter, et finalement l’instant
             est si magique et nous n’avions jamais vu ça ailleurs qu’on en oublie presque les gens.
           </p>
-          <TwoImagesSameSize>
+          <TwoImagesSameSizeOrToGroup>
             <ArashiyamaPathTuktukImage />
             <ArashiyamaGeishaImage />
-          </TwoImagesSameSize>
+          </TwoImagesSameSizeOrToGroup>
           <p>
             Le chemin se rétrécit de plus en plus. Les bambous, hauts de plusieurs dizaines de mètres, se dressent
             devant vous et laissent passer juste un filet de lumière du soleil. La météo est clairement un véritable
             plus.
           </p>
-          <TwoImagesSameSize css={adaptiveImageMarginBottom}>
-            <ArashiyamaSkyBamboo1Image />
-            <ArashiyamaSkyBamboo2Image />
-          </TwoImagesSameSize>
-          <ImageAsLandscape>
-            <ArashiyamaSkyBamboo3Image />
-          </ImageAsLandscape>
+          <GroupOfImages>
+            <TwoImagesSameSize>
+              <ArashiyamaSkyBamboo1Image />
+              <ArashiyamaSkyBamboo2Image />
+            </TwoImagesSameSize>
+            <ImageAsLandscape>
+              <ArashiyamaSkyBamboo3Image />
+            </ImageAsLandscape>
+          </GroupOfImages>
           <p>
             A un moment donné le chemin se sépare en deux, avec en son centre le “Nonomiya Shrine”, d’un côté vous allez
             vers le Kameyama Park et de l’autre côté vous continuez vers une autre petite forêt de bambous.

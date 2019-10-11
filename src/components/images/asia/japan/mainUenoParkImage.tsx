@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import * as React from "react"
 import { css } from "@emotion/core"
-export const MainUenoParkImage = () => {
+export const MainUenoParkImage = ({ className = "" }: { className?: string }) => {
   const data = useStaticQuery(graphql`
     query {
       file: file(relativePath: { eq: "asia/japan/ueno-park-main.jpg" }) {
