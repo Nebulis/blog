@@ -44,6 +44,7 @@ import { HimejiCastle3Image } from "../../../components/images/asia/japan/himeji
 import { HimejiCastleWithCherry4Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry4Image"
 import { HimejiCastle2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
 import { HimejiCastle4Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
+import { HimejiCastleWithCherry3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
 
 const IndexPage = () => {
   return (
@@ -183,7 +184,7 @@ const Content = () => {
           </p>
           <TwoImagesSameSize>
             <HimejiCastle4Image />
-            <HimejiCastleWithCherry4Image />
+            <HimejiCastleWithCherry3Image />
           </TwoImagesSameSize>
           <p>
             Nous avons le choix de visiter l’intérieur ou de continuer vers l’extérieur, les deux se valent. Le château
