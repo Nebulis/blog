@@ -11,7 +11,6 @@ import {
   How,
   HowLong,
   HowMuch,
-  SectionTitle,
   Visit,
   When,
   Where,

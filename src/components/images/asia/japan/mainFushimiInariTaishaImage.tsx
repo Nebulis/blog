@@ -13,5 +13,5 @@ export const MainFushimiInariTaishaImage = ({ className = "" }: { className?: st
       }
     }
   `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="Fushimi Hinari Taisha" />
+  return <Img fluid={data.file.childImageSharp.fluid} alt="Fushimi Hinari Taisha" className={className} />
 }

@@ -13,5 +13,5 @@ export const MainImage = ({ className = "" }: { className?: string }) => {
       }
     }
   `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="Welcome to Japan" />
+  return <Img fluid={data.file.childImageSharp.fluid} alt="Welcome to Japan" className={className} />
 }

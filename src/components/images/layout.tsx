@@ -203,6 +203,7 @@ const imageAsTwoLandscapeLeftAndOnePortraitRightStyle = css`
 
   ${margin}
   .right-panel {
+    padding-top: 1.3rem; // to align correctly
     margin-top: auto;
     margin-bottom: auto;
   }

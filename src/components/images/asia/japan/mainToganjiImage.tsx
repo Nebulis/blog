@@ -23,6 +23,7 @@ export const MainToganjiImage = ({ className = "" }: { className?: string }) => 
           max-height: 495px;
         }
       `}
+      className={className}
     />
   )
 }

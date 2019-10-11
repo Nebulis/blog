@@ -16,7 +16,7 @@ export const MainHamarikyuGardenImage = ({ className = "" }: { className?: strin
   `)
   return (
     <div className="">
-      <Img fluid={data.file.childImageSharp.fluid} alt="Hama-rikyu garden" />
+      <Img fluid={data.file.childImageSharp.fluid} alt="Hama-rikyu garden" className={className} />
     </div>
   )
 }

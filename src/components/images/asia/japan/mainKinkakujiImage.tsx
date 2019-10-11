@@ -13,5 +13,5 @@ export const MainKinkakujiImage = ({ className = "" }: { className?: string }) =
       }
     }
   `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="Kinkaku-ji temple" />
+  return <Img fluid={data.file.childImageSharp.fluid} alt="Kinkaku-ji temple" className={className} />
 }

@@ -13,5 +13,5 @@ export const MainNagoyaCastleImage = ({ className = "" }: { className?: string }
       }
     }
   `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="Nagoya Castle" />
+  return <Img fluid={data.file.childImageSharp.fluid} alt="Nagoya Castle" className={className} />
 }

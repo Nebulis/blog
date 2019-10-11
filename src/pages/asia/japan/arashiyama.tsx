@@ -13,7 +13,8 @@ import {
   ImageAsLandscape,
   ImageAsPortrait,
   ImageAsTwoLandscapeLeftAndOnePortraitRight,
-  TwoImagesSameSize, TwoImagesSameSizeOrToGroup,
+  TwoImagesSameSize,
+  TwoImagesSameSizeOrToGroup,
 } from "../../../components/images/layout"
 import { ArashiyamaTuktukImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaTuktukImage"
 import { ArashiyamaGeishaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaGeishaImage"

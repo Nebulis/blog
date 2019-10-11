@@ -13,5 +13,5 @@ export const MainFujiImage = ({ className = "" }: { className?: string }) => {
       }
     }
   `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="Mount Fuji" />
+  return <Img fluid={data.file.childImageSharp.fluid} alt="Mount Fuji" className={className} />
 }

@@ -13,5 +13,5 @@ export const MainSensojiImage = ({ className = "" }: { className?: string }) => 
       }
     }
   `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="Senso-ji" />
+  return <Img fluid={data.file.childImageSharp.fluid} alt="Senso-ji" className={className} />
 }
