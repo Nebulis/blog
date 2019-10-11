@@ -24,7 +24,6 @@ import { HimejiCastle1Image } from "../../../components/images/asia/japan/himeji
 import { HimejiCastleWithCherryImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherryImage"
 import { HimejiCastleWithCherry2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry2Image"
 import { HimejiCastleGeishaImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleGeishaImage"
-import { HimejiCastleWithCherry3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
 import { HimejiCastleWithCherry6Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry6Image"
 import { HimejiCastleWithCherry5Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry5Image"
 import { Conclusion } from "../../../components/core/conclusion"
@@ -44,6 +43,7 @@ import { HimejiCastleWithTreeImage } from "../../../components/images/asia/japan
 import { HimejiCastle3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle3Image"
 import { HimejiCastleWithCherry4Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry4Image"
 import { HimejiCastle2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
+import { HimejiCastle4Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
 
 const IndexPage = () => {
   return (
@@ -182,8 +182,8 @@ const Content = () => {
             poser les yeux.
           </p>
           <TwoImagesSameSize>
-            <HimejiCastleWithCherry3Image />
-            <HimejiCastleWithCherry2Image />
+            <HimejiCastle4Image />
+            <HimejiCastleWithCherry4Image />
           </TwoImagesSameSize>
           <p>
             Nous avons le choix de visiter l’intérieur ou de continuer vers l’extérieur, les deux se valent. Le château
