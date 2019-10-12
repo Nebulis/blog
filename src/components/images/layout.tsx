@@ -62,6 +62,10 @@ export const GroupOfImages: FunctionComponent = ({ children }) => {
 const imageAsPortraitStyle = css`
   max-width: 600px;
   margin: auto;
+  .gatsby-image-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+  }
 `
 export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
   <div css={imageAsPortraitStyle} className={className}>

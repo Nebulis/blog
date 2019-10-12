@@ -110,7 +110,11 @@ const Content = () => {
             c’était interdit, peut-être dû au monde ce jour-là.
           </p>
           <ImageAsPortrait>
-            <ArashiyamaTuktukImage />
+            <ArashiyamaTuktukImage
+              css={css`
+                max-width: 450px;
+              `}
+            />
           </ImageAsPortrait>
           <p>
             Malgré le monde, l’ambiance est apaisante. Lorsque le vent souffle, on peut entendre les bambous se cogner
