@@ -28,6 +28,7 @@ import { ArashiyamaShrine2Image } from "../../../../components/images/asia/japan
 import { ArashiyamaCherryImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaCherryImage"
 import { Menu } from "../../../../components/layout/menu"
 import { Conclusion } from "../../../../components/core/conclusion"
+import { JapanLine } from "../../../../components/core/japanLine"
 
 const IndexPage = () => {
   return (
@@ -63,10 +64,19 @@ const Content = () => {
             </small>
           </ul>
           <p>
-            Depuis la gare de Kyoto, prendre la San-In Line jusqu’à Saga-Arashiyama Station (17 mins – 7 arrêts).
-            Prendre la sortie sud de la gare, puis se diriger vers l’ouest pendant environ 10 mins. On arrive sur une
-            rue où se trouvent plusieurs restaurants, il suffit de traverser et l’entrée se situe sur votre gauche
-            (direction sud).
+            Depuis la gare de Kyoto, prendre la{" "}
+            <JapanLine
+              href="https://www.google.fr/maps/dir/Kyoto+Station,+Higashishiokoji+Kamadonocho,+Shimogyo+Ward,+Kyoto,+Japan/Saga-Arashiyama+Station,+Sagatenryuji+Kurumamichicho,+Uky%C5%8D-ku,+Kyoto,+Pr%C3%A9fecture+de+Kyoto,+Japon"
+              css={css`
+                background-color: #800080;
+                color: #ffffff;
+              `}
+            >
+              San-In Line
+            </JapanLine>{" "}
+            jusqu’à Saga-Arashiyama Station (17 mins – 7 arrêts). Prendre la sortie sud de la gare, puis se diriger vers
+            l’ouest pendant environ 10 mins. On arrive sur une rue où se trouvent plusieurs restaurants, il suffit de
+            traverser et l’entrée se situe sur votre gauche (direction sud).
           </p>
         </How>
         <HowLong>Environ 2h.</HowLong>

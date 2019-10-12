@@ -4,7 +4,14 @@ import { FaExternalLinkAlt } from "react-icons/all"
 import { css } from "@emotion/core"
 import React, { AnchorHTMLAttributes, FunctionComponent } from "react"
 
-export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any>> = ({ children, ...rest }) => (
+interface ExternalLinkProps {
+  noIcon?: boolean
+}
+export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & ExternalLinkProps> = ({
+  children,
+  noIcon = false,
+  ...rest
+}) => (
   <a
     {...rest}
     target="_blank"
@@ -16,7 +23,7 @@ export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any>> = ({ chi
       }
     `}
   >
-    {children} <FaExternalLinkAlt size={14} />
+    {children} {noIcon ? null : <FaExternalLinkAlt size={14} />}
   </a>
 )
 
