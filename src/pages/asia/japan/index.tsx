@@ -10,7 +10,6 @@ import SEO from "../../../components/layout/seo"
 import { Conclusion } from "../../../components/core/conclusion"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { MainHimejiCastleImage } from "../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
-import { MainArashiyamaImage } from "../../../components/images/asia/japan/mainArashiyamaImage"
 import { Link } from "gatsby"
 import { Card } from "../../../components/Card"
 import { MainKinkakujiImage } from "../../../components/images/asia/japan/mainKinkakujiImage"
@@ -23,6 +22,7 @@ import { MainUenoParkImage } from "../../../components/images/asia/japan/mainUen
 import { MainSensojiImage } from "../../../components/images/asia/japan/mainSensojiImage"
 import { MainHamarikyuGardenImage } from "../../../components/images/asia/japan/mainHamarikyuGardenImage"
 import { JapanTitle } from "../../../components/core/title"
+import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 
 const IndexPage = () => {
   return (

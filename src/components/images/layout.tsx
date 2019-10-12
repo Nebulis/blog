@@ -1,23 +1,8 @@
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import { css, jsx } from "@emotion/core"
+import styled from "@emotion/styled"
+import { useWindowSize } from "../hooks/useWindowSize"
 
-export const adaptiveImageMarginBottom = css`
-  @media (max-width: 576px) {
-    .gatsby-image-wrapper {
-      margin-bottom: 10px;
-    }
-  }
-  @media (min-width: 576px) and (max-width: 768px) {
-    .gatsby-image-wrapper {
-      margin-bottom: 15px;
-    }
-  }
-  @media (min-width: 769px) and (max-width: 992px) {
-    .gatsby-image-wrapper {
-      margin-bottom: 20px;
-    }
-  }
-`
 // https://github.com/emotion-js/emotion/issues/1404
 const cloneElement = (element: any, props: any, ...children: any) =>
   jsx(
@@ -64,12 +49,8 @@ export const GroupOfImages: FunctionComponent = ({ children }) => {
         if (index > 0 && index < size - 1) {
           return cloneElement(child, { css: css(allButLastImageStyle, allButFirstImageStyle, child.props.css) })
         } else if (index === 0) {
-          console.log(child.props)
-          console.log(cloneElement(child, { css: css(allButLastImageStyle, child.props.css) }))
           return cloneElement(child, { css: css(allButLastImageStyle, child.props.css) })
         } else if (index === size - 1) {
-          console.log(child.props)
-          console.log(cloneElement(child, { css: css(allButFirstImageStyle, child.props.css) }))
           return cloneElement(child, { css: css(allButFirstImageStyle, child.props.css) })
         }
         throw new Error("Damned")
@@ -81,6 +62,10 @@ export const GroupOfImages: FunctionComponent = ({ children }) => {
 const imageAsPortraitStyle = css`
   max-width: 600px;
   margin: auto;
+  .gatsby-image-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+  }
 `
 export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
   <div css={imageAsPortraitStyle} className={className}>
@@ -92,95 +77,83 @@ export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any>> = ({ child
   <div className={className}>{children}</div>
 )
 
+const margin = css`
+  & .left-panel {
+    flex-basis: 100%;
+    margin-right: 0.725rem;
+  }
+  & .right-panel {
+    flex-basis: 100%;
+    margin-left: 0.725rem;
+  }
+  @media (max-width: 576px) {
+    & .left-panel {
+      margin-right: 5px;
+    }
+    & .right-panel {
+      margin-left: 5px;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 768px) {
+    & .left-panel {
+      margin-right: 7.5px;
+    }
+    & .right-panel {
+      margin-left: 7.5px;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    & .left-panel {
+      margin-right: 10px;
+    }
+    & .right-panel {
+      margin-left: 10px;
+    }
+  }
+`
+
 const twoImagesSameSizeStyles = css`
   margin: auto;
   .gatsby-image-wrapper {
     width: 100%;
   }
-  & div:first-of-type {
-    margin-right: 0.725rem;
-  }
-  & div:last-of-type {
-    margin-left: 0.725rem;
-  }
-  @media (max-width: 576px) {
-    & div:first-of-type {
-      margin-right: 5px;
-    }
-    & div:last-of-type {
-      margin-left: 5px;
-    }
-  }
-  @media (min-width: 576px) and (max-width: 768px) {
-    & div:first-of-type {
-      margin-right: 7.5px;
-    }
-    & div:last-of-type {
-      margin-left: 7.5px;
-    }
-  }
-  @media (min-width: 769px) and (max-width: 992px) {
-    & div:first-of-type {
-      margin-right: 10px;
-    }
-    & div:last-of-type {
-      margin-left: 10px;
-    }
-  }
+  ${margin}
 `
 export const TwoImagesSameSize: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   if (!children || !Array.isArray(children) || children.length !== 2)
     throw new Error("This component expect 2 children")
   return (
     <div className={`flex ${className}`} css={twoImagesSameSizeStyles}>
-      {children}
+      {cloneElement(children[0], { className: "left-panel" })}
+      {cloneElement(children[1], { className: "right-panel" })}
     </div>
   )
 }
-const twoImagesLeftBiggerStyles = css`
-  .gatsby-image-wrapper {
-    width: 100%;
-  }
-  & div:first-of-type {
-    margin-right: 0.725rem;
+
+export const TwoImagesLeftBigger = styled(TwoImagesSameSize)`
+  & .left-panel {
     flex-basis: 65%;
+    margin-right: 0.725rem;
   }
-  & div:last-of-type {
-    margin-left: 0.725rem;
+  & .right-panel {
     flex-basis: 35%;
-  }
-  @media (max-width: 576px) {
-    & div:first-of-type {
-      margin-right: 5px;
-    }
-    & div:last-of-type {
-      margin-left: 5px;
-    }
-  }
-  @media (min-width: 576px) and (max-width: 768px) {
-    & div:first-of-type {
-      margin-right: 7.5px;
-    }
-    & div:last-of-type {
-      margin-left: 7.5px;
-    }
-  }
-  @media (min-width: 769px) and (max-width: 992px) {
-    & div:first-of-type {
-      margin-right: 10px;
-    }
-    & div:last-of-type {
-      margin-left: 10px;
-    }
+    margin-left: 0.725rem;
   }
 `
-export const TwoImagesLeftBigger: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
+export const TwoImagesSameSizeOrToGroup: FunctionComponent<HTMLAttributes<any>> = ({ children }) => {
+  const { windowWidth: width } = useWindowSize()
   if (!children || !Array.isArray(children) || children.length !== 2)
     throw new Error("This component expect 2 children")
-  return (
-    <div className={`flex ${className}`} css={twoImagesLeftBiggerStyles}>
-      {children}
-    </div>
+  return width <= 768 ? (
+    <GroupOfImages>
+      <ImageAsLandscape>{children[0]}</ImageAsLandscape>
+      <ImageAsLandscape>{children[1]}</ImageAsLandscape>
+    </GroupOfImages>
+  ) : (
+    <TwoImagesSameSize>
+      {children[0]}
+      {children[1]}
+    </TwoImagesSameSize>
   )
 }
 
@@ -222,6 +195,46 @@ export const ImageAsLandscapeOnTheRight: FunctionComponent<HTMLAttributes<any>> 
   return (
     <div className={`flex justify-end ${className}`} css={imageAsLandscapeOnTheRight}>
       {children}
+    </div>
+  )
+}
+
+const imageAsTwoLandscapeLeftAndOnePortraitRightStyle = css`
+  align-items: flex-start;
+  .gatsby-image-wrapper {
+    width: 100%;
+  }
+
+  ${margin}
+  .right-panel {
+    padding-top: 1.3rem; // to align correctly
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+`
+const additionalMargin = css`
+  margin-bottom: 1.3rem;
+`
+export const ImageAsTwoLandscapeLeftAndOnePortraitRight: FunctionComponent<HTMLAttributes<any>> = ({
+  children,
+  className,
+}) => {
+  const { windowWidth: width } = useWindowSize()
+  if (!children || !Array.isArray(children) || children.length !== 3)
+    throw new Error("This component expect 3 children")
+  return (
+    <div
+      className={`flex ${width <= 768 ? "flex-column" : ""} w-100 ${className}`}
+      css={css(imageAsTwoLandscapeLeftAndOnePortraitRightStyle, width > 768 ? additionalMargin : null)}
+    >
+      <div className={`flex flex-column ${width <= 768 ? "w-100" : "w-50"} left-panel`}>
+        <GroupOfImages>
+          <ImageAsPortrait className="w-100">{children[0]}</ImageAsPortrait>
+          <ImageAsPortrait className="w-100">{children[1]}</ImageAsPortrait>
+          {width <= 768 ? <ImageAsLandscape className="w-100">{children[2]}</ImageAsLandscape> : null}
+        </GroupOfImages>
+      </div>
+      {width > 768 ? <div className="w-50 flex flex-grow-0 items right-panel">{children[2]}</div> : null}
     </div>
   )
 }

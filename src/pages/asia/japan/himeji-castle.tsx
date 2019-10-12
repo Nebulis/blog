@@ -24,7 +24,6 @@ import { HimejiCastle1Image } from "../../../components/images/asia/japan/himeji
 import { HimejiCastleWithCherryImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherryImage"
 import { HimejiCastleWithCherry2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry2Image"
 import { HimejiCastleGeishaImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleGeishaImage"
-import { HimejiCastleWithCherry3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
 import { HimejiCastleWithCherry6Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry6Image"
 import { HimejiCastleWithCherry5Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry5Image"
 import { Conclusion } from "../../../components/core/conclusion"
@@ -44,6 +43,8 @@ import { HimejiCastleWithTreeImage } from "../../../components/images/asia/japan
 import { HimejiCastle3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle3Image"
 import { HimejiCastleWithCherry4Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry4Image"
 import { HimejiCastle2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
+import { HimejiCastle4Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
+import { HimejiCastleWithCherry3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
 
 const IndexPage = () => {
   return (
@@ -99,7 +100,7 @@ const Content = () => {
           jardins au plus proche, il faudra payer 1 000 Yens (~ 8,50€) pour les adultes et 300 Yens (~ 2,50€) pour les
           enfants.
         </HowMuch>
-        <WhereToStay>
+        <WhereToStay location="à Himeji">
           <p>
             Himeji est particulièrement touristique, vous n’aurez donc pas de mal à trouver un hôtel. Reste à voir les
             prix, car comme partout au Japon, les hôtels ne sont pas donnés.
@@ -182,8 +183,8 @@ const Content = () => {
             poser les yeux.
           </p>
           <TwoImagesSameSize>
+            <HimejiCastle4Image />
             <HimejiCastleWithCherry3Image />
-            <HimejiCastleWithCherry2Image />
           </TwoImagesSameSize>
           <p>
             Nous avons le choix de visiter l’intérieur ou de continuer vers l’extérieur, les deux se valent. Le château

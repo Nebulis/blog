@@ -87,11 +87,14 @@ export const HowMuch: FunctionComponent = ({ children }) => (
   </>
 )
 
-export const WhereToStay: FunctionComponent = ({ children }) => (
+interface WhereToStayProps {
+  location: string
+}
+export const WhereToStay: FunctionComponent<WhereToStayProps> = ({ children, location }) => (
   <>
     <SectionTitle>
       <FaBed />
-      &nbsp;Où dormir à Himeji ?
+      &nbsp;Où dormir {location} ?
     </SectionTitle>
     <SectionContent>{children}</SectionContent>
   </>
