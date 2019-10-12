@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Header } from "../../../components/layout/header"
-import { Maintenance } from "../../../components/layout/maintenance"
-import SEO from "../../../components/layout/seo"
+import { Header } from "../../../../components/layout/header"
+import { Maintenance } from "../../../../components/layout/maintenance"
+import SEO from "../../../../components/layout/seo"
 
 const IndexPage = () => {
   return (
@@ -17,7 +17,7 @@ const Content = () => {
   return (
     <>
       <Header />
-      Kyoto page
+      Himeji page
       <Link to="/asia/japan">Japon</Link>
     </>
   )

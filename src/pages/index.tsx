@@ -2,7 +2,7 @@ import React from "react"
 import { Header } from "../components/layout/header"
 import { Maintenance } from "../components/layout/maintenance"
 import SEO from "../components/layout/seo"
-import { JapanLink } from "../components/core/link"
+import { Menu } from "../components/layout/menu"
 
 const IndexPage = () => {
   return (
@@ -17,8 +17,8 @@ const Content = () => {
   return (
     <>
       <Header />
-      Index
-      <JapanLink to="/asia/japan">Japon</JapanLink>
+      <Menu />
+      <div className="center blog-container" />
     </>
   )
 }

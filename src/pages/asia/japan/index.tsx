@@ -23,6 +23,7 @@ import { MainSensojiImage } from "../../../components/images/asia/japan/mainSens
 import { MainHamarikyuGardenImage } from "../../../components/images/asia/japan/mainHamarikyuGardenImage"
 import { JapanTitle } from "../../../components/core/title"
 import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
+import { Menu } from "../../../components/layout/menu"
 
 const IndexPage = () => {
   return (
@@ -37,12 +38,7 @@ const Content = () => {
   return (
     <>
       <Header />
-      <div
-        css={css`
-          height: 60px;
-          background-color: #ffe1e7;
-        `}
-      />
+      <Menu />
       <div className="center blog-container">
         <JapanTitle title="Le Japon au printemps" categories={["asie", "japon"]} />
         <MainImage />
