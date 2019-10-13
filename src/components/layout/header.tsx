@@ -4,6 +4,7 @@ import { Banner } from "./banner"
 import { css } from "@emotion/core"
 import { FlagUK } from "../icon/flag-uk"
 import { FlagFrance } from "../icon/flag-france"
+import { Link } from "gatsby"
 
 const style = css`
   &.header {
@@ -57,7 +58,9 @@ export const Header: FunctionComponent = () => {
           <FlagUK selected={lang === "english"} onClick={() => setLang("english")} />
         </div>
       </div>
-      <Banner />
+      <Link to="/">
+        <Banner />
+      </Link>
     </header>
   )
 }

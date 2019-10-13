@@ -94,14 +94,14 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
         display: flex;
       }
       .nav-container > ul > li {
-        padding-right: 2rem;
-        padding-left: 2rem;
         display: flex;
       }
       .nav-container > ul > li > a {
         display: flex;
         align-items: center;
         height: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
       }
       .nav-container:first-of-type {
         margin-left: 0;
@@ -182,8 +182,6 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
       }
 
       .nav-container .where-to-go > a {
-        padding-left: 3rem;
-        padding-right: 3rem;
         background-color: black;
       }
 
@@ -222,11 +220,11 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
         transition: all 100ms linear;
       }
       .white-arrow {
-        bottom: 4px;
+        bottom: -5px;
         z-index: 2;
       }
       .black-arrow {
-        bottom: 3px;
+        bottom: -6px;
         z-index: 1;
       }
       .where-to-go:hover .white-arrow {
