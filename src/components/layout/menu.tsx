@@ -79,7 +79,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
   <div
     className={`flex justify-center items-center ${className}`}
     css={css`
-      height: 60.7px; // no idea why
+      height: 60px;
       background-color: black;
       color: white;
       text-transform: uppercase;
@@ -89,15 +89,19 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
         max-width: 870px;
         width: 100%;
         height: 100%;
-        font-size: 1.2rem;
+      }
+      .nav-container > ul {
+        display: flex;
       }
       .nav-container > ul > li {
         padding-right: 2rem;
         padding-left: 2rem;
+        display: flex;
       }
       .nav-container > ul > li > a {
-        padding: 1rem;
-        display: block;
+        display: flex;
+        align-items: center;
+        height: 100%;
       }
       .nav-container:first-of-type {
         margin-left: 0;
@@ -118,9 +122,14 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
         background: black;
         color: white;
         display: block;
-        float: left;
         position: relative;
         transition-duration: 0.5s;
+      }
+
+      .nav-container ul .where-to-go {
+        box-sizing: border-box;
+        height: 70px;
+        padding-bottom: 10px;
       }
 
       .where-to-go > ul,
@@ -138,7 +147,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
         transition: all 0.5s ease;
       }
       .where-to-go > ul {
-        margin-top: 10px;
+        top: 100%;
         left: 0;
         z-index: 100;
         font-size: 0.8rem;
@@ -164,14 +173,12 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
       .nav-container .where-to-go {
         background-color: transparent;
         padding: 0;
-        padding-bottom: 1rem;
         cursor: pointer;
       }
 
       .nav-container .where-to-go:hover > a {
         background-color: white;
         border-bottom: 1px solid black;
-        padding-bottom: calc(1rem - 1px);
       }
 
       .nav-container .where-to-go > a {
@@ -206,7 +213,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
         border-top: 1px solid white;
       }
 
-      // arrow below where to go
+      // arrow below .where to go
       .white-arrow,
       .black-arrow {
         position: absolute;
@@ -223,11 +230,11 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
         z-index: 1;
       }
       .where-to-go:hover .white-arrow {
-        bottom: 0px;
+        bottom: -8.5px; // dunno why
         border-top-color: white;
       }
       .where-to-go:hover .black-arrow {
-        bottom: -1px;
+        bottom: -10px;
         border-top-color: black;
       }
     `}
