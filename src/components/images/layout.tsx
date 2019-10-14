@@ -238,3 +238,56 @@ export const ImageAsTwoLandscapeLeftAndOnePortraitRight: FunctionComponent<HTMLA
     </div>
   )
 }
+
+const medallionDimension = "10rem"
+const imageAsMedallionStyle = css`
+  position: relative;
+  border-radius: 50%;
+  width: ${medallionDimension};
+  height: ${medallionDimension};
+  overflow: hidden;
+  border: 6px solid transparent;
+  transition: border 100ms linear;
+  &:hover span {
+    height: 60px;
+    font-size: 1.4rem;
+  }
+  span {
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 50px;
+    padding-top: 10px;
+    transition: all 300ms linear;
+  }
+  .gatsby-image-wrapper {
+    margin: 0;
+    width: ${medallionDimension};
+    height: ${medallionDimension} !important;
+  }
+  img {
+    width: ${medallionDimension};
+    height: ${medallionDimension} !important;
+  }
+`
+export const ImageAsMedallion: FunctionComponent<HTMLAttributes<any> & { title: string }> = ({
+  children,
+  className,
+  title,
+}) => (
+  <div css={imageAsMedallionStyle} className={className}>
+    {children}
+    <span>{title}</span>
+  </div>
+)
+
+export const JapanImageAsMedallion = styled(ImageAsMedallion)`
+  &:hover {
+    border: 6px solid #b8566a;
+  }
+`
