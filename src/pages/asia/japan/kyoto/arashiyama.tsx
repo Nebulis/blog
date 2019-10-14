@@ -1,13 +1,13 @@
 import React from "react"
-import { Header } from "../../../components/layout/header"
-import { Maintenance } from "../../../components/layout/maintenance"
-import SEO from "../../../components/layout/seo"
+import { Header } from "../../../../components/layout/header"
+import { Maintenance } from "../../../../components/layout/maintenance"
+import SEO from "../../../../components/layout/seo"
 import css from "@emotion/css"
-import { JapanQuote } from "../../../components/core/quote"
-import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../components/core/section"
-import { JapanTitle } from "../../../components/core/title"
-import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
-import { JapanExternalLink, JapanLink } from "../../../components/core/link"
+import { JapanQuote } from "../../../../components/core/quote"
+import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
+import { JapanTitle } from "../../../../components/core/title"
+import { MainArashiyamaImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -15,17 +15,18 @@ import {
   ImageAsTwoLandscapeLeftAndOnePortraitRight,
   TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
-} from "../../../components/images/layout"
-import { ArashiyamaTuktukImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaTuktukImage"
-import { ArashiyamaGeishaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaGeishaImage"
-import { ArashiyamaPathTuktukImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaPathTuktukImage"
-import { ArashiyamaSkyBamboo1Image } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaSkyBamboo1Image"
-import { ArashiyamaSkyBamboo2Image } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaSkyBamboo2Image"
-import { ArashiyamaSkyBamboo3Image } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaSkyBamboo3Image"
-import { ArashiyamaBambooImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaBambooImage"
-import { ArashiyamaShrine1Image } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine1Image"
-import { ArashiyamaShrine2Image } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine2Image"
-import { ArashiyamaCherryImage } from "../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaCherryImage"
+} from "../../../../components/images/layout"
+import { ArashiyamaTuktukImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaTuktukImage"
+import { ArashiyamaGeishaImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaGeishaImage"
+import { ArashiyamaPathTuktukImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaPathTuktukImage"
+import { ArashiyamaSkyBamboo1Image } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaSkyBamboo1Image"
+import { ArashiyamaSkyBamboo2Image } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaSkyBamboo2Image"
+import { ArashiyamaSkyBamboo3Image } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaSkyBamboo3Image"
+import { ArashiyamaBambooImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaBambooImage"
+import { ArashiyamaShrine1Image } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine1Image"
+import { ArashiyamaShrine2Image } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine2Image"
+import { ArashiyamaCherryImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaCherryImage"
+import { Menu } from "../../../../components/layout/menu"
 
 const IndexPage = () => {
   return (
@@ -39,12 +40,7 @@ const Content = () => {
   return (
     <>
       <Header />
-      <div
-        css={css`
-          height: 60px;
-          background-color: #ffe1e7;
-        `}
-      />
+      <Menu />
       <div className="center blog-container">
         <JapanTitle title="ARASHIYAMA – Forêt de bambous" categories={["asie", "japon", "kyoto"]} />
         <MainArashiyamaImage />

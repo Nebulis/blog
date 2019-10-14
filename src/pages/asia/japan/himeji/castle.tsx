@@ -1,11 +1,11 @@
 import React from "react"
-import { Header } from "../../../components/layout/header"
-import { Maintenance } from "../../../components/layout/maintenance"
-import SEO from "../../../components/layout/seo"
+import { Header } from "../../../../components/layout/header"
+import { Maintenance } from "../../../../components/layout/maintenance"
+import SEO from "../../../../components/layout/seo"
 import { css } from "@emotion/core"
-import { JapanTitle } from "../../../components/core/title"
-import { JapanQuote } from "../../../components/core/quote"
-import { MainHimejiCastleImage } from "../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
+import { JapanTitle } from "../../../../components/core/title"
+import { JapanQuote } from "../../../../components/core/quote"
+import { MainHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import {
   Bonus,
   How,
@@ -16,20 +16,20 @@ import {
   Where,
   WhereToHave,
   WhereToStay,
-} from "../../../components/core/section"
-import { JapanExternalLink, JapanLink } from "../../../components/core/link"
-import { EntranceHimejiCastleImage } from "../../../components/images/asia/japan/himeji/castle/entranceHimejiCastleImage"
-import { EntranceRiverHimejiCastleImage } from "../../../components/images/asia/japan/himeji/castle/entranceRiverHimejiCastleImage"
-import { HimejiCastle1Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle1Image"
-import { HimejiCastleWithCherryImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherryImage"
-import { HimejiCastleWithCherry2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry2Image"
-import { HimejiCastleGeishaImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleGeishaImage"
-import { HimejiCastleWithCherry6Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry6Image"
-import { HimejiCastleWithCherry5Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry5Image"
-import { Conclusion } from "../../../components/core/conclusion"
-import { HimejiCastleTroup } from "../../../components/images/asia/japan/himeji/castle/himejiCastleTroup"
-import { HimejiCastleMarket } from "../../../components/images/asia/japan/himeji/castle/himejiCastleMarket"
-import { HimejiGyuKaku } from "../../../components/images/asia/japan/himeji/castle/himejiGyukaku"
+} from "../../../../components/core/section"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
+import { EntranceHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/entranceHimejiCastleImage"
+import { EntranceRiverHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/entranceRiverHimejiCastleImage"
+import { HimejiCastle1Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle1Image"
+import { HimejiCastleWithCherryImage } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherryImage"
+import { HimejiCastleWithCherry2Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry2Image"
+import { HimejiCastleGeishaImage } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleGeishaImage"
+import { HimejiCastleWithCherry6Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry6Image"
+import { HimejiCastleWithCherry5Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry5Image"
+import { Conclusion } from "../../../../components/core/conclusion"
+import { HimejiCastleTroup } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleTroup"
+import { HimejiCastleMarket } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleMarket"
+import { HimejiGyuKaku } from "../../../../components/images/asia/japan/himeji/castle/himejiGyukaku"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -38,13 +38,14 @@ import {
   ImageAsPortrait,
   TwoImagesLeftBigger,
   TwoImagesSameSize,
-} from "../../../components/images/layout"
-import { HimejiCastleWithTreeImage } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithTreeImage"
-import { HimejiCastle3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle3Image"
-import { HimejiCastleWithCherry4Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry4Image"
-import { HimejiCastle2Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
-import { HimejiCastle4Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
-import { HimejiCastleWithCherry3Image } from "../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
+} from "../../../../components/images/layout"
+import { HimejiCastleWithTreeImage } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithTreeImage"
+import { HimejiCastle3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle3Image"
+import { HimejiCastleWithCherry4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry4Image"
+import { HimejiCastle2Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
+import { HimejiCastle4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
+import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
+import { Menu } from "../../../../components/layout/menu"
 
 const IndexPage = () => {
   return (
@@ -59,12 +60,7 @@ const Content = () => {
   return (
     <>
       <Header />
-      <div
-        css={css`
-          height: 60px;
-          background-color: #ffe1e7;
-        `}
-      />
+      <Menu />
       <div className="center blog-container">
         <JapanTitle title="Château de HIMEJI" categories={["asie", "japon", "himeji"]} />
         <ImageAsLandscape>
