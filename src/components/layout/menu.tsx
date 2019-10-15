@@ -46,6 +46,18 @@ export const continents: Continent[] = [
                 id: "arashiyama",
                 label: "Arashiyama",
               },
+              {
+                id: "daigoji",
+                label: "Daigoji",
+              },
+              {
+                id: "kinkakuji",
+                label: "Kinkakuji",
+              },
+              {
+                id: "fushimi-inari-taisha",
+                label: "Fushimi Inari Taisha",
+              },
             ],
           },
           {
