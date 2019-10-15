@@ -68,8 +68,8 @@ const Content = () => {
           <MainHimejiCastleImage />
         </ImageAsLandscape>
         <JapanQuote>
-          Construit au XVIIe siècle, le château de Himeji est l’un des rares châteaux du Japon à ne pas avoir été
-          détruit ou endommagé lors de la guerre ou par des catastrophes naturelles.{" "}
+          Magnifique château, surnommé le château du Héron Blanc, il est considéré comme l’un des plus beaux châteaux du
+          Japon.{" "}
         </JapanQuote>
         <Where>68 Honmachi, Himeji</Where>
         <When>Tous les jours de 9h à 17h (16h pour les dernières entrées)</When>
@@ -79,7 +79,7 @@ const Content = () => {
             <li>Depuis Tokyo environ 3h40</li>
             <li>Depuis Kyoto environ 1h</li>
             <small>
-              Plus d’information sur les transports <JapanLink to="/asia/japan/transports">ici</JapanLink>.
+              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>
             </small>
           </ul>
           <p>
@@ -91,14 +91,16 @@ const Content = () => {
             magnifique vue de loin.
           </p>
         </How>
-        <HowLong>Entre une demi-journée et une journée.</HowLong>
+        <HowLong>Entre une demi-journée et une journée si vous visitez les jardins aux alentours.</HowLong>
         <WhatTimeOfYear>
           On vous conseille d’y aller au printemps, vers début Avril, pour son parc et ses magnifiques cerisiers.
         </WhatTimeOfYear>
         <HowMuch>
-          Vous pouvez visiter les jardins aux alentours gratuitement. Pour la visite de l’intérieur du château et des
-          jardins au plus proche, il faudra payer 1 000 Yens (~ 8,50€) pour les adultes et 300 Yens (~ 2,50€) pour les
-          enfants.
+          <p>Vous pouvez visiter les jardins aux alentours gratuitement.</p>
+          <p>
+            Pour la visite de l’intérieur du château et des jardins au plus proche, il faudra payer 1 000 Yens (~ 8,50€)
+            pour les adultes et 300 Yens (~ 2,50€) pour les enfants.
+          </p>
         </HowMuch>
         <WhereToStay location="à Himeji">
           <p>
@@ -113,6 +115,11 @@ const Content = () => {
             , pas forcément le mieux noté mais juste pour une nuit cela nous suffisait amplement, excellent rapport
             qualité prix, à 5 minutes à pied de la gare dans une rue plutôt calme la nuit. Tout ce qu’il nous fallait
             pour nous reposer après ce long trajet et avant la visite du château le lendemain matin.
+          </p>
+          <p>
+            <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Himeji%2C+Himeji%2C+Japon">
+              Comparez et réservez votre hôtel à Himeji.
+            </JapanExternalLink>
           </p>
         </WhereToStay>
         <WhereToHave>
@@ -155,7 +162,7 @@ const Content = () => {
           </GroupOfImages>
           <p>
             On arrive enfin dans les jardins (gratuit) qui entoure le château, il y a déjà beaucoup de monde alors qu’il
-            n’est que 9h, les fleurs des cerisiers sont timides mais quelques-unes sont déjà de sortie et nous font
+            n’est que 9h, les fleurs des cerisiers sont timides mais quelques-unes sont déjà de sorties et nous font
             rêver et imaginer leurs beautés si c’était la pleine saison.
           </p>
           <GroupOfImages>
@@ -178,9 +185,9 @@ const Content = () => {
 
           <p>
             A l’entrée, un magnifique cerisier en fleur, et nous n’en sommes qu’au début. Ils se sont peut-être donné le
-            mot d’ordre, sublimer en premier lieu les intérieurs du château. En tout cas c’est chose faites, les
-            chemins, entre montées et descentes, sont magnifiques, on ne sait pas vraiment quoi prendre en photo et où
-            poser les yeux.
+            mot d’ordre, sublimer en premier lieu les intérieurs du parc tout près du château. En tout cas c’est chose
+            faites, les chemins, entre montées et descentes, sont magnifiques, on ne sait pas vraiment quoi prendre en
+            photo et où poser les yeux.
           </p>
           <TwoImagesSameSize>
             <HimejiCastle4Image />
@@ -226,8 +233,8 @@ const Content = () => {
           </GroupOfImages>
         </Visit>
         <Conclusion>
-          Magnifique château, surnommé le château du Héron Blanc, il est considéré comme l’un des plus beaux châteaux du
-          Japon.
+          Construit au XVIIe siècle, le château de Himeji est l’un des rares châteaux du Japon à ne pas avoir été
+          détruit ou endommagé lors de la guerre ou par des catastrophes naturelles.
         </Conclusion>
         <Bonus>
           <p>
@@ -238,7 +245,9 @@ const Content = () => {
             Nous avons également eu la chance de voir des enfants danser sur une musique typiquement japonaise, pas le
             temps de trop s’attarder cela dit, la musique finit nous devons filer à la gare !{" "}
           </p>
-          <p>Direction KYOTO. </p>
+          <p>
+            <JapanLink to="/asia/japan/kyoto">Direction KYOTO. </JapanLink>
+          </p>
           <TwoImagesSameSize
             css={css`
               max-width: 700px;

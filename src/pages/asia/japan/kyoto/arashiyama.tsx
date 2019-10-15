@@ -27,6 +27,7 @@ import { ArashiyamaShrine1Image } from "../../../../components/images/asia/japan
 import { ArashiyamaShrine2Image } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine2Image"
 import { ArashiyamaCherryImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaCherryImage"
 import { Menu } from "../../../../components/layout/menu"
+import { Conclusion } from "../../../../components/core/conclusion"
 
 const IndexPage = () => {
   return (
@@ -50,7 +51,6 @@ const Content = () => {
         <Where>Ukyo Ward, Kyoto</Where>
         <When>
           <p>Tous les jours 24h/24h.</p>
-          <p>Plutôt tôt le matin ou au coucher du soleil pour éviter le monde.</p>
         </When>
         <How>
           Depuis la plupart des grandes villes il est possible de se rendre à Kyoto en Shinkansen.
@@ -59,19 +59,19 @@ const Content = () => {
             <li>Depuis Himeji environ 1h</li>
             <li>Depuis Nagoya environ 1h</li>
             <small>
-              Plus d’information sur les transports <JapanLink to="/asia/japan/transports">ici</JapanLink>.
+              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>.
             </small>
           </ul>
           <p>
-            Depuis la gare de Kyoto, prendre la San-In Line jusqu’à Saga-Arashiyama Station (17mins – 7 arrêts). Prendre
-            la sortie sud de la gare, puis se diriger vers l&apos;ouest pendant environ 10mins. On arrive sur une rue où
-            se trouvent plusieurs restaurants, il suffit de traverser et l’entrée se situe sur votre gauche (direction
-            sud).
+            Depuis la gare de Kyoto, prendre la San-In Line jusqu’à Saga-Arashiyama Station (17 mins – 7 arrêts).
+            Prendre la sortie sud de la gare, puis se diriger vers l&apos;ouest pendant environ 10 mins. On arrive sur
+            une rue où se trouvent plusieurs restaurants, il suffit de traverser et l’entrée se situe sur votre gauche
+            (direction sud).
           </p>
         </How>
         <HowLong>Environ 2h.</HowLong>
         <HowMuch>Gratuit</HowMuch>
-        <WhereToStay location="à Kyoto">
+        <WhereToStay location="à Kyoto, près de Arashiyama">
           <p>
             Kyoto est particulièrement cher de ce que nous avons pu voir. Partez sur un minimum de 100€ voir 200€ par
             nuit. Vérifiez bien les hôtels, on trouve un peu de tout et pas forcément très bien indiqué (des hôtels avec
@@ -79,9 +79,8 @@ const Content = () => {
             chambres fumeurs et non-fumeurs.
           </p>
           <p>
-            Pour trouver un hôtel à Kyoto{" "}
             <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Kyoto%2C+Kyoto%2C+Japon">
-              ICI
+              Comparez et réservez votre hôtel à Kyoto.
             </JapanExternalLink>
           </p>
         </WhereToStay>
@@ -101,8 +100,8 @@ const Content = () => {
           </ImageAsTwoLandscapeLeftAndOnePortraitRight>
           <p>Au bout de la rue, nous arrivons dans une rue animée où il y a déjà pas mal de mondes.</p>
           <p>
-            Pour entrer dans le chemin d’Arashiyama vous pouvez y aller à pied ou en pousse-pousse. On a vu que
-            certaines personnes disaient qu’on pouvait le faire en vélo, en tout cas à la période où nous y étions
+            Pour entrer dans le chemin d’Arashiyama vous pouvez y aller à pied ou en pousse-pousse (~5000 Yens). On a vu
+            que certaines personnes disent qu’on peut le faire en vélo, en tout cas à la période où nous y étions
             c’était interdit, peut-être dû au monde ce jour-là.
           </p>
           <ImageAsPortrait>
@@ -117,8 +116,8 @@ const Content = () => {
             les uns les autres, un moment unique.
           </p>
           <p>
-            En voyant le monde au début, on se disait que nous allions avoir du mal à profiter, et finalement l’instant
-            est si magique et nous n’avions jamais vu ça ailleurs qu’on en oublie presque les gens.
+            En voyant le monde au début, on se dit qu'on va avoir du mal à profiter, et finalement l’instant est si
+            magique et nous n’avons jamais vu ça ailleurs qu’on en oublie presque les gens.
           </p>
           <TwoImagesSameSizeOrToGroup>
             <ArashiyamaPathTuktukImage />
@@ -147,6 +146,10 @@ const Content = () => {
             <ArashiyamaBambooImage />
           </ImageAsPortrait>
         </Visit>
+        <Conclusion>
+          Certains bambous sont malheureusement très abîmés et cela à cause de quelques touristes mal intentionnés qui
+          s’amusent à graver leurs noms sur les bambous. Une véritable honte !
+        </Conclusion>
       </div>
     </>
   )
