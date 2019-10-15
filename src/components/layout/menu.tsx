@@ -77,14 +77,14 @@ const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.lo
 
 export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
   <div
-    className={`flex justify-center items-center ${className}`}
+    className={`flex justify-start items-center ${className}`}
     css={css`
-      height: 60px;
+      height: 45px;
       background-color: black;
       color: white;
       text-transform: uppercase;
       font-weight: bold;
-
+      font-size: 0.8rem;
       .nav-container {
         max-width: 870px;
         width: 100%;
@@ -128,7 +128,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
 
       .nav-container ul .where-to-go {
         box-sizing: border-box;
-        height: 70px;
+        height: 55px;
         padding-bottom: 10px;
       }
 
@@ -150,7 +150,10 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
         top: 100%;
         left: 0;
         z-index: 100;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+      }
+      .where-to-go > ul > * {
+        font-size: 0.7rem;
       }
 
       .dropdown-continent > li > ul,
@@ -189,7 +192,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
         width: 100%;
       }
       .where-to-go .dropdown-continent li a {
-        padding: 0.8rem 0.5rem 0.8rem 0.7rem;
+        padding: 0.7rem 0.5rem 0.7rem 0.7rem;
         display: flex;
         justify-content: space-between;
         width: 100%;
