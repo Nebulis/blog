@@ -12,6 +12,7 @@ import {
   HowLong,
   HowMuch,
   Visit,
+  WhatTimeOfYear,
   When,
   Where,
   WhereToHave,
@@ -91,6 +92,9 @@ const Content = () => {
           </p>
         </How>
         <HowLong>Entre une demi-journée et une journée.</HowLong>
+        <WhatTimeOfYear>
+          On vous conseille d’y aller au printemps, vers début Avril, pour son parc et ses magnifiques cerisiers.
+        </WhatTimeOfYear>
         <HowMuch>
           Vous pouvez visiter les jardins aux alentours gratuitement. Pour la visite de l’intérieur du château et des
           jardins au plus proche, il faudra payer 1 000 Yens (~ 8,50€) pour les adultes et 300 Yens (~ 2,50€) pour les

@@ -6,6 +6,7 @@ import {
   FaBusAlt,
   FaCalendarAlt,
   FaClock,
+  FaCloudSun,
   FaLightbulb,
   FaMapMarkedAlt,
   FaUtensils,
@@ -95,6 +96,16 @@ export const WhereToStay: FunctionComponent<WhereToStayProps> = ({ children, loc
     <SectionTitle>
       <FaBed />
       &nbsp;Où dormir {location} ?
+    </SectionTitle>
+    <SectionContent>{children}</SectionContent>
+  </>
+)
+
+export const WhatTimeOfYear: FunctionComponent = ({ children }) => (
+  <>
+    <SectionTitle>
+      <FaCloudSun />
+      &nbsp;A quelle période ?
     </SectionTitle>
     <SectionContent>{children}</SectionContent>
   </>
