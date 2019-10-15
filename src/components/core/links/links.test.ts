@@ -1,7 +1,7 @@
 import { getLink } from "./links"
 
 describe("links", () => {
-  it("it should populate cache", () => {
+  it("should populate cache", () => {
     // continents assertions
     expect(getLink("asia")).toMatchObject({ label: "Asie", published: true })
 

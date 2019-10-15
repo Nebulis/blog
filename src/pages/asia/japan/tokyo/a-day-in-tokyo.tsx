@@ -35,6 +35,7 @@ import { JapanCard } from "../../../../components/card"
 import { MainSensojiImage } from "../../../../components/images/asia/japan/tokyo/sensoji/mainSensojiImage"
 import { JapanLink } from "../../../../components/core/links/link"
 import { Conclusion } from "../../../../components/core/conclusion"
+import { Comments } from "../../../../components/core/comments"
 
 const IndexPage = () => {
   return (
@@ -193,6 +194,8 @@ const IndexPage = () => {
           Tokyo, une ville à cent à l’heure qui mérite qu’on s’y attarde. Entre modernité et authenticité, elle regorge
           d’endroits à visiter et de découvertes à faire.
         </Conclusion>
+        <JapanDivider />
+        <Comments collectionName="asia/japan/tokyo/a-day-in-tokyo" />
       </BlogLayout>
     </>
   )
