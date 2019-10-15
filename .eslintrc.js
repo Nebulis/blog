@@ -28,6 +28,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
     "react/prop-types": "off",
     "react/self-closing-comp": "error",
     "jest/prefer-expect-assertions": "off",

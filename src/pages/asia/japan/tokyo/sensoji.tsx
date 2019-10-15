@@ -32,6 +32,8 @@ import { SensojiGarden2Image } from "../../../../components/images/asia/japan/to
 import { SensojiGarden3Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiGarden3Image"
 import { Conclusion } from "../../../../components/core/conclusion"
 import css from "@emotion/css"
+import { JapanDivider } from "../../../../components/core/divider"
+import { Comments } from "../../../../components/core/comments"
 
 const IndexPage = () => {
   return (
@@ -201,6 +203,8 @@ const IndexPage = () => {
           comme étrangers. Vous pourrez y observer des Yakuzas, faire parti du défilé ou encore danser tout ça dans le
           respect le plus total puisqu’il ne faut pas oublier que c’est une fête religieuse.
         </Conclusion>
+        <JapanDivider />
+        <Comments collectionName="asia/japan/tokyo/sensoji" />
       </BlogLayout>
     </>
   )
