@@ -11,6 +11,7 @@ import { Link } from "gatsby"
 import { MainUenoParkImage } from "../../../components/images/asia/japan/mainUenoParkImage"
 import { MainFujiImage } from "../../../components/images/asia/japan/mainFujiImage"
 import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
+import { getLinkUrl } from "../../../utils/links"
 
 const IndexPage = () => {
   return (
@@ -37,27 +38,27 @@ const Content = () => {
             }
           `}
         >
-          <Link to="/asia/japan/himeji">
+          <Link to={getLinkUrl("himeji")}>
             <JapanImageAsMedallion title="Himeji">
               <MainHimejiCastleImage />
             </JapanImageAsMedallion>
           </Link>
-          <Link to="/asia/japan/kyoto">
+          <Link to={getLinkUrl("kyoto")}>
             <JapanImageAsMedallion title="Kyoto">
               <MainArashiyamaImage />
             </JapanImageAsMedallion>
           </Link>
-          <Link to="/asia/japan/nagoya">
+          <Link to={getLinkUrl("nagoya")}>
             <JapanImageAsMedallion title="Nagoya">
               <MainNagoyaCastleImage />
             </JapanImageAsMedallion>
           </Link>
-          <Link to="/asia/japan/fuji">
+          <Link to={getLinkUrl("fuji")}>
             <JapanImageAsMedallion title="Fuji">
               <MainFujiImage />
             </JapanImageAsMedallion>
           </Link>
-          <Link to="/asia/japan/tokyo">
+          <Link to={getLinkUrl("tokyo")}>
             <JapanImageAsMedallion title="Tokyo">
               <MainUenoParkImage />
             </JapanImageAsMedallion>

@@ -8,10 +8,9 @@ interface ExternalLinkProps {
   noIcon?: boolean
 }
 const style = css`
-  font-weight: bold;
   svg {
     vertical-align: middle;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 `
 export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & ExternalLinkProps> = ({

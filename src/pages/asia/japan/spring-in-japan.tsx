@@ -24,6 +24,7 @@ import { JapanTitle } from "../../../components/core/title"
 import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { Menu } from "../../../components/layout/menu"
 import { MainFushimiImage } from "../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
+import { getLinkUrl } from "../../../utils/links"
 
 const IndexPage = () => {
   return (
@@ -40,7 +41,7 @@ const Content = () => {
       <Header />
       <Menu />
       <div className="center blog-container">
-        <JapanTitle title="Le Japon au printemps" categories={["asie", "japon"]} />
+        <JapanTitle title="Le Japon au printemps" categories={["asia", "japan"]} />
         <MainImage />
         <JapanQuote>
           Le Japon, ce pays incontournable à visiter en Asie. Un décor de rêve à chaque saison. Un mélange entre
@@ -78,7 +79,7 @@ const Content = () => {
         <section>
           <JapanCity>Himeji</JapanCity>
           <article>
-            <Link to="/asia/japan/himeji/castle">
+            <Link to={getLinkUrl("japan")}>
               <Card title="Château de Himeji – Magnifique château du Heron Blanc">
                 <MainHimejiCastleImage />
                 <div className="flex items-center">
@@ -93,7 +94,7 @@ const Content = () => {
           <JapanCity>Kyoto</JapanCity>
 
           <article>
-            <Link to="/asia/japan/kyoto/arashiyama">
+            <Link to={getLinkUrl("arashiyama")}>
               <Card title="Arashiyama – Foret de Bambous géants">
                 <MainArashiyamaImage />
                 <div>
@@ -108,7 +109,7 @@ const Content = () => {
           </article>
 
           <article>
-            <Link to="/asia/japan/kyoto/kinkakuji">
+            <Link to={getLinkUrl("kinkakuji")}>
               <Card title="Temple de Kinkakuji – Le pavillon d’or">
                 <MainKinkakujiImage />
                 <div>
@@ -123,7 +124,7 @@ const Content = () => {
           </article>
 
           <article>
-            <Link to="/asia/japan/kyoto/fushimi-inari-taisha">
+            <Link to={getLinkUrl("fushimi-inari-taisha")}>
               <Card title="Fushimi Inari Taisha – Santuaire aux Torii">
                 <MainFushimiImage />
                 <div>
@@ -138,7 +139,7 @@ const Content = () => {
           </article>
 
           <article>
-            <Link to="/asia/japan/kyoto/daigo-ji">
+            <Link to={getLinkUrl("daigo-ji")}>
               <Card title="Temple Daigo-ji">
                 <MainDaigojiImage />
                 <div>
@@ -156,7 +157,7 @@ const Content = () => {
           <JapanCity>Nagoya</JapanCity>
 
           <article>
-            <Link to="/asia/japan/nagoya/castle">
+            <Link to={getLinkUrl("nagoya-castle")}>
               <Card title="Château de Nagoya">
                 <MainNagoyaCastleImage />
                 <div>
@@ -170,7 +171,7 @@ const Content = () => {
             </Link>
           </article>
           <article>
-            <Link to="/asia/japan/toganji">
+            <Link to={getLinkUrl("togan-ji")}>
               <Card title="Togan-ji Temple">
                 <MainToganjiImage />
                 <div>
@@ -188,7 +189,7 @@ const Content = () => {
         <section>
           <JapanCity>Kawaguchiko</JapanCity>
           <article>
-            <Link to="/asia/japan/fuji">
+            <Link to={getLinkUrl("fuji")}>
               <Card title="Mont Fuji - Lac Kawaguchiko">
                 <MainFujiImage />
                 <div>
@@ -206,7 +207,7 @@ const Content = () => {
         <section>
           <JapanCity>Tokyo</JapanCity>
           <article>
-            <Link to="/asia/japan/ueno-park">
+            <Link to={getLinkUrl("ueno-park")}>
               <Card title="Parc d’Ueno – Rendez-vous autour des “SAKURA”">
                 <MainUenoParkImage />
                 <div>
@@ -221,7 +222,7 @@ const Content = () => {
           </article>
           <Highlight>ameya yokocho (rue, Ameyoko) ???</Highlight>
           <article>
-            <Link to="/asia/japan/sensoji">
+            <Link to={getLinkUrl("senso-ji")}>
               <Card title="Temple de Senso-Ji">
                 <MainSensojiImage />
                 <div>
@@ -235,7 +236,7 @@ const Content = () => {
             </Link>
           </article>
           <article>
-            <Link to="/asia/japan/hamarikyu-garden">
+            <Link to={getLinkUrl("hamarikyu-garden")}>
               <Card title="Jardin Hama Rikyu – Un havre de paix au milieu de la ville">
                 <MainHamarikyuGardenImage />
                 <div>

@@ -42,6 +42,7 @@ import { NagoyaRosebushImage } from "../../../../components/images/asia/japan/na
 import { NagoyaStatueImage } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaStatueImage"
 import { NagoyaCastle2Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaCastle2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
+import { getLinkUrl } from "../../../../utils/links"
 
 const IndexPage = () => {
   return (
@@ -58,7 +59,7 @@ const Content = () => {
       <Header />
       <Menu />
       <div className="center blog-container">
-        <JapanTitle title="Château de NAGOYA" categories={["asie", "japon", "nagoya"]} />
+        <JapanTitle title="Château de NAGOYA" categories={["asia", "japan", "nagoya"]} />
         <ImageAsLandscape>
           <MainNagoyaCastleImage />
         </ImageAsLandscape>
@@ -158,7 +159,7 @@ const Content = () => {
           <p>
             En entrant dans le parc, on a l’embarras du choix tellement c’est grand. De loin, on aperçoit le château ce
             qui nous amène par y aller en premier lieu. On peut d’ailleurs apercevoir une petite réplique{" "}
-            <JapanLink to="/asia/japan/himeji/castle">du château de Himeji</JapanLink>, ce qui nous rappelle déjà nos
+            <JapanLink to={getLinkUrl("himeji-castle")}>du château de Himeji</JapanLink>, ce qui nous rappelle déjà nos
             souvenirs du premier jour.
           </p>
           <TwoImagesSameSizeOrToGroup>
