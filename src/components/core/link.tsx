@@ -8,6 +8,7 @@ interface ExternalLinkProps {
   noIcon?: boolean
 }
 const style = css`
+  font-size: 0.9rem;
   svg {
     vertical-align: middle;
     font-size: 0.6rem;
@@ -15,11 +16,11 @@ const style = css`
 `
 export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & ExternalLinkProps> = ({
   children,
-  noIcon = false,
+  noIcon = true,
   ...rest
 }) => (
   <a {...rest} target="_blank" rel="noopener noreferrer" css={style}>
-    {children} {noIcon ? null : <FaExternalLinkAlt size={14} />}
+    {children} {noIcon ? null : <FaExternalLinkAlt />}
   </a>
 )
 
