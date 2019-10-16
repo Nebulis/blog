@@ -25,6 +25,7 @@ import { FushimiKomainu2Image } from "../../../../components/images/asia/japan/k
 import { FushimiKomainu1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu1Image"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { FushimiTorii3Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTorii3Image"
+import { JapanLine } from "../../../../components/core/japanLine"
 
 const IndexPage = () => {
   return (
@@ -67,8 +68,17 @@ const Content = () => {
             </small>
           </ul>
           <p>
-            Depuis la gare de Kyoto, prendre la Nara Line jusqu’à Inari Station (5mins - 2 arrêts). Attention tous les
-            trains ne s’y arrêtent pas{" "}
+            Depuis la gare de Kyoto, prendre la{" "}
+            <JapanLine
+              href="https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Fushimi%20Inari%20Taisha%2C%2068%20Fukakusa%20Yabunouchicho%2C%20Fushimi%20Ward%2C%20Kyoto%2C%20612-0882%2C%20Japan&travelmode=transit"
+              css={css`
+                background-color: #b67c2b;
+                color: #ffffff;
+              `}
+            >
+              Nara Line
+            </JapanLine>{" "}
+            jusqu’à Inari Station (5mins - 2 arrêts). Attention tous les trains ne s’y arrêtent pas{" "}
             <JapanExternalLink href="https://www.westjr.co.jp/global/en/timetable/">
               (Vérifier quel train prendre)
             </JapanExternalLink>
@@ -146,27 +156,11 @@ const Content = () => {
             Vous n’êtes pas obligé de faire la randonnée, l’endroit est déjà prestigieux et rien qu’en vous promenant
             près du temple, vous y découvrirez pleins de petits endroits.
           </p>
-          <GroupOfImages>
-            <TwoImagesSameSize>
-              <FushimiKomainu1Image />
-              <FushimiKomainu2Image />
-            </TwoImagesSameSize>
-            <ImageAsPortrait
-              css={css`
-                max-width: 800px;
-              `}
-            >
-              <FushimiTorii3Image />
-            </ImageAsPortrait>
-          </GroupOfImages>
-          <p>
-            Nous n’avons malheureusement pas pu prendre de photos sous les Torii car c’était noir de monde, nous vous
-            renvoyons vers{" "}
-            <JapanExternalLink href="https://travelswithnano.com/2016/05/18/fushimi-inari-taisha-kyoto/">
-              Travels With Nano
-            </JapanExternalLink>{" "}
-            (blog en anglais) qui a fait de superbes photos de cet endroit.
-          </p>
+          <TwoImagesSameSize>
+            <FushimiKomainu1Image />
+            <FushimiKomainu2Image />
+          </TwoImagesSameSize>
+          <p>Nous n’avons malheureusement pas pu prendre de photos sous les Torii car c’était noir de monde.</p>
           <p>
             Nous y retournerons certainement à une période moins touristique, et en essayant d’avoir un peu plus de
             chance sur la météo cette fois-ci. Nous sommes restés un peu sur notre faim.

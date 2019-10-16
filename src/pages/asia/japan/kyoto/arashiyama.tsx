@@ -60,13 +60,13 @@ const Content = () => {
             <li>Depuis Himeji environ 1h</li>
             <li>Depuis Nagoya environ 1h</li>
             <small>
-              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>.
+              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>
             </small>
           </ul>
           <p>
             Depuis la gare de Kyoto, prendre la{" "}
             <JapanLine
-              href="https://www.google.fr/maps/dir/Kyoto+Station,+Higashishiokoji+Kamadonocho,+Shimogyo+Ward,+Kyoto,+Japan/Saga-Arashiyama+Station,+Sagatenryuji+Kurumamichicho,+Uky%C5%8D-ku,+Kyoto,+Pr%C3%A9fecture+de+Kyoto,+Japon"
+              href="https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Saga-Arashiyama%20Station%2C%20Sagatenryuji%20Kurumamichicho%2C%20Ukyo%20Ward%2C%20Kyoto%2C%20616-8373%2C%20Japan&travelmode=transit"
               css={css`
                 background-color: #800080;
                 color: #ffffff;

@@ -43,6 +43,7 @@ import { NagoyaStatueImage } from "../../../../components/images/asia/japan/nago
 import { NagoyaCastle2Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaCastle2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { getLinkUrl } from "../../../../utils/links"
+import { JapanLine } from "../../../../components/core/japanLine"
 
 const IndexPage = () => {
   return (
@@ -80,9 +81,28 @@ const Content = () => {
             </small>
           </ul>
           <p>
-            Depuis la gare de Nagoya, prendre la Higashiyama Line jusqu’à Sakae (5 mins – 2 arrêts). Puis prendre la
-            Meijo Line jusqu’à Shiyakusho Station (3 mins – 2 arrêts). Prendre la sortie 7 puis continuez tout droit
-            (direction Nord) l’entrée du château est à 2 minutes à pied sur votre gauche.{" "}
+            Depuis la gare de Nagoya, prendre la{" "}
+            <JapanLine
+              href="https://www.google.com/maps/dir/?api=1&origin=Nagoya%20Station%2C%201%20Chome-1-4%20Meieki%2C%20Nakamura%20Ward%2C%20Nagoya%2C%20Aichi%2C%20Japan&destination=Shiyakusho%20Station%2C%20Japan&travelmode=transit"
+              css={css`
+                background-color: #f2f200;
+                color: #000000;
+              `}
+            >
+              Higashiyama Line
+            </JapanLine>{" "}
+            jusqu’à Sakae (5 mins – 2 arrêts). Puis prendre la{" "}
+            <JapanLine
+              href="https://www.google.com/maps/dir/?api=1&origin=Nagoya%20Station%2C%201%20Chome-1-4%20Meieki%2C%20Nakamura%20Ward%2C%20Nagoya%2C%20Aichi%2C%20Japan&destination=Shiyakusho%20Station%2C%20Japan&travelmode=transit"
+              css={css`
+                background-color: #800080;
+                color: #ffffff;
+              `}
+            >
+              Meijo Line
+            </JapanLine>{" "}
+            jusqu’à Shiyakusho Station (3 mins – 2 arrêts). Prendre la sortie 7 puis continuez tout droit (direction
+            Nord) l’entrée du château est à 2 minutes à pied sur votre gauche.{" "}
           </p>
         </How>
         <HowLong>Une demi-journée.</HowLong>
