@@ -79,7 +79,7 @@ const Content = () => {
           </ul>
           <p>
             Depuis la gare de Kyoto, prendre la Tokaido-Sanyo Line jusqu’à Yamashina Station (5 mins - 1er arrêt).
-            Prendre le bus 22a, de Yamashina Station à Daigojizen (21 mins - 14 arrêts). Il s'arrête pile en face de
+            Prendre le bus 22a, de Yamashina Station à Daigojizen (21 mins - 14 arrêts). Il s’arrête pile en face de
             Daigo-Ji.
           </p>
         </How>
@@ -96,7 +96,7 @@ const Content = () => {
         <HowMuch>1500 Yen pour l’ensemble de la visite.</HowMuch>
         <WhereToStay location="à Kyoto, près de Daigo-Ji">
           <p>
-            Daigo-ji est dans un coin reculé de Kyoto, il n’y a pas d'hôtels juste à côté mais de notre point de vue
+            Daigo-ji est dans un coin reculé de Kyoto, il n’y a pas d’hôtels juste à côté mais de notre point de vue
             pour la visite de Kyoto nous avons justement préféré être dans ce coin reculé, plus calme et quand même
             particulièrement bien desservi par les transports.{" "}
           </p>

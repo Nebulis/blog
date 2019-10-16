@@ -51,7 +51,7 @@ const Content = () => {
         <When>
           <p>Tous les jours 24h/24h.</p>
           <p>
-            Plutôt tôt le matin ou le soir pour éviter le monde. Nous y étions allés en fin de matinée, c'était noir de
+            Plutôt tôt le matin ou le soir pour éviter le monde. Nous y étions allés en fin de matinée, c’était noir de
             monde, impossible de faire des photos ou de se promener sans se faire bousculer, éviter les heures de pointe
             en haute saison du coup.
           </p>
@@ -68,7 +68,7 @@ const Content = () => {
           </ul>
           <p>
             Depuis la gare de Kyoto, prendre la Nara Line jusqu’à Inari Station (5mins - 2 arrêts). Attention tous les
-            trains ne s'y arrêtent pas{" "}
+            trains ne s’y arrêtent pas{" "}
             <JapanExternalLink href="https://www.westjr.co.jp/global/en/timetable/">
               (Vérifier quel train prendre)
             </JapanExternalLink>
