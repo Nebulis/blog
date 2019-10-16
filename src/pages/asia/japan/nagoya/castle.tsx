@@ -141,7 +141,7 @@ const Content = () => {
             </small>
           </p>
         </WhereToStay>
-        <WhereToHave>
+        <WhereToHave location="à Nagoya">
           <p>
             Après une bonne journée à marcher, on avait clairement envie de se refaire plaisir, et à deux pas de l’hôtel
             dans une petite rue nous avons trouvé le restaurant que nous cherchions, le même type qu’à Himeji où nous
