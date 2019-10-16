@@ -215,7 +215,7 @@ const Content = () => {
           <Conclusion>
             Le château de Nagoya fait malheureusement parti des nombreux châteaux qui ont été détruit ou endommagé au
             cours des années. Il semblerait que les travaux soient pour lui redonner de l’authenticité. Ils auraient
-            totalement détruit le donjon pour le reconstruire de manière plus traditionnelle, en l'occurrence ici en
+            totalement détruit le donjon pour le reconstruire de manière plus traditionnelle, en l’occurrence ici en
             bois. Un mal pour un bien du coup !
           </Conclusion>
           <Bonus>

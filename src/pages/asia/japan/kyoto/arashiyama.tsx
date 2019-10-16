@@ -64,8 +64,8 @@ const Content = () => {
           </ul>
           <p>
             Depuis la gare de Kyoto, prendre la San-In Line jusqu’à Saga-Arashiyama Station (17 mins – 7 arrêts).
-            Prendre la sortie sud de la gare, puis se diriger vers l&apos;ouest pendant environ 10 mins. On arrive sur
-            une rue où se trouvent plusieurs restaurants, il suffit de traverser et l’entrée se situe sur votre gauche
+            Prendre la sortie sud de la gare, puis se diriger vers l’ouest pendant environ 10 mins. On arrive sur une
+            rue où se trouvent plusieurs restaurants, il suffit de traverser et l’entrée se situe sur votre gauche
             (direction sud).
           </p>
         </How>
@@ -118,7 +118,7 @@ const Content = () => {
             les uns les autres, un moment unique.
           </p>
           <p>
-            En voyant le monde au début, on se dit qu'on va avoir du mal à profiter, et finalement l’instant est si
+            En voyant le monde au début, on se dit qu’on va avoir du mal à profiter, et finalement l’instant est si
             magique et nous n’avons jamais vu ça ailleurs qu’on en oublie presque les gens.
           </p>
           <TwoImagesSameSizeOrToGroup>
