@@ -125,7 +125,7 @@ const Content = () => {
             </small>
           </p>
         </WhereToStay>
-        <WhereToHave>
+        <WhereToHave location="à Himeji">
           <p>
             Nous n’y sommes resté qu’une matinée et une nuit mais le soir on est sorti pour chercher un petit resto
             sympa. On était un peu perdu à vrai dire et nous avons pris le premier restaurant ouvert que nous avons

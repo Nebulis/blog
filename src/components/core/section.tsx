@@ -111,11 +111,14 @@ export const WhatTimeOfYear: FunctionComponent = ({ children }) => (
   </>
 )
 
-export const WhereToHave: FunctionComponent = ({ children }) => (
+interface WhereToHaveProps {
+  location: string
+}
+export const WhereToHave: FunctionComponent<WhereToHaveProps> = ({ children, location }) => (
   <>
     <SectionTitle>
       <FaUtensils />
-      &nbsp;Où manger à Himeji ?
+      &nbsp;Où manger {location} ?
     </SectionTitle>
     <SectionContent>{children}</SectionContent>
   </>
