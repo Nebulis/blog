@@ -44,7 +44,7 @@ const Content = () => {
       <Header />
       <Menu />
       <div className="center blog-container">
-        <JapanTitle title="ARASHIYAMA – Forêt de bambous" categories={["asie", "japon", "kyoto"]} />
+        <JapanTitle title="ARASHIYAMA – Forêt de bambous" categories={["asia", "japan", "kyoto"]} />
         <MainArashiyamaImage />
         <JapanQuote>
           Le bambou serait capable de repousser les mauvais esprits, il représenterait la force et la prospérité.{" "}

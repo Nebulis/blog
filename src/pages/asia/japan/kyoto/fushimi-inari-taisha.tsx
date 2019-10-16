@@ -41,7 +41,7 @@ const Content = () => {
       <Header />
       <Menu />
       <div className="center blog-container">
-        <JapanTitle title="FUSHIMI INARI TAISHA" categories={["asie", "japon", "kyoto"]} />
+        <JapanTitle title="FUSHIMI INARI TAISHA" categories={["asia", "japan", "kyoto"]} />
         <MainFushimiImage />
         <JapanQuote>
           Le sanctuaire est surtout connu pour ses quelques milliers de Torii Vermillon qui crée un chemin dans une

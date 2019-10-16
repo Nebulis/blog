@@ -1,90 +1,7 @@
 import css from "@emotion/css"
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import { Link } from "gatsby"
-import * as path from "path"
-
-interface Continent {
-  id: string
-  label: string
-  countries: Country[]
-}
-interface Country {
-  id: string
-  label: string
-  cities: City[]
-}
-interface City {
-  id: string
-  label: string
-  highlights: Highlight[]
-}
-
-interface Highlight {
-  id: string
-  label: string
-}
-
-export const continents: Continent[] = [
-  {
-    id: "asia",
-    label: "Asie",
-    countries: [
-      // {
-      //   id: "malaysia",
-      //   label: "Malaisie",
-      //   cities: [],
-      // },
-      {
-        id: "japan",
-        label: "Japon",
-        cities: [
-          {
-            id: "kyoto",
-            label: "Kyoto",
-            highlights: [
-              {
-                id: "arashiyama",
-                label: "Arashiyama",
-              },
-              {
-                id: "daigoji",
-                label: "Daigoji",
-              },
-              {
-                id: "kinkakuji",
-                label: "Kinkakuji",
-              },
-              {
-                id: "fushimi-inari-taisha",
-                label: "Fushimi Inari Taisha",
-              },
-            ],
-          },
-          {
-            id: "himeji",
-            label: "Himeji",
-            highlights: [
-              {
-                id: "castle",
-                label: "Himeji Castle",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  // {
-  //   id: "europa",
-  //   label: "Europe",
-  //   countries: [],
-  // },
-  // {
-  //   id: "north-america",
-  //   label: "Amerique du Nord",
-  //   countries: [],
-  // },
-]
+import { continentLinks, getLinkLabel, getLinkUrl } from "../../utils/links"
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 
 export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
@@ -222,7 +139,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
       .where-to-go .dropdown-continent {
         border-right: none;
       }
-      .where-to-go .dropdown-continent li:not(:first-child) a {
+      .where-to-go .dropdown-continent li:not(:first-of-type) a {
         border-top: 1px solid white;
       }
 
@@ -266,35 +183,33 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
           <span className="white-arrow"> </span>
           <span className="black-arrow"> </span>
           <ul className="dropdown-continent" aria-label="submenu">
-            {continents.map(continent => (
+            {continentLinks.map(continent => (
               <li key={continent.id}>
-                <Link to={continent.id}>
-                  <span>{continent.label}</span>
+                <Link to={getLinkUrl(continent.id)}>
+                  <span>{getLinkLabel(continent.id)}</span>
                   <span>{continent.countries.length > 0 ? ">" : null}</span>
                 </Link>
                 {continent.countries.length > 0 ? (
                   <ul className="dropdown-country" aria-label="submenu">
                     {continent.countries.sort(sort).map(country => (
                       <li key={`${continent.id}_${country.id}`}>
-                        <Link to={path.resolve(continent.id, country.id)}>
-                          <span>{country.label}</span>
+                        <Link to={getLinkUrl(country.id)}>
+                          <span>{getLinkLabel(country.id)}</span>
                           <span>{country.cities.length > 0 ? ">" : null}</span>
                         </Link>
                         {country.cities.length > 0 ? (
                           <ul className="dropdown-city" aria-label="submenu">
                             {country.cities.sort(sort).map(city => (
                               <li key={`${continent.id}_${country.id}_${city.id}`}>
-                                <Link to={path.resolve(continent.id, country.id, city.id)}>
-                                  <span>{city.label}</span>
+                                <Link to={getLinkUrl(city.id)}>
+                                  <span>{getLinkLabel(city.id)}</span>
                                   <span>{city.highlights.length > 0 ? ">" : null}</span>
                                 </Link>
                                 {city.highlights.length > 0 ? (
                                   <ul className="dropdown-highlight" aria-label="submenu">
                                     {city.highlights.sort(sort).map(highlight => (
                                       <li key={`${continent.id}_${country.id}_${city.id}_${highlight.id}`}>
-                                        <Link to={path.resolve(continent.id, country.id, city.id, highlight.id)}>
-                                          {highlight.label}
-                                        </Link>
+                                        <Link to={getLinkUrl(highlight.id)}>{getLinkLabel(highlight.id)}</Link>
                                       </li>
                                     ))}
                                   </ul>

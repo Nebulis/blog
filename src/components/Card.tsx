@@ -19,7 +19,7 @@ export const Card: FunctionComponent<CardProps> = ({ children, title }) => {
         }
 
         .container {
-          &:first-child {
+          &:first-of-type {
             flex-basis: 60%;
           }
           .image {

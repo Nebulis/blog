@@ -58,7 +58,7 @@ const Content = () => {
       <Header />
       <Menu />
       <div className="center blog-container">
-        <JapanTitle title="DAIGO-JI" categories={["asie", "japon", "kyoto"]} />
+        <JapanTitle title="DAIGO-JI" categories={["asia", "japan", "kyoto"]} />
         <MainDaigojiImage />
         <JapanQuote>
           Daigo-ji est un ensemble de temples bouddhiste et de jardins, haut en couleur à chaque saison.{" "}

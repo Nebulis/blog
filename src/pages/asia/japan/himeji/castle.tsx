@@ -47,6 +47,7 @@ import { HimejiCastle2Image } from "../../../../components/images/asia/japan/him
 import { HimejiCastle4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
 import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
 import { Menu } from "../../../../components/layout/menu"
+import { getLinkUrl } from "../../../../utils/links"
 
 const IndexPage = () => {
   return (
@@ -63,7 +64,7 @@ const Content = () => {
       <Header />
       <Menu />
       <div className="center blog-container">
-        <JapanTitle title="Château de HIMEJI" categories={["asie", "japon", "himeji"]} />
+        <JapanTitle title="Château de HIMEJI" categories={["asia", "japan", "himeji"]} />
         <ImageAsLandscape>
           <MainHimejiCastleImage />
         </ImageAsLandscape>
@@ -248,7 +249,7 @@ const Content = () => {
             temps de trop s’attarder cela dit, la musique finit nous devons filer à la gare !{" "}
           </p>
           <p>
-            <JapanLink to="/asia/japan/kyoto">Direction KYOTO. </JapanLink>
+            <JapanLink to={getLinkUrl("tokyo")}>Direction KYOTO. </JapanLink>
           </p>
           <TwoImagesSameSize
             css={css`

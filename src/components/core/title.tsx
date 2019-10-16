@@ -2,46 +2,13 @@ import React, { FunctionComponent } from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
+import { getLinkUrl, getLinkLabel } from "../../utils/links"
 
 interface TitleProps {
   title: string
   categories: string[]
   className?: string
 }
-
-const allCategories = [
-  {
-    name: "asie",
-    title: "Asie",
-    link: "/asia",
-  },
-  {
-    name: "japon",
-    title: "Japon",
-    link: "/asia/japan",
-  },
-  {
-    name: "himeji",
-    title: "Himeji",
-    link: "/asia/japan/himeji",
-  },
-  {
-    name: "kyoto",
-    title: "Kyoto",
-    link: "/asia/japan/kyoto",
-  },
-  {
-    name: "nagoya",
-    title: "Nagoya",
-    link: "/asia/japan/nagoya",
-  },
-]
-
-const getCategory = (category: string) => {
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  return allCategories.find(c => c.name === category)!
-}
-
 export const Title: FunctionComponent<TitleProps> = ({ title, categories, className }) => {
   return (
     <>
@@ -62,7 +29,7 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
         {categories.map((c, index) => (
           <React.Fragment key={index}>
             {index > 0 ? " " : ""}
-            <Link to={getCategory(c).link}>{getCategory(c).title}</Link>
+            <Link to={getLinkUrl(c)}>{getLinkLabel(c)}</Link>
           </React.Fragment>
         ))}
       </div>

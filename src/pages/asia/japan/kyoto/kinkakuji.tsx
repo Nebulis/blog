@@ -56,7 +56,7 @@ const Content = () => {
       <Header />
       <Menu />
       <div className="center blog-container">
-        <JapanTitle title="Temple de KINKAKUJI" categories={["asie", "japon", "kyoto"]} />
+        <JapanTitle title="Temple de KINKAKUJI" categories={["asia", "japan", "kyoto"]} />
         <MainKinkakujiImage />
         <JapanQuote>
           Temple bouddhiste reconnu pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages
