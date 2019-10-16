@@ -119,9 +119,11 @@ const Content = () => {
             d’odeur dans la nôtre mais on ne peut pas vous dire dans toutes.
           </p>
           <p>
-            <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Kyoto%2C+Kyoto%2C+Japon">
-              Comparez et réservez votre hôtel à Kyoto.
-            </JapanExternalLink>
+            <small>
+              <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Kyoto%2C+Kyoto%2C+Japon">
+                Comparez et réservez votre hôtel à Kyoto.
+              </JapanExternalLink>
+            </small>
           </p>
         </WhereToStay>
         <Visit>

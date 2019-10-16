@@ -1,16 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Header } from "../../../../components/layout/header"
 import { Maintenance } from "../../../../components/layout/maintenance"
 import SEO from "../../../../components/layout/seo"
 import { JapanTitle } from "../../../../components/core/title"
 import { Menu } from "../../../../components/layout/menu"
-import { MainArashiyamaImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { MainFushimiImage } from "../../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { JapanQuote } from "../../../../components/core/quote"
 import { Where, When, How, HowLong, HowMuch, WhereToStay, Visit } from "../../../../components/core/section"
 import { JapanLink, JapanExternalLink } from "../../../../components/core/link"
-import { MainHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import {
   ImageAsLandscape,
   ImageAsPortrait,
@@ -20,11 +17,8 @@ import {
 } from "../../../../components/images/layout"
 import { FushimiTorii1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTorii1Image"
 import { css } from "@emotion/core"
-import { HimejiCastleWithCherry4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry4Image"
 import { FushimiTorii2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTorii2Image"
 import { FushimiTemple1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTemple1Image"
-import { HimejiCastle4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
-import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
 import { FushimiTemple2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTemple2Image"
 import { FushimiWaterImage } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiWaterImage"
 import { FushimiKomainu2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu2Image"
@@ -69,12 +63,12 @@ const Content = () => {
             <li>Depuis Himeji environ 1h</li>
             <li>Depuis Nagoya environ 1h</li>
             <small>
-              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>.
+              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>
             </small>
           </ul>
           <p>
             Depuis la gare de Kyoto, prendre la Nara Line jusqu’à Inari Station (5mins - 2 arrêts). Attention tous les
-            trains ne s'y arrêtent pas
+            trains ne s'y arrêtent pas{" "}
             <JapanExternalLink href="https://www.westjr.co.jp/global/en/timetable/">
               (Vérifier quel train prendre)
             </JapanExternalLink>
@@ -95,9 +89,11 @@ const Content = () => {
             n’importe quoi. Le logement au Japon un vrai investissement sur vos vacances.
           </p>
           <p>
-            <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Kyoto%2C+Kyoto%2C+Japon">
-              Trouver un hôtel vers Fushimi.
-            </JapanExternalLink>
+            <small>
+              <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Kyoto%2C+Kyoto%2C+Japon">
+                Trouver un hôtel vers Fushimi.
+              </JapanExternalLink>
+            </small>
           </p>
         </WhereToStay>
         <Visit>
@@ -165,7 +161,7 @@ const Content = () => {
           </GroupOfImages>
           <p>
             Nous n’avons malheureusement pas pu prendre de photos sous les Torii car c’était noir de monde, nous vous
-            renvoyons vers
+            renvoyons vers{" "}
             <JapanExternalLink href="https://travelswithnano.com/2016/05/18/fushimi-inari-taisha-kyoto/">
               Travels With Nano
             </JapanExternalLink>{" "}

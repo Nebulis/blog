@@ -12,10 +12,9 @@ import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { MainHimejiCastleImage } from "../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { Link } from "gatsby"
 import { Card } from "../../../components/Card"
-import { MainKinkakujiImage } from "../../../components/images/asia/japan/mainKinkakujiImage"
-import { MainFushimiInariTaishaImage } from "../../../components/images/asia/japan/mainFushimiInariTaishaImage"
-import { MainDaigojiImage } from "../../../components/images/asia/japan/mainDaigojiImage"
-import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/mainNagoyaCastleImage"
+import { MainKinkakujiImage } from "../../../components/images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
+import { MainDaigojiImage } from "../../../components/images/asia/japan/kyoto/daigoji/mainDaigojiImage"
+import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
 import { MainToganjiImage } from "../../../components/images/asia/japan/mainToganjiImage"
 import { MainFujiImage } from "../../../components/images/asia/japan/mainFujiImage"
 import { MainUenoParkImage } from "../../../components/images/asia/japan/mainUenoParkImage"
@@ -24,6 +23,7 @@ import { MainHamarikyuGardenImage } from "../../../components/images/asia/japan/
 import { JapanTitle } from "../../../components/core/title"
 import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { Menu } from "../../../components/layout/menu"
+import { MainFushimiImage } from "../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 
 const IndexPage = () => {
   return (
@@ -78,7 +78,7 @@ const Content = () => {
         <section>
           <JapanCity>Himeji</JapanCity>
           <article>
-            <Link to="/asia/japan/himeji-castle">
+            <Link to="/asia/japan/himeji/castle">
               <Card title="Château de Himeji – Magnifique château du Heron Blanc">
                 <MainHimejiCastleImage />
                 <div className="flex items-center">
@@ -93,7 +93,7 @@ const Content = () => {
           <JapanCity>Kyoto</JapanCity>
 
           <article>
-            <Link to="/asia/japan/arashiyama">
+            <Link to="/asia/japan/kyoto/arashiyama">
               <Card title="Arashiyama – Foret de Bambous géants">
                 <MainArashiyamaImage />
                 <div>
@@ -108,7 +108,7 @@ const Content = () => {
           </article>
 
           <article>
-            <Link to="/asia/japan/kinkakuji">
+            <Link to="/asia/japan/kyoto/kinkakuji">
               <Card title="Temple de Kinkakuji – Le pavillon d’or">
                 <MainKinkakujiImage />
                 <div>
@@ -123,9 +123,9 @@ const Content = () => {
           </article>
 
           <article>
-            <Link to="/asia/japan/fushimi-inari-taisha">
+            <Link to="/asia/japan/kyoto/fushimi-inari-taisha">
               <Card title="Fushimi Inari Taisha – Santuaire aux Torii">
-                <MainFushimiInariTaishaImage />
+                <MainFushimiImage />
                 <div>
                   Lorem Ipsum Lorem Ipsusdm Lore sadsadsam dsad asIpsum Lorem Ipsum Lorem Ipsa assum Lorem Ipsum Lorem
                   Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loredsadsadm Ipsum Lorem Ipsum Lsdsadsadrem Ipsum Lorem
@@ -138,7 +138,7 @@ const Content = () => {
           </article>
 
           <article>
-            <Link to="/asia/japan/daigoji">
+            <Link to="/asia/japan/kyoto/daigo-ji">
               <Card title="Temple Daigo-ji">
                 <MainDaigojiImage />
                 <div>
@@ -156,7 +156,7 @@ const Content = () => {
           <JapanCity>Nagoya</JapanCity>
 
           <article>
-            <Link to="/asia/japan/nagoya-castle">
+            <Link to="/asia/japan/nagoya/castle">
               <Card title="Château de Nagoya">
                 <MainNagoyaCastleImage />
                 <div>

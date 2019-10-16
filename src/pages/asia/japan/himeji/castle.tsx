@@ -117,9 +117,11 @@ const Content = () => {
             pour nous reposer après ce long trajet et avant la visite du château le lendemain matin.
           </p>
           <p>
-            <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Himeji%2C+Himeji%2C+Japon">
-              Comparez et réservez votre hôtel à Himeji.
-            </JapanExternalLink>
+            <small>
+              <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Himeji%2C+Himeji%2C+Japon">
+                Comparez et réservez votre hôtel à Himeji.
+              </JapanExternalLink>
+            </small>
           </p>
         </WhereToStay>
         <WhereToHave>
