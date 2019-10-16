@@ -7,22 +7,19 @@ import React, { AnchorHTMLAttributes, FunctionComponent } from "react"
 interface ExternalLinkProps {
   noIcon?: boolean
 }
+const style = css`
+  font-weight: bold;
+  svg {
+    vertical-align: middle;
+    font-size: 0.7rem;
+  }
+`
 export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & ExternalLinkProps> = ({
   children,
   noIcon = false,
   ...rest
 }) => (
-  <a
-    {...rest}
-    target="_blank"
-    rel="noopener noreferrer"
-    css={css`
-      font-weight: bold;
-      svg {
-        vertical-align: middle;
-      }
-    `}
-  >
+  <a {...rest} target="_blank" rel="noopener noreferrer" css={style}>
     {children} {noIcon ? null : <FaExternalLinkAlt size={14} />}
   </a>
 )
