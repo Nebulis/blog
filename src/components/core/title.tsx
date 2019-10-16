@@ -30,6 +30,11 @@ const allCategories = [
     title: "Kyoto",
     link: "/asia/japan/kyoto",
   },
+  {
+    name: "nagoya",
+    title: "Nagoya",
+    link: "/asia/japan/nagoya",
+  },
 ]
 
 const getCategory = (category: string) => {

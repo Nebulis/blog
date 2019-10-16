@@ -104,9 +104,11 @@ const Content = () => {
             comme partout au Japon, Google Map est clairement votre meilleur ami !
           </p>
           <p>
-            <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Kyoto%2C+Kyoto%2C+Japon">
-              Comparez et réservez votre hôtel à Kyoto.
-            </JapanExternalLink>
+            <small>
+              <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Kyoto%2C+Kyoto%2C+Japon">
+                Comparez et réservez votre hôtel à Kyoto.
+              </JapanExternalLink>
+            </small>
           </p>
         </WhereToStay>
         <Visit>

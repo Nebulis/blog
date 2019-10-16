@@ -8,9 +8,9 @@ import { JapanImageAsMedallion } from "../../../components/images/layout"
 import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
-import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/mainNagoyaCastleImage"
 import { MainUenoParkImage } from "../../../components/images/asia/japan/mainUenoParkImage"
 import { MainFujiImage } from "../../../components/images/asia/japan/mainFujiImage"
+import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
 
 const IndexPage = () => {
   return (
