@@ -6,14 +6,13 @@ import { JapanTitle } from "../../../../components/core/title"
 import { Menu } from "../../../../components/layout/menu"
 import { MainFushimiImage } from "../../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { JapanQuote } from "../../../../components/core/quote"
-import { Where, When, How, HowLong, HowMuch, WhereToStay, Visit } from "../../../../components/core/section"
-import { JapanLink, JapanExternalLink } from "../../../../components/core/link"
+import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import {
   ImageAsLandscape,
   ImageAsPortrait,
   TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
-  GroupOfImages,
 } from "../../../../components/images/layout"
 import { FushimiTorii1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTorii1Image"
 import { css } from "@emotion/core"
@@ -24,7 +23,6 @@ import { FushimiWaterImage } from "../../../../components/images/asia/japan/kyot
 import { FushimiKomainu2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu2Image"
 import { FushimiKomainu1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu1Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { FushimiTorii3Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTorii3Image"
 import { JapanLine } from "../../../../components/core/japanLine"
 
 const IndexPage = () => {
