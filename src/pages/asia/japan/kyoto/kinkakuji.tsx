@@ -40,6 +40,7 @@ import { KinkakujiWaterfall1Image } from "../../../../components/images/asia/jap
 import { KinkakujiLakeImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiLakeImage"
 import { KinkakujiStatueImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiStatueImage"
 import { Conclusion } from "../../../../components/core/conclusion"
+import { JapanLine } from "../../../../components/core/japanLine"
 
 const IndexPage = () => {
   return (
@@ -77,9 +78,19 @@ const Content = () => {
             </small>
           </ul>
           <p>
-            Depuis la gare de Kyoto, prendre la San-In Line jusqu’à Emmachi (9 mins - 4 arrêts). Prendre ensuite le bus
-            ligne 204 ou 205 depuis Kita Oji Bus Terminal vers Waratenjin-mae (9 mins - 6 arrêts). Marcher vers l’Ouest
-            pendant 2 minutes (en descendant du bus redescendre vers la dernière intersection puis tourner à droite).
+            Depuis la gare de Kyoto, prendre la{" "}
+            <JapanLine
+              href="https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Kinkaku-ji%2C%201%20Kinkakujicho%2C%20Kita%20Ward%2C%20Kyoto%2C%20603-8361%2C%20Japan&travelmode=transit"
+              css={css`
+                background-color: #800080;
+                color: #ffffff;
+              `}
+            >
+              San-In Line
+            </JapanLine>{" "}
+            jusqu’à Emmachi (9 mins - 4 arrêts). Prendre ensuite le bus ligne 204 ou 205 depuis Kita Oji Bus Terminal
+            vers Waratenjin-mae (9 mins - 6 arrêts). Marcher vers l’Ouest pendant 2 minutes (en descendant du bus
+            redescendre vers la dernière intersection puis tourner à droite).
           </p>
         </How>
         <HowLong>Environ 2h.</HowLong>

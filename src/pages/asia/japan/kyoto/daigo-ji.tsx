@@ -42,6 +42,7 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { DaigojiGarden5Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden5Image"
 import { DaigojiGarden4Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden4Image"
 import { DaigojiMonk2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiMonk2Image"
+import { JapanLine } from "../../../../components/core/japanLine"
 
 const IndexPage = () => {
   return (
@@ -78,9 +79,18 @@ const Content = () => {
             </small>
           </ul>
           <p>
-            Depuis la gare de Kyoto, prendre la Tokaido-Sanyo Line jusqu’à Yamashina Station (5 mins - 1er arrêt).
-            Prendre le bus 22a, de Yamashina Station à Daigojizen (21 mins - 14 arrêts). Il s’arrête pile en face de
-            Daigo-Ji.
+            Depuis la gare de Kyoto, prendre la{" "}
+            <JapanLine
+              href="https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Daigoji%2C%2022%20Daigohigashiojicho%2C%20Fushimi%20Ward%2C%20Kyoto%2C%20601-1325%2C%20Japan&travelmode=transit"
+              css={css`
+                background-color: #1073c0;
+                color: #ffffff;
+              `}
+            >
+              Tokaido-Sanyo Line
+            </JapanLine>{" "}
+            jusqu’à Yamashina Station (5 mins - 1er arrêt). Prendre le bus 22a, de Yamashina Station à Daigojizen (21
+            mins - 14 arrêts). Il s’arrête pile en face de Daigo-Ji.
           </p>
         </How>
         <HowLong>Entre 2h et 4h.</HowLong>
