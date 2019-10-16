@@ -248,9 +248,7 @@ const Content = () => {
             Nous avons également eu la chance de voir des enfants danser sur une musique typiquement japonaise, pas le
             temps de trop s’attarder cela dit, la musique finit nous devons filer à la gare !{" "}
           </p>
-          <p>
-            <JapanLink to={getLinkUrl("tokyo")}>Direction KYOTO. </JapanLink>
-          </p>
+          <p>Direction KYOTO.</p>
           <TwoImagesSameSize
             css={css`
               max-width: 700px;

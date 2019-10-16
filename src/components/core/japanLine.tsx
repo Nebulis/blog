@@ -5,7 +5,6 @@ import { ExternalLink } from "./link"
 let japanLineStyle = css`
   padding: 2px 5px;
   font-size: 0.9rem;
-  font-weight: bold;
 `
 interface JapanLineProps {
   href: string
