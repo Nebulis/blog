@@ -36,3 +36,11 @@ export const JapanQuote = styled(Quote)`
     color: #ffb7c5;
   }
 `
+
+export const SpringInJapanQuote = () => (
+  <JapanQuote>
+    Le Japon, ce pays incontournable à visiter en Asie. Un décor de rêve à chaque saison. Un mélange entre zenitude dans
+    les endroits reculés et animation et dynamisme dans les villes, autant dire que en fonction de ce que vous
+    recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre bonheur.
+  </JapanQuote>
+)

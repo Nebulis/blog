@@ -12,6 +12,10 @@ import { MainUenoParkImage } from "../../../components/images/asia/japan/mainUen
 import { MainFujiImage } from "../../../components/images/asia/japan/mainFujiImage"
 import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
 import { getLinkUrl } from "../../../utils/links"
+import { Divider } from "../../../components/core/divider"
+import { JapanCard } from "../../../components/Card"
+import { MainImage } from "../../../components/images/asia/japan/mainImage"
+import { SpringInJapanQuote } from "../../../components/core/quote"
 
 const IndexPage = () => {
   return (
@@ -28,9 +32,19 @@ const Content = () => {
       <Header />
       <Menu />
       <div className="center blog-container">
-        <h1 className="tc">Le Japon</h1>
+        <h1 className="tc ttu">Japon</h1>
+        <Divider />
+        <h2 className="tc ttu">Notre voyage au Japon</h2>
+        <Link to={getLinkUrl("spring-in-japan")}>
+          <JapanCard title="Le Japon au printemps">
+            <MainImage />
+            <SpringInJapanQuote />
+          </JapanCard>
+        </Link>
+        <Divider />
+        <h2 className="tc ttu">Explore le Japon</h2>
         <div
-          className="flex justify-center flex-wrap"
+          className="flex justify-center flex-wrap pt3 pb3 mb3"
           css={css`
             & > * {
               margin-left: 10px;
@@ -64,6 +78,7 @@ const Content = () => {
             </JapanImageAsMedallion>
           </Link>
         </div>
+        <Divider />
       </div>
     </>
   )
