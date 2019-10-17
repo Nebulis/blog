@@ -3,7 +3,6 @@ import { Header } from "../../../../components/layout/header"
 import { Maintenance } from "../../../../components/layout/maintenance"
 import SEO from "../../../../components/layout/seo"
 import css from "@emotion/css"
-import { JapanQuote } from "../../../../components/core/quote"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import { JapanTitle } from "../../../../components/core/title"
 import { MainArashiyamaImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
@@ -28,7 +27,7 @@ import { ArashiyamaShrine2Image } from "../../../../components/images/asia/japan
 import { ArashiyamaCherryImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaCherryImage"
 import { Menu } from "../../../../components/layout/menu"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { JapanLine } from "../../../../components/core/japanLine"
+import { ArashiyamaQuote, JapanLine } from "../../../../components/core/japan"
 
 const IndexPage = () => {
   return (
@@ -46,9 +45,7 @@ const Content = () => {
       <div className="center blog-container">
         <JapanTitle title="ARASHIYAMA – Forêt de bambous" categories={["asia", "japan", "kyoto"]} />
         <MainArashiyamaImage />
-        <JapanQuote>
-          Le bambou serait capable de repousser les mauvais esprits, il représenterait la force et la prospérité.{" "}
-        </JapanQuote>
+        <ArashiyamaQuote />
         <Where>Ukyo Ward, Kyoto</Where>
         <When>
           <p>Tous les jours 24h/24h.</p>

@@ -5,26 +5,26 @@ import SEO from "../../../../components/layout/seo"
 import { Menu } from "../../../../components/layout/menu"
 import { JapanTitle } from "../../../../components/core/title"
 import { MainDaigojiImage } from "../../../../components/images/asia/japan/kyoto/daigoji/mainDaigojiImage"
-import { JapanQuote } from "../../../../components/core/quote"
+import { DaigojiQuote, JapanLine } from "../../../../components/core/japan"
 import {
-  When,
-  Where,
   How,
   HowLong,
-  WhatTimeOfYear,
   HowMuch,
-  WhereToStay,
   Visit,
+  WhatTimeOfYear,
+  When,
+  Where,
+  WhereToStay,
 } from "../../../../components/core/section"
-import { JapanLink, JapanExternalLink } from "../../../../components/core/link"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import {
   GroupOfImages,
-  ImageAsPortrait,
-  TwoImagesSameSize,
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
+  ImageAsPortrait,
   TwoImagesLeftBigger,
+  TwoImagesSameSize,
 } from "../../../../components/images/layout"
 import { css } from "@emotion/core"
 import { DaigojiTempleImage } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiTempleImage"
@@ -42,7 +42,6 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { DaigojiGarden5Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden5Image"
 import { DaigojiGarden4Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden4Image"
 import { DaigojiMonk2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiMonk2Image"
-import { JapanLine } from "../../../../components/core/japanLine"
 
 const IndexPage = () => {
   return (
@@ -61,9 +60,7 @@ const Content = () => {
       <div className="center blog-container">
         <JapanTitle title="DAIGO-JI" categories={["asia", "japan", "kyoto"]} />
         <MainDaigojiImage />
-        <JapanQuote>
-          Daigo-ji est un ensemble de temples bouddhiste et de jardins, haut en couleur à chaque saison.{" "}
-        </JapanQuote>
+        <DaigojiQuote />
         <Where>22 Daigohigashiojicho, Fushimi Ward, Kyoto</Where>
         <When>
           <p>Tous les jours 9h - 16h.</p>

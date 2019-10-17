@@ -5,7 +5,6 @@ import SEO from "../../../../components/layout/seo"
 import { JapanTitle } from "../../../../components/core/title"
 import { Menu } from "../../../../components/layout/menu"
 import { MainFushimiImage } from "../../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
-import { JapanQuote } from "../../../../components/core/quote"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import {
@@ -23,7 +22,7 @@ import { FushimiWaterImage } from "../../../../components/images/asia/japan/kyot
 import { FushimiKomainu2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu2Image"
 import { FushimiKomainu1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu1Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { JapanLine } from "../../../../components/core/japanLine"
+import { FushimiInariTaishaQuote, JapanLine } from "../../../../components/core/japan"
 
 const IndexPage = () => {
   return (
@@ -42,10 +41,7 @@ const Content = () => {
       <div className="center blog-container">
         <JapanTitle title="FUSHIMI INARI TAISHA" categories={["asia", "japan", "kyoto"]} />
         <MainFushimiImage />
-        <JapanQuote>
-          Le sanctuaire est surtout connu pour ses quelques milliers de Torii Vermillon qui crée un chemin dans une
-          forêt remplie de pins.{" "}
-        </JapanQuote>
+        <FushimiInariTaishaQuote />
         <Where>68 Fukakusa Yabunouchicho, Fushimi Ward, Kyoto</Where>
         <When>
           <p>Tous les jours 24h/24h.</p>
