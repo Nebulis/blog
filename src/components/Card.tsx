@@ -14,7 +14,7 @@ export const Card: FunctionComponent<CardProps> = ({ children, title, className,
     throw new Error("I need 2 children")
   return (
     <div
-      className={`pa3 mt3 mb3 ${className}`}
+      className={`pa3 pt0 mt3 mb3 ${className}`}
       css={css`
         h4,
         h5 {
@@ -45,5 +45,8 @@ export const Card: FunctionComponent<CardProps> = ({ children, title, className,
 export const JapanCard = styled(Card)`
   .next {
     color: #b8566a;
+  }
+  blockquote {
+    margin-bottom: 0.5rem;
   }
 `

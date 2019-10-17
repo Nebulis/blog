@@ -8,14 +8,14 @@ import { JapanImageAsMedallion } from "../../../components/images/layout"
 import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
-import { MainUenoParkImage } from "../../../components/images/asia/japan/mainUenoParkImage"
 import { MainFujiImage } from "../../../components/images/asia/japan/mainFujiImage"
 import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
 import { getLinkUrl } from "../../../utils/links"
-import { Divider } from "../../../components/core/divider"
+import { JapanDivider } from "../../../components/core/divider"
 import { JapanCard } from "../../../components/Card"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { SpringInJapanQuote } from "../../../components/core/japan"
+import { MainTokyoImage } from "../../../components/images/asia/japan/mainTokyoImage"
 
 const IndexPage = () => {
   return (
@@ -33,13 +33,13 @@ const Content = () => {
       <Menu />
       <div className="center blog-container">
         <h1 className="tc ttu">Japon</h1>
-        <Divider />
+        <JapanDivider />
         <h2 className="tc ttu">Notre voyage au Japon</h2>
         <JapanCard title="Le Japon au printemps" to={getLinkUrl("spring-in-japan")}>
           <MainImage />
           <SpringInJapanQuote />
         </JapanCard>
-        <Divider />
+        <JapanDivider />
         <h2 className="tc ttu">Explore le Japon</h2>
         <div
           className="flex justify-center flex-wrap pt3 pb3 mb3"
@@ -72,11 +72,11 @@ const Content = () => {
           </Link>
           <Link to={getLinkUrl("tokyo")}>
             <JapanImageAsMedallion title="Tokyo">
-              <MainUenoParkImage />
+              <MainTokyoImage />
             </JapanImageAsMedallion>
           </Link>
         </div>
-        <Divider />
+        <JapanDivider />
       </div>
     </>
   )

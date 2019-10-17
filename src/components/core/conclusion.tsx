@@ -7,6 +7,7 @@ export const Conclusion: FunctionComponent = ({ children }) => (
     className="f5 tc fw6 pb4"
     css={css`
       line-height: 1.5em;
+      font-family: "Playfair Display", serif;
     `}
   >
     {children}

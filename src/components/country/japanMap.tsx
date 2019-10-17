@@ -2,7 +2,7 @@ import React, { FunctionComponent, SVGAttributes, useState } from "react"
 import { css, Global } from "@emotion/core"
 import Popover from "react-popover"
 type PopoverPlace = "above" | "right" | "below" | "left" | "row" | "column" | "start" | "end"
-export const Japan = () => {
+export const JapanMap = () => {
   const textStyle = css`
     fill: black;
     font-weight: bold;
