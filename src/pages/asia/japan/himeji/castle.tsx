@@ -4,7 +4,6 @@ import { Maintenance } from "../../../../components/layout/maintenance"
 import SEO from "../../../../components/layout/seo"
 import { css } from "@emotion/core"
 import { JapanTitle } from "../../../../components/core/title"
-import { JapanQuote } from "../../../../components/core/quote"
 import { MainHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import {
   Bonus,
@@ -47,6 +46,7 @@ import { HimejiCastle2Image } from "../../../../components/images/asia/japan/him
 import { HimejiCastle4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
 import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
 import { Menu } from "../../../../components/layout/menu"
+import { HimejiCastleQuote } from "../../../../components/core/japan"
 
 const IndexPage = () => {
   return (
@@ -67,10 +67,7 @@ const Content = () => {
         <ImageAsLandscape>
           <MainHimejiCastleImage />
         </ImageAsLandscape>
-        <JapanQuote>
-          Magnifique château, surnommé le château du Héron Blanc, il est considéré comme l’un des plus beaux châteaux du
-          Japon.{" "}
-        </JapanQuote>
+        <HimejiCastleQuote />
         <Where>68 Honmachi, Himeji</Where>
         <When>Tous les jours de 9h à 17h (16h pour les dernières entrées)</When>
         <How>

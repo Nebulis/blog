@@ -1,6 +1,5 @@
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import { css } from "@emotion/core"
-import styled from "@emotion/styled"
 
 export const Quote: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   return (
@@ -30,17 +29,3 @@ export const Quote: FunctionComponent<HTMLAttributes<any>> = ({ children, classN
     </div>
   )
 }
-
-export const JapanQuote = styled(Quote)`
-  blockquote::before {
-    color: #ffb7c5;
-  }
-`
-
-export const SpringInJapanQuote = () => (
-  <JapanQuote>
-    Le Japon, ce pays incontournable à visiter en Asie. Un décor de rêve à chaque saison. Un mélange entre zenitude dans
-    les endroits reculés et animation et dynamisme dans les villes, autant dire que en fonction de ce que vous
-    recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre bonheur.
-  </JapanQuote>
-)

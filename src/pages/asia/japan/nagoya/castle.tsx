@@ -5,28 +5,27 @@ import SEO from "../../../../components/layout/seo"
 import { JapanTitle } from "../../../../components/core/title"
 import { Menu } from "../../../../components/layout/menu"
 import {
+  GroupOfImages,
   ImageAsLandscape,
   ImageAsPortrait,
-  GroupOfImages,
-  TwoImagesSameSizeOrToGroup,
   TwoImagesLeftBigger,
   TwoImagesSameSize,
+  TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { MainNagoyaCastleImage } from "../../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
-import { JapanQuote } from "../../../../components/core/quote"
 import {
-  Where,
-  When,
+  Bonus,
   How,
   HowLong,
-  WhatTimeOfYear,
   HowMuch,
-  WhereToStay,
-  WhereToHave,
   Visit,
-  Bonus,
+  WhatTimeOfYear,
+  When,
+  Where,
+  WhereToHave,
+  WhereToStay,
 } from "../../../../components/core/section"
-import { JapanLink, JapanExternalLink } from "../../../../components/core/link"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import { NagoyaEntrance1Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaEntrance1Image"
 import { css } from "@emotion/core"
 import { NagoyaEntrance2Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaEntrance2Image"
@@ -43,7 +42,7 @@ import { NagoyaStatueImage } from "../../../../components/images/asia/japan/nago
 import { NagoyaCastle2Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaCastle2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { getLinkUrl } from "../../../../utils/links"
-import { JapanLine } from "../../../../components/core/japanLine"
+import { JapanLine, NagoyaCastleQuote } from "../../../../components/core/japan"
 
 const IndexPage = () => {
   return (
@@ -64,10 +63,7 @@ const Content = () => {
         <ImageAsLandscape>
           <MainNagoyaCastleImage />
         </ImageAsLandscape>
-        <JapanQuote>
-          Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya et ses vastes jardins
-          sont clairement un lieu à faire si vous y êtes de passage.{" "}
-        </JapanQuote>
+        <NagoyaCastleQuote />
         <Where>1-1 Honmaru, Naka Ward, Nagoya</Where>
         <When>Tous les jours de 9h à 16h30.</When>
         <How>

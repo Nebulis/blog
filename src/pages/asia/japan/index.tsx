@@ -15,7 +15,7 @@ import { getLinkUrl } from "../../../utils/links"
 import { Divider } from "../../../components/core/divider"
 import { JapanCard } from "../../../components/Card"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
-import { SpringInJapanQuote } from "../../../components/core/quote"
+import { SpringInJapanQuote } from "../../../components/core/japan"
 
 const IndexPage = () => {
   return (

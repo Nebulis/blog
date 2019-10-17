@@ -5,27 +5,26 @@ import SEO from "../../../../components/layout/seo"
 import { Menu } from "../../../../components/layout/menu"
 import { JapanTitle } from "../../../../components/core/title"
 import { MainKinkakujiImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
-import { JapanQuote } from "../../../../components/core/quote"
 import {
-  When,
-  Where,
   How,
   HowLong,
-  WhatTimeOfYear,
   HowMuch,
-  WhereToStay,
   Visit,
+  WhatTimeOfYear,
+  When,
+  Where,
+  WhereToStay,
 } from "../../../../components/core/section"
-import { JapanLink, JapanExternalLink } from "../../../../components/core/link"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import css from "@emotion/css"
 import {
-  ImageAsPortrait,
-  TwoImagesSameSizeOrToGroup,
   GroupOfImages,
+  ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
-  ImageAsLandscape,
+  ImageAsPortrait,
   TwoImagesSameSize,
+  TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { KinkakujiKanjiImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiKanjiImage"
 import { KinkakujiTempleWithLake1Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiTempleWithLake1Image"
@@ -40,7 +39,7 @@ import { KinkakujiWaterfall1Image } from "../../../../components/images/asia/jap
 import { KinkakujiLakeImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiLakeImage"
 import { KinkakujiStatueImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiStatueImage"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { JapanLine } from "../../../../components/core/japanLine"
+import { JapanLine, KinkakujiQuote } from "../../../../components/core/japan"
 
 const IndexPage = () => {
   return (
@@ -59,10 +58,7 @@ const Content = () => {
       <div className="center blog-container">
         <JapanTitle title="Temple de KINKAKUJI" categories={["asia", "japan", "kyoto"]} />
         <MainKinkakujiImage />
-        <JapanQuote>
-          Temple bouddhiste reconnu pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages
-          sont entièrement recouverts de feuilles d’or.{" "}
-        </JapanQuote>
+        <KinkakujiQuote />
         <Where>1 Kinkakujicho, Kita Ward, Kyoto</Where>
         <When>
           <p>Tous les jours de 9h à 17h.</p>

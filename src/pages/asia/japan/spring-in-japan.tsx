@@ -1,7 +1,15 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { Japan } from "../../../components/country/japan"
-import { SpringInJapanQuote } from "../../../components/core/quote"
+import {
+  ArashiyamaQuote,
+  DaigojiQuote,
+  FushimiInariTaishaQuote,
+  HimejiCastleQuote,
+  KinkakujiQuote,
+  NagoyaCastleQuote,
+  SpringInJapanQuote,
+} from "../../../components/core/japan"
 import { SectionContent, SectionTitle } from "../../../components/core/section"
 import { Highlight, JapanCity } from "../../../components/core/highlight"
 import { Header } from "../../../components/layout/header"
@@ -74,12 +82,9 @@ const Content = () => {
         <section>
           <JapanCity>Himeji</JapanCity>
           <article>
-            <JapanCard title="Château de Himeji – Magnifique château du Heron Blanc" to={getLinkUrl("japan")}>
+            <JapanCard title="Château de Himeji – Magnifique château du Heron Blanc" to={getLinkUrl("himeji-castle")}>
               <MainHimejiCastleImage />
-              <div className="flex items-center">
-                Construit au XVIIe siècle, le château de Himeji est l’un des rares châteaux du Japon à ne pas avoir été
-                détruit ou endommagé lors de la guerre ou par des catastrophes naturelles.
-              </div>
+              <HimejiCastleQuote />
             </JapanCard>
           </article>
         </section>
@@ -89,52 +94,28 @@ const Content = () => {
           <article>
             <JapanCard title="Arashiyama – Foret de Bambous géants" to={getLinkUrl("arashiyama")}>
               <MainArashiyamaImage />
-              <div>
-                Lorem Ipsum Lorem Ipsusdm Lore sadsadsam dsad asIpsum Lorem Ipsum Lorem Ipsa assum Lorem Ipsum Lorem
-                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loredsadsadm Ipsum Lorem Ipsum Lsdsadsadrem Ipsum Lorem Ipsum
-                Loresadsadsam Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loremsdsad sad Ipsum Lorem Ipsum Lorem Ipsum
-                Lorem Ipsum Loresadsadsa dm Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum L
-                sdasdorem Ipsum{" "}
-              </div>
+              <ArashiyamaQuote />
             </JapanCard>
           </article>
 
           <article>
             <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to={getLinkUrl("kinkakuji")}>
               <MainKinkakujiImage />
-              <div>
-                Lorem Ipsum Lorem Ipsusdm Lore sadsadsam dsad asIpsum Lorem Ipsum Lorem Ipsa assum Lorem Ipsum Lorem
-                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loredsadsadm Ipsum Lorem Ipsum Lsdsadsadrem Ipsum Lorem Ipsum
-                Loresadsadsam Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loremsdsad sad Ipsum Lorem Ipsum Lorem Ipsum
-                Lorem Ipsum Loresadsadsa dm Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum L
-                sdasdorem Ipsum{" "}
-              </div>
+              <KinkakujiQuote />
             </JapanCard>
           </article>
 
           <article>
             <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to={getLinkUrl("fushimi-inari-taisha")}>
               <MainFushimiImage />
-              <div>
-                Lorem Ipsum Lorem Ipsusdm Lore sadsadsam dsad asIpsum Lorem Ipsum Lorem Ipsa assum Lorem Ipsum Lorem
-                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loredsadsadm Ipsum Lorem Ipsum Lsdsadsadrem Ipsum Lorem Ipsum
-                Loresadsadsam Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loremsdsad sad Ipsum Lorem Ipsum Lorem Ipsum
-                Lorem Ipsum Loresadsadsa dm Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum L
-                sdasdorem Ipsum{" "}
-              </div>
+              <FushimiInariTaishaQuote />
             </JapanCard>
           </article>
 
           <article>
             <JapanCard title="Temple Daigo-ji" to={getLinkUrl("daigo-ji")}>
               <MainDaigojiImage />
-              <div>
-                Lorem Ipsum Lorem Ipsusdm Lore sadsadsam dsad asIpsum Lorem Ipsum Lorem Ipsa assum Lorem Ipsum Lorem
-                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loredsadsadm Ipsum Lorem Ipsum Lsdsadsadrem Ipsum Lorem Ipsum
-                Loresadsadsam Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loremsdsad sad Ipsum Lorem Ipsum Lorem Ipsum
-                Lorem Ipsum Loresadsadsa dm Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum L
-                sdasdorem Ipsum{" "}
-              </div>
+              <DaigojiQuote />
             </JapanCard>
           </article>
         </section>
@@ -144,13 +125,7 @@ const Content = () => {
           <article>
             <JapanCard title="Château de Nagoya" to={getLinkUrl("nagoya-castle")}>
               <MainNagoyaCastleImage />
-              <div>
-                Lorem Ipsum Lorem Ipsusdm Lore sadsadsam dsad asIpsum Lorem Ipsum Lorem Ipsa assum Lorem Ipsum Lorem
-                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loredsadsadm Ipsum Lorem Ipsum Lsdsadsadrem Ipsum Lorem Ipsum
-                Loresadsadsam Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Loremsdsad sad Ipsum Lorem Ipsum Lorem Ipsum
-                Lorem Ipsum Loresadsadsa dm Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum L
-                sdasdorem Ipsum{" "}
-              </div>
+              <NagoyaCastleQuote />
             </JapanCard>
           </article>
           <article>
