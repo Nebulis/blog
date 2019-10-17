@@ -26,8 +26,8 @@ export const JapanQuote = styled(Quote)`
 `
 export const SpringInJapanQuote = () => (
   <JapanQuote>
-    Le Japon, ce pays incontournable à visiter en Asie. Un décor de rêve à chaque saison. Un mélange entre zenitude dans
-    les endroits reculés et animation et dynamisme dans les villes, autant dire que en fonction de ce que vous
+    Le Japon, ce pays incontournable à visiter en Asie. Un nouveau décor à chaque saison. Un mélange entre zénitude dans
+    les endroits reculés et animation et dynamisme dans les villes, autant dire qu’en fonction de ce que vous
     recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre bonheur.
   </JapanQuote>
 )
@@ -55,7 +55,7 @@ export const KinkakujiQuote = () => (
 export const FushimiInariTaishaQuote = () => (
   <JapanQuote>
     Le sanctuaire est surtout connu pour ses quelques milliers de Torii Vermillon qui crée un chemin dans une forêt
-    remplie de pins.{" "}
+    remplie de pins.
   </JapanQuote>
 )
 
@@ -68,6 +68,11 @@ export const DaigojiQuote = () => (
 export const NagoyaCastleQuote = () => (
   <JapanQuote>
     Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya et ses vastes jardins sont
-    clairement un lieu à faire si vous y êtes de passage.{" "}
+    clairement un lieu à faire si vous y êtes de passage.
   </JapanQuote>
 )
+
+export const ToganjiQuote = () => <JapanQuote>Toganji</JapanQuote>
+export const TokyoQuote = () => <JapanQuote>Tokyo</JapanQuote>
+export const FujiQuote = () => <JapanQuote>Fuji</JapanQuote>
+export const HamarikyuGardenQuote = () => <JapanQuote>HamarikyuGarden</JapanQuote>

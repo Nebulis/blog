@@ -46,7 +46,10 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
           type: "font/ttf",
           crossOrigin: "anonymous",
         },
-        { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css?family=Playfair+Display:400i&display=swap",
+        },
         { rel: "stylesheet", href: "https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" },
       ]}
       title={title}

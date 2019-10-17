@@ -15,7 +15,7 @@ import {
 } from "react-icons/all"
 
 export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
-  <h4 className={`mb0 flex ${className}`}>{children}</h4>
+  <h4 className={`mb1 flex ${className}`}>{children}</h4>
 )
 export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   const size = React.Children.count(children)
@@ -38,11 +38,14 @@ export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ childre
   )
 }
 
-export const Where: FunctionComponent = ({ children }) => (
+interface WhereProps {
+  title?: string
+}
+export const Where: FunctionComponent<WhereProps> = ({ children, title = "Où ?" }) => (
   <>
     <SectionTitle>
       <FaMapMarkedAlt />
-      &nbsp;Où ?
+      &nbsp;{title}
     </SectionTitle>
     <SectionContent>{children}</SectionContent>
   </>
@@ -68,21 +71,27 @@ export const How: FunctionComponent = ({ children }) => (
   </>
 )
 
-export const HowLong: FunctionComponent = ({ children }) => (
+interface HowLongProps {
+  title?: string
+}
+export const HowLong: FunctionComponent<HowLongProps> = ({ children, title = "Combien de temps ?" }) => (
   <>
     <SectionTitle>
       <FaClock />
-      &nbsp;Combien de temps ?
+      &nbsp;{title}
     </SectionTitle>
     <SectionContent>{children}</SectionContent>
   </>
 )
 
-export const HowMuch: FunctionComponent = ({ children }) => (
+interface HowMuchProps {
+  title?: string
+}
+export const HowMuch: FunctionComponent<HowMuchProps> = ({ children, title = "Prix ?" }) => (
   <>
     <SectionTitle>
       <FaYenSign />
-      &nbsp;Prix ?
+      &nbsp;{title}
     </SectionTitle>
     <SectionContent>{children}</SectionContent>
   </>
@@ -100,12 +109,14 @@ export const WhereToStay: FunctionComponent<WhereToStayProps> = ({ children, loc
     <SectionContent>{children}</SectionContent>
   </>
 )
-
-export const WhatTimeOfYear: FunctionComponent = ({ children }) => (
+interface WhatTimeOfYearProps {
+  title?: string
+}
+export const WhatTimeOfYear: FunctionComponent<WhatTimeOfYearProps> = ({ children, title = "A quelle période ?" }) => (
   <>
     <SectionTitle>
       <FaCloudSun />
-      &nbsp;A quelle période ?
+      &nbsp;{title}
     </SectionTitle>
     <SectionContent>{children}</SectionContent>
   </>
