@@ -16,6 +16,7 @@ interface City {
   id: string
   label: string
   url?: string
+  hideInMenu?: boolean
   highlights: Highlight[]
 }
 
@@ -34,6 +35,12 @@ export const continentLinks: Continent[] = [
         id: "japan",
         label: "Japon",
         cities: [
+          {
+            id: "spring-in-japan",
+            label: "Le japon au printemps",
+            hideInMenu: true,
+            highlights: [],
+          },
           {
             id: "kyoto",
             label: "Kyoto",
@@ -94,6 +101,14 @@ export const continentLinks: Continent[] = [
               {
                 id: "ueno-park",
                 label: "Parc Ueno",
+              },
+              {
+                id: "senso-ji",
+                label: "Senso-ji",
+              },
+              {
+                id: "hamarikyu-garden",
+                label: "Hamarikyu Garden",
               },
             ],
           },

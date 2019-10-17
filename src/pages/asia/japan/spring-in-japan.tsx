@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { Japan } from "../../../components/country/japan"
-import { JapanQuote } from "../../../components/core/quote"
+import { SpringInJapanQuote } from "../../../components/core/quote"
 import { SectionContent, SectionTitle } from "../../../components/core/section"
 import { Highlight, JapanCity } from "../../../components/core/highlight"
 import { Header } from "../../../components/layout/header"
@@ -43,12 +43,7 @@ const Content = () => {
       <div className="center blog-container">
         <JapanTitle title="Le Japon au printemps" categories={["asia", "japan"]} />
         <MainImage />
-        <JapanQuote>
-          Le Japon, ce pays incontournable à visiter en Asie. Un décor de rêve à chaque saison. Un mélange entre
-          zenitude dans les endroits reculés et animation et dynamisme dans les villes, autant dire que en fonction de
-          ce que vous recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre
-          bonheur.
-        </JapanQuote>
+        <SpringInJapanQuote />
         <SectionTitle>Pourquoi au printemps ?</SectionTitle>
         <SectionContent>
           Contrairement au pays où la farniente et les plages sont de mises, pour le Japon il n’y a pas de meilleure

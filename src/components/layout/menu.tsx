@@ -199,23 +199,26 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
                         </Link>
                         {country.cities.length > 0 ? (
                           <ul className="dropdown-city" aria-label="submenu">
-                            {country.cities.sort(sort).map(city => (
-                              <li key={`${continent.id}_${country.id}_${city.id}`}>
-                                <Link to={getLinkUrl(city.id)}>
-                                  <span>{getLinkLabel(city.id)}</span>
-                                  <span>{city.highlights.length > 0 ? ">" : null}</span>
-                                </Link>
-                                {city.highlights.length > 0 ? (
-                                  <ul className="dropdown-highlight" aria-label="submenu">
-                                    {city.highlights.sort(sort).map(highlight => (
-                                      <li key={`${continent.id}_${country.id}_${city.id}_${highlight.id}`}>
-                                        <Link to={getLinkUrl(highlight.id)}>{getLinkLabel(highlight.id)}</Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                ) : null}
-                              </li>
-                            ))}
+                            {country.cities
+                              .filter(city => !city.hideInMenu)
+                              .sort(sort)
+                              .map(city => (
+                                <li key={`${continent.id}_${country.id}_${city.id}`}>
+                                  <Link to={getLinkUrl(city.id)}>
+                                    <span>{getLinkLabel(city.id)}</span>
+                                    <span>{city.highlights.length > 0 ? ">" : null}</span>
+                                  </Link>
+                                  {city.highlights.length > 0 ? (
+                                    <ul className="dropdown-highlight" aria-label="submenu">
+                                      {city.highlights.sort(sort).map(highlight => (
+                                        <li key={`${continent.id}_${country.id}_${city.id}_${highlight.id}`}>
+                                          <Link to={getLinkUrl(highlight.id)}>{getLinkLabel(highlight.id)}</Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  ) : null}
+                                </li>
+                              ))}
                           </ul>
                         ) : null}
                       </li>

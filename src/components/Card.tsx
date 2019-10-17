@@ -1,56 +1,45 @@
 import React, { FunctionComponent } from "react"
 import { css } from "@emotion/core"
+import styled from "@emotion/styled"
 
 interface CardProps {
   title?: string
+  className?: string
 }
 
-export const Card: FunctionComponent<CardProps> = ({ children, title }) => {
+export const Card: FunctionComponent<CardProps> = ({ children, title, className }) => {
   if (!children || !Array.isArray(children) || children.length < 2 || !React.isValidElement(children[1]))
     throw new Error("I need 2 children")
   return (
     <div
-      className="pa3 mt3 mb3"
+      className={`pa3 mt3 mb3 ${className}`}
       css={css`
-        border: 2px solid lightgrey;
-        border-radius: 5px;
-        &:hover {
-          border: 2px solid #ffb7c5;
+        h4,
+        h5 {
+          margin-bottom: 0;
         }
 
-        .container {
-          &:first-of-type {
-            flex-basis: 60%;
-          }
-          .image {
-            flex-basis: 60%;
-          }
-          .text {
-            flex-basis: 40%;
-            padding-left: 1rem;
-          }
-
-          @media (max-width: 768px) {
-            flex-direction: column;
-            .text {
-              padding-left: 0;
-              padding-top: 1rem;
-            }
-          }
+        h4 {
+          font-family: "Playfair Display", serif;
         }
-
         .gatsby-image-wrapper {
           margin-bottom: 0px;
         }
+        .next {
+          text-decoration: underline;
+        }
       `}
     >
-      <div>
-        <h4 className="normal tc">{title}</h4>
-      </div>
-      <div className="container flex align-center">
-        <div className="image">{children[0]}</div>
-        {React.cloneElement(children[1], { className: `${children[1].props.className || ""} text` })}
-      </div>
+      <h4 className="normal tc i b">{title}</h4>
+      <div className="image mb3">{children[0]}</div>
+      {React.cloneElement(children[1], { className: `${children[1].props.className || ""} text` })}
+      <h5 className="normal tc ttu next">Lire La suite</h5>
     </div>
   )
 }
+
+export const JapanCard = styled(Card)`
+  .next {
+    color: #b8566a;
+  }
+`
