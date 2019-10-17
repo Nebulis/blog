@@ -35,12 +35,10 @@ const Content = () => {
         <h1 className="tc ttu">Japon</h1>
         <Divider />
         <h2 className="tc ttu">Notre voyage au Japon</h2>
-        <Link to={getLinkUrl("spring-in-japan")}>
-          <JapanCard title="Le Japon au printemps">
-            <MainImage />
-            <SpringInJapanQuote />
-          </JapanCard>
-        </Link>
+        <JapanCard title="Le Japon au printemps" to={getLinkUrl("spring-in-japan")}>
+          <MainImage />
+          <SpringInJapanQuote />
+        </JapanCard>
         <Divider />
         <h2 className="tc ttu">Explore le Japon</h2>
         <div
