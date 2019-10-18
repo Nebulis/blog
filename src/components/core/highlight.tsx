@@ -3,6 +3,7 @@ import { FunctionComponent, HTMLAttributes } from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { japanPrimaryColor } from "./japan"
+import cherryBlossom from "../../images/asia/japan/cherry-blossom.png"
 
 const style = css`
   font-family: "Playfair Display", serif;
@@ -12,9 +13,14 @@ export const City: FunctionComponent<HTMLAttributes<any>> = ({ children, classNa
     {children}
   </h3>
 )
-export const JapanCity = styled(City)`
+const japanCityStyle = css`
   color: ${japanPrimaryColor};
 `
+export const JapanCity: FunctionComponent = ({ children }) => (
+  <City css={japanCityStyle}>
+    <img src={cherryBlossom} alt="cherry blossom" /> {children} <img src={cherryBlossom} alt="cherry blossom" />
+  </City>
+)
 
 export const Highlight: FunctionComponent = styled(City)`
   color: black;

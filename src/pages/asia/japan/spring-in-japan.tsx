@@ -37,7 +37,6 @@ import { MainTokyoImage } from "../../../components/images/asia/japan/mainTokyoI
 import { MainToganjiImage } from "../../../components/images/asia/japan/mainToganjiImage"
 import { MainHamarikyuGardenImage } from "../../../components/images/asia/japan/mainHamarikyuGardenImage"
 import { JapanDivider } from "../../../components/core/divider"
-import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 
 const IndexPage = () => {
   return (
@@ -109,9 +108,7 @@ const Content = () => {
         </div>
         <JapanDivider />
         <section>
-          <JapanCity>
-            <img src={cherryBlossom} alt="Logo" /> Jour 1 - Himeji <img src={cherryBlossom} alt="Logo" />
-          </JapanCity>
+          <JapanCity>Jour 1 - Himeji</JapanCity>
           <JapanDivider />
           <SectionContent>
             <p>
@@ -133,9 +130,7 @@ const Content = () => {
         </section>
         <JapanDivider />
         <section>
-          <JapanCity>
-            <img src={cherryBlossom} alt="Logo" /> Jour 2 & 3 - Kyoto <img src={cherryBlossom} alt="Logo" />
-          </JapanCity>
+          <JapanCity>Jour 2 & 3 - Kyoto</JapanCity>
           <JapanDivider />
           <SectionContent>
             <p>Départ pour Kyoto pour deux journées bien chargées, enfin dans notre planning en tout cas. </p>
@@ -208,9 +203,7 @@ const Content = () => {
         </section>
         <JapanDivider />
         <section>
-          <JapanCity>
-            <img src={cherryBlossom} alt="Logo" /> Jour 4 - Nagoya <img src={cherryBlossom} alt="Logo" />
-          </JapanCity>
+          <JapanCity>Jour 4 - Nagoya</JapanCity>
           <JapanDivider />
 
           <SectionContent>
@@ -253,9 +246,7 @@ const Content = () => {
         </section>
         <JapanDivider />
         <section>
-          <JapanCity>
-            <img src={cherryBlossom} alt="Logo" /> Jour 5 - Tokyo <img src={cherryBlossom} alt="Logo" />
-          </JapanCity>
+          <JapanCity>Jour 5 - Tokyo</JapanCity>
           <JapanDivider />
           <SectionContent>
             <p>
@@ -273,9 +264,7 @@ const Content = () => {
         </section>
         <JapanDivider />
         <section>
-          <JapanCity>
-            <img src={cherryBlossom} alt="Logo" /> Jour 6 - Kawaguchiko <img src={cherryBlossom} alt="Logo" />
-          </JapanCity>
+          <JapanCity>Jour 6 - Mt. Fuji</JapanCity>
           <JapanDivider />
           <SectionContent>
             <p>
@@ -293,9 +282,7 @@ const Content = () => {
         </section>
         <JapanDivider />
         <section>
-          <JapanCity>
-            <img src={cherryBlossom} alt="Logo" /> Jour 7 - Tokyo <img src={cherryBlossom} alt="Logo" />
-          </JapanCity>
+          <JapanCity>Jour 7 - Tokyo</JapanCity>
           <JapanDivider />
           <SectionContent>
             <p>
