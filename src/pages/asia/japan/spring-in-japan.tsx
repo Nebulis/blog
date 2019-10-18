@@ -37,6 +37,7 @@ import { MainTokyoImage } from "../../../components/images/asia/japan/mainTokyoI
 import { MainToganjiImage } from "../../../components/images/asia/japan/mainToganjiImage"
 import { MainHamarikyuGardenImage } from "../../../components/images/asia/japan/mainHamarikyuGardenImage"
 import { JapanDivider } from "../../../components/core/divider"
+import { JapanExternalLink } from "../../../components/core/link"
 
 const IndexPage = () => {
   return (
@@ -299,7 +300,27 @@ const Content = () => {
           </article>
         </section>
         <JapanDivider />
-        <HowMuch title="Et le prix dans tout ça ?">TODO</HowMuch>
+        <HowMuch title="Et le prix dans tout ça ?">
+          <p>
+            C’est toujours difficile de parler du coût d’un voyage, on ne dépense forcément pas tous de la même manière
+            et on ne privilégie pas tous la même chose. Cela dit pour vous donner un ordre d’idée on a quand même des
+            prix assez fixes pour certaines catégories.
+          </p>
+          <p>Comptez environ 250€ par personne pour le JR-Pass pour une semaine (Réservez-le en ligne).</p>
+          <p>Pour les logements comptez environ 100€ la nuit.</p>
+          <p>
+            Le prix de la nourriture peut varier énormément en fonction des lieux et de la spécialitée, la viande est
+            généralement assez cher. Vous trouverez de tout, à tous les prix. On utilise de temps en temps Google pour
+            regarder les commentaires et se faire une idée, mais on juge souvent au feeling, pour de bonnes ou de
+            mauvaises surprises.
+          </p>
+          <p>Les activités payantes ne sont généralement pas très cher.</p>
+          <p>
+            Pour l’avion, tout dépend d’où vous venez. Nous réservons le plus souvent nos billets sur{" "}
+            <JapanExternalLink href="https://expedia.fr">le site expedia</JapanExternalLink>.
+          </p>
+        </HowMuch>
+        <JapanDivider />
         <Conclusion>
           Le Japon est un pays riche en découverte. Que vous aimiez la nature ou la ville, le côté culturel ou bien
           l’excentricité. Foncez, vous ne le regretterez pas !

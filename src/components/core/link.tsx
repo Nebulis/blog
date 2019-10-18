@@ -21,7 +21,13 @@ export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & Externa
   ...rest
 }) => (
   <a {...rest} target="_blank" rel="noopener noreferrer" css={style}>
-    {children} {noIcon ? null : <FaExternalLinkAlt />}
+    {children}
+    {noIcon ? null : (
+      <>
+        {" "}
+        <FaExternalLinkAlt />
+      </>
+    )}
   </a>
 )
 
