@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { FaExternalLinkAlt } from "react-icons/all"
 import { css } from "@emotion/core"
 import React, { AnchorHTMLAttributes, FunctionComponent } from "react"
+import { japanPrimaryColor } from "./japan"
 
 interface ExternalLinkProps {
   noIcon?: boolean
@@ -25,14 +26,14 @@ export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & Externa
 )
 
 export const JapanLink = styled(Link)`
-  color: #b8566a;
+  color: ${japanPrimaryColor};
   &:visited {
-    color: #b8566a;
+    color: ${japanPrimaryColor};
   }
 `
 export const JapanExternalLink = styled(ExternalLink)`
-  color: #b8566a;
+  color: ${japanPrimaryColor};
   &:visited {
-    color: #b8566a;
+    color: ${japanPrimaryColor};
   }
 `

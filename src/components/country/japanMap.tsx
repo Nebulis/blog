@@ -1,29 +1,24 @@
-import React, { FunctionComponent, SVGAttributes, useState } from "react"
-import { css, Global } from "@emotion/core"
-import Popover from "react-popover"
+import React, { FunctionComponent, SVGAttributes } from "react"
+import { css } from "@emotion/core"
+import { navigate } from "gatsby"
+import { getLinkUrl } from "../../utils/links"
+import { japanPrimaryColor } from "../core/japan"
+
 type PopoverPlace = "above" | "right" | "below" | "left" | "row" | "column" | "start" | "end"
 export const JapanMap = () => {
   const textStyle = css`
     fill: black;
     font-weight: bold;
     cursor: pointer;
+    &:hover {
+      fill: ${japanPrimaryColor};
+    }
+    rect {
+      fill: transparent;
+    }
   `
   return (
     <>
-      <Global
-        styles={css`
-          .Popover-body {
-            display: -ms-inline-flexbox;
-            display: inline-flex;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            padding: 2rem 4rem;
-            background: hsl(0, 0%, 27%);
-            color: white;
-            border-radius: 0.3rem;
-          }
-        `}
-      />
       <svg width="874" height="750" style={{ fill: "#d4edf5", strokeWidth: "0.3", stroke: "white" }}>
         <g transform="scale(2.5) translate(-80, -100)">
           <path
@@ -263,72 +258,59 @@ export const JapanMap = () => {
           />
         </g>
 
-        <JapanCity place="above">
-          <text x="568" y="365" css={textStyle}>
+        <g css={textStyle} onClick={() => navigate(getLinkUrl("tokyo"))}>
+          <rect width="50" height="50" x="568" y="350" />
+          <text x="568" y="365">
             Tokyo
           </text>
           <g transform="translate(580 370) scale(0.4)">
             <Train />
           </g>
-        </JapanCity>
-        <JapanCity place="below">
-          <text x="515" y="420" css={textStyle}>
+        </g>
+        <g css={textStyle} onClick={() => navigate(getLinkUrl("fuji"))}>
+          <rect width="60" height="40" x="515" y="380" />
+          <text x="515" y="420">
             Mt. Fuji
           </text>
           <g transform="translate(535 380) scale(0.4)">
             <Train />
           </g>
-        </JapanCity>
-        <JapanCity place="below">
-          <text x="422" y="445" css={textStyle}>
+        </g>
+        <g css={textStyle} onClick={() => navigate(getLinkUrl("nagoya"))}>
+          <rect width="60" height="50" x="422" y="400" />
+          <text x="422" y="445">
             Nagoya
           </text>
           <g transform="translate(440 405) scale(0.4)">
             <Train />
           </g>
-        </JapanCity>
-        <JapanCity place="above">
-          <text x="373" y="405" css={textStyle}>
+        </g>
+        <g css={textStyle} onClick={() => navigate(getLinkUrl("kyoto"))}>
+          <rect width="50" height="50" x="373" y="390" />
+          <text x="373" y="405">
             Kyoto
           </text>
           <g transform="translate(385 410) scale(0.4)">
             <Train />
           </g>
-        </JapanCity>
-        <JapanCity place="below">
-          <text x="320" y="460" css={textStyle}>
+        </g>
+        <g css={textStyle} onClick={() => navigate(getLinkUrl("himeji"))}>
+          <rect width="55" height="50" x="320" y="420" />
+          <text x="320" y="460">
             Himeji
           </text>
           <g transform="translate(335 420) scale(0.4)">
             <Train />
           </g>
-        </JapanCity>
+        </g>
       </svg>
     </>
-  )
-}
-interface JapanCityProps {
-  place: PopoverPlace
-}
-const JapanCity: FunctionComponent<JapanCityProps> = ({ children, place }) => {
-  const [open, setOpen] = useState(false)
-  const popoverProps = {
-    isOpen: open,
-    preferPlace: place,
-    body: [<h1 key="a">Popover Title</h1>, <div key="b">Popover contents</div>],
-    onOuterAction: () => setOpen(false),
-  }
-  return (
-    // @ts-ignore
-    <Popover {...popoverProps}>
-      <g onClick={() => setOpen(true)}>{children}</g>
-    </Popover>
   )
 }
 
 const Train: FunctionComponent<SVGAttributes<any>> = props => {
   return (
-    <svg style={{ fill: "black", cursor: "pointer" }} {...props}>
+    <svg {...props}>
       <circle cx="39" cy="44" r="1" />
       <circle cx="13" cy="44" r="1" />
       <path d="m11 49h7v-7c0-.553.448-1 1-1h14c.552 0 1 .447 1 1v7h7c1.654 0 3-1.346 3-3v-2.994l-4.523-6.006h-31.477v9c0 1.654 1.346 3 3 3zm28-8c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3zm-26 0c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3z" />

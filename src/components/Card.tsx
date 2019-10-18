@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
+import { japanPrimaryColor } from "./core/japan"
 
 interface CardProps {
   title?: string
@@ -44,7 +45,7 @@ export const Card: FunctionComponent<CardProps> = ({ children, title, className,
 
 export const JapanCard = styled(Card)`
   .next {
-    color: #b8566a;
+    color: ${japanPrimaryColor};
   }
   blockquote {
     margin-bottom: 0.5rem;

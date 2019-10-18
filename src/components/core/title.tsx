@@ -2,7 +2,8 @@ import React, { FunctionComponent } from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-import { getLinkUrl, getLinkLabel } from "../../utils/links"
+import { getLinkLabel, getLinkUrl } from "../../utils/links"
+import { japanPrimaryColor } from "./japan"
 
 interface TitleProps {
   title: string
@@ -41,7 +42,7 @@ export const JapanTitle = styled(Title)`
   a {
     border-radius: 3px;
     color: white;
-    background-color: #b8566a;
+    background-color: ${japanPrimaryColor};
     padding: 0 2px;
     text-decoration: none;
   }
