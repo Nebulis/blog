@@ -40,7 +40,7 @@ const Content = () => {
           <SpringInJapanQuote />
         </JapanCard>
         <JapanDivider />
-        <h2 className="tc ttu">Explore le Japon</h2>
+        <h2 className="tc ttu">Découvre le Japon</h2>
         <div
           className="flex justify-center flex-wrap pt3 pb3 mb3"
           css={css`
