@@ -2,6 +2,7 @@ import React, { FunctionComponent, HTMLAttributes } from "react"
 import { css, jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
+import { japanPrimaryColor } from "../core/japan"
 
 // https://github.com/emotion-js/emotion/issues/1404
 const cloneElement = (element: any, props: any, ...children: any) =>
@@ -288,6 +289,6 @@ export const ImageAsMedallion: FunctionComponent<HTMLAttributes<any> & { title: 
 
 export const JapanImageAsMedallion = styled(ImageAsMedallion)`
   &:hover {
-    border: 6px solid #b8566a;
+    border: 6px solid ${japanPrimaryColor};
   }
 `
