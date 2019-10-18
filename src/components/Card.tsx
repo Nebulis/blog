@@ -37,7 +37,7 @@ export const Card: FunctionComponent<CardProps> = ({ children, title, className,
       <div className="image mb3">{children[0]}</div>
       {React.cloneElement(children[1], { className: `${children[1].props.className || ""} text` })}
       <h5 className="normal tc ttu next">
-        <Link to={to}>Lire La suite</Link>
+        <Link to={to}>En savoir plus</Link>
       </h5>
     </div>
   )
