@@ -25,51 +25,56 @@ export const JapanQuote = styled(Quote)`
     color: #ffb7c5;
   }
 `
-export const SpringInJapanQuote = () => (
+interface SpringInJapanQuoteProps {
+  short?: boolean
+}
+export const SpringInJapanQuote: FunctionComponent<SpringInJapanQuoteProps> = ({ short }) => (
   <JapanQuote>
     Le Japon, ce pays incontournable à visiter en Asie. Un nouveau décor à chaque saison. Un mélange entre zénitude dans
-    les endroits reculés et animation et dynamisme dans les villes, autant dire qu’en fonction de ce que vous
-    recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre bonheur.
+    les endroits reculés et animation et dynamisme dans
+    {short
+      ? "..."
+      : " les villes, autant dire qu’en fonction de ce que vous recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre bonheur..."}
   </JapanQuote>
 )
 
 export const HimejiCastleQuote = () => (
   <JapanQuote>
     Magnifique château, surnommé le château du Héron Blanc, il est considéré comme l’un des plus beaux châteaux du
-    Japon.
+    Japon...
   </JapanQuote>
 )
 
 export const ArashiyamaQuote = () => (
   <JapanQuote>
-    Le bambou serait capable de repousser les mauvais esprits, il représenterait la force et la prospérité.{" "}
+    Le bambou serait capable de repousser les mauvais esprits, il représenterait la force et la prospérité...
   </JapanQuote>
 )
 
 export const KinkakujiQuote = () => (
   <JapanQuote>
     Temple bouddhiste reconnu pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages sont
-    entièrement recouverts de feuilles d’or.
+    entièrement recouverts de feuilles d’or...
   </JapanQuote>
 )
 
 export const FushimiInariTaishaQuote = () => (
   <JapanQuote>
     Le sanctuaire est surtout connu pour ses quelques milliers de Torii Vermillon qui crée un chemin dans une forêt
-    remplie de pins.
+    remplie de pins...
   </JapanQuote>
 )
 
 export const DaigojiQuote = () => (
   <JapanQuote>
-    Daigo-ji est un ensemble de temples bouddhiste et de jardins, haut en couleur à chaque saison.
+    Daigo-ji est un ensemble de temples bouddhiste et de jardins, haut en couleur à chaque saison...
   </JapanQuote>
 )
 
 export const NagoyaCastleQuote = () => (
   <JapanQuote>
     Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya et ses vastes jardins sont
-    clairement un lieu à faire si vous y êtes de passage.
+    clairement un lieu à faire si vous y êtes de passage...
   </JapanQuote>
 )
 
