@@ -134,7 +134,7 @@ const Content = () => {
         <JapanDivider />
         <section>
           <JapanCity>
-            <img src={cherryBlossom} alt="Logo" /> Jour 2 et 3 - Kyoto <img src={cherryBlossom} alt="Logo" />
+            <img src={cherryBlossom} alt="Logo" /> Jour 2 & 3 - Kyoto <img src={cherryBlossom} alt="Logo" />
           </JapanCity>
           <JapanDivider />
           <SectionContent>
