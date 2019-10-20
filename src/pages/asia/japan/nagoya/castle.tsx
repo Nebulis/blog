@@ -25,7 +25,6 @@ import {
   WhereToHave,
   WhereToStay,
 } from "../../../../components/core/section"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import { NagoyaEntrance1Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaEntrance1Image"
 import { css } from "@emotion/core"
 import { NagoyaEntrance2Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaEntrance2Image"
@@ -41,8 +40,8 @@ import { NagoyaRosebushImage } from "../../../../components/images/asia/japan/na
 import { NagoyaStatueImage } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaStatueImage"
 import { NagoyaCastle2Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaCastle2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { getLinkUrl } from "../../../../utils/links"
 import { JapanLine, NagoyaCastleQuote } from "../../../../components/core/japan"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 
 const IndexPage = () => {
   return (
@@ -73,7 +72,7 @@ const Content = () => {
             <li>Depuis Kyoto environ 40 min.</li>
             <li>Depuis Osaka environ 1h.</li>
             <small>
-              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>
+              <JapanLink to="transports-in-japan">Plus d’information sur les transports.</JapanLink>
             </small>
           </ul>
           <p>
@@ -175,8 +174,8 @@ const Content = () => {
           <p>
             En entrant dans le parc, on a l’embarras du choix tellement c’est grand. De loin, on aperçoit le château ce
             qui nous amène par y aller en premier lieu. On peut d’ailleurs apercevoir une petite réplique{" "}
-            <JapanLink to={getLinkUrl("himeji-castle")}>du château de Himeji</JapanLink>, ce qui nous rappelle déjà nos
-            souvenirs du premier jour.
+            <JapanLink to="himeji-castle">du château de Himeji</JapanLink>, ce qui nous rappelle déjà nos souvenirs du
+            premier jour.
           </p>
           <TwoImagesSameSizeOrToGroup>
             <NagoyaHimeji1Image />

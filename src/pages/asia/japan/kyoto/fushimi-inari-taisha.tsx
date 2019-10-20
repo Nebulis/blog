@@ -6,7 +6,6 @@ import { JapanTitle } from "../../../../components/core/title"
 import { Menu } from "../../../../components/layout/menu"
 import { MainFushimiImage } from "../../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import {
   ImageAsLandscape,
   ImageAsPortrait,
@@ -23,6 +22,7 @@ import { FushimiKomainu2Image } from "../../../../components/images/asia/japan/k
 import { FushimiKomainu1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu1Image"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { FushimiInariTaishaQuote, JapanLine } from "../../../../components/core/japan"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 
 const IndexPage = () => {
   return (
@@ -58,7 +58,7 @@ const Content = () => {
             <li>Depuis Himeji environ 1h</li>
             <li>Depuis Nagoya environ 1h</li>
             <small>
-              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>
+              <JapanLink to="transports-in-japan">Plus d’information sur les transports.</JapanLink>
             </small>
           </ul>
           <p>

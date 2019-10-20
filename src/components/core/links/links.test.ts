@@ -10,6 +10,10 @@ describe("links", () => {
       continent.countries.forEach(country => {
         set.add(country.id)
         numberOfElements++
+        country.others.forEach(other => {
+          set.add(other.id)
+          numberOfElements++
+        })
         country.cities.forEach(city => {
           set.add(city.id)
           numberOfElements++

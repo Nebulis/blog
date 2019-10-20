@@ -16,7 +16,6 @@ import {
   Where,
   WhereToStay,
 } from "../../../../components/core/section"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -42,6 +41,7 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { DaigojiGarden5Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden5Image"
 import { DaigojiGarden4Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden4Image"
 import { DaigojiMonk2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiMonk2Image"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 
 const IndexPage = () => {
   return (
@@ -72,7 +72,7 @@ const Content = () => {
             <li>Depuis Himeji environ 1h</li>
             <li>Depuis Nagoya environ 1h</li>
             <small>
-              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>
+              <JapanLink to="transports-in-japan">Plus d’information sur les transports.</JapanLink>
             </small>
           </ul>
           <p>

@@ -17,7 +17,6 @@ import {
   WhereToHave,
   WhereToStay,
 } from "../../../../components/core/section"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import { EntranceHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/entranceHimejiCastleImage"
 import { EntranceRiverHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/entranceRiverHimejiCastleImage"
 import { HimejiCastle1Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle1Image"
@@ -47,6 +46,7 @@ import { HimejiCastle4Image } from "../../../../components/images/asia/japan/him
 import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
 import { Menu } from "../../../../components/layout/menu"
 import { HimejiCastleQuote } from "../../../../components/core/japan"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 
 const IndexPage = () => {
   return (
@@ -76,7 +76,7 @@ const Content = () => {
             <li>Depuis Tokyo environ 3h40</li>
             <li>Depuis Kyoto environ 1h</li>
             <small>
-              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>
+              <JapanLink to="transports-in-japan">Plus d’information sur les transports.</JapanLink>
             </small>
           </ul>
           <p>

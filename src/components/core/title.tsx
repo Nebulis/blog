@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from "react"
-import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-import { getLinkLabel, getLinkUrl } from "../../utils/links"
 import { japanPrimaryColor } from "./japan.variables"
+import { getLinkLabel } from "./links/links"
+import { ApplicationLink } from "./links/link"
 
 interface TitleProps {
   title: string
@@ -30,7 +30,7 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
         {categories.map((c, index) => (
           <React.Fragment key={index}>
             {index > 0 ? " " : ""}
-            <Link to={getLinkUrl(c)}>{getLinkLabel(c)}</Link>
+            <ApplicationLink to={c}>{getLinkLabel(c)}</ApplicationLink>
           </React.Fragment>
         ))}
       </div>
