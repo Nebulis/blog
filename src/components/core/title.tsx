@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { getLinkLabel, getLinkUrl } from "../../utils/links"
-import { japanPrimaryColor } from "./japan"
+import { japanPrimaryColor } from "./japan.variables"
 
 interface TitleProps {
   title: string

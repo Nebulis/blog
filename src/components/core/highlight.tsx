@@ -2,7 +2,7 @@ import * as React from "react"
 import { FunctionComponent, HTMLAttributes } from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import { japanPrimaryColor } from "./japan"
+import { japanPrimaryColor } from "./japan.variables"
 import cherryBlossom from "../../images/asia/japan/cherry-blossom.png"
 
 const style = css`

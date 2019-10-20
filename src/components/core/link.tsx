@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { FaExternalLinkAlt } from "react-icons/all"
 import { css } from "@emotion/core"
 import React, { AnchorHTMLAttributes, FunctionComponent } from "react"
-import { japanPrimaryColor } from "./japan"
+import { japanPrimaryColor } from "./japan.variables"
 
 interface ExternalLinkProps {
   noIcon?: boolean

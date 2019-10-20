@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
-import { japanPrimaryColor } from "./core/japan"
+import { japanPrimaryColor } from "./core/japan.variables"
 
 interface CardProps {
   title?: string

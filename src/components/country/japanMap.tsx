@@ -2,7 +2,7 @@ import React, { FunctionComponent, SVGAttributes } from "react"
 import { css } from "@emotion/core"
 import { navigate } from "gatsby"
 import { getLinkUrl } from "../../utils/links"
-import { japanPrimaryColor } from "../core/japan"
+import { japanPrimaryColor } from "../core/japan.variables"
 
 type PopoverPlace = "above" | "right" | "below" | "left" | "row" | "column" | "start" | "end"
 export const JapanMap = () => {
