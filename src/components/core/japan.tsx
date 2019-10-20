@@ -3,7 +3,6 @@ import React, { FunctionComponent, HTMLAttributes } from "react"
 import { ExternalLink } from "./link"
 import styled from "@emotion/styled"
 import { Quote } from "./quote"
-export const japanPrimaryColor = "#b8566a"
 
 const japanLineStyle = css`
   padding: 2px 5px;
