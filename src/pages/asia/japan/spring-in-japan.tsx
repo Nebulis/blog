@@ -31,13 +31,12 @@ import { JapanTitle } from "../../../components/core/title"
 import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { Menu } from "../../../components/layout/menu"
 import { MainFushimiImage } from "../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
-import { getLinkUrl } from "../../../utils/links"
 import { ImageAsPortrait } from "../../../components/images/layout"
 import { MainTokyoImage } from "../../../components/images/asia/japan/mainTokyoImage"
 import { MainToganjiImage } from "../../../components/images/asia/japan/mainToganjiImage"
 import { MainHamarikyuGardenImage } from "../../../components/images/asia/japan/mainHamarikyuGardenImage"
 import { JapanDivider } from "../../../components/core/divider"
-import { JapanExternalLink } from "../../../components/core/link"
+import { JapanExternalLink } from "../../../components/core/links/link"
 
 const IndexPage = () => {
   return (
@@ -123,7 +122,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Château de Himeji – Magnifique château du Héron Blanc" to={getLinkUrl("himeji-castle")}>
+            <JapanCard title="Château de Himeji – Magnifique château du Héron Blanc" to="himeji-castle">
               <MainHimejiCastleImage />
               <HimejiCastleQuote />
             </JapanCard>
@@ -144,7 +143,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Arashiyama – Forêt de Bambous géants" to={getLinkUrl("arashiyama")}>
+            <JapanCard title="Arashiyama – Forêt de Bambous géants" to="arashiyama">
               <MainArashiyamaImage />
               <ArashiyamaQuote />
             </JapanCard>
@@ -158,7 +157,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to={getLinkUrl("kinkakuji")}>
+            <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to="kinkakuji">
               <MainKinkakujiImage />
               <KinkakujiQuote />
             </JapanCard>
@@ -176,7 +175,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Temple Daigo-ji" to={getLinkUrl("daigo-ji")}>
+            <JapanCard title="Temple Daigo-ji" to="daigo-ji">
               <MainDaigojiImage />
               <DaigojiQuote />
             </JapanCard>
@@ -190,7 +189,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to={getLinkUrl("fushimi-inari-taisha")}>
+            <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to="fushimi-inari-taisha">
               <MainFushimiImage />
               <FushimiInariTaishaQuote />
             </JapanCard>
@@ -215,7 +214,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Château de Nagoya" to={getLinkUrl("nagoya-castle")}>
+            <JapanCard title="Château de Nagoya" to="nagoya-castle">
               <MainNagoyaCastleImage />
               <NagoyaCastleQuote />
             </JapanCard>
@@ -230,7 +229,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Le temple de Togan-Ji et son grand bouddha" to={getLinkUrl("togan-ji")}>
+            <JapanCard title="Le temple de Togan-Ji et son grand bouddha" to="togan-ji">
               <ImageAsPortrait>
                 <MainToganjiImage />
               </ImageAsPortrait>
@@ -257,7 +256,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Une journée à Tokyo" to={getLinkUrl("tokyo")}>
+            <JapanCard title="Une journée à Tokyo" to="tokyo">
               <MainTokyoImage />
               <TokyoQuote />
             </JapanCard>
@@ -275,7 +274,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Mont Fuji - Lac Kawaguchiko" to={getLinkUrl("fuji")}>
+            <JapanCard title="Mont Fuji - Lac Kawaguchiko" to="fuji">
               <MainFujiImage />
               <FujiQuote />
             </JapanCard>
@@ -293,7 +292,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to={getLinkUrl("tokyo")}>
+            <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to="tokyo">
               <MainHamarikyuGardenImage />
               <HamarikyuGardenQuote />
             </JapanCard>

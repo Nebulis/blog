@@ -1,8 +1,49 @@
 import css from "@emotion/css"
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
-import { continentLinks, getLinkLabel, getLinkUrl } from "../../utils/links"
+import { continentLinks, getLinkLabel, isPublished } from "../core/links/links"
+import { ApplicationLink } from "../core/links/link"
+import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
+
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
+
+const renderCity = (continent: ContinentLink, country: CountryLink, city: CityLink) => {
+  const highlights = city.highlights.filter(isPublished)
+  return (
+    <li key={`${continent.id}_${country.id}_${city.id}`}>
+      <ApplicationLink to={city.id}>
+        <span>{getLinkLabel(city.id)}</span>
+        <span>{highlights.length > 0 ? ">" : null}</span>
+      </ApplicationLink>
+      {highlights.length > 0 ? (
+        <ul className="dropdown-highlight" aria-label="submenu">
+          {highlights.sort(sort).map(highlight => (
+            <li key={`${continent.id}_${country.id}_${city.id}_${highlight.id}`}>
+              <ApplicationLink to={highlight.id}>{getLinkLabel(highlight.id)}</ApplicationLink>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </li>
+  )
+}
+const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelopment: boolean) => {
+  const cities = country.cities.filter(isPublished)
+
+  return (
+    <li key={`${continent.id}_${country.id}`}>
+      <ApplicationLink to={country.id}>
+        <span>{getLinkLabel(country.id)}</span>
+        <span>{inDevelopment && cities.length > 0 ? ">" : null}</span>
+      </ApplicationLink>
+      {inDevelopment && cities.length > 0 ? (
+        <ul className="dropdown-city" aria-label="submenu">
+          {cities.sort(sort).map(city => renderCity(continent, country, city))}
+        </ul>
+      ) : null}
+    </li>
+  )
+}
 
 export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
   const { site } = useStaticQuery(
@@ -19,6 +60,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
     `
   )
   const inDevelopment = site.siteMetadata.config.context !== "production"
+
   return (
     <div
       className={`flex justify-start items-center ${className}`}
@@ -199,44 +241,16 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
             <ul className="dropdown-continent" aria-label="submenu">
               {continentLinks.map(continent => (
                 <li key={continent.id}>
-                  <Link to={getLinkUrl(continent.id)}>
+                  <ApplicationLink to={continent.id}>
                     <span>{getLinkLabel(continent.id)}</span>
-                    <span>{continent.countries.length > 0 ? ">" : null}</span>
-                  </Link>
-                  {continent.countries.length > 0 ? (
+                    <span>{continent.countries.filter(isPublished).length > 0 ? ">" : null}</span>
+                  </ApplicationLink>
+                  {continent.countries.filter(isPublished).length > 0 ? (
                     <ul className="dropdown-country" aria-label="submenu">
-                      {continent.countries.sort(sort).map(country => (
-                        <li key={`${continent.id}_${country.id}`}>
-                          <Link to={getLinkUrl(country.id)}>
-                            <span>{getLinkLabel(country.id)}</span>
-                            <span>{inDevelopment && country.cities.length > 0 ? ">" : null}</span>
-                          </Link>
-                          {inDevelopment && country.cities.length > 0 ? (
-                            <ul className="dropdown-city" aria-label="submenu">
-                              {country.cities
-                                .filter(city => !city.hideInMenu)
-                                .sort(sort)
-                                .map(city => (
-                                  <li key={`${continent.id}_${country.id}_${city.id}`}>
-                                    <Link to={getLinkUrl(city.id)}>
-                                      <span>{getLinkLabel(city.id)}</span>
-                                      <span>{city.highlights.length > 0 ? ">" : null}</span>
-                                    </Link>
-                                    {city.highlights.length > 0 ? (
-                                      <ul className="dropdown-highlight" aria-label="submenu">
-                                        {city.highlights.sort(sort).map(highlight => (
-                                          <li key={`${continent.id}_${country.id}_${city.id}_${highlight.id}`}>
-                                            <Link to={getLinkUrl(highlight.id)}>{getLinkLabel(highlight.id)}</Link>
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    ) : null}
-                                  </li>
-                                ))}
-                            </ul>
-                          ) : null}
-                        </li>
-                      ))}
+                      {continent.countries
+                        .filter(isPublished)
+                        .sort(sort)
+                        .map(country => renderCountry(continent, country, inDevelopment))}
                     </ul>
                   ) : null}
                 </li>

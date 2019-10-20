@@ -6,7 +6,6 @@ import css from "@emotion/css"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import { JapanTitle } from "../../../../components/core/title"
 import { MainArashiyamaImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -28,6 +27,7 @@ import { ArashiyamaCherryImage } from "../../../../components/images/asia/japan/
 import { Menu } from "../../../../components/layout/menu"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { ArashiyamaQuote, JapanLine } from "../../../../components/core/japan"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 
 const IndexPage = () => {
   return (
@@ -57,7 +57,7 @@ const Content = () => {
             <li>Depuis Himeji environ 1h</li>
             <li>Depuis Nagoya environ 1h</li>
             <small>
-              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>
+              <JapanLink to="transports-in-japan">Plus d’information sur les transports.</JapanLink>
             </small>
           </ul>
           <p>

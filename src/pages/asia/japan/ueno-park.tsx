@@ -1,9 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Header } from "../../../components/layout/header"
 import { Maintenance } from "../../../components/layout/maintenance"
 import SEO from "../../../components/layout/seo"
-import { getLinkUrl } from "../../../utils/links"
+import { ApplicationLink } from "../../../components/core/links/link"
 
 const IndexPage = () => {
   return (
@@ -19,7 +18,7 @@ const Content = () => {
     <>
       <Header />
       Ueno park page
-      <Link to={getLinkUrl("japan")}>Japon</Link>
+      <ApplicationLink to="japan">Japon</ApplicationLink>
     </>
   )
 }

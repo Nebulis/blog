@@ -15,7 +15,6 @@ import {
   Where,
   WhereToStay,
 } from "../../../../components/core/section"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/link"
 import css from "@emotion/css"
 import {
   GroupOfImages,
@@ -40,6 +39,7 @@ import { KinkakujiLakeImage } from "../../../../components/images/asia/japan/kyo
 import { KinkakujiStatueImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiStatueImage"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { JapanLine, KinkakujiQuote } from "../../../../components/core/japan"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 
 const IndexPage = () => {
   return (
@@ -70,7 +70,7 @@ const Content = () => {
             <li>Depuis Himeji environ 1h</li>
             <li>Depuis Nagoya environ 1h</li>
             <small>
-              <JapanLink to="/asia/japan/transports">Plus d’information sur les transports.</JapanLink>
+              <JapanLink to="transports-in-japan">Plus d’information sur les transports.</JapanLink>
             </small>
           </ul>
           <p>

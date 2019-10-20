@@ -1,8 +1,8 @@
 import css from "@emotion/css"
 import React, { FunctionComponent, HTMLAttributes } from "react"
-import { ExternalLink } from "./link"
 import styled from "@emotion/styled"
 import { Quote } from "./quote"
+import { ExternalLink } from "./links/link"
 
 const japanLineStyle = css`
   padding: 2px 5px;
