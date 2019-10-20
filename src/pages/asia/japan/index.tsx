@@ -16,6 +16,7 @@ import { JapanCard } from "../../../components/Card"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { SpringInJapanQuote } from "../../../components/core/japan"
 import { MainTokyoImage } from "../../../components/images/asia/japan/mainTokyoImage"
+import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 
 const IndexPage = () => {
   return (
@@ -32,7 +33,11 @@ const Content = () => {
       <Header />
       <Menu />
       <div className="center blog-container">
-        <h1 className="tc ttu">Japon</h1>
+        <h1 className="tc ttu flex items-center justify-center">
+          <img src={cherryBlossom} alt="cherry blossom" />
+          &nbsp;Japon&nbsp;
+          <img src={cherryBlossom} alt="cherry blossom" />
+        </h1>
         <JapanDivider />
         <h2 className="tc ttu">Notre voyage au Japon</h2>
         <JapanCard title="Le Japon au printemps" to={getLinkUrl("spring-in-japan")}>
