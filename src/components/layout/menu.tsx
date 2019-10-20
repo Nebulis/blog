@@ -108,7 +108,6 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
         }
 
         ul li:hover > ul,
-        ul li:focus-within > ul,
         ul li ul:hover,
         ul li ul:focus {
           visibility: visible;
