@@ -8,12 +8,11 @@ import { MainTokyoImage } from "../../images/asia/japan/mainTokyoImage"
 export const japanLinks: CountryLink = {
   id: "japan",
   label: "Japon",
-  published: true,
   others: [
     {
       id: "spring-in-japan",
       label: "Le japon au printemps",
-      published: true,
+      published: false,
     },
     {
       id: "transports-in-japan",
@@ -26,7 +25,6 @@ export const japanLinks: CountryLink = {
     {
       id: "kyoto",
       label: "Kyoto",
-      published: true,
       image: MainArashiyamaImage,
       highlights: [
         {
@@ -55,7 +53,6 @@ export const japanLinks: CountryLink = {
       id: "himeji",
       label: "Himeji",
       image: MainHimejiCastleImage,
-      published: true,
       highlights: [
         {
           id: "himeji-castle",
@@ -68,7 +65,6 @@ export const japanLinks: CountryLink = {
     {
       id: "nagoya",
       label: "Nagoya",
-      published: false,
       image: MainNagoyaCastleImage,
       highlights: [
         {
@@ -87,14 +83,12 @@ export const japanLinks: CountryLink = {
     {
       id: "fuji",
       label: "Mt. Fuji",
-      published: false,
       image: MainFujiImage,
       highlights: [],
     },
     {
       id: "tokyo",
       label: "Tokyo",
-      published: false,
       image: MainTokyoImage,
       highlights: [
         {

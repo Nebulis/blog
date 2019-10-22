@@ -11,15 +11,16 @@ export const continentLinks: ContinentLink[] = [
 
 const getUrl = (object: { url?: string; id: string }): string => object.url || object.id
 
-export const cachedLinks = new Map<string, { label: string; url: string; published: boolean | Date }>()
+interface CachedLinksMap {
+  label: string
+  url: string
+  published: boolean | Date
+}
+
+export const cachedLinks = new Map<string, CachedLinksMap>()
 continentLinks.forEach(continent => {
   cachedLinks.set(continent.id, { label: continent.label, url: path.resolve(getUrl(continent)), published: true })
   continent.countries.forEach(country => {
-    cachedLinks.set(country.id, {
-      label: country.label,
-      url: path.resolve(getUrl(continent), getUrl(country)),
-      published: country.published,
-    })
     country.others.forEach(other => {
       cachedLinks.set(other.id, {
         label: other.label,
@@ -31,7 +32,7 @@ continentLinks.forEach(continent => {
       cachedLinks.set(city.id, {
         label: city.label,
         url: path.resolve(getUrl(continent), getUrl(country), getUrl(city)),
-        published: city.published,
+        published: city.highlights.some(h => h.published),
       })
       city.highlights.forEach(highlight => {
         cachedLinks.set(highlight.id, {
@@ -40,6 +41,16 @@ continentLinks.forEach(continent => {
           published: highlight.published,
         })
       })
+    })
+
+    cachedLinks.set(country.id, {
+      label: country.label,
+      url: path.resolve(getUrl(continent), getUrl(country)),
+      published:
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        country.others.some(o => cachedLinks.get(o.id)!.published) ||
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        country.cities.some(c => cachedLinks.get(c.id)!.published),
     })
   })
 })
@@ -58,4 +69,10 @@ export const getLinkUrl = (linkId: string): string => {
 export const getLinkLabel = (linkId: string): string => {
   return getLink(linkId).label
 }
-export const isPublished = (element: CountryLink | CityLink | HighlightLink) => element.published
+export const isPublished = (element: CountryLink | CityLink | HighlightLink) => {
+  const link = cachedLinks.get(element.id)
+  if (!link) {
+    throw new Error(`No link for ${element.id}`)
+  }
+  return !!link.published
+}

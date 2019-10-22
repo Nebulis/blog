@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Header } from "../../../components/layout/header"
 import { Maintenance } from "../../../components/layout/maintenance"
 import SEO from "../../../components/layout/seo"
@@ -13,6 +13,7 @@ import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import { getLinkLabel, isPublished } from "../../../components/core/links/links"
 import { japanLinks } from "../../../components/core/links/japan.links"
 import { ApplicationLink } from "../../../components/core/links/link"
+import { ApplicationContext } from "../../../components/applications"
 
 const IndexPage = () => {
   return (
@@ -24,7 +25,8 @@ const IndexPage = () => {
 }
 
 const Content = () => {
-  const cities = japanLinks.cities.filter(isPublished).sort()
+  const context = useContext(ApplicationContext)
+  const cities = context.development ? japanLinks.cities : japanLinks.cities.filter(isPublished).sort()
   return (
     <>
       <Header />

@@ -12,7 +12,6 @@ export interface CountryLink {
   url?: string
   cities: CityLink[]
   others: OtherLink[]
-  published: boolean
 }
 export interface CityLink {
   id: string
@@ -20,7 +19,6 @@ export interface CityLink {
   url?: string
   image: React.ComponentType<any>
   highlights: HighlightLink[]
-  published: boolean | Date
 }
 
 export interface OtherLink {
