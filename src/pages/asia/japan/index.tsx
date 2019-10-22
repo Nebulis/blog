@@ -10,7 +10,7 @@ import { JapanCard } from "../../../components/Card"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { SpringInJapanQuote } from "../../../components/core/japan"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
-import { getLinkLabel, isPublished } from "../../../components/core/links/links"
+import { getLinkLabel, isLinkPublished } from "../../../components/core/links/links"
 import { japanLinks } from "../../../components/core/links/japan.links"
 import { ApplicationLink } from "../../../components/core/links/link"
 import { ApplicationContext } from "../../../components/applications"
@@ -26,7 +26,7 @@ const IndexPage = () => {
 
 const Content = () => {
   const context = useContext(ApplicationContext)
-  const cities = context.development ? japanLinks.cities : japanLinks.cities.filter(isPublished).sort()
+  const cities = context.development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished).sort()
   return (
     <>
       <Header />

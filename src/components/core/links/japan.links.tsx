@@ -30,7 +30,7 @@ export const japanLinks: CountryLink = {
         {
           id: "arashiyama",
           label: "Arashiyama",
-          published: true,
+          published: false,
         },
         {
           id: "daigo-ji",

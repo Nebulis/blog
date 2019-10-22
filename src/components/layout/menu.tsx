@@ -1,7 +1,7 @@
 import css from "@emotion/css"
 import React, { FunctionComponent, HTMLAttributes, useContext } from "react"
 import { Link } from "gatsby"
-import { continentLinks, getLinkLabel, isPublished } from "../core/links/links"
+import { continentLinks, getLinkLabel, isLinkPublished } from "../core/links/links"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../applications"
@@ -9,7 +9,7 @@ import { ApplicationContext } from "../applications"
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 
 const renderCity = (continent: ContinentLink, country: CountryLink, city: CityLink, inDevelopment: boolean) => {
-  const highlights = inDevelopment ? city.highlights : city.highlights.filter(isPublished)
+  const highlights = inDevelopment ? city.highlights : city.highlights.filter(isLinkPublished)
   return (
     <li key={`${continent.id}_${country.id}_${city.id}`}>
       <ApplicationLink to={city.id}>
@@ -29,7 +29,7 @@ const renderCity = (continent: ContinentLink, country: CountryLink, city: CityLi
   )
 }
 const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelopment: boolean) => {
-  const cities = inDevelopment ? country.cities : country.cities.filter(isPublished)
+  const cities = inDevelopment ? country.cities : country.cities.filter(isLinkPublished)
 
   return (
     <li key={`${continent.id}_${country.id}`}>
@@ -229,7 +229,9 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
             <span className="black-arrow"> </span>
             <ul className="dropdown-continent" aria-label="submenu">
               {continentLinks.map(continent => {
-                const publishedCountries = inDevelopment ? continent.countries : continent.countries.filter(isPublished)
+                const publishedCountries = inDevelopment
+                  ? continent.countries
+                  : continent.countries.filter(isLinkPublished)
                 return (
                   <li key={continent.id}>
                     <ApplicationLink to={continent.id}>
