@@ -4,6 +4,7 @@ import { World } from "./world"
 import Layout from "./layout"
 import React, { FunctionComponent } from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { ApplicationContext } from "../applications"
 
 export const Maintenance: FunctionComponent = ({ children }) => {
   const { site } = useStaticQuery(
@@ -21,7 +22,11 @@ export const Maintenance: FunctionComponent = ({ children }) => {
   )
   const mapSize = 80
   if (site.siteMetadata.config.context !== "production") {
-    return <>{children}</>
+    return (
+      <ApplicationContext.Provider value={{ development: site.siteMetadata.config.context !== "production" }}>
+        {children}
+      </ApplicationContext.Provider>
+    )
   }
   return (
     <Layout>

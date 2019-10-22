@@ -7,8 +7,8 @@ import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 
-const renderCity = (continent: ContinentLink, country: CountryLink, city: CityLink) => {
-  const highlights = city.highlights.filter(isPublished)
+const renderCity = (continent: ContinentLink, country: CountryLink, city: CityLink, inDevelopment: boolean) => {
+  const highlights = inDevelopment ? city.highlights : city.highlights.filter(isPublished)
   return (
     <li key={`${continent.id}_${country.id}_${city.id}`}>
       <ApplicationLink to={city.id}>
@@ -28,7 +28,7 @@ const renderCity = (continent: ContinentLink, country: CountryLink, city: CityLi
   )
 }
 const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelopment: boolean) => {
-  const cities = country.cities.filter(isPublished)
+  const cities = inDevelopment ? country.cities : country.cities.filter(isPublished)
 
   return (
     <li key={`${continent.id}_${country.id}`}>
@@ -38,7 +38,7 @@ const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelop
       </ApplicationLink>
       {inDevelopment && cities.length > 0 ? (
         <ul className="dropdown-city" aria-label="submenu">
-          {cities.sort(sort).map(city => renderCity(continent, country, city))}
+          {cities.sort(sort).map(city => renderCity(continent, country, city, inDevelopment))}
         </ul>
       ) : null}
     </li>
@@ -239,22 +239,22 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
             <span className="white-arrow"> </span>
             <span className="black-arrow"> </span>
             <ul className="dropdown-continent" aria-label="submenu">
-              {continentLinks.map(continent => (
-                <li key={continent.id}>
-                  <ApplicationLink to={continent.id}>
-                    <span>{getLinkLabel(continent.id)}</span>
-                    <span>{continent.countries.filter(isPublished).length > 0 ? ">" : null}</span>
-                  </ApplicationLink>
-                  {continent.countries.filter(isPublished).length > 0 ? (
-                    <ul className="dropdown-country" aria-label="submenu">
-                      {continent.countries
-                        .filter(isPublished)
-                        .sort(sort)
-                        .map(country => renderCountry(continent, country, inDevelopment))}
-                    </ul>
-                  ) : null}
-                </li>
-              ))}
+              {continentLinks.map(continent => {
+                const publishedCountries = inDevelopment ? continent.countries : continent.countries.filter(isPublished)
+                return (
+                  <li key={continent.id}>
+                    <ApplicationLink to={continent.id}>
+                      <span>{getLinkLabel(continent.id)}</span>
+                      <span>{publishedCountries.length > 0 ? ">" : null}</span>
+                    </ApplicationLink>
+                    {publishedCountries.length > 0 ? (
+                      <ul className="dropdown-country" aria-label="submenu">
+                        {publishedCountries.sort(sort).map(country => renderCountry(continent, country, inDevelopment))}
+                      </ul>
+                    ) : null}
+                  </li>
+                )
+              })}
             </ul>
           </li>
           <li className="about">
