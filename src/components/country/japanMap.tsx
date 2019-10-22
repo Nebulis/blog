@@ -2,21 +2,36 @@ import React, { FunctionComponent, SVGAttributes } from "react"
 import { css } from "@emotion/core"
 import { navigate } from "gatsby"
 import { japanPrimaryColor } from "../core/japan.variables"
-import { getLinkUrl } from "../core/links/links"
+import { getLink, getLinkUrl } from "../core/links/links"
 
 type PopoverPlace = "above" | "right" | "below" | "left" | "row" | "column" | "start" | "end"
+const basicTextStyle = css`
+  fill: black;
+  font-weight: bold;
+  rect {
+    fill: transparent;
+  }
+`
+const hoveredTextStyle = css`
+  ${basicTextStyle}
+  cursor: pointer;
+  &:hover {
+    fill: ${japanPrimaryColor};
+  }
+`
 export const JapanMap = () => {
-  const textStyle = css`
-    fill: black;
-    font-weight: bold;
-    cursor: pointer;
-    &:hover {
-      fill: ${japanPrimaryColor};
+  const propsFor = (city: string) => {
+    const link = getLink(city)
+    if (link.published) {
+      return {
+        css: hoveredTextStyle,
+        onClick: () => navigate(getLinkUrl(city)),
+      }
     }
-    rect {
-      fill: transparent;
+    return {
+      css: basicTextStyle,
     }
-  `
+  }
   return (
     <>
       <svg width="874" height="750" style={{ fill: "#d4edf5", strokeWidth: "0.3", stroke: "white" }}>
@@ -258,7 +273,7 @@ export const JapanMap = () => {
           />
         </g>
 
-        <g css={textStyle} onClick={() => navigate(getLinkUrl("tokyo"))}>
+        <g {...propsFor("tokyo")}>
           <rect width="50" height="50" x="568" y="350" />
           <text x="568" y="365">
             Tokyo
@@ -267,7 +282,7 @@ export const JapanMap = () => {
             <Train />
           </g>
         </g>
-        <g css={textStyle} onClick={() => navigate(getLinkUrl("fuji"))}>
+        <g {...propsFor("fuji")}>
           <rect width="60" height="40" x="515" y="380" />
           <text x="515" y="420">
             Mt. Fuji
@@ -276,7 +291,7 @@ export const JapanMap = () => {
             <Train />
           </g>
         </g>
-        <g css={textStyle} onClick={() => navigate(getLinkUrl("nagoya"))}>
+        <g {...propsFor("nagoya")}>
           <rect width="60" height="50" x="422" y="400" />
           <text x="422" y="445">
             Nagoya
@@ -285,7 +300,7 @@ export const JapanMap = () => {
             <Train />
           </g>
         </g>
-        <g css={textStyle} onClick={() => navigate(getLinkUrl("kyoto"))}>
+        <g {...propsFor("kyoto")}>
           <rect width="50" height="50" x="373" y="390" />
           <text x="373" y="405">
             Kyoto
@@ -294,7 +309,7 @@ export const JapanMap = () => {
             <Train />
           </g>
         </g>
-        <g css={textStyle} onClick={() => navigate(getLinkUrl("himeji"))}>
+        <g {...propsFor("himeji")}>
           <rect width="55" height="50" x="320" y="420" />
           <text x="320" y="460">
             Himeji

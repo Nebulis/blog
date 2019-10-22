@@ -4,7 +4,7 @@ import { FaExternalLinkAlt } from "react-icons/all"
 import { css } from "@emotion/core"
 import React, { AnchorHTMLAttributes, ComponentType, FunctionComponent, useContext } from "react"
 import { japanPrimaryColor } from "../japan.variables"
-import { cachedLinks, getLinkUrl } from "./links"
+import { getLink, getLinkUrl } from "./links"
 import { ApplicationContext } from "../../applications"
 
 interface ExternalLinkProps {
@@ -39,7 +39,7 @@ const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => FunctionCompon
 ) =>
   function LinkIfActive({ children, to, action = "no-link", ...props }) {
     const context = useContext(ApplicationContext)
-    const link = cachedLinks.get(to)
+    const link = getLink(to)
     if (!link) {
       throw new Error(`No link for ${to}`)
     }
