@@ -72,7 +72,9 @@ const Content = () => {
             <li>Depuis Kyoto environ 40 min.</li>
             <li>Depuis Osaka environ 1h.</li>
             <small>
-              <JapanLink to="transports-in-japan">Plus d’information sur les transports.</JapanLink>
+              <JapanLink action="hide" to="transports-in-japan">
+                Plus d’information sur les transports.
+              </JapanLink>
             </small>
           </ul>
           <p>

@@ -11,7 +11,7 @@ export const japanLinks: CountryLink = {
   others: [
     {
       id: "spring-in-japan",
-      label: "Le japon au printemps",
+      label: "Le Japon au printemps",
       published: false,
     },
     {

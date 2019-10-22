@@ -70,7 +70,9 @@ const Content = () => {
             <li>Depuis Himeji environ 1h</li>
             <li>Depuis Nagoya environ 1h</li>
             <small>
-              <JapanLink to="transports-in-japan">Plus d’information sur les transports.</JapanLink>
+              <JapanLink action="hide" to="transports-in-japan">
+                Plus d’information sur les transports.
+              </JapanLink>
             </small>
           </ul>
           <p>
