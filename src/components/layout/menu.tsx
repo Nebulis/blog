@@ -1,9 +1,10 @@
 import css from "@emotion/css"
-import React, { FunctionComponent, HTMLAttributes } from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import React, { FunctionComponent, HTMLAttributes, useContext } from "react"
+import { Link } from "gatsby"
 import { continentLinks, getLinkLabel, isPublished } from "../core/links/links"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
+import { ApplicationContext } from "../applications"
 
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 
@@ -46,20 +47,8 @@ const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelop
 }
 
 export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            config {
-              context
-            }
-          }
-        }
-      }
-    `
-  )
-  const inDevelopment = site.siteMetadata.config.context !== "production"
+  const context = useContext(ApplicationContext)
+  const inDevelopment = context.development
 
   return (
     <div
