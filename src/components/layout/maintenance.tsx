@@ -2,7 +2,7 @@ import SEO from "./seo"
 import { Scooter } from "./scooter"
 import { World } from "./world"
 import Layout from "./layout"
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { ApplicationContext } from "../applications"
 
@@ -20,10 +20,17 @@ export const Maintenance: FunctionComponent = ({ children }) => {
       }
     `
   )
+  const [development, setDevelopment] = useState(site.siteMetadata.config.context !== "production")
   const mapSize = 80
   if (site.siteMetadata.config.context !== "production") {
     return (
-      <ApplicationContext.Provider value={{ development: site.siteMetadata.config.context !== "production" }}>
+      <ApplicationContext.Provider
+        value={{
+          initialDevelopmentValue: site.siteMetadata.config.context !== "production",
+          development,
+          toggle: () => setDevelopment(!development),
+        }}
+      >
         {children}
       </ApplicationContext.Provider>
     )

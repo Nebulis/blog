@@ -1,10 +1,11 @@
-import React, { FunctionComponent, useState } from "react"
-import { FaFacebook, FaInstagram, FaPinterest, FaTwitter } from "react-icons/all"
+import React, { FunctionComponent, useContext, useState } from "react"
+import { FaFacebook, FaInstagram, FaPinterest, FaTwitter, FaCircle } from "react-icons/all"
 import { Banner } from "./banner"
 import { css } from "@emotion/core"
 import { FlagUK } from "../icon/flag-uk"
 import { FlagFrance } from "../icon/flag-france"
 import { Link } from "gatsby"
+import { ApplicationContext } from "../applications"
 
 const style = css`
   &.header {
@@ -39,11 +40,18 @@ const style = css`
     background-color: white;
     border-radius: 16px;
   }
+  .development-mode-button.development {
+    fill: green;
+  }
+  .development-mode-button.production {
+    fill: red;
+  }
 `
 type Lang = "french" | "english"
 
 export const Header: FunctionComponent = () => {
   const [lang, setLang] = useState<Lang>("french")
+  const context = useContext(ApplicationContext)
   return (
     <header>
       <div css={style} className="header">
@@ -54,6 +62,12 @@ export const Header: FunctionComponent = () => {
           <FaPinterest className="pinterest" />
         </div>
         <div>
+          {context.initialDevelopmentValue ? (
+            <FaCircle
+              onClick={context.toggle}
+              className={`development-mode-button ${context.development ? "development" : "production"}`}
+            />
+          ) : null}
           <FlagFrance selected={lang === "french"} onClick={() => setLang("french")} />
           <FlagUK selected={lang === "english"} onClick={() => setLang("english")} />
         </div>

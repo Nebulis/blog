@@ -17,7 +17,7 @@ interface CachedLinksMap {
   published: boolean | Date
 }
 
-export const cachedLinks = new Map<string, CachedLinksMap>()
+const cachedLinks = new Map<string, CachedLinksMap>()
 continentLinks.forEach(continent => {
   cachedLinks.set(continent.id, { label: continent.label, url: path.resolve(getUrl(continent)), published: true })
   continent.countries.forEach(country => {
@@ -55,7 +55,7 @@ continentLinks.forEach(continent => {
   })
 })
 
-const getLink = (linkId: string): { label: string; url: string } => {
+export const getLink = (linkId: string): CachedLinksMap => {
   const link = cachedLinks.get(linkId)
   if (!link) {
     throw new Error(`No link for ${linkId}`)
