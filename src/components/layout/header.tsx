@@ -6,6 +6,7 @@ import { FlagUK } from "../icon/flag-uk"
 import { FlagFrance } from "../icon/flag-france"
 import { Link } from "gatsby"
 import { ApplicationContext } from "../applications"
+import { ScrollToTopDesktop } from "../core/scrollTo"
 
 const style = css`
   &.header {
@@ -53,28 +54,31 @@ export const Header: FunctionComponent = () => {
   const [lang, setLang] = useState<Lang>("french")
   const context = useContext(ApplicationContext)
   return (
-    <header>
-      <div css={style} className="header">
-        <div>
-          <FaFacebook className="facebook" />
-          <FaTwitter className="twitter" />
-          <FaInstagram className="instagram" />
-          <FaPinterest className="pinterest" />
+    <>
+      <header>
+        <div css={style} className="header">
+          <div>
+            <FaFacebook className="facebook" />
+            <FaTwitter className="twitter" />
+            <FaInstagram className="instagram" />
+            <FaPinterest className="pinterest" />
+          </div>
+          <div>
+            {context.initialDevelopmentValue ? (
+              <FaCircle
+                onClick={context.toggle}
+                className={`development-mode-button ${context.development ? "development" : "production"}`}
+              />
+            ) : null}
+            <FlagFrance selected={lang === "french"} onClick={() => setLang("french")} />
+            <FlagUK selected={lang === "english"} onClick={() => setLang("english")} />
+          </div>
         </div>
-        <div>
-          {context.initialDevelopmentValue ? (
-            <FaCircle
-              onClick={context.toggle}
-              className={`development-mode-button ${context.development ? "development" : "production"}`}
-            />
-          ) : null}
-          <FlagFrance selected={lang === "french"} onClick={() => setLang("french")} />
-          <FlagUK selected={lang === "english"} onClick={() => setLang("english")} />
-        </div>
-      </div>
-      <Link to="/">
-        <Banner />
-      </Link>
-    </header>
+        <Link to="/">
+          <Banner />
+        </Link>
+      </header>
+      <ScrollToTopDesktop />
+    </>
   )
 }
