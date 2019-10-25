@@ -34,7 +34,7 @@ import { MainToganjiImage } from "../../../components/images/asia/japan/mainToga
 import { MainHamarikyuGardenImage } from "../../../components/images/asia/japan/mainHamarikyuGardenImage"
 import { JapanDivider } from "../../../components/core/divider"
 import { JapanExternalLink } from "../../../components/core/links/link"
-import { BlogLayout } from "../../../components/layout/blog"
+import { BlogLayout } from "../../../components/layout/layout"
 
 const IndexPage = () => {
   return (
