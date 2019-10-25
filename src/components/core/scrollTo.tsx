@@ -33,7 +33,11 @@ export const ScrollToTop = () => {
           <FaArrowCircleUp
             css={style}
             className={`${
-              (height > windowHeight && direction === "UP") || document.body.offsetHeight - height < windowHeight * 2
+              // display if we have scrolled for one window size and going up OR
+              // if reaching the bottom for ~ one screen size (windowHeight * 2 because (document.body.offsetHeight - height - windowHeight) is equal to 0)
+              // shouldn't display the arrow if the body height is less then 2 screen height
+              (height > windowHeight && direction === "UP") ||
+              (height > windowHeight * 2 && document.body.offsetHeight - height < windowHeight * 2)
                 ? "show"
                 : "hide"
             }`}
