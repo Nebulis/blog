@@ -24,7 +24,7 @@ const style = css`
   }
 `
 
-export const ScrollToTopDesktop = () => {
+export const ScrollToTop = () => {
   const { windowHeight } = useWindowSize()
   return (
     <ScrollPosition>

@@ -1,6 +1,4 @@
 import React from "react"
-import { Header } from "../../../../components/layout/header"
-import { Maintenance } from "../../../../components/layout/maintenance"
 import SEO from "../../../../components/layout/seo"
 import css from "@emotion/css"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
@@ -24,25 +22,16 @@ import { ArashiyamaBambooImage } from "../../../../components/images/asia/japan/
 import { ArashiyamaShrine1Image } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine1Image"
 import { ArashiyamaShrine2Image } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine2Image"
 import { ArashiyamaCherryImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaCherryImage"
-import { Menu } from "../../../../components/layout/menu"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { ArashiyamaQuote, JapanLine } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
+import { BlogLayout } from "../../../../components/layout/blog"
 
 const IndexPage = () => {
   return (
     <>
       <SEO title="main" />
-      <Maintenance>{typeof window !== `undefined` ? <Content /> : null}</Maintenance>
-    </>
-  )
-}
-const Content = () => {
-  return (
-    <>
-      <Header />
-      <Menu />
-      <div className="center blog-container">
+      <BlogLayout page="arashiyama">
         <JapanTitle title="ARASHIYAMA – Forêt de bambous" categories={["asia", "japan", "kyoto"]} />
         <MainArashiyamaImage />
         <ArashiyamaQuote />
@@ -161,7 +150,7 @@ const Content = () => {
           Certains bambous sont malheureusement très abîmés et cela à cause de quelques touristes mal intentionnés qui
           s’amusent à graver leurs noms sur les bambous. Une véritable honte !
         </Conclusion>
-      </div>
+      </BlogLayout>
     </>
   )
 }

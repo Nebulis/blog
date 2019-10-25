@@ -1,9 +1,6 @@
 import React from "react"
-import { Header } from "../../../../components/layout/header"
-import { Maintenance } from "../../../../components/layout/maintenance"
 import SEO from "../../../../components/layout/seo"
 import { JapanTitle } from "../../../../components/core/title"
-import { Menu } from "../../../../components/layout/menu"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -42,22 +39,13 @@ import { NagoyaCastle2Image } from "../../../../components/images/asia/japan/nag
 import { Conclusion } from "../../../../components/core/conclusion"
 import { JapanLine, NagoyaCastleQuote } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
+import { BlogLayout } from "../../../../components/layout/blog"
 
 const IndexPage = () => {
   return (
     <>
       <SEO title="main" />
-      <Maintenance>{typeof window !== `undefined` ? <Content /> : null}</Maintenance>
-    </>
-  )
-}
-
-const Content = () => {
-  return (
-    <>
-      <Header />
-      <Menu />
-      <div className="center blog-container">
+      <BlogLayout page="nagoya-castle">
         <JapanTitle title="Château de NAGOYA" categories={["asia", "japan", "nagoya"]} />
         <ImageAsLandscape>
           <MainNagoyaCastleImage />
@@ -243,7 +231,7 @@ const Content = () => {
             </p>
           </Bonus>
         </Visit>
-      </div>
+      </BlogLayout>
     </>
   )
 }

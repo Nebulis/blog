@@ -1,12 +1,11 @@
 import React, { FunctionComponent, useContext, useState } from "react"
-import { FaFacebook, FaInstagram, FaPinterest, FaTwitter, FaCircle } from "react-icons/all"
+import { FaCircle, FaFacebook, FaInstagram, FaPinterest, FaTwitter } from "react-icons/all"
 import { Banner } from "./banner"
 import { css } from "@emotion/core"
 import { FlagUK } from "../icon/flag-uk"
 import { FlagFrance } from "../icon/flag-france"
 import { Link } from "gatsby"
-import { ApplicationContext } from "../applications"
-import { ScrollToTopDesktop } from "../core/scrollTo"
+import { ApplicationContext } from "../application"
 
 const style = css`
   &.header {
@@ -78,7 +77,6 @@ export const Header: FunctionComponent = () => {
           <Banner />
         </Link>
       </header>
-      <ScrollToTopDesktop />
     </>
   )
 }

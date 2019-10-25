@@ -16,20 +16,17 @@ import {
 } from "../../../components/core/japan"
 import { HowLong, HowMuch, SectionContent, WhatTimeOfYear, Where } from "../../../components/core/section"
 import { JapanCity } from "../../../components/core/highlight"
-import { Header } from "../../../components/layout/header"
-import { Maintenance } from "../../../components/layout/maintenance"
 import SEO from "../../../components/layout/seo"
 import { Conclusion } from "../../../components/core/conclusion"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { MainHimejiCastleImage } from "../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
-import { JapanCard } from "../../../components/Card"
+import { JapanCard } from "../../../components/card"
 import { MainKinkakujiImage } from "../../../components/images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
 import { MainDaigojiImage } from "../../../components/images/asia/japan/kyoto/daigoji/mainDaigojiImage"
 import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
 import { MainFujiImage } from "../../../components/images/asia/japan/mainFujiImage"
 import { JapanTitle } from "../../../components/core/title"
 import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
-import { Menu } from "../../../components/layout/menu"
 import { MainFushimiImage } from "../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { ImageAsPortrait } from "../../../components/images/layout"
 import { MainTokyoImage } from "../../../components/images/asia/japan/mainTokyoImage"
@@ -37,22 +34,13 @@ import { MainToganjiImage } from "../../../components/images/asia/japan/mainToga
 import { MainHamarikyuGardenImage } from "../../../components/images/asia/japan/mainHamarikyuGardenImage"
 import { JapanDivider } from "../../../components/core/divider"
 import { JapanExternalLink } from "../../../components/core/links/link"
+import { BlogLayout } from "../../../components/layout/blog"
 
 const IndexPage = () => {
   return (
     <>
       <SEO title="japan" />
-      <Maintenance>{typeof window !== `undefined` ? <Content /> : null}</Maintenance>
-    </>
-  )
-}
-
-const Content = () => {
-  return (
-    <>
-      <Header />
-      <Menu />
-      <div className="center blog-container">
+      <BlogLayout page="spring-in-japan">
         <JapanTitle title="Le Japon au printemps" categories={["asia", "japan"]} />
         <MainImage />
         <SpringInJapanQuote />
@@ -175,7 +163,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Temple Daigo-ji" to="daigo-ji">
+            <JapanCard title="Temple Daigo-ji" to="daigoji">
               <MainDaigojiImage />
               <DaigojiQuote />
             </JapanCard>
@@ -229,7 +217,7 @@ const Content = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Le temple de Togan-Ji et son grand bouddha" to="togan-ji">
+            <JapanCard title="Le temple de Togan-Ji et son grand bouddha" to="toganji">
               <ImageAsPortrait>
                 <MainToganjiImage />
               </ImageAsPortrait>
@@ -324,7 +312,7 @@ const Content = () => {
           Le Japon est un pays riche en découverte. Que vous aimiez la nature ou la ville, le côté culturel ou bien
           l’excentricité. Foncez, vous ne le regretterez pas !
         </Conclusion>
-      </div>
+      </BlogLayout>
     </>
   )
 }

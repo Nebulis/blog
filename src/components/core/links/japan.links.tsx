@@ -33,7 +33,7 @@ export const japanLinks: CountryLink = {
           published: false,
         },
         {
-          id: "daigo-ji",
+          id: "daigoji",
           label: "Daigo-ji",
           published: false,
         },
@@ -74,7 +74,7 @@ export const japanLinks: CountryLink = {
           published: false,
         },
         {
-          id: "togan-ji",
+          id: "toganji",
           label: "Togan-ji",
           published: false,
         },
@@ -97,7 +97,7 @@ export const japanLinks: CountryLink = {
           published: false,
         },
         {
-          id: "senso-ji",
+          id: "sensoji",
           label: "Senso-ji",
           published: false,
         },

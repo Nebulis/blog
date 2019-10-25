@@ -50,7 +50,6 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css?family=Playfair+Display:400i&display=swap",
         },
-        { rel: "stylesheet", href: "https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" },
       ]}
       title={title}
       titleTemplate={`${site.siteMetadata.title} | Blog voyage`}
