@@ -11,7 +11,7 @@ import { getLinkLabel, isLinkPublished } from "../../../components/core/links/li
 import { japanLinks } from "../../../components/core/links/japan.links"
 import { ApplicationLink } from "../../../components/core/links/link"
 import { ApplicationContext } from "../../../components/application"
-import { BlogLayout } from "../../../components/layout/blog"
+import { BlogLayout } from "../../../components/layout/layout"
 
 const IndexPage = () => {
   const context = useContext(ApplicationContext)

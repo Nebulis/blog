@@ -8,6 +8,8 @@ import { ApplicationContext } from "../application"
 import { Maintenance } from "./maintenance"
 import "./layout.css"
 import "./tachyons.css"
+import smoothscroll from "smoothscroll-polyfill"
+typeof window !== `undefined` && smoothscroll.polyfill()
 
 const pageDevelopmentMarkStyle = css`
   position: fixed;

@@ -39,7 +39,7 @@ import { NagoyaCastle2Image } from "../../../../components/images/asia/japan/nag
 import { Conclusion } from "../../../../components/core/conclusion"
 import { JapanLine, NagoyaCastleQuote } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
-import { BlogLayout } from "../../../../components/layout/blog"
+import { BlogLayout } from "../../../../components/layout/layout"
 
 const IndexPage = () => {
   return (

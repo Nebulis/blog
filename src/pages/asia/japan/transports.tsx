@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../../../components/layout/seo"
 import { JapanLink } from "../../../components/core/links/link"
-import { BlogLayout } from "../../../components/layout/blog"
+import { BlogLayout } from "../../../components/layout/layout"
 
 const IndexPage = () => {
   return (

@@ -37,7 +37,7 @@ import { KinkakujiStatueImage } from "../../../../components/images/asia/japan/k
 import { Conclusion } from "../../../../components/core/conclusion"
 import { JapanLine, KinkakujiQuote } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
-import { BlogLayout } from "../../../../components/layout/blog"
+import { BlogLayout } from "../../../../components/layout/layout"
 
 const IndexPage = () => {
   return (

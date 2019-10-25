@@ -39,7 +39,7 @@ import { DaigojiGarden5Image } from "../../../../components/images/asia/japan/ky
 import { DaigojiGarden4Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden4Image"
 import { DaigojiMonk2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiMonk2Image"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
-import { BlogLayout } from "../../../../components/layout/blog"
+import { BlogLayout } from "../../../../components/layout/layout"
 
 const IndexPage = () => {
   return (

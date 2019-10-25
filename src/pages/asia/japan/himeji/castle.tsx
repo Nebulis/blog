@@ -44,7 +44,7 @@ import { HimejiCastle4Image } from "../../../../components/images/asia/japan/him
 import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
 import { HimejiCastleQuote } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
-import { BlogLayout } from "../../../../components/layout/blog"
+import { BlogLayout } from "../../../../components/layout/layout"
 
 const IndexPage = () => {
   return (
