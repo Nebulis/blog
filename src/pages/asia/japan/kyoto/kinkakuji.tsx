@@ -1,8 +1,5 @@
 import React from "react"
-import { Header } from "../../../../components/layout/header"
-import { Maintenance } from "../../../../components/layout/maintenance"
 import SEO from "../../../../components/layout/seo"
-import { Menu } from "../../../../components/layout/menu"
 import { JapanTitle } from "../../../../components/core/title"
 import { MainKinkakujiImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
 import {
@@ -40,22 +37,13 @@ import { KinkakujiStatueImage } from "../../../../components/images/asia/japan/k
 import { Conclusion } from "../../../../components/core/conclusion"
 import { JapanLine, KinkakujiQuote } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
+import { BlogLayout } from "../../../../components/layout/blog"
 
 const IndexPage = () => {
   return (
     <>
       <SEO title="main" />
-      <Maintenance>{typeof window !== `undefined` ? <Content /> : null}</Maintenance>
-    </>
-  )
-}
-
-const Content = () => {
-  return (
-    <>
-      <Header />
-      <Menu />
-      <div className="center blog-container">
+      <BlogLayout page="kinkakuji">
         <JapanTitle title="Temple de KINKAKUJI" categories={["asia", "japan", "kyoto"]} />
         <MainKinkakujiImage />
         <KinkakujiQuote />
@@ -203,7 +191,7 @@ const Content = () => {
             l’identique 5 ans après.
           </Conclusion>
         </Visit>
-      </div>
+      </BlogLayout>
     </>
   )
 }

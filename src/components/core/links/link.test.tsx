@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react"
 import { ApplicationLink } from "./link"
 import * as React from "react"
-import { ApplicationContext } from "../../applications"
+import { ApplicationContext } from "../../application"
 
 describe("link", () => {
   it("should throw error when the link doesnt exist", () => {

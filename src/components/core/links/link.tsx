@@ -5,7 +5,7 @@ import { css } from "@emotion/core"
 import React, { AnchorHTMLAttributes, ComponentType, FunctionComponent, useContext } from "react"
 import { japanPrimaryColor } from "../japan.variables"
 import { getLink, getLinkUrl } from "./links"
-import { ApplicationContext } from "../../applications"
+import { ApplicationContext } from "../../application"
 
 interface ExternalLinkProps {
   noIcon?: boolean

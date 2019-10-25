@@ -1,37 +1,25 @@
 import React, { useContext } from "react"
-import { Header } from "../../../components/layout/header"
-import { Maintenance } from "../../../components/layout/maintenance"
 import SEO from "../../../components/layout/seo"
-import { Menu } from "../../../components/layout/menu"
 import { JapanImageAsMedallion } from "../../../components/images/layout"
 import { css } from "@emotion/core"
 import { JapanDivider } from "../../../components/core/divider"
-import { JapanCard } from "../../../components/Card"
+import { JapanCard } from "../../../components/card"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { SpringInJapanQuote } from "../../../components/core/japan"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import { getLinkLabel, isLinkPublished } from "../../../components/core/links/links"
 import { japanLinks } from "../../../components/core/links/japan.links"
 import { ApplicationLink } from "../../../components/core/links/link"
-import { ApplicationContext } from "../../../components/applications"
+import { ApplicationContext } from "../../../components/application"
+import { BlogLayout } from "../../../components/layout/blog"
 
 const IndexPage = () => {
-  return (
-    <>
-      <SEO title="japan" />
-      <Maintenance>{typeof window !== `undefined` ? <Content /> : null}</Maintenance>
-    </>
-  )
-}
-
-const Content = () => {
   const context = useContext(ApplicationContext)
   const cities = context.development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished).sort()
   return (
     <>
-      <Header />
-      <Menu />
-      <div className="center blog-container">
+      <SEO title="japan" />
+      <BlogLayout page="japan">
         <h1 className="tc ttu flex items-center justify-center">
           <img src={cherryBlossom} alt="cherry blossom" />
           &nbsp;Japon&nbsp;
@@ -67,7 +55,7 @@ const Content = () => {
             <JapanDivider />
           </>
         )}
-      </div>
+      </BlogLayout>
     </>
   )
 }

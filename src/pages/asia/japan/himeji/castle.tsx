@@ -1,6 +1,4 @@
 import React from "react"
-import { Header } from "../../../../components/layout/header"
-import { Maintenance } from "../../../../components/layout/maintenance"
 import SEO from "../../../../components/layout/seo"
 import { css } from "@emotion/core"
 import { JapanTitle } from "../../../../components/core/title"
@@ -44,25 +42,15 @@ import { HimejiCastleWithCherry4Image } from "../../../../components/images/asia
 import { HimejiCastle2Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
 import { HimejiCastle4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
 import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
-import { Menu } from "../../../../components/layout/menu"
 import { HimejiCastleQuote } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
+import { BlogLayout } from "../../../../components/layout/blog"
 
 const IndexPage = () => {
   return (
     <>
       <SEO title="main" />
-      <Maintenance>{typeof window !== `undefined` ? <Content /> : null}</Maintenance>
-    </>
-  )
-}
-
-const Content = () => {
-  return (
-    <>
-      <Header />
-      <Menu />
-      <div className="center blog-container">
+      <BlogLayout page="himeji-castle">
         <JapanTitle title="Château de HIMEJI" categories={["asia", "japan", "himeji"]} />
         <ImageAsLandscape>
           <MainHimejiCastleImage />
@@ -256,7 +244,7 @@ const Content = () => {
             <HimejiCastleTroup />
           </TwoImagesSameSize>
         </Bonus>
-      </div>
+      </BlogLayout>
     </>
   )
 }

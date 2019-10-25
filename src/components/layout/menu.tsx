@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { continentLinks, getLinkLabel, isLinkPublished } from "../core/links/links"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
-import { ApplicationContext } from "../applications"
+import { ApplicationContext } from "../application"
 
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 

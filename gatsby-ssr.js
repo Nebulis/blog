@@ -1,4 +1,4 @@
-import { Application } from "./src/components/Application"
+import { Application } from "./src/components/application"
 import React from "react"
 
 /**

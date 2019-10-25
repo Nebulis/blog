@@ -1,9 +1,6 @@
 import React from "react"
-import { Header } from "../../../../components/layout/header"
-import { Maintenance } from "../../../../components/layout/maintenance"
 import SEO from "../../../../components/layout/seo"
 import { JapanTitle } from "../../../../components/core/title"
-import { Menu } from "../../../../components/layout/menu"
 import { MainFushimiImage } from "../../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import {
@@ -23,22 +20,13 @@ import { FushimiKomainu1Image } from "../../../../components/images/asia/japan/k
 import { Conclusion } from "../../../../components/core/conclusion"
 import { FushimiInariTaishaQuote, JapanLine } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
+import { BlogLayout } from "../../../../components/layout/blog"
 
 const IndexPage = () => {
   return (
     <>
       <SEO title="main" />
-      <Maintenance>{typeof window !== `undefined` ? <Content /> : null}</Maintenance>
-    </>
-  )
-}
-
-const Content = () => {
-  return (
-    <>
-      <Header />
-      <Menu />
-      <div className="center blog-container">
+      <BlogLayout page="fushimi-inari-taisha">
         <JapanTitle title="FUSHIMI INARI TAISHA" categories={["asia", "japan", "kyoto"]} />
         <MainFushimiImage />
         <FushimiInariTaishaQuote />
@@ -166,7 +154,7 @@ const Content = () => {
           Les Torii seraient, pour la plupart, des dons fait par des particuliers ou des entreprises. Leur nom ainsi que
           la date de pose y serait indiqué sur chacun d’eux.
         </Conclusion>
-      </div>
+      </BlogLayout>
     </>
   )
 }

@@ -1,8 +1,5 @@
 import React from "react"
-import { Header } from "../../../../components/layout/header"
-import { Maintenance } from "../../../../components/layout/maintenance"
 import SEO from "../../../../components/layout/seo"
-import { Menu } from "../../../../components/layout/menu"
 import { JapanTitle } from "../../../../components/core/title"
 import { MainDaigojiImage } from "../../../../components/images/asia/japan/kyoto/daigoji/mainDaigojiImage"
 import { DaigojiQuote, JapanLine } from "../../../../components/core/japan"
@@ -42,22 +39,13 @@ import { DaigojiGarden5Image } from "../../../../components/images/asia/japan/ky
 import { DaigojiGarden4Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden4Image"
 import { DaigojiMonk2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiMonk2Image"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
+import { BlogLayout } from "../../../../components/layout/blog"
 
 const IndexPage = () => {
   return (
     <>
       <SEO title="main" />
-      <Maintenance>{typeof window !== `undefined` ? <Content /> : null}</Maintenance>
-    </>
-  )
-}
-
-const Content = () => {
-  return (
-    <>
-      <Header />
-      <Menu />
-      <div className="center blog-container">
+      <BlogLayout page="daigoji">
         <JapanTitle title="DAIGO-JI" categories={["asia", "japan", "kyoto"]} />
         <MainDaigojiImage />
         <DaigojiQuote />
@@ -223,7 +211,7 @@ const Content = () => {
         >
           <DaigojiMonk2Image />
         </ImageAsPortrait>
-      </div>
+      </BlogLayout>
     </>
   )
 }

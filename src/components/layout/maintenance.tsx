@@ -1,9 +1,8 @@
 import SEO from "./seo"
 import { Scooter } from "./scooter"
 import { World } from "./world"
-import Layout from "./layout"
 import React, { FunctionComponent, useContext } from "react"
-import { ApplicationContext } from "../applications"
+import { ApplicationContext } from "../application"
 
 export const Maintenance: FunctionComponent = ({ children }) => {
   const context = useContext(ApplicationContext)
@@ -12,7 +11,13 @@ export const Maintenance: FunctionComponent = ({ children }) => {
     return <>{children}</>
   }
   return (
-    <Layout>
+    <div
+      style={{
+        margin: `0 auto`,
+        maxWidth: "100%",
+        paddingTop: 0,
+      }}
+    >
       <SEO title="Home" />
       <h3
         style={{
@@ -56,6 +61,6 @@ export const Maintenance: FunctionComponent = ({ children }) => {
           }}
         />
       </div>
-    </Layout>
+    </div>
   )
 }

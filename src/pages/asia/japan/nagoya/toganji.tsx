@@ -7,8 +7,8 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="main" />
-      <BlogLayout page="kyoto">
-        Kyoto page
+      <BlogLayout page="toganji">
+        Toganji page
         <ApplicationLink to="japan">Japon</ApplicationLink>
       </BlogLayout>
     </>

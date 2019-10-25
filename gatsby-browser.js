@@ -1,5 +1,5 @@
 import React from "react"
-import { Application } from "./src/components/Application"
+import { Application } from "./src/components/application"
 
 /**
  * Implement Gatsby's Browser APIs in this file.
