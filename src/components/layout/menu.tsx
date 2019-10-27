@@ -56,7 +56,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
       className={`flex justify-start items-center ${className}`}
       css={css`
         height: 45px;
-        background-color: black;
+        background-color: #1b1811;
         color: white;
         text-transform: uppercase;
         font-weight: bold;
@@ -95,7 +95,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
           color: black;
         }
         li {
-          background: black;
+          background-color: #1b1811;
           color: white;
           display: block;
           position: relative;
@@ -156,11 +156,11 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
 
         .nav-container .where-to-go:hover > a {
           background-color: white;
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid #1b1811;
         }
 
         .nav-container .where-to-go > a {
-          background-color: black;
+          background-color: #1b1811;
         }
 
         .where-to-go .dropdown-continent li {
@@ -173,7 +173,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
           width: 100%;
         }
         .where-to-go .dropdown-continent li:hover {
-          background-color: #565656;
+          background-color: rgba(27, 24, 17, 0.8);
         }
         .where-to-go .dropdown-country li,
         .where-to-go .dropdown-continent ul {
@@ -211,7 +211,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
         }
         .where-to-go:hover .black-arrow {
           bottom: -10px;
-          border-top-color: black;
+          border-top-color: #1b1811;
         }
       `}
     >
@@ -273,7 +273,7 @@ const burgerStyle = css`
     position: absolute;
     height: 3px;
     width: 100%;
-    background: black;
+    background-color: #1b1811;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -364,7 +364,7 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
           padding-left: 0;
           width: 100%;
           text-transform: uppercase;
-          background-color: black;
+          background-color: #1b1811;
         }
         li > a {
           min-height: 45px;

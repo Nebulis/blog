@@ -12,7 +12,7 @@ const backgroundColor = "whitesmoke"
 const style = css`
   background-color: ${backgroundColor};
   .header {
-    background-color: black;
+    background-color: #1b1811;
     height: 40px;
     display: flex;
     justify-content: space-between;
