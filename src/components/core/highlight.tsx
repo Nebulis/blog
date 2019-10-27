@@ -1,6 +1,5 @@
 import * as React from "react"
 import { FunctionComponent, HTMLAttributes } from "react"
-import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { japanPrimaryColor } from "./japan.variables"
 import cherryBlossom from "../../images/asia/japan/cherry-blossom.png"
@@ -21,7 +20,3 @@ export const JapanCity: FunctionComponent = ({ children }) => (
     <img src={cherryBlossom} alt="cherry blossom" /> {children} <img src={cherryBlossom} alt="cherry blossom" />
   </City>
 )
-
-export const Highlight: FunctionComponent = styled(City)`
-  color: black;
-`
