@@ -1,10 +1,11 @@
 import css from "@emotion/css"
-import React, { FunctionComponent, HTMLAttributes, useContext } from "react"
+import React, { FunctionComponent, HTMLAttributes, useContext, useState } from "react"
 import { Link } from "gatsby"
 import { continentLinks, getLinkLabel, isLinkPublished } from "../core/links/links"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
+import { FaChevronDown } from "react-icons/all"
 
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 
@@ -257,5 +258,257 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
         </ul>
       </nav>
     </div>
+  )
+}
+
+const burgerStyle = css`
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+  span:nth-of-type(1) {
+    top: 4px;
+  }
+  span:nth-of-type(2),
+  span:nth-of-type(3) {
+    top: 12px;
+  }
+  span:nth-of-type(4) {
+    top: 20px;
+  }
+
+  &.open span:nth-of-type(1) {
+    top: 12px;
+    width: 0%;
+    left: 50%;
+  }
+  &.open span:nth-of-type(2) {
+    transform: rotate(45deg);
+  }
+
+  &.open span:nth-of-type(3) {
+    transform: rotate(-45deg);
+  }
+
+  &.open span:nth-of-type(4) {
+    top: 12px;
+    width: 0%;
+    left: 50%;
+  }
+`
+const Burger: FunctionComponent<{ open: boolean; onClick: () => void }> = ({ open, onClick }) => {
+  return (
+    <div css={burgerStyle} className={`${open ? "open" : "closed"}`} onClick={onClick}>
+      <span />
+      <span />
+      <span />
+      <span />
+    </div>
+  )
+}
+
+export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
+  const [openMenu, setOpenMenu] = useState(false)
+  const [openContinents, setOpenContinents] = useState(false)
+
+  return (
+    <div
+      css={css`
+        height: 65px;
+        background-color: whitesmoke;
+        .nav-container {
+          position: relative;
+          height: 45px;
+          background-color: #dedede;
+          margin-bottom: 20px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+        @media (max-width: 576px) {
+          .nav-container {
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+        }
+        .nav-container > div {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          justify-content: space-between;
+        }
+        .nav-container > ul {
+          z-index: 100;
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }
+        ul {
+          list-style: none;
+          margin: 0;
+          padding-left: 0;
+          width: 100%;
+          text-transform: uppercase;
+          background-color: black;
+        }
+        li > a {
+          min-height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid #565656;
+        }
+        li > a > .chevron {
+          display: flex;
+          align-items: center;
+        }
+        li > a > .chevron.open {
+          transform: rotate(-90deg);
+          transition: transform 0.15s ease;
+        }
+        li > a > .chevron.closed {
+          transform: rotate(0);
+          transition: transform 0.15s ease;
+        }
+        li {
+          color: white;
+          display: flex;
+          flex-direction: column;
+          margin-left: 1rem;
+        }
+        ul.main-menu > li {
+          margin-right: 1rem;
+        }
+        ul.closed {
+          transform: scaleY(0);
+          transition: transform 0.15s ease, height 0.15s ease;
+          transform-origin: top;
+          // height: 0 !important;
+        }
+        ul.open {
+          transform: scaleY(1);
+          transform-origin: top;
+          transition: transform 0.15s ease;
+        }
+      `}
+    >
+      <nav className="nav-container flex justify-center" role="navigation">
+        <div>
+          <span>Selectionner une page</span>
+          <Burger open={openMenu} onClick={() => setOpenMenu(!openMenu)} />
+        </div>
+        <ul className={`${openMenu ? "open" : "closed"} main-menu`}>
+          <li>
+            <Link to="/" className="home">
+              Accueil
+            </Link>
+          </li>
+          <li className="where-to-go" onClick={() => setOpenContinents(!openContinents)}>
+            <a href="#" aria-haspopup="true">
+              <span>Ou Partir</span>
+              <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronDown />}</span>
+            </a>
+            {openContinents && (
+              <ul className="dropdown-continent" aria-label="submenu">
+                {continentLinks.map(continent => (
+                  <MobileContinent key={continent.id} continent={continent} />
+                ))}
+              </ul>
+            )}
+          </li>
+          <li className="about">
+            <a href="#">A Propos</a>
+          </li>
+          <li className="contact">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  )
+}
+
+const MobileContinent: FunctionComponent<{ continent: ContinentLink }> = ({ continent }) => {
+  const [open, setOpen] = useState(false)
+  const context = useContext(ApplicationContext)
+  const publishedCountries = context.development ? continent.countries : continent.countries.filter(isLinkPublished)
+  return (
+    <li
+      onClick={event => {
+        event.stopPropagation()
+        setOpen(!open)
+      }}
+    >
+      <a href="#">
+        <span>{getLinkLabel(continent.id)}</span>
+        <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronDown />}</span>
+      </a>
+      {publishedCountries.length > 0 && open ? (
+        <ul aria-label="submenu">
+          {publishedCountries.sort(sort).map(country => (
+            <MobileCountry key={`${continent.id}_${country.id}`} continent={continent} country={country} />
+          ))}
+        </ul>
+      ) : null}
+    </li>
+  )
+}
+
+const MobileCountry: FunctionComponent<{ continent: ContinentLink; country: CountryLink }> = ({
+  continent,
+  country,
+}) => {
+  const [open, setOpen] = useState(false)
+  const context = useContext(ApplicationContext)
+  const cities = context.development ? country.cities : country.cities.filter(isLinkPublished)
+
+  return (
+    <li
+      onClick={event => {
+        event.stopPropagation()
+        setOpen(!open)
+      }}
+    >
+      <a href="#">
+        <span>{getLinkLabel(country.id)}</span>
+        <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronDown />}</span>
+      </a>
+      {context.development && cities.length > 0 && open ? (
+        <ul
+          className={`${open ? "open" : "closed"}`}
+          aria-label="submenu"
+          style={{ height: cities.length * 45 + "px" }}
+        >
+          {cities.sort(sort).map(city => (
+            <MobileCity city={city} key={`${continent.id}_${country.id}_${city.id}`} />
+          ))}
+        </ul>
+      ) : null}
+    </li>
+  )
+}
+
+const MobileCity: FunctionComponent<{ city: CityLink }> = ({ city }) => {
+  return (
+    <li>
+      <ApplicationLink to={city.id}>
+        <span>{getLinkLabel(city.id)}</span>
+      </ApplicationLink>
+    </li>
   )
 }

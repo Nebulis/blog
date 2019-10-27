@@ -1,26 +1,29 @@
 import { css } from "@emotion/core"
-import React from "react"
+import React, { FunctionComponent } from "react"
 import { useWindowSize } from "../hooks/useWindowSize"
 
-export const Banner = () => {
+const style = css`
+  mqx-height: 170px;
+  overflow: hidden;
+  margin-top: 0.8rem;
+  rect {
+    fill: white;
+  }
+  & > div {
+    margin: auto;
+    font-family: "Ami R Regular";
+    background-color: white;
+    font-size: 70px;
+  }
+`
+
+export const Banner: FunctionComponent<{ className?: string }> = ({ className = "" }) => {
   const { windowWidth: width } = useWindowSize()
   return (
-    <div
-      css={css`
-        mqx-height: 170px;
-        overflow: hidden;
-        margin-top: 0.8rem;
-        @media (max-width: 767px) {
-        }
-      `}
-    >
+    <div css={style} className={className}>
       <div
         css={css`
           width: ${width > 1000 ? 1000 : width}px;
-          margin: auto;
-          font-family: "Ami R Regular";
-          background-color: white;
-          font-size: 70px;
         `}
       >
         <svg viewBox="0 0 1000 170" paintOrder="fill stroke">
@@ -38,7 +41,7 @@ export const Banner = () => {
             </text>
           </g>
           <g transform="translate(910, 70) rotate(59)">
-            <rect width="60" height="50" fill="white" />
+            <rect width="60" height="50" />
             <path d="m23 49c2-4 0-13-2-14l3-3c3 1 5 9 4 13z" fill="#d4edf5" />
             <path
               d="m52 10s0-3-1-4l-.1-.3-3.88 1.29c-1.97.66-3.7 1.4-5.02 3.01l-5.43 6.68-1.93 2.38 5.13 4.086c.796.634 1.941.569 2.66-.15l9.629-9.629s-.059-3.257-.059-3.367z"
