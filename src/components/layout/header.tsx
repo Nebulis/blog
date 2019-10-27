@@ -6,20 +6,23 @@ import { FlagUK } from "../icon/flag-uk"
 import { FlagFrance } from "../icon/flag-france"
 import { Link } from "gatsby"
 import { ApplicationContext } from "../application"
+import styled from "@emotion/styled"
 
+const backgroundColor = "whitesmoke"
 const style = css`
-  &.header {
+  background-color: ${backgroundColor};
+  .header {
     background-color: black;
     height: 40px;
     display: flex;
     justify-content: space-between;
   }
-  & > div {
+  .header > div {
     height: 100%;
     display: flex;
     align-items: center;
   }
-  svg {
+  .header svg {
     fill: white;
     margin-left: 0.3rem;
     margin-right: 0.3rem;
@@ -47,36 +50,43 @@ const style = css`
     fill: red;
   }
 `
+const StyledBanner = styled(Banner)`
+  div {
+    background-color: ${backgroundColor};
+  }
+  rect {
+    fill: ${backgroundColor};
+  }
+`
+
 type Lang = "french" | "english"
 
 export const Header: FunctionComponent = () => {
   const [lang, setLang] = useState<Lang>("french")
   const context = useContext(ApplicationContext)
   return (
-    <>
-      <header>
-        <div css={style} className="header">
-          <div>
-            <FaFacebook className="facebook" />
-            <FaTwitter className="twitter" />
-            <FaInstagram className="instagram" />
-            <FaPinterest className="pinterest" />
-          </div>
-          <div>
-            {context.initialDevelopmentValue ? (
-              <FaCircle
-                onClick={context.toggle}
-                className={`development-mode-button ${context.development ? "development" : "production"}`}
-              />
-            ) : null}
-            <FlagFrance selected={lang === "french"} onClick={() => setLang("french")} />
-            <FlagUK selected={lang === "english"} onClick={() => setLang("english")} />
-          </div>
+    <header css={style}>
+      <div className="header">
+        <div>
+          <FaFacebook className="facebook" />
+          <FaTwitter className="twitter" />
+          <FaInstagram className="instagram" />
+          <FaPinterest className="pinterest" />
         </div>
-        <Link to="/">
-          <Banner />
-        </Link>
-      </header>
-    </>
+        <div>
+          {context.initialDevelopmentValue ? (
+            <FaCircle
+              onClick={context.toggle}
+              className={`development-mode-button ${context.development ? "development" : "production"}`}
+            />
+          ) : null}
+          <FlagFrance selected={lang === "french"} onClick={() => setLang("french")} />
+          <FlagUK selected={lang === "english"} onClick={() => setLang("english")} />
+        </div>
+      </div>
+      <Link to="/">
+        <StyledBanner />
+      </Link>
+    </header>
   )
 }
