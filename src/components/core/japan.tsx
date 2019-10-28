@@ -77,7 +77,12 @@ export const NagoyaCastleQuote = () => (
   </JapanQuote>
 )
 
-export const ToganjiQuote = () => <JapanQuote>Toganji</JapanQuote>
+export const ToganjiQuote = () => (
+  <JapanQuote>
+    Impressionnante statue d’un vert très vif d’environ 10 mètres de haut, ce grand Bouddha est entouré à son pied
+    d’éléphants, de rennes et de moines.
+  </JapanQuote>
+)
 export const TokyoQuote = () => <JapanQuote>Tokyo</JapanQuote>
 export const FujiQuote = () => <JapanQuote>Fuji</JapanQuote>
 export const HamarikyuGardenQuote = () => <JapanQuote>HamarikyuGarden</JapanQuote>

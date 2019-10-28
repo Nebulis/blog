@@ -14,7 +14,7 @@ import {
   ToganjiQuote,
   TokyoQuote,
 } from "../../../components/core/japan"
-import { HowLong, HowMuch, SectionContent, WhatTimeOfYear, Where } from "../../../components/core/section"
+import { SectionContent, WhatTimeOfYear, Where } from "../../../components/core/section"
 import { JapanCity } from "../../../components/core/highlight"
 import SEO from "../../../components/layout/seo"
 import { Conclusion } from "../../../components/core/conclusion"
@@ -29,11 +29,10 @@ import { JapanTitle } from "../../../components/core/title"
 import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { MainFushimiImage } from "../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { ImageAsPortrait } from "../../../components/images/layout"
-import { MainTokyoImage } from "../../../components/images/asia/japan/mainTokyoImage"
-import { MainToganjiImage } from "../../../components/images/asia/japan/mainToganjiImage"
+import { MainTokyoImage } from "../../../components/images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
+import { MainToganjiImage } from "../../../components/images/asia/japan/nagoya/toganji/mainToganjiImage"
 import { MainHamarikyuGardenImage } from "../../../components/images/asia/japan/mainHamarikyuGardenImage"
 import { JapanDivider } from "../../../components/core/divider"
-import { JapanExternalLink } from "../../../components/core/links/link"
 import { BlogLayout } from "../../../components/layout/layout"
 
 const IndexPage = () => {
@@ -62,11 +61,6 @@ const IndexPage = () => {
             façon d’y voyager.
           </p>
         </WhatTimeOfYear>
-        <HowLong title="Combien de temps y aller ?">
-          Comme pour tout, tout dépend de ce que vous comptez y faire. Mais si comme nous, vous n’aimez pas spécialement
-          rester au même endroit mais plutôt bouger un peu partout comptez vraiment au minimum deux semaines pour
-          voyager à votre rythme mais en voir un maximum.
-        </HowLong>
         <Where title="Notre itinéraire">
           <p>
             Nous n’avions malheureusement pas beaucoup de temps, qu’une petite semaine pour visiter le maximum de choses
@@ -153,8 +147,8 @@ const IndexPage = () => {
           <JapanDivider />
           <SectionContent>
             <p>
-              Nous devions faire le château de Nijo-jo dans la foulée mais il fermait à 16h et comme nous avions décidé
-              de profiter au maximum à chaque endroit, nous n’avions plus le temps d’y aller.
+              Nous devions faire <b>le château de Nijo-jo</b> dans la foulée mais il fermait à 16h et comme nous avions
+              décidé de profiter au maximum à chaque endroit, nous n’avions plus le temps d’y aller.
             </p>
             <p>
               Deuxième jour, direction Daigo-ji. Là encore nous ne pensions pas cela aussi grand, nous avions compris
@@ -184,8 +178,8 @@ const IndexPage = () => {
           </article>
           <SectionContent>
             <p>
-              Nous devions visiter le temple Kiyomisu ensuite mais il était en travaux et nous avons donc décidé de
-              s’arrêter pour ce jour là.
+              Nous devions visiter <b>le temple Kiyomisu</b> ensuite mais il était en travaux et nous avons donc décidé
+              de s’arrêter pour ce jour là.
             </p>
           </SectionContent>
         </section>
@@ -217,7 +211,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Le temple de Togan-Ji et son grand bouddha" to="toganji">
+            <JapanCard title="Le temple de Togan-Ji" to="toganji">
               <ImageAsPortrait>
                 <MainToganjiImage />
               </ImageAsPortrait>
@@ -227,8 +221,8 @@ const IndexPage = () => {
 
           <SectionContent>
             <p>
-              Si vous êtes à Nagoya en automne on vous conseille également de faire le Tokugawa-En Garden, un parc qui a
-              l’air juste magnifique quand les feuilles rouges des érables apparaissent.
+              Si vous êtes à Nagoya en automne on vous conseille également de faire <b>le Tokugawa-En Garden</b>, un
+              parc qui a l’air juste magnifique quand les feuilles rouges des érables apparaissent.
             </p>
           </SectionContent>
         </section>
@@ -239,8 +233,12 @@ const IndexPage = () => {
           <SectionContent>
             <p>
               Nous n’avions pas beaucoup de temps à Tokyo car nous nous étions surtout concentré sur les plus petites
-              villes qui nous intéressaient bien plus. Mais comment passer au Japon sans rester au minimum une voir deux
-              journées à Tokyo. On vous propose quelques endroits à faire, parmi quelques lieux incontournables.
+              villes qui nous intéressaient bien plus. Mais comment passer au Japon sans rester au minimum une journée à
+              Tokyo.
+            </p>
+            <p>
+              Au programme pour cette journée : Cerisiers au parc Ueno, Cosplay à Takeshita Street, incontournable
+              Shibuya Crossing et visite du temple de Senso-Ji.
             </p>
           </SectionContent>
           <article>
@@ -258,7 +256,7 @@ const IndexPage = () => {
             <p>
               N’ayant ni le temps, ni le courage de faire l’ascension du Mont Fuji, nous voulions quand même le voir de
               près. Après plusieurs recherches pour déterminer à quel endroit cela nous plairait le plus, nous avons
-              opté pour l’un des 5 lacs qui l’entoure, le lac Kawaguchiko.
+              opté pour l’un des 5 lacs qui l’entoure, le lac Kawaguchi.
             </p>
           </SectionContent>
           <article>
@@ -286,27 +284,6 @@ const IndexPage = () => {
             </JapanCard>
           </article>
         </section>
-        <JapanDivider />
-        <HowMuch title="Et le prix dans tout ça ?">
-          <p>
-            C’est toujours difficile de parler du coût d’un voyage, on ne dépense forcément pas tous de la même manière
-            et on ne privilégie pas tous la même chose. Cela dit pour vous donner un ordre d’idée on a quand même des
-            prix assez fixes pour certaines catégories.
-          </p>
-          <p>Comptez environ 250€ par personne pour le JR-Pass pour une semaine (Réservez-le en ligne).</p>
-          <p>Pour les logements comptez environ 100€ la nuit.</p>
-          <p>
-            Le prix de la nourriture peut varier énormément en fonction des lieux et de la spécialitée, la viande est
-            généralement assez cher. Vous trouverez de tout, à tous les prix. On utilise de temps en temps Google pour
-            regarder les commentaires et se faire une idée, mais on juge souvent au feeling, pour de bonnes ou de
-            mauvaises surprises.
-          </p>
-          <p>Les activités payantes ne sont généralement pas très cher.</p>
-          <p>
-            Pour l’avion, tout dépend d’où vous venez. Nous réservons le plus souvent nos billets sur{" "}
-            <JapanExternalLink href="https://expedia.fr">le site expedia</JapanExternalLink>.
-          </p>
-        </HowMuch>
         <JapanDivider />
         <Conclusion>
           Le Japon est un pays riche en découverte. Que vous aimiez la nature ou la ville, le côté culturel ou bien

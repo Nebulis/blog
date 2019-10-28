@@ -225,10 +225,7 @@ const IndexPage = () => {
             bois. Un mal pour un bien du coup !
           </Conclusion>
           <Bonus>
-            <p>
-              Il semblerait que le Dimanche vous puissiez voir un spectacle de Samouraï et de Ninja dans l’après-midi,
-              aucune véritable confirmation là dessus, mais nous avons vu pas mal de commentaires là dessus.
-            </p>
+            <p>Le Dimanche vous pouvez voir un spectacle de Samouraï et de Ninja dans l’après-midi.</p>
           </Bonus>
         </Visit>
       </BlogLayout>

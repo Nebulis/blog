@@ -3,7 +3,7 @@ import { MainArashiyamaImage } from "../../images/asia/japan/kyoto/arashiyama/ma
 import { MainHimejiCastleImage } from "../../images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { MainNagoyaCastleImage } from "../../images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
 import { MainFujiImage } from "../../images/asia/japan/mainFujiImage"
-import { MainTokyoImage } from "../../images/asia/japan/mainTokyoImage"
+import { MainTokyoImage } from "../../images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
 
 export const japanLinks: CountryLink = {
   id: "japan",
@@ -92,8 +92,8 @@ export const japanLinks: CountryLink = {
       image: MainTokyoImage,
       highlights: [
         {
-          id: "ueno-park",
-          label: "Parc Ueno",
+          id: "a-day-in-tokyo",
+          label: "Un jour à Tokyo",
           published: false,
         },
         {
