@@ -17,7 +17,7 @@ export interface CityLink {
   id: string
   label: string
   url?: string
-  image: React.ComponentType<any>
+  image?: React.ComponentType<any>
   highlights: HighlightLink[]
 }
 
