@@ -1,11 +1,11 @@
 import css from "@emotion/css"
 import React, { FunctionComponent, HTMLAttributes, useContext, useState } from "react"
 import { Link } from "gatsby"
-import { continentLinks, getLinkLabel, isLinkPublished } from "../core/links/links"
+import { continentLinks, getLinkLabel, getLinkUrl, isLinkPublished } from "../core/links/links"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
-import { FaChevronDown } from "react-icons/all"
+import { FaChevronRight } from "react-icons/all"
 
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 
@@ -15,9 +15,9 @@ const renderCity = (continent: ContinentLink, country: CountryLink, city: CityLi
     <li key={`${continent.id}_${country.id}_${city.id}`}>
       <ApplicationLink to={city.id}>
         <span>{getLinkLabel(city.id)}</span>
-        <span>{highlights.length > 0 ? ">" : null}</span>
+        <span>{inDevelopment && highlights.length > 0 ? ">" : null}</span>
       </ApplicationLink>
-      {highlights.length > 0 ? (
+      {inDevelopment && highlights.length > 0 ? (
         <ul className="dropdown-highlight" aria-label="submenu">
           {highlights.sort(sort).map(highlight => (
             <li key={`${continent.id}_${country.id}_${city.id}_${highlight.id}`}>
@@ -36,9 +36,9 @@ const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelop
     <li key={`${continent.id}_${country.id}`}>
       <ApplicationLink to={country.id}>
         <span>{getLinkLabel(country.id)}</span>
-        <span>{inDevelopment && cities.length > 0 ? ">" : null}</span>
+        <span>{cities.length > 0 ? ">" : null}</span>
       </ApplicationLink>
-      {inDevelopment && cities.length > 0 ? (
+      {cities.length > 0 ? (
         <ul className="dropdown-city" aria-label="submenu">
           {cities.sort(sort).map(city => renderCity(continent, country, city, inDevelopment))}
         </ul>
@@ -53,7 +53,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
 
   return (
     <div
-      className={`flex justify-start items-center ${className}`}
+      className={`flex justify-center items-center ${className}`}
       css={css`
         height: 45px;
         background-color: #1b1811;
@@ -310,7 +310,7 @@ const burgerStyle = css`
     left: 50%;
   }
 `
-const Burger: FunctionComponent<{ open: boolean; onClick: () => void }> = ({ open, onClick }) => {
+const Burger: FunctionComponent<{ open: boolean; onClick?: () => void }> = ({ open, onClick }) => {
   return (
     <div css={burgerStyle} className={`${open ? "open" : "closed"}`} onClick={onClick}>
       <span />
@@ -321,15 +321,19 @@ const Burger: FunctionComponent<{ open: boolean; onClick: () => void }> = ({ ope
   )
 }
 
+const animationTiming = "0.2s"
 export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
   const [openMenu, setOpenMenu] = useState(false)
-  const [openContinents, setOpenContinents] = useState(false)
 
   return (
     <div
       css={css`
         height: 65px;
         background-color: whitesmoke;
+        .nav-container > div {
+          cursor: pointer;
+        }
+
         .nav-container {
           position: relative;
           height: 45px;
@@ -365,6 +369,7 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
           width: 100%;
           text-transform: uppercase;
           background-color: #1b1811;
+          max-height: 600px;
         }
         li > a {
           min-height: 45px;
@@ -373,17 +378,20 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
           justify-content: space-between;
           border-bottom: 1px solid #565656;
         }
+        li > a.active {
+          border-bottom: 2px solid whitesmoke;
+        }
         li > a > .chevron {
           display: flex;
           align-items: center;
         }
         li > a > .chevron.open {
-          transform: rotate(-90deg);
-          transition: transform 0.15s ease;
+          transform: rotate(90deg);
+          transition: transform ${animationTiming} ease;
         }
         li > a > .chevron.closed {
           transform: rotate(0);
-          transition: transform 0.15s ease;
+          transition: transform ${animationTiming} ease;
         }
         li {
           color: white;
@@ -396,21 +404,27 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
         }
         ul.closed {
           transform: scaleY(0);
-          transition: transform 0.15s ease, height 0.15s ease;
+          transition: transform ${animationTiming} ease;
           transform-origin: top;
-          // height: 0 !important;
         }
         ul.open {
           transform: scaleY(1);
           transform-origin: top;
-          transition: transform 0.15s ease;
+          transition: transform ${animationTiming} ease;
+        }
+        ul.closed.sub-menu {
+          height: 0 !important;
+          transition: all ${animationTiming} ease;
+        }
+        ul.open.sub-menu {
+          transition: all ${animationTiming} ease;
         }
       `}
     >
       <nav className="nav-container flex justify-center" role="navigation">
-        <div>
+        <div onClick={() => setOpenMenu(!openMenu)}>
           <span>Selectionner une page</span>
-          <Burger open={openMenu} onClick={() => setOpenMenu(!openMenu)} />
+          <Burger open={openMenu} />
         </div>
         <ul className={`${openMenu ? "open" : "closed"} main-menu`}>
           <li>
@@ -418,18 +432,18 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
               Accueil
             </Link>
           </li>
-          <li className="where-to-go" onClick={() => setOpenContinents(!openContinents)}>
+          <li className="where-to-go">
             <a href="#" aria-haspopup="true">
               <span>Ou Partir</span>
-              <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronDown />}</span>
+              <span className={`chevron open`}>{<FaChevronRight />}</span>
             </a>
-            {openContinents && (
-              <ul className="dropdown-continent" aria-label="submenu">
+            {
+              <ul className={`open`} aria-label="submenu">
                 {continentLinks.map(continent => (
                   <MobileContinent key={continent.id} continent={continent} />
                 ))}
               </ul>
-            )}
+            }
           </li>
           <li className="about">
             <a href="#">A Propos</a>
@@ -443,10 +457,18 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
   )
 }
 
+const isCurrentPage = (id: string) => location.pathname === getLinkUrl(id) || location.pathname === `${getLinkUrl(id)}/`
+const disableEventOnCurrentPage = (id: string) => (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  if (isCurrentPage(id)) {
+    event.stopPropagation()
+  }
+}
+
 const MobileContinent: FunctionComponent<{ continent: ContinentLink }> = ({ continent }) => {
   const [open, setOpen] = useState(false)
   const context = useContext(ApplicationContext)
-  const publishedCountries = context.development ? continent.countries : continent.countries.filter(isLinkPublished)
+  const countries = context.development ? continent.countries : continent.countries.filter(isLinkPublished)
+  const [numberOfElement, setNumberOfElements] = useState(countries.length)
   return (
     <li
       onClick={event => {
@@ -454,14 +476,25 @@ const MobileContinent: FunctionComponent<{ continent: ContinentLink }> = ({ cont
         setOpen(!open)
       }}
     >
-      <a href="#">
+      <a href="#" className={isCurrentPage(continent.id) ? "active" : ""}>
         <span>{getLinkLabel(continent.id)}</span>
-        <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronDown />}</span>
+        <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronRight />}</span>
       </a>
-      {publishedCountries.length > 0 && open ? (
-        <ul aria-label="submenu">
-          {publishedCountries.sort(sort).map(country => (
-            <MobileCountry key={`${continent.id}_${country.id}`} continent={continent} country={country} />
+      {countries.length > 0 ? (
+        <ul
+          aria-label="submenu"
+          className={`sub-menu ${open ? "open" : "closed"}`}
+          style={{ height: numberOfElement * 45 + "px" }}
+        >
+          {countries.sort(sort).map(country => (
+            <MobileCountry
+              key={`${continent.id}_${country.id}`}
+              continent={continent}
+              country={country}
+              onOpen={(open, numberOfCities) => {
+                setNumberOfElements(open ? numberOfElement - numberOfCities : numberOfElement + numberOfCities)
+              }}
+            />
           ))}
         </ul>
       ) : null}
@@ -469,10 +502,11 @@ const MobileContinent: FunctionComponent<{ continent: ContinentLink }> = ({ cont
   )
 }
 
-const MobileCountry: FunctionComponent<{ continent: ContinentLink; country: CountryLink }> = ({
-  continent,
-  country,
-}) => {
+const MobileCountry: FunctionComponent<{
+  continent: ContinentLink
+  country: CountryLink
+  onOpen: (open: boolean, numberOfCities: number) => void
+}> = ({ continent, country, onOpen }) => {
   const [open, setOpen] = useState(false)
   const context = useContext(ApplicationContext)
   const cities = context.development ? country.cities : country.cities.filter(isLinkPublished)
@@ -482,17 +516,18 @@ const MobileCountry: FunctionComponent<{ continent: ContinentLink; country: Coun
       onClick={event => {
         event.stopPropagation()
         setOpen(!open)
+        onOpen(open, cities.length)
       }}
     >
-      <a href="#">
+      <a href="#" className={isCurrentPage(country.id) ? "active" : ""}>
         <span>{getLinkLabel(country.id)}</span>
-        <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronDown />}</span>
+        <span className={`chevron ${open ? "open" : "closed"}`}>{cities.length > 0 ? <FaChevronRight /> : null}</span>
       </a>
-      {context.development && cities.length > 0 && open ? (
+      {cities.length > 0 ? (
         <ul
-          className={`${open ? "open" : "closed"}`}
-          aria-label="submenu"
+          className={`sub-menu ${open ? "open" : "closed"}`}
           style={{ height: cities.length * 45 + "px" }}
+          aria-label="submenu"
         >
           {cities.sort(sort).map(city => (
             <MobileCity city={city} key={`${continent.id}_${country.id}_${city.id}`} />
@@ -506,7 +541,7 @@ const MobileCountry: FunctionComponent<{ continent: ContinentLink; country: Coun
 const MobileCity: FunctionComponent<{ city: CityLink }> = ({ city }) => {
   return (
     <li>
-      <ApplicationLink to={city.id}>
+      <ApplicationLink to={city.id} activeClassName="active" onClick={disableEventOnCurrentPage(city.id)}>
         <span>{getLinkLabel(city.id)}</span>
       </ApplicationLink>
     </li>

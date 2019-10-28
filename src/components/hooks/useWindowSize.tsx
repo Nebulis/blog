@@ -21,6 +21,7 @@ export const useWindowSize = () => {
         windowWidth: window.innerWidth,
       })
 
+    setTimeout(handler, 0) // force initial computation on size because of ssr initial size may be wrong =) (default values)
     window.addEventListener(`resize`, handler)
     return () => window.removeEventListener(`resize`, handler)
   }, [])
