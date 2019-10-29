@@ -38,6 +38,7 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { JapanLine, KinkakujiQuote } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
+import { KinkakujiOtherTemple3Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiOtherTemple3Image"
 
 const IndexPage = () => {
   return (
@@ -79,7 +80,7 @@ const IndexPage = () => {
             redescendre vers la dernière intersection puis tourner à droite).
           </p>
         </How>
-        <HowLong>Environ 2h.</HowLong>
+        <HowLong>Une demi-journée</HowLong>
         <WhatTimeOfYear>
           <p> Pas de période spécifique, à chaque saison vous y découvrirez un nouveau paysage. </p>
           <p>
@@ -145,16 +146,17 @@ const IndexPage = () => {
             paraissent si lisses. On peut enfin apercevoir le phénix chinois Fenghuang qui surplombe le temple à son
             sommet.
           </p>
-          <ImageAsPortrait>
-            <KinkakujiTemple1Image />
-          </ImageAsPortrait>
-          <ImageAsPortrait
-            css={css`
-              max-width: 800px;
-            `}
-          >
-            <KinkakujiFenghuangImage />
-          </ImageAsPortrait>
+          <GroupOfImages>
+            <ImageAsLandscapeOnTheLeft>
+              <KinkakujiTemple1Image />
+            </ImageAsLandscapeOnTheLeft>
+            <ImageAsLandscapeOnTheRight>
+              <KinkakujiFenghuangImage />
+            </ImageAsLandscapeOnTheRight>
+            <ImageAsLandscapeOnTheLeft>
+              <KinkakujiOtherTemple3Image />
+            </ImageAsLandscapeOnTheLeft>
+          </GroupOfImages>
           <p>
             Le chemin continue sur des jardins à perte de vue, vous pouvez continuer à monter ou prendre un raccourci
             pour terminer la visite mais vous louperez la vue d’en haut sur le temple, les différentes petites statues

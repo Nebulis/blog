@@ -20,7 +20,6 @@ import { EntranceRiverHimejiCastleImage } from "../../../../components/images/as
 import { HimejiCastle1Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle1Image"
 import { HimejiCastleWithCherryImage } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherryImage"
 import { HimejiCastleWithCherry2Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry2Image"
-import { HimejiCastleGeishaImage } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleGeishaImage"
 import { HimejiCastleWithCherry6Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry6Image"
 import { HimejiCastleWithCherry5Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry5Image"
 import { Conclusion } from "../../../../components/core/conclusion"
@@ -45,6 +44,7 @@ import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia
 import { HimejiCastleQuote } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
+import { HimejiCastleWithCherry7Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry7Image"
 
 const IndexPage = () => {
   return (
@@ -163,7 +163,7 @@ const IndexPage = () => {
               <HimejiCastleWithCherry2Image />
             </TwoImagesSameSize>
             <ImageAsLandscape>
-              <HimejiCastleGeishaImage />
+              <HimejiCastleWithCherry7Image />
             </ImageAsLandscape>
           </GroupOfImages>
           <p>

@@ -40,6 +40,7 @@ import { DaigojiGarden4Image } from "../../../../components/images/asia/japan/ky
 import { DaigojiMonk2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiMonk2Image"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
+import { DaigojiTempleWithLake3Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiTempleWithLake3Image"
 
 const IndexPage = () => {
   return (
@@ -103,17 +104,6 @@ const IndexPage = () => {
             </JapanExternalLink>{" "}
             est un hôtel plutôt sympa, moderne, chambre et salle de bain de taille standard pour le japon. Très bien
             situé et au niveau du prix on est dans la moyenne.
-          </p>
-          <p>
-            Si vous voulez tenter les love hotel, nous avons testé également le{" "}
-            <JapanExternalLink href="https://www.booking.com/hotel/jp/in-the-green.fr.html?label=gen173nr-1DCAEoggI46AdIM1gEaE2IAQGYAQ24ARfIAQzYAQPoAQGIAgGoAgO4AqWi5-wFwAIB;sid=4bab15bee9c381d39dd9173a3a402ed8;all_sr_blocks=136465110_95692332_2_1_0;checkin=2019-10-11;checkout=2019-10-12;dest_id=-235402;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=136465110_95692332_2_1_0;hpos=1;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1570363032;srpvid=9ab9540bf7be0140;type=total;ucfs=1&#_">
-              Hotel In The Green (Adult Only)
-            </JapanExternalLink>{" "}
-            , endroit un peu perdu mais l’hôtel en lui même est pas mal. Les chambres sont très spacieuses, et on ne
-            vous raconte pas la salle de bain, on pourrait rentrer à 3 dans la baignoire. Le repas est livré à n’importe
-            quel moment dans votre chambre, attention cela dit vraiment tout est écrit en Japonais et si comme nous vous
-            ne comprenez rien, utilisez google translate. Les chambres sont également forcément fumeur, il n’y avait pas
-            d’odeur dans la nôtre mais on ne peut pas vous dire dans toutes.
           </p>
           <p>
             <small>
@@ -189,6 +179,9 @@ const IndexPage = () => {
             <ImageAsLandscapeOnTheRight>
               <DaigojiTempleWithLake2Image />
             </ImageAsLandscapeOnTheRight>
+            <ImageAsLandscapeOnTheLeft>
+              <DaigojiTempleWithLake3Image />
+            </ImageAsLandscapeOnTheLeft>
           </GroupOfImages>
           <p>
             Si vous avez encore du temps, profitez-en pour aller derrière le temple et continuez à vous promener, il y a
