@@ -5,7 +5,7 @@ import { css } from "@emotion/core"
 export const MainToganjiImage = ({ className = "" }: { className?: string }) => {
   const data = useStaticQuery(graphql`
     query {
-      file: file(relativePath: { eq: "asia/japan/toganji-main.jpg" }) {
+      file: file(relativePath: { eq: "asia/japan/nagoya/toganji/toganji-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid

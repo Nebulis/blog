@@ -26,6 +26,8 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { ArashiyamaQuote, JapanLine } from "../../../../components/core/japan"
 import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
+import { ArashiyamaHouseImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaHouseImage"
+import { ArashiyamaPathImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaPathImage"
 
 const IndexPage = () => {
   return (
@@ -91,13 +93,20 @@ const IndexPage = () => {
           </p>
           <p>
             On marche pendant une dizaine de minutes dans des rues habitées avec quelques jolies façades, quelques
-            jardins fleuries de cerisiers et temples.
+            jardins fleuries de cerisiers et des temples.
           </p>
           <ImageAsTwoLandscapeLeftAndOnePortraitRight>
             <ArashiyamaShrine1Image />
             <ArashiyamaCherryImage />
             <ArashiyamaShrine2Image />
           </ImageAsTwoLandscapeLeftAndOnePortraitRight>
+          <ImageAsPortrait>
+            <ArashiyamaHouseImage
+              css={css`
+                max-width: 450px;
+              `}
+            />
+          </ImageAsPortrait>
           <p>Au bout de la rue, nous arrivons dans une rue animée où il y a déjà pas mal de mondes.</p>
           <p>
             Pour entrer dans le chemin d’Arashiyama vous pouvez y aller à pied ou en pousse-pousse (~5000 Yens). On a vu
@@ -123,6 +132,16 @@ const IndexPage = () => {
             <ArashiyamaPathTuktukImage />
             <ArashiyamaGeishaImage />
           </TwoImagesSameSizeOrToGroup>
+          <p>
+            Nous arrivons malgré tout à trouver des endroits où il n’y a personne, ce qui est d’autant plus plaisant.
+          </p>
+          <ImageAsPortrait>
+            <ArashiyamaPathImage
+              css={css`
+                max-width: 450px;
+              `}
+            />
+          </ImageAsPortrait>
           <p>
             Le chemin se rétrécit de plus en plus. Les bambous, hauts de plusieurs dizaines de mètres, se dressent
             devant vous et laissent passer juste un filet de lumière du soleil. La météo est clairement un véritable

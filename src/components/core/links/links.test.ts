@@ -13,7 +13,7 @@ describe("links", () => {
     expect(getLink("transports-in-japan")).toMatchObject({ label: "Transports in Japan", published: false })
 
     expect(getLink("tokyo")).toMatchObject({ label: "Tokyo", published: false })
-    expect(getLink("ueno-park")).toMatchObject({ label: "Parc Ueno", published: false })
+    expect(getLink("a-day-in-tokyo")).toMatchObject({ label: "Un jour à Tokyo", published: false })
     expect(getLink("sensoji")).toMatchObject({ label: "Senso-ji", published: false })
     expect(getLink("hamarikyu-garden")).toMatchObject({ label: "Hamarikyu Garden", published: false })
 
