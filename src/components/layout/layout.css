@@ -670,6 +670,7 @@ pre tt:after {
 }
 
 .gatsby-image-wrapper {
-  margin-top: 1.3rem;
+  /*most of images are below a paragraph which uses mt-2*/
+  margin-top: calc(1.3rem - 0.5rem);
   margin-bottom: 1.3rem;
 }

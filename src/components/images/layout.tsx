@@ -25,6 +25,9 @@ const allButLastImageStyle = css`
   }
 `
 const allButFirstImageStyle = css`
+  .gatsby-image-wrapper {
+    margin-top: 1.3rem;
+  }
   @media (max-width: 576px) {
     .gatsby-image-wrapper {
       margin-top: 10px;
@@ -66,16 +69,24 @@ const imageAsPortraitStyle = css`
   .gatsby-image-wrapper {
     margin-right: auto;
     margin-left: auto;
+    width: 100%;
   }
 `
 export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
-  <div css={imageAsPortraitStyle} className={className}>
+  <div css={imageAsPortraitStyle} className={`${className} flex`}>
     {children}
   </div>
 )
 
+const imageAsLandscapeStyle = css`
+  .gatsby-image-wrapper {
+    width: 100%;
+  }
+`
 export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
-  <div className={className}>{children}</div>
+  <div css={imageAsLandscapeStyle} className={`${className} flex`}>
+    {children}
+  </div>
 )
 
 const margin = css`

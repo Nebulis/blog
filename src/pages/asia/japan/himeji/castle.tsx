@@ -210,7 +210,7 @@ const IndexPage = () => {
           </GroupOfImages>
           <p>
             Connu pour être un véritable spot pour admirer les cerisiers, Sakura. On vous conseille donc d’y aller
-            plutôt au printemps quand les cerisiers sont en fleurs, pour admirer ce magnifique endroit si paisible.{" "}
+            plutôt au printemps quand les cerisiers sont en fleurs, pour admirer ce magnifique endroit si paisible.
           </p>
           <GroupOfImages>
             <ImageAsLandscapeOnTheLeft>
@@ -232,7 +232,7 @@ const IndexPage = () => {
           </p>
           <p>
             Nous avons également eu la chance de voir des enfants danser sur une musique typiquement japonaise, pas le
-            temps de trop s’attarder cela dit, la musique finit nous devons filer à la gare !{" "}
+            temps de trop s’attarder cela dit, la musique finit nous devons filer à la gare !
           </p>
           <p>Direction KYOTO.</p>
           <TwoImagesSameSize
