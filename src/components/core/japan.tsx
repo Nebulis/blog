@@ -20,7 +20,7 @@ export const JapanLine: FunctionComponent<HTMLAttributes<any> & JapanLineProps> 
 )
 
 export const JapanQuote = styled(Quote)`
-  blockquote::before {
+  .quote::before {
     color: #ffb7c5;
   }
 `

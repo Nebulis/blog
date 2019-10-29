@@ -10,21 +10,25 @@ const style = css`
     text-indent: 2em;
     font-family: "Playfair Display", serif;
   }
-  blockquote::before {
+
+  .quote::before {
+    vertical-align: middle;
+    text-indent: 0;
     content: "“";
     font-family: "Playfair Display SC", serif;
     font-size: 2.2em;
     font-weight: 900;
-    line-height: 1;
     font-style: normal;
-    position: absolute;
-    left: 0.2em;
+    margin-right: 0.5rem;
   }
 `
 export const Quote: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   return (
     <div className={`f5 ${className} i`} css={style}>
-      <blockquote>{children}</blockquote>
+      <blockquote className="tc">
+        <span className="quote" />
+        {children}
+      </blockquote>
     </div>
   )
 }
