@@ -80,11 +80,9 @@ export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any>> = ({ child
 
 const margin = css`
   & .left-panel {
-    flex-basis: 100%;
     margin-right: 0.725rem;
   }
   & .right-panel {
-    flex-basis: 100%;
     margin-left: 0.725rem;
   }
   @media (max-width: 576px) {
@@ -115,6 +113,12 @@ const margin = css`
 
 const twoImagesSameSizeStyles = css`
   margin: auto;
+  & .left-panel {
+    flex-basis: 100%;
+  }
+  & .right-panel {
+    flex-basis: 100%;
+  }
   .gatsby-image-wrapper {
     width: 100%;
   }
@@ -134,11 +138,9 @@ export const TwoImagesSameSize: FunctionComponent<HTMLAttributes<any>> = ({ chil
 export const TwoImagesLeftBigger = styled(TwoImagesSameSize)`
   & .left-panel {
     flex-basis: 65%;
-    margin-right: 0.725rem;
   }
   & .right-panel {
     flex-basis: 35%;
-    margin-left: 0.725rem;
   }
 `
 export const TwoImagesSameSizeOrToGroup: FunctionComponent<HTMLAttributes<any>> = ({ children }) => {
@@ -204,6 +206,12 @@ const imageAsTwoLandscapeLeftAndOnePortraitRightStyle = css`
   align-items: flex-start;
   .gatsby-image-wrapper {
     width: 100%;
+  }
+  & .left-panel {
+    flex-basis: 100%;
+  }
+  & .right-panel {
+    flex-basis: 100%;
   }
 
   ${margin}
