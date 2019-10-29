@@ -95,18 +95,20 @@ const IndexPage = () => {
             On marche pendant une dizaine de minutes dans des rues habitées avec quelques jolies façades, quelques
             jardins fleuries de cerisiers et des temples.
           </p>
-          <ImageAsTwoLandscapeLeftAndOnePortraitRight>
-            <ArashiyamaShrine1Image />
-            <ArashiyamaCherryImage />
-            <ArashiyamaShrine2Image />
-          </ImageAsTwoLandscapeLeftAndOnePortraitRight>
-          <ImageAsPortrait>
-            <ArashiyamaHouseImage
+          <GroupOfImages>
+            <ImageAsTwoLandscapeLeftAndOnePortraitRight>
+              <ArashiyamaShrine1Image />
+              <ArashiyamaCherryImage />
+              <ArashiyamaShrine2Image />
+            </ImageAsTwoLandscapeLeftAndOnePortraitRight>
+            <ImageAsPortrait
               css={css`
                 max-width: 450px;
               `}
-            />
-          </ImageAsPortrait>
+            >
+              <ArashiyamaHouseImage />
+            </ImageAsPortrait>
+          </GroupOfImages>
           <p>Au bout de la rue, nous arrivons dans une rue animée où il y a déjà pas mal de mondes.</p>
           <p>
             Pour entrer dans le chemin d’Arashiyama vous pouvez y aller à pied ou en pousse-pousse (~5000 Yens). On a vu

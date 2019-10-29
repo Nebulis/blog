@@ -20,6 +20,8 @@ const cloneElement = (element: any, props: any, ...children: any) =>
   )
 
 const allButLastImageStyle = css`
+  // needed for ImageAsTwoLandscapeLeftAndOnePortraitRight under GroupOfImages
+  margin-bottom: 0;
   .gatsby-image-wrapper {
     margin-bottom: 0px;
   }
