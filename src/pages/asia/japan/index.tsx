@@ -44,13 +44,15 @@ const IndexPage = () => {
                 }
               `}
             >
-              {cities.map(city => (
-                <ApplicationLink to={city.id} key={city.id}>
-                  <JapanImageAsMedallion title={getLinkLabel(city.id)}>
-                    {React.createElement(city.image)}
-                  </JapanImageAsMedallion>
-                </ApplicationLink>
-              ))}
+              {cities.map(city => {
+                return city.image ? (
+                  <ApplicationLink to={city.id} key={city.id}>
+                    <JapanImageAsMedallion title={getLinkLabel(city.id)}>
+                      {React.createElement(city.image)}
+                    </JapanImageAsMedallion>
+                  </ApplicationLink>
+                ) : null
+              })}
             </div>
             <JapanDivider />
           </>

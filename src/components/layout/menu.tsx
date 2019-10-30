@@ -435,7 +435,6 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
           <li className="where-to-go">
             <a href="#" aria-haspopup="true">
               <span>Ou Partir</span>
-              <span className={`chevron open`}>{<FaChevronRight />}</span>
             </a>
             {
               <ul className={`open`} aria-label="submenu">
