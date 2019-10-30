@@ -35,6 +35,7 @@ import { JapanCard } from "../../../../components/card"
 import { MainSensojiImage } from "../../../../components/images/asia/japan/tokyo/sensoji/mainSensojiImage"
 import { JapanLink } from "../../../../components/core/links/link"
 import { Conclusion } from "../../../../components/core/conclusion"
+import { FaWalking } from "react-icons/all"
 
 const IndexPage = () => {
   return (
@@ -56,7 +57,9 @@ const IndexPage = () => {
           En premier lieu, direction le célèbre arrondissement de Shibuya, cet immense quartier qui rassemble les spots
           que nous avons préféré dans Tokyo.
         </p>
-        <SectionTitle>Shibuya Crossing</SectionTitle>
+        <SectionTitle>
+          <FaWalking /> &nbsp;Shibuya Crossing
+        </SectionTitle>
         <SectionContent>
           <p>
             Shibuya Crossing, vous en avez déjà forcément tous entendu parlé. La traversée des passages piétons est une
@@ -72,7 +75,9 @@ const IndexPage = () => {
           <TokyoShibuyaCrossing1Image />
           <TokyoShibuyaCrossing2Image />
         </TwoImagesSameSize>
-        <SectionTitle>Takeshita Street</SectionTitle>
+        <SectionTitle>
+          <FaWalking /> &nbsp;Takeshita Street
+        </SectionTitle>
         <SectionContent>
           <p>
             Cette rue très animé est LE rdv des jeunes et des cosplay. Endroit totalement déjanté où on peut trouver
