@@ -12,7 +12,7 @@ import {
   TwoImagesSameSizeOrToGroup,
   TwoImagesSameSize,
 } from "../../../../components/images/layout"
-import { SensojiQuote } from "../../../../components/core/japan"
+import { JapanLine, SensojiQuote } from "../../../../components/core/japan"
 import { MainSensojiImage } from "../../../../components/images/asia/japan/tokyo/sensoji/mainSensojiImage"
 import { When, Where, How, HowLong, HowMuch, WhereToStay, Visit } from "../../../../components/core/section"
 import { SensojiPathPeople1Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiPathPeople1Image"
@@ -31,6 +31,7 @@ import { SensojiGarden1Image } from "../../../../components/images/asia/japan/to
 import { SensojiGarden2Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiGarden2Image"
 import { SensojiGarden3Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiGarden3Image"
 import { Conclusion } from "../../../../components/core/conclusion"
+import css from "@emotion/css"
 
 const IndexPage = () => {
   return (
@@ -46,7 +47,19 @@ const IndexPage = () => {
         <When>Tous les jours 24h/24h</When>
         <When>Tous les jours de 9h à 17h (16h pour les dernières entrées)</When>
         <How>
-          <p>Depuis Tokyo Station, prendre la Ginza Line jusqu’à Asakusa Station (14 mins, 8 arrêts).</p>
+          <p>
+            Depuis Tokyo Station, prendre la{" "}
+            <JapanLine
+              href="https://www.google.com/maps/dir/?api=1&origin=Tokyo%20Station%2C%201%20Chome%20Marunouchi%2C%20Chiyoda%20City%2C%20Tokyo%2C%20Japan&destination=Asakusa%20Station%2C%203%20Chome-1-11%20Nishiasakusa%2C%20Taito%20City%2C%20Tokyo%20111-0035%2C%20Japan &travelmode=transit"
+              css={css`
+                background-color: #ed9927;
+                color: black;
+              `}
+            >
+              Ginza Line
+            </JapanLine>{" "}
+            jusqu’à Asakusa Station (14 mins, 8 arrêts).
+          </p>
           <p>Prendre la sortie 3 et continuer tout droit sur 100m, l’entrée se trouvera sur votre droite.</p>
         </How>
         <HowLong>
@@ -69,23 +82,25 @@ const IndexPage = () => {
             </JapanLink>{" "}
             sont très efficaces à Tokyo et rien ne vous empêchera de les prendre pour aller à diverses endroits.
           </p>
-          <p>
-            <b>Quartier UENO :</b> Nous avons dormi à{" "}
-            <JapanExternalLink href="https://www.booking.com/hotel/jp/ueno-touganeya.fr.html?label=gen173nr-1DCAEoggI46AdIM1gEaE2IAQGYAQ24ARfIAQzYAQPoAQGIAgGoAgO4AozLzO0FwAIB;sid=84292f1ab56f7d5758148ac4648df016;checkin=2020-04-02;checkout=2020-04-03;dest_id=-246227;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;room1=A%2CA;sb_price_type=total;soh=1;sr_order=popularity;srepoch=1572021660;srpvid=c52f754d78b3007b;type=total;ucfs=1&#no_availability_msg">
-              Ueno Touganeya Hotel,
-            </JapanExternalLink>{" "}
-            parfaitement bien situé, tout proche du métro dans une rue un peu perdu et donc très calme. Vous n’aurez pas
-            de mal à trouver des restaurants juste à côté.
-          </p>
-          <p>
-            <b>Quartier Shinjuku :</b> Quartier très animé, nous avons décidé de nous éloigner un peu, à 15 minutes à
-            pied nous avons réservé à{" "}
-            <JapanExternalLink href="https://www.booking.com/hotel/jp/listel-shinjuku.fr.html?label=gen173nr-1DCAEoggI46AdIM1gEaE2IAQGYAQ24ARfIAQzYAQPoAQGIAgGoAgO4AozLzO0FwAIB;sid=84292f1ab56f7d5758148ac4648df016;all_sr_blocks=25102002_199005478_0_2_0;checkin=2020-04-02;checkout=2020-04-03;dest_id=-246227;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=25102002_199005478_0_2_0;hpos=1;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1572021961;srpvid=015475e430090032;type=total;ucfs=1&#hotelTmpl">
-              Hotel Listel Shinjuku,
-            </JapanExternalLink>{" "}
-            la chambre est plutôt grande comparé à la moyenne du Japon, le restaurant n’est pas top mais le but était
-            d’aller passer la soirée dans les rues animées et d’être au calme pour dormir donc parfait de ce côté là.
-          </p>
+          <ul>
+            <li>
+              <b>Quartier UENO :</b> Nous avons dormi à{" "}
+              <JapanExternalLink href="https://www.booking.com/hotel/jp/ueno-touganeya.fr.html?label=gen173nr-1DCAEoggI46AdIM1gEaE2IAQGYAQ24ARfIAQzYAQPoAQGIAgGoAgO4AozLzO0FwAIB">
+                Ueno Touganeya Hotel,
+              </JapanExternalLink>{" "}
+              parfaitement bien situé, tout proche du métro dans une rue un peu perdu et donc très calme. Vous n’aurez
+              pas de mal à trouver des restaurants juste à côté.
+            </li>
+            <li>
+              <b>Quartier Shinjuku :</b> Quartier très animé, nous avons décidé de nous éloigner un peu, à 15 minutes à
+              pied nous avons réservé à{" "}
+              <JapanExternalLink href="https://www.booking.com/hotel/jp/listel-shinjuku.fr.html?label=gen173nr-1DCAEoggI46AdIM1gEaE2IAQGYAQ24ARfIAQzYAQPoAQGIAgGoAgO4AozLzO0FwAIB">
+                Hotel Listel Shinjuku,
+              </JapanExternalLink>{" "}
+              la chambre est plutôt grande comparé à la moyenne du Japon, le restaurant n’est pas top mais le but était
+              d’aller passer la soirée dans les rues animées et d’être au calme pour dormir donc parfait de ce côté là.
+            </li>
+          </ul>
         </WhereToStay>
         <Visit>
           <p>
@@ -150,7 +165,13 @@ const IndexPage = () => {
             Une fois le temple visité on en profite pour aller faire un tour au jardin qui est juste à côté, en passant
             par la pagode que nous apercevions de loin.
           </p>
-          <TwoImagesSameSize>
+          <TwoImagesSameSize
+            css={css`
+              @media (min-width: 992px) {
+                width: 80%;
+              }
+            `}
+          >
             <SensojiPagoda1Image />
             <SensojiPagoda2Image />
           </TwoImagesSameSize>
@@ -163,7 +184,13 @@ const IndexPage = () => {
             <ImageAsPortrait>
               <SensojiGarden1Image />
             </ImageAsPortrait>
-            <TwoImagesSameSize>
+            <TwoImagesSameSize
+              css={css`
+                @media (min-width: 992px) {
+                  width: 80%;
+                }
+              `}
+            >
               <SensojiGarden2Image />
               <SensojiGarden3Image />
             </TwoImagesSameSize>
