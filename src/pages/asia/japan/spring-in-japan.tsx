@@ -244,7 +244,6 @@ const IndexPage = () => {
           <article>
             <JapanCard title="Une journée à Tokyo" to="tokyo">
               <MainTokyoImage />
-              <TokyoQuote />
             </JapanCard>
           </article>
         </section>
