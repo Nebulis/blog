@@ -4,6 +4,7 @@ import { JapanTitle } from "../../../../components/core/title"
 import { MainFushimiImage } from "../../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import {
+  GroupOfImages,
   ImageAsLandscape,
   ImageAsPortrait,
   TwoImagesSameSize,
@@ -108,16 +109,18 @@ const IndexPage = () => {
           </p>
           <p>Sur notre gauche il y a quelques boutiques de souvenirs.</p>
           <p>On suit le chemin en ayant un peu peur de se perdre à vrai dire tellement l’endroit à l’air immense.</p>
-          <ImageAsPortrait
-            css={css`
-              max-width: 800px;
-            `}
-          >
-            <FushimiTorii2Image />
-          </ImageAsPortrait>
-          <ImageAsLandscape>
-            <FushimiTemple1Image />
-          </ImageAsLandscape>
+          <GroupOfImages>
+            <ImageAsPortrait
+              css={css`
+                max-width: 800px;
+              `}
+            >
+              <FushimiTorii2Image />
+            </ImageAsPortrait>
+            <ImageAsLandscape>
+              <FushimiTemple1Image />
+            </ImageAsLandscape>
+          </GroupOfImages>
           <p>Nous suivons les escaliers depuis le pied de la colline.</p>
           <p>
             Avant de passer en dessous des Torii, on croise quelques monuments pour prier et se purifier. Avant d’entrer
