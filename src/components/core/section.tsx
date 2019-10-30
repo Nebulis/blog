@@ -136,7 +136,7 @@ export const WhereToHave: FunctionComponent<WhereToHaveProps> = ({ children, loc
 )
 
 const visitStyle = css`
-  &.content div:last-of-type .gatsby-image-wrapper {
+  &.content div:last-child .gatsby-image-wrapper {
     margin-bottom: 0;
   }
 `
