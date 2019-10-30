@@ -94,7 +94,13 @@ const IndexPage = () => {
             Au bout d’une petite dizaine de marche, on aperçoit sur le côté une rue qui contraste un peu avec tout le
             reste. Nous avons d’ailleurs eu d’abord l’impression de rentrer chez des gens.
           </p>
-          <TwoImagesSameSize>
+          <TwoImagesSameSize
+            css={css`
+              @media (min-width: 992px) {
+                width: 80%;
+              }
+            `}
+          >
             <ToganjiEntrance1Image />
             <ToganjiEntrance2Image />
           </TwoImagesSameSize>
