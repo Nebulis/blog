@@ -218,16 +218,16 @@ const IndexPage = () => {
               <NagoyaCastle2Image />
             </ImageAsPortrait>
           </GroupOfImages>
-          <Conclusion>
-            Le château de Nagoya fait malheureusement parti des nombreux châteaux qui ont été détruit ou endommagé au
-            cours des années. Il semblerait que les travaux soient pour lui redonner de l’authenticité. Ils auraient
-            totalement détruit le donjon pour le reconstruire de manière plus traditionnelle, en l’occurrence ici en
-            bois. Un mal pour un bien du coup !
-          </Conclusion>
-          <Bonus>
-            <p>Le Dimanche vous pouvez voir un spectacle de Samouraï et de Ninja dans l’après-midi.</p>
-          </Bonus>
         </Visit>
+        <Conclusion>
+          Le château de Nagoya fait malheureusement parti des nombreux châteaux qui ont été détruit ou endommagé au
+          cours des années. Il semblerait que les travaux soient pour lui redonner de l’authenticité. Ils auraient
+          totalement détruit le donjon pour le reconstruire de manière plus traditionnelle, en l’occurrence ici en bois.
+          Un mal pour un bien du coup !
+        </Conclusion>
+        <Bonus>
+          <p>Le Dimanche vous pouvez voir un spectacle de Samouraï et de Ninja dans l’après-midi.</p>
+        </Bonus>
       </BlogLayout>
     </>
   )

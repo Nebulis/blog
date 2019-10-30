@@ -674,3 +674,7 @@ pre tt:after {
   margin-top: calc(1.3rem - 0.5rem);
   margin-bottom: 1.3rem;
 }
+
+.gatsby-image-wrapper-no-top-margin .gatsby-image-wrapper {
+  margin-top: 0;
+}

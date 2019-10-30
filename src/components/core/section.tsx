@@ -135,13 +135,20 @@ export const WhereToHave: FunctionComponent<WhereToHaveProps> = ({ children, loc
   </>
 )
 
-export const Visit: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
+const visitStyle = css`
+  &.content div:last-of-type .gatsby-image-wrapper {
+    margin-bottom: 0;
+  }
+`
+export const Visit: FunctionComponent<HTMLAttributes<any>> = ({ children, className = "" }) => (
   <>
     <SectionTitle>
       <FaWalking />
       &nbsp;La visite
     </SectionTitle>
-    <SectionContent className={className}>{children}</SectionContent>
+    <SectionContent css={visitStyle} className={className}>
+      {children}
+    </SectionContent>
   </>
 )
 

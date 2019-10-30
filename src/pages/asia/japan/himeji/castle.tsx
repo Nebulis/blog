@@ -129,13 +129,7 @@ const IndexPage = () => {
             <HimejiGyuKaku />
           </ImageAsPortrait>
         </WhereToHave>
-        <Visit
-          css={css`
-            &.content {
-              margin-bottom: 0;
-            }
-          `}
-        >
+        <Visit>
           <p>
             Après avoir parcouru la rue principale, on arrive en face du château, il paraît encore si loin mais si
             proche à la fois. Traversé d’un petit pont en bois qui nous fait passer au dessus d’une sorte de douve
