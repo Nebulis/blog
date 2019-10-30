@@ -371,25 +371,34 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
           background-color: #1b1811;
           max-height: 600px;
         }
-        li > a {
+        li > a,
+        .link-container {
+          cursor: pointer;
           min-height: 45px;
           display: flex;
           align-items: center;
           justify-content: space-between;
           border-bottom: 1px solid #565656;
         }
-        li > a.active {
+        .link-container > a {
+          min-height: 45px;
+          display: flex;
+          align-items: center;
+        }
+        li > .active {
           border-bottom: 2px solid whitesmoke;
         }
         li > a > .chevron {
           display: flex;
           align-items: center;
         }
-        li > a > .chevron.open {
+        li > a > .chevron.open,
+        .link-container > .chevron.open {
           transform: rotate(90deg);
           transition: transform ${animationTiming} ease;
         }
-        li > a > .chevron.closed {
+        li > a > .chevron.closed,
+        .link-container > .chevron.closed {
           transform: rotate(0);
           transition: transform ${animationTiming} ease;
         }
@@ -475,10 +484,12 @@ const MobileContinent: FunctionComponent<{ continent: ContinentLink }> = ({ cont
         setOpen(!open)
       }}
     >
-      <a href="#" className={isCurrentPage(continent.id) ? "active" : ""}>
-        <span>{getLinkLabel(continent.id)}</span>
+      <span className={`link-container ${isCurrentPage(continent.id) ? "active" : ""}`}>
+        <ApplicationLink to={continent.id}>
+          <span>{getLinkLabel(continent.id)}</span>
+        </ApplicationLink>
         <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronRight />}</span>
-      </a>
+      </span>
       {countries.length > 0 ? (
         <ul
           aria-label="submenu"
@@ -518,10 +529,12 @@ const MobileCountry: FunctionComponent<{
         onOpen(open, cities.length)
       }}
     >
-      <a href="#" className={isCurrentPage(country.id) ? "active" : ""}>
-        <span>{getLinkLabel(country.id)}</span>
-        <span className={`chevron ${open ? "open" : "closed"}`}>{cities.length > 0 ? <FaChevronRight /> : null}</span>
-      </a>
+      <span className={`link-container ${isCurrentPage(country.id) ? "active" : ""}`}>
+        <ApplicationLink to={country.id}>
+          <span>{getLinkLabel(country.id)}</span>
+        </ApplicationLink>
+        <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronRight />}</span>
+      </span>
       {cities.length > 0 ? (
         <ul
           className={`sub-menu ${open ? "open" : "closed"}`}
