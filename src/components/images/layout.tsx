@@ -159,17 +159,17 @@ export const TwoImagesLeftBigger = styled(TwoImagesSameSize)`
     flex-basis: 35%;
   }
 `
-export const TwoImagesSameSizeOrToGroup: FunctionComponent<HTMLAttributes<any>> = ({ children }) => {
+export const TwoImagesSameSizeOrToGroup: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   const { windowWidth: width } = useWindowSize()
   if (!children || !Array.isArray(children) || children.length !== 2)
     throw new Error("This component expect 2 children")
   return width <= 768 ? (
-    <GroupOfImages>
+    <GroupOfImages className={className}>
       <ImageAsLandscape>{children[0]}</ImageAsLandscape>
       <ImageAsLandscape>{children[1]}</ImageAsLandscape>
     </GroupOfImages>
   ) : (
-    <TwoImagesSameSize>
+    <TwoImagesSameSize className={className}>
       {children[0]}
       {children[1]}
     </TwoImagesSameSize>

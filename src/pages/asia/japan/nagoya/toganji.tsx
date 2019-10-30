@@ -121,13 +121,15 @@ const IndexPage = () => {
             d’être rentré à un endroit un peu interdit. Mais à un moment, il y a des escaliers et sur notre gauche on a
             enfin une vue sur la statue et il y a quelques personnes à côté, cela nous a nettement rassuré.
           </p>
-          <TwoImagesSameSize>
-            <ToganjiEntrance3Image />
-            <ToganjiBuddha1Image />
-          </TwoImagesSameSize>
-          <ImageAsPortrait>
-            <ToganjiEntrance4Image />
-          </ImageAsPortrait>
+          <GroupOfImages>
+            <TwoImagesSameSize>
+              <ToganjiEntrance3Image />
+              <ToganjiBuddha1Image />
+            </TwoImagesSameSize>
+            <ImageAsPortrait>
+              <ToganjiEntrance4Image />
+            </ImageAsPortrait>
+          </GroupOfImages>
           <p>
             Vu sa grandeur, cela fait d’autant plus bizarre de l’apercevoir au dernier moment. C’est un peu ce qui en
             fait son charme d’ailleurs.
