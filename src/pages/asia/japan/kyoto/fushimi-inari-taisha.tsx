@@ -73,9 +73,9 @@ const IndexPage = () => {
         <HowMuch>Gratuit</HowMuch>
         <WhereToStay location="à Kyoto, près de Fushimi Inari Taisha">
           <p>
-            Comme déjà expliqué dans nos autres articles sur Kyoto, nous sommes toujours effaré par les prix des hôtels
-            surtout pour une nuit, cela dit au moins près de Fushimi il y en a et ils ont l’air tous plutôt pas mal,
-            c’est déjà ça.
+            Comme déjà expliqué dans <JapanLink to="kyoto">nos autres articles sur Kyoto</JapanLink>, nous sommes
+            toujours effaré par les prix des hôtels surtout pour une nuit, cela dit au moins près de Fushimi il y en a
+            et ils ont l’air tous plutôt pas mal, c’est déjà ça.
           </p>
           <p>
             Parce qu’on a quand même mis du temps à chercher à Kyoto, un véritable casse tête qu’on se le dise ! Si vous
