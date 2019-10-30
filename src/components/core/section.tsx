@@ -17,16 +17,17 @@ import {
 export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
   <h4 className={`mb1 flex ${className}`}>{children}</h4>
 )
+const sectionContentStyle = css`
+  &.content div:last-child .gatsby-image-wrapper {
+    margin-bottom: 0;
+  }
+  line-height: 1.5em;
+  margin-bottom: 1.45rem;
+`
 export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   const size = React.Children.count(children)
   return (
-    <div
-      className={`f5 content ${className}`}
-      css={css`
-        line-height: 1.5em;
-        margin-bottom: 1.45rem;
-      `}
-    >
+    <div className={`f5 content ${className}`} css={sectionContentStyle}>
       {React.Children.map(children, (child, index) => {
         if (!React.isValidElement(child)) return child
         if ((child.type === "p" || child.type === "ul") && index < size - 1) {
@@ -135,20 +136,17 @@ export const WhereToHave: FunctionComponent<WhereToHaveProps> = ({ children, loc
   </>
 )
 
-const visitStyle = css`
-  &.content div:last-child .gatsby-image-wrapper {
-    margin-bottom: 0;
-  }
-`
-export const Visit: FunctionComponent<HTMLAttributes<any>> = ({ children, className = "" }) => (
+export const Visit: FunctionComponent<HTMLAttributes<any> & { title?: string }> = ({
+  children,
+  className = "",
+  title = "La visite",
+}) => (
   <>
     <SectionTitle>
       <FaWalking />
-      &nbsp;La visite
+      &nbsp;{title}
     </SectionTitle>
-    <SectionContent css={visitStyle} className={className}>
-      {children}
-    </SectionContent>
+    <SectionContent className={className}>{children}</SectionContent>
   </>
 )
 
