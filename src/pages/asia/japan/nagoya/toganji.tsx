@@ -53,7 +53,7 @@ const IndexPage = () => {
           <p>
             Depuis la gare de Nagoya, prendre la{" "}
             <JapanLine
-              href="https://www.google.com/maps/dir/?api=1&origin=Nagoya%20Station%2C%201%20Chome-1-4%20Meieki%2C%20Nakamura%20Ward%2C%20Nagoya%2C%20Aichi%2C%20Japan&destination=Shiyakusho%20Station%2C%20Japan&travelmode=transit"
+              href="https://www.google.com/maps/dir/?api=1&origin=Nagoya%20Station%2C%201%20Chome-1-4%20Meieki%2C%20Nakamura%20Ward%2C%20Nagoya%2C%20Aichi%2C%20Japan&destination=Motoyama%20Station%2C%201%20Chome-18-1%20Yotsuyatori%2C%20Chikusa%20Ward%2C%20Nagoya%2C%20Aichi%20464-0819%2C%20Japan&travelmode=transit"
               css={css`
                 background-color: #f2f200;
                 color: #000000;
