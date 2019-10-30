@@ -55,12 +55,18 @@ export const GroupOfImages: FunctionComponent<{ className?: string }> = ({ child
         if (index > 0 && index < size - 1) {
           return cloneElement(child, {
             css: css(allButLastImageStyle, allButFirstImageStyle, child.props.css),
-            className,
+            className: className + " " + (child.props.className || ""),
           })
         } else if (index === 0) {
-          return cloneElement(child, { css: css(allButLastImageStyle, child.props.css), className })
+          return cloneElement(child, {
+            css: css(allButLastImageStyle, child.props.css),
+            className: className + " " + (child.props.className || ""),
+          })
         } else if (index === size - 1) {
-          return cloneElement(child, { css: css(allButFirstImageStyle, child.props.css), className })
+          return cloneElement(child, {
+            css: css(allButFirstImageStyle, child.props.css),
+            className: className + " " + (child.props.className || ""),
+          })
         }
         throw new Error("Damned")
       })}
