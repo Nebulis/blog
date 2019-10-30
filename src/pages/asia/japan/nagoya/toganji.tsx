@@ -145,11 +145,11 @@ const IndexPage = () => {
               <ToganjiBuddha2Image />
             </ImageAsPortrait>
           </GroupOfImages>
-          <Conclusion>
-            Endroit totalement isolé, presque comme coupé du monde, il ne faut pas hésiter à s’y aventurer pour
-            découvrir ce géant vert surnommé le Grand Bouddha de Nagoya.
-          </Conclusion>
         </Visit>
+        <Conclusion>
+          Endroit totalement isolé, presque comme coupé du monde, il ne faut pas hésiter à s’y aventurer pour découvrir
+          ce géant vert surnommé le Grand Bouddha de Nagoya.
+        </Conclusion>
       </BlogLayout>
     </>
   )

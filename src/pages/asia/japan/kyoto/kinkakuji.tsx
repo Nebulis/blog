@@ -187,12 +187,12 @@ const IndexPage = () => {
             <KinkakujiLakeImage />
             <KinkakujiStatueImage />
           </TwoImagesSameSize>
-          <Conclusion>
-            Pavillon d’or, temple impérial du jardin des cerfs, que de surnom pour ce splendide temple qui fût
-            malheureusement totalement détruit en 1950 par un incendie volontaire, et heureusement reconstruit à
-            l’identique 5 ans après.
-          </Conclusion>
         </Visit>
+        <Conclusion>
+          Pavillon d’or, temple impérial du jardin des cerfs, que de surnom pour ce splendide temple qui fût
+          malheureusement totalement détruit en 1950 par un incendie volontaire, et heureusement reconstruit à
+          l’identique 5 ans après.
+        </Conclusion>
       </BlogLayout>
     </>
   )

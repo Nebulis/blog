@@ -46,18 +46,21 @@ const allButFirstImageStyle = css`
     }
   }
 `
-export const GroupOfImages: FunctionComponent = ({ children }) => {
+export const GroupOfImages: FunctionComponent<{ className?: string }> = ({ children, className = "" }) => {
   const size = React.Children.count(children)
   return (
     <>
       {React.Children.map(children, (child, index) => {
         if (!React.isValidElement(child)) return child
         if (index > 0 && index < size - 1) {
-          return cloneElement(child, { css: css(allButLastImageStyle, allButFirstImageStyle, child.props.css) })
+          return cloneElement(child, {
+            css: css(allButLastImageStyle, allButFirstImageStyle, child.props.css),
+            className,
+          })
         } else if (index === 0) {
-          return cloneElement(child, { css: css(allButLastImageStyle, child.props.css) })
+          return cloneElement(child, { css: css(allButLastImageStyle, child.props.css), className })
         } else if (index === size - 1) {
-          return cloneElement(child, { css: css(allButFirstImageStyle, child.props.css) })
+          return cloneElement(child, { css: css(allButFirstImageStyle, child.props.css), className })
         }
         throw new Error("Damned")
       })}
