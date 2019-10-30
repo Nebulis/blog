@@ -11,8 +11,9 @@ interface CardProps {
 }
 
 export const Card: FunctionComponent<CardProps> = ({ children, title, className, to }) => {
-  if (!children || !Array.isArray(children) || children.length < 2 || !React.isValidElement(children[1]))
-    throw new Error("I need 2 children")
+  if (!children) {
+    throw new Error("Error in Card component")
+  }
   return (
     <div
       className={`pa3 pt0 mt3 mb3 ${className}`}
@@ -34,8 +35,10 @@ export const Card: FunctionComponent<CardProps> = ({ children, title, className,
       `}
     >
       <h4 className="normal tc i b">{title}</h4>
-      <div className="image mb3">{children[0]}</div>
-      {React.cloneElement(children[1], { className: `${children[1].props.className || ""} text` })}
+      <div className="image mb3">{Array.isArray(children) ? children[0] : children}</div>
+      {Array.isArray(children) && React.isValidElement(children[1])
+        ? React.cloneElement(children[1], { className: `${children[1].props.className || ""} text` })
+        : null}
       <h5 className="normal tc ttu next">
         <ApplicationLink to={to} action="hide">
           En savoir plus

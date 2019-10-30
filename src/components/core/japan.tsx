@@ -83,6 +83,12 @@ export const ToganjiQuote = () => (
     d’éléphants, de rennes et de moines.
   </JapanQuote>
 )
-export const TokyoQuote = () => <JapanQuote>Tokyo</JapanQuote>
+
+export const SensojiQuote = () => (
+  <JapanQuote>
+    Le temple de Senso-Ji serait le plus vieux temple de Tokyo, situé dans le quartier de Asakusa, il regroupe chaque
+    jour des milliers de visiteurs.
+  </JapanQuote>
+)
 export const FujiQuote = () => <JapanQuote>Fuji</JapanQuote>
 export const HamarikyuGardenQuote = () => <JapanQuote>HamarikyuGarden</JapanQuote>
