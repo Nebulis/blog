@@ -71,7 +71,7 @@ const IndexPage = () => {
         </How>
         <HowLong>Environ 4h si vous comptez faire la randonnée.</HowLong>
         <HowMuch>Gratuit</HowMuch>
-        <WhereToStay location="à Kyoto, près de Fushimi Inari Taisha">
+        <WhereToStay location="à Kyoto, près de Fushimi">
           <p>
             Comme déjà expliqué dans <JapanLink to="kyoto">nos autres articles sur Kyoto</JapanLink>, nous sommes
             toujours effaré par les prix des hôtels surtout pour une nuit, cela dit au moins près de Fushimi il y en a
