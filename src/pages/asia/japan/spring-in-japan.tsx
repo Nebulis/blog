@@ -12,7 +12,6 @@ import {
   NagoyaCastleQuote,
   SpringInJapanQuote,
   ToganjiQuote,
-  TokyoQuote,
 } from "../../../components/core/japan"
 import { SectionContent, WhatTimeOfYear, Where } from "../../../components/core/section"
 import { JapanCity } from "../../../components/core/highlight"
