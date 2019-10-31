@@ -2,7 +2,7 @@ import { CountryLink } from "./links.types"
 import { MainArashiyamaImage } from "../../images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { MainHimejiCastleImage } from "../../images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { MainNagoyaCastleImage } from "../../images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
-import { MainFujiImage } from "../../images/asia/japan/mainFujiImage"
+import { MainFujiImage } from "../../images/asia/japan/fuji/kawaguchiko/mainFujiImage"
 import { MainTokyoImage } from "../../images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
 
 export const japanLinks: CountryLink = {
@@ -84,7 +84,13 @@ export const japanLinks: CountryLink = {
       id: "fuji",
       label: "Mt. Fuji",
       image: MainFujiImage,
-      highlights: [],
+      highlights: [
+        {
+          id: "lake-kawaguchiko",
+          label: "Lac Kawaguchiko",
+          published: false,
+        },
+      ],
     },
     {
       id: "tokyo",

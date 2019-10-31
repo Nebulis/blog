@@ -9,8 +9,8 @@ import { MainKinkakujiImage } from "../images/asia/japan/kyoto/kinkakuji/mainKin
 import { MainDaigojiImage } from "../images/asia/japan/kyoto/daigoji/mainDaigojiImage"
 import { MainFushimiImage } from "../images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { MainTokyoImage } from "../images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
-import { MainHamarikyuGardenImage } from "../images/asia/japan/mainHamarikyuGardenImage"
 import { MainSensojiImage } from "../images/asia/japan/tokyo/sensoji/mainSensojiImage"
+import { MainHamarikyuGardenImage } from "../images/asia/japan/tokyo/hamarikyu/mainHamarikyuGardenImage"
 
 const japanLineStyle = css`
   padding: 2px 5px;
@@ -98,8 +98,17 @@ export const SensojiQuote = () => (
     jour des milliers de visiteurs.
   </JapanQuote>
 )
-export const FujiQuote = () => <JapanQuote>Fuji</JapanQuote>
-export const HamarikyuGardenQuote = () => <JapanQuote>HamarikyuGarden</JapanQuote>
+export const FujiQuote = () => (
+  <JapanQuote>
+    Le Mont Fuji est un véritable symbole au Japon. Par beau temps il serait même visible de Tokyo. Entouré de cinq
+    lacs, nous avons tenté l’expérience au lac Kawaguchi.
+  </JapanQuote>
+)
+export const HamarikyuGardenQuote = () => (
+  <JapanQuote>
+    Un jardin paisible et calme, parfait endroit pour se ressourcer au milieu de la plus grande mégapole du monde.
+  </JapanQuote>
+)
 
 export const ArashiyamaCard = () => (
   <JapanCard title="Arashiyama – Forêt de Bambous géants" to="arashiyama">
