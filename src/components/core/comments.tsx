@@ -144,7 +144,7 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName }) =
                 content: message,
                 timestamp: Date.now(),
                 website,
-                gravatar: md5(email.trim().toLowerCase()),
+                gravatar: md5((email || name).trim().toLowerCase()),
                 parent: id,
               }),
             ])
@@ -166,7 +166,7 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName }) =
                 name,
                 content: message,
                 website,
-                gravatar: md5(email.trim().toLowerCase()),
+                gravatar: md5((email || name).trim().toLowerCase()),
                 timestamp: Date.now(),
               }),
             ])
@@ -369,7 +369,7 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
       <Input
         hideLabel
         id="email"
-        placeholder="Email *"
+        placeholder="Email"
         type="email"
         value={email}
         Icon={FaEnvelope}
@@ -398,7 +398,7 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
       />
       <Button
         className="form-element"
-        disabled={!name || !message || !email}
+        disabled={!name || !message || (subscribeToNewsletter && !email)}
         onClick={() =>
           onSubmit({ name, message, email, website, saveInBrowser, subscribeToNewsletter })
             .then(() => {
