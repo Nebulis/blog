@@ -5,10 +5,10 @@ import { JapanTitle } from "../../../../components/core/title"
 import {
   GroupOfImages,
   ImageAsLandscape,
-  TwoImagesSameSize,
   ImageAsPortrait,
   ImageAsTwoLandscapeLeftAndOnePortraitRight,
   TwoImagesLeftBigger,
+  TwoImagesSameSize,
 } from "../../../../components/images/layout"
 import { MainTokyoImage } from "../../../../components/images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
 import { SectionContent, Visit } from "../../../../components/core/section"
@@ -35,7 +35,7 @@ import { JapanCard } from "../../../../components/card"
 import { MainSensojiImage } from "../../../../components/images/asia/japan/tokyo/sensoji/mainSensojiImage"
 import { JapanLink } from "../../../../components/core/links/link"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { Comments } from "../../../../components/core/comments"
+import { JapanComments } from "../../../../components/core/comments"
 
 const IndexPage = () => {
   return (
@@ -195,7 +195,7 @@ const IndexPage = () => {
           d’endroits à visiter et de découvertes à faire.
         </Conclusion>
         <JapanDivider />
-        <Comments collectionName="asia/japan/tokyo/a-day-in-tokyo" />
+        <JapanComments collectionName="asia/japan/tokyo/a-day-in-tokyo" />
       </BlogLayout>
     </>
   )

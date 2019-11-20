@@ -8,9 +8,11 @@ import md5 from "md5"
 import styled from "@emotion/styled"
 import { Gravatar } from "./gravatar"
 import { FaEnvelope, FaLink, FaPen, FaUser } from "react-icons/all"
+import { japanPrimaryColor } from "./japan.variables"
 
 interface CommentsProps {
   collectionName: string
+  className?: string
 }
 
 interface CommentType {
@@ -59,7 +61,7 @@ const transformPath = (path: string): string => path.replace(/\//g, "-")
 const commentsStyle = css`
   font-size: 0.9rem;
 `
-export const Comments: FunctionComponent<CommentsProps> = ({ collectionName }) => {
+export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, className = "" }) => {
   const [comments, setComments] = useState<CommentProp[]>([])
   const [numberOfComments, setNumberOfComments] = useState(0)
   const [commentToEdit, setCommentToEdit] = useState("")
@@ -111,14 +113,13 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName }) =
         } else if (times < 10) {
           times++
         } else {
-          console.log("close")
           clearInterval(interval)
         }
       }, 100)
     }
   }, [comments, scrollToAnchor])
   return (
-    <div css={commentsStyle}>
+    <div className={className} css={commentsStyle}>
       <h4>
         {numberOfComments} commentaire{numberOfComments > 1 ? "s" : ""}
       </h4>
@@ -414,3 +415,17 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
     </div>
   )
 }
+
+export const JapanComments = styled(Comments)`
+  a,
+  span.reply,
+  .form-group.active svg,
+  a:visited {
+    color: ${japanPrimaryColor};
+  }
+  textarea.form-control:focus,
+  input.form-control:focus {
+    border-color: ${japanPrimaryColor};
+    box-shadow: 0 0 0 0.2rem rgba(184, 86, 106, 0.21);
+  }
+`

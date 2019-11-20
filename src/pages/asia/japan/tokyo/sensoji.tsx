@@ -1,20 +1,20 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { JapanLink, JapanExternalLink } from "../../../../components/core/links/link"
+import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
 import { JapanTitle } from "../../../../components/core/title"
 import {
-  ImageAsLandscape,
   GroupOfImages,
+  ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
-  TwoImagesSameSizeOrToGroup,
   TwoImagesSameSize,
+  TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { JapanLine, SensojiQuote } from "../../../../components/core/japan"
 import { MainSensojiImage } from "../../../../components/images/asia/japan/tokyo/sensoji/mainSensojiImage"
-import { When, Where, How, HowLong, HowMuch, WhereToStay, Visit } from "../../../../components/core/section"
+import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import { SensojiPathPeople1Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiPathPeople1Image"
 import { SensojiPathPeople2Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiPathPeople2Image"
 import { SensojiCherryPagodaImage } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiCherryPagodaImage"
@@ -33,7 +33,7 @@ import { SensojiGarden3Image } from "../../../../components/images/asia/japan/to
 import { Conclusion } from "../../../../components/core/conclusion"
 import css from "@emotion/css"
 import { JapanDivider } from "../../../../components/core/divider"
-import { Comments } from "../../../../components/core/comments"
+import { JapanComments } from "../../../../components/core/comments"
 
 const IndexPage = () => {
   return (
@@ -204,7 +204,7 @@ const IndexPage = () => {
           respect le plus total puisqu’il ne faut pas oublier que c’est une fête religieuse.
         </Conclusion>
         <JapanDivider />
-        <Comments collectionName="asia/japan/tokyo/sensoji" />
+        <JapanComments collectionName="asia/japan/tokyo/sensoji" />
       </BlogLayout>
     </>
   )
