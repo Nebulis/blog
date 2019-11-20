@@ -5,10 +5,9 @@ import {
   ADayInTokyoCard,
   ArashiyamaCard,
   DaigojiCard,
-  FujiQuote,
   FushimiInariTaishaCard,
   HamarikyuGardenCard,
-  HimejiCastleQuote,
+  HimejiCastleCard,
   KinkakujiCard,
   NagoyaCastleQuote,
   SpringInJapanQuote,
@@ -19,10 +18,8 @@ import { JapanCity } from "../../../components/core/highlight"
 import SEO from "../../../components/layout/seo"
 import { Conclusion } from "../../../components/core/conclusion"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
-import { MainHimejiCastleImage } from "../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { JapanCard } from "../../../components/card"
 import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
-import { MainFujiImage } from "../../../components/images/asia/japan/fuji/kawaguchiko/mainFujiImage"
 import { JapanTitle } from "../../../components/core/title"
 import { ImageAsPortrait } from "../../../components/images/layout"
 import { MainToganjiImage } from "../../../components/images/asia/japan/nagoya/toganji/mainToganjiImage"
@@ -98,10 +95,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Château de Himeji – Magnifique château du Héron Blanc" to="himeji-castle">
-              <MainHimejiCastleImage />
-              <HimejiCastleQuote />
-            </JapanCard>
+            <HimejiCastleCard />
           </article>
         </section>
         <JapanDivider />

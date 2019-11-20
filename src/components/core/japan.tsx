@@ -12,6 +12,7 @@ import { MainTokyoImage } from "../images/asia/japan/tokyo/adayintokyo/mainTokyo
 import { MainSensojiImage } from "../images/asia/japan/tokyo/sensoji/mainSensojiImage"
 import { MainHamarikyuGardenImage } from "../images/asia/japan/tokyo/hamarikyu/mainHamarikyuGardenImage"
 import { MainFujiImage } from "../images/asia/japan/fuji/kawaguchiko/mainFujiImage"
+import { MainHimejiCastleImage } from "../images/asia/japan/himeji/castle/mainHimejiCastleImage"
 
 const japanLineStyle = css`
   padding: 2px 5px;
@@ -159,5 +160,12 @@ export const KawaguchikoLakeCard = () => (
   <JapanCard title="Mont Fuji - Lac Kawaguchiko" to="fuji">
     <MainFujiImage />
     <FujiQuote />
+  </JapanCard>
+)
+
+export const HimejiCastleCard = () => (
+  <JapanCard title="Château de Himeji – Magnifique château du Héron Blanc" to="himeji-castle">
+    <MainHimejiCastleImage />
+    <HimejiCastleQuote />
   </JapanCard>
 )

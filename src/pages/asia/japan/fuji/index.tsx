@@ -3,13 +3,7 @@ import SEO from "../../../../components/layout/seo"
 import { JapanImageAsMedallion } from "../../../../components/images/layout"
 import { css } from "@emotion/core"
 import { JapanDivider } from "../../../../components/core/divider"
-import {
-  ArashiyamaCard,
-  DaigojiCard,
-  FushimiInariTaishaCard,
-  KawaguchikoLakeCard,
-  KinkakujiCard,
-} from "../../../../components/core/japan"
+import { KawaguchikoLakeCard } from "../../../../components/core/japan"
 import cherryBlossom from "../../../../images/asia/japan/cherry-blossom.png"
 import { getLinkLabel, isLinkPublished } from "../../../../components/core/links/links"
 import { japanLinks } from "../../../../components/core/links/japan.links"
