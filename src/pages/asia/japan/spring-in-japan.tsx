@@ -9,20 +9,16 @@ import {
   HamarikyuGardenCard,
   HimejiCastleCard,
   KinkakujiCard,
-  NagoyaCastleQuote,
+  NagoyaCastleCard,
   SpringInJapanQuote,
-  ToganjiQuote,
+  ToganjiCard,
 } from "../../../components/core/japan"
 import { SectionContent, WhatTimeOfYear, Where } from "../../../components/core/section"
 import { JapanCity } from "../../../components/core/highlight"
 import SEO from "../../../components/layout/seo"
 import { Conclusion } from "../../../components/core/conclusion"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
-import { JapanCard } from "../../../components/card"
-import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
 import { JapanTitle } from "../../../components/core/title"
-import { ImageAsPortrait } from "../../../components/images/layout"
-import { MainToganjiImage } from "../../../components/images/asia/japan/nagoya/toganji/mainToganjiImage"
 import { JapanDivider } from "../../../components/core/divider"
 import { BlogLayout } from "../../../components/layout/layout"
 
@@ -172,10 +168,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Château de Nagoya" to="nagoya-castle">
-              <MainNagoyaCastleImage />
-              <NagoyaCastleQuote />
-            </JapanCard>
+            <NagoyaCastleCard />
           </article>
           <JapanDivider />
 
@@ -187,12 +180,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Le temple de Togan-Ji" to="toganji">
-              <ImageAsPortrait>
-                <MainToganjiImage />
-              </ImageAsPortrait>
-              <ToganjiQuote />
-            </JapanCard>
+            <ToganjiCard />
           </article>
 
           <SectionContent>

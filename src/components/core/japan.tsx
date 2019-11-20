@@ -13,6 +13,9 @@ import { MainSensojiImage } from "../images/asia/japan/tokyo/sensoji/mainSensoji
 import { MainHamarikyuGardenImage } from "../images/asia/japan/tokyo/hamarikyu/mainHamarikyuGardenImage"
 import { MainFujiImage } from "../images/asia/japan/fuji/kawaguchiko/mainFujiImage"
 import { MainHimejiCastleImage } from "../images/asia/japan/himeji/castle/mainHimejiCastleImage"
+import { MainNagoyaCastleImage } from "../images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
+import { ImageAsPortrait } from "../images/layout"
+import { MainToganjiImage } from "../images/asia/japan/nagoya/toganji/mainToganjiImage"
 
 const japanLineStyle = css`
   padding: 2px 5px;
@@ -167,5 +170,21 @@ export const HimejiCastleCard = () => (
   <JapanCard title="Château de Himeji – Magnifique château du Héron Blanc" to="himeji-castle">
     <MainHimejiCastleImage />
     <HimejiCastleQuote />
+  </JapanCard>
+)
+
+export const NagoyaCastleCard = () => (
+  <JapanCard title="Château de Nagoya" to="nagoya-castle">
+    <MainNagoyaCastleImage />
+    <NagoyaCastleQuote />
+  </JapanCard>
+)
+
+export const ToganjiCard = () => (
+  <JapanCard title="Le temple de Togan-Ji" to="toganji">
+    <ImageAsPortrait>
+      <MainToganjiImage />
+    </ImageAsPortrait>
+    <ToganjiQuote />
   </JapanCard>
 )
