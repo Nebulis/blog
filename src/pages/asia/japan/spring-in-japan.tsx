@@ -2,11 +2,12 @@ import React from "react"
 import { css } from "@emotion/core"
 import { JapanMap } from "../../../components/country/japanMap"
 import {
+  ADayInTokyoCard,
   ArashiyamaCard,
   DaigojiCard,
   FujiQuote,
   FushimiInariTaishaCard,
-  HamarikyuGardenQuote,
+  HamarikyuGardenCard,
   HimejiCastleQuote,
   KinkakujiCard,
   NagoyaCastleQuote,
@@ -24,9 +25,7 @@ import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/nag
 import { MainFujiImage } from "../../../components/images/asia/japan/mainFujiImage"
 import { JapanTitle } from "../../../components/core/title"
 import { ImageAsPortrait } from "../../../components/images/layout"
-import { MainTokyoImage } from "../../../components/images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
 import { MainToganjiImage } from "../../../components/images/asia/japan/nagoya/toganji/mainToganjiImage"
-import { MainHamarikyuGardenImage } from "../../../components/images/asia/japan/mainHamarikyuGardenImage"
 import { JapanDivider } from "../../../components/core/divider"
 import { BlogLayout } from "../../../components/layout/layout"
 
@@ -225,9 +224,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Une journée à Tokyo" to="tokyo">
-              <MainTokyoImage />
-            </JapanCard>
+            <ADayInTokyoCard />
           </article>
         </section>
         <JapanDivider />
@@ -260,10 +257,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to="tokyo">
-              <MainHamarikyuGardenImage />
-              <HamarikyuGardenQuote />
-            </JapanCard>
+            <HamarikyuGardenCard />
           </article>
         </section>
         <JapanDivider />

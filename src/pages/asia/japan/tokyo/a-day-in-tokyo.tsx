@@ -30,9 +30,7 @@ import { TokyoYasukuni2Image } from "../../../../components/images/asia/japan/to
 import { TokyoYasukuni3Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoYasukuni3Image"
 import { TokyoYasukuni4Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoYasukuni4Image"
 import { TokyoYasukuni5Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoYasukuni5Image"
-import { SensojiQuote } from "../../../../components/core/japan"
-import { JapanCard } from "../../../../components/card"
-import { MainSensojiImage } from "../../../../components/images/asia/japan/tokyo/sensoji/mainSensojiImage"
+import { SensojiCard } from "../../../../components/core/japan"
 import { JapanLink } from "../../../../components/core/links/link"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { JapanComments } from "../../../../components/core/comments"
@@ -167,10 +165,7 @@ const IndexPage = () => {
           les temples et jardins autour valent clairement le détour.
         </p>
         <article>
-          <JapanCard title="Le temple de Senso-Ji" to="sensoji">
-            <MainSensojiImage />
-            <SensojiQuote />
-          </JapanCard>
+          <SensojiCard />
         </article>
         <JapanDivider />
         <SectionContent>

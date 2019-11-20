@@ -19,7 +19,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="japan" />
-      <BlogLayout page="japan">
+      <BlogLayout page="kyoto">
         <h1 className="tc ttu flex items-center justify-center">
           <img src={cherryBlossom} alt="cherry blossom" />
           &nbsp;Kyoto&nbsp;

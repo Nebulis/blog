@@ -8,6 +8,9 @@ import { JapanCard } from "../card"
 import { MainKinkakujiImage } from "../images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
 import { MainDaigojiImage } from "../images/asia/japan/kyoto/daigoji/mainDaigojiImage"
 import { MainFushimiImage } from "../images/asia/japan/kyoto/fushimi/mainFushimiImage"
+import { MainTokyoImage } from "../images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
+import { MainHamarikyuGardenImage } from "../images/asia/japan/mainHamarikyuGardenImage"
+import { MainSensojiImage } from "../images/asia/japan/tokyo/sensoji/mainSensojiImage"
 
 const japanLineStyle = css`
   padding: 2px 5px;
@@ -122,5 +125,23 @@ export const FushimiInariTaishaCard = () => (
   <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to="fushimi-inari-taisha">
     <MainFushimiImage />
     <FushimiInariTaishaQuote />
+  </JapanCard>
+)
+export const ADayInTokyoCard = () => (
+  <JapanCard title="Une journée à Tokyo" to="tokyo">
+    <MainTokyoImage />
+  </JapanCard>
+)
+export const HamarikyuGardenCard = () => (
+  <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to="tokyo">
+    <MainHamarikyuGardenImage />
+    <HamarikyuGardenQuote />
+  </JapanCard>
+)
+
+export const SensojiCard = () => (
+  <JapanCard title="Le temple de Senso-Ji" to="sensoji">
+    <MainSensojiImage />
+    <SensojiQuote />
   </JapanCard>
 )
