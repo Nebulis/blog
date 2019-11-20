@@ -239,10 +239,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Mont Fuji - Lac Kawaguchiko" to="fuji">
-              <MainFujiImage />
-              <FujiQuote />
-            </JapanCard>
+            <HamarikyuGardenCard />
           </article>
         </section>
         <JapanDivider />

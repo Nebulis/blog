@@ -11,6 +11,7 @@ import { MainFushimiImage } from "../images/asia/japan/kyoto/fushimi/mainFushimi
 import { MainTokyoImage } from "../images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
 import { MainSensojiImage } from "../images/asia/japan/tokyo/sensoji/mainSensojiImage"
 import { MainHamarikyuGardenImage } from "../images/asia/japan/tokyo/hamarikyu/mainHamarikyuGardenImage"
+import { MainFujiImage } from "../images/asia/japan/fuji/kawaguchiko/mainFujiImage"
 
 const japanLineStyle = css`
   padding: 2px 5px;
@@ -152,5 +153,11 @@ export const SensojiCard = () => (
   <JapanCard title="Le temple de Senso-Ji" to="sensoji">
     <MainSensojiImage />
     <SensojiQuote />
+  </JapanCard>
+)
+export const KawaguchikoLakeCard = () => (
+  <JapanCard title="Mont Fuji - Lac Kawaguchiko" to="fuji">
+    <MainFujiImage />
+    <FujiQuote />
   </JapanCard>
 )
