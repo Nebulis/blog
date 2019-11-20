@@ -3,6 +3,11 @@ import React, { FunctionComponent, HTMLAttributes } from "react"
 import styled from "@emotion/styled"
 import { Quote } from "./quote"
 import { ExternalLink } from "./links/link"
+import { MainArashiyamaImage } from "../images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
+import { JapanCard } from "../card"
+import { MainKinkakujiImage } from "../images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
+import { MainDaigojiImage } from "../images/asia/japan/kyoto/daigoji/mainDaigojiImage"
+import { MainFushimiImage } from "../images/asia/japan/kyoto/fushimi/mainFushimiImage"
 
 const japanLineStyle = css`
   padding: 2px 5px;
@@ -92,3 +97,30 @@ export const SensojiQuote = () => (
 )
 export const FujiQuote = () => <JapanQuote>Fuji</JapanQuote>
 export const HamarikyuGardenQuote = () => <JapanQuote>HamarikyuGarden</JapanQuote>
+
+export const ArashiyamaCard = () => (
+  <JapanCard title="Arashiyama – Forêt de Bambous géants" to="arashiyama">
+    <MainArashiyamaImage />
+    <ArashiyamaQuote />
+  </JapanCard>
+)
+
+export const KinkakujiCard = () => (
+  <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to="kinkakuji">
+    <MainKinkakujiImage />
+    <KinkakujiQuote />
+  </JapanCard>
+)
+
+export const DaigojiCard = () => (
+  <JapanCard title="Temple Daigo-ji" to="daigoji">
+    <MainDaigojiImage />
+    <DaigojiQuote />
+  </JapanCard>
+)
+export const FushimiInariTaishaCard = () => (
+  <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to="fushimi-inari-taisha">
+    <MainFushimiImage />
+    <FushimiInariTaishaQuote />
+  </JapanCard>
+)

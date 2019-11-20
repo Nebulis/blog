@@ -2,13 +2,13 @@ import React from "react"
 import { css } from "@emotion/core"
 import { JapanMap } from "../../../components/country/japanMap"
 import {
-  ArashiyamaQuote,
-  DaigojiQuote,
+  ArashiyamaCard,
+  DaigojiCard,
   FujiQuote,
-  FushimiInariTaishaQuote,
+  FushimiInariTaishaCard,
   HamarikyuGardenQuote,
   HimejiCastleQuote,
-  KinkakujiQuote,
+  KinkakujiCard,
   NagoyaCastleQuote,
   SpringInJapanQuote,
   ToganjiQuote,
@@ -20,13 +20,9 @@ import { Conclusion } from "../../../components/core/conclusion"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { MainHimejiCastleImage } from "../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { JapanCard } from "../../../components/card"
-import { MainKinkakujiImage } from "../../../components/images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
-import { MainDaigojiImage } from "../../../components/images/asia/japan/kyoto/daigoji/mainDaigojiImage"
 import { MainNagoyaCastleImage } from "../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
 import { MainFujiImage } from "../../../components/images/asia/japan/mainFujiImage"
 import { JapanTitle } from "../../../components/core/title"
-import { MainArashiyamaImage } from "../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
-import { MainFushimiImage } from "../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { ImageAsPortrait } from "../../../components/images/layout"
 import { MainTokyoImage } from "../../../components/images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
 import { MainToganjiImage } from "../../../components/images/asia/japan/nagoya/toganji/mainToganjiImage"
@@ -124,10 +120,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Arashiyama – Forêt de Bambous géants" to="arashiyama">
-              <MainArashiyamaImage />
-              <ArashiyamaQuote />
-            </JapanCard>
+            <ArashiyamaCard />
           </article>
           <JapanDivider />
           <SectionContent>
@@ -138,10 +131,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to="kinkakuji">
-              <MainKinkakujiImage />
-              <KinkakujiQuote />
-            </JapanCard>
+            <KinkakujiCard />
           </article>
           <JapanDivider />
           <SectionContent>
@@ -156,10 +146,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Temple Daigo-ji" to="daigoji">
-              <MainDaigojiImage />
-              <DaigojiQuote />
-            </JapanCard>
+            <DaigojiCard />
           </article>
           <JapanDivider />
           <SectionContent>
@@ -170,10 +157,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to="fushimi-inari-taisha">
-              <MainFushimiImage />
-              <FushimiInariTaishaQuote />
-            </JapanCard>
+            <FushimiInariTaishaCard />
           </article>
           <SectionContent>
             <p>
