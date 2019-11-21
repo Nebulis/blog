@@ -1,12 +1,254 @@
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import SEO from "../components/layout/seo"
-import { BlogLayout } from "../components/layout/layout"
+import { PageDevelopmentMark } from "../components/layout/layout"
+import { useWindowSize } from "../components/hooks/useWindowSize"
+import { Maintenance } from "../components/layout/maintenance"
+import { Header } from "../components/layout/header"
+import { Menu, MobileMenu } from "../components/layout/menu"
+import { ScrollToTop } from "../components/core/scrollTo"
+import { MainHimejiCastleImage } from "../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
+import { css } from "@emotion/core"
+import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
+import { FaChevronCircleRight, FaChevronCircleLeft, FaMapMarkerAlt } from "react-icons/all"
+import Img from "gatsby-image"
+
+const carousellStyle = css`
+  position: relative;
+  .gatsby-image-wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+    max-height: 700px;
+  }
+  .hidden .gatsby-image-wrapper {
+    height: 0;
+    opacity: 0;
+  }
+  .visible .gatsby-image-wrapper {
+    opacity: 1;
+    transition: opacity 0.8s linear;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.25;
+    z-index: 5;
+  }
+  .overlay-border {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    display: block;
+    border: 1px solid #fff;
+    z-index: 5;
+  }
+  .left {
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 20px);
+    z-index: 10;
+  }
+  .right {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 20px);
+    z-index: 10;
+  }
+  .left svg,
+  .right svg {
+    color: black;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    stroke: black;
+    stroke-width: 20;
+    opacity: 0.95;
+    transition: all 0.2s linear;
+  }
+  .left:focus,
+  svg:focus,
+  .right:focus {
+    outline: none;
+  }
+  .right,
+  .left {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: whitesmoke;
+  }
+  .left:hover,
+  .right:hover {
+    background-color: black;
+    transition: all 0.2s linear;
+  }
+  .left:hover svg,
+  .right:hover svg {
+    color: whitesmoke;
+    stroke: whitesmoke;
+    transition: all 0.2s linear;
+  }
+  @media (max-width: 576px) {
+    .left svg,
+    .right svg {
+      width: 30px;
+      height: 30px;
+    }
+    .right,
+    .left {
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+    }
+  }
+`
+const Carousell: React.FunctionComponent = ({ children }) => {
+  if (!Array.isArray(children)) throw new Error("nope")
+  const [currentElement, setCurrentElement] = useState(0)
+  const ref = useRef<HTMLDivElement>(null)
+  const [height, setHeight] = useState(0)
+  // must reset on resize
+  const heightStyle = height
+    ? css`
+        .visible .gatsby-image-wrapper {
+          height: ${height}px;
+        }
+      `
+    : css``
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentElement === children.length - 1) {
+        setCurrentElement(0)
+      } else {
+        setCurrentElement(currentElement + 1)
+      }
+    }, 20000)
+    return () => {
+      clearInterval(interval)
+    }
+  }, [children.length, currentElement])
+  useEffect(() => {
+    if (ref.current && height === 0) {
+      console.log("here", ref.current.getBoundingClientRect().height)
+      setHeight(ref.current.getBoundingClientRect().height)
+    }
+    console.log("noop")
+  }, [height])
+  useEffect(() => {
+    const eventListener = () => {
+      setHeight(0)
+    }
+    window.addEventListener("resize", eventListener)
+    return () => {
+      window.removeEventListener("resize", eventListener)
+    }
+  }, [])
+  return (
+    <div css={[carousellStyle, heightStyle]} ref={ref}>
+      <div className="left">
+        <FaChevronCircleLeft
+          onClick={() => {
+            if (currentElement === 0) {
+              setCurrentElement(children.length - 1)
+            } else {
+              setCurrentElement(currentElement - 1)
+            }
+          }}
+        />
+      </div>
+      <div className="right">
+        <FaChevronCircleRight
+          onClick={() => {
+            if (currentElement === children.length - 1) {
+              setCurrentElement(0)
+            } else {
+              setCurrentElement(currentElement + 1)
+            }
+          }}
+        />
+      </div>
+      <div className="overlay" />
+      <span className="overlay-border" />
+      <div>
+        {React.Children.map(children, (child, index) => {
+          if (React.isValidElement(child)) {
+            return React.cloneElement(child, {
+              className: `${currentElement === index ? "visible" : "hidden"}`,
+              hide: currentElement !== index,
+            })
+          }
+        })}
+      </div>
+    </div>
+  )
+}
+
+const imageWithMarkerStyle = css`
+  .country-marker {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: right;
+    z-index: 100;
+    color: white;
+    font-size: 1.2rem;
+    padding-right: 10px;
+  }
+  .country-marker svg {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+  }
+  .country-marker.hidden {
+    display: none;
+  }
+`
+const ImageWithMarker: React.FunctionComponent<{ country: string; className?: string; hide?: boolean }> = ({
+  country,
+  hide,
+  children,
+  className = "",
+}) => {
+  return (
+    <div className={className} css={imageWithMarkerStyle}>
+      {children}
+      <div className={`country-marker ${hide ? "hidden" : ""}`}>
+        <FaMapMarkerAlt />
+        {country}
+      </div>
+    </div>
+  )
+}
 
 const IndexPage = () => {
+  const { windowWidth } = useWindowSize()
   return (
     <>
       <SEO title="main" />
-      <BlogLayout page="home">Hello</BlogLayout>
+      <Maintenance>
+        {typeof window !== `undefined` ? (
+          <>
+            <PageDevelopmentMark />
+            <Header />
+            {windowWidth <= 576 ? <MobileMenu /> : <Menu />}
+            <ScrollToTop />
+            <Carousell>
+              <ImageWithMarker country="Japon">
+                <MainHimejiCastleImage />
+              </ImageWithMarker>
+              <ImageWithMarker country="Cambodia">
+                <MainArashiyamaImage />
+              </ImageWithMarker>
+            </Carousell>
+            {/*<div className="center blog-container">Hello</div>*/}
+          </>
+        ) : null}
+      </Maintenance>
     </>
   )
 }

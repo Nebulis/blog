@@ -21,7 +21,7 @@ const pageDevelopmentMarkStyle = css`
   border-left: 45px solid transparent;
   border-top: 45px solid #e28de5;
 `
-const PageDevelopmentMark = () => <span css={pageDevelopmentMarkStyle} />
+export const PageDevelopmentMark = () => <span css={pageDevelopmentMarkStyle} />
 
 export const BlogLayout: FunctionComponent<{ page: string }> = ({ children, page }) => {
   const isPublished = page === "home" ? true : getLink(page).published
