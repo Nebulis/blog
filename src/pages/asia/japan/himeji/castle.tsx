@@ -51,7 +51,7 @@ const IndexPage = () => {
     <>
       <SEO title="main" />
       <BlogLayout page="himeji-castle">
-        <JapanTitle title="Château de HIMEJI" categories={["asia", "japan", "himeji"]} />
+        <JapanTitle title="Château de HIMEJI" categories={["asia", "japan", "himeji"]} linkId="himeji-castle" />
         <ImageAsLandscape>
           <MainHimejiCastleImage />
         </ImageAsLandscape>

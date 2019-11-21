@@ -40,7 +40,7 @@ const IndexPage = () => {
     <>
       <SEO title="main" />
       <BlogLayout page="a-day-in-tokyo">
-        <JapanTitle title="Une journée à Tokyo" categories={["asia", "japan", "tokyo"]} />
+        <JapanTitle title="Une journée à Tokyo" categories={["asia", "japan", "tokyo"]} linkId="a-day-in-tokyo" />
         <ImageAsLandscape>
           <MainTokyoImage />
         </ImageAsLandscape>

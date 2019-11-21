@@ -47,7 +47,7 @@ const IndexPage = () => {
     <>
       <SEO title="main" />
       <BlogLayout page="daigoji">
-        <JapanTitle title="DAIGO-JI" categories={["asia", "japan", "kyoto"]} />
+        <JapanTitle title="DAIGO-JI" categories={["asia", "japan", "kyoto"]} linkId="daigoji" />
         <MainDaigojiImage />
         <DaigojiQuote />
         <Where>22 Daigohigashiojicho, Fushimi Ward, Kyoto</Where>

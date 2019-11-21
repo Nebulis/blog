@@ -16,7 +16,8 @@ const getUrl = (object: { url?: string; id: string }): string => object.url || o
 interface CachedLinksMap {
   label: string
   url: string
-  published: boolean | Date
+  published: boolean
+  publishedDate?: Date
 }
 const cachedLinks = new Map<string, CachedLinksMap>()
 continentLinks.forEach(continent => {
@@ -27,6 +28,7 @@ continentLinks.forEach(continent => {
         label: other.label,
         url: path.resolve(getUrl(continent), getUrl(country), getUrl(other)),
         published: isPublished(other),
+        publishedDate: other.published instanceof Date ? other.published : undefined,
       })
     })
     country.cities.forEach(city => {
@@ -40,6 +42,7 @@ continentLinks.forEach(continent => {
           label: highlight.label,
           url: path.resolve(getUrl(continent), getUrl(country), getUrl(city), getUrl(highlight)),
           published: isPublished(highlight),
+          publishedDate: highlight.published instanceof Date ? highlight.published : undefined,
         })
       })
     })
