@@ -31,7 +31,7 @@ const IndexPage = () => {
     <>
       <SEO title="main" />
       <BlogLayout page="toganji">
-        <JapanTitle title="Temple de Togan-Ji" categories={["asia", "japan", "nagoya"]} />
+        <JapanTitle title="Temple de Togan-Ji" categories={["asia", "japan", "nagoya"]} linkId="toganji" />
         <ImageAsLandscape>
           <MainToganjiImage />
         </ImageAsLandscape>

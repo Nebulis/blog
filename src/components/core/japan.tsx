@@ -142,12 +142,12 @@ export const FushimiInariTaishaCard = () => (
   </JapanCard>
 )
 export const ADayInTokyoCard = () => (
-  <JapanCard title="Une journée à Tokyo" to="tokyo">
+  <JapanCard title="Une journée à Tokyo" to="a-day-in-tokyo">
     <MainTokyoImage />
   </JapanCard>
 )
 export const HamarikyuGardenCard = () => (
-  <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to="tokyo">
+  <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to="hamarikyu-garden">
     <MainHamarikyuGardenImage />
     <HamarikyuGardenQuote />
   </JapanCard>

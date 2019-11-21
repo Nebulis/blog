@@ -34,6 +34,7 @@ const IndexPage = () => {
         <JapanTitle
           title="Un havre de paix en plein Tokyo - Le jardin Hama-Rikyu"
           categories={["asia", "japan", "tokyo"]}
+          linkId="hamarikyu-garden"
         />
         <MainHamarikyuGardenImage />
         <HamarikyuGardenQuote />

@@ -34,7 +34,7 @@ const IndexPage = () => {
     <>
       <SEO title="main" />
       <BlogLayout page="arashiyama">
-        <JapanTitle title="ARASHIYAMA – Forêt de bambous" categories={["asia", "japan", "kyoto"]} />
+        <JapanTitle title="ARASHIYAMA – Forêt de bambous" categories={["asia", "japan", "kyoto"]} linkId="arashiyama" />
         <MainArashiyamaImage />
         <ArashiyamaQuote />
         <Where>Ukyo Ward, Kyoto</Where>

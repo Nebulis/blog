@@ -45,7 +45,7 @@ const IndexPage = () => {
     <>
       <SEO title="main" />
       <BlogLayout page="kinkakuji">
-        <JapanTitle title="Temple de KINKAKUJI" categories={["asia", "japan", "kyoto"]} />
+        <JapanTitle title="Temple de KINKAKUJI" categories={["asia", "japan", "kyoto"]} linkId="kinkakuji" />
         <MainKinkakujiImage />
         <KinkakujiQuote />
         <Where>1 Kinkakujicho, Kita Ward, Kyoto</Where>

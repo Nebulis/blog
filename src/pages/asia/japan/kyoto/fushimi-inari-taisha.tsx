@@ -28,7 +28,11 @@ const IndexPage = () => {
     <>
       <SEO title="main" />
       <BlogLayout page="fushimi-inari-taisha">
-        <JapanTitle title="FUSHIMI INARI TAISHA" categories={["asia", "japan", "kyoto"]} />
+        <JapanTitle
+          title="FUSHIMI INARI TAISHA"
+          categories={["asia", "japan", "kyoto"]}
+          linkId="fushimi-inari-taisha"
+        />
         <MainFushimiImage />
         <FushimiInariTaishaQuote />
         <Where>68 Fukakusa Yabunouchicho, Fushimi Ward, Kyoto</Where>

@@ -27,7 +27,7 @@ const IndexPage = () => {
     <>
       <SEO title="japan" />
       <BlogLayout page="spring-in-japan">
-        <JapanTitle title="Le Japon au printemps" categories={["asia", "japan"]} />
+        <JapanTitle title="Le Japon au printemps" categories={["asia", "japan"]} linkId="spring-in-japan" />
         <MainImage />
         <SpringInJapanQuote />
         <WhatTimeOfYear title="Pourquoi au printemps ?">
