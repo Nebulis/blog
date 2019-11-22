@@ -1,10 +1,66 @@
 import SEO from "./seo"
 import { Scooter } from "./scooter"
-import { World } from "./world"
-import React, { FunctionComponent, useContext } from "react"
+import { continents, Country, World } from "./world"
+import React, { FunctionComponent, useContext, useEffect, useState } from "react"
 import { ApplicationContext } from "../application"
+import styled from "@emotion/styled"
+
+const transformSelectedCountriesByContinent = (continent: string) => (country: Country): Country => {
+  if (country.continent === continent) {
+    return {
+      ...country,
+      className: "selectedContinent",
+    }
+  }
+  return country
+}
+
+const StyledWorld = styled(World)`
+  stroke-line-join: round;
+  stroke: #d9d9d9;
+  fill-rule: evenodd;
+  fill: #f2f2f2;
+
+  .selectedContinent {
+    animation: color-in 4s ease-in-out;
+  }
+
+  @keyframes color-in {
+    0% {
+      fill: #f2f2f2;
+    }
+    50% {
+      fill: lightblue;
+    }
+    100% {
+      fill: #f2f2f2;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .title-temp-page {
+      font-size: 1rem;
+    }
+  }
+`
+const getRandomInt = (max: number) => {
+  return Math.floor(Math.random() * Math.floor(max))
+}
 
 export const Maintenance: FunctionComponent = ({ children }) => {
+  const [continent, setContinent] = useState(continents[getRandomInt(continents.length)])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      let newContinent = continents[getRandomInt(continents.length)]
+      while (newContinent === continent) {
+        newContinent = continents[getRandomInt(continents.length)]
+      }
+      setContinent(newContinent)
+    }, 4000)
+    return () => {
+      clearInterval(interval)
+    }
+  }, [continent])
   const context = useContext(ApplicationContext)
   const mapSize = 80
   if (context.initialDevelopmentValue) {
@@ -51,7 +107,7 @@ export const Maintenance: FunctionComponent = ({ children }) => {
           }}
         >
           <Scooter />
-          <World />
+          <StyledWorld transform={transformSelectedCountriesByContinent(continent)} />
         </div>
         <div
           style={{

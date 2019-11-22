@@ -11,6 +11,8 @@ import { css } from "@emotion/core"
 import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react-icons/all"
 import { ApplicationLink } from "../components/core/links/link"
+import { Country, World } from "../components/layout/world"
+import styled from "@emotion/styled"
 
 const carousellStyle = css`
   position: relative;
@@ -140,7 +142,6 @@ const Carousell: React.FunctionComponent = ({ children }) => {
     if (ref.current && height === 0) {
       setHeight(ref.current.getBoundingClientRect().height)
     }
-    console.log("noop")
   }, [height])
   useEffect(() => {
     const eventListener = () => {
@@ -236,6 +237,41 @@ const ImageWithMarker: React.FunctionComponent<{ country: string; className?: st
   )
 }
 
+const StyledWorld = styled(World)`
+  stroke-line-join: round;
+  stroke: white;
+  fill: #aacfe9;
+
+  .visited {
+    fill: #67a9d7;
+    cursor: pointer;
+  }
+`
+const visited = [
+  "japan",
+  "france",
+  "australia",
+  "spain",
+  "vietnam",
+  "singapour",
+  "indonesia",
+  "cambodia",
+  "malaysia",
+  "philippines",
+  "india",
+  "sri lanka",
+  "united states",
+]
+const transform = (country: Country): Country => {
+  if (visited.includes(country["data-name"].toLowerCase())) {
+    return {
+      ...country,
+      className: "visited",
+    }
+  }
+  return country
+}
+
 const IndexPage = () => {
   const { windowWidth } = useWindowSize()
   return (
@@ -256,7 +292,7 @@ const IndexPage = () => {
                 <MainArashiyamaImage />
               </ImageWithMarker>
             </Carousell>
-            {/*<div className="center blog-container">Hello</div>*/}
+            <StyledWorld transform={transform} />
           </>
         ) : null}
       </Maintenance>
