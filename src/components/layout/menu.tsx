@@ -90,8 +90,11 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
           margin: 0;
           padding-left: 0;
         }
-        .nav-container > ul > li:hover {
+        .nav-container > ul > li:hover:not(.where-to-go) {
           background-color: white;
+          color: black;
+        }
+        .nav-container > ul > li.where-to-go:hover {
           color: black;
         }
         li {
@@ -106,6 +109,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
           box-sizing: border-box;
           height: 55px;
           padding-bottom: 10px;
+          z-index: 500;
         }
 
         .where-to-go > ul,
@@ -125,7 +129,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
         .where-to-go > ul {
           top: 100%;
           left: 0;
-          z-index: 100;
+          z-index: 500;
           font-size: 0.7rem;
         }
         .where-to-go > ul > * {
@@ -199,11 +203,11 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
         }
         .white-arrow {
           bottom: -5px;
-          z-index: 2;
+          z-index: 490;
         }
         .black-arrow {
           bottom: -6px;
-          z-index: 1;
+          z-index: 480;
         }
         .where-to-go:hover .white-arrow {
           bottom: -8.5px; // dunno why
@@ -357,7 +361,7 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
           justify-content: space-between;
         }
         .nav-container > ul {
-          z-index: 100;
+          z-index: 500;
           position: absolute;
           top: 100%;
           left: 0;
