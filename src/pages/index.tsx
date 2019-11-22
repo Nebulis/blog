@@ -9,8 +9,8 @@ import { ScrollToTop } from "../components/core/scrollTo"
 import { MainHimejiCastleImage } from "../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { css } from "@emotion/core"
 import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
-import { FaChevronCircleRight, FaChevronCircleLeft, FaMapMarkerAlt } from "react-icons/all"
-import Img from "gatsby-image"
+import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react-icons/all"
+import { ApplicationLink } from "../components/core/links/link"
 
 const carousellStyle = css`
   position: relative;
@@ -36,6 +36,7 @@ const carousellStyle = css`
     background-color: black;
     opacity: 0.25;
     z-index: 5;
+    pointer-events: none;
   }
   .overlay-border {
     position: absolute;
@@ -46,6 +47,7 @@ const carousellStyle = css`
     display: block;
     border: 1px solid #fff;
     z-index: 5;
+    pointer-events: none;
   }
   .left {
     position: absolute;
@@ -82,16 +84,18 @@ const carousellStyle = css`
     border-radius: 40px;
     background-color: whitesmoke;
   }
-  .left:hover,
-  .right:hover {
-    background-color: black;
-    transition: all 0.2s linear;
-  }
-  .left:hover svg,
-  .right:hover svg {
-    color: whitesmoke;
-    stroke: whitesmoke;
-    transition: all 0.2s linear;
+  @media (hover: hover) {
+    .left:hover,
+    .right:hover {
+      background-color: black;
+      transition: all 0.2s linear;
+    }
+    .left:hover svg,
+    .right:hover svg {
+      color: whitesmoke;
+      stroke: whitesmoke;
+      transition: all 0.2s linear;
+    }
   }
   @media (max-width: 576px) {
     .left svg,
@@ -127,14 +131,13 @@ const Carousell: React.FunctionComponent = ({ children }) => {
       } else {
         setCurrentElement(currentElement + 1)
       }
-    }, 20000)
+    }, 13000)
     return () => {
       clearInterval(interval)
     }
   }, [children.length, currentElement])
   useEffect(() => {
     if (ref.current && height === 0) {
-      console.log("here", ref.current.getBoundingClientRect().height)
       setHeight(ref.current.getBoundingClientRect().height)
     }
     console.log("noop")
@@ -189,6 +192,7 @@ const Carousell: React.FunctionComponent = ({ children }) => {
 }
 
 const imageWithMarkerStyle = css`
+  display: block;
   .country-marker {
     position: absolute;
     bottom: 10px;
@@ -207,21 +211,28 @@ const imageWithMarkerStyle = css`
   .country-marker.hidden {
     display: none;
   }
+  &.link.hidden .development-mark {
+    // hide development mark
+    display: none;
+  }
 `
-const ImageWithMarker: React.FunctionComponent<{ country: string; className?: string; hide?: boolean }> = ({
+const ImageWithMarker: React.FunctionComponent<{ country: string; className?: string; hide?: boolean; to: string }> = ({
   country,
   hide,
   children,
   className = "",
+  to,
 }) => {
   return (
-    <div className={className} css={imageWithMarkerStyle}>
-      {children}
-      <div className={`country-marker ${hide ? "hidden" : ""}`}>
-        <FaMapMarkerAlt />
-        {country}
+    <ApplicationLink to={to} css={imageWithMarkerStyle} className={`${className} link ${hide ? "hidden" : ""}`}>
+      <div>
+        {children}
+        <div className={`country-marker ${hide ? "hidden" : ""}`}>
+          <FaMapMarkerAlt />
+          {country}
+        </div>
       </div>
-    </div>
+    </ApplicationLink>
   )
 }
 
@@ -238,10 +249,10 @@ const IndexPage = () => {
             {windowWidth <= 576 ? <MobileMenu /> : <Menu />}
             <ScrollToTop />
             <Carousell>
-              <ImageWithMarker country="Japon">
+              <ImageWithMarker country="Japon" to="japan">
                 <MainHimejiCastleImage />
               </ImageWithMarker>
-              <ImageWithMarker country="Cambodia">
+              <ImageWithMarker country="Cambodia" to="himeji">
                 <MainArashiyamaImage />
               </ImageWithMarker>
             </Carousell>
