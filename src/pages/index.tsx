@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { ReactElement, useEffect, useRef, useState } from "react"
 import SEO from "../components/layout/seo"
 import { PageDevelopmentMark } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
@@ -11,7 +11,7 @@ import { css } from "@emotion/core"
 import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react-icons/all"
 import { ApplicationLink } from "../components/core/links/link"
-import { Country, World } from "../components/layout/world"
+import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip } from "../components/core/tooltip"
 import { navigate } from "gatsby"
@@ -249,6 +249,9 @@ const StyledWorld = styled(World)`
     fill: #92d6c1;
     cursor: pointer;
   }
+  .visited.dot {
+    fill: #318269;
+  }
 `
 const visitedCountries = [
   "japan",
@@ -256,7 +259,7 @@ const visitedCountries = [
   "australia",
   "spain",
   "vietnam",
-  "singapour",
+  "singapore",
   "indonesia",
   "cambodia",
   "malaysia",
@@ -267,14 +270,14 @@ const visitedCountries = [
   "senegal",
   "united states",
 ]
-const transform = (country: Country): Country => {
+const transform = (country: Country): ReactElement => {
   if (visitedCountries.includes(country["data-name"].toLowerCase())) {
-    return {
-      ...country,
-      className: "visited",
+    if (country["data-name"].toLowerCase() === "singapore") {
+      return <circle cx="1385" cy="565" r="6" className="visited dot" />
     }
+    return <CountryPath country={country} className="visited" />
   }
-  return country
+  return <CountryPath country={country} />
 }
 const TooltipContent = styled.span`
   background: hsla(0, 0%, 0%, 0.75);

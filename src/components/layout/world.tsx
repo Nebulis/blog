@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactElement } from "react"
 
 export type Continent = "Asia" | "Europe" | "Africa" | "North America" | "South America" | "Oceania"
 export const continents: Continent[] = ["Asia", "Europe", "Africa", "North America", "South America", "Oceania"]
@@ -7,7 +7,6 @@ export interface Country {
   continent: Continent
   d: string
   "data-name": string
-  className?: string
 }
 const countries: Country[] = [
   {
@@ -1462,27 +1461,45 @@ const countries: Country[] = [
   },
 ]
 
-const noop = () => void 0
+export interface CountryProps {
+  country: Country
+  className?: string
+  onClick?: () => void
+  onMouseEnter?: () => void
+  onMouseLeave?: () => void
+}
+
+const noop = () => {
+  console.log("nee")
+  void 0
+}
+export const CountryPath: React.FunctionComponent<CountryProps> = ({ country, className = "", ...props }) => (
+  <path {...country} transform="translate(-180, 0)" className={className} {...props} />
+)
+
 export const World: React.FunctionComponent<{
   className?: string
-  transform?: (country: Country) => Country
+  transform?: (country: Country) => ReactElement
   onClick?: (country: Country) => void
   onMouseEnter?: (country: Country) => void
   onMouseLeave?: (country: Country) => void
-}> = ({ className = "", transform = country => country, onMouseEnter = noop, onMouseLeave = noop, onClick = noop }) => {
+}> = ({
+  className = "",
+  transform = country => <CountryPath country={country} />,
+  onMouseEnter = noop,
+  onMouseLeave = noop,
+  onClick = noop,
+}) => {
   return (
     <svg className={className} version="1.1" viewBox="0 0 1800 1001" width="100%" id="svg2">
-      {countries.map(transform).map(country => {
-        return (
-          <path
-            key={country.id}
-            {...country}
-            transform="translate(-180, 0)"
-            onMouseEnter={() => onMouseEnter(country)}
-            onMouseLeave={() => onMouseLeave(country)}
-            onClick={() => onClick(country)}
-          />
-        )
+      {countries.map(country => {
+        const element = transform(country)
+        return React.cloneElement(element, {
+          key: country.id,
+          onMouseEnter: () => onMouseEnter(country),
+          onMouseLeave: () => onMouseLeave(country),
+          onClick: () => onClick(country),
+        })
       })}
     </svg>
   )

@@ -1,18 +1,15 @@
 import SEO from "./seo"
 import { Scooter } from "./scooter"
-import { continents, Country, World } from "./world"
-import React, { FunctionComponent, useContext, useEffect, useState } from "react"
+import { continents, Country, CountryPath, World } from "./world"
+import React, { FunctionComponent, ReactElement, useContext, useEffect, useState } from "react"
 import { ApplicationContext } from "../application"
 import styled from "@emotion/styled"
 
-const transformSelectedCountriesByContinent = (continent: string) => (country: Country): Country => {
+const transformSelectedCountriesByContinent = (continent: string) => (country: Country): ReactElement => {
   if (country.continent === continent) {
-    return {
-      ...country,
-      className: "selectedContinent",
-    }
+    return <CountryPath country={country} className="selectedContinent" />
   }
-  return country
+  return <CountryPath country={country} />
 }
 
 const StyledWorld = styled(World)`
