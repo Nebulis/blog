@@ -286,6 +286,11 @@ const TooltipContent = styled.span`
   border-radius: 4px;
   padding: 0.5em 1em;
 `
+
+const mapContainerStyle = css`
+  max-width: 1140px;
+  margin: auto;
+`
 const IndexPage = () => {
   const { windowWidth } = useWindowSize()
   const [country, setCountry] = useState<Country>()
@@ -307,22 +312,24 @@ const IndexPage = () => {
                 <MainArashiyamaImage />
               </ImageWithMarker>
             </Carousell>
-            <StyledWorld
-              transform={transform}
-              onMouseEnter={country => {
-                if (visitedCountries.includes(country["data-name"].toLowerCase())) {
-                  setCountry(country)
-                }
-              }}
-              onMouseLeave={() => setCountry(undefined)}
-              onClick={country => {
-                try {
-                  navigate(getLinkUrl(country["data-name"].toLowerCase()))
-                } catch (e) {
-                  console.log(`Link doesnt exist for ${country["data-name"].toLowerCase()}`)
-                }
-              }}
-            />
+            <div css={mapContainerStyle}>
+              <StyledWorld
+                transform={transform}
+                onMouseEnter={country => {
+                  if (visitedCountries.includes(country["data-name"].toLowerCase())) {
+                    setCountry(country)
+                  }
+                }}
+                onMouseLeave={() => setCountry(undefined)}
+                onClick={country => {
+                  try {
+                    navigate(getLinkUrl(country["data-name"].toLowerCase()))
+                  } catch (e) {
+                    console.log(`Link doesnt exist for ${country["data-name"].toLowerCase()}`)
+                  }
+                }}
+              />
+            </div>
             <MouseToolTip>{country ? <TooltipContent>{country["data-name"]}</TooltipContent> : null}</MouseToolTip>
           </>
         ) : null}
