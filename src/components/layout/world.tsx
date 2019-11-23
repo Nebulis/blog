@@ -1462,14 +1462,27 @@ const countries: Country[] = [
   },
 ]
 
-export const World: React.FunctionComponent<{ className?: string; transform?: (country: Country) => Country }> = ({
-  className = "",
-  transform = country => country,
-}) => {
+const noop = () => void 0
+export const World: React.FunctionComponent<{
+  className?: string
+  transform?: (country: Country) => Country
+  onClick?: (country: Country) => void
+  onMouseEnter?: (country: Country) => void
+  onMouseLeave?: (country: Country) => void
+}> = ({ className = "", transform = country => country, onMouseEnter = noop, onMouseLeave = noop, onClick = noop }) => {
   return (
-    <svg className={className} version="1.1" viewBox="0 0 2000 1001" width="100%" id="svg2">
+    <svg className={className} version="1.1" viewBox="0 0 1800 1001" width="100%" id="svg2">
       {countries.map(transform).map(country => {
-        return <path key={country.id} {...country} />
+        return (
+          <path
+            key={country.id}
+            {...country}
+            transform="translate(-180, 0)"
+            onMouseEnter={() => onMouseEnter(country)}
+            onMouseLeave={() => onMouseLeave(country)}
+            onClick={() => onClick(country)}
+          />
+        )
       })}
     </svg>
   )

@@ -13,6 +13,9 @@ import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react
 import { ApplicationLink } from "../components/core/links/link"
 import { Country, World } from "../components/layout/world"
 import styled from "@emotion/styled"
+import { MouseToolTip } from "../components/core/tooltip"
+import { navigate } from "gatsby"
+import { getLinkUrl } from "../components/core/links/links"
 
 const carousellStyle = css`
   position: relative;
@@ -240,14 +243,14 @@ const ImageWithMarker: React.FunctionComponent<{ country: string; className?: st
 const StyledWorld = styled(World)`
   stroke-line-join: round;
   stroke: white;
-  fill: #aacfe9;
+  fill: #d4eadc;
 
   .visited {
-    fill: #67a9d7;
+    fill: #92d6c1;
     cursor: pointer;
   }
 `
-const visited = [
+const visitedCountries = [
   "japan",
   "france",
   "australia",
@@ -260,10 +263,12 @@ const visited = [
   "philippines",
   "india",
   "sri lanka",
+  "taiwan",
+  "senegal",
   "united states",
 ]
 const transform = (country: Country): Country => {
-  if (visited.includes(country["data-name"].toLowerCase())) {
+  if (visitedCountries.includes(country["data-name"].toLowerCase())) {
     return {
       ...country,
       className: "visited",
@@ -271,9 +276,16 @@ const transform = (country: Country): Country => {
   }
   return country
 }
-
+const TooltipContent = styled.span`
+  background: hsla(0, 0%, 0%, 0.75);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+`
 const IndexPage = () => {
   const { windowWidth } = useWindowSize()
+  const [country, setCountry] = useState<Country>()
   return (
     <>
       <SEO title="main" />
@@ -292,7 +304,23 @@ const IndexPage = () => {
                 <MainArashiyamaImage />
               </ImageWithMarker>
             </Carousell>
-            <StyledWorld transform={transform} />
+            <StyledWorld
+              transform={transform}
+              onMouseEnter={country => {
+                if (visitedCountries.includes(country["data-name"].toLowerCase())) {
+                  setCountry(country)
+                }
+              }}
+              onMouseLeave={() => setCountry(undefined)}
+              onClick={country => {
+                try {
+                  navigate(getLinkUrl(country["data-name"].toLowerCase()))
+                } catch (e) {
+                  console.log(`Link doesnt exist for ${country["data-name"].toLowerCase()}`)
+                }
+              }}
+            />
+            <MouseToolTip>{country ? <TooltipContent>{country["data-name"]}</TooltipContent> : null}</MouseToolTip>
           </>
         ) : null}
       </Maintenance>

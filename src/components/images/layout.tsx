@@ -1,23 +1,9 @@
 import React, { FunctionComponent, HTMLAttributes } from "react"
-import { css, jsx } from "@emotion/core"
+import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { japanPrimaryColor } from "../core/japan.variables"
-
-// https://github.com/emotion-js/emotion/issues/1404
-const cloneElement = (element: any, props: any, ...children: any) =>
-  jsx(
-    element.props["__EMOTION_TYPE_PLEASE_DO_NOT_USE__"]
-      ? element.props["__EMOTION_TYPE_PLEASE_DO_NOT_USE__"]
-      : element.type,
-    {
-      key: element.key !== null ? element.key : undefined,
-      ref: element.ref,
-      ...element.props,
-      ...props,
-    },
-    ...children
-  )
+import { cloneElement } from "../core/cloneElement"
 
 const allButLastImageStyle = css`
   // needed for ImageAsTwoLandscapeLeftAndOnePortraitRight under GroupOfImages
