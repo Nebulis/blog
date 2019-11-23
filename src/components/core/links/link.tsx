@@ -37,19 +37,19 @@ type LinkProps = Omit<GatsbyLinkProps<any>, "ref"> & { action?: "hide" | "no-lin
 const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => FunctionComponent<LinkProps> = (
   ApplicationLink: ComponentType<LinkProps>
 ) =>
-  function LinkIfActive({ children, to, action = "no-link", ...props }) {
+  function LinkIfActive({ children, to, action = "no-link", className, ...props }) {
     const context = useContext(ApplicationContext)
     const link = getLink(to)
     if (!link) {
       throw new Error(`No link for ${to}`)
     }
     return context.development || link.published ? (
-      <ApplicationLink to={getLinkUrl(to)} {...props} className="relative">
+      <ApplicationLink to={getLinkUrl(to)} {...props} className={`relative ${className}`}>
         {children}
         {!link.published ? <DevelopmentMark /> : null}
       </ApplicationLink>
     ) : action === "no-link" ? (
-      <>{children}</>
+      <div className={className}>{children}</div>
     ) : null
   }
 const developmentMarkStyle = css`

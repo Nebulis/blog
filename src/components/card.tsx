@@ -1,16 +1,34 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent, useContext } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { japanPrimaryColor } from "./core/japan.variables"
 import { ApplicationLink } from "./core/links/link"
 import { getLink } from "./core/links/links"
+import { ApplicationContext } from "./application"
 
 interface CardProps {
   title?: string
   className?: string
   to: string
 }
+
+const cardPublishedStyle = css`
+  transition: transform 0.2s ease, box-shadow 0.2s ease, padding 0.2s ease;
+  &:hover {
+    box-shadow: 0 17px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(4px);
+    padding-top: 4px;
+  }
+
+  @media (max-width: 576px) {
+    background-color: whitesmoke;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    padding-top: 4px;
+  }
+`
 const cardStyle = css`
+  display: block;
+
   h4,
   h5 {
     margin-bottom: 0;
@@ -35,10 +53,15 @@ export const Card: FunctionComponent<CardProps> = ({ children, title, className,
   if (!children) {
     throw new Error("Error in Card component")
   }
-  const { publishedDate } = getLink(to)
+  const { publishedDate, published } = getLink(to)
+  const context = useContext(ApplicationContext)
 
   return (
-    <div className={`pa3 pt0 mt3 mb3 ${className}`} css={cardStyle}>
+    <ApplicationLink
+      to={to}
+      className={`pa3 pt0 mt3 mb3 ${className}`}
+      css={[cardStyle, context.development || published ? cardPublishedStyle : null]}
+    >
       <h4 className="normal tc i b">{title}</h4>
       <div className="published-date tc mt1">
         Publié le{" "}
@@ -54,12 +77,7 @@ export const Card: FunctionComponent<CardProps> = ({ children, title, className,
       {Array.isArray(children) && React.isValidElement(children[1])
         ? React.cloneElement(children[1], { className: `${children[1].props.className || ""} text` })
         : null}
-      <h5 className="normal tc ttu next">
-        <ApplicationLink to={to} action="hide">
-          En savoir plus
-        </ApplicationLink>
-      </h5>
-    </div>
+    </ApplicationLink>
   )
 }
 
