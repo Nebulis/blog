@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import * as React from "react"
-export const MainTokyoImage = ({ className = "" }: { className?: string }) => {
+export const MainTokyoImage: React.FunctionComponent<{ className?: string }> = ({ className = "" }) => {
   const data = useStaticQuery(graphql`
     query {
       file: file(relativePath: { eq: "asia/japan/tokyo/adayintokyo/tokyo-main.jpg" }) {
