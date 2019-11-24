@@ -1,4 +1,4 @@
-import React from "react"
+import { ComponentType } from "react"
 
 export interface ContinentLink {
   id: string
@@ -26,6 +26,7 @@ export interface OtherLink {
   label: string
   url?: string
   published: boolean | Date
+  card?: ComponentType
 }
 
 export interface HighlightLink {
@@ -33,4 +34,5 @@ export interface HighlightLink {
   label: string
   url?: string
   published: boolean | Date
+  card?: ComponentType
 }

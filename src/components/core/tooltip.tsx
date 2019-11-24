@@ -16,7 +16,7 @@ export const MouseToolTip: FunctionComponent = ({ children }) => {
   useEffect(() => {
     setWidth(ref.current?.getBoundingClientRect().width ?? 0)
   }, [children])
-  const offset = clientY > 80 ? -40 : 30
+  const offset = clientY > 80 ? -45 : 30
   return (
     <ToolTip>
       <div

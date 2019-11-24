@@ -4,6 +4,19 @@ import { MainHimejiCastleImage } from "../../images/asia/japan/himeji/castle/mai
 import { MainNagoyaCastleImage } from "../../images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
 import { MainFujiImage } from "../../images/asia/japan/fuji/kawaguchiko/mainFujiImage"
 import { MainTokyoImage } from "../../images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
+import {
+  ADayInTokyoCard,
+  ArashiyamaCard,
+  DaigojiCard,
+  FushimiInariTaishaCard,
+  HamarikyuGardenCard,
+  HimejiCastleCard,
+  KawaguchikoLakeCard,
+  KinkakujiCard,
+  NagoyaCastleCard,
+  SensojiCard,
+  ToganjiCard,
+} from "../japan"
 
 export const japanLinks: CountryLink = {
   id: "japan",
@@ -12,13 +25,13 @@ export const japanLinks: CountryLink = {
     {
       id: "spring-in-japan",
       label: "Le Japon au printemps",
-      published: false,
+      published: new Date("2019-10-10"),
     },
     {
       id: "transports-in-japan",
       label: "Transports in Japan",
       url: "transports",
-      published: false,
+      published: new Date("2019-10-11"),
     },
   ],
   cities: [
@@ -30,22 +43,26 @@ export const japanLinks: CountryLink = {
         {
           id: "arashiyama",
           label: "Arashiyama",
-          published: false,
+          published: new Date("2019-10-12"),
+          card: ArashiyamaCard,
         },
         {
           id: "daigoji",
           label: "Daigo-ji",
-          published: false,
+          published: new Date("2019-10-13"),
+          card: DaigojiCard,
         },
         {
           id: "kinkakuji",
           label: "Kinkakuji",
           published: false,
+          card: KinkakujiCard,
         },
         {
           id: "fushimi-inari-taisha",
           label: "Fushimi Inari Taisha",
           published: false,
+          card: FushimiInariTaishaCard,
         },
       ],
     },
@@ -59,6 +76,7 @@ export const japanLinks: CountryLink = {
           label: "Himeji Castle",
           url: "castle",
           published: false,
+          card: HimejiCastleCard,
         },
       ],
     },
@@ -72,11 +90,13 @@ export const japanLinks: CountryLink = {
           label: "Nagoya Castle",
           url: "castle",
           published: false,
+          card: NagoyaCastleCard,
         },
         {
           id: "toganji",
           label: "Togan-ji",
           published: false,
+          card: ToganjiCard,
         },
       ],
     },
@@ -89,6 +109,7 @@ export const japanLinks: CountryLink = {
           id: "lake-kawaguchiko",
           label: "Lac Kawaguchiko",
           published: false,
+          card: KawaguchikoLakeCard,
         },
       ],
     },
@@ -101,16 +122,19 @@ export const japanLinks: CountryLink = {
           id: "a-day-in-tokyo",
           label: "Un jour à Tokyo",
           published: false,
+          card: ADayInTokyoCard,
         },
         {
           id: "sensoji",
           label: "Senso-ji",
           published: false,
+          card: SensojiCard,
         },
         {
           id: "hamarikyu-garden",
           label: "Hamarikyu Garden",
           published: false,
+          card: HamarikyuGardenCard,
         },
       ],
     },

@@ -2,12 +2,23 @@ import * as path from "path"
 import { japanLinks } from "./japan.links"
 import { CityLink, ContinentLink, CountryLink, HighlightLink } from "./links.types"
 import { isPublished } from "./links.utils"
+import React from "react"
 
 export const continentLinks: ContinentLink[] = [
   {
     id: "asia",
     label: "Asie",
     countries: [japanLinks],
+  },
+  {
+    id: "articles",
+    label: "articles",
+    countries: [],
+  },
+  {
+    id: "who-are-we",
+    label: "who-are-we",
+    countries: [],
   },
 ]
 
@@ -18,6 +29,7 @@ interface CachedLinksMap {
   url: string
   published: boolean
   publishedDate?: Date
+  card?: React.ComponentType
 }
 const cachedLinks = new Map<string, CachedLinksMap>()
 continentLinks.forEach(continent => {
@@ -29,6 +41,7 @@ continentLinks.forEach(continent => {
         url: path.resolve(getUrl(continent), getUrl(country), getUrl(other)),
         published: isPublished(other),
         publishedDate: other.published instanceof Date ? other.published : undefined,
+        card: other.card,
       })
     })
     country.cities.forEach(city => {
@@ -43,6 +56,7 @@ continentLinks.forEach(continent => {
           url: path.resolve(getUrl(continent), getUrl(country), getUrl(city), getUrl(highlight)),
           published: isPublished(highlight),
           publishedDate: highlight.published instanceof Date ? highlight.published : undefined,
+          card: highlight.card,
         })
       })
     })
@@ -78,5 +92,22 @@ export const isLinkPublished = (element: CountryLink | CityLink | HighlightLink)
   if (!link) {
     throw new Error(`No link for ${element.id}`)
   }
-  return !!link.published
+  return link.published
+}
+
+const filterNull = (value: any): value is Required<Pick<CachedLinksMap, "card" | "publishedDate">> => {
+  return value
+}
+export const getThreeMoreRecentArticles = () => {
+  return Array.from(cachedLinks.values())
+    .map(link => {
+      if (link.published && link.publishedDate && link.card) {
+        return { publishedDate: link.publishedDate, card: link.card }
+      }
+      return null
+    })
+    .filter(filterNull)
+    .sort((a, b) => b.publishedDate.getTime() - a.publishedDate.getTime())
+    .slice(0, 3)
+    .map(value => value.card)
 }
