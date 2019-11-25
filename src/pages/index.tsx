@@ -4,7 +4,7 @@ import { PageDevelopmentMark } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
 import { Maintenance } from "../components/layout/maintenance"
 import { Header } from "../components/layout/header"
-import { Menu, MobileMenu } from "../components/layout/menu"
+import { MobileMenu } from "../components/layout/menu"
 import { ScrollToTop } from "../components/core/scrollTo"
 import { MainHimejiCastleImage } from "../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
@@ -85,7 +85,7 @@ const IndexPage = () => {
           <>
             <PageDevelopmentMark />
             <Header />
-            {windowWidth <= 576 ? <MobileMenu /> : <Menu />}
+            {windowWidth <= 576 ? <MobileMenu /> : null}
             <ScrollToTop />
             <Carousell>
               <ImageWithMarker country="Japon" to="japan">
