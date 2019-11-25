@@ -10,16 +10,6 @@ export const continentLinks: ContinentLink[] = [
     label: "Asie",
     countries: [japanLinks],
   },
-  {
-    id: "articles",
-    label: "articles",
-    countries: [],
-  },
-  {
-    id: "who-are-we",
-    label: "who-are-we",
-    countries: [],
-  },
 ]
 
 const getUrl = (object: { url?: string; id: string }): string => object.url || object.id

@@ -6,7 +6,7 @@ describe("links", () => {
     expect(getLink("asia")).toMatchObject({ label: "Asie", published: true })
 
     // countries assertions
-    expect(getLink("japan")).toMatchObject({ label: "Japon", published: false })
+    expect(getLink("japan")).toMatchObject({ label: "Japon", published: true })
 
     // japan assertions
     expect(getLink("spring-in-japan")).toMatchObject({ label: "Le Japon au printemps", published: false })
@@ -17,9 +17,9 @@ describe("links", () => {
     expect(getLink("sensoji")).toMatchObject({ label: "Senso-ji", published: false })
     expect(getLink("hamarikyu-garden")).toMatchObject({ label: "Hamarikyu Garden", published: false })
 
-    expect(getLink("kyoto")).toMatchObject({ label: "Kyoto", published: false })
-    expect(getLink("arashiyama")).toMatchObject({ label: "Arashiyama", published: false })
-    expect(getLink("daigoji")).toMatchObject({ label: "Daigo-ji", published: false })
+    expect(getLink("kyoto")).toMatchObject({ label: "Kyoto", published: true })
+    expect(getLink("arashiyama")).toMatchObject({ label: "Arashiyama", published: true })
+    expect(getLink("daigoji")).toMatchObject({ label: "Daigo-ji", published: true })
     expect(getLink("kinkakuji")).toMatchObject({ label: "Kinkakuji", published: false })
     expect(getLink("fushimi-inari-taisha")).toMatchObject({ label: "Fushimi Inari Taisha", published: false })
 

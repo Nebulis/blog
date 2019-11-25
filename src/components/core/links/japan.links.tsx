@@ -25,13 +25,13 @@ export const japanLinks: CountryLink = {
     {
       id: "spring-in-japan",
       label: "Le Japon au printemps",
-      published: new Date("2019-10-10"),
+      published: false,
     },
     {
       id: "transports-in-japan",
       label: "Transports in Japan",
       url: "transports",
-      published: new Date("2019-10-11"),
+      published: false,
     },
   ],
   cities: [

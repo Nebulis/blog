@@ -8,11 +8,10 @@ import { MobileMenu } from "../components/layout/menu"
 import { ScrollToTop } from "../components/core/scrollTo"
 import { MainHimejiCastleImage } from "../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
-import { ApplicationLink } from "../components/core/links/link"
 import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip } from "../components/core/tooltip"
-import { navigate } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { getLinkUrl, getThreeMoreRecentArticles } from "../components/core/links/links"
 import { UsImage } from "../components/images/usImage"
 import { ImageAsMedallion, ImageWithMarker } from "../components/images/layout"
@@ -100,13 +99,13 @@ const IndexPage = () => {
             </h3>
             <div className="tc">
               <div>
-                <ApplicationLink to="who-are-we">En savoir plus sur nous ...</ApplicationLink>
+                <Link to="/who-are-we">En savoir plus sur nous ...</Link>
               </div>
 
               <ImageAsMedallion className="center">
-                <ApplicationLink to="who-are-we">
+                <Link to="/who-are-we">
                   <UsImage />
-                </ApplicationLink>
+                </Link>
               </ImageAsMedallion>
             </div>
             <h4 className="tc mt5 mb0">Nos voyages</h4>
@@ -134,7 +133,7 @@ const IndexPage = () => {
                 <Element key={index} />
               ))}
             </ArticlesContainer>
-            <ApplicationLink to="articles">Tous nos articles</ApplicationLink>
+            <Link to="/articles">Tous nos articles</Link>
             <MouseToolTip>{country ? <TooltipContent>{country["data-name"]}</TooltipContent> : null}</MouseToolTip>
           </>
         ) : null}

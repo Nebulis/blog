@@ -1470,7 +1470,6 @@ export interface CountryProps {
 }
 
 const noop = () => {
-  console.log("nee")
   void 0
 }
 export const CountryPath: React.FunctionComponent<CountryProps> = ({ country, className = "", ...props }) => (
