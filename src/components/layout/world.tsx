@@ -1,15 +1,12 @@
-import React, { CSSProperties, useEffect, useState } from "react"
-import { css } from "@emotion/core"
+import React, { ReactElement } from "react"
 
-type Continent = "Asia" | "Europe" | "Africa" | "North America" | "South America" | "Oceania"
-const continents: Continent[] = ["Asia", "Europe", "Africa", "North America", "South America", "Oceania"]
-interface Country {
+export type Continent = "Asia" | "Europe" | "Africa" | "North America" | "South America" | "Oceania"
+export const continents: Continent[] = ["Asia", "Europe", "Africa", "North America", "South America", "Oceania"]
+export interface Country {
   id: string
   continent: Continent
   d: string
   "data-name": string
-  style?: CSSProperties
-  className?: string
 }
 const countries: Country[] = [
   {
@@ -1463,75 +1460,46 @@ const countries: Country[] = [
       "m 879.6,395.2 -0.2,-0.2 -0.7,0.5 -0.6,0 0.1,0.2 0.1,0.2 0.7,0.4 0.6,-1.1 z m 13.5,-2.1 0,-0.1 -0.1,0 -0.1,0.1 -1.3,-0.1 -0.2,0.6 -0.5,0.4 0,0.7 0.5,0.7 0.3,0.1 0.5,0.1 0.7,-0.4 0.2,-0.4 0.1,-0.8 -0.1,-0.4 0,-0.5 z m -9.7,0.8 0.5,-0.4 0,-0.2 -0.1,-0.3 -0.5,-0.3 -0.2,0 -0.2,0.2 -0.2,0.4 0.3,0.5 0.2,0.1 0.2,0 z m 4.7,-2.3 1.2,-1 0,-0.3 -1,0.1 -1.1,1 -0.3,0.1 -1,0.1 -0.5,0 -0.4,0.2 0.2,0.3 0.4,1 0.7,0.9 0.6,-0.2 0.3,-0.2 0.4,-0.6 0.5,-1.4 z m 11.6,1.3 1.5,-0.5 0.3,-1 0.3,-1.1 0,-0.7 -0.2,-0.3 -0.1,0 -0.4,0 -0.3,0.2 -0.1,0.6 -0.7,1.3 -0.5,1.2 -0.7,0.6 -0.7,0.2 0.1,0.1 0.7,0.1 0.8,-0.7 z m -19.7,-2 0.5,-0.5 0.1,-0.3 -0.1,-0.5 0.2,-0.2 -0.1,-0.4 -0.3,-0.4 -0.7,0 -0.4,0.6 0.6,1.2 0.1,0.5 0.1,0 z m 22.4,-2.7 0.9,-0.3 0.5,-0.3 0.1,-0.9 0.2,-0.3 -0.2,-0.3 -0.2,0.2 -0.2,0.4 -0.6,0.2 -0.8,0.4 -0.2,0.3 -0.2,0.9 0.4,0.1 0.3,-0.4 z",
   },
 ]
-const style = css`
-  .selectedContinent {
-    animation: color-in 4s ease-in-out;
-  }
 
-  @keyframes color-in {
-    0% {
-      fill: #f2f2f2;
-    }
-    50% {
-      fill: lightblue;
-    }
-    100% {
-      fill: #f2f2f2;
-    }
-  }
-
-  @media (max-width: 550px) {
-    .title-temp-page {
-      font-size: 1rem;
-    }
-  }
-`
-const getRandomInt = (max: number) => {
-  return Math.floor(Math.random() * Math.floor(max))
+export interface CountryProps {
+  country: Country
+  className?: string
+  onClick?: () => void
+  onMouseEnter?: () => void
+  onMouseLeave?: () => void
 }
-export const World = () => {
-  const [continent, setContinent] = useState(continents[getRandomInt(continents.length)])
-  useEffect(() => {
-    const interval = setInterval(() => {
-      let newContinent = continents[getRandomInt(continents.length)]
-      while (newContinent === continent) {
-        newContinent = continents[getRandomInt(continents.length)]
-      }
-      setContinent(newContinent)
-    }, 4000)
-    return () => {
-      clearInterval(interval)
-    }
-  }, [continent])
-  const defaultCountryStyle: CSSProperties = {
-    fill: "#f2f2f2",
-    fillRule: "evenodd",
-  }
-  const transformSelectedCountriesByContinent = (country: Country): Country => {
-    if (country.continent === continent) {
-      return {
-        ...country,
-        className: "selectedContinent",
-      }
-    }
-    return country
-  }
 
+const noop = () => {
+  console.log("nee")
+  void 0
+}
+export const CountryPath: React.FunctionComponent<CountryProps> = ({ country, className = "", ...props }) => (
+  <path {...country} transform="translate(-180, 0)" className={className} {...props} />
+)
+
+export const World: React.FunctionComponent<{
+  className?: string
+  transform?: (country: Country) => ReactElement
+  onClick?: (country: Country) => void
+  onMouseEnter?: (country: Country) => void
+  onMouseLeave?: (country: Country) => void
+}> = ({
+  className = "",
+  transform = country => <CountryPath country={country} />,
+  onMouseEnter = noop,
+  onMouseLeave = noop,
+  onClick = noop,
+}) => {
   return (
-    <svg
-      css={style}
-      style={{
-        strokeLinejoin: "round",
-        stroke: "#d9d9d9",
-        fill: "none",
-      }}
-      version="1.1"
-      viewBox="0 0 2000 1001"
-      width="100%"
-      id="svg2"
-    >
-      {countries.map(transformSelectedCountriesByContinent).map(country => {
-        return <path key={country.id} {...country} style={country.style || defaultCountryStyle} />
+    <svg className={className} version="1.1" viewBox="0 0 1800 1001" width="100%" id="svg2">
+      {countries.map(country => {
+        const element = transform(country)
+        return React.cloneElement(element, {
+          key: country.id,
+          onMouseEnter: () => onMouseEnter(country),
+          onMouseLeave: () => onMouseLeave(country),
+          onClick: () => onClick(country),
+        })
       })}
     </svg>
   )

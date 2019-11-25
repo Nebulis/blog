@@ -8,6 +8,7 @@ import {
   FushimiInariTaishaCard,
   HamarikyuGardenCard,
   HimejiCastleCard,
+  KawaguchikoLakeCard,
   KinkakujiCard,
   NagoyaCastleCard,
   SpringInJapanQuote,
@@ -221,7 +222,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <HamarikyuGardenCard />
+            <KawaguchikoLakeCard />
           </article>
         </section>
         <JapanDivider />

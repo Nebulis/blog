@@ -3,7 +3,7 @@ import React, { FunctionComponent } from "react"
 import { useWindowSize } from "../hooks/useWindowSize"
 
 const style = css`
-  mqx-height: 170px;
+  max-height: 170px;
   overflow: hidden;
   margin-top: 0.8rem;
   rect {

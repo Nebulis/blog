@@ -37,7 +37,7 @@ type LinkProps = Omit<GatsbyLinkProps<any>, "ref"> & { action?: "hide" | "no-lin
 const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => FunctionComponent<LinkProps> = (
   ApplicationLink: ComponentType<LinkProps>
 ) =>
-  function LinkIfActive({ children, to, action = "no-link", className, ...props }) {
+  function LinkIfActive({ children, to, action = "no-link", className = "", ...props }) {
     const context = useContext(ApplicationContext)
     const link = getLink(to)
     if (!link) {
@@ -61,7 +61,7 @@ const developmentMarkStyle = css`
   border-left: 15px solid transparent;
   border-top: 15px solid #e28de5;
 `
-const DevelopmentMark = () => <span css={developmentMarkStyle} />
+const DevelopmentMark = () => <span css={developmentMarkStyle} className="development-mark" />
 
 export const ApplicationLink = linkBuilder(Link)
 
