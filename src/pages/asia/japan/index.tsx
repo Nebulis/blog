@@ -5,7 +5,6 @@ import { css } from "@emotion/core"
 import { JapanDivider } from "../../../components/core/divider"
 import { JapanCard } from "../../../components/card"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
-import { SpringInJapanQuote } from "../../../components/core/japan"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import { getLinkLabel, isLinkPublished } from "../../../components/core/links/links"
 import { japanLinks } from "../../../components/core/links/japan.links"
@@ -27,9 +26,8 @@ const IndexPage = () => {
         </h1>
         <JapanDivider />
         <h2 className="tc ttu">Notre voyage au Japon</h2>
-        <JapanCard title="Le Japon au printemps" to="spring-in-japan">
+        <JapanCard title="Le Japon au printemps" to="spring-in-japan" country="Japon">
           <MainImage />
-          <SpringInJapanQuote />
         </JapanCard>
         <JapanDivider />
         {cities.length > 0 && (

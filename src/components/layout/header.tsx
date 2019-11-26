@@ -1,20 +1,22 @@
 import React, { FunctionComponent, useContext, useState } from "react"
-import { FaCircle, FaFacebook, FaInstagram, FaPinterest, FaTwitter } from "react-icons/all"
+import { FaCircle, FaFacebook, FaInstagram, FaPinterest, FaSearch, FaTwitter } from "react-icons/all"
 import { css } from "@emotion/core"
-import { FlagUK } from "../icon/flag-uk"
-import { FlagFrance } from "../icon/flag-france"
+import banner from "../../images/banner-transparent.png"
 import { ApplicationContext } from "../application"
-import { Menu } from "./menu"
-import { useWindowSize } from "../hooks/useWindowSize"
+import { backgroundPrimaryColor, primaryColor, bannerHeight } from "../core/variables"
+import { DialogPortal } from "../core/tooltipPortal"
+import { Search } from "./search"
+import styled from "@emotion/styled"
+import { ApplicationLink } from "../core/links/link"
+import { useScrollPosition } from "../hooks/useScrollPosition"
+import { useBannerHeight } from "../hooks/useBannerHeight"
 
-const backgroundColor = "whitesmoke"
-const style = css`
-  background-color: ${backgroundColor};
+const headerStyle = css`
   .header {
-    background-color: #1b1811;
-    height: 45px;
-    display: flex;
-    justify-content: space-between;
+    background-color: ${backgroundPrimaryColor};
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    height: ${bannerHeight};
   }
   .header > div {
     height: 100%;
@@ -22,25 +24,31 @@ const style = css`
     align-items: center;
   }
   .header svg {
-    fill: white;
+    fill: black;
     margin-left: 0.3rem;
     margin-right: 0.3rem;
     cursor: pointer;
   }
-  .facebook:hover {
-    fill: #3b5998;
+  .logo-container img {
+    width: auto;
+    z-index: 1000;
+    height: ${bannerHeight};
   }
-  .twitter:hover {
-    fill: #55acee;
+  .left-menu-container {
+    display: flex;
+    justify-content: space-between;
   }
+  .right-menu-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .facebook:hover,
+  .twitter:hover,
+  .search:hover,
+  .pinterest:hover,
   .instagram:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-    border-radius: 2px;
-  }
-  .pinterest:hover {
-    fill: #cc2127;
-    background-color: white;
-    border-radius: 16px;
+    fill: ${primaryColor};
   }
   .development-mode-button.development {
     fill: green;
@@ -50,33 +58,134 @@ const style = css`
   }
 `
 
-type Lang = "french" | "english"
+const menuItemStyle = css`
+  display: inline-block;
+  padding: 5px 10px;
+  transition: all 0.1s linear;
+  cursor: pointer;
+  &:active {
+    background-color: red;
+    color: white;
+  }
+  &:active {
+    background-color: yellow;
+    color: white;
+  }
+  &:hover {
+    background-color: ${primaryColor};
+    color: white;
+  }
+  span {
+    padding-bottom: 5px;
+    font-family: monospace;
+    border-bottom: 2px dotted ${primaryColor};
+  }
+  &:hover span {
+    border-bottom: none;
+  }
+`
+// TODO there is a small glitch when clicking on an element, might be due to the non use of an app skeleton
+const MenuItem: FunctionComponent = ({ children }) => {
+  return (
+    <span css={menuItemStyle}>
+      <span>{children}</span>
+    </span>
+  )
+}
 
 export const Header: FunctionComponent = () => {
-  const [lang, setLang] = useState<Lang>("french")
-  const { windowWidth } = useWindowSize()
-  const context = useContext(ApplicationContext)
+  const { height } = useScrollPosition()
+  const [bannerHeight] = useBannerHeight()
+  const [search, setSearch] = useState(false)
+  const status = height > bannerHeight * 4 ? "display" : "hide"
   return (
-    <header css={style}>
+    <>
+      <StaticHeader onSearch={() => setSearch(true)} />
+      <StickyHeader className={status} onSearch={() => setSearch(true)} />
+      {search && (
+        <DialogPortal>
+          <Search onClose={() => setSearch(false)} />
+        </DialogPortal>
+      )}
+    </>
+  )
+}
+
+const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void }> = ({
+  className = "",
+  onSearch,
+}) => {
+  const context = useContext(ApplicationContext)
+
+  return (
+    <header css={headerStyle} className={className}>
       <div className="header">
-        <div>
-          <FaFacebook className="facebook" />
-          <FaTwitter className="twitter" />
-          <FaInstagram className="instagram" />
-          <FaPinterest className="pinterest" />
+        <div className="left-menu-container">
+          <div className="social-network-container">
+            <FaFacebook className="facebook" />
+            <FaTwitter className="twitter" />
+            <FaInstagram className="instagram" />
+            <FaPinterest className="pinterest" />
+          </div>
+          <div className="left-menu-element">
+            <MenuItem>
+              <ApplicationLink to="home">Accueil</ApplicationLink>
+            </MenuItem>
+            <MenuItem>Destination</MenuItem>
+            <MenuItem>Organisation</MenuItem>
+          </div>
         </div>
-        {windowWidth > 576 ? <Menu /> : null}
-        <div>
-          {context.initialDevelopmentValue ? (
-            <FaCircle
-              onClick={context.toggle}
-              className={`development-mode-button ${context.development ? "development" : "production"}`}
-            />
-          ) : null}
-          <FlagFrance selected={lang === "french"} onClick={() => setLang("french")} />
-          <FlagUK selected={lang === "english"} onClick={() => setLang("english")} />
+        <div className="logo-container">
+          <ApplicationLink to="home">
+            <img src={banner} />
+          </ApplicationLink>
+        </div>
+        <div className="right-menu-container">
+          <div className="right-menu-element">
+            <MenuItem>Découverte</MenuItem>
+            <MenuItem>Lifestyle</MenuItem>
+            <MenuItem>A propos</MenuItem>
+          </div>
+          <div className="mr2">
+            <FaSearch onClick={onSearch} className="search" />
+            {context.initialDevelopmentValue ? (
+              <FaCircle
+                onClick={context.toggle}
+                className={`development-mode-button ${context.development ? "development" : "production"}`}
+              />
+            ) : null}
+          </div>
         </div>
       </div>
     </header>
   )
 }
+
+const duration = 0.1
+// TODO explore position sticky
+const StickyHeader = styled(StaticHeader)`
+  &.hide .header,
+  &.hide .header img {
+    z-index: 0;
+    height: 0px;
+  }
+  &.hide .header > :not(.logo-container) {
+    visibility: hidden;
+  }
+  &.display .header > :not(.logo-container) {
+    visibility: visible;
+    transition: visibility ${duration / 2}s step-end;
+  }
+  &.display .header,
+  &.display .header img {
+    transition: height ${duration}s ease-in-out;
+  }
+  &.display {
+    z-index: 1000;
+    position: fixed;
+  }
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid black;
+`

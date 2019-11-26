@@ -1,6 +1,6 @@
 import * as path from "path"
 import { japanLinks } from "./japan.links"
-import { CityLink, ContinentLink, CountryLink, HighlightLink } from "./links.types"
+import { CityLink, ContinentLink, CountryLink, HighlightLink, NavigationLink } from "./links.types"
 import { isPublished } from "./links.utils"
 import React from "react"
 
@@ -9,6 +9,22 @@ export const continentLinks: ContinentLink[] = [
     id: "asia",
     label: "Asie",
     countries: [japanLinks],
+  },
+]
+
+export const navigationLinks: NavigationLink[] = [
+  {
+    id: "home",
+    label: "home",
+    url: "/",
+  },
+  {
+    id: "articles",
+    label: "Articles",
+  },
+  {
+    id: "who-are-we",
+    label: "Qui sommes-nous?",
   },
 ]
 
@@ -60,6 +76,14 @@ continentLinks.forEach(continent => {
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         country.cities.some(c => cachedLinks.get(c.id)!.published),
     })
+  })
+})
+
+navigationLinks.forEach(link => {
+  cachedLinks.set(link.id, {
+    label: link.label,
+    url: path.resolve(getUrl(link)),
+    published: true,
   })
 })
 

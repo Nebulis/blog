@@ -55,7 +55,7 @@ export const japanLinks: CountryLink = {
         {
           id: "kinkakuji",
           label: "Kinkakuji",
-          published: false,
+          published: new Date("2019-10-14"),
           card: KinkakujiCard,
         },
         {

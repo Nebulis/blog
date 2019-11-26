@@ -2,7 +2,13 @@ import React, { FunctionComponent, useEffect, useRef, useState } from "react"
 import ReactDOM from "react-dom"
 import { useWindowMousePosition } from "../hooks/useWindowMousePosition"
 
-export const ToolTip: FunctionComponent = ({ children }) => {
+export const DialogPortal: FunctionComponent = ({ children }) => {
+  const element = document.getElementById("dialog-portal")
+  if (!element) return null
+  return ReactDOM.createPortal(children, element)
+}
+
+export const TooltipPortal: FunctionComponent = ({ children }) => {
   const element = document.getElementById("tooltip-portal")
   if (!element) return null
   return ReactDOM.createPortal(children, element)
@@ -18,7 +24,7 @@ export const MouseToolTip: FunctionComponent = ({ children }) => {
   }, [children])
   const offset = clientY > 80 ? -45 : 30
   return (
-    <ToolTip>
+    <TooltipPortal>
       <div
         ref={ref}
         style={{
@@ -29,6 +35,6 @@ export const MouseToolTip: FunctionComponent = ({ children }) => {
       >
         {children}
       </div>
-    </ToolTip>
+    </TooltipPortal>
   )
 }

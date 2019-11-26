@@ -9,7 +9,7 @@ import React, { FunctionComponent } from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
 // @ts-ignore
-import FontUrl1 from "../../fonts/Ami-R-Regular.ttf"
+import FontUrl1 from "../../fonts/Freestyle-Script.ttf"
 
 interface SEOProps {
   description?: string
