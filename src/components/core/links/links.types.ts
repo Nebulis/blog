@@ -36,3 +36,8 @@ export interface HighlightLink {
   published: boolean | Date
   card?: ComponentType
 }
+export interface NavigationLink {
+  id: string
+  label: string
+  url?: string
+}

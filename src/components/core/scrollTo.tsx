@@ -2,6 +2,7 @@ import { css } from "@emotion/core"
 import React from "react"
 import { FaArrowCircleUp } from "react-icons/all"
 import { useWindowSize } from "../hooks/useWindowSize"
+import { useScrollPosition } from "../hooks/useScrollPosition"
 
 const style = css`
   width: 40px;
@@ -26,61 +27,26 @@ const style = css`
 
 export const ScrollToTop = () => {
   const { windowHeight } = useWindowSize()
+  const { height, direction } = useScrollPosition()
   return (
-    <ScrollPosition>
-      {({ height, direction }) => {
-        return (
-          <FaArrowCircleUp
-            css={style}
-            className={`${
-              // display if we have scrolled for one window size and going up OR
-              // if reaching the bottom for ~ one screen size (windowHeight * 2 because (document.body.offsetHeight - height - windowHeight) is equal to 0)
-              // shouldn't display the arrow if the body height is less then 2 screen height
-              (height > windowHeight && direction === "UP") ||
-              (height > windowHeight * 2 && document.body.offsetHeight - height < windowHeight * 2)
-                ? "show"
-                : "hide"
-            }`}
-            onClick={() => {
-              window.scroll({
-                top: 0,
-                left: 0,
-                behavior: "smooth",
-              })
-            }}
-          />
-        )
+    <FaArrowCircleUp
+      css={style}
+      className={`${
+        // display if we have scrolled for one window size and going up OR
+        // if reaching the bottom for ~ one screen size (windowHeight * 2 because (document.body.offsetHeight - height - windowHeight) is equal to 0)
+        // shouldn't display the arrow if the body height is less then 2 screen height
+        (height > windowHeight && direction === "UP") ||
+        (height > windowHeight * 2 && document.body.offsetHeight - height < windowHeight * 2)
+          ? "show"
+          : "hide"
+      }`}
+      onClick={() => {
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        })
       }}
-    </ScrollPosition>
+    />
   )
-}
-type DIRECTION = "UP" | "DOWN" | "NONE"
-class ScrollPosition extends React.Component<
-  { children: (options: { height: number; direction: DIRECTION }) => JSX.Element },
-  { height: number; direction: DIRECTION }
-> {
-  public constructor(props: any) {
-    super(props)
-    this.state = { height: 0, direction: "NONE" }
-  }
-
-  public componentDidMount = () => {
-    window.addEventListener("scroll", this.listenToScroll)
-  }
-
-  public componentWillUnmount = () => {
-    window.removeEventListener("scroll", this.listenToScroll)
-  }
-
-  private listenToScroll = () => {
-    const newHeight = document.body.scrollTop || document.documentElement.scrollTop
-    this.setState(state => ({
-      height: newHeight,
-      direction: state.height > newHeight ? "UP" : state.height < newHeight ? "DOWN" : "NONE",
-    }))
-  }
-
-  public render = () => {
-    return <>{this.props.children({ height: this.state.height, direction: this.state.direction })}</>
-  }
 }

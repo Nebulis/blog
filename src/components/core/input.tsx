@@ -1,6 +1,7 @@
 import React, { FunctionComponent, InputHTMLAttributes, TextareaHTMLAttributes, useState } from "react"
 import { css } from "@emotion/core"
 import { IconType } from "react-icons"
+import { backgroundPrimaryColor, primaryColor } from "./variables"
 
 const style = css`
   margin-top: 0.6rem;
@@ -16,18 +17,17 @@ const style = css`
     padding: 2px 13.5px;
     line-height: 1.5;
     color: #495057;
-    background-color: #fff;
+    background-color: ${backgroundPrimaryColor};
     background-clip: padding-box;
     border: 1px solid #ced4da;
-    border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
   .form-control:focus {
     color: #495057;
     background-color: #fff;
-    border-color: #80bdff;
+    border-color: ${primaryColor};
     outline: 0;
-    box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(212, 234, 220, 0.25);
   }
 `
 
@@ -35,7 +35,7 @@ const iconStyle = css`
   position: relative;
 
   &.active svg {
-    color: #9ac0f2;
+    color: ${primaryColor};
   }
   svg {
     color: #aeabae;

@@ -116,75 +116,66 @@ export const HamarikyuGardenQuote = () => (
 )
 
 export const ArashiyamaCard = () => (
-  <JapanCard title="Arashiyama – Forêt de Bambous géants" to="arashiyama">
+  <JapanCard title="Arashiyama – Forêt de Bambous géants" to="arashiyama" country="Japon">
     <MainArashiyamaImage />
-    <ArashiyamaQuote />
   </JapanCard>
 )
 
 export const KinkakujiCard = () => (
-  <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to="kinkakuji">
+  <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to="kinkakuji" country="Japon">
     <MainKinkakujiImage />
-    <KinkakujiQuote />
+    {/*<KinkakujiQuote />*/}
   </JapanCard>
 )
 
 export const DaigojiCard = () => (
-  <JapanCard title="Temple Daigo-ji" to="daigoji">
+  <JapanCard title="Temple Daigo-ji" to="daigoji" country="Japon">
     <MainDaigojiImage />
-    <DaigojiQuote />
   </JapanCard>
 )
 export const FushimiInariTaishaCard = () => (
-  <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to="fushimi-inari-taisha">
+  <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to="fushimi-inari-taisha" country="Japon">
     <MainFushimiImage />
-    <FushimiInariTaishaQuote />
   </JapanCard>
 )
 export const ADayInTokyoCard = () => (
-  <JapanCard title="Une journée à Tokyo" to="a-day-in-tokyo">
+  <JapanCard title="Une journée à Tokyo" to="a-day-in-tokyo" country="Japon">
     <MainTokyoImage />
   </JapanCard>
 )
 export const HamarikyuGardenCard = () => (
-  <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to="hamarikyu-garden">
+  <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to="hamarikyu-garden" country="Japon">
     <MainHamarikyuGardenImage />
-    <HamarikyuGardenQuote />
   </JapanCard>
 )
 
 export const SensojiCard = () => (
-  <JapanCard title="Le temple de Senso-Ji" to="sensoji">
+  <JapanCard title="Le temple de Senso-Ji" to="sensoji" country="Japon">
     <MainSensojiImage />
-    <SensojiQuote />
   </JapanCard>
 )
 export const KawaguchikoLakeCard = () => (
-  <JapanCard title="Mont Fuji - Lac Kawaguchiko" to="fuji">
+  <JapanCard title="Mont Fuji - Lac Kawaguchiko" to="fuji" country="Japon">
     <MainFujiImage />
-    <FujiQuote />
   </JapanCard>
 )
 
 export const HimejiCastleCard = () => (
-  <JapanCard title="Château de Himeji – Magnifique château du Héron Blanc" to="himeji-castle">
+  <JapanCard title="Château de Himeji – Magnifique château du Héron Blanc" to="himeji-castle" country="Japon">
     <MainHimejiCastleImage />
-    <HimejiCastleQuote />
   </JapanCard>
 )
 
 export const NagoyaCastleCard = () => (
-  <JapanCard title="Château de Nagoya" to="nagoya-castle">
+  <JapanCard title="Château de Nagoya" to="nagoya-castle" country="Japon">
     <MainNagoyaCastleImage />
-    <NagoyaCastleQuote />
   </JapanCard>
 )
 
 export const ToganjiCard = () => (
-  <JapanCard title="Le temple de Togan-Ji" to="toganji">
+  <JapanCard title="Le temple de Togan-Ji" to="toganji" country="Japon">
     <ImageAsPortrait>
       <MainToganjiImage />
     </ImageAsPortrait>
-    <ToganjiQuote />
   </JapanCard>
 )

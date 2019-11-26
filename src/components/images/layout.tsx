@@ -4,8 +4,6 @@ import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { japanPrimaryColor } from "../core/japan.variables"
 import { cloneElement } from "../core/cloneElement"
-import { ApplicationLink } from "../core/links/link"
-import { FaMapMarkerAlt } from "react-icons/all"
 
 const allButLastImageStyle = css`
   // needed for ImageAsTwoLandscapeLeftAndOnePortraitRight under GroupOfImages
@@ -310,47 +308,3 @@ export const JapanImageAsMedallion = styled(ImageAsMedallion)`
     border: 6px solid ${japanPrimaryColor};
   }
 `
-
-const imageWithMarkerStyle = css`
-  display: block;
-  .country-marker {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: right;
-    z-index: 100;
-    color: white;
-    font-size: 1.2rem;
-    padding-right: 10px;
-  }
-  .country-marker svg {
-    margin-right: 5px;
-    width: 15px;
-    height: 15px;
-  }
-  .country-marker.hidden {
-    display: none;
-  }
-  &.link.hidden .development-mark {
-    // hide development mark
-    display: none;
-  }
-`
-export const ImageWithMarker: React.FunctionComponent<{
-  country: string
-  className?: string
-  hide?: boolean
-  to: string
-}> = ({ country, hide, children, className = "", to }) => {
-  return (
-    <ApplicationLink to={to} css={imageWithMarkerStyle} className={`${className} link ${hide ? "hidden" : ""}`}>
-      <div>
-        {children}
-        <div className={`country-marker ${hide ? "hidden" : ""}`}>
-          <FaMapMarkerAlt />
-          {country}
-        </div>
-      </div>
-    </ApplicationLink>
-  )
-}

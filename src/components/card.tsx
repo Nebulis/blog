@@ -1,10 +1,11 @@
 import React, { FunctionComponent, useContext } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-import { japanPrimaryColor } from "./core/japan.variables"
 import { ApplicationLink } from "./core/links/link"
 import { getLink } from "./core/links/links"
 import { ApplicationContext } from "./application"
+import { Divider } from "./core/divider"
+import { primaryColor } from "./core/variables"
 
 interface CardProps {
   title?: string
@@ -16,8 +17,6 @@ const cardPublishedStyle = css`
   transition: transform 0.2s ease, box-shadow 0.2s ease, padding 0.2s ease;
   &:hover {
     box-shadow: 0 17px 25px rgba(0, 0, 0, 0.5);
-    transform: translateY(4px);
-    padding-top: 4px;
   }
 
   @media (max-width: 576px) {
@@ -27,33 +26,39 @@ const cardPublishedStyle = css`
   }
 `
 const cardStyle = css`
-  display: block;
-
-  h4,
-  h5 {
-    margin-bottom: 0;
-  }
-
-  h4 {
-    font-family: "Playfair Display", serif;
-  }
   .gatsby-image-wrapper {
     margin-bottom: 0px;
   }
-  .next {
-    text-decoration: underline;
-  }
-  .published-date {
+  .country {
+    text-align: center;
     font-size: 0.8rem;
-    font-weight: normal;
-    opacity: 0.7;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: ${primaryColor};
+  }
+  .title {
+    font-size: 0.9rem;
+    text-align: center;
+    text-transform: uppercase;
   }
 `
-export const Card: FunctionComponent<CardProps> = ({ children, title, className, to }) => {
+const StyledDivider = styled(Divider)`
+  background-color: black;
+  margin-bottom: 0;
+  margin-top: auto;
+  width: 40px;
+`
+export const Card: FunctionComponent<CardProps & { country: string }> = ({
+  children,
+  title,
+  className,
+  to,
+  country,
+}) => {
   if (!children) {
     throw new Error("Error in Card component")
   }
-  const { publishedDate, published } = getLink(to)
+  const { published } = getLink(to)
   const context = useContext(ApplicationContext)
 
   return (
@@ -62,30 +67,12 @@ export const Card: FunctionComponent<CardProps> = ({ children, title, className,
       className={`pa3 pt0 mt3 mb3 ${className}`}
       css={[cardStyle, context.development || published ? cardPublishedStyle : null]}
     >
-      <h4 className="normal tc i b">{title}</h4>
-      <div className="published-date tc mt1">
-        Publié le{" "}
-        {publishedDate instanceof Date
-          ? publishedDate.toLocaleString("fr-FR", {
-              month: "numeric",
-              year: "numeric",
-              day: "numeric",
-            })
-          : "03/01/2010"}
-      </div>
-      <div className="image mb3">{Array.isArray(children) ? children[0] : children}</div>
-      {Array.isArray(children) && React.isValidElement(children[1])
-        ? React.cloneElement(children[1], { className: `${children[1].props.className || ""} text` })
-        : null}
+      <div className="image mb3">{children}</div>
+      <div className="country mb2">{country}</div>
+      <div className="title mb3">{title}</div>
+      <StyledDivider />
     </ApplicationLink>
   )
 }
 
-export const JapanCard = styled(Card)`
-  .next {
-    color: ${japanPrimaryColor};
-  }
-  blockquote {
-    margin-bottom: 0.5rem;
-  }
-`
+export const JapanCard = styled(Card)``

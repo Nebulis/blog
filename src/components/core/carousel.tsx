@@ -1,13 +1,17 @@
 import { css } from "@emotion/core"
-import React, { useEffect, useRef, useState } from "react"
-import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/all"
+import React, { useEffect, useState } from "react"
+import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react-icons/all"
+import { backgroundPrimaryColor, pageHeightWithoutBanner } from "./variables"
+import { ApplicationLink } from "./links/link"
 
-const carousellStyle = css`
+const iconSize = 40
+const overlayBorderPadding = 15
+
+const carouselStyle = css`
   position: relative;
   .gatsby-image-wrapper {
     margin-top: 0;
     margin-bottom: 0;
-    max-height: 700px;
   }
   .hidden .gatsby-image-wrapper {
     height: 0;
@@ -16,6 +20,7 @@ const carousellStyle = css`
   .visible .gatsby-image-wrapper {
     opacity: 1;
     transition: opacity 0.8s linear;
+    height: ${pageHeightWithoutBanner};
   }
   .overlay {
     position: absolute;
@@ -30,32 +35,32 @@ const carousellStyle = css`
   }
   .overlay-border {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
+    top: ${overlayBorderPadding}px;
+    left: ${overlayBorderPadding}px;
+    right: ${overlayBorderPadding}px;
+    bottom: ${overlayBorderPadding}px;
     display: block;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     z-index: 5;
     pointer-events: none;
   }
   .left {
     position: absolute;
-    left: 10px;
-    top: calc(50% - 20px);
+    left: ${overlayBorderPadding * 2}px;
+    top: calc(50% - ${iconSize / 2}px);
     z-index: 10;
   }
   .right {
     position: absolute;
-    right: 10px;
-    top: calc(50% - 20px);
+    right: ${overlayBorderPadding * 2}px;
+    top: calc(50% - ${iconSize / 2}px);
     z-index: 10;
   }
   .left svg,
   .right svg {
     color: black;
-    width: 40px;
-    height: 40px;
+    width: ${iconSize}px;
+    height: ${iconSize}px;
     cursor: pointer;
     stroke: black;
     stroke-width: 20;
@@ -69,10 +74,10 @@ const carousellStyle = css`
   }
   .right,
   .left {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    background-color: whitesmoke;
+    width: ${iconSize}px;
+    height: ${iconSize}px;
+    border-radius: ${iconSize}px;
+    background-color: ${backgroundPrimaryColor};
   }
   @media (hover: hover) {
     .left:hover,
@@ -82,8 +87,8 @@ const carousellStyle = css`
     }
     .left:hover svg,
     .right:hover svg {
-      color: whitesmoke;
-      stroke: whitesmoke;
+      color: ${backgroundPrimaryColor};
+      stroke: ${backgroundPrimaryColor};
       transition: all 0.2s linear;
     }
   }
@@ -101,19 +106,10 @@ const carousellStyle = css`
     }
   }
 `
-export const Carousell: React.FunctionComponent = ({ children }) => {
+export const Carousel: React.FunctionComponent = ({ children }) => {
   if (!Array.isArray(children)) throw new Error("Please add children to the carousell")
   const [currentElement, setCurrentElement] = useState(0)
-  const ref = useRef<HTMLDivElement>(null)
-  const [height, setHeight] = useState(0)
   // must reset on resize
-  const heightStyle = height
-    ? css`
-        .visible .gatsby-image-wrapper {
-          height: ${height}px;
-        }
-      `
-    : css``
   useEffect(() => {
     const interval = setInterval(() => {
       if (currentElement === children.length - 1) {
@@ -126,22 +122,8 @@ export const Carousell: React.FunctionComponent = ({ children }) => {
       clearInterval(interval)
     }
   }, [children.length, currentElement])
-  useEffect(() => {
-    if (ref.current && height === 0) {
-      setHeight(ref.current.getBoundingClientRect().height)
-    }
-  }, [height])
-  useEffect(() => {
-    const eventListener = () => {
-      setHeight(0)
-    }
-    window.addEventListener("resize", eventListener)
-    return () => {
-      window.removeEventListener("resize", eventListener)
-    }
-  }, [])
   return (
-    <div css={[carousellStyle, heightStyle]} ref={ref}>
+    <div css={carouselStyle}>
       <div className="left">
         <FaChevronCircleLeft
           onClick={() => {
@@ -177,5 +159,49 @@ export const Carousell: React.FunctionComponent = ({ children }) => {
         })}
       </div>
     </div>
+  )
+}
+
+const carouselImageStyle = css`
+  display: block;
+  .country-marker {
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    z-index: 100;
+    color: white;
+    font-size: 1.2rem;
+    bottom: ${overlayBorderPadding + 5}px;
+    padding-right: ${overlayBorderPadding + 10}px;
+  }
+  .country-marker svg {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+  }
+  .country-marker.hidden {
+    display: none;
+  }
+  &.link.hidden .development-mark {
+    // hide development mark
+    display: none;
+  }
+`
+export const CarouselImage: React.FunctionComponent<{
+  country: string
+  className?: string
+  hide?: boolean
+  to: string
+}> = ({ country, hide, children, className = "", to }) => {
+  return (
+    <ApplicationLink to={to} css={carouselImageStyle} className={`${className} link ${hide ? "hidden" : ""}`}>
+      <div>
+        {children}
+        <div className={`country-marker ${hide ? "hidden" : ""}`}>
+          <FaMapMarkerAlt />
+          {country}
+        </div>
+      </div>
+    </ApplicationLink>
   )
 }

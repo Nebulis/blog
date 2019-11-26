@@ -24,7 +24,7 @@ const style = css`
 `
 export const Quote: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   return (
-    <div className={`f5 ${className} i`} css={style}>
+    <div className={`quote-container f5 ${className} i`} css={style}>
       <blockquote className="tc">
         <span className="quote" />
         {children}

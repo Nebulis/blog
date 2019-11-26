@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react"
+import React, { FunctionComponent, ReactElement, useState } from "react"
 import SEO from "../components/layout/seo"
 import { PageDevelopmentMark } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
@@ -10,24 +10,29 @@ import { MainHimejiCastleImage } from "../components/images/asia/japan/himeji/ca
 import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
-import { MouseToolTip } from "../components/core/tooltip"
-import { Link, navigate } from "gatsby"
+import { MouseToolTip } from "../components/core/tooltipPortal"
+import { navigate } from "gatsby"
 import { getLinkUrl, getThreeMoreRecentArticles } from "../components/core/links/links"
-import { UsImage } from "../components/images/usImage"
-import { ImageAsMedallion, ImageWithMarker } from "../components/images/layout"
-import { Carousell } from "../components/core/carousell"
+import { Carousel, CarouselImage } from "../components/core/carousel"
+import { css } from "@emotion/core"
+import { Divider } from "../components/core/divider"
+import { Monument } from "../components/icon/monument"
+import { Hiking } from "../components/icon/hiking"
+import { CityIcon } from "../components/icon/city"
+import { Photo } from "../components/icon/photo"
+import { ApplicationLink, ExternalLink } from "../components/core/links/link"
+import { primaryColor, primaryDarkColor, primaryLightColor } from "../components/core/variables"
 
 const StyledWorld = styled(World)`
   stroke-line-join: round;
   stroke: white;
-  fill: #d4eadc;
-
+  fill: ${primaryLightColor};
   .visited {
-    fill: #92d6c1;
-    cursor: pointer;
+    fill: ${primaryColor};
   }
-  .visited.dot {
-    fill: #318269;
+  .visited.articles {
+    fill: ${primaryDarkColor};
+    cursor: pointer;
   }
 `
 const visitedCountries = [
@@ -47,10 +52,13 @@ const visitedCountries = [
   "senegal",
   "united states",
 ]
+const countriesWithArticles = ["japan"]
 const transform = (country: Country): ReactElement => {
   if (visitedCountries.includes(country["data-name"].toLowerCase())) {
     if (country["data-name"].toLowerCase() === "singapore") {
-      return <circle cx="1385" cy="565" r="6" className="visited dot" />
+      return <circle cx="1385" cy="565" r="6" className="visited" />
+    } else if (countriesWithArticles.includes(country["data-name"].toLowerCase())) {
+      return <CountryPath country={country} className="visited articles" />
     }
     return <CountryPath country={country} className="visited" />
   }
@@ -66,76 +74,304 @@ const TooltipContent = styled.span`
 
 const MapContainer = styled.div`
   max-width: 1140px;
-  margin: auto;
+`
+const TravelsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
+const ButtonMapContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 230px;
+  min-width: 230px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  a {
+    text-align: center;
+    width: 200px;
+  }
+  a:nth-of-type(odd) {
+    align-self: flex-start;
+  }
+  a:nth-of-type(even) {
+    align-self: flex-end;
+  }
 `
 
+const maxWidth = 1425
 const ArticlesContainer = styled.div`
+  max-width: ${maxWidth}px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  .quote-container {
+    display: none;
+  }
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
 `
+const ButtonLink = styled(ApplicationLink)`
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid ${primaryColor};
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: ${primaryColor};
+  transition: all 0.2s linear;
+  &:visited {
+    color: ${primaryColor};
+  }
+  &:hover {
+    transition: all 0.2s linear;
+    background-color: ${primaryColor};
+    color: white;
+  }
+`
+const InstagramContainer = styled.div`
+  .hashtag {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: monospace;
+  }
+  .instagram {
+    display: flex;
+    a {
+      overflow: hidden;
+      height: calc(100vw / 10);
+      width: calc(100vw / 10);
+    }
+    img {
+      transition: transform 0.3s ease;
+    }
+
+    a:hover {
+      border: 3px solid #d4eadc;
+    }
+
+    a:hover img {
+      transform: scale(1.2);
+    }
+  }
+`
+const ContemplateContainer = styled.div`
+  max-width: ${maxWidth}px;
+  margin-top: 5.5rem;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  grid-gap: 3rem;
+  text-align: center;
+  svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    fill: #318269;
+  }
+  .title {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: ${primaryColor};
+    margin-bottom: 0.8rem;
+  }
+  .content {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    font-family: monospace;
+  }
+`
+
+const HomeSection: FunctionComponent = ({ children }) => (
+  <h2
+    className="tc ttu mb4"
+    css={css`
+      letter-spacing: 5px;
+      font-family: auto;
+    `}
+  >
+    {children}
+  </h2>
+)
+const HomeSubSection: FunctionComponent = ({ children }) => (
+  <h4
+    className="tl normal center pb2 mb0"
+    css={css`
+      padding-left: 200px;
+      max-width: calc(${maxWidth}px - 2rem);
+      border-bottom: 1px solid black;
+      font-family: "Freestyle Script";
+      font-size: 1.8rem;
+    `}
+  >
+    {children}
+  </h4>
+)
+/* margin-top is bigger than margin-bottom because it looks further due to text disposition */
+const HomeDivider = styled(Divider)`
+  margin-top: 1.85rem;
+`
+
 const IndexPage = () => {
-  const { windowWidth } = useWindowSize()
+  const { windowWidth, windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
+  const articleStyle = css`
+    @media (min-width: 993px) {
+      .gatsby-image-wrapper {
+        height: ${windowHeight / 2.9}px;
+      }
+    }
+  `
   return (
     <>
       <SEO title="main" />
       <Maintenance>
         {typeof window !== `undefined` ? (
-          <>
+          <div>
             <PageDevelopmentMark />
             <Header />
             {windowWidth <= 576 ? <MobileMenu /> : null}
             <ScrollToTop />
-            <Carousell>
-              <ImageWithMarker country="Japon" to="japan">
+            <Carousel>
+              <CarouselImage country="Japon" to="japan">
                 <MainHimejiCastleImage />
-              </ImageWithMarker>
-              <ImageWithMarker country="Cambodia" to="himeji">
+              </CarouselImage>
+              <CarouselImage country="Cambodia" to="himeji">
                 <MainArashiyamaImage />
-              </ImageWithMarker>
-            </Carousell>
-            <h3 className="tc mt5 mb3">
-              Bienvenue sur notre blog, découvrez ici nos voyages, nos astuces, nos coups de coeurs et nos ressentis.
-            </h3>
-            <div className="tc">
-              <div>
-                <Link to="/who-are-we">En savoir plus sur nous ...</Link>
+              </CarouselImage>
+            </Carousel>
+            <HomeDivider />
+            <HomeSection>Explorer</HomeSection>
+            <HomeSubSection>Nos voyages à travers le monde...</HomeSubSection>
+            <TravelsContainer>
+              <MapContainer>
+                <StyledWorld
+                  style={{ height: windowHeight / 1.5 + "px" }}
+                  transform={transform}
+                  onMouseEnter={country => {
+                    if (visitedCountries.includes(country["data-name"].toLowerCase())) {
+                      setCountry(country)
+                    }
+                  }}
+                  onMouseLeave={() => setCountry(undefined)}
+                  onClick={country => {
+                    try {
+                      navigate(getLinkUrl(country["data-name"].toLowerCase()))
+                    } catch (e) {
+                      console.log(`Link doesnt exist for ${country["data-name"].toLowerCase()}`)
+                    }
+                  }}
+                />
+              </MapContainer>
+              <ButtonMapContainer>
+                <ButtonLink to="articles" className="left">
+                  Afrique
+                </ButtonLink>
+                <ButtonLink to="articles" className="right">
+                  Amérique du Nord
+                </ButtonLink>
+                <ButtonLink to="articles" className="left">
+                  Amérique du Sud
+                </ButtonLink>
+                <ButtonLink to="articles" className="right">
+                  Asie
+                </ButtonLink>
+                <ButtonLink to="articles" className="left">
+                  Europe
+                </ButtonLink>
+                <ButtonLink to="articles" className="left">
+                  Moyen-Orient
+                </ButtonLink>
+                <ButtonLink to="articles" className="right">
+                  Oceanie
+                </ButtonLink>
+              </ButtonMapContainer>
+            </TravelsContainer>
+            <Divider />
+            <div>
+              <HomeSection>Découvrir</HomeSection>
+              <HomeSubSection>Nos dernières aventures...</HomeSubSection>
+              <ArticlesContainer css={articleStyle}>
+                {getThreeMoreRecentArticles().map((Element, index) => (
+                  <Element key={index} />
+                ))}
+              </ArticlesContainer>
+              <div className="tc mt3">
+                <ButtonLink to="articles">Tous nos articles</ButtonLink>
               </div>
-
-              <ImageAsMedallion className="center">
-                <Link to="/who-are-we">
-                  <UsImage />
-                </Link>
-              </ImageAsMedallion>
             </div>
-            <h4 className="tc mt5 mb0">Nos voyages</h4>
-            <MapContainer>
-              <StyledWorld
-                transform={transform}
-                onMouseEnter={country => {
-                  if (visitedCountries.includes(country["data-name"].toLowerCase())) {
-                    setCountry(country)
-                  }
-                }}
-                onMouseLeave={() => setCountry(undefined)}
-                onClick={country => {
-                  try {
-                    navigate(getLinkUrl(country["data-name"].toLowerCase()))
-                  } catch (e) {
-                    console.log(`Link doesnt exist for ${country["data-name"].toLowerCase()}`)
-                  }
-                }}
-              />
-            </MapContainer>
-            <h4 className="tc mt0 mb4">Nos derniers articles</h4>
-            <ArticlesContainer>
-              {getThreeMoreRecentArticles().map((Element, index) => (
-                <Element key={index} />
-              ))}
-            </ArticlesContainer>
-            <Link to="/articles">Tous nos articles</Link>
+            <HomeDivider />
+            <HomeSection>Contempler</HomeSection>
+            <HomeSubSection>Les merveilles de la planète...</HomeSubSection>
+            <ContemplateContainer>
+              <div>
+                <Monument />
+                <div className="title">Monument</div>
+                <div className="content">
+                  Visite de Pyramides, Temples, Pagodes... A la poursuite de l&apos;héritage des différentes
+                  civilisations
+                </div>
+              </div>
+              <div>
+                <Hiking />
+                <div className="title">Nature</div>
+                <div className="content">
+                  Marche entre trek et randonnées, dans la montagne comme dans la jungle, et découvre les paysages que
+                  la nature nous offre
+                </div>
+              </div>
+              <div>
+                <CityIcon />
+                <div className="title">Ville</div>
+                <div className="content">
+                  Promènes-toi dans les rues et les quartiers atypiques animés par ses habitants (marchés, restaurants,
+                  magasins...)
+                </div>
+              </div>
+              <div>
+                <Photo />
+                <div className="title">Animaux</div>
+                <div className="content">
+                  Dans leur habitat naturel ou dans des réserves protégés, observe les animaux, apprends à les connaitre
+                  et comment les protéger et conserver leur milieu naturel.
+                </div>
+              </div>
+            </ContemplateContainer>
+            <HomeDivider />
+            <HomeSection>Partager</HomeSection>
+            <HomeSubSection>Quelque chose ...</HomeSubSection>
+            <InstagramContainer>
+              <div className="hashtag">#Some</div>
+              <div className="instagram">
+                {Array(10)
+                  .fill(0)
+                  .map((_, index) => (
+                    <ExternalLink key={index} href="https://www.instagram.com/p/B31ltcFgggb">
+                      <img src="https://scontent-sin2-2.cdninstagram.com/v/t51.2885-15/e35/s320x320/72416702_462115874391380_3272355710023571102_n.jpg?_nc_ht=scontent-sin2-2.cdninstagram.com&_nc_cat=108&oh=af51bd1ee8b5982a81fc8e7317832714&oe=5E748522" />
+                    </ExternalLink>
+                  ))}
+              </div>
+            </InstagramContainer>
+            <div
+              css={css`
+                height: ${windowHeight}px;
+                background-color: lightgray;
+              `}
+            />
             <MouseToolTip>{country ? <TooltipContent>{country["data-name"]}</TooltipContent> : null}</MouseToolTip>
-          </>
+          </div>
         ) : null}
       </Maintenance>
     </>

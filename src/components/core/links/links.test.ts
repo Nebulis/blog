@@ -20,7 +20,7 @@ describe("links", () => {
     expect(getLink("kyoto")).toMatchObject({ label: "Kyoto", published: true })
     expect(getLink("arashiyama")).toMatchObject({ label: "Arashiyama", published: true })
     expect(getLink("daigoji")).toMatchObject({ label: "Daigo-ji", published: true })
-    expect(getLink("kinkakuji")).toMatchObject({ label: "Kinkakuji", published: false })
+    expect(getLink("kinkakuji")).toMatchObject({ label: "Kinkakuji", published: true })
     expect(getLink("fushimi-inari-taisha")).toMatchObject({ label: "Fushimi Inari Taisha", published: false })
 
     expect(getLink("himeji")).toMatchObject({ label: "Himeji", published: false })
