@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/Nebulis/blog.svg?style=svg)](https://circleci.com/gh/Nebulis/blog)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
