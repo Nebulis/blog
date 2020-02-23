@@ -363,7 +363,7 @@ const IndexPage = () => {
               </>
             )}
             <Footer className="flex justify-around pa4">
-              <div className="flex items-center f6">© 2020 Magic of Travels.</div>
+              <div className="flex items-center f6">© 2020 Magic of Travels</div>
               {development && (
                 <div>
                   <div className="tc">NEWSLETTER</div>

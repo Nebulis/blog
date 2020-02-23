@@ -125,7 +125,9 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
             <div className="social-network-container">
               <FaFacebook className="facebook" />
               <FaTwitter className="twitter" />
-              <FaInstagram className="instagram" />
+              <a href="https://instagram.com/_magic_of_travels_" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="instagram" />
+              </a>
               <FaPinterest className="pinterest" />
             </div>
           ) : (
