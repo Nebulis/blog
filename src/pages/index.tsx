@@ -232,7 +232,7 @@ const IndexPage = () => {
               <CarouselImage country="Japon" to="japan">
                 <MainHimejiCastleImage />
               </CarouselImage>
-              <CarouselImage country="Cambodia" to="himeji">
+              <CarouselImage country="Japon" to="japan">
                 <MainArashiyamaImage />
               </CarouselImage>
             </Carousel>
