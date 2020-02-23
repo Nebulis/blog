@@ -271,6 +271,7 @@ const IndexPage = () => {
                     <div key={continent.id}>
                       <ButtonLink
                         to={continent.id}
+                        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                         className={`${getLink(continent.id)!.published || development ? "active" : "inactive"}`}
                       >
                         {continent.label}

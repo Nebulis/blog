@@ -109,6 +109,7 @@ continentLinks.forEach(continent => {
   cachedLinks.set(continent.id, {
     label: continent.label,
     url: path.resolve(getUrl(continent)),
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     published: continent.countries.some(country => cachedLinks.get(country.id)!.published),
   })
 })
