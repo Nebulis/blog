@@ -238,7 +238,7 @@ const IndexPage = () => {
             </Carousel>
             <HomeDivider />
             <HomeSection>Explorer</HomeSection>
-            <HomeSubSection>Nos voyages à travers le monde...</HomeSubSection>
+            <HomeSubSection>Nos voyages à travers le monde ...</HomeSubSection>
             <TravelsContainer>
               <MapContainer>
                 <StyledWorld
@@ -286,7 +286,7 @@ const IndexPage = () => {
             <Divider />
             <div>
               <HomeSection>Découvrir</HomeSection>
-              <HomeSubSection>Nos dernières aventures...</HomeSubSection>
+              <HomeSubSection>Nos dernières aventures ...</HomeSubSection>
               <ArticlesContainer css={articleStyle}>
                 {getThreeMoreRecentArticles().map((Element, index) => (
                   <Element key={index} />
@@ -298,13 +298,13 @@ const IndexPage = () => {
             </div>
             <HomeDivider />
             <HomeSection>Contempler</HomeSection>
-            <HomeSubSection>Les merveilles de la planète...</HomeSubSection>
+            <HomeSubSection>Les merveilles de la planète ...</HomeSubSection>
             <ContemplateContainer>
               <div>
                 <Monument />
                 <div className="title">Monument</div>
                 <div className="content">
-                  Visite de Pyramides, Temples, Pagodes... A la poursuite de l&apos;héritage des différentes
+                  Visite de Pyramides, Temples, Pagodes ... A la poursuite de l&apos;héritage des différentes
                   civilisations
                 </div>
               </div>
@@ -321,7 +321,7 @@ const IndexPage = () => {
                 <div className="title">Ville</div>
                 <div className="content">
                   Promènes-toi dans les rues et les quartiers atypiques animés par ses habitants (marchés, restaurants,
-                  magasins...)
+                  magasins ...)
                 </div>
               </div>
               <div>
