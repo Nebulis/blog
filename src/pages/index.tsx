@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactElement, useState } from "react"
+import React, { FunctionComponent, ReactElement, useContext, useState } from "react"
 import SEO from "../components/layout/seo"
 import { PageDevelopmentMark } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
@@ -22,6 +22,7 @@ import { CityIcon } from "../components/icon/city"
 import { Photo } from "../components/icon/photo"
 import { ApplicationLink, ExternalLink } from "../components/core/links/link"
 import { primaryColor, primaryDarkColor, primaryLightColor } from "../components/core/variables"
+import { ApplicationContext } from "../components/application"
 
 const StyledWorld = styled(World)`
   stroke-line-join: round;
@@ -209,6 +210,7 @@ const HomeDivider = styled(Divider)`
 `
 
 const IndexPage = () => {
+  const { development } = useContext(ApplicationContext)
   const { windowWidth, windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
   const articleStyle = css`
@@ -333,21 +335,25 @@ const IndexPage = () => {
                 </div>
               </div>
             </ContemplateContainer>
-            <HomeDivider />
-            <HomeSection>Partager</HomeSection>
-            <HomeSubSection>Quelque chose ...</HomeSubSection>
-            <InstagramContainer>
-              <div className="hashtag">#Some</div>
-              <div className="instagram">
-                {Array(10)
-                  .fill(0)
-                  .map((_, index) => (
-                    <ExternalLink key={index} href="https://www.instagram.com/p/B31ltcFgggb">
-                      <img src="https://scontent-sin2-2.cdninstagram.com/v/t51.2885-15/e35/s320x320/72416702_462115874391380_3272355710023571102_n.jpg?_nc_ht=scontent-sin2-2.cdninstagram.com&_nc_cat=108&oh=af51bd1ee8b5982a81fc8e7317832714&oe=5E748522" />
-                    </ExternalLink>
-                  ))}
-              </div>
-            </InstagramContainer>
+            {development && (
+              <>
+                <HomeDivider />
+                <HomeSection>Partager</HomeSection>
+                <HomeSubSection>Quelque chose ...</HomeSubSection>
+                <InstagramContainer>
+                  <div className="hashtag">#Some</div>
+                  <div className="instagram">
+                    {Array(10)
+                      .fill(0)
+                      .map((_, index) => (
+                        <ExternalLink key={index} href="https://www.instagram.com/p/B31ltcFgggb">
+                          <img src="https://scontent-sin2-2.cdninstagram.com/v/t51.2885-15/e35/s320x320/72416702_462115874391380_3272355710023571102_n.jpg?_nc_ht=scontent-sin2-2.cdninstagram.com&_nc_cat=108&oh=af51bd1ee8b5982a81fc8e7317832714&oe=5E748522" />
+                        </ExternalLink>
+                      ))}
+                  </div>
+                </InstagramContainer>
+              </>
+            )}
             <div
               css={css`
                 height: ${windowHeight}px;

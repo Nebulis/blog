@@ -25,8 +25,8 @@ const headerStyle = css`
   }
   .header svg {
     fill: black;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
+    margin-left: 0.2rem;
+    margin-right: 0.1rem;
     cursor: pointer;
   }
   .logo-container img {
@@ -121,12 +121,16 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
     <header css={headerStyle} className={className}>
       <div className="header">
         <div className="left-menu-container">
-          <div className="social-network-container">
-            <FaFacebook className="facebook" />
-            <FaTwitter className="twitter" />
-            <FaInstagram className="instagram" />
-            <FaPinterest className="pinterest" />
-          </div>
+          {context.development ? (
+            <div className="social-network-container">
+              <FaFacebook className="facebook" />
+              <FaTwitter className="twitter" />
+              <FaInstagram className="instagram" />
+              <FaPinterest className="pinterest" />
+            </div>
+          ) : (
+            <div />
+          )}
           <div className="left-menu-element">
             <MenuItem>
               <ApplicationLink to="home">Accueil</ApplicationLink>
@@ -147,7 +151,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
             <MenuItem>A propos</MenuItem>
           </div>
           <div className="mr2">
-            <FaSearch onClick={onSearch} className="search" />
+            {context.development && <FaSearch onClick={onSearch} className="search" />}
             {context.initialDevelopmentValue ? (
               <FaCircle
                 onClick={context.toggle}
