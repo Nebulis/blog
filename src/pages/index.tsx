@@ -35,29 +35,13 @@ const StyledWorld = styled(World)`
     cursor: pointer;
   }
 `
-const visitedCountries = [
-  "japan",
-  "france",
-  "australia",
-  "spain",
-  "vietnam",
-  "singapore",
-  "indonesia",
-  "cambodia",
-  "malaysia",
-  "philippines",
-  "india",
-  "sri lanka",
-  "taiwan",
-  "senegal",
-  "united states",
-]
-const countriesWithArticles = ["japan"]
+const visitedCountries = ["jp", "fr", "au", "es", "vn", "sg", "id", "kh", "my", "ph", "in", "lk", "tw", "sn", "us"]
+const countriesWithArticles = ["jp"]
 const transform = (country: Country): ReactElement => {
-  if (visitedCountries.includes(country["data-name"].toLowerCase())) {
-    if (country["data-name"].toLowerCase() === "singapore") {
+  if (visitedCountries.includes(country.id.toLowerCase())) {
+    if (country.id.toLowerCase() === "singapore") {
       return <circle cx="1385" cy="565" r="6" className="visited" />
-    } else if (countriesWithArticles.includes(country["data-name"].toLowerCase())) {
+    } else if (countriesWithArticles.includes(country.id.toLowerCase())) {
       return <CountryPath country={country} className="visited articles" />
     }
     return <CountryPath country={country} className="visited" />
@@ -261,7 +245,7 @@ const IndexPage = () => {
                   style={{ height: windowHeight / 1.5 + "px" }}
                   transform={transform}
                   onMouseEnter={country => {
-                    if (visitedCountries.includes(country["data-name"].toLowerCase())) {
+                    if (visitedCountries.includes(country.id.toLowerCase())) {
                       setCountry(country)
                     }
                   }}
