@@ -71,7 +71,7 @@ export const Search: FunctionComponent<{ onClose: () => void }> = ({ onClose }) 
             placeholder="Recherche"
             Icon={FaSearch}
             hideLabel
-            className="mt0 input"
+            inputClassName="mt0 input"
             id="search"
             value={search}
             onKeyUp={event => {

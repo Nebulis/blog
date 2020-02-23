@@ -48,24 +48,26 @@ const iconStyle = css`
     padding-left: 30px;
   }
 `
-export const Input: FunctionComponent<InputHTMLAttributes<any> & { hideLabel?: boolean; Icon?: IconType }> = ({
-  hideLabel,
-  Icon,
-  ...props
-}) => {
+// that's shit ... remove hideLabel :/
+export const Input: FunctionComponent<InputHTMLAttributes<any> & {
+  hideLabel?: boolean
+  Icon?: IconType
+  label?: string
+  inputClassName?: string
+}> = ({ hideLabel, Icon, ...props }) => {
   if (!props.id) {
     console.warn("Please add an id into this component")
   }
   const [state, setState] = useState("")
 
   return (
-    <div className={`form-group ${state === "in" ? "active" : ""}`} css={[style, Icon && iconStyle]}>
-      {!hideLabel && <label htmlFor={props.id}>{props.placeholder}</label>}
+    <div className={`form-group ${state === "in" ? "active" : ""} ${props.className}`} css={[style, Icon && iconStyle]}>
+      {!hideLabel && <label htmlFor={props.id}>{props.label}</label>}
       {Icon && <Icon />}
 
       <input
         {...props}
-        className={`form-control ${props.className}`}
+        className={`form-control ${props.inputClassName}`}
         onFocus={() => setState("in")}
         onBlur={() => setState("out")}
       />

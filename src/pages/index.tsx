@@ -23,6 +23,8 @@ import { Photo } from "../components/icon/photo"
 import { ApplicationLink, ExternalLink } from "../components/core/links/link"
 import { primaryColor, primaryDarkColor, primaryLightColor } from "../components/core/variables"
 import { ApplicationContext } from "../components/application"
+import { Input } from "../components/core/input"
+import { LolButton } from "../components/core/button"
 
 const StyledWorld = styled(World)`
   stroke-line-join: round;
@@ -212,6 +214,17 @@ const HomeDivider = styled(Divider)`
   margin-top: 1.85rem;
 `
 
+const Footer = styled.footer`
+  color: white;
+  background-color: black;
+  a {
+    color: ${primaryColor};
+  }
+  & > div {
+    justify-items: center;
+  }
+`
+
 const IndexPage = () => {
   const { development } = useContext(ApplicationContext)
   const { windowWidth, windowHeight } = useWindowSize()
@@ -349,12 +362,30 @@ const IndexPage = () => {
                 </InstagramContainer>
               </>
             )}
-            <div
-              css={css`
-                height: ${windowHeight}px;
-                background-color: lightgray;
-              `}
-            />
+            <Footer className="flex justify-around pa4">
+              <div className="flex items-center f6">© 2020 Magic of Travels.</div>
+              {development && (
+                <div>
+                  <div className="tc">NEWSLETTER</div>
+                  <Input placeholder="Adresse Email" hideLabel className="inline-flex" />
+                  <div
+                    className="inline-flex"
+                    css={css`
+                      margin-top: 0.6rem;
+                      margin-bottom: 0.6rem;
+                    `}
+                  >
+                    <LolButton>S&apos;inscrire</LolButton>
+                  </div>
+                </div>
+              )}
+              <div className="flex items-center f6">
+                Made with ❤️ by&nbsp;
+                <a href="https://github.com/nebulis" target="_blank" rel="noopener noreferrer">
+                  Nebulis
+                </a>
+              </div>
+            </Footer>
             <MouseToolTip>{country ? <TooltipContent>{country["data-name"]}</TooltipContent> : null}</MouseToolTip>
           </div>
         ) : null}
