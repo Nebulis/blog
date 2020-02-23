@@ -7,6 +7,10 @@
   background-color: #343a40;
   color: whitesmoke;
 }
+footer ::selection {
+  color: whitesmoke;
+  background-color: #318269;
+}
 
 html {
   font-family: sans-serif;

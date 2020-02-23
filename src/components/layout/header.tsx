@@ -124,11 +124,15 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
           {context.development ? (
             <div className="social-network-container">
               <FaFacebook className="facebook" />
-              <FaTwitter className="twitter" />
+              <a href="https://twitter.com/_magicoftravels" target="_blank" rel="noopener noreferrer">
+                <FaTwitter className="twitter" />
+              </a>
               <a href="https://instagram.com/_magic_of_travels_" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="instagram" />
               </a>
-              <FaPinterest className="pinterest" />
+              <a href="https://pinterest.com/MagicOfTravels" target="_blank" rel="noopener noreferrer">
+                <FaPinterest className="pinterest" />
+              </a>
             </div>
           ) : (
             <div />
