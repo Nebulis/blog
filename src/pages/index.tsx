@@ -12,7 +12,7 @@ import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip } from "../components/core/tooltipPortal"
 import { navigate } from "gatsby"
-import { getLinkUrl, getThreeMoreRecentArticles } from "../components/core/links/links"
+import { continentLinks, getLink, getLinkUrl, getThreeMoreRecentArticles } from "../components/core/links/links"
 import { Carousel, CarouselImage } from "../components/core/carousel"
 import { css } from "@emotion/core"
 import { Divider } from "../components/core/divider"
@@ -72,14 +72,17 @@ const ButtonMapContainer = styled.div`
   min-width: 230px;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  a {
+  > div {
     text-align: center;
     width: 200px;
   }
-  a:nth-of-type(odd) {
+  div > * {
+    width: 100%;
+  }
+  div:nth-of-type(odd) {
     align-self: flex-start;
   }
-  a:nth-of-type(even) {
+  div:nth-of-type(even) {
     align-self: flex-end;
   }
 `
@@ -111,7 +114,7 @@ const ButtonLink = styled(ApplicationLink)`
   &:visited {
     color: ${primaryColor};
   }
-  &:hover {
+  &.active:hover {
     transition: all 0.2s linear;
     background-color: ${primaryColor};
     color: white;
@@ -262,27 +265,18 @@ const IndexPage = () => {
                 />
               </MapContainer>
               <ButtonMapContainer>
-                <ButtonLink to="articles" className="left">
-                  Afrique
-                </ButtonLink>
-                <ButtonLink to="articles" className="right">
-                  Amérique du Nord
-                </ButtonLink>
-                <ButtonLink to="articles" className="left">
-                  Amérique du Sud
-                </ButtonLink>
-                <ButtonLink to="articles" className="right">
-                  Asie
-                </ButtonLink>
-                <ButtonLink to="articles" className="left">
-                  Europe
-                </ButtonLink>
-                <ButtonLink to="articles" className="left">
-                  Moyen-Orient
-                </ButtonLink>
-                <ButtonLink to="articles" className="right">
-                  Oceanie
-                </ButtonLink>
+                {continentLinks
+                  .sort((obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label))
+                  .map(continent => (
+                    <div key={continent.id}>
+                      <ButtonLink
+                        to={continent.id}
+                        className={`${getLink(continent.id)!.published || development ? "active" : "inactive"}`}
+                      >
+                        {continent.label}
+                      </ButtonLink>
+                    </div>
+                  ))}
               </ButtonMapContainer>
             </TravelsContainer>
             <Divider />

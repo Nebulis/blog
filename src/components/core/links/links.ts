@@ -10,6 +10,36 @@ export const continentLinks: ContinentLink[] = [
     label: "Asie",
     countries: [japanLinks],
   },
+  {
+    id: "africa",
+    label: "Afrique",
+    countries: [],
+  },
+  {
+    id: "south-america",
+    label: "Amérique du Sud",
+    countries: [],
+  },
+  {
+    id: "north-america",
+    label: "Amérique du Nord",
+    countries: [],
+  },
+  {
+    id: "europe",
+    label: "Europe",
+    countries: [],
+  },
+  {
+    id: "middle-east",
+    label: "Moyen-Orient",
+    countries: [],
+  },
+  {
+    id: "oceania",
+    label: "Océanie",
+    countries: [],
+  },
 ]
 
 export const navigationLinks: NavigationLink[] = [
@@ -39,7 +69,6 @@ interface CachedLinksMap {
 }
 const cachedLinks = new Map<string, CachedLinksMap>()
 continentLinks.forEach(continent => {
-  cachedLinks.set(continent.id, { label: continent.label, url: path.resolve(getUrl(continent)), published: true })
   continent.countries.forEach(country => {
     country.others.forEach(other => {
       cachedLinks.set(other.id, {
@@ -76,6 +105,11 @@ continentLinks.forEach(continent => {
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         country.cities.some(c => cachedLinks.get(c.id)!.published),
     })
+  })
+  cachedLinks.set(continent.id, {
+    label: continent.label,
+    url: path.resolve(getUrl(continent)),
+    published: continent.countries.some(country => cachedLinks.get(country.id)!.published),
   })
 })
 
