@@ -161,14 +161,14 @@ const ContemplateContainer = styled.div`
     width: 100px;
     height: 100px;
     margin-bottom: 1rem;
-    fill: #318269;
+    fill: ${primaryColor};
   }
   .title {
     text-align: center;
     font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: ${primaryColor};
+    color: ${primaryDarkColor};
     margin-bottom: 0.8rem;
   }
   .content {
