@@ -312,24 +312,24 @@ const IndexPage = () => {
                 <Hiking />
                 <div className="title">Nature</div>
                 <div className="content">
-                  Marche entre trek et randonnées, dans la montagne comme dans la jungle, et découvre les paysages que
-                  la nature nous offre
+                  Trek, randonnées ou farniente, dans la montagne, dans la jungle comme sur la plage, découvre les
+                  paysages que la nature nous offre
                 </div>
               </div>
               <div>
                 <CityIcon />
                 <div className="title">Ville</div>
                 <div className="content">
-                  Promènes-toi dans les rues et les quartiers atypiques animés par ses habitants (marchés, restaurants,
-                  magasins ...)
+                  Promènes-toi dans les rues et les quartiers atypiques, visite les endroits animés et imprègne toi de
+                  la culture des habitants
                 </div>
               </div>
               <div>
                 <Photo />
                 <div className="title">Animaux</div>
                 <div className="content">
-                  Dans leur habitat naturel ou dans des réserves protégés, observe les animaux, apprends à les connaitre
-                  et comment les protéger et conserver leur milieu naturel.
+                  Dans leur habitat ou dans des réserves protégées, observe les animaux, apprends à les connaitre,
+                  comment les protéger et conserver leur milieu naturel.
                 </div>
               </div>
             </ContemplateContainer>
