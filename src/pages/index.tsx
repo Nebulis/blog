@@ -322,7 +322,7 @@ const IndexPage = () => {
                 <Hiking />
                 <div className="title">Nature</div>
                 <div className="content">
-                  Trek, randonnées ou farniente, dans la montagne, dans la jungle comme sur la plage, découvre les
+                  Trek, randonnées ou farniente, dans la montagne, dans la jungle comme sur la plage, admire les
                   paysages que la nature nous offre
                 </div>
               </div>
