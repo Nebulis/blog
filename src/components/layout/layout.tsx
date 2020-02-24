@@ -33,7 +33,7 @@ export const BlogLayout: FunctionComponent<{ page: string }> = ({ children, page
         <>
           {context.development && !isPublished && <PageDevelopmentMark />}
           <Header />
-          {windowWidth <= 576 ? <MobileMenu /> : <Menu />}
+          {/*{windowWidth <= 576 ? <MobileMenu /> : <Menu />}*/}
           <ScrollToTop />
           <div className="center blog-container">{children}</div>
         </>

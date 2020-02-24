@@ -244,7 +244,7 @@ const IndexPage = () => {
           <div>
             <PageDevelopmentMark />
             <Header />
-            {windowWidth <= 576 ? <MobileMenu /> : null}
+            {/*{windowWidth <= 576 ? <MobileMenu /> : null}*/}
             <ScrollToTop />
             <Carousel>
               <CarouselImage country="Japon" to="japan">
