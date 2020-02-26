@@ -1,5 +1,5 @@
 /** colors **/
-export const backgroundPrimaryColor = "whitesmoke"
+export const backgroundPrimaryColor = "white"
 
 export const primaryColor = "#92d6c1"
 export const primaryLightColor = "#d4eadc"
@@ -11,5 +11,5 @@ export const darkButtonHoverColor = "#23272b"
 /** sizes **/
 export const menuHeight = "35px"
 export const bannerHeight = `calc(100vh / 9.425)`
-export const imageHeight = "114px"
-export const pageHeightWithoutBanner = `calc(100vh - ${bannerHeight} - ${menuHeight})`
+export const pageDesktopHeightWithoutBanner = `calc(100vh - ${bannerHeight} - ${menuHeight})`
+export const pageMobileHeightWithoutBanner = `calc(100vh - ${bannerHeight})`

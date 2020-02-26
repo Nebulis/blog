@@ -5,7 +5,7 @@ import { ApplicationLink } from "./core/links/link"
 import { getLink } from "./core/links/links"
 import { ApplicationContext } from "./application"
 import { Divider } from "./core/divider"
-import { primaryColor } from "./core/variables"
+import { backgroundPrimaryColor, primaryColor } from "./core/variables"
 
 interface CardProps {
   title?: string
@@ -20,7 +20,7 @@ const cardPublishedStyle = css`
   }
 
   @media (max-width: 576px) {
-    background-color: whitesmoke;
+    background-color: ${backgroundPrimaryColor};
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     padding-top: 4px;
   }

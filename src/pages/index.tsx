@@ -4,7 +4,6 @@ import { PageDevelopmentMark } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
 import { Maintenance } from "../components/layout/maintenance"
 import { Header } from "../components/layout/header"
-import { MobileMenu } from "../components/layout/menu"
 import { ScrollToTop } from "../components/core/scrollTo"
 import { MainHimejiCastleImage } from "../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
@@ -227,7 +226,7 @@ const Footer = styled.footer`
 
 const IndexPage = () => {
   const { development } = useContext(ApplicationContext)
-  const { windowWidth, windowHeight } = useWindowSize()
+  const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
   const articleStyle = css`
     @media (min-width: 993px) {
@@ -244,7 +243,6 @@ const IndexPage = () => {
           <div>
             <PageDevelopmentMark />
             <Header />
-            {windowWidth <= 576 ? <MobileMenu /> : null}
             <ScrollToTop />
             <Carousel>
               <CarouselImage country="Japon" to="japan">
@@ -367,7 +365,7 @@ const IndexPage = () => {
               {development && (
                 <div>
                   <div className="tc">NEWSLETTER</div>
-                  <Input placeholder="Adresse Email" hideLabel className="inline-flex" />
+                  <Input placeholder="Adresse Email" hideLabel className="inline-flex" id="newsletter" />
                   <div
                     className="inline-flex"
                     css={css`

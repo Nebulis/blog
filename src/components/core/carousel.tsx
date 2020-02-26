@@ -1,8 +1,9 @@
 import { css } from "@emotion/core"
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react-icons/all"
-import { backgroundPrimaryColor, pageHeightWithoutBanner } from "./variables"
+import { backgroundPrimaryColor } from "./variables"
 import { ApplicationLink } from "./links/link"
+import { MenuContext } from "../layout/menu.context"
 
 const iconSize = 40
 const overlayBorderPadding = 15
@@ -20,7 +21,6 @@ const carouselStyle = css`
   .visible .gatsby-image-wrapper {
     opacity: 1;
     transition: opacity 0.8s linear;
-    height: ${pageHeightWithoutBanner};
   }
   .overlay {
     position: absolute;
@@ -109,6 +109,12 @@ const carouselStyle = css`
 export const Carousel: React.FunctionComponent = ({ children }) => {
   if (!Array.isArray(children)) throw new Error("Please add children to the carousell")
   const [currentElement, setCurrentElement] = useState(0)
+  const { pageHeight } = useContext(MenuContext)
+  const style = css`
+    .visible .gatsby-image-wrapper {
+      height: ${pageHeight};
+    }
+  `
   // must reset on resize
   useEffect(() => {
     const interval = setInterval(() => {
@@ -123,7 +129,7 @@ export const Carousel: React.FunctionComponent = ({ children }) => {
     }
   }, [children.length, currentElement])
   return (
-    <div css={carouselStyle}>
+    <div css={[carouselStyle, style]}>
       <div className="left">
         <FaChevronCircleLeft
           onClick={() => {

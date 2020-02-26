@@ -6,7 +6,7 @@ import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
 import { FaChevronRight } from "react-icons/all"
-import { menuHeight } from "../core/variables"
+import { backgroundPrimaryColor, menuHeight } from "../core/variables"
 
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 
@@ -229,7 +229,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
             <span className="white-arrow"> </span>
             <span className="black-arrow"> </span>
             <ul className="submenu" aria-label="submenu">
-              {continentLinks.filter(isLinkPublished).map(continent => {
+              {(inDevelopment ? continentLinks : continentLinks.filter(isLinkPublished)).map(continent => {
                 const publishedCountries = inDevelopment
                   ? continent.countries
                   : continent.countries.filter(isLinkPublished)
@@ -295,75 +295,14 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
   )
 }
 
-const burgerStyle = css`
-  width: 24px;
-  height: 24px;
-  position: relative;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-  span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background-color: #1b1811;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
-  }
-  span:nth-of-type(1) {
-    top: 4px;
-  }
-  span:nth-of-type(2),
-  span:nth-of-type(3) {
-    top: 12px;
-  }
-  span:nth-of-type(4) {
-    top: 20px;
-  }
-
-  &.open span:nth-of-type(1) {
-    top: 12px;
-    width: 0%;
-    left: 50%;
-  }
-  &.open span:nth-of-type(2) {
-    transform: rotate(45deg);
-  }
-
-  &.open span:nth-of-type(3) {
-    transform: rotate(-45deg);
-  }
-
-  &.open span:nth-of-type(4) {
-    top: 12px;
-    width: 0%;
-    left: 50%;
-  }
-`
-const Burger: FunctionComponent<{ open: boolean; onClick?: () => void }> = ({ open, onClick }) => {
-  return (
-    <div css={burgerStyle} className={`${open ? "open" : "closed"}`} onClick={onClick}>
-      <span />
-      <span />
-      <span />
-      <span />
-    </div>
-  )
-}
-
 const animationTiming = "0.2s"
 export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
   const [openMenu, setOpenMenu] = useState(false)
-
   return (
     <div
       css={css`
         height: 65px;
-        background-color: whitesmoke;
+        background-color: ${backgroundPrimaryColor};
         .nav-container > div {
           cursor: pointer;
         }
@@ -421,7 +360,7 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
           align-items: center;
         }
         li > .active {
-          border-bottom: 2px solid whitesmoke;
+          border-bottom: 2px solid ${backgroundPrimaryColor};
         }
         li > a > .chevron {
           display: flex;
@@ -468,7 +407,6 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
       <nav className="nav-container flex justify-center" role="navigation">
         <div onClick={() => setOpenMenu(!openMenu)}>
           <span>Selectionner une page</span>
-          <Burger open={openMenu} />
         </div>
         <ul className={`${openMenu ? "open" : "closed"} main-menu`}>
           <li>
