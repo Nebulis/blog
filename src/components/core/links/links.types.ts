@@ -40,4 +40,6 @@ export interface NavigationLink {
   id: string
   label: string
   url?: string
+  published?: Date
+  sections: NavigationLink[]
 }

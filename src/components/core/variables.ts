@@ -9,6 +9,7 @@ export const darkButtonColor = "#343a40"
 export const darkButtonHoverColor = "#23272b"
 
 /** sizes **/
-export const bannerHeight = "calc(100vh / 9.425)"
+export const menuHeight = "35px"
+export const bannerHeight = `calc(100vh / 9.425)`
 export const imageHeight = "114px"
-export const pageHeightWithoutBanner = `calc(100vh - ${bannerHeight})`
+export const pageHeightWithoutBanner = `calc(100vh - ${bannerHeight} - ${menuHeight})`
