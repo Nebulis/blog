@@ -1,5 +1,6 @@
 import React from "react"
 import { Application } from "./src/components/application"
+import { MenuProvider } from "./src/components/layout/menu.context"
 const tooltipPortal = document.createElement("div")
 tooltipPortal.id = "tooltip-portal"
 const dialogPortal = document.createElement("div")
@@ -13,5 +14,9 @@ document.body.appendChild(dialogPortal)
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 export const wrapPageElement = ({ element }) => {
-  return <Application>{element}</Application>
+  return (
+    <Application>
+      <MenuProvider>{element}</MenuProvider>
+    </Application>
+  )
 }

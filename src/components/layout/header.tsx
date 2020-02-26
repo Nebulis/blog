@@ -11,6 +11,8 @@ import { ApplicationLink } from "../core/links/link"
 import { useScrollPosition } from "../hooks/useScrollPosition"
 import { useBannerHeight } from "../hooks/useBannerHeight"
 import { Menu } from "./menu"
+import { Burger, BurgerAbsolute, MobileMenu } from "./menuNew"
+import { MenuContext } from "./menu.context"
 
 const headerStyle = css`
   .header {
@@ -82,12 +84,13 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
   onSearch,
 }) => {
   const context = useContext(ApplicationContext)
+  const { isMobileView, open, setOpen } = useContext(MenuContext)
 
   return (
     <header css={headerStyle} className={className}>
       <div className="header">
         <div className="left-menu-container">
-          {context.development ? (
+          {context.development && !isMobileView ? (
             <div className="social-network-container">
               <FaFacebook className="facebook" />
               <a href="https://twitter.com/_magicoftravels" target="_blank" rel="noopener noreferrer">
@@ -101,7 +104,10 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
               </a>
             </div>
           ) : (
-            <div />
+            <div className="ml2">
+              <Burger open={open} onClick={() => setOpen(!open)} />
+              <BurgerAbsolute open={open} onClick={() => setOpen(!open)} />
+            </div>
           )}
           <div className="left-menu-element" />
         </div>
@@ -123,7 +129,8 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
           </div>
         </div>
       </div>
-      <Menu />
+      {!isMobileView && <Menu />}
+      <MobileMenu />
     </header>
   )
 }
