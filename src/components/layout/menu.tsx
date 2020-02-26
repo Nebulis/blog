@@ -1,11 +1,12 @@
 import css from "@emotion/css"
 import React, { FunctionComponent, HTMLAttributes, useContext, useState } from "react"
 import { Link } from "gatsby"
-import { continentLinks, getLinkLabel, getLinkUrl, isLinkPublished } from "../core/links/links"
+import { continentLinks, getLinkLabel, getLinkUrl, isLinkPublished, menuLinks } from "../core/links/links"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
 import { FaChevronRight } from "react-icons/all"
+import { menuHeight } from "../core/variables"
 
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 
@@ -39,7 +40,7 @@ const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelop
         <span>{cities.length > 0 ? ">" : null}</span>
       </ApplicationLink>
       {cities.length > 0 ? (
-        <ul className="dropdown-city" aria-label="submenu">
+        <ul className="submenu" aria-label="submenu">
           {cities.sort(sort).map(city => renderCity(continent, country, city, inDevelopment))}
         </ul>
       ) : null}
@@ -53,16 +54,16 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
 
   return (
     <div
-      className={`flex justify-center items-center ${className}`}
+      className={`flex justify-center items-center ${className} menu`}
       css={css`
-        height: 45px;
+        height: ${menuHeight};
         background-color: #1b1811;
         color: white;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         .nav-container {
-          max-width: 870px;
+          max-width: 992px;
           width: 100%;
           height: 100%;
         }
@@ -90,11 +91,11 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
           margin: 0;
           padding-left: 0;
         }
-        .nav-container > ul > li:hover:not(.where-to-go) {
+        .nav-container > ul > li:hover:not(.menu-down) {
           background-color: white;
           color: black;
         }
-        .nav-container > ul > li.where-to-go:hover {
+        .nav-container > ul > li.menu-down:hover {
           color: black;
         }
         li {
@@ -105,17 +106,15 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
           transition-duration: 0.5s;
         }
 
-        .nav-container ul .where-to-go {
+        .nav-container ul .menu-down {
           box-sizing: border-box;
-          height: 55px;
+          height: calc(${menuHeight} + 10px);
           padding-bottom: 10px;
           z-index: 500;
         }
 
-        .where-to-go > ul,
-        .dropdown-continent > li > ul,
-        .dropdown-country > li > ul,
-        .dropdown-city > li > ul {
+        .menu-down > ul,
+        .submenu > li > ul {
           visibility: hidden;
           opacity: 0;
           display: none;
@@ -126,19 +125,17 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
           position: absolute;
           transition: all 0.5s ease;
         }
-        .where-to-go > ul {
+        .menu-down > ul {
           top: 100%;
           left: 0;
           z-index: 500;
           font-size: 0.7rem;
         }
-        .where-to-go > ul > * {
+        .menu-down > ul > * {
           font-size: 0.7rem;
         }
 
-        .dropdown-continent > li > ul,
-        .dropdown-country > li > ul,
-        .dropdown-city > li > ul {
+        .submenu > li > ul {
           top: -1px;
           left: 100%;
         }
@@ -152,44 +149,43 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
         }
 
         // sub-menu
-        .nav-container .where-to-go {
+        .nav-container .menu-down {
           background-color: transparent;
           padding: 0;
           cursor: pointer;
         }
 
-        .nav-container .where-to-go:hover > a {
+        .nav-container .menu-down:hover > a {
           background-color: white;
           border-bottom: 1px solid #1b1811;
         }
 
-        .nav-container .where-to-go > a {
+        .nav-container .menu-down > a {
           background-color: #1b1811;
         }
 
-        .where-to-go .dropdown-continent li {
+        .menu-down .submenu li {
           width: 100%;
         }
-        .where-to-go .dropdown-continent li a {
+        .menu-down .submenu li a {
           padding: 0.7rem 0.5rem 0.7rem 0.7rem;
           display: flex;
           justify-content: space-between;
           width: 100%;
         }
-        .where-to-go .dropdown-continent li:hover {
+        .menu-down .submenu li:hover {
           background-color: rgba(27, 24, 17, 0.8);
         }
-        .where-to-go .dropdown-country li,
-        .where-to-go .dropdown-continent ul {
+        .menu-down .submenu ul {
           width: 160px;
         }
-        .where-to-go ul {
+        .menu-down ul {
           border: 1px solid #c0c0c0;
         }
-        .where-to-go .dropdown-continent {
+        .menu-down .submenu {
           border-right: none;
         }
-        .where-to-go .dropdown-continent li:not(:first-of-type) a {
+        .menu-down .submenu li:not(:first-of-type) a {
           border-top: 1px solid white;
         }
 
@@ -209,11 +205,11 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
           bottom: -6px;
           z-index: 480;
         }
-        .where-to-go:hover .white-arrow {
+        .menu-down:hover .white-arrow {
           bottom: -8.5px; // dunno why
           border-top-color: white;
         }
-        .where-to-go:hover .black-arrow {
+        .menu-down:hover .black-arrow {
           bottom: -10px;
           border-top-color: #1b1811;
         }
@@ -222,18 +218,18 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
       <nav className="nav-container flex justify-center" role="navigation">
         <ul>
           <li>
-            <Link to="/" className="home">
+            <ApplicationLink to="home" className="home">
               Accueil
-            </Link>
+            </ApplicationLink>
           </li>
-          <li className="where-to-go">
+          <li className="menu-down">
             <a href="#" aria-haspopup="true">
-              Ou Partir
+              Destination
             </a>
             <span className="white-arrow"> </span>
             <span className="black-arrow"> </span>
-            <ul className="dropdown-continent" aria-label="submenu">
-              {continentLinks.map(continent => {
+            <ul className="submenu" aria-label="submenu">
+              {continentLinks.filter(isLinkPublished).map(continent => {
                 const publishedCountries = inDevelopment
                   ? continent.countries
                   : continent.countries.filter(isLinkPublished)
@@ -244,7 +240,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
                       <span>{publishedCountries.length > 0 ? ">" : null}</span>
                     </ApplicationLink>
                     {publishedCountries.length > 0 ? (
-                      <ul className="dropdown-country" aria-label="submenu">
+                      <ul className="submenu" aria-label="submenu">
                         {publishedCountries.sort(sort).map(country => renderCountry(continent, country, inDevelopment))}
                       </ul>
                     ) : null}
@@ -253,12 +249,46 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
               })}
             </ul>
           </li>
-          <li className="about">
-            <a href="#">A Propos</a>
-          </li>
-          <li className="contact">
-            <a href="#">Contact</a>
-          </li>
+          {menuLinks.map(menuLink => {
+            const subLinks = inDevelopment ? menuLink.sections : menuLink.sections.filter(isLinkPublished)
+            return (
+              <li key={menuLink.id} className="menu-down">
+                <a href="#">{menuLink.label}</a>
+                {subLinks.length > 0 && (
+                  <>
+                    <span className="white-arrow"> </span>
+                    <span className="black-arrow"> </span>
+                    <ul className="submenu" aria-label="submenu">
+                      {subLinks.map(subLink => {
+                        const subSubLinks = inDevelopment ? subLink.sections : subLink.sections.filter(isLinkPublished)
+                        return (
+                          <li key={subLink.id}>
+                            {subSubLinks.length > 0 ? (
+                              <>
+                                <a href="#">
+                                  <span>{subLink.label}</span>
+                                  <span>&gt;</span>
+                                </a>
+                                <ul className="submenu" aria-label="submenu">
+                                  {subSubLinks.map(subSubLink => (
+                                    <li key={subSubLink.id}>
+                                      <ApplicationLink to={subSubLink.id}>{subSubLink.label}</ApplicationLink>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </>
+                            ) : (
+                              <ApplicationLink to={subLink.id}>{subLink.label}</ApplicationLink>
+                            )}
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </>
+                )}
+              </li>
+            )
+          })}
         </ul>
       </nav>
     </div>
@@ -446,7 +476,7 @@ export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
               Accueil
             </Link>
           </li>
-          <li className="where-to-go">
+          <li className="menu-down">
             <a href="#" aria-haspopup="true">
               <span>Ou Partir</span>
             </a>

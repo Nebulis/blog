@@ -42,19 +42,140 @@ export const continentLinks: ContinentLink[] = [
   },
 ]
 
-export const navigationLinks: NavigationLink[] = [
+export const menuLinks: NavigationLink[] = [
+  {
+    id: "organisation",
+    label: "Organisation",
+    sections: [
+      {
+        id: "organisation-by-country",
+        label: "Par pays",
+        sections: [],
+      },
+      {
+        id: "organisation-health",
+        label: "Santé",
+        sections: [],
+      },
+      {
+        id: "organisation-money",
+        label: "Argent",
+        sections: [],
+      },
+      {
+        id: "organisation-security",
+        label: "Sécurité",
+        sections: [],
+      },
+      {
+        id: "organisation-transport",
+        label: "Transport",
+        sections: [],
+      },
+      {
+        id: "organisation-devices",
+        label: "Matériel",
+        sections: [],
+      },
+      {
+        id: "organisation-when-to-go",
+        label: "Quand Partir",
+        sections: [
+          {
+            id: "organisation-when-to-go-spring",
+            label: "Printemps",
+            sections: [],
+          },
+          {
+            id: "organisation-when-to-go-summer",
+            label: "Eté",
+            sections: [],
+          },
+          {
+            id: "organisation-when-to-go-autumn",
+            label: "Automne",
+            sections: [],
+          },
+          {
+            id: "organisation-when-to-go-winter",
+            label: "Hiver",
+            sections: [],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "discovery",
+    label: "Découverte",
+    sections: [
+      {
+        id: "discovery-monument",
+        label: "Monuments",
+        sections: [],
+      },
+      {
+        id: "discovery-nature",
+        label: "Nature",
+        sections: [],
+      },
+      {
+        id: "discovery-city",
+        label: "Ville",
+        sections: [],
+      },
+      {
+        id: "discovery-templs",
+        label: "Temples",
+        sections: [],
+      },
+    ],
+  },
+  {
+    id: "lifestyle",
+    label: "Lifestyle",
+    sections: [
+      {
+        id: "lifestyle-new-life",
+        label: "Nouvelle vie",
+        sections: [],
+      },
+    ],
+  },
+  {
+    id: "about",
+    label: "A propos",
+    sections: [
+      {
+        id: "about-who",
+        label: "Qui on est ?",
+        sections: [],
+      },
+      {
+        id: "about-contact",
+        label: "Contact",
+        sections: [],
+      },
+      {
+        id: "about-devices",
+        label: "Notre matériel",
+        sections: [],
+      },
+    ],
+  },
+]
+
+export const otherLinks: NavigationLink[] = [
   {
     id: "home",
     label: "home",
     url: "/",
+    sections: [],
   },
   {
     id: "articles",
-    label: "Articles",
-  },
-  {
-    id: "who-are-we",
-    label: "Qui sommes-nous?",
+    label: "articles",
+    sections: [],
   },
 ]
 
@@ -114,7 +235,32 @@ continentLinks.forEach(continent => {
   })
 })
 
-navigationLinks.forEach(link => {
+menuLinks.forEach(menu => {
+  menu.sections.forEach(submenu => {
+    submenu.sections.forEach(subsubmenu => {
+      cachedLinks.set(subsubmenu.id, {
+        label: subsubmenu.label,
+        url: path.resolve(getUrl(subsubmenu)),
+        published: !!subsubmenu.published,
+      })
+    })
+
+    cachedLinks.set(submenu.id, {
+      label: submenu.label,
+      url: path.resolve(getUrl(submenu)),
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      published: submenu.sections.some(subsubmenu => cachedLinks.get(subsubmenu.id)!.published) || !!submenu.published,
+    })
+  })
+  cachedLinks.set(menu.id, {
+    label: menu.label,
+    url: path.resolve(getUrl(menu)),
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    published: menu.sections.some(submenu => cachedLinks.get(submenu.id)!.published) || !!menu.published,
+  })
+})
+
+otherLinks.forEach(link => {
   cachedLinks.set(link.id, {
     label: link.label,
     url: path.resolve(getUrl(link)),
@@ -136,7 +282,7 @@ export const getLinkUrl = (linkId: string): string => {
 export const getLinkLabel = (linkId: string): string => {
   return getLink(linkId).label
 }
-export const isLinkPublished = (element: CountryLink | CityLink | HighlightLink) => {
+export const isLinkPublished = (element: CountryLink | CityLink | HighlightLink | ContinentLink | NavigationLink) => {
   const link = cachedLinks.get(element.id)
   if (!link) {
     throw new Error(`No link for ${element.id}`)

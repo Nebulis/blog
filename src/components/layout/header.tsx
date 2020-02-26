@@ -10,6 +10,7 @@ import styled from "@emotion/styled"
 import { ApplicationLink } from "../core/links/link"
 import { useScrollPosition } from "../hooks/useScrollPosition"
 import { useBannerHeight } from "../hooks/useBannerHeight"
+import { Menu } from "./menu"
 
 const headerStyle = css`
   .header {
@@ -58,41 +59,6 @@ const headerStyle = css`
   }
 `
 
-const menuItemStyle = css`
-  display: inline-block;
-  padding: 5px 10px;
-  transition: all 0.1s linear;
-  cursor: pointer;
-  &:active {
-    background-color: red;
-    color: white;
-  }
-  &:active {
-    background-color: yellow;
-    color: white;
-  }
-  &:hover {
-    background-color: ${primaryColor};
-    color: white;
-  }
-  span {
-    padding-bottom: 5px;
-    font-family: monospace;
-    border-bottom: 2px dotted ${primaryColor};
-  }
-  &:hover span {
-    border-bottom: none;
-  }
-`
-// TODO there is a small glitch when clicking on an element, might be due to the non use of an app skeleton
-const MenuItem: FunctionComponent = ({ children }) => {
-  return (
-    <span css={menuItemStyle}>
-      <span>{children}</span>
-    </span>
-  )
-}
-
 export const Header: FunctionComponent = () => {
   const { height } = useScrollPosition()
   const [bannerHeight] = useBannerHeight()
@@ -137,13 +103,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
           ) : (
             <div />
           )}
-          <div className="left-menu-element">
-            <MenuItem>
-              <ApplicationLink to="home">Accueil</ApplicationLink>
-            </MenuItem>
-            <MenuItem>Destination</MenuItem>
-            <MenuItem>Organisation</MenuItem>
-          </div>
+          <div className="left-menu-element" />
         </div>
         <div className="logo-container">
           <ApplicationLink to="home">
@@ -151,11 +111,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
           </ApplicationLink>
         </div>
         <div className="right-menu-container">
-          <div className="right-menu-element">
-            <MenuItem>Découverte</MenuItem>
-            <MenuItem>Lifestyle</MenuItem>
-            <MenuItem>A propos</MenuItem>
-          </div>
+          <div className="right-menu-element" />
           <div className="mr2">
             {context.development && <FaSearch onClick={onSearch} className="search" />}
             {context.initialDevelopmentValue ? (
@@ -167,33 +123,23 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
           </div>
         </div>
       </div>
+      <Menu />
     </header>
   )
 }
 
-const duration = 0.1
 // TODO explore position sticky
 const StickyHeader = styled(StaticHeader)`
-  &.hide .header,
-  &.hide .header img {
-    z-index: 0;
-    height: 0px;
-  }
-  &.hide .header > :not(.logo-container) {
-    visibility: hidden;
-  }
-  &.display .header > :not(.logo-container) {
-    visibility: visible;
-    transition: visibility ${duration / 2}s step-end;
-  }
-  &.display .header,
-  &.display .header img {
-    transition: height ${duration}s ease-in-out;
+  &.hide {
+    transform: translateY(-500px);
+    transition: transform 0s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
   &.display {
-    z-index: 1000;
-    position: fixed;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
+
+  z-index: 1000;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
