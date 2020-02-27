@@ -116,12 +116,12 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
         .dropdown-continent > li > ul,
         .dropdown-country > li > ul,
         .dropdown-city > li > ul {
-          visibility: hidden;
-          opacity: 0;
-          display: none;
-          // visibility: visible;
-          // opacity: 1;
-          // display: block;
+          // visibility: hidden;
+          // opacity: 0;
+          // display: none;
+          visibility: visible;
+          opacity: 1;
+          display: block;
           width: 100%;
           position: absolute;
           transition: all 0.5s ease;

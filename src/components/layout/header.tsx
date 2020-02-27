@@ -3,7 +3,7 @@ import { FaCircle, FaFacebook, FaInstagram, FaPinterest, FaSearch, FaTwitter } f
 import { css } from "@emotion/core"
 import banner from "../../images/banner-transparent.png"
 import { ApplicationContext } from "../application"
-import { backgroundPrimaryColor, primaryColor, bannerHeight } from "../core/variables"
+import { backgroundPrimaryColor, primaryColor, bannerHeight, primaryDarkColor } from "../core/variables"
 import { DialogPortal } from "../core/tooltipPortal"
 import { Search } from "./search"
 import styled from "@emotion/styled"
@@ -17,6 +17,7 @@ const headerStyle = css`
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     height: ${bannerHeight};
+    // height: 200px;
   }
   .header > div {
     height: 100%;
@@ -56,6 +57,154 @@ const headerStyle = css`
   .development-mode-button.production {
     fill: red;
   }
+
+  .left-menu-element {
+    ul {
+      z-index: 500;
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+    }
+    li {
+      position: relative;
+      font-family: monospace;
+      // transition: all 0.1s linear;
+    }
+    a {
+      width: 100%;
+    }
+    & > ul {
+      display: flex;
+      & > li {
+        padding: 5px 10px;
+        & > a {
+          padding-bottom: 5px;
+          font-family: monospace;
+          border-bottom: 2px dotted ${primaryColor};
+        }
+        &:hover > a {
+          border-bottom-color: ;
+        }
+      }
+      & > li:hover {
+        background-color: ${primaryColor};
+        color: white;
+      }
+    }
+
+    & ul > li > ul {
+      top: calc(100% + 10px);
+      left: 0;
+      font-size: 0.75rem;
+    }
+    & ul > li > ul ul {
+      top: -20px;
+      left: 100%;
+    }
+
+    ul li > ul {
+      // visibility: hidden;
+      // opacity: 0;
+      // display: none;
+      visibility: visible;
+      display: block;
+      // opacity: 0.9;
+      width: calc(100% + 50px);
+      width: 200px;
+      position: absolute;
+
+      // background-color: transparent;
+      // background-color: ${primaryDarkColor};
+      // background-color: ${primaryColor};
+      // background-color: #1b1811;
+      background-color: rgba(255,255,255,.85);
+      // color: ${primaryDarkColor};
+      color: black;
+      // color: whitesmoke;
+      // border: px solid ${primaryDarkColor};
+      padding-top:20px;
+      padding-bottom:20px;
+      border-top: 3px solid ${primaryDarkColor};
+    }
+
+    ul li:hover > ul,
+    ul li ul:hover,
+    ul li ul:focus {
+      visibility: visible;
+      // opacity: 1;
+      display: block;
+    }
+
+    ul > li li:not(:last-child) {
+      // border-bottom: 2px solid ${primaryColor};
+      // border-bottom: 1px solid black;
+      // border-bottom: 2px solid ${primaryDarkColor};
+    }
+
+    ul > li ul li:hover {
+      // background-color: ${primaryColor};
+      // background-color: #dcdcdc;
+      // background-color: white;
+      // opacity: 1;
+      color: black;
+    }
+
+    ul > li li:first-child {
+    }
+    ul > li li {
+      padding: 0px 15px;
+      text-transform: uppercase;
+      // border-left: 6px solid ${primaryColor};
+      // border-right: 4px solid #B0B0B0;
+    }
+    & ul > li > ul > li {
+      // background-color: #E8E8E8	;
+      // opacity: 0.94;
+    }
+    & ul > li > ul > li > ul > li {
+      // background-color: #E8E8E8	;
+      // opacity: 1;
+    }
+    & ul > li > ul > li:hover > ul > li {
+      // opacity: 0.94;
+    }
+    & ul > li > ul > li:hover > ul > li:hover {
+      // background-color: white;
+      // color: black;
+      // opacity: 1;
+    }
+    
+    ul > li ul li a:hover {
+    background-color: rgba(0,0,0,.03);
+    }
+
+    ul > li ul li a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10px;
+    }
+    .menu-arrow {
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+
+      border-left: 5px solid green;
+    }
+  .white-arrow {
+    position: absolute;
+    border: 10px solid transparent;
+    left: calc(50% - 10px);
+    transition: all 100ms linear;
+    bottom: -20px;
+    z-index: 510;
+  }
+  li:hover .white-arrow {
+    // bottom: -8.5px; // dunno why
+    border-top-color: ${primaryColor};
+  }
+  }
 `
 
 const menuItemStyle = css`
@@ -63,10 +212,6 @@ const menuItemStyle = css`
   padding: 5px 10px;
   transition: all 0.1s linear;
   cursor: pointer;
-  &:active {
-    background-color: red;
-    color: white;
-  }
   &:active {
     background-color: yellow;
     color: white;
@@ -101,7 +246,7 @@ export const Header: FunctionComponent = () => {
   return (
     <>
       <StaticHeader onSearch={() => setSearch(true)} />
-      <StickyHeader className={status} onSearch={() => setSearch(true)} />
+      {/*<StickyHeader className={status} onSearch={() => setSearch(true)} />*/}
       {search && (
         <DialogPortal>
           <Search onClose={() => setSearch(false)} />
@@ -138,11 +283,44 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
             <div />
           )}
           <div className="left-menu-element">
-            <MenuItem>
-              <ApplicationLink to="home">Accueil</ApplicationLink>
-            </MenuItem>
-            <MenuItem>Destination</MenuItem>
-            <MenuItem>Organisation</MenuItem>
+            <ul>
+              <li>
+                <ApplicationLink to="home">Accueil</ApplicationLink>
+              </li>
+              <li>
+                <a href="#">Destination</a>
+                {/*<span className="white-arrow"> </span>*/}
+                <ul aria-label="submenu">
+                  <li>
+                    <a href="#">One</a>
+                  </li>
+                  <li>
+                    <a href="#">Two</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>Three</span>
+                      <span className="menu-arrow" />
+                    </a>
+
+                    <ul aria-label="submenu">
+                      <li>
+                        <a href="#">Three One</a>
+                      </li>
+                      <li>
+                        <a href="#">Three Two</a>
+                      </li>
+                      <li>
+                        <a href="#">Three Three</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Organisation</a>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="logo-container">
