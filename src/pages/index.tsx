@@ -60,31 +60,59 @@ const TooltipContent = styled.span`
 
 const MapContainer = styled.div`
   max-width: 1140px;
+  width: 100%;
 `
 const TravelsContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-right: 0.5rem;
+  @media (max-width: 992px) {
+    flex-direction: column;
+    margin-right: 0;
+  }
 `
 const ButtonMapContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  max-width: 230px;
-  min-width: 230px;
   margin-bottom: 1rem;
-  margin-top: 1rem;
-  > div {
-    text-align: center;
-    width: 200px;
-  }
   div > * {
     width: 100%;
   }
-  div:nth-of-type(odd) {
-    align-self: flex-start;
+  > div {
+    text-align: center;
   }
-  div:nth-of-type(even) {
-    align-self: flex-end;
+
+  @media (min-width: 993px) {
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 230px;
+    margin-top: 1rem;
+    > div {
+      width: 200px;
+    }
+    div:nth-of-type(odd) {
+      align-self: flex-start;
+    }
+    div:nth-of-type(even) {
+      align-self: flex-end;
+    }
+  }
+
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    > div {
+      margin-top: 0.5rem;
+      width: calc(100vw / 3 - 2rem);
+    }
+  }
+  @media (max-width: 576px) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    > div {
+      margin-top: 0.5rem;
+      width: calc(100vw / 2 - 2rem);
+    }
   }
 `
 
@@ -105,8 +133,6 @@ const ButtonLink = styled(ApplicationLink)`
   display: inline-block;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
   border: 2px solid ${primaryColor};
   font-weight: bold;
   font-size: 0.9rem;
@@ -194,17 +220,23 @@ const HomeSection: FunctionComponent = ({ children }) => (
     {children}
   </h2>
 )
+const homeSubSectionStyle = css`
+  padding-left: 200px;
+  max-width: calc(${maxWidth}px - 2rem);
+  border-bottom: 1px solid black;
+  font-family: "Freestyle Script";
+  font-size: 1.8rem;
+
+  @media (max-width: 992px) {
+    padding-left: 100px;
+  }
+  @media (max-width: 568px) {
+    padding-left: 0;
+    text-align: center;
+  }
+`
 const HomeSubSection: FunctionComponent = ({ children }) => (
-  <h4
-    className="tl normal center pb2 mb0"
-    css={css`
-      padding-left: 200px;
-      max-width: calc(${maxWidth}px - 2rem);
-      border-bottom: 1px solid black;
-      font-family: "Freestyle Script";
-      font-size: 1.8rem;
-    `}
-  >
+  <h4 className="tl normal center pb2 mb0" css={homeSubSectionStyle}>
     {children}
   </h4>
 )
@@ -258,7 +290,7 @@ const IndexPage = () => {
             <TravelsContainer>
               <MapContainer>
                 <StyledWorld
-                  style={{ height: windowHeight / 1.5 + "px" }}
+                  style={{ maxHeight: windowHeight / 1.5 + "px" }}
                   transform={transform}
                   onMouseEnter={country => {
                     if (visitedCountries.includes(country.id.toLowerCase())) {
@@ -268,9 +300,9 @@ const IndexPage = () => {
                   onMouseLeave={() => setCountry(undefined)}
                   onClick={country => {
                     try {
-                      navigate(getLinkUrl(country["data-name"].toLowerCase()))
+                      navigate(getLinkUrl(country.id))
                     } catch (e) {
-                      console.log(`Link doesnt exist for ${country["data-name"].toLowerCase()}`)
+                      console.log(`Link doesnt exist for ${country.id.toLowerCase()}`)
                     }
                   }}
                 />
