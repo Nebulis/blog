@@ -1,12 +1,23 @@
 import css from "@emotion/css"
-import React, { FunctionComponent, HTMLAttributes, useContext, useState } from "react"
-import { Link } from "gatsby"
-import { continentLinks, getLinkLabel, getLinkUrl, isLinkPublished, menuLinks } from "../core/links/links"
+import React, {
+  FunctionComponent,
+  HTMLAttributes,
+  MutableRefObject,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
+import { continentLinks, getLinkLabel, isLinkPublished, menuLinks } from "../core/links/links"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
-import { FaChevronRight } from "react-icons/all"
-import { backgroundPrimaryColor, menuHeight } from "../core/variables"
+import { FaChevronDown, FaChevronRight } from "react-icons/all"
+import { backgroundPrimaryColor, bannerHeight, menuHeight, primaryColor } from "../core/variables"
+import styled from "@emotion/styled"
+import { animated, useSpring } from "react-spring"
+import ResizeObserver from "resize-observer-polyfill"
+import { MenuContext } from "./menu.context"
 
 const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 
@@ -295,240 +306,252 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
   )
 }
 
-const animationTiming = "0.2s"
-export const MobileMenu: FunctionComponent<HTMLAttributes<any>> = ({}) => {
-  const [openMenu, setOpenMenu] = useState(false)
-  return (
-    <div
-      css={css`
-        height: 65px;
-        background-color: ${backgroundPrimaryColor};
-        .nav-container > div {
-          cursor: pointer;
-        }
+const burgerStyle = css`
+  width: 24px;
+  height: 24px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #1b1811;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+  span:nth-of-type(1) {
+    top: 4px;
+  }
+  span:nth-of-type(2),
+  span:nth-of-type(3) {
+    top: 12px;
+  }
+  span:nth-of-type(4) {
+    top: 20px;
+  }
 
-        .nav-container {
-          position: relative;
-          height: 45px;
-          background-color: #dedede;
-          margin-top: 20px;
-          margin-bottom: 20px;
-          margin-left: 20px;
-          margin-right: 20px;
-        }
-        @media (max-width: 576px) {
-          .nav-container {
-            margin-left: 10px;
-            margin-right: 10px;
-          }
-        }
-        .nav-container > div {
-          display: flex;
-          width: 100%;
-          align-items: center;
-          padding-left: 1rem;
-          padding-right: 1rem;
-          justify-content: space-between;
-        }
-        .nav-container > ul {
-          z-index: 500;
-          position: absolute;
-          top: 100%;
-          left: 0;
-        }
-        ul {
-          list-style: none;
-          margin: 0;
-          padding-left: 0;
-          width: 100%;
-          text-transform: uppercase;
-          background-color: #1b1811;
-          max-height: 600px;
-        }
-        li > a,
-        .link-container {
-          cursor: pointer;
-          min-height: 45px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          border-bottom: 1px solid #565656;
-        }
-        .link-container > a {
-          min-height: 45px;
-          display: flex;
-          align-items: center;
-        }
-        li > .active {
-          border-bottom: 2px solid ${backgroundPrimaryColor};
-        }
-        li > a > .chevron {
-          display: flex;
-          align-items: center;
-        }
-        li > a > .chevron.open,
-        .link-container > .chevron.open {
-          transform: rotate(90deg);
-          transition: transform ${animationTiming} ease;
-        }
-        li > a > .chevron.closed,
-        .link-container > .chevron.closed {
-          transform: rotate(0);
-          transition: transform ${animationTiming} ease;
-        }
-        li {
-          color: white;
-          display: flex;
-          flex-direction: column;
-          margin-left: 1rem;
-        }
-        ul.main-menu > li {
-          margin-right: 1rem;
-        }
-        ul.closed {
-          transform: scaleY(0);
-          transition: transform ${animationTiming} ease;
-          transform-origin: top;
-        }
-        ul.open {
-          transform: scaleY(1);
-          transform-origin: top;
-          transition: transform ${animationTiming} ease;
-        }
-        ul.closed.sub-menu {
-          height: 0 !important;
-          transition: all ${animationTiming} ease;
-        }
-        ul.open.sub-menu {
-          transition: all ${animationTiming} ease;
-        }
-      `}
-    >
-      <nav className="nav-container flex justify-center" role="navigation">
-        <div onClick={() => setOpenMenu(!openMenu)}>
-          <span>Selectionner une page</span>
-        </div>
-        <ul className={`${openMenu ? "open" : "closed"} main-menu`}>
-          <li>
-            <Link to="/" className="home">
-              Accueil
-            </Link>
-          </li>
-          <li className="menu-down">
-            <a href="#" aria-haspopup="true">
-              <span>Ou Partir</span>
-            </a>
-            {
-              <ul className={`open`} aria-label="submenu">
-                {continentLinks.map(continent => (
-                  <MobileContinent key={continent.id} continent={continent} />
-                ))}
-              </ul>
-            }
-          </li>
-          <li className="about">
-            <a href="#">A Propos</a>
-          </li>
-          <li className="contact">
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
+  &.open span:nth-of-type(1) {
+    top: 12px;
+    width: 0%;
+    left: 50%;
+  }
+  &.open span:nth-of-type(2) {
+    transform: rotate(45deg);
+  }
+
+  &.open span:nth-of-type(3) {
+    transform: rotate(-45deg);
+  }
+
+  &.open span:nth-of-type(4) {
+    top: 12px;
+    width: 0%;
+    left: 50%;
+  }
+  z-index: 10001;
+`
+export const Burger: FunctionComponent<{ open: boolean; onClick?: () => void; className?: string }> = ({
+  open,
+  onClick,
+  className = "",
+}) => {
+  return (
+    <div css={burgerStyle} className={`${className} ${open ? "open" : "closed"} dib`} onClick={onClick}>
+      <span />
+      <span />
+      <span />
+      <span />
     </div>
   )
 }
 
-const isCurrentPage = (id: string) => location.pathname === getLinkUrl(id) || location.pathname === `${getLinkUrl(id)}/`
-const disableEventOnCurrentPage = (id: string) => (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-  if (isCurrentPage(id)) {
-    event.stopPropagation()
+// this is for mobile
+export const BurgerAbsolute = styled(Burger)`
+  position: fixed;
+  left: 0.5rem;
+  top: calc(${bannerHeight} / 2 - 12px);
+  &.closed {
+    visibility: hidden;
   }
+`
+
+const Content = styled(animated.div)`
+  will-change: transform, opacity, height;
+  margin-left: 6px;
+  padding: 0px 0px 0px 14px;
+  overflow: hidden;
+`
+
+export const usePrevious = (value: boolean) => {
+  const ref = useRef<boolean>()
+  useEffect(() => void (ref.current = value), [value])
+  return ref.current
 }
 
-const MobileContinent: FunctionComponent<{ continent: ContinentLink }> = ({ continent }) => {
-  const [open, setOpen] = useState(false)
-  const context = useContext(ApplicationContext)
-  const countries = context.development ? continent.countries : continent.countries.filter(isLinkPublished)
-  const [numberOfElement, setNumberOfElements] = useState(countries.length)
+type Boundary = { left: number; top: number; width: number; height: number }
+const useMeasure = (): [{ ref: MutableRefObject<HTMLDivElement | null> }, Boundary] => {
+  const ref = React.useRef<HTMLDivElement>(null)
+  const [bounds, set] = React.useState({
+    left: 0,
+    top: 0,
+    width: 0,
+    height: 0,
+  })
+  const [ro] = React.useState(() => new ResizeObserver(([entry]) => set(entry.contentRect)))
+  React.useEffect(() => {
+    if (ref.current) ro.observe(ref.current)
+    return () => ro.disconnect()
+  }, [ro])
+  return [{ ref }, bounds]
+}
+
+const Tree: React.FunctionComponent<{ name: string; open?: boolean; to?: string }> = ({
+  children,
+  name,
+  to,
+  open = false,
+}) => {
+  const [isOpen, setOpen] = useState(open)
+  const prev = usePrevious(isOpen)
+  const [bind, bounds] = useMeasure()
+  // @ts-ignore
+  const { height, opacity, transform } = useSpring({
+    from: { height: 0, opacity: 0, transform: "translate3d(0,0,0)" },
+    to: {
+      height: isOpen ? bounds.height : 0,
+      opacity: isOpen ? 1 : 0,
+      transform: `translate3d(${isOpen ? 0 : 200}px,0,0)`,
+    },
+  })
+  const hasChildren = (!Array.isArray(children) && children) || (Array.isArray(children) && children.length > 0)
   return (
-    <li
-      onClick={event => {
-        event.stopPropagation()
-        setOpen(!open)
-      }}
-    >
-      <span className={`link-container ${isCurrentPage(continent.id) ? "active" : ""}`}>
-        <ApplicationLink to={continent.id}>
-          <span>{getLinkLabel(continent.id)}</span>
-        </ApplicationLink>
-        <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronRight />}</span>
-      </span>
-      {countries.length > 0 ? (
-        <ul
-          aria-label="submenu"
-          className={`sub-menu ${open ? "open" : "closed"}`}
-          style={{ height: numberOfElement * 45 + "px" }}
-        >
-          {countries.sort(sort).map(country => (
-            <MobileCountry
-              key={`${continent.id}_${country.id}`}
-              continent={continent}
-              country={country}
-              onOpen={(open, numberOfCities) => {
-                setNumberOfElements(open ? numberOfElement - numberOfCities : numberOfElement + numberOfCities)
-              }}
-            />
-          ))}
-        </ul>
-      ) : null}
-    </li>
+    <div className="menu-entry">
+      <div onClick={() => hasChildren && setOpen(!isOpen)} className="menu-label">
+        <span>{to ? <ApplicationLink to={to}>{name}</ApplicationLink> : name}</span>
+        <span>{hasChildren && isOpen ? <FaChevronDown /> : hasChildren ? <FaChevronRight /> : ""}</span>
+      </div>
+      <Content
+        style={{ opacity, height: height.interpolate((height: any) => (isOpen && prev === isOpen ? "auto" : height)) }}
+      >
+        <animated.div style={{ transform }} {...bind}>
+          {children ? children : null}
+        </animated.div>
+      </Content>
+    </div>
   )
 }
 
-const MobileCountry: FunctionComponent<{
-  continent: ContinentLink
-  country: CountryLink
-  onOpen: (open: boolean, numberOfCities: number) => void
-}> = ({ continent, country, onOpen }) => {
-  const [open, setOpen] = useState(false)
-  const context = useContext(ApplicationContext)
-  const cities = context.development ? country.cities : country.cities.filter(isLinkPublished)
+const MobileMenuContainer = styled.div`
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  box-shadow: 0 0 10px #85888c;
+  background-color: ${backgroundPrimaryColor};
+  -webkit-font-smoothing: antialiased;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  z-index: 10000;
+  width: 500px;
+  max-width: 80vw;
+  &.inactive {
+    transform: translateX(-500px);
+  }
+`
 
+const ScrollContainer = styled.div`
+  margin-top: ${bannerHeight};
+  height: calc(100vh - ${bannerHeight});
+  padding: 0 50px 20px 50px;
+  @media (max-width: 576px) {
+    padding: 0 20px 10px 40px;
+  }
+  overflow-y: auto;
+  .menu-entry {
+    border-top: 1px solid ${primaryColor};
+    text-transform: uppercase;
+  }
+  .menu-label {
+    padding: 10px 0px;
+    cursor: pointer;
+    display: flex;
+  }
+  .menu-label > span:first-of-type {
+    flex-grow: 1;
+  }
+  .menu-label .menu-label:first-of-type {
+    margin-top: 10px;
+  }
+  .menu-label .menu-label:last-of-type {
+    padding-bottom: 0px;
+  }
+  .menu-label:hover {
+    background-color: #e8e8e8;
+  }
+  a {
+    display: inline-block;
+    width: 100%;
+  }
+`
+const Overlay = styled.div`
+  z-index: 9999;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+`
+export const MobileMenu: React.FunctionComponent = () => {
+  const { open, setOpen } = useContext(MenuContext)
+  const { development } = useContext(ApplicationContext)
   return (
-    <li
-      onClick={event => {
-        event.stopPropagation()
-        setOpen(!open)
-        onOpen(open, cities.length)
-      }}
-    >
-      <span className={`link-container ${isCurrentPage(country.id) ? "active" : ""}`}>
-        <ApplicationLink to={country.id}>
-          <span>{getLinkLabel(country.id)}</span>
-        </ApplicationLink>
-        <span className={`chevron ${open ? "open" : "closed"}`}>{<FaChevronRight />}</span>
-      </span>
-      {cities.length > 0 ? (
-        <ul
-          className={`sub-menu ${open ? "open" : "closed"}`}
-          style={{ height: cities.length * 45 + "px" }}
-          aria-label="submenu"
-        >
-          {cities.sort(sort).map(city => (
-            <MobileCity city={city} key={`${continent.id}_${country.id}_${city.id}`} />
-          ))}
-        </ul>
-      ) : null}
-    </li>
-  )
-}
-
-const MobileCity: FunctionComponent<{ city: CityLink }> = ({ city }) => {
-  return (
-    <li>
-      <ApplicationLink to={city.id} activeClassName="active" onClick={disableEventOnCurrentPage(city.id)}>
-        <span>{getLinkLabel(city.id)}</span>
-      </ApplicationLink>
-    </li>
+    <>
+      {open && <Overlay onClick={() => setOpen(false)} />}
+      <MobileMenuContainer className={`${open ? "active" : "inactive"}`}>
+        <ScrollContainer>
+          <Tree name="Accueil" to="asia" />
+          <Tree name="Destination" open>
+            {(development ? continentLinks : continentLinks.filter(isLinkPublished)).map(continent => {
+              const publishedCountries = development ? continent.countries : continent.countries.filter(isLinkPublished)
+              return (
+                <Tree key={continent.id} name={continent.label}>
+                  {publishedCountries.map(country => (
+                    <Tree key={country.id} name={country.label} to={country.id} />
+                  ))}
+                </Tree>
+              )
+            })}
+          </Tree>
+          {menuLinks.map(menuLink => {
+            const subMenuLinks = development ? menuLink.sections : menuLink.sections.filter(isLinkPublished)
+            const to = subMenuLinks.length > 0 ? undefined : menuLink.id
+            return (
+              <Tree key={menuLink.id} to={to} name={menuLink.label}>
+                {subMenuLinks.map(subMenuLink => {
+                  const subSubMenuLinks = development
+                    ? subMenuLink.sections
+                    : subMenuLink.sections.filter(isLinkPublished)
+                  const to = subSubMenuLinks.length > 0 ? undefined : subMenuLink.id
+                  return (
+                    <Tree key={subMenuLink.id} to={to} name={subMenuLink.label}>
+                      {subSubMenuLinks.map(subSubMenuLink => (
+                        <Tree key={subSubMenuLink.id} to={to} name={subSubMenuLink.label} />
+                      ))}
+                    </Tree>
+                  )
+                })}
+              </Tree>
+            )
+          })}
+        </ScrollContainer>
+      </MobileMenuContainer>
+    </>
   )
 }

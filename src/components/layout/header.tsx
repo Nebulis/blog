@@ -10,8 +10,7 @@ import styled from "@emotion/styled"
 import { ApplicationLink } from "../core/links/link"
 import { useScrollPosition } from "../hooks/useScrollPosition"
 import { useBannerHeight } from "../hooks/useBannerHeight"
-import { Menu } from "./menu"
-import { Burger, BurgerAbsolute, MobileMenu } from "./menuNew"
+import { Burger, BurgerAbsolute, Menu, MobileMenu } from "./menu"
 import { MenuContext } from "./menu.context"
 
 const headerStyle = css`
