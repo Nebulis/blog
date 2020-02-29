@@ -2,6 +2,7 @@ import React, { FunctionComponent, useContext, useState } from "react"
 import { FaCircle, FaFacebook, FaInstagram, FaPinterest, FaSearch, FaTwitter } from "react-icons/all"
 import { css } from "@emotion/core"
 import banner from "../../images/2020-02-28.png"
+import bannerMobile from "../../images/2020-02-29.png"
 import { ApplicationContext } from "../application"
 import { backgroundPrimaryColor, primaryColor, bannerHeight } from "../core/variables"
 import { DialogPortal } from "../core/tooltipPortal"
@@ -112,7 +113,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
         </div>
         <div className="logo-container">
           <ApplicationLink to="home">
-            <img src={banner} />
+            {isMobileView ? <img src={bannerMobile} /> : <img src={banner} />}
           </ApplicationLink>
         </div>
         <div className="right-menu-container">
