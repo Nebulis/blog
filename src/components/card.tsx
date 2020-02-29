@@ -19,7 +19,7 @@ const cardPublishedStyle = css`
     box-shadow: 0 17px 25px rgba(0, 0, 0, 0.5);
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 992px) {
     background-color: ${backgroundPrimaryColor};
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     padding-top: 4px;
