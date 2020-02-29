@@ -25,6 +25,7 @@ import { ToganjiBuddha3Image } from "../../../../components/images/asia/japan/na
 import { ToganjiBuddha2Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiBuddha2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { ToganjiEntrance4Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiEntrance4Image"
+import { largeStart } from "../../../../components/core/variables"
 
 const IndexPage = () => {
   return (
@@ -96,7 +97,7 @@ const IndexPage = () => {
           </p>
           <TwoImagesSameSize
             css={css`
-              @media (min-width: 992px) {
+              @media (min-width: ${largeStart}) {
                 width: 80%;
               }
             `}

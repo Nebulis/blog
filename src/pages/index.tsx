@@ -20,7 +20,15 @@ import { Hiking } from "../components/icon/hiking"
 import { CityIcon } from "../components/icon/city"
 import { Photo } from "../components/icon/photo"
 import { ApplicationLink, ExternalLink } from "../components/core/links/link"
-import { primaryColor, primaryDarkColor, primaryLightColor } from "../components/core/variables"
+import {
+  mediumEnd,
+  smallEnd,
+  primaryColor,
+  primaryDarkColor,
+  primaryLightColor,
+  mobileEnd,
+  largeStart,
+} from "../components/core/variables"
 import { ApplicationContext } from "../components/application"
 import { Input } from "../components/core/input"
 import { LolButton } from "../components/core/button"
@@ -67,7 +75,7 @@ const TravelsContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-right: 0.5rem;
-  @media (max-width: 992px) {
+  @media (max-width: ${mediumEnd}) {
     flex-direction: column;
     margin-right: 0;
   }
@@ -82,7 +90,7 @@ const ButtonMapContainer = styled.div`
     text-align: center;
   }
 
-  @media (min-width: 993px) {
+  @media (min-width: ${largeStart}) {
     flex-direction: column;
     justify-content: space-around;
     max-width: 230px;
@@ -98,7 +106,7 @@ const ButtonMapContainer = styled.div`
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: ${mediumEnd}) {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
@@ -107,7 +115,7 @@ const ButtonMapContainer = styled.div`
       width: calc(100vw / 3 - 2rem);
     }
   }
-  @media (max-width: 576px) {
+  @media (max-width: ${mobileEnd}) {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     > div {
@@ -126,7 +134,7 @@ const ArticlesContainer = styled.div`
   .quote-container {
     display: none;
   }
-  @media (max-width: 992px) {
+  @media (max-width: ${mediumEnd}) {
     grid-template-columns: 1fr;
   }
 `
@@ -209,7 +217,7 @@ const ContemplateContainer = styled.div`
     font-family: monospace;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: ${mediumEnd}) {
     margin-top: 3rem;
     margin-bottom: 3rem;
     grid-template-columns: auto auto auto auto;
@@ -221,10 +229,10 @@ const ContemplateContainer = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${smallEnd}) {
     grid-template-columns: auto auto;
   }
-  @media (max-width: 576px) {
+  @media (max-width: ${mobileEnd}) {
     svg {
       width: 80px;
       height: 80px;
@@ -238,7 +246,7 @@ const HomeSection: FunctionComponent = ({ children }) => (
     css={css`
       letter-spacing: 5px;
       font-family: auto;
-      @media (max-width: 992px) {
+      @media (max-width: ${mediumEnd}) {
         margin-bottom: 1rem;
       }
     `}
@@ -253,10 +261,10 @@ const homeSubSectionStyle = css`
   font-family: "Freestyle Script";
   font-size: 1.8rem;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${mediumEnd}) {
     padding-left: 100px;
   }
-  @media (max-width: 568px) {
+  @media (max-width: ${mobileEnd}) {
     padding-left: 2rem;
   }
 `
@@ -287,7 +295,7 @@ const IndexPage = () => {
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
   const articleStyle = css`
-    @media (min-width: 993px) {
+    @media (min-width: ${largeStart}) {
       .gatsby-image-wrapper {
         height: ${windowHeight / 2.9}px;
       }

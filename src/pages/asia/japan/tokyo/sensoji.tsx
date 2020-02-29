@@ -34,6 +34,7 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import css from "@emotion/css"
 import { JapanDivider } from "../../../../components/core/divider"
 import { JapanComments } from "../../../../components/core/comments"
+import { largeStart } from "../../../../components/core/variables"
 
 const IndexPage = () => {
   return (
@@ -169,7 +170,7 @@ const IndexPage = () => {
           </p>
           <TwoImagesSameSize
             css={css`
-              @media (min-width: 992px) {
+              @media (min-width: ${largeStart}) {
                 width: 80%;
               }
             `}
@@ -188,7 +189,7 @@ const IndexPage = () => {
             </ImageAsPortrait>
             <TwoImagesSameSize
               css={css`
-                @media (min-width: 992px) {
+                @media (min-width: ${largeStart}) {
                   width: 80%;
                 }
               `}

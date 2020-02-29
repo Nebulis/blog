@@ -34,6 +34,7 @@ import { SensojiCard } from "../../../../components/core/japan"
 import { JapanLink } from "../../../../components/core/links/link"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { JapanComments } from "../../../../components/core/comments"
+import { largeStart } from "../../../../components/core/variables"
 
 const IndexPage = () => {
   return (
@@ -80,7 +81,7 @@ const IndexPage = () => {
           <GroupOfImages>
             <TwoImagesSameSize
               css={css`
-                @media (min-width: 992px) {
+                @media (min-width: ${largeStart}) {
                   width: 80%;
                 }
               `}
@@ -90,7 +91,7 @@ const IndexPage = () => {
             </TwoImagesSameSize>
             <TwoImagesSameSize
               css={css`
-                @media (min-width: 992px) {
+                @media (min-width: ${largeStart}) {
                   width: 80%;
                 }
               `}

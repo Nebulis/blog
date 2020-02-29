@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { japanPrimaryColor } from "../core/japan.variables"
 import { cloneElement } from "../core/cloneElement"
+import { mediumEnd, mediumStart, mobileEnd, smallEnd, smallStart } from "../core/variables"
 
 const allButLastImageStyle = css`
   // needed for ImageAsTwoLandscapeLeftAndOnePortraitRight under GroupOfImages
@@ -16,17 +17,17 @@ const allButFirstImageStyle = css`
   .gatsby-image-wrapper {
     margin-top: 1.3rem;
   }
-  @media (max-width: 576px) {
+  @media (max-width: ${mobileEnd}) {
     .gatsby-image-wrapper {
       margin-top: 10px;
     }
   }
-  @media (min-width: 576px) and (max-width: 768px) {
+  @media (min-width: ${smallStart}) and (max-width: ${smallEnd}) {
     .gatsby-image-wrapper {
       margin-top: 15px;
     }
   }
-  @media (min-width: 769px) and (max-width: 992px) {
+  @media (min-width: ${mediumStart}) and (max-width: ${mediumEnd}) {
     .gatsby-image-wrapper {
       margin-top: 20px;
     }
@@ -93,7 +94,7 @@ const margin = css`
   & .right-panel {
     margin-left: 0.725rem;
   }
-  @media (max-width: 576px) {
+  @media (max-width: ${mobileEnd}) {
     & .left-panel {
       margin-right: 5px;
     }
@@ -101,7 +102,7 @@ const margin = css`
       margin-left: 5px;
     }
   }
-  @media (min-width: 576px) and (max-width: 768px) {
+  @media (min-width: ${smallStart}) and (max-width: ${smallEnd}) {
     & .left-panel {
       margin-right: 7.5px;
     }
@@ -109,7 +110,7 @@ const margin = css`
       margin-left: 7.5px;
     }
   }
-  @media (min-width: 769px) and (max-width: 992px) {
+  @media (min-width: ${mediumStart}) and (max-width: ${mediumEnd}) {
     & .left-panel {
       margin-right: 10px;
     }
@@ -175,7 +176,7 @@ const imageAsLandscapeOnTheLeft = css`
   & div:first-of-type {
     flex-basis: 65%;
   }
-  @media (max-width: 992px) {
+  @media (max-width: ${mediumEnd}) {
     & div:first-of-type {
       flex-basis: 100%;
     }
@@ -196,7 +197,7 @@ const imageAsLandscapeOnTheRight = css`
   & div:first-of-type {
     flex-basis: 65%;
   }
-  @media (max-width: 992px) {
+  @media (max-width: ${mediumEnd}) {
     & div:first-of-type {
       flex-basis: 100%;
     }

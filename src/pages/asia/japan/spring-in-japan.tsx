@@ -22,6 +22,7 @@ import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { JapanTitle } from "../../../components/core/title"
 import { JapanDivider } from "../../../components/core/divider"
 import { BlogLayout } from "../../../components/layout/layout"
+import { smallEnd } from "../../../components/core/variables"
 
 const IndexPage = () => {
   return (
@@ -69,7 +70,7 @@ const IndexPage = () => {
         <div
           className="overflow-hidden tc"
           css={css`
-            @media (max-width: 768px) {
+            @media (max-width: ${smallEnd}) {
               display: none;
             }
           `}

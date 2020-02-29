@@ -10,6 +10,7 @@ import { japanLinks } from "../../../../components/core/links/japan.links"
 import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import { BlogLayout } from "../../../../components/layout/layout"
+import { extraLargeStart, largeStart } from "../../../../components/core/variables"
 
 const IndexPage = () => {
   const context = useContext(ApplicationContext)
@@ -28,7 +29,7 @@ const IndexPage = () => {
         <JapanDivider />
         <div
           css={css`
-            @media (min-width: 992px) {
+            @media (min-width: ${largeStart}) {
               display: grid;
               grid-template-columns: 1fr 1fr;
               .gatsby-image-wrapper {
@@ -36,7 +37,7 @@ const IndexPage = () => {
               }
             }
 
-            @media (min-width: 1200px) {
+            @media (min-width: ${extraLargeStart}) {
               .gatsby-image-wrapper {
                 height: 400px;
               }

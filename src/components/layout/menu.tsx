@@ -13,7 +13,7 @@ import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
 import { FaChevronDown, FaChevronRight } from "react-icons/all"
-import { backgroundPrimaryColor, bannerHeight, menuHeight, primaryColor } from "../core/variables"
+import { backgroundPrimaryColor, bannerHeight, menuHeight, primaryColor, mobileEnd } from "../core/variables"
 import styled from "@emotion/styled"
 import { animated, useSpring } from "react-spring"
 import ResizeObserver from "resize-observer-polyfill"
@@ -474,7 +474,7 @@ const ScrollContainer = styled.div`
   margin-top: ${bannerHeight};
   height: calc(100vh - ${bannerHeight});
   padding: 0 50px 20px 50px;
-  @media (max-width: 576px) {
+  @media (max-width: ${mobileEnd}) {
     padding: 0 20px 10px 40px;
   }
   overflow-y: auto;

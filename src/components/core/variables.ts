@@ -13,3 +13,11 @@ export const menuHeight = "35px"
 export const bannerHeight = `calc(100vh / 9.425)`
 export const pageDesktopHeightWithoutBanner = `calc(100vh - ${bannerHeight} - ${menuHeight})`
 export const pageMobileHeightWithoutBanner = `calc(100vh - ${bannerHeight})`
+
+export const mobileEnd = "576px"
+export const smallStart = "577px"
+export const smallEnd = "768px"
+export const mediumStart = "769px"
+export const mediumEnd = "992px"
+export const largeStart = "993px"
+export const extraLargeStart = "1200px"

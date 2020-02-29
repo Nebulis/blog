@@ -1,7 +1,7 @@
 import { css } from "@emotion/core"
 import React, { useContext, useEffect, useState } from "react"
 import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react-icons/all"
-import { backgroundPrimaryColor } from "./variables"
+import { backgroundPrimaryColor, mobileEnd } from "./variables"
 import { ApplicationLink } from "./links/link"
 import { MenuContext } from "../layout/menu.context"
 
@@ -92,7 +92,7 @@ const carouselStyle = css`
       transition: all 0.2s linear;
     }
   }
-  @media (max-width: 576px) {
+  @media (max-width: ${mobileEnd}) {
     .left svg,
     .right svg {
       width: 30px;
