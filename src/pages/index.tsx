@@ -373,7 +373,7 @@ const IndexPage = () => {
                 </div>
               </div>
             </ContemplateContainer>
-            {development && (
+            {false && (
               <>
                 <HomeDivider />
                 <HomeSection>Partager</HomeSection>
