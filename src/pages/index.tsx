@@ -24,6 +24,7 @@ import { primaryColor, primaryDarkColor, primaryLightColor } from "../components
 import { ApplicationContext } from "../components/application"
 import { Input } from "../components/core/input"
 import { LolButton } from "../components/core/button"
+import { MenuContext } from "../components/layout/menu.context"
 
 const StyledWorld = styled(World)`
   stroke-line-join: round;
@@ -260,6 +261,7 @@ const Footer = styled.footer`
 
 const IndexPage = () => {
   const { development } = useContext(ApplicationContext)
+  const { isMobileView } = useContext(MenuContext)
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
   const articleStyle = css`
@@ -295,14 +297,16 @@ const IndexPage = () => {
                   style={{ maxHeight: windowHeight / 1.5 + "px" }}
                   transform={transform}
                   onMouseEnter={country => {
+                    if (isMobileView) return
                     if (visitedCountries.includes(country.id.toLowerCase())) {
                       setCountry(country)
                     }
                   }}
                   onMouseLeave={() => setCountry(undefined)}
                   onClick={country => {
+                    if (isMobileView) return
                     try {
-                      navigate(getLinkUrl(country.id))
+                      navigate(getLinkUrl((country["data-name-en"] || country["data-name"]).toLowerCase()))
                     } catch (e) {
                       console.log(`Link doesnt exist for ${country.id.toLowerCase()}`)
                     }
