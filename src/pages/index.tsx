@@ -287,6 +287,30 @@ const Footer = styled.footer`
   & > div {
     justify-items: center;
   }
+  justify-content: space-around;
+  display: flex;
+  @media (min-width: ${largeStart}) {
+    align-items: center;
+  }
+  @media (max-width: ${mediumEnd}) {
+    flex-wrap: wrap;
+    .newsletter {
+      width: 100%;
+      order: -1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .newsletter .text {
+      margin-right: 0.5rem;
+    }
+  }
+  @media (max-width: ${mobileEnd}) {
+    .newsletter {
+      display: block;
+      text-align: center;
+    }
+  }
 `
 
 const IndexPage = () => {
@@ -430,11 +454,11 @@ const IndexPage = () => {
                 </InstagramContainer>
               </>
             )}
-            <Footer className="flex justify-around pa4">
-              <div className="flex items-center f6">© 2020 Magic of Travels</div>
+            <Footer className="pa2">
+              <div className="f6 copyright">© 2020 Magic of Travels</div>
               {development && (
-                <div>
-                  <div className="tc">NEWSLETTER</div>
+                <div className="newsletter">
+                  <div className="tc text">NEWSLETTER</div>
                   <Input placeholder="Adresse Email" hideLabel className="inline-flex" id="newsletter" />
                   <div
                     className="inline-flex"
@@ -447,7 +471,7 @@ const IndexPage = () => {
                   </div>
                 </div>
               )}
-              <div className="flex items-center f6">
+              <div className="f6 made-by">
                 Made with ❤️ by&nbsp;
                 <a href="https://github.com/nebulis" target="_blank" rel="noopener noreferrer">
                   Nebulis
