@@ -211,10 +211,13 @@ const ContemplateContainer = styled.div`
 
 const HomeSection: FunctionComponent = ({ children }) => (
   <h2
-    className="tc ttu mb4"
+    className="tc ttu mb4-l"
     css={css`
       letter-spacing: 5px;
       font-family: auto;
+      @media (max-width: 992px) {
+        margin-bottom: 1rem;
+      }
     `}
   >
     {children}
@@ -231,8 +234,7 @@ const homeSubSectionStyle = css`
     padding-left: 100px;
   }
   @media (max-width: 568px) {
-    padding-left: 0;
-    text-align: center;
+    padding-left: 2rem;
   }
 `
 const HomeSubSection: FunctionComponent = ({ children }) => (
@@ -333,7 +335,9 @@ const IndexPage = () => {
                 ))}
               </ArticlesContainer>
               <div className="tc mt3">
-                <ButtonLink to="articles">Tous nos articles</ButtonLink>
+                <ButtonLink to="articles" className="pr3 pl3 active">
+                  Tous nos articles
+                </ButtonLink>
               </div>
             </div>
             <HomeDivider />
@@ -342,7 +346,7 @@ const IndexPage = () => {
             <ContemplateContainer>
               <div>
                 <Monument />
-                <div className="title">Monument</div>
+                <div className="title">Monuments</div>
                 <div className="content">
                   Visite de Pyramides, Temples, Pagodes ... A la poursuite de l&apos;héritage des différentes
                   civilisations

@@ -144,11 +144,11 @@ export const menuLinks: NavigationLink[] = [
   },
   {
     id: "about",
-    label: "A propos",
+    label: "À propos",
     sections: [
       {
         id: "about-who",
-        label: "Qui on est ?",
+        label: "Qui sommes nous ?",
         sections: [],
       },
       {
