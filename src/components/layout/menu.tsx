@@ -410,11 +410,12 @@ const useMeasure = (): [{ ref: MutableRefObject<HTMLDivElement | null> }, Bounda
   return [{ ref }, bounds]
 }
 
-const Tree: React.FunctionComponent<{ name: string; open?: boolean; to?: string }> = ({
+const Tree: React.FunctionComponent<{ name: string; open?: boolean; to?: string; onNavigate?: () => void }> = ({
   children,
   name,
   to,
   open = false,
+  onNavigate = () => void 0,
 }) => {
   const [isOpen, setOpen] = useState(open)
   const prev = usePrevious(isOpen)
@@ -431,7 +432,13 @@ const Tree: React.FunctionComponent<{ name: string; open?: boolean; to?: string 
   const hasChildren = (!Array.isArray(children) && children) || (Array.isArray(children) && children.length > 0)
   return (
     <div className="menu-entry">
-      <div onClick={() => hasChildren && setOpen(!isOpen)} className="menu-label">
+      <div
+        onClick={() => {
+          hasChildren && setOpen(!isOpen)
+          !hasChildren && onNavigate()
+        }}
+        className="menu-label"
+      >
         <span>{to ? <ApplicationLink to={to}>{name}</ApplicationLink> : name}</span>
         <span>{hasChildren && isOpen ? <FaChevronDown /> : hasChildren ? <FaChevronRight /> : ""}</span>
       </div>
@@ -511,19 +518,20 @@ const Overlay = styled.div`
 export const MobileMenu: React.FunctionComponent = () => {
   const { open, setOpen } = useContext(MenuContext)
   const { development } = useContext(ApplicationContext)
+  const closeMenu = () => setOpen(false)
   return (
     <>
-      {open && <Overlay onClick={() => setOpen(false)} />}
+      {open && <Overlay onClick={closeMenu} />}
       <MobileMenuContainer className={`${open ? "active" : "inactive"}`}>
         <ScrollContainer>
-          <Tree name="Accueil" to="asia" />
-          <Tree name="Destination" open>
+          <Tree name="Accueil" to="home" onNavigate={closeMenu} />
+          <Tree name="Destination">
             {(development ? continentLinks : continentLinks.filter(isLinkPublished)).map(continent => {
               const publishedCountries = development ? continent.countries : continent.countries.filter(isLinkPublished)
               return (
-                <Tree key={continent.id} name={continent.label}>
+                <Tree key={continent.id} name={continent.label} onNavigate={closeMenu}>
                   {publishedCountries.map(country => (
-                    <Tree key={country.id} name={country.label} to={country.id} />
+                    <Tree key={country.id} name={country.label} to={country.id} onNavigate={closeMenu} />
                   ))}
                 </Tree>
               )
@@ -540,9 +548,9 @@ export const MobileMenu: React.FunctionComponent = () => {
                     : subMenuLink.sections.filter(isLinkPublished)
                   const to = subSubMenuLinks.length > 0 ? undefined : subMenuLink.id
                   return (
-                    <Tree key={subMenuLink.id} to={to} name={subMenuLink.label}>
+                    <Tree key={subMenuLink.id} to={to} name={subMenuLink.label} onNavigate={closeMenu}>
                       {subSubMenuLinks.map(subSubMenuLink => (
-                        <Tree key={subSubMenuLink.id} to={to} name={subSubMenuLink.label} />
+                        <Tree key={subSubMenuLink.id} to={to} name={subSubMenuLink.label} onNavigate={closeMenu} />
                       ))}
                     </Tree>
                   )
