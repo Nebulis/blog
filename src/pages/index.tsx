@@ -208,6 +208,28 @@ const ContemplateContainer = styled.div`
     line-height: 1.3rem;
     font-family: monospace;
   }
+
+  @media (max-width: 992px) {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    grid-gap: 0;
+    grid-row-gap: 2rem;
+    .content {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: auto auto;
+  }
+  @media (max-width: 576px) {
+    svg {
+      width: 80px;
+      height: 80px;
+    }
+  }
 `
 
 const HomeSection: FunctionComponent = ({ children }) => (
@@ -348,7 +370,7 @@ const IndexPage = () => {
             <HomeSection>Contempler</HomeSection>
             <HomeSubSection>Les merveilles de la planète ...</HomeSubSection>
             <ContemplateContainer>
-              <div>
+              <div className="contemplate-element">
                 <Monument />
                 <div className="title">Monuments</div>
                 <div className="content">
@@ -356,7 +378,7 @@ const IndexPage = () => {
                   civilisations
                 </div>
               </div>
-              <div>
+              <div className="contemplate-element">
                 <Hiking />
                 <div className="title">Nature</div>
                 <div className="content">
@@ -364,7 +386,7 @@ const IndexPage = () => {
                   paysages que la nature nous offre
                 </div>
               </div>
-              <div>
+              <div className="contemplate-element">
                 <CityIcon />
                 <div className="title">Ville</div>
                 <div className="content">
@@ -372,7 +394,7 @@ const IndexPage = () => {
                   la culture des habitants
                 </div>
               </div>
-              <div>
+              <div className="contemplate-element">
                 <Photo />
                 <div className="title">Animaux</div>
                 <div className="content">
