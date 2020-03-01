@@ -40,7 +40,7 @@ export const continentLinks: ContinentLink[] = [
     label: "Océanie",
     countries: [],
   },
-]
+].sort((obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label))
 
 export const menuLinks: NavigationLink[] = [
   {
@@ -48,56 +48,56 @@ export const menuLinks: NavigationLink[] = [
     label: "Organisation",
     sections: [
       {
-        id: "organisation-by-country",
+        id: "by-country",
         label: "Par pays",
         sections: [],
       },
       {
-        id: "organisation-health",
+        id: "health",
         label: "Santé",
         sections: [],
       },
       {
-        id: "organisation-money",
+        id: "money",
         label: "Argent",
         sections: [],
       },
       {
-        id: "organisation-security",
+        id: "security",
         label: "Sécurité",
         sections: [],
       },
       {
-        id: "organisation-transport",
+        id: "transport",
         label: "Transport",
         sections: [],
       },
       {
-        id: "organisation-devices",
+        id: "devices",
         label: "Matériel",
         sections: [],
       },
       {
-        id: "organisation-when-to-go",
+        id: "when-to-go",
         label: "Quand Partir",
         sections: [
           {
-            id: "organisation-when-to-go-spring",
+            id: "spring",
             label: "Printemps",
             sections: [],
           },
           {
-            id: "organisation-when-to-go-summer",
+            id: "summer",
             label: "Eté",
             sections: [],
           },
           {
-            id: "organisation-when-to-go-autumn",
+            id: "autumn",
             label: "Automne",
             sections: [],
           },
           {
-            id: "organisation-when-to-go-winter",
+            id: "winter",
             label: "Hiver",
             sections: [],
           },
@@ -110,22 +110,22 @@ export const menuLinks: NavigationLink[] = [
     label: "Découverte",
     sections: [
       {
-        id: "discovery-monument",
+        id: "monuments",
         label: "Monuments",
         sections: [],
       },
       {
-        id: "discovery-nature",
+        id: "nature",
         label: "Nature",
         sections: [],
       },
       {
-        id: "discovery-city",
+        id: "city",
         label: "Ville",
         sections: [],
       },
       {
-        id: "discovery-templs",
+        id: "temples",
         label: "Temples",
         sections: [],
       },
@@ -136,7 +136,7 @@ export const menuLinks: NavigationLink[] = [
     label: "Lifestyle",
     sections: [
       {
-        id: "lifestyle-new-life",
+        id: "new-life",
         label: "Nouvelle vie",
         sections: [],
       },
@@ -147,17 +147,17 @@ export const menuLinks: NavigationLink[] = [
     label: "À propos",
     sections: [
       {
-        id: "about-who",
+        id: "who",
         label: "Qui sommes nous ?",
         sections: [],
       },
       {
-        id: "about-contact",
+        id: "contact",
         label: "Contact",
         sections: [],
       },
       {
-        id: "about-devices",
+        id: "devices",
         label: "Notre matériel",
         sections: [],
       },
@@ -240,14 +240,14 @@ menuLinks.forEach(menu => {
     submenu.sections.forEach(subsubmenu => {
       cachedLinks.set(subsubmenu.id, {
         label: subsubmenu.label,
-        url: path.resolve(getUrl(subsubmenu)),
+        url: path.resolve(getUrl(menu), getUrl(submenu), getUrl(subsubmenu)),
         published: !!subsubmenu.published,
       })
     })
 
     cachedLinks.set(submenu.id, {
       label: submenu.label,
-      url: path.resolve(getUrl(submenu)),
+      url: path.resolve(getUrl(menu), getUrl(submenu)),
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       published: submenu.sections.some(subsubmenu => cachedLinks.get(subsubmenu.id)!.published) || !!submenu.published,
     })

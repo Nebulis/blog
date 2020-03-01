@@ -1,8 +1,7 @@
-import { ButtonHTMLAttributes, FunctionComponent } from "react"
-import React from "react"
+import React, { ButtonHTMLAttributes, FunctionComponent } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-import { darkButtonColor, darkButtonHoverColor, primaryDarkColor } from "./variables"
+import { darkButtonColor, darkButtonHoverColor, primaryDarkColor, primaryDarkColor15Darker } from "./variables"
 
 const style = css`
   &.btn:not(:disabled):not(.disabled) {
@@ -57,9 +56,8 @@ export const DarkButton = styled(Button)`
 
 export const PrimaryDarkButton = styled(Button)`
   &.btn:hover {
-    color: #fff;
-    background-color: #296e59; // 15% darker than normal color
-    border-color: #296e59; // 15% darker than normal color
+    background-color: ${primaryDarkColor15Darker};
+    border-color: ${primaryDarkColor15Darker};
   }
   &.btn,
   &.btn:disabled {

@@ -4,6 +4,7 @@ export const backgroundPrimaryColor = "white"
 export const primaryColor = "#92d6c1"
 export const primaryLightColor = "#d4eadc"
 export const primaryDarkColor = "#318269"
+export const primaryDarkColor15Darker = "#296e59" // 15% darker than 318269
 
 export const darkButtonColor = "#343a40"
 export const darkButtonHoverColor = "#23272b"

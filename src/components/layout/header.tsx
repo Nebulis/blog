@@ -113,7 +113,11 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
         </div>
         <div className="logo-container">
           <ApplicationLink to="home">
-            {isMobileView ? <img src={bannerMobile} /> : <img src={banner} />}
+            {isMobileView ? (
+              <img src={bannerMobile} alt="Welcome to Magic of Travels" />
+            ) : (
+              <img src={banner} alt="Welcome to Magic of Travels" />
+            )}
           </ApplicationLink>
         </div>
         <div className="right-menu-container">

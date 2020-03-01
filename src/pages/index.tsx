@@ -15,7 +15,7 @@ import { Monument } from "../components/icon/monument"
 import { Hiking } from "../components/icon/hiking"
 import { CityIcon } from "../components/icon/city"
 import { Photo } from "../components/icon/photo"
-import { ApplicationLink, ExternalLink } from "../components/core/links/link"
+import { ButtonLink, ExternalLink } from "../components/core/links/link"
 import {
   largeStart,
   mediumEnd,
@@ -130,24 +130,6 @@ const ArticlesContainer = styled.div`
   }
   @media (max-width: ${mediumEnd}) {
     grid-template-columns: 1fr;
-  }
-`
-const ButtonLink = styled(ApplicationLink)`
-  display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 2px solid ${primaryColor};
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: ${primaryColor};
-  transition: all 0.2s linear;
-  &:visited {
-    color: ${primaryColor};
-  }
-  &.active:hover {
-    transition: all 0.2s linear;
-    background-color: ${primaryColor};
-    color: white;
   }
 `
 const InstagramContainer = styled.div`
@@ -320,19 +302,17 @@ const IndexPage = () => {
           />
         </MapContainer>
         <ButtonMapContainer>
-          {continentLinks
-            .sort((obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label))
-            .map(continent => (
-              <div key={continent.id}>
-                <ButtonLink
-                  to={continent.id}
-                  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                  className={`${getLink(continent.id)!.published || development ? "active" : "inactive"}`}
-                >
-                  {continent.label}
-                </ButtonLink>
-              </div>
-            ))}
+          {continentLinks.map(continent => (
+            <div key={continent.id}>
+              <ButtonLink
+                to={continent.id}
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                className={`${getLink(continent.id)!.published || development ? "" : "inactive"}`}
+              >
+                {continent.label}
+              </ButtonLink>
+            </div>
+          ))}
         </ButtonMapContainer>
       </TravelsContainer>
       <Divider />
@@ -345,7 +325,7 @@ const IndexPage = () => {
           ))}
         </ArticlesContainer>
         <div className="tc mt3">
-          <ButtonLink to="articles" className="pr3 pl3 active">
+          <ButtonLink to="articles" className="pr3 pl3">
             Tous nos articles
           </ButtonLink>
         </div>
