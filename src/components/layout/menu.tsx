@@ -13,7 +13,7 @@ import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
 import { FaChevronDown, FaChevronRight } from "react-icons/all"
-import { backgroundPrimaryColor, bannerHeight, menuHeight, primaryColor, mobileEnd } from "../core/variables"
+import { backgroundPrimaryColor, bannerHeight, menuHeight, mobileEnd, primaryColor } from "../core/variables"
 import styled from "@emotion/styled"
 import { animated, useSpring } from "react-spring"
 import ResizeObserver from "resize-observer-polyfill"
@@ -410,13 +410,14 @@ const useMeasure = (): [{ ref: MutableRefObject<HTMLDivElement | null> }, Bounda
   return [{ ref }, bounds]
 }
 
-const Tree: React.FunctionComponent<{ name: string; open?: boolean; to?: string; onNavigate?: () => void }> = ({
-  children,
-  name,
-  to,
-  open = false,
-  onNavigate = () => void 0,
-}) => {
+// animation is a bit weird on the last element ... animate has been created for that purpose, in order to disable the animation on the height property
+const Tree: React.FunctionComponent<{
+  name: string
+  open?: boolean
+  to?: string
+  onNavigate?: () => void
+  animate?: boolean
+}> = ({ children, name, to, open = false, onNavigate = () => void 0, animate = true }) => {
   const [isOpen, setOpen] = useState(open)
   const prev = usePrevious(isOpen)
   const [bind, bounds] = useMeasure()
@@ -443,7 +444,14 @@ const Tree: React.FunctionComponent<{ name: string; open?: boolean; to?: string;
         <span>{hasChildren && isOpen ? <FaChevronDown /> : hasChildren ? <FaChevronRight /> : ""}</span>
       </div>
       <Content
-        style={{ opacity, height: height.interpolate((height: any) => (isOpen && prev === isOpen ? "auto" : height)) }}
+        style={{
+          opacity,
+          height: animate
+            ? height.interpolate((height: any) => (isOpen && prev === isOpen ? "auto" : height))
+            : isOpen
+            ? "auto"
+            : "0",
+        }}
       >
         <animated.div style={{ transform }} {...bind}>
           {children ? children : null}
@@ -541,7 +549,8 @@ export const MobileMenu: React.FunctionComponent = () => {
             const subMenuLinks = development ? menuLink.sections : menuLink.sections.filter(isLinkPublished)
             const to = subMenuLinks.length > 0 ? undefined : menuLink.id
             return (
-              <Tree key={menuLink.id} to={to} name={menuLink.label}>
+              // animation is a bit weird on the last element ... animate has been created for that purpose
+              <Tree key={menuLink.id} to={to} name={menuLink.label} animate={menuLink.id !== "about"}>
                 {subMenuLinks.map(subMenuLink => {
                   const subSubMenuLinks = development
                     ? subMenuLink.sections
