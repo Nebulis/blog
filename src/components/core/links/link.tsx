@@ -95,14 +95,15 @@ const BaseButtonLink = styled(ApplicationLink)`
 
 export const ButtonLink = styled(BaseButtonLink)`
   border: 2px solid ${primaryColor};
-  color: ${primaryColor};
+  background-color: ${primaryColor};
+  color: white;
   &:visited {
-    color: ${primaryColor};
+    color: white;
   }
   &:not(.inactive):hover {
     transition: all 0.2s linear;
-    background-color: ${primaryColor};
-    color: white;
+    color: ${primaryColor};
+    background-color: white;
   }
 `
 export const PrimaryDarkButtonLink = styled(BaseButtonLink)`
