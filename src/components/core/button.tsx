@@ -55,7 +55,7 @@ export const DarkButton = styled(Button)`
   }
 `
 
-export const LolButton = styled(Button)`
+export const PrimaryDarkButton = styled(Button)`
   &.btn:hover {
     color: #fff;
     background-color: #296e59; // 15% darker than normal color

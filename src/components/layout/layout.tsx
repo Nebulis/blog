@@ -9,7 +9,7 @@ import "./layout.css"
 import "./tachyons.css"
 import smoothscroll from "smoothscroll-polyfill"
 import { Input } from "../core/input"
-import { LolButton } from "../core/button"
+import { PrimaryDarkButton } from "../core/button"
 import styled from "@emotion/styled"
 import { largeStart, mediumEnd, mobileEnd, primaryColor } from "../core/variables"
 import { MenuContext } from "./menu.context"
@@ -92,7 +92,7 @@ export const BlogLayout: FunctionComponent<{ page: string; className?: string }>
                     margin-bottom: 0.6rem;
                   `}
                 >
-                  <LolButton>S&apos;inscrire</LolButton>
+                  <PrimaryDarkButton>S&apos;inscrire</PrimaryDarkButton>
                 </div>
               </div>
             )}

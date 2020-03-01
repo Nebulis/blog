@@ -1,10 +1,6 @@
 import React, { FunctionComponent, ReactElement, useContext, useState } from "react"
-import SEO from "../components/layout/seo"
-import { BlogLayout, PageDevelopmentMark } from "../components/layout/layout"
+import { BlogLayout } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
-import { Maintenance } from "../components/layout/maintenance"
-import { Header } from "../components/layout/header"
-import { ScrollToTop } from "../components/core/scrollTo"
 import { MainHimejiCastleImage } from "../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { Country, CountryPath, World } from "../components/layout/world"
@@ -21,17 +17,15 @@ import { CityIcon } from "../components/icon/city"
 import { Photo } from "../components/icon/photo"
 import { ApplicationLink, ExternalLink } from "../components/core/links/link"
 import {
+  largeStart,
   mediumEnd,
-  smallEnd,
+  mobileEnd,
   primaryColor,
   primaryDarkColor,
   primaryLightColor,
-  mobileEnd,
-  largeStart,
+  smallEnd,
 } from "../components/core/variables"
 import { ApplicationContext } from "../components/application"
-import { Input } from "../components/core/input"
-import { LolButton } from "../components/core/button"
 import { MenuContext } from "../components/layout/menu.context"
 
 const StyledWorld = styled(World)`
