@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactElement, useContext, useState } from "react"
 import SEO from "../components/layout/seo"
-import { PageDevelopmentMark } from "../components/layout/layout"
+import { BlogLayout, PageDevelopmentMark } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
 import { Maintenance } from "../components/layout/maintenance"
 import { Header } from "../components/layout/header"
@@ -278,41 +278,6 @@ const HomeDivider = styled(Divider)`
   margin-top: 1.85rem;
 `
 
-const Footer = styled.footer`
-  color: white;
-  background-color: black;
-  a {
-    color: ${primaryColor};
-  }
-  & > div {
-    justify-items: center;
-  }
-  justify-content: space-around;
-  display: flex;
-  @media (min-width: ${largeStart}) {
-    align-items: center;
-  }
-  @media (max-width: ${mediumEnd}) {
-    flex-wrap: wrap;
-    .newsletter {
-      width: 100%;
-      order: -1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .newsletter .text {
-      margin-right: 0.5rem;
-    }
-  }
-  @media (max-width: ${mobileEnd}) {
-    .newsletter {
-      display: block;
-      text-align: center;
-    }
-  }
-`
-
 const IndexPage = () => {
   const { development } = useContext(ApplicationContext)
   const { isMobileView } = useContext(MenuContext)
@@ -326,163 +291,128 @@ const IndexPage = () => {
     }
   `
   return (
-    <>
-      <SEO title="main" />
-      <Maintenance>
-        {typeof window !== `undefined` ? (
-          <div>
-            <PageDevelopmentMark />
-            <Header />
-            <ScrollToTop />
-            <Carousel>
-              <CarouselImage country="Japon" to="japan">
-                <MainHimejiCastleImage />
-              </CarouselImage>
-              <CarouselImage country="Japon" to="japan">
-                <MainArashiyamaImage />
-              </CarouselImage>
-            </Carousel>
-            <HomeDivider />
-            <HomeSection>Explorer</HomeSection>
-            <HomeSubSection>Nos voyages à travers le monde ...</HomeSubSection>
-            <TravelsContainer>
-              <MapContainer>
-                <StyledWorld
-                  style={{ maxHeight: windowHeight / 1.5 + "px" }}
-                  transform={transform}
-                  onMouseEnter={country => {
-                    if (isMobileView) return
-                    if (visitedCountries.includes(country.id.toLowerCase())) {
-                      setCountry(country)
-                    }
-                  }}
-                  onMouseLeave={() => setCountry(undefined)}
-                  onClick={country => {
-                    if (isMobileView) return
-                    try {
-                      navigate(getLinkUrl((country["data-name-en"] || country["data-name"]).toLowerCase()))
-                    } catch (e) {
-                      console.log(`Link doesnt exist for ${country.id.toLowerCase()}`)
-                    }
-                  }}
-                />
-              </MapContainer>
-              <ButtonMapContainer>
-                {continentLinks
-                  .sort((obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label))
-                  .map(continent => (
-                    <div key={continent.id}>
-                      <ButtonLink
-                        to={continent.id}
-                        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                        className={`${getLink(continent.id)!.published || development ? "active" : "inactive"}`}
-                      >
-                        {continent.label}
-                      </ButtonLink>
-                    </div>
-                  ))}
-              </ButtonMapContainer>
-            </TravelsContainer>
-            <Divider />
-            <div>
-              <HomeSection>Découvrir</HomeSection>
-              <HomeSubSection>Nos dernières aventures ...</HomeSubSection>
-              <ArticlesContainer css={articleStyle}>
-                {getThreeMoreRecentArticles().map((Element, index) => (
-                  <Element key={index} />
-                ))}
-              </ArticlesContainer>
-              <div className="tc mt3">
-                <ButtonLink to="articles" className="pr3 pl3 active">
-                  Tous nos articles
+    <BlogLayout page="home" className="">
+      <Carousel>
+        <CarouselImage country="Japon" to="japan">
+          <MainHimejiCastleImage />
+        </CarouselImage>
+        <CarouselImage country="Japon" to="japan">
+          <MainArashiyamaImage />
+        </CarouselImage>
+      </Carousel>
+      <HomeDivider />
+      <HomeSection>Explorer</HomeSection>
+      <HomeSubSection>Nos voyages à travers le monde ...</HomeSubSection>
+      <TravelsContainer>
+        <MapContainer>
+          <StyledWorld
+            style={{ maxHeight: windowHeight / 1.5 + "px" }}
+            transform={transform}
+            onMouseEnter={country => {
+              if (isMobileView) return
+              if (visitedCountries.includes(country.id.toLowerCase())) {
+                setCountry(country)
+              }
+            }}
+            onMouseLeave={() => setCountry(undefined)}
+            onClick={country => {
+              if (isMobileView) return
+              try {
+                navigate(getLinkUrl((country["data-name-en"] || country["data-name"]).toLowerCase()))
+              } catch (e) {
+                console.log(`Link doesnt exist for ${country.id.toLowerCase()}`)
+              }
+            }}
+          />
+        </MapContainer>
+        <ButtonMapContainer>
+          {continentLinks
+            .sort((obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label))
+            .map(continent => (
+              <div key={continent.id}>
+                <ButtonLink
+                  to={continent.id}
+                  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                  className={`${getLink(continent.id)!.published || development ? "active" : "inactive"}`}
+                >
+                  {continent.label}
                 </ButtonLink>
               </div>
-            </div>
-            <HomeDivider />
-            <HomeSection>Contempler</HomeSection>
-            <HomeSubSection>Les merveilles de la planète ...</HomeSubSection>
-            <ContemplateContainer>
-              <div className="contemplate-element">
-                <Monument />
-                <div className="title">Monuments</div>
-                <div className="content">
-                  Visite de Pyramides, Temples, Pagodes ... A la poursuite de l&apos;héritage des différentes
-                  civilisations
-                </div>
-              </div>
-              <div className="contemplate-element">
-                <Hiking />
-                <div className="title">Nature</div>
-                <div className="content">
-                  Trek, randonnées ou farniente, dans la montagne, dans la jungle comme sur la plage, admire les
-                  paysages que la nature nous offre
-                </div>
-              </div>
-              <div className="contemplate-element">
-                <CityIcon />
-                <div className="title">Ville</div>
-                <div className="content">
-                  Promènes-toi dans les rues et les quartiers atypiques, visite les endroits animés et imprègne toi de
-                  la culture des habitants
-                </div>
-              </div>
-              <div className="contemplate-element">
-                <Photo />
-                <div className="title">Animaux</div>
-                <div className="content">
-                  Dans leur habitat ou dans des réserves protégées, observe les animaux, apprends à les connaitre,
-                  comment les protéger et conserver leur milieu naturel.
-                </div>
-              </div>
-            </ContemplateContainer>
-            {false && (
-              <>
-                <HomeDivider />
-                <HomeSection>Partager</HomeSection>
-                <HomeSubSection>Quelque chose ...</HomeSubSection>
-                <InstagramContainer>
-                  <div className="hashtag">#Some</div>
-                  <div className="instagram">
-                    {Array(10)
-                      .fill(0)
-                      .map((_, index) => (
-                        <ExternalLink key={index} href="https://www.instagram.com/p/B31ltcFgggb">
-                          <img src="https://scontent-sin2-2.cdninstagram.com/v/t51.2885-15/e35/s320x320/72416702_462115874391380_3272355710023571102_n.jpg?_nc_ht=scontent-sin2-2.cdninstagram.com&_nc_cat=108&oh=af51bd1ee8b5982a81fc8e7317832714&oe=5E748522" />
-                        </ExternalLink>
-                      ))}
-                  </div>
-                </InstagramContainer>
-              </>
-            )}
-            <Footer className="pa2">
-              <div className="f6 copyright">© 2020 Magic of Travels</div>
-              {development && (
-                <div className="newsletter">
-                  <div className="tc text">NEWSLETTER</div>
-                  <Input placeholder="Adresse Email" hideLabel className="inline-flex" id="newsletter" />
-                  <div
-                    className="inline-flex"
-                    css={css`
-                      margin-top: 0.6rem;
-                      margin-bottom: 0.6rem;
-                    `}
-                  >
-                    <LolButton>S&apos;inscrire</LolButton>
-                  </div>
-                </div>
-              )}
-              <div className="f6 made-by">
-                Made with ❤️ by&nbsp;
-                <a href="https://github.com/nebulis" target="_blank" rel="noopener noreferrer">
-                  Nebulis
-                </a>
-              </div>
-            </Footer>
-            <MouseToolTip>{country ? <TooltipContent>{country["data-name"]}</TooltipContent> : null}</MouseToolTip>
+            ))}
+        </ButtonMapContainer>
+      </TravelsContainer>
+      <Divider />
+      <div>
+        <HomeSection>Découvrir</HomeSection>
+        <HomeSubSection>Nos dernières aventures ...</HomeSubSection>
+        <ArticlesContainer css={articleStyle}>
+          {getThreeMoreRecentArticles().map((Element, index) => (
+            <Element key={index} />
+          ))}
+        </ArticlesContainer>
+        <div className="tc mt3">
+          <ButtonLink to="articles" className="pr3 pl3 active">
+            Tous nos articles
+          </ButtonLink>
+        </div>
+      </div>
+      <HomeDivider />
+      <HomeSection>Contempler</HomeSection>
+      <HomeSubSection>Les merveilles de la planète ...</HomeSubSection>
+      <ContemplateContainer>
+        <div className="contemplate-element">
+          <Monument />
+          <div className="title">Monuments</div>
+          <div className="content">
+            Visite de Pyramides, Temples, Pagodes ... A la poursuite de l&apos;héritage des différentes civilisations
           </div>
-        ) : null}
-      </Maintenance>
-    </>
+        </div>
+        <div className="contemplate-element">
+          <Hiking />
+          <div className="title">Nature</div>
+          <div className="content">
+            Trek, randonnées ou farniente, dans la montagne, dans la jungle comme sur la plage, admire les paysages que
+            la nature nous offre
+          </div>
+        </div>
+        <div className="contemplate-element">
+          <CityIcon />
+          <div className="title">Ville</div>
+          <div className="content">
+            Promènes-toi dans les rues et les quartiers atypiques, visite les endroits animés et imprègne toi de la
+            culture des habitants
+          </div>
+        </div>
+        <div className="contemplate-element">
+          <Photo />
+          <div className="title">Animaux</div>
+          <div className="content">
+            Dans leur habitat ou dans des réserves protégées, observe les animaux, apprends à les connaitre, comment les
+            protéger et conserver leur milieu naturel.
+          </div>
+        </div>
+      </ContemplateContainer>
+      {false && (
+        <>
+          <HomeDivider />
+          <HomeSection>Partager</HomeSection>
+          <HomeSubSection>Quelque chose ...</HomeSubSection>
+          <InstagramContainer>
+            <div className="hashtag">#Some</div>
+            <div className="instagram">
+              {Array(10)
+                .fill(0)
+                .map((_, index) => (
+                  <ExternalLink key={index} href="https://www.instagram.com/p/B31ltcFgggb">
+                    <img src="https://scontent-sin2-2.cdninstagram.com/v/t51.2885-15/e35/s320x320/72416702_462115874391380_3272355710023571102_n.jpg?_nc_ht=scontent-sin2-2.cdninstagram.com&_nc_cat=108&oh=af51bd1ee8b5982a81fc8e7317832714&oe=5E748522" />
+                  </ExternalLink>
+                ))}
+            </div>
+          </InstagramContainer>
+        </>
+      )}
+      <MouseToolTip>{country ? <TooltipContent>{country["data-name"]}</TooltipContent> : null}</MouseToolTip>
+    </BlogLayout>
   )
 }
 
