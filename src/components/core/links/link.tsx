@@ -6,6 +6,7 @@ import React, { AnchorHTMLAttributes, ComponentType, FunctionComponent, useConte
 import { japanPrimaryColor } from "../japan.variables"
 import { getLink, getLinkUrl } from "./links"
 import { ApplicationContext } from "../../application"
+import { primaryColor, primaryDarkColor, primaryDarkColor15Darker } from "../variables"
 
 interface ExternalLinkProps {
   noIcon?: boolean
@@ -75,5 +76,44 @@ export const JapanExternalLink = styled(ExternalLink)`
   color: ${japanPrimaryColor};
   &:visited {
     color: ${japanPrimaryColor};
+  }
+`
+
+const BaseButtonLink = styled(ApplicationLink)`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.2s linear;
+  &:not(.inactive):hover {
+    transition: all 0.2s linear;
+  }
+`
+
+export const ButtonLink = styled(BaseButtonLink)`
+  border: 2px solid ${primaryColor};
+  color: ${primaryColor};
+  &:visited {
+    color: ${primaryColor};
+  }
+  &:not(.inactive):hover {
+    transition: all 0.2s linear;
+    background-color: ${primaryColor};
+    color: white;
+  }
+`
+export const PrimaryDarkButtonLink = styled(BaseButtonLink)`
+  background-color: ${primaryDarkColor};
+  border-color: ${primaryDarkColor};
+  color: #fff;
+  &:visited {
+    color: #fff;
+  }
+  &:not(.inactive):hover {
+    background-color: ${primaryDarkColor15Darker};
+    border-color: ${primaryDarkColor15Darker};
   }
 `
