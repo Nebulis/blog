@@ -351,7 +351,6 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
       </h4>
       <div>Votre adresse de messagerie ne sera pas publiée. Les champs obligatoires sont indiqués avec *</div>
       <Textarea
-        hideLabel
         id="message"
         placeholder="Commentaire *"
         value={message}

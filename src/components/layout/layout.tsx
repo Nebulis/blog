@@ -62,10 +62,11 @@ const Footer = styled.footer`
   }
 `
 
-export const BlogLayout: FunctionComponent<{ page: string; className?: string }> = ({
+export const BlogLayout: FunctionComponent<{ page: string; className?: string; noStickyHeader?: boolean }> = ({
   children,
   page,
   className = "center blog-container",
+  noStickyHeader = false,
 }) => {
   const isPublished = page === "home" ? true : getLink(page).published
   const { development } = useContext(ApplicationContext)
@@ -75,7 +76,7 @@ export const BlogLayout: FunctionComponent<{ page: string; className?: string }>
       {typeof window !== `undefined` ? (
         <>
           {development && !isPublished && <PageDevelopmentMark />}
-          <Header />
+          <Header noStickyHeader={noStickyHeader} />
           {!isMobileView && <ScrollToTop />}
           <div className={className}>{children}</div>
 

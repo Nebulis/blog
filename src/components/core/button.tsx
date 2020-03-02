@@ -8,11 +8,12 @@ const style = css`
     cursor: pointer;
   }
   &.btn {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
     font-weight: 400;
     text-align: center;
     white-space: nowrap;
-    vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

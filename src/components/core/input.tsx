@@ -4,6 +4,7 @@ import { IconType } from "react-icons"
 import { backgroundPrimaryColor, primaryColor } from "./variables"
 
 const style = css`
+  text-align: left;
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
   label {
@@ -29,11 +30,15 @@ const style = css`
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(212, 234, 220, 0.25);
   }
+  label {
+    margin: 0;
+    font-size: 0.7rem;
+    color: #495057;
+    font-weight: bold;
+  }
 `
 
 const iconStyle = css`
-  position: relative;
-
   &.active svg {
     color: ${primaryColor};
   }
@@ -54,7 +59,7 @@ export const Input: FunctionComponent<InputHTMLAttributes<any> & {
   Icon?: IconType
   label?: string
   inputClassName?: string
-}> = ({ hideLabel, Icon, ...props }) => {
+}> = ({ Icon, ...props }) => {
   if (!props.id) {
     console.warn("Please add an id into this component")
   }
@@ -62,39 +67,42 @@ export const Input: FunctionComponent<InputHTMLAttributes<any> & {
 
   return (
     <div className={`form-group ${state === "in" ? "active" : ""} ${props.className}`} css={[style, Icon && iconStyle]}>
-      {!hideLabel && <label htmlFor={props.id}>{props.label}</label>}
-      {Icon && <Icon />}
+      {props.label && <label htmlFor={props.id}>{props.label}</label>}
+      <div className="relative">
+        {Icon && <Icon />}
 
-      <input
-        {...props}
-        className={`form-control ${props.inputClassName}`}
-        onFocus={() => setState("in")}
-        onBlur={() => setState("out")}
-      />
+        <input
+          {...props}
+          className={`form-control ${props.inputClassName}`}
+          onFocus={() => setState("in")}
+          onBlur={() => setState("out")}
+        />
+      </div>
     </div>
   )
 }
 
-export const Textarea: FunctionComponent<TextareaHTMLAttributes<any> & { hideLabel?: boolean; Icon?: IconType }> = ({
-  hideLabel,
-  Icon,
-  ...props
-}) => {
+export const Textarea: FunctionComponent<TextareaHTMLAttributes<any> & {
+  Icon?: IconType
+  label?: string
+}> = ({ Icon, ...props }) => {
   if (!props.id) {
     console.warn("Please add an id into this component")
   }
   const [state, setState] = useState("")
   return (
     <div className={`form-group ${state === "in" ? "active" : ""}`} css={[style, Icon && iconStyle]}>
-      {!hideLabel && <label htmlFor={props.id}>{props.placeholder}</label>}
-      {Icon && <Icon />}
-      <textarea
-        rows={3}
-        {...props}
-        className={`form-control ${props.className}`}
-        onFocus={() => setState("in")}
-        onBlur={() => setState("out")}
-      />
+      {props.label && <label htmlFor={props.id}>{props.label}</label>}
+      <div className="relative">
+        {Icon && <Icon />}
+        <textarea
+          rows={3}
+          {...props}
+          className={`form-control ${props.className}`}
+          onFocus={() => setState("in")}
+          onBlur={() => setState("out")}
+        />
+      </div>
     </div>
   )
 }

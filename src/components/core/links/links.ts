@@ -161,7 +161,7 @@ export const menuLinks: NavigationLink[] = [
       {
         id: "devices",
         label: "Notre matériel",
-        published: true,
+        published: false,
         sections: [],
       },
     ],

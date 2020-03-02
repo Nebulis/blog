@@ -61,7 +61,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "echo lol",
+    "build:real": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
     "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
