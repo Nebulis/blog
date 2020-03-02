@@ -8,7 +8,8 @@ const style = css`
   width: 40px;
   height: 40px;
   position: fixed;
-  bottom: 20px;
+  // bottom: 20px;
+  bottom: 40px;
   right: 20px;
   transition: fill 0.5s, opacity 0.6s, visibility 0.6s;
   opacity: 0;

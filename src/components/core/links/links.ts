@@ -149,16 +149,19 @@ export const menuLinks: NavigationLink[] = [
       {
         id: "who",
         label: "Qui sommes nous ?",
+        published: true,
         sections: [],
       },
       {
         id: "contact",
         label: "Contact",
+        published: true,
         sections: [],
       },
       {
         id: "devices",
         label: "Notre matériel",
+        published: true,
         sections: [],
       },
     ],

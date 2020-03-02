@@ -15,6 +15,7 @@ import { Burger, BurgerAbsolute, Menu, MobileMenu } from "./menu"
 import { MenuContext } from "./menu.context"
 
 const headerStyle = css`
+  border-bottom: 1px solid black;
   .header {
     background-color: ${backgroundPrimaryColor};
     display: grid;
