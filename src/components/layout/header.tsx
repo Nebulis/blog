@@ -90,7 +90,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
     <header css={headerStyle} className={className}>
       <div className="header">
         <div className="left-menu-container">
-          {context.development && !isMobileView ? (
+          {!isMobileView ? (
             <div className="social-network-container">
               <FaFacebook className="facebook" />
               <a href="https://twitter.com/_magicoftravels" target="_blank" rel="noopener noreferrer">

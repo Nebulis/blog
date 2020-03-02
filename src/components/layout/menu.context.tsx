@@ -16,15 +16,17 @@ export const MenuContext = React.createContext<{
 
 export const MenuProvider: React.FunctionComponent = ({ children }) => {
   const [open, setOpen] = useState(false)
+  const { windowWidth, scrollbarWidth } = useWindowSize()
   useEffect(() => {
     if (open) {
       document.body.style.overflowY = "hidden"
+      document.body.style.marginRight = `${scrollbarWidth}px` // this to avoid element to move on thr right when hiding the menu
     } else {
       document.body.style.overflowY = "scroll"
+      document.body.style.marginRight = "0px"
     }
-  }, [open])
+  }, [open, scrollbarWidth])
 
-  const { windowWidth } = useWindowSize()
   const isMobileView = windowWidth <= 992
   return (
     <MenuContext.Provider

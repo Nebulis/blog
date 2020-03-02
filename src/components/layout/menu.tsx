@@ -474,7 +474,7 @@ const MobileMenuContainer = styled.div`
   width: 500px;
   max-width: 80vw;
   &.inactive {
-    transform: translateX(-500px);
+    transform: translateX(-600px);
   }
 `
 
