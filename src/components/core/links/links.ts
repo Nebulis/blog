@@ -47,36 +47,36 @@ export const menuLinks: NavigationLink[] = [
     id: "organisation",
     label: "Organisation",
     sections: [
-      {
-        id: "by-country",
-        label: "Par pays",
-        sections: [],
-      },
-      {
-        id: "health",
-        label: "Santé",
-        sections: [],
-      },
-      {
-        id: "money",
-        label: "Argent",
-        sections: [],
-      },
-      {
-        id: "security",
-        label: "Sécurité",
-        sections: [],
-      },
-      {
-        id: "transport",
-        label: "Transport",
-        sections: [],
-      },
-      {
-        id: "devices",
-        label: "Matériel",
-        sections: [],
-      },
+      // {
+      //   id: "by-country",
+      //   label: "Par pays",
+      //   sections: [],
+      // },
+      // {
+      //   id: "health",
+      //   label: "Santé",
+      //   sections: [],
+      // },
+      // {
+      //   id: "money",
+      //   label: "Argent",
+      //   sections: [],
+      // },
+      // {
+      //   id: "security",
+      //   label: "Sécurité",
+      //   sections: [],
+      // },
+      // {
+      //   id: "transport",
+      //   label: "Transport",
+      //   sections: [],
+      // },
+      // {
+      //   id: "devices",
+      //   label: "Matériel",
+      //   sections: [],
+      // },
       {
         id: "when-to-go",
         label: "Quand Partir",
@@ -132,14 +132,14 @@ export const menuLinks: NavigationLink[] = [
     ],
   },
   {
-    id: "lifestyle",
-    label: "Lifestyle",
+    id: "journal",
+    label: "Journal",
     sections: [
-      {
-        id: "new-life",
-        label: "Nouvelle vie",
-        sections: [],
-      },
+      // {
+      //   id: "new-life",
+      //   label: "Nouvelle vie",
+      //   sections: [],
+      // },
     ],
   },
   {
