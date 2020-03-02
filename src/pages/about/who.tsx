@@ -7,7 +7,7 @@ import { PrimaryDarkButtonLink } from "../../components/core/links/link"
 import { FaChevronRight } from "react-icons/fa"
 import who from "../../images/about/who.png"
 import { css } from "@emotion/core"
-import { mediumEnd } from "../../components/core/variables"
+import { mediumEnd, primaryColor } from "../../components/core/variables"
 
 const IndexPage = () => {
   return (
@@ -32,6 +32,14 @@ const IndexPage = () => {
           Une sorte de journal intime que nous partageons avec vous, quelques astuces par ci par là mais surtout un
           carnet de souvenirs inoubliable que nous lirons nous-même dans le futur.
         </SectionContent>
+        <h3
+          className="tc"
+          css={css`
+            color: ${primaryColor};
+          `}
+        >
+          ¡ Bonne aventure !
+        </h3>
         <Divider />
         <SectionContent>
           ❤️ ️Mme Magic est particulièrement rêveuse, dévoreuse de romans et de séries, elle aime également faire des
@@ -40,7 +48,7 @@ const IndexPage = () => {
         </SectionContent>
         <SectionContent>
           ❤️ Mr Magic est un passioné de manga et un fan de sport - dans la réalité comme dans un canapé -. Mi manchot,
-          mi aventurier, il reste de tout temps d’un calme olympien. Plus à l&apos;aise avec un ordinateur, il
+          mi aventurier, il reste de tout temps d’un calme olympien. Très à l&apos;aise avec un ordinateur, il
           s&apos;occupe de la partie technique du blog. ❤️
         </SectionContent>
         <SectionContent
