@@ -62,7 +62,7 @@ const headerStyle = css`
   }
 `
 
-export const Header: FunctionComponent = () => {
+export const Header: FunctionComponent<{ noStickyHeader?: boolean }> = ({ noStickyHeader = false }) => {
   const { height } = useScrollPosition()
   const [bannerHeight] = useBannerHeight()
   const [search, setSearch] = useState(false)
@@ -70,7 +70,7 @@ export const Header: FunctionComponent = () => {
   return (
     <>
       <StaticHeader onSearch={() => setSearch(true)} />
-      <StickyHeader className={status} onSearch={() => setSearch(true)} />
+      {!noStickyHeader && <StickyHeader className={status} onSearch={() => setSearch(true)} />}
       {search && (
         <DialogPortal>
           <Search onClose={() => setSearch(false)} />

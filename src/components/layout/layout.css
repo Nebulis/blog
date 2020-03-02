@@ -708,3 +708,15 @@ pre tt:after {
 .gatsby-image-wrapper-no-top-margin .gatsby-image-wrapper {
   margin-top: 0;
 }
+
+.fa-spin {
+  animation: fa-spin 2s infinite linear;
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
