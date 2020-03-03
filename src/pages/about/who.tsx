@@ -12,7 +12,7 @@ import { mediumEnd, primaryColor } from "../../components/core/variables"
 const IndexPage = () => {
   return (
     <>
-      <SEO title="main" />
+      <SEO title="Qui sommes-nous ?" />
       <BlogLayout page="who">
         <div className="tc mb3 mt3">
           <img

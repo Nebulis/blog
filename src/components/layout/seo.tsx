@@ -15,7 +15,7 @@ interface SEOProps {
   description?: string
   lang?: string
   meta?: any
-  title: string
+  title?: string
 }
 const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta = [], title }) => {
   const { site } = useStaticQuery(
@@ -33,6 +33,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaTitle = title || site.siteMetadata.title
   return (
     <Helmet
       htmlAttributes={{
@@ -51,8 +52,8 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
           href: "https://fonts.googleapis.com/css?family=Playfair+Display:400i&display=swap",
         },
       ]}
-      title={title}
-      titleTemplate={`${site.siteMetadata.title} | Blog voyage`}
+      title={metaTitle}
+      titleTemplate={`${metaTitle} | Blog Voyage`}
       meta={[
         {
           name: `description`,
@@ -64,7 +65,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -84,7 +85,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
