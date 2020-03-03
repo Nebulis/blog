@@ -17,7 +17,7 @@ const IndexPage = () => {
   const cities = context.development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished).sort()
   return (
     <>
-      <SEO title="japan" />
+      <SEO title="Japon" />
       <BlogLayout page="japan">
         <h1 className="tc ttu flex items-center justify-center">
           <img src={cherryBlossom} alt="cherry blossom" />

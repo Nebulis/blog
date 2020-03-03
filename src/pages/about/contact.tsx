@@ -25,7 +25,7 @@ const IndexPage = () => {
   const [status, setStatus] = useState<Status>("INITIAL")
   return (
     <>
-      <SEO title="main" />
+      <SEO title="Contact" />
       <BlogLayout page="who" noStickyHeader>
         <div
           className="tc mt4 mb3"
