@@ -2,7 +2,6 @@ import React from "react"
 import SEO from "../../../../components/layout/seo"
 import css from "@emotion/css"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
-import { JapanTitle } from "../../../../components/core/title"
 import { MainArashiyamaImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import {
   GroupOfImages,
@@ -23,11 +22,16 @@ import { ArashiyamaShrine1Image } from "../../../../components/images/asia/japan
 import { ArashiyamaShrine2Image } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine2Image"
 import { ArashiyamaCherryImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaCherryImage"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { ArashiyamaQuote, JapanLine } from "../../../../components/core/japan"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
 import { ArashiyamaHouseImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaHouseImage"
 import { ArashiyamaPathImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaPathImage"
+import {
+  ArashiyamaQuote,
+  JapanExternalLink,
+  JapanLine,
+  JapanLink,
+  JapanTitle,
+} from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   return (

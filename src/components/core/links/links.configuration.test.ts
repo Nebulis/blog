@@ -1,4 +1,4 @@
-import { getLink } from "./links"
+import { getLink } from "./links.configuration"
 
 describe("links", () => {
   it("should populate cache", () => {

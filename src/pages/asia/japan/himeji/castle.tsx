@@ -1,7 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
 import { css } from "@emotion/core"
-import { JapanTitle } from "../../../../components/core/title"
 import { MainHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import {
   Bonus,
@@ -41,10 +40,9 @@ import { HimejiCastleWithCherry4Image } from "../../../../components/images/asia
 import { HimejiCastle2Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
 import { HimejiCastle4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
 import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
-import { HimejiCastleQuote } from "../../../../components/core/japan"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
 import { HimejiCastleWithCherry7Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry7Image"
+import { HimejiCastleQuote, JapanExternalLink, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   return (

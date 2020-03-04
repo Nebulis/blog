@@ -1,4 +1,4 @@
-import { CountryLink } from "./links.types"
+import { CountryLink } from "../links/links.types"
 import { MainArashiyamaImage } from "../../images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { MainHimejiCastleImage } from "../../images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { MainNagoyaCastleImage } from "../../images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
@@ -16,7 +16,7 @@ import {
   NagoyaCastleCard,
   SensojiCard,
   ToganjiCard,
-} from "../japan"
+} from "./japan.cards"
 
 export const japanLinks: CountryLink = {
   id: "japan",

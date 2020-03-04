@@ -1,7 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
 import { BlogLayout } from "../../../../components/layout/layout"
-import { JapanTitle } from "../../../../components/core/title"
 import {
   ImageAsLandscape,
   GroupOfImages,
@@ -11,10 +10,8 @@ import {
   TwoImagesSameSizeOrToGroup,
   TwoImagesSameSize,
 } from "../../../../components/images/layout"
-import { FujiQuote } from "../../../../components/core/japan"
 import { MainFujiImage } from "../../../../components/images/asia/japan/fuji/kawaguchiko/mainFujiImage"
 import { How, HowLong, WhereToStay, Visit, Bonus } from "../../../../components/core/section"
-import { JapanLink, JapanExternalLink } from "../../../../components/core/links/link"
 import { KawaguchikoTrainImage } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoTrainImage"
 import { KawaguchikoViewFujiTrainImage } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoViewFujiTrainImage"
 import { KawaguchikoFuji1Image } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoFuji1Image"
@@ -24,6 +21,7 @@ import { KawaguchikoFuji3Image } from "../../../../components/images/asia/japan/
 import { KawaguchikoLake1Image } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoLake1Image"
 import { KawaguchikoLake2Image } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoLake2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
+import { FujiQuote, JapanExternalLink, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   return (

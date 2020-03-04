@@ -70,7 +70,6 @@ export const Search: FunctionComponent<{ onClose: () => void }> = ({ onClose }) 
           <Input
             placeholder="Recherche"
             Icon={FaSearch}
-            hideLabel
             inputClassName="mt0 input"
             id="search"
             value={search}

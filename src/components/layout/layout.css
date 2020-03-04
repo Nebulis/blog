@@ -663,37 +663,6 @@ pre tt:after {
   }
 }
 
-.blog-container {
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  flex: 1;
-}
-
-@media (min-width: 576px) {
-  .blog-container {
-    padding: 0;
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .blog-container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .blog-container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .blog-container {
-    max-width: 1140px;
-  }
-}
 
 .full-container {
   width: 100%;

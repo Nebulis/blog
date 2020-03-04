@@ -1,5 +1,5 @@
-import React, { FunctionComponent, ReactElement, useContext, useState } from "react"
-import { BlogLayout } from "../components/layout/layout"
+import React, { ReactElement, useContext, useState } from "react"
+import { IndexBlogLayout } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
 import { MainHimejiCastleImage } from "../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
@@ -7,7 +7,12 @@ import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip } from "../components/core/tooltipPortal"
 import { navigate } from "gatsby"
-import { continentLinks, getLink, getLinkUrl, getThreeMoreRecentArticles } from "../components/core/links/links"
+import {
+  continentLinks,
+  getLink,
+  getLinkUrl,
+  getThreeMoreRecentArticles,
+} from "../components/core/links/links.configuration"
 import { Carousel, CarouselImage } from "../components/core/carousel"
 import { css } from "@emotion/core"
 import { Divider } from "../components/core/divider"
@@ -18,6 +23,7 @@ import { Photo } from "../components/icon/photo"
 import { ButtonLink, ExternalLink } from "../components/core/links/link"
 import {
   largeStart,
+  maxWidth,
   mediumEnd,
   mobileEnd,
   primaryColor,
@@ -28,6 +34,7 @@ import {
 import { ApplicationContext } from "../components/application"
 import { MenuContext } from "../components/layout/menu.context"
 import SEO from "../components/layout/seo"
+import { HomeSection, HomeSubSection } from "../components/core/section"
 
 const StyledWorld = styled(World)`
   stroke-line-join: round;
@@ -120,7 +127,6 @@ const ButtonMapContainer = styled.div`
   }
 `
 
-const maxWidth = 1425
 const ArticlesContainer = styled.div`
   max-width: ${maxWidth}px;
   margin: auto;
@@ -216,40 +222,6 @@ const ContemplateContainer = styled.div`
     }
   }
 `
-
-const HomeSection: FunctionComponent = ({ children }) => (
-  <h2
-    className="tc ttu mb4-l"
-    css={css`
-      letter-spacing: 5px;
-      font-family: auto;
-      @media (max-width: ${mediumEnd}) {
-        margin-bottom: 1rem;
-      }
-    `}
-  >
-    {children}
-  </h2>
-)
-const homeSubSectionStyle = css`
-  padding-left: 200px;
-  max-width: calc(${maxWidth}px - 2rem);
-  border-bottom: 1px solid black;
-  font-family: "Freestyle Script";
-  font-size: 1.8rem;
-
-  @media (max-width: ${mediumEnd}) {
-    padding-left: 100px;
-  }
-  @media (max-width: ${mobileEnd}) {
-    padding-left: 2rem;
-  }
-`
-const HomeSubSection: FunctionComponent = ({ children }) => (
-  <h4 className="tl normal center pb2 mb0" css={homeSubSectionStyle}>
-    {children}
-  </h4>
-)
 /* margin-top is bigger than margin-bottom because it looks further due to text disposition */
 const HomeDivider = styled(Divider)`
   margin-top: 1.85rem;
@@ -270,7 +242,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO />
-      <BlogLayout page="home" className="">
+      <IndexBlogLayout page="home" className="">
         <Carousel>
           <CarouselImage country="Japon" to="japan">
             <MainHimejiCastleImage />
@@ -389,7 +361,7 @@ const IndexPage = () => {
           </>
         )}
         <MouseToolTip>{country ? <TooltipContent>{country["data-name"]}</TooltipContent> : null}</MouseToolTip>
-      </BlogLayout>
+      </IndexBlogLayout>
     </>
   )
 }

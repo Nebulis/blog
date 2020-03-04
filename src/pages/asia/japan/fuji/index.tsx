@@ -1,16 +1,16 @@
 import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
-import { JapanImageAsMedallion } from "../../../../components/images/layout"
 import { css } from "@emotion/core"
-import { JapanDivider } from "../../../../components/core/divider"
-import { KawaguchikoLakeCard } from "../../../../components/core/japan"
 import cherryBlossom from "../../../../images/asia/japan/cherry-blossom.png"
-import { getLinkLabel, isLinkPublished } from "../../../../components/core/links/links"
-import { japanLinks } from "../../../../components/core/links/japan.links"
+import { getLinkLabel, isLinkPublished } from "../../../../components/core/links/links.configuration"
 import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import { BlogLayout } from "../../../../components/layout/layout"
 import { largeStart } from "../../../../components/core/variables"
+import { japanLinks } from "../../../../components/core/japan/japan.links"
+import { KawaguchikoLakeCard } from "../../../../components/core/japan/japan.cards"
+import { JapanImageAsMedallion } from "../../../../components/core/japan/japan.images"
+import { JapanDivider } from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   const context = useContext(ApplicationContext)

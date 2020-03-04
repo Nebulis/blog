@@ -1,7 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
 import { BlogLayout } from "../../../../components/layout/layout"
-import { JapanTitle } from "../../../../components/core/title"
 import {
   ImageAsLandscape,
   TwoImagesSameSize,
@@ -10,10 +9,8 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { MainToganjiImage } from "../../../../components/images/asia/japan/nagoya/toganji/mainToganjiImage"
-import { ToganjiQuote, JapanLine } from "../../../../components/core/japan"
 import { How, When, Where, HowLong, HowMuch, WhereToStay, Visit } from "../../../../components/core/section"
 import { css } from "@emotion/core"
-import { JapanLink, JapanExternalLink } from "../../../../components/core/links/link"
 import { ToganjiEntrance1Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiEntrance1Image"
 import { ToganjiEntrance2Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiEntrance2Image"
 import { ToganjiStatue1Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiStatue1Image"
@@ -26,6 +23,13 @@ import { ToganjiBuddha2Image } from "../../../../components/images/asia/japan/na
 import { Conclusion } from "../../../../components/core/conclusion"
 import { ToganjiEntrance4Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiEntrance4Image"
 import { largeStart } from "../../../../components/core/variables"
+import {
+  JapanExternalLink,
+  JapanLine,
+  JapanLink,
+  JapanTitle,
+  ToganjiQuote,
+} from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   return (

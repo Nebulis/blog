@@ -3,8 +3,7 @@ import { GatsbyLinkProps, Link } from "gatsby"
 import { FaExternalLinkAlt } from "react-icons/all"
 import { css } from "@emotion/core"
 import React, { AnchorHTMLAttributes, ComponentType, FunctionComponent, useContext } from "react"
-import { japanPrimaryColor } from "../japan.variables"
-import { getLink, getLinkUrl } from "./links"
+import { getLink, getLinkUrl } from "./links.configuration"
 import { ApplicationContext } from "../../application"
 import { primaryColor, primaryDarkColor, primaryDarkColor15Darker } from "../variables"
 
@@ -35,7 +34,7 @@ export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & Externa
 )
 // ignore ref property, typing issue
 type LinkProps = Omit<GatsbyLinkProps<any>, "ref"> & { action?: "hide" | "no-link" }
-const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => FunctionComponent<LinkProps> = (
+export const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => FunctionComponent<LinkProps> = (
   ApplicationLink: ComponentType<LinkProps>
 ) =>
   function LinkIfActive({ children, to, action = "no-link", className = "", ...props }) {
@@ -62,22 +61,9 @@ const developmentMarkStyle = css`
   border-left: 15px solid transparent;
   border-top: 15px solid #e28de5;
 `
-const DevelopmentMark = () => <span css={developmentMarkStyle} className="development-mark" />
+export const DevelopmentMark = () => <span css={developmentMarkStyle} className="development-mark" />
 
 export const ApplicationLink = linkBuilder(Link)
-
-export const JapanLink = linkBuilder(styled(Link)`
-  color: ${japanPrimaryColor};
-  &:visited {
-    color: ${japanPrimaryColor};
-  }
-`)
-export const JapanExternalLink = styled(ExternalLink)`
-  color: ${japanPrimaryColor};
-  &:visited {
-    color: ${japanPrimaryColor};
-  }
-`
 
 const BaseButtonLink = styled(ApplicationLink)`
   display: inline-flex;

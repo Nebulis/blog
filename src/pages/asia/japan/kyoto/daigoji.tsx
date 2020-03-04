@@ -1,8 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { JapanTitle } from "../../../../components/core/title"
 import { MainDaigojiImage } from "../../../../components/images/asia/japan/kyoto/daigoji/mainDaigojiImage"
-import { DaigojiQuote, JapanLine } from "../../../../components/core/japan"
 import {
   How,
   HowLong,
@@ -38,9 +36,15 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { DaigojiGarden5Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden5Image"
 import { DaigojiGarden4Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden4Image"
 import { DaigojiMonk2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiMonk2Image"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
 import { DaigojiTempleWithLake3Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiTempleWithLake3Image"
+import {
+  DaigojiQuote,
+  JapanExternalLink,
+  JapanLine,
+  JapanLink,
+  JapanTitle,
+} from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   return (

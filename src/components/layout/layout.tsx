@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useContext } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
-import { getLink } from "../core/links/links"
+import { getLink } from "../core/links/links.configuration"
 import { css } from "@emotion/core"
 import { ApplicationContext } from "../application"
 import { Maintenance } from "./maintenance"
@@ -11,7 +11,7 @@ import smoothscroll from "smoothscroll-polyfill"
 import { Input } from "../core/input"
 import { PrimaryDarkButton } from "../core/button"
 import styled from "@emotion/styled"
-import { largeStart, mediumEnd, mobileEnd, primaryColor } from "../core/variables"
+import { largeStart, mediumEnd, mobileEnd, primaryColor, primaryDarkColor } from "../core/variables"
 import { MenuContext } from "./menu.context"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
@@ -62,10 +62,10 @@ const Footer = styled.footer`
   }
 `
 
-export const BlogLayout: FunctionComponent<{ page: string; className?: string; noStickyHeader?: boolean }> = ({
+const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; noStickyHeader?: boolean }> = ({
   children,
   page,
-  className = "center blog-container",
+  className = "",
   noStickyHeader = false,
 }) => {
   const isPublished = page === "home" ? true : getLink(page).published
@@ -74,18 +74,18 @@ export const BlogLayout: FunctionComponent<{ page: string; className?: string; n
   return (
     <Maintenance>
       {typeof window !== `undefined` ? (
-        <>
+        <div className={className}>
           {development && !isPublished && <PageDevelopmentMark />}
           <Header noStickyHeader={noStickyHeader} />
           {!isMobileView && <ScrollToTop />}
-          <div className={className}>{children}</div>
+          <div className="children-container">{children}</div>
 
           <Footer className="pa2">
             <div className="f6 copyright">© 2020 Magic of Travels</div>
             {development && (
               <div className="newsletter">
                 <div className="tc text">NEWSLETTER</div>
-                <Input placeholder="Adresse Email" hideLabel className="inline-flex" id="newsletter" />
+                <Input placeholder="Adresse Email" className="inline-flex" id="newsletter" />
                 <div
                   className="inline-flex"
                   css={css`
@@ -104,8 +104,53 @@ export const BlogLayout: FunctionComponent<{ page: string; className?: string; n
               </a>
             </div>
           </Footer>
-        </>
+        </div>
       ) : null}
     </Maintenance>
   )
 }
+
+export const IndexBlogLayout = styled(InternalBlogLayout)`
+  .card .tags a {
+    color: ${primaryColor};
+  }
+  .card .tags a:hover {
+    border-bottom: 1px solid ${primaryDarkColor};
+  }
+`
+
+export const BlogLayout = styled(InternalBlogLayout)`
+  // .children-container {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   width: 100%;
+  //   padding-left: 10px;
+  //   padding-right: 10px;
+  //   flex: 1;
+  // }
+  //
+  // @media (min-width: 576px) {
+  //   .children-container {
+  //     padding: 0;
+  //     max-width: 540px;
+  //   }
+  // }
+  //
+  // @media (min-width: 768px) {
+  //   .children-container {
+  //     max-width: 720px;
+  //   }
+  // }
+  //
+  // @media (min-width: 992px) {
+  //   .children-container {
+  //     max-width: 960px;
+  //   }
+  // }
+  //
+  // @media (min-width: 1200px) {
+  //   .children-container {
+  //     max-width: 1140px;
+  //   }
+  // }
+`
