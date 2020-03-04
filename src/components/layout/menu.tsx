@@ -8,7 +8,7 @@ import React, {
   useRef,
   useState,
 } from "react"
-import { continentLinks, getLinkLabel, isLinkPublished, menuLinks } from "../core/links/links"
+import { continentLinks, getLinkLabel, isLinkPublished, menuLinks } from "../core/links/links.configuration"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
@@ -246,10 +246,10 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
                   : continent.countries.filter(isLinkPublished)
                 return (
                   <li key={continent.id}>
-                    <ApplicationLink to={continent.id}>
+                    <a href="#">
                       <span>{getLinkLabel(continent.id)}</span>
                       <span>{publishedCountries.length > 0 ? ">" : null}</span>
-                    </ApplicationLink>
+                    </a>
                     {publishedCountries.length > 0 ? (
                       <ul className="submenu" aria-label="submenu">
                         {publishedCountries.sort(sort).map(country => renderCountry(continent, country, inDevelopment))}

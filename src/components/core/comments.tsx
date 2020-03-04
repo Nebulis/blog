@@ -8,7 +8,6 @@ import md5 from "md5"
 import styled from "@emotion/styled"
 import { Gravatar } from "./gravatar"
 import { FaEnvelope, FaLink, FaPen, FaUser } from "react-icons/all"
-import { japanPrimaryColor } from "./japan.variables"
 
 interface CommentsProps {
   collectionName: string
@@ -358,7 +357,6 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
         Icon={FaPen}
       />
       <Input
-        hideLabel
         id="name"
         placeholder="Nom *"
         type="text"
@@ -367,7 +365,6 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => setName(event.target.value)}
       />
       <Input
-        hideLabel
         id="email"
         placeholder="Email"
         type="email"
@@ -376,7 +373,6 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
       />
       <Input
-        hideLabel
         id="website"
         placeholder="Site Internet"
         type="website"
@@ -414,17 +410,3 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
     </div>
   )
 }
-
-export const JapanComments = styled(Comments)`
-  a,
-  span.reply,
-  .form-group.active svg,
-  a:visited {
-    color: ${japanPrimaryColor};
-  }
-  textarea.form-control:focus,
-  input.form-control:focus {
-    border-color: ${japanPrimaryColor};
-    box-shadow: 0 0 0 0.2rem rgba(184, 86, 106, 0.21);
-  }
-`

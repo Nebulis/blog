@@ -1,17 +1,14 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
 import { BlogLayout } from "../../../../components/layout/layout"
-import { JapanTitle } from "../../../../components/core/title"
-import { HamarikyuGardenQuote } from "../../../../components/core/japan"
 import { MainHamarikyuGardenImage } from "../../../../components/images/asia/japan/tokyo/hamarikyu/mainHamarikyuGardenImage"
-import { Where, When, How, HowMuch, Visit } from "../../../../components/core/section"
-import { JapanLink } from "../../../../components/core/links/link"
+import { How, HowMuch, Visit, When, Where } from "../../../../components/core/section"
 import {
+  GroupOfImages,
+  ImageAsLandscape,
   ImageAsPortrait,
   TwoImagesSameSize,
-  GroupOfImages,
   TwoImagesSameSizeOrToGroup,
-  ImageAsLandscape,
 } from "../../../../components/images/layout"
 import { HamarikyuGardenBuilding1Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenBuilding1Image"
 import { HamarikyuBird1Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuBird1Image"
@@ -25,6 +22,7 @@ import { HamarikyuGardenJungleImage } from "../../../../components/images/asia/j
 import { HamarikyuGardenBankImage } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenBankImage"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { HamarikyuGardenCherry3Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenCherry3Image"
+import { HamarikyuGardenQuote, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   return (

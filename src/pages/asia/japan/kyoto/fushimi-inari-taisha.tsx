@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { JapanTitle } from "../../../../components/core/title"
 import { MainFushimiImage } from "../../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import {
@@ -19,9 +18,14 @@ import { FushimiWaterImage } from "../../../../components/images/asia/japan/kyot
 import { FushimiKomainu2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu2Image"
 import { FushimiKomainu1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu1Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { FushimiInariTaishaQuote, JapanLine } from "../../../../components/core/japan"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
+import {
+  FushimiInariTaishaQuote,
+  JapanExternalLink,
+  JapanLine,
+  JapanLink,
+  JapanTitle,
+} from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   return (

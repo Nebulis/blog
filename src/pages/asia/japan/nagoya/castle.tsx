@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { JapanTitle } from "../../../../components/core/title"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -37,9 +36,14 @@ import { NagoyaRosebushImage } from "../../../../components/images/asia/japan/na
 import { NagoyaStatueImage } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaStatueImage"
 import { NagoyaCastle2Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaCastle2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { JapanLine, NagoyaCastleQuote } from "../../../../components/core/japan"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
+import {
+  JapanExternalLink,
+  JapanLine,
+  JapanLink,
+  JapanTitle,
+  NagoyaCastleQuote,
+} from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   return (

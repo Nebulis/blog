@@ -53,9 +53,7 @@ const iconStyle = css`
     padding-left: 30px;
   }
 `
-// that's shit ... remove hideLabel :/
 export const Input: FunctionComponent<InputHTMLAttributes<any> & {
-  hideLabel?: boolean
   Icon?: IconType
   label?: string
   inputClassName?: string

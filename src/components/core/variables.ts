@@ -22,3 +22,5 @@ export const mediumStart = "769px"
 export const mediumEnd = "992px"
 export const largeStart = "993px"
 export const extraLargeStart = "1200px"
+
+export const maxWidth = 1425 // used on home page

@@ -1,21 +1,21 @@
 import css from "@emotion/css"
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import styled from "@emotion/styled"
-import { Quote } from "./quote"
-import { ExternalLink } from "./links/link"
-import { MainArashiyamaImage } from "../images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
-import { JapanCard } from "../card"
-import { MainKinkakujiImage } from "../images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
-import { MainDaigojiImage } from "../images/asia/japan/kyoto/daigoji/mainDaigojiImage"
-import { MainFushimiImage } from "../images/asia/japan/kyoto/fushimi/mainFushimiImage"
-import { MainTokyoImage } from "../images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
-import { MainSensojiImage } from "../images/asia/japan/tokyo/sensoji/mainSensojiImage"
-import { MainHamarikyuGardenImage } from "../images/asia/japan/tokyo/hamarikyu/mainHamarikyuGardenImage"
-import { MainFujiImage } from "../images/asia/japan/fuji/kawaguchiko/mainFujiImage"
-import { MainHimejiCastleImage } from "../images/asia/japan/himeji/castle/mainHimejiCastleImage"
-import { MainNagoyaCastleImage } from "../images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
-import { ImageAsPortrait } from "../images/layout"
-import { MainToganjiImage } from "../images/asia/japan/nagoya/toganji/mainToganjiImage"
+import { Quote } from "../quote"
+import { ExternalLink, linkBuilder } from "../links/link"
+import { BlogLayout } from "../../layout/layout"
+import {
+  japanCherryBlossom,
+  japanPrimaryColor,
+  japanPrimaryColorDarker,
+  japanPrimaryColorLighter,
+} from "./japan.variables"
+import { Link } from "gatsby"
+import { Comments } from "../comments"
+import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
+import { City } from "../highlight"
+import { Title } from "../title"
+import { Divider } from "../divider"
 
 const japanLineStyle = css`
   padding: 2px 5px;
@@ -115,67 +115,78 @@ export const HamarikyuGardenQuote = () => (
   </JapanQuote>
 )
 
-export const ArashiyamaCard = () => (
-  <JapanCard title="Arashiyama – Forêt de Bambous géants" to="arashiyama" country="Japon">
-    <MainArashiyamaImage />
-  </JapanCard>
+export const JapanLink = linkBuilder(styled(Link)`
+  color: ${japanPrimaryColor};
+  &:visited {
+    color: ${japanPrimaryColor};
+  }
+`)
+export const JapanExternalLink = styled(ExternalLink)`
+  color: ${japanPrimaryColor};
+  &:visited {
+    color: ${japanPrimaryColor};
+  }
+`
+
+export const JapanBlogLayout = styled(BlogLayout)`
+  svg.facebook:hover,
+  svg.instagram:hover,
+  svg.twitter:hover,
+  svg.pinterest:hover,
+  svg.search:hover {
+    fill: ${japanPrimaryColorLighter};
+  }
+  footer a {
+    color: ${japanCherryBlossom};
+  }
+
+  footer button.btn,
+  footer button.btn:disabled {
+    background-color: ${japanPrimaryColor};
+    border-color: ${japanPrimaryColor};
+  }
+  footer button.btn:hover {
+    background-color: ${japanPrimaryColorDarker};
+    border-color: ${japanPrimaryColorDarker};
+  }
+`
+
+export const JapanComments = styled(Comments)`
+  a,
+  span.reply,
+  .form-group.active svg,
+  a:visited {
+    color: ${japanPrimaryColor};
+  }
+  textarea.form-control:focus,
+  input.form-control:focus {
+    border-color: ${japanPrimaryColor};
+    box-shadow: 0 0 0 0.2rem rgba(184, 86, 106, 0.21);
+  }
+`
+
+const japanCityStyle = css`
+  color: ${japanPrimaryColor};
+`
+export const JapanCity: FunctionComponent = ({ children }) => (
+  <City css={japanCityStyle}>
+    <img src={cherryBlossom} alt="cherry blossom" /> {children} <img src={cherryBlossom} alt="cherry blossom" />
+  </City>
 )
 
-export const KinkakujiCard = () => (
-  <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to="kinkakuji" country="Japon">
-    <MainKinkakujiImage />
-    {/*<KinkakujiQuote />*/}
-  </JapanCard>
-)
+export const JapanTitle = styled(Title)`
+  a {
+    border-radius: 3px;
+    color: white;
+    background-color: ${japanPrimaryColor};
+    padding: 0 2px;
+    text-decoration: none;
+  }
+  a:hover {
+    box-shadow: 0px 0px 2px 1px #ed5567;
+  }
+`
 
-export const DaigojiCard = () => (
-  <JapanCard title="Temple Daigo-ji" to="daigoji" country="Japon">
-    <MainDaigojiImage />
-  </JapanCard>
-)
-export const FushimiInariTaishaCard = () => (
-  <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to="fushimi-inari-taisha" country="Japon">
-    <MainFushimiImage />
-  </JapanCard>
-)
-export const ADayInTokyoCard = () => (
-  <JapanCard title="Une journée à Tokyo" to="a-day-in-tokyo" country="Japon">
-    <MainTokyoImage />
-  </JapanCard>
-)
-export const HamarikyuGardenCard = () => (
-  <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to="hamarikyu-garden" country="Japon">
-    <MainHamarikyuGardenImage />
-  </JapanCard>
-)
-
-export const SensojiCard = () => (
-  <JapanCard title="Le temple de Senso-Ji" to="sensoji" country="Japon">
-    <MainSensojiImage />
-  </JapanCard>
-)
-export const KawaguchikoLakeCard = () => (
-  <JapanCard title="Mont Fuji - Lac Kawaguchiko" to="fuji" country="Japon">
-    <MainFujiImage />
-  </JapanCard>
-)
-
-export const HimejiCastleCard = () => (
-  <JapanCard title="Château de Himeji – Magnifique château du Héron Blanc" to="himeji-castle" country="Japon">
-    <MainHimejiCastleImage />
-  </JapanCard>
-)
-
-export const NagoyaCastleCard = () => (
-  <JapanCard title="Château de Nagoya" to="nagoya-castle" country="Japon">
-    <MainNagoyaCastleImage />
-  </JapanCard>
-)
-
-export const ToganjiCard = () => (
-  <JapanCard title="Le temple de Togan-Ji" to="toganji" country="Japon">
-    <ImageAsPortrait>
-      <MainToganjiImage />
-    </ImageAsPortrait>
-  </JapanCard>
-)
+export const JapanDivider = styled(Divider)`
+  background-color: hsl(348, 41%, 53%, 0.2);
+`

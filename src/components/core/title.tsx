@@ -1,8 +1,6 @@
 import React, { FunctionComponent } from "react"
 import { css } from "@emotion/core"
-import styled from "@emotion/styled"
-import { japanPrimaryColor } from "./japan.variables"
-import { getLink, getLinkLabel } from "./links/links"
+import { getLink, getLinkLabel } from "./links/links.configuration"
 import { ApplicationLink } from "./links/link"
 
 interface TitleProps {
@@ -54,16 +52,3 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
     </>
   )
 }
-
-export const JapanTitle = styled(Title)`
-  a {
-    border-radius: 3px;
-    color: white;
-    background-color: ${japanPrimaryColor};
-    padding: 0 2px;
-    text-decoration: none;
-  }
-  a:hover {
-    box-shadow: 0px 0px 2px 1px #ed5567;
-  }
-`

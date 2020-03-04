@@ -1,7 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
 import { BlogLayout } from "../../../../components/layout/layout"
-import { JapanTitle } from "../../../../components/core/title"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -18,8 +17,6 @@ import { TokyoTakeshitaStreet1Image } from "../../../../components/images/asia/j
 import { TokyoTakeshitaStreet2Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoTakeshitaStreet2Image"
 import { TokyoTakeshitaStreet3Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoTakeshitaStreet3Image"
 import { TokyoTakeshitaStreet4Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoTakeshitaStreet4Image"
-import { JapanCity } from "../../../../components/core/highlight"
-import { JapanDivider } from "../../../../components/core/divider"
 import css from "@emotion/css"
 import { TokyoUenoPark1Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoUenoPark1Image"
 import { TokyoUenoPark2Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoUenoPark2Image"
@@ -30,11 +27,10 @@ import { TokyoYasukuni2Image } from "../../../../components/images/asia/japan/to
 import { TokyoYasukuni3Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoYasukuni3Image"
 import { TokyoYasukuni4Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoYasukuni4Image"
 import { TokyoYasukuni5Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoYasukuni5Image"
-import { SensojiCard } from "../../../../components/core/japan"
-import { JapanLink } from "../../../../components/core/links/link"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { JapanComments } from "../../../../components/core/comments"
 import { largeStart } from "../../../../components/core/variables"
+import { JapanCity, JapanComments, JapanDivider, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
+import { SensojiCard } from "../../../../components/core/japan/japan.cards"
 
 const IndexPage = () => {
   return (

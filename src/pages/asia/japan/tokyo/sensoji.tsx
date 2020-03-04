@@ -1,8 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
-import { JapanTitle } from "../../../../components/core/title"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -12,7 +10,6 @@ import {
   TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { JapanLine, SensojiQuote } from "../../../../components/core/japan"
 import { MainSensojiImage } from "../../../../components/images/asia/japan/tokyo/sensoji/mainSensojiImage"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import { SensojiPathPeople1Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiPathPeople1Image"
@@ -32,9 +29,16 @@ import { SensojiGarden2Image } from "../../../../components/images/asia/japan/to
 import { SensojiGarden3Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiGarden3Image"
 import { Conclusion } from "../../../../components/core/conclusion"
 import css from "@emotion/css"
-import { JapanDivider } from "../../../../components/core/divider"
-import { JapanComments } from "../../../../components/core/comments"
 import { largeStart } from "../../../../components/core/variables"
+import {
+  JapanComments,
+  JapanDivider,
+  JapanExternalLink,
+  JapanLine,
+  JapanLink,
+  JapanTitle,
+  SensojiQuote,
+} from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   return (

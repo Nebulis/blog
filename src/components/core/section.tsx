@@ -13,6 +13,7 @@ import {
   FaWalking,
   FaYenSign,
 } from "react-icons/all"
+import { maxWidth, mediumEnd, mobileEnd } from "./variables"
 
 export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
   <h4 className={`mb1 flex ${className}`}>{children}</h4>
@@ -158,4 +159,37 @@ export const Bonus: FunctionComponent = ({ children }) => (
     </SectionTitle>
     <SectionContent>{children}</SectionContent>
   </>
+)
+
+const homeSectionStyle = css`
+  letter-spacing: 5px;
+  font-family: auto;
+  @media (max-width: ${mediumEnd}) {
+    margin-bottom: 1rem;
+  }
+`
+export const HomeSection: FunctionComponent = ({ children }) => (
+  <h2 className="tc ttu mb4-l" css={homeSectionStyle}>
+    {children}
+  </h2>
+)
+
+const homeSubSectionStyle = css`
+  padding-left: 200px;
+  max-width: calc(${maxWidth}px - 2rem);
+  border-bottom: 1px solid black;
+  font-family: "Freestyle Script";
+  font-size: 1.8rem;
+
+  @media (max-width: ${mediumEnd}) {
+    padding-left: 100px;
+  }
+  @media (max-width: ${mobileEnd}) {
+    padding-left: 2rem;
+  }
+`
+export const HomeSubSection: FunctionComponent = ({ children }) => (
+  <h4 className="tl normal center pb2 mb0" css={homeSubSectionStyle}>
+    {children}
+  </h4>
 )

@@ -1,6 +1,12 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { JapanMap } from "../../../components/country/japanMap"
+import { SectionContent, WhatTimeOfYear, Where } from "../../../components/core/section"
+import SEO from "../../../components/layout/seo"
+import { Conclusion } from "../../../components/core/conclusion"
+import { MainImage } from "../../../components/images/asia/japan/mainImage"
+import { BlogLayout } from "../../../components/layout/layout"
+import { smallEnd } from "../../../components/core/variables"
+import { JapanCity, JapanDivider, JapanTitle, SpringInJapanQuote } from "../../../components/core/japan/japan"
 import {
   ADayInTokyoCard,
   ArashiyamaCard,
@@ -11,18 +17,9 @@ import {
   KawaguchikoLakeCard,
   KinkakujiCard,
   NagoyaCastleCard,
-  SpringInJapanQuote,
   ToganjiCard,
-} from "../../../components/core/japan"
-import { SectionContent, WhatTimeOfYear, Where } from "../../../components/core/section"
-import { JapanCity } from "../../../components/core/highlight"
-import SEO from "../../../components/layout/seo"
-import { Conclusion } from "../../../components/core/conclusion"
-import { MainImage } from "../../../components/images/asia/japan/mainImage"
-import { JapanTitle } from "../../../components/core/title"
-import { JapanDivider } from "../../../components/core/divider"
-import { BlogLayout } from "../../../components/layout/layout"
-import { smallEnd } from "../../../components/core/variables"
+} from "../../../components/core/japan/japan.cards"
+import { JapanMap } from "../../../components/core/japan/japan.map"
 
 const IndexPage = () => {
   return (

@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { JapanTitle } from "../../../../components/core/title"
 import { MainKinkakujiImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
 import {
   How,
@@ -35,10 +34,15 @@ import { KinkakujiWaterfall1Image } from "../../../../components/images/asia/jap
 import { KinkakujiLakeImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiLakeImage"
 import { KinkakujiStatueImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiStatueImage"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { JapanLine, KinkakujiQuote } from "../../../../components/core/japan"
-import { JapanExternalLink, JapanLink } from "../../../../components/core/links/link"
 import { BlogLayout } from "../../../../components/layout/layout"
 import { KinkakujiOtherTemple3Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiOtherTemple3Image"
+import {
+  JapanExternalLink,
+  JapanLine,
+  JapanLink,
+  JapanTitle,
+  KinkakujiQuote,
+} from "../../../../components/core/japan/japan"
 
 const IndexPage = () => {
   return (

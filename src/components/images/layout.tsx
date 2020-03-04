@@ -2,7 +2,6 @@ import React, { FunctionComponent, HTMLAttributes } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
-import { japanPrimaryColor } from "../core/japan.variables"
 import { cloneElement } from "../core/cloneElement"
 import { mediumEnd, mediumStart, mobileEnd, smallEnd, smallStart } from "../core/variables"
 
@@ -303,9 +302,3 @@ export const ImageAsMedallion: FunctionComponent<HTMLAttributes<any> & { title?:
     {title && <span>{title}</span>}
   </div>
 )
-
-export const JapanImageAsMedallion = styled(ImageAsMedallion)`
-  &:hover {
-    border: 6px solid ${japanPrimaryColor};
-  }
-`

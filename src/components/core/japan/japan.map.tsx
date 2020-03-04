@@ -1,8 +1,8 @@
 import React, { FunctionComponent, SVGAttributes } from "react"
 import { css } from "@emotion/core"
 import { navigate } from "gatsby"
-import { japanPrimaryColor } from "../core/japan.variables"
-import { getLink, getLinkUrl } from "../core/links/links"
+import { japanPrimaryColor } from "./japan.variables"
+import { getLink, getLinkUrl } from "../links/links.configuration"
 
 type PopoverPlace = "above" | "right" | "below" | "left" | "row" | "column" | "start" | "end"
 const basicTextStyle = css`

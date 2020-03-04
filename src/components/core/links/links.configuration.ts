@@ -1,5 +1,5 @@
 import * as path from "path"
-import { japanLinks } from "./japan.links"
+import { japanLinks } from "../japan/japan.links"
 import { CityLink, ContinentLink, CountryLink, HighlightLink, NavigationLink } from "./links.types"
 import { isPublished } from "./links.utils"
 import React from "react"
