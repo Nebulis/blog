@@ -11,7 +11,7 @@ import {
 } from "../../../components/core/links/links.configuration"
 import { ApplicationLink } from "../../../components/core/links/link"
 import { ApplicationContext } from "../../../components/application"
-import { JapanBlogLayout, JapanDivider } from "../../../components/core/japan/japan"
+import { IndexJapanBlogLayout, JapanDivider } from "../../../components/core/japan/japan"
 import { JapanImageAsMedallion } from "../../../components/core/japan/japan.images"
 import { japanLinks } from "../../../components/core/japan/japan.links"
 import { JapanCard } from "../../../components/core/japan/japan.cards"
@@ -70,7 +70,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Japon" />
-      <JapanBlogLayout page="japan">
+      <IndexJapanBlogLayout page="japan">
         <h1 className="tc ttu flex items-center justify-center">
           <img src={cherryBlossom} alt="cherry blossom" />
           &nbsp;Japon&nbsp;
@@ -89,7 +89,6 @@ const IndexPage = () => {
         >
           Voyager
         </h2>
-        {/*<h2 className="tc ttu">Suivre notre aventure</h2>*/}
         <HomeSubSection>En suivant notre aventure ...</HomeSubSection>
         <Container>
           <JapanCard title="Le Japon au printemps" to="spring-in-japan" tags={["asia", "japan"]}>
@@ -134,7 +133,7 @@ const IndexPage = () => {
             </ArticlesContainer>
           </>
         )}
-      </JapanBlogLayout>
+      </IndexJapanBlogLayout>
     </>
   )
 }

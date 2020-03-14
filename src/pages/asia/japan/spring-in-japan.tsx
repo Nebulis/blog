@@ -6,7 +6,13 @@ import { Conclusion } from "../../../components/core/conclusion"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { BlogLayout } from "../../../components/layout/layout"
 import { smallEnd } from "../../../components/core/variables"
-import { JapanCity, JapanDivider, JapanTitle, SpringInJapanQuote } from "../../../components/core/japan/japan"
+import {
+  JapanBlogLayout,
+  JapanCity,
+  JapanDivider,
+  JapanTitle,
+  SpringInJapanQuote,
+} from "../../../components/core/japan/japan"
 import {
   ADayInTokyoCard,
   ArashiyamaCard,
@@ -24,8 +30,8 @@ import { JapanMap } from "../../../components/core/japan/japan.map"
 const IndexPage = () => {
   return (
     <>
-      <SEO title="japan" />
-      <BlogLayout page="spring-in-japan">
+      <SEO title="Le Japon au printemps" />
+      <JapanBlogLayout page="spring-in-japan">
         <JapanTitle title="Le Japon au printemps" categories={["asia", "japan"]} linkId="spring-in-japan" />
         <MainImage />
         <SpringInJapanQuote />
@@ -243,7 +249,7 @@ const IndexPage = () => {
           Le Japon est un pays riche en découverte. Que vous aimiez la nature ou la ville, le côté culturel ou bien
           l’excentricité. Foncez, vous ne le regretterez pas !
         </Conclusion>
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }

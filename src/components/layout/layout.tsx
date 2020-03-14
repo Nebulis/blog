@@ -120,37 +120,37 @@ export const IndexBlogLayout = styled(InternalBlogLayout)`
 `
 
 export const BlogLayout = styled(InternalBlogLayout)`
-  // .children-container {
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   width: 100%;
-  //   padding-left: 10px;
-  //   padding-right: 10px;
-  //   flex: 1;
-  // }
-  //
-  // @media (min-width: 576px) {
-  //   .children-container {
-  //     padding: 0;
-  //     max-width: 540px;
-  //   }
-  // }
-  //
-  // @media (min-width: 768px) {
-  //   .children-container {
-  //     max-width: 720px;
-  //   }
-  // }
-  //
-  // @media (min-width: 992px) {
-  //   .children-container {
-  //     max-width: 960px;
-  //   }
-  // }
-  //
-  // @media (min-width: 1200px) {
-  //   .children-container {
-  //     max-width: 1140px;
-  //   }
-  // }
+  .children-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 1;
+  }
+
+  @media (min-width: 576px) {
+    .children-container {
+      padding: 0;
+      max-width: 540px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .children-container {
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .children-container {
+      max-width: 960px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .children-container {
+      max-width: 1140px;
+    }
+  }
 `
