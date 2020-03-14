@@ -3,7 +3,7 @@ import React, { FunctionComponent, HTMLAttributes } from "react"
 import styled from "@emotion/styled"
 import { Quote } from "../quote"
 import { ExternalLink, linkBuilder } from "../links/link"
-import { BlogLayout } from "../../layout/layout"
+import { BlogLayout, IndexBlogLayout } from "../../layout/layout"
 import {
   japanCherryBlossom,
   japanPrimaryColor,
@@ -128,7 +128,7 @@ export const JapanExternalLink = styled(ExternalLink)`
   }
 `
 
-export const JapanBlogLayout = styled(BlogLayout)`
+const japanLayout = `
   svg.facebook:hover,
   svg.instagram:hover,
   svg.twitter:hover,
@@ -136,10 +136,10 @@ export const JapanBlogLayout = styled(BlogLayout)`
   svg.search:hover {
     fill: ${japanPrimaryColorLighter};
   }
+
   footer a {
     color: ${japanCherryBlossom};
   }
-
   footer button.btn,
   footer button.btn:disabled {
     background-color: ${japanPrimaryColor};
@@ -149,6 +149,16 @@ export const JapanBlogLayout = styled(BlogLayout)`
     background-color: ${japanPrimaryColorDarker};
     border-color: ${japanPrimaryColorDarker};
   }
+
+  .menu-entry {
+    border-top: 1px solid ${japanPrimaryColorLighter};
+  }
+`
+export const IndexJapanBlogLayout = styled(IndexBlogLayout)`
+  ${japanLayout}
+`
+export const JapanBlogLayout = styled(BlogLayout)`
+  ${japanLayout}
 `
 
 export const JapanComments = styled(Comments)`
