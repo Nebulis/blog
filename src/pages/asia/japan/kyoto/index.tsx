@@ -20,7 +20,7 @@ import { japanLinks } from "../../../../components/core/japan/japan.links"
 const IndexPage = () => {
   const context = useContext(ApplicationContext)
   const cities = (context.development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished).sort()).filter(
-    city => city.id !== "kyoto"
+    (city) => city.id !== "kyoto"
   )
   return (
     <>
@@ -67,7 +67,7 @@ const IndexPage = () => {
                 }
               `}
             >
-              {cities.map(city => {
+              {cities.map((city) => {
                 return city.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
                     <JapanImageAsMedallion title={getLinkLabel(city.id)}>

@@ -5,6 +5,7 @@ import React, { FunctionComponent, ReactElement, useContext, useEffect, useState
 import { ApplicationContext } from "../application"
 import styled from "@emotion/styled"
 
+// eslint-disable-next-line react/display-name
 const transformSelectedCountriesByContinent = (continent: string) => (country: Country): ReactElement => {
   if (country.continent === continent) {
     return <CountryPath country={country} className="selectedContinent" />

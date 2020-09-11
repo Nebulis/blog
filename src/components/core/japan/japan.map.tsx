@@ -323,7 +323,7 @@ export const JapanMap = () => {
   )
 }
 
-const Train: FunctionComponent<SVGAttributes<any>> = props => {
+const Train: FunctionComponent<SVGAttributes<any>> = (props) => {
   return (
     <svg {...props}>
       <circle cx="39" cy="44" r="1" />

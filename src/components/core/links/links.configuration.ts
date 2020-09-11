@@ -192,9 +192,9 @@ interface CachedLinksMap {
   card?: React.ComponentType
 }
 const cachedLinks = new Map<string, CachedLinksMap>()
-continentLinks.forEach(continent => {
-  continent.countries.forEach(country => {
-    country.others.forEach(other => {
+continentLinks.forEach((continent) => {
+  continent.countries.forEach((country) => {
+    country.others.forEach((other) => {
       cachedLinks.set(other.id, {
         label: other.label,
         url: path.resolve(getUrl(continent), getUrl(country), getUrl(other)),
@@ -203,13 +203,13 @@ continentLinks.forEach(continent => {
         card: other.card,
       })
     })
-    country.cities.forEach(city => {
+    country.cities.forEach((city) => {
       cachedLinks.set(city.id, {
         label: city.label,
         url: path.resolve(getUrl(continent), getUrl(country), getUrl(city)),
         published: city.highlights.some(isPublished),
       })
-      city.highlights.forEach(highlight => {
+      city.highlights.forEach((highlight) => {
         cachedLinks.set(highlight.id, {
           label: highlight.label,
           url: path.resolve(getUrl(continent), getUrl(country), getUrl(city), getUrl(highlight)),
@@ -224,23 +224,20 @@ continentLinks.forEach(continent => {
       label: country.label,
       url: path.resolve(getUrl(continent), getUrl(country)),
       published:
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        country.others.some(o => cachedLinks.get(o.id)!.published) ||
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        country.cities.some(c => cachedLinks.get(c.id)!.published),
+        country.others.some((o) => cachedLinks.get(o.id)?.published) ||
+        country.cities.some((c) => cachedLinks.get(c.id)?.published),
     })
   })
   cachedLinks.set(continent.id, {
     label: continent.label,
     url: path.resolve(getUrl(continent)),
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    published: continent.countries.some(country => cachedLinks.get(country.id)!.published),
+    published: continent.countries.some((country) => cachedLinks.get(country.id)?.published),
   })
 })
 
-menuLinks.forEach(menu => {
-  menu.sections.forEach(submenu => {
-    submenu.sections.forEach(subsubmenu => {
+menuLinks.forEach((menu) => {
+  menu.sections.forEach((submenu) => {
+    submenu.sections.forEach((subsubmenu) => {
       cachedLinks.set(subsubmenu.id, {
         label: subsubmenu.label,
         url: path.resolve(getUrl(menu), getUrl(submenu), getUrl(subsubmenu)),
@@ -251,19 +248,18 @@ menuLinks.forEach(menu => {
     cachedLinks.set(submenu.id, {
       label: submenu.label,
       url: path.resolve(getUrl(menu), getUrl(submenu)),
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      published: submenu.sections.some(subsubmenu => cachedLinks.get(subsubmenu.id)!.published) || !!submenu.published,
+      published:
+        submenu.sections.some((subsubmenu) => cachedLinks.get(subsubmenu.id)?.published) || !!submenu.published,
     })
   })
   cachedLinks.set(menu.id, {
     label: menu.label,
     url: path.resolve(getUrl(menu)),
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    published: menu.sections.some(submenu => cachedLinks.get(submenu.id)!.published) || !!menu.published,
+    published: menu.sections.some((submenu) => cachedLinks.get(submenu.id)?.published) || !!menu.published,
   })
 })
 
-otherLinks.forEach(link => {
+otherLinks.forEach((link) => {
   cachedLinks.set(link.id, {
     label: link.label,
     url: path.resolve(getUrl(link)),
@@ -298,7 +294,7 @@ const filterNull = (value: any): value is Required<Pick<CachedLinksMap, "card" |
 }
 export const getThreeMoreRecentArticles = () => {
   return Array.from(cachedLinks.values())
-    .map(link => {
+    .map((link) => {
       if (link.published && link.publishedDate && link.card) {
         return { publishedDate: link.publishedDate, card: link.card }
       }
@@ -307,5 +303,5 @@ export const getThreeMoreRecentArticles = () => {
     .filter(filterNull)
     .sort((a, b) => b.publishedDate.getTime() - a.publishedDate.getTime())
     .slice(0, 3)
-    .map(value => value.card)
+    .map((value) => value.card)
 }

@@ -73,10 +73,10 @@ export const Search: FunctionComponent<{ onClose: () => void }> = ({ onClose }) 
             inputClassName="mt0 input"
             id="search"
             value={search}
-            onKeyUp={event => {
+            onKeyUp={(event) => {
               event.stopPropagation()
             }}
-            onChange={event => {
+            onChange={(event) => {
               setSearch(event.target.value)
             }}
           />

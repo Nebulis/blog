@@ -4,7 +4,6 @@ import { SectionContent, WhatTimeOfYear, Where } from "../../../components/core/
 import SEO from "../../../components/layout/seo"
 import { Conclusion } from "../../../components/core/conclusion"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
-import { BlogLayout } from "../../../components/layout/layout"
 import { smallEnd } from "../../../components/core/variables"
 import {
   JapanBlogLayout,

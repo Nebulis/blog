@@ -88,7 +88,7 @@ export const Card: FunctionComponent<CardProps & { tags: string[] }> = ({ childr
         {tags.map((tag, index) => (
           <span
             key={index}
-            onClick={event => {
+            onClick={(event) => {
               event.stopPropagation()
             }}
           >

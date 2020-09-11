@@ -109,7 +109,7 @@ const IndexPage = () => {
                 }
               `}
             >
-              {cities.map(city => {
+              {cities.map((city) => {
                 return city.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
                     <JapanImageAsMedallion title={getLinkLabel(city.id)}>

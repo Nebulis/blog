@@ -259,14 +259,14 @@ const IndexPage = () => {
             <StyledWorld
               style={{ maxHeight: windowHeight / 1.5 + "px" }}
               transform={transform}
-              onMouseEnter={country => {
+              onMouseEnter={(country) => {
                 if (isMobileView) return
                 if (visitedCountries.includes(country.id.toLowerCase())) {
                   setCountry(country)
                 }
               }}
               onMouseLeave={() => setCountry(undefined)}
-              onClick={country => {
+              onClick={(country) => {
                 if (isMobileView) return
                 try {
                   navigate(getLinkUrl((country["data-name-en"] || country["data-name"]).toLowerCase()))
@@ -277,12 +277,11 @@ const IndexPage = () => {
             />
           </MapContainer>
           <ButtonMapContainer>
-            {continentLinks.map(continent => (
+            {continentLinks.map((continent) => (
               <div key={continent.id}>
                 <ButtonLink
                   to={continent.id}
-                  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                  className={`${getLink(continent.id)!.published || development ? "" : "inactive"}`}
+                  className={`${getLink(continent.id)?.published || development ? "" : "inactive"}`}
                 >
                   {continent.label}
                 </ButtonLink>

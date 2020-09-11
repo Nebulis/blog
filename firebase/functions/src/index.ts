@@ -9,8 +9,8 @@ const transporter = createTransport({
   service: "gmail",
   auth: {
     user: functions.config().mail.id,
-    pass: functions.config().mail.password
-  }
+    pass: functions.config().mail.password,
+  },
 });
 admin.initializeApp();
 
@@ -27,9 +27,9 @@ exports.newsletterNotification = functions.database
       to: ["servane.bausson@gmail.com", "nebounet@gmail.com"],
       subject: `New comment on ${collection}`,
       html: `<h4>From ${message?.name} at ${new Date(message?.timestamp).toLocaleString("fr-FR", {
-        timeZone: "Asia/Singapore"
+        timeZone: "Asia/Singapore",
       })}</h4><p>${message?.content}</p>
-    <a href="https://magicoftravels.com/${collection}#${context?.params?.key}" target="_blank">View</a>`
+    <a href="https://magicoftravels.com/${collection}#${context?.params?.key}" target="_blank">View</a>`,
     };
     return transporter.sendMail(mailOptions);
   });
@@ -37,13 +37,13 @@ exports.newsletterNotification = functions.database
 const app = express();
 app.use(
   cors({
-    origin: function(origin, callback) {
+    origin: function (origin, callback) {
       if (origin === "magicoftravels.com" || origin?.endsWith("blog-maillet.netlify.com")) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
       }
-    }
+    },
   })
 );
 
@@ -55,7 +55,7 @@ app.post("/", (req, res) => {
     from: `${name} <${mail}>`,
     to: ["servane.bausson@gmail.com", "nebounet@gmail.com"],
     subject: `[${isPro ? "Professionel" : "Particulier"}] ${title}`,
-    html: `<h4>From ${name} &lt;${mail}&gt;</h4><p>${message}</p>`
+    html: `<h4>From ${name} &lt;${mail}&gt;</h4><p>${message}</p>`,
   };
   return transporter
     .sendMail(mailOptions)
@@ -63,7 +63,7 @@ app.post("/", (req, res) => {
       console.log("Mail sent with success");
       res.status(200).send();
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
       res.status(400).send(error);
     });

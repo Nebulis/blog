@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useContext, useState } from "react"
 import { FaCircle, FaFacebook, FaInstagram, FaPinterest, FaSearch, FaTwitter } from "react-icons/all"
 import { css } from "@emotion/core"
-import banner from "../../images/2020-02-28.png"
-import bannerMobile from "../../images/2020-02-29.png"
+import banner from "../../images/logo-the-real.svg"
+import bannerMobile from "../../images/logo-mobile-the-real.svg"
 import { ApplicationContext } from "../application"
 import { backgroundPrimaryColor, primaryColor, bannerHeight } from "../core/variables"
 import { DialogPortal } from "../core/tooltipPortal"
@@ -36,6 +36,8 @@ const headerStyle = css`
   .logo-container img {
     width: auto;
     z-index: 1000;
+    padding-top: 5px;
+    padding-bottom: 5px;
     height: ${bannerHeight};
   }
   .left-menu-container {

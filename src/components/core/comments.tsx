@@ -69,20 +69,20 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, cla
   useEffect(() => {
     const reference = database.ref(`comments/${transformPath(collectionName)}`)
 
-    reference.on("value", snapshot => {
+    reference.on("value", (snapshot) => {
       const commentsAsObject = snapshot.val() as DatabaseComments
       if (commentsAsObject) {
-        const commentsAsArray: CommentProp[] = Object.keys(commentsAsObject).map(key => ({
+        const commentsAsArray: CommentProp[] = Object.keys(commentsAsObject).map((key) => ({
           ...commentsAsObject[key],
           id: key,
           children: [],
         }))
         const transformedComments: CommentProp[] = []
-        commentsAsArray.forEach(comment => {
+        commentsAsArray.forEach((comment) => {
           if (!comment.parent) {
             transformedComments.push(comment)
           } else {
-            const parent = commentsAsArray.find(c => c.id === comment.parent)
+            const parent = commentsAsArray.find((c) => c.id === comment.parent)
             if (parent) {
               parent.children.push(comment)
             }
@@ -205,22 +205,24 @@ const hrStyle = css`
   margin-top: 0rem;
   margin-bottom: 0rem;
 `
-const Comment: FunctionComponent<CommentProp & {
-  isLast: boolean
-  index: number
-  depth: number
-  commentToEdit: string
-  setCommentToEdit: React.Dispatch<React.SetStateAction<string>>
-  onSubmit: (comment: {
-    name: string
-    message: string
-    id: string
-    email: string
-    website: string
-    saveInBrowser: boolean
-    subscribeToNewsletter: boolean
-  }) => Promise<any>
-}> = ({
+const Comment: FunctionComponent<
+  CommentProp & {
+    isLast: boolean
+    index: number
+    depth: number
+    commentToEdit: string
+    setCommentToEdit: React.Dispatch<React.SetStateAction<string>>
+    onSubmit: (comment: {
+      name: string
+      message: string
+      id: string
+      email: string
+      website: string
+      saveInBrowser: boolean
+      subscribeToNewsletter: boolean
+    }) => Promise<any>
+  }
+> = ({
   name,
   timestamp,
   content,
@@ -281,7 +283,7 @@ const Comment: FunctionComponent<CommentProp & {
         <CommentForm
           cancellable
           onCancel={() => setCommentToEdit("")}
-          onSubmit={c => onSubmit({ ...c, id }).then(() => setCommentToEdit(""))}
+          onSubmit={(c) => onSubmit({ ...c, id }).then(() => setCommentToEdit(""))}
         />
       )}
       <div>
@@ -400,7 +402,7 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
             .then(() => {
               setMessage("")
             })
-            .catch(error => {
+            .catch((error) => {
               console.error(error)
             })
         }

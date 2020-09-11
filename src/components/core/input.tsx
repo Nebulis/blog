@@ -53,11 +53,13 @@ const iconStyle = css`
     padding-left: 30px;
   }
 `
-export const Input: FunctionComponent<InputHTMLAttributes<any> & {
-  Icon?: IconType
-  label?: string
-  inputClassName?: string
-}> = ({ Icon, ...props }) => {
+export const Input: FunctionComponent<
+  InputHTMLAttributes<any> & {
+    Icon?: IconType
+    label?: string
+    inputClassName?: string
+  }
+> = ({ Icon, ...props }) => {
   if (!props.id) {
     console.warn("Please add an id into this component")
   }
@@ -80,10 +82,12 @@ export const Input: FunctionComponent<InputHTMLAttributes<any> & {
   )
 }
 
-export const Textarea: FunctionComponent<TextareaHTMLAttributes<any> & {
-  Icon?: IconType
-  label?: string
-}> = ({ Icon, ...props }) => {
+export const Textarea: FunctionComponent<
+  TextareaHTMLAttributes<any> & {
+    Icon?: IconType
+    label?: string
+  }
+> = ({ Icon, ...props }) => {
   if (!props.id) {
     console.warn("Please add an id into this component")
   }
