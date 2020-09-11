@@ -9,7 +9,7 @@ export const MenuContext = React.createContext<{
   pageHeight: string
 }>({
   open: false,
-  setOpen: () => {},
+  setOpen: () => void 0,
   isMobileView: false,
   pageHeight: pageDesktopHeightWithoutBanner,
 })

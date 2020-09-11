@@ -15,7 +15,7 @@ import { JapanDivider } from "../../../../components/core/japan/japan"
 const IndexPage = () => {
   const context = useContext(ApplicationContext)
   const cities = (context.development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished).sort()).filter(
-    city => city.id !== "fuji"
+    (city) => city.id !== "fuji"
   )
   return (
     <>
@@ -50,7 +50,7 @@ const IndexPage = () => {
                 }
               `}
             >
-              {cities.map(city => {
+              {cities.map((city) => {
                 return city.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
                     <JapanImageAsMedallion title={getLinkLabel(city.id)}>

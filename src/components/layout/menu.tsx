@@ -31,7 +31,7 @@ const renderCity = (continent: ContinentLink, country: CountryLink, city: CityLi
       </ApplicationLink>
       {inDevelopment && highlights.length > 0 ? (
         <ul className="dropdown-highlight" aria-label="submenu">
-          {highlights.sort(sort).map(highlight => (
+          {highlights.sort(sort).map((highlight) => (
             <li key={`${continent.id}_${country.id}_${city.id}_${highlight.id}`}>
               <ApplicationLink to={highlight.id}>{getLinkLabel(highlight.id)}</ApplicationLink>
             </li>
@@ -52,7 +52,7 @@ const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelop
       </ApplicationLink>
       {cities.length > 0 ? (
         <ul className="submenu" aria-label="submenu">
-          {cities.sort(sort).map(city => renderCity(continent, country, city, inDevelopment))}
+          {cities.sort(sort).map((city) => renderCity(continent, country, city, inDevelopment))}
         </ul>
       ) : null}
     </li>
@@ -240,7 +240,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
             <span className="white-arrow"> </span>
             <span className="black-arrow"> </span>
             <ul className="submenu" aria-label="submenu">
-              {(inDevelopment ? continentLinks : continentLinks.filter(isLinkPublished)).map(continent => {
+              {(inDevelopment ? continentLinks : continentLinks.filter(isLinkPublished)).map((continent) => {
                 const publishedCountries = inDevelopment
                   ? continent.countries
                   : continent.countries.filter(isLinkPublished)
@@ -252,7 +252,9 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
                     </a>
                     {publishedCountries.length > 0 ? (
                       <ul className="submenu" aria-label="submenu">
-                        {publishedCountries.sort(sort).map(country => renderCountry(continent, country, inDevelopment))}
+                        {publishedCountries
+                          .sort(sort)
+                          .map((country) => renderCountry(continent, country, inDevelopment))}
                       </ul>
                     ) : null}
                   </li>
@@ -260,7 +262,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
               })}
             </ul>
           </li>
-          {menuLinks.map(menuLink => {
+          {menuLinks.map((menuLink) => {
             const subLinks = inDevelopment ? menuLink.sections : menuLink.sections.filter(isLinkPublished)
             return (
               <li key={menuLink.id} className="menu-down">
@@ -270,7 +272,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
                     <span className="white-arrow"> </span>
                     <span className="black-arrow"> </span>
                     <ul className="submenu" aria-label="submenu">
-                      {subLinks.map(subLink => {
+                      {subLinks.map((subLink) => {
                         const subSubLinks = inDevelopment ? subLink.sections : subLink.sections.filter(isLinkPublished)
                         return (
                           <li key={subLink.id}>
@@ -281,7 +283,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
                                   <span>&gt;</span>
                                 </a>
                                 <ul className="submenu" aria-label="submenu">
-                                  {subSubLinks.map(subSubLink => (
+                                  {subSubLinks.map((subSubLink) => (
                                     <li key={subSubLink.id}>
                                       <ApplicationLink to={subSubLink.id}>{subSubLink.label}</ApplicationLink>
                                     </li>
@@ -534,31 +536,31 @@ export const MobileMenu: React.FunctionComponent = () => {
         <ScrollContainer>
           <Tree name="Accueil" to="home" onNavigate={closeMenu} />
           <Tree name="Destination">
-            {(development ? continentLinks : continentLinks.filter(isLinkPublished)).map(continent => {
+            {(development ? continentLinks : continentLinks.filter(isLinkPublished)).map((continent) => {
               const publishedCountries = development ? continent.countries : continent.countries.filter(isLinkPublished)
               return (
                 <Tree key={continent.id} name={continent.label} onNavigate={closeMenu}>
-                  {publishedCountries.map(country => (
+                  {publishedCountries.map((country) => (
                     <Tree key={country.id} name={country.label} to={country.id} onNavigate={closeMenu} />
                   ))}
                 </Tree>
               )
             })}
           </Tree>
-          {menuLinks.map(menuLink => {
+          {menuLinks.map((menuLink) => {
             const subMenuLinks = development ? menuLink.sections : menuLink.sections.filter(isLinkPublished)
             const to = subMenuLinks.length > 0 ? undefined : menuLink.id
             return (
               // animation is a bit weird on the last element ... animate has been created for that purpose
               <Tree key={menuLink.id} to={to} name={menuLink.label} animate={menuLink.id !== "about"}>
-                {subMenuLinks.map(subMenuLink => {
+                {subMenuLinks.map((subMenuLink) => {
                   const subSubMenuLinks = development
                     ? subMenuLink.sections
                     : subMenuLink.sections.filter(isLinkPublished)
                   const to = subSubMenuLinks.length > 0 ? undefined : subMenuLink.id
                   return (
                     <Tree key={subMenuLink.id} to={to} name={subMenuLink.label} onNavigate={closeMenu}>
-                      {subSubMenuLinks.map(subSubMenuLink => (
+                      {subSubMenuLinks.map((subSubMenuLink) => (
                         <Tree key={subSubMenuLink.id} to={to} name={subSubMenuLink.label} onNavigate={closeMenu} />
                       ))}
                     </Tree>

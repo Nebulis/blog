@@ -13,8 +13,7 @@ describe("link", () => {
         <ApplicationLink to="asia">Abc</ApplicationLink>
       </ApplicationContext.Provider>
     )
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    expect(container.querySelector("a")!.href).toMatch("/asia")
+    expect(container.querySelector("a")?.href).toMatch("/asia")
     expect(container.querySelector("span")).toBeNull()
     // eslint-disable-next-line jest/no-truthy-falsy
     expect(getByText("Abc")).toBeTruthy()
@@ -25,8 +24,7 @@ describe("link", () => {
         <ApplicationLink to="tokyo">Abc</ApplicationLink>
       </ApplicationContext.Provider>
     )
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    expect(container.querySelector("a")!.href).toMatch("/asia/japan/tokyo")
+    expect(container.querySelector("a")?.href).toMatch("/asia/japan/tokyo")
     // eslint-disable-next-line jest/no-truthy-falsy
     expect(container.querySelector("span")).toBeTruthy()
     // eslint-disable-next-line jest/no-truthy-falsy

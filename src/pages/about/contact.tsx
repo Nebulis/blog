@@ -155,9 +155,7 @@ const IndexPage = () => {
                 <ErrorAlert>
                   Malheureusement une erreur a été rencontrée lors de l&apos;envoi de ton message.
                 </ErrorAlert>
-              ) : (
-                undefined
-              )}
+              ) : undefined}
             </div>
           </section>
         </div>

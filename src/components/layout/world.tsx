@@ -1604,7 +1604,7 @@ export const World: React.FunctionComponent<{
   onMouseLeave?: (country: Country) => void
 }> = ({
   className = "",
-  transform = country => <CountryPath country={country} />,
+  transform = (country) => <CountryPath country={country} />,
   onMouseEnter = noop,
   onMouseLeave = noop,
   onClick = noop,
@@ -1612,7 +1612,7 @@ export const World: React.FunctionComponent<{
 }) => {
   return (
     <svg className={className} version="1.1" viewBox="0 0 1800 1001" id="svg2" style={style}>
-      {countries.map(country => {
+      {countries.map((country) => {
         const element = transform(country)
         return React.cloneElement(element, {
           key: country.id,
