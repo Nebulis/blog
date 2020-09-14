@@ -15,7 +15,6 @@ import { Burger, BurgerAbsolute, Menu, MobileMenu } from "./menu"
 import { MenuContext } from "./menu.context"
 
 const headerStyle = css`
-  border-bottom: 1px solid black;
   .header {
     background-color: ${backgroundPrimaryColor};
     display: grid;
@@ -70,12 +69,19 @@ export const Header: FunctionComponent<{ noStickyHeader?: boolean; className?: s
 }) => {
   const { height } = useScrollPosition()
   const [bannerHeight] = useBannerHeight()
+  const { isMobileView } = useContext(MenuContext)
   const [search, setSearch] = useState(false)
   const status = height > bannerHeight * 4 ? "display" : "hide"
   return (
     <>
       <StaticHeader onSearch={() => setSearch(true)} className={className} />
-      {!noStickyHeader && <StickyHeader className={`${status} ${className}`} onSearch={() => setSearch(true)} />}
+      {!noStickyHeader && (
+        <StickyHeader
+          // show-border-bottom must be shown only on mobile view, otherwise there is a weird border on desktop view
+          className={`${status} ${className} ${isMobileView ? "show-border-bottom" : ""}`}
+          onSearch={() => setSearch(true)}
+        />
+      )}
       {search && (
         <DialogPortal>
           <Search onClose={() => setSearch(false)} />
@@ -154,11 +160,13 @@ const StickyHeader = styled(StaticHeader)`
   &.display {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
+  &.show-border-bottom {
+    border-bottom: 1px solid black;
+  }
 
   z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  border-bottom: 1px solid black;
 `

@@ -4,6 +4,7 @@ import { createTransport } from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 import cors from "cors";
 import express from "express";
+import mailgun from "mailgun-js";
 
 const transporter = createTransport({
   service: "gmail",
@@ -14,6 +15,7 @@ const transporter = createTransport({
 });
 admin.initializeApp();
 
+// TODO bad name
 exports.newsletterNotification = functions.database
   .ref(`/comments/{collectionName}/{key}`)
   .onCreate((snapshot, context) => {
@@ -38,7 +40,7 @@ const app = express();
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (origin === "magicoftravels.com" || origin?.endsWith("blog-maillet.netlify.com")) {
+      if (origin === "magicoftravels.com" || origin?.endsWith("blog-maillet.netlify.app")) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
@@ -51,22 +53,27 @@ app.post("/", (req, res) => {
   console.log(JSON.stringify(req.body));
   const { name, message, mail, title, isPro } = req.body;
 
-  const mailOptions: Mail.Options = {
-    from: `${name} <${mail}>`,
-    to: ["servane.bausson@gmail.com", "nebounet@gmail.com"],
+  const mg = mailgun({
+    apiKey: functions.config().mailgun?.api?.key ?? "",
+    domain: "magicoftravels.com",
+    host: "api.eu.mailgun.net",
+  });
+  const data = {
+    from: "admin@magicoftravels.com",
+    to: "contact@magicoftravels.com",
+    "h:Reply-To": `${name} <${mail}>`,
     subject: `[${isPro ? "Professionel" : "Particulier"}] ${title}`,
     html: `<h4>From ${name} &lt;${mail}&gt;</h4><p>${message}</p>`,
   };
-  return transporter
-    .sendMail(mailOptions)
-    .then(() => {
-      console.log("Mail sent with success");
-      res.status(200).send();
-    })
-    .catch((error) => {
-      console.error(error);
+  mg.messages().send(data, function (error, body) {
+    if (error) {
+      console.error(JSON.stringify(error));
       res.status(400).send(error);
-    });
+    } else {
+      console.log("Mail sent with success:", JSON.stringify(body));
+      res.status(200).send();
+    }
+  });
 });
 
 exports.contact = functions.https.onRequest(app);

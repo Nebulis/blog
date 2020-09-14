@@ -48,9 +48,9 @@ const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelop
     <li key={`${continent.id}_${country.id}`}>
       <ApplicationLink to={country.id}>
         <span>{getLinkLabel(country.id)}</span>
-        <span>{cities.length > 0 ? ">" : null}</span>
+        <span>{inDevelopment && cities.length > 0 ? ">" : null}</span>
       </ApplicationLink>
-      {cities.length > 0 ? (
+      {inDevelopment && cities.length > 0 ? (
         <ul className="submenu" aria-label="submenu">
           {cities.sort(sort).map((city) => renderCity(continent, country, city, inDevelopment))}
         </ul>
@@ -493,9 +493,13 @@ const ScrollContainer = styled.div`
     text-transform: uppercase;
   }
   .menu-label {
-    padding: 10px 0px;
+    padding: 10px 3px;
     cursor: pointer;
     display: flex;
+  }
+  .menu-label > span {
+    display: inline-flex;
+    align-items: center;
   }
   .menu-label > span:first-of-type {
     flex-grow: 1;
