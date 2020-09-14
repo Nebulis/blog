@@ -48,7 +48,24 @@ const StyledWorld = styled(World)`
     cursor: pointer;
   }
 `
-const visitedCountries = ["jp", "fr", "au", "es", "vn", "sg", "id", "kh", "my", "ph", "in", "lk", "tw", "sn", "us"]
+const visitedCountries = [
+  "jp",
+  "fr",
+  "au",
+  "es",
+  "vn",
+  "sg",
+  "id",
+  "kh",
+  "my",
+  "ph",
+  "in",
+  "lk",
+  "tw",
+  "th",
+  "sn",
+  "us",
+]
 const countriesWithArticles = ["jp"]
 const transform = (country: Country): ReactElement => {
   if (visitedCountries.includes(country.id.toLowerCase())) {

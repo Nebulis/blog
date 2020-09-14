@@ -135,11 +135,21 @@ export const menuLinks: NavigationLink[] = [
     id: "journal",
     label: "Journal",
     sections: [
-      // {
-      //   id: "new-life",
-      //   label: "Nouvelle vie",
-      //   sections: [],
-      // },
+      {
+        id: "travelling",
+        label: "Voyage",
+        sections: [],
+      },
+      {
+        id: "living-foreign-country",
+        label: "Vivre à l'étranger",
+        sections: [],
+      },
+      {
+        id: "living-singapore",
+        label: "Vivre à Singapour",
+        sections: [],
+      },
     ],
   },
   {
