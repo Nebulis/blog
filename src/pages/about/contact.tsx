@@ -9,13 +9,13 @@ import { css } from "@emotion/core"
 import { backgroundPrimaryColor, largeStart, primaryColor } from "../../components/core/variables"
 import styled from "@emotion/styled"
 import { ErrorAlert, SuccessAlert } from "../../components/core/alert"
+import { Status } from "../../types/shared"
 
 const Hightlight = styled.span`
   color: ${primaryColor};
   font-weight: bold;
 `
 
-type Status = "INITIAL" | "LOADING" | "SUCCESS" | "ERROR"
 const IndexPage = () => {
   const [name, setName] = useState("")
   const [mail, setMail] = useState("")
@@ -125,6 +125,11 @@ const IndexPage = () => {
                       isPro,
                     }),
                   })
+                    .then((res) => {
+                      if (!res.ok) {
+                        throw new Error("Request failed: " + res.statusText)
+                      }
+                    })
                     .then(() => {
                       setMail("")
                       setName("")

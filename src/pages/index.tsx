@@ -284,7 +284,6 @@ const IndexPage = () => {
               }}
               onMouseLeave={() => setCountry(undefined)}
               onClick={(country) => {
-                if (isMobileView) return
                 try {
                   navigate(getLinkUrl((country["data-name-en"] || country["data-name"]).toLowerCase()))
                 } catch (e) {

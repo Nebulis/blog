@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext } from "react"
+import React, { FunctionComponent, useContext, useState, useEffect } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.configuration"
@@ -12,7 +12,9 @@ import { Input } from "../core/input"
 import { PrimaryDarkButton } from "../core/button"
 import styled from "@emotion/styled"
 import { largeStart, mediumEnd, mobileEnd, primaryColor, primaryDarkColor } from "../core/variables"
+import { FaEnvelope, FaCheck, FaTimes, FaSpinner } from "react-icons/all"
 import { MenuContext } from "./menu.context"
+import { Status } from "../../types/shared"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -71,6 +73,21 @@ const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; 
   const isPublished = page === "home" ? true : getLink(page).published
   const { development } = useContext(ApplicationContext)
   const { isMobileView } = useContext(MenuContext)
+  const [mail, setMail] = useState("")
+  const [status, setStatus] = useState<Status>("INITIAL")
+
+  // reset the status to INITIAL after SUCCESS
+  useEffect(() => {
+    let timeout: NodeJS.Timeout
+    if (status === "SUCCESS") {
+      timeout = setTimeout(() => {
+        setStatus("INITIAL")
+      }, 5000)
+    }
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [status])
   return (
     <Maintenance>
       {typeof window !== `undefined` ? (
@@ -85,15 +102,60 @@ const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; 
             {development && (
               <div className="newsletter">
                 <div className="tc text">NEWSLETTER</div>
-                <Input placeholder="Adresse Email" className="inline-flex" id="newsletter" />
-                <div
-                  className="inline-flex"
-                  css={css`
-                    margin-top: 0.6rem;
-                    margin-bottom: 0.6rem;
-                  `}
-                >
-                  <PrimaryDarkButton>S&apos;inscrire</PrimaryDarkButton>
+                <div className="inline-flex">
+                  <Input
+                    placeholder="Adresse Email"
+                    className="inline-flex"
+                    id="newsletter"
+                    value={mail}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
+                  />
+                  <div
+                    className="inline-flex"
+                    css={css`
+                      margin-top: 0.6rem;
+                      margin-bottom: 0.6rem;
+                    `}
+                  >
+                    <PrimaryDarkButton
+                      disabled={!mail || status === "LOADING"}
+                      onClick={() => {
+                        setStatus("LOADING")
+                        fetch("https://us-central1-blog-3dd22.cloudfunctions.net/newsletter", {
+                          method: "POST",
+                          headers: {
+                            "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify({
+                            mail,
+                          }),
+                        })
+                          .then((res) => {
+                            if (!res.ok) {
+                              throw new Error("Request failed: " + res.statusText)
+                            }
+                          })
+                          .then(() => {
+                            setMail("")
+                            setStatus("SUCCESS")
+                          })
+                          .catch(() => {
+                            setStatus("ERROR")
+                          })
+                      }}
+                    >
+                      {status === "INITIAL" ? (
+                        <FaEnvelope />
+                      ) : status === "LOADING" ? (
+                        <FaSpinner className="fa-spin" />
+                      ) : status === "SUCCESS" ? (
+                        <FaCheck />
+                      ) : (
+                        <FaTimes />
+                      )}
+                      &nbsp;S&apos;inscrire
+                    </PrimaryDarkButton>
+                  </div>
                 </div>
               </div>
             )}
