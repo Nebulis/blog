@@ -15,6 +15,7 @@ import { largeStart, mediumEnd, mobileEnd, primaryColor, primaryDarkColor } from
 import { FaEnvelope, FaCheck, FaTimes, FaSpinner } from "react-icons/all"
 import { MenuContext } from "./menu.context"
 import { Status } from "../../types/shared"
+import { drawKoala } from "../../components/core/australia/console-draw-koala"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -75,6 +76,9 @@ const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; 
   const { isMobileView } = useContext(MenuContext)
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
+  useEffect(() => {
+    drawKoala()
+  }, [])
 
   // reset the status to INITIAL after SUCCESS
   useEffect(() => {
