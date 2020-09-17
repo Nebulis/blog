@@ -66,7 +66,7 @@ const visitedCountries = [
   "sn",
   "us",
 ]
-const countriesWithArticles = ["jp"]
+const countriesWithArticles = ["vn"]
 const transform = (country: Country): ReactElement => {
   if (visitedCountries.includes(country.id.toLowerCase())) {
     if (country.id.toLowerCase() === "singapore") {
