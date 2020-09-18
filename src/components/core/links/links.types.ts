@@ -10,6 +10,7 @@ export interface CountryLink {
   id: string
   label: string
   url?: string
+  image?: ComponentType
   cities: CityLink[]
   others: OtherLink[]
 }

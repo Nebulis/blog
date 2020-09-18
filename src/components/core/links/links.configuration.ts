@@ -1,16 +1,11 @@
 import * as path from "path"
-import { japanLinks } from "../japan/japan.links"
-import { vietnamLinks } from "../vietnam/vietnam.links"
 import { CityLink, ContinentLink, CountryLink, HighlightLink, NavigationLink } from "./links.types"
 import { isPublished } from "./links.utils"
 import React from "react"
+import { asiaLinks } from "../asia/asia.links"
 
 export const continentLinks: ContinentLink[] = [
-  {
-    id: "asia",
-    label: "Asie",
-    countries: [japanLinks, vietnamLinks],
-  },
+  asiaLinks,
   {
     id: "africa",
     label: "Afrique",

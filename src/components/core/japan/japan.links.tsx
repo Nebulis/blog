@@ -17,10 +17,18 @@ import {
   SensojiCard,
   ToganjiCard,
 } from "./japan.cards"
+import { HomeJapanImage } from "../../images/asia/japan/home"
+import styled from "@emotion/styled"
 
 export const japanLinks: CountryLink = {
   id: "japan",
   label: "Japon",
+  // this style is for the image in the asia page (medallion) to have the geisha centered
+  image: styled(HomeJapanImage)`
+    img {
+      object-position: -30px 0px !important;
+    }
+  `,
   others: [
     {
       id: "spring-in-japan",
