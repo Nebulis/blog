@@ -4,7 +4,7 @@ import { BlogLayout } from "../../components/layout/layout"
 import { ApplicationLink } from "../../components/core/links/link"
 import { ImageAsMedallion } from "../../components/images/layout"
 import { asiaLinks } from "../../components/core/asia/asia.links"
-import { getLinkLabel, isLinkPublished } from "../../components/core/links/links.configuration"
+import { getLinkLabel, isLinkPublished, sortByLabel } from "../../components/core/links/links.configuration"
 import { ApplicationContext } from "../../components/application"
 import { css } from "@emotion/core"
 
@@ -25,17 +25,15 @@ const IndexPage = () => {
             }
           `}
         >
-          {countries
-            .sort((obj1, obj2) => obj1.label.localeCompare(obj2.label))
-            .map((country) =>
-              country.image ? (
-                <ApplicationLink to={country.id} key={country.id}>
-                  <ImageAsMedallion title={getLinkLabel(country.id)}>
-                    {React.createElement(country.image)}
-                  </ImageAsMedallion>
-                </ApplicationLink>
-              ) : null
-            )}
+          {countries.sort(sortByLabel).map((country) =>
+            country.image ? (
+              <ApplicationLink to={country.id} key={country.id}>
+                <ImageAsMedallion title={getLinkLabel(country.id)}>
+                  {React.createElement(country.image)}
+                </ImageAsMedallion>
+              </ApplicationLink>
+            ) : null
+          )}
         </div>
       </BlogLayout>
     </>

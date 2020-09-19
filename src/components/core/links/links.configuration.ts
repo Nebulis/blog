@@ -295,6 +295,8 @@ export const isLinkPublished = (element: CountryLink | CityLink | HighlightLink 
   return link.published
 }
 
+export const sortByLabel = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
+
 const filterNull = (value: any): value is Required<Pick<CachedLinksMap, "card" | "publishedDate">> => {
   return value
 }

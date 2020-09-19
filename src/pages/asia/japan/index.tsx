@@ -8,6 +8,7 @@ import {
   getLinkLabel,
   getThreeMoreRecentArticles,
   isLinkPublished,
+  sortByLabel,
 } from "../../../components/core/links/links.configuration"
 import { ApplicationLink } from "../../../components/core/links/link"
 import { ApplicationContext } from "../../../components/application"
@@ -56,7 +57,7 @@ const ArticlesContainer = styled(Container)`
 
 const IndexPage = () => {
   const { development } = useContext(ApplicationContext)
-  const cities = development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished).sort()
+  const cities = development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished)
   const articleStyle = css`
     .gatsby-image-wrapper {
       height: 200px;
@@ -96,32 +97,28 @@ const IndexPage = () => {
           </JapanCard>
         </Container>
         <JapanDivider />
-        {cities.length > 0 && (
-          <>
-            <HomeSection>Parcourir</HomeSection>
-            <HomeSubSection>Le pays de ville en ville ...</HomeSubSection>
-            <div
-              className="flex justify-center flex-wrap pt3 pb3 mb3 mt3"
-              css={css`
-                & > * {
-                  margin-left: 5px;
-                  margin-right: 5px;
-                }
-              `}
-            >
-              {cities.map((city) => {
-                return city.image ? (
-                  <ApplicationLink to={city.id} key={city.id}>
-                    <JapanImageAsMedallion title={getLinkLabel(city.id)}>
-                      {React.createElement(city.image)}
-                    </JapanImageAsMedallion>
-                  </ApplicationLink>
-                ) : null
-              })}
-            </div>
-            <JapanDivider />
-          </>
-        )}
+        <HomeSection>Parcourir</HomeSection>
+        <HomeSubSection>Le pays de ville en ville ...</HomeSubSection>
+        <div
+          className="flex justify-center flex-wrap pt3 pb3 mb3 mt3"
+          css={css`
+            & > * {
+              margin-left: 5px;
+              margin-right: 5px;
+            }
+          `}
+        >
+          {cities.sort(sortByLabel).map((city) => {
+            return city.image ? (
+              <ApplicationLink to={city.id} key={city.id}>
+                <JapanImageAsMedallion title={getLinkLabel(city.id)}>
+                  {React.createElement(city.image)}
+                </JapanImageAsMedallion>
+              </ApplicationLink>
+            ) : null
+          })}
+        </div>
+        <JapanDivider />
         {development && (
           <>
             <HomeSection>S&apos;informer</HomeSection>
