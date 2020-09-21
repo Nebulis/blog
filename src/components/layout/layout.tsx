@@ -15,7 +15,6 @@ import { largeStart, mediumEnd, mobileEnd, primaryColor, primaryDarkColor } from
 import { FaEnvelope, FaCheck, FaTimes, FaSpinner } from "react-icons/all"
 import { MenuContext } from "./menu.context"
 import { Status } from "../../types/shared"
-import { drawKoala } from "../../components/core/australia/console-draw-koala"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -65,19 +64,30 @@ const Footer = styled.footer`
   }
 `
 
-const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; noStickyHeader?: boolean }> = ({
-  children,
-  page,
-  className = "",
-  noStickyHeader = false,
-}) => {
+export const withDraw = (draw: () => void) => {
+  return function <P>(Component: React.ComponentType<P>) {
+    // eslint-disable-next-line react/display-name
+    return (props: P) => {
+      return <Component draw={draw} {...props} />
+    }
+  }
+}
+
+const InternalBlogLayout: FunctionComponent<{
+  page: string
+  className?: string
+  noStickyHeader?: boolean
+  draw?: () => void
+}> = ({ children, page, className = "", noStickyHeader = false, draw }) => {
   const isPublished = page === "home" ? true : getLink(page).published
   const { development } = useContext(ApplicationContext)
   const { isMobileView } = useContext(MenuContext)
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
   useEffect(() => {
-    drawKoala()
+    if (draw) draw()
+    // I really want to run this one even if the function changed which should NOT happen
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // reset the status to INITIAL after SUCCESS
@@ -176,6 +186,7 @@ const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; 
   )
 }
 
+// TODO I dont remember what this is for
 export const IndexBlogLayout = styled(InternalBlogLayout)`
   .card .tags a {
     color: ${primaryColor};
@@ -185,6 +196,7 @@ export const IndexBlogLayout = styled(InternalBlogLayout)`
   }
 `
 
+// TODO I dont remember what this is for (diff with IndexBlogLayout ?)
 export const BlogLayout = styled(InternalBlogLayout)`
   .children-container {
     margin-left: auto;

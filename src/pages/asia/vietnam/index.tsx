@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
-import { BlogLayout } from "../../../components/layout/layout"
 import { ApplicationContext } from "../../../components/application"
 import {
   getLinkLabel,
@@ -12,10 +11,14 @@ import { vietnamLinks } from "../../../components/core/asia/vietnam/vietnam.link
 import { HomeSection, HomeSubSection } from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
 import { css } from "@emotion/core"
-import { ImageAsMedallion } from "../../../components/images/layout"
-import { Divider } from "../../../components/core/divider"
 import { extraLargeStart, maxWidth, mediumEnd, mobileEnd } from "../../../components/core/variables"
 import styled from "@emotion/styled"
+import vietnamHat from "../../../images/asia/vietnam/hat.svg"
+import {
+  VietnamBlogLayout,
+  VietnamDivider,
+  VietnamImageAsMedallion,
+} from "../../../components/core/asia/vietnam/vietnam"
 
 export const Container = styled.div`
   margin-left: auto;
@@ -58,15 +61,20 @@ const ArticlesContainer = styled(Container)`
     height: 200px;
   }
 `
+
 const IndexPage = () => {
   const { development } = useContext(ApplicationContext)
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
   return (
     <>
       <SEO title="main" />
-      <BlogLayout page="asia">
-        <h1 className="tc ttu flex items-center justify-center">Vietnam</h1>
-        <Divider />
+      <VietnamBlogLayout page="vietnam">
+        <h1 className="tc ttu flex items-center justify-center">
+          <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
+          &nbsp;Vietnam&nbsp;
+          <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
+        </h1>
+        <VietnamDivider />
         <h2
           className="tc ttu mb2-l"
           css={css`
@@ -80,7 +88,7 @@ const IndexPage = () => {
           Voyager
         </h2>
         <HomeSubSection>En suivant notre aventure ...</HomeSubSection>
-        <Divider />
+        <VietnamDivider />
         <HomeSection>Parcourir</HomeSection>
         <HomeSubSection>Le pays de région en région ...</HomeSubSection>
         <div
@@ -95,12 +103,14 @@ const IndexPage = () => {
           {cities.sort(sortByLabel).map((city) => {
             return city.image ? (
               <ApplicationLink to={city.id} key={city.id}>
-                <ImageAsMedallion title={getLinkLabel(city.id)}>{React.createElement(city.image)}</ImageAsMedallion>
+                <VietnamImageAsMedallion title={getLinkLabel(city.id)}>
+                  {React.createElement(city.image)}
+                </VietnamImageAsMedallion>
               </ApplicationLink>
             ) : null
           })}
         </div>
-        <Divider />
+        <VietnamDivider />
         {development && (
           <>
             <HomeSection>S&apos;informer</HomeSection>
@@ -112,7 +122,7 @@ const IndexPage = () => {
             </ArticlesContainer>
           </>
         )}
-      </BlogLayout>
+      </VietnamBlogLayout>
     </>
   )
 }
