@@ -30,6 +30,7 @@ const pageDevelopmentMarkStyle = css`
 export const PageDevelopmentMark = () => <span css={pageDevelopmentMarkStyle} />
 
 const Footer = styled.footer`
+  justify-self: flex-end;
   color: white;
   background-color: black;
   a {
@@ -105,7 +106,7 @@ const InternalBlogLayout: FunctionComponent<{
   return (
     <Maintenance>
       {typeof window !== `undefined` ? (
-        <div className={className}>
+        <div className={`${className} flex flex-column min-vh-100`}>
           {development && !isPublished && <PageDevelopmentMark />}
           <Header noStickyHeader={noStickyHeader} />
           {!isMobileView && <ScrollToTop />}

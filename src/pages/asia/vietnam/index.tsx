@@ -111,17 +111,13 @@ const IndexPage = () => {
           })}
         </div>
         <VietnamDivider />
-        {development && (
-          <>
-            <HomeSection>S&apos;informer</HomeSection>
-            <HomeSubSection>A travers nos astuces, nos coups de cœur ...</HomeSubSection>
-            <ArticlesContainer>
-              {getThreeMoreRecentArticles().map((Element, index) => (
-                <Element key={index} />
-              ))}
-            </ArticlesContainer>
-          </>
-        )}
+        <HomeSection>S&apos;informer</HomeSection>
+        <HomeSubSection>A travers nos astuces, nos coups de cœur ...</HomeSubSection>
+        <ArticlesContainer>
+          {getThreeMoreRecentArticles().map((Element, index) => (
+            <Element key={index} />
+          ))}
+        </ArticlesContainer>
       </VietnamBlogLayout>
     </>
   )
