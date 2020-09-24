@@ -6,22 +6,23 @@ import {
   VietnamDivider,
   VietnamImageAsMedallion,
 } from "../../../../components/core/asia/vietnam/vietnam"
-import { mediumEnd, smallEnd } from "../../../../components/core/variables"
+import { largeStart, mediumEnd, smallEnd } from "../../../../components/core/variables"
 import { css } from "@emotion/core"
-import { HomeSection, Where } from "../../../../components/core/section"
+import { HomeSection } from "../../../../components/core/section"
 import { getLinkLabel, isLinkPublished, sortByLabel } from "../../../../components/core/links/links.configuration"
 import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import { vietnamLinks } from "../../../../components/core/asia/vietnam/vietnam.links"
 import { VietnamMap } from "../../../../components/core/asia/vietnam/vietnam.map"
+import { CuChiTunnelsCard } from "../../../../components/core/asia/vietnam/vietnam.cards"
 
 const IndexPage = () => {
   const { development } = useContext(ApplicationContext)
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
   return (
     <>
-      <SEO title="main" />
-      <VietnamBlogLayout page="vietnam">
+      <SEO title="Vietnam du Sud" />
+      <VietnamBlogLayout page="south-vietnam">
         <h1 className="tc ttu flex items-center justify-center">
           <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
           &nbsp;Vietnam du Sud&nbsp;
@@ -40,6 +41,16 @@ const IndexPage = () => {
         >
           Nos visites dans le sud
         </h2>
+        <div
+          css={css`
+            @media (min-width: ${largeStart}) {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+            }
+          `}
+        >
+          <CuChiTunnelsCard />
+        </div>
         <VietnamDivider />
         <div
           className="overflow-hidden tc"

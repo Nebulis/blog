@@ -104,15 +104,49 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
         <div className="left-menu-container">
           {!isMobileView ? (
             <div className="social-network-container">
-              <FaFacebook className="facebook" />
-              <a href="https://twitter.com/_magicoftravels" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="twitter" />
+              <a
+                href="https://twitter.com/_magicoftravels"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="facebook-label"
+              >
+                <span id="facebook-label" hidden>
+                  Go to Facebook
+                </span>
+                <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
               </a>
-              <a href="https://instagram.com/_magic_of_travels_" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="instagram" />
+              <a
+                href="https://twitter.com/_magicoftravels"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="twitter-label"
+              >
+                <span id="twitter-label" hidden>
+                  Go to Twitter
+                </span>
+                <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
               </a>
-              <a href="https://pinterest.com/MagicOfTravels" target="_blank" rel="noopener noreferrer">
-                <FaPinterest className="pinterest" />
+              <a
+                href="https://instagram.com/_magic_of_travels_"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="instagram-label"
+              >
+                <span id="instagram-label" hidden>
+                  Go to Facebook
+                </span>
+                <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
+              </a>
+              <a
+                href="https://pinterest.com/MagicOfTravels"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="pinterest-label"
+              >
+                <span id="pinterest-label" hidden>
+                  Go to Facebook
+                </span>
+                <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
               </a>
             </div>
           ) : (

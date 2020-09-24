@@ -151,6 +151,15 @@ export const TwoImagesLeftBigger = styled(TwoImagesSameSize)`
     flex-basis: 35%;
   }
 `
+export const TwoImagesRightBigger = styled(TwoImagesSameSize)`
+  & .left-panel {
+    flex-basis: 35%;
+  }
+  & .right-panel {
+    flex-basis: 65%;
+  }
+`
+// this component will adapt to smaller devices and display images in different rows when the device is too small
 export const TwoImagesSameSizeOrToGroup: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   const { windowWidth: width } = useWindowSize()
   if (!children || !Array.isArray(children) || children.length !== 2)

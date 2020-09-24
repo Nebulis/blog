@@ -11,7 +11,7 @@ import {
   FaMapMarkedAlt,
   FaUtensils,
   FaWalking,
-  FaYenSign,
+  FaEuroSign,
 } from "react-icons/all"
 import { maxWidth, mediumEnd, mobileEnd } from "./variables"
 
@@ -88,11 +88,12 @@ export const HowLong: FunctionComponent<HowLongProps> = ({ children, title = "Co
 
 interface HowMuchProps {
   title?: string
+  PriceSign?: React.ComponentType
 }
-export const HowMuch: FunctionComponent<HowMuchProps> = ({ children, title = "Prix ?" }) => (
+export const HowMuch: FunctionComponent<HowMuchProps> = ({ children, title = "Prix ?", PriceSign = FaEuroSign }) => (
   <>
     <SectionTitle>
-      <FaYenSign />
+      <PriceSign />
       &nbsp;{title}
     </SectionTitle>
     <SectionContent>{children}</SectionContent>
@@ -100,13 +101,13 @@ export const HowMuch: FunctionComponent<HowMuchProps> = ({ children, title = "Pr
 )
 
 interface WhereToStayProps {
-  location: string
+  location?: string
 }
 export const WhereToStay: FunctionComponent<WhereToStayProps> = ({ children, location }) => (
   <>
     <SectionTitle>
       <FaBed />
-      &nbsp;Où dormir {location} ?
+      &nbsp;Où dormir {location ? location + " " : ""}?
     </SectionTitle>
     <SectionContent>{children}</SectionContent>
   </>
@@ -157,6 +158,13 @@ export const Bonus: FunctionComponent = ({ children }) => (
       <FaLightbulb />
       &nbsp;Le petit +
     </SectionTitle>
+    <SectionContent>{children}</SectionContent>
+  </>
+)
+
+export const GoodToKnow: FunctionComponent = ({ children }) => (
+  <>
+    <SectionTitle>Bon à savoir</SectionTitle>
     <SectionContent>{children}</SectionContent>
   </>
 )

@@ -123,6 +123,7 @@ const InternalBlogLayout: FunctionComponent<{
                     className="inline-flex"
                     id="newsletter"
                     value={mail}
+                    aria-label="Email"
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
                   />
                   <div

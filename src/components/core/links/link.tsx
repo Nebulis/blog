@@ -18,11 +18,12 @@ const style = css`
   }
 `
 export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & ExternalLinkProps> = ({
+  className,
   children,
   noIcon = true,
   ...rest
 }) => (
-  <a {...rest} target="_blank" rel="noopener noreferrer" css={style}>
+  <a {...rest} target="_blank" rel="noopener noreferrer" css={style} className={className}>
     {children}
     {noIcon ? null : (
       <>

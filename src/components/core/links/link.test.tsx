@@ -10,10 +10,10 @@ describe("link", () => {
   it("should render a link when the article is published and mode is production", () => {
     const { getByText, container } = render(
       <ApplicationContext.Provider value={{ development: false }}>
-        <ApplicationLink to="asia">Abc</ApplicationLink>
+        <ApplicationLink to="contact">Abc</ApplicationLink>
       </ApplicationContext.Provider>
     )
-    expect(container.querySelector("a")?.href).toMatch("/asia")
+    expect(container.querySelector("a")?.href).toMatch("/contact")
     expect(container.querySelector("span")).toBeNull()
     // eslint-disable-next-line jest/no-truthy-falsy
     expect(getByText("Abc")).toBeTruthy()

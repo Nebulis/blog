@@ -6,7 +6,7 @@ export const HomeCentralVietnamImage: React.FunctionComponent<{ className?: stri
     query {
       file: file(relativePath: { eq: "asia/vietnam/central-vietnam/home.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200) {
+          fluid(maxWidth: 1200, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

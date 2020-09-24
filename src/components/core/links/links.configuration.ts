@@ -84,7 +84,7 @@ export const menuLinks: NavigationLink[] = [
           },
           {
             id: "summer",
-            label: "Eté",
+            label: "Été",
             sections: [],
           },
           {
@@ -279,6 +279,10 @@ export const getLink = (linkId: string): CachedLinksMap => {
     throw new Error(`No link for ${linkId}`)
   }
   return link
+}
+
+export const getCacheSize = () => {
+  return cachedLinks.size
 }
 
 export const getLinkUrl = (linkId: string): string => {

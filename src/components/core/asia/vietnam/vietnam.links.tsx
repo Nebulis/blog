@@ -52,5 +52,12 @@ export const vietnamLinks: CountryLink = {
       highlights: [],
     },
   ],
-  others: [],
+  others: [
+    {
+      id: "transports-in-vietnam",
+      label: "Transports in Vietnam",
+      url: "transports",
+      published: false,
+    },
+  ],
 }
