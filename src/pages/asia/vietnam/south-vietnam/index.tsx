@@ -13,7 +13,7 @@ import { getLinkLabel, isLinkPublished, sortByLabel } from "../../../../componen
 import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import { vietnamLinks } from "../../../../components/core/asia/vietnam/vietnam.links"
-import { VietnamMap } from "../../../../components/core/asia/vietnam/vietnam.map"
+import { VietnamMap } from "../../../../components/core/asia/vietnam/vietnam-map"
 import { CuChiTunnelsCard } from "../../../../components/core/asia/vietnam/vietnam.cards"
 
 const IndexPage = () => {

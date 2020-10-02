@@ -28,6 +28,21 @@ export const vietnamLinks: CountryLink = {
         {
           id: "cu-chi-tunnels",
           label: "Tunnels de Cu-Chi",
+          published: new Date("2020-01-01"),
+        },
+        {
+          id: "my-tho",
+          label: "My Tho",
+          published: new Date("2021-01-01"),
+        },
+        {
+          id: "can-tho",
+          label: "Can Tho",
+          published: new Date("2021-01-01"),
+        },
+        {
+          id: "ho-chi-minh-war-museum",
+          label: "Le Musée des Vestiges de Guerre",
           published: new Date("2021-01-01"),
         },
       ],
@@ -57,6 +72,11 @@ export const vietnamLinks: CountryLink = {
       id: "transports-in-vietnam",
       label: "Transports in Vietnam",
       url: "transports",
+      published: false,
+    },
+    {
+      id: "discover-south-vietnam",
+      label: "Découverte du Vietnam du Sud",
       published: false,
     },
   ],

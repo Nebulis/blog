@@ -19,6 +19,8 @@ import {
   VietnamDivider,
   VietnamImageAsMedallion,
 } from "../../../components/core/asia/vietnam/vietnam"
+import { VietnamCard } from "../../../components/core/asia/vietnam/vietnam.cards"
+import { MainSouthVietnamImage } from "../../../components/images/asia/vietnam/south-vietnam/south-vietnam-main"
 
 export const Container = styled.div`
   margin-left: auto;
@@ -88,6 +90,11 @@ const IndexPage = () => {
           Voyager
         </h2>
         <HomeSubSection>En suivant notre aventure ...</HomeSubSection>
+        <Container>
+          <VietnamCard title="Découverte du Vietnam du Sud" to="discover-south-vietnam" tags={["asia", "vietnam"]}>
+            <MainSouthVietnamImage />
+          </VietnamCard>
+        </Container>
         <VietnamDivider />
         <HomeSection>Parcourir</HomeSection>
         <HomeSubSection>Le pays de région en région ...</HomeSubSection>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import { Divider } from "../../divider"
 import styled from "@emotion/styled"
 import { vietnamPrimaryColor, vietnamPrimaryColorDarker } from "./vietnam.colors"
@@ -9,6 +9,9 @@ import { Title } from "../../title"
 import { Quote } from "../../quote"
 import { ExternalLink, linkBuilder } from "../../links/link"
 import { Link } from "gatsby"
+import { City } from "../../highlight"
+import hat from "../../../../images/asia/vietnam/hat.svg"
+import { css } from "@emotion/core"
 
 export const VietnamQuote = styled(Quote)`
   .quote::before {
@@ -20,6 +23,25 @@ export const CuChoTunnelsQuote = () => (
     Immense ensemble de tunnels souterrains atteignant environ 250 km, ils s’étendent de Ho Chi Minh jusqu&apos;à la
     frontière Cambodgienne.
   </VietnamQuote>
+)
+
+export const SouthVietnamQuote = () => (
+  <VietnamQuote>
+    Le Sud du Vietnam regorge de surprises et de découvertes, toutes plus passionnantes les unes que les autres. Entre
+    le dynamisme de la ville de Ho Chi Minh et les excursions en bateau à l’ombre des palmiers d’eau sur le Delta du
+    Mékong, il y en a pour tous les goûts.
+  </VietnamQuote>
+)
+
+const vietnamPartStyle = css`
+  color: ${vietnamPrimaryColorDarker};
+`
+// TODO worst name
+export const VietnamPart: FunctionComponent = ({ children }) => (
+  <City css={vietnamPartStyle}>
+    <img src={hat} alt="hat" style={{ width: "24px" }} /> {children}{" "}
+    <img src={hat} alt="hat" style={{ width: "24px" }} />
+  </City>
 )
 
 const drawer = withDraw(draqHat)
@@ -61,7 +83,7 @@ export const VietnamTitle = styled(Title)`
     text-decoration: none;
   }
   a:hover {
-    box-shadow: 0px 0px 2px 1px #ed5567;
+    box-shadow: 0px 0px 2px 1px ${vietnamPrimaryColorDarker};
   }
 `
 export const VietnamBlogLayout = drawer(styled(BlogLayout)`

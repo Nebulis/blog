@@ -17,7 +17,8 @@ interface CardProps {
 const cardPublishedStyle = css`
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, padding 0.2s ease;
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0 17px 25px rgba(0, 0, 0, 0.5);
   }
 
@@ -79,8 +80,16 @@ export const Card: FunctionComponent<CardProps & { tags: string[] }> = ({ childr
   return (
     <span
       onClick={() => navigate(getLinkUrl(to))}
+      onKeyUp={(event) => {
+        if (event.key === "Enter") {
+          navigate(getLinkUrl(to))
+        }
+        console.log(event)
+      }}
       className={`pa3 mt3 mb3 ${className} card relative`}
       css={[cardStyle, context.development || link.published ? cardPublishedStyle : null]}
+      tabIndex={0}
+      role="link"
     >
       {context.development && !link.published ? <DevelopmentMark /> : null}
       <div className="image mb3">{children}</div>
