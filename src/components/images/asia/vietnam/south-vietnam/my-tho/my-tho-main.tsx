@@ -7,7 +7,7 @@ export const MainMyThoImage: React.FunctionComponent<{ className?: string }> = (
       file: file(relativePath: { eq: "asia/vietnam/south-vietnam/my-tho/my-tho-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

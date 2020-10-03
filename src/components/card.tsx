@@ -31,6 +31,13 @@ const cardPublishedStyle = css`
 const cardStyle = css`
   display: flex;
   flex-direction: column;
+  &:active,
+  &:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+  }
+
   .gatsby-image-wrapper {
     margin-bottom: 0px;
   }
@@ -67,6 +74,10 @@ const StyledDivider = styled(Divider)`
   margin-bottom: 0;
   width: 40px;
 `
+// TODO can disable tags
+// TODO must compute tags automatically
+// TODO can disable published
+// TODO must be displayed in a page
 export const Card: FunctionComponent<CardProps & { tags: string[] }> = ({ children, title, className, to, tags }) => {
   if (!children) {
     throw new Error("Error in Card component")
@@ -76,18 +87,22 @@ export const Card: FunctionComponent<CardProps & { tags: string[] }> = ({ childr
   if (!link) {
     throw new Error(`No link for ${to}`)
   }
+  const mustShowAndInteract = context.development || link.published
 
   return (
     <span
-      onClick={() => navigate(getLinkUrl(to))}
+      onClick={() => {
+        if (!mustShowAndInteract) return
+        navigate(getLinkUrl(to))
+      }}
       onKeyUp={(event) => {
+        if (!mustShowAndInteract) return
         if (event.key === "Enter") {
           navigate(getLinkUrl(to))
         }
-        console.log(event)
       }}
       className={`pa3 mt3 mb3 ${className} card relative`}
-      css={[cardStyle, context.development || link.published ? cardPublishedStyle : null]}
+      css={[cardStyle, mustShowAndInteract ? cardPublishedStyle : null]}
       tabIndex={0}
       role="link"
     >

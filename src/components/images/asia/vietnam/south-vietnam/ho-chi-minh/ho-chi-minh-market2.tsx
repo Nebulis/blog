@@ -7,7 +7,7 @@ export const HoChiMinhMarket2Image: React.FunctionComponent<{ className?: string
       file: file(relativePath: { eq: "asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-market2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

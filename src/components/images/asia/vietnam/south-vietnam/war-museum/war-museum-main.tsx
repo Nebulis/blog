@@ -7,7 +7,7 @@ export const MainWarMuseumImage: React.FunctionComponent<{ className?: string }>
       file: file(relativePath: { eq: "asia/vietnam/south-vietnam/war-museum/war-museum-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
