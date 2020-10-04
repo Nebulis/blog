@@ -51,8 +51,8 @@ export const japanLinks: CountryLink = {
         {
           id: "arashiyama",
           label: "Arashiyama",
-          published: false,
           card: ArashiyamaCard,
+          published: new Date("2020-09-09"),
         },
         {
           id: "daigoji",

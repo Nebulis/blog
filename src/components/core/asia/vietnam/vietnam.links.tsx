@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 import { HomeCentralVietnamImage } from "../../../images/asia/vietnam/central-vietnam/home"
 import { HomeSouthVietnamImage } from "../../../images/asia/vietnam/south-vietnam/home"
 import { HomeNorthVietnamImage } from "../../../images/asia/vietnam/north-vietnam/home"
+import { CanThoCard, CuChiTunnelsCard, MyThoCard } from "./vietnam.cards"
 
 export const vietnamLinks: CountryLink = {
   id: "vietnam",
@@ -29,16 +30,19 @@ export const vietnamLinks: CountryLink = {
           id: "cu-chi-tunnels",
           label: "Tunnels de Cu-Chi",
           published: new Date("2020-01-01"),
+          card: CuChiTunnelsCard,
         },
         {
           id: "my-tho",
           label: "My Tho",
-          published: new Date("2021-01-01"),
+          published: new Date("2020-01-01"),
+          card: MyThoCard,
         },
         {
           id: "can-tho",
           label: "Can Tho",
-          published: new Date("2021-01-01"),
+          published: new Date("2020-01-01"),
+          card: CanThoCard,
         },
         {
           id: "ho-chi-minh-war-museum",
