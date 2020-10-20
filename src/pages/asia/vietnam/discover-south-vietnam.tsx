@@ -40,7 +40,9 @@ const IndexPage = () => {
           categories={["asia", "vietnam"]}
           linkId="discover-south-vietnam"
         />
-        <MainSouthVietnamImage />
+        <ImageAsLandscape>
+          <MainSouthVietnamImage />
+        </ImageAsLandscape>
         <SouthVietnamQuote />
         <WhatTimeOfYear title="À quelle période ?">
           <p>La meilleure période pour partir au Vietnam du Sud est la saison sèche de Décembre à Avril.</p>
@@ -100,7 +102,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <WarMuseumCard />
+            <WarMuseumCard card={{ showTags: false, showPublished: false, showMore: true }} />
           </article>
           <VietnamDivider />
           <SectionContent>
@@ -110,7 +112,7 @@ const IndexPage = () => {
               auraient-ils pu survivre sans …{" "}
             </p>
             <article>
-              <CuChiTunnelsCard />
+              <CuChiTunnelsCard card={{ showTags: false, showPublished: false, showMore: true }} />
             </article>
           </SectionContent>
         </section>
@@ -175,7 +177,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <MyThoCard />
+            <MyThoCard card={{ showTags: false, showPublished: false, showMore: true }} />
           </article>
           <VietnamDivider />
           <SectionContent>
@@ -185,7 +187,7 @@ const IndexPage = () => {
             </p>
           </SectionContent>
           <article>
-            <CanThoCard />
+            <CanThoCard card={{ showTags: false, showPublished: false, showMore: true }} />
           </article>
         </section>
         <VietnamDivider />

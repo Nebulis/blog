@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react"
 import { Divider } from "../../divider"
 import styled from "@emotion/styled"
 import { vietnamPrimaryColor, vietnamPrimaryColorDarker } from "./vietnam.colors"
-import { BlogLayout, withDraw } from "../../../layout/layout"
+import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
 import { ImageAsMedallion } from "../../../images/layout"
 import { draqHat } from "./console-draw-hat"
 import { Title } from "../../title"
@@ -73,6 +73,12 @@ const vietnamLayout = `
     border-top: 1px solid ${vietnamPrimaryColor}!important;
   }
 `
+export const IndexVietnamBlogLayout = drawer(styled(IndexBlogLayout)`
+  ${vietnamLayout}
+`)
+export const VietnamBlogLayout = drawer(styled(BlogLayout)`
+  ${vietnamLayout}
+`)
 
 export const VietnamTitle = styled(Title)`
   a {
@@ -86,9 +92,6 @@ export const VietnamTitle = styled(Title)`
     box-shadow: 0px 0px 2px 1px ${vietnamPrimaryColorDarker};
   }
 `
-export const VietnamBlogLayout = drawer(styled(BlogLayout)`
-  ${vietnamLayout}
-`)
 
 export const VietnamDivider = styled(Divider)`
   background-color: ${vietnamPrimaryColor};

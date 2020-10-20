@@ -32,7 +32,6 @@ import { Expo1CuChiTunnelsImage } from "../../../../components/images/asia/vietn
 import { Expo5CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/expo5CuChiTunnelsImage"
 import { Expo3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/expo3CuChiTunnelsImage"
 import { Expo4CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/expo4CuChiTunnelsImage"
-import { Tunnel1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/tunnel1CuChiTunnelsImage"
 import { Tunnel2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/tunnel2CuChiTunnelsImage"
 import { Tunnel3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/tunnel3CuChiTunnelsImage"
 import { TunnelInside1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/tunnelInside1CuChiTunnelsImage"
@@ -179,7 +178,7 @@ const IndexPage = () => {
           </p>
           <GroupOfImages>
             <TwoImagesSameSize>
-              <Tunnel1CuChiTunnelsImage />
+              <MainCuChiTunnelsImage />
               <Tunnel2CuChiTunnelsImage />
             </TwoImagesSameSize>
             <ImageAsLandscape>

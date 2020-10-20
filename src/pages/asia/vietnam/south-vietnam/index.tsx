@@ -15,6 +15,7 @@ import { ApplicationContext } from "../../../../components/application"
 import { vietnamLinks } from "../../../../components/core/asia/vietnam/vietnam.links"
 import { VietnamMap } from "../../../../components/core/asia/vietnam/vietnam-map"
 import { CuChiTunnelsCard } from "../../../../components/core/asia/vietnam/vietnam.cards"
+import { MedallionContainer } from "../../../../components/layout/layout"
 
 const IndexPage = () => {
   const { development } = useContext(ApplicationContext)
@@ -39,10 +40,11 @@ const IndexPage = () => {
             }
           `}
         >
-          Nos visites dans le sud
+          Nos visites
         </h2>
         <div
           css={css`
+            padding: 1rem 20px;
             @media (min-width: ${largeStart}) {
               display: grid;
               grid-template-columns: 1fr 1fr;
@@ -64,15 +66,7 @@ const IndexPage = () => {
         </div>
         <VietnamDivider />
         <HomeSection>Découvre le Vietnam</HomeSection>
-        <div
-          className="flex justify-center flex-wrap pt3 pb3 mb3 mt3"
-          css={css`
-            & > * {
-              margin-left: 5px;
-              margin-right: 5px;
-            }
-          `}
-        >
+        <MedallionContainer>
           {cities
             .filter((city) => city.id !== "south-vietnam")
             .sort(sortByLabel)
@@ -85,7 +79,7 @@ const IndexPage = () => {
                 </ApplicationLink>
               ) : null
             })}
-        </div>
+        </MedallionContainer>
       </VietnamBlogLayout>
     </>
   )

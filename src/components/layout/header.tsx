@@ -75,7 +75,7 @@ export const Header: FunctionComponent<{ noStickyHeader?: boolean; className?: s
   return (
     <>
       <StaticHeader onSearch={() => setSearch(true)} className={className} />
-      {!noStickyHeader && (
+      {isMobileView && !noStickyHeader && (
         <StickyHeader
           // show-border-bottom must be shown only on mobile view, otherwise there is a weird border on desktop view
           className={`${status} ${className} ${isMobileView ? "show-border-bottom" : ""}`}

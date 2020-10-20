@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext, useState, useEffect } from "react"
+import React, { FunctionComponent, useContext, useEffect, useState } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.configuration"
@@ -11,8 +11,8 @@ import smoothscroll from "smoothscroll-polyfill"
 import { Input } from "../core/input"
 import { PrimaryDarkButton } from "../core/button"
 import styled from "@emotion/styled"
-import { largeStart, mediumEnd, mobileEnd, primaryColor, primaryDarkColor } from "../core/variables"
-import { FaEnvelope, FaCheck, FaTimes, FaSpinner } from "react-icons/all"
+import { largeStart, maxWidth, mediumEnd, mobileEnd, primaryColor, primaryDarkColor } from "../core/variables"
+import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
 import { MenuContext } from "./menu.context"
 import { Status } from "../../types/shared"
 
@@ -74,7 +74,7 @@ export const withDraw = (draw: () => void) => {
   }
 }
 
-const InternalBlogLayout: FunctionComponent<{
+export const IndexBlogLayout: FunctionComponent<{
   page: string
   className?: string
   noStickyHeader?: boolean
@@ -188,8 +188,8 @@ const InternalBlogLayout: FunctionComponent<{
   )
 }
 
-// TODO I dont remember what this is for
-export const IndexBlogLayout = styled(InternalBlogLayout)`
+// layout to apply on articles
+export const HomeBlogLayout = styled(IndexBlogLayout)`
   .card .tags a {
     color: ${primaryColor};
   }
@@ -198,8 +198,8 @@ export const IndexBlogLayout = styled(InternalBlogLayout)`
   }
 `
 
-// TODO I dont remember what this is for (diff with IndexBlogLayout ?)
-export const BlogLayout = styled(InternalBlogLayout)`
+// layout to apply on pages (index, country index, ...)
+export const BlogLayout = styled(IndexBlogLayout)`
   .children-container {
     margin-left: auto;
     margin-right: auto;
@@ -232,5 +232,66 @@ export const BlogLayout = styled(InternalBlogLayout)`
     .children-container {
       max-width: 1140px;
     }
+  }
+`
+
+// max-width is needed for the title to text-overflow correctly
+export const ArticlesContainer = styled.div`
+  max-width: ${maxWidth}px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  > * {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  padding: 1rem 20px;
+  @media (max-width: ${mediumEnd}) {
+    > * {
+      flex: 0 0 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+    > *:nth-of-type(n + 3) {
+      margin-top: 20px;
+    }
+    > *:nth-of-type(odd) {
+      margin-right: 10px;
+    }
+    > *:nth-of-type(even) {
+      margin-left: 10px;
+    }
+  }
+  @media (max-width: ${mobileEnd}) {
+    > * {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    > *:nth-of-type(n + 2) {
+      margin-top: 20px;
+    }
+    > *:nth-of-type(odd) {
+      margin-right: 0;
+    }
+    > *:nth-of-type(even) {
+      margin-left: 0;
+    }
+  }
+  .card .tags span,
+  .card .title {
+    font-size: 0.8rem;
+  }
+`
+export const MedallionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  & > * {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 `

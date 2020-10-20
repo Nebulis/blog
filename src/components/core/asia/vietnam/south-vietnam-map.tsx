@@ -3,7 +3,8 @@ import { css } from "@emotion/core"
 import { smallEnd } from "../../variables"
 import { navigate } from "gatsby"
 import { getLink, getLinkUrl } from "../../links/links.configuration"
-import { vietnamPrimaryColor, vietnamPrimaryColorDarker } from "./vietnam.colors"
+import { vietnamPrimaryColorDarker } from "./vietnam.colors"
+
 const basicTextStyle = css`
   fill: black;
   font-weight: bold;

@@ -3,6 +3,7 @@ import { CityLink, ContinentLink, CountryLink, HighlightLink, NavigationLink } f
 import { isPublished } from "./links.utils"
 import React from "react"
 import { asiaLinks } from "../asia/asia.links"
+import { ExtraCardProps } from "../../../types/shared"
 
 export const continentLinks: ContinentLink[] = [
   asiaLinks,
@@ -191,11 +192,13 @@ export const otherLinks: NavigationLink[] = [
 const getUrl = (object: { url?: string; id: string }): string => object.url || object.id
 
 interface CachedLinksMap {
+  country?: string
   label: string
   url: string
   published: boolean
   publishedDate?: Date
-  card?: React.ComponentType
+  tags: string[]
+  card?: React.ComponentType<ExtraCardProps>
 }
 const cachedLinks = new Map<string, CachedLinksMap>()
 continentLinks.forEach((continent) => {
@@ -207,6 +210,8 @@ continentLinks.forEach((continent) => {
         published: isPublished(other),
         publishedDate: other.published instanceof Date ? other.published : undefined,
         card: other.card,
+        tags: [continent.id, country.id],
+        country: country.id,
       })
     })
     country.cities.forEach((city) => {
@@ -214,6 +219,8 @@ continentLinks.forEach((continent) => {
         label: city.label,
         url: path.resolve(getUrl(continent), getUrl(country), getUrl(city)),
         published: city.highlights.some(isPublished),
+        tags: [continent.id, country.id],
+        country: country.id,
       })
       city.highlights.forEach((highlight) => {
         cachedLinks.set(highlight.id, {
@@ -222,6 +229,8 @@ continentLinks.forEach((continent) => {
           published: isPublished(highlight),
           publishedDate: highlight.published instanceof Date ? highlight.published : undefined,
           card: highlight.card,
+          tags: [continent.id, country.id, city.id],
+          country: country.id,
         })
       })
     })
@@ -232,12 +241,15 @@ continentLinks.forEach((continent) => {
       published:
         country.others.some((o) => cachedLinks.get(o.id)?.published) ||
         country.cities.some((c) => cachedLinks.get(c.id)?.published),
+      tags: [continent.id],
+      country: country.id,
     })
   })
   cachedLinks.set(continent.id, {
     label: continent.label,
     url: path.resolve(getUrl(continent)),
     published: continent.countries.some((country) => cachedLinks.get(country.id)?.published),
+    tags: [],
   })
 })
 
@@ -248,6 +260,7 @@ menuLinks.forEach((menu) => {
         label: subsubmenu.label,
         url: path.resolve(getUrl(menu), getUrl(submenu), getUrl(subsubmenu)),
         published: !!subsubmenu.published,
+        tags: [],
       })
     })
 
@@ -256,12 +269,14 @@ menuLinks.forEach((menu) => {
       url: path.resolve(getUrl(menu), getUrl(submenu)),
       published:
         submenu.sections.some((subsubmenu) => cachedLinks.get(subsubmenu.id)?.published) || !!submenu.published,
+      tags: [],
     })
   })
   cachedLinks.set(menu.id, {
     label: menu.label,
     url: path.resolve(getUrl(menu)),
     published: menu.sections.some((submenu) => cachedLinks.get(submenu.id)?.published) || !!menu.published,
+    tags: [],
   })
 })
 
@@ -270,6 +285,7 @@ otherLinks.forEach((link) => {
     label: link.label,
     url: path.resolve(getUrl(link)),
     published: true,
+    tags: [],
   })
 })
 
@@ -301,19 +317,26 @@ export const isLinkPublished = (element: CountryLink | CityLink | HighlightLink 
 
 export const sortByLabel = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
 
-const filterNull = (value: any): value is Required<Pick<CachedLinksMap, "card" | "publishedDate">> => {
+type LinkMapped = Required<Pick<CachedLinksMap, "card" | "publishedDate" | "country">>
+const filterNull = (value: any): value is LinkMapped => {
   return value
 }
-export const getThreeMoreRecentArticles = () => {
+interface Options {
+  customFilter?: (link: LinkMapped) => boolean
+  limit?: number
+}
+export const getMostRecentArticles = ({ customFilter = () => true, limit = 3 }: Options | undefined = {}) => {
   return Array.from(cachedLinks.values())
     .map((link) => {
       if (link.published && link.publishedDate && link.card) {
-        return { publishedDate: link.publishedDate, card: link.card }
+        // for some reason, typescript going nuts if country is made optional in LinkMapped ...
+        return { publishedDate: link.publishedDate, card: link.card, country: link.country ?? "" }
       }
       return null
     })
     .filter(filterNull)
+    .filter(customFilter)
     .sort((a, b) => b.publishedDate.getTime() - a.publishedDate.getTime())
-    .slice(0, 3)
+    .slice(0, limit)
     .map((value) => value.card)
 }

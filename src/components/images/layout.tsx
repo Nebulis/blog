@@ -78,10 +78,11 @@ export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any>> = ({ childr
 const imageAsLandscapeStyle = css`
   .gatsby-image-wrapper {
     width: 100%;
+    max-height: calc(100vh - 40px);
   }
 `
 export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
-  <div css={imageAsLandscapeStyle} className={`${className} flex`}>
+  <div css={imageAsLandscapeStyle} className={`${className} flex justify-center`}>
     {children}
   </div>
 )
@@ -121,6 +122,7 @@ const margin = css`
 
 const twoImagesSameSizeStyles = css`
   margin: auto;
+  max-height: calc(100vh - 40px);
   & .left-panel {
     flex-basis: 100%;
   }
@@ -265,7 +267,7 @@ export const ImageAsTwoLandscapeLeftAndOnePortraitRight: FunctionComponent<HTMLA
   )
 }
 
-const medallionDimension = "10rem"
+const medallionDimension = "240px"
 const imageAsMedallionStyle = css`
   position: relative;
   border-radius: 50%;
@@ -275,7 +277,7 @@ const imageAsMedallionStyle = css`
   border: 6px solid transparent;
   transition: border 100ms linear;
   &:hover span {
-    height: 60px;
+    height: 65px;
     font-size: 1.4rem;
   }
   span {
@@ -287,8 +289,8 @@ const imageAsMedallionStyle = css`
     position: absolute;
     width: 100%;
     bottom: 0;
-    height: 50px;
-    padding-top: 10px;
+    height: 55px;
+    padding-top: 12.5px;
     transition: all 300ms linear;
   }
   .gatsby-image-wrapper {
