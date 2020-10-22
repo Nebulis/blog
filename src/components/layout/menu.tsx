@@ -246,10 +246,10 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
                   : continent.countries.filter(isLinkPublished)
                 return (
                   <li key={continent.id}>
-                    <a href="#">
+                    <ApplicationLink to={continent.id}>
                       <span>{getLinkLabel(continent.id)}</span>
                       <span>{publishedCountries.length > 0 ? ">" : null}</span>
-                    </a>
+                    </ApplicationLink>
                     {publishedCountries.length > 0 ? (
                       <ul className="submenu" aria-label="submenu">
                         {publishedCountries
@@ -544,6 +544,7 @@ export const MobileMenu: React.FunctionComponent = () => {
               const publishedCountries = development ? continent.countries : continent.countries.filter(isLinkPublished)
               return (
                 <Tree key={continent.id} name={continent.label} onNavigate={closeMenu}>
+                  <Tree key={continent.id} name="Accueil" to={continent.id} onNavigate={closeMenu} />
                   {publishedCountries.map((country) => (
                     <Tree key={country.id} name={country.label} to={country.id} onNavigate={closeMenu} />
                   ))}
