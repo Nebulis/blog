@@ -22,11 +22,15 @@ const style = css`
     margin-right: 0.5rem;
   }
 `
-export const Quote: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
+export const Quote: FunctionComponent<HTMLAttributes<any> & { position?: "before" | "none" }> = ({
+  children,
+  className,
+  position = "before",
+}) => {
   return (
     <div className={`quote-container f5 ${className} i`} css={style}>
       <blockquote className="tc">
-        <span className="quote" />
+        {position === "before" && <span className="quote" />}
         {children}
       </blockquote>
     </div>
