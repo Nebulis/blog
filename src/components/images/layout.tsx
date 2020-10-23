@@ -3,7 +3,7 @@ import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { cloneElement } from "../core/cloneElement"
-import { mediumEnd, mediumStart, mobileEnd, smallEnd, smallStart } from "../core/variables"
+import { mediumEnd, mediumStart, mobileEnd, primaryColor, smallEnd, smallStart } from "../core/variables"
 
 const allButLastImageStyle = css`
   // needed for ImageAsTwoLandscapeLeftAndOnePortraitRight under GroupOfImages
@@ -276,6 +276,9 @@ const imageAsMedallionStyle = css`
   overflow: hidden;
   border: 6px solid transparent;
   transition: border 100ms linear;
+  &:hover {
+    border: 6px solid ${primaryColor};
+  }
   &:hover span {
     height: 65px;
     font-size: 1.4rem;
