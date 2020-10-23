@@ -47,18 +47,7 @@ const IndexPage = () => {
           <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
         </h1>
         <VietnamDivider />
-        <h2
-          className="tc ttu mb2-l"
-          css={css`
-            letter-spacing: 5px;
-            font-family: auto;
-            @media (max-width: ${mediumEnd}) {
-              margin-bottom: 1rem;
-            }
-          `}
-        >
-          Voyager
-        </h2>
+        <HomeSection>Voyager</HomeSection>
         <HomeSubSection>En suivant notre aventure ...</HomeSubSection>
         <Container>
           <VietnamCard title="Découverte du Vietnam du Sud" to="discover-south-vietnam">

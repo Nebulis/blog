@@ -8,8 +8,8 @@
 import React, { FunctionComponent } from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
-// @ts-ignore
 import FontUrl1 from "../../fonts/Freestyle-Script.ttf"
+import FontUrl2 from "../../fonts/Courgette-Regular.ttf"
 
 interface SEOProps {
   description?: string
@@ -44,6 +44,13 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
           rel: "preload",
           as: "font",
           href: FontUrl1,
+          type: "font/ttf",
+          crossOrigin: "anonymous",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: FontUrl2,
           type: "font/ttf",
           crossOrigin: "anonymous",
         },

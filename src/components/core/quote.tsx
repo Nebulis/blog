@@ -7,13 +7,12 @@ const style = css`
   padding-right: 1em;
   line-height: 1.5em;
   blockquote {
-    text-indent: 2em;
     font-family: "Playfair Display", serif;
   }
 
+  vertical-align: initial !important;
   .quote::before {
-    vertical-align: middle;
-    text-indent: 0;
+    vertical-align: bottom;
     content: "“";
     font-family: "Playfair Display SC", serif;
     font-size: 2.2em;

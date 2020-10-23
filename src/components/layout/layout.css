@@ -3,6 +3,11 @@
   font-display: swap;
   src: url("../../fonts/Freestyle-Script.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
+@font-face {
+  font-family: "Courgette";
+  font-display: swap;
+  src: url("../../fonts/Courgette-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 ::selection {
   background-color: #343a40;
