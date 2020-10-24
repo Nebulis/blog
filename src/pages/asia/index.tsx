@@ -30,12 +30,11 @@ const IndexPage = () => {
         <div>
           <CustomQuote>
             Le continent asiatique est un continent que nous aimons particulièrement. Nous vivons depuis 2016 à
-            Singapour et de ce fait nous avons pu y faire de nombreux voyages.
+            Singapour et de ce fait nous avons pu faire de nombreux voyages dans les régions environnantes.
           </CustomQuote>
           <CustomQuote position="none">
             Farniente sur des plages paradisiaques, visite de temples traditionnels, trek dans la jungle ou simple
-            promenade à la découverte de paysages à couper le souffle, des grandes villes au petit village, apprendre
-            les traditions de certaines tribus ou observer avec discrétion les animaux sauvages … Tant de pays qui
+            promenade à la découverte de paysages à couper le souffle, des grandes villes au petit village, en apprenant les traditions de certaines tribus ou en observant avec discrétion les animaux sauvages … Tant de pays qui
             incitent à l’évasion et font rêver.
           </CustomQuote>
           <CustomQuote position="none">Retrouvez ci-dessous les plus belles perles d’Asie.</CustomQuote>
