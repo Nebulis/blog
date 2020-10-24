@@ -1,9 +1,10 @@
-import React, { FunctionComponent, HTMLAttributes } from "react"
+import React, { FunctionComponent, HTMLAttributes, useContext } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { cloneElement } from "../core/cloneElement"
 import { mediumEnd, mediumStart, mobileEnd, primaryColor, smallEnd, smallStart } from "../core/variables"
+import { MenuContext } from "../layout/menu.context"
 
 const allButLastImageStyle = css`
   // needed for ImageAsTwoLandscapeLeftAndOnePortraitRight under GroupOfImages
@@ -276,6 +277,7 @@ const imageAsMedallionStyle = css`
   overflow: hidden;
   border: 6px solid transparent;
   transition: border 100ms linear;
+  &.mobile,
   &:hover {
     border: 6px solid ${primaryColor};
   }
@@ -310,9 +312,13 @@ export const ImageAsMedallion: FunctionComponent<HTMLAttributes<any> & { title?:
   children,
   className,
   title,
-}) => (
-  <div css={imageAsMedallionStyle} className={className}>
-    {children}
-    {title && <span>{title}</span>}
-  </div>
-)
+}) => {
+  const { isMobileView } = useContext(MenuContext)
+
+  return (
+    <div css={imageAsMedallionStyle} className={`${className}${isMobileView ? " mobile" : ""}`}>
+      {children}
+      {title && <span>{title}</span>}
+    </div>
+  )
+}

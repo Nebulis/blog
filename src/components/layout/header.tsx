@@ -61,27 +61,33 @@ const headerStyle = css`
   .development-mode-button.production {
     fill: red;
   }
+  &.show-border-bottom {
+    border-bottom: 1px solid black;
+  }
 `
-
+// disabled code is used by the sticky header
 export const Header: FunctionComponent<{ noStickyHeader?: boolean; className?: string }> = ({
-  noStickyHeader = false,
+  // noStickyHeader = false,
   className = "",
 }) => {
-  const { height } = useScrollPosition()
-  const [bannerHeight] = useBannerHeight()
   const { isMobileView } = useContext(MenuContext)
   const [search, setSearch] = useState(false)
-  const status = height > bannerHeight * 4 ? "display" : "hide"
+  // const { height } = useScrollPosition()
+  // const [bannerHeight] = useBannerHeight()
+  // const status = height > bannerHeight * 4 ? "display" : "hide"
   return (
     <>
-      <StaticHeader onSearch={() => setSearch(true)} className={className} />
-      {isMobileView && !noStickyHeader && (
-        <StickyHeader
-          // show-border-bottom must be shown only on mobile view, otherwise there is a weird border on desktop view
-          className={`${status} ${className} ${isMobileView ? "show-border-bottom" : ""}`}
-          onSearch={() => setSearch(true)}
-        />
-      )}
+      <StaticHeader
+        onSearch={() => setSearch(true)}
+        className={`${className}${isMobileView ? " show-border-bottom" : ""}`}
+      />
+      {/*{isMobileView && !noStickyHeader && (*/}
+      {/*  <StickyHeader*/}
+      {/*    // show-border-bottom must be shown only on mobile view, otherwise there is a weird border on desktop view*/}
+      {/*    className={`${status} ${className} ${isMobileView ? "show-border-bottom" : ""}`}*/}
+      {/*    onSearch={() => setSearch(true)}*/}
+      {/*  />*/}
+      {/*)}*/}
       {search && (
         <DialogPortal>
           <Search onClose={() => setSearch(false)} />

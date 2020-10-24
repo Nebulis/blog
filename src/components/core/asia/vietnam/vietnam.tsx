@@ -98,6 +98,7 @@ export const VietnamDivider = styled(Divider)`
 `
 // the color has been picked from the hat images and is not derived from the primary color or other
 export const VietnamImageAsMedallion = styled(ImageAsMedallion)`
+  &.mobile,
   &:hover {
     border: 6px solid #f8c471;
   }

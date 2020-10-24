@@ -291,7 +291,6 @@ export const MedallionContainer = styled.div`
   padding-top: 1rem;
   padding-bottom: 1rem;
   & > * {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 5px;
   }
 `
