@@ -9,7 +9,7 @@ export const HomeJapanImage: React.FunctionComponent<ExtraImageProps> = ({ class
       file: file(relativePath: { eq: "asia/japan/home.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

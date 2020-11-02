@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-export const draqHat = () => {
+export const drawHat = () => {
   const yellow1 = "color: #e8b86b; background-color: #e8b86b"
   const yellow2 = "color: #fbce85; background-color: #fbce85"
   const yellow3 = "color: #fbc773; background-color: #fbc773"

@@ -4,10 +4,9 @@ import {
   SouthVietnamQuote,
   VietnamBlogLayout,
   VietnamDivider,
-  VietnamPart,
+  VietnamHeadline,
   VietnamTitle,
 } from "../../../components/core/asia/vietnam/vietnam"
-import { MainSouthVietnamImage } from "../../../components/images/asia/vietnam/south-vietnam/south-vietnam-main"
 import { HowLong, HowMuch, SectionContent, SectionTitle, WhatTimeOfYear, Where } from "../../../components/core/section"
 import { SouthVietnamMap } from "../../../components/core/asia/vietnam/south-vietnam-map"
 import {
@@ -29,6 +28,7 @@ import { HoChiMinhMarket1Image } from "../../../components/images/asia/vietnam/s
 import { HoChiMinhMarket2Image } from "../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-market2"
 import { HoChiMinhDragonImage } from "../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-dragon"
 import { Conclusion } from "../../../components/core/conclusion"
+import { HomeVietnamImage } from "../../../components/images/asia/vietnam/home"
 
 const IndexPage = () => {
   return (
@@ -41,7 +41,7 @@ const IndexPage = () => {
           linkId="discover-south-vietnam"
         />
         <ImageAsLandscape>
-          <MainSouthVietnamImage />
+          <HomeVietnamImage />
         </ImageAsLandscape>
         <SouthVietnamQuote />
         <WhatTimeOfYear title="À quelle période ?">
@@ -86,7 +86,7 @@ const IndexPage = () => {
         </SectionContent>
         <VietnamDivider />
         <section>
-          <VietnamPart>Connaître un peu mieux l’histoire du pays</VietnamPart>
+          <VietnamHeadline>Connaître un peu mieux l’histoire du pays</VietnamHeadline>
           <VietnamDivider />
           <SectionContent>
             <p>Comment venir au Vietnam sans passer par les incontournables sites de guerre.</p>
@@ -118,7 +118,7 @@ const IndexPage = () => {
         </section>
         <VietnamDivider />
         <section>
-          <VietnamPart>Visite de la plus grande ville du pays</VietnamPart>
+          <VietnamHeadline>Visite de la plus grande ville du pays</VietnamHeadline>
           <VietnamDivider />
           <SectionContent>
             <p>
@@ -164,7 +164,7 @@ const IndexPage = () => {
         </section>
         <VietnamDivider />
         <section>
-          <VietnamPart>Le Delta du Mékong</VietnamPart>
+          <VietnamHeadline>Le Delta du Mékong</VietnamHeadline>
           <VietnamDivider />
           <SectionContent>
             <p>
@@ -192,7 +192,7 @@ const IndexPage = () => {
         </section>
         <VietnamDivider />
         <section>
-          <VietnamPart>Une histoire sans fin</VietnamPart>
+          <VietnamHeadline>Une histoire sans fin</VietnamHeadline>
           <VietnamDivider />
           <SectionContent>
             <p>

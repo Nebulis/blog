@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import { vietnamPrimaryColor, vietnamPrimaryColorDarker } from "./vietnam.colors"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
 import { ImageAsMedallion } from "../../../images/layout"
-import { draqHat } from "./console-draw-hat"
+import { drawHat } from "./console-draw-hat"
 import { Title } from "../../title"
 import { Quote } from "../../quote"
 import { ExternalLink, linkBuilder } from "../../links/link"
@@ -36,15 +36,14 @@ export const SouthVietnamQuote = () => (
 const vietnamPartStyle = css`
   color: ${vietnamPrimaryColorDarker};
 `
-// TODO worst name
-export const VietnamPart: FunctionComponent = ({ children }) => (
+export const VietnamHeadline: FunctionComponent = ({ children }) => (
   <City css={vietnamPartStyle}>
     <img src={hat} alt="hat" style={{ width: "24px" }} /> {children}{" "}
     <img src={hat} alt="hat" style={{ width: "24px" }} />
   </City>
 )
 
-const drawer = withDraw(draqHat)
+const drawer = withDraw(drawHat)
 
 const vietnamLayout = `
   svg.facebook:hover,

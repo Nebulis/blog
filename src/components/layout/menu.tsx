@@ -12,7 +12,7 @@ import { continentLinks, getLinkLabel, isLinkPublished, menuLinks } from "../cor
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
-import { FaChevronDown, FaChevronRight } from "react-icons/all"
+import { FaChevronDown, FaChevronRight, FaTwitter, FaFacebook, FaInstagram, FaPinterest } from "react-icons/all"
 import { backgroundPrimaryColor, bannerHeight, menuHeight, mobileEnd, primaryColor } from "../core/variables"
 import styled from "@emotion/styled"
 import { animated, useSpring } from "react-spring"
@@ -376,6 +376,7 @@ export const Burger: FunctionComponent<{ open: boolean; onClick?: () => void; cl
 export const BurgerAbsolute = styled(Burger)`
   position: fixed;
   left: 0.5rem;
+  // center, 12px is half the icon size
   top: calc(${bannerHeight} / 2 - 12px);
   &.closed {
     visibility: hidden;
@@ -481,7 +482,9 @@ const MobileMenuContainer = styled.div`
 `
 
 const ScrollContainer = styled.div`
-  margin-top: ${bannerHeight};
+  // make sure the menu align with the bottom of the header
+  // the second part is the position of the bottom of the social network icon
+  margin-top: calc(${bannerHeight} - calc(${bannerHeight} / 2 + 18px));
   height: calc(100vh - ${bannerHeight});
   padding: 0 50px 20px 50px;
   @media (max-width: ${mobileEnd}) {
@@ -537,6 +540,63 @@ export const MobileMenu: React.FunctionComponent = () => {
     <>
       {open && <Overlay onClick={closeMenu} />}
       <MobileMenuContainer className={`${open ? "active" : "inactive"}`}>
+        <div
+          className="social-network-container"
+          css={css`
+            display: flex;
+            justify-content: center;
+            & > * {
+              margin: 5px;
+              // align with the burger, center the same way 9px is half the icon size
+              margin-top: calc(${bannerHeight} / 2 - 9px);
+            }
+          `}
+        >
+          <a
+            href="https://twitter.com/_magicoftravels"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-labelledby="facebook-label"
+          >
+            <span id="facebook-label" hidden>
+              Go to Facebook
+            </span>
+            <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
+          </a>
+          <a
+            href="https://twitter.com/_magicoftravels"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-labelledby="twitter-label"
+          >
+            <span id="twitter-label" hidden>
+              Go to Twitter
+            </span>
+            <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
+          </a>
+          <a
+            href="https://instagram.com/_magic_of_travels_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-labelledby="instagram-label"
+          >
+            <span id="instagram-label" hidden>
+              Go to Facebook
+            </span>
+            <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
+          </a>
+          <a
+            href="https://pinterest.com/MagicOfTravels"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-labelledby="pinterest-label"
+          >
+            <span id="pinterest-label" hidden>
+              Go to Facebook
+            </span>
+            <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
+          </a>
+        </div>
         <ScrollContainer>
           <Tree name="Accueil" to="home" onNavigate={closeMenu} />
           <Tree name="Destination">

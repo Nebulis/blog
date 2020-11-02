@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext, useEffect, useState } from "react"
+import React, { FunctionComponent, useContext, useEffect, useState, PropsWithChildren } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.configuration"
@@ -66,7 +66,7 @@ const Footer = styled.footer`
 `
 
 export const withDraw = (draw: () => void) => {
-  return function <P>(Component: React.ComponentType<P>) {
+  return function <P>(Component: React.ComponentType<P>): React.FunctionComponent<P> {
     // eslint-disable-next-line react/display-name
     return (props: P) => {
       return <Component draw={draw} {...props} />

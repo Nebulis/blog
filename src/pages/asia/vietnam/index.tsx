@@ -10,8 +10,7 @@ import {
 import { vietnamLinks } from "../../../components/core/asia/vietnam/vietnam.links"
 import { HomeSection, HomeSubSection } from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
-import { css } from "@emotion/core"
-import { extraLargeStart, mediumEnd } from "../../../components/core/variables"
+import { extraLargeStart } from "../../../components/core/variables"
 import styled from "@emotion/styled"
 import vietnamHat from "../../../images/asia/vietnam/hat.svg"
 import {
@@ -20,8 +19,8 @@ import {
   VietnamImageAsMedallion,
 } from "../../../components/core/asia/vietnam/vietnam"
 import { VietnamCard } from "../../../components/core/asia/vietnam/vietnam.cards"
-import { MainSouthVietnamImage } from "../../../components/images/asia/vietnam/south-vietnam/south-vietnam-main"
 import { ArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
+import { HomeVietnamImage } from "../../../components/images/asia/vietnam/home"
 
 export const Container = styled.div`
   margin-left: auto;
@@ -51,7 +50,7 @@ const IndexPage = () => {
         <HomeSubSection>En suivant notre aventure ...</HomeSubSection>
         <Container>
           <VietnamCard title="Découverte du Vietnam du Sud" to="discover-south-vietnam">
-            <MainSouthVietnamImage lol />
+            <HomeVietnamImage />
           </VietnamCard>
         </Container>
         <VietnamDivider />

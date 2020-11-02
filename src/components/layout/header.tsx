@@ -9,8 +9,6 @@ import { DialogPortal } from "../core/tooltipPortal"
 import { Search } from "./search"
 import styled from "@emotion/styled"
 import { ApplicationLink } from "../core/links/link"
-import { useScrollPosition } from "../hooks/useScrollPosition"
-import { useBannerHeight } from "../hooks/useBannerHeight"
 import { Burger, BurgerAbsolute, Menu, MobileMenu } from "./menu"
 import { MenuContext } from "./menu.context"
 
