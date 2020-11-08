@@ -6,8 +6,9 @@ import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import {
   getLinkLabel,
-  getThreeMoreRecentArticles,
+  getMostRecentArticles,
   isLinkPublished,
+  sortByLabel,
 } from "../../../components/core/links/links.configuration"
 import { ApplicationLink } from "../../../components/core/links/link"
 import { ApplicationContext } from "../../../components/application"
@@ -16,57 +17,23 @@ import { JapanImageAsMedallion } from "../../../components/core/japan/japan.imag
 import { japanLinks } from "../../../components/core/japan/japan.links"
 import { JapanCard } from "../../../components/core/japan/japan.cards"
 import { HomeSection, HomeSubSection } from "../../../components/core/section"
-import { extraLargeStart, maxWidth, mediumEnd, mobileEnd } from "../../../components/core/variables"
+import { extraLargeStart, mediumEnd } from "../../../components/core/variables"
+import { ArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
 
 export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  flex: 1;
+  padding: 1rem 20px;
 
   @media (min-width: ${extraLargeStart}) {
-    padding: 0;
     max-width: 1140px;
-  }
-`
-
-const ArticlesContainer = styled(Container)`
-  max-width: ${maxWidth}px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  .quote-container {
-    display: none;
-  }
-  @media (max-width: ${mediumEnd}) {
-    grid-column-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-  }
-  @media (max-width: ${mobileEnd}) {
-    grid-template-columns: 1fr;
-    justify-content: center;
-  }
-  .card .tags span,
-  .card .title {
-    font-size: 0.8rem;
   }
 `
 
 const IndexPage = () => {
   const { development } = useContext(ApplicationContext)
-  const cities = development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished).sort()
-  const articleStyle = css`
-    .gatsby-image-wrapper {
-      height: 200px;
-    }
-    @media (max-width: ${mediumEnd}) {
-      .gatsby-image-wrapper {
-        height: 180px;
-      }
-    }
-  `
+  const cities = development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished)
   return (
     <>
       <SEO title="Japon" />
@@ -96,39 +63,29 @@ const IndexPage = () => {
           </JapanCard>
         </Container>
         <JapanDivider />
-        {cities.length > 0 && (
-          <>
-            <HomeSection>Parcourir</HomeSection>
-            <HomeSubSection>Le pays de ville en ville ...</HomeSubSection>
-            <div
-              className="flex justify-center flex-wrap pt3 pb3 mb3 mt3"
-              css={css`
-                & > * {
-                  margin-left: 5px;
-                  margin-right: 5px;
-                }
-              `}
-            >
-              {cities.map((city) => {
-                return city.image ? (
-                  <ApplicationLink to={city.id} key={city.id}>
-                    <JapanImageAsMedallion title={getLinkLabel(city.id)}>
-                      {React.createElement(city.image)}
-                    </JapanImageAsMedallion>
-                  </ApplicationLink>
-                ) : null
-              })}
-            </div>
-            <JapanDivider />
-          </>
-        )}
+        <HomeSection>Parcourir</HomeSection>
+        <HomeSubSection>Le pays de ville en ville ...</HomeSubSection>
+        <MedallionContainer>
+          {cities.sort(sortByLabel).map((city) => {
+            return city.image ? (
+              <ApplicationLink to={city.id} key={city.id}>
+                <JapanImageAsMedallion title={getLinkLabel(city.id)}>
+                  {React.createElement(city.image)}
+                </JapanImageAsMedallion>
+              </ApplicationLink>
+            ) : null
+          })}
+        </MedallionContainer>
+        <JapanDivider />
         {development && (
           <>
             <HomeSection>S&apos;informer</HomeSection>
             <HomeSubSection>A travers nos astuces, nos coups de cœur ...</HomeSubSection>
-            <ArticlesContainer css={articleStyle}>
-              {getThreeMoreRecentArticles().map((Element, index) => (
-                <Element key={index} />
+            <ArticlesContainer>
+              {getMostRecentArticles({
+                customFilter: (link) => link.country === "japan",
+              }).map((Element, index) => (
+                <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />
               ))}
             </ArticlesContainer>
           </>

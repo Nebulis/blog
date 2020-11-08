@@ -21,6 +21,7 @@ export const Application: FunctionComponent = ({ children }) => {
       value={{
         initialDevelopmentValue: site.siteMetadata.config.context !== "production",
         development,
+        displayAllArticles: development,
         toggle: () => setDevelopment(!development),
       }}
     >
@@ -31,6 +32,7 @@ export const Application: FunctionComponent = ({ children }) => {
 
 export const ApplicationContext = React.createContext<{
   development: boolean
+  displayAllArticles: boolean
   /**
    * Property to keep track of the initial value of development when the page started
    * This property is useful because development property can be changed over the time by calling the toggle function
@@ -40,5 +42,6 @@ export const ApplicationContext = React.createContext<{
   toggle?: () => void
 }>({
   development: false,
+  displayAllArticles: false,
   initialDevelopmentValue: false,
 })

@@ -1,9 +1,10 @@
-import React, { FunctionComponent, HTMLAttributes } from "react"
+import React, { FunctionComponent, HTMLAttributes, useContext } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { cloneElement } from "../core/cloneElement"
-import { mediumEnd, mediumStart, mobileEnd, smallEnd, smallStart } from "../core/variables"
+import { mediumEnd, mediumStart, mobileEnd, primaryColor, smallEnd, smallStart } from "../core/variables"
+import { MenuContext } from "../layout/menu.context"
 
 const allButLastImageStyle = css`
   // needed for ImageAsTwoLandscapeLeftAndOnePortraitRight under GroupOfImages
@@ -78,10 +79,11 @@ export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any>> = ({ childr
 const imageAsLandscapeStyle = css`
   .gatsby-image-wrapper {
     width: 100%;
+    max-height: calc(100vh - 40px);
   }
 `
 export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
-  <div css={imageAsLandscapeStyle} className={`${className} flex`}>
+  <div css={imageAsLandscapeStyle} className={`${className} flex justify-center`}>
     {children}
   </div>
 )
@@ -121,6 +123,7 @@ const margin = css`
 
 const twoImagesSameSizeStyles = css`
   margin: auto;
+  max-height: calc(100vh - 40px);
   & .left-panel {
     flex-basis: 100%;
   }
@@ -151,6 +154,15 @@ export const TwoImagesLeftBigger = styled(TwoImagesSameSize)`
     flex-basis: 35%;
   }
 `
+export const TwoImagesRightBigger = styled(TwoImagesSameSize)`
+  & .left-panel {
+    flex-basis: 35%;
+  }
+  & .right-panel {
+    flex-basis: 65%;
+  }
+`
+// this component will adapt to smaller devices and display images in different rows when the device is too small
 export const TwoImagesSameSizeOrToGroup: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   const { windowWidth: width } = useWindowSize()
   if (!children || !Array.isArray(children) || children.length !== 2)
@@ -256,7 +268,7 @@ export const ImageAsTwoLandscapeLeftAndOnePortraitRight: FunctionComponent<HTMLA
   )
 }
 
-const medallionDimension = "10rem"
+const medallionDimension = "240px"
 const imageAsMedallionStyle = css`
   position: relative;
   border-radius: 50%;
@@ -265,8 +277,12 @@ const imageAsMedallionStyle = css`
   overflow: hidden;
   border: 6px solid transparent;
   transition: border 100ms linear;
+  &.mobile,
+  &:hover {
+    border: 6px solid ${primaryColor};
+  }
   &:hover span {
-    height: 60px;
+    height: 65px;
     font-size: 1.4rem;
   }
   span {
@@ -278,8 +294,8 @@ const imageAsMedallionStyle = css`
     position: absolute;
     width: 100%;
     bottom: 0;
-    height: 50px;
-    padding-top: 10px;
+    height: 55px;
+    padding-top: 12.5px;
     transition: all 300ms linear;
   }
   .gatsby-image-wrapper {
@@ -296,9 +312,13 @@ export const ImageAsMedallion: FunctionComponent<HTMLAttributes<any> & { title?:
   children,
   className,
   title,
-}) => (
-  <div css={imageAsMedallionStyle} className={className}>
-    {children}
-    {title && <span>{title}</span>}
-  </div>
-)
+}) => {
+  const { isMobileView } = useContext(MenuContext)
+
+  return (
+    <div css={imageAsMedallionStyle} className={`${className}${isMobileView ? " mobile" : ""}`}>
+      {children}
+      {title && <span>{title}</span>}
+    </div>
+  )
+}

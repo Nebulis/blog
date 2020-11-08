@@ -2,7 +2,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import * as React from "react"
 import { css } from "@emotion/core"
-export const MainToganjiImage = ({ className = "" }: { className?: string }) => {
+import { ExtraImageProps } from "../../../../../../types/shared"
+export const MainToganjiImage: React.FunctionComponent<ExtraImageProps> = ({ className = "", fluidObject = {} }) => {
   const data = useStaticQuery(graphql`
     query {
       file: file(relativePath: { eq: "asia/japan/nagoya/toganji/toganji-main.jpg" }) {
@@ -16,7 +17,7 @@ export const MainToganjiImage = ({ className = "" }: { className?: string }) => 
   `)
   return (
     <Img
-      fluid={data.file.childImageSharp.fluid}
+      fluid={{ ...data.file.childImageSharp.fluid, ...fluidObject }}
       alt="Toganji Temple"
       css={css`
         &.gatsby-image-wrapper {

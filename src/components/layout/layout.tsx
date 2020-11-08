@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext, useState, useEffect } from "react"
+import React, { FunctionComponent, useContext, useEffect, useState, PropsWithChildren } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.configuration"
@@ -11,11 +11,10 @@ import smoothscroll from "smoothscroll-polyfill"
 import { Input } from "../core/input"
 import { PrimaryDarkButton } from "../core/button"
 import styled from "@emotion/styled"
-import { largeStart, mediumEnd, mobileEnd, primaryColor, primaryDarkColor } from "../core/variables"
-import { FaEnvelope, FaCheck, FaTimes, FaSpinner } from "react-icons/all"
+import { largeStart, maxWidth, mediumEnd, mobileEnd, primaryColor, primaryDarkColor } from "../core/variables"
+import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
 import { MenuContext } from "./menu.context"
 import { Status } from "../../types/shared"
-import { drawKoala } from "../../components/core/australia/console-draw-koala"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -31,6 +30,7 @@ const pageDevelopmentMarkStyle = css`
 export const PageDevelopmentMark = () => <span css={pageDevelopmentMarkStyle} />
 
 const Footer = styled.footer`
+  justify-self: flex-end;
   color: white;
   background-color: black;
   a {
@@ -65,19 +65,30 @@ const Footer = styled.footer`
   }
 `
 
-const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; noStickyHeader?: boolean }> = ({
-  children,
-  page,
-  className = "",
-  noStickyHeader = false,
-}) => {
+export const withDraw = (draw: () => void) => {
+  return function <P>(Component: React.ComponentType<P>): React.FunctionComponent<P> {
+    // eslint-disable-next-line react/display-name
+    return (props: P) => {
+      return <Component draw={draw} {...props} />
+    }
+  }
+}
+
+export const IndexBlogLayout: FunctionComponent<{
+  page: string
+  className?: string
+  noStickyHeader?: boolean
+  draw?: () => void
+}> = ({ children, page, className = "", noStickyHeader = false, draw }) => {
   const isPublished = page === "home" ? true : getLink(page).published
   const { development } = useContext(ApplicationContext)
   const { isMobileView } = useContext(MenuContext)
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
   useEffect(() => {
-    drawKoala()
+    if (draw) draw()
+    // I really want to run this one even if the function changed which should NOT happen
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // reset the status to INITIAL after SUCCESS
@@ -95,7 +106,7 @@ const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; 
   return (
     <Maintenance>
       {typeof window !== `undefined` ? (
-        <div className={className}>
+        <div className={`${className} flex flex-column min-vh-100`}>
           {development && !isPublished && <PageDevelopmentMark />}
           <Header noStickyHeader={noStickyHeader} />
           {!isMobileView && <ScrollToTop />}
@@ -112,6 +123,7 @@ const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; 
                     className="inline-flex"
                     id="newsletter"
                     value={mail}
+                    aria-label="Email"
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
                   />
                   <div
@@ -176,7 +188,8 @@ const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; 
   )
 }
 
-export const IndexBlogLayout = styled(InternalBlogLayout)`
+// layout to apply on articles
+export const HomeBlogLayout = styled(IndexBlogLayout)`
   .card .tags a {
     color: ${primaryColor};
   }
@@ -185,7 +198,8 @@ export const IndexBlogLayout = styled(InternalBlogLayout)`
   }
 `
 
-export const BlogLayout = styled(InternalBlogLayout)`
+// layout to apply on pages (index, country index, ...)
+export const BlogLayout = styled(IndexBlogLayout)`
   .children-container {
     margin-left: auto;
     margin-right: auto;
@@ -218,5 +232,65 @@ export const BlogLayout = styled(InternalBlogLayout)`
     .children-container {
       max-width: 1140px;
     }
+  }
+`
+
+// max-width is needed for the title to text-overflow correctly
+export const ArticlesContainer = styled.div`
+  max-width: ${maxWidth}px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  > * {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  padding: 1rem 20px;
+  @media (max-width: ${mediumEnd}) {
+    > * {
+      flex: 0 0 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+    > *:nth-of-type(n + 3) {
+      margin-top: 20px;
+    }
+    > *:nth-of-type(odd) {
+      margin-right: 10px;
+    }
+    > *:nth-of-type(even) {
+      margin-left: 10px;
+    }
+  }
+  @media (max-width: ${mobileEnd}) {
+    > * {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    > *:nth-of-type(n + 2) {
+      margin-top: 20px;
+    }
+    > *:nth-of-type(odd) {
+      margin-right: 0;
+    }
+    > *:nth-of-type(even) {
+      margin-left: 0;
+    }
+  }
+  .card .tags span,
+  .card .title {
+    font-size: 0.8rem;
+  }
+`
+export const MedallionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  & > * {
+    margin: 5px;
   }
 `

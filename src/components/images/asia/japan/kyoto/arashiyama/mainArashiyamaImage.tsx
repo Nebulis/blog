@@ -1,8 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import * as React from "react"
+import { ExtraImageProps } from "../../../../../../types/shared"
 
-export const MainArashiyamaImage: React.FunctionComponent<{ className?: string }> = ({ className = "" }) => {
+export const MainArashiyamaImage: React.FunctionComponent<ExtraImageProps> = ({ className = "", fluidObject = {} }) => {
   const data = useStaticQuery(graphql`
     query {
       file: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-main.jpg" }) {
@@ -14,5 +15,7 @@ export const MainArashiyamaImage: React.FunctionComponent<{ className?: string }
       }
     }
   `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="Himeji castle" className={className} />
+  return (
+    <Img fluid={{ ...data.file.childImageSharp.fluid, ...fluidObject }} alt="Himeji castle" className={className} />
+  )
 }

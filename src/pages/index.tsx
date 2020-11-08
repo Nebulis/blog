@@ -1,5 +1,5 @@
 import React, { ReactElement, useContext, useState } from "react"
-import { IndexBlogLayout } from "../components/layout/layout"
+import { ArticlesContainer, HomeBlogLayout } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
 import { MainHimejiCastleImage } from "../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
@@ -11,10 +11,9 @@ import {
   continentLinks,
   getLink,
   getLinkUrl,
-  getThreeMoreRecentArticles,
+  getMostRecentArticles,
 } from "../components/core/links/links.configuration"
 import { Carousel, CarouselImage } from "../components/core/carousel"
-import { css } from "@emotion/core"
 import { Divider } from "../components/core/divider"
 import { Monument } from "../components/icon/monument"
 import { Hiking } from "../components/icon/hiking"
@@ -144,18 +143,6 @@ const ButtonMapContainer = styled.div`
   }
 `
 
-const ArticlesContainer = styled.div`
-  max-width: ${maxWidth}px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  .quote-container {
-    display: none;
-  }
-  @media (max-width: ${mediumEnd}) {
-    grid-template-columns: 1fr;
-  }
-`
 const InstagramContainer = styled.div`
   .hashtag {
     text-align: center;
@@ -249,17 +236,10 @@ const IndexPage = () => {
   const { isMobileView } = useContext(MenuContext)
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
-  const articleStyle = css`
-    @media (min-width: ${largeStart}) {
-      .gatsby-image-wrapper {
-        height: ${windowHeight / 2.9}px;
-      }
-    }
-  `
   return (
     <>
       <SEO />
-      <IndexBlogLayout page="home" className="">
+      <HomeBlogLayout page="home" className="">
         <Carousel>
           <CarouselImage country="Japon" to="japan">
             <MainHimejiCastleImage />
@@ -309,9 +289,9 @@ const IndexPage = () => {
         <div>
           <HomeSection>Découvrir</HomeSection>
           <HomeSubSection>Nos dernières aventures ...</HomeSubSection>
-          <ArticlesContainer css={articleStyle}>
-            {getThreeMoreRecentArticles().map((Element, index) => (
-              <Element key={index} />
+          <ArticlesContainer>
+            {getMostRecentArticles().map((Element, index) => (
+              <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />
             ))}
           </ArticlesContainer>
           <div className="tc mt3">
@@ -376,7 +356,7 @@ const IndexPage = () => {
           </>
         )}
         <MouseToolTip>{country ? <TooltipContent>{country["data-name"]}</TooltipContent> : null}</MouseToolTip>
-      </IndexBlogLayout>
+      </HomeBlogLayout>
     </>
   )
 }

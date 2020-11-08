@@ -17,10 +17,18 @@ import {
   SensojiCard,
   ToganjiCard,
 } from "./japan.cards"
+import { HomeJapanImage } from "../../images/asia/japan/home"
+import styled from "@emotion/styled"
 
 export const japanLinks: CountryLink = {
   id: "japan",
   label: "Japon",
+  // this style is for the image in the asia page (medallion) to have the geisha centered
+  image: styled(HomeJapanImage)`
+    img {
+      object-position: -30px 0px !important;
+    }
+  `,
   others: [
     {
       id: "spring-in-japan",
@@ -43,19 +51,19 @@ export const japanLinks: CountryLink = {
         {
           id: "arashiyama",
           label: "Arashiyama",
-          published: new Date("2019-10-12"),
           card: ArashiyamaCard,
+          published: new Date("2020-09-09"),
         },
         {
           id: "daigoji",
           label: "Daigo-ji",
-          published: new Date("2019-10-13"),
+          published: false,
           card: DaigojiCard,
         },
         {
           id: "kinkakuji",
           label: "Kinkakuji",
-          published: new Date("2019-10-14"),
+          published: false,
           card: KinkakujiCard,
         },
         {

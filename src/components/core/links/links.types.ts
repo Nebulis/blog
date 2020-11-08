@@ -1,4 +1,5 @@
 import { ComponentType } from "react"
+import { ExtraCardProps } from "../../../types/shared"
 
 export interface ContinentLink {
   id: string
@@ -10,6 +11,7 @@ export interface CountryLink {
   id: string
   label: string
   url?: string
+  image?: ComponentType<ExtraCardProps>
   cities: CityLink[]
   others: OtherLink[]
 }
@@ -17,7 +19,7 @@ export interface CityLink {
   id: string
   label: string
   url?: string
-  image?: ComponentType
+  image?: ComponentType<ExtraCardProps>
   highlights: HighlightLink[]
 }
 
@@ -26,7 +28,7 @@ export interface OtherLink {
   label: string
   url?: string
   published: boolean | Date
-  card?: ComponentType
+  card?: ComponentType<ExtraCardProps>
 }
 
 export interface HighlightLink {
@@ -34,7 +36,7 @@ export interface HighlightLink {
   label: string
   url?: string
   published: boolean | Date
-  card?: ComponentType
+  card?: ComponentType<ExtraCardProps>
 }
 export interface NavigationLink {
   id: string

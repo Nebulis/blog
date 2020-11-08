@@ -8,6 +8,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-loadable-components-ssr`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {

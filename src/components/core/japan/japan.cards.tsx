@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import { MainArashiyamaImage } from "../../images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { MainKinkakujiImage } from "../../images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
 import { MainDaigojiImage } from "../../images/asia/japan/kyoto/daigoji/mainDaigojiImage"
@@ -14,6 +14,7 @@ import { MainToganjiImage } from "../../images/asia/japan/nagoya/toganji/mainTog
 import { Card } from "../../card"
 import { japanPrimaryColor, japanPrimaryColorDarker } from "./japan.variables"
 import styled from "@emotion/styled"
+import { ExtraCardProps } from "../../../types/shared"
 
 export const JapanCard = styled(Card)`
   .tags a {
@@ -24,67 +25,66 @@ export const JapanCard = styled(Card)`
   }
 `
 
-export const ArashiyamaCard = () => (
-  <JapanCard title="Arashiyama – Forêt de Bambous géants" to="arashiyama" tags={["japan", "kyoto"]}>
-    <MainArashiyamaImage />
+export const ArashiyamaCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Arashiyama – Forêt de Bambous géants" to="arashiyama">
+    <MainArashiyamaImage fluidObject={fluidObject} />
   </JapanCard>
 )
 
-export const KinkakujiCard = () => (
-  <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to="kinkakuji" tags={["japan", "kyoto"]}>
-    <MainKinkakujiImage />
-    {/*<KinkakujiQuote />*/}
+export const KinkakujiCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to="kinkakuji">
+    <MainKinkakujiImage fluidObject={fluidObject} />
   </JapanCard>
 )
 
-export const DaigojiCard = () => (
-  <JapanCard title="Temple Daigo-ji" to="daigoji" tags={["japan", "kyoto"]}>
-    <MainDaigojiImage />
+export const DaigojiCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Temple Daigo-ji" to="daigoji">
+    <MainDaigojiImage fluidObject={fluidObject} />
   </JapanCard>
 )
-export const FushimiInariTaishaCard = () => (
-  <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to="fushimi-inari-taisha" tags={[]}>
-    <MainFushimiImage />
+export const FushimiInariTaishaCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Fushimi Inari Taisha – Santuaire aux Torii" to="fushimi-inari-taisha">
+    <MainFushimiImage fluidObject={fluidObject} />
   </JapanCard>
 )
-export const ADayInTokyoCard = () => (
-  <JapanCard title="Une journée à Tokyo" to="a-day-in-tokyo" tags={[]}>
-    <MainTokyoImage />
+export const ADayInTokyoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Une journée à Tokyo" to="a-day-in-tokyo">
+    <MainTokyoImage fluidObject={fluidObject} />
   </JapanCard>
 )
-export const HamarikyuGardenCard = () => (
-  <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to="hamarikyu-garden" tags={[]}>
-    <MainHamarikyuGardenImage />
-  </JapanCard>
-)
-
-export const SensojiCard = () => (
-  <JapanCard title="Le temple de Senso-Ji" to="sensoji" tags={[]}>
-    <MainSensojiImage />
-  </JapanCard>
-)
-export const KawaguchikoLakeCard = () => (
-  <JapanCard title="Mont Fuji - Lac Kawaguchiko" to="fuji" tags={[]}>
-    <MainFujiImage />
+export const HamarikyuGardenCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Jardin Hama Rikyu – Un havre de paix en pleine ville" to="hamarikyu-garden">
+    <MainHamarikyuGardenImage fluidObject={fluidObject} />
   </JapanCard>
 )
 
-export const HimejiCastleCard = () => (
-  <JapanCard title="Château de Himeji – Magnifique château du Héron Blanc" to="himeji-castle" tags={[]}>
-    <MainHimejiCastleImage />
+export const SensojiCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Le temple de Senso-Ji" to="sensoji">
+    <MainSensojiImage fluidObject={fluidObject} />
+  </JapanCard>
+)
+export const KawaguchikoLakeCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Mont Fuji - Lac Kawaguchiko" to="fuji">
+    <MainFujiImage fluidObject={fluidObject} />
   </JapanCard>
 )
 
-export const NagoyaCastleCard = () => (
-  <JapanCard title="Château de Nagoya" to="nagoya-castle" tags={[]}>
-    <MainNagoyaCastleImage />
+export const HimejiCastleCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Château de Himeji – Magnifique château du Héron Blanc" to="himeji-castle">
+    <MainHimejiCastleImage fluidObject={fluidObject} />
   </JapanCard>
 )
 
-export const ToganjiCard = () => (
-  <JapanCard title="Le temple de Togan-Ji" to="toganji" tags={[]}>
+export const NagoyaCastleCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Château de Nagoya" to="nagoya-castle">
+    <MainNagoyaCastleImage fluidObject={fluidObject} />
+  </JapanCard>
+)
+
+export const ToganjiCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
+  <JapanCard title="Le temple de Togan-Ji" to="toganji">
     <ImageAsPortrait>
-      <MainToganjiImage />
+      <MainToganjiImage fluidObject={fluidObject} />
     </ImageAsPortrait>
   </JapanCard>
 )

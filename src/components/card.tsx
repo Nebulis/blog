@@ -17,7 +17,8 @@ interface CardProps {
 const cardPublishedStyle = css`
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, padding 0.2s ease;
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0 17px 25px rgba(0, 0, 0, 0.5);
   }
 
@@ -30,8 +31,17 @@ const cardPublishedStyle = css`
 const cardStyle = css`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-height: calc(100vh - 40px);
+  &:active,
+  &:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+  }
+
   .gatsby-image-wrapper {
-    margin-bottom: 0px;
+    margin-bottom: 0.5rem;
   }
   .tags {
     text-align: center;
@@ -42,6 +52,12 @@ const cardStyle = css`
     color: black;
   }
   .title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .title,
+  .show-more {
     font-size: 0.9rem;
     text-align: center;
     text-transform: uppercase;
@@ -66,7 +82,9 @@ const StyledDivider = styled(Divider)`
   margin-bottom: 0;
   width: 40px;
 `
-export const Card: FunctionComponent<CardProps & { tags: string[] }> = ({ children, title, className, to, tags }) => {
+export const Card: FunctionComponent<
+  CardProps & { tags?: string[]; showTags?: boolean; showPublished?: boolean; showMore?: boolean }
+> = ({ children, title, className, to, tags, showTags = true, showPublished = true, showMore = false }) => {
   if (!children) {
     throw new Error("Error in Card component")
   }
@@ -75,39 +93,72 @@ export const Card: FunctionComponent<CardProps & { tags: string[] }> = ({ childr
   if (!link) {
     throw new Error(`No link for ${to}`)
   }
+  const mustShowAndInteract = context.development || link.published
+  const tagsToDisplay = tags || link.tags
 
   return (
     <span
-      onClick={() => navigate(getLinkUrl(to))}
-      className={`pa3 mt3 mb3 ${className} card relative`}
-      css={[cardStyle, context.development || link.published ? cardPublishedStyle : null]}
+      onAuxClick={(event) => {
+        // TODO safari
+        // when clicking with the middle button, open the link into a new tab
+        if (event.button === 1) {
+          window.open(window.location.origin + getLinkUrl(to))
+        }
+      }}
+      onClick={(event) => {
+        if (!mustShowAndInteract) return
+        // if ctrl is pressed, must open the link into a new tab
+        if (event.ctrlKey) {
+          window.open(window.location.origin + getLinkUrl(to))
+        } else {
+          navigate(getLinkUrl(to))
+        }
+      }}
+      onKeyUp={(event) => {
+        if (!mustShowAndInteract) return
+        if (event.key === "Enter") {
+          navigate(getLinkUrl(to))
+        }
+      }}
+      className={`pa3 ${className} card relative`}
+      css={[cardStyle, mustShowAndInteract ? cardPublishedStyle : null]}
+      tabIndex={0}
+      role="link"
     >
       {context.development && !link.published ? <DevelopmentMark /> : null}
-      <div className="image mb3">{children}</div>
-      <div className="tags mb2">
-        {tags.map((tag, index) => (
-          <span
-            key={index}
-            onClick={(event) => {
-              event.stopPropagation()
-            }}
-          >
-            <ApplicationLink to={tag}>{getLinkLabel(tag)}</ApplicationLink>
-            {index < tags.length - 1 ? <>&nbsp;|&nbsp;</> : ""}
-          </span>
-        ))}
+      {/*Adding a wrapper around the image make it overflow for some reason*/}
+      {children}
+      {showTags && (
+        <div className="tags mb2">
+          {tagsToDisplay.map((tag, index) => (
+            <span
+              key={index}
+              onClick={(event) => {
+                event.stopPropagation()
+              }}
+            >
+              <ApplicationLink to={tag}>{getLinkLabel(tag)}</ApplicationLink>
+              {index < tagsToDisplay.length - 1 ? <>&nbsp;|&nbsp;</> : ""}
+            </span>
+          ))}
+        </div>
+      )}
+      <div className="title mb2" title={title}>
+        {title}
       </div>
-      <div className="title mb3">{title}</div>
-      <div className="date mb2">
-        Publié le{" "}
-        {link.publishedDate instanceof Date
-          ? link.publishedDate.toLocaleString("fr-FR", {
-              month: "numeric",
-              year: "numeric",
-              day: "numeric",
-            })
-          : "03/01/2010"}
-      </div>
+      {showMore && <div className="show-more mb2">En savoir plus</div>}
+      {showPublished && (
+        <div className="date mb2">
+          Publié le{" "}
+          {link.publishedDate instanceof Date
+            ? link.publishedDate.toLocaleString("fr-FR", {
+                month: "numeric",
+                year: "numeric",
+                day: "numeric",
+              })
+            : "03/01/2010"}
+        </div>
+      )}
       <StyledDivider />
     </span>
   )

@@ -18,11 +18,12 @@ const style = css`
   }
 `
 export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & ExternalLinkProps> = ({
+  className,
   children,
   noIcon = true,
   ...rest
 }) => (
-  <a {...rest} target="_blank" rel="noopener noreferrer" css={style}>
+  <a {...rest} target="_blank" rel="noopener noreferrer" css={style} className={className}>
     {children}
     {noIcon ? null : (
       <>
@@ -39,12 +40,19 @@ export const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => Functio
 ) =>
   function LinkIfActive({ children, to, action = "no-link", className = "", ...props }) {
     const context = useContext(ApplicationContext)
-    const link = getLink(to)
+    // sometimes we need to provide extra parameters, get rid of them to find the page
+    const page = to.split("?")[0]
+    const search = to.split("?")[1]
+    const link = getLink(page)
     if (!link) {
-      throw new Error(`No link for ${to}`)
+      throw new Error(`No link for ${page}`)
     }
     return context.development || link.published ? (
-      <ApplicationLink to={getLinkUrl(to)} {...props} className={`relative ${className}`}>
+      <ApplicationLink
+        to={`${getLinkUrl(page)}${search ? `?${search}` : ""}`}
+        {...props}
+        className={`relative ${className}`}
+      >
         {children}
         {!link.published ? <DevelopmentMark /> : null}
       </ApplicationLink>
