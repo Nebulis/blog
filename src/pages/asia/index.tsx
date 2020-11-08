@@ -11,6 +11,12 @@ import { Quote } from "../../components/core/quote"
 import styled from "@emotion/styled"
 import { HomeSection, HomeSubSection } from "../../components/core/section"
 import { IndexBlogLayoutWithDrawer } from "../../components/layout/main-layout"
+import loadable from "@loadable/component"
+
+const component = "yyyyy"
+// const ClientSideOnlyLazy = React.lazy(() => import(path))
+const ModuleComponent = loadable(() => import(`../../components/xxxxx/${component}`))
+// const ModuleComponent = loadable(() => import("../../components/x"))
 
 const CustomQuote = styled(Quote)`
   font-size: 20px;
@@ -25,6 +31,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Asie" />
+      <ModuleComponent />
       <IndexBlogLayoutWithDrawer page="asia">
         <h1 className="tc ttu">Asie</h1>
         <PrimaryDivider />
