@@ -8,5 +8,5 @@ import { vietnamLinks } from "../asia/vietnam/vietnam.links"
 export const asiaLinks: ContinentLink = {
   id: "asia",
   label: "Asie",
-  countries: [japanLinks, vietnamLinks],
+  countries: [vietnamLinks],
 }
