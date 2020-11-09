@@ -12,8 +12,10 @@ export const darkButtonHoverColor = "#23272b"
 /** sizes **/
 export const menuHeight = "35px"
 export const bannerHeight = `calc(100vh / 9.425)`
+export const bannerHeightLandscape = `calc(100vh / 7)` // random :)
 export const pageDesktopHeightWithoutBanner = `calc(100vh - ${bannerHeight} - ${menuHeight})`
 export const pageMobileHeightWithoutBanner = `calc(100vh - ${bannerHeight})`
+export const pageMobileLandscapeHeightWithoutBanner = `calc(100vh - ${bannerHeightLandscape})`
 
 export const mobileEnd = "576px"
 export const smallStart = "577px"

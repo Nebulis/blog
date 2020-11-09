@@ -5,6 +5,7 @@ import { DarkButton } from "../core/button"
 import { css } from "@emotion/core"
 import { backgroundPrimaryColor, bannerHeight, darkButtonColor, darkButtonHoverColor } from "../core/variables"
 
+// TODO landscape on mobile
 const searchContainerStyle = css`
   z-index: 2000;
   position: fixed;

@@ -13,7 +13,14 @@ import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
 import { FaChevronDown, FaChevronRight, FaTwitter, FaFacebook, FaInstagram, FaPinterest } from "react-icons/all"
-import { backgroundPrimaryColor, bannerHeight, menuHeight, mobileEnd, primaryColor } from "../core/variables"
+import {
+  backgroundPrimaryColor,
+  bannerHeight,
+  bannerHeightLandscape,
+  menuHeight,
+  mobileEnd,
+  primaryColor,
+} from "../core/variables"
 import styled from "@emotion/styled"
 import { animated, useSpring } from "react-spring"
 import ResizeObserver from "resize-observer-polyfill"
@@ -378,6 +385,11 @@ export const BurgerAbsolute = styled(Burger)`
   left: 0.5rem;
   // center, 12px is half the icon size
   top: calc(${bannerHeight} / 2 - 12px);
+
+  // use max-height to check the mobile
+  @media (orientation: landscape) and (max-height: ${mobileEnd}) {
+    top: calc(${bannerHeightLandscape} / 2 - 12px);
+  }
   &.closed {
     visibility: hidden;
   }
@@ -486,6 +498,12 @@ const ScrollContainer = styled.div`
   // the second part is the position of the bottom of the social network icon
   margin-top: calc(${bannerHeight} - calc(${bannerHeight} / 2 + 18px));
   height: calc(100vh - ${bannerHeight});
+
+  // use max-height to check the mobile
+  @media (orientation: landscape) and (max-height: ${mobileEnd}) {
+    margin-top: calc(${bannerHeightLandscape} - calc(${bannerHeightLandscape} / 2 + 18px));
+    height: calc(100vh - ${bannerHeightLandscape});
+  }
   padding: 0 50px 20px 50px;
   @media (max-width: ${mobileEnd}) {
     padding: 0 20px 10px 40px;
@@ -549,6 +567,12 @@ export const MobileMenu: React.FunctionComponent = () => {
               margin: 5px;
               // align with the burger, center the same way 9px is half the icon size
               margin-top: calc(${bannerHeight} / 2 - 9px);
+            }
+
+            @media (orientation: landscape) and (max-height: ${mobileEnd}) {
+              & > * {
+                margin-top: calc(${bannerHeightLandscape} / 2 - 9px);
+              }
             }
           `}
         >

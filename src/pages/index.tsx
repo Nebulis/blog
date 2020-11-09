@@ -216,7 +216,7 @@ const ContemplateContainer = styled.div`
     }
   }
 
-  @media (max-width: ${smallEnd}) {
+  @media (max-width: ${smallEnd}) amd (orientation: portrait) {
     grid-template-columns: auto auto;
   }
   @media (max-width: ${mobileEnd}) {

@@ -4,7 +4,7 @@ import { css } from "@emotion/core"
 import banner from "../../images/logo-the-real.svg"
 import bannerMobile from "../../images/logo-mobile-the-real.svg"
 import { ApplicationContext } from "../application"
-import { backgroundPrimaryColor, primaryColor, bannerHeight } from "../core/variables"
+import { backgroundPrimaryColor, primaryColor, bannerHeight, bannerHeightLandscape, mobileEnd } from "../core/variables"
 import { DialogPortal } from "../core/tooltipPortal"
 import { Search } from "./search"
 import styled from "@emotion/styled"
@@ -61,6 +61,13 @@ const headerStyle = css`
   }
   &.show-border-bottom {
     border-bottom: 1px solid black;
+  }
+  // use max-height to check the mobile
+  @media (orientation: landscape) and (max-height: ${mobileEnd}) {
+    .header,
+    .logo-container img {
+      height: ${bannerHeightLandscape};
+    }
   }
 `
 // disabled code is used by the sticky header
