@@ -9,7 +9,7 @@ import {
 } from "../../../components/core/links/links.configuration"
 import { vietnamLinks } from "../../../components/core/asia/vietnam/vietnam.links"
 import { HomeSection, HomeSubSection } from "../../../components/core/section"
-import { ApplicationLink } from "../../../components/core/links/link"
+import { ApplicationLink, ButtonLink } from "../../../components/core/links/link"
 import { extraLargeStart } from "../../../components/core/variables"
 import styled from "@emotion/styled"
 import vietnamHat from "../../../images/asia/vietnam/hat.svg"
@@ -19,7 +19,7 @@ import {
   VietnamImageAsMedallion,
 } from "../../../components/core/asia/vietnam/vietnam"
 import { VietnamCard } from "../../../components/core/asia/vietnam/vietnam.cards"
-import { ArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
+import { ArticlesContainer, GoToAllArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
 import { HomeVietnamImage } from "../../../components/images/asia/vietnam/home"
 
 export const Container = styled.div`
@@ -34,7 +34,7 @@ export const Container = styled.div`
 `
 
 const IndexPage = () => {
-  const { development } = useContext(ApplicationContext)
+  const { development, displayAllArticles } = useContext(ApplicationContext)
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
   return (
     <>
@@ -77,6 +77,16 @@ const IndexPage = () => {
             )
           )}
         </ArticlesContainer>
+        {displayAllArticles && (
+          <>
+            <VietnamDivider />
+            <GoToAllArticlesContainer>
+              <ButtonLink to="articles?country=vietnam" className="pr3 pl3">
+                Tous nos articles
+              </ButtonLink>
+            </GoToAllArticlesContainer>
+          </>
+        )}
       </IndexVietnamBlogLayout>
     </>
   )

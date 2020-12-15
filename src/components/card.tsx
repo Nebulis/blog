@@ -55,6 +55,10 @@ const cardStyle = css`
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    // there is a bug because the size of the card may have a max-height
+    // in that case the title may not be displayed totally
+    // we reuse the same value as the font-size
+    min-height: 0.9rem;
   }
   .title,
   .show-more {

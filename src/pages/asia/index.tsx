@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import SEO from "../../components/layout/seo"
-import { MedallionContainer } from "../../components/layout/layout"
+import { MedallionContainer, GoToAllArticlesContainer } from "../../components/layout/layout"
 import { ApplicationLink, ButtonLink } from "../../components/core/links/link"
 import { ImageAsMedallion } from "../../components/images/layout"
 import { asiaLinks } from "../../components/core/asia/asia.links"
@@ -59,11 +59,11 @@ const IndexPage = () => {
         {displayAllArticles && (
           <>
             <PrimaryDivider />
-            <div className="tc mt3 mb3">
+            <GoToAllArticlesContainer>
               <ButtonLink to="articles?continent=asia" className="pr3 pl3">
                 Tous nos articles
               </ButtonLink>
-            </div>
+            </GoToAllArticlesContainer>
           </>
         )}
       </IndexBlogLayoutWithDrawer>

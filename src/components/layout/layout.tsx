@@ -294,3 +294,9 @@ export const MedallionContainer = styled.div`
     margin: 5px;
   }
 `
+
+export const GoToAllArticlesContainer = styled.div`
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+`

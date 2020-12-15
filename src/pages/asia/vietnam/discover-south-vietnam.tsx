@@ -62,7 +62,20 @@ const IndexPage = () => {
             c’était largement suffisant.
           </p>
         </HowLong>
-        <HowMuch title="Combien d’argent prévoir ?">???</HowMuch>
+        <HowMuch title="Combien d’argent prévoir ?">
+          Le plus gros du budget sera consacré au voyage en avion. Environ 600€ par personne. Pour le reste des
+          dépenses, il est plutôt simple de s&apos;en sortir à moindre coût, que cela soit pour le logement, la
+          nourriture, les déplacements ou bien les activités. Par exemple, pour deux personnes nous en avons eu, par
+          jour, pour environ:
+          <ul>
+            <li>25€ de logement</li>
+            <li>20€ de nourriture</li>
+            <li>30€ en activités</li>
+            <li>10€ en déplacements (bus, taxi, etc.)</li>
+          </ul>
+          A noter qu&apos;en fonction de votre planning et vos besoins / envies, il est possible de s&apos;en sortir
+          pour encor emoins cher.
+        </HowMuch>
         <Where title="Notre itinéraire">
           <p>Ho Chi Minh ↠ My Tho ↠ Ho Chi Minh ↠ Can Tho ↠ Ho Chi Minh</p>
           <p>
@@ -203,7 +216,10 @@ const IndexPage = () => {
           </SectionContent>
         </section>
         <VietnamDivider />
-        <Conclusion>Le -</Conclusion>
+        <Conclusion>
+          De par son histoire et l&apos;authenticité de ses paysages, le Vietnam du Sud est une destination qui ne vous
+          laissera pas insensible.
+        </Conclusion>
       </VietnamBlogLayout>
     </>
   )
