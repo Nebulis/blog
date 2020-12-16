@@ -61,7 +61,7 @@ const IndexPage = () => {
       <VietnamBlogLayout page="cu-chi-tunnels">
         <VietnamTitle
           title="Les tunnels de Cu Chi"
-          categories={["asia", "vietnam", "south-vietnam"]}
+          categories={["asia", "vietnam", "southern-vietnam"]}
           linkId="cu-chi-tunnels"
         />
         <ImageAsLandscape>

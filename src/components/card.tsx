@@ -7,6 +7,7 @@ import { ApplicationContext } from "./application"
 import { Divider } from "./core/divider"
 import { backgroundPrimaryColor, mediumEnd, primaryColor, primaryDarkColor } from "./core/variables"
 import { navigate } from "gatsby"
+import { useCustomTranslation } from "../i18n"
 
 interface CardProps {
   title?: string
@@ -94,6 +95,7 @@ export const Card: FunctionComponent<
   }
   const link = getLink(to)
   const context = useContext(ApplicationContext)
+  const { t, i18n } = useCustomTranslation("common")
   if (!link) {
     throw new Error(`No link for ${to}`)
   }
@@ -141,7 +143,7 @@ export const Card: FunctionComponent<
                 event.stopPropagation()
               }}
             >
-              <ApplicationLink to={tag}>{getLinkLabel(tag)}</ApplicationLink>
+              <ApplicationLink to={tag}>{getLinkLabel(i18n.languageCode)(tag)}</ApplicationLink>
               {index < tagsToDisplay.length - 1 ? <>&nbsp;|&nbsp;</> : ""}
             </span>
           ))}
@@ -150,10 +152,10 @@ export const Card: FunctionComponent<
       <div className="title mb2" title={title}>
         {title}
       </div>
-      {showMore && <div className="show-more mb2">En savoir plus</div>}
+      {mustShowAndInteract && showMore && <div className="show-more mb2">En savoir plus</div>}
       {showPublished && (
         <div className="date mb2">
-          Publié le{" "}
+          {t("published")}{" "}
           {link.publishedDate instanceof Date
             ? link.publishedDate.toLocaleString("fr-FR", {
                 month: "numeric",

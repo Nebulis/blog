@@ -5,10 +5,12 @@ import { HomeCentralVietnamImage } from "../../../images/asia/vietnam/central-vi
 import { HomeSouthVietnamImage } from "../../../images/asia/vietnam/south-vietnam/home"
 import { HomeNorthVietnamImage } from "../../../images/asia/vietnam/north-vietnam/home"
 import { CanThoCard, CuChiTunnelsCard, MyThoCard } from "./vietnam.cards"
+import commonFr from "../../../../locales/fr/common.json"
+import commonEn from "../../../../locales/en/common.json"
 
 export const vietnamLinks: CountryLink = {
   id: "vietnam",
-  label: "Vietnam",
+  label: { fr: commonFr.country.vietnam, en: commonEn.country.vietnam },
   // this style is for the image in the asia page (medallion) to have the fisherman centered
   image: styled(HomeVietnamImage)`
     img {
@@ -17,8 +19,8 @@ export const vietnamLinks: CountryLink = {
   `,
   cities: [
     {
-      id: "south-vietnam",
-      label: "Sud",
+      id: "southern-vietnam",
+      label: { fr: commonFr.link.south, en: commonEn.link.south },
       // this style is for the image in the asia page (medallion)
       image: styled(HomeSouthVietnamImage)`
         img {
@@ -28,32 +30,32 @@ export const vietnamLinks: CountryLink = {
       highlights: [
         {
           id: "cu-chi-tunnels",
-          label: "Tunnels de Cu-Chi",
-          published: new Date("2020-01-01"),
+          label: { fr: commonFr.card.vietnam["cu-chi-tunnels"], en: commonEn.card.vietnam["cu-chi-tunnels"] },
+          published: new Date("2020-01-02"),
           card: CuChiTunnelsCard,
         },
         {
           id: "my-tho",
-          label: "My Tho",
+          label: { fr: "Mỹ Tho", en: "Mỹ Tho" },
           published: new Date("2020-01-01"),
           card: MyThoCard,
         },
         {
           id: "can-tho",
-          label: "Can Tho",
-          published: new Date("2020-01-01"),
+          label: { fr: "Cần Thơ", en: "Cần Thơ" },
+          published: new Date("2020-03-01"),
           card: CanThoCard,
         },
         {
           id: "ho-chi-minh-war-museum",
-          label: "Le Musée des Vestiges de Guerre",
+          label: { fr: "Le Musée des Vestiges de Guerre", en: "War Remnants Museum" },
           published: new Date("2021-01-01"),
         },
       ],
     },
     {
       id: "central-vietnam",
-      label: "Centre",
+      label: { fr: commonFr.link.central, en: commonEn.link.central },
       // this style is for the image in the asia page (medallion)
       // IMPORTANT
       // dont use more than -65px otherwise the picture goes out of the medallion in small device
@@ -66,7 +68,7 @@ export const vietnamLinks: CountryLink = {
     },
     {
       id: "north-vietnam",
-      label: "Nord",
+      label: { fr: commonFr.link.north, en: commonEn.link.north },
       image: HomeNorthVietnamImage,
       highlights: [],
     },
@@ -74,13 +76,16 @@ export const vietnamLinks: CountryLink = {
   others: [
     {
       id: "transports-in-vietnam",
-      label: "Transports in Vietnam",
+      label: { fr: commonFr.link.transports, en: commonEn.link.transports },
       url: "transports",
       published: false,
     },
     {
-      id: "discover-south-vietnam",
-      label: "Découverte du Vietnam du Sud",
+      id: "discover-southern-vietnam",
+      label: {
+        fr: commonFr.card.vietnam["discover-southern-vietnam"],
+        en: commonEn.card.vietnam["discover-southern-vietnam"],
+      },
       published: false,
     },
   ],

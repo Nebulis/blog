@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext, useEffect, useState, PropsWithChildren } from "react"
+import React, { FunctionComponent, useContext, useEffect, useState } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.configuration"
@@ -11,10 +11,19 @@ import smoothscroll from "smoothscroll-polyfill"
 import { Input } from "../core/input"
 import { PrimaryDarkButton } from "../core/button"
 import styled from "@emotion/styled"
-import { largeStart, maxWidth, mediumEnd, mobileEnd, primaryColor, primaryDarkColor } from "../core/variables"
+import {
+  extraLargeStart,
+  largeStart,
+  maxWidth,
+  mediumEnd,
+  mobileEnd,
+  primaryColor,
+  primaryDarkColor,
+} from "../core/variables"
 import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
 import { MenuContext } from "./menu.context"
 import { Status } from "../../types/shared"
+import { useCustomTranslation } from "../../i18n"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -85,6 +94,7 @@ export const IndexBlogLayout: FunctionComponent<{
   const { isMobileView } = useContext(MenuContext)
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
+  const { t } = useCustomTranslation("common")
   useEffect(() => {
     if (draw) draw()
     // I really want to run this one even if the function changed which should NOT happen
@@ -119,7 +129,7 @@ export const IndexBlogLayout: FunctionComponent<{
                 <div className="tc text">NEWSLETTER</div>
                 <div className="inline-flex">
                   <Input
-                    placeholder="Adresse Email"
+                    placeholder={t("footer.email")}
                     className="inline-flex"
                     id="newsletter"
                     value={mail}
@@ -169,7 +179,7 @@ export const IndexBlogLayout: FunctionComponent<{
                       ) : (
                         <FaTimes />
                       )}
-                      &nbsp;S&apos;inscrire
+                      &nbsp;{t("footer.subscribe")}
                     </PrimaryDarkButton>
                   </div>
                 </div>
@@ -299,4 +309,23 @@ export const GoToAllArticlesContainer = styled.div`
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
+`
+
+export const MainCardContainer = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 1rem 20px;
+
+  @media (min-width: ${extraLargeStart}) {
+    max-width: 1140px;
+  }
+`
+
+export const CityArticleContainer = styled.div`
+  padding: 1rem 20px;
+  @media (min-width: ${largeStart}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 `

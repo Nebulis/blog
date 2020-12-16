@@ -1,8 +1,6 @@
 import React, { ReactElement, useContext, useState } from "react"
 import { ArticlesContainer, HomeBlogLayout } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
-import { MainHimejiCastleImage } from "../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
-import { MainArashiyamaImage } from "../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip } from "../components/core/tooltipPortal"
@@ -12,6 +10,7 @@ import {
   getLink,
   getLinkUrl,
   getMostRecentArticles,
+  sortByLabel,
 } from "../components/core/links/links.configuration"
 import { Carousel, CarouselImage } from "../components/core/carousel"
 import { Divider } from "../components/core/divider"
@@ -34,6 +33,16 @@ import { ApplicationContext } from "../components/application"
 import { MenuContext } from "../components/layout/menu.context"
 import SEO from "../components/layout/seo"
 import { HomeSection, HomeSubSection } from "../components/core/section"
+import { useCustomTranslation } from "../i18n"
+import i18n from "i18next"
+import indexFr from "../locales/fr/index.json"
+import indexEn from "../locales/en/index.json"
+import { CarouselVietnam2 } from "../components/images/asia/vietnam/carousel-2"
+import { CarouselVietnam } from "../components/images/asia/vietnam/carousel"
+
+const namespace = "index"
+i18n.addResourceBundle("fr", namespace, indexFr)
+i18n.addResourceBundle("en", namespace, indexEn)
 
 const StyledWorld = styled(World)`
   stroke-line-join: round;
@@ -48,29 +57,29 @@ const StyledWorld = styled(World)`
   }
 `
 const visitedCountries = [
-  "jp",
-  "fr",
-  "au",
-  "es",
-  "vn",
-  "sg",
-  "id",
-  "kh",
-  "my",
-  "ph",
-  "in",
-  "lk",
-  "tw",
-  "th",
-  "sn",
-  "us",
+  "japan",
+  "france",
+  "australia",
+  "spain",
+  "vietnam",
+  "singapore",
+  "indonesia",
+  "cambodia",
+  "malaysia",
+  "philippines",
+  "india",
+  "sri-lanka",
+  "taiwan",
+  "thailand",
+  "senegal",
+  "united-states",
 ]
-const countriesWithArticles = ["vn"]
+const countriesWithArticles = ["vietnam"]
 const transform = (country: Country): ReactElement => {
-  if (visitedCountries.includes(country.id.toLowerCase())) {
-    if (country.id.toLowerCase() === "singapore") {
+  if (visitedCountries.includes(country.id)) {
+    if (country.id === "singapore") {
       return <circle cx="1385" cy="565" r="6" className="visited" />
-    } else if (countriesWithArticles.includes(country.id.toLowerCase())) {
+    } else if (countriesWithArticles.includes(country.id)) {
       return <CountryPath country={country} className="visited articles" />
     }
     return <CountryPath country={country} className="visited" />
@@ -236,21 +245,22 @@ const IndexPage = () => {
   const { isMobileView } = useContext(MenuContext)
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   return (
     <>
       <SEO />
       <HomeBlogLayout page="home" className="">
         <Carousel>
-          <CarouselImage country="Japon" to="japan">
-            <MainHimejiCastleImage />
+          <CarouselImage to="vietnam" country={t("common:country.vietnam")}>
+            <CarouselVietnam />
           </CarouselImage>
-          <CarouselImage country="Japon" to="japan">
-            <MainArashiyamaImage />
+          <CarouselImage to="vietnam" country={t("common:country.vietnam")}>
+            <CarouselVietnam2 />
           </CarouselImage>
         </Carousel>
         <HomeDivider />
-        <HomeSection>Explorer</HomeSection>
-        <HomeSubSection>Nos voyages à travers le monde ...</HomeSubSection>
+        <HomeSection>{t("index:explore.title")}</HomeSection>
+        <HomeSubSection>{t("explore.subtitle")}</HomeSubSection>
         <TravelsContainer>
           <MapContainer>
             <StyledWorld
@@ -258,28 +268,28 @@ const IndexPage = () => {
               transform={transform}
               onMouseEnter={(country) => {
                 if (isMobileView) return
-                if (visitedCountries.includes(country.id.toLowerCase())) {
+                if (visitedCountries.includes(country.id)) {
                   setCountry(country)
                 }
               }}
               onMouseLeave={() => setCountry(undefined)}
               onClick={(country) => {
                 try {
-                  navigate(getLinkUrl((country["data-name-en"] || country["data-name"]).toLowerCase()))
+                  navigate(getLinkUrl(country.id))
                 } catch (e) {
-                  console.log(`Link doesnt exist for ${country.id.toLowerCase()}`)
+                  console.log(`Link doesnt exist for ${country.id}`)
                 }
               }}
             />
           </MapContainer>
           <ButtonMapContainer>
-            {continentLinks.map((continent) => (
+            {continentLinks.sort(sortByLabel(i18n.languageCode)).map((continent) => (
               <div key={continent.id}>
                 <ButtonLink
                   to={continent.id}
                   className={`${getLink(continent.id)?.published || development ? "" : "inactive"}`}
                 >
-                  {continent.label}
+                  {continent.label[i18n.languageCode]}
                 </ButtonLink>
               </div>
             ))}
@@ -287,53 +297,40 @@ const IndexPage = () => {
         </TravelsContainer>
         <Divider />
         <div>
-          <HomeSection>Découvrir</HomeSection>
-          <HomeSubSection>Nos dernières aventures ...</HomeSubSection>
+          <HomeSection>{t("discover.title")}</HomeSection>
+          <HomeSubSection>{t("discover.subtitle")}</HomeSubSection>
           <ArticlesContainer>
             {getMostRecentArticles().map((Element, index) => (
               <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />
             ))}
           </ArticlesContainer>
           <div className="tc mt3">
-            <ButtonLink to="articles" className="pr3 pl3">
-              Tous nos articles
-            </ButtonLink>
+            <ButtonLink to="articles">{t("common:allArticles")}</ButtonLink>
           </div>
         </div>
         <HomeDivider />
-        <HomeSection>Contempler</HomeSection>
-        <HomeSubSection>Les merveilles de la planète ...</HomeSubSection>
+        <HomeSection>{t("contemplate.title")}</HomeSection>
+        <HomeSubSection>{t("contemplate.subtitle")}</HomeSubSection>
         <ContemplateContainer>
           <div className="contemplate-element">
             <Monument />
-            <div className="title">Monuments</div>
-            <div className="content">
-              Visite de Pyramides, Temples, Pagodes ... A la poursuite de l&apos;héritage des différentes civilisations
-            </div>
+            <div className="title">{t("contemplate.monuments.title")}</div>
+            <div className="content">{t("contemplate.monuments.content")}</div>
           </div>
           <div className="contemplate-element">
             <Hiking />
-            <div className="title">Nature</div>
-            <div className="content">
-              Trek, randonnées ou farniente, dans la montagne, dans la jungle comme sur la plage, admire les paysages
-              que la nature nous offre
-            </div>
+            <div className="title">{t("contemplate.nature.title")}</div>
+            <div className="content">{t("contemplate.nature.content")}</div>
           </div>
           <div className="contemplate-element">
             <CityIcon />
-            <div className="title">Ville</div>
-            <div className="content">
-              Promènes-toi dans les rues et les quartiers atypiques, visite les endroits animés et imprègne toi de la
-              culture des habitants
-            </div>
+            <div className="title">{t("contemplate.city.title")}</div>
+            <div className="content">{t("contemplate.city.content")}</div>
           </div>
           <div className="contemplate-element">
             <Photo />
-            <div className="title">Animaux</div>
-            <div className="content">
-              Dans leur habitat ou dans des réserves protégées, observe les animaux, apprends à les connaitre, comment
-              les protéger et conserver leur milieu naturel.
-            </div>
+            <div className="title">{t("contemplate.animals.title")}</div>
+            <div className="content">{t("contemplate.animals.content")}</div>
           </div>
         </ContemplateContainer>
         {false && (
@@ -355,7 +352,9 @@ const IndexPage = () => {
             </InstagramContainer>
           </>
         )}
-        <MouseToolTip>{country ? <TooltipContent>{country["data-name"]}</TooltipContent> : null}</MouseToolTip>
+        <MouseToolTip>
+          {country ? <TooltipContent>{t(`common:country.${country.id}`)}</TooltipContent> : null}
+        </MouseToolTip>
       </HomeBlogLayout>
     </>
   )

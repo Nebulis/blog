@@ -19,6 +19,7 @@ import { JapanCard } from "../../../components/core/japan/japan.cards"
 import { HomeSection, HomeSubSection } from "../../../components/core/section"
 import { extraLargeStart, mediumEnd } from "../../../components/core/variables"
 import { ArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
+import { useCustomTranslation } from "../../../i18n"
 
 export const Container = styled.div`
   margin-left: auto;
@@ -33,6 +34,7 @@ export const Container = styled.div`
 
 const IndexPage = () => {
   const { development } = useContext(ApplicationContext)
+  const { i18n } = useCustomTranslation()
   const cities = development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished)
   return (
     <>
@@ -66,10 +68,10 @@ const IndexPage = () => {
         <HomeSection>Parcourir</HomeSection>
         <HomeSubSection>Le pays de ville en ville ...</HomeSubSection>
         <MedallionContainer>
-          {cities.sort(sortByLabel).map((city) => {
+          {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
             return city.image ? (
               <ApplicationLink to={city.id} key={city.id}>
-                <JapanImageAsMedallion title={getLinkLabel(city.id)}>
+                <JapanImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
                   {React.createElement(city.image)}
                 </JapanImageAsMedallion>
               </ApplicationLink>

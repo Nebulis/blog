@@ -1,7 +1,11 @@
-import { graphql, useStaticQuery } from "gatsby"
-import React, { FunctionComponent, useState } from "react"
+import { graphql, PageProps, useStaticQuery } from "gatsby"
+import React, { useState } from "react"
+import { configureI18n, useCustomTranslation } from "../i18n"
 
-export const Application: FunctionComponent = ({ children }) => {
+let runOnce = false
+configureI18n()
+export const Application: React.FunctionComponent<PageProps> = ({ children, location }) => {
+  const { i18n } = useCustomTranslation()
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -16,6 +20,11 @@ export const Application: FunctionComponent = ({ children }) => {
     `
   )
   const [development, setDevelopment] = useState(site.siteMetadata.config.context !== "production")
+
+  if (location.pathname.startsWith("/en/") && !runOnce) {
+    runOnce = true
+    i18n.changeLanguage("en")
+  }
   return (
     <ApplicationContext.Provider
       value={{

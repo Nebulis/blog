@@ -11,6 +11,9 @@ import styled from "@emotion/styled"
 import { ApplicationLink } from "../core/links/link"
 import { Burger, BurgerAbsolute, Menu, MobileMenu } from "./menu"
 import { MenuContext } from "./menu.context"
+import { FlagFrance } from "../icon/flag-france"
+import { FlagUK } from "../icon/flag-uk"
+import { useCustomTranslation } from "../../i18n"
 
 const headerStyle = css`
   .header {
@@ -108,6 +111,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
 }) => {
   const context = useContext(ApplicationContext)
   const { isMobileView, open, setOpen } = useContext(MenuContext)
+  const { i18n } = useCustomTranslation()
 
   return (
     <header css={headerStyle} className={className}>
@@ -180,6 +184,8 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
         <div className="right-menu-container">
           <div className="right-menu-element" />
           <div className="mr2">
+            <FlagFrance selected={i18n.languageCode === "fr"} onClick={() => i18n.changeLanguage("fr")} />
+            <FlagUK selected={i18n.languageCode === "en"} onClick={() => i18n.changeLanguage("en")} />
             {context.development && <FaSearch onClick={onSearch} className="search" />}
             {context.initialDevelopmentValue ? (
               <FaCircle

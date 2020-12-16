@@ -7,13 +7,15 @@ import {
   FaCalendarAlt,
   FaClock,
   FaCloudSun,
+  FaDollarSign,
+  FaEuroSign,
   FaLightbulb,
   FaMapMarkedAlt,
   FaUtensils,
   FaWalking,
-  FaEuroSign,
 } from "react-icons/all"
 import { maxWidth, mediumEnd, mobileEnd } from "./variables"
+import { useCustomTranslation } from "../../i18n"
 
 export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
   <h4 className={`mb1 flex ${className}`}>{children}</h4>
@@ -43,16 +45,18 @@ export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ childre
 interface WhereProps {
   title?: string
 }
-export const Where: FunctionComponent<WhereProps> = ({ children, title = "Où ?" }) => (
-  <>
-    <SectionTitle>
-      <FaMapMarkedAlt />
-      &nbsp;{title}
-    </SectionTitle>
-    <SectionContent>{children}</SectionContent>
-  </>
-)
-
+export const Where: FunctionComponent<WhereProps> = ({ children, title }) => {
+  const { t } = useCustomTranslation("common")
+  return (
+    <>
+      <SectionTitle>
+        <FaMapMarkedAlt />
+        &nbsp;{title || t("section.where")}
+      </SectionTitle>
+      <SectionContent>{children}</SectionContent>
+    </>
+  )
+}
 export const When: FunctionComponent = ({ children }) => (
   <>
     <SectionTitle>
@@ -76,68 +80,79 @@ export const How: FunctionComponent = ({ children }) => (
 interface HowLongProps {
   title?: string
 }
-export const HowLong: FunctionComponent<HowLongProps> = ({ children, title = "Combien de temps ?" }) => (
-  <>
-    <SectionTitle>
-      <FaClock />
-      &nbsp;{title}
-    </SectionTitle>
-    <SectionContent>{children}</SectionContent>
-  </>
-)
-
+export const HowLong: FunctionComponent<HowLongProps> = ({ children, title }) => {
+  const { t } = useCustomTranslation("common")
+  return (
+    <>
+      <SectionTitle>
+        <FaClock />
+        &nbsp;{title || t("section.how-long")}
+      </SectionTitle>
+      <SectionContent>{children}</SectionContent>
+    </>
+  )
+}
 interface HowMuchProps {
   title?: string
-  PriceSign?: React.ComponentType
 }
-export const HowMuch: FunctionComponent<HowMuchProps> = ({ children, title = "Prix ?", PriceSign = FaEuroSign }) => (
-  <>
-    <SectionTitle>
-      <PriceSign />
-      &nbsp;{title}
-    </SectionTitle>
-    <SectionContent>{children}</SectionContent>
-  </>
-)
-
+export const HowMuch: FunctionComponent<HowMuchProps> = ({ children, title }) => {
+  const { t, i18n } = useCustomTranslation("common")
+  const PriceSign = i18n.languageCode === "fr" ? FaEuroSign : FaDollarSign
+  return (
+    <>
+      <SectionTitle>
+        <PriceSign />
+        &nbsp;{title || t("section.how-much")}
+      </SectionTitle>
+      <SectionContent>{children}</SectionContent>
+    </>
+  )
+}
 interface WhereToStayProps {
   location?: string
 }
-export const WhereToStay: FunctionComponent<WhereToStayProps> = ({ children, location }) => (
-  <>
-    <SectionTitle>
-      <FaBed />
-      &nbsp;Où dormir {location ? location + " " : ""}?
-    </SectionTitle>
-    <SectionContent>{children}</SectionContent>
-  </>
-)
+export const WhereToStay: FunctionComponent<WhereToStayProps> = ({ children, location }) => {
+  const { t } = useCustomTranslation("common")
+  return (
+    <>
+      <SectionTitle>
+        <FaBed />
+        &nbsp;{t("section.where")} {location ? location + " " : ""}?
+      </SectionTitle>
+      <SectionContent>{children}</SectionContent>
+    </>
+  )
+}
 interface WhatTimeOfYearProps {
   title?: string
 }
-export const WhatTimeOfYear: FunctionComponent<WhatTimeOfYearProps> = ({ children, title = "A quelle période ?" }) => (
-  <>
-    <SectionTitle>
-      <FaCloudSun />
-      &nbsp;{title}
-    </SectionTitle>
-    <SectionContent>{children}</SectionContent>
-  </>
-)
+export const WhatTimeOfYear: FunctionComponent<WhatTimeOfYearProps> = ({ children, title }) => {
+  const { t } = useCustomTranslation("common")
+  return (
+    <>
+      <SectionTitle>
+        <FaCloudSun />
+        &nbsp;{title || t("section.what-time-of-year")}
+      </SectionTitle>
+      <SectionContent>{children}</SectionContent>
+    </>
+  )
+}
 
 interface WhereToHaveProps {
   location: string
 }
-export const WhereToHave: FunctionComponent<WhereToHaveProps> = ({ children, location }) => (
-  <>
-    <SectionTitle>
-      <FaUtensils />
-      &nbsp;Où manger {location} ?
-    </SectionTitle>
-    <SectionContent>{children}</SectionContent>
-  </>
-)
-
+export const WhereToHave: FunctionComponent<WhereToHaveProps> = ({ children, location }) => {
+  return (
+    <>
+      <SectionTitle>
+        <FaUtensils />
+        &nbsp;Où manger {location} ?
+      </SectionTitle>
+      <SectionContent>{children}</SectionContent>
+    </>
+  )
+}
 export const Visit: FunctionComponent<HTMLAttributes<any> & { title?: string }> = ({
   children,
   className = "",
@@ -181,6 +196,10 @@ export const HomeSection: FunctionComponent = ({ children }) => (
     {children}
   </h2>
 )
+
+export const MainTitleSection: FunctionComponent = ({ children }) => {
+  return <h1 className="tc ttu flex items-center justify-center">{children}</h1>
+}
 
 const homeSubSectionStyle = css`
   padding-left: 200px;

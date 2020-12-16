@@ -1,0 +1,71 @@
+{
+  "link": {
+    "home": "Accueil",
+    "destination": "Destination",
+    "who": "Qui sommes nous ?",
+    "contact": "Contact",
+    "south": "Sud",
+    "north": "Nord",
+    "central": "Centre",
+    "transports": "Transports"
+  },
+  "continent": {
+    "asia": "Asie"
+  },
+  "inspire": {
+    "title": "S'inspirer",
+    "subtitle": "D'après nos récits et nos conseils ..."
+  },
+  "travel": {
+    "title": "Voyager",
+    "subtitle": "En suivant notre aventure ..."
+  },
+  "tour": {
+    "title": "Parcourir",
+    "subtitle": "Le pays de région en région ..."
+  },
+  "inform": {
+    "title": "S'informer",
+    "subtitle": "À travers nos astuces, nos coups de cœur ..."
+  },
+  "country": {
+    "australia": "Australie",
+    "cambodia": "Cambodge",
+    "france": "France",
+    "india": "Inde",
+    "indonesia": "Indonésie",
+    "japan": "Japon",
+    "malaysia": "Malaisie",
+    "philippines": "Philippines",
+    "senegal": "Sénégal",
+    "singapore": "Singapour",
+    "spain": "Espagne",
+    "sri-lanka": "Sri Lanka",
+    "taiwan": "Taiwan",
+    "thailand": "Thaïlande",
+    "united-states": "États-Unis",
+    "vietnam": "Vietnam"
+  },
+  "card": {
+    "vietnam": {
+      "cu-chi-tunnels": "Les tunnels de Củ Chi",
+      "discover-southern-vietnam": "Découverte du Vietnam du Sud",
+      "my-tho": "Croisière sur le Mékong entre Mỹ Tho et Ben Tre"
+    }
+  },
+  "allArticles": "Tous nos articles",
+  "published": "Publié le",
+  "in": "dans",
+  "head": "Blog Voyage",
+  "section": {
+    "how-long": "Combien de temps ?",
+    "how-much": "Combien d’argent prévoir ?",
+    "visit": "Les visites",
+    "what-time-of-year": "À quelle période ?",
+    "where": "Notre itinéraire"
+  },
+  "footer": {
+    "email": "Addresse Email",
+    "subscribe": "S'inscrire"
+  }
+}

@@ -9,8 +9,16 @@ import { ApplicationContext } from "../../components/application"
 import { PrimaryDivider } from "../../components/core/divider"
 import { Quote } from "../../components/core/quote"
 import styled from "@emotion/styled"
-import { HomeSection, HomeSubSection } from "../../components/core/section"
+import { HomeSection, HomeSubSection, MainTitleSection } from "../../components/core/section"
 import { IndexBlogLayoutWithDrawer } from "../../components/layout/main-layout"
+import { useCustomTranslation } from "../../i18n"
+import i18n from "i18next"
+import asiaIndexFr from "../../locales/fr/asia/index.json"
+import asiaIndexEn from "../../locales/en/asia/index.json"
+
+const namespace = "asia/index"
+i18n.addResourceBundle("fr", namespace, asiaIndexFr)
+i18n.addResourceBundle("en", namespace, asiaIndexEn)
 
 const CustomQuote = styled(Quote)`
   font-size: 20px;
@@ -22,34 +30,27 @@ const CustomQuote = styled(Quote)`
 const IndexPage = () => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const countries = development ? asiaLinks.countries : asiaLinks.countries.filter(isLinkPublished)
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   return (
     <>
-      <SEO title="Asie" />
+      <SEO title={t("common:continent.asia")} />
       <IndexBlogLayoutWithDrawer page="asia">
-        <h1 className="tc ttu">Asie</h1>
+        <MainTitleSection>{t("common:continent.asia")}</MainTitleSection>
         <PrimaryDivider />
         <div>
-          <CustomQuote>
-            Le continent asiatique est un continent que nous aimons particulièrement. Nous vivons depuis 2016 à
-            Singapour et de ce fait nous avons pu faire de nombreux voyages dans les régions environnantes.
-          </CustomQuote>
-          <CustomQuote position="none">
-            Farniente sur des plages paradisiaques, visite de temples traditionnels, trek dans la jungle ou simple
-            promenade à la découverte de paysages à couper le souffle, des grandes villes aux petits villages, en
-            apprenant les traditions de certaines tribus ou en observant avec discrétion les animaux sauvages … Tant de
-            pays qui incitent à l’évasion et font rêver.
-          </CustomQuote>
-          <CustomQuote position="none">Retrouvez ci-dessous les plus belles perles d’Asie.</CustomQuote>
+          <CustomQuote>{t("quote.part1")}</CustomQuote>
+          <CustomQuote position="none">{t("quote.part2")}</CustomQuote>
+          <CustomQuote position="none">{t("quote.part3")}</CustomQuote>
         </div>
         <PrimaryDivider />
 
-        <HomeSection>S&apos;inspirer</HomeSection>
-        <HomeSubSection>D&apos;après nos récits et nos conseils ...</HomeSubSection>
+        <HomeSection>{t("common:inspire.title")}</HomeSection>
+        <HomeSubSection>{t("common:inspire.subtitle")}</HomeSubSection>
         <MedallionContainer>
-          {countries.sort(sortByLabel).map((country) =>
+          {countries.sort(sortByLabel(i18n.languageCode)).map((country) =>
             country.image ? (
               <ApplicationLink to={country.id} key={country.id}>
-                <ImageAsMedallion title={getLinkLabel(country.id)}>
+                <ImageAsMedallion title={getLinkLabel(i18n.languageCode)(country.id)}>
                   {React.createElement(country.image)}
                 </ImageAsMedallion>
               </ApplicationLink>
@@ -60,9 +61,7 @@ const IndexPage = () => {
           <>
             <PrimaryDivider />
             <GoToAllArticlesContainer>
-              <ButtonLink to="articles?continent=asia" className="pr3 pl3">
-                Tous nos articles
-              </ButtonLink>
+              <ButtonLink to="articles?continent=asia">{t("common:allArticles")}</ButtonLink>
             </GoToAllArticlesContainer>
           </>
         )}

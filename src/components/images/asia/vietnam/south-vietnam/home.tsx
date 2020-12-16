@@ -18,6 +18,6 @@ export const HomeSouthVietnamImage: React.FunctionComponent<ExtraImageProps> = (
     }
   `)
   return (
-    <Img fluid={{ ...data.file.childImageSharp.fluid, ...fluidObject }} alt="South Vietnam" className={className} />
+    <Img fluid={{ ...data.file.childImageSharp.fluid, ...fluidObject }} alt="Southern Vietnam" className={className} />
   )
 }

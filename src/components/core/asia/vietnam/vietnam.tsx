@@ -25,14 +25,6 @@ export const CuChoTunnelsQuote = () => (
   </VietnamQuote>
 )
 
-export const SouthVietnamQuote = () => (
-  <VietnamQuote>
-    Le Sud du Vietnam regorge de surprises et de découvertes, toutes plus passionnantes les unes que les autres. Entre
-    le dynamisme de la ville de Ho Chi Minh et les excursions en bateau à l’ombre des palmiers d’eau sur le Delta du
-    Mékong, il y en a pour tous les goûts.
-  </VietnamQuote>
-)
-
 const vietnamPartStyle = css`
   color: ${vietnamPrimaryColorDarker};
 `

@@ -77,8 +77,7 @@ const BaseButtonLink = styled(ApplicationLink)`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 16px;
   font-weight: bold;
   font-size: 0.9rem;
   transition: all 0.2s linear;

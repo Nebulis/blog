@@ -1,0 +1,30 @@
+{
+  "explore": {
+    "title": "Explorer",
+    "subtitle": "Nos voyages à travers le monde ..."
+  },
+  "discover": {
+    "title": "Découvrir",
+    "subtitle": "Nos dernières aventures ..."
+  },
+  "contemplate": {
+    "title": "Contempler",
+    "subtitle": "Les merveilles de la planète ...",
+    "monuments": {
+      "title": "Monuments",
+      "content": "Visite de Pyramides, Temples, Pagodes ... A la poursuite de l'héritage des différentes civilisations"
+    },
+    "nature": {
+      "title": "Nature",
+      "content": "Trek, randonnées ou farniente, dans la montagne, dans la jungle comme sur la plage, admire les paysages que la nature nous offre"
+    },
+    "city": {
+      "title": "Ville",
+      "content": "Promènes-toi dans les rues et les quartiers atypiques, visite les endroits animés et imprègne toi de la culture des habitants"
+    },
+    "animals": {
+      "title": "Animaux",
+      "content": "Dans leur habitat ou dans des réserves protégées, observe les animaux, apprends à les connaitre, comment les protéger et conserver leur milieu naturel."
+    }
+  }
+}

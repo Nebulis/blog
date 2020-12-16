@@ -8,9 +8,15 @@ import React, {
   useRef,
   useState,
 } from "react"
-import { continentLinks, getLinkLabel, isLinkPublished, menuLinks } from "../core/links/links.configuration"
+import {
+  continentLinks,
+  getLinkLabel,
+  isLinkPublished,
+  menuLinks,
+  sortByLabel,
+} from "../core/links/links.configuration"
 import { ApplicationLink } from "../core/links/link"
-import { CityLink, ContinentLink, CountryLink } from "../core/links/links.types"
+import { CityLink, ContinentLink, CountryLink, Label, Lang } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
 import { FaChevronDown, FaChevronRight, FaTwitter, FaFacebook, FaInstagram, FaPinterest } from "react-icons/all"
 import {
@@ -25,22 +31,27 @@ import styled from "@emotion/styled"
 import { animated, useSpring } from "react-spring"
 import ResizeObserver from "resize-observer-polyfill"
 import { MenuContext } from "./menu.context"
+import { useCustomTranslation } from "../../i18n"
 
-const sort = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
-
-const renderCity = (continent: ContinentLink, country: CountryLink, city: CityLink, inDevelopment: boolean) => {
+const renderCity = (
+  continent: ContinentLink,
+  country: CountryLink,
+  city: CityLink,
+  inDevelopment: boolean,
+  lang: Lang
+) => {
   const highlights = inDevelopment ? city.highlights : city.highlights.filter(isLinkPublished)
   return (
     <li key={`${continent.id}_${country.id}_${city.id}`}>
       <ApplicationLink to={city.id}>
-        <span>{getLinkLabel(city.id)}</span>
+        <span>{getLinkLabel(lang)(city.id)}</span>
         <span>{inDevelopment && highlights.length > 0 ? ">" : null}</span>
       </ApplicationLink>
       {inDevelopment && highlights.length > 0 ? (
         <ul className="dropdown-highlight" aria-label="submenu">
-          {highlights.sort(sort).map((highlight) => (
+          {highlights.sort(sortByLabel(lang)).map((highlight) => (
             <li key={`${continent.id}_${country.id}_${city.id}_${highlight.id}`}>
-              <ApplicationLink to={highlight.id}>{getLinkLabel(highlight.id)}</ApplicationLink>
+              <ApplicationLink to={highlight.id}>{getLinkLabel(lang)(highlight.id)}</ApplicationLink>
             </li>
           ))}
         </ul>
@@ -48,18 +59,18 @@ const renderCity = (continent: ContinentLink, country: CountryLink, city: CityLi
     </li>
   )
 }
-const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelopment: boolean) => {
+const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelopment: boolean, lang: Lang) => {
   const cities = inDevelopment ? country.cities : country.cities.filter(isLinkPublished)
 
   return (
     <li key={`${continent.id}_${country.id}`}>
       <ApplicationLink to={country.id}>
-        <span>{getLinkLabel(country.id)}</span>
+        <span>{getLinkLabel(lang)(country.id)}</span>
         <span>{inDevelopment && cities.length > 0 ? ">" : null}</span>
       </ApplicationLink>
       {inDevelopment && cities.length > 0 ? (
         <ul className="submenu" aria-label="submenu">
-          {cities.sort(sort).map((city) => renderCity(continent, country, city, inDevelopment))}
+          {cities.sort(sortByLabel(lang)).map((city) => renderCity(continent, country, city, inDevelopment, lang))}
         </ul>
       ) : null}
     </li>
@@ -69,6 +80,7 @@ const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelop
 export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
   const context = useContext(ApplicationContext)
   const inDevelopment = context.development
+  const { t, i18n } = useCustomTranslation("common")
 
   return (
     <div
@@ -237,43 +249,45 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
         <ul>
           <li>
             <ApplicationLink to="home" className="home">
-              Accueil
+              {t("link.home")}
             </ApplicationLink>
           </li>
           <li className="menu-down">
             <a href="#" aria-haspopup="true">
-              Destination
+              {t("link.destination")}
             </a>
             <span className="white-arrow"> </span>
             <span className="black-arrow"> </span>
             <ul className="submenu" aria-label="submenu">
-              {(inDevelopment ? continentLinks : continentLinks.filter(isLinkPublished)).map((continent) => {
-                const publishedCountries = inDevelopment
-                  ? continent.countries
-                  : continent.countries.filter(isLinkPublished)
-                return (
-                  <li key={continent.id}>
-                    <ApplicationLink to={continent.id}>
-                      <span>{getLinkLabel(continent.id)}</span>
-                      <span>{publishedCountries.length > 0 ? ">" : null}</span>
-                    </ApplicationLink>
-                    {publishedCountries.length > 0 ? (
-                      <ul className="submenu" aria-label="submenu">
-                        {publishedCountries
-                          .sort(sort)
-                          .map((country) => renderCountry(continent, country, inDevelopment))}
-                      </ul>
-                    ) : null}
-                  </li>
-                )
-              })}
+              {(inDevelopment ? continentLinks : continentLinks.filter(isLinkPublished))
+                .sort(sortByLabel(i18n.languageCode))
+                .map((continent) => {
+                  const publishedCountries = inDevelopment
+                    ? continent.countries
+                    : continent.countries.filter(isLinkPublished)
+                  return (
+                    <li key={continent.id}>
+                      <ApplicationLink to={continent.id}>
+                        <span>{getLinkLabel(i18n.languageCode)(continent.id)}</span>
+                        <span>{publishedCountries.length > 0 ? ">" : null}</span>
+                      </ApplicationLink>
+                      {publishedCountries.length > 0 ? (
+                        <ul className="submenu" aria-label="submenu">
+                          {publishedCountries
+                            .sort(sortByLabel(i18n.languageCode))
+                            .map((country) => renderCountry(continent, country, inDevelopment, i18n.languageCode))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  )
+                })}
             </ul>
           </li>
           {menuLinks.map((menuLink) => {
             const subLinks = inDevelopment ? menuLink.sections : menuLink.sections.filter(isLinkPublished)
             return (
               <li key={menuLink.id} className="menu-down">
-                <a href="#">{menuLink.label}</a>
+                <a href="#">{menuLink.label[i18n.languageCode]}</a>
                 {subLinks.length > 0 && (
                   <>
                     <span className="white-arrow"> </span>
@@ -286,19 +300,21 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
                             {subSubLinks.length > 0 ? (
                               <>
                                 <a href="#">
-                                  <span>{subLink.label}</span>
+                                  <span>{subLink.label[i18n.languageCode]}</span>
                                   <span>&gt;</span>
                                 </a>
                                 <ul className="submenu" aria-label="submenu">
                                   {subSubLinks.map((subSubLink) => (
                                     <li key={subSubLink.id}>
-                                      <ApplicationLink to={subSubLink.id}>{subSubLink.label}</ApplicationLink>
+                                      <ApplicationLink to={subSubLink.id}>
+                                        {subSubLink.label[i18n.languageCode]}
+                                      </ApplicationLink>
                                     </li>
                                   ))}
                                 </ul>
                               </>
                             ) : (
-                              <ApplicationLink to={subLink.id}>{subLink.label}</ApplicationLink>
+                              <ApplicationLink to={subLink.id}>{subLink.label[i18n.languageCode]}</ApplicationLink>
                             )}
                           </li>
                         )
@@ -554,6 +570,7 @@ export const MobileMenu: React.FunctionComponent = () => {
   const { open, setOpen } = useContext(MenuContext)
   const { development } = useContext(ApplicationContext)
   const closeMenu = () => setOpen(false)
+  const { i18n } = useCustomTranslation("common")
   return (
     <>
       {open && <Overlay onClick={closeMenu} />}
@@ -627,10 +644,10 @@ export const MobileMenu: React.FunctionComponent = () => {
             {(development ? continentLinks : continentLinks.filter(isLinkPublished)).map((continent) => {
               const publishedCountries = development ? continent.countries : continent.countries.filter(isLinkPublished)
               return (
-                <Tree key={continent.id} name={continent.label} onNavigate={closeMenu}>
+                <Tree key={continent.id} name={continent.label[i18n.languageCode]} onNavigate={closeMenu}>
                   <Tree key={continent.id} name="Accueil" to={continent.id} onNavigate={closeMenu} />
                   {publishedCountries.map((country) => (
-                    <Tree key={country.id} name={country.label} to={country.id} onNavigate={closeMenu} />
+                    <Tree key={country.id} name={country.label[i18n.languageCode]} to={country.id} onNavigate={closeMenu} />
                   ))}
                 </Tree>
               )
@@ -641,16 +658,21 @@ export const MobileMenu: React.FunctionComponent = () => {
             const to = subMenuLinks.length > 0 ? undefined : menuLink.id
             return (
               // animation is a bit weird on the last element ... animate has been created for that purpose
-              <Tree key={menuLink.id} to={to} name={menuLink.label} animate={menuLink.id !== "about"}>
+              <Tree key={menuLink.id} to={to} name={menuLink.label[i18n.languageCode]} animate={menuLink.id !== "about"}>
                 {subMenuLinks.map((subMenuLink) => {
                   const subSubMenuLinks = development
                     ? subMenuLink.sections
                     : subMenuLink.sections.filter(isLinkPublished)
                   const to = subSubMenuLinks.length > 0 ? undefined : subMenuLink.id
                   return (
-                    <Tree key={subMenuLink.id} to={to} name={subMenuLink.label} onNavigate={closeMenu}>
+                    <Tree key={subMenuLink.id} to={to} name={subMenuLink.label[i18n.languageCode]} onNavigate={closeMenu}>
                       {subSubMenuLinks.map((subSubMenuLink) => (
-                        <Tree key={subSubMenuLink.id} to={to} name={subSubMenuLink.label} onNavigate={closeMenu} />
+                        <Tree
+                          key={subSubMenuLink.id}
+                          to={to}
+                          name={subSubMenuLink.label[i18n.languageCode]}
+                          onNavigate={closeMenu}
+                        />
                       ))}
                     </Tree>
                   )

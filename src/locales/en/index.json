@@ -1,0 +1,30 @@
+{
+  "explore": {
+    "title": "Explore",
+    "subtitle": "Our travels around the world ..."
+  },
+  "discover": {
+    "title": "Discover",
+    "subtitle": "Our latest adventures ..."
+  },
+  "contemplate": {
+    "title": "Contemplate",
+    "subtitle": "The wonders of the World ...",
+    "monuments": {
+      "title": "Monuments",
+      "content": "Visit Pyramids, Temples, Pagodas ... Let's discover the heritage of different civilizations"
+    },
+    "nature": {
+      "title": "Nature",
+      "content": "Trek, hikes or idleness, in the mountains, in the jungle as on the beach, admire the landscapes that nature gives us"
+    },
+    "city": {
+      "title": "City",
+      "content": "Stroll through the streets and unique district, visit the lively places and soak up the culture of the locals"
+    },
+    "animals": {
+      "title": "Animals",
+      "content": "In their natural habitat or in protected reserves, observe the animals, get to know them, how to protect them and preserve their environment."
+    }
+  }
+}

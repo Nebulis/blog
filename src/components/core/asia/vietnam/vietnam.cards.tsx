@@ -7,6 +7,10 @@ import { MainWarMuseumImage } from "../../../images/asia/vietnam/south-vietnam/w
 import { MainCanThoImage } from "../../../images/asia/vietnam/south-vietnam/can-tho/can-tho-main"
 import { MainMyThoImage } from "../../../images/asia/vietnam/south-vietnam/my-tho/my-tho-main"
 import { ExtraCardProps } from "../../../../types/shared"
+import { useCustomTranslation } from "../../../../i18n"
+import { HomeVietnamImage } from "../../../images/asia/vietnam/home"
+import commonFr from "../../../../locales/fr/common.json"
+import commonEn from "../../../../locales/en/common.json"
 
 export const VietnamCard = styled(Card)`
   .tags a {
@@ -20,11 +24,15 @@ export const VietnamCard = styled(Card)`
   }
 `
 
-export const CuChiTunnelsCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => (
-  <VietnamCard title="Les tunnels de Cu Chi" to="cu-chi-tunnels" {...card}>
-    <MainCuChiTunnelsImage fluidObject={fluidObject} />
-  </VietnamCard>
-)
+export const CuChiTunnelsCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <VietnamCard title={common.card.vietnam["cu-chi-tunnels"]} to="cu-chi-tunnels" {...card}>
+      <MainCuChiTunnelsImage fluidObject={fluidObject} />
+    </VietnamCard>
+  )
+}
 
 export const WarMuseumCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => (
   <VietnamCard title="Le Musée des Vestiges de Guerre" to="ho-chi-minh-war-museum" {...card}>
@@ -38,8 +46,22 @@ export const CanThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, car
   </VietnamCard>
 )
 
-export const MyThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => (
-  <VietnamCard title="Croisière sur le Mékong entre My Tho et Ben Tre" to="my-tho" {...card}>
-    <MainMyThoImage fluidObject={fluidObject} />
-  </VietnamCard>
-)
+export const MyThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <VietnamCard title={common.card.vietnam["my-tho"]} to="my-tho" {...card}>
+      <MainMyThoImage fluidObject={fluidObject} />
+    </VietnamCard>
+  )
+}
+
+export const SouthVietnamCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <VietnamCard title={common.card.vietnam["discover-southern-vietnam"]} to="discover-southern-vietnam" {...card}>
+      <HomeVietnamImage fluidObject={fluidObject} />
+    </VietnamCard>
+  )
+}

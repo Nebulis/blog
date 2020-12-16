@@ -1,48 +1,68 @@
 import * as path from "path"
-import { CityLink, ContinentLink, CountryLink, HighlightLink, NavigationLink } from "./links.types"
+import { CityLink, ContinentLink, CountryLink, HighlightLink, Label, Lang, NavigationLink } from "./links.types"
 import { isPublished } from "./links.utils"
 import React from "react"
 import { asiaLinks } from "../asia/asia.links"
 import { ExtraCardProps } from "../../../types/shared"
+import commonEn from "../../../locales/en/common.json"
+import commonFr from "../../../locales/fr/common.json"
 
 export const continentLinks: ContinentLink[] = [
   asiaLinks,
   {
     id: "africa",
-    label: "Afrique",
+    label: {
+      fr: "Afrique",
+      en: "Africa",
+    },
     countries: [],
   },
   {
     id: "south-america",
-    label: "Amérique du Sud",
+    label: {
+      fr: "Amérique du Sud",
+      en: "South America",
+    },
     countries: [],
   },
   {
     id: "north-america",
-    label: "Amérique du Nord",
+    label: {
+      fr: "Amérique du Nord",
+      en: "North America",
+    },
     countries: [],
   },
   {
     id: "europe",
-    label: "Europe",
+    label: {
+      fr: "Europe",
+      en: "Europe",
+    },
     countries: [],
   },
   {
     id: "middle-east",
-    label: "Moyen-Orient",
+    label: {
+      fr: "Moyen-Orient",
+      en: "Middle-East",
+    },
     countries: [],
   },
   {
     id: "oceania",
-    label: "Océanie",
+    label: {
+      fr: "Océanie",
+      en: "Oceania",
+    },
     countries: [],
   },
-].sort((obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label))
+]
 
 export const menuLinks: NavigationLink[] = [
   {
     id: "organisation",
-    label: "Organisation",
+    label: { fr: "Organisation", en: "Organisation" },
     sections: [
       // {
       //   id: "by-country",
@@ -76,26 +96,26 @@ export const menuLinks: NavigationLink[] = [
       // },
       {
         id: "when-to-go",
-        label: "Quand Partir",
+        label: { fr: "Quand Partir", en: "When to go" },
         sections: [
           {
             id: "spring",
-            label: "Printemps",
+            label: { fr: "Printemps", en: "Spring" },
             sections: [],
           },
           {
             id: "summer",
-            label: "Été",
+            label: { fr: "Été", en: "Summer" },
             sections: [],
           },
           {
             id: "autumn",
-            label: "Automne",
+            label: { fr: "Automne", en: "Autumn" },
             sections: [],
           },
           {
             id: "winter",
-            label: "Hiver",
+            label: { fr: "Hiver", en: "Winter" },
             sections: [],
           },
         ],
@@ -104,70 +124,70 @@ export const menuLinks: NavigationLink[] = [
   },
   {
     id: "discovery",
-    label: "Découverte",
+    label: { fr: "Découverte", en: "Discovery" },
     sections: [
       {
         id: "monuments",
-        label: "Monuments",
+        label: { fr: "Monuments", en: "Monuments" },
         sections: [],
       },
       {
         id: "nature",
-        label: "Nature",
+        label: { fr: "Nature", en: "Nature" },
         sections: [],
       },
       {
         id: "city",
-        label: "Ville",
+        label: { fr: "Ville", en: "City" },
         sections: [],
       },
       {
         id: "temples",
-        label: "Temples",
+        label: { fr: "Temples", en: "Temples" },
         sections: [],
       },
     ],
   },
   {
     id: "journal",
-    label: "Journal",
+    label: { fr: "Journal", en: "Journal" },
     sections: [
       {
         id: "travelling",
-        label: "Voyage",
+        label: { fr: "Voyage", en: "Travelling" },
         sections: [],
       },
       {
         id: "living-foreign-country",
-        label: "Vivre à l'étranger",
+        label: { fr: "Vivre à l'étranger", en: "Living abroad" },
         sections: [],
       },
       {
         id: "living-singapore",
-        label: "Vivre à Singapour",
+        label: { fr: "Vivre à Singapour", en: "Living in Singapore" },
         sections: [],
       },
     ],
   },
   {
     id: "about",
-    label: "À propos",
+    label: { fr: "À propos", en: "About" },
     sections: [
       {
         id: "who",
-        label: "Qui sommes nous ?",
+        label: { fr: commonFr.link.who, en: commonEn.link.who },
         published: true,
         sections: [],
       },
       {
         id: "contact",
-        label: "Contact",
+        label: { fr: commonFr.link.contact, en: commonEn.link.contact },
         published: true,
         sections: [],
       },
       {
         id: "devices",
-        label: "Notre matériel",
+        label: { fr: "Notre matériel", en: "Our devices" },
         published: false,
         sections: [],
       },
@@ -178,13 +198,13 @@ export const menuLinks: NavigationLink[] = [
 export const otherLinks: NavigationLink[] = [
   {
     id: "home",
-    label: "home",
+    label: { fr: "Accueil", en: "Home" },
     url: "/",
     sections: [],
   },
   {
     id: "articles",
-    label: "articles",
+    label: { fr: "Articles", en: "Articles" },
     sections: [],
   },
 ]
@@ -193,7 +213,7 @@ const getUrl = (object: { url?: string; id: string }): string => object.url || o
 
 interface CachedLinksMap {
   country?: string
-  label: string
+  label: Label
   url: string
   published: boolean
   publishedDate?: Date
@@ -304,8 +324,8 @@ export const getCacheSize = () => {
 export const getLinkUrl = (linkId: string): string => {
   return getLink(linkId).url
 }
-export const getLinkLabel = (linkId: string): string => {
-  return getLink(linkId).label
+export const getLinkLabel = (lang: Lang) => (linkId: string): string => {
+  return getLink(linkId).label[lang]
 }
 export const isLinkPublished = (element: CountryLink | CityLink | HighlightLink | ContinentLink | NavigationLink) => {
   const link = cachedLinks.get(element.id)
@@ -315,7 +335,13 @@ export const isLinkPublished = (element: CountryLink | CityLink | HighlightLink 
   return link.published
 }
 
-export const sortByLabel = (obj1: { label: string }, obj2: { label: string }) => obj1.label.localeCompare(obj2.label)
+export const sortByLabel = (lang: Lang) => (obj1: { label: Label }, obj2: { label: Label }) =>
+  obj1.label[lang].localeCompare(obj2.label[lang])
+export const sortByPublishedDate = (obj1: { published?: Date | boolean }, obj2: { published?: Date | boolean }) => {
+  const time1 = obj1.published instanceof Date ? obj1.published.getTime() : 0
+  const time2 = obj2.published instanceof Date ? obj2.published.getTime() : 0
+  return time2 - time1
+}
 
 type LinkMapped = Required<Pick<CachedLinksMap, "card" | "publishedDate" | "country">>
 const filterNull = (value: any): value is LinkMapped => {

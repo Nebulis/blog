@@ -15,6 +15,7 @@ import { Card } from "../../card"
 import { japanPrimaryColor, japanPrimaryColorDarker } from "./japan.variables"
 import styled from "@emotion/styled"
 import { ExtraCardProps } from "../../../types/shared"
+import { useCustomTranslation } from "../../../i18n"
 
 export const JapanCard = styled(Card)`
   .tags a {
@@ -25,12 +26,18 @@ export const JapanCard = styled(Card)`
   }
 `
 
-export const ArashiyamaCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
-  <JapanCard title="Arashiyama – Forêt de Bambous géants" to="arashiyama">
-    <MainArashiyamaImage fluidObject={fluidObject} />
-  </JapanCard>
-)
-
+export const ArashiyamaCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => {
+  const { i18n } = useCustomTranslation()
+  const title = {
+    fr: "Arashiyama – Forêt de bambous géants",
+    en: "Arashiyama – Giant bamboo forest",
+  }
+  return (
+    <JapanCard title={title[i18n.languageCode]} to="arashiyama">
+      <MainArashiyamaImage fluidObject={fluidObject} />
+    </JapanCard>
+  )
+}
 export const KinkakujiCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => (
   <JapanCard title="Temple de Kinkakuji – Le pavillon d’or" to="kinkakuji">
     <MainKinkakujiImage fluidObject={fluidObject} />

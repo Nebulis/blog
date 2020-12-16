@@ -5,52 +5,48 @@ import { SectionContent } from "../../components/core/section"
 import { Divider } from "../../components/core/divider"
 import { PrimaryDarkButtonLink } from "../../components/core/links/link"
 import { FaChevronRight } from "react-icons/fa"
-import who from "../../images/about/who.png"
+import whoImageFr from "../../images/about/who-fr.png"
+import whoImageEn from "../../images/about/who-en.png"
 import { css } from "@emotion/core"
 import { mediumEnd, primaryColor } from "../../components/core/variables"
+import { useCustomTranslation } from "../../i18n"
+import i18n from "i18next"
+import whoFr from "../../locales/fr/about/who.json"
+import whoEn from "../../locales/en/about/who.json"
+
+const namespace = "about/who"
+i18n.addResourceBundle("fr", namespace, whoFr)
+i18n.addResourceBundle("en", namespace, whoEn)
 
 const IndexPage = () => {
+  const { t, i18n } = useCustomTranslation([namespace, "commonet"])
   return (
     <>
-      <SEO title="Qui sommes-nous ?" />
+      <SEO title={t("common:link.who")} />
       <BlogLayout page="who">
         <div className="tc mb3 mt3">
           <img
-            src={who}
+            src={i18n.languageCode === "fr" ? whoImageFr : whoImageEn}
             alt="Some words..."
             css={css`
               max-height: 500px;
             `}
           />
         </div>
-        <SectionContent>
-          Après 8 ans d’amour, une routine boulot dodo et un manque de dépaysement nous avons décidé en 2016 de changer
-          de vie pour venir nous installer à Singapour avec nos 2 chats sans jamais y avoir mis les pieds.
-        </SectionContent>
-        <SectionContent>Une sacrée aventure qui nous a permis de faire de nombreux voyages.</SectionContent>
-        <SectionContent>
-          Une sorte de journal intime que nous partageons avec vous, quelques astuces par ci par là mais surtout un
-          carnet de souvenirs inoubliable que nous lirons nous-même dans le futur.
-        </SectionContent>
+        <SectionContent>{t("section1")}</SectionContent>
+        <SectionContent>{t("section2")}</SectionContent>
+        <SectionContent>{t("section3")}</SectionContent>
         <h3
           className="tc"
           css={css`
             color: ${primaryColor};
           `}
         >
-          ¡ Bonne aventure !
+          {t("section4")}
         </h3>
         <Divider />
-        <SectionContent>
-          ❤️ ️Mme Magic est particulièrement rêveuse, dévoreuse de romans et de séries, elle aime également faire des
-          photos de tout et n&apos;importe quoi. Sensible à la protection animale, adepte du shopping, elle cache
-          derrière son sourire un très fort caractère. ❤️
-        </SectionContent>
-        <SectionContent>
-          ❤️ Mr Magic est un passioné de manga et un fan de sport - dans la réalité comme dans un canapé -. Mi manchot,
-          mi aventurier, il reste de tout temps d’un calme olympien. Très à l&apos;aise avec un ordinateur, il
-          s&apos;occupe de la partie technique du blog. ❤️
-        </SectionContent>
+        <SectionContent>{t("section5")}</SectionContent>
+        <SectionContent>{t("section6")}</SectionContent>
         <SectionContent
           className="tr"
           css={css`
@@ -59,8 +55,8 @@ const IndexPage = () => {
             }
           `}
         >
-          <PrimaryDarkButtonLink to="contact" className="pr3 pl3">
-            Nous Contacter <FaChevronRight />
+          <PrimaryDarkButtonLink to="contact">
+            {t("contact")} <FaChevronRight />
           </PrimaryDarkButtonLink>
         </SectionContent>
       </BlogLayout>

@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react"
 import { css } from "@emotion/core"
 import { getLink, getLinkLabel } from "./links/links.configuration"
 import { ApplicationLink } from "./links/link"
+import { useCustomTranslation } from "../../i18n"
 
 interface TitleProps {
   title: string
@@ -11,6 +12,7 @@ interface TitleProps {
 }
 export const Title: FunctionComponent<TitleProps> = ({ title, categories, className, linkId }) => {
   const { publishedDate } = getLink(linkId)
+  const { t, i18n } = useCustomTranslation("common")
   return (
     <>
       <h1 className={`tc mb1 ${className}`}>{title}</h1>
@@ -32,7 +34,7 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
         `}
       >
         <span className="published-date">
-          Publié le{" "}
+          {t("published")}{" "}
           {publishedDate instanceof Date
             ? publishedDate.toLocaleString("fr-FR", {
                 month: "numeric",
@@ -41,11 +43,11 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
               })
             : "03/01/2010"}
         </span>{" "}
-        dans{" "}
+        {t("in")}{" "}
         {categories.map((c, index) => (
           <React.Fragment key={index}>
             {index > 0 ? " " : ""}
-            <ApplicationLink to={c}>{getLinkLabel(c)}</ApplicationLink>
+            <ApplicationLink to={c}>{getLinkLabel(i18n.languageCode)(c)}</ApplicationLink>
           </React.Fragment>
         ))}
       </div>
