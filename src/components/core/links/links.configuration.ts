@@ -64,36 +64,6 @@ export const menuLinks: NavigationLink[] = [
     id: "organisation",
     label: { fr: "Organisation", en: "Organisation" },
     sections: [
-      // {
-      //   id: "by-country",
-      //   label: "Par pays",
-      //   sections: [],
-      // },
-      // {
-      //   id: "health",
-      //   label: "Santé",
-      //   sections: [],
-      // },
-      // {
-      //   id: "money",
-      //   label: "Argent",
-      //   sections: [],
-      // },
-      // {
-      //   id: "security",
-      //   label: "Sécurité",
-      //   sections: [],
-      // },
-      // {
-      //   id: "transport",
-      //   label: "Transport",
-      //   sections: [],
-      // },
-      // {
-      //   id: "devices",
-      //   label: "Matériel",
-      //   sections: [],
-      // },
       {
         id: "when-to-go",
         label: { fr: "Quand Partir", en: "When to go" },

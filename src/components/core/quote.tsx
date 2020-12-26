@@ -1,5 +1,6 @@
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import { css } from "@emotion/core"
+import styled from "@emotion/styled"
 
 const style = css`
   position: relative;
@@ -35,3 +36,10 @@ export const Quote: FunctionComponent<HTMLAttributes<any> & { position?: "before
     </div>
   )
 }
+
+export const PageQuote = styled(Quote)`
+  font-size: 20px;
+  blockquote {
+    font-family: "Courgette", serif;
+  }
+`

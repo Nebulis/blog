@@ -21,6 +21,9 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
   )
   const [development, setDevelopment] = useState(site.siteMetadata.config.context !== "production")
 
+  // this is done for SSR and english generation of metadata
+  // if the URL starts with /en, then we suppose we really want to display the page in english
+  // on top of that, we "need" runOnce otherwise when switching to french language, there is an infinite loop
   if (location.pathname.startsWith("/en/") && !runOnce) {
     runOnce = true
     i18n.changeLanguage("en")

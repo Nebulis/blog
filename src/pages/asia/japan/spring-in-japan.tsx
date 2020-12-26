@@ -67,7 +67,7 @@ const IndexPage = () => {
             c’est bien beau, c’est bien pratique (surtout au Japon ! Et il faut quand même le dire, les trains sont très
             très confortables) mais au bout d’un moment c’est lassant.
           </p>
-          <p>Let’s go …</p>
+          <p>Let’s go ...</p>
         </Where>
         <div
           className="overflow-hidden tc"

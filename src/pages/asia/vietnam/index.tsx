@@ -31,7 +31,7 @@ const IndexPage = () => {
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
   return (
     <>
-      <SEO title="Vietnam" />
+      <SEO title={t("common:country.vietnam")} />
       <IndexVietnamBlogLayout page="vietnam">
         <MainTitleSection>
           <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />

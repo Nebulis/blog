@@ -22,6 +22,7 @@ import { ButtonLink, ExternalLink } from "../components/core/links/link"
 import {
   largeStart,
   maxWidth,
+  maxWidthExtraLargeContainer,
   mediumEnd,
   mobileEnd,
   primaryColor,
@@ -95,7 +96,7 @@ const TooltipContent = styled.span`
 `
 
 const MapContainer = styled.div`
-  max-width: 1140px;
+  max-width: ${maxWidthExtraLargeContainer}px;
   width: 100%;
 `
 const TravelsContainer = styled.div`

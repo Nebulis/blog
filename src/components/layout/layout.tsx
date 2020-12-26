@@ -15,10 +15,12 @@ import {
   extraLargeStart,
   largeStart,
   maxWidth,
-  mediumEnd,
+  maxWidthExtraLargeContainer,
+  maxWidthLargeContainer, maxWidthMediumContainer,
+  mediumEnd, mediumStart,
   mobileEnd,
   primaryColor,
-  primaryDarkColor,
+  primaryDarkColor, smallStart,
 } from "../core/variables"
 import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
 import { MenuContext } from "./menu.context"
@@ -219,28 +221,28 @@ export const BlogLayout = styled(IndexBlogLayout)`
     flex: 1;
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: ${smallStart}) {
     .children-container {
       padding: 0;
       max-width: 540px;
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: ${mediumStart}) {
     .children-container {
-      max-width: 720px;
+      max-width: ${maxWidthMediumContainer}px;
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: ${largeStart}) {
     .children-container {
-      max-width: 960px;
+      max-width: ${maxWidthLargeContainer}px;
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: ${extraLargeStart}) {
     .children-container {
-      max-width: 1140px;
+      max-width: ${maxWidthExtraLargeContainer}px;
     }
   }
 `
@@ -318,7 +320,7 @@ export const MainCardContainer = styled.div`
   padding: 1rem 20px;
 
   @media (min-width: ${extraLargeStart}) {
-    max-width: 1140px;
+    max-width: ${maxWidthExtraLargeContainer}px;
   }
 `
 

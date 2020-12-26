@@ -64,6 +64,7 @@ const IndexPage = () => {
             </Hightlight>
             .
           </SectionContent>
+          {t("section4") && <SectionContent className="f6">{t("section4")}</SectionContent>}
           <section>
             <div
               css={css`
