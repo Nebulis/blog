@@ -594,7 +594,7 @@ export const MobileMenu: React.FunctionComponent = () => {
           `}
         >
           <a
-            href="https://twitter.com/_magicoftravels"
+            href="https://www.facebook.com/magicoftravels"
             target="_blank"
             rel="noopener noreferrer"
             aria-labelledby="facebook-label"
@@ -616,7 +616,7 @@ export const MobileMenu: React.FunctionComponent = () => {
             <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
           </a>
           <a
-            href="https://instagram.com/_magic_of_travels_"
+            href="https://instagram.com/magic_of_travels"
             target="_blank"
             rel="noopener noreferrer"
             aria-labelledby="instagram-label"
@@ -647,7 +647,12 @@ export const MobileMenu: React.FunctionComponent = () => {
                 <Tree key={continent.id} name={continent.label[i18n.languageCode]} onNavigate={closeMenu}>
                   <Tree key={continent.id} name="Accueil" to={continent.id} onNavigate={closeMenu} />
                   {publishedCountries.map((country) => (
-                    <Tree key={country.id} name={country.label[i18n.languageCode]} to={country.id} onNavigate={closeMenu} />
+                    <Tree
+                      key={country.id}
+                      name={country.label[i18n.languageCode]}
+                      to={country.id}
+                      onNavigate={closeMenu}
+                    />
                   ))}
                 </Tree>
               )
@@ -658,14 +663,24 @@ export const MobileMenu: React.FunctionComponent = () => {
             const to = subMenuLinks.length > 0 ? undefined : menuLink.id
             return (
               // animation is a bit weird on the last element ... animate has been created for that purpose
-              <Tree key={menuLink.id} to={to} name={menuLink.label[i18n.languageCode]} animate={menuLink.id !== "about"}>
+              <Tree
+                key={menuLink.id}
+                to={to}
+                name={menuLink.label[i18n.languageCode]}
+                animate={menuLink.id !== "about"}
+              >
                 {subMenuLinks.map((subMenuLink) => {
                   const subSubMenuLinks = development
                     ? subMenuLink.sections
                     : subMenuLink.sections.filter(isLinkPublished)
                   const to = subSubMenuLinks.length > 0 ? undefined : subMenuLink.id
                   return (
-                    <Tree key={subMenuLink.id} to={to} name={subMenuLink.label[i18n.languageCode]} onNavigate={closeMenu}>
+                    <Tree
+                      key={subMenuLink.id}
+                      to={to}
+                      name={subMenuLink.label[i18n.languageCode]}
+                      onNavigate={closeMenu}
+                    >
                       {subSubMenuLinks.map((subSubMenuLink) => (
                         <Tree
                           key={subSubMenuLink.id}

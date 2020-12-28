@@ -50,7 +50,13 @@ const IndexPage = () => {
           {/*<SectionContent>Un partenariat, un projet à nous proposer ?</SectionContent>*/}
           <SectionContent>{t("section2")}</SectionContent>
           <SectionContent>
-            {t("section3.part1")} <Hightlight>Facebook</Hightlight>,{" "}
+            {t("section3.part1")}{" "}
+            <Hightlight>
+              <a href="https://www.facebook.com/magicoftravels" target="_blank" rel="noopener noreferrer">
+                Facebook
+              </a>
+            </Hightlight>
+            ,{" "}
             <Hightlight>
               <a href="https://twitter.com/_magicoftravels" target="_blank" rel="noopener noreferrer">
                 Twitter
@@ -58,7 +64,7 @@ const IndexPage = () => {
             </Hightlight>{" "}
             {t("section3.part2")}{" "}
             <Hightlight>
-              <a href="https://instagram.com/_magic_of_travels_" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/magic_of_travels" target="_blank" rel="noopener noreferrer">
                 Instagram
               </a>
             </Hightlight>

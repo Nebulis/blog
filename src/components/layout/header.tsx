@@ -120,7 +120,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
           {!isMobileView ? (
             <div className="social-network-container">
               <a
-                href="https://twitter.com/_magicoftravels"
+                href="https://www.facebook.com/magicoftravels"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-labelledby="facebook-label"
@@ -142,7 +142,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
                 <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
               </a>
               <a
-                href="https://instagram.com/_magic_of_travels_"
+                href="https://instagram.com/magic_of_travels"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-labelledby="instagram-label"
