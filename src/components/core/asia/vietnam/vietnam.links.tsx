@@ -31,19 +31,19 @@ export const vietnamLinks: CountryLink = {
         {
           id: "cu-chi-tunnels",
           label: { fr: commonFr.card.vietnam["cu-chi-tunnels"], en: commonEn.card.vietnam["cu-chi-tunnels"] },
-          published: new Date("2020-01-02"),
+          published: new Date("2022-01-02"),
           card: CuChiTunnelsCard,
         },
         {
           id: "my-tho",
           label: { fr: "Mỹ Tho", en: "Mỹ Tho" },
-          published: new Date("2020-01-01"),
+          published: new Date("2022-01-01"),
           card: MyThoCard,
         },
         {
           id: "can-tho",
           label: { fr: "Cần Thơ", en: "Cần Thơ" },
-          published: new Date("2020-03-01"),
+          published: new Date("2022-03-01"),
           card: CanThoCard,
         },
         {
@@ -86,7 +86,7 @@ export const vietnamLinks: CountryLink = {
         fr: commonFr.card.vietnam["discover-southern-vietnam"],
         en: commonEn.card.vietnam["discover-southern-vietnam"],
       },
-      published: false,
+      published: new Date("2019-01-01"),
     },
   ],
 }

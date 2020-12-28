@@ -16,16 +16,20 @@ import {
   largeStart,
   maxWidth,
   maxWidthExtraLargeContainer,
-  maxWidthLargeContainer, maxWidthMediumContainer,
-  mediumEnd, mediumStart,
+  maxWidthLargeContainer,
+  maxWidthMediumContainer,
+  mediumEnd,
+  mediumStart,
   mobileEnd,
   primaryColor,
-  primaryDarkColor, smallStart,
+  primaryDarkColor,
+  smallStart,
 } from "../core/variables"
 import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
 import { MenuContext } from "./menu.context"
 import { Status } from "../../types/shared"
 import { useCustomTranslation } from "../../i18n"
+import { subscribe } from "../../services/newsletter"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -126,67 +130,52 @@ export const IndexBlogLayout: FunctionComponent<{
 
           <Footer className="pa2">
             <div className="f6 copyright">© 2020 Magic of Travels</div>
-            {development && (
-              <div className="newsletter">
-                <div className="tc text">NEWSLETTER</div>
-                <div className="inline-flex">
-                  <Input
-                    placeholder={t("footer.email")}
-                    className="inline-flex"
-                    id="newsletter"
-                    value={mail}
-                    aria-label="Email"
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
-                  />
-                  <div
-                    className="inline-flex"
-                    css={css`
-                      margin-top: 0.6rem;
-                      margin-bottom: 0.6rem;
-                    `}
-                  >
-                    <PrimaryDarkButton
-                      disabled={!mail || status === "LOADING"}
-                      onClick={() => {
-                        setStatus("LOADING")
-                        fetch("https://us-central1-blog-3dd22.cloudfunctions.net/newsletter", {
-                          method: "POST",
-                          headers: {
-                            "Content-Type": "application/json",
-                          },
-                          body: JSON.stringify({
-                            mail,
-                          }),
+            <div className="newsletter">
+              <div className="tc text">NEWSLETTER</div>
+              <div className="inline-flex">
+                <Input
+                  placeholder={t("footer.email")}
+                  className="inline-flex"
+                  id="newsletter"
+                  value={mail}
+                  aria-label="Email"
+                  onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
+                />
+                <div
+                  className="inline-flex"
+                  css={css`
+                    margin-top: 0.6rem;
+                    margin-bottom: 0.6rem;
+                  `}
+                >
+                  <PrimaryDarkButton
+                    disabled={!mail || status === "LOADING"}
+                    onClick={() => {
+                      setStatus("LOADING")
+                      subscribe({ mail })
+                        .then(() => {
+                          setMail("")
+                          setStatus("SUCCESS")
                         })
-                          .then((res) => {
-                            if (!res.ok) {
-                              throw new Error("Request failed: " + res.statusText)
-                            }
-                          })
-                          .then(() => {
-                            setMail("")
-                            setStatus("SUCCESS")
-                          })
-                          .catch(() => {
-                            setStatus("ERROR")
-                          })
-                      }}
-                    >
-                      {status === "INITIAL" ? (
-                        <FaEnvelope />
-                      ) : status === "LOADING" ? (
-                        <FaSpinner className="fa-spin" />
-                      ) : status === "SUCCESS" ? (
-                        <FaCheck />
-                      ) : (
-                        <FaTimes />
-                      )}
-                      &nbsp;{t("footer.subscribe")}
-                    </PrimaryDarkButton>
-                  </div>
+                        .catch(() => {
+                          setStatus("ERROR")
+                        })
+                    }}
+                  >
+                    {status === "INITIAL" ? (
+                      <FaEnvelope />
+                    ) : status === "LOADING" ? (
+                      <FaSpinner className="fa-spin" />
+                    ) : status === "SUCCESS" ? (
+                      <FaCheck />
+                    ) : (
+                      <FaTimes />
+                    )}
+                    &nbsp;{t("footer.subscribe")}
+                  </PrimaryDarkButton>
                 </div>
               </div>
-            )}
+            </div>
             <div className="f6 made-by">
               Made with ❤️ by&nbsp;
               <a href="https://github.com/nebulis" target="_blank" rel="noopener noreferrer">

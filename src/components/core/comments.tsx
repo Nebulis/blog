@@ -1,13 +1,18 @@
 import React, { FunctionComponent, useEffect, useState } from "react"
 import { database } from "../firebase"
 import { Checkbox, Input, Textarea } from "./input"
-import { Button } from "./button"
+import { PrimaryDarkButton } from "./button"
 import { css } from "@emotion/core"
 import { ExternalLink } from "./links/link"
 import md5 from "md5"
 import styled from "@emotion/styled"
-import { Gravatar } from "./gravatar"
-import { FaEnvelope, FaLink, FaPen, FaUser } from "react-icons/all"
+import { RandomAvatar } from "./random-avatar"
+import { FaEnvelope, FaLink, FaPen, FaSpinner, FaUser } from "react-icons/all"
+import { Status } from "../../types/shared"
+import { ErrorAlert, SuccessAlert } from "./alert"
+import { subscribe } from "../../services/newsletter"
+import { useCustomTranslation } from "../../i18n"
+import { capitalize } from "../../utils"
 
 interface CommentsProps {
   collectionName: string
@@ -19,8 +24,16 @@ interface CommentType {
   content: string
   timestamp: number
   website: string
-  gravatar: string
+  avatar: string
   parent?: string
+}
+interface CommentFormType {
+  name: string
+  message: string
+  email: string
+  website: string
+  saveInBrowser: boolean
+  subscribeToNewsletter: boolean
 }
 interface CommentProp extends CommentType {
   id: string
@@ -55,7 +68,7 @@ interface DatabaseComments {
 //   .ref(`comments/${collectionName}`)
 //   .orderByChild("published")
 //   .equalTo(true)
-const transformPath = (path: string): string => path.replace(/\//g, "-")
+const transformPath = (path: string): string => path.replace(/\//g, "__")
 
 const commentsStyle = css`
   font-size: 0.9rem;
@@ -65,9 +78,35 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, cla
   const [numberOfComments, setNumberOfComments] = useState(0)
   const [commentToEdit, setCommentToEdit] = useState("")
   const [scrollToAnchor, setScrollToAnchor] = useState(true)
+  const [status, setStatus] = useState<Status>("INITIAL")
+  const [commentStatus, setCommentStatus] = useState<Status>("INITIAL")
+  const [newsletterStatus, setNewsletterStatus] = useState<Status>("INITIAL")
+  const { t } = useCustomTranslation("common")
+
+  // hide status after 10s
+  useEffect(() => {
+    const timeout = 10000
+    let interval1: NodeJS.Timeout
+    let interval2: NodeJS.Timeout
+    if (commentStatus === "SUCCESS") {
+      interval1 = setTimeout(() => {
+        setCommentStatus("INITIAL")
+      }, timeout)
+    }
+    if (newsletterStatus === "SUCCESS") {
+      interval2 = setTimeout(() => {
+        setCommentStatus("INITIAL")
+      }, timeout)
+    }
+    return () => {
+      clearTimeout(interval1)
+      clearTimeout(interval2)
+    }
+  }, [commentStatus, newsletterStatus])
 
   useEffect(() => {
     const reference = database.ref(`comments/${transformPath(collectionName)}`)
+    setStatus("LOADING")
 
     reference.on("value", (snapshot) => {
       const commentsAsObject = snapshot.val() as DatabaseComments
@@ -90,6 +129,7 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, cla
         })
         setComments(transformedComments)
         setNumberOfComments(commentsAsArray.length)
+        setStatus("SUCCESS")
       }
     })
 
@@ -97,6 +137,56 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, cla
       reference.off()
     }
   }, [collectionName])
+
+  const onSubmit: (comment: CommentFormType & { id?: string }) => Promise<any> = ({
+    name,
+    message,
+    id,
+    email,
+    website,
+    saveInBrowser,
+    subscribeToNewsletter,
+  }): Promise<[void, boolean]> => {
+    if (saveInBrowser) {
+      localStorage.setItem("name", name)
+      localStorage.setItem("email", email)
+      localStorage.setItem("website", website || "")
+    } else {
+      localStorage.removeItem("name")
+      localStorage.removeItem("email")
+      localStorage.removeItem("website")
+    }
+    return Promise.all([
+      subscribeToNewsletter
+        ? subscribe({ mail: email })
+            .then(() => {
+              setNewsletterStatus("SUCCESS")
+            })
+            .catch(() => {
+              setNewsletterStatus("ERROR")
+            })
+        : Promise.resolve(),
+      database
+        .ref(`comments/${transformPath(collectionName)}`)
+        .push()
+        .set({
+          name,
+          content: message,
+          timestamp: Date.now(),
+          website,
+          avatar: md5((email || name).trim().toLowerCase()),
+          ...(id ? { parent: id } : {}),
+        })
+        .then(() => {
+          setCommentStatus("SUCCESS")
+          return true
+        })
+        .catch(() => {
+          setCommentStatus("ERROR")
+          return false
+        }),
+    ])
+  }
 
   useEffect(() => {
     if (comments.length > 0 && scrollToAnchor && window.location.hash) {
@@ -119,59 +209,36 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, cla
   }, [comments, scrollToAnchor])
   return (
     <div className={className} css={commentsStyle}>
-      <h4>
-        {numberOfComments} commentaire{numberOfComments > 1 ? "s" : ""}
-      </h4>
-      {comments.map((comment, index) => (
-        <Comment
-          key={comment.id}
-          {...comment}
-          commentToEdit={commentToEdit}
-          setCommentToEdit={setCommentToEdit}
-          depth={0}
-          index={index}
-          isLast={index === comments.length}
-          onSubmit={({ name, message, id, email, website, saveInBrowser, subscribeToNewsletter }) => {
-            if (saveInBrowser) {
-              localStorage.setItem("name", name)
-              localStorage.setItem("email", email)
-              localStorage.setItem("website", website || "")
-            }
-            return Promise.all([
-              subscribeToNewsletter ? database.ref(`newsletter/${email}`).set(true) : Promise.resolve(),
-              database.ref(`comments/${transformPath(collectionName)}`).push({
-                name,
-                content: message,
-                timestamp: Date.now(),
-                website,
-                gravatar: md5((email || name).trim().toLowerCase()),
-                parent: id,
-              }),
-            ])
-          }}
-        />
-      ))}
-      <hr />
-      {!commentToEdit && (
-        <CommentForm
-          onSubmit={({ name, message, email, website, saveInBrowser, subscribeToNewsletter }) => {
-            if (saveInBrowser) {
-              localStorage.setItem("name", name)
-              localStorage.setItem("email", email)
-              localStorage.setItem("website", website || "")
-            }
-            return Promise.all([
-              subscribeToNewsletter ? database.ref(`newsletter/${email}`).set(true) : Promise.resolve(),
-              database.ref(`comments/${transformPath(collectionName)}`).push({
-                name,
-                content: message,
-                website,
-                gravatar: md5((email || name).trim().toLowerCase()),
-                timestamp: Date.now(),
-              }),
-            ])
-          }}
-        />
+      {status === "LOADING" ? (
+        <div className="flex flex-column justify-center items-center mb3 f4">
+          {t("comments.loading")}
+          <FaSpinner className="fa-spin" />
+        </div>
+      ) : (
+        <>
+          <h4>
+            {numberOfComments} {t("comments.comment")}
+            {numberOfComments > 1 ? "s" : ""}
+          </h4>
+          {comments.map((comment, index) => (
+            <Comment
+              key={comment.id}
+              {...comment}
+              commentToEdit={commentToEdit}
+              setCommentToEdit={setCommentToEdit}
+              depth={0}
+              index={index}
+              isLast={index === comments.length}
+              onSubmit={onSubmit}
+            />
+          ))}
+          <hr />
+          {!commentToEdit && <CommentForm deepForm={false} onSubmit={onSubmit} />}
+          {commentStatus === "SUCCESS" && <SuccessAlert>{t("comments.comment-posted")}</SuccessAlert>}
+          {newsletterStatus === "SUCCESS" && <SuccessAlert>{t("comments.newsletter-subscribed")}</SuccessAlert>}
+          {commentStatus === "ERROR" && <ErrorAlert>{t("comments.comment-failed")}</ErrorAlert>}
+          {newsletterStatus === "ERROR" && <ErrorAlert>{t("comments.newsletter-failed")}</ErrorAlert>}
+        </>
       )}
     </div>
   )
@@ -183,7 +250,7 @@ const commentStyle = css`
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
   }
-  .gravatar-container {
+  .avatar-container {
     margin-right: 20px;
   }
   .reply {
@@ -212,29 +279,10 @@ const Comment: FunctionComponent<
     depth: number
     commentToEdit: string
     setCommentToEdit: React.Dispatch<React.SetStateAction<string>>
-    onSubmit: (comment: {
-      name: string
-      message: string
-      id: string
-      email: string
-      website: string
-      saveInBrowser: boolean
-      subscribeToNewsletter: boolean
-    }) => Promise<any>
+    onSubmit: (comment: CommentFormType & { id: string }) => Promise<void>
   }
-> = ({
-  name,
-  timestamp,
-  content,
-  children,
-  onSubmit,
-  id,
-  depth,
-  gravatar,
-  commentToEdit,
-  setCommentToEdit,
-  website,
-}) => {
+> = ({ name, timestamp, content, children, onSubmit, id, depth, avatar, commentToEdit, setCommentToEdit, website }) => {
+  const { t, i18n } = useCustomTranslation("common")
   return (
     <>
       <div css={commentStyle} id={id}>
@@ -242,16 +290,21 @@ const Comment: FunctionComponent<
           className={`${id === window.location.hash.split("#")[1] ? "active" : ""}`}
           style={{ paddingLeft: depth + "rem" }}
         >
-          <div className="gravatar-container">
-            <Gravatar hash={gravatar} />
+          <div className="avatar-container">
+            <RandomAvatar hash={avatar} />
           </div>
           <div>
             <div>
               <span className="b">
                 {website ? <CommentExternalLink href={website}>{name}</CommentExternalLink> : name}
               </span>{" "}
-              <span className="date">
-                {new Date(timestamp).toLocaleString("fr-FR", {
+              <span
+                className="date pointer"
+                onClick={() => {
+                  window.location.hash = id
+                }}
+              >
+                {new Date(timestamp).toLocaleString(i18n.languageCode === "fr" ? "fr-FR" : "en-GB", {
                   // @ts-ignore
                   dateStyle: "long",
                   timeStyle: "short",
@@ -273,7 +326,7 @@ const Comment: FunctionComponent<
                   commentToEdit === id ? setCommentToEdit("") : setCommentToEdit(id)
                 }}
               >
-                Répondre
+                {t("comments.reply")}
               </span>
             </div>
           </div>
@@ -281,9 +334,14 @@ const Comment: FunctionComponent<
       </div>
       {commentToEdit === id && (
         <CommentForm
+          deepForm={true}
           cancellable
           onCancel={() => setCommentToEdit("")}
-          onSubmit={(c) => onSubmit({ ...c, id }).then(() => setCommentToEdit(""))}
+          onSubmit={(c) =>
+            onSubmit({ ...c, id }).then(() => {
+              setCommentToEdit("")
+            })
+          }
         />
       )}
       <div>
@@ -324,43 +382,45 @@ const commentFormStyle = css`
 interface CommentFormProps {
   cancellable?: boolean
   onCancel?: () => void
-  onSubmit: (comment: {
-    name: string
-    message: string
-    email: string
-    website: string
-    subscribeToNewsletter: boolean
-    saveInBrowser: boolean
-  }) => Promise<any>
+  deepForm: boolean
+  onSubmit: (comment: CommentFormType) => Promise<any>
 }
-const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellable, onCancel = () => void 0 }) => {
+const CommentForm: FunctionComponent<CommentFormProps> = ({
+  onSubmit,
+  cancellable,
+  onCancel = () => void 0,
+  deepForm,
+}) => {
   const [name, setName] = useState(localStorage.getItem("name") || "")
   const [message, setMessage] = useState("")
   const [email, setEmail] = useState(localStorage.getItem("email") || "")
   const [website, setWebsite] = useState(localStorage.getItem("website") || "")
   const [subscribeToNewsletter, setSubscribeToNewsletter] = useState(false)
-  const [saveInBrowser, setSaveInBrowser] = useState(false)
+  const [saveInBrowser, setSaveInBrowser] = useState(!!localStorage.getItem("name"))
+  const { t } = useCustomTranslation("common")
   return (
     <div css={commentFormStyle}>
       <h4>
-        Laisser un commentaire{" "}
+        {t("comments.post-comment")}{" "}
         {cancellable && (
           <span className="cancel" onClick={onCancel}>
-            Annuler
+            {t("comments.cancel")}
           </span>
         )}
       </h4>
-      <div>Votre adresse de messagerie ne sera pas publiée. Les champs obligatoires sont indiqués avec *</div>
+      <div>{t("comments.note")}</div>
       <Textarea
         id="message"
-        placeholder="Commentaire *"
+        placeholder={capitalize(t("comments.comment"))}
+        label={`${capitalize(t("comments.comment"))} *`}
         value={message}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMessage(event.target.value)}
         Icon={FaPen}
       />
       <Input
         id="name"
-        placeholder="Nom *"
+        placeholder={t("form.name")}
+        label={`${t("form.name")} *`}
         type="text"
         value={name}
         Icon={FaUser}
@@ -368,7 +428,8 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
       />
       <Input
         id="email"
-        placeholder="Email"
+        placeholder={t("form.email")}
+        label={t("form.email")}
         type="email"
         value={email}
         Icon={FaEnvelope}
@@ -376,7 +437,8 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
       />
       <Input
         id="website"
-        placeholder="Site Internet"
+        placeholder={t("comments.website")}
+        label={t("comment.website")}
         type="website"
         value={website}
         Icon={FaLink}
@@ -384,31 +446,30 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({ onSubmit, cancellabl
       />
       <Checkbox
         id="newsletter"
-        label="Prévenez-moi des nouveaux articles par e-mail"
+        label={t("comments.subscribed-note")}
         checked={subscribeToNewsletter}
         onChange={() => setSubscribeToNewsletter(!subscribeToNewsletter)}
       />
       <Checkbox
         id="save"
-        label="Enregistrer mon nom, mon e-mail et mon site web dans le navigateur pour mon prochain commentaire."
+        label={t("comments.local-save")}
         checked={saveInBrowser}
         onChange={() => setSaveInBrowser(!saveInBrowser)}
       />
-      <Button
+      <PrimaryDarkButton
         className="form-element"
         disabled={!name || !message || (subscribeToNewsletter && !email)}
         onClick={() =>
-          onSubmit({ name, message, email, website, saveInBrowser, subscribeToNewsletter })
-            .then(() => {
-              setMessage("")
-            })
-            .catch((error) => {
-              console.error(error)
-            })
+          onSubmit({ name, message, email, website, saveInBrowser, subscribeToNewsletter }).then(([, status]) => {
+            // when the form is a response to a previous comment, this change of state will result to a react warning :
+            // - Can't perform a React state update on an unmounted component. This is a no-op
+            // this boolean indicates whether the form is used in a deep comment, or at the top
+            if (status && !deepForm) setMessage("")
+          })
         }
       >
-        Laisser un commentaire
-      </Button>
+        {t("comments.post-comment")}
+      </PrimaryDarkButton>
     </div>
   )
 }

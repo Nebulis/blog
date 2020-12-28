@@ -35,6 +35,7 @@ import { useCustomTranslation } from "../../../i18n"
 import i18n from "i18next"
 import translationFr from "../../../locales/fr/asia/vietnam/discover-southern-vietnam.json"
 import translationEn from "../../../locales/en/asia/vietnam/discover-southern-vietnam.json"
+import { Comments } from "../../../components/core/comments"
 
 const namespace = "asia/vietnam/discover-southern-vietnam"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -42,7 +43,7 @@ i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = () => {
   const { t } = useCustomTranslation([namespace, "common"])
-  const title = t("common:card.discover-southern-vietnam")
+  const title = t("common:card.vietnam.discover-southern-vietnam")
   const description = t("quote")
 
   return (
@@ -58,7 +59,7 @@ const IndexPage: React.FunctionComponent<PageProps> = () => {
       />
       <VietnamBlogLayout page="discover-southern-vietnam">
         <VietnamTitle
-          title={t("common:card.discover-southern-vietnam")}
+          title={t("common:card.vietnam.discover-southern-vietnam")}
           categories={["asia", "vietnam"]}
           linkId="discover-southern-vietnam"
         />
@@ -173,6 +174,8 @@ const IndexPage: React.FunctionComponent<PageProps> = () => {
         </section>
         <VietnamDivider />
         <Conclusion>{t("conclusion")}</Conclusion>
+        <VietnamDivider />
+        <Comments collectionName={namespace} />
       </VietnamBlogLayout>
     </>
   )

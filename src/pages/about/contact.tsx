@@ -77,18 +77,18 @@ const IndexPage = () => {
               `}
             >
               <Input
-                label={`${t("form.name")} *`}
+                label={`${t("common:form.name")} *`}
                 id="name"
-                placeholder={t("form.name")}
+                placeholder={t("common:form.name")}
                 type="text"
                 value={name}
                 Icon={FaUser}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setName(event.target.value)}
               />
               <Input
-                label={`${t("form.email")} *`}
+                label={`${t("common:form.email")} *`}
                 id="email"
-                placeholder={t("form.email")}
+                placeholder={t("common:form.email")}
                 type="text"
                 value={mail}
                 Icon={FaEnvelope}

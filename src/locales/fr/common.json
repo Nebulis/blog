@@ -64,6 +64,25 @@
     "what-time-of-year": "À quelle période ?",
     "where": "Notre itinéraire"
   },
+  "comments": {
+    "loading": "Chargement des commentaires ...,",
+    "comment": "commentaire",
+    "comment-posted": "Commentaire ajouté",
+    "comment-failed": "Impossible de rajouter le commentaire",
+    "newsletter-subscribed": "Inscription à la newsletter effectuée",
+    "newsletter-failed": "Impossible de s'inscrire à la newsletter",
+    "reply": "Répondre",
+    "post-comment": "Laisser un commentaire",
+    "cancel": "Annuler",
+    "note": "Votre adresse de messagerie ne sera pas publiée. Les champs obligatoires sont indiqués avec *.",
+    "website": "Site Internet",
+    "subscribed-note": "Prévenez-moi des nouveaux articles par e-mail.",
+    "local-save": "Enregistrer mon nom, mon e-mail et mon site web dans le navigateur pour mon prochain commentaire."
+  },
+  "form": {
+    "name": "Nom",
+    "email": "Mail"
+  },
   "footer": {
     "email": "Adresse Email",
     "subscribe": "S'inscrire"

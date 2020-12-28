@@ -49,15 +49,12 @@ const vietnamLayout = `
   footer a {
     color: ${vietnamPrimaryColor};
   }
-  footer button.btn,
-  footer button.btn:disabled {
-    background-color: ${vietnamPrimaryColor};
-    border-color: ${vietnamPrimaryColor};
-    color: black;
-  }
-  footer button.btn:hover {
-    background-color: ${vietnamPrimaryColor};
-    border-color: ${vietnamPrimaryColor};
+  button.btn,
+  button.btn:disabled,
+  button.btn:hover {
+    background-color: ${vietnamPrimaryColorDarker};
+    border-color: ${vietnamPrimaryColorDarker};
+    color: white;
   }
 
   .menu-entry {

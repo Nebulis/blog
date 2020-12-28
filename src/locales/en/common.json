@@ -64,6 +64,25 @@
     "what-time-of-year": "When?",
     "where": "Our itinerary"
   },
+  "comments": {
+    "loading": "Loading comments ...",
+    "comment": "comment",
+    "comment-posted": "Comment posted",
+    "comment-failed": "Unable to post the comment",
+    "newsletter-subscribed": "Subscribed to newsletter",
+    "newsletter-failed": "Unable to subscribe to the newsletter",
+    "reply": "Reply",
+    "post-comment": "Post a comment",
+    "cancel": "Cancel",
+    "note": "Your email won't be stored or shared to 3rd parties. All fields followed by * are required.",
+    "website": "Website",
+    "subscribed-note": "Send me an email when new articles are published.",
+    "local-save": "Save my name, email and website into the browser for my next comments."
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email"
+  },
   "footer": {
     "email": "Email Address",
     "subscribe": "Subscribe"
