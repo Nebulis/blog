@@ -242,7 +242,7 @@ const HomeDivider = styled(Divider)`
 `
 
 const IndexPage = () => {
-  const { development } = useContext(ApplicationContext)
+  const { development, displayAllArticles } = useContext(ApplicationContext)
   const { isMobileView } = useContext(MenuContext)
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
@@ -305,9 +305,11 @@ const IndexPage = () => {
               <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />
             ))}
           </ArticlesContainer>
-          <div className="tc mt3">
-            <ButtonLink to="articles">{t("common:allArticles")}</ButtonLink>
-          </div>
+          {displayAllArticles && (
+            <div className="tc mt3">
+              <ButtonLink to="articles">{t("common:allArticles")}</ButtonLink>
+            </div>
+          )}
         </div>
         <HomeDivider />
         <HomeSection>{t("contemplate.title")}</HomeSection>

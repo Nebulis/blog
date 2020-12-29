@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import { HomeCentralVietnamImage } from "../../../images/asia/vietnam/central-vietnam/home"
 import { HomeSouthVietnamImage } from "../../../images/asia/vietnam/south-vietnam/home"
 import { HomeNorthVietnamImage } from "../../../images/asia/vietnam/north-vietnam/home"
-import { CanThoCard, CuChiTunnelsCard, MyThoCard } from "./vietnam.cards"
+import { CanThoCard, CuChiTunnelsCard, MyThoCard, SouthVietnamCard } from "./vietnam.cards"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
 
@@ -81,12 +81,15 @@ export const vietnamLinks: CountryLink = {
       published: false,
     },
     {
+      // todo to move into southern later, dont forget to change the url to discover only
       id: "discover-southern-vietnam",
+      url: "southern-vietnam/discover",
       label: {
         fr: commonFr.card.vietnam["discover-southern-vietnam"],
         en: commonEn.card.vietnam["discover-southern-vietnam"],
       },
       published: new Date("2019-01-01"),
+      card: SouthVietnamCard,
     },
   ],
 }

@@ -24,11 +24,16 @@ import {
   MedallionContainer,
 } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
+import { filteredUrl } from "../../../components/core/asia/vietnam/vietnam.utils"
 
 const IndexPage = () => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation(["asia/vietnam/index", "common"])
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
+  const articles = getMostRecentArticles({
+    customFilter: (link) => link.country === "vietnam" && !filteredUrl.includes(link.url),
+    limit: 2,
+  })
   return (
     <>
       <SEO title={t("common:country.vietnam")} />
@@ -44,30 +49,36 @@ const IndexPage = () => {
         <MainCardContainer>
           <SouthVietnamCard />
         </MainCardContainer>
-        <VietnamDivider />
-        <HomeSection>{t("common:tour.title")}</HomeSection>
-        <HomeSubSection>{t("common:tour.subtitle")}</HomeSubSection>
-        <MedallionContainer>
-          {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
-            return city.image ? (
-              <ApplicationLink to={city.id} key={city.id}>
-                <VietnamImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
-                  {React.createElement(city.image)}
-                </VietnamImageAsMedallion>
-              </ApplicationLink>
-            ) : null
-          })}
-        </MedallionContainer>
-        <VietnamDivider />
-        <HomeSection>{t("common:inform.title")}</HomeSection>
-        <HomeSubSection>{t("common:inform.subtitle")}</HomeSubSection>
-        <ArticlesContainer>
-          {getMostRecentArticles({ customFilter: (link) => link.country === "vietnam", limit: 2 }).map(
-            (Element, index) => (
-              <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />
-            )
-          )}
-        </ArticlesContainer>
+        {cities.length > 0 && (
+          <>
+            <VietnamDivider />
+            <HomeSection>{t("common:tour.title")}</HomeSection>
+            <HomeSubSection>{t("common:tour.subtitle")}</HomeSubSection>
+            <MedallionContainer>
+              {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
+                return city.image ? (
+                  <ApplicationLink to={city.id} key={city.id}>
+                    <VietnamImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
+                      {React.createElement(city.image)}
+                    </VietnamImageAsMedallion>
+                  </ApplicationLink>
+                ) : null
+              })}
+            </MedallionContainer>
+          </>
+        )}
+        {articles.length > 0 && (
+          <>
+            <VietnamDivider />
+            <HomeSection>{t("common:inform.title")}</HomeSection>
+            <HomeSubSection>{t("common:inform.subtitle")}</HomeSubSection>
+            <ArticlesContainer>
+              {articles.map((Element, index) => (
+                <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />
+              ))}
+            </ArticlesContainer>
+          </>
+        )}
         {displayAllArticles && (
           <>
             <VietnamDivider />

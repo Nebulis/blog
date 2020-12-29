@@ -1,43 +1,50 @@
 import React from "react"
-import SEO from "../../../components/layout/seo"
+import SEO from "../../../../components/layout/seo"
 import {
   VietnamBlogLayout,
   VietnamDivider,
   VietnamHeadline,
   VietnamQuote,
   VietnamTitle,
-} from "../../../components/core/asia/vietnam/vietnam"
-import { HowLong, HowMuch, SectionContent, SectionTitle, WhatTimeOfYear, Where } from "../../../components/core/section"
-import { SouthVietnamMap } from "../../../components/core/asia/vietnam/south-vietnam-map"
+} from "../../../../components/core/asia/vietnam/vietnam"
+import {
+  HowLong,
+  HowMuch,
+  SectionContent,
+  SectionTitle,
+  WhatTimeOfYear,
+  Where,
+} from "../../../../components/core/section"
+import { SouthVietnamMap } from "../../../../components/core/asia/vietnam/south-vietnam-map"
 import {
   CanThoCard,
   CuChiTunnelsCard,
   MyThoCard,
   WarMuseumCard,
-} from "../../../components/core/asia/vietnam/vietnam.cards"
+} from "../../../../components/core/asia/vietnam/vietnam.cards"
 import {
   GroupOfImages,
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   TwoImagesSameSize,
-} from "../../../components/images/layout"
-import { HoChiMinhCalao1Image } from "../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-calao1"
-import { HoChiMinhCalao2Image } from "../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-calao2"
-import { HoChiMinhMarket1Image } from "../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-market1"
-import { HoChiMinhMarket2Image } from "../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-market2"
-import { HoChiMinhDragonImage } from "../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-dragon"
-import { Conclusion } from "../../../components/core/conclusion"
-import { HomeVietnamImage } from "../../../components/images/asia/vietnam/home"
-import HomeImgUrl from "../../../images/asia/vietnam/south-vietnam/home.jpg"
+} from "../../../../components/images/layout"
+import { HoChiMinhCalao1Image } from "../../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-calao1"
+import { HoChiMinhCalao2Image } from "../../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-calao2"
+import { HoChiMinhMarket1Image } from "../../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-market1"
+import { HoChiMinhMarket2Image } from "../../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-market2"
+import { HoChiMinhDragonImage } from "../../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-dragon"
+import { Conclusion } from "../../../../components/core/conclusion"
+import { HomeVietnamImage } from "../../../../components/images/asia/vietnam/home"
+import HomeImgUrl from "../../../../images/asia/vietnam/south-vietnam/home.jpg"
 import { PageProps } from "gatsby"
-import { useCustomTranslation } from "../../../i18n"
+import { useCustomTranslation } from "../../../../i18n"
 import i18n from "i18next"
-import translationFr from "../../../locales/fr/asia/vietnam/discover-southern-vietnam.json"
-import translationEn from "../../../locales/en/asia/vietnam/discover-southern-vietnam.json"
-import { Comments } from "../../../components/core/comments"
+import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/discover.json"
+import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/discover.json"
+import { Comments } from "../../../../components/core/comments"
 
-const namespace = "asia/vietnam/discover-southern-vietnam"
+const namespace = "asia/vietnam/southern-vietnam/discover"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 

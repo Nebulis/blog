@@ -313,7 +313,7 @@ export const sortByPublishedDate = (obj1: { published?: Date | boolean }, obj2: 
   return time2 - time1
 }
 
-type LinkMapped = Required<Pick<CachedLinksMap, "card" | "publishedDate" | "country">>
+type LinkMapped = Required<Pick<CachedLinksMap, "card" | "publishedDate" | "country" | "url">>
 const filterNull = (value: any): value is LinkMapped => {
   return value
 }
@@ -326,7 +326,7 @@ export const getMostRecentArticles = ({ customFilter = () => true, limit = 3 }: 
     .map((link) => {
       if (link.published && link.publishedDate && link.card) {
         // for some reason, typescript going nuts if country is made optional in LinkMapped ...
-        return { publishedDate: link.publishedDate, card: link.card, country: link.country ?? "" }
+        return { publishedDate: link.publishedDate, card: link.card, country: link.country ?? "", url: link.url }
       }
       return null
     })

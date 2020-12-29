@@ -438,7 +438,7 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({
       <Input
         id="website"
         placeholder={t("comments.website")}
-        label={t("comment.website")}
+        label={t("comments.website")}
         type="website"
         value={website}
         Icon={FaLink}
