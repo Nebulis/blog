@@ -19,4 +19,4 @@ jobs:
           command: npm run test
       - run:
           name: build
-          command: npm run build
+          command: GATSBY_CPU_COUNT=1 npm run build
