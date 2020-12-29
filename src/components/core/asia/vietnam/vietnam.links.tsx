@@ -88,7 +88,7 @@ export const vietnamLinks: CountryLink = {
         fr: commonFr.card.vietnam["discover-southern-vietnam"],
         en: commonEn.card.vietnam["discover-southern-vietnam"],
       },
-      published: new Date("2019-01-01"),
+      published: new Date("2021-01-01"),
       card: SouthVietnamCard,
     },
   ],

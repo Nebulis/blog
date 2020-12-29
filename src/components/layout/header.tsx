@@ -203,6 +203,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
 }
 
 // TODO explore position sticky
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const StickyHeader = styled(StaticHeader)`
   &.hide {
     transform: translateY(-500px);

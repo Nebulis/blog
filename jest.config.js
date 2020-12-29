@@ -1,5 +1,6 @@
 module.exports = {
   testPathIgnorePatterns: [`node_modules`, `.cache`, `public`],
+  watchPathIgnorePatterns: [`node_modules`, `.cache`, `public`],
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": `<rootDir>/jest-preprocess.js`,
   },
@@ -15,4 +16,5 @@ module.exports = {
   // testURL: `http://localhost`,
   setupFiles: [`<rootDir>/loadershim.js`],
   setupFilesAfterEnv: ["./jest.setup.js"],
+  watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
 }

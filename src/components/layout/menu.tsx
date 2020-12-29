@@ -16,7 +16,7 @@ import {
   sortByLabel,
 } from "../core/links/links.configuration"
 import { ApplicationLink } from "../core/links/link"
-import { CityLink, ContinentLink, CountryLink, Label, Lang } from "../core/links/links.types"
+import { CityLink, ContinentLink, CountryLink, Lang } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
 import { FaChevronDown, FaChevronRight, FaTwitter, FaFacebook, FaInstagram, FaPinterest } from "react-icons/all"
 import {
