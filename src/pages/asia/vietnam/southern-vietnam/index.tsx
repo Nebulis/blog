@@ -2,7 +2,7 @@ import React, { ComponentType, useContext } from "react"
 import SEO from "../../../../components/layout/seo"
 import vietnamHat from "../../../../images/asia/vietnam/hat.svg"
 import {
-  IndexVietnamBlogLayout,
+  VietnamBlogLayout,
   VietnamDivider,
   VietnamImageAsMedallion,
 } from "../../../../components/core/asia/vietnam/vietnam"
@@ -58,7 +58,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO title={t("title")} />
-      <IndexVietnamBlogLayout page={currentPageId}>
+      <VietnamBlogLayout page={currentPageId}>
         <MainTitleSection>
           <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
           &nbsp;{t("title")}&nbsp;
@@ -103,7 +103,7 @@ const IndexPage = () => {
             </GoToAllArticlesContainer>
           </>
         )}
-      </IndexVietnamBlogLayout>
+      </VietnamBlogLayout>
     </>
   )
 }

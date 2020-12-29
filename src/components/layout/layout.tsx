@@ -126,7 +126,7 @@ export const IndexBlogLayout: FunctionComponent<{
           {development && !isPublished && <PageDevelopmentMark />}
           <Header noStickyHeader={noStickyHeader} />
           {!isMobileView && <ScrollToTop />}
-          <div className="children-container">{children}</div>
+          <div className="children-container flex-grow-1">{children}</div>
 
           <Footer className="pa2">
             <div className="f6 copyright">© 2020 Magic of Travels</div>
@@ -207,7 +207,6 @@ export const BlogLayout = styled(IndexBlogLayout)`
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    flex: 1;
   }
 
   @media (min-width: ${smallStart}) {

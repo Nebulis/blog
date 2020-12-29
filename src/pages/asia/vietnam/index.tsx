@@ -43,12 +43,16 @@ const IndexPage = () => {
           &nbsp;{t("common:country.vietnam")}&nbsp;
           <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
         </MainTitleSection>
-        <VietnamDivider />
-        <HomeSection>{t("common:travel.title")}</HomeSection>
-        <HomeSubSection>{t("common:travel.subtitle")}</HomeSubSection>
-        <MainCardContainer>
-          <SouthVietnamCard />
-        </MainCardContainer>
+        {false && (
+          <>
+            <VietnamDivider />
+            <HomeSection>{t("common:travel.title")}</HomeSection>
+            <HomeSubSection>{t("common:travel.subtitle")}</HomeSubSection>
+            <MainCardContainer>
+              <SouthVietnamCard />
+            </MainCardContainer>
+          </>
+        )}
         {cities.length > 0 && (
           <>
             <VietnamDivider />

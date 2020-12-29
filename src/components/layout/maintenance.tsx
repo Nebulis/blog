@@ -72,7 +72,6 @@ export const Maintenance: FunctionComponent = ({ children }) => {
         paddingTop: 0,
       }}
     >
-      <SEO title="Home" />
       <h3
         style={{
           textAlign: "center",

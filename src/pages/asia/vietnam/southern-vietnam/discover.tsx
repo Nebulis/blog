@@ -36,13 +36,14 @@ import { HoChiMinhMarket2Image } from "../../../../components/images/asia/vietna
 import { HoChiMinhDragonImage } from "../../../../components/images/asia/vietnam/south-vietnam/ho-chi-minh/ho-chi-minh-dragon"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { HomeVietnamImage } from "../../../../components/images/asia/vietnam/home"
-import HomeImgUrl from "../../../../images/asia/vietnam/south-vietnam/home.jpg"
+import HomeImgUrl from "../../../../images/asia/vietnam/home.jpg"
 import { PageProps } from "gatsby"
 import { useCustomTranslation } from "../../../../i18n"
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/discover.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/discover.json"
 import { Comments } from "../../../../components/core/comments"
+import { hostname } from "../../../../utils"
 
 const namespace = "asia/vietnam/southern-vietnam/discover"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -59,9 +60,10 @@ const IndexPage: React.FunctionComponent<PageProps> = () => {
         title={title}
         description={description}
         meta={[
-          { name: "twitter:image", content: `https://blog-git-feat-vietnam.nebulis.vercel.app${HomeImgUrl}` },
+          { name: "twitter:image", content: `${hostname}${HomeImgUrl}` },
           { name: "twitter:card", content: "summary_large_image" },
-          { property: "og:image", content: `https://blog-git-feat-vietnam.nebulis.vercel.app${HomeImgUrl}` },
+          { property: "og:image", content: `${hostname}${HomeImgUrl}` },
+          { property: "putain:de:merde", content: `${title}${description}` },
         ]}
       />
       <VietnamBlogLayout page="discover-southern-vietnam">

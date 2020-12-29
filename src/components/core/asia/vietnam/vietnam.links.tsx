@@ -51,6 +51,16 @@ export const vietnamLinks: CountryLink = {
           label: { fr: "Le Musée des Vestiges de Guerre", en: "War Remnants Museum" },
           published: new Date("2021-01-01"),
         },
+        {
+          id: "discover-southern-vietnam",
+          url: "discover",
+          label: {
+            fr: commonFr.card.vietnam["discover-southern-vietnam"],
+            en: commonEn.card.vietnam["discover-southern-vietnam"],
+          },
+          published: new Date("2019-01-01"),
+          card: SouthVietnamCard,
+        },
       ],
     },
     {
@@ -79,17 +89,6 @@ export const vietnamLinks: CountryLink = {
       label: { fr: commonFr.link.transports, en: commonEn.link.transports },
       url: "transports",
       published: false,
-    },
-    {
-      // todo to move into southern later, dont forget to change the url to discover only
-      id: "discover-southern-vietnam",
-      url: "southern-vietnam/discover",
-      label: {
-        fr: commonFr.card.vietnam["discover-southern-vietnam"],
-        en: commonEn.card.vietnam["discover-southern-vietnam"],
-      },
-      published: new Date("2021-01-01"),
-      card: SouthVietnamCard,
     },
   ],
 }

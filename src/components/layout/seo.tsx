@@ -18,7 +18,7 @@ interface SEOProps {
   meta?: any
   title?: string
 }
-const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta = [], title }) => {
+const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -32,14 +32,15 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang = "en", meta 
       }
     `
   )
-  const { t } = useCustomTranslation("common")
+  const { t, i18n } = useCustomTranslation("common")
 
   const metaDescription = description || site.siteMetadata.description
   const metaTitle = title || site.siteMetadata.title
+  const metaLang = lang || i18n.languageCode
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: metaLang,
       }}
       link={[
         {
