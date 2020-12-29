@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext, useState, useEffect } from "react"
+import React, { FunctionComponent, useContext, useEffect, useState } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.configuration"
@@ -11,11 +11,25 @@ import smoothscroll from "smoothscroll-polyfill"
 import { Input } from "../core/input"
 import { PrimaryDarkButton } from "../core/button"
 import styled from "@emotion/styled"
-import { largeStart, mediumEnd, mobileEnd, primaryColor, primaryDarkColor } from "../core/variables"
-import { FaEnvelope, FaCheck, FaTimes, FaSpinner } from "react-icons/all"
+import {
+  extraLargeStart,
+  largeStart,
+  maxWidth,
+  maxWidthExtraLargeContainer,
+  maxWidthLargeContainer,
+  maxWidthMediumContainer,
+  mediumEnd,
+  mediumStart,
+  mobileEnd,
+  primaryColor,
+  primaryDarkColor,
+  smallStart,
+} from "../core/variables"
+import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
 import { MenuContext } from "./menu.context"
 import { Status } from "../../types/shared"
-import { drawKoala } from "../../components/core/australia/console-draw-koala"
+import { useCustomTranslation } from "../../i18n"
+import { subscribe } from "../../services/newsletter"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -31,6 +45,7 @@ const pageDevelopmentMarkStyle = css`
 export const PageDevelopmentMark = () => <span css={pageDevelopmentMarkStyle} />
 
 const Footer = styled.footer`
+  justify-self: flex-end;
   color: white;
   background-color: black;
   a {
@@ -65,19 +80,31 @@ const Footer = styled.footer`
   }
 `
 
-const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; noStickyHeader?: boolean }> = ({
-  children,
-  page,
-  className = "",
-  noStickyHeader = false,
-}) => {
+export const withDraw = (draw: () => void) => {
+  return function <P>(Component: React.ComponentType<P>): React.FunctionComponent<P> {
+    // eslint-disable-next-line react/display-name
+    return (props: P) => {
+      return <Component draw={draw} {...props} />
+    }
+  }
+}
+
+export const IndexBlogLayout: FunctionComponent<{
+  page: string
+  className?: string
+  noStickyHeader?: boolean
+  draw?: () => void
+}> = ({ children, page, className = "", noStickyHeader = false, draw }) => {
   const isPublished = page === "home" ? true : getLink(page).published
   const { development } = useContext(ApplicationContext)
   const { isMobileView } = useContext(MenuContext)
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
+  const { t } = useCustomTranslation("common")
   useEffect(() => {
-    drawKoala()
+    if (draw) draw()
+    // I really want to run this one even if the function changed which should NOT happen
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // reset the status to INITIAL after SUCCESS
@@ -95,7 +122,7 @@ const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; 
   return (
     <Maintenance>
       {typeof window !== `undefined` ? (
-        <div className={className}>
+        <div className={`${className} flex flex-column min-vh-100`}>
           {development && !isPublished && <PageDevelopmentMark />}
           <Header noStickyHeader={noStickyHeader} />
           {!isMobileView && <ScrollToTop />}
@@ -103,66 +130,52 @@ const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; 
 
           <Footer className="pa2">
             <div className="f6 copyright">© 2020 Magic of Travels</div>
-            {development && (
-              <div className="newsletter">
-                <div className="tc text">NEWSLETTER</div>
-                <div className="inline-flex">
-                  <Input
-                    placeholder="Adresse Email"
-                    className="inline-flex"
-                    id="newsletter"
-                    value={mail}
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
-                  />
-                  <div
-                    className="inline-flex"
-                    css={css`
-                      margin-top: 0.6rem;
-                      margin-bottom: 0.6rem;
-                    `}
-                  >
-                    <PrimaryDarkButton
-                      disabled={!mail || status === "LOADING"}
-                      onClick={() => {
-                        setStatus("LOADING")
-                        fetch("https://us-central1-blog-3dd22.cloudfunctions.net/newsletter", {
-                          method: "POST",
-                          headers: {
-                            "Content-Type": "application/json",
-                          },
-                          body: JSON.stringify({
-                            mail,
-                          }),
+            <div className="newsletter">
+              <div className="tc text">NEWSLETTER</div>
+              <div className="inline-flex">
+                <Input
+                  placeholder={t("footer.email")}
+                  className="inline-flex"
+                  id="newsletter"
+                  value={mail}
+                  aria-label="Email"
+                  onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
+                />
+                <div
+                  className="inline-flex"
+                  css={css`
+                    margin-top: 0.6rem;
+                    margin-bottom: 0.6rem;
+                  `}
+                >
+                  <PrimaryDarkButton
+                    disabled={!mail || status === "LOADING"}
+                    onClick={() => {
+                      setStatus("LOADING")
+                      subscribe({ mail })
+                        .then(() => {
+                          setMail("")
+                          setStatus("SUCCESS")
                         })
-                          .then((res) => {
-                            if (!res.ok) {
-                              throw new Error("Request failed: " + res.statusText)
-                            }
-                          })
-                          .then(() => {
-                            setMail("")
-                            setStatus("SUCCESS")
-                          })
-                          .catch(() => {
-                            setStatus("ERROR")
-                          })
-                      }}
-                    >
-                      {status === "INITIAL" ? (
-                        <FaEnvelope />
-                      ) : status === "LOADING" ? (
-                        <FaSpinner className="fa-spin" />
-                      ) : status === "SUCCESS" ? (
-                        <FaCheck />
-                      ) : (
-                        <FaTimes />
-                      )}
-                      &nbsp;S&apos;inscrire
-                    </PrimaryDarkButton>
-                  </div>
+                        .catch(() => {
+                          setStatus("ERROR")
+                        })
+                    }}
+                  >
+                    {status === "INITIAL" ? (
+                      <FaEnvelope />
+                    ) : status === "LOADING" ? (
+                      <FaSpinner className="fa-spin" />
+                    ) : status === "SUCCESS" ? (
+                      <FaCheck />
+                    ) : (
+                      <FaTimes />
+                    )}
+                    &nbsp;{t("footer.subscribe")}
+                  </PrimaryDarkButton>
                 </div>
               </div>
-            )}
+            </div>
             <div className="f6 made-by">
               Made with ❤️ by&nbsp;
               <a href="https://github.com/nebulis" target="_blank" rel="noopener noreferrer">
@@ -176,7 +189,8 @@ const InternalBlogLayout: FunctionComponent<{ page: string; className?: string; 
   )
 }
 
-export const IndexBlogLayout = styled(InternalBlogLayout)`
+// layout to apply on articles
+export const HomeBlogLayout = styled(IndexBlogLayout)`
   .card .tags a {
     color: ${primaryColor};
   }
@@ -185,7 +199,8 @@ export const IndexBlogLayout = styled(InternalBlogLayout)`
   }
 `
 
-export const BlogLayout = styled(InternalBlogLayout)`
+// layout to apply on pages (index, country index, ...)
+export const BlogLayout = styled(IndexBlogLayout)`
   .children-container {
     margin-left: auto;
     margin-right: auto;
@@ -195,28 +210,113 @@ export const BlogLayout = styled(InternalBlogLayout)`
     flex: 1;
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: ${smallStart}) {
     .children-container {
       padding: 0;
       max-width: 540px;
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: ${mediumStart}) {
     .children-container {
-      max-width: 720px;
+      max-width: ${maxWidthMediumContainer}px;
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: ${largeStart}) {
     .children-container {
-      max-width: 960px;
+      max-width: ${maxWidthLargeContainer}px;
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: ${extraLargeStart}) {
     .children-container {
-      max-width: 1140px;
+      max-width: ${maxWidthExtraLargeContainer}px;
     }
+  }
+`
+
+// max-width is needed for the title to text-overflow correctly
+export const ArticlesContainer = styled.div`
+  max-width: ${maxWidth}px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  > * {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  padding: 1rem 20px;
+  @media (max-width: ${mediumEnd}) {
+    > * {
+      flex: 0 0 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+    > *:nth-of-type(n + 3) {
+      margin-top: 20px;
+    }
+    > *:nth-of-type(odd) {
+      margin-right: 10px;
+    }
+    > *:nth-of-type(even) {
+      margin-left: 10px;
+    }
+  }
+  @media (max-width: ${mobileEnd}) {
+    > * {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    > *:nth-of-type(n + 2) {
+      margin-top: 20px;
+    }
+    > *:nth-of-type(odd) {
+      margin-right: 0;
+    }
+    > *:nth-of-type(even) {
+      margin-left: 0;
+    }
+  }
+  .card .tags span,
+  .card .title {
+    font-size: 0.8rem;
+  }
+`
+export const MedallionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  & > * {
+    margin: 5px;
+  }
+`
+
+export const GoToAllArticlesContainer = styled.div`
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+`
+
+export const MainCardContainer = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 1rem 20px;
+
+  @media (min-width: ${extraLargeStart}) {
+    max-width: ${maxWidthExtraLargeContainer}px;
+  }
+`
+
+export const CityArticleContainer = styled.div`
+  padding: 1rem 20px;
+  @media (min-width: ${largeStart}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 `

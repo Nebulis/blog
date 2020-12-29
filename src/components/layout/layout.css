@@ -1,6 +1,12 @@
 @font-face {
   font-family: "Freestyle Script";
+  font-display: swap;
   src: url("../../fonts/Freestyle-Script.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+@font-face {
+  font-family: "Courgette";
+  font-display: swap;
+  src: url("../../fonts/Courgette-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
 ::selection {
@@ -662,7 +668,6 @@ pre tt:after {
     font-size: 100%;
   }
 }
-
 
 .full-container {
   width: 100%;

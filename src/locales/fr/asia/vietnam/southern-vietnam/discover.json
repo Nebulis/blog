@@ -1,0 +1,54 @@
+{
+  "quote": "Le Sud du Vietnam regorge de surprises et de découvertes, toutes plus passionnantes les unes que les autres. Entre le dynamisme de la ville de Ho Chi Minh et les excursions en bateau à l’ombre des palmiers d’eau sur le Delta du Mékong, il y en a pour tous les goûts.",
+  "what-time-of-year": {
+    "part1": "La meilleure période pour partir au Sud du Vietnam est la saison sèche de Décembre à Avril.",
+    "part2": "Évitez de vous rendre dans le Sud pendant la mousson qui se situe entre Mai et Novembre si vous ne voulez pas avoir de la pluie pratiquement chaque jour de votre séjour.",
+    "part3": "Nous y sommes allés en Février, il y avait énormément de monde à Ho Chi Minh par contre nous n’avons eu aucun problème lors de nos visites aux alentours."
+  },
+  "how-long": {
+    "part1": "Une semaine est suffisante pour visiter le Sud du Vietnam.",
+    "part2": "Bien sûr tout dépend de la vitesse de vos visites ou si vous prévoyez des jours de farniente, mais pour nous c’était largement suffisant."
+  },
+  "how-much": {
+    "part1": "Le plus gros du budget sera consacré au voyage en avion. Environ 600€ par personne. Pour le reste des dépenses, il est plutôt simple de s'en sortir à moindre coût, que cela soit pour le logement, la nourriture, les déplacements ou bien les activités. Par exemple, pour deux personnes nous en avons eu, par jour, pour environ:",
+    "price1": "25€ de logement",
+    "price2": "20€ de nourriture",
+    "price3": "30€ en activités",
+    "price4": "10€ en déplacements (bus, taxi, etc.)",
+    "part2": "A noter qu'en fonction de votre planning et vos besoins / envies, il est possible de s&apos;en sortir pour encore moins cher."
+  },
+  "where": {
+    "part1": "Ho Chi Minh ↠ Mỹ Tho ↠ Ho Chi Minh ↠ Cần Thơ ↠ Ho Chi Minh",
+    "part2": "À regarder comme ça, cela fait beaucoup d’aller / retour vers Ho Chi Minh mais vu que nous avions pris des tours avec guide pour la plupart de nos visites il était plus simple pour nous de nous retrouver toujours au même point. Cela dit même avec des tours avec guide vous pouvez demander de vous prendre un peu n’importe où sur le chemin, cela se fait sans problème si vous prévenez avant."
+  },
+  "visit": {
+    "part1": "Nous avions tellement hâte de commencer nos visites au Vietnam, ce pays nous tentait depuis déjà un bon bout de temps sans même savoir réellement pourquoi, un feeling sûrement mais nous n’attendions qu’une chose, le Jour J.",
+    "part2": "Let’s Go ..."
+  },
+  "visit1": {
+    "title": "Connaître un peu mieux l’histoire du pays",
+    "part1": "Comment venir au Vietnam sans passer par les incontournables sites de guerre.",
+    "part2": "On aime particulièrement se renseigner sur l’histoire du pays que l’on visite, d’autant plus qu’ici cela concerne malheureusement également notre pays, et que la fin de la guerre n’est d’ailleurs pas si vieille que ça.",
+    "part3": "On commence d’abord par le musée des Vestiges de la Guerre, une sorte de film d’horreur à chaque pas, à chaque photographie, à chaque description. Un lieu incontournable certes mais qui vous prend au tripes très clairement. On vous le déconseille avec des enfants en bas âge ou si vous êtes trop sensible.",
+    "part4": "Puis visite des Tunnels de Củ Chi. En immersion totale dans ces tunnels très étroits où on a du mal à s’imaginer comment pouvaient survivre les Viêt Cong à l’intérieur et en même temps on se demande comment auraient-ils pu survivre sans ..."
+  },
+  "visit2": {
+    "title": "Visite de la plus grande ville du pays",
+    "part1": "Vous serez impressionnés par le défilé de deux roues qui passent chaque seconde devant vous, pas facile de se frayer un chemin mais n’ayez pas peur de forcer le passage. C’est un peu comme ça ici, on ne dit pas que Ho Chi Minh est dynamique pour rien.",
+    "part2": "Si vous avez le temps de visiter la ville profitez-en pour visiter le District 1, vous pourrez y admirer de nombreuses constructions françaises qui font le charme de ce district: la cathédrale par exemple est basée sur la construction de Notre Dame de Paris, la Poste Centrale ou bien encore l’Hôtel de Ville.",
+    "part3": "De jour comme de nuit, promenez-vous, profitez, vous découvrirez de toute façon toujours quelque chose.",
+    "part4": "Entre les petits marchés authentiques au coin des rues, l’immense marché Ben Thanh très prisé, lui aussi construit par des Français et situé au cœur de la ville ou bien encore le marché Binh Tay dans le quartier de Chinatown, vous n’avez que l’embarras du choix.",
+    "part5": "Tiens en parlant de Chinatown, nous avions une statue de dragon qui nous avait clairement fait de l'œil quand nous avions vu des photos sur internet, énorme déception lors de notre visite. Alors soit on s’est fait avoir par un montage photo surréaliste soit il y a clairement un problème parce que nous n’avons pas vu la même chose de nos propres yeux."
+  },
+  "visit3": {
+    "title": "Le Delta du Mékong",
+    "part1": "Après le brouhaha de la ville, nous voici parti pour d’autres aventures, bien plus au Sud maintenant, on se retrouve près du Delta du Mékong pour une première visite.",
+    "part2": "A la découverte de Mỹ Tho et de Ben Tre, balade en bateau sur le Delta du Mékong à l’abri des cocotiers et des palmiers d’eau. Le dépaysement est total et le calme fait du bien.",
+    "part3": "Puis découverte de Cần Thơ, son marché flottant et son marché terrestre qui font vivre la ville et notre gros coup de cœur pour un Homestay au bord du lac."
+  },
+  "visit4": {
+    "title": "Une histoire sans fin",
+    "part1": "C’est la fin pour nous de notre visite du Vietnam du Sud, mais ce n’est clairement pas la fin de notre séjour. Le Nord et le Centre n’attendent que nous et nous avons hâte de nous y rendre et de poursuivre notre parcours dans ce pays que nous commençons à peine à découvrir."
+  },
+  "conclusion": "De par son histoire et l'authenticité de ses paysages, le Vietnam du Sud est une destination qui ne vous laissera pas insensible."
+}

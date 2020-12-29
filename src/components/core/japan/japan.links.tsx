@@ -17,19 +17,29 @@ import {
   SensojiCard,
   ToganjiCard,
 } from "./japan.cards"
+import { HomeJapanImage } from "../../images/asia/japan/home"
+import styled from "@emotion/styled"
+import commonFr from "../../../locales/fr/common.json"
+import commonEn from "../../../locales/en/common.json"
 
 export const japanLinks: CountryLink = {
   id: "japan",
-  label: "Japon",
+  label: { fr: commonFr.country.japan, en: commonEn.country.japan },
+  // this style is for the image in the asia page (medallion) to have the geisha centered
+  image: styled(HomeJapanImage)`
+    img {
+      object-position: -30px 0px !important;
+    }
+  `,
   others: [
     {
       id: "spring-in-japan",
-      label: "Le Japon au printemps",
+      label: { fr: "Le Japon au printemps", en: "Spring in Japan" },
       published: false,
     },
     {
       id: "transports-in-japan",
-      label: "Transports in Japan",
+      label: { fr: "Transports", en: "Transports" },
       url: "transports",
       published: false,
     },
@@ -37,30 +47,30 @@ export const japanLinks: CountryLink = {
   cities: [
     {
       id: "kyoto",
-      label: "Kyoto",
+      label: { fr: "Kyoto", en: "Kyoto" },
       image: MainArashiyamaImage,
       highlights: [
         {
           id: "arashiyama",
-          label: "Arashiyama",
-          published: new Date("2019-10-12"),
+          label: { fr: "Arashiyama", en: "Arashiyama" },
           card: ArashiyamaCard,
+          published: new Date("2022-09-09"),
         },
         {
           id: "daigoji",
-          label: "Daigo-ji",
-          published: new Date("2019-10-13"),
+          label: { fr: "Daigo-ji", en: "Daigo-ji" },
+          published: false,
           card: DaigojiCard,
         },
         {
           id: "kinkakuji",
-          label: "Kinkakuji",
-          published: new Date("2019-10-14"),
+          label: { fr: "Kinkaku-ji", en: "Kinkaku-ji" },
+          published: false,
           card: KinkakujiCard,
         },
         {
           id: "fushimi-inari-taisha",
-          label: "Fushimi Inari Taisha",
+          label: { fr: "Fushimi Inari-taisha", en: "Fushimi Inari-taisha" },
           published: false,
           card: FushimiInariTaishaCard,
         },
@@ -68,12 +78,12 @@ export const japanLinks: CountryLink = {
     },
     {
       id: "himeji",
-      label: "Himeji",
+      label: { fr: "Himeji", en: "Himeji" },
       image: MainHimejiCastleImage,
       highlights: [
         {
           id: "himeji-castle",
-          label: "Himeji Castle",
+          label: { fr: "Château de Himeji", en: "Himeji Castle" },
           url: "castle",
           published: false,
           card: HimejiCastleCard,
@@ -82,19 +92,19 @@ export const japanLinks: CountryLink = {
     },
     {
       id: "nagoya",
-      label: "Nagoya",
+      label: { fr: "Nagoya", en: "Nagoya" },
       image: MainNagoyaCastleImage,
       highlights: [
         {
           id: "nagoya-castle",
-          label: "Nagoya Castle",
+          label: { fr: "Château de Nagoya", en: "Nagoya Castle" },
           url: "castle",
           published: false,
           card: NagoyaCastleCard,
         },
         {
           id: "toganji",
-          label: "Togan-ji",
+          label: { fr: "Togan-ji", en: "Togan-ji" },
           published: false,
           card: ToganjiCard,
         },
@@ -102,12 +112,12 @@ export const japanLinks: CountryLink = {
     },
     {
       id: "fuji",
-      label: "Mt. Fuji",
+      label: { fr: "Mt. Fuji", en: "Mt. Fuji" },
       image: MainFujiImage,
       highlights: [
         {
           id: "lake-kawaguchiko",
-          label: "Lac Kawaguchiko",
+          label: { fr: "Lac Kawaguchiko", en: "Kawaguchiko Lake" },
           published: false,
           card: KawaguchikoLakeCard,
         },
@@ -115,24 +125,24 @@ export const japanLinks: CountryLink = {
     },
     {
       id: "tokyo",
-      label: "Tokyo",
+      label: { fr: "Tokyo", en: "Tokyo" },
       image: MainTokyoImage,
       highlights: [
         {
           id: "a-day-in-tokyo",
-          label: "Un jour à Tokyo",
+          label: { fr: "Un jour à Tokyo", en: "A day in Tokyo" },
           published: false,
           card: ADayInTokyoCard,
         },
         {
           id: "sensoji",
-          label: "Senso-ji",
+          label: { fr: "Senso-ji", en: "Senso-ji" },
           published: false,
           card: SensojiCard,
         },
         {
           id: "hamarikyu-garden",
-          label: "Hamarikyu Garden",
+          label: { fr: "Jardins de Hamarikyu", en: "Hamarikyu Garden" },
           published: false,
           card: HamarikyuGardenCard,
         },

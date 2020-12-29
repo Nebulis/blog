@@ -4,7 +4,6 @@ import { navigate } from "gatsby"
 import { japanPrimaryColor } from "./japan.variables"
 import { getLink, getLinkUrl } from "../links/links.configuration"
 
-type PopoverPlace = "above" | "right" | "below" | "left" | "row" | "column" | "start" | "end"
 const basicTextStyle = css`
   fill: black;
   font-weight: bold;

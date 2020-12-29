@@ -16,7 +16,7 @@ describe("isPublished", () => {
     Date = _date
   })
   it("should work yeah I know it's a bad name", () => {
-    const props = { id: "", label: "" }
+    const props = { id: "", label: { fr: "", en: "" } }
 
     expect(isPublished({ published: createDate(21, "october", 2019), ...props })).toStrictEqual(true)
     expect(isPublished({ published: createDate(21, "october", 2019, 23, 59, 59), ...props })).toStrictEqual(true)

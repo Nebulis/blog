@@ -20,7 +20,7 @@ const carouselStyle = css`
   }
   .visible .gatsby-image-wrapper {
     opacity: 1;
-    transition: opacity 0.8s linear;
+    // transition: opacity 0.8s linear;
   }
   .overlay {
     position: absolute;
@@ -29,7 +29,7 @@ const carouselStyle = css`
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.25;
+    opacity: 0.15;
     z-index: 5;
     pointer-events: none;
   }
@@ -119,9 +119,9 @@ export const Carousel: React.FunctionComponent = ({ children }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (currentElement === children.length - 1) {
-        setCurrentElement(0)
+        // setCurrentElement(0)
       } else {
-        setCurrentElement(currentElement + 1)
+        // setCurrentElement(currentElement + 1)
       }
     }, 13000)
     return () => {

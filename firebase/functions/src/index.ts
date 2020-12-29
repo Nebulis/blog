@@ -1,17 +1,10 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { createTransport } from "nodemailer";
-import Mail from "nodemailer/lib/mailer";
+import mailgun, { messages } from "mailgun-js";
 import { app as contactApp } from "./contact";
 import { app as newsletterApp } from "./newsletter";
+import { adminEmail, commentEmail, mailgunConfiguration } from "./shared";
 
-const transporter = createTransport({
-  service: "gmail",
-  auth: {
-    user: functions.config().mail.id,
-    pass: functions.config().mail.password,
-  },
-});
 admin.initializeApp();
 
 exports.commentsNotification = functions.database
@@ -20,18 +13,27 @@ exports.commentsNotification = functions.database
     // Grab the current value of what was written to the Realtime Database.
     console.log("Run function", context.authType);
     const message = snapshot.val();
-    const collection = context?.params?.collectionName?.replace(/-/g, "/");
+    const collection = context?.params?.collectionName?.replace(/__/g, "/");
     console.log(JSON.stringify(message));
-    const mailOptions: Mail.Options = {
-      from: "Magic of travels <nebneb123.nebneb123@gmail.com>",
-      to: ["servane.bausson@gmail.com", "nebounet@gmail.com"],
+
+    const mg = mailgun(mailgunConfiguration);
+    const data: messages.SendData = {
+      from: adminEmail,
+      to: commentEmail,
       subject: `New comment on ${collection}`,
       html: `<h4>From ${message?.name} at ${new Date(message?.timestamp).toLocaleString("fr-FR", {
         timeZone: "Asia/Singapore",
       })}</h4><p>${message?.content}</p>
-    <a href="https://magicoftravels.com/${collection}#${context?.params?.key}" target="_blank">View</a>`,
+    <p><a href="https://magicoftravels.com/${collection}#${context?.params?.key}" target="_blank">View</a></p>
+    <p>Delete comment: TODO</p>`,
     };
-    return transporter.sendMail(mailOptions);
+    mg.messages().send(data, function (error) {
+      if (error) {
+        console.error(JSON.stringify(error));
+      } else {
+        console.log("Mail sent with success:", JSON.stringify(data));
+      }
+    });
   });
 
 exports.contact = functions.https.onRequest(contactApp);

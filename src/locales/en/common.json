@@ -1,0 +1,90 @@
+{
+  "link": {
+    "home": "Home",
+    "destination": "Destination",
+    "who": "Who are we ?",
+    "contact": "Contact",
+    "south": "Southern",
+    "north": "Northern",
+    "central": "Central",
+    "transports": "Transports"
+  },
+  "continent": {
+    "asia": "Asia"
+  },
+  "inspire": {
+    "title": "Take inspiration",
+    "subtitle": "From our stories and advices ..."
+  },
+  "travel": {
+    "title": "Travel",
+    "subtitle": "By following our journey ..."
+  },
+  "tour": {
+    "title": "Travel around",
+    "subtitle": "The country from region to region"
+  },
+  "inform": {
+    "title": "Get informed",
+    "subtitle": "With our suggestions, favorites ..."
+  },
+  "country": {
+    "australia": "Australia",
+    "cambodia": "Cambodia",
+    "france": "France",
+    "india": "India",
+    "indonesia": "Indonesia",
+    "japan": "Japan",
+    "malaysia": "Malaysia",
+    "philippines": "Philippines",
+    "senegal": "Senegal",
+    "singapore": "Singapore",
+    "spain": "Spain",
+    "sri-lanka": "Sri Lanka",
+    "taiwan": "Taiwan",
+    "thailand": "Thailand",
+    "united-states": "United States",
+    "vietnam": "Vietnam"
+  },
+  "card": {
+    "vietnam": {
+      "cu-chi-tunnels": "Củ Chi tunnels",
+      "discover-southern-vietnam": "Discover Southern Vietnam",
+      "my-tho": "Cruise on the Mekong between Mỹ Tho and Ben Tre"
+    }
+  },
+  "allArticles": "All our articles",
+  "published": "Published on",
+  "in": "in",
+  "head": "Travel Blog",
+  "section": {
+    "how-long": "How long?",
+    "how-much": "How much?",
+    "visit": "Visits",
+    "what-time-of-year": "When?",
+    "where": "Our itinerary"
+  },
+  "comments": {
+    "loading": "Loading comments ...",
+    "comment": "comment",
+    "comment-posted": "Comment posted",
+    "comment-failed": "Unable to post the comment",
+    "newsletter-subscribed": "Subscribed to newsletter",
+    "newsletter-failed": "Unable to subscribe to the newsletter",
+    "reply": "Reply",
+    "post-comment": "Post a comment",
+    "cancel": "Cancel",
+    "note": "Your email won't be stored or shared to 3rd parties. All fields followed by * are required.",
+    "website": "Website",
+    "subscribed-note": "Send me an email when new articles are published.",
+    "local-save": "Save my name, email and website into the browser for my next comments."
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email"
+  },
+  "footer": {
+    "email": "Email Address",
+    "subscribe": "Subscribe"
+  }
+}

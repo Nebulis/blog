@@ -1,0 +1,90 @@
+{
+  "link": {
+    "home": "Accueil",
+    "destination": "Destination",
+    "who": "Qui sommes nous ?",
+    "contact": "Contact",
+    "south": "Sud",
+    "north": "Nord",
+    "central": "Centre",
+    "transports": "Transports"
+  },
+  "continent": {
+    "asia": "Asie"
+  },
+  "inspire": {
+    "title": "S'inspirer",
+    "subtitle": "D'après nos récits et nos conseils ..."
+  },
+  "travel": {
+    "title": "Voyager",
+    "subtitle": "En suivant notre aventure ..."
+  },
+  "tour": {
+    "title": "Parcourir",
+    "subtitle": "Le pays de région en région ..."
+  },
+  "inform": {
+    "title": "S'informer",
+    "subtitle": "À travers nos astuces, nos coups de cœur ..."
+  },
+  "country": {
+    "australia": "Australie",
+    "cambodia": "Cambodge",
+    "france": "France",
+    "india": "Inde",
+    "indonesia": "Indonésie",
+    "japan": "Japon",
+    "malaysia": "Malaisie",
+    "philippines": "Philippines",
+    "senegal": "Sénégal",
+    "singapore": "Singapour",
+    "spain": "Espagne",
+    "sri-lanka": "Sri Lanka",
+    "taiwan": "Taiwan",
+    "thailand": "Thaïlande",
+    "united-states": "États-Unis",
+    "vietnam": "Vietnam"
+  },
+  "card": {
+    "vietnam": {
+      "cu-chi-tunnels": "Les tunnels de Củ Chi",
+      "discover-southern-vietnam": "Découverte du Vietnam du Sud",
+      "my-tho": "Croisière sur le Mékong entre Mỹ Tho et Ben Tre"
+    }
+  },
+  "allArticles": "Tous nos articles",
+  "published": "Publié le",
+  "in": "dans",
+  "head": "Blog Voyage",
+  "section": {
+    "how-long": "Combien de temps ?",
+    "how-much": "Combien d’argent prévoir ?",
+    "visit": "Les visites",
+    "what-time-of-year": "À quelle période ?",
+    "where": "Notre itinéraire"
+  },
+  "comments": {
+    "loading": "Chargement des commentaires ...,",
+    "comment": "commentaire",
+    "comment-posted": "Commentaire ajouté",
+    "comment-failed": "Impossible de rajouter le commentaire",
+    "newsletter-subscribed": "Inscription à la newsletter effectuée",
+    "newsletter-failed": "Impossible de s'inscrire à la newsletter",
+    "reply": "Répondre",
+    "post-comment": "Laisser un commentaire",
+    "cancel": "Annuler",
+    "note": "Votre adresse de messagerie ne sera pas publiée. Les champs obligatoires sont indiqués avec *.",
+    "website": "Site Internet",
+    "subscribed-note": "Prévenez-moi des nouveaux articles par e-mail.",
+    "local-save": "Enregistrer mon nom, mon e-mail et mon site web dans le navigateur pour mon prochain commentaire."
+  },
+  "form": {
+    "name": "Nom",
+    "email": "Mail"
+  },
+  "footer": {
+    "email": "Adresse Email",
+    "subscribe": "S'inscrire"
+  }
+}

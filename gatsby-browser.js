@@ -13,9 +13,9 @@ document.body.appendChild(dialogPortal)
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-export const wrapPageElement = ({ element }) => {
+export const wrapPageElement = ({ element, props }) => {
   return (
-    <Application>
+    <Application {...props}>
       <MenuProvider>{element}</MenuProvider>
     </Application>
   )

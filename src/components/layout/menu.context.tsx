@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { useWindowSize } from "../hooks/useWindowSize"
-import { pageDesktopHeightWithoutBanner, pageMobileHeightWithoutBanner } from "../core/variables"
+import {
+  pageDesktopHeightWithoutBanner,
+  pageMobileHeightWithoutBanner,
+  pageMobileLandscapeHeightWithoutBanner,
+} from "../core/variables"
 
 export const MenuContext = React.createContext<{
   open: boolean
@@ -16,7 +20,7 @@ export const MenuContext = React.createContext<{
 
 export const MenuProvider: React.FunctionComponent = ({ children }) => {
   const [open, setOpen] = useState(false)
-  const { windowWidth, scrollbarWidth } = useWindowSize()
+  const { windowWidth, scrollbarWidth, mode } = useWindowSize()
   useEffect(() => {
     if (open) {
       document.body.style.overflowY = "hidden"
@@ -34,7 +38,11 @@ export const MenuProvider: React.FunctionComponent = ({ children }) => {
         open,
         setOpen,
         isMobileView,
-        pageHeight: isMobileView ? pageMobileHeightWithoutBanner : pageDesktopHeightWithoutBanner,
+        pageHeight: isMobileView
+          ? mode === "portrait"
+            ? pageMobileHeightWithoutBanner
+            : pageMobileLandscapeHeightWithoutBanner
+          : pageDesktopHeightWithoutBanner,
       }}
     >
       {children}

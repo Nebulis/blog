@@ -4,15 +4,16 @@ import { css } from "@emotion/core"
 import banner from "../../images/logo-the-real.svg"
 import bannerMobile from "../../images/logo-mobile-the-real.svg"
 import { ApplicationContext } from "../application"
-import { backgroundPrimaryColor, primaryColor, bannerHeight } from "../core/variables"
+import { backgroundPrimaryColor, primaryColor, bannerHeight, bannerHeightLandscape, mobileEnd } from "../core/variables"
 import { DialogPortal } from "../core/tooltipPortal"
 import { Search } from "./search"
 import styled from "@emotion/styled"
 import { ApplicationLink } from "../core/links/link"
-import { useScrollPosition } from "../hooks/useScrollPosition"
-import { useBannerHeight } from "../hooks/useBannerHeight"
 import { Burger, BurgerAbsolute, Menu, MobileMenu } from "./menu"
 import { MenuContext } from "./menu.context"
+import { FlagFrance } from "../icon/flag-france"
+import { FlagUK } from "../icon/flag-uk"
+import { useCustomTranslation } from "../../i18n"
 
 const headerStyle = css`
   .header {
@@ -61,27 +62,40 @@ const headerStyle = css`
   .development-mode-button.production {
     fill: red;
   }
+  &.show-border-bottom {
+    border-bottom: 1px solid black;
+  }
+  // use max-height to check the mobile
+  @media (orientation: landscape) and (max-height: ${mobileEnd}) {
+    .header,
+    .logo-container img {
+      height: ${bannerHeightLandscape};
+    }
+  }
 `
-
+// disabled code is used by the sticky header
 export const Header: FunctionComponent<{ noStickyHeader?: boolean; className?: string }> = ({
-  noStickyHeader = false,
+  // noStickyHeader = false,
   className = "",
 }) => {
-  const { height } = useScrollPosition()
-  const [bannerHeight] = useBannerHeight()
   const { isMobileView } = useContext(MenuContext)
   const [search, setSearch] = useState(false)
-  const status = height > bannerHeight * 4 ? "display" : "hide"
+  // const { height } = useScrollPosition()
+  // const [bannerHeight] = useBannerHeight()
+  // const status = height > bannerHeight * 4 ? "display" : "hide"
   return (
     <>
-      <StaticHeader onSearch={() => setSearch(true)} className={className} />
-      {!noStickyHeader && (
-        <StickyHeader
-          // show-border-bottom must be shown only on mobile view, otherwise there is a weird border on desktop view
-          className={`${status} ${className} ${isMobileView ? "show-border-bottom" : ""}`}
-          onSearch={() => setSearch(true)}
-        />
-      )}
+      <StaticHeader
+        onSearch={() => setSearch(true)}
+        className={`${className}${isMobileView ? " show-border-bottom" : ""}`}
+      />
+      {/*{isMobileView && !noStickyHeader && (*/}
+      {/*  <StickyHeader*/}
+      {/*    // show-border-bottom must be shown only on mobile view, otherwise there is a weird border on desktop view*/}
+      {/*    className={`${status} ${className} ${isMobileView ? "show-border-bottom" : ""}`}*/}
+      {/*    onSearch={() => setSearch(true)}*/}
+      {/*  />*/}
+      {/*)}*/}
       {search && (
         <DialogPortal>
           <Search onClose={() => setSearch(false)} />
@@ -97,6 +111,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
 }) => {
   const context = useContext(ApplicationContext)
   const { isMobileView, open, setOpen } = useContext(MenuContext)
+  const { i18n } = useCustomTranslation()
 
   return (
     <header css={headerStyle} className={className}>
@@ -104,15 +119,49 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
         <div className="left-menu-container">
           {!isMobileView ? (
             <div className="social-network-container">
-              <FaFacebook className="facebook" />
-              <a href="https://twitter.com/_magicoftravels" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="twitter" />
+              <a
+                href="https://www.facebook.com/magicoftravels"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="facebook-label"
+              >
+                <span id="facebook-label" hidden>
+                  Go to Facebook
+                </span>
+                <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
               </a>
-              <a href="https://instagram.com/_magic_of_travels_" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="instagram" />
+              <a
+                href="https://twitter.com/_magicoftravels"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="twitter-label"
+              >
+                <span id="twitter-label" hidden>
+                  Go to Twitter
+                </span>
+                <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
               </a>
-              <a href="https://pinterest.com/MagicOfTravels" target="_blank" rel="noopener noreferrer">
-                <FaPinterest className="pinterest" />
+              <a
+                href="https://instagram.com/magic_of_travels"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="instagram-label"
+              >
+                <span id="instagram-label" hidden>
+                  Go to Facebook
+                </span>
+                <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
+              </a>
+              <a
+                href="https://pinterest.com/MagicOfTravels"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="pinterest-label"
+              >
+                <span id="pinterest-label" hidden>
+                  Go to Facebook
+                </span>
+                <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
               </a>
             </div>
           ) : (
@@ -135,6 +184,8 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
         <div className="right-menu-container">
           <div className="right-menu-element" />
           <div className="mr2">
+            <FlagFrance selected={i18n.languageCode === "fr"} onClick={() => i18n.changeLanguage("fr")} />
+            <FlagUK selected={i18n.languageCode === "en"} onClick={() => i18n.changeLanguage("en")} />
             {context.development && <FaSearch onClick={onSearch} className="search" />}
             {context.initialDevelopmentValue ? (
               <FaCircle
@@ -152,6 +203,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
 }
 
 // TODO explore position sticky
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const StickyHeader = styled(StaticHeader)`
   &.hide {
     transform: translateY(-500px);

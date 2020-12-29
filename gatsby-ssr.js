@@ -10,9 +10,9 @@ import { MenuProvider } from "./src/components/layout/menu.context"
 
 // You can delete this file if you're not using it
 
-export const wrapPageElement = ({ element }) => {
+export const wrapPageElement = ({ element, props }) => {
   return (
-    <Application>
+    <Application {...props}>
       <MenuProvider>{element}</MenuProvider>
     </Application>
   )

@@ -10,6 +10,14 @@ import { backgroundPrimaryColor, largeStart, primaryColor } from "../../componen
 import styled from "@emotion/styled"
 import { ErrorAlert, SuccessAlert } from "../../components/core/alert"
 import { Status } from "../../types/shared"
+import { useCustomTranslation } from "../../i18n"
+import i18n from "i18next"
+import contactFr from "../../locales/fr/about/contact.json"
+import contactEn from "../../locales/en/about/contact.json"
+
+const namespace = "about/contact"
+i18n.addResourceBundle("fr", namespace, contactFr)
+i18n.addResourceBundle("en", namespace, contactEn)
 
 const Hightlight = styled.span`
   color: ${primaryColor};
@@ -23,9 +31,10 @@ const IndexPage = () => {
   const [message, setMessage] = useState("")
   const [isPro] = useState(false)
   const [status, setStatus] = useState<Status>("INITIAL")
+  const { t } = useCustomTranslation([namespace, "common"])
   return (
     <>
-      <SEO title="Contact" />
+      <SEO title={t("common:link.contact")} />
       <BlogLayout page="who" noStickyHeader>
         <div
           className="tc mt4 mb3"
@@ -36,28 +45,32 @@ const IndexPage = () => {
             }
           `}
         >
-          <h4 className="tc">Bienvenue à bord, voyageur !</h4>
-          <SectionContent>
-            Tu as des questions ? Des conseils à nous donner ? Ou tout simplement un petit mot à nous laisser ?
-          </SectionContent>
+          <h4 className="tc">{t("headline")}</h4>
+          <SectionContent>{t("section1")}</SectionContent>
           {/*<SectionContent>Un partenariat, un projet à nous proposer ?</SectionContent>*/}
-          <SectionContent>N’hésites pas à nous écrire un petit mot, on y répondra avec plaisir. ❤️</SectionContent>
+          <SectionContent>{t("section2")}</SectionContent>
           <SectionContent>
-            Tu peux aussi commenter directement en bas d’un article si cela concerne un pays que nous avons déjà visité.
-            Ou encore nous contacter via <Hightlight>Facebook</Hightlight>,{" "}
+            {t("section3.part1")}{" "}
+            <Hightlight>
+              <a href="https://www.facebook.com/magicoftravels" target="_blank" rel="noopener noreferrer">
+                Facebook
+              </a>
+            </Hightlight>
+            ,{" "}
             <Hightlight>
               <a href="https://twitter.com/_magicoftravels" target="_blank" rel="noopener noreferrer">
                 Twitter
               </a>
             </Hightlight>{" "}
-            et plus particulièrement{" "}
+            {t("section3.part2")}{" "}
             <Hightlight>
-              <a href="https://instagram.com/_magic_of_travels_" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/magic_of_travels" target="_blank" rel="noopener noreferrer">
                 Instagram
               </a>
             </Hightlight>
             .
           </SectionContent>
+          {t("section4") && <SectionContent className="f6">{t("section4")}</SectionContent>}
           <section>
             <div
               css={css`
@@ -70,27 +83,27 @@ const IndexPage = () => {
               `}
             >
               <Input
-                label="Nom *"
+                label={`${t("common:form.name")} *`}
                 id="name"
-                placeholder="Nom *"
+                placeholder={t("common:form.name")}
                 type="text"
                 value={name}
                 Icon={FaUser}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setName(event.target.value)}
               />
               <Input
-                label="Mail *"
+                label={`${t("common:form.email")} *`}
                 id="email"
-                placeholder="Mail *"
+                placeholder={t("common:form.email")}
                 type="text"
                 value={mail}
                 Icon={FaEnvelope}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
               />
               <Input
-                label="Objet *"
+                label={`${t("form.object")} *`}
                 id="objet"
-                placeholder="Objet *"
+                placeholder={t("form.object")}
                 type="text"
                 value={title}
                 Icon={FaCubes}
@@ -98,9 +111,9 @@ const IndexPage = () => {
               />
               <Textarea
                 rows={10}
-                label="Message *"
+                label={`${t("form.message.label")} *`}
                 id="message"
-                placeholder="Ton message *"
+                placeholder={t("form.message.placeholder")}
                 value={message}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMessage(event.target.value)}
                 Icon={FaPen}
@@ -152,14 +165,12 @@ const IndexPage = () => {
                 ) : (
                   <FaTimes />
                 )}
-                &nbsp;Envoyer
+                &nbsp;{t("form.submit")}
               </PrimaryDarkButton>
               {status === "SUCCESS" ? (
-                <SuccessAlert>Ton message a été envoyé avec succès.</SuccessAlert>
+                <SuccessAlert>{t("form.valid")}</SuccessAlert>
               ) : status === "ERROR" ? (
-                <ErrorAlert>
-                  Malheureusement une erreur a été rencontrée lors de l&apos;envoi de ton message.
-                </ErrorAlert>
+                <ErrorAlert>{t("form.invalid")}</ErrorAlert>
               ) : undefined}
             </div>
           </section>

@@ -1,0 +1,23 @@
+{
+  "title": "Contact",
+  "headline": "Bienvenue à bord, voyageur !",
+  "section1": "Tu as des questions ? Des conseils à nous donner ? Ou tout simplement un petit mot à nous laisser ?",
+  "section2": "N’hésites pas à nous écrire, on y répondra avec plaisir. ❤️",
+  "section3": {
+    "part1": "Tu peux aussi commenter directement en bas d’un article si cela concerne un pays que nous avons déjà visité. Ou encore nous contacter via",
+    "part2": "et plus particulièrement"
+  },
+  "section4": "",
+  "form": {
+    "name": "Nom",
+    "email": "Mail",
+    "object": "Objet",
+    "message": {
+      "label": "Message",
+      "placeholder": "Ton message"
+    },
+    "submit": "Envoyer",
+    "valid": "Ton message a été envoyé avec succès.",
+    "invalid": "Malheureusement une erreur a été rencontrée lors de l'envoi de ton message."
+  }
+}
