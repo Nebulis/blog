@@ -56,16 +56,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
 
   return (
     <>
-      <SEO
-        title={title}
-        description={description}
-        meta={[
-          { name: "twitter:image", content: `${hostname}${HomeImgUrl}` },
-          { name: "twitter:card", content: "summary_large_image" },
-          { property: "og:image", content: `${hostname}${HomeImgUrl}` },
-          { property: "putain:de:merde", content: `${title}${description}` },
-        ]}
-      />
+      <SEO title={title} description={description} image={`${hostname}${HomeImgUrl}`} />
       <VietnamBlogLayout page="discover-southern-vietnam">
         <VietnamTitle
           title={t("common:card.vietnam.discover-southern-vietnam")}

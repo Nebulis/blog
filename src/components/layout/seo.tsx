@@ -11,21 +11,22 @@ import { graphql, useStaticQuery } from "gatsby"
 import FontUrl1 from "../../fonts/Freestyle-Script.ttf"
 import FontUrl2 from "../../fonts/Courgette-Regular.ttf"
 import { useCustomTranslation } from "../../i18n"
+import DefaultImgUrl from "../../images/logo-the-real.svg"
 
 interface SEOProps {
   description?: string
   lang?: string
   meta?: any
   title?: string
+  image?: string
 }
-const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], title }) => {
+const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], title, image }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
-            description
             author
           }
         }
@@ -36,6 +37,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], t
 
   const metaDescription = description || site.siteMetadata.description
   const metaTitle = title || site.siteMetadata.title
+  const metaImage = image || DefaultImgUrl
   const metaLang = lang || i18n.languageCode
   return (
     <Helmet
@@ -86,6 +88,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], t
           property: `og:type`,
           content: `website`,
         },
+        { property: "og:image", content: `${metaImage}` },
         {
           name: `twitter:card`,
           content: `summary`,
@@ -102,6 +105,8 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], t
           name: `twitter:description`,
           content: metaDescription,
         },
+        { name: "twitter:image", content: `${metaImage}` },
+        { name: "twitter:card", content: "summary_large_image" },
       ].concat(meta)}
     >
       <meta charSet="utf-8" />
