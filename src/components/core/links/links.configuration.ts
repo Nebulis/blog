@@ -71,6 +71,7 @@ export const menuLinks: NavigationLink[] = [
           {
             id: "spring",
             label: { fr: "Printemps", en: "Spring" },
+            published: true,
             sections: [],
           },
           {
@@ -86,6 +87,7 @@ export const menuLinks: NavigationLink[] = [
           {
             id: "winter",
             label: { fr: "Hiver", en: "Winter" },
+            published: true,
             sections: [],
           },
         ],
