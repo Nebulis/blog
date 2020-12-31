@@ -42,7 +42,7 @@ export const vietnamLinks: CountryLink = {
         },
         {
           id: "can-tho",
-          label: { fr: "Cần Thơ", en: "Cần Thơ" },
+          label: { fr: "Cân Thơ", en: "Cân Thơ" },
           published: new Date("2022-03-01"),
           card: CanThoCard,
         },
