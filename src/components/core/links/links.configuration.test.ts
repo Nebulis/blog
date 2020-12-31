@@ -119,7 +119,7 @@ describe("links", () => {
       published: false,
     })
     expect(getLink("can-tho")).toMatchObject({
-      label: { fr: "Cần Thơ", en: "Cần Thơ" },
+      label: { fr: "Cân Thơ", en: "Cân Thơ" },
       published: false,
     })
     expect(getLink("ho-chi-minh-war-museum")).toMatchObject({
