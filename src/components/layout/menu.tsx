@@ -32,6 +32,7 @@ import { animated, useSpring } from "react-spring"
 import ResizeObserver from "resize-observer-polyfill"
 import { MenuContext } from "./menu.context"
 import { useCustomTranslation } from "../../i18n"
+import { facebook, instagram, pinterest, twitter } from "../../utils"
 
 const renderCity = (
   continent: ContinentLink,
@@ -594,7 +595,7 @@ export const MobileMenu: React.FunctionComponent = () => {
           `}
         >
           <a
-            href="https://www.facebook.com/magicoftravels"
+            href={`https://www.facebook.com/${facebook}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-labelledby="facebook-label"
@@ -605,7 +606,7 @@ export const MobileMenu: React.FunctionComponent = () => {
             <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
           </a>
           <a
-            href="https://twitter.com/_magicoftravels"
+            href={`https://twitter.com/${twitter}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-labelledby="twitter-label"
@@ -616,7 +617,7 @@ export const MobileMenu: React.FunctionComponent = () => {
             <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
           </a>
           <a
-            href="https://instagram.com/magic_of_travels"
+            href={`https://instagram.com/${instagram}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-labelledby="instagram-label"
@@ -627,7 +628,7 @@ export const MobileMenu: React.FunctionComponent = () => {
             <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
           </a>
           <a
-            href="https://pinterest.com/MagicOfTravels"
+            href={`https://pinterest.com/${pinterest}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-labelledby="pinterest-label"

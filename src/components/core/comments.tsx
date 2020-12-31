@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useState } from "react"
+import React, { FunctionComponent, useEffect, useState, useContext } from "react"
 import { database } from "../firebase"
 import { Checkbox, Input, Textarea } from "./input"
 import { PrimaryDarkButton } from "./button"
@@ -7,16 +7,30 @@ import { ExternalLink } from "./links/link"
 import md5 from "md5"
 import styled from "@emotion/styled"
 import { RandomAvatar } from "./random-avatar"
-import { FaEnvelope, FaLink, FaPen, FaSpinner, FaUser } from "react-icons/all"
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaHeart,
+  FaLink,
+  FaPen,
+  FaPinterest,
+  FaSpinner,
+  FaTwitter,
+  FaUser,
+} from "react-icons/all"
 import { Status } from "../../types/shared"
 import { ErrorAlert, SuccessAlert } from "./alert"
 import { subscribe } from "../../services/newsletter"
 import { useCustomTranslation } from "../../i18n"
-import { capitalize } from "../../utils"
+import { capitalize, facebook, hostname, pinterest, twitter } from "../../utils"
+import { PageProps } from "gatsby"
+import { useLocalStorage } from "../../use-local-storage"
+import { ApplicationContext } from "../application"
 
 interface CommentsProps {
   collectionName: string
   className?: string
+  location: PageProps["location"]
 }
 
 interface CommentType {
@@ -73,15 +87,24 @@ const transformPath = (path: string): string => path.replace(/\//g, "__")
 const commentsStyle = css`
   font-size: 0.9rem;
 `
-export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, className = "" }) => {
+export const Comments: FunctionComponent<CommentsProps> = (props) => {
+  const { displayComments } = useContext(ApplicationContext)
+  if (displayComments) {
+    return <InnerComments {...props} />
+  }
+  return <div className="tc mb3">No comments in development</div>
+}
+const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, className = "" }) => {
   const [comments, setComments] = useState<CommentProp[]>([])
-  const [numberOfComments, setNumberOfComments] = useState(0)
+  const [likes, setLikes] = useState(0)
+  const [localLikes, setLocalLikes] = useLocalStorage<string[]>("likes", [])
   const [commentToEdit, setCommentToEdit] = useState("")
   const [scrollToAnchor, setScrollToAnchor] = useState(true)
-  const [status, setStatus] = useState<Status>("INITIAL")
+  // set as loading, as we directly load the comments. otherwise we quickly display the comments before showing the loading message
+  const [status, setStatus] = useState<Status>("LOADING")
   const [commentStatus, setCommentStatus] = useState<Status>("INITIAL")
   const [newsletterStatus, setNewsletterStatus] = useState<Status>("INITIAL")
-  const { t } = useCustomTranslation("common")
+  const { t, i18n } = useCustomTranslation("common")
 
   // hide status after 10s
   useEffect(() => {
@@ -109,7 +132,7 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, cla
     setStatus("LOADING")
 
     reference.on("value", (snapshot) => {
-      const commentsAsObject = snapshot.val() as DatabaseComments
+      const commentsAsObject = snapshot.val() as DatabaseComments | null
       if (commentsAsObject) {
         const commentsAsArray: CommentProp[] = Object.keys(commentsAsObject).map((key) => ({
           ...commentsAsObject[key],
@@ -128,14 +151,26 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, cla
           }
         })
         setComments(transformedComments)
-        setNumberOfComments(commentsAsArray.length)
-        setStatus("SUCCESS")
+      } else {
+        setComments([])
       }
+      setStatus("SUCCESS")
     })
 
     return () => {
       reference.off()
     }
+  }, [collectionName])
+
+  useEffect(() => {
+    const reference = database.ref(`likes/${transformPath(collectionName)}`)
+
+    reference.on("value", (snapshot) => {
+      const likes = snapshot.val() as number | null
+      if (likes || likes === 0) {
+        setLikes(likes)
+      }
+    })
   }, [collectionName])
 
   const onSubmit: (comment: CommentFormType & { id?: string }) => Promise<any> = ({
@@ -188,6 +223,15 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, cla
     ])
   }
 
+  const like = () => {
+    database.ref(`likes/${transformPath(collectionName)}`).set(likes + 1)
+    setLocalLikes([...localLikes, collectionName])
+  }
+  const unlike = () => {
+    database.ref(`likes/${transformPath(collectionName)}`).set(likes - 1)
+    setLocalLikes(localLikes.filter((like) => like !== collectionName))
+  }
+
   useEffect(() => {
     if (comments.length > 0 && scrollToAnchor && window.location.hash) {
       let times = 0 // number of times to try to scroll to the anchor
@@ -207,6 +251,13 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, cla
       }, 100)
     }
   }, [comments, scrollToAnchor])
+
+  const url = `${location.origin || hostname}${i18n.languageCode === "en" ? "/en" : ""}${location.pathname}`
+  const sharedUrl = encodeURI(url)
+  const description = t("comments.shared-description", { handle: `@${twitter}` })
+  const descriptionFacebook = t("comments.shared-description", { handle: `@${facebook}` })
+  const descriptionPinterest = t("comments.shared-description", { handle: `@${pinterest}` })
+  const hashtags = t("comments.hashtags")
   return (
     <div className={className} css={commentsStyle}>
       {status === "LOADING" ? (
@@ -216,10 +267,64 @@ export const Comments: FunctionComponent<CommentsProps> = ({ collectionName, cla
         </div>
       ) : (
         <>
-          <h4>
-            {numberOfComments} {t("comments.comment")}
-            {numberOfComments > 1 ? "s" : ""}
-          </h4>
+          <div className="flex justify-center">
+            <span className="br bw1 pr2 mr2">
+              {comments.length} {t("comments.comment")}
+              {comments.length > 1 ? "s" : ""}
+            </span>
+            <span className="inline-flex br bw1 pr2 mr2">
+              {!localLikes.includes(collectionName) ? (
+                <span className="pointer inline-flex" onClick={like}>
+                  {t("comments.like")}&nbsp;
+                  <FaHeart className="likes" />
+                </span>
+              ) : (
+                <span className="pointer inline-flex" onClick={unlike}>
+                  {likes}&nbsp;
+                  <FaHeart className="likes" />
+                </span>
+              )}
+            </span>
+            <span className="inline-flex">
+              {t("comments.share")}&nbsp;
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}&quote=${descriptionFacebook}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="facebook-label-comment"
+                className="inline-flex mr1"
+              >
+                <span id="facebook-label-comment" hidden>
+                  Share on Facebook
+                </span>
+                <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
+              </a>
+              <a
+                href={`https://twitter.com/intent/tweet?text=${description}&url=${sharedUrl}&hashtags=${hashtags}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="twitter-label-comment"
+                className="inline-flex mr1"
+              >
+                <span id="twitter-label-comment" hidden>
+                  Share on Twitter
+                </span>
+                <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
+              </a>
+              <a
+                href={`https://pinterest.com/pin/create/button/?url=${sharedUrl}&description=${descriptionPinterest}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="pinterest-label-comment"
+                className="inline-flex"
+              >
+                <span id="pinterest-label-comment" hidden>
+                  Share on Pinterest
+                </span>
+                <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
+              </a>
+            </span>
+          </div>
           {comments.map((comment, index) => (
             <Comment
               key={comment.id}

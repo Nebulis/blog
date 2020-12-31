@@ -3,3 +3,7 @@ export const capitalize = (s: string) => {
 }
 
 export const hostname = "https://magicoftravels.com"
+export const twitter = "_magicoftravels"
+export const instagram = "magic_of_travels"
+export const facebook = "magicoftravels"
+export const pinterest = "MagicOfTravels"

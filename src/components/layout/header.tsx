@@ -14,6 +14,7 @@ import { MenuContext } from "./menu.context"
 import { FlagFrance } from "../icon/flag-france"
 import { FlagUK } from "../icon/flag-uk"
 import { useCustomTranslation } from "../../i18n"
+import { facebook, instagram, pinterest, twitter } from "../../utils"
 
 const headerStyle = css`
   .header {
@@ -120,7 +121,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
           {!isMobileView ? (
             <div className="social-network-container">
               <a
-                href="https://www.facebook.com/magicoftravels"
+                href={`https://www.facebook.com/${facebook}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-labelledby="facebook-label"
@@ -131,7 +132,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
                 <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
               </a>
               <a
-                href="https://twitter.com/_magicoftravels"
+                href={`https://twitter.com/${twitter}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-labelledby="twitter-label"
@@ -142,7 +143,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
                 <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
               </a>
               <a
-                href="https://instagram.com/magic_of_travels"
+                href={`https://instagram.com/${instagram}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-labelledby="instagram-label"
@@ -153,7 +154,7 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
                 <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
               </a>
               <a
-                href="https://pinterest.com/MagicOfTravels"
+                href={`https://pinterest.com/${pinterest}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-labelledby="pinterest-label"

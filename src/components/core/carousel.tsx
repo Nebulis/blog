@@ -119,9 +119,9 @@ export const Carousel: React.FunctionComponent = ({ children }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (currentElement === children.length - 1) {
-        // setCurrentElement(0)
+        setCurrentElement(0)
       } else {
-        // setCurrentElement(currentElement + 1)
+        setCurrentElement(currentElement + 1)
       }
     }, 13000)
     return () => {

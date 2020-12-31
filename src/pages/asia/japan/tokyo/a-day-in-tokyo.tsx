@@ -29,7 +29,7 @@ import { TokyoYasukuni4Image } from "../../../../components/images/asia/japan/to
 import { TokyoYasukuni5Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoYasukuni5Image"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { largeStart } from "../../../../components/core/variables"
-import { JapanCity, JapanComments, JapanDivider, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
+import { JapanCity, JapanDivider, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
 import { SensojiCard } from "../../../../components/core/japan/japan.cards"
 
 const IndexPage = () => {
@@ -187,7 +187,6 @@ const IndexPage = () => {
           d’endroits à visiter et de découvertes à faire.
         </Conclusion>
         <JapanDivider />
-        <JapanComments collectionName="asia/japan/tokyo/a-day-in-tokyo" />
       </BlogLayout>
     </>
   )

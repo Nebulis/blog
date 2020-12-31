@@ -42,7 +42,8 @@ const vietnamLayout = `
   svg.instagram:hover,
   svg.twitter:hover,
   svg.pinterest:hover,
-  svg.search:hover {
+  svg.search:hover,
+  svg.likes {
     fill: ${vietnamPrimaryColor};
   }
 
