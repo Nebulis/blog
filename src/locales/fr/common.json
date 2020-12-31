@@ -65,7 +65,7 @@
     "where": "Notre itinéraire"
   },
   "comments": {
-    "loading": "Chargement des commentaires ...,",
+    "loading": "Chargement des commentaires ...",
     "comment": "commentaire",
     "comment-posted": "Commentaire ajouté",
     "comment-failed": "Impossible de rajouter le commentaire",
@@ -77,7 +77,11 @@
     "note": "Votre adresse de messagerie ne sera pas publiée. Les champs obligatoires sont indiqués avec *.",
     "website": "Site Internet",
     "subscribed-note": "Prévenez-moi des nouveaux articles par e-mail.",
-    "local-save": "Enregistrer mon nom, mon e-mail et mon site web dans le navigateur pour mon prochain commentaire."
+    "local-save": "Enregistrer mon nom, mon e-mail et mon site web dans le navigateur pour mon prochain commentaire.",
+    "shared-description": "Découvre le blog {{handle}} à travers cet article",
+    "hashtags": "blog,voyage",
+    "share": "Partage",
+    "like": "J'aime l'article"
   },
   "form": {
     "name": "Nom",

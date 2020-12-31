@@ -31,7 +31,6 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import css from "@emotion/css"
 import { largeStart } from "../../../../components/core/variables"
 import {
-  JapanComments,
   JapanDivider,
   JapanExternalLink,
   JapanLine,
@@ -209,7 +208,6 @@ const IndexPage = () => {
           respect le plus total puisqu’il ne faut pas oublier que c’est une fête religieuse.
         </Conclusion>
         <JapanDivider />
-        <JapanComments collectionName="asia/japan/tokyo/sensoji" />
       </BlogLayout>
     </>
   )

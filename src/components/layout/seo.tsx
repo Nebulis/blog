@@ -103,7 +103,9 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], t
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <meta charSet="utf-8" />
+    </Helmet>
   )
 }
 

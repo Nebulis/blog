@@ -49,7 +49,7 @@ const namespace = "asia/vietnam/southern-vietnam/discover"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
-const IndexPage: React.FunctionComponent<PageProps> = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t } = useCustomTranslation([namespace, "common"])
   const title = t("common:card.vietnam.discover-southern-vietnam")
   const description = t("quote")
@@ -184,7 +184,7 @@ const IndexPage: React.FunctionComponent<PageProps> = () => {
         <VietnamDivider />
         <Conclusion>{t("conclusion")}</Conclusion>
         <VietnamDivider />
-        <Comments collectionName={namespace} />
+        <Comments collectionName={namespace} location={location} />
       </VietnamBlogLayout>
     </>
   )

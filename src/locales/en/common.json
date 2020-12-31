@@ -77,7 +77,11 @@
     "note": "Your email won't be stored or shared to 3rd parties. All fields followed by * are required.",
     "website": "Website",
     "subscribed-note": "Send me an email when new articles are published.",
-    "local-save": "Save my name, email and website into the browser for my next comments."
+    "local-save": "Save my name, email and website into the browser for my next comments.",
+    "shared-description": "Discover the blog {{handle}} with this post",
+    "hashtags": "blog,travel",
+    "share": "Share",
+    "like": "Like the post"
   },
   "form": {
     "name": "Name",

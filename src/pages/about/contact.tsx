@@ -14,6 +14,7 @@ import { useCustomTranslation } from "../../i18n"
 import i18n from "i18next"
 import contactFr from "../../locales/fr/about/contact.json"
 import contactEn from "../../locales/en/about/contact.json"
+import { facebook, instagram, twitter } from "../../utils"
 
 const namespace = "about/contact"
 i18n.addResourceBundle("fr", namespace, contactFr)
@@ -52,19 +53,19 @@ const IndexPage = () => {
           <SectionContent>
             {t("section3.part1")}{" "}
             <Hightlight>
-              <a href="https://www.facebook.com/magicoftravels" target="_blank" rel="noopener noreferrer">
+              <a href={`https://www.facebook.com/${facebook}`} target="_blank" rel="noopener noreferrer">
                 Facebook
               </a>
             </Hightlight>
             ,{" "}
             <Hightlight>
-              <a href="https://twitter.com/_magicoftravels" target="_blank" rel="noopener noreferrer">
+              <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
                 Twitter
               </a>
             </Hightlight>{" "}
             {t("section3.part2")}{" "}
             <Hightlight>
-              <a href="https://instagram.com/magic_of_travels" target="_blank" rel="noopener noreferrer">
+              <a href={`https://instagram.com/${instagram}`} target="_blank" rel="noopener noreferrer">
                 Instagram
               </a>
             </Hightlight>
