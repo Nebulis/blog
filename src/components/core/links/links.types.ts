@@ -50,3 +50,5 @@ export interface NavigationLink {
   published?: boolean | Date
   sections: NavigationLink[]
 }
+
+export type HighlightWithCard = HighlightLink & { card: ComponentType<ExtraCardProps> }

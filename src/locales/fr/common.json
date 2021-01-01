@@ -47,7 +47,15 @@
     "united-states": "États-Unis",
     "vietnam": "Vietnam"
   },
+  "city": {
+    "philippines": {
+      "el-nido": "El Nido"
+    }
+  },
   "card": {
+    "philippines": {
+      "el-nido-paradise": "El Nido : Un petit coin de Paradis"
+    },
     "vietnam": {
       "cu-chi-tunnels": "Les tunnels de Củ Chi",
       "discover-southern-vietnam": "Découverte du Vietnam du Sud",

@@ -40,6 +40,8 @@ import indexFr from "../locales/fr/index.json"
 import indexEn from "../locales/en/index.json"
 import { CarouselVietnam2 } from "../components/images/asia/vietnam/carousel-2"
 import { CarouselVietnam } from "../components/images/asia/vietnam/carousel"
+import { CarouselPhilippines } from "../components/images/asia/philippines/carousel"
+import { CarouselPhilippines2 } from "../components/images/asia/philippines/carousel-2"
 
 const namespace = "index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -75,7 +77,7 @@ const visitedCountries = [
   "senegal",
   "united-states",
 ]
-const countriesWithArticles = ["vietnam"]
+const countriesWithArticles = ["philippines", "vietnam"]
 const transform = (country: Country): ReactElement => {
   if (visitedCountries.includes(country.id)) {
     if (country.id === "singapore") {
@@ -241,23 +243,64 @@ const HomeDivider = styled(Divider)`
   margin-top: 1.85rem;
 `
 
+const shuffleArray = (array: Array<any>) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    const temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+  }
+  return array
+}
+interface CarouselElementType {
+  component: React.ComponentType
+  to: string
+  country: string
+}
+
 const IndexPage = () => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const { isMobileView } = useContext(MenuContext)
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
   const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const [carouselElement] = useState<CarouselElementType[]>(() => {
+    const tmp: CarouselElementType[] = [
+      {
+        to: "vietnam",
+        country: t("common:country.vietnam"),
+        component: CarouselVietnam,
+      },
+      {
+        to: "vietnam",
+        country: t("common:country.vietnam"),
+        component: CarouselVietnam2,
+      },
+      {
+        to: "philippines",
+        country: t("common:country.philippines"),
+        component: CarouselPhilippines,
+      },
+      {
+        to: "philippines",
+        country: t("common:country.philippines"),
+        component: CarouselPhilippines2,
+      },
+    ]
+    return shuffleArray(tmp)
+  })
   return (
     <>
       <SEO />
       <HomeBlogLayout page="home" className="">
         <Carousel>
-          <CarouselImage to="vietnam" country={t("common:country.vietnam")}>
-            <CarouselVietnam />
-          </CarouselImage>
-          <CarouselImage to="vietnam" country={t("common:country.vietnam")}>
-            <CarouselVietnam2 />
-          </CarouselImage>
+          {carouselElement.map(({ country, component: Component, to }, index) => {
+            return (
+              <CarouselImage to={to} country={country} key={index}>
+                <Component />
+              </CarouselImage>
+            )
+          })}
         </Carousel>
         <HomeDivider />
         <HomeSection>{t("index:explore.title")}</HomeSection>
