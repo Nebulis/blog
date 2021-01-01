@@ -24,7 +24,7 @@ export const vietnamLinks: CountryLink = {
       // this style is for the image in the asia page (medallion)
       image: styled(HomeSouthVietnamImage)`
         img {
-          object-position: -30px -10px !important;
+          object-position: -35px -12px !important;
         }
       `,
       highlights: [
