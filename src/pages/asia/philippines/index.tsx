@@ -7,65 +7,48 @@ import {
   isLinkPublished,
   sortByLabel,
 } from "../../../components/core/links/links.configuration"
-import { vietnamLinks } from "../../../components/core/asia/vietnam/vietnam.links"
 import { HomeSection, HomeSubSection, MainTitleSection } from "../../../components/core/section"
 import { ApplicationLink, ButtonLink } from "../../../components/core/links/link"
-import vietnamHat from "../../../images/asia/vietnam/hat.svg"
-import {
-  IndexVietnamBlogLayout,
-  VietnamDivider,
-  VietnamHeadline,
-  VietnamImageAsMedallion,
-} from "../../../components/core/asia/vietnam/vietnam"
-import { SouthVietnamCard } from "../../../components/core/asia/vietnam/vietnam.cards"
-import {
-  ArticlesContainer,
-  GoToAllArticlesContainer,
-  MainCardContainer,
-  MedallionContainer,
-} from "../../../components/layout/layout"
+import philippinesScubaDiving from "../../../images/asia/philippines/scuba-diving.svg"
+import { ArticlesContainer, GoToAllArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
 import { filteredUrl } from "../../../components/core/asia/vietnam/vietnam.utils"
+import { philippinesLinks } from "../../../components/core/asia/philippines/philippines.links"
+import {
+  IndexPhilippinesBlogLayout,
+  PhilippinesDivider,
+  PhilippinesImageAsMedallion,
+} from "../../../components/core/asia/philippines/philippines"
 
 const IndexPage = () => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
-  const { t, i18n } = useCustomTranslation(["asia/vietnam/index", "common"])
-  const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
+  const { t, i18n } = useCustomTranslation(["asia/philippines/index", "common"])
+  const cities = development ? philippinesLinks.cities : philippinesLinks.cities.filter(isLinkPublished)
   const articles = getMostRecentArticles({
-    customFilter: (link) => link.country === "vietnam" && !filteredUrl.includes(link.url),
+    customFilter: (link) => link.country === "philippines" && !filteredUrl.includes(link.url),
     limit: 2,
   })
   return (
     <>
-      <SEO title={t("common:country.vietnam")} />
-      <IndexVietnamBlogLayout page="vietnam">
+      <SEO title={t("common:country.philippines")} />
+      <IndexPhilippinesBlogLayout page="philippines">
         <MainTitleSection>
-          <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
-          &nbsp;{t("common:country.vietnam")}&nbsp;
-          <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
+          <img src={philippinesScubaDiving} alt="philippines scuba diving" style={{ width: "24px" }} />
+          &nbsp;{t("common:country.philippines")}&nbsp;
+          <img src={philippinesScubaDiving} alt="philippines scuba diving" style={{ width: "24px" }} />
         </MainTitleSection>
-        {false && (
-          <>
-            <VietnamDivider />
-            <HomeSection>{t("common:travel.title")}</HomeSection>
-            <HomeSubSection>{t("common:travel.subtitle")}</HomeSubSection>
-            <MainCardContainer>
-              <SouthVietnamCard />
-            </MainCardContainer>
-          </>
-        )}
         {cities.length > 0 && (
           <>
-            <VietnamDivider />
+            <PhilippinesDivider />
             <HomeSection>{t("common:tour.title")}</HomeSection>
             <HomeSubSection>{t("common:tour.subtitle")}</HomeSubSection>
             <MedallionContainer>
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
                 return city.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
-                    <VietnamImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
+                    <PhilippinesImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
                       {React.createElement(city.image)}
-                    </VietnamImageAsMedallion>
+                    </PhilippinesImageAsMedallion>
                   </ApplicationLink>
                 ) : null
               })}
@@ -74,7 +57,7 @@ const IndexPage = () => {
         )}
         {articles.length > 0 && (
           <>
-            <VietnamDivider />
+            <PhilippinesDivider />
             <HomeSection>{t("common:inform.title")}</HomeSection>
             <HomeSubSection>{t("common:inform.subtitle")}</HomeSubSection>
             <ArticlesContainer>
@@ -86,13 +69,13 @@ const IndexPage = () => {
         )}
         {displayAllArticles && (
           <>
-            <VietnamDivider />
+            <PhilippinesDivider />
             <GoToAllArticlesContainer>
-              <ButtonLink to="articles?country=vietnam">Tous nos articles</ButtonLink>
+              <ButtonLink to="articles?country=philippines">Tous nos articles</ButtonLink>
             </GoToAllArticlesContainer>
           </>
         )}
-      </IndexVietnamBlogLayout>
+      </IndexPhilippinesBlogLayout>
     </>
   )
 }

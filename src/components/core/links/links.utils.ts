@@ -1,4 +1,6 @@
-import { HighlightLink, OtherLink } from "./links.types"
+import { CityLink, HighlightLink, HighlightWithCard, OtherLink } from "./links.types"
+import { isLinkPublished } from "./links.configuration"
+import { filteredId } from "../asia/vietnam/vietnam.utils"
 
 export const isPublished = (element: OtherLink | HighlightLink) => {
   if (typeof element.published === "boolean") {
@@ -82,4 +84,18 @@ const convertMonth = (month: Month): number => {
 }
 export const createDate = (day: Day, month: Month, year: number, hours = 0, minuts = 0, seconds = 0): Date => {
   return new Date(Date.UTC(year, convertMonth(month), day, hours, minuts, seconds))
+}
+
+export const isHighlighWithCard = (highlight: HighlightLink): highlight is HighlightWithCard => !!highlight.card
+export const getHighlightsFromCity = (cities: CityLink[]) => ({
+  id,
+  development,
+}: {
+  id: string
+  development: boolean
+}): HighlightWithCard[] => {
+  const city = cities.find((city) => city.id === id)
+  if (!city) return []
+  const highlights = development ? city.highlights : city.highlights.filter(isLinkPublished)
+  return highlights.filter(isHighlighWithCard).filter((link) => !filteredId.includes(link.id))
 }
