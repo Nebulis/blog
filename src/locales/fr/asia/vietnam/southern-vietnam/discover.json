@@ -30,25 +30,33 @@
     "part1": "Comment venir au Vietnam sans passer par les incontournables sites de guerre.",
     "part2": "On aime particulièrement se renseigner sur l’histoire du pays que l’on visite, d’autant plus qu’ici cela concerne malheureusement également notre pays, et que la fin de la guerre n’est d’ailleurs pas si vieille que ça.",
     "part3": "On commence d’abord par le musée des Vestiges de la Guerre, une sorte de film d’horreur à chaque pas, à chaque photographie, à chaque description. Un lieu incontournable certes mais qui vous prend au tripes très clairement. On vous le déconseille avec des enfants en bas âge ou si vous êtes trop sensible.",
-    "part4": "Puis visite des Tunnels de Củ Chi. En immersion totale dans ces tunnels très étroits où on a du mal à s’imaginer comment pouvaient survivre les Viêt Cong à l’intérieur et en même temps on se demande comment auraient-ils pu survivre sans ..."
+    "part4": "Mais néanmoins, si comme nous vous aimez un minimum l'histoire, n'hésitez pas à y faire un tour. Nous l'avons trouvé un peu fouillis à certains moments mais il se visite assez facilement malgré tout.",
+    "part5": "Puis nous avons visité les Tunnels de Củ Chi.",
+    "part6": "En immersion totale dans ces tunnels très étroits où on a du mal à s’imaginer comment pouvaient survivre les Viêt Cong à l’intérieur et en même temps on se demande comment auraient-ils pu survivre sans ..."
   },
   "visit2": {
     "title": "Visite de la plus grande ville du pays",
-    "part1": "Vous serez impressionnés par le défilé de deux roues qui passent chaque seconde devant vous, pas facile de se frayer un chemin mais n’ayez pas peur de forcer le passage. C’est un peu comme ça ici, on ne dit pas que Ho Chi Minh est dynamique pour rien.",
-    "part2": "Si vous avez le temps de visiter la ville profitez-en pour visiter le District 1, vous pourrez y admirer de nombreuses constructions françaises qui font le charme de ce district: la cathédrale par exemple est basée sur la construction de Notre Dame de Paris, la Poste Centrale ou bien encore l’Hôtel de Ville.",
-    "part3": "De jour comme de nuit, promenez-vous, profitez, vous découvrirez de toute façon toujours quelque chose.",
-    "part4": "Entre les petits marchés authentiques au coin des rues, l’immense marché Ben Thanh très prisé, lui aussi construit par des Français et situé au cœur de la ville ou bien encore le marché Binh Tay dans le quartier de Chinatown, vous n’avez que l’embarras du choix.",
-    "part5": "Tiens en parlant de Chinatown, nous avions une statue de dragon qui nous avait clairement fait de l'œil quand nous avions vu des photos sur internet, énorme déception lors de notre visite. Alors soit on s’est fait avoir par un montage photo surréaliste soit il y a clairement un problème parce que nous n’avons pas vu la même chose de nos propres yeux."
+    "part1": "Ho Chi Minh City était le point de départ de quasiment toutes nos visites. Il était du coup impossible de ne pas y faire un petit tour.",
+    "part2": "Vous serez impressionnés par le défilé de deux roues qui passent chaque seconde devant vous, pas facile de se frayer un chemin mais n’ayez pas peur de forcer le passage. C’est un peu comme ça ici, on ne dit pas que Ho Chi Minh est dynamique pour rien.",
+    "part3": "Si vous avez le temps de visiter la ville profitez-en pour visiter le District 1, vous pourrez y admirer de nombreuses constructions françaises qui font le charme de ce district: la cathédrale par exemple est basée sur la construction de Notre Dame de Paris, vous pourrez admirez également la Poste Centrale ou bien encore l’Hôtel de Ville.",
+    "part4": "De jour comme de nuit, promenez-vous, profitez, vous découvrirez de toute façon toujours quelque chose.",
+    "part5": "Entre les petits marchés authentiques au coin des rues, l’immense marché Ben Thanh très prisé, lui aussi construit par des Français et situé au cœur de la ville ou bien encore le marché Binh Tay dans le quartier de Chinatown, vous n’avez que l’embarras du choix.",
+    "part6": "Tiens en parlant de Chinatown, nous avions une statue de dragon qui nous avait clairement fait de l'œil quand nous avions vu des photos sur internet. Énorme déception lors de notre visite, elle était censée être d'un or flamboyant mais nous n’avons pas vu la même chose de nos propres yeux."
   },
   "visit3": {
     "title": "Le Delta du Mékong",
     "part1": "Après le brouhaha de la ville, nous voici parti pour d’autres aventures, bien plus au Sud maintenant, on se retrouve près du Delta du Mékong pour une première visite.",
     "part2": "A la découverte de Mỹ Tho et de Ben Tre, balade en bateau sur le Delta du Mékong à l’abri des cocotiers et des palmiers d’eau. Le dépaysement est total et le calme fait du bien.",
-    "part3": "Puis découverte de Cân Thơ, son marché flottant et son marché terrestre qui font vivre la ville et notre gros coup de cœur pour un Homestay au bord du lac."
+    "part3": "Contrairement à ce qu'on aurait pu voir par ci, par là, ce n'était pas si touristique et nous avons donc pu profiter au maximum d'un paysage authentique.",
+    "part4": "Puis découverte de Cân Thơ, son marché flottant et son marché terrestre qui font vivre la ville.",
+    "part5": "Nous visitons rarement un pays sans passer par les incontournables marchés, celui-ci en faisait parti et nous n'avons pas du tout été déçu."
   },
   "visit4": {
     "title": "Une histoire sans fin",
-    "part1": "C’est la fin pour nous de notre visite du Vietnam du Sud, mais ce n’est clairement pas la fin de notre séjour. Le Nord et le Centre n’attendent que nous et nous avons hâte de nous y rendre et de poursuivre notre parcours dans ce pays que nous commençons à peine à découvrir."
+    "part1": "C’est la fin pour nous de notre visite du Vietnam du Sud, mais ce n’est clairement pas la fin de notre séjour. Le Nord et le Centre n’attendent que nous.",
+    "part2": "Nous avons également hâte de vous emmener avec nous découvrir le reste du pays."
   },
-  "conclusion": "De par son histoire et l'authenticité de ses paysages, le Vietnam du Sud est une destination qui ne vous laissera pas insensible."
+  "conclusion": "De par son histoire et l'authenticité de ses paysages, le Vietnam du Sud est une destination qui ne vous laissera pas insensible.",
+  "question1": "Êtes-vous déjà allé au Vietnam du Sud ? Quel en est votre meilleur souvenir ?",
+  "question2": "Notre article vous a-t-il donné envie d'y aller ?"
 }
