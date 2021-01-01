@@ -18,14 +18,14 @@ describe("links", () => {
     })
 
     // categories assertions
-    expect(getLink("spring")).toMatchObject({ label: { en: "Spring", fr: "Printemps" }, published: false })
+    expect(getLink("spring")).toMatchObject({ label: { en: "Spring", fr: "Printemps" }, published: true })
     expect(getLink("summer")).toMatchObject({ label: { fr: "Été", en: "Summer" }, published: false })
-    expect(getLink("winter")).toMatchObject({ label: { fr: "Hiver", en: "Winter" }, published: false })
+    expect(getLink("winter")).toMatchObject({ label: { fr: "Hiver", en: "Winter" }, published: true })
     expect(getLink("autumn")).toMatchObject({ label: { fr: "Automne", en: "Autumn" }, published: false })
-    expect(getLink("when-to-go")).toMatchObject({ label: { fr: "Quand Partir", en: "When to go" }, published: false })
+    expect(getLink("when-to-go")).toMatchObject({ label: { fr: "Quand Partir", en: "When to go" }, published: true })
     expect(getLink("organisation")).toMatchObject({
       label: { fr: "Organisation", en: "Organisation" },
-      published: false,
+      published: true,
     })
     expect(getLink("monuments")).toMatchObject({ label: { fr: "Monuments", en: "Monuments" }, published: false })
     expect(getLink("nature")).toMatchObject({ label: { fr: "Nature", en: "Nature" }, published: false })

@@ -1,4 +1,3 @@
-import SEO from "./seo"
 import { Scooter } from "./scooter"
 import { continents, Country, CountryPath, World } from "./world"
 import React, { FunctionComponent, ReactElement, useContext, useEffect, useState } from "react"
