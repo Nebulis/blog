@@ -106,13 +106,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit1.part1")}</p>
             <p>{t("visit1.part2")}</p>
             <p>{t("visit1.part3")}</p>
+            <p>{t("visit1.part4")}</p>
           </SectionContent>
           <article>
             <WarMuseumCard card={{ showTags: false, showPublished: false, showMore: true }} />
           </article>
           <VietnamDivider />
           <SectionContent>
-            <p>{t("visit1.part4")}</p>
+            <p>{t("visit1.part5")}</p>
+            <p>{t("visit1.part6")}</p>
             <article>
               <CuChiTunnelsCard card={{ showTags: false, showPublished: false, showMore: true }} />
             </article>
@@ -126,6 +128,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit2.part1")}</p>
             <p>{t("visit2.part2")}</p>
             <p>{t("visit2.part3")}</p>
+            <p>{t("visit2.part4")}</p>
             <GroupOfImages>
               <ImageAsLandscapeOnTheLeft>
                 <HoChiMinhCalao1Image />
@@ -134,12 +137,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <HoChiMinhCalao2Image />
               </ImageAsLandscapeOnTheRight>
             </GroupOfImages>
-            <p>{t("visit2.part4")}</p>
+            <p>{t("visit2.part5")}</p>
             <TwoImagesSameSize>
               <HoChiMinhMarket1Image />
               <HoChiMinhMarket2Image />
             </TwoImagesSameSize>
-            <p>{t("visit2.part5")}</p>
+            <p>{t("visit2.part6")}</p>
             <ImageAsLandscape>
               <HoChiMinhDragonImage />
             </ImageAsLandscape>
@@ -152,13 +155,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SectionContent>
             <p>{t("visit3.part1")}</p>
             <p>{t("visit3.part2")}</p>
+            <p>{t("visit3.part3")}</p>
           </SectionContent>
           <article>
             <MyThoCard card={{ showTags: false, showPublished: false, showMore: true }} />
           </article>
           <VietnamDivider />
           <SectionContent>
-            <p>{t("visit3.part3")}</p>
+            <p>{t("visit3.part4")}</p>
+            <p>{t("visit3.part5")}</p>
           </SectionContent>
           <article>
             <CanThoCard card={{ showTags: false, showPublished: false, showMore: true }} />
@@ -170,10 +175,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <VietnamDivider />
           <SectionContent>
             <p>{t("visit4.part1")}</p>
+            <p>{t("visit4.part2")}</p>
           </SectionContent>
         </section>
         <VietnamDivider />
-        <Conclusion>{t("conclusion")}</Conclusion>
+        <Conclusion>
+          <p>{t("conclusion")}</p>
+          <p>
+            <ul>
+              <li>{t("question1")}</li>
+              <li>{t("question2")}</li>
+            </ul>
+          </p>
+        </Conclusion>
         <VietnamDivider />
         <Comments collectionName={namespace} location={location} />
       </VietnamBlogLayout>

@@ -19,7 +19,7 @@ i18n.addResourceBundle("fr", namespace, whoFr)
 i18n.addResourceBundle("en", namespace, whoEn)
 
 const IndexPage = () => {
-  const { t, i18n } = useCustomTranslation([namespace, "commonet"])
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   return (
     <>
       <SEO title={t("common:link.who")} />

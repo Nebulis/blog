@@ -9,6 +9,10 @@ export const Conclusion: FunctionComponent = ({ children }) => (
       line-height: 1.5em;
       font-family: "Playfair Display", serif;
       margin-bottom: 1.45rem;
+      ul,
+      li {
+        list-style-type: none;
+      }
     `}
   >
     {children}
