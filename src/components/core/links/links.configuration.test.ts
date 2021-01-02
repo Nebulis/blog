@@ -48,6 +48,7 @@ describe("links", () => {
     expect(getLink("about")).toMatchObject({ label: { fr: "À propos", en: "About" }, published: true })
     expect(getLink("home")).toMatchObject({ label: { en: "Home", fr: "Accueil" }, published: true })
     expect(getLink("articles")).toMatchObject({ label: { fr: "Articles", en: "Articles" }, published: true })
+    expect(getLink("404")).toMatchObject({ label: { fr: "404", en: "404" }, published: true })
 
     // asia countries assertions
     expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: false })

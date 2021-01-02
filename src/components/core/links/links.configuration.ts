@@ -185,6 +185,11 @@ export const otherLinks: NavigationLink[] = [
     label: { fr: "Articles", en: "Articles" },
     sections: [],
   },
+  {
+    id: "404",
+    label: { fr: "404", en: "404" },
+    sections: [],
+  },
 ]
 
 export const cachedLinks = new Map<string, CachedLinksMap>()
