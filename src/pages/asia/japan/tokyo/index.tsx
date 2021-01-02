@@ -12,8 +12,9 @@ import { JapanImageAsMedallion } from "../../../../components/core/japan/japan.i
 import { ADayInTokyoCard, HamarikyuGardenCard, SensojiCard } from "../../../../components/core/japan/japan.cards"
 import { japanLinks } from "../../../../components/core/japan/japan.links"
 import { useCustomTranslation } from "../../../../i18n"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const context = useContext(ApplicationContext)
   const { i18n } = useCustomTranslation()
   const cities = (context.development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished).sort()).filter(
@@ -21,7 +22,7 @@ const IndexPage = () => {
   )
   return (
     <>
-      <SEO title="japan" />
+      <SEO title="japan" location={location} />
       <BlogLayout page="tokyo">
         <h1 className="tc ttu flex items-center justify-center">
           <img src={cherryBlossom} alt="cherry blossom" />

@@ -43,7 +43,6 @@ import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/discover.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/discover.json"
 import { Comments } from "../../../../components/core/comments"
-import { hostname } from "../../../../utils"
 
 const namespace = "asia/vietnam/southern-vietnam/discover"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -56,7 +55,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
 
   return (
     <>
-      <SEO title={title} description={description} image={`${hostname}${HomeImgUrl}`} />
+      <SEO title={title} description={description} image={HomeImgUrl} location={location} />
       <VietnamBlogLayout page="discover-southern-vietnam">
         <VietnamTitle
           title={t("common:card.vietnam.discover-southern-vietnam")}

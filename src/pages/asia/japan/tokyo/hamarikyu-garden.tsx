@@ -23,11 +23,12 @@ import { HamarikyuGardenBankImage } from "../../../../components/images/asia/jap
 import { Conclusion } from "../../../../components/core/conclusion"
 import { HamarikyuGardenCherry3Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenCherry3Image"
 import { HamarikyuGardenQuote, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
-      <SEO title="main" />
+      <SEO title="main" location={location} />
       <BlogLayout page="hamarikyu-garden">
         <JapanTitle
           title="Un havre de paix en plein Tokyo - Le jardin Hama-Rikyu"

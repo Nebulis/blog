@@ -22,7 +22,7 @@ import { Status } from "../../types/shared"
 import { ErrorAlert, SuccessAlert } from "./alert"
 import { subscribe } from "../../services/newsletter"
 import { useCustomTranslation } from "../../i18n"
-import { capitalize, facebook, hostname, pinterest, twitter } from "../../utils"
+import { capitalize, facebook, defaultHostname, pinterest, twitter } from "../../utils"
 import { PageProps } from "gatsby"
 import { useLocalStorage } from "../../use-local-storage"
 import { ApplicationContext } from "../application"
@@ -252,7 +252,7 @@ const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, class
     }
   }, [comments, scrollToAnchor])
 
-  const url = `${location.origin || hostname}${i18n.languageCode === "en" ? "/en" : ""}${location.pathname}`
+  const url = `${location.origin || defaultHostname}${i18n.languageCode === "en" ? "/en" : ""}${location.pathname}`
   const sharedUrl = encodeURI(url)
   const description = t("comments.shared-description", { handle: `@${twitter}` })
   const descriptionFacebook = t("comments.shared-description", { handle: `@${facebook}` })

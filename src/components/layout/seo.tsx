@@ -7,11 +7,12 @@
 
 import React, { FunctionComponent } from "react"
 import { Helmet } from "react-helmet"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, PageProps } from "gatsby"
 import FontUrl1 from "../../fonts/Freestyle-Script.ttf"
 import FontUrl2 from "../../fonts/Courgette-Regular.ttf"
 import { useCustomTranslation } from "../../i18n"
-import DefaultImgUrl from "../../images/logo-the-real.svg"
+import DefaultImgUrl from "../../images/logo-the-real.png"
+import { defaultHostname } from "../../utils"
 
 interface SEOProps {
   description?: string
@@ -19,8 +20,9 @@ interface SEOProps {
   meta?: any
   title?: string
   image?: string
+  location: PageProps["location"]
 }
-const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], title, image }) => {
+const SEO: FunctionComponent<SEOProps> = ({ description, lang, meta = [], title, image, location }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -35,9 +37,9 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], t
   )
   const { t, i18n } = useCustomTranslation("common")
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || t("description")
   const metaTitle = title || site.siteMetadata.title
-  const metaImage = image || DefaultImgUrl
+  const metaImage = `${location.origin || defaultHostname}${image || DefaultImgUrl}`
   const metaLang = lang || i18n.languageCode
   return (
     <Helmet
@@ -90,10 +92,6 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], t
         },
         { property: "og:image", content: `${metaImage}` },
         {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
         },
@@ -108,9 +106,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description = "", lang, meta = [], t
         { name: "twitter:image", content: `${metaImage}` },
         { name: "twitter:card", content: "summary_large_image" },
       ].concat(meta)}
-    >
-      <meta charSet="utf-8" />
-    </Helmet>
+    />
   )
 }
 

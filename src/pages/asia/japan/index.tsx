@@ -20,6 +20,7 @@ import { HomeSection, HomeSubSection } from "../../../components/core/section"
 import { extraLargeStart, mediumEnd } from "../../../components/core/variables"
 import { ArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
+import { PageProps } from "gatsby"
 
 export const Container = styled.div`
   margin-left: auto;
@@ -32,13 +33,13 @@ export const Container = styled.div`
   }
 `
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { i18n } = useCustomTranslation()
   const cities = development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished)
   return (
     <>
-      <SEO title="Japon" />
+      <SEO title="Japon" location={location} />
       <IndexJapanBlogLayout page="japan">
         <h1 className="tc ttu flex items-center justify-center">
           <img src={cherryBlossom} alt="cherry blossom" />

@@ -15,6 +15,7 @@ import i18n from "i18next"
 import contactFr from "../../locales/fr/about/contact.json"
 import contactEn from "../../locales/en/about/contact.json"
 import { facebook, instagram, twitter } from "../../utils"
+import { PageProps } from "gatsby"
 
 const namespace = "about/contact"
 i18n.addResourceBundle("fr", namespace, contactFr)
@@ -25,7 +26,7 @@ const Hightlight = styled.span`
   font-weight: bold;
 `
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const [name, setName] = useState("")
   const [mail, setMail] = useState("")
   const [title, setTitle] = useState("")
@@ -35,7 +36,7 @@ const IndexPage = () => {
   const { t } = useCustomTranslation([namespace, "common"])
   return (
     <>
-      <SEO title={t("common:link.contact")} />
+      <SEO title={t("common:link.contact")} location={location} />
       <BlogLayout page="who" noStickyHeader>
         <div
           className="tc mt4 mb3"

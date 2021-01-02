@@ -13,16 +13,17 @@ import { useCustomTranslation } from "../../i18n"
 import i18n from "i18next"
 import whoFr from "../../locales/fr/about/who.json"
 import whoEn from "../../locales/en/about/who.json"
+import { PageProps } from "gatsby"
 
 const namespace = "about/who"
 i18n.addResourceBundle("fr", namespace, whoFr)
 i18n.addResourceBundle("en", namespace, whoEn)
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   return (
     <>
-      <SEO title={t("common:link.who")} />
+      <SEO title={t("common:link.who")} location={location} />
       <BlogLayout page="who">
         <div className="tc mb3 mt3">
           <img

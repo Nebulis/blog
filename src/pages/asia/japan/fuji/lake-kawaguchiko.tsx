@@ -22,11 +22,12 @@ import { KawaguchikoLake1Image } from "../../../../components/images/asia/japan/
 import { KawaguchikoLake2Image } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoLake2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { FujiQuote, JapanExternalLink, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
-      <SEO title="main" />
+      <SEO title="main" location={location} />
       <BlogLayout page="fuji">
         <JapanTitle title="Le lac Kawaguchi" categories={["asia", "japan", "fuji"]} linkId="lake-kawaguchiko" />
         <ImageAsLandscape>

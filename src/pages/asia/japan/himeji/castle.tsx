@@ -43,11 +43,12 @@ import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia
 import { BlogLayout } from "../../../../components/layout/layout"
 import { HimejiCastleWithCherry7Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry7Image"
 import { HimejiCastleQuote, JapanExternalLink, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
-      <SEO title="main" />
+      <SEO title="main" location={location} />
       <BlogLayout page="himeji-castle">
         <JapanTitle title="Château de HIMEJI" categories={["asia", "japan", "himeji"]} linkId="himeji-castle" />
         <ImageAsLandscape>
