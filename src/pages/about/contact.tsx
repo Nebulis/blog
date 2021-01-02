@@ -51,27 +51,29 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SectionContent>{t("section1")}</SectionContent>
           {/*<SectionContent>Un partenariat, un projet à nous proposer ?</SectionContent>*/}
           <SectionContent>{t("section2")}</SectionContent>
-          <SectionContent>
-            {t("section3.part1")}{" "}
-            <Hightlight>
-              <a href={`https://www.facebook.com/${facebook}`} target="_blank" rel="noopener noreferrer">
-                Facebook
-              </a>
-            </Hightlight>
-            ,{" "}
-            <Hightlight>
-              <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
-                Twitter
-              </a>
-            </Hightlight>{" "}
-            {t("section3.part2")}{" "}
-            <Hightlight>
-              <a href={`https://instagram.com/${instagram}`} target="_blank" rel="noopener noreferrer">
-                Instagram
-              </a>
-            </Hightlight>
-            .
-          </SectionContent>
+          {false && (
+            <SectionContent>
+              {t("section3.part1")}{" "}
+              <Hightlight>
+                <a href={`https://www.facebook.com/${facebook}`} target="_blank" rel="noopener noreferrer">
+                  Facebook
+                </a>
+              </Hightlight>
+              ,{" "}
+              <Hightlight>
+                <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
+                  Twitter
+                </a>
+              </Hightlight>{" "}
+              {t("section3.part2")}{" "}
+              <Hightlight>
+                <a href={`https://instagram.com/${instagram}`} target="_blank" rel="noopener noreferrer">
+                  Instagram
+                </a>
+              </Hightlight>
+              .
+            </SectionContent>
+          )}
           {t("section4") && <SectionContent className="f6">{t("section4")}</SectionContent>}
           <section>
             <div

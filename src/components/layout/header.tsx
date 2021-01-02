@@ -119,52 +119,54 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
       <div className="header">
         <div className="left-menu-container">
           {!isMobileView ? (
-            <div className="social-network-container">
-              <a
-                href={`https://www.facebook.com/${facebook}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="facebook-label"
-              >
-                <span id="facebook-label" hidden>
-                  Go to Facebook
-                </span>
-                <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
-              </a>
-              <a
-                href={`https://twitter.com/${twitter}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="twitter-label"
-              >
-                <span id="twitter-label" hidden>
-                  Go to Twitter
-                </span>
-                <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
-              </a>
-              <a
-                href={`https://instagram.com/${instagram}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="instagram-label"
-              >
-                <span id="instagram-label" hidden>
-                  Go to Facebook
-                </span>
-                <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
-              </a>
-              <a
-                href={`https://pinterest.com/${pinterest}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="pinterest-label"
-              >
-                <span id="pinterest-label" hidden>
-                  Go to Facebook
-                </span>
-                <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
-              </a>
-            </div>
+            false && (
+              <div className="social-network-container">
+                <a
+                  href={`https://www.facebook.com/${facebook}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-labelledby="facebook-label"
+                >
+                  <span id="facebook-label" hidden>
+                    Go to Facebook
+                  </span>
+                  <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
+                </a>
+                <a
+                  href={`https://twitter.com/${twitter}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-labelledby="twitter-label"
+                >
+                  <span id="twitter-label" hidden>
+                    Go to Twitter
+                  </span>
+                  <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
+                </a>
+                <a
+                  href={`https://instagram.com/${instagram}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-labelledby="instagram-label"
+                >
+                  <span id="instagram-label" hidden>
+                    Go to Facebook
+                  </span>
+                  <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
+                </a>
+                <a
+                  href={`https://pinterest.com/${pinterest}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-labelledby="pinterest-label"
+                >
+                  <span id="pinterest-label" hidden>
+                    Go to Facebook
+                  </span>
+                  <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
+                </a>
+              </div>
+            )
           ) : (
             <div className="ml2">
               <Burger open={open} onClick={() => setOpen(!open)} />
