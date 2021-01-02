@@ -8,13 +8,7 @@ import React, {
   useRef,
   useState,
 } from "react"
-import {
-  continentLinks,
-  getLinkLabel,
-  isLinkPublished,
-  menuLinks,
-  sortByLabel,
-} from "../core/links/links.configuration"
+import { getLinkLabel, isLinkPublished } from "../core/links/links.utils"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink, Lang } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
@@ -33,6 +27,8 @@ import ResizeObserver from "resize-observer-polyfill"
 import { MenuContext } from "./menu.context"
 import { useCustomTranslation } from "../../i18n"
 import { facebook, instagram, pinterest, twitter } from "../../utils"
+import { sortByLabel } from "../core/links/links.utils"
+import { continentLinks, menuLinks } from "../core/links/links.configuration"
 
 const renderCity = (
   continent: ContinentLink,
@@ -685,7 +681,7 @@ export const MobileMenu: React.FunctionComponent = () => {
                       {subSubMenuLinks.map((subSubMenuLink) => (
                         <Tree
                           key={subSubMenuLink.id}
-                          to={to}
+                          to={subSubMenuLink.id}
                           name={subSubMenuLink.label[i18n.languageCode]}
                           onNavigate={closeMenu}
                         />

@@ -4,6 +4,7 @@ import { philippinesPrimaryColor, philippinesPrimaryColorDarker } from "./philip
 import { ImageAsMedallion } from "../../../images/layout"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
 import { drawSth } from "./console-draw-sth"
+import { ButtonLink } from "../../links/link"
 
 export const PhilippinesDivider = styled(Divider)`
   background-color: ${philippinesPrimaryColor};
@@ -48,3 +49,11 @@ export const IndexPhilippinesBlogLayout = drawer(styled(IndexBlogLayout)`
 export const PhilippinesBlogLayout = drawer(styled(BlogLayout)`
   ${philippinesLayout}
 `)
+
+export const PhilippinesButtonLink = styled(ButtonLink)`
+  border: 2px solid ${philippinesPrimaryColor};
+  background-color: ${philippinesPrimaryColor};
+  &:not(.inactive):hover {
+    color: ${philippinesPrimaryColor};
+  }
+`

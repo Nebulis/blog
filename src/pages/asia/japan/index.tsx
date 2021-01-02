@@ -4,12 +4,7 @@ import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
-import {
-  getLinkLabel,
-  getMostRecentArticles,
-  isLinkPublished,
-  sortByLabel,
-} from "../../../components/core/links/links.configuration"
+import { getLinkLabel, getMostRecentArticles, isLinkPublished } from "../../../components/core/links/links.utils"
 import { ApplicationLink } from "../../../components/core/links/link"
 import { ApplicationContext } from "../../../components/application"
 import { IndexJapanBlogLayout, JapanDivider } from "../../../components/core/japan/japan"
@@ -21,6 +16,7 @@ import { extraLargeStart, mediumEnd } from "../../../components/core/variables"
 import { ArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
 import { PageProps } from "gatsby"
+import { sortByLabel } from "../../../components/core/links/links.utils"
 
 export const Container = styled.div`
   margin-left: auto;

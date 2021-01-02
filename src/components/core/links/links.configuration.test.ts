@@ -1,4 +1,4 @@
-import { getCacheSize, getLink } from "./links.configuration"
+import { getCacheSize, getLink } from "./links.utils"
 
 describe("links", () => {
   it("should populate cache", () => {

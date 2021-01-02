@@ -6,9 +6,9 @@ import {
   getMostRecentArticles,
   isLinkPublished,
   sortByLabel,
-} from "../../../components/core/links/links.configuration"
+} from "../../../components/core/links/links.utils"
 import { HomeSection, HomeSubSection, MainTitleSection } from "../../../components/core/section"
-import { ApplicationLink, ButtonLink } from "../../../components/core/links/link"
+import { ApplicationLink } from "../../../components/core/links/link"
 import philippinesScubaDiving from "../../../images/asia/philippines/scuba-diving.svg"
 import { ArticlesContainer, GoToAllArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
@@ -16,6 +16,7 @@ import { filteredUrl } from "../../../components/core/asia/vietnam/vietnam.utils
 import { philippinesLinks } from "../../../components/core/asia/philippines/philippines.links"
 import {
   IndexPhilippinesBlogLayout,
+  PhilippinesButtonLink,
   PhilippinesDivider,
   PhilippinesImageAsMedallion,
 } from "../../../components/core/asia/philippines/philippines"
@@ -72,7 +73,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <>
             <PhilippinesDivider />
             <GoToAllArticlesContainer>
-              <ButtonLink to="articles?country=philippines">Tous nos articles</ButtonLink>
+              <PhilippinesButtonLink to="articles?country=philippines">Tous nos articles</PhilippinesButtonLink>
             </GoToAllArticlesContainer>
           </>
         )}

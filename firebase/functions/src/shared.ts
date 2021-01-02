@@ -4,10 +4,11 @@ import * as functions from "firebase-functions";
 export const createCors = () =>
   cors({
     origin: function (origin, callback) {
-      if (origin === "magicoftravels.com" || origin?.endsWith("blog-maillet.netlify.app")) {
+      console.log("origin:" + origin);
+      if (origin === "https://magicoftravels.com" || origin?.endsWith("blog-maillet.netlify.app")) {
         callback(null, true);
       } else {
-        callback(new Error("Not allowed by CORS"));
+        callback(new Error("Not allowed by CORS: " + origin));
       }
     },
   });

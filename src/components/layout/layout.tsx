@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useContext, useEffect, useState } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
-import { getLink } from "../core/links/links.configuration"
+import { getLink } from "../core/links/links.utils"
 import { css } from "@emotion/core"
 import { ApplicationContext } from "../application"
 import "./layout.css"

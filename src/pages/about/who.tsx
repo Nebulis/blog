@@ -15,12 +15,9 @@ import whoFr from "../../locales/fr/about/who.json"
 import whoEn from "../../locales/en/about/who.json"
 import { PageProps } from "gatsby"
 
-// meta tags image default :(
 // seo
-// couleur selection footer
 // page 404
 // redirection page non publiee :)
-// tout nos articles a changer de couleur par pays :)
 
 // corriger fautes sur later
 

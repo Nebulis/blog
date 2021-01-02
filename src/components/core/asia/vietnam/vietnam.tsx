@@ -7,7 +7,7 @@ import { ImageAsMedallion } from "../../../images/layout"
 import { drawHat } from "./console-draw-hat"
 import { Title } from "../../title"
 import { Quote } from "../../quote"
-import { ExternalLink, linkBuilder } from "../../links/link"
+import { ButtonLink, ExternalLink, linkBuilder } from "../../links/link"
 import { Link } from "gatsby"
 import { City } from "../../highlight"
 import hat from "../../../../images/asia/vietnam/hat.svg"
@@ -105,5 +105,14 @@ export const VietnamExternalLink = styled(ExternalLink)`
   font-weight: bold;
   &:visited {
     color: ${vietnamPrimaryColorDarker};
+  }
+`
+
+// #d8a200 is vietnamPrimaryColorDarker lighten by 10%
+export const VietnamButtonLink = styled(ButtonLink)`
+  border: 2px solid #d8a200;
+  background-color: #d8a200;
+  &:not(.inactive):hover {
+    color: #d8a200;
   }
 `

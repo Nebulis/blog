@@ -3,6 +3,7 @@ import SEO from "../../../../components/layout/seo"
 import vietnamHat from "../../../../images/asia/vietnam/hat.svg"
 import {
   VietnamBlogLayout,
+  VietnamButtonLink,
   VietnamDivider,
   VietnamImageAsMedallion,
 } from "../../../../components/core/asia/vietnam/vietnam"
@@ -13,8 +14,8 @@ import {
   isLinkPublished,
   sortByLabel,
   sortByPublishedDate,
-} from "../../../../components/core/links/links.configuration"
-import { ApplicationLink, ButtonLink } from "../../../../components/core/links/link"
+} from "../../../../components/core/links/links.utils"
+import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import { vietnamLinks } from "../../../../components/core/asia/vietnam/vietnam.links"
 import {
@@ -93,7 +94,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <>
             <VietnamDivider />
             <GoToAllArticlesContainer>
-              <ButtonLink to="articles?country=vietnam">Tous nos articles</ButtonLink>
+              <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
             </GoToAllArticlesContainer>
           </>
         )}

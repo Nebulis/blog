@@ -4,7 +4,7 @@ import { GoToAllArticlesContainer, MedallionContainer } from "../../components/l
 import { ApplicationLink, ButtonLink } from "../../components/core/links/link"
 import { ImageAsMedallion } from "../../components/images/layout"
 import { asiaLinks } from "../../components/core/asia/asia.links"
-import { getLinkLabel, isLinkPublished, sortByLabel } from "../../components/core/links/links.configuration"
+import { getLinkLabel, isLinkPublished } from "../../components/core/links/links.utils"
 import { ApplicationContext } from "../../components/application"
 import { PrimaryDivider } from "../../components/core/divider"
 import { PageQuote } from "../../components/core/quote"
@@ -16,6 +16,7 @@ import asiaIndexFr from "../../locales/fr/asia/index.json"
 import asiaIndexEn from "../../locales/en/asia/index.json"
 import { PageProps } from "gatsby"
 import VietnamImage from "../../images/asia/vietnam/home.jpg"
+import { sortByLabel } from "../../components/core/links/links.utils"
 
 const namespace = "asia/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)

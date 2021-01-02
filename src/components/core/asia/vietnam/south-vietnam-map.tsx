@@ -2,7 +2,7 @@ import React, { FunctionComponent, SVGAttributes } from "react"
 import { css } from "@emotion/core"
 import { smallEnd } from "../../variables"
 import { navigate } from "gatsby"
-import { getLink, getLinkUrl } from "../../links/links.configuration"
+import { getLink, getLinkUrl } from "../../links/links.utils"
 import { vietnamPrimaryColorDarker } from "./vietnam.colors"
 
 const basicTextStyle = css`

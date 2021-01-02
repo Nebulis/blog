@@ -5,13 +5,7 @@ import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip } from "../components/core/tooltipPortal"
 import { navigate, PageProps } from "gatsby"
-import {
-  continentLinks,
-  getLink,
-  getLinkUrl,
-  getMostRecentArticles,
-  sortByLabel,
-} from "../components/core/links/links.configuration"
+import { getLink, getLinkUrl, getMostRecentArticles, isLinkPublished } from "../components/core/links/links.utils"
 import { Carousel, CarouselImage } from "../components/core/carousel"
 import { Divider } from "../components/core/divider"
 import { Monument } from "../components/icon/monument"
@@ -42,7 +36,8 @@ import { CarouselVietnam2 } from "../components/images/asia/vietnam/carousel-2"
 import { CarouselVietnam } from "../components/images/asia/vietnam/carousel"
 import { CarouselPhilippines } from "../components/images/asia/philippines/carousel"
 import { CarouselPhilippines2 } from "../components/images/asia/philippines/carousel-2"
-import { isPublished } from "../components/core/links/links.utils"
+import { sortByLabel } from "../components/core/links/links.utils"
+import { continentLinks } from "../components/core/links/links.configuration"
 
 const namespace = "index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -78,6 +73,7 @@ const visitedCountries = [
   "senegal",
   "united-states",
 ]
+// eslint-disable-next-line react/display-name
 const transform = (countriesWithArticles: string[]) => (country: Country): ReactElement => {
   if (visitedCountries.includes(country.id)) {
     if (country.id === "singapore") {
@@ -264,7 +260,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const [carouselElement, setCarouselElement] = useState<CarouselElementType[]>(() => {
+  const [carouselElement] = useState<CarouselElementType[]>(() => {
     const tmp: CarouselElementType[] = [
       {
         to: "vietnam",
@@ -287,13 +283,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         component: CarouselPhilippines2,
       },
     ].filter(({ to }) => {
-      return development || isPublished(getLink(to))
+      return development || isLinkPublished(to)
     })
     return shuffleArray(tmp)
   })
 
   const countriesWithArticles = ["philippines", "vietnam"].filter((country) => {
-    return development || isPublished(getLink(country))
+    return development || isLinkPublished(country)
   })
   return (
     <>

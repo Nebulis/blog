@@ -2,12 +2,13 @@ import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
 import { HomeSection, MainTitleSection } from "../../../../components/core/section"
 import {
+  getHighlightsFromCity,
   getLinkLabel,
   isLinkPublished,
   sortByLabel,
   sortByPublishedDate,
-} from "../../../../components/core/links/links.configuration"
-import { ApplicationLink, ButtonLink } from "../../../../components/core/links/link"
+} from "../../../../components/core/links/links.utils"
+import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import {
   CityArticleContainer,
@@ -22,12 +23,12 @@ import translationEn from "../../../../locales/en/asia/philippines/el-nido/index
 import { CityLink } from "../../../../components/core/links/links.types"
 import {
   PhilippinesBlogLayout,
+  PhilippinesButtonLink,
   PhilippinesDivider,
   PhilippinesImageAsMedallion,
 } from "../../../../components/core/asia/philippines/philippines"
 import philippinesScubaDiving from "../../../../images/asia/philippines/scuba-diving.svg"
 import { philippinesLinks } from "../../../../components/core/asia/philippines/philippines.links"
-import { getHighlightsFromCity } from "../../../../components/core/links/links.configuration"
 import { ElNidoParadiseCard } from "../../../../components/core/asia/philippines/philippines.card"
 import { PageProps } from "gatsby"
 
@@ -92,7 +93,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <>
             <PhilippinesDivider />
             <GoToAllArticlesContainer>
-              <ButtonLink to="articles?country=philippines">Tous nos articles</ButtonLink>
+              <PhilippinesButtonLink to="articles?country=philippines">Tous nos articles</PhilippinesButtonLink>
             </GoToAllArticlesContainer>
           </>
         )}

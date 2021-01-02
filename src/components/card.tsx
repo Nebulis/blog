@@ -2,7 +2,7 @@ import React, { FunctionComponent, useContext } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { ApplicationLink, DevelopmentMark } from "./core/links/link"
-import { getLink, getLinkLabel, getLinkUrl } from "./core/links/links.configuration" // TODO this causes a cycle
+import { getLink, getLinkLabel, getLinkUrl } from "./core/links/links.utils"
 import { ApplicationContext } from "./application"
 import { Divider } from "./core/divider"
 import { backgroundPrimaryColor, mediumEnd, primaryColor, primaryDarkColor } from "./core/variables"

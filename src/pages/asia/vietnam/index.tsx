@@ -6,13 +6,14 @@ import {
   getMostRecentArticles,
   isLinkPublished,
   sortByLabel,
-} from "../../../components/core/links/links.configuration"
+} from "../../../components/core/links/links.utils"
 import { vietnamLinks } from "../../../components/core/asia/vietnam/vietnam.links"
 import { HomeSection, HomeSubSection, MainTitleSection } from "../../../components/core/section"
-import { ApplicationLink, ButtonLink } from "../../../components/core/links/link"
+import { ApplicationLink } from "../../../components/core/links/link"
 import vietnamHat from "../../../images/asia/vietnam/hat.svg"
 import {
   IndexVietnamBlogLayout,
+  VietnamButtonLink,
   VietnamDivider,
   VietnamImageAsMedallion,
 } from "../../../components/core/asia/vietnam/vietnam"
@@ -89,7 +90,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <>
             <VietnamDivider />
             <GoToAllArticlesContainer>
-              <ButtonLink to="articles?country=vietnam">Tous nos articles</ButtonLink>
+              <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
             </GoToAllArticlesContainer>
           </>
         )}

@@ -1,4 +1,5 @@
-import { createDate, isPublished } from "./links.utils"
+import { createDate } from "./links.utils"
+import { isPublished } from "./links.configuration"
 
 describe("isPublished", () => {
   const currentDate = new Date("2019-10-22")

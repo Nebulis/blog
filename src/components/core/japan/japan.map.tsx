@@ -2,7 +2,7 @@ import React, { FunctionComponent, SVGAttributes } from "react"
 import { css } from "@emotion/core"
 import { navigate } from "gatsby"
 import { japanPrimaryColor } from "./japan.variables"
-import { getLink, getLinkUrl } from "../links/links.configuration"
+import { getLink, getLinkUrl } from "../links/links.utils"
 
 const basicTextStyle = css`
   fill: black;

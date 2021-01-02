@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react"
 import { css } from "@emotion/core"
-import { getLink, getLinkLabel } from "./links/links.configuration"
+import { getLink, getLinkLabel } from "./links/links.utils"
 import { ApplicationLink } from "./links/link"
 import { useCustomTranslation } from "../../i18n"
 

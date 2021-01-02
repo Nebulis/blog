@@ -52,3 +52,13 @@ export interface NavigationLink {
 }
 
 export type HighlightWithCard = HighlightLink & { card: ComponentType<ExtraCardProps> }
+
+export interface CachedLinksMap {
+  country?: string
+  label: Label
+  url: string
+  published: boolean
+  publishedDate?: Date
+  tags: string[]
+  card?: React.ComponentType<ExtraCardProps>
+}

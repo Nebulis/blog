@@ -3,7 +3,7 @@ import { GatsbyLinkProps, Link } from "gatsby"
 import { FaExternalLinkAlt } from "react-icons/all"
 import { css } from "@emotion/core"
 import React, { AnchorHTMLAttributes, ComponentType, FunctionComponent, useContext } from "react"
-import { getLink, getLinkUrl } from "./links.configuration"
+import { getLink, getLinkUrl } from "./links.utils"
 import { ApplicationContext } from "../../application"
 import { primaryColor, primaryDarkColor, primaryDarkColor15Darker } from "../variables"
 
