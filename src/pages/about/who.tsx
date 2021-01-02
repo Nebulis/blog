@@ -18,7 +18,6 @@ import { BlogLayoutWithDrawer } from "../../components/layout/main-layout"
 // seo
 // page 404
 // redirection page non publiee :)
-// google api font local
 
 // corriger fautes sur later
 

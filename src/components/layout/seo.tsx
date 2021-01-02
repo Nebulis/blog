@@ -8,8 +8,9 @@
 import React, { FunctionComponent } from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery, PageProps } from "gatsby"
-import FontUrl1 from "../../fonts/Freestyle-Script.ttf"
-import FontUrl2 from "../../fonts/Courgette-Regular.ttf"
+import FreestyleFont from "../../fonts/Freestyle-Script.ttf"
+import CourgetteFont from "../../fonts/Courgette-Regular.ttf"
+import PlayfairFont from "../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf"
 import { useCustomTranslation } from "../../i18n"
 import DefaultImgUrl from "../../images/SocialNetworkDefault.jpg"
 import { defaultHostname } from "../../utils"
@@ -50,21 +51,23 @@ const SEO: FunctionComponent<SEOProps> = ({ description, lang, meta = [], title,
         {
           rel: "preload",
           as: "font",
-          href: FontUrl1,
+          href: FreestyleFont,
           type: "font/ttf",
           crossOrigin: "anonymous",
         },
         {
           rel: "preload",
           as: "font",
-          href: FontUrl2,
+          href: CourgetteFont,
           type: "font/ttf",
           crossOrigin: "anonymous",
         },
         {
-          rel: "stylesheet",
-          // TODO host locally
-          href: "https://fonts.googleapis.com/css?family=Playfair+Display:400i&display=swap",
+          rel: "preload",
+          as: "font",
+          href: PlayfairFont,
+          type: "font/ttf",
+          crossOrigin: "anonymous",
         },
       ]}
       title={metaTitle}
