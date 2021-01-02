@@ -180,12 +180,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <VietnamDivider />
         <Conclusion>
           <p>{t("conclusion")}</p>
-          <p>
-            <ul>
-              <li>{t("question1")}</li>
-              <li>{t("question2")}</li>
-            </ul>
-          </p>
+          <ul>
+            <li>{t("question1")}</li>
+            <li>{t("question2")}</li>
+          </ul>
         </Conclusion>
         <VietnamDivider />
         <Comments collectionName={namespace} location={location} />
