@@ -1,6 +1,4 @@
-import { HighlightLink, OtherLink } from "./links.types"
-
-export const isPublished = (element: OtherLink | HighlightLink) => {
+export const isPublished = (element: { published: boolean | Date }) => {
   if (typeof element.published === "boolean") {
     return element.published
   }

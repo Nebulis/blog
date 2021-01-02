@@ -13,6 +13,7 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
           siteMetadata {
             config {
               context
+              comments
             }
           }
         }

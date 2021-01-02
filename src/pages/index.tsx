@@ -42,6 +42,7 @@ import { CarouselVietnam2 } from "../components/images/asia/vietnam/carousel-2"
 import { CarouselVietnam } from "../components/images/asia/vietnam/carousel"
 import { CarouselPhilippines } from "../components/images/asia/philippines/carousel"
 import { CarouselPhilippines2 } from "../components/images/asia/philippines/carousel-2"
+import { isPublished } from "../components/core/links/links.utils"
 
 const namespace = "index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -77,8 +78,7 @@ const visitedCountries = [
   "senegal",
   "united-states",
 ]
-const countriesWithArticles = ["philippines", "vietnam"]
-const transform = (country: Country): ReactElement => {
+const transform = (countriesWithArticles: string[]) => (country: Country): ReactElement => {
   if (visitedCountries.includes(country.id)) {
     if (country.id === "singapore") {
       return <circle cx="1385" cy="565" r="6" className="visited" />
@@ -264,7 +264,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const [carouselElement] = useState<CarouselElementType[]>(() => {
+  const [carouselElement, setCarouselElement] = useState<CarouselElementType[]>(() => {
     const tmp: CarouselElementType[] = [
       {
         to: "vietnam",
@@ -286,8 +286,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         country: t("common:country.philippines"),
         component: CarouselPhilippines2,
       },
-    ]
+    ].filter(({ to }) => {
+      return development || isPublished(getLink(to))
+    })
     return shuffleArray(tmp)
+  })
+
+  const countriesWithArticles = ["philippines", "vietnam"].filter((country) => {
+    return development || isPublished(getLink(country))
   })
   return (
     <>
@@ -309,7 +315,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <MapContainer>
             <StyledWorld
               style={{ maxHeight: windowHeight / 1.5 + "px" }}
-              transform={transform}
+              transform={transform(countriesWithArticles)}
               onMouseEnter={(country) => {
                 if (isMobileView) return
                 if (visitedCountries.includes(country.id)) {

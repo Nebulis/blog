@@ -59,7 +59,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <VietnamBlogLayout page="discover-southern-vietnam">
         <VietnamTitle
           title={t("common:card.vietnam.discover-southern-vietnam")}
-          categories={["asia", "vietnam"]}
+          categories={["asia", "vietnam", "southern-vietnam"]}
           linkId="discover-southern-vietnam"
         />
         <ImageAsLandscape>
