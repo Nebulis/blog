@@ -16,11 +16,11 @@ const namespace = "organisation/when-to-go/spring"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
-const IndexPage: React.FunctionComponent<PageProps> = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t } = useCustomTranslation([namespace, "common"])
   return (
     <>
-      <SEO title={t("title")} />
+      <SEO title={t("title")} location={location} />
       <BlogLayout page="spring">
         <MainTitleSection>{t("title")}</MainTitleSection>
         <PrimaryDivider />

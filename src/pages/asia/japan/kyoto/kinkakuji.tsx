@@ -43,11 +43,12 @@ import {
   JapanTitle,
   KinkakujiQuote,
 } from "../../../../components/core/japan/japan"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
-      <SEO title="main" />
+      <SEO title="main" location={location} />
       <BlogLayout page="kinkakuji">
         <JapanTitle title="Temple de KINKAKUJI" categories={["asia", "japan", "kyoto"]} linkId="kinkakuji" />
         <MainKinkakujiImage />

@@ -27,8 +27,9 @@ import {
 } from "../../../../components/core/asia/philippines/philippines"
 import philippinesScubaDiving from "../../../../images/asia/philippines/scuba-diving.svg"
 import { philippinesLinks } from "../../../../components/core/asia/philippines/philippines.links"
-import { getHighlightsFromCity } from "../../../../components/core/links/links.utils"
+import { getHighlightsFromCity } from "../../../../components/core/links/links.configuration"
 import { ElNidoParadiseCard } from "../../../../components/core/asia/philippines/philippines.card"
+import { PageProps } from "gatsby"
 
 const namespace = "asia/philippines/el-nido/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -37,7 +38,7 @@ i18n.addResourceBundle("en", namespace, translationEn)
 const currentPageId = "el-nido"
 
 const isNotCurrentPage = (city: CityLink) => city.id !== currentPageId
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const cities = development
@@ -49,7 +50,7 @@ const IndexPage = () => {
   )
   return (
     <>
-      <SEO title={t("title")} />
+      <SEO title={t("title")} location={location} />
       <PhilippinesBlogLayout page={currentPageId}>
         <MainTitleSection>
           <img src={philippinesScubaDiving} alt="philippines scuba diving" style={{ width: "24px" }} />

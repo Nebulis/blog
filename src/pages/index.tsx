@@ -4,7 +4,7 @@ import { useWindowSize } from "../components/hooks/useWindowSize"
 import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip } from "../components/core/tooltipPortal"
-import { navigate } from "gatsby"
+import { navigate, PageProps } from "gatsby"
 import {
   continentLinks,
   getLink,
@@ -258,7 +258,7 @@ interface CarouselElementType {
   country: string
 }
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const { isMobileView } = useContext(MenuContext)
   const { windowHeight } = useWindowSize()
@@ -291,7 +291,7 @@ const IndexPage = () => {
   })
   return (
     <>
-      <SEO />
+      <SEO location={location} />
       <HomeBlogLayout page="home" className="">
         <Carousel>
           {carouselElement.map(({ country, component: Component, to }, index) => {

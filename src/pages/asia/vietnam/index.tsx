@@ -14,7 +14,6 @@ import vietnamHat from "../../../images/asia/vietnam/hat.svg"
 import {
   IndexVietnamBlogLayout,
   VietnamDivider,
-  VietnamHeadline,
   VietnamImageAsMedallion,
 } from "../../../components/core/asia/vietnam/vietnam"
 import { SouthVietnamCard } from "../../../components/core/asia/vietnam/vietnam.cards"
@@ -26,8 +25,9 @@ import {
 } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
 import { filteredUrl } from "../../../components/core/asia/vietnam/vietnam.utils"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation(["asia/vietnam/index", "common"])
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
@@ -37,7 +37,7 @@ const IndexPage = () => {
   })
   return (
     <>
-      <SEO title={t("common:country.vietnam")} />
+      <SEO title={t("common:country.vietnam")} location={location} />
       <IndexVietnamBlogLayout page="vietnam">
         <MainTitleSection>
           <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />

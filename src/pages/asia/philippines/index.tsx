@@ -19,8 +19,9 @@ import {
   PhilippinesDivider,
   PhilippinesImageAsMedallion,
 } from "../../../components/core/asia/philippines/philippines"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation(["asia/philippines/index", "common"])
   const cities = development ? philippinesLinks.cities : philippinesLinks.cities.filter(isLinkPublished)
@@ -30,7 +31,7 @@ const IndexPage = () => {
   })
   return (
     <>
-      <SEO title={t("common:country.philippines")} />
+      <SEO title={t("common:country.philippines")} location={location} />
       <IndexPhilippinesBlogLayout page="philippines">
         <MainTitleSection>
           <img src={philippinesScubaDiving} alt="philippines scuba diving" style={{ width: "24px" }} />

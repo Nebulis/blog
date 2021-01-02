@@ -1,4 +1,4 @@
-import React, { ComponentType, useContext } from "react"
+import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
 import vietnamHat from "../../../../images/asia/vietnam/hat.svg"
 import {
@@ -8,6 +8,7 @@ import {
 } from "../../../../components/core/asia/vietnam/vietnam"
 import { HomeSection, MainTitleSection } from "../../../../components/core/section"
 import {
+  getHighlightsFromCity,
   getLinkLabel,
   isLinkPublished,
   sortByLabel,
@@ -26,10 +27,9 @@ import { useCustomTranslation } from "../../../../i18n"
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/index.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/index.json"
-import { CityLink, HighlightLink } from "../../../../components/core/links/links.types"
-import { ExtraCardProps } from "../../../../types/shared"
+import { CityLink } from "../../../../components/core/links/links.types"
 import { SouthVietnamCard } from "../../../../components/core/asia/vietnam/vietnam.cards"
-import { filteredId } from "../../../../components/core/asia/vietnam/vietnam.utils"
+import { PageProps } from "gatsby"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -37,27 +37,20 @@ i18n.addResourceBundle("en", namespace, translationEn)
 
 const currentPageId = "southern-vietnam"
 
-type HighlightWithCard = HighlightLink & { card: ComponentType<ExtraCardProps> }
-const isHighlighWithCard = (highlight: HighlightLink): highlight is HighlightWithCard => !!highlight.card
-const getHighlightsFromCity = ({ id, development }: { id: string; development: boolean }): HighlightWithCard[] => {
-  const city = vietnamLinks.cities.find((city) => city.id === id)
-  if (!city) return []
-  const highlights = development ? city.highlights : city.highlights.filter(isLinkPublished)
-  return highlights.filter(isHighlighWithCard).filter((link) => !filteredId.includes(link.id))
-}
-
 const isNotCurrentPage = (city: CityLink) => city.id !== currentPageId
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const cities = development
     ? vietnamLinks.cities.filter(isNotCurrentPage)
     : vietnamLinks.cities.filter(isLinkPublished).filter(isNotCurrentPage)
 
-  const highlights = getHighlightsFromCity({ id: currentPageId, development }).sort(sortByPublishedDate)
+  const highlights = getHighlightsFromCity(vietnamLinks.cities)({ id: currentPageId, development }).sort(
+    sortByPublishedDate
+  )
   return (
     <>
-      <SEO title={t("title")} />
+      <SEO title={t("title")} location={location} />
       <VietnamBlogLayout page={currentPageId}>
         <MainTitleSection>
           <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />

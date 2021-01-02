@@ -43,6 +43,7 @@ import { Rest2CuChiTunnelsImage } from "../../../../components/images/asia/vietn
 import { Conclusion } from "../../../../components/core/conclusion"
 import { Bonus1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/bonus1CuChiTunnelsImage"
 import { Bonus2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/bonus2CuChiTunnelsImage"
+import { PageProps } from "gatsby"
 
 /*
 the image at the end have sizing problem which look caused by the size of the original image and gatsby not handling properly. Some resources:
@@ -54,10 +55,10 @@ Manually setting the srcset dont get rid of the original img size (maybe in the 
 the fastest way to fix it is to resize a bit the images to
  */
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
-      <SEO title="Les tunnels de Cu Chi" />
+      <SEO title="Les tunnels de Cu Chi" location={location} />
       <VietnamBlogLayout page="cu-chi-tunnels">
         <VietnamTitle
           title="Les tunnels de Cu Chi"

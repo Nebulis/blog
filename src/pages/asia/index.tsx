@@ -14,18 +14,19 @@ import { useCustomTranslation } from "../../i18n"
 import i18n from "i18next"
 import asiaIndexFr from "../../locales/fr/asia/index.json"
 import asiaIndexEn from "../../locales/en/asia/index.json"
+import { PageProps } from "gatsby"
 
 const namespace = "asia/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
 i18n.addResourceBundle("en", namespace, asiaIndexEn)
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const countries = development ? asiaLinks.countries : asiaLinks.countries.filter(isLinkPublished)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   return (
     <>
-      <SEO title={t("common:continent.asia")} />
+      <SEO title={t("common:continent.asia")} location={location} />
       <IndexBlogLayoutWithDrawer page="asia">
         <MainTitleSection>{t("common:continent.asia")}</MainTitleSection>
         <PrimaryDivider />

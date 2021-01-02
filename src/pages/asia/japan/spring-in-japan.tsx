@@ -25,11 +25,12 @@ import {
   ToganjiCard,
 } from "../../../components/core/japan/japan.cards"
 import { JapanMap } from "../../../components/core/japan/japan.map"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
-      <SEO title="Le Japon au printemps" />
+      <SEO title="Le Japon au printemps" location={location} />
       <JapanBlogLayout page="spring-in-japan">
         <JapanTitle title="Le Japon au printemps" categories={["asia", "japan"]} linkId="spring-in-japan" />
         <MainImage />

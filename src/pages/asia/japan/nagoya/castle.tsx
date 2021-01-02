@@ -44,11 +44,12 @@ import {
   JapanTitle,
   NagoyaCastleQuote,
 } from "../../../../components/core/japan/japan"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
-      <SEO title="main" />
+      <SEO title="main" location={location} />
       <BlogLayout page="nagoya-castle">
         <JapanTitle title="Château de NAGOYA" categories={["asia", "japan", "nagoya"]} linkId="nagoya-castle" />
         <ImageAsLandscape>

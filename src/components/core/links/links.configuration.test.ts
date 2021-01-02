@@ -52,6 +52,7 @@ describe("links", () => {
     // asia countries assertions
     expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: false })
     expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: false })
+    expect(getLink("philippines")).toMatchObject({ label: { fr: "Philippines", en: "Philippines" }, published: false })
 
     // japan assertions
     expect(getLink("spring-in-japan")).toMatchObject({
@@ -134,6 +135,13 @@ describe("links", () => {
     expect(getLink("north-vietnam")).toMatchObject({ label: { fr: "Nord", en: "Northern" }, published: false })
 
     expect(getLink("central-vietnam")).toMatchObject({ label: { fr: "Centre", en: "Central" }, published: false })
+
+    // philippines assertions
+    expect(getLink("el-nido")).toMatchObject({ label: { fr: "El Nido", en: "El Nido" }, published: false })
+    expect(getLink("el-nido-paradise")).toMatchObject({
+      label: { fr: "El Nido : Un petit coin de Paradis", en: "El Nido: A little paradise" },
+      published: false,
+    })
 
     expect.assertions(getCacheSize())
   })

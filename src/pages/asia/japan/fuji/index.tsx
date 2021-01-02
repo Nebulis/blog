@@ -12,8 +12,9 @@ import { KawaguchikoLakeCard } from "../../../../components/core/japan/japan.car
 import { JapanImageAsMedallion } from "../../../../components/core/japan/japan.images"
 import { JapanDivider } from "../../../../components/core/japan/japan"
 import { useCustomTranslation } from "../../../../i18n"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const context = useContext(ApplicationContext)
   const { i18n } = useCustomTranslation()
   const cities = (context.development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished).sort()).filter(
@@ -21,7 +22,7 @@ const IndexPage = () => {
   )
   return (
     <>
-      <SEO title="japan" />
+      <SEO title="japan" location={location} />
       <BlogLayout page="fuji">
         <h1 className="tc ttu flex items-center justify-center">
           <img src={cherryBlossom} alt="cherry blossom" />

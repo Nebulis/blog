@@ -31,11 +31,12 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { largeStart } from "../../../../components/core/variables"
 import { JapanCity, JapanDivider, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
 import { SensojiCard } from "../../../../components/core/japan/japan.cards"
+import { PageProps } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
-      <SEO title="main" />
+      <SEO title="main" location={location} />
       <BlogLayout page="a-day-in-tokyo">
         <JapanTitle title="Une journée à Tokyo" categories={["asia", "japan", "tokyo"]} linkId="a-day-in-tokyo" />
         <ImageAsLandscape>

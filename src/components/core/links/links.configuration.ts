@@ -1,11 +1,21 @@
 import * as path from "path"
-import { CityLink, ContinentLink, CountryLink, HighlightLink, Label, Lang, NavigationLink } from "./links.types"
+import {
+  CityLink,
+  ContinentLink,
+  CountryLink,
+  HighlightLink,
+  HighlightWithCard,
+  Label,
+  Lang,
+  NavigationLink,
+} from "./links.types"
 import { isPublished } from "./links.utils"
 import React from "react"
 import { asiaLinks } from "../asia/asia.links"
 import { ExtraCardProps } from "../../../types/shared"
 import commonEn from "../../../locales/en/common.json"
 import commonFr from "../../../locales/fr/common.json"
+import { filteredId } from "../asia/vietnam/vietnam.utils"
 
 export const continentLinks: ContinentLink[] = [
   asiaLinks,
@@ -337,4 +347,18 @@ export const getMostRecentArticles = ({ customFilter = () => true, limit = 3 }: 
     .sort((a, b) => b.publishedDate.getTime() - a.publishedDate.getTime())
     .slice(0, limit)
     .map((value) => value.card)
+}
+
+export const isHighlighWithCard = (highlight: HighlightLink): highlight is HighlightWithCard => !!highlight.card
+export const getHighlightsFromCity = (cities: CityLink[]) => ({
+  id,
+  development,
+}: {
+  id: string
+  development: boolean
+}): HighlightWithCard[] => {
+  const city = cities.find((city) => city.id === id)
+  if (!city) return []
+  const highlights = development ? city.highlights : city.highlights.filter(isLinkPublished)
+  return highlights.filter(isHighlighWithCard).filter((link) => !filteredId.includes(link.id))
 }
