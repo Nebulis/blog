@@ -1,7 +1,6 @@
 import React from "react"
 import SEO from "../../../components/layout/seo"
 import { MainTitleSection, SectionContent } from "../../../components/core/section"
-import { BlogLayout } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
 import i18n from "i18next"
 import translationFr from "../../../locales/fr/organisation/when-to-go/spring.json"
@@ -11,6 +10,7 @@ import { PageQuote } from "../../../components/core/quote"
 import { HomeVietnamImage } from "../../../components/images/asia/vietnam/home"
 import { PageProps } from "gatsby"
 import { CountriesContainer, CountryContainer } from "../../../components/layout/organisation-layout"
+import { BlogLayoutWithDrawer } from "../../../components/layout/main-layout"
 
 const namespace = "organisation/when-to-go/spring"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -21,7 +21,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={t("title")} location={location} />
-      <BlogLayout page="spring">
+      <BlogLayoutWithDrawer page="spring">
         <MainTitleSection>{t("title")}</MainTitleSection>
         <PrimaryDivider />
         <SectionContent>
@@ -32,7 +32,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <CountriesContainer>
           <CountryContainer title={t("common:country.vietnam")} image={HomeVietnamImage} to="southern-vietnam" />
         </CountriesContainer>
-      </BlogLayout>
+      </BlogLayoutWithDrawer>
     </>
   )
 }

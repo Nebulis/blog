@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../../components/layout/seo"
-import { BlogLayout } from "../../components/layout/layout"
 import { SectionContent } from "../../components/core/section"
 import { Divider } from "../../components/core/divider"
 import { PrimaryDarkButtonLink } from "../../components/core/links/link"
@@ -14,10 +13,12 @@ import i18n from "i18next"
 import whoFr from "../../locales/fr/about/who.json"
 import whoEn from "../../locales/en/about/who.json"
 import { PageProps } from "gatsby"
+import { BlogLayoutWithDrawer } from "../../components/layout/main-layout"
 
 // seo
 // page 404
 // redirection page non publiee :)
+// google api font local
 
 // corriger fautes sur later
 
@@ -30,7 +31,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={t("common:link.who")} location={location} />
-      <BlogLayout page="who">
+      <BlogLayoutWithDrawer page="who">
         <div className="tc mb3 mt3">
           <img
             src={i18n.languageCode === "fr" ? whoImageFr : whoImageEn}
@@ -67,7 +68,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             {t("contact")} <FaChevronRight />
           </PrimaryDarkButtonLink>
         </SectionContent>
-      </BlogLayout>
+      </BlogLayoutWithDrawer>
     </>
   )
 }

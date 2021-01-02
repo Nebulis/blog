@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import SEO from "../components/layout/seo"
-import { BlogLayout } from "../components/layout/layout"
 import queryString from "query-string"
 import { PageProps } from "gatsby"
+import { BlogLayoutWithDrawer } from "../components/layout/main-layout"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const [search, setSearch] = useState<any>()
@@ -12,9 +12,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title="main" location={location} />
-      <BlogLayout page="articles">
+      <BlogLayoutWithDrawer page="articles">
         <p>Articles page. Search:{JSON.stringify(search, undefined, 2)}</p>
-      </BlogLayout>
+      </BlogLayoutWithDrawer>
     </>
   )
 }

@@ -184,16 +184,6 @@ export const IndexBlogLayout: FunctionComponent<{
   ) : null
 }
 
-// layout to apply on articles
-export const HomeBlogLayout = styled(IndexBlogLayout)`
-  .card .tags a {
-    color: ${primaryColor};
-  }
-  .card .tags a:hover {
-    border-bottom: 1px solid ${primaryDarkColor};
-  }
-`
-
 // layout to apply on pages (index, country index, ...)
 export const BlogLayout = styled(IndexBlogLayout)`
   .children-container {

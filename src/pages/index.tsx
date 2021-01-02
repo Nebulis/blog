@@ -1,5 +1,5 @@
 import React, { ReactElement, useContext, useState } from "react"
-import { ArticlesContainer, HomeBlogLayout } from "../components/layout/layout"
+import { ArticlesContainer } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
 import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
@@ -38,6 +38,7 @@ import { CarouselPhilippines } from "../components/images/asia/philippines/carou
 import { CarouselPhilippines2 } from "../components/images/asia/philippines/carousel-2"
 import { sortByLabel } from "../components/core/links/links.utils"
 import { continentLinks } from "../components/core/links/links.configuration"
+import { HomeBlogLayout } from "../components/layout/main-layout"
 
 const namespace = "index"
 i18n.addResourceBundle("fr", namespace, indexFr)

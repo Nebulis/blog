@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import SEO from "../../components/layout/seo"
-import { BlogLayout } from "../../components/layout/layout"
 import { SectionContent } from "../../components/core/section"
 import { Input, Textarea } from "../../components/core/input"
 import { FaCheck, FaCubes, FaEnvelope, FaPen, FaSpinner, FaTimes, FaUser } from "react-icons/all"
@@ -16,6 +15,7 @@ import contactFr from "../../locales/fr/about/contact.json"
 import contactEn from "../../locales/en/about/contact.json"
 import { facebook, instagram, twitter } from "../../utils"
 import { PageProps } from "gatsby"
+import { BlogLayoutWithDrawer } from "../../components/layout/main-layout"
 
 const namespace = "about/contact"
 i18n.addResourceBundle("fr", namespace, contactFr)
@@ -37,7 +37,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={t("common:link.contact")} location={location} />
-      <BlogLayout page="who" noStickyHeader>
+      <BlogLayoutWithDrawer page="who" noStickyHeader>
         <div
           className="tc mt4 mb3"
           css={css`
@@ -177,7 +177,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </div>
           </section>
         </div>
-      </BlogLayout>
+      </BlogLayoutWithDrawer>
     </>
   )
 }
