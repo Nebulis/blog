@@ -59,7 +59,9 @@
     "vietnam": {
       "cu-chi-tunnels": "Les tunnels de Củ Chi",
       "discover-southern-vietnam": "Découverte du Vietnam du Sud",
-      "my-tho": "Croisière sur le Mékong entre Mỹ Tho et Ben Tre"
+      "my-tho": "Croisière sur le Mékong entre Mỹ Tho et Ben Tre",
+      "ho-chi-minh-war-museum": "Le Musée des Vestiges de Guerre",
+      "can-tho": "Visite de Cân Thơ et son marché flottant"
     }
   },
   "allArticles": "Tous nos articles",
@@ -87,7 +89,7 @@
     "website": "Site Internet",
     "subscribed-note": "Prévenez-moi des nouveaux articles par e-mail.",
     "local-save": "Enregistrer mon nom, mon e-mail et mon site web dans le navigateur pour mon prochain commentaire.",
-    "shared-description": "Découvre le blog {{handle}} à travers cet article",
+    "shared-description": "Découvrez le blog {{handle}} à travers cet article",
     "hashtags": "blog,voyage",
     "share": "Partage",
     "like": "J'aime l'article"

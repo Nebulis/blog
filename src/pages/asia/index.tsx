@@ -15,6 +15,7 @@ import i18n from "i18next"
 import asiaIndexFr from "../../locales/fr/asia/index.json"
 import asiaIndexEn from "../../locales/en/asia/index.json"
 import { PageProps } from "gatsby"
+import VietnamImage from "../../images/asia/vietnam/home.jpg"
 
 const namespace = "asia/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
@@ -26,7 +27,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   return (
     <>
-      <SEO title={t("common:continent.asia")} location={location} />
+      <SEO title={t("common:continent.asia")} location={location} image={VietnamImage} />
       <IndexBlogLayoutWithDrawer page="asia">
         <MainTitleSection>{t("common:continent.asia")}</MainTitleSection>
         <PrimaryDivider />

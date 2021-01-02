@@ -11,7 +11,7 @@ import { graphql, useStaticQuery, PageProps } from "gatsby"
 import FontUrl1 from "../../fonts/Freestyle-Script.ttf"
 import FontUrl2 from "../../fonts/Courgette-Regular.ttf"
 import { useCustomTranslation } from "../../i18n"
-import DefaultImgUrl from "../../images/logo-the-real.png"
+import DefaultImgUrl from "../../images/SocialNetworkDefault.jpg"
 import { defaultHostname } from "../../utils"
 
 interface SEOProps {

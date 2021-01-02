@@ -3,7 +3,7 @@ import { getCacheSize, getLink } from "./links.configuration"
 describe("links", () => {
   it("should populate cache", () => {
     // continents assertions
-    expect(getLink("asia")).toMatchObject({ label: { en: "Asia", fr: "Asie" }, published: false })
+    expect(getLink("asia")).toMatchObject({ label: { en: "Asia", fr: "Asie" }, published: true })
     expect(getLink("oceania")).toMatchObject({ label: { fr: "Océanie", en: "Oceania" }, published: false })
     expect(getLink("middle-east")).toMatchObject({ label: { fr: "Moyen-Orient", en: "Middle-East" }, published: false })
     expect(getLink("europe")).toMatchObject({ label: { fr: "Europe", en: "Europe" }, published: false })
@@ -51,7 +51,7 @@ describe("links", () => {
 
     // asia countries assertions
     expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: false })
-    expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: false })
+    expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: true })
     expect(getLink("philippines")).toMatchObject({ label: { fr: "Philippines", en: "Philippines" }, published: false })
 
     // japan assertions
@@ -110,7 +110,7 @@ describe("links", () => {
     })
 
     // southern vietnam
-    expect(getLink("southern-vietnam")).toMatchObject({ label: { fr: "Sud", en: "Southern" }, published: false })
+    expect(getLink("southern-vietnam")).toMatchObject({ label: { fr: "Sud", en: "Southern" }, published: true })
     expect(getLink("cu-chi-tunnels")).toMatchObject({
       label: { fr: "Les tunnels de Củ Chi", en: "Củ Chi tunnels" },
       published: false,
@@ -129,7 +129,7 @@ describe("links", () => {
     })
     expect(getLink("discover-southern-vietnam")).toMatchObject({
       label: { fr: "Découverte du Vietnam du Sud", en: "Discover Southern Vietnam" },
-      published: false,
+      published: true,
     })
 
     expect(getLink("north-vietnam")).toMatchObject({ label: { fr: "Nord", en: "Northern" }, published: false })

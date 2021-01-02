@@ -71,7 +71,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <CuChoTunnelsQuote />
         <When>Ouvert de 8h à 17h tous les jours</When>
         <How>
-          <p>Plusieurs moyens de transports existent en partant de Ho Chi Minh.</p>
+          <p>Plusieurs moyens de transports existent en partant de Hô Chi Minh-Ville.</p>
           <p>En Scooter, en Bus public, en Taxi ou en Tour avec guide, ce qui est la meilleure solution à nos yeux.</p>
           <p>
             <VietnamLink action="hide" to="transports-in-vietnam">
@@ -81,10 +81,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </How>
         <HowLong>
           <p>
-            Comptez une bonne demi-journée, en partant de Ho Chi Minh, il faut environ 2h aller / 2h retour en fonction
-            du trafic et de la météo. Ça peut paraître long et on ne va pas mentir c&apos;est effectivement long, mais
-            si vous vous faites emmener le matin ça permet de continuer sa nuit et l&apos;après midi de faire une petite
-            sieste (Voyons le côté positif à ce temps de trajet !).
+            Comptez une bonne demi-journée, en partant de Hô Chi Minh-Ville, il faut environ 2h aller / 2h retour en
+            fonction du trafic et de la météo. Ça peut paraître long et on ne va pas mentir c&apos;est effectivement
+            long, mais si vous vous faites emmener le matin ça permet de continuer sa nuit et l&apos;après midi de faire
+            une petite sieste (Voyons le côté positif à ce temps de trajet !).
           </p>
           <p>
             Pour un tour avec guide nous avions rendez-vous à 7h30 (point de rendez-vous{" "}
@@ -121,7 +121,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
         </HowMuch>
         <WhereToStay>
-          <p>On vous conseille très clairement de prendre un hôtel sur Ho Chi Minh.</p>
+          <p>On vous conseille très clairement de prendre un hôtel sur Hô Chi Minh-Ville.</p>
           <p>
             Nous voulions un hôtel proche du centre-ville et surtout proche de la rue de rassemblement des bus pour nos
             visites.
@@ -140,7 +140,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             . Hôtel parfait, chambre très confortable, le restaurant très bon, niveau confort rien à redire et à deux
             minutes à pied du point de rassemblement des bus pour les excursions.
           </p>
-          <p style={{ color: "red" }}>Comparez et réservez votre hôtel à Ho Chi Minh.</p>
+          <p style={{ color: "red" }}>Comparez et réservez votre hôtel à Hô Chi Minh-Ville.</p>
         </WhereToStay>
         <Visit>
           <p>

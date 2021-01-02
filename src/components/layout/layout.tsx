@@ -4,7 +4,6 @@ import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.configuration"
 import { css } from "@emotion/core"
 import { ApplicationContext } from "../application"
-import { Maintenance } from "./maintenance"
 import "./layout.css"
 import "./tachyons.css"
 import smoothscroll from "smoothscroll-polyfill"
@@ -119,74 +118,70 @@ export const IndexBlogLayout: FunctionComponent<{
       clearTimeout(timeout)
     }
   }, [status])
-  return (
-    <Maintenance>
-      {typeof window !== `undefined` ? (
-        <div className={`${className} flex flex-column min-vh-100`}>
-          {development && !isPublished && <PageDevelopmentMark />}
-          <Header noStickyHeader={noStickyHeader} />
-          {!isMobileView && <ScrollToTop />}
-          <div className="children-container flex-grow-1">{children}</div>
+  return typeof window !== `undefined` ? (
+    <div className={`${className} flex flex-column min-vh-100`}>
+      {development && !isPublished && <PageDevelopmentMark />}
+      <Header noStickyHeader={noStickyHeader} />
+      {!isMobileView && <ScrollToTop />}
+      <div className="children-container flex-grow-1">{children}</div>
 
-          <Footer className="pa2">
-            <div className="f6 copyright">© 2020 Magic of Travels</div>
-            <div className="newsletter">
-              <div className="tc text">NEWSLETTER</div>
-              <div className="inline-flex">
-                <Input
-                  placeholder={t("footer.email")}
-                  className="inline-flex"
-                  id="newsletter"
-                  value={mail}
-                  aria-label="Email"
-                  onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
-                />
-                <div
-                  className="inline-flex"
-                  css={css`
-                    margin-top: 0.6rem;
-                    margin-bottom: 0.6rem;
-                  `}
-                >
-                  <PrimaryDarkButton
-                    disabled={!mail || status === "LOADING"}
-                    onClick={() => {
-                      setStatus("LOADING")
-                      subscribe({ mail })
-                        .then(() => {
-                          setMail("")
-                          setStatus("SUCCESS")
-                        })
-                        .catch(() => {
-                          setStatus("ERROR")
-                        })
-                    }}
-                  >
-                    {status === "INITIAL" ? (
-                      <FaEnvelope />
-                    ) : status === "LOADING" ? (
-                      <FaSpinner className="fa-spin" />
-                    ) : status === "SUCCESS" ? (
-                      <FaCheck />
-                    ) : (
-                      <FaTimes />
-                    )}
-                    &nbsp;{t("footer.subscribe")}
-                  </PrimaryDarkButton>
-                </div>
-              </div>
+      <Footer className="pa2">
+        <div className="f6 copyright">© 2020 Magic of Travels</div>
+        <div className="newsletter">
+          <div className="tc text">NEWSLETTER</div>
+          <div className="inline-flex">
+            <Input
+              placeholder={t("footer.email")}
+              className="inline-flex"
+              id="newsletter"
+              value={mail}
+              aria-label="Email"
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
+            />
+            <div
+              className="inline-flex"
+              css={css`
+                margin-top: 0.6rem;
+                margin-bottom: 0.6rem;
+              `}
+            >
+              <PrimaryDarkButton
+                disabled={!mail || status === "LOADING"}
+                onClick={() => {
+                  setStatus("LOADING")
+                  subscribe({ mail })
+                    .then(() => {
+                      setMail("")
+                      setStatus("SUCCESS")
+                    })
+                    .catch(() => {
+                      setStatus("ERROR")
+                    })
+                }}
+              >
+                {status === "INITIAL" ? (
+                  <FaEnvelope />
+                ) : status === "LOADING" ? (
+                  <FaSpinner className="fa-spin" />
+                ) : status === "SUCCESS" ? (
+                  <FaCheck />
+                ) : (
+                  <FaTimes />
+                )}
+                &nbsp;{t("footer.subscribe")}
+              </PrimaryDarkButton>
             </div>
-            <div className="f6 made-by">
-              Made with ❤️ by&nbsp;
-              <a href="https://github.com/nebulis" target="_blank" rel="noopener noreferrer">
-                Nebulis
-              </a>
-            </div>
-          </Footer>
+          </div>
         </div>
-      ) : null}
-    </Maintenance>
-  )
+        <div className="f6 made-by">
+          Made with ❤️ by&nbsp;
+          <a href="https://github.com/nebulis" target="_blank" rel="noopener noreferrer">
+            Nebulis
+          </a>
+        </div>
+      </Footer>
+    </div>
+  ) : null
 }
 
 // layout to apply on articles

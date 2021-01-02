@@ -15,6 +15,15 @@ import whoFr from "../../locales/fr/about/who.json"
 import whoEn from "../../locales/en/about/who.json"
 import { PageProps } from "gatsby"
 
+// meta tags image default :(
+// seo
+// couleur selection footer
+// page 404
+// redirection page non publiee :)
+// tout nos articles a changer de couleur par pays :)
+
+// corriger fautes sur later
+
 const namespace = "about/who"
 i18n.addResourceBundle("fr", namespace, whoFr)
 i18n.addResourceBundle("en", namespace, whoEn)
@@ -37,17 +46,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <SectionContent>{t("section1")}</SectionContent>
         <SectionContent>{t("section2")}</SectionContent>
         <SectionContent>{t("section3")}</SectionContent>
+        <SectionContent>{t("section4")}</SectionContent>
         <h3
           className="tc"
           css={css`
             color: ${primaryColor};
           `}
         >
-          {t("section4")}
+          {t("section5")}
         </h3>
         <Divider />
-        <SectionContent>{t("section5")}</SectionContent>
         <SectionContent>{t("section6")}</SectionContent>
+        <SectionContent>{t("section7")}</SectionContent>
         <SectionContent
           className="tr"
           css={css`

@@ -48,7 +48,10 @@ export const vietnamLinks: CountryLink = {
         },
         {
           id: "ho-chi-minh-war-museum",
-          label: { fr: "Le Musée des Vestiges de Guerre", en: "War Remnants Museum" },
+          label: {
+            fr: commonFr.card.vietnam["ho-chi-minh-war-museum"],
+            en: commonEn.card.vietnam["ho-chi-minh-war-museum"],
+          },
           published: new Date("2022-01-01"),
         },
         {
@@ -58,7 +61,7 @@ export const vietnamLinks: CountryLink = {
             fr: commonFr.card.vietnam["discover-southern-vietnam"],
             en: commonEn.card.vietnam["discover-southern-vietnam"],
           },
-          published: new Date("2022-01-01"),
+          published: new Date("2021-01-02"),
           card: SouthVietnamCard,
         },
       ],

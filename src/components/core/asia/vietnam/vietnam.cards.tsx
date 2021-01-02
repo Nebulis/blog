@@ -34,18 +34,24 @@ export const CuChiTunnelsCard: FunctionComponent<ExtraCardProps> = ({ fluidObjec
   )
 }
 
-export const WarMuseumCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => (
-  <VietnamCard title="Le Musée des Vestiges de Guerre" to="ho-chi-minh-war-museum" {...card}>
-    <MainWarMuseumImage fluidObject={fluidObject} />
-  </VietnamCard>
-)
-
-export const CanThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => (
-  <VietnamCard title="Visite de Can Tho et son marché flottant" to="can-tho" {...card}>
-    <MainCanThoImage fluidObject={fluidObject} />
-  </VietnamCard>
-)
-
+export const WarMuseumCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <VietnamCard title={common.card.vietnam["ho-chi-minh-war-museum"]} to="ho-chi-minh-war-museum" {...card}>
+      <MainWarMuseumImage fluidObject={fluidObject} />
+    </VietnamCard>
+  )
+}
+export const CanThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <VietnamCard title={common.card.vietnam["can-tho"]} to="can-tho" {...card}>
+      <MainCanThoImage fluidObject={fluidObject} />
+    </VietnamCard>
+  )
+}
 export const MyThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn

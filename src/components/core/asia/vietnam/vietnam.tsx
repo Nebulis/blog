@@ -20,8 +20,8 @@ export const VietnamQuote = styled(Quote)`
 `
 export const CuChoTunnelsQuote = () => (
   <VietnamQuote>
-    Immense ensemble de tunnels souterrains atteignant environ 250 km, ils s’étendent de Ho Chi Minh jusqu&apos;à la
-    frontière Cambodgienne.
+    Immense ensemble de tunnels souterrains atteignant environ 250 km, ils s’étendent de Hô Chi Minh-Ville jusqu&apos;à
+    la frontière Cambodgienne.
   </VietnamQuote>
 )
 
