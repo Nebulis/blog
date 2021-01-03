@@ -14,7 +14,7 @@ import {
   TwoImagesRightBigger,
   TwoImagesSameSize,
 } from "../../../../components/images/layout"
-import { MainCuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/mainCuChiTunnelsImage"
+import { MainCuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/mainCuChiTunnelsImage"
 import {
   GoodToKnow,
   How,
@@ -25,24 +25,24 @@ import {
   When,
   WhereToStay,
 } from "../../../../components/core/section"
-import { Entrance1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/entrance1CuChiTunnelsImage"
-import { Entrance2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/entrance2CuChiTunnelsImage"
-import { Expo2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/expo2CuChiTunnelsImage"
-import { Expo1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/expo1CuChiTunnelsImage"
-import { Expo5CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/expo5CuChiTunnelsImage"
-import { Expo3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/expo3CuChiTunnelsImage"
-import { Expo4CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/expo4CuChiTunnelsImage"
-import { Tunnel2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/tunnel2CuChiTunnelsImage"
-import { Tunnel3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/tunnel3CuChiTunnelsImage"
-import { TunnelInside1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/tunnelInside1CuChiTunnelsImage"
-import { TunnelInside2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/tunnelInside2CuChiTunnelsImage"
-import { TunnelInside3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/tunnelInside3CuChiTunnelsImage"
-import { TunnelInside4CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/tunnelInside4CuChiTunnelsImage"
-import { Rest1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/rest1CuChiTunnelsImage"
-import { Rest2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/rest2CuChiTunnelsImage"
+import { Entrance1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/entrance1CuChiTunnelsImage"
+import { Entrance2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/entrance2CuChiTunnelsImage"
+import { Expo2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/expo2CuChiTunnelsImage"
+import { Expo1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/expo1CuChiTunnelsImage"
+import { Expo5CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/expo5CuChiTunnelsImage"
+import { Expo3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/expo3CuChiTunnelsImage"
+import { Expo4CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/expo4CuChiTunnelsImage"
+import { Tunnel2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnel2CuChiTunnelsImage"
+import { Tunnel3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnel3CuChiTunnelsImage"
+import { TunnelInside1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnelInside1CuChiTunnelsImage"
+import { TunnelInside2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnelInside2CuChiTunnelsImage"
+import { TunnelInside3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnelInside3CuChiTunnelsImage"
+import { TunnelInside4CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnelInside4CuChiTunnelsImage"
+import { Rest1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/rest1CuChiTunnelsImage"
+import { Rest2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/rest2CuChiTunnelsImage"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { Bonus1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/bonus1CuChiTunnelsImage"
-import { Bonus2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/south-vietnam/cu-chi-tunnels/bonus2CuChiTunnelsImage"
+import { Bonus1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/bonus1CuChiTunnelsImage"
+import { Bonus2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/bonus2CuChiTunnelsImage"
 import { PageProps } from "gatsby"
 
 /*

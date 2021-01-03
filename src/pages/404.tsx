@@ -38,7 +38,7 @@ const NotFoundPage: React.FunctionComponent<PageProps> = ({ location }) => {
           />
           <ApplicationLink
             to="home"
-            className="mt3 underline"
+            className="mt3 underline fw9"
             css={css`
               &,
               &:visited {
@@ -50,7 +50,7 @@ const NotFoundPage: React.FunctionComponent<PageProps> = ({ location }) => {
               }
             `}
           >
-            {i18n.languageCode === "fr" ? "Retour a l'accueil" : "Back to home"}
+            {i18n.languageCode === "fr" ? "Retour a l'accueil" : "Return to home"}
           </ApplicationLink>
         </div>
       </BlogLayoutWithDrawer>

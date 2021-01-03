@@ -7,7 +7,7 @@ import translationFr from "../../../locales/fr/organisation/when-to-go/spring.js
 import translationEn from "../../../locales/en/organisation/when-to-go/spring.json"
 import { PrimaryDivider } from "../../../components/core/divider"
 import { PageQuote } from "../../../components/core/quote"
-import { HomeVietnamImage } from "../../../components/images/asia/vietnam/home"
+import { HomeVietnamImage } from "../../../components/images/asia/vietnam/home-vietnam"
 import { PageProps } from "gatsby"
 import { CountriesContainer, CountryContainer } from "../../../components/layout/organisation-layout"
 import { BlogLayoutWithDrawer } from "../../../components/layout/main-layout"
