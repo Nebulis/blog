@@ -15,11 +15,7 @@ import whoEn from "../../locales/en/about/who.json"
 import { PageProps } from "gatsby"
 import { BlogLayoutWithDrawer } from "../../components/layout/main-layout"
 
-// seo
-// page 404
 // redirection page non publiee :)
-
-// corriger fautes sur later
 
 const namespace = "about/who"
 i18n.addResourceBundle("fr", namespace, whoFr)

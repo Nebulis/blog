@@ -74,7 +74,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               .
             </SectionContent>
           )}
-          {t("section4") && <SectionContent className="f6">{t("section4")}</SectionContent>}
+          {t("section4") && <SectionContent className="f6 i">{t("section4")}</SectionContent>}
           <section>
             <div
               css={css`

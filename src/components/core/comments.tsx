@@ -550,7 +550,7 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => setWebsite(event.target.value)}
       />
       <Checkbox
-        id="newsletter"
+        id="newsletter-comments"
         label={t("comments.subscribed-note")}
         checked={subscribeToNewsletter}
         onChange={() => setSubscribeToNewsletter(!subscribeToNewsletter)}

@@ -4,9 +4,10 @@ import { css } from "@emotion/core"
 
 const style = css`
   font-family: "Playfair Display", serif;
+  font-size: 1.38316rem; // like h3
 `
 export const City: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
-  <h3 className={`normal tc ${className} ttu`} css={style}>
+  <h2 className={`normal tc ${className} ttu`} css={style}>
     {children}
-  </h3>
+  </h2>
 )

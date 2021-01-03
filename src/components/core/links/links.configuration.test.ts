@@ -133,7 +133,7 @@ describe("links", () => {
       published: true,
     })
 
-    expect(getLink("north-vietnam")).toMatchObject({ label: { fr: "Nord", en: "Northern" }, published: false })
+    expect(getLink("northern-vietnam")).toMatchObject({ label: { fr: "Nord", en: "Northern" }, published: false })
 
     expect(getLink("central-vietnam")).toMatchObject({ label: { fr: "Centre", en: "Central" }, published: false })
 

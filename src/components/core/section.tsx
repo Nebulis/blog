@@ -18,7 +18,7 @@ import { maxWidth, mediumEnd, mobileEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n"
 
 export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
-  <h4 className={`mb1 flex ${className}`}>{children}</h4>
+  <div className={`mb1 flex section-title ${className}`}>{children}</div>
 )
 const sectionContentStyle = css`
   &.content div:last-child .gatsby-image-wrapper {
@@ -216,7 +216,7 @@ const homeSubSectionStyle = css`
   }
 `
 export const HomeSubSection: FunctionComponent = ({ children }) => (
-  <h4 className="tl normal center pb2 mb0" css={homeSubSectionStyle}>
+  <h3 className="tl normal center pb2 mb0" css={homeSubSectionStyle}>
     {children}
-  </h4>
+  </h3>
 )
