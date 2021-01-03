@@ -31,7 +31,7 @@ import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/
 import { CityLink } from "../../../../components/core/links/links.types"
 import { SouthVietnamCard } from "../../../../components/core/asia/vietnam/vietnam.cards"
 import { PageProps } from "gatsby"
-import SouthernVietnamImage from "../../../../images/asia/vietnam/south-vietnam/home.jpg"
+import SouthernVietnamImage from "../../../../images/asia/vietnam/southern-vietnam/home-southern-vietnam.jpg"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)

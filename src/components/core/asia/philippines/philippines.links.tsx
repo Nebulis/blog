@@ -2,8 +2,8 @@ import { CountryLink } from "../../links/links.types"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
 import styled from "@emotion/styled"
-import { HomePhilippinesImage } from "../../../images/asia/philippines/home"
-import { HomeElNidoImage } from "../../../images/asia/philippines/el-nido/home"
+import { HomePhilippinesImage } from "../../../images/asia/philippines/home-philippines"
+import { HomeElNidoImage } from "../../../images/asia/philippines/el-nido/home-el-nido"
 
 export const philippinesLinks: CountryLink = {
   id: "philippines",

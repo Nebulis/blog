@@ -6,7 +6,7 @@ import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
 import { philippinesPrimaryColor } from "./philippines.colors"
 import React, { FunctionComponent } from "react"
-import { HomePhilippinesImage } from "../../../images/asia/philippines/home"
+import { HomePhilippinesImage } from "../../../images/asia/philippines/home-philippines"
 
 export const PhilippinesCard = styled(Card)`
   .tags a {

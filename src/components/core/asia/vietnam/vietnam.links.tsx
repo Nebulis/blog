@@ -1,9 +1,9 @@
 import { CountryLink } from "../../links/links.types"
-import { HomeVietnamImage } from "../../../images/asia/vietnam/home"
+import { HomeVietnamImage } from "../../../images/asia/vietnam/home-vietnam"
 import styled from "@emotion/styled"
-import { HomeCentralVietnamImage } from "../../../images/asia/vietnam/central-vietnam/home"
-import { HomeSouthVietnamImage } from "../../../images/asia/vietnam/south-vietnam/home"
-import { HomeNorthVietnamImage } from "../../../images/asia/vietnam/north-vietnam/home"
+import { HomeCentralVietnamImage } from "../../../images/asia/vietnam/central-vietnam/home-central-vietnam"
+import { HomeSouthernVietnamImage } from "../../../images/asia/vietnam/southern-vietnam/home-southern-vietnam"
+import { HomeNorthernVietnamImage } from "../../../images/asia/vietnam/northern-vietnam/home-northern-vietnam"
 import { CanThoCard, CuChiTunnelsCard, MyThoCard, SouthVietnamCard } from "./vietnam.cards"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
@@ -22,7 +22,7 @@ export const vietnamLinks: CountryLink = {
       id: "southern-vietnam",
       label: { fr: commonFr.link.south, en: commonEn.link.south },
       // this style is for the image in the asia page (medallion)
-      image: styled(HomeSouthVietnamImage)`
+      image: styled(HomeSouthernVietnamImage)`
         img {
           object-position: -35px -12px !important;
         }
@@ -82,7 +82,7 @@ export const vietnamLinks: CountryLink = {
     {
       id: "north-vietnam",
       label: { fr: commonFr.link.north, en: commonEn.link.north },
-      image: HomeNorthVietnamImage,
+      image: HomeNorthernVietnamImage,
       highlights: [],
     },
   ],

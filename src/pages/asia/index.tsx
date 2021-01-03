@@ -15,7 +15,7 @@ import i18n from "i18next"
 import asiaIndexFr from "../../locales/fr/asia/index.json"
 import asiaIndexEn from "../../locales/en/asia/index.json"
 import { PageProps } from "gatsby"
-import VietnamImage from "../../images/asia/vietnam/home.jpg"
+import VietnamImage from "../../images/asia/vietnam/home-vietnam.jpg"
 import { sortByLabel } from "../../components/core/links/links.utils"
 
 const namespace = "asia/index"

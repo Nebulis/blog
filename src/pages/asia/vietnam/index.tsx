@@ -27,7 +27,7 @@ import {
 import { useCustomTranslation } from "../../../i18n"
 import { filteredUrl } from "../../../components/core/asia/vietnam/vietnam.utils"
 import { PageProps } from "gatsby"
-import VietnamImage from "../../../images/asia/vietnam/home.jpg"
+import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)

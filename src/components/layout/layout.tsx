@@ -21,7 +21,6 @@ import {
   mediumStart,
   mobileEnd,
   primaryColor,
-  primaryDarkColor,
   smallStart,
 } from "../core/variables"
 import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
