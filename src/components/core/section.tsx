@@ -117,7 +117,7 @@ export const WhereToStay: FunctionComponent<WhereToStayProps> = ({ children, loc
     <>
       <SectionTitle>
         <FaBed />
-        &nbsp;{t("section.where")} {location ? location + " " : ""}?
+        &nbsp;{t("section.where-to-stay")} {location ? location + " " : ""}
       </SectionTitle>
       <SectionContent>{children}</SectionContent>
     </>
@@ -156,16 +156,19 @@ export const WhereToHave: FunctionComponent<WhereToHaveProps> = ({ children, loc
 export const Visit: FunctionComponent<HTMLAttributes<any> & { title?: string }> = ({
   children,
   className = "",
-  title = "La visite",
-}) => (
-  <>
-    <SectionTitle>
-      <FaWalking />
-      &nbsp;{title}
-    </SectionTitle>
-    <SectionContent className={className}>{children}</SectionContent>
-  </>
-)
+  title,
+}) => {
+  const { t } = useCustomTranslation("common")
+  return (
+    <>
+      <SectionTitle>
+        <FaWalking />
+        &nbsp;{title || t("common:section.visit")}
+      </SectionTitle>
+      <SectionContent className={className}>{children}</SectionContent>
+    </>
+  )
+}
 
 export const Bonus: FunctionComponent = ({ children }) => (
   <>

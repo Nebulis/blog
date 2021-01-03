@@ -60,11 +60,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO title="Les tunnels de Cu Chi" location={location} />
       <VietnamBlogLayout page="cu-chi-tunnels">
-        <VietnamTitle
-          title="Les tunnels de Cu Chi"
-          categories={["asia", "vietnam", "southern-vietnam"]}
-          linkId="cu-chi-tunnels"
-        />
+        <VietnamTitle title="Les tunnels de Cu Chi" linkId="cu-chi-tunnels" />
         <ImageAsLandscape>
           <MainCuChiTunnelsImage />
         </ImageAsLandscape>

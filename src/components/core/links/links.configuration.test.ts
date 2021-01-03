@@ -143,6 +143,10 @@ describe("links", () => {
       label: { fr: "El Nido : Un petit coin de Paradis", en: "El Nido: A little paradise" },
       published: false,
     })
+    expect(getLink("el-nido-which-tour")).toMatchObject({
+      label: { en: "", fr: "Archipel de Bacuit : Quel tour choisir ?" },
+      published: false,
+    })
 
     expect.assertions(getCacheSize())
   })

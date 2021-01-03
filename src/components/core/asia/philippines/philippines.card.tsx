@@ -7,6 +7,7 @@ import commonEn from "../../../../locales/en/common.json"
 import { philippinesPrimaryColor } from "./philippines.colors"
 import React, { FunctionComponent } from "react"
 import { HomePhilippinesImage } from "../../../images/asia/philippines/home-philippines"
+import { ElNidoWhichTourMain } from "../../../images/asia/philippines/el-nido/which-tour/el-nido-which-tour-main"
 
 export const PhilippinesCard = styled(Card)`
   .tags a {
@@ -26,6 +27,16 @@ export const ElNidoParadiseCard: FunctionComponent<ExtraCardProps> = ({ fluidObj
   return (
     <PhilippinesCard title={common.card.philippines["el-nido-paradise"]} to="el-nido-paradise" {...card}>
       <HomePhilippinesImage fluidObject={fluidObject} />
+    </PhilippinesCard>
+  )
+}
+
+export const ElNidoWhichTourCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <PhilippinesCard title={common.card.philippines["which-tour"]} to="el-nido-which-tour" {...card}>
+      <ElNidoWhichTourMain fluidObject={fluidObject} />
     </PhilippinesCard>
   )
 }

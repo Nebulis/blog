@@ -45,7 +45,8 @@
     "taiwan": "Taiwan",
     "thailand": "Thaïlande",
     "united-states": "États-Unis",
-    "vietnam": "Vietnam"
+    "vietnam": "Vietnam",
+    "southern-vietnam": "Vietnam du Sud"
   },
   "city": {
     "philippines": {
@@ -54,7 +55,8 @@
   },
   "card": {
     "philippines": {
-      "el-nido-paradise": "El Nido : Un petit coin de Paradis"
+      "el-nido-paradise": "El Nido : Un petit coin de Paradis",
+      "which-tour": "Archipel de Bacuit : Quel tour choisir ?"
     },
     "vietnam": {
       "cu-chi-tunnels": "Les tunnels de Củ Chi",
@@ -73,7 +75,8 @@
     "how-much": "Combien d’argent prévoir ?",
     "visit": "Les visites",
     "what-time-of-year": "À quelle période ?",
-    "where": "Notre itinéraire"
+    "where": "Notre itinéraire",
+    "where-to-stay": "Où dormir ?"
   },
   "comments": {
     "loading": "Chargement des commentaires ...",

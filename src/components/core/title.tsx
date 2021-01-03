@@ -7,32 +7,37 @@ import { useCustomTranslation } from "../../i18n"
 interface TitleProps {
   title: string
   linkId: string
-  categories: string[]
+  categories?: string[]
   className?: string
 }
+const titleStyle = css`
+  margin-bottom: 1.45rem;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  font-size: 0.85028rem;
+  line-height: 1.1;
+  .published-date {
+    font-size: 0.8rem;
+    font-weight: normal;
+    opacity: 0.7;
+  }
+  a {
+    border-radius: 3px;
+    color: white;
+    padding: 0 2px;
+    text-decoration: none;
+  }
+`
 export const Title: FunctionComponent<TitleProps> = ({ title, categories, className, linkId }) => {
-  const { publishedDate } = getLink(linkId)
+  const { publishedDate, tags } = getLink(linkId)
   const { t, i18n } = useCustomTranslation("common")
+  const lol = categories || tags
   return (
     <>
       <h1 className={`tc mb1 ${className}`}>{title}</h1>
-      <div
-        className={`tc ${className}`}
-        css={css`
-          margin-bottom: 1.45rem;
-          font-weight: bold;
-          text-rendering: optimizeLegibility;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
-            Droid Sans, Helvetica Neue, sans-serif;
-          font-size: 0.85028rem;
-          line-height: 1.1;
-          .published-date {
-            font-size: 0.8rem;
-            font-weight: normal;
-            opacity: 0.7;
-          }
-        `}
-      >
+      <div className={`tc ${className}`} css={titleStyle}>
         <span className="published-date">
           {t("published")}{" "}
           {publishedDate instanceof Date
@@ -44,7 +49,7 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
             : "03/01/2010"}
         </span>{" "}
         {t("in")}{" "}
-        {categories.map((c, index) => (
+        {lol.map((c, index) => (
           <React.Fragment key={index}>
             {index > 0 ? " " : ""}
             <ApplicationLink to={c}>{getLinkLabel(i18n.languageCode)(c)}</ApplicationLink>

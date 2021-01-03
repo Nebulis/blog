@@ -52,6 +52,9 @@ const style = css`
     font-weight: bold;
     font-size: 1.3rem;
     transition: all 0.2s linear;
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
   }
   .overlay {
     position: absolute;

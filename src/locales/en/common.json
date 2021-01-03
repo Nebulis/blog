@@ -45,7 +45,8 @@
     "taiwan": "Taiwan",
     "thailand": "Thailand",
     "united-states": "United States",
-    "vietnam": "Vietnam"
+    "vietnam": "Vietnam",
+    "southern-vietnam": "Southern Vietnam"
   },
   "city": {
     "philippines": {
@@ -54,7 +55,8 @@
   },
   "card": {
     "philippines": {
-      "el-nido-paradise": "El Nido: A little paradise"
+      "el-nido-paradise": "El Nido: A little paradise",
+      "which-tour": ""
     },
     "vietnam": {
       "cu-chi-tunnels": "Củ Chi tunnels",
