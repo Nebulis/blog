@@ -52,14 +52,10 @@ const cardStyle = css`
     color: ${primaryColor};
     color: black;
   }
-  .title {
+  .title.published {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    // there is a bug because the size of the card may have a max-height
-    // in that case the title may not be displayed totally
-    // we reuse the same value as the font-size
-    min-height: 0.9rem;
   }
   .title,
   .show-more {
@@ -135,7 +131,7 @@ export const Card: FunctionComponent<
       {/*Adding a wrapper around the image make it overflow for some reason*/}
       {children}
       {showTags && (
-        <div className="tags mb2">
+        <div className="tags pb2">
           {tagsToDisplay.map((tag, index) => (
             <span
               key={index}
@@ -149,12 +145,12 @@ export const Card: FunctionComponent<
           ))}
         </div>
       )}
-      <div className="title mb2" title={title}>
+      <div className={`title pb2 ${mustShowAndInteract ? "published" : ""}`} title={title}>
         {title}
       </div>
-      {mustShowAndInteract && showMore && <div className="show-more mb2">En savoir plus</div>}
+      {mustShowAndInteract && showMore && <div className="show-more pb2">En savoir plus</div>}
       {showPublished && (
-        <div className="date mb2">
+        <div className="date pb2">
           {t("published")}{" "}
           {link.publishedDate instanceof Date
             ? link.publishedDate.toLocaleString("fr-FR", {

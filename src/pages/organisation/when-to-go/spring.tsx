@@ -30,7 +30,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote position="none">{t("part3")}</PageQuote>
         </SectionContent>
         <CountriesContainer>
-          <CountryContainer title={t("common:country.vietnam")} image={HomeVietnamImage} to="southern-vietnam" />
+          <CountryContainer
+            title={t("common:country.southern-vietnam")}
+            image={HomeVietnamImage}
+            to="southern-vietnam"
+          />
         </CountriesContainer>
       </BlogLayoutWithDrawer>
     </>

@@ -572,71 +572,69 @@ export const MobileMenu: React.FunctionComponent = () => {
     <>
       {open && <Overlay onClick={closeMenu} />}
       <MobileMenuContainer className={`${open ? "active" : "inactive"}`}>
-        {false && (
-          <div
-            className="social-network-container"
-            css={css`
-              display: flex;
-              justify-content: center;
-              & > * {
-                margin: 5px;
-                // align with the burger, center the same way 9px is half the icon size
-                margin-top: calc(${bannerHeight} / 2 - 9px);
-              }
+        <div
+          className="social-network-container"
+          css={css`
+            display: flex;
+            justify-content: center;
+            & > * {
+              margin: 5px;
+              // align with the burger, center the same way 9px is half the icon size
+              margin-top: calc(${bannerHeight} / 2 - 9px);
+            }
 
-              @media (orientation: landscape) and (max-height: ${mobileEnd}) {
-                & > * {
-                  margin-top: calc(${bannerHeightLandscape} / 2 - 9px);
-                }
+            @media (orientation: landscape) and (max-height: ${mobileEnd}) {
+              & > * {
+                margin-top: calc(${bannerHeightLandscape} / 2 - 9px);
               }
-            `}
+            }
+          `}
+        >
+          <a
+            href={`https://www.facebook.com/${facebook}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-labelledby="facebook-label"
           >
-            <a
-              href={`https://www.facebook.com/${facebook}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-labelledby="facebook-label"
-            >
-              <span id="facebook-label" hidden>
-                Go to Facebook
-              </span>
-              <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
-            </a>
-            <a
-              href={`https://twitter.com/${twitter}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-labelledby="twitter-label"
-            >
-              <span id="twitter-label" hidden>
-                Go to Twitter
-              </span>
-              <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
-            </a>
-            <a
-              href={`https://instagram.com/${instagram}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-labelledby="instagram-label"
-            >
-              <span id="instagram-label" hidden>
-                Go to Facebook
-              </span>
-              <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
-            </a>
-            <a
-              href={`https://pinterest.com/${pinterest}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-labelledby="pinterest-label"
-            >
-              <span id="pinterest-label" hidden>
-                Go to Facebook
-              </span>
-              <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
-            </a>
-          </div>
-        )}
+            <span id="facebook-label" hidden>
+              Go to Facebook
+            </span>
+            <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
+          </a>
+          <a
+            href={`https://twitter.com/${twitter}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-labelledby="twitter-label"
+          >
+            <span id="twitter-label" hidden>
+              Go to Twitter
+            </span>
+            <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
+          </a>
+          <a
+            href={`https://instagram.com/${instagram}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-labelledby="instagram-label"
+          >
+            <span id="instagram-label" hidden>
+              Go to Facebook
+            </span>
+            <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
+          </a>
+          <a
+            href={`https://pinterest.com/${pinterest}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-labelledby="pinterest-label"
+          >
+            <span id="pinterest-label" hidden>
+              Go to Facebook
+            </span>
+            <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
+          </a>
+        </div>
         <ScrollContainer>
           <Tree name="Accueil" to="home" onNavigate={closeMenu} />
           <Tree name="Destination">

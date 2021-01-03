@@ -5,7 +5,22 @@ import { ImageAsMedallion } from "../../../images/layout"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
 import { drawSth } from "./console-draw-sth"
 import { ButtonLink } from "../../links/link"
+import { Title } from "../../title"
+import { Quote } from "../../quote"
+import { City } from "../../highlight"
+import { css } from "@emotion/core"
+import React, { FunctionComponent } from "react"
+import philippinesScubaDiving from "../../../../images/asia/philippines/scuba-diving.svg"
 
+const philippinesPartStyle = css`
+  color: ${philippinesPrimaryColor};
+`
+export const PhilippinesHeadline: FunctionComponent = ({ children }) => (
+  <City css={philippinesPartStyle}>
+    <img src={philippinesScubaDiving} alt="scuba diving icon" style={{ width: "24px" }} /> {children}{" "}
+    <img src={philippinesScubaDiving} alt="scuba diving icon" style={{ width: "24px" }} />
+  </City>
+)
 export const PhilippinesDivider = styled(Divider)`
   background-color: ${philippinesPrimaryColor};
 `
@@ -54,6 +69,21 @@ export const PhilippinesButtonLink = styled(ButtonLink)`
   border: 2px solid ${philippinesPrimaryColor};
   background-color: ${philippinesPrimaryColor};
   &:not(.inactive):hover {
+    color: ${philippinesPrimaryColor};
+  }
+`
+
+export const PhilippinesTitle = styled(Title)`
+  a {
+    background-color: ${philippinesPrimaryColor};
+  }
+  a:hover {
+    box-shadow: 0px 0px 2px 1px ${philippinesPrimaryColor};
+  }
+`
+
+export const PhilippinesQuote = styled(Quote)`
+  .quote::before {
     color: ${philippinesPrimaryColor};
   }
 `

@@ -5,6 +5,7 @@ import { css } from "@emotion/core"
 const style = css`
   font-family: "Playfair Display", serif;
   font-size: 1.38316rem; // like h3
+  white-space: break-spaces;
 `
 export const City: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
   <h2 className={`normal tc ${className} ttu`} css={style}>

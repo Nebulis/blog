@@ -33,6 +33,15 @@ export const philippinesLinks: CountryLink = {
           },
           published: new Date("2022-01-02"),
         },
+        {
+          id: "el-nido-which-tour",
+          url: "which-tour",
+          label: {
+            fr: commonFr.card.philippines["which-tour"],
+            en: commonEn.card.philippines["which-tour"],
+          },
+          published: new Date("2022-01-02"),
+        },
       ],
     },
   ],
