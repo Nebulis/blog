@@ -80,7 +80,7 @@ export const vietnamLinks: CountryLink = {
       highlights: [],
     },
     {
-      id: "north-vietnam",
+      id: "northern-vietnam",
       label: { fr: commonFr.link.north, en: commonEn.link.north },
       image: HomeNorthernVietnamImage,
       highlights: [],

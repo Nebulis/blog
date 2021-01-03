@@ -321,7 +321,7 @@ h3 {
   font-size: 1.38316rem;
   line-height: 1.1;
 }
-h4 {
+h4, .section-title {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
