@@ -43,11 +43,26 @@ const SEO: FunctionComponent<SEOProps> = ({ description, lang, meta = [], title,
   const metaImage = `${location.origin || defaultHostname}${image || DefaultImgUrl}`
   const metaLang = lang || i18n.languageCode
   return (
+    // @ts-ignore hreflang :(
     <Helmet
       htmlAttributes={{
         lang: metaLang,
       }}
       link={[
+        {
+          rel: "alternate",
+          href: `${location.origin || defaultHostname}${
+            location.pathname.startsWith("/en/") ? location.pathname.replace("/en", "") : location.pathname
+          }`,
+          hreflang: "fr-fr",
+        },
+        {
+          rel: "alternate",
+          href: `${location.origin || defaultHostname}${
+            location.pathname.startsWith("/en/") ? location.pathname : `/en${location.pathname}`
+          }`,
+          hreflang: "en-us",
+        },
         {
           rel: "preload",
           as: "font",
