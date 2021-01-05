@@ -1,19 +1,19 @@
-import React, { FunctionComponent, SVGAttributes } from "react"
-import { css } from "@emotion/core"
-import { smallEnd } from "../../variables"
-import { navigate } from "gatsby"
-import { getLink, getLinkUrl } from "../../links/links.utils"
+import React from "react"
+import { defaultTextStyle, mapProps, mapStyle, PinPoint, propsFor } from "../../map"
 import { vietnamPrimaryColorDarker } from "./vietnam.colors"
+import { css } from "@emotion/core"
+import { smallStart } from "../../variables"
 
 const basicTextStyle = css`
-  fill: black;
-  font-weight: bold;
+  ${defaultTextStyle}
   stroke-width: 0.3;
-  rect {
-    fill: transparent;
-  }
   text {
-    font-size: 1.5rem;
+    font-size: 27px;
+  }
+  @media (max-width: ${smallStart}) {
+    text {
+      font-size: 30px;
+    }
   }
 `
 const hoveredTextStyle = css`
@@ -23,37 +23,9 @@ const hoveredTextStyle = css`
     fill: ${vietnamPrimaryColorDarker};
   }
 `
-
 export const SouthVietnamMap = () => {
-  const propsFor = (city: string) => {
-    const link = getLink(city)
-    if (link.published) {
-      return {
-        css: hoveredTextStyle,
-        onClick: () => navigate(getLinkUrl(city)),
-      }
-    }
-    return {
-      css: basicTextStyle,
-    }
-  }
   return (
-    <svg
-      css={css`
-        @media (min-width: ${smallEnd}) {
-          max-height: 60vh;
-        }
-      `}
-      baseProfile="tiny"
-      fill="#d4edf5"
-      stroke="#ffffff"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="1"
-      version="1.2"
-      viewBox="0 0 800 919"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg css={mapStyle} {...mapProps} viewBox="0 0 800 919" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M386.7 468.3l3.5 1.2 1.5 2.2 2.1 8.5 0.4 2.6 0 1.7-0.6 0.4-2.8 0.7-4.6 8.3-2.5 3-1.3 1.1-2.1 2.1-1.1 1.6-3.6 7.7-0.8 2.5-0.5 2.7-0.2 5.4 0.2 2.2 0.5 2.3 0.8 2 1.5 2.9 0.8 1.1 1 2.3 0.6 2.3 1.4 1.7 2.2 1.6 1.8 2.2 1.2 4.4-1.5 8.2-1 2.7-1.5 3-1.3 1.9-3.7 3.9-4.7-4.2-1.8-1-1.8-0.7-0.8 0.3-0.4 0.9 0.2 2.3-0.3 1.1-1.1 0.8-11.2 3.4-1.9-0.1-1.3-0.3-1.1-0.9 1.4 0 0.9-0.8-1.5-2.8-2.2-7.9-1.6-2.4-2.4-1.8-2.3-0.4-2.1 1.2-1.6 3-1.4-2.8-1.8-2.3-4.7-4.1-2.1-2.3-3.3-5.2-2-1.8-7.2-1.8-2.8-2.1-1.5-3.9-0.3-3-1.8-1.1-2.2-0.5-1.8-1.4-0.1-2 2.2-10.4 1.5-4.7 0.4-2.1-0.2-2.1-2.1-7.3 0.3-3.6-0.1-1.8-0.7-1.6-1.5-1.1-3.6-0.7-1.6-0.9-1.8-2.9 0.4-2.8 1.6-2.4 1.8-2 3.1-2.6 2.3-0.5 6.4 2.4 3.9 0.2 1.6-2 1.3-2.9 3.8-3.9 0.7-1.7 0.4-1.9 0.1-1.9 3.1-3.4 6.3 1.1 7 2.2 5.6 0.1 9.4 2.9 2.7 1.5 1 1.2 1.9 3 1.2 1 1.8 0.3 7.7-2 1.4-0.1 1.4 0.2 1.9 0.6 2.9 2.2 1.8 0.9 1.7-0.1 1.2-2.2z"
         id="VNM444"
@@ -194,7 +166,7 @@ export const SouthVietnamMap = () => {
         id="VNM510"
         name="Vĩnh Long"
       />
-      <g {...propsFor("cu-chi-tunnels")}>
+      <g {...propsFor({ city: "cu-chi-tunnels", basicTextStyle, hoveredTextStyle })}>
         <rect width="150" height="80" x="360" y="510" />
         <text x="360" y="535">
           Ho Chi Minh
@@ -203,7 +175,7 @@ export const SouthVietnamMap = () => {
           <PinPoint />
         </g>
       </g>
-      <g {...propsFor("my-tho")}>
+      <g {...propsFor({ city: "my-tho", basicTextStyle, hoveredTextStyle })}>
         <rect width="90" height="80" x="350" y="600" />
         <text x="345" y="680">
           My Tho
@@ -212,7 +184,7 @@ export const SouthVietnamMap = () => {
           <PinPoint />
         </g>
       </g>
-      <g {...propsFor("can-tho")}>
+      <g {...propsFor({ city: "can-tho", basicTextStyle, hoveredTextStyle })}>
         <rect width="90" height="80" x="255" y="650" />
         <text x="255" y="730">
           Can Tho
@@ -221,24 +193,6 @@ export const SouthVietnamMap = () => {
           <PinPoint />
         </g>
       </g>
-    </svg>
-  )
-}
-
-const PinPoint: FunctionComponent<SVGAttributes<any>> = (props) => {
-  return (
-    <svg version="1.1" viewBox="0 0 512 512" {...props}>
-      <path
-        d="M441.554,133.088C423.517,74.8,376.1,27.369,317.812,9.33C256.12-9.78,190.482,0.841,140.381,37.757
-			c-49.732,36.661-79.419,95.389-79.419,157.093c0,42.567,13.466,83.008,38.933,116.944L256.02,512l156.125-200.221
-			C450.258,260.963,460.984,195.832,441.554,133.088z M256.02,299.88c-57.908,0-105.031-47.123-105.031-105.031
-			c0-57.908,47.123-105.031,105.031-105.031c57.908,0,105.031,47.123,105.031,105.031C361.051,252.757,313.928,299.88,256.02,299.88
-			z"
-      />
-      <path
-        d="M256.02,120.027c-41.365,0-75.022,33.457-75.022,74.822c0,41.365,33.657,75.022,75.022,75.022
-			c41.365,0,75.022-33.657,75.022-75.022C331.043,153.484,297.385,120.027,256.02,120.027z"
-      />
     </svg>
   )
 }

@@ -11,6 +11,8 @@ import { HomeVietnamImage } from "../../../components/images/asia/vietnam/home-v
 import { PageProps } from "gatsby"
 import { CountriesContainer, CountryContainer } from "../../../components/layout/organisation-layout"
 import { BlogLayoutWithDrawer } from "../../../components/layout/main-layout"
+import { CarouselAndOrganisationPhilippines2 } from "../../../components/images/asia/philippines/carousel-and-organisation-philippines2"
+import styled from "@emotion/styled"
 
 const namespace = "organisation/when-to-go/winter"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -33,6 +35,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote position="none">{t("part6")}</PageQuote>
         </SectionContent>
         <CountriesContainer>
+          <CountryContainer
+            title={t("common:country.philippines")}
+            image={styled(CarouselAndOrganisationPhilippines2)`
+              img {
+                object-position: -50px 30px !important;
+                transform: scale(1.6);
+              }
+            `}
+            to="philippines"
+          />
           <CountryContainer
             title={t("common:country.southern-vietnam")}
             image={HomeVietnamImage}

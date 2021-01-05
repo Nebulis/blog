@@ -27,7 +27,7 @@ import {
   PhilippinesDivider,
   PhilippinesImageAsMedallion,
 } from "../../../../components/core/asia/philippines/philippines"
-import philippinesScubaDiving from "../../../../images/asia/philippines/scuba-diving.svg"
+import philippinesFish from "../../../../images/asia/philippines/fish.svg"
 import { philippinesLinks } from "../../../../components/core/asia/philippines/philippines.links"
 import { ElNidoParadiseCard } from "../../../../components/core/asia/philippines/philippines.card"
 import { PageProps } from "gatsby"
@@ -54,9 +54,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO title={t("title")} location={location} />
       <PhilippinesBlogLayout page={currentPageId}>
         <MainTitleSection>
-          <img src={philippinesScubaDiving} alt="philippines scuba diving" style={{ width: "24px" }} />
+          <img src={philippinesFish} alt="philippines scuba diving" style={{ width: "24px" }} />
           &nbsp;{t("title")}&nbsp;
-          <img src={philippinesScubaDiving} alt="philippines scuba diving" style={{ width: "24px" }} />
+          <img src={philippinesFish} alt="philippines scuba diving" style={{ width: "24px" }} />
         </MainTitleSection>
         <PhilippinesDivider className="mb0" />
         <MainCardContainer>

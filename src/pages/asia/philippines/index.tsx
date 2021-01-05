@@ -9,7 +9,7 @@ import {
 } from "../../../components/core/links/links.utils"
 import { HomeSection, HomeSubSection, MainTitleSection } from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
-import philippinesScubaDiving from "../../../images/asia/philippines/scuba-diving.svg"
+import philippinesFish from "../../../images/asia/philippines/fish.svg"
 import { ArticlesContainer, GoToAllArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
 import { filteredUrl } from "../../../components/core/asia/vietnam/vietnam.utils"
@@ -35,9 +35,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO title={t("common:country.philippines")} location={location} />
       <IndexPhilippinesBlogLayout page="philippines">
         <MainTitleSection>
-          <img src={philippinesScubaDiving} alt="philippines scuba diving" style={{ width: "24px" }} />
+          <img src={philippinesFish} alt="philippines scuba diving" style={{ width: "24px" }} />
           &nbsp;{t("common:country.philippines")}&nbsp;
-          <img src={philippinesScubaDiving} alt="philippines scuba diving" style={{ width: "24px" }} />
+          <img src={philippinesFish} alt="philippines scuba diving" style={{ width: "24px" }} />
         </MainTitleSection>
         {cities.length > 0 && (
           <>

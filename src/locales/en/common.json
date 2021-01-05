@@ -56,7 +56,7 @@
   "card": {
     "philippines": {
       "el-nido-paradise": "El Nido: A little paradise",
-      "which-tour": ""
+      "which-tour": "Bacuit Archipelago: Which tour to choose?"
     },
     "vietnam": {
       "cu-chi-tunnels": "Củ Chi tunnels",
@@ -73,9 +73,11 @@
   "section": {
     "how-long": "How long?",
     "how-much": "How much?",
+    "how-to-get-there": "How to get there?",
     "visit": "Visits",
     "what-time-of-year": "When?",
-    "where": "Our itinerary"
+    "where": "Our itinerary",
+    "where-to-stay": "Where to stay ?"
   },
   "comments": {
     "loading": "Loading comments ...",

@@ -144,7 +144,7 @@ describe("links", () => {
       published: false,
     })
     expect(getLink("el-nido-which-tour")).toMatchObject({
-      label: { en: "", fr: "Archipel de Bacuit : Quel tour choisir ?" },
+      label: { en: "Bacuit Archipelago: Which tour to choose?", fr: "Archipel de Bacuit : Quel tour choisir ?" },
       published: false,
     })
 
