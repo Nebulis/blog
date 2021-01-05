@@ -11,7 +11,6 @@ interface ExternalLinkProps {
   noIcon?: boolean
 }
 const style = css`
-  font-size: 0.9rem;
   svg {
     vertical-align: middle;
     font-size: 0.6rem;
@@ -23,7 +22,7 @@ export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & Externa
   noIcon = true,
   ...rest
 }) => (
-  <a {...rest} target="_blank" rel="noopener noreferrer" css={style} className={className}>
+  <a {...rest} target="_blank" rel="noopener noreferrer" css={style} className={`${className} underline`}>
     {children}
     {noIcon ? null : (
       <>

@@ -17,7 +17,7 @@ const titleStyle = css`
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
   font-size: 0.85028rem;
-  line-height: 1.1;
+  line-height: 1.3;
   .published-date {
     font-size: 0.8rem;
     font-weight: normal;

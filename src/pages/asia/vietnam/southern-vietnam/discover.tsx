@@ -32,6 +32,7 @@ import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/discover.json"
 import { Comments } from "../../../../components/core/comments"
 import { SouthernVietnam } from "../../../../components/images/asia/vietnam/southern-vietnam/southern-vietnam"
+import { MapContainer } from "../../../../components/layout/layout"
 
 const namespace = "asia/vietnam/southern-vietnam/discover"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -74,9 +75,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where.part1")}</p>
           <p>{t("where.part2")}</p>
         </Where>
-        <div className="overflow-hidden tc">
+        <MapContainer>
           <SouthVietnamMap />
-        </div>
+        </MapContainer>
         <Visit>
           <p>{t("visit.part1")}</p>
           <p>{t("visit.part2")}</p>

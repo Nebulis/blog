@@ -8,7 +8,7 @@ import {
   ImageAsPortrait,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import HomeImgUrl from "../../../../images/asia/vietnam/home-vietnam.jpg"
+import HomeImgUrl from "../../../../images/asia/philippines/home-philippines.jpg"
 import { PageProps } from "gatsby"
 import { useCustomTranslation } from "../../../../i18n"
 import i18n from "i18next"
@@ -17,6 +17,7 @@ import translationEn from "../../../../locales/en/asia/philippines/el-nido/el-ni
 import {
   PhilippinesBlogLayout,
   PhilippinesDivider,
+  PhilippinesExternalLink,
   PhilippinesHeadline,
   PhilippinesQuote,
   PhilippinesTitle,
@@ -35,13 +36,17 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { Comments } from "../../../../components/core/comments"
 import { ElNidoWhichTourCard } from "../../../../components/core/asia/philippines/philippines.card"
 import { ElNidoParadise } from "../../../../components/images/asia/philippines/el-nido/el-nido-paradise"
+import { philippinesPrimaryColor } from "../../../../components/core/asia/philippines/philippines.colors"
+import { css } from "@emotion/core"
+import { MapContainer } from "../../../../components/layout/layout"
+import { PhilippinesMap } from "../../../../components/core/asia/philippines/philippines-map"
 
 const namespace = "asia/philippines/el-nido/el-nido-paradise"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { t } = useCustomTranslation([namespace, "common"])
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t("common:card.philippines.el-nido-paradise")
   const description = t("quote")
 
@@ -76,32 +81,76 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </HowLong>
         <HowMuch>
           <p>{t("how-much.part1")}</p>
+          <p>{t("how-much.part2")}</p>
           <ul>
             <li>{t("how-much.price1")}</li>
             <li>{t("how-much.price2")}</li>
             <li>{t("how-much.price3")}</li>
             <li>{t("how-much.price4")}</li>
+            <li>{t("how-much.price5")}</li>
           </ul>
-          <p>{t("how-much.part2")}</p>
+          <p>{t("how-much.part3")}</p>
         </HowMuch>
         <How>
           <p>{t("how.part1")}</p>
-          <p>{t("how.part2")}</p>
+          <p
+            className="mb2 tc b"
+            css={css`
+              color: ${philippinesPrimaryColor};
+            `}
+          >
+            {t("how.part2")}
+          </p>
           <p>{t("how.part3")}</p>
           <p>{t("how.part4")}</p>
           <p>{t("how.part5")}</p>
-          <p>{t("how.part6")}</p>
-          <p>{t("how.part7")}</p>
-          <p>{t("how.part8")}</p>
+          <p>
+            {t("how.part6")}{" "}
+            <PhilippinesExternalLink href="https://www.elnidoparadise.com/rentals/">
+              elnidoparadise
+            </PhilippinesExternalLink>{" "}
+            {t("how.part7")} <PhilippinesExternalLink href="https://www.phbus.com/">phbus</PhilippinesExternalLink>.
+          </p>
+          <p>
+            {t("how.part8")}{" "}
+            <PhilippinesExternalLink href="https://www.travel-palawan.com/ferry-from-el-nido-to-coron/">
+              travel-palawan
+            </PhilippinesExternalLink>
+            .
+          </p>
+          <p>{t("how.part9")}</p>
         </How>
         <WhereToStay>
-          <p>{t("where-to-stay.part1")}</p>
+          <p>
+            {t("where-to-stay.part1")}{" "}
+            <PhilippinesExternalLink href="http://www.amakan.ph/">
+              Amakan - Bed | Bunk | Breakfast
+            </PhilippinesExternalLink>{" "}
+            {t("where-to-stay.part2")}
+          </p>
+          <p>
+            {t("where-to-stay.part3")} {/* TODO create a helper for search*/}
+            <PhilippinesExternalLink
+              href={`https://www.booking.com/searchresults.${i18n.languageCode}.html?ss=El+Nido%2C+Luzon%2C+Philippines/`}
+            >
+              booking
+            </PhilippinesExternalLink>
+            .
+          </p>
         </WhereToStay>
-        <Visit>
+        <Visit
+          css={css`
+            // using emotion because of priority issue with className
+            margin-bottom: 0;
+          `}
+        >
           <p>{t("visit.part1")}</p>
           <p>{t("visit.part2")}</p>
-          <p>{t("visit.part3")}</p>
+          <p className="mb0">{t("visit.part3")}</p>
         </Visit>
+        <MapContainer>
+          <PhilippinesMap />
+        </MapContainer>
         <PhilippinesDivider />
         <section>
           <PhilippinesHeadline>{t("visit1.title")}</PhilippinesHeadline>
@@ -109,11 +158,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SectionContent>
             <p>{t("visit1.part1")}</p>
             <p>{t("visit1.part2")}</p>
-            <p>{t("visit1.part3")}</p>
-            <p>{t("visit1.part4")}</p>
             <ImageAsPortrait>
               <ElNidoParadise image="fruit" />
             </ImageAsPortrait>
+            <p>{t("visit1.part3")}</p>
+            <p>{t("visit1.part4")}</p>
           </SectionContent>
         </section>
         <PhilippinesDivider />
@@ -121,7 +170,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PhilippinesHeadline>{t("visit2.title")}</PhilippinesHeadline>
           <PhilippinesDivider />
           <SectionContent>
-            <p>{t("visit2.part1")}</p>
+            <p>
+              {t("visit2.part1-1")}{" "}
+              <PhilippinesExternalLink
+                href={`https://www.google.com/maps/place/Calle+Hama,+Barangay+Buena+Suerte,+El+Nido,+Palawan,+Philippines`}
+              >
+                Calle Hama
+              </PhilippinesExternalLink>
+              {t("visit2.part1-2")}
+            </p>
+            <p>{t("visit2.part2")}</p>
             <GroupOfImages>
               <ImageAsPortrait>
                 <ElNidoParadise image="tuktuk" />
@@ -132,13 +190,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </TwoImagesSameSizeOrToGroup>
             </GroupOfImages>
           </SectionContent>
-          <PhilippinesDivider />
           <SectionContent>
-            <p>{t("visit2.part2")}</p>
             <p>{t("visit2.part3")}</p>
             <p>{t("visit2.part4")}</p>
             <p>{t("visit2.part5")}</p>
-            <p>{t("visit2.part6")}</p>
             <article>
               <ElNidoWhichTourCard card={{ showTags: false, showPublished: false, showMore: true }} />
             </article>
@@ -154,6 +209,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit3.part3")}</p>
             <p>{t("visit3.part4")}</p>
             <p>{t("visit3.part5")}</p>
+            <p>{t("visit3.part6")}</p>
+            <p>{t("visit3.part7")}</p>
             <GroupOfImages>
               <ImageAsLandscape>
                 <ElNidoParadise image="paradise1" />
@@ -167,9 +224,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
-          <PhilippinesDivider />
           <SectionContent>
-            <p>{t("visit3.part6")}</p>
+            <p>{t("visit3.part8")}</p>
             <GroupOfImages>
               <TwoImagesSameSizeOrToGroup>
                 <ElNidoParadise image="snorkeling1" />

@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import * as React from "react"
 import { ExtraImageProps } from "../../../../types/shared"
 
-export const CarouselPhilippines2: React.FunctionComponent<ExtraImageProps> = ({
+export const CarouselAndOrganisationPhilippines2: React.FunctionComponent<ExtraImageProps> = ({
   className = "",
   fluidObject = {},
 }) => {

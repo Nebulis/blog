@@ -303,3 +303,7 @@ export const CityArticleContainer = styled.div`
     grid-template-columns: 1fr 1fr;
   }
 `
+export const MapContainer = styled.div`
+  overflow: hidden;
+  text-align: center;
+`

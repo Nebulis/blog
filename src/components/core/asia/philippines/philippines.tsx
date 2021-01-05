@@ -4,21 +4,21 @@ import { philippinesPrimaryColor, philippinesPrimaryColorDarker } from "./philip
 import { ImageAsMedallion } from "../../../images/layout"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
 import { drawSth } from "./console-draw-sth"
-import { ButtonLink } from "../../links/link"
+import { ButtonLink, ExternalLink } from "../../links/link"
 import { Title } from "../../title"
 import { Quote } from "../../quote"
 import { City } from "../../highlight"
 import { css } from "@emotion/core"
 import React, { FunctionComponent } from "react"
-import philippinesScubaDiving from "../../../../images/asia/philippines/scuba-diving.svg"
+import philippinesFish from "../../../../images/asia/philippines/fish.svg"
 
 const philippinesPartStyle = css`
   color: ${philippinesPrimaryColor};
 `
 export const PhilippinesHeadline: FunctionComponent = ({ children }) => (
   <City css={philippinesPartStyle}>
-    <img src={philippinesScubaDiving} alt="scuba diving icon" style={{ width: "24px" }} /> {children}{" "}
-    <img src={philippinesScubaDiving} alt="scuba diving icon" style={{ width: "24px" }} />
+    <img src={philippinesFish} alt="fish icon" style={{ width: "24px" }} /> {children}{" "}
+    <img src={philippinesFish} alt="fish icon" style={{ width: "24px" }} />
   </City>
 )
 export const PhilippinesDivider = styled(Divider)`
@@ -84,6 +84,13 @@ export const PhilippinesTitle = styled(Title)`
 
 export const PhilippinesQuote = styled(Quote)`
   .quote::before {
+    color: ${philippinesPrimaryColor};
+  }
+`
+
+export const PhilippinesExternalLink = styled(ExternalLink)`
+  color: ${philippinesPrimaryColor};
+  &:visited {
     color: ${philippinesPrimaryColor};
   }
 `

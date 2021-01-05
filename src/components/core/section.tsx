@@ -67,16 +67,18 @@ export const When: FunctionComponent = ({ children }) => (
   </>
 )
 
-export const How: FunctionComponent = ({ children }) => (
-  <>
-    <SectionTitle>
-      <FaBusAlt />
-      &nbsp;Comment y aller ?
-    </SectionTitle>
-    <SectionContent>{children}</SectionContent>
-  </>
-)
-
+export const How: FunctionComponent = ({ children }) => {
+  const { t } = useCustomTranslation("common")
+  return (
+    <>
+      <SectionTitle>
+        <FaBusAlt />
+        &nbsp;{t("section.how-to-get-there")}
+      </SectionTitle>
+      <SectionContent>{children}</SectionContent>
+    </>
+  )
+}
 interface HowLongProps {
   title?: string
 }

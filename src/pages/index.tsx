@@ -35,7 +35,7 @@ import indexEn from "../locales/en/index.json"
 import { CarouselVietnam2 } from "../components/images/asia/vietnam/carousel-2-vietnam"
 import { CarouselVietnam } from "../components/images/asia/vietnam/carousel-vietnam"
 import { CarouselPhilippines } from "../components/images/asia/philippines/carousel-philippines"
-import { CarouselPhilippines2 } from "../components/images/asia/philippines/carousel-philippines-2"
+import { CarouselAndOrganisationPhilippines2 } from "../components/images/asia/philippines/carousel-and-organisation-philippines2"
 import { sortByLabel } from "../components/core/links/links.utils"
 import { continentLinks } from "../components/core/links/links.configuration"
 import { HomeBlogLayout } from "../components/layout/main-layout"
@@ -262,6 +262,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const [country, setCountry] = useState<Country>()
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const [carouselElement] = useState<CarouselElementType[]>(() => {
+    // TODO use a single component to load all carousel images
     const tmp: CarouselElementType[] = [
       {
         to: "vietnam",
@@ -281,7 +282,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       {
         to: "philippines",
         country: t("common:country.philippines"),
-        component: CarouselPhilippines2,
+        component: CarouselAndOrganisationPhilippines2,
       },
     ].filter(({ to }) => {
       return development || isLinkPublished(to)
