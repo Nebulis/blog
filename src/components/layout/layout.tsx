@@ -24,7 +24,6 @@ import {
   smallStart,
 } from "../core/variables"
 import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
-import { MenuContext } from "./menu.context"
 import { Status } from "../../types/shared"
 import { useCustomTranslation } from "../../i18n"
 import { subscribe } from "../../services/newsletter"
@@ -97,7 +96,6 @@ export const IndexBlogLayout: FunctionComponent<{
 }> = ({ children, page, className = "", noStickyHeader = false, draw, location }) => {
   const isPublished = page === "home" ? true : getLink(page).published
   const { development } = useContext(ApplicationContext)
-  const { isMobileView } = useContext(MenuContext)
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
   const { t } = useCustomTranslation("common")
@@ -123,7 +121,7 @@ export const IndexBlogLayout: FunctionComponent<{
     <div className={`${className} flex flex-column min-vh-100`}>
       {development && !isPublished && <PageDevelopmentMark />}
       <Header noStickyHeader={noStickyHeader} location={location} />
-      {!isMobileView && <ScrollToTop />}
+      <ScrollToTop />
       <div className="children-container flex-grow-1">{children}</div>
 
       <Footer className="pa2">

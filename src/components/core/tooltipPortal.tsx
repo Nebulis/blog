@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect, useRef, useState } from "react"
 import ReactDOM from "react-dom"
 import { useWindowMousePosition } from "../hooks/useWindowMousePosition"
 
+// check this in case https://www.joshwcomeau.com/react/the-perils-of-rehydration/
 export const DialogPortal: FunctionComponent = ({ children }) => {
   if (typeof window === `undefined`) return null
   const element = document.getElementById("dialog-portal")

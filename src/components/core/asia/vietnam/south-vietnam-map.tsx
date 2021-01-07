@@ -3,6 +3,7 @@ import { defaultTextStyle, mapProps, mapStyle, PinPoint, propsFor } from "../../
 import { vietnamPrimaryColorDarker } from "./vietnam.colors"
 import { css } from "@emotion/core"
 import { smallStart } from "../../variables"
+import { useCustomTranslation } from "../../../../i18n"
 
 const basicTextStyle = css`
   ${defaultTextStyle}
@@ -24,6 +25,7 @@ const hoveredTextStyle = css`
   }
 `
 export const SouthVietnamMap = () => {
+  const { i18n } = useCustomTranslation()
   return (
     <svg css={mapStyle} {...mapProps} viewBox="0 0 800 919" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -166,7 +168,7 @@ export const SouthVietnamMap = () => {
         id="VNM510"
         name="Vĩnh Long"
       />
-      <g {...propsFor({ city: "cu-chi-tunnels", basicTextStyle, hoveredTextStyle })}>
+      <g {...propsFor({ city: "cu-chi-tunnels", basicTextStyle, hoveredTextStyle, lang: i18n.languageCode })}>
         <rect width="150" height="80" x="360" y="510" />
         <text x="360" y="535">
           Ho Chi Minh
@@ -175,7 +177,7 @@ export const SouthVietnamMap = () => {
           <PinPoint />
         </g>
       </g>
-      <g {...propsFor({ city: "my-tho", basicTextStyle, hoveredTextStyle })}>
+      <g {...propsFor({ city: "my-tho", basicTextStyle, hoveredTextStyle, lang: i18n.languageCode })}>
         <rect width="90" height="80" x="350" y="600" />
         <text x="345" y="680">
           My Tho
@@ -184,7 +186,7 @@ export const SouthVietnamMap = () => {
           <PinPoint />
         </g>
       </g>
-      <g {...propsFor({ city: "can-tho", basicTextStyle, hoveredTextStyle })}>
+      <g {...propsFor({ city: "can-tho", basicTextStyle, hoveredTextStyle, lang: i18n.languageCode })}>
         <rect width="90" height="80" x="255" y="650" />
         <text x="255" y="730">
           Can Tho
