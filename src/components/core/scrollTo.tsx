@@ -3,8 +3,12 @@ import React from "react"
 import { FaArrowCircleUp } from "react-icons/all"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { useScrollPosition } from "../hooks/useScrollPosition"
+import { mediumEnd } from "./variables"
 
 const style = css`
+  @media (max-width: ${mediumEnd}) {
+    display: none;
+  }
   width: 40px;
   height: 40px;
   position: fixed;

@@ -4,7 +4,15 @@ import { css } from "@emotion/core"
 import banner from "../../images/logo-the-real.svg"
 import bannerMobile from "../../images/logo-mobile-the-real.svg"
 import { ApplicationContext } from "../application"
-import { backgroundPrimaryColor, primaryColor, bannerHeight, bannerHeightLandscape, mobileEnd } from "../core/variables"
+import {
+  backgroundPrimaryColor,
+  bannerHeight,
+  bannerHeightLandscape,
+  largeStart,
+  mediumEnd,
+  mobileEnd,
+  primaryColor,
+} from "../core/variables"
 import { DialogPortal } from "../core/tooltipPortal"
 import { Search } from "./search"
 import styled from "@emotion/styled"
@@ -74,6 +82,19 @@ const headerStyle = css`
       height: ${bannerHeightLandscape};
     }
   }
+
+  @media (min-width: ${largeStart}) {
+    #burger-menu-container,
+    #mobile-banner {
+      display: none;
+    }
+  }
+  @media (max-width: ${mediumEnd}) {
+    #desktop-social-network-container,
+    #desktop-banner {
+      display: none;
+    }
+  }
 `
 // disabled code is used by the sticky header
 export const Header: FunctionComponent<{
@@ -119,75 +140,69 @@ const StaticHeader: FunctionComponent<{
   location: PageProps["location"]
 }> = ({ className = "", onSearch, location }) => {
   const context = useContext(ApplicationContext)
-  const { isMobileView, open, setOpen } = useContext(MenuContext)
+  const { open, setOpen } = useContext(MenuContext)
   const { i18n } = useCustomTranslation()
 
   return (
     <header css={headerStyle} className={className}>
       <div className="header">
         <div className="left-menu-container">
-          {!isMobileView ? (
-            <div className="social-network-container">
-              <a
-                href={`https://www.facebook.com/${facebook}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="facebook-label"
-              >
-                <span id="facebook-label" hidden>
-                  Go to Facebook
-                </span>
-                <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
-              </a>
-              <a
-                href={`https://twitter.com/${twitter}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="twitter-label"
-              >
-                <span id="twitter-label" hidden>
-                  Go to Twitter
-                </span>
-                <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
-              </a>
-              <a
-                href={`https://instagram.com/${instagram}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="instagram-label"
-              >
-                <span id="instagram-label" hidden>
-                  Go to Facebook
-                </span>
-                <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
-              </a>
-              <a
-                href={`https://pinterest.com/${pinterest}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="pinterest-label"
-              >
-                <span id="pinterest-label" hidden>
-                  Go to Facebook
-                </span>
-                <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
-              </a>
-            </div>
-          ) : (
-            <div className="ml2">
-              <Burger open={open} onClick={() => setOpen(!open)} />
-              <BurgerAbsolute open={open} onClick={() => setOpen(!open)} />
-            </div>
-          )}
+          <div className="social-network-container" id="desktop-social-network-container">
+            <a
+              href={`https://www.facebook.com/${facebook}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-labelledby="facebook-label"
+            >
+              <span id="facebook-label" hidden>
+                Go to Facebook
+              </span>
+              <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
+            </a>
+            <a
+              href={`https://twitter.com/${twitter}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-labelledby="twitter-label"
+            >
+              <span id="twitter-label" hidden>
+                Go to Twitter
+              </span>
+              <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
+            </a>
+            <a
+              href={`https://instagram.com/${instagram}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-labelledby="instagram-label"
+            >
+              <span id="instagram-label" hidden>
+                Go to Facebook
+              </span>
+              <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
+            </a>
+            <a
+              href={`https://pinterest.com/${pinterest}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-labelledby="pinterest-label"
+            >
+              <span id="pinterest-label" hidden>
+                Go to Facebook
+              </span>
+              <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
+            </a>
+          </div>
+          <div className="ml2" id="burger-menu-container">
+            <Burger open={open} onClick={() => setOpen(!open)} />
+            <BurgerAbsolute open={open} onClick={() => setOpen(!open)} />
+          </div>
           <div className="left-menu-element" />
         </div>
         <div className="logo-container">
           <ApplicationLink to="home">
-            {isMobileView ? (
-              <img src={bannerMobile} alt="Welcome to Magic of Travels" />
-            ) : (
-              <img src={banner} alt="Welcome to Magic of Travels" />
-            )}
+            <img src={bannerMobile} alt="Welcome to Magic of Travels" id="mobile-banner" />
+            <img src={banner} alt="Welcome to Magic of Travels" id="desktop-banner" />
           </ApplicationLink>
         </div>
         <div className="right-menu-container">
@@ -215,7 +230,7 @@ const StaticHeader: FunctionComponent<{
           </div>
         </div>
       </div>
-      {!isMobileView && <Menu />}
+      <Menu />
       <MobileMenu />
     </header>
   )

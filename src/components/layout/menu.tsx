@@ -17,6 +17,7 @@ import {
   backgroundPrimaryColor,
   bannerHeight,
   bannerHeightLandscape,
+  mediumEnd,
   menuHeight,
   mobileEnd,
   primaryColor,
@@ -83,6 +84,9 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
     <div
       className={`flex justify-center items-center ${className} menu`}
       css={css`
+        @media (max-width: ${mediumEnd}) {
+          display: none;
+        }
         height: ${menuHeight};
         background-color: #1b1811;
         color: white;

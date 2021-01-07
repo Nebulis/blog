@@ -2,6 +2,7 @@ import React, { SVGProps, FunctionComponent, SVGAttributes } from "react"
 import { css, SerializedStyles } from "@emotion/core"
 import { getLink, getLinkUrl } from "./links/links.utils"
 import { navigate } from "gatsby"
+import { Lang } from "./links/links.types"
 
 export const mapProps: SVGProps<any> = {
   fill: "#d4edf5",
@@ -23,10 +24,12 @@ export const defaultTextStyle = css`
 `
 export const propsFor = ({
   city,
+  lang,
   basicTextStyle = defaultTextStyle,
   hoveredTextStyle = defaultTextStyle,
 }: {
   city: string
+  lang: Lang
   basicTextStyle?: SerializedStyles
   hoveredTextStyle?: SerializedStyles
 }) => {
@@ -34,7 +37,7 @@ export const propsFor = ({
   if (link.published) {
     return {
       css: hoveredTextStyle,
-      onClick: () => navigate(getLinkUrl(city)),
+      onClick: () => navigate(getLinkUrl(lang)(city)),
     }
   }
   return {
