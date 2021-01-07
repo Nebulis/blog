@@ -53,7 +53,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={t("title")} location={location} image={SouthernVietnamImage} />
-      <VietnamBlogLayout page={currentPageId}>
+      <VietnamBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>
           <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
           &nbsp;{t("title")}&nbsp;

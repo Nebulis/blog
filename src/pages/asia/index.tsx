@@ -29,7 +29,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={t("common:continent.asia")} location={location} image={VietnamImage} />
-      <IndexBlogLayoutWithDrawer page="asia">
+      <IndexBlogLayoutWithDrawer page="asia" location={location}>
         <MainTitleSection>{t("common:continent.asia")}</MainTitleSection>
         <PrimaryDivider />
         <SectionContent>

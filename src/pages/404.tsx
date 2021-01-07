@@ -13,7 +13,7 @@ const NotFoundPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title="404: Not found" location={location} />
-      <BlogLayoutWithDrawer page="404">
+      <BlogLayoutWithDrawer page="404" location={location}>
         <div
           className="flex justify-center items-center flex-grow-1 flex-column h-100"
           css={css`

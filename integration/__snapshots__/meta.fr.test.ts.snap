@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`french pages exports meta for public/404.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/404.html correctly 2`] = `"404: Not found | Blog Voyage"`;
+
+exports[`french pages exports meta for public/404/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/404/index.html correctly 2`] = `"404: Not found | Blog Voyage"`;
+
+exports[`french pages exports meta for public/about/contact/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/about/contact/index.html correctly 2`] = `"Contact | Blog Voyage"`;
+
+exports[`french pages exports meta for public/about/who/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/about/who/index.html correctly 2`] = `"Qui sommes nous ? | Blog Voyage"`;
+
+exports[`french pages exports meta for public/articles/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/articles/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/index.html correctly 2`] = `"Asie | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly 2`] = `"japan | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/fuji/lake-kawaguchiko/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/fuji/lake-kawaguchiko/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/himeji/castle/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/himeji/castle/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly 2`] = `"japan | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/index.html correctly 2`] = `"Japon | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/kyoto/daigoji/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/kyoto/daigoji/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/kyoto/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/kyoto/index.html correctly 2`] = `"japan | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/nagoya/castle/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/nagoya/castle/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly 2`] = `"japan | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly 2`] = `"Le Japon au printemps | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/a-day-in-tokyo/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/a-day-in-tokyo/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly 2`] = `"japan | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/transports/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/japan/transports/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly 1`] = `"Décor de carte postale, sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre \\"Dream List\\" de voyage pour cette nouvelle année."`;
+
+exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly 2`] = `"El Nido : Un petit coin de Paradis | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly 2`] = `"El Nido | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/philippines/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/philippines/index.html correctly 2`] = `"Philippines | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/vietnam/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/vietnam/index.html correctly 2`] = `"Vietnam | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly 2`] = `"Les tunnels de Cu Chi | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/discover/index.html correctly 1`] = `"Le Sud du Vietnam regorge de surprises et de découvertes, toutes plus passionnantes les unes que les autres. Entre le dynamisme de Hô Chi Minh-Ville et les excursions en bateau à l’ombre des palmiers d’eau sur le Delta du Mékong, il y en a pour tous les goûts."`;
+
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/discover/index.html correctly 2`] = `"Découverte du Vietnam du Sud | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly 2`] = `"Vietnam du Sud | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/vietnam/transports/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/asia/vietnam/transports/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/credits/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/credits/index.html correctly 2`] = `"main | Blog Voyage"`;
+
+exports[`french pages exports meta for public/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/index.html correctly 2`] = `"Magic of travels | Blog Voyage"`;
+
+exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly 2`] = `"Voyager au printemps | Blog Voyage"`;
+
+exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+
+exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 2`] = `"Voyager en hiver | Blog Voyage"`;

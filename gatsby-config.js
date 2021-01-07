@@ -1,3 +1,6 @@
+const pages = (page) => {
+  return [page, `/en${page}`]
+}
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.magicoftravels.com`,
@@ -40,9 +43,31 @@ module.exports = {
       },
     },
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-robots-txt",
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    // could this be done automatically ?
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        policy: [
+          {
+            userAgent: "*",
+            allow: [...pages("/asia/vietnam/index.html"), ...pages("/asia/vietnam/southern-vietnam/")],
+            disallow: [
+              ...pages("/asia/japan"),
+              ...pages("/asia/vietnam/*"),
+              ...pages("/asia/vietnam/southern-vietnam/cu-chi-tunnels"),
+              ...pages("/asia/philippines"),
+            ],
+          },
+          {
+            userAgent: "twitterbot",
+            allow: [...pages("/asia/philippines")],
+          },
+          {
+            userAgent: "facebookexternalhit",
+            allow: [...pages("/asia/philippines")],
+          },
+        ],
+      },
+    },
   ],
 }

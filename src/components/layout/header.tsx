@@ -14,7 +14,8 @@ import { MenuContext } from "./menu.context"
 import { FlagFrance } from "../icon/flag-france"
 import { FlagUK } from "../icon/flag-uk"
 import { useCustomTranslation } from "../../i18n"
-import { facebook, instagram, pinterest, twitter } from "../../utils"
+import { facebook, getPathForEnglish, getPathForFrench, instagram, pinterest, twitter } from "../../utils"
+import { navigate, PageProps } from "gatsby"
 
 const headerStyle = css`
   .header {
@@ -75,9 +76,14 @@ const headerStyle = css`
   }
 `
 // disabled code is used by the sticky header
-export const Header: FunctionComponent<{ noStickyHeader?: boolean; className?: string }> = ({
+export const Header: FunctionComponent<{
+  noStickyHeader?: boolean
+  className?: string
+  location: PageProps["location"]
+}> = ({
   // noStickyHeader = false,
   className = "",
+  location,
 }) => {
   const { isMobileView } = useContext(MenuContext)
   const [search, setSearch] = useState(false)
@@ -89,6 +95,7 @@ export const Header: FunctionComponent<{ noStickyHeader?: boolean; className?: s
       <StaticHeader
         onSearch={() => setSearch(true)}
         className={`${className}${isMobileView ? " show-border-bottom" : ""}`}
+        location={location}
       />
       {/*{isMobileView && !noStickyHeader && (*/}
       {/*  <StickyHeader*/}
@@ -106,10 +113,11 @@ export const Header: FunctionComponent<{ noStickyHeader?: boolean; className?: s
   )
 }
 
-const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void }> = ({
-  className = "",
-  onSearch,
-}) => {
+const StaticHeader: FunctionComponent<{
+  className?: string
+  onSearch: () => void
+  location: PageProps["location"]
+}> = ({ className = "", onSearch, location }) => {
   const context = useContext(ApplicationContext)
   const { isMobileView, open, setOpen } = useContext(MenuContext)
   const { i18n } = useCustomTranslation()
@@ -185,8 +193,18 @@ const StaticHeader: FunctionComponent<{ className?: string; onSearch: () => void
         <div className="right-menu-container">
           <div className="right-menu-element" />
           <div className="mr2">
-            <FlagFrance selected={i18n.languageCode === "fr"} onClick={() => i18n.changeLanguage("fr")} />
-            <FlagUK selected={i18n.languageCode === "en"} onClick={() => i18n.changeLanguage("en")} />
+            <FlagFrance
+              selected={i18n.languageCode === "fr"}
+              onClick={() => {
+                navigate(getPathForFrench(location))
+              }}
+            />
+            <FlagUK
+              selected={i18n.languageCode === "en"}
+              onClick={() => {
+                navigate(getPathForEnglish(location))
+              }}
+            />
             {context.development && <FaSearch onClick={onSearch} className="search" />}
             {context.initialDevelopmentValue ? (
               <FaCircle

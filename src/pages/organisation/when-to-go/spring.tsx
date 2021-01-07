@@ -23,7 +23,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={t("title")} location={location} />
-      <BlogLayoutWithDrawer page="spring">
+      <BlogLayoutWithDrawer page="spring" location={location}>
         <MainTitleSection>{t("title")}</MainTitleSection>
         <PrimaryDivider />
         <SectionContent>

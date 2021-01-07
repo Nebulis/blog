@@ -33,7 +33,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={t("common:country.philippines")} location={location} />
-      <IndexPhilippinesBlogLayout page="philippines">
+      <IndexPhilippinesBlogLayout page="philippines" location={location}>
         <MainTitleSection>
           <img src={philippinesFish} alt="philippines scuba diving" style={{ width: "24px" }} />
           &nbsp;{t("common:country.philippines")}&nbsp;

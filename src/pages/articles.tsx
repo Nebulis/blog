@@ -12,7 +12,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title="main" location={location} />
-      <BlogLayoutWithDrawer page="articles">
+      <BlogLayoutWithDrawer page="articles" location={location}>
         <p>Articles page. Search:{JSON.stringify(search, undefined, 2)}</p>
       </BlogLayoutWithDrawer>
     </>

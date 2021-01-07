@@ -8,7 +8,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO title="main" location={location} />
       {/* TODO CHANGED TO CREDITS*/}
-      <BlogLayoutWithDrawer page="articles">
+      <BlogLayoutWithDrawer page="articles" location={location}>
         <ul>
           <li>Flaticon</li>
           <li>Simplemaps</li>

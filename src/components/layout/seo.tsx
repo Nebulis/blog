@@ -13,7 +13,7 @@ import CourgetteFont from "../../fonts/Courgette-Regular.ttf"
 import PlayfairFont from "../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf"
 import { useCustomTranslation } from "../../i18n"
 import DefaultImgUrl from "../../images/SocialNetworkDefault.jpg"
-import { defaultHostname } from "../../utils"
+import { getHostname, getPathForEnglish, getPathForFrench } from "../../utils"
 
 interface SEOProps {
   description?: string
@@ -40,7 +40,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description, lang, meta = [], title,
 
   const metaDescription = description || t("description")
   const metaTitle = title || site.siteMetadata.title
-  const metaImage = `${location.origin || defaultHostname}${image || DefaultImgUrl}`
+  const metaImage = `${getHostname(location)}${image || DefaultImgUrl}`
   const metaLang = lang || i18n.languageCode
   return (
     // @ts-ignore hreflang :(
@@ -51,16 +51,12 @@ const SEO: FunctionComponent<SEOProps> = ({ description, lang, meta = [], title,
       link={[
         {
           rel: "alternate",
-          href: `${location.origin || defaultHostname}${
-            location.pathname.startsWith("/en/") ? location.pathname.replace("/en", "") : location.pathname
-          }`,
+          href: `${getHostname(location)}${getPathForFrench(location)}`,
           hreflang: "fr-fr",
         },
         {
           rel: "alternate",
-          href: `${location.origin || defaultHostname}${
-            location.pathname.startsWith("/en/") ? location.pathname : `/en${location.pathname}`
-          }`,
+          href: `${getHostname(location)}${getPathForEnglish(location)}`,
           hreflang: "en-us",
         },
         {

@@ -110,8 +110,9 @@ export const getCacheSize = () => {
   return cachedLinks.size
 }
 
-export const getLinkUrl = (linkId: string): string => {
-  return getLink(linkId).url
+export const getLinkUrl = (lang: Lang) => (linkId: string): string => {
+  const url = getLink(linkId).url
+  return lang === "fr" ? url : `/en${url}`
 }
 export const getLinkLabel = (lang: Lang) => (linkId: string): string => {
   return getLink(linkId).label[lang]

@@ -28,7 +28,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title="main" location={location} />
-      <BlogLayout page="fuji">
+      <BlogLayout page="fuji" location={location}>
         <JapanTitle title="Le lac Kawaguchi" categories={["asia", "japan", "fuji"]} linkId="lake-kawaguchiko" />
         <ImageAsLandscape>
           <MainFujiImage />

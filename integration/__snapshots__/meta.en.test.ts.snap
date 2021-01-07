@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`english pages exports meta for public/en/404.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/404.html correctly 2`] = `"404: Not found | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/404/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/404/index.html correctly 2`] = `"404: Not found | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/about/contact/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/about/contact/index.html correctly 2`] = `"Contact | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/about/who/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/about/who/index.html correctly 2`] = `"Who are we ? | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/articles/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/articles/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/index.html correctly 2`] = `"Asia | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly 2`] = `"japan | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/fuji/lake-kawaguchiko/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/fuji/lake-kawaguchiko/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/himeji/castle/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/himeji/castle/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly 2`] = `"japan | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/index.html correctly 2`] = `"Japon | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/kyoto/arashiyama/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/kyoto/arashiyama/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/kyoto/daigoji/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/kyoto/daigoji/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html correctly 2`] = `"japan | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/kyoto/kinkakuji/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/kyoto/kinkakuji/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/nagoya/castle/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/nagoya/castle/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly 2`] = `"japan | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly 2`] = `"Le Japon au printemps | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/a-day-in-tokyo/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/a-day-in-tokyo/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly 2`] = `"japan | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/sensoji/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/sensoji/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/transports/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/japan/transports/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly 2`] = `"El Nido: A little paradise | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly 2`] = `"El Nido | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/index.html correctly 2`] = `"Philippines | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly 2`] = `"Vietnam | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly 2`] = `"Les tunnels de Cu Chi | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/discover/index.html correctly 1`] = `"Southern Vietnam is full of surprises and discoveries, each one more exciting. From dynamic cities like Ho Chi Minh City, to boat trips on the Mekong River Delta under palm trees, there is something for everyone."`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/discover/index.html correctly 2`] = `"Discover Southern Vietnam | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/index.html correctly 2`] = `"Southern Vietnam | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/transports/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/transports/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/credits/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/credits/index.html correctly 2`] = `"main | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/index.html correctly 2`] = `"Magic of travels | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/organisation/when-to-go/spring/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/organisation/when-to-go/spring/index.html correctly 2`] = `"Travel in spring | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+
+exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly 2`] = `"Travel in winter | Travel Blog"`;

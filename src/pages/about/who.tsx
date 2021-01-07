@@ -26,7 +26,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={t("common:link.who")} location={location} />
-      <BlogLayoutWithDrawer page="who">
+      <BlogLayoutWithDrawer page="who" location={location}>
         <div className="tc mb3 mt3">
           <img
             src={i18n.languageCode === "fr" ? whoImageFr : whoImageEn}

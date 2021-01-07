@@ -9,7 +9,9 @@ exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions
   const newPage = Object.assign({}, page)
   // Duplicate page for english
+  // if (page.path === "/asia/" || page.path === "/asia/vietnam/southern-vietnam/discover/") {
   newPage.path = "en" + page.path
   createPage(page)
   createPage(newPage)
+  // }
 }

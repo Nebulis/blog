@@ -8,7 +8,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title="main" location={location} />
-      <BlogLayout page="transports-in-vietnam">
+      <BlogLayout page="transports-in-vietnam" location={location}>
         Transport page
         <VietnamLink to="vietnam">Vietnam</VietnamLink>
       </BlogLayout>

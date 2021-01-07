@@ -32,7 +32,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title="main" location={location} />
-      <BlogLayout page="fushimi-inari-taisha">
+      <BlogLayout page="fushimi-inari-taisha" location={location}>
         <JapanTitle
           title="FUSHIMI INARI TAISHA"
           categories={["asia", "japan", "kyoto"]}
