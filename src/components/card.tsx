@@ -104,22 +104,22 @@ export const Card: FunctionComponent<
         // TODO safari
         // when clicking with the middle button, open the link into a new tab
         if (event.button === 1) {
-          window.open(window.location.origin + getLinkUrl(to))
+          window.open(window.location.origin + getLinkUrl(i18n.languageCode)(to))
         }
       }}
       onClick={(event) => {
         if (!mustShowAndInteract) return
         // if ctrl is pressed, must open the link into a new tab
         if (event.ctrlKey) {
-          window.open(window.location.origin + getLinkUrl(to))
+          window.open(window.location.origin + getLinkUrl(i18n.languageCode)(to))
         } else {
-          navigate(getLinkUrl(to))
+          navigate(getLinkUrl(i18n.languageCode)(to))
         }
       }}
       onKeyUp={(event) => {
         if (!mustShowAndInteract) return
         if (event.key === "Enter") {
-          navigate(getLinkUrl(to))
+          navigate(getLinkUrl(i18n.languageCode)(to))
         }
       }}
       className={`pa3 ${className} card relative`}
@@ -148,7 +148,7 @@ export const Card: FunctionComponent<
       <div className={`title pb2 ${mustShowAndInteract ? "published" : ""}`} title={title}>
         {title}
       </div>
-      {mustShowAndInteract && showMore && <div className="show-more pb2">En savoir plus</div>}
+      {mustShowAndInteract && showMore && <div className="show-more pb2">{t("show-more")}</div>}
       {showPublished && (
         <div className="date pb2">
           {t("published")}{" "}

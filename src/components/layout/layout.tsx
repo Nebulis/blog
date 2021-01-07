@@ -28,6 +28,7 @@ import { MenuContext } from "./menu.context"
 import { Status } from "../../types/shared"
 import { useCustomTranslation } from "../../i18n"
 import { subscribe } from "../../services/newsletter"
+import { PageProps } from "gatsby"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -92,7 +93,8 @@ export const IndexBlogLayout: FunctionComponent<{
   className?: string
   noStickyHeader?: boolean
   draw?: () => void
-}> = ({ children, page, className = "", noStickyHeader = false, draw }) => {
+  location: PageProps["location"]
+}> = ({ children, page, className = "", noStickyHeader = false, draw, location }) => {
   const isPublished = page === "home" ? true : getLink(page).published
   const { development } = useContext(ApplicationContext)
   const { isMobileView } = useContext(MenuContext)
@@ -117,10 +119,10 @@ export const IndexBlogLayout: FunctionComponent<{
       clearTimeout(timeout)
     }
   }, [status])
-  return typeof window !== `undefined` ? (
+  return (
     <div className={`${className} flex flex-column min-vh-100`}>
       {development && !isPublished && <PageDevelopmentMark />}
-      <Header noStickyHeader={noStickyHeader} />
+      <Header noStickyHeader={noStickyHeader} location={location} />
       {!isMobileView && <ScrollToTop />}
       <div className="children-container flex-grow-1">{children}</div>
 
@@ -180,7 +182,7 @@ export const IndexBlogLayout: FunctionComponent<{
         </div>
       </Footer>
     </div>
-  ) : null
+  )
 }
 
 // layout to apply on pages (index, country index, ...)

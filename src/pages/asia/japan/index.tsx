@@ -36,7 +36,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title="Japon" location={location} />
-      <IndexJapanBlogLayout page="japan">
+      <IndexJapanBlogLayout page="japan" location={location}>
         <h1 className="tc ttu flex items-center justify-center">
           <img src={cherryBlossom} alt="cherry blossom" />
           &nbsp;Japon&nbsp;

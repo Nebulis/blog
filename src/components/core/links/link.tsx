@@ -6,6 +6,7 @@ import React, { AnchorHTMLAttributes, ComponentType, FunctionComponent, useConte
 import { getLink, getLinkUrl } from "./links.utils"
 import { ApplicationContext } from "../../application"
 import { primaryColor, primaryDarkColor, primaryDarkColor15Darker } from "../variables"
+import { useCustomTranslation } from "../../../i18n"
 
 interface ExternalLinkProps {
   noIcon?: boolean
@@ -39,6 +40,7 @@ export const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => Functio
 ) =>
   function LinkIfActive({ children, to, action = "no-link", className = "", ...props }) {
     const context = useContext(ApplicationContext)
+    const { i18n } = useCustomTranslation()
     // sometimes we need to provide extra parameters, get rid of them to find the page
     const page = to.split("?")[0]
     const search = to.split("?")[1]
@@ -48,7 +50,7 @@ export const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => Functio
     }
     return context.development || link.published ? (
       <ApplicationLink
-        to={`${getLinkUrl(page)}${search ? `?${search}` : ""}`}
+        to={`${getLinkUrl(i18n.languageCode)(page)}${search ? `?${search}` : ""}`}
         {...props}
         className={`relative ${className}`}
       >

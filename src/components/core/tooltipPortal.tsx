@@ -3,12 +3,14 @@ import ReactDOM from "react-dom"
 import { useWindowMousePosition } from "../hooks/useWindowMousePosition"
 
 export const DialogPortal: FunctionComponent = ({ children }) => {
+  if (typeof window === `undefined`) return null
   const element = document.getElementById("dialog-portal")
   if (!element) return null
   return ReactDOM.createPortal(children, element)
 }
 
 export const TooltipPortal: FunctionComponent = ({ children }) => {
+  if (typeof window === `undefined`) return null
   const element = document.getElementById("tooltip-portal")
   if (!element) return null
   return ReactDOM.createPortal(children, element)

@@ -296,7 +296,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO location={location} />
-      <HomeBlogLayout page="home" className="">
+      <HomeBlogLayout page="home" className="" location={location}>
         <Carousel>
           {carouselElement.map(({ country, component: Component, to }, index) => {
             return (
@@ -323,7 +323,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               onMouseLeave={() => setCountry(undefined)}
               onClick={(country) => {
                 try {
-                  navigate(getLinkUrl(country.id))
+                  navigate(getLinkUrl(i18n.languageCode)(country.id))
                 } catch (e) {
                   console.log(`Link doesnt exist for ${country.id}`)
                 }

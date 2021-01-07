@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useState, useContext } from "react"
+import React, { FunctionComponent, useContext, useEffect, useState } from "react"
 import { database } from "../firebase"
 import { Checkbox, Input, Textarea } from "./input"
 import { PrimaryDarkButton } from "./button"
@@ -22,7 +22,7 @@ import { Status } from "../../types/shared"
 import { ErrorAlert, SuccessAlert } from "./alert"
 import { subscribe } from "../../services/newsletter"
 import { useCustomTranslation } from "../../i18n"
-import { capitalize, facebook, defaultHostname, pinterest, twitter } from "../../utils"
+import { capitalize, facebook, getHostname, pinterest, twitter } from "../../utils"
 import { PageProps } from "gatsby"
 import { useLocalStorage } from "../../use-local-storage"
 import { ApplicationContext } from "../application"
@@ -94,7 +94,7 @@ export const Comments: FunctionComponent<CommentsProps> = (props) => {
   }
   return <div className="tc mb3">No comments in development</div>
 }
-const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, className = "" }) => {
+const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, className = "", location }) => {
   const [comments, setComments] = useState<CommentProp[]>([])
   const [likes, setLikes] = useState(0)
   const [localLikes, setLocalLikes] = useLocalStorage<string[]>("likes", [])
@@ -104,7 +104,7 @@ const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, class
   const [status, setStatus] = useState<Status>("LOADING")
   const [commentStatus, setCommentStatus] = useState<Status>("INITIAL")
   const [newsletterStatus, setNewsletterStatus] = useState<Status>("INITIAL")
-  const { t, i18n } = useCustomTranslation("common")
+  const { t } = useCustomTranslation("common")
 
   // hide status after 10s
   useEffect(() => {
@@ -252,7 +252,7 @@ const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, class
     }
   }, [comments, scrollToAnchor])
 
-  const url = `${location.origin || defaultHostname}${i18n.languageCode === "en" ? "/en" : ""}${location.pathname}`
+  const url = `${getHostname(location)}${location.pathname}`
   const sharedUrl = encodeURI(url)
   const description = t("comments.shared-description", { handle: `@${twitter}` })
   const descriptionFacebook = t("comments.shared-description", { handle: `@${facebook}` })

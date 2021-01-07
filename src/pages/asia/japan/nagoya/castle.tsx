@@ -50,7 +50,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title="main" location={location} />
-      <BlogLayout page="nagoya-castle">
+      <BlogLayout page="nagoya-castle" location={location}>
         <JapanTitle title="Château de NAGOYA" categories={["asia", "japan", "nagoya"]} linkId="nagoya-castle" />
         <ImageAsLandscape>
           <MainNagoyaCastleImage />

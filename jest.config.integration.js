@@ -1,5 +1,5 @@
 module.exports = {
-  testPathIgnorePatterns: [`node_modules`, `.cache`, `public`, "integration"],
+  testPathIgnorePatterns: [`node_modules`, `.cache`, `public`, "src"],
   watchPathIgnorePatterns: [`node_modules`, `.cache`, `public`],
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": `<rootDir>/jest-preprocess.js`,

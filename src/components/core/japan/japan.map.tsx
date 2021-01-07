@@ -3,6 +3,7 @@ import { css } from "@emotion/core"
 import { navigate } from "gatsby"
 import { japanPrimaryColor } from "./japan.variables"
 import { getLink, getLinkUrl } from "../links/links.utils"
+import { useCustomTranslation } from "../../../i18n"
 
 const basicTextStyle = css`
   fill: black;
@@ -19,12 +20,13 @@ const hoveredTextStyle = css`
   }
 `
 export const JapanMap = () => {
+  const { i18n } = useCustomTranslation()
   const propsFor = (city: string) => {
     const link = getLink(city)
     if (link.published) {
       return {
         css: hoveredTextStyle,
-        onClick: () => navigate(getLinkUrl(city)),
+        onClick: () => navigate(getLinkUrl(i18n.languageCode)(city)),
       }
     }
     return {

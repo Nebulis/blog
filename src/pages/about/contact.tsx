@@ -37,7 +37,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={t("common:link.contact")} location={location} />
-      <BlogLayoutWithDrawer page="who" noStickyHeader>
+      <BlogLayoutWithDrawer page="who" noStickyHeader location={location}>
         <div
           className="tc mt4 mb3"
           css={css`

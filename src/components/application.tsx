@@ -1,8 +1,8 @@
 import { graphql, PageProps, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
 import { configureI18n, useCustomTranslation } from "../i18n"
+import { isEnglishPage } from "../utils"
 
-let runOnce = false
 configureI18n()
 export const Application: React.FunctionComponent<PageProps> = ({ children, location }) => {
   const { i18n } = useCustomTranslation()
@@ -22,13 +22,13 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
   )
   const [development, setDevelopment] = useState(site.siteMetadata.config.context !== "production")
 
-  // this is done for SSR and english generation of metadata
-  // if the URL starts with /en, then we suppose we really want to display the page in english
-  // on top of that, we "need" runOnce otherwise when switching to french language, there is an infinite loop
-  if (location.pathname.startsWith("/en/") && !runOnce) {
-    runOnce = true
+  // if the URL starts with /en, then we really want to display the page in english
+  if (isEnglishPage(location) && i18n.languageCode !== "en") {
     i18n.changeLanguage("en")
+  } else if (!isEnglishPage(location) && i18n.languageCode !== "fr") {
+    i18n.changeLanguage("fr")
   }
+
   return (
     <ApplicationContext.Provider
       value={{
