@@ -82,6 +82,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <HomeSubSection>A travers nos astuces, nos coups de cœur ...</HomeSubSection>
             <ArticlesContainer>
               {getMostRecentArticles({
+                development,
                 customFilter: (link) => link.country === "japan",
               }).map((Element, index) => (
                 <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />

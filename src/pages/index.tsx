@@ -348,7 +348,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <HomeSection>{t("discover.title")}</HomeSection>
           <HomeSubSection>{t("discover.subtitle")}</HomeSubSection>
           <ArticlesContainer>
-            {getMostRecentArticles().map((Element, index) => (
+            {getMostRecentArticles({ development }).map((Element, index) => (
               <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />
             ))}
           </ArticlesContainer>
