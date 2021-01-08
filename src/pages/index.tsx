@@ -32,13 +32,11 @@ import { useCustomTranslation } from "../i18n"
 import i18n from "i18next"
 import indexFr from "../locales/fr/index.json"
 import indexEn from "../locales/en/index.json"
-import { CarouselVietnam2 } from "../components/images/asia/vietnam/carousel-2-vietnam"
-import { CarouselVietnam } from "../components/images/asia/vietnam/carousel-vietnam"
-import { CarouselPhilippines } from "../components/images/asia/philippines/carousel-philippines"
 import { CarouselAndOrganisationPhilippines2 } from "../components/images/asia/philippines/carousel-and-organisation-philippines2"
 import { sortByLabel } from "../components/core/links/links.utils"
 import { continentLinks } from "../components/core/links/links.configuration"
 import { HomeBlogLayout } from "../components/layout/main-layout"
+import { CarouselImageQuery } from "../components/images/carousel"
 
 const namespace = "index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -250,7 +248,8 @@ const shuffleArray = (array: Array<any>) => {
   return array
 }
 interface CarouselElementType {
-  component: React.ComponentType
+  component?: React.ComponentType
+  image?: string
   to: string
   country: string
 }
@@ -267,17 +266,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       {
         to: "vietnam",
         country: t("common:country.vietnam"),
-        component: CarouselVietnam,
+        image: "vietnam1",
       },
       {
         to: "vietnam",
         country: t("common:country.vietnam"),
-        component: CarouselVietnam2,
+        image: "vietnam2",
       },
       {
         to: "philippines",
         country: t("common:country.philippines"),
-        component: CarouselPhilippines,
+        image: "philippines1",
       },
       {
         to: "philippines",
@@ -298,10 +297,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO location={location} />
       <HomeBlogLayout page="home" className="" location={location}>
         <Carousel>
-          {carouselElement.map(({ country, component: Component, to }, index) => {
+          {carouselElement.map(({ country, component: Component, to, image }, index) => {
             return (
               <CarouselImage to={to} country={country} key={index}>
-                <Component />
+                {image ? <CarouselImageQuery image={image} /> : Component ? <Component /> : null}
               </CarouselImage>
             )
           })}
