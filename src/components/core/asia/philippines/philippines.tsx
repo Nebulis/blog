@@ -1,7 +1,7 @@
 import { Divider } from "../../divider"
 import styled from "@emotion/styled"
 import { philippinesPrimaryColor, philippinesPrimaryColorDarker } from "./philippines.colors"
-import { ImageAsMedallion } from "../../../images/layout"
+import { ImageAsMedallion, TitleImage } from "../../../images/layout"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
 import { drawSth } from "./console-draw-sth"
 import { ButtonLink, ExternalLink } from "../../links/link"
@@ -17,8 +17,7 @@ const philippinesPartStyle = css`
 `
 export const PhilippinesHeadline: FunctionComponent = ({ children }) => (
   <City css={philippinesPartStyle}>
-    <img src={philippinesFish} alt="fish icon" style={{ width: "24px" }} /> {children}{" "}
-    <img src={philippinesFish} alt="fish icon" style={{ width: "24px" }} />
+    <TitleImage src={philippinesFish} alt="fish icon" /> {children} <TitleImage src={philippinesFish} alt="fish icon" />
   </City>
 )
 export const PhilippinesDivider = styled(Divider)`

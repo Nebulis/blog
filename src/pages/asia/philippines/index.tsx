@@ -21,6 +21,7 @@ import {
   PhilippinesImageAsMedallion,
 } from "../../../components/core/asia/philippines/philippines"
 import { PageProps } from "gatsby"
+import { TitleImage } from "../../../components/images/layout"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
@@ -35,9 +36,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO title={t("common:country.philippines")} location={location} />
       <IndexPhilippinesBlogLayout page="philippines" location={location}>
         <MainTitleSection>
-          <img src={philippinesFish} alt="philippines scuba diving" style={{ width: "24px" }} />
+          <TitleImage src={philippinesFish} alt="philippines scuba diving" />
           &nbsp;{t("common:country.philippines")}&nbsp;
-          <img src={philippinesFish} alt="philippines scuba diving" style={{ width: "24px" }} />
+          <TitleImage src={philippinesFish} alt="philippines scuba diving" />
         </MainTitleSection>
         {cities.length > 0 && (
           <>
