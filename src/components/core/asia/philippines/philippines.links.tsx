@@ -4,6 +4,8 @@ import commonEn from "../../../../locales/en/common.json"
 import styled from "@emotion/styled"
 import { HomeElNidoImage } from "../../../images/asia/philippines/el-nido/home-el-nido"
 import { CarouselAndOrganisationPhilippines2 } from "../../../images/asia/philippines/carousel-and-organisation-philippines2"
+import { HomePhilippinesImage } from "../../../images/asia/philippines/home-philippines"
+import { ElNidoParadiseCard, PhilippinesCard } from "./philippines.card"
 
 export const philippinesLinks: CountryLink = {
   id: "philippines",
@@ -27,6 +29,7 @@ export const philippinesLinks: CountryLink = {
       highlights: [
         {
           id: "el-nido-paradise",
+          card: ElNidoParadiseCard,
           label: {
             fr: commonFr.card.philippines["el-nido-paradise"],
             en: commonEn.card.philippines["el-nido-paradise"],
