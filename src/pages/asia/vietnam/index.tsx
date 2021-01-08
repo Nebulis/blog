@@ -28,6 +28,7 @@ import { useCustomTranslation } from "../../../i18n"
 import { filteredUrl } from "../../../components/core/asia/vietnam/vietnam.utils"
 import { PageProps } from "gatsby"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
+import { TitleImage } from "../../../components/images/layout"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
@@ -42,9 +43,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO title={t("common:country.vietnam")} location={location} image={VietnamImage} />
       <IndexVietnamBlogLayout page="vietnam" location={location}>
         <MainTitleSection>
-          <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
+          <TitleImage src={vietnamHat} alt="vietnam hat" />
           &nbsp;{t("common:country.vietnam")}&nbsp;
-          <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
+          <TitleImage src={vietnamHat} alt="vietnam hat" />
         </MainTitleSection>
         {false && (
           <>

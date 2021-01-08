@@ -31,6 +31,7 @@ import philippinesFish from "../../../../images/asia/philippines/fish.svg"
 import { philippinesLinks } from "../../../../components/core/asia/philippines/philippines.links"
 import { ElNidoParadiseCard } from "../../../../components/core/asia/philippines/philippines.card"
 import { PageProps } from "gatsby"
+import { TitleImage } from "../../../../components/images/layout"
 
 const namespace = "asia/philippines/el-nido/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -54,9 +55,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO title={t("title")} location={location} />
       <PhilippinesBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>
-          <img src={philippinesFish} alt="philippines scuba diving" style={{ width: "24px" }} />
+          <TitleImage src={philippinesFish} alt="philippines scuba diving" />
           &nbsp;{t("title")}&nbsp;
-          <img src={philippinesFish} alt="philippines scuba diving" style={{ width: "24px" }} />
+          <TitleImage src={philippinesFish} alt="philippines scuba diving" />
         </MainTitleSection>
         <PhilippinesDivider className="mb0" />
         <MainCardContainer>

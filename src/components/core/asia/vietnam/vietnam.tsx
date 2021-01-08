@@ -3,7 +3,7 @@ import { Divider } from "../../divider"
 import styled from "@emotion/styled"
 import { vietnamPrimaryColor, vietnamPrimaryColorDarker } from "./vietnam.colors"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
-import { ImageAsMedallion } from "../../../images/layout"
+import { ImageAsMedallion, TitleImage } from "../../../images/layout"
 import { drawHat } from "./console-draw-hat"
 import { Title } from "../../title"
 import { Quote } from "../../quote"
@@ -30,8 +30,7 @@ const vietnamPartStyle = css`
 `
 export const VietnamHeadline: FunctionComponent = ({ children }) => (
   <City css={vietnamPartStyle}>
-    <img src={hat} alt="hat" style={{ width: "24px" }} /> {children}{" "}
-    <img src={hat} alt="hat" style={{ width: "24px" }} />
+    <TitleImage src={hat} alt="hat" /> {children} <TitleImage src={hat} alt="hat" />
   </City>
 )
 

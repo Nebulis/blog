@@ -32,6 +32,7 @@ import { CityLink } from "../../../../components/core/links/links.types"
 import { SouthVietnamCard } from "../../../../components/core/asia/vietnam/vietnam.cards"
 import { PageProps } from "gatsby"
 import SouthernVietnamImage from "../../../../images/asia/vietnam/southern-vietnam/home-southern-vietnam.jpg"
+import { TitleImage } from "../../../../components/images/layout"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -55,9 +56,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO title={t("title")} location={location} image={SouthernVietnamImage} />
       <VietnamBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>
-          <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
+          <TitleImage src={vietnamHat} alt="vietnam hat" />
           &nbsp;{t("title")}&nbsp;
-          <img src={vietnamHat} alt="vietnam hat" style={{ width: "24px" }} />
+          <TitleImage src={vietnamHat} alt="vietnam hat" />
         </MainTitleSection>
         <VietnamDivider className="mb0" />
         <MainCardContainer>

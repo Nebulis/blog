@@ -322,3 +322,7 @@ export const ImageAsMedallion: FunctionComponent<HTMLAttributes<any> & { title?:
     </div>
   )
 }
+
+export const TitleImage = styled.img`
+  width: 24px;
+`
