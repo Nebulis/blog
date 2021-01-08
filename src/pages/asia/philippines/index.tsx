@@ -28,6 +28,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation(["asia/philippines/index", "common"])
   const cities = development ? philippinesLinks.cities : philippinesLinks.cities.filter(isLinkPublished)
   const articles = getMostRecentArticles({
+    development,
     customFilter: (link) => link.country === "philippines" && !filteredUrl.includes(link.url),
     limit: 2,
   })

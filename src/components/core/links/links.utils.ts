@@ -135,11 +135,12 @@ const filterNull = (value: any): value is LinkMapped => {
 interface Options {
   customFilter?: (link: LinkMapped) => boolean
   limit?: number
+  development: boolean
 }
-export const getMostRecentArticles = ({ customFilter = () => true, limit = 3 }: Options | undefined = {}) => {
+export const getMostRecentArticles = ({ customFilter = () => true, limit = 3, development }: Options) => {
   return Array.from(cachedLinks.values())
     .map((link) => {
-      if (link.published && link.publishedDate && link.card) {
+      if ((development || link.published) && link.publishedDate && link.card) {
         // for some reason, typescript going nuts if country is made optional in LinkMapped ...
         return { publishedDate: link.publishedDate, card: link.card, country: link.country ?? "", url: link.url }
       }
