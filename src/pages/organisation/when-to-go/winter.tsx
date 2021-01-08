@@ -35,16 +35,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote position="none">{t("part6")}</PageQuote>
         </SectionContent>
         <CountriesContainer>
-          <CountryContainer
-            title={t("common:country.philippines")}
-            image={styled(CarouselAndOrganisationPhilippines2)`
-              img {
-                object-position: -50px 30px !important;
-                transform: scale(1.6);
-              }
-            `}
-            to="philippines"
-          />
+          {/*<CountryContainer*/}
+          {/*  title={t("common:country.philippines")}*/}
+          {/*  image={styled(CarouselAndOrganisationPhilippines2)`*/}
+          {/*    img {*/}
+          {/*      object-position: -50px 30px !important;*/}
+          {/*      transform: scale(1.6);*/}
+          {/*    }*/}
+          {/*  `}*/}
+          {/*  to="philippines"*/}
+          {/*/>*/}
           <CountryContainer
             title={t("common:country.southern-vietnam")}
             image={HomeVietnamImage}
