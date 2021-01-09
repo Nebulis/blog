@@ -90,6 +90,10 @@ export const createDate = (day: Day, month: Month, year: number, hours = 0, minu
   return new Date(Date.UTC(year, convertMonth(month), day, hours, minuts, seconds))
 }
 
+export function sortByField<T extends string>(field: T) {
+  return (obj1: { [key in T]: string }, obj2: { [key in T]: string }) => obj1[field].localeCompare(obj2[field])
+}
+// TODO is this still needed ?
 export const sortByLabel = (lang: Lang) => (obj1: { label: Label }, obj2: { label: Label }) =>
   obj1.label[lang].localeCompare(obj2.label[lang])
 export const sortByPublishedDate = (obj1: { published?: Date | boolean }, obj2: { published?: Date | boolean }) => {

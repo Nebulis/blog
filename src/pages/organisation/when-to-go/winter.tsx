@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
 import { MainTitleSection, SectionContent } from "../../../components/core/section"
 import { useCustomTranslation } from "../../../i18n"
@@ -11,15 +11,39 @@ import { HomeVietnamImage } from "../../../components/images/asia/vietnam/home-v
 import { PageProps } from "gatsby"
 import { CountriesContainer, CountryContainer } from "../../../components/layout/organisation-layout"
 import { BlogLayoutWithDrawer } from "../../../components/layout/main-layout"
-// import { CarouselAndOrganisationPhilippines2 } from "../../../components/images/asia/philippines/carousel-and-organisation-philippines2"
-// import styled from "@emotion/styled"
+import { CarouselAndOrganisationPhilippines2 } from "../../../components/images/asia/philippines/carousel-and-organisation-philippines2"
+import styled from "@emotion/styled"
+import { OrganisationCard } from "../../../types/shared"
+import { isLinkPublished, sortByField } from "../../../components/core/links/links.utils"
+import { ApplicationContext } from "../../../components/application"
 
 const namespace = "organisation/when-to-go/winter"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
+const elements: OrganisationCard[] = [
+  {
+    label: "common:country.southern-vietnam",
+    image: HomeVietnamImage,
+    to: "southern-vietnam",
+  },
+  {
+    label: "common:country.philippines",
+    image: styled(CarouselAndOrganisationPhilippines2)`
+      img {
+        object-position: -50px 30px !important;
+        transform: scale(1.6);
+      }
+    `,
+    to: "philippines",
+  },
+]
+
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { development } = useContext(ApplicationContext)
   const { t } = useCustomTranslation([namespace, "common"])
+  const cards = development ? elements : elements.filter(({ to }) => isLinkPublished(to))
+
   return (
     <>
       <SEO title={t("title")} location={location} />
@@ -35,21 +59,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote position="none">{t("part6")}</PageQuote>
         </SectionContent>
         <CountriesContainer>
-          {/*<CountryContainer*/}
-          {/*  title={t("common:country.philippines")}*/}
-          {/*  image={styled(CarouselAndOrganisationPhilippines2)`*/}
-          {/*    img {*/}
-          {/*      object-position: -50px 30px !important;*/}
-          {/*      transform: scale(1.6);*/}
-          {/*    }*/}
-          {/*  `}*/}
-          {/*  to="philippines"*/}
-          {/*/>*/}
-          <CountryContainer
-            title={t("common:country.southern-vietnam")}
-            image={HomeVietnamImage}
-            to="southern-vietnam"
-          />
+          {cards.sort(sortByField("label")).map(({ label, image, to }, index) => (
+            <CountryContainer title={t(label)} image={image} to={to} key={index} />
+          ))}
         </CountriesContainer>
       </BlogLayoutWithDrawer>
     </>
