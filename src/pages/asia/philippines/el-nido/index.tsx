@@ -63,7 +63,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <MainCardContainer>
           <ElNidoParadiseCard />
         </MainCardContainer>
-        {cities.length > 0 && (
+        {highlights.length > 0 && (
           <>
             <HomeSection>{t("section1")}</HomeSection>
             <CityArticleContainer>

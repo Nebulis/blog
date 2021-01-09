@@ -1,12 +1,7 @@
 import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
 import { ApplicationContext } from "../../../components/application"
-import {
-  getLinkLabel,
-  getMostRecentArticles,
-  isLinkPublished,
-  sortByLabel,
-} from "../../../components/core/links/links.utils"
+import { getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
 import { vietnamLinks } from "../../../components/core/asia/vietnam/vietnam.links"
 import { HomeSection, HomeSubSection, MainTitleSection } from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
@@ -25,20 +20,16 @@ import {
   MedallionContainer,
 } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
-import { filteredUrl } from "../../../components/core/asia/vietnam/vietnam.utils"
 import { PageProps } from "gatsby"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 import { TitleImage } from "../../../components/images/layout"
+import { ExtraCardProps } from "../../../types/shared"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation(["asia/vietnam/index", "common"])
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
-  const articles = getMostRecentArticles({
-    development,
-    customFilter: (link) => link.country === "vietnam" && !filteredUrl.includes(link.url),
-    limit: 2,
-  })
+  const articles: React.ComponentType<ExtraCardProps>[] = []
   return (
     <>
       <SEO title={t("common:country.vietnam")} location={location} image={VietnamImage} />

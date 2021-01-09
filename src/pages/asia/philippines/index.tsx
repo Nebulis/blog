@@ -1,18 +1,12 @@
 import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
 import { ApplicationContext } from "../../../components/application"
-import {
-  getLinkLabel,
-  getMostRecentArticles,
-  isLinkPublished,
-  sortByLabel,
-} from "../../../components/core/links/links.utils"
+import { getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
 import { HomeSection, HomeSubSection, MainTitleSection } from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
 import philippinesFish from "../../../images/asia/philippines/fish.svg"
 import { ArticlesContainer, GoToAllArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
-import { filteredUrl } from "../../../components/core/asia/vietnam/vietnam.utils"
 import { philippinesLinks } from "../../../components/core/asia/philippines/philippines.links"
 import {
   IndexPhilippinesBlogLayout,
@@ -22,16 +16,13 @@ import {
 } from "../../../components/core/asia/philippines/philippines"
 import { PageProps } from "gatsby"
 import { TitleImage } from "../../../components/images/layout"
+import { ExtraCardProps } from "../../../types/shared"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation(["asia/philippines/index", "common"])
   const cities = development ? philippinesLinks.cities : philippinesLinks.cities.filter(isLinkPublished)
-  const articles = getMostRecentArticles({
-    development,
-    customFilter: (link) => link.country === "philippines" && !filteredUrl.includes(link.url),
-    limit: 2,
-  })
+  const articles: React.ComponentType<ExtraCardProps>[] = []
   return (
     <>
       <SEO title={t("common:country.philippines")} location={location} />
