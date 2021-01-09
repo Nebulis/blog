@@ -117,7 +117,7 @@ export const IndexBlogLayout: FunctionComponent<{
       clearTimeout(timeout)
     }
   }, [status])
-  return (
+  return typeof window !== `undefined` ? (
     <div className={`${className} flex flex-column min-vh-100`}>
       {development && !isPublished && <PageDevelopmentMark />}
       <Header noStickyHeader={noStickyHeader} location={location} />
@@ -180,7 +180,7 @@ export const IndexBlogLayout: FunctionComponent<{
         </div>
       </Footer>
     </div>
-  )
+  ) : null
 }
 
 // layout to apply on pages (index, country index, ...)
