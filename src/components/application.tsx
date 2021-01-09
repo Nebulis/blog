@@ -20,7 +20,6 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
       }
     `
   )
-  console.log(" context = " + site.siteMetadata.config.context)
   const [development, setDevelopment] = useState(site.siteMetadata.config.context !== "production")
 
   // if the URL starts with /en, then we really want to display the page in english

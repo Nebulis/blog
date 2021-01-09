@@ -198,7 +198,7 @@ continentLinks.forEach((continent) => {
     country.others.forEach((other) => {
       cachedLinks.set(other.id, {
         label: other.label,
-        url: path.resolve(getUrl(continent), getUrl(country), getUrl(other)),
+        url: path.join("/", getUrl(continent), getUrl(country), getUrl(other)),
         published: isPublished(other),
         publishedDate: other.published instanceof Date ? other.published : undefined,
         card: other.card,
@@ -209,7 +209,7 @@ continentLinks.forEach((continent) => {
     country.cities.forEach((city) => {
       cachedLinks.set(city.id, {
         label: city.label,
-        url: path.resolve(getUrl(continent), getUrl(country), getUrl(city)),
+        url: path.join("/", getUrl(continent), getUrl(country), getUrl(city)),
         published: city.highlights.some(isPublished),
         tags: [continent.id, country.id],
         country: country.id,
@@ -217,7 +217,7 @@ continentLinks.forEach((continent) => {
       city.highlights.forEach((highlight) => {
         cachedLinks.set(highlight.id, {
           label: highlight.label,
-          url: path.resolve(getUrl(continent), getUrl(country), getUrl(city), getUrl(highlight)),
+          url: path.join("/", getUrl(continent), getUrl(country), getUrl(city), getUrl(highlight)),
           published: isPublished(highlight),
           publishedDate: highlight.published instanceof Date ? highlight.published : undefined,
           card: highlight.card,
@@ -229,7 +229,7 @@ continentLinks.forEach((continent) => {
 
     cachedLinks.set(country.id, {
       label: country.label,
-      url: path.resolve(getUrl(continent), getUrl(country)),
+      url: path.join("/", getUrl(continent), getUrl(country)),
       published:
         country.others.some((o) => cachedLinks.get(o.id)?.published) ||
         country.cities.some((c) => cachedLinks.get(c.id)?.published),
@@ -239,7 +239,7 @@ continentLinks.forEach((continent) => {
   })
   cachedLinks.set(continent.id, {
     label: continent.label,
-    url: path.resolve(getUrl(continent)),
+    url: path.join("/", getUrl(continent)),
     published: continent.countries.some((country) => cachedLinks.get(country.id)?.published),
     tags: [],
   })
@@ -250,7 +250,7 @@ menuLinks.forEach((menu) => {
     submenu.sections.forEach((subsubmenu) => {
       cachedLinks.set(subsubmenu.id, {
         label: subsubmenu.label,
-        url: path.resolve(getUrl(menu), getUrl(submenu), getUrl(subsubmenu)),
+        url: path.join("/", getUrl(menu), getUrl(submenu), getUrl(subsubmenu)),
         published: !!subsubmenu.published,
         tags: [],
       })
@@ -258,7 +258,7 @@ menuLinks.forEach((menu) => {
 
     cachedLinks.set(submenu.id, {
       label: submenu.label,
-      url: path.resolve(getUrl(menu), getUrl(submenu)),
+      url: path.join("/", getUrl(menu), getUrl(submenu)),
       published:
         submenu.sections.some((subsubmenu) => cachedLinks.get(subsubmenu.id)?.published) || !!submenu.published,
       tags: [],
@@ -266,7 +266,7 @@ menuLinks.forEach((menu) => {
   })
   cachedLinks.set(menu.id, {
     label: menu.label,
-    url: path.resolve(getUrl(menu)),
+    url: path.join("/", getUrl(menu)),
     published: menu.sections.some((submenu) => cachedLinks.get(submenu.id)?.published) || !!menu.published,
     tags: [],
   })
@@ -275,7 +275,7 @@ menuLinks.forEach((menu) => {
 otherLinks.forEach((link) => {
   cachedLinks.set(link.id, {
     label: link.label,
-    url: path.resolve(getUrl(link)),
+    url: path.join("/", getUrl(link)),
     published: true,
     tags: [],
   })
