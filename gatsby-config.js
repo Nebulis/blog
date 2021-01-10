@@ -55,16 +55,7 @@ module.exports = {
               ...pages("/asia/japan"),
               ...pages("/asia/vietnam/*"),
               ...pages("/asia/vietnam/southern-vietnam/cu-chi-tunnels"),
-              ...pages("/asia/philippines"),
             ],
-          },
-          {
-            userAgent: "twitterbot",
-            allow: [...pages("/asia/philippines")],
-          },
-          {
-            userAgent: "facebookexternalhit",
-            allow: [...pages("/asia/philippines")],
           },
         ],
       },
