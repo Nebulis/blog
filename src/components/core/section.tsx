@@ -42,10 +42,24 @@ export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ childre
   )
 }
 
-interface WhereProps {
-  title?: string
+export const Introduction: React.FunctionComponent = ({ children }) => {
+  return (
+    <SectionContent
+      className="b tc"
+      css={css`
+        font-size: 1.2rem;
+      `}
+    >
+      {children}
+    </SectionContent>
+  )
 }
-export const Where: FunctionComponent<WhereProps> = ({ children, title }) => {
+
+interface TitleProps {
+  title?: string
+  className?: string
+}
+export const Where: FunctionComponent<TitleProps> = ({ children, title }) => {
   const { t } = useCustomTranslation("common")
   return (
     <>
@@ -57,17 +71,20 @@ export const Where: FunctionComponent<WhereProps> = ({ children, title }) => {
     </>
   )
 }
-export const When: FunctionComponent = ({ children }) => (
-  <>
-    <SectionTitle>
-      <FaCalendarAlt />
-      &nbsp;Quand ?
-    </SectionTitle>
-    <SectionContent>{children}</SectionContent>
-  </>
-)
+export const When: FunctionComponent<TitleProps> = ({ children, title }) => {
+  const { t } = useCustomTranslation("common")
+  return (
+    <>
+      <SectionTitle>
+        <FaCalendarAlt />
+        &nbsp;{title || t("section.when")}
+      </SectionTitle>
+      <SectionContent>{children}</SectionContent>
+    </>
+  )
+}
 
-export const How: FunctionComponent = ({ children }) => {
+export const How: FunctionComponent<TitleProps> = ({ children }) => {
   const { t } = useCustomTranslation("common")
   return (
     <>
@@ -79,10 +96,7 @@ export const How: FunctionComponent = ({ children }) => {
     </>
   )
 }
-interface HowLongProps {
-  title?: string
-}
-export const HowLong: FunctionComponent<HowLongProps> = ({ children, title }) => {
+export const HowLong: FunctionComponent<TitleProps> = ({ children, title }) => {
   const { t } = useCustomTranslation("common")
   return (
     <>
@@ -94,10 +108,7 @@ export const HowLong: FunctionComponent<HowLongProps> = ({ children, title }) =>
     </>
   )
 }
-interface HowMuchProps {
-  title?: string
-}
-export const HowMuch: FunctionComponent<HowMuchProps> = ({ children, title }) => {
+export const HowMuch: FunctionComponent<TitleProps> = ({ children, title }) => {
   const { t, i18n } = useCustomTranslation("common")
   const PriceSign = i18n.languageCode === "fr" ? FaEuroSign : FaDollarSign
   return (
@@ -110,25 +121,22 @@ export const HowMuch: FunctionComponent<HowMuchProps> = ({ children, title }) =>
     </>
   )
 }
-interface WhereToStayProps {
+interface WhereToStayProps extends TitleProps {
   location?: string
 }
-export const WhereToStay: FunctionComponent<WhereToStayProps> = ({ children, location }) => {
+export const WhereToStay: FunctionComponent<WhereToStayProps> = ({ children, location, title }) => {
   const { t } = useCustomTranslation("common")
   return (
     <>
       <SectionTitle>
         <FaBed />
-        &nbsp;{t("section.where-to-stay")} {location ? location + " " : ""}
+        &nbsp;{title || t("section.where-to-stay")} {location ? location + " " : ""}
       </SectionTitle>
       <SectionContent>{children}</SectionContent>
     </>
   )
 }
-interface WhatTimeOfYearProps {
-  title?: string
-}
-export const WhatTimeOfYear: FunctionComponent<WhatTimeOfYearProps> = ({ children, title }) => {
+export const WhatTimeOfYear: FunctionComponent<TitleProps> = ({ children, title }) => {
   const { t } = useCustomTranslation("common")
   return (
     <>
@@ -155,11 +163,7 @@ export const WhereToHave: FunctionComponent<WhereToHaveProps> = ({ children, loc
     </>
   )
 }
-export const Visit: FunctionComponent<HTMLAttributes<any> & { title?: string }> = ({
-  children,
-  className = "",
-  title,
-}) => {
+export const Visit: FunctionComponent<TitleProps> = ({ children, className = "", title }) => {
   const { t } = useCustomTranslation("common")
   return (
     <>
@@ -172,7 +176,7 @@ export const Visit: FunctionComponent<HTMLAttributes<any> & { title?: string }> 
   )
 }
 
-export const Bonus: FunctionComponent = ({ children }) => (
+export const Bonus: FunctionComponent<TitleProps> = ({ children }) => (
   <>
     <SectionTitle>
       <FaLightbulb />
@@ -182,7 +186,7 @@ export const Bonus: FunctionComponent = ({ children }) => (
   </>
 )
 
-export const GoodToKnow: FunctionComponent = ({ children }) => (
+export const GoodToKnow: FunctionComponent<TitleProps> = ({ children }) => (
   <>
     <SectionTitle>Bon à savoir</SectionTitle>
     <SectionContent>{children}</SectionContent>

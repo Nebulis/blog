@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import { HomeCentralVietnamImage } from "../../../images/asia/vietnam/central-vietnam/home-central-vietnam"
 import { HomeSouthernVietnamImage } from "../../../images/asia/vietnam/southern-vietnam/home-southern-vietnam"
 import { HomeNorthernVietnamImage } from "../../../images/asia/vietnam/northern-vietnam/home-northern-vietnam"
-import { CanThoCard, CuChiTunnelsCard, MyThoCard, SouthVietnamCard } from "./vietnam.cards"
+import { CanThoCard, CuChiTunnelsCard, MyThoCard, SouthVietnamCard, WarMuseumCard } from "./vietnam.cards"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
 
@@ -52,7 +52,9 @@ export const vietnamLinks: CountryLink = {
             fr: commonFr.card.vietnam["ho-chi-minh-war-museum"],
             en: commonEn.card.vietnam["ho-chi-minh-war-museum"],
           },
-          published: new Date("2022-01-01"),
+          url: "war-remnants-museum",
+          card: WarMuseumCard,
+          published: new Date("2021-01-16T17:00:00.000+08:00"),
         },
         {
           id: "discover-southern-vietnam",

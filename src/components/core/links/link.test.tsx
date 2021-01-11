@@ -37,7 +37,6 @@ describe("link", () => {
       </ApplicationContext.Provider>
     )
     expect(container.querySelector("a")).toBeNull()
-    expect(container.querySelector("span")).toBeNull()
     // eslint-disable-next-line jest/no-truthy-falsy
     expect(getByText("Abc")).toBeTruthy()
   })

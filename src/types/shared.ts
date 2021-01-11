@@ -12,7 +12,7 @@ export interface ExtraCardProps {
   }
 }
 
-export type ExtraImageProps = { className?: string; fluidObject?: Partial<FluidObject> }
+export type ExtraImageProps = { className?: string; fluidObject?: Partial<FluidObject>; imgStyle?: object }
 
 export type OrganisationCard = {
   label: string

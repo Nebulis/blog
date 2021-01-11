@@ -300,7 +300,13 @@ export const CityArticleContainer = styled.div`
   padding: 1rem 20px;
   @media (min-width: ${largeStart}) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    // use minmax to prevent item from expanding the grid
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  @media (max-width: ${mediumEnd}) {
+    & > *:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
   }
 `
 export const MapContainer = styled.div`

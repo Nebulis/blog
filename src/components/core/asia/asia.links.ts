@@ -11,5 +11,21 @@ import { philippinesLinks } from "./philippines/philippines.links"
 export const asiaLinks: ContinentLink = {
   id: "asia",
   label: { fr: commonFr.continent.asia, en: commonEn.continent.asia },
-  countries: [japanLinks, vietnamLinks, philippinesLinks],
+  countries: [
+    japanLinks,
+    vietnamLinks,
+    philippinesLinks,
+    {
+      id: "cambodia",
+      cities: [],
+      others: [
+        {
+          id: "s-21-prison",
+          label: { en: "s-21-prison", fr: "s-21-prison" },
+          published: false,
+        },
+      ],
+      label: { en: "Cambodia", fr: "Cambodge" },
+    },
+  ],
 }

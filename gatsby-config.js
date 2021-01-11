@@ -44,6 +44,7 @@ module.exports = {
     },
     "gatsby-plugin-sitemap",
     // could this be done automatically ?
+    // idea for fb / twitter : allow one week before the release
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -53,9 +54,19 @@ module.exports = {
             allow: [...pages("/asia/vietnam/index.html"), ...pages("/asia/vietnam/southern-vietnam/")],
             disallow: [
               ...pages("/asia/japan"),
+              ...pages("/asia/cambodia"),
               ...pages("/asia/vietnam/*"),
               ...pages("/asia/vietnam/southern-vietnam/cu-chi-tunnels"),
+              ...pages("/asia/vietnam/southern-vietnam/war-remnants-museum"),
             ],
+          },
+          {
+            userAgent: "twitterbot",
+            allow: [...pages("/asia/vietnam/southern-vietnam/war-remnants-museum")],
+          },
+          {
+            userAgent: "facebookexternalhit",
+            allow: [...pages("/asia/vietnam/southern-vietnam/war-remnants-museum")],
           },
         ],
       },
