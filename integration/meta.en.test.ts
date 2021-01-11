@@ -15,5 +15,7 @@ describe("english pages", () => {
     expect(description.getAttribute("content")).toMatchSnapshot()
     const title = root.querySelector("title")
     expect(title.text).toMatchSnapshot()
+    const googleDescription = root.querySelector('meta[name="description"]')
+    expect(googleDescription.getAttribute("content")).toMatchSnapshot()
   })
 })

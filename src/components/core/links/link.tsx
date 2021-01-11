@@ -48,6 +48,7 @@ export const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => Functio
     if (!link) {
       throw new Error(`No link for ${page}`)
     }
+    console.log({ link })
     return context.development || link.published ? (
       <ApplicationLink
         to={`${getLinkUrl(i18n.languageCode)(page)}${search ? `?${search}` : ""}`}
@@ -58,7 +59,7 @@ export const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => Functio
         {!link.published ? <DevelopmentMark /> : null}
       </ApplicationLink>
     ) : action === "no-link" ? (
-      <div className={className}>{children}</div>
+      <span className={className}>{children}</span>
     ) : null
   }
 const developmentMarkStyle = css`

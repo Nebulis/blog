@@ -62,9 +62,11 @@
     "jest": "^26.4.2",
     "jest-watch-typeahead": "^0.6.1",
     "node-html-parser": "^2.0.1",
+    "plop": "^2.7.4",
     "prettier": "^2.1.1",
     "react-test-renderer": "^16.13.1",
-    "ts-jest": "^26.3.0"
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.1.1"
   },
   "keywords": [
     "gatsby"
@@ -76,6 +78,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
     "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
     "lint:fix": "npm run lint -- --fix",
+    "plop": "plop",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest --ci --passWithNoTests",

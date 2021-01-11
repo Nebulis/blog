@@ -188,16 +188,24 @@ const imageAsLandscapeOnTheLeft = css`
     flex-basis: 65%;
   }
   @media (max-width: ${mediumEnd}) {
-    & div:first-of-type {
+    & div:first-of-type,
+    .title {
       flex-basis: 100%;
     }
   }
 `
-export const ImageAsLandscapeOnTheLeft: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
+export const ImageAsLandscapeOnTheLeft: FunctionComponent<HTMLAttributes<any>> = ({ children, className, title }) => {
   return (
-    <div className={`flex ${className}`} css={imageAsLandscapeOnTheLeft}>
-      {children}
-    </div>
+    <>
+      <div className={`flex ${className}`} css={imageAsLandscapeOnTheLeft}>
+        {children}
+      </div>
+      {title && (
+        <div className={`flex ${className}`} css={imageAsLandscapeOnTheLeft}>
+          <div className="title tc underline ttu">{title}</div>
+        </div>
+      )}
+    </>
   )
 }
 
@@ -214,11 +222,18 @@ const imageAsLandscapeOnTheRight = css`
     }
   }
 `
-export const ImageAsLandscapeOnTheRight: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
+export const ImageAsLandscapeOnTheRight: FunctionComponent<HTMLAttributes<any>> = ({ children, className, title }) => {
   return (
-    <div className={`flex justify-end ${className}`} css={imageAsLandscapeOnTheRight}>
-      {children}
-    </div>
+    <>
+      <div className={`flex justify-end ${className}`} css={imageAsLandscapeOnTheRight}>
+        {children}
+      </div>
+      {title && (
+        <div className={`flex justify-end ${className}`} css={imageAsLandscapeOnTheLeft}>
+          <div className="title tc underline ttu">{title}</div>
+        </div>
+      )}
+    </>
   )
 }
 

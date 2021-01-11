@@ -40,6 +40,7 @@ import { philippinesPrimaryColor } from "../../../../components/core/asia/philip
 import { css } from "@emotion/core"
 import { MapContainer } from "../../../../components/layout/layout"
 import { PhilippinesMap } from "../../../../components/core/asia/philippines/philippines-map"
+import { buildBookingSearchUrl } from "../../../../utils"
 
 const namespace = "asia/philippines/el-nido/el-nido-paradise"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -129,10 +130,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             {t("where-to-stay.part2")}
           </p>
           <p>
-            {t("where-to-stay.part3")} {/* TODO create a helper for search*/}
-            <PhilippinesExternalLink
-              href={`https://www.booking.com/searchresults.${i18n.languageCode}.html?ss=El+Nido%2C+Luzon%2C+Philippines/`}
-            >
+            {t("where-to-stay.part3")}{" "}
+            <PhilippinesExternalLink href={buildBookingSearchUrl(i18n.languageCode)("El+Nido%2C+Luzon%2C+Philippines")}>
               booking
             </PhilippinesExternalLink>
             .

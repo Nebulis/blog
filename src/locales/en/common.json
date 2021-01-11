@@ -62,7 +62,7 @@
       "cu-chi-tunnels": "Củ Chi tunnels",
       "discover-southern-vietnam": "Discover Southern Vietnam",
       "my-tho": "Cruise on the Mekong between Mỹ Tho and Ben Tre",
-      "ho-chi-minh-war-museum": "War Remnants Museum",
+      "ho-chi-minh-war-museum": "War Remnants Museum in Ho Chi Minh City",
       "can-tho": "Cân Thơ floating market"
     }
   },
@@ -77,8 +77,9 @@
     "how-to-get-there": "How to get there?",
     "visit": "Visits",
     "what-time-of-year": "When?",
+    "when": "When?",
     "where": "Our itinerary",
-    "where-to-stay": "Where to stay ?"
+    "where-to-stay": "Where to stay?"
   },
   "comments": {
     "loading": "Loading comments ...",

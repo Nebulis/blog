@@ -51,6 +51,7 @@ describe("links", () => {
     expect(getLink("404")).toMatchObject({ label: { fr: "404", en: "404" }, published: true })
 
     // asia countries assertions
+    expect(getLink("cambodia")).toMatchObject({ label: { fr: "Cambodge", en: "Cambodia" }, published: false })
     expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: false })
     expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: true })
     expect(getLink("philippines")).toMatchObject({ label: { fr: "Philippines", en: "Philippines" }, published: true })
@@ -125,7 +126,10 @@ describe("links", () => {
       published: false,
     })
     expect(getLink("ho-chi-minh-war-museum")).toMatchObject({
-      label: { fr: "Le Musée des Vestiges de Guerre", en: "War Remnants Museum" },
+      label: {
+        en: "War Remnants Museum in Ho Chi Minh City",
+        fr: "Le Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
+      },
       published: false,
     })
     expect(getLink("discover-southern-vietnam")).toMatchObject({
@@ -145,6 +149,12 @@ describe("links", () => {
     })
     expect(getLink("el-nido-which-tour")).toMatchObject({
       label: { en: "Bacuit Archipelago: Which tour to choose?", fr: "Archipel de Bacuit : Quel tour choisir ?" },
+      published: false,
+    })
+
+    // cambodia assertions
+    expect(getLink("s-21-prison")).toMatchObject({
+      label: { en: "s-21-prison", fr: "s-21-prison" },
       published: false,
     })
 

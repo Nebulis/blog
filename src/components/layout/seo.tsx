@@ -17,13 +17,22 @@ import { getHostname, getPathForEnglish, getPathForFrench } from "../../utils"
 
 interface SEOProps {
   description?: string
+  googleDescription?: string
   lang?: string
   meta?: any
   title?: string
   image?: string
   location: PageProps["location"]
 }
-const SEO: FunctionComponent<SEOProps> = ({ description, lang, meta = [], title, image, location }) => {
+const SEO: FunctionComponent<SEOProps> = ({
+  description,
+  googleDescription,
+  lang,
+  meta = [],
+  title,
+  image,
+  location,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -39,6 +48,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description, lang, meta = [], title,
   const { t, i18n } = useCustomTranslation("common")
 
   const metaDescription = description || t("description")
+  const metaGoogleDescription = googleDescription || metaDescription
   const metaTitle = title || site.siteMetadata.title
   const metaImage = `${getHostname(location)}${image || DefaultImgUrl}`
   const metaLang = lang || i18n.languageCode
@@ -86,7 +96,7 @@ const SEO: FunctionComponent<SEOProps> = ({ description, lang, meta = [], title,
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: metaGoogleDescription,
         },
         {
           name: `viewport`,
