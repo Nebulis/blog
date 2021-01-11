@@ -33,6 +33,12 @@
     "australia": {
       "title": "Australie"
     },
+    "belarus": {
+      "title": "Biélorussie"
+    },
+    "brunei": {
+      "title": "Brunei"
+    },
     "cambodia": {
       "title": "Cambodge",
       "card": {
@@ -40,11 +46,23 @@
         "kampong-phluk": "Village flottant de Kampong Phluk"
       }
     },
+    "chile": {
+      "title": "Chili"
+    },
     "china": {
       "title": "Chine"
     },
+    "denmark": {
+      "title": "Danemark"
+    },
+    "finland": {
+      "title": "Finlande"
+    },
     "france": {
       "title": "France"
+    },
+    "germany": {
+      "title": "Allemagne"
     },
     "india": {
       "title": "Inde"
@@ -52,8 +70,14 @@
     "indonesia": {
       "title": "Indonésie"
     },
+    "italy": {
+      "title": "Italie"
+    },
     "japan": {
       "title": "Japon"
+    },
+    "kyrgyzstan": {
+      "title": "Kyrgyzstan"
     },
     "laos": {
       "title": "Laos"
@@ -63,6 +87,9 @@
     },
     "myanmar": {
       "title": "Birmanie"
+    },
+    "norway": {
+      "title": "Norvège"
     },
     "philippines": {
       "title": "Philippines",
@@ -74,11 +101,17 @@
         "which-tour": "Archipel de Bacuit : Quel tour choisir ?"
       }
     },
+    "russia": {
+      "title": "Russie"
+    },
     "senegal": {
       "title": "Sénégal"
     },
     "singapore": {
       "title": "Singapour"
+    },
+    "south-korea": {
+      "title": "Corée du Sud"
     },
     "spain": {
       "title": "Espagne"
@@ -86,11 +119,17 @@
     "sri-lanka": {
       "title": "Sri Lanka"
     },
+    "sweden": {
+      "title": "Suède"
+    },
     "taiwan": {
       "title": "Taiwan"
     },
     "thailand": {
       "title": "Thaïlande"
+    },
+    "uk": {
+      "title": "Royaume-Uni"
     },
     "united-states": {
       "title": "États-Unis"
@@ -104,7 +143,9 @@
         "my-tho": "Croisière sur le Mékong entre Mỹ Tho et Ben Tre",
         "ho-chi-minh-war-museum": "Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
         "can-tho": "Visite de Cân Thơ et son marché flottant",
-        "transports": "Les transports au Vietnam"
+        "transport": "Les transports au Vietnam",
+        "food": "Nos coups de cœur culinaires du Vietnam",
+        "prepare": "Préparer son voyage au Vietnam"
       }
     }
   },
@@ -114,12 +155,18 @@
   "in": "dans",
   "head": "Blog Voyage",
   "section": {
+    "baggage": "Valise idéale",
+    "health": "Santé",
     "how-long": "Combien de temps ?",
     "how-much": "Combien d’argent prévoir ?",
     "how-much2": "Prix ?",
     "how-to-get-there": "Comment y aller ?",
-    "visits": "Les visites",
+    "natural-disaster": "Catastrophes naturelles",
+    "phone": "Téléphone et internet",
+    "traps": "Arnaques et pièges à éviter",
+    "visa": "Visa",
     "visit": "La visite",
+    "visits": "Les visites",
     "what-time-of-year": "À quelle période ?",
     "when": "Quand ?",
     "where": "Notre itinéraire",

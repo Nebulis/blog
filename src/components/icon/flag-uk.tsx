@@ -2,9 +2,9 @@ import React, { FunctionComponent } from "react"
 
 interface FlagUKProps {
   selected?: boolean
-  onClick: () => void
+  onClick?: () => void
 }
-export const FlagUK: FunctionComponent<FlagUKProps> = ({ selected, onClick }) => {
+export const FlagUK: FunctionComponent<FlagUKProps> = ({ selected = true, onClick }) => {
   return (
     <svg
       onClick={onClick}

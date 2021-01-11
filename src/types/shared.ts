@@ -10,6 +10,7 @@ export interface ExtraCardProps {
     showTags?: boolean
     showPublished?: boolean
     showMore?: boolean
+    imageOnly?: boolean
   }
 }
 

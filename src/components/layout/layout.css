@@ -23,6 +23,14 @@ footer ::selection {
   color: white;
   background-color: #318269;
 }
+/*https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header/21707103#21707103*/
+:target {
+  display: block;
+  position: relative;
+  /*section bottom margin is 1.45 rem*/
+  top: -2.9rem;
+  visibility: hidden;
+}
 
 html {
   font-family: sans-serif;
@@ -321,7 +329,8 @@ h3 {
   font-size: 1.38316rem;
   line-height: 1.1;
 }
-h4, .section-title {
+h4,
+.section-title {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -566,6 +575,9 @@ ol li {
 ul li {
   padding-left: 0;
 }
+.index-blog-layout-content li {
+  margin-bottom: 0.5rem;
+}
 li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
@@ -577,9 +589,6 @@ li > ul {
   margin-top: calc(1.45rem / 2);
 }
 blockquote *:last-child {
-  margin-bottom: 0;
-}
-li *:last-child {
   margin-bottom: 0;
 }
 p *:last-child {
@@ -619,7 +628,7 @@ thead {
 td,
 th {
   text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
@@ -629,13 +638,20 @@ th {
   padding-top: 0.725rem;
   padding-bottom: calc(0.725rem - 1px);
 }
-th:first-child,
-td:first-child {
-  padding-left: 0;
+/*th:first-child,*/
+/*td:first-child {*/
+/*  padding-left: 0;*/
+/*}*/
+/*th:last-child,*/
+/*td:last-child {*/
+/*  padding-right: 0;*/
+/*}*/
+/* add background color */
+tr:nth-of-type(even) {
+  background-color: hsla(0, 0%, 0%, 0.08);
 }
-th:last-child,
-td:last-child {
-  padding-right: 0;
+tbody tr:hover {
+  background-color: hsla(0, 0%, 0%, 0.12);
 }
 tt,
 code {
@@ -699,4 +715,14 @@ pre tt:after {
   100% {
     transform: rotate(359deg);
   }
+}
+
+/*remove margin from image that are first child of section content*/
+/* fucking-annoying-classname-because-emotion-fucking-annoying-me */
+.fucking-annoying-classname-because-emotion-fucking-annoying-me
+  .section-title
+  + .section-content
+  > div:first-child
+  > .gatsby-image-wrapper {
+  margin-top: 0;
 }

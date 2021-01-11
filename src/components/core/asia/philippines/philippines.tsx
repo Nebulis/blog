@@ -97,6 +97,7 @@ export const PhilippinesQuote = styled(Quote)`
 
 export const PhilippinesExternalLink = styled(ExternalLink)`
   color: ${philippinesPrimaryColor};
+  font-weight: bold;
   &:visited {
     color: ${philippinesPrimaryColor};
   }

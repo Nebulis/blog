@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
 import { ApplicationContext } from "../../../components/application"
-import { getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
+import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
 import { vietnamLinks } from "../../../components/core/asia/vietnam/vietnam.links"
 import { HomeSection, HomeSubSection, MainTitleSection, SectionContent } from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
@@ -22,7 +22,6 @@ import { useCustomTranslation } from "../../../i18n"
 import { PageProps } from "gatsby"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 import { TitleImage } from "../../../components/images/layout"
-import { ExtraCardProps } from "../../../types/shared"
 import { jsx } from "@emotion/core"
 import { SharedVietnamImages } from "../../../components/images/asia/vietnam/shared-vietnam-images"
 import i18n from "i18next"
@@ -39,7 +38,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
-  const articles: React.ComponentType<ExtraCardProps>[] = []
+  const articles = getArticles({ kind: "other", country: "vietnam", development })
   const country = t("common:country.vietnam.title")
   const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
@@ -90,9 +89,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <HomeSection>{t("common:inform.title")}</HomeSection>
             <HomeSubSection>{t("common:inform.subtitle")}</HomeSubSection>
             <ArticlesContainer>
-              {articles.map((Element, index) => (
-                <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />
-              ))}
+              {articles.map(({ card: Card }, index) =>
+                Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
+              )}
             </ArticlesContainer>
           </>
         )}

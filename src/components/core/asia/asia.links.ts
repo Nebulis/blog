@@ -62,5 +62,20 @@ export const asiaLinks: ContinentLink = {
       others: [],
       label: { en: commonEn.country.laos.title, fr: commonFr.country.laos.title },
     },
+    {
+      id: "indonesia",
+      cities: [
+        {
+          id: "bali",
+          label: {
+            en: "Bali",
+            fr: "Bali",
+          },
+          highlights: [],
+        },
+      ],
+      others: [],
+      label: { en: commonEn.country.indonesia.title, fr: commonFr.country.indonesia.title },
+    },
   ],
 }

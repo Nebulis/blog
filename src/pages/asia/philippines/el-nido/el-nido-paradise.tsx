@@ -155,145 +155,141 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             .
           </p>
         </WhereToStay>
-        <Visit
-          css={css`
-            // using emotion because of priority issue with className
-            margin-bottom: 0;
-          `}
-        >
-          <p>{t("visit.part1")}</p>
-          <p>{t("visit.part2")}</p>
-          <p className="mb0">{t("visit.part3")}</p>
-        </Visit>
-        <MapContainer>
-          <PhilippinesMap />
-        </MapContainer>
-        <PhilippinesDivider />
-        <section>
-          <PhilippinesHeadline>{t("visit1.title")}</PhilippinesHeadline>
-          <PhilippinesDivider />
-          <SectionContent>
-            <p>{t("visit1.part1")}</p>
-            <p>{t("visit1.part2")}</p>
-            <ImageAsPortrait>
-              <ElNidoParadiseImages image="fruit" />
-            </ImageAsPortrait>
+        <Visit>
+          <SectionContent
+            css={css`
+              // using emotion because of priority issue with className
+              margin-bottom: 0;
+            `}
+          >
+            <p>{t("visit.part1")}</p>
+            <p>{t("visit.part2")}</p>
+            <p className="mb0">{t("visit.part3")}</p>
           </SectionContent>
-          <SectionContent>
-            <p>{t("visit1.part3")}</p>
-            <p>{t("visit1.part4")}</p>
-            <GroupOfImages>
-              <ImageAsLandscape>
-                <ElNidoParadiseImages image="city1" />
-              </ImageAsLandscape>
-              <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadiseImages image="city2" />
-                <ElNidoParadiseImages image="city3" />
-              </TwoImagesSameSizeOrToGroup>
-              <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadiseImages image="city4" />
-                <ElNidoParadiseImages image="city5" />
-              </TwoImagesSameSizeOrToGroup>
-            </GroupOfImages>
-          </SectionContent>
-        </section>
-        <PhilippinesDivider />
-        <section>
-          <PhilippinesHeadline>{t("visit2.title")}</PhilippinesHeadline>
+          <MapContainer>
+            <PhilippinesMap />
+          </MapContainer>
           <PhilippinesDivider />
-          <SectionContent>
-            <p>
-              {t("visit2.part1-1")}{" "}
-              <PhilippinesExternalLink
-                href={`https://www.google.com/maps/place/Calle+Hama,+Barangay+Buena+Suerte,+El+Nido,+Palawan,+Philippines`}
-              >
-                Calle Hama
-              </PhilippinesExternalLink>
-              {t("visit2.part1-2")}
-            </p>
-            <p>{t("visit2.part2")}</p>
-            <GroupOfImages>
+          <section>
+            <PhilippinesHeadline>{t("visit1.title")}</PhilippinesHeadline>
+            <PhilippinesDivider />
+            <SectionContent>
+              <p>{t("visit1.part1")}</p>
+              <p>{t("visit1.part2")}</p>
               <ImageAsPortrait>
-                <ElNidoParadiseImages image="tuktuk" />
+                <ElNidoParadiseImages image="fruit" />
               </ImageAsPortrait>
-              <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadiseImages image="departure1" />
-                <ElNidoParadiseImages image="departure2" />
-              </TwoImagesSameSizeOrToGroup>
-            </GroupOfImages>
-          </SectionContent>
-          <SectionContent>
-            <p>{t("visit2.part3")}</p>
-            <p>{t("visit2.part4")}</p>
-            <p>{t("visit2.part5")}</p>
-            <article>
-              <ElNidoWhichTourCard card={{ showTags: false, showPublished: false, showMore: true }} />
-            </article>
-          </SectionContent>
-        </section>
-        <PhilippinesDivider />
-        <section>
-          <PhilippinesHeadline>{t("visit3.title")}</PhilippinesHeadline>
+              <p>{t("visit1.part3")}</p>
+              <p>{t("visit1.part4")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <ElNidoParadiseImages image="city1" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <ElNidoParadiseImages image="city2" />
+                  <ElNidoParadiseImages image="city3" />
+                </TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSizeOrToGroup>
+                  <ElNidoParadiseImages image="city4" />
+                  <ElNidoParadiseImages image="city5" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
           <PhilippinesDivider />
-          <SectionContent>
-            <p>{t("visit3.part1")}</p>
-            <p>{t("visit3.part2")}</p>
-            <p>{t("visit3.part3")}</p>
-            <p>{t("visit3.part4")}</p>
-            <p>{t("visit3.part5")}</p>
-            <p>{t("visit3.part6")}</p>
-            <p>{t("visit3.part7")}</p>
-            <GroupOfImages>
-              <ImageAsLandscape>
-                <ElNidoParadiseImages image="paradise1" />
-              </ImageAsLandscape>
-              <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadiseImages image="paradise2" />
-                <ElNidoParadiseImages image="paradise3" />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsLandscape>
-                <ElNidoParadiseImages image="paradise4" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-          </SectionContent>
-          <SectionContent>
-            <p>{t("visit3.part8")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadiseImages image="snorkeling1" />
-                <ElNidoParadiseImages image="snorkeling2" />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsLandscape>
-                <ElNidoParadiseImages image="snorkeling3" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-          </SectionContent>
-        </section>
-        <PhilippinesDivider />
-        <section>
-          <PhilippinesHeadline>{t("visit4.title")}</PhilippinesHeadline>
+          <section>
+            <PhilippinesHeadline>{t("visit2.title")}</PhilippinesHeadline>
+            <PhilippinesDivider />
+            <SectionContent>
+              <p>
+                {t("visit2.part1-1")}{" "}
+                <PhilippinesExternalLink
+                  href={`https://www.google.com/maps/place/Calle+Hama,+Barangay+Buena+Suerte,+El+Nido,+Palawan,+Philippines`}
+                >
+                  Calle Hama
+                </PhilippinesExternalLink>
+                {t("visit2.part1-2")}
+              </p>
+              <p>{t("visit2.part2")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <ElNidoParadiseImages image="tuktuk" />
+                </ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
+                  <ElNidoParadiseImages image="departure1" />
+                  <ElNidoParadiseImages image="departure2" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
+              <p>{t("visit2.part3")}</p>
+              <p>{t("visit2.part4")}</p>
+              <p>{t("visit2.part5")}</p>
+              <article>
+                <ElNidoWhichTourCard card={{ showTags: false, showPublished: false, showMore: true }} />
+              </article>
+            </SectionContent>
+          </section>
           <PhilippinesDivider />
-          <SectionContent>
-            <p>{t("visit4.part1")}</p>
-            <p>{t("visit4.part2")}</p>
-            <p>{t("visit4.part3")}</p>
-            <GroupOfImages>
-              <ImageAsLandscapeOnTheLeft>
-                <ElNidoParadiseImages image="paradise5" />
-              </ImageAsLandscapeOnTheLeft>
-              <ImageAsLandscapeOnTheRight>
-                <ElNidoParadiseImages image="paradise6" />
-              </ImageAsLandscapeOnTheRight>
-              <ImageAsLandscape>
-                <ElNidoParadiseImages image="paradise7" />
-              </ImageAsLandscape>
-              <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadiseImages image="paradise8" />
-                <ElNidoParadiseImages image="paradise9" />
-              </TwoImagesSameSizeOrToGroup>
-            </GroupOfImages>
-          </SectionContent>
-        </section>
+          <section>
+            <PhilippinesHeadline>{t("visit3.title")}</PhilippinesHeadline>
+            <PhilippinesDivider />
+            <SectionContent>
+              <p>{t("visit3.part1")}</p>
+              <p>{t("visit3.part2")}</p>
+              <p>{t("visit3.part3")}</p>
+              <p>{t("visit3.part4")}</p>
+              <p>{t("visit3.part5")}</p>
+              <p>{t("visit3.part6")}</p>
+              <p>{t("visit3.part7")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <ElNidoParadiseImages image="paradise1" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <ElNidoParadiseImages image="paradise2" />
+                  <ElNidoParadiseImages image="paradise3" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <ElNidoParadiseImages image="paradise4" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit3.part8")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <ElNidoParadiseImages image="snorkeling1" />
+                  <ElNidoParadiseImages image="snorkeling2" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <ElNidoParadiseImages image="snorkeling3" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <PhilippinesDivider />
+          <section>
+            <PhilippinesHeadline>{t("visit4.title")}</PhilippinesHeadline>
+            <PhilippinesDivider />
+            <SectionContent>
+              <p>{t("visit4.part1")}</p>
+              <p>{t("visit4.part2")}</p>
+              <p>{t("visit4.part3")}</p>
+              <GroupOfImages>
+                <ImageAsLandscapeOnTheLeft>
+                  <ElNidoParadiseImages image="paradise5" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <ElNidoParadiseImages image="paradise6" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsLandscape>
+                  <ElNidoParadiseImages image="paradise7" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <ElNidoParadiseImages image="paradise8" />
+                  <ElNidoParadiseImages image="paradise9" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+        </Visit>
         <PhilippinesDivider />
         <Conclusion>
           <p>{t("conclusion")}</p>

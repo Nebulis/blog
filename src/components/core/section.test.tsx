@@ -7,7 +7,7 @@ describe("sectionContent", () => {
     const tree = renderer.create(<SectionContent>aaaa</SectionContent>).toJSON()
     expect(tree).toMatchInlineSnapshot(`
       <div
-        className="undefined f5 content tj css-r1n2zh-sectionContentStyle"
+        className="undefined f5 section-content tj css-ogd0c4-sectionContentStyle"
       >
         aaaa
       </div>
@@ -24,7 +24,7 @@ describe("sectionContent", () => {
       .toJSON()
     expect(tree).toMatchInlineSnapshot(`
       <div
-        className="undefined f5 content tj css-r1n2zh-sectionContentStyle"
+        className="undefined f5 section-content tj css-ogd0c4-sectionContentStyle"
       >
         aaaa
         <p>
@@ -44,7 +44,7 @@ describe("sectionContent", () => {
       .toJSON()
     expect(tree).toMatchInlineSnapshot(`
       <div
-        className="undefined f5 content tj css-r1n2zh-sectionContentStyle"
+        className="undefined f5 section-content tj css-ogd0c4-sectionContentStyle"
       >
         <p
           className="mb2 "
@@ -68,7 +68,7 @@ describe("sectionContent", () => {
       .toJSON()
     expect(tree).toMatchInlineSnapshot(`
       <div
-        className="undefined f5 content tj css-r1n2zh-sectionContentStyle"
+        className="undefined f5 section-content tj css-ogd0c4-sectionContentStyle"
       >
         <p
           className="mb2 foo"
@@ -94,7 +94,7 @@ describe("sectionContent", () => {
       .toJSON()
     expect(tree).toMatchInlineSnapshot(`
       <div
-        className="undefined f5 content tj css-r1n2zh-sectionContentStyle"
+        className="undefined f5 section-content tj css-ogd0c4-sectionContentStyle"
       >
         <p
           className="mb2 "
@@ -128,7 +128,7 @@ describe("sectionContent", () => {
       .toJSON()
     expect(tree).toMatchInlineSnapshot(`
       <div
-        className="undefined f5 content tj css-r1n2zh-sectionContentStyle"
+        className="undefined f5 section-content tj css-ogd0c4-sectionContentStyle"
       >
         <ul
           className="mb2 "

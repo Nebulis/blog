@@ -34,7 +34,7 @@ exports[`english pages exports meta for public/en/asia/index.html correctly 1`] 
 
 exports[`english pages exports meta for public/en/asia/index.html correctly 2`] = `"Asia | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/index.html correctly 3`] = `"Find below the most beautiful wonders of Asia as well as when and where to travel for your dream holidays. Currently you will find articles about Vietnam and the Philippines."`;
+exports[`english pages exports meta for public/en/asia/index.html correctly 3`] = `"Find below the most beautiful wonders of Asia as well as when and where to travel for your dream holidays.}"`;
 
 exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
@@ -174,6 +174,12 @@ exports[`english pages exports meta for public/en/asia/vietnam/index.html correc
 
 exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly 3`] = `"Vietnam is a unique destination. Magnificent and varied landscapes, natural parks, a cultural heritage and a rich historical heritage ... From Ho Chi Minh City to Hanoi, via Da Nang, each destination offers its own history and a different experience. Discover through our articles and our photos our itinerary in the Southern Vietnam. We will share very soon about the North and the Center so stay tuned."`;
 
+exports[`english pages exports meta for public/en/asia/vietnam/prepare/index.html correctly 1`] = `"So many questions to ask yourself when planning a trip and especially how to organize yourself? In this article, you will find information and advice that will help you prepare for your trip to Vietnam."`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/prepare/index.html correctly 2`] = `"Prepare your travel to Vietnam | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/prepare/index.html correctly 3`] = `"In this article, you will find information and advice that will help you to prepare your trip to Vietnam. Why go to Vietnam? When to go? How many days or weeks? How much to budget? What are the procedures to follow ? We also share with you about accommodations, what you need to bring, the dangers you may face, and our opinion about Vietnam."`;
+
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/can-tho/index.html correctly 1`] = `"Can Tho is the largest city in the Mekong River Delta, located on the banks of the Hau River, it is renowned for its very large floating market."`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/can-tho/index.html correctly 2`] = `"Cân Thơ floating market | Travel Blog"`;
@@ -232,10 +238,10 @@ exports[`english pages exports meta for public/en/organisation/when-to-go/spring
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/spring/index.html correctly 2`] = `"Travel in spring | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/organisation/when-to-go/spring/index.html correctly 3`] = `"Winter is over! It's time to organize your spring holidays But where to travel during the month of March, April and May? Currently you will find articles about Vietnam and the Philippines but new countries will be added soon."`;
+exports[`english pages exports meta for public/en/organisation/when-to-go/spring/index.html correctly 3`] = `"Winter is over! It's time to organize your spring holidays But where to travel during the month of March, April and May?"`;
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly 1`] = `"Do you prefer snowy and magical Christmas? Or lack of sunlight make you feel low? Have holidays near astounding landscapes covered with a large white coat, rent a chalet for a cocooning week or fly for ski vacations and learn about winter sports. Or else ... Escape cold winter for heavenly beaches. Escape for the tropical sun. Discover unique landscapes and discover new cultures. So many places to spend your dream holidays during December, January or February. Alors, vous avez décidé ? Plutôt neige ou soleil en hiver ?"`;
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly 2`] = `"Travel in winter | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly 3`] = `"Do you prefer snowy and magical Christmas? Or lack of sunlight make you feel low? Currently you will find articles about Vietnam and the Philippines but new countries will be added soon.}"`;
+exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly 3`] = `"Do you prefer snowy and magical Christmas? Or lack of sunlight make you feel low?"`;

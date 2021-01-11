@@ -1,13 +1,7 @@
 import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
 import { CityHomeSection, MainTitleSection, SectionContent } from "../../../../components/core/section"
-import {
-  getHighlightsFromCity,
-  getLinkLabel,
-  isLinkPublished,
-  sortByLabel,
-  sortByPublishedDate,
-} from "../../../../components/core/links/links.utils"
+import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../../components/core/links/links.utils"
 import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import {
@@ -50,9 +44,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     ? philippinesLinks.cities.filter(isNotCurrentPage)
     : philippinesLinks.cities.filter(isLinkPublished).filter(isNotCurrentPage)
 
-  const highlights = getHighlightsFromCity(philippinesLinks.cities)({ id: currentPageId, development }).sort(
-    sortByPublishedDate
-  )
+  const highlights = getArticles({
+    country: "philippines",
+    kind: "highlight",
+    development,
+    tag: "el-nido",
+    filter: (cachedLink) => cachedLink.id !== "el-nido-paradise",
+  })
   const googleDescription = t("introduction.section3")
   const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
@@ -82,9 +80,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <PhilippinesDivider className="mt2" />
             <CityHomeSection>{t("section2")}</CityHomeSection>
             <CityArticleContainer>
-              {highlights.map(({ card: Card, id }) => (
-                <Card key={id} fluidObject={{ aspectRatio: 4 / 3 }} />
-              ))}
+              {highlights.map(({ card: Card, id }) =>
+                Card ? <Card key={id} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
+              )}
             </CityArticleContainer>
           </>
         )}

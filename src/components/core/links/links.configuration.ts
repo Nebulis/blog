@@ -98,6 +98,7 @@ export const menuLinks: NavigationLink[] = [
           },
         ],
       },
+      { id: "prepare", label: { fr: "Prepare", en: "Prepare" }, sections: [] },
     ],
   },
   {
@@ -173,7 +174,7 @@ export const menuLinks: NavigationLink[] = [
   },
 ]
 
-export const otherLinks: NavigationLink[] = [
+export const noIdeaLinks: NavigationLink[] = [
   {
     id: "home",
     label: { fr: "Accueil", en: "Home" },
@@ -197,25 +198,30 @@ continentLinks.forEach((continent) => {
   continent.countries.forEach((country) => {
     country.others.forEach((other) => {
       cachedLinks.set(other.id, {
+        id: other.id,
         label: other.label,
         url: path.join("/", getUrl(continent), getUrl(country), getUrl(other)),
         published: isPublished(other),
         publishedDate: other.published instanceof Date ? other.published : undefined,
         card: other.card,
-        tags: [continent.id, country.id],
+        tags: [continent.id, country.id, ...(other.additionalTags ?? [])],
         country: country.id,
+        kind: "other",
       })
     })
     country.cities.forEach((city) => {
       cachedLinks.set(city.id, {
+        id: city.id,
         label: city.label,
         url: path.join("/", getUrl(continent), getUrl(country), getUrl(city)),
         published: city.highlights.some(isPublished),
         tags: [continent.id, country.id],
         country: country.id,
+        kind: "city",
       })
       city.highlights.forEach((highlight) => {
         cachedLinks.set(highlight.id, {
+          id: highlight.id,
           label: highlight.label,
           url: path.join("/", getUrl(continent), getUrl(country), getUrl(city), getUrl(highlight)),
           published: isPublished(highlight),
@@ -223,11 +229,13 @@ continentLinks.forEach((continent) => {
           card: highlight.card,
           tags: [continent.id, country.id, city.id],
           country: country.id,
+          kind: "highlight",
         })
       })
     })
 
     cachedLinks.set(country.id, {
+      id: country.id,
       label: country.label,
       url: path.join("/", getUrl(continent), getUrl(country)),
       published:
@@ -235,13 +243,16 @@ continentLinks.forEach((continent) => {
         country.cities.some((c) => cachedLinks.get(c.id)?.published),
       tags: [continent.id],
       country: country.id,
+      kind: "country",
     })
   })
   cachedLinks.set(continent.id, {
+    id: continent.id,
     label: continent.label,
     url: path.join("/", getUrl(continent)),
     published: continent.countries.some((country) => cachedLinks.get(country.id)?.published),
     tags: [],
+    kind: "continent",
   })
 })
 
@@ -249,34 +260,42 @@ menuLinks.forEach((menu) => {
   menu.sections.forEach((submenu) => {
     submenu.sections.forEach((subsubmenu) => {
       cachedLinks.set(subsubmenu.id, {
+        id: subsubmenu.id,
         label: subsubmenu.label,
         url: path.join("/", getUrl(menu), getUrl(submenu), getUrl(subsubmenu)),
         published: !!subsubmenu.published,
         tags: [],
+        kind: "menu",
       })
     })
 
     cachedLinks.set(submenu.id, {
+      id: submenu.id,
       label: submenu.label,
       url: path.join("/", getUrl(menu), getUrl(submenu)),
       published:
         submenu.sections.some((subsubmenu) => cachedLinks.get(subsubmenu.id)?.published) || !!submenu.published,
       tags: [],
+      kind: "menu",
     })
   })
   cachedLinks.set(menu.id, {
+    id: menu.id,
     label: menu.label,
     url: path.join("/", getUrl(menu)),
     published: menu.sections.some((submenu) => cachedLinks.get(submenu.id)?.published) || !!menu.published,
     tags: [],
+    kind: "menu",
   })
 })
 
-otherLinks.forEach((link) => {
+noIdeaLinks.forEach((link) => {
   cachedLinks.set(link.id, {
+    id: link.id,
     label: link.label,
     url: path.join("/", getUrl(link)),
     published: true,
     tags: [],
+    kind: "noIdea",
   })
 })

@@ -9,6 +9,10 @@ export const primaryDarkColor15Darker = "#296e59" // 15% darker than 318269
 export const darkButtonColor = "#343a40"
 export const darkButtonHoverColor = "#23272b"
 
+export const weatherGood = "green"
+export const weatherAverage = "#f5c71a"
+export const weatherBad = "red"
+
 export const fillMap = "#d4edf5"
 
 /** sizes **/

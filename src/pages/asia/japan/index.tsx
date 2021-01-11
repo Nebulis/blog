@@ -4,7 +4,7 @@ import { css, jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
-import { getLinkLabel, getMostRecentArticles, isLinkPublished } from "../../../components/core/links/links.utils"
+import { getLinkLabel, getArticles, isLinkPublished } from "../../../components/core/links/links.utils"
 import { ApplicationLink } from "../../../components/core/links/link"
 import { ApplicationContext } from "../../../components/application"
 import { IndexJapanBlogLayout, JapanDivider } from "../../../components/core/japan/japan"
@@ -82,12 +82,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <HomeSection>S&apos;informer</HomeSection>
             <HomeSubSection>A travers nos astuces, nos coups de cœur ...</HomeSubSection>
             <ArticlesContainer>
-              {getMostRecentArticles({
+              {getArticles({
                 development,
-                customFilter: (link) => link.country === "japan",
-              }).map((Element, index) => (
-                <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />
-              ))}
+                country: "japan",
+                kind: "highlight",
+              }).map(({ card: Card }, index) =>
+                Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
+              )}
             </ArticlesContainer>
           </>
         )}

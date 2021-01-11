@@ -11,8 +11,6 @@ import {
   VietnamExternalLink,
   VietnamHeadline,
   VietnamLink,
-  VietnamQuote,
-  VietnamTitle,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import {
   HighLight,
@@ -44,6 +42,8 @@ import { buildBaolauLink, buildBookingSearchUrl, buildBookingUrl, buildExpediaUr
 import { vietnamPrimaryColorDarker } from "../../../../components/core/asia/vietnam/vietnam.colors"
 import { CanThoImages } from "../../../../components/images/asia/vietnam/southern-vietnam/can-tho"
 import styled from "@emotion/styled"
+import { Title } from "../../../../components/core/title"
+import { Quote } from "../../../../components/core/quote"
 
 const namespace = "asia/vietnam/southern-vietnam/can-tho"
 const id = "can-tho"
@@ -60,7 +60,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const title = t(`common:country.vietnam.card.${id}`)
   const description = t("quote")
   const googleDescription = t("introduction")
-  const transportLinkPublished = development || getLink("transports-in-vietnam").published
+  const transportLinkPublished = development || getLink("transport-vietnam").published
 
   return (
     <>
@@ -72,11 +72,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         location={location}
       />
       <VietnamBlogLayout page={id} location={location}>
-        <VietnamTitle title={title} linkId={id} />
+        <Title title={title} linkId={id} />
         <MainImageAsLandscape>
           <SharedCardVietnamImages image="canThoMain" />
         </MainImageAsLandscape>
-        <VietnamQuote>{description}</VietnamQuote>
+        <Quote>{description}</Quote>
         <Divider />
         <Introduction>{googleDescription}</Introduction>
         <Divider />
@@ -111,7 +111,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           {transportLinkPublished && (
             <p>
               {t("how.part17")}{" "}
-              <VietnamLink to="transports-in-vietnam">{t("common:country.vietnam.card.transports")}</VietnamLink>.
+              <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
             </p>
           )}
         </How>
@@ -155,195 +155,189 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
         </WhereToStay>
         <Visit>
-          <p>{t("visit.part1")}</p>
-        </Visit>
-        <Divider />
-        <section>
-          <VietnamHeadline>{t("visit1.title")}</VietnamHeadline>
-          <Divider />
           <SectionContent>
-            <p>{t("visit1.part1")}</p>
-            <p>{t("visit1.part2")}</p>
-            <p>{t("visit1.part3")}</p>
-            <p>{t("visit1.part4")}</p>
-            <p>{t("visit1.part5")}</p>
-            <GroupOfImages>
+            <p>{t("visit.part1")}</p>
+          </SectionContent>
+          <Divider />
+          <section>
+            <VietnamHeadline>{t("visit1.title")}</VietnamHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit1.part1")}</p>
+              <p>{t("visit1.part2")}</p>
+              <p>{t("visit1.part3")}</p>
+              <p>{t("visit1.part4")}</p>
+              <p>{t("visit1.part5")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <CanThoImages image="hotel1" />
+                </ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
+                  <CanThoImages image="hotel2" />
+                  <CanThoImages image="hotel3" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <VietnamHeadline>{t("visit2.title")}</VietnamHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit2.part1")}</p>
+              <p>{t("visit2.part2")}</p>
+              <ul>
+                <li>
+                  <span className="b">{t("visit2.part3")}</span>
+                  {t("visit2.part4")}
+                </li>
+                <li>
+                  <span className="b">{t("visit2.part5")}</span>
+                  {t("visit2.part6")}
+                </li>
+              </ul>
+              <p>{t("visit2.part7")}</p>
+              <p>{t("visit2.part8")}</p>
+              <TwoImagesSameSizeOrToGroup>
+                <CanThoImages image="floatingMarket1" />
+                <CanThoImages image="floatingMarket2" />
+              </TwoImagesSameSizeOrToGroup>
+            </SectionContent>
+            <SectionContent>
+              <p>{t("visit2.part9")}</p>
+              <p>{t("visit2.part10")}</p>
+              <p>{t("visit2.part11")}</p>
+              <p>{t("visit2.part12")}</p>
+              {/* adding mb2 manually cause it's not working automatically: should use child.type?.__emotion_base === "p" but it's not typed*/}
+              <InsideQuote className="tc b mb2">{t("visit2.part13")}</InsideQuote>
               <ImageAsPortrait>
-                <CanThoImages image="hotel1" />
+                <CanThoImages image="floatingMarket3" />
               </ImageAsPortrait>
-              <TwoImagesSameSizeOrToGroup>
-                <CanThoImages image="hotel2" />
-                <CanThoImages image="hotel3" />
-              </TwoImagesSameSizeOrToGroup>
-            </GroupOfImages>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <VietnamHeadline>{t("visit2.title")}</VietnamHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit2.part1")}</p>
-            <p>{t("visit2.part2")}</p>
-            <ul>
-              <li>
-                <span className="b">{t("visit2.part3")}</span>
-                {t("visit2.part4")}
-              </li>
-              <li>
-                <span className="b">{t("visit2.part5")}</span>
-                {t("visit2.part6")}
-              </li>
-            </ul>
-            <p>{t("visit2.part7")}</p>
-            <p>{t("visit2.part8")}</p>
-            <TwoImagesSameSizeOrToGroup>
-              <CanThoImages image="floatingMarket1" />
-              <CanThoImages image="floatingMarket2" />
-            </TwoImagesSameSizeOrToGroup>
-          </SectionContent>
-          <SectionContent>
-            <p>{t("visit2.part9")}</p>
-            <p>{t("visit2.part10")}</p>
-            <p>{t("visit2.part11")}</p>
-            <p>{t("visit2.part12")}</p>
-            {/*should use child.type?.__emotion_base === "p" but it's not typed*/}
-            <InsideQuote className="tc b mb2">{t("visit2.part13")}</InsideQuote>
-            <ImageAsPortrait>
-              <CanThoImages image="floatingMarket3" />
-            </ImageAsPortrait>
-          </SectionContent>
-          <SectionContent>
-            <p>{t("visit2.part14")}</p>
-            <p>{t("visit2.part15")}</p>
-            <p>{t("visit2.part16")}</p>
-            <p>{t("visit2.part17")}</p>
-            <p>{t("visit2.part18")}</p>
-            <p>{t("visit2.part19")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
-                <CanThoImages image="floatingMarket4" />
-                <CanThoImages image="floatingMarket5" />
-              </TwoImagesSameSizeOrToGroup>
+              <p>{t("visit2.part14")}</p>
+              <p>{t("visit2.part15")}</p>
+              <p>{t("visit2.part16")}</p>
+              <p>{t("visit2.part17")}</p>
+              <p>{t("visit2.part18")}</p>
+              <p>{t("visit2.part19")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <CanThoImages image="floatingMarket4" />
+                  <CanThoImages image="floatingMarket5" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <CanThoImages image="floatingMarket6" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <CanThoImages image="floatingMarket7" />
+                  <CanThoImages image="floatingMarket8" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <CanThoImages image="floatingMarket9" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit2.part20")}</p>
+              <p>{t("visit2.part21")}</p>
               <ImageAsLandscape>
-                <CanThoImages image="floatingMarket6" />
+                <CanThoImages image="floatingMarket10" />
               </ImageAsLandscape>
-              <TwoImagesSameSizeOrToGroup>
-                <CanThoImages image="floatingMarket7" />
-                <CanThoImages image="floatingMarket8" />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsPortrait>
-                <CanThoImages image="floatingMarket9" />
-              </ImageAsPortrait>
-            </GroupOfImages>
-          </SectionContent>
-          <SectionContent>
-            <p>{t("visit2.part20")}</p>
-            <p>{t("visit2.part21")}</p>
-            <ImageAsLandscape>
-              <CanThoImages image="floatingMarket10" />
-            </ImageAsLandscape>
-          </SectionContent>
-          <SectionContent>
-            <p>{t("visit2.part22")}</p>
-            <p>{t("visit2.part23")}</p>
-            <TwoImagesLeftBigger>
-              <CanThoImages image="floatingMarket11" />
-              <CanThoImages image="floatingMarket12" />
-            </TwoImagesLeftBigger>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <VietnamHeadline>{t("visit3.title")}</VietnamHeadline>
+              <p>{t("visit2.part22")}</p>
+              <p>{t("visit2.part23")}</p>
+              <TwoImagesLeftBigger>
+                <CanThoImages image="floatingMarket11" />
+                <CanThoImages image="floatingMarket12" />
+              </TwoImagesLeftBigger>
+            </SectionContent>
+          </section>
           <Divider />
-          <SectionContent>
-            <p>{t("visit3.part1")}</p>
-            <p>{t("visit3.part2")}</p>
-            <p>{t("visit3.part3")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
-                <CanThoImages image="market1" />
-                <CanThoImages image="market2" />
-              </TwoImagesSameSizeOrToGroup>
-              <TwoImagesSameSizeOrToGroup>
-                <CanThoImages image="market3" />
-                <CanThoImages image="market4" />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsPortrait>
-                <CanThoImages image="market5" />
-              </ImageAsPortrait>
-              <TwoImagesSameSizeOrToGroup>
-                <CanThoImages image="market6" />
-                <CanThoImages image="market7" />
-              </TwoImagesSameSizeOrToGroup>
-            </GroupOfImages>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <VietnamHeadline>{t("visit4.title")}</VietnamHeadline>
+          <section>
+            <VietnamHeadline>{t("visit3.title")}</VietnamHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit3.part1")}</p>
+              <p>{t("visit3.part2")}</p>
+              <p>{t("visit3.part3")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <CanThoImages image="market1" />
+                  <CanThoImages image="market2" />
+                </TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSizeOrToGroup>
+                  <CanThoImages image="market3" />
+                  <CanThoImages image="market4" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <CanThoImages image="market5" />
+                </ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
+                  <CanThoImages image="market6" />
+                  <CanThoImages image="market7" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
           <Divider />
-          <SectionContent>
-            <p>{t("visit4.part1")}</p>
-            <p>{t("visit4.part2")}</p>
-            <p>{t("visit4.part3")}</p>
-            <p>{t("visit4.part4")}</p>
-            <p>{t("visit4.part5")}</p>
-            <p>{t("visit4.part6")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
-                <CanThoImages image="rice1" />
-                <CanThoImages image="rice2" />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsPortrait>
-                <CanThoImages image="rice3" />
-              </ImageAsPortrait>
+          <section>
+            <VietnamHeadline>{t("visit4.title")}</VietnamHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit4.part1")}</p>
+              <p>{t("visit4.part2")}</p>
+              <p>{t("visit4.part3")}</p>
+              <p>{t("visit4.part4")}</p>
+              <p>{t("visit4.part5")}</p>
+              <p>{t("visit4.part6")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <CanThoImages image="rice1" />
+                  <CanThoImages image="rice2" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <CanThoImages image="rice3" />
+                </ImageAsPortrait>
+                <TwoImagesSameSize>
+                  <CanThoImages image="rice4" />
+                  <CanThoImages image="rice5" />
+                </TwoImagesSameSize>
+              </GroupOfImages>
+              <p>{t("visit4.part7")}</p>
+              <p>{t("visit4.part8")}</p>
               <TwoImagesSameSize>
-                <CanThoImages image="rice4" />
-                <CanThoImages image="rice5" />
+                <CanThoImages image="rice6" />
+                <CanThoImages image="rice7" />
               </TwoImagesSameSize>
-            </GroupOfImages>
-          </SectionContent>
-          <SectionContent>
-            <p>{t("visit4.part7")}</p>
-            <p>{t("visit4.part8")}</p>
-            <TwoImagesSameSize>
-              <CanThoImages image="rice6" />
-              <CanThoImages image="rice7" />
-            </TwoImagesSameSize>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <VietnamHeadline>{t("visit5.title")}</VietnamHeadline>
+            </SectionContent>
+          </section>
           <Divider />
-          <SectionContent>
-            <p>{t("visit5.part1")}</p>
-            <p>{t("visit5.part2")}</p>
-            <p>{t("visit5.part3")}</p>
-            <TwoImagesSameSizeOrToGroup>
-              <CanThoImages image="ride1" />
-              <CanThoImages image="ride2" />
-            </TwoImagesSameSizeOrToGroup>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <VietnamHeadline>{t("visit6.title")}</VietnamHeadline>
+          <section>
+            <VietnamHeadline>{t("visit5.title")}</VietnamHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit5.part1")}</p>
+              <p>{t("visit5.part2")}</p>
+              <p>{t("visit5.part3")}</p>
+              <TwoImagesSameSizeOrToGroup>
+                <CanThoImages image="ride1" />
+                <CanThoImages image="ride2" />
+              </TwoImagesSameSizeOrToGroup>
+            </SectionContent>
+          </section>
           <Divider />
-          <SectionContent>
-            <p className="b tc">{t("visit6.part1")}</p>
-            <p className="mb4">{t("visit6.part2")}</p>
-            <p className="b tc">{t("visit6.part3")}</p>
-            <p className="mb4">{t("visit6.part4")}</p>
-            <p className="b tc">{t("visit6.part5")}</p>
-            <p className="mb4">{t("visit6.part6")}</p>
-            <ImageAsPortrait>
-              <CanThoImages image="pineapple" />
-            </ImageAsPortrait>
-          </SectionContent>
-        </section>
+          <section>
+            <VietnamHeadline>{t("visit6.title")}</VietnamHeadline>
+            <Divider />
+            <SectionContent>
+              <p className="b tc">{t("visit6.part1")}</p>
+              <p className="mb4">{t("visit6.part2")}</p>
+              <p className="b tc">{t("visit6.part3")}</p>
+              <p className="mb4">{t("visit6.part4")}</p>
+              <p className="b tc">{t("visit6.part5")}</p>
+              <p className="mb4">{t("visit6.part6")}</p>
+              <ImageAsPortrait>
+                <CanThoImages image="pineapple" />
+              </ImageAsPortrait>
+            </SectionContent>
+          </section>
+        </Visit>
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

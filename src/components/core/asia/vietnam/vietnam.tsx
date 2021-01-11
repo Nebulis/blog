@@ -4,25 +4,11 @@ import { vietnamPrimaryColor, vietnamPrimaryColorDarker } from "./vietnam.colors
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
 import { ImageAsMedallion, TitleImage } from "../../../images/layout"
 import { drawHat } from "./console-draw-hat"
-import { Title } from "../../title"
-import { Quote } from "../../quote"
 import { ButtonLink, ExternalLink, linkBuilder } from "../../links/link"
 import { Link } from "gatsby"
 import { City } from "../../highlight"
 import hat from "../../../../images/asia/vietnam/hat.svg"
 import { css } from "@emotion/core"
-
-export const VietnamQuote = styled(Quote)`
-  .quote::before {
-    color: ${vietnamPrimaryColor};
-  }
-`
-export const CuChoTunnelsQuote = () => (
-  <VietnamQuote>
-    Immense ensemble de tunnels souterrains atteignant environ 250 km, ils s’étendent de Hô Chi Minh-Ville jusqu&apos;à
-    la frontière Cambodgienne.
-  </VietnamQuote>
-)
 
 const vietnamPartStyle = css`
   color: ${vietnamPrimaryColorDarker};
@@ -43,6 +29,17 @@ const vietnamLayout = `
   svg.search:hover,
   svg.likes {
     fill: ${vietnamPrimaryColor};
+  }
+  
+  a.title-tag {
+    background-color: ${vietnamPrimaryColorDarker};
+  }
+  a.title-tag:hover {
+    box-shadow: 0px 0px 2px 1px ${vietnamPrimaryColorDarker};
+  }
+  
+  .quote::before {
+    color: ${vietnamPrimaryColor};
   }
 
   footer a {
@@ -78,15 +75,6 @@ export const VietnamBlogLayout = drawer(styled(BlogLayout)`
   ${vietnamLayout}
 `)
 
-export const VietnamTitle = styled(Title)`
-  a {
-    background-color: ${vietnamPrimaryColorDarker};
-  }
-  a:hover {
-    box-shadow: 0px 0px 2px 1px ${vietnamPrimaryColorDarker};
-  }
-`
-
 // the color has been picked from the hat images and is not derived from the primary color or other
 export const VietnamImageAsMedallion = styled(ImageAsMedallion)`
   &.mobile,
@@ -100,6 +88,7 @@ export const VietnamLink = linkBuilder(styled(Link)`
   &:visited {
     color: ${vietnamPrimaryColorDarker};
   }
+  text-decoration: underline;
 `)
 
 export const VietnamExternalLink = styled(ExternalLink)`

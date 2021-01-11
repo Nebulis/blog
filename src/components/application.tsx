@@ -37,6 +37,7 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
         displayAllArticles: development,
         displayComments: site.siteMetadata.config.comments === "enabled",
         toggle: () => setDevelopment(!development),
+        covid: true,
       }}
     >
       {children}
@@ -55,9 +56,11 @@ export const ApplicationContext = React.createContext<{
    */
   initialDevelopmentValue?: boolean
   toggle?: () => void
+  covid: boolean
 }>({
   development: false,
   displayAllArticles: false,
   displayComments: false,
   initialDevelopmentValue: false,
+  covid: true,
 })

@@ -33,6 +33,12 @@
     "australia": {
       "title": "Australia"
     },
+    "belarus": {
+      "title": "Belarus"
+    },
+    "brunei": {
+      "title": "Brunei"
+    },
     "cambodia": {
       "title": "Cambodia",
       "card": {
@@ -40,11 +46,23 @@
         "kampong-phluk": "Kampong Phluk Floating Village"
       }
     },
+    "chile": {
+      "title": "Chile"
+    },
     "china": {
       "title": "China"
     },
+    "denmark": {
+      "title": "Denmark"
+    },
+    "finland": {
+      "title": "Finland"
+    },
     "france": {
       "title": "France"
+    },
+    "germany": {
+      "title": "Germany"
     },
     "india": {
       "title": "India"
@@ -52,8 +70,14 @@
     "indonesia": {
       "title": "Indonesia"
     },
+    "italy": {
+      "title": "Italy"
+    },
     "japan": {
       "title": "Japan"
+    },
+    "kyrgyzstan": {
+      "title": "Kyrgyzstan"
     },
     "laos": {
       "title": "Laos"
@@ -63,6 +87,9 @@
     },
     "myanmar": {
       "title": "Myanmar"
+    },
+    "norway": {
+      "title": "Norway"
     },
     "philippines": {
       "title": "Philippines",
@@ -74,17 +101,26 @@
         "which-tour": "Bacuit Archipelago: Which tour to choose?"
       }
     },
+    "russia": {
+      "title": "Russia"
+    },
     "senegal": {
       "title": "Senegal"
     },
     "singapore": {
       "title": "Singapore"
     },
+    "south-korea": {
+      "title": "South Korea"
+    },
     "spain": {
       "title": "Spain"
     },
     "sri-lanka": {
       "title": "Sri Lanka"
+    },
+    "sweden": {
+      "title": "Sweden"
     },
     "taiwan": {
       "title": "Taiwan"
@@ -95,6 +131,9 @@
     "united-states": {
       "title": "United States"
     },
+    "uk": {
+      "title": "United Kingdom"
+    },
     "vietnam": {
       "title": "Vietnam",
       "southern-vietnam": "Southern Vietnam",
@@ -104,7 +143,9 @@
         "my-tho": "Cruise on the Mekong between Mỹ Tho and Ben Tre",
         "ho-chi-minh-war-museum": "War Remnants Museum in Ho Chi Minh City",
         "can-tho": "Cân Thơ floating market",
-        "transports": "Transports in Vietnam"
+        "transport": "Transports in Vietnam",
+        "food": "Our Vietnamese Food Favorites",
+        "prepare": "Prepare your travel to Vietnam"
       }
     }
   },
@@ -114,12 +155,18 @@
   "in": "in",
   "head": "Travel Blog",
   "section": {
+    "baggage": "Must-pack items",
+    "health": "Health",
     "how-long": "How long?",
     "how-much": "How much?",
     "how-much2": "Price ?",
     "how-to-get-there": "How to get there?",
-    "visits": "Visits",
+    "natural-disaster": "Natural disasters",
+    "phone": "Phone",
+    "traps": "Scams and fraud",
+    "visa": "Visa",
     "visit": "The visit",
+    "visits": "Visits",
     "what-time-of-year": "When?",
     "when": "When?",
     "where": "Our itinerary",

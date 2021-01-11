@@ -34,7 +34,7 @@ exports[`french pages exports meta for public/asia/index.html correctly 1`] = `"
 
 exports[`french pages exports meta for public/asia/index.html correctly 2`] = `"Asie | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/index.html correctly 3`] = `"Retrouvez dans notre blog les plus belles perles d’Asie ainsi que où et quand voyager pour vos vacances de rêve. Actuellement vous trouverez des articles sur le Vietnam et les Philippines."`;
+exports[`french pages exports meta for public/asia/index.html correctly 3`] = `"Retrouvez dans notre blog les plus belles perles d’Asie ainsi que où et quand voyager pour vos vacances de rêve.}"`;
 
 exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 
@@ -174,6 +174,12 @@ exports[`french pages exports meta for public/asia/vietnam/index.html correctly 
 
 exports[`french pages exports meta for public/asia/vietnam/index.html correctly 3`] = `"Le Vietnam est une destination unique. Des paysages magnifiques et variés, des parcs naturels, un héritage culturel et un patrimoine historique riche ... D'Hô Chi Minh-Ville à Hanoï, en passant par Da Nang, chaque destination offre sa propre histoire et une expérience différente. On vous fait découvrir à travers nos articles et nos photos notre itinéraire dans le Sud du Vietnam et nous vous parlerons très prochainement du Nord et du Centre alors restez connecté."`;
 
+exports[`french pages exports meta for public/asia/vietnam/prepare/index.html correctly 1`] = `"Que de questions à se poser quand on prépare un voyage et surtout comment bien s’organiser ? Vous trouverez dans cet article nos informations et conseils qui vous permettront de préparer votre voyage au Vietnam."`;
+
+exports[`french pages exports meta for public/asia/vietnam/prepare/index.html correctly 2`] = `"Préparer son voyage au Vietnam | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/vietnam/prepare/index.html correctly 3`] = `"Vous trouverez dans cet article nos informations et conseils qui vous permettront de préparer votre voyage au Vietnam. Pourquoi partir au Vietnam ? Quand partir ? Combien de jours ou semaines ? Combien d’argent prévoir ? Quelles sont les formalités ? On vous parle également des logements, des incontournables à faire et des dangers tout en vous donnant notre avis."`;
+
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/can-tho/index.html correctly 1`] = `"Can Tho est la plus grande ville du Delta du Mékong, située sur les rives de la rivière de Hau, elle est surtout célèbre pour son très grand marché flottant."`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/can-tho/index.html correctly 2`] = `"Visite de Cân Thơ et son marché flottant | Blog Voyage"`;
@@ -232,10 +238,10 @@ exports[`french pages exports meta for public/organisation/when-to-go/spring/ind
 
 exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly 2`] = `"Voyager au printemps | Blog Voyage"`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly 3`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ? Actuellement vous trouverez des articles sur le Vietnam et les Philippines mais nos prochains pays arrivent prochainement."`;
+exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly 3`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ?"`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 1`] = `"Vous êtes plutôt magie de Noël sous la neige ? Ou le manque de soleil a plutôt tendance à vous déprimer ? Passer ses vacances près de magnifiques paysages recouverts d’un grand manteau blanc, louer un chalet pour une semaine cocooning ou partir en voyage au ski et s’initier aux sports d'hiver. Ou bien ... Fuir le froid pour des plages paradisiaques, s’évader sous le soleil des tropiques. Découvrir des paysages uniques et partir à la rencontre de nouvelles cultures. Tant d’endroits pour passer les vacances de vos rêves en décembre, janvier ou février. Alors, vous avez décidé ? Plutôt neige ou soleil en hiver ?"`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 2`] = `"Voyager en hiver | Blog Voyage"`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 3`] = `"Vous êtes plutôt magie de Noël sous la neige ? Ou le manque de soleil a plutôt tendance à vous déprimer ? Actuellement vous trouverez des articles sur le Vietnam et les Philippines mais nos prochains pays arrivent prochainement.}"`;
+exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 3`] = `"Vous êtes plutôt magie de Noël sous la neige ? Ou le manque de soleil a plutôt tendance à vous déprimer ?"`;

@@ -27,7 +27,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const countries = development ? asiaLinks.countries : asiaLinks.countries.filter(isLinkPublished)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const googleDescription = `${t("quote.part3")} ${t("seo")}`
+  const googleDescription = `${t("quote.part3")}}`
   const description = t("quote.part2")
   return (
     <>

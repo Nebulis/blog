@@ -9,6 +9,9 @@ export const alt = {
   myThoMain: "My Tho Palm Tree",
   canThoMain: "Can Tho Floating Market",
   warMuseumMain: "War Remnants Museum Tank",
+  prepareMain: "Prepare Travel Vietnam",
+  transportMain: "Vietnam Transport",
+  foodMain: "Vietnam Food",
 }
 export const SharedCardVietnamImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
   className = "",
@@ -53,6 +56,27 @@ export const SharedCardVietnamImages: React.FunctionComponent<ExtraImageProps & 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      prepareMain: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      transportMain: file(relativePath: { eq: "asia/vietnam/transport/transport-vietnam-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      foodMain: file(relativePath: { eq: "asia/vietnam/food/food-vietnam-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

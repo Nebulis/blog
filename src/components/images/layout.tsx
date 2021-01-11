@@ -12,12 +12,12 @@ const creditStyle = css`
   .credit {
     position: absolute;
     opacity: 0.8;
-    bottom: 0;
+    bottom: 1.3rem; // margin bottom of images
     right: 0;
     background-color: black;
     line-height: initial;
     color: white;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 `
 const margin = css`
@@ -126,7 +126,7 @@ export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any> & { credit?:
   className,
   credit,
 }) => (
-  <div css={imageAsPortraitStyle} className={`${className} flex relative`}>
+  <div css={imageAsPortraitStyle} className={`${className} flex relative image-layout`}>
     {children}
     {credit && <div className="credit">{credit}</div>}
   </div>
@@ -262,7 +262,7 @@ export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any> & { credit?
   className,
   credit,
 }) => (
-  <div css={imageAsLandscapeStyle} className={`${className} flex justify-center relative`}>
+  <div css={imageAsLandscapeStyle} className={`${className} flex justify-center relative image-layout`}>
     {children}
     {credit && <div className="credit">{credit}</div>}
   </div>
@@ -291,7 +291,7 @@ export const TwoImagesSameSize: FunctionComponent<HTMLAttributes<any>> = ({ chil
   if (!children || !Array.isArray(children) || children.length !== 2)
     throw new Error("This component expect 2 children")
   return (
-    <div className={`flex ${className}`} css={twoImagesSameSizeStyles}>
+    <div className={`flex image-layout ${className}`} css={twoImagesSameSizeStyles}>
       {cloneElement(children[0], { className: "left-panel" })}
       {cloneElement(children[1], { className: "right-panel" })}
     </div>
@@ -349,7 +349,7 @@ const imageAsLandscapeOnTheLeft = css`
 export const ImageAsLandscapeOnTheLeft: FunctionComponent<HTMLAttributes<any>> = ({ children, className, title }) => {
   return (
     <>
-      <div className={`flex ${className}`} css={imageAsLandscapeOnTheLeft}>
+      <div className={`flex image-layout ${className}`} css={imageAsLandscapeOnTheLeft}>
         {children}
       </div>
       {title && (
@@ -377,7 +377,7 @@ const imageAsLandscapeOnTheRight = css`
 export const ImageAsLandscapeOnTheRight: FunctionComponent<HTMLAttributes<any>> = ({ children, className, title }) => {
   return (
     <>
-      <div className={`flex justify-end ${className}`} css={imageAsLandscapeOnTheRight}>
+      <div className={`flex justify-end image-layout ${className}`} css={imageAsLandscapeOnTheRight}>
         {children}
       </div>
       {title && (

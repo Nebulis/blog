@@ -23,6 +23,7 @@ describe("links", () => {
     expect(getLink("winter")).toMatchObject({ label: { fr: "Hiver", en: "Winter" }, published: true })
     expect(getLink("autumn")).toMatchObject({ label: { fr: "Automne", en: "Autumn" }, published: false })
     expect(getLink("when-to-go")).toMatchObject({ label: { fr: "Quand Partir", en: "When to go" }, published: true })
+    expect(getLink("prepare")).toMatchObject({ label: { fr: "Prepare", en: "Prepare" }, published: false })
     expect(getLink("organisation")).toMatchObject({
       label: { fr: "Organisation", en: "Organisation" },
       published: true,
@@ -56,6 +57,7 @@ describe("links", () => {
     expect(getLink("thailand")).toMatchObject({ label: { fr: "Thaïlande", en: "Thailand" }, published: false })
     expect(getLink("myanmar")).toMatchObject({ label: { fr: "Birmanie", en: "Myanmar" }, published: false })
     expect(getLink("cambodia")).toMatchObject({ label: { fr: "Cambodge", en: "Cambodia" }, published: false })
+    expect(getLink("indonesia")).toMatchObject({ label: { fr: "Indonésie", en: "Indonesia" }, published: false })
     expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: false })
     expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: true })
     expect(getLink("philippines")).toMatchObject({ label: { fr: "Philippines", en: "Philippines" }, published: true })
@@ -110,9 +112,17 @@ describe("links", () => {
     expect(getLink("toganji")).toMatchObject({ label: { fr: "Togan-ji", en: "Togan-ji" }, published: false })
 
     // vietnam assertions
-    expect(getLink("transports-in-vietnam")).toMatchObject({
+    expect(getLink("transport-vietnam")).toMatchObject({
       label: { fr: "Les transports au Vietnam", en: "Transports in Vietnam" },
       published: false,
+    })
+    expect(getLink("food-vietnam")).toMatchObject({
+      label: { fr: "Nos coups de cœur culinaires du Vietnam", en: "Our Vietnamese Food Favorites" },
+      published: false,
+    })
+    expect(getLink("prepare-vietnam")).toMatchObject({
+      label: { en: "Prepare your travel to Vietnam", fr: "Préparer son voyage au Vietnam" },
+      published: true,
     })
 
     // southern vietnam
@@ -127,7 +137,7 @@ describe("links", () => {
     })
     expect(getLink("can-tho")).toMatchObject({
       label: { fr: "Cân Thơ", en: "Cân Thơ" },
-      published: false,
+      published: true,
     })
     expect(getLink("ho-chi-minh-war-museum")).toMatchObject({
       label: {
@@ -163,6 +173,12 @@ describe("links", () => {
     })
     expect(getLink("kampong-phluk")).toMatchObject({
       label: { en: "Kampong Phluk Floating Village", fr: "Village flottant de Kampong Phluk" },
+      published: false,
+    })
+
+    // indonesia assertions
+    expect(getLink("bali")).toMatchObject({
+      label: { en: "Bali", fr: "Bali" },
       published: false,
     })
 

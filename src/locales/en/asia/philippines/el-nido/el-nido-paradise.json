@@ -22,11 +22,11 @@
   "how-much": {
     "part1": "Most of the budget will be spent on air travel. Food, transports or activities are quite affordable. Regarding accommodations, we recommend to plan for a larger budget.",
     "part2": "Here is an example of a budget that allows you to travel comfortably at a lower cost:",
-    "price1": "60$ for accommodations per night,",
-    "price2": "20$ for food per day,",
-    "price3": "25$ per person for a shared tour (beyond 6 people, a private tour will be more advantageous),",
-    "price4": "15$ per person for one trip from Puerto Princesa to El Nido with a public van,",
-    "price5": "2$ per trip on tuk-tuk.",
+    "price1": "$60 for accommodations per night,",
+    "price2": "$20 for food per day,",
+    "price3": "$25 per person for a shared tour (beyond 6 people, a private tour will be more advantageous),",
+    "price4": "$15 per person for one trip from Puerto Princesa to El Nido with a public van,",
+    "price5": "$2 per trip on tuk-tuk.",
     "part3": "As always, it is possible to spend less in case of tight budget (especially on accommodations)."
   },
   "how": {
@@ -47,7 +47,7 @@
   },
   "where-to-stay": {
     "part1": "We stayed in",
-    "part2": "for 70$ per night. Unfortunately we can no longer find a way to book this hotel even on their website. Do not hesitate to tell us if you know more about that because we liked it a lot.",
+    "part2": "for $70 per night. Unfortunately we can no longer find a way to book this hotel even on their website. Do not hesitate to tell us if you know more about that because we liked it a lot.",
     "part3": "You can still find other hotels on"
   },
   "visit": {
@@ -92,7 +92,7 @@
   "question1": "Have you ever been to El Nido? What is your favorite place?",
   "question2": "Did our post make you want to go?",
   "facebook": {
-    "part1": "♡ Hello travellers ! ♡",
+    "part1": "♡ Hello travellers! ♡",
     "part2": "Do you want to come with us to discover the gem of the Philippines ? Bring your mask and dive into these crystal clear waters that will be engraved into your memory."
   },
   "pinterest": "✈️ How to prepare well for your trip to the Philippines? Bring your mask and dive into these crystal clear waters. We share through our articles and our photos, our visit to the Philippines. Many tips and detailed guided tours for each place. Click on the image for the full guide about El Nido... \uD83C\uDF0F"

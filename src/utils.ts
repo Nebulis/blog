@@ -20,10 +20,16 @@ export const facebook = "magicoftravels"
 export const pinterest = "MagicOfTravels"
 
 export const buildBookingUrl = (lang: Lang) => (hotel: string) => `https://www.booking.com/hotel/${hotel}.${lang}.html`
-export const buildBookingSearchUrl = (lang: Lang) => (part: string) =>
-  `https://www.booking.com/searchresults.${lang}.html?ss=${part}`
-
-// https://booking.baolau.com/fr/results/?transports=&origin=Ho+Chi+Minh&destination=Can+Tho
+export const buildBookingSearchUrl = (lang: Lang) => (slug: string) =>
+  `https://www.booking.com/searchresults.${lang}.html?ss=${slug}`
+export const buildAgodaSearchUrl = (lang: Lang) => (searchterm?: string) =>
+  `https://www.agoda.com${lang === "fr" ? "/fr-fr" : ""}/search?searchterm=${searchterm}`
+export const buildAirBnbSearchUrl = (lang: Lang) => (searchterm?: string) =>
+  `https://www.airbnb.${lang === "fr" ? "fr" : "com"}/s/${searchterm}/homes`
+export const buildHostelWorldSearchUrl = (lang: Lang) => (searchterm?: string) =>
+  `https://www.${lang === "fr" ? "french." : ""}hostelworld.com/${
+    lang === "fr" ? "logement" : "accommodation"
+  }/${searchterm}`
 
 const regexReplaceSpace = / /g
 export const buildBaolauLink = (lang: Lang) => ({ destination, origin }: { destination: string; origin: string }) =>
@@ -35,6 +41,8 @@ export const buildGetYourGuideLink = (lang: Lang) => (slug = "") =>
   `https://www.getyourguide.${lang === "fr" ? "fr" : "com"}/${slug}`
 export const buildTripAdvisorLink = (lang: Lang) => (slug = "") =>
   `https://www.tripadvisor.${lang === "fr" ? "fr" : "com"}/${slug}`
+export const buildCivivatisLink = (lang: Lang) => (slug = "") =>
+  `https://www.civitatis.com${lang === "fr" ? "/fr" : ""}/${slug}`
 export const buildExpediaUrl = (lang: Lang) => (slug: string) => {
   const date = new Date()
   date.setDate(date.getDate() + 15)
@@ -58,6 +66,8 @@ export const buildPinterestUrl = ({
     media ? `&media=${media}` : ""
   }&isVideo=false`
 }
+export const buildAllianzUrl = (lang: Lang) =>
+  lang === "fr" ? "https://www.allianz-voyage.fr/" : "https://www.allianztravelinsurance.com/"
 
 export const buildSharedUrl = (location: PageProps["location"], path = "") => {
   const url = `${getHostname(location)}${path}`

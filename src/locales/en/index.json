@@ -38,5 +38,9 @@
     "published": "Published articles",
     "visited": "Incoming articles",
     "not-visited": "Not-visited countries"
+  },
+  "new-article": {
+    "title": "New article",
+    "prepare-vietnam": "So many questions to ask yourself when planning a trip and especially how to organize yourself? In this article, you will find a lot of information and advice that will help you prepare for your trip to Vietnam."
   }
 }

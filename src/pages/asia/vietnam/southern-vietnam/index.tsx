@@ -7,13 +7,7 @@ import {
   VietnamImageAsMedallion,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import { CityHomeSection, MainTitleSection, SectionContent } from "../../../../components/core/section"
-import {
-  getHighlightsFromCity,
-  getLinkLabel,
-  isLinkPublished,
-  sortByLabel,
-  sortByPublishedDate,
-} from "../../../../components/core/links/links.utils"
+import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../../components/core/links/links.utils"
 import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import { vietnamLinks } from "../../../../components/core/asia/vietnam/vietnam.links"
@@ -51,9 +45,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     ? vietnamLinks.cities.filter(isNotCurrentPage)
     : vietnamLinks.cities.filter(isLinkPublished).filter(isNotCurrentPage)
 
-  const highlights = getHighlightsFromCity(vietnamLinks.cities)({ id: currentPageId, development }).sort(
-    sortByPublishedDate
-  )
+  const highlights = getArticles({
+    country: "vietnam",
+    kind: "highlight",
+    development,
+    tag: "southern-vietnam",
+    filter: (cachedLink) => cachedLink.id !== "discover-southern-vietnam",
+  })
   const googleDescription = t("introduction.section3")
   const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
@@ -89,9 +87,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider className="mt2" />
             <CityHomeSection>{t("section2")}</CityHomeSection>
             <CityArticleContainer>
-              {highlights.map(({ card: Card, id }) => (
-                <Card key={id} fluidObject={{ aspectRatio: 4 / 3 }} />
-              ))}
+              {highlights.map(({ card: Card, id }) =>
+                Card ? <Card key={id} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
+              )}
             </CityArticleContainer>
           </>
         )}
