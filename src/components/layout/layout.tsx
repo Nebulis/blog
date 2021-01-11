@@ -124,11 +124,11 @@ export const IndexBlogLayout: FunctionComponent<{
     }
   }, [status])
   return typeof window !== `undefined` ? (
-    <div className={`${className} flex flex-column min-vh-100`} onClick={() => setSelectedPin("")}>
+    <div className={`${className} index-blog-layout flex flex-column min-vh-100`} onClick={() => setSelectedPin("")}>
       {development && !isPublished && <PageDevelopmentMark />}
       <Header noStickyHeader={noStickyHeader} location={location} />
       <ScrollToTop />
-      <div className="children-container flex-grow-1">{children}</div>
+      <div className="children-container index-blog-layout-content flex-grow-1">{children}</div>
 
       <Footer className="pa2">
         <div className="f6 copyright">© 2020 Magic of Travels</div>

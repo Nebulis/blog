@@ -11,8 +11,6 @@ import {
   VietnamExternalLink,
   VietnamHeadline,
   VietnamLink,
-  VietnamQuote,
-  VietnamTitle,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import {
   GroupOfImages,
@@ -46,6 +44,8 @@ import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { Divider } from "../../../../components/core/divider"
+import { Title } from "../../../../components/core/title"
+import { Quote } from "../../../../components/core/quote"
 
 const namespace = "asia/vietnam/southern-vietnam/ho-chi-minh-war-museum"
 const id = "ho-chi-minh-war-museum"
@@ -58,7 +58,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const title = t(`common:country.vietnam.card.${id}`)
   const description = t("quote")
   const googleDescription = t("introduction")
-  const transportLinkPublished = development || getLink("transports-in-vietnam").published
+  const transportLinkPublished = development || getLink("transport-vietnam").published
 
   return (
     <>
@@ -70,11 +70,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         location={location}
       />
       <VietnamBlogLayout page={id} location={location}>
-        <VietnamTitle title={title} linkId={id} />
+        <Title title={title} linkId={id} />
         <MainImageAsLandscape>
           <SharedCardVietnamImages image="warMuseumMain" />
         </MainImageAsLandscape>
-        <VietnamQuote>{description}</VietnamQuote>
+        <Quote>{description}</Quote>
         <Divider />
         <Introduction>{googleDescription}</Introduction>
         <Divider />
@@ -96,7 +96,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           {transportLinkPublished && (
             <p>
               {t("how.part6")}{" "}
-              <VietnamLink to="transports-in-vietnam">{t("common:country.vietnam.card.transports")}</VietnamLink>.
+              <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
             </p>
           )}
         </How>
@@ -140,164 +140,156 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
         </WhereToStay>
         <Visit title={t("common:section.visit")}>
-          <p>{t("visit.part1")}</p>
-        </Visit>
-        <Divider />
-        <section>
-          <VietnamHeadline>{t("visit1.title")}</VietnamHeadline>
-          <Divider />
           <SectionContent>
-            <p>{t("visit1.part1")}</p>
-            <p>{t("visit1.part2")}</p>
-            <p>{t("visit1.part3")}</p>
-            <p>{t("visit1.part4")}</p>
-            <p>{t("visit1.part5")}</p>
-            <ImageAsPortrait
-              credit={
-                <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/saildancer-3004325">
-                  Saildancer
-                </ExternalLinkNotUnderlined>
-              }
-            >
-              <HoChiMinWarMuseum image="memorial" />
-            </ImageAsPortrait>
+            <p>{t("visit.part1")}</p>
           </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <VietnamHeadline>{t("visit2.title")}</VietnamHeadline>
           <Divider />
-          <SectionContent>
-            <p>{t("visit2.part1")}</p>
-            <p>{t("visit2.part2")}</p>
-            <p>{t("visit2.part3")}</p>
-            <GroupOfImages>
-              <ImageAsLandscapeOnTheLeft title="U-17 Plane">
-                <HoChiMinWarMuseum image="u17" />
-              </ImageAsLandscapeOnTheLeft>
-              <ImageAsLandscapeOnTheRight title="A-1 Skyraider">
-                <HoChiMinWarMuseum image="a1" />
-              </ImageAsLandscapeOnTheRight>
-              <ImageAsLandscapeOnTheLeft title="F-5A Jet Fighter">
-                <HoChiMinWarMuseum image="f5a" />
-              </ImageAsLandscapeOnTheLeft>
-              <ImageAsLandscapeOnTheRight title="M48 Tank">
-                <HoChiMinWarMuseum image="m48" />
-              </ImageAsLandscapeOnTheRight>
-              <ImageAsLandscapeOnTheLeft title="CH-47 Chinook">
-                <HoChiMinWarMuseum image="ch47" />
-              </ImageAsLandscapeOnTheLeft>
-              <ImageAsLandscapeOnTheRight title="M107 Gun">
-                <SharedCardVietnamImages image="warMuseumMain" />
-              </ImageAsLandscapeOnTheRight>
-              <ImageAsLandscapeOnTheLeft>
-                <HoChiMinWarMuseum image="helicopter" />
-              </ImageAsLandscapeOnTheLeft>
-            </GroupOfImages>
-          </SectionContent>
-          <SectionContent>
-            <p>{t("visit2.part4")}</p>
-            <p>{t("visit2.part5")}</p>
-            <GroupOfImages>
+          <section>
+            <VietnamHeadline>{t("visit1.title")}</VietnamHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit1.part1")}</p>
+              <p>{t("visit1.part2")}</p>
+              <p>{t("visit1.part3")}</p>
+              <p>{t("visit1.part4")}</p>
+              <p>{t("visit1.part5")}</p>
+              <ImageAsPortrait
+                credit={
+                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/saildancer-3004325">
+                    Saildancer
+                  </ExternalLinkNotUnderlined>
+                }
+              >
+                <HoChiMinWarMuseum image="memorial" />
+              </ImageAsPortrait>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <VietnamHeadline>{t("visit2.title")}</VietnamHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit2.part1")}</p>
+              <p>{t("visit2.part2")}</p>
+              <p>{t("visit2.part3")}</p>
+              <GroupOfImages>
+                <ImageAsLandscapeOnTheLeft title="U-17 Plane">
+                  <HoChiMinWarMuseum image="u17" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight title="A-1 Skyraider">
+                  <HoChiMinWarMuseum image="a1" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsLandscapeOnTheLeft title="F-5A Jet Fighter">
+                  <HoChiMinWarMuseum image="f5a" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight title="M48 Tank">
+                  <HoChiMinWarMuseum image="m48" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsLandscapeOnTheLeft title="CH-47 Chinook">
+                  <HoChiMinWarMuseum image="ch47" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight title="M107 Gun">
+                  <SharedCardVietnamImages image="warMuseumMain" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsLandscapeOnTheLeft>
+                  <HoChiMinWarMuseum image="helicopter" />
+                </ImageAsLandscapeOnTheLeft>
+              </GroupOfImages>
+              <p>{t("visit2.part4")}</p>
+              <p>{t("visit2.part5")}</p>
               <TwoImagesSameSizeOrToGroup>
                 <HoChiMinWarMuseum image="guillotine" />
                 <HoChiMinWarMuseum image="jail" />
               </TwoImagesSameSizeOrToGroup>
-            </GroupOfImages>
-          </SectionContent>
-          <SectionContent>
-            <p>
-              {t("visit2.part6")} <span className="b">{t("visit2.part7")}</span> {t("visit2.part8")}
-            </p>
-            <p>{t("visit2.part9")}</p>
-            <GroupOfImages>
-              <ImageAsLandscape>
-                <HoChiMinWarMuseum image="tigerCage" />
-              </ImageAsLandscape>
-              <ImageAsPortrait>
-                <HoChiMinWarMuseum image="panelTigerCage" />
+              <p>
+                {t("visit2.part6")} <span className="b">{t("visit2.part7")}</span> {t("visit2.part8")}
+              </p>
+              <p>{t("visit2.part9")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <HoChiMinWarMuseum image="tigerCage" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <HoChiMinWarMuseum image="panelTigerCage" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              {t("visit2.part10") && <Quote className="b">{t("visit2.part10")}</Quote>}
+              <p>{t("visit2.part11")}</p>
+              <p>{t("visit2.part12")}</p>
+              <p>{t("visit2.part13")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <VietnamHeadline>{t("visit3.title")}</VietnamHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit3.part1")}</p>
+              <p>{t("visit3.part2")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <HoChiMinWarMuseum image="museum1" />
+                  <HoChiMinWarMuseum image="museum2" imgStyle={{ objectFit: "contain" }} />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <HoChiMinWarMuseum image="museum3" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit3.part3")}</p>
+              <p>{t("visit3.part4")}</p>
+              <p>
+                <span className="b">{t("visit3.part5")}</span> {t("visit3.part6")}
+              </p>
+              <p>{t("visit3.part7")}</p>
+              <p>{t("visit3.part8")}</p>
+              <p>{t("visit3.part9")}</p>
+              <p>{t("visit3.part10")}</p>
+              <p>{t("visit3.part11")}</p>
+              <p>{t("visit3.part12")}</p>
+              <p>
+                {t("visit3.part13")} <span className="i">{t("visit3.part14")}</span>
+              </p>
+              <ImageAsPortrait
+                credit={
+                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/janeb13-725943">
+                    janeb13
+                  </ExternalLinkNotUnderlined>
+                }
+              >
+                <HoChiMinWarMuseum image="youngChild" />
               </ImageAsPortrait>
-            </GroupOfImages>
-            {t("visit2.part10") && <VietnamQuote className="b">{t("visit2.part10")}</VietnamQuote>}
-          </SectionContent>
-          <SectionContent>
-            <p>{t("visit2.part11")}</p>
-            <p>{t("visit2.part12")}</p>
-            <p>{t("visit2.part13")}</p>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <VietnamHeadline>{t("visit3.title")}</VietnamHeadline>
+            </SectionContent>
+          </section>
           <Divider />
-          <SectionContent>
-            <p>{t("visit3.part1")}</p>
-            <p>{t("visit3.part2")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
-                <HoChiMinWarMuseum image="museum1" />
-                <HoChiMinWarMuseum image="museum2" imgStyle={{ objectFit: "contain" }} />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsLandscape>
-                <HoChiMinWarMuseum image="museum3" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-          </SectionContent>
-          <SectionContent>
-            <p>{t("visit3.part3")}</p>
-            <p>{t("visit3.part4")}</p>
-            <p>
-              <span className="b">{t("visit3.part5")}</span> {t("visit3.part6")}
-            </p>
-            <p>{t("visit3.part7")}</p>
-            <p>{t("visit3.part8")}</p>
-            <p>{t("visit3.part9")}</p>
-            <p>{t("visit3.part10")}</p>
-            <p>{t("visit3.part11")}</p>
-            <p>{t("visit3.part12")}</p>
-            <p>
-              {t("visit3.part13")} <span className="i">{t("visit3.part14")}</span>
-            </p>
+          <section>
+            <VietnamHeadline>{t("visit4.title")}</VietnamHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit4.part1")}</p>
+              <p>{t("visit4.part2")}</p>
+              <p>{t("visit4.part3")}</p>
+              <p>{t("visit4.part4")}</p>
+              <p>
+                {t("visit4.part5")}{" "}
+                <VietnamLink to="s-21-prison">{t("common:country.cambodia.card.s-21-prison")}</VietnamLink>{" "}
+                {t("visit4.part6")}
+              </p>
+              <p>{t("visit4.part7")}</p>
+              {t("visit4.part8")}{" "}
+              <VietnamLink to="discover-southern-vietnam">
+                {t("common:country.vietnam.card.discover-southern-vietnam")}
+              </VietnamLink>
+              {t("visit4.part9")}
+            </SectionContent>
             <ImageAsPortrait
-              credit={
-                <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/janeb13-725943">
-                  janeb13
-                </ExternalLinkNotUnderlined>
-              }
+              css={css`
+                max-width: 200px;
+              `}
             >
-              <HoChiMinWarMuseum image="youngChild" />
+              <HoChiMinWarMuseum image="soldierHelmet" />
             </ImageAsPortrait>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <VietnamHeadline>{t("visit4.title")}</VietnamHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit4.part1")}</p>
-            <p>{t("visit4.part2")}</p>
-            <p>{t("visit4.part3")}</p>
-            <p>{t("visit4.part4")}</p>
-            <p>
-              {t("visit4.part5")}{" "}
-              <VietnamLink to="s-21-prison">{t("common:country.cambodia.card.s-21-prison")}</VietnamLink>{" "}
-              {t("visit4.part6")}
-            </p>
-            <p>{t("visit4.part7")}</p>
-            {t("visit4.part8")}{" "}
-            <VietnamLink to="discover-southern-vietnam">
-              {t("common:country.vietnam.card.discover-southern-vietnam")}
-            </VietnamLink>
-            {t("visit4.part9")}
-          </SectionContent>
-          <ImageAsPortrait
-            css={css`
-              max-width: 200px;
-            `}
-          >
-            <HoChiMinWarMuseum image="soldierHelmet" />
-          </ImageAsPortrait>
-        </section>
+          </section>
+        </Visit>
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

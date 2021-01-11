@@ -54,7 +54,9 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
         {computedCategories.map((c, index) => (
           <React.Fragment key={index}>
             {index > 0 ? <>&nbsp;</> : ""}
-            <ApplicationLink to={c}>{getLinkLabel(i18n.languageCode)(c)}</ApplicationLink>
+            <ApplicationLink className="title-tag" action="hide" to={c}>
+              {getLinkLabel(i18n.languageCode)(c)}
+            </ApplicationLink>
           </React.Fragment>
         ))}
       </div>

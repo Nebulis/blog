@@ -35,6 +35,7 @@ export interface OtherLink {
   url?: string
   published: boolean | Date
   card?: ComponentType<ExtraCardProps>
+  additionalTags?: string[]
 }
 
 export interface HighlightLink {
@@ -54,7 +55,9 @@ export interface NavigationLink {
 
 export type HighlightWithCard = HighlightLink & { card: ComponentType<ExtraCardProps> }
 
+export type Kind = "continent" | "country" | "city" | "highlight" | "other" | "menu" | "noIdea"
 export interface CachedLinksMap {
+  id: string
   country?: string
   label: Label
   url: string
@@ -62,4 +65,5 @@ export interface CachedLinksMap {
   publishedDate?: Date
   tags: string[]
   card?: React.ComponentType<ExtraCardProps>
+  kind: Kind
 }

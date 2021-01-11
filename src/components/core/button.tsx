@@ -1,7 +1,15 @@
 import React, { ButtonHTMLAttributes, FunctionComponent } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-import { darkButtonColor, darkButtonHoverColor, primaryDarkColor, primaryDarkColor15Darker } from "./variables"
+import {
+  darkButtonColor,
+  darkButtonHoverColor,
+  primaryDarkColor,
+  primaryDarkColor15Darker,
+  weatherAverage,
+  weatherBad,
+  weatherGood,
+} from "./variables"
 
 const style = css`
   &.btn:not(:disabled):not(.disabled) {
@@ -28,6 +36,9 @@ const style = css`
   &.btn:disabled {
     opacity: 0.65;
     cursor: not-allowed;
+  }
+  &:focus {
+    outline: 0;
   }
 `
 export const Button: FunctionComponent<ButtonHTMLAttributes<any>> = ({ children, className = "", ...props }) => {
@@ -68,5 +79,44 @@ export const PrimaryDarkButton = styled(Button)`
   }
   &.btn:disabled {
     opacity: 0.65;
+  }
+`
+export const WeatherGoodMonths = styled(Button)`
+  &&.btn {
+    background-color: transparent;
+    border: 2px solid ${weatherGood};
+    color: ${weatherGood};
+  }
+  &&.btn:hover,
+  &&.btn.active {
+    border: 2px solid ${weatherGood};
+    background-color: ${weatherGood};
+    color: white;
+  }
+`
+export const WeatherBadMonths = styled(Button)`
+  &&.btn {
+    background-color: transparent;
+    border: 2px solid ${weatherBad};
+    color: ${weatherBad};
+  }
+  &&.btn:hover,
+  &&.btn.active {
+    border: 2px solid ${weatherBad};
+    background-color: ${weatherBad};
+    color: white;
+  }
+`
+export const WeatherAverageMonths = styled(Button)`
+  &&.btn {
+    background-color: transparent;
+    border: 2px solid ${weatherAverage};
+    color: ${weatherAverage};
+  }
+  &&.btn:hover,
+  &&.btn.active {
+    border: 2px solid ${weatherAverage};
+    background-color: ${weatherAverage};
+    color: white;
   }
 `

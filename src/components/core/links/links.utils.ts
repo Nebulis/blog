@@ -4,12 +4,11 @@ import {
   ContinentLink,
   CountryLink,
   HighlightLink,
-  HighlightWithCard,
+  Kind,
   Label,
   Lang,
   NavigationLink,
 } from "./links.types"
-import { filteredId } from "../asia/vietnam/vietnam.utils"
 import { cachedLinks, isPublished } from "./links.configuration"
 
 type Day =
@@ -96,9 +95,9 @@ export function sortByField<T extends string>(field: T) {
 // TODO is this still needed ?
 export const sortByLabel = (lang: Lang) => (obj1: { label: Label }, obj2: { label: Label }) =>
   obj1.label[lang].localeCompare(obj2.label[lang])
-export const sortByPublishedDate = (obj1: { published?: Date | boolean }, obj2: { published?: Date | boolean }) => {
-  const time1 = obj1.published instanceof Date ? obj1.published.getTime() : 0
-  const time2 = obj2.published instanceof Date ? obj2.published.getTime() : 0
+export const sortByPublishedDate = (obj1: { publishedDate?: Date }, obj2: { publishedDate?: Date }) => {
+  const time1 = obj1.publishedDate?.getTime() ?? 0
+  const time2 = obj2.publishedDate?.getTime() ?? 0
   return time2 - time1
 }
 
@@ -128,41 +127,35 @@ export const isLinkPublished = (
   return isPublished(getLink(id))
 }
 
-type LinkMapped = Required<Pick<CachedLinksMap, "card" | "publishedDate" | "country" | "url">>
-const filterNull = (value: any): value is LinkMapped => {
-  return value
-}
-interface Options {
-  customFilter?: (link: LinkMapped) => boolean
-  limit?: number
-  development: boolean
-}
-export const getMostRecentArticles = ({ customFilter = () => true, limit = 3, development }: Options) => {
-  return Array.from(cachedLinks.values())
-    .map((link) => {
-      if ((development || link.published) && link.publishedDate && link.card) {
-        // for some reason, typescript going nuts if country is made optional in LinkMapped ...
-        return { publishedDate: link.publishedDate, card: link.card, country: link.country ?? "", url: link.url }
-      }
-      return null
-    })
-    .filter(filterNull)
-    .filter(customFilter)
-    .sort((a, b) => b.publishedDate.getTime() - a.publishedDate.getTime())
-    .slice(0, limit)
-    .map((value) => value.card)
-}
-
-export const isHighlighWithCard = (highlight: HighlightLink): highlight is HighlightWithCard => !!highlight.card
-export const getHighlightsFromCity = (cities: CityLink[]) => ({
-  id,
+const returnTrue = () => true
+export const getArticles = ({
+  country,
+  published = true,
   development,
+  card = true,
+  kind,
+  tag,
+  filter = returnTrue,
+  sort = sortByPublishedDate,
+  limit = Number.POSITIVE_INFINITY,
 }: {
-  id: string
+  country?: string
+  card?: boolean
+  kind?: Kind
+  filter?: (cachedLink: CachedLinksMap) => boolean
+  published?: boolean
   development: boolean
-}): HighlightWithCard[] => {
-  const city = cities.find((city) => city.id === id)
-  if (!city) return []
-  const highlights = development ? city.highlights : city.highlights.filter(isLinkPublished)
-  return highlights.filter(isHighlighWithCard).filter((link) => !filteredId.includes(link.id))
+  tag?: string
+  sort?: (cacheLink: CachedLinksMap, cacheLink2: CachedLinksMap) => number
+  limit?: number
+}) => {
+  return Array.from(cachedLinks.values())
+    .filter((cachedLink) => (country ? cachedLink.country === country : true))
+    .filter((cachedLink) => (card ? cachedLink.card : true))
+    .filter((cachedLink) => (published && !development ? cachedLink.published : true))
+    .filter((cachedLink) => (kind ? cachedLink.kind === kind : true))
+    .filter((cachedLink) => (tag ? cachedLink.tags.includes(tag) : true))
+    .filter(filter)
+    .sort(sort)
+    .slice(0, limit)
 }

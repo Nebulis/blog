@@ -12,7 +12,7 @@
   },
   "discover": {
     "title": "Découvrir",
-    "subtitle": "Nos dernières aventures ..."
+    "subtitle": "Nos plus récentes aventures ..."
   },
   "contemplate": {
     "title": "Contempler",
@@ -38,5 +38,9 @@
     "published": "Articles publiés",
     "visited": "Articles à venir",
     "not-visited": "Pays non visités"
+  },
+  "new-article": {
+    "title": "Nouvel article",
+    "prepare-vietnam": "Que de questions à se poser quand on prépare un voyage et surtout comment bien s’organiser ? Vous trouverez dans cet article quelques informations et conseils qui vous permettront de préparer votre voyage au Vietnam."
   }
 }

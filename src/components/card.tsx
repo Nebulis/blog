@@ -94,8 +94,18 @@ const StyledDivider = styled(Divider)`
   width: 40px;
 `
 export const Card: FunctionComponent<
-  CardProps & { tags?: string[]; showTags?: boolean; showPublished?: boolean; showMore?: boolean }
-> = ({ children, title, className, to, tags, showTags = true, showPublished = true, showMore = false }) => {
+  CardProps & { tags?: string[]; showTags?: boolean; showPublished?: boolean; showMore?: boolean; imageOnly?: boolean }
+> = ({
+  children,
+  title,
+  className,
+  to,
+  tags,
+  showTags = true,
+  showPublished = true,
+  showMore = false,
+  imageOnly = false,
+}) => {
   if (!children) {
     throw new Error("Error in Card component")
   }
@@ -107,6 +117,8 @@ export const Card: FunctionComponent<
   }
   const mustShowAndInteract = context.development || link.published
   const tagsToDisplay = tags || link.tags
+
+  if (imageOnly) return <>{children}</>
 
   return (
     <span

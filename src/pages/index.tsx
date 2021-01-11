@@ -5,7 +5,7 @@ import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip } from "../components/core/tooltipPortal"
 import { PageProps } from "gatsby"
-import { getLink, getMostRecentArticles, isLinkPublished, sortByLabel } from "../components/core/links/links.utils"
+import { getArticles, getLink, isLinkPublished, sortByLabel } from "../components/core/links/links.utils"
 import { Carousel, CarouselImage } from "../components/core/carousel"
 import { Divider } from "../components/core/divider"
 import { Monument } from "../components/icon/monument"
@@ -14,6 +14,7 @@ import { CityIcon } from "../components/icon/city"
 import { Photo } from "../components/icon/photo"
 import { ApplicationLink, ButtonLink, ExternalLink, PrimaryApplicationLink } from "../components/core/links/link"
 import {
+  extraLargeStart,
   largeStart,
   maxWidth,
   maxWidthExtraLargeContainer,
@@ -34,7 +35,7 @@ import indexEn from "../locales/en/index.json"
 import { continentLinks } from "../components/core/links/links.configuration"
 import { HomeBlogLayout } from "../components/layout/main-layout"
 import { CarouselImageQuery } from "../components/images/carousel"
-import { PageQuote } from "../components/core/quote"
+import { PageQuote, Quote } from "../components/core/quote"
 
 const namespace = "index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -242,6 +243,68 @@ const ContemplateContainer = styled.div`
     }
   }
 `
+
+const NewArticleContainer = styled.div`
+  @media (max-width: ${mediumEnd}) {
+    flex-direction: column;
+    .new-article-section-title-large-screen {
+      display: none;
+    }
+    .gatsby-image-wrapper {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+    }
+  }
+  @media (min-width: ${largeStart}) {
+    height: 60vh;
+    max-height: 60vh;
+    .new-article-section-title-small-screen {
+      display: none;
+    }
+    .new-article-card-container {
+      flex-basis: 50%;
+    }
+    .gatsby-image-wrapper {
+      margin: 0;
+    }
+    .new-article-content-container {
+      padding-left: 1.5rem;
+      flex-basis: 50%;
+    }
+  }
+  @media (min-width: ${extraLargeStart}) {
+    .new-article-card-container {
+      flex-basis: 60%;
+    }
+    .new-article-content-container {
+      flex-basis: 40%;
+    }
+  }
+  background-color: rgb(212, 234, 220, 0.4); //primary light color in rgb
+  display: flex;
+  padding: 1.5rem;
+  .gatsby-image-wrapper {
+    width: 100%;
+  }
+  .new-article-card-container {
+    display: flex;
+  }
+  .new-article-content-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .new-article-title {
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    font-family: auto;
+    margin-bottom: 1.45rem;
+    font-weight: bold;
+  }
+`
 /* margin-top is bigger than margin-bottom because it looks further due to text disposition */
 const HomeDivider = styled(Divider)`
   margin-top: 1.85rem;
@@ -269,8 +332,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
   const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const lastArticle = getArticles({ development, limit: 1, country: "vietnam" })[0]
+  const Card = lastArticle.card
   const [carouselElement] = useState<CarouselElementType[]>(() => {
-    // TODO use a single component to load all carousel images
     const tmp: CarouselElementType[] = [
       {
         to: "vietnam",
@@ -328,6 +392,30 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </PageQuote>
         </SectionContent>
         <HomeDivider />
+        <NewArticleContainer>
+          <div className="new-article-section-title-small-screen">
+            <div>
+              <HomeSection>{t("new-article.title")}</HomeSection>
+            </div>
+            <Divider />
+          </div>
+          <div className="new-article-card-container">{Card ? <Card card={{ imageOnly: true }} /> : null}</div>
+          <div className="new-article-content-container">
+            <div className="new-article-section-title-large-screen">
+              <HomeSection>{t("new-article.title")}</HomeSection>
+              <Divider />
+            </div>
+            <div>
+              <div className="tc ttu mb3-l new-article-title">{lastArticle.label[i18n.languageCode]}</div>
+              <Quote className="tc">{t(`new-article.${lastArticle.id}`)}</Quote>
+              <HomeDivider />
+            </div>
+            <div className="b underline">
+              <ApplicationLink to={lastArticle.id}>{t("common:show-more")}</ApplicationLink>
+            </div>
+          </div>
+        </NewArticleContainer>
+        <HomeDivider />
         <HomeSection>{t("index:explore.title")}</HomeSection>
         <HomeSubSection>{t("explore.subtitle")}</HomeSubSection>
         <TravelsContainer>
@@ -361,9 +449,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <HomeSection>{t("discover.title")}</HomeSection>
           <HomeSubSection>{t("discover.subtitle")}</HomeSubSection>
           <ArticlesContainer>
-            {getMostRecentArticles({ development }).map((Element, index) => (
-              <Element key={index} fluidObject={{ aspectRatio: 4 / 3 }} />
-            ))}
+            {getArticles({
+              development,
+              kind: "highlight",
+              limit: 3,
+              filter: (cachedLink) => cachedLink.id !== lastArticle.id,
+            }).map(({ card: Card }, index) =>
+              Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
+            )}
           </ArticlesContainer>
           {displayAllArticles && (
             <div className="tc mt3">
@@ -404,6 +497,27 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <div className="content">{t("contemplate.animals.content")}</div>
           </div>
         </ContemplateContainer>
+        {/*<HomeDivider />*/}
+        {/*<div>*/}
+        {/*  <HomeSection>partager / echanger</HomeSection>*/}
+        {/*  <HomeSubSection>Conseils, Découvertes, Journal de bord...</HomeSubSection>*/}
+        {/*  <ArticlesContainer>*/}
+        {/*    {getArticles({*/}
+        {/*      development,*/}
+        {/*      kind: "other",*/}
+        {/*      limit: 3,*/}
+        {/*      filter: (cachedLink) => cachedLink.id !== lastArticle.id,*/}
+        {/*    }).map(({ card: Card }, index) =>*/}
+        {/*      Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null*/}
+        {/*    )}*/}
+        {/*  </ArticlesContainer>*/}
+        {/*  {displayAllArticles && (*/}
+        {/*    <div className="tc mt3">*/}
+        {/*      <ButtonLink to="articles">{t("common:allArticles")}</ButtonLink>*/}
+        {/*    </div>*/}
+        {/*  )}*/}
+        {/*</div>*/}
+        {/*<HomeDivider />*/}
         {false && (
           <>
             <HomeDivider />

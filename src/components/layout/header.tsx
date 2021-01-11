@@ -23,7 +23,7 @@ import { FlagFrance } from "../icon/flag-france"
 import { FlagUK } from "../icon/flag-uk"
 import { useCustomTranslation } from "../../i18n"
 import { facebook, getPathForEnglish, getPathForFrench, instagram, pinterest, twitter } from "../../utils"
-import { navigate, PageProps } from "gatsby"
+import { Link, PageProps } from "gatsby"
 
 const headerStyle = css`
   .header {
@@ -208,18 +208,12 @@ const StaticHeader: FunctionComponent<{
         <div className="right-menu-container">
           <div className="right-menu-element" />
           <div className="mr2">
-            <FlagFrance
-              selected={i18n.languageCode === "fr"}
-              onClick={() => {
-                navigate(getPathForFrench(location))
-              }}
-            />
-            <FlagUK
-              selected={i18n.languageCode === "en"}
-              onClick={() => {
-                navigate(getPathForEnglish(location))
-              }}
-            />
+            <Link to={getPathForFrench(location)}>
+              <FlagFrance selected={i18n.languageCode === "fr"} />
+            </Link>
+            <Link to={getPathForEnglish(location)}>
+              <FlagUK selected={i18n.languageCode === "en"} />
+            </Link>
             {context.development && <FaSearch onClick={onSearch} className="search" />}
             {context.initialDevelopmentValue ? (
               <FaCircle

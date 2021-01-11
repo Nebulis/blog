@@ -58,6 +58,36 @@ export const MyThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card
   )
 }
 
+export const PrepareVietnamCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <VietnamCard title={common.country.vietnam.card.prepare} to="prepare-vietnam" {...card}>
+      <SharedCardVietnamImages image="prepareMain" fluidObject={fluidObject} />
+    </VietnamCard>
+  )
+}
+
+export const TransportVietnamCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <VietnamCard title={common.country.vietnam.card.transport} to="transport-vietnam" {...card}>
+      <SharedCardVietnamImages image="transportMain" fluidObject={fluidObject} />
+    </VietnamCard>
+  )
+}
+
+export const FoodVietnamCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <VietnamCard title={common.country.vietnam.card.food} to="food-vietnam" {...card}>
+      <SharedCardVietnamImages image="foodMain" fluidObject={fluidObject} />
+    </VietnamCard>
+  )
+}
+
 export const SouthVietnamCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn

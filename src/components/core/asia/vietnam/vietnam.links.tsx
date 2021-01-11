@@ -1,5 +1,12 @@
 import { CountryLink } from "../../links/links.types"
-import { CanThoCard, CuChiTunnelsCard, MyThoCard, SouthVietnamCard, WarMuseumCard } from "./vietnam.cards"
+import {
+  CanThoCard,
+  CuChiTunnelsCard,
+  MyThoCard,
+  PrepareVietnamCard,
+  SouthVietnamCard,
+  WarMuseumCard,
+} from "./vietnam.cards"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
 import { css } from "@emotion/core"
@@ -98,13 +105,30 @@ export const vietnamLinks: CountryLink = {
   ],
   others: [
     {
-      id: "transports-in-vietnam",
+      id: "transport-vietnam",
       label: {
-        fr: commonFr.country.vietnam.card["transports"],
-        en: commonEn.country.vietnam.card["transports"],
+        fr: commonFr.country.vietnam.card.transport,
+        en: commonEn.country.vietnam.card.transport,
       },
-      url: "transports",
+      url: "transport",
       published: false,
+    },
+    {
+      id: "food-vietnam",
+      label: {
+        fr: commonFr.country.vietnam.card.food,
+        en: commonEn.country.vietnam.card.food,
+      },
+      url: "food",
+      published: false,
+    },
+    {
+      id: "prepare-vietnam",
+      label: { fr: commonFr.country.vietnam.card.prepare, en: commonEn.country.vietnam.card.prepare },
+      card: PrepareVietnamCard,
+      url: "prepare",
+      published: new Date("2021-02-13T17:00:00.000+08:00"),
+      additionalTags: ["prepare"],
     },
   ],
 }

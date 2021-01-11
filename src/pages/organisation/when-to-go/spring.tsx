@@ -51,7 +51,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t } = useCustomTranslation([namespace, "common"])
   const cards = development ? elements : elements.filter(({ to }) => isLinkPublished(to))
   const description = `${t("part1")} ${t("part2")} ${t("part3")} ${t("part4")}`
-  const googleDescription = `${t("part1")} ${t("part2")} ${t("seo")}`
+  const googleDescription = `${t("part1")} ${t("part2")}`
 
   return (
     <>

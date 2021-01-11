@@ -9,7 +9,9 @@ describe("link", () => {
   })
   it("should render a link when the article is published and mode is production", () => {
     const { getByText, container } = render(
-      <ApplicationContext.Provider value={{ development: false, displayAllArticles: false, displayComments: false }}>
+      <ApplicationContext.Provider
+        value={{ development: false, displayAllArticles: false, displayComments: false, covid: false }}
+      >
         <ApplicationLink to="contact">Abc</ApplicationLink>
       </ApplicationContext.Provider>
     )
@@ -20,7 +22,9 @@ describe("link", () => {
   })
   it("should render a link when the article is not published and mode is development", () => {
     const { container, getByText } = render(
-      <ApplicationContext.Provider value={{ development: true, displayAllArticles: false, displayComments: false }}>
+      <ApplicationContext.Provider
+        value={{ development: true, displayAllArticles: false, displayComments: false, covid: false }}
+      >
         <ApplicationLink to="tokyo">Abc</ApplicationLink>
       </ApplicationContext.Provider>
     )
@@ -32,7 +36,9 @@ describe("link", () => {
   })
   it("should render a text when the article is not published and mode is production", () => {
     const { container, getByText } = render(
-      <ApplicationContext.Provider value={{ development: false, displayAllArticles: false, displayComments: false }}>
+      <ApplicationContext.Provider
+        value={{ development: false, displayAllArticles: false, displayComments: false, covid: false }}
+      >
         <ApplicationLink to="tokyo">Abc</ApplicationLink>
       </ApplicationContext.Provider>
     )
@@ -42,7 +48,9 @@ describe("link", () => {
   })
   it("should render nothing when the article is not published, mode is production and action is hide", () => {
     const { container, queryByText } = render(
-      <ApplicationContext.Provider value={{ development: false, displayAllArticles: false, displayComments: false }}>
+      <ApplicationContext.Provider
+        value={{ development: false, displayAllArticles: false, displayComments: false, covid: false }}
+      >
         <ApplicationLink to="tokyo" action="hide" />
       </ApplicationContext.Provider>
     )
