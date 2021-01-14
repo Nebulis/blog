@@ -22,7 +22,7 @@ import { Status } from "../../types/shared"
 import { ErrorAlert, SuccessAlert } from "./alert"
 import { subscribe } from "../../services/newsletter"
 import { useCustomTranslation } from "../../i18n"
-import { capitalize, facebook, getHostname, pinterest, twitter } from "../../utils"
+import { capitalize, getHostname, pinterest, twitter } from "../../utils"
 import { PageProps } from "gatsby"
 import { useLocalStorage } from "../../use-local-storage"
 import { ApplicationContext } from "../application"
@@ -255,7 +255,6 @@ const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, class
   const url = `${getHostname(location)}${location.pathname}`
   const sharedUrl = encodeURI(url)
   const description = t("comments.shared-description", { handle: `@${twitter}` })
-  const descriptionFacebook = t("comments.shared-description", { handle: `@${facebook}` })
   const descriptionPinterest = t("comments.shared-description", { handle: `@${pinterest}` })
   const hashtags = t("comments.hashtags")
   return (
@@ -288,7 +287,7 @@ const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, class
             <span className="inline-flex">
               {t("comments.share")}&nbsp;
               <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}&quote=${descriptionFacebook}`}
+                href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-labelledby="facebook-label-comment"
