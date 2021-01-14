@@ -3,7 +3,7 @@ const pages = (page) => {
 }
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.magicoftravels.com`,
+    siteUrl: `https://magicoftravels.com`,
     title: `Magic of travels`,
     author: `@gatsbyjs`,
     config: {
