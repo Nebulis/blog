@@ -107,7 +107,7 @@ describe("links", () => {
 
     // vietnam assertions
     expect(getLink("transports-in-vietnam")).toMatchObject({
-      label: { fr: "Transports", en: "Transports" },
+      label: { fr: "Les transports au Vietnam", en: "Transports in Vietnam" },
       published: false,
     })
 

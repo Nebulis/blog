@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react"
 import { Card } from "../../../card"
 import { vietnamPrimaryColorDarker } from "./vietnam.colors"
 import styled from "@emotion/styled"
-import { MainCuChiTunnelsImage } from "../../../images/asia/vietnam/southern-vietnam/cu-chi-tunnels/mainCuChiTunnelsImage"
+import { CuChiTunnelsMain } from "../../../images/asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-main"
 import { MainWarMuseumImage } from "../../../images/asia/vietnam/southern-vietnam/war-museum/war-museum-main"
 import { MainCanThoImage } from "../../../images/asia/vietnam/southern-vietnam/can-tho/can-tho-main"
 import { MainMyThoImage } from "../../../images/asia/vietnam/southern-vietnam/my-tho/my-tho-main"
@@ -29,7 +29,7 @@ export const CuChiTunnelsCard: FunctionComponent<ExtraCardProps> = ({ fluidObjec
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
     <VietnamCard title={common.country.vietnam.card["cu-chi-tunnels"]} to="cu-chi-tunnels" {...card}>
-      <MainCuChiTunnelsImage fluidObject={fluidObject} />
+      <CuChiTunnelsMain fluidObject={fluidObject} />
     </VietnamCard>
   )
 }
