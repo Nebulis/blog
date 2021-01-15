@@ -21,11 +21,14 @@ export const asiaLinks: ContinentLink = {
       others: [
         {
           id: "s-21-prison",
-          label: { en: "s-21-prison", fr: "s-21-prison" },
+          label: {
+            en: commonEn.country.cambodia.card["s-21-prison"],
+            fr: commonFr.country.cambodia.card["s-21-prison"],
+          },
           published: false,
         },
       ],
-      label: { en: "Cambodia", fr: "Cambodge" },
+      label: { en: commonEn.country.cambodia.title, fr: commonFr.country.cambodia.title },
     },
   ],
 }

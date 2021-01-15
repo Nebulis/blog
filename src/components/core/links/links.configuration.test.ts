@@ -114,7 +114,7 @@ describe("links", () => {
     // southern vietnam
     expect(getLink("southern-vietnam")).toMatchObject({ label: { fr: "Sud", en: "Southern" }, published: true })
     expect(getLink("cu-chi-tunnels")).toMatchObject({
-      label: { fr: "Les tunnels de Củ Chi", en: "Củ Chi tunnels" },
+      label: { fr: "Tunnels de Củ Chi", en: "Củ Chi tunnels" },
       published: false,
     })
     expect(getLink("my-tho")).toMatchObject({
@@ -128,7 +128,7 @@ describe("links", () => {
     expect(getLink("ho-chi-minh-war-museum")).toMatchObject({
       label: {
         en: "War Remnants Museum in Ho Chi Minh City",
-        fr: "Le Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
+        fr: "Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
       },
       published: false,
     })
@@ -154,7 +154,7 @@ describe("links", () => {
 
     // cambodia assertions
     expect(getLink("s-21-prison")).toMatchObject({
-      label: { en: "s-21-prison", fr: "s-21-prison" },
+      label: { en: "Tuol Sleng Genocide Museum", fr: "Musée du génocide Tuol Sleng" },
       published: false,
     })
 

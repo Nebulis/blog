@@ -95,7 +95,7 @@ export const HowMuch = titleBuilder({
 export const WhereToStay = titleBuilder({ icon: FaBed, translationKey: "section.where-to-stay" })
 export const WhatTimeOfYear = titleBuilder({ icon: FaCloudSun, translationKey: "section.what-time-of-year" })
 export const WhereToHave = titleBuilder({ icon: FaUtensils, translationKey: "todo" })
-export const Visit = titleBuilder({ icon: FaWalking, translationKey: "section.visit" })
+export const Visit = titleBuilder({ icon: FaWalking, translationKey: "section.visits" })
 export const Bonus = titleBuilder({ icon: FaLightbulb, translationKey: "todo" })
 
 export const GoodToKnow: FunctionComponent<TitleProps> = ({ children }) => (

@@ -34,7 +34,10 @@
       "title": "Australia"
     },
     "cambodia": {
-      "title": "Cambodia"
+      "title": "Cambodia",
+      "card": {
+        "s-21-prison": "Tuol Sleng Genocide Museum"
+      }
     },
     "france": {
       "title": "France"
@@ -103,7 +106,8 @@
     "how-long": "How long?",
     "how-much": "How much?",
     "how-to-get-there": "How to get there?",
-    "visit": "Visits",
+    "visits": "Visits",
+    "visit": "The visit",
     "what-time-of-year": "When?",
     "when": "When?",
     "where": "Our itinerary",

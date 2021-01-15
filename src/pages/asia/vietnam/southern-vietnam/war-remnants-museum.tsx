@@ -123,7 +123,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </VietnamExternalLink>
           </p>
         </WhereToStay>
-        <Visit>
+        <Visit title={t("common:section.visit")}>
           <p>{t("visit.part1")}</p>
         </Visit>
         <VietnamDivider />
@@ -251,14 +251,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit4.part3")}</p>
             <p>{t("visit4.part4")}</p>
             <p>
-              {t("visit4.part5")} <VietnamLink to="s-21-prison">{t("visit4.part6")}</VietnamLink> {t("visit4.part7")}
+              {t("visit4.part5")}{" "}
+              <VietnamLink to="s-21-prison">{t("common:country.cambodia.card.s-21-prison")}</VietnamLink>{" "}
+              {t("visit4.part6")}
             </p>
-            <p>{t("visit4.part8")}</p>
-            {t("visit4.part9")}{" "}
+            <p>{t("visit4.part7")}</p>
+            {t("visit4.part8")}{" "}
             <VietnamLink to="discover-southern-vietnam">
               {t("common:country.vietnam.card.discover-southern-vietnam")}
             </VietnamLink>
-            {t("visit4.part10")}
+            {t("visit4.part9")}
           </SectionContent>
           <ImageAsPortrait
             css={css`

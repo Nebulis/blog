@@ -34,7 +34,10 @@
       "title": "Australie"
     },
     "cambodia": {
-      "title": "Cambodge"
+      "title": "Cambodge",
+      "card": {
+        "s-21-prison": "Musée du génocide Tuol Sleng"
+      }
     },
     "france": {
       "title": "France"
@@ -86,10 +89,10 @@
       "title": "Vietnam",
       "southern-vietnam": "Vietnam du Sud",
       "card": {
-        "cu-chi-tunnels": "Les tunnels de Củ Chi",
+        "cu-chi-tunnels": "Tunnels de Củ Chi",
         "discover-southern-vietnam": "Découverte du Vietnam du Sud",
         "my-tho": "Croisière sur le Mékong entre Mỹ Tho et Ben Tre",
-        "ho-chi-minh-war-museum": "Le Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
+        "ho-chi-minh-war-museum": "Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
         "can-tho": "Visite de Cân Thơ et son marché flottant"
       }
     }
@@ -103,7 +106,8 @@
     "how-long": "Combien de temps ?",
     "how-much": "Combien d’argent prévoir ?",
     "how-to-get-there": "Comment y aller ?",
-    "visit": "Les visites",
+    "visits": "Les visites",
+    "visit": "La visite",
     "what-time-of-year": "À quelle période ?",
     "when": "Quand ?",
     "where": "Notre itinéraire",
