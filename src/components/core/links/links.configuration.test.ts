@@ -107,7 +107,7 @@ describe("links", () => {
 
     // vietnam assertions
     expect(getLink("transports-in-vietnam")).toMatchObject({
-      label: { fr: "Transports", en: "Transports" },
+      label: { fr: "Les transports au Vietnam", en: "Transports in Vietnam" },
       published: false,
     })
 
@@ -130,7 +130,7 @@ describe("links", () => {
         en: "War Remnants Museum in Ho Chi Minh City",
         fr: "Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
       },
-      published: false,
+      published: true,
     })
     expect(getLink("discover-southern-vietnam")).toMatchObject({
       label: { fr: "Découverte du Vietnam du Sud", en: "Discover Southern Vietnam" },

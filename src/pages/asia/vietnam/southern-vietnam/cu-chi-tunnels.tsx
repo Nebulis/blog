@@ -1,50 +1,48 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
 import {
-  CuChoTunnelsQuote,
   VietnamBlogLayout,
+  VietnamDivider,
   VietnamExternalLink,
+  VietnamHeadline,
   VietnamLink,
+  VietnamQuote,
   VietnamTitle,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import {
   GroupOfImages,
   ImageAsLandscape,
-  TwoImagesLeftBigger,
+  ImageAsPortrait,
   TwoImagesRightBigger,
-  TwoImagesSameSize,
+  TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { MainCuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/mainCuChiTunnelsImage"
 import {
-  GoodToKnow,
   How,
   HowLong,
   HowMuch,
+  Introduction,
+  SectionContent,
   Visit,
   WhatTimeOfYear,
   When,
   WhereToStay,
 } from "../../../../components/core/section"
-import { Entrance1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/entrance1CuChiTunnelsImage"
-import { Entrance2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/entrance2CuChiTunnelsImage"
-import { Expo2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/expo2CuChiTunnelsImage"
-import { Expo1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/expo1CuChiTunnelsImage"
-import { Expo5CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/expo5CuChiTunnelsImage"
-import { Expo3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/expo3CuChiTunnelsImage"
-import { Expo4CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/expo4CuChiTunnelsImage"
-import { Tunnel2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnel2CuChiTunnelsImage"
-import { Tunnel3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnel3CuChiTunnelsImage"
-import { TunnelInside1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnelInside1CuChiTunnelsImage"
-import { TunnelInside2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnelInside2CuChiTunnelsImage"
-import { TunnelInside3CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnelInside3CuChiTunnelsImage"
-import { TunnelInside4CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/tunnelInside4CuChiTunnelsImage"
-import { Rest1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/rest1CuChiTunnelsImage"
-import { Rest2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/rest2CuChiTunnelsImage"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { Bonus1CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/bonus1CuChiTunnelsImage"
-import { Bonus2CuChiTunnelsImage } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/bonus2CuChiTunnelsImage"
 import { PageProps } from "gatsby"
+import { useCustomTranslation } from "../../../../i18n"
+import HomeImgUrl from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/war-museum-main.jpg"
+import { buildBookingUrl } from "../../../../utils"
+import { Comments } from "../../../../components/core/comments"
+import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/cu-chi-tunnels.json"
+import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/cu-chi-tunnels.json"
+import i18n from "i18next"
+import { CuChiTunnelsMain } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-main"
+import { CuChiTunnelsImages } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels"
 
+const namespace = "asia/vietnam/southern-vietnam/cu-chi-tunnels"
+const id = "cu-chi-tunnels"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 /*
 the image at the end have sizing problem which look caused by the size of the original image and gatsby not handling properly. Some resources:
 - https://github.com/gatsbyjs/gatsby/issues/15669
@@ -56,194 +54,284 @@ the fastest way to fix it is to resize a bit the images to
  */
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.vietnam.card.${id}`)
+  const description = t("quote")
+  const googleDescription = t("introduction")
+
   return (
     <>
-      <SEO title="Les tunnels de Cu Chi" location={location} />
-      <VietnamBlogLayout page="cu-chi-tunnels" location={location}>
-        <VietnamTitle title="Les tunnels de Cu Chi" linkId="cu-chi-tunnels" />
+      <SEO
+        title={title}
+        description={description}
+        googleDescription={googleDescription}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <VietnamBlogLayout page={id} location={location}>
+        <VietnamTitle title={title} linkId={id} />
         <ImageAsLandscape>
-          <MainCuChiTunnelsImage />
+          <CuChiTunnelsMain />
         </ImageAsLandscape>
-        <CuChoTunnelsQuote />
-        <When>Ouvert de 8h à 17h tous les jours</When>
+        <VietnamQuote>{description}</VietnamQuote>
+        <VietnamDivider />
+        <Introduction>{googleDescription}</Introduction>
+        <VietnamDivider />
+        <When>
+          <p>{t("when.part1")}</p>
+        </When>
         <How>
-          <p>Plusieurs moyens de transports existent en partant de Hô Chi Minh-Ville.</p>
-          <p>En Scooter, en Bus public, en Taxi ou en Tour avec guide, ce qui est la meilleure solution à nos yeux.</p>
+          <p>{t("how.part1")}</p>
           <p>
+            {t("how.part2")} <span className="b">{t("how.part3")}</span>
+            {t("how.part4")}
+          </p>
+          <p>{t("how.part5")}</p>
+          <ul>
+            <li>
+              <span className="b">{t("how.part6")}</span>{" "}
+              <VietnamExternalLink href="https://www.google.com/maps/dir/?api=1&origin=Bến+Xe+Buýt+Sài+Gòn+Lê+Lai,+Phạm+Ngũ+Lão,+Quận+1,+Thành+phố+Hồ+Chí+Minh,+Vietnam&destination=Ben+Dinh+Tunnel,+Đường+Tỉnh+Lộ+15,+Nhuận+Đức,+Củ+Chi,+Ho+Chi+Minh+City,+Vietnam&travelmode=transit">
+                {t("how.part7")}
+              </VietnamExternalLink>
+            </li>
+            <li>
+              <span className="b">{t("how.part8")}</span>{" "}
+              <VietnamExternalLink href="https://www.google.com/maps/dir/?api=1&origin=Bến+Xe+Buýt+Sài+Gòn+Lê+Lai,+Phạm+Ngũ+Lão,+Quận+1,+Thành+phố+Hồ+Chí+Minh,+Vietnam&destination=Cu+Chi+Tunnel,+Đ.+Tỉnh+Lộ+15,+Phú+Hiệp,+Củ+Chi,+Thành+phố+Hồ+Chí+Minh+733814,+Vietnam&travelmode=transit">
+                {t("how.part9")}
+              </VietnamExternalLink>
+            </li>
+          </ul>
+          <p>
+            {t("how.part10")}{" "}
             <VietnamLink action="hide" to="transports-in-vietnam">
-              Plus d&apos;informations sur les transports au Vietnam ici.
+              {t("common:country.vietnam.card.transports")}
             </VietnamLink>
+            .
           </p>
         </How>
         <HowLong>
+          <p>{t("how-long.part1")}</p>
+          <p>{t("how-long.part2")}</p>
           <p>
-            Comptez une bonne demi-journée, en partant de Hô Chi Minh-Ville, il faut environ 2h aller / 2h retour en
-            fonction du trafic et de la météo. Ça peut paraître long et on ne va pas mentir c&apos;est effectivement
-            long, mais si vous vous faites emmener le matin ça permet de continuer sa nuit et l&apos;après midi de faire
-            une petite sieste (Voyons le côté positif à ce temps de trajet !).
-          </p>
-          <p>
-            Pour un tour avec guide nous avions rendez-vous à 7h30 (point de rendez-vous{" "}
-            <VietnamExternalLink href="https://www.google.com/maps/place/220+%C4%90%E1%BB%81+Th%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam/@10.7676075,106.6933625,19z/data=!3m1!4b1!4m5!3m4!1s0x31752fac3b562065:0x1a56e1dbb3930b3!8m2!3d10.7676075!4d106.6939097">
-              rue De Tham
+            {t("how-long.part3")}{" "}
+            <VietnamExternalLink href="https://www.google.com/maps/place/220+%C4%90%E1%BB%81+Th%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh">
+              {t("how-long.part4")}
             </VietnamExternalLink>{" "}
-            comme quasiment tous les tours avec guide, nous y étions 15 minutes avant) et le retour était compté vers
-            15h.
+            {t("how-long.part5")}
           </p>
         </HowLong>
         <WhatTimeOfYear>
           <p>
-            Les tunnels se trouvant dans le Sud du Vietnam, la meilleure période pour y aller est très clairement la
-            saison sèche, de Décembre à Avril.
+            {t("what-time-of-year.part1")} <span className="b">{t("what-time-of-year.part2")}</span>
           </p>
-          <p>Nous y sommes allés en Février.</p>
+          <p>{t("what-time-of-year.part3")}</p>
+          <p>{t("what-time-of-year.part4")}</p>
         </WhatTimeOfYear>
         <HowMuch>
+          <p>{t("how-much.part1")}</p>
           <p>
-            Le prix varie en fonction du moyen avec lequel vous y allez et si vous prenez un tour tout dépendra
-            également de l&apos;agence que vous prenez.
-          </p>
-          <p>
-            Nous avons réservé notre{" "}
+            {t("how-much.part2")}{" "}
             <VietnamExternalLink href="https://www.tripadvisor.com/AttractionProductReview-g293925-d11455504-Morning_Cu_Chi_Tunnels_Tour_from_Ho_Chi_Minh_City-Ho_Chi_Minh_City.html">
-              tour avec guide sur Tripadvisor
+              {t("how-much.part3")}
             </VietnamExternalLink>{" "}
-            et on en a eu pour un peu moins de 13€ par personne tout compris.
+            {t("how-much.part4")}
           </p>
-          <p>
-            Pour le prix d&apos;entrée sur le site si vous y allez par vous même, on ne sait pas exactement, on voit de
-            tout, ça passe de 90 000 VND à 120 000 VND entre chaque site donc on ne préfère pas dire de bêtise. Prévoyez
-            120 000 VND ça équivaut à 4€ environ.
-          </p>
+          <p>{t("how-much.part5")}</p>
         </HowMuch>
         <WhereToStay>
-          <p>On vous conseille très clairement de prendre un hôtel sur Hô Chi Minh-Ville.</p>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
           <p>
-            Nous voulions un hôtel proche du centre-ville et surtout proche de la rue de rassemblement des bus pour nos
-            visites.
+            {t("where-to-stay.part3")}{" "}
+            <VietnamExternalLink href={buildBookingUrl(i18n.languageCode)("vn/prague")}>
+              {t("where-to-stay.part4")}
+            </VietnamExternalLink>{" "}
+            {t("where-to-stay.part5")}
           </p>
-          <p>
-            Si nous avions su de base que les rues autour de nous étaient remplies de restaurants nous n&apos;aurions
-            pas utilisé ce critère pour chercher notre hôtel mais avec les journées chargées que nous avions, nous
-            avions peur de ne pas avoir le courage de chercher des restaurants pour le soir et donc nous avons pris un
-            hôtel avec restaurant.
-          </p>
-          <p>
-            Nous avons donc pris{" "}
-            <VietnamExternalLink href="https://www.booking.com/hotel/vn/prague.fr.html?aid=359627;sid=8ad0a7713dc5ba93dbc4d5d0d89f2e34;all_sr_blocks=266339401_265530718_0_1_0;checkin=2021-02-19;checkout=2021-02-20;dest_id=-3730078;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=266339401_265530718_0_1_0;hpos=1;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=266339401_265530718_0_1_0__81143999;srepoch=1599930649;srpvid=258478cc41150166;type=total;ucfs=1&#_">
-              l&apos;Hôtel Prague
-            </VietnamExternalLink>
-            . Hôtel parfait, chambre très confortable, le restaurant très bon, niveau confort rien à redire et à deux
-            minutes à pied du point de rassemblement des bus pour les excursions.
-          </p>
-          <p style={{ color: "red" }}>Comparez et réservez votre hôtel à Hô Chi Minh-Ville.</p>
         </WhereToStay>
-        <Visit>
+        <Visit title={t("common:section.visit")}>
           <p>
-            Avant toute chose, il existe deux sites différents pour visiter les tunnels. Ben Dinh et Ben Duoc, l&apos;un
-            à priori plus touristique que l&apos;autre. Nous n&apos;avons pas fait du tout attention à cela et nous nous
-            sommes laissés guider uniquement par notre choix d&apos;agence. En l&apos;occurrence après recherche nous
-            sommes allés au site dit touristique et nous n&apos;avons pas vu un chat à part notre groupe.
+            {t("visit.part1")} <span className="b">{t("visit.part2")}</span> {t("visit.part3")}
           </p>
-          <TwoImagesSameSize>
-            <Entrance1CuChiTunnelsImage />
-            <Entrance2CuChiTunnelsImage />
-          </TwoImagesSameSize>
-          <p>Le site est composé en différentes parties.</p>
-          <p>
-            Une partie avec des panneaux explicatifs sur les tunnels et ses fonctions lors de la guerre, des stands
-            d&apos;exposition dont entrepôt des armes, mises en scène de la vie des soldats et présentations des pièges
-            artisanaux ou bien encore mannequins nous présentant les tenues de guerre.
-          </p>
-          <GroupOfImages>
-            <TwoImagesLeftBigger>
-              <Expo2CuChiTunnelsImage />
-              <Expo1CuChiTunnelsImage />
-            </TwoImagesLeftBigger>
-            <TwoImagesRightBigger>
-              <Expo3CuChiTunnelsImage />
-              <Expo4CuChiTunnelsImage />
-            </TwoImagesRightBigger>
-            <ImageAsLandscape>
-              <Expo5CuChiTunnelsImage />
-            </ImageAsLandscape>
-          </GroupOfImages>
-          <p>
-            La partie tunnel où vous pouvez entrer et sortir à différents endroits. Á noter d&apos;ailleurs que toutes
-            les sorties créées n&apos;existaient pas forcément à l&apos;époque et ont surtout été rajoutées pour les
-            touristes.
-          </p>
-          <GroupOfImages>
-            <TwoImagesSameSize>
-              <MainCuChiTunnelsImage />
-              <Tunnel2CuChiTunnelsImage />
-            </TwoImagesSameSize>
-            <ImageAsLandscape>
-              <Tunnel3CuChiTunnelsImage />
-            </ImageAsLandscape>
-          </GroupOfImages>
-          <p>
-            On se demande comment faisaient les gens pour circuler alors même que tout a été quasiment agrandi, on se
-            retrouve malgré tout quand même à quatre pattes ou à genoux pour les tunnels les moins confortables.
-          </p>
-          <TwoImagesSameSize>
-            <TunnelInside1CuChiTunnelsImage />
-            <TunnelInside2CuChiTunnelsImage />
-          </TwoImagesSameSize>
-          <p>Nous sommes rentrés dans deux tunnels totalement différents.</p>
-          <p>L&apos;un où nous étions légèrement penchés, tunnel assez court et fait pour la plupart des touristes.</p>
-          <p>
-            L&apos;autre en revanche était beaucoup plus étroit, accroupi tout le long, nous avons même fini à quatre
-            pattes à la fin. Même en n&apos;étant pas claustrophobe nous étions content de sortir.
-          </p>
-          <TwoImagesSameSize>
-            <TunnelInside3CuChiTunnelsImage />
-            <TunnelInside4CuChiTunnelsImage />
-          </TwoImagesSameSize>
-          <p>
-            Les guides sont eux aussi habitués et ça se voit, quand nous étions tous en train de galérer vers la fin,
-            notre guide était déjà sorti. Nous avons d&apos;ailleurs eu un temps où nous avons eu peur de nous perdre,
-            surtout au moment où le tunnel tourne et que le guide disparaît au loin - Total immersion pour se rendre
-            vraiment encore plus compte à quel point cela devait être encore moins évident que ce qu&apos;on peut déjà
-            l&apos;imaginer.
-          </p>
-          <p>On s&apos;arrête enfin à un stand de tir où vous pouvez vous exercer à tirer avec des armes de guerre.</p>
-          <p>
-            Profitez également d&apos;un petit temps d&apos;arrêt pour goûter de l’eau de noix de coco frais, un délice.
-          </p>
-          <TwoImagesSameSize>
-            <Rest1CuChiTunnelsImage />
-            <Rest2CuChiTunnelsImage />
-          </TwoImagesSameSize>
+          <p>{t("visit.part4")}</p>
+          <p>{t("visit.part5")}</p>
         </Visit>
+        <VietnamDivider />
+        <section>
+          <VietnamHeadline>{t("visit1.title")}</VietnamHeadline>
+          <VietnamDivider />
+          <SectionContent>
+            <p>{t("visit1.part1")}</p>
+            <p>{t("visit1.part2")}</p>
+            <p>{t("visit1.part3")}</p>
+            <p>{t("visit1.part4")}</p>
+            <p>{t("visit1.part5")}</p>
+          </SectionContent>
+        </section>
+        <VietnamDivider />
+        <section>
+          <VietnamHeadline>{t("visit2.title")}</VietnamHeadline>
+          <VietnamDivider />
+          <SectionContent>
+            <GroupOfImages>
+              <TwoImagesSameSizeOrToGroup>
+                <CuChiTunnelsImages image="entrance1" />
+                <CuChiTunnelsImages image="entrance2" />
+              </TwoImagesSameSizeOrToGroup>
+            </GroupOfImages>
+          </SectionContent>
+          <SectionContent>
+            <p>{t("visit2.part1")}</p>
+            <p>{t("visit2.part2")}</p>
+            <p>{t("visit2.part3")}</p>
+            <GroupOfImages>
+              <TwoImagesRightBigger>
+                <CuChiTunnelsImages image="expo1" />
+                <CuChiTunnelsImages image="expo2" />
+              </TwoImagesRightBigger>
+              <ImageAsLandscape>
+                <CuChiTunnelsImages image="expo3" />
+              </ImageAsLandscape>
+              <TwoImagesSameSizeOrToGroup>
+                <CuChiTunnelsImages image="expo4" />
+                <CuChiTunnelsImages image="expo5" />
+              </TwoImagesSameSizeOrToGroup>
+              <ImageAsPortrait>
+                <CuChiTunnelsImages image="expo6" />
+              </ImageAsPortrait>
+            </GroupOfImages>
+          </SectionContent>
+        </section>
+        <VietnamDivider />
+        <section>
+          <VietnamHeadline>{t("visit3.title")}</VietnamHeadline>
+          <VietnamDivider />
+          <SectionContent>
+            <p>{t("visit3.part1")}</p>
+            <p>{t("visit3.part2")}</p>
+            <p>{t("visit3.part3")}</p>
+            <GroupOfImages>
+              <TwoImagesSameSizeOrToGroup>
+                <CuChiTunnelsMain />
+                <CuChiTunnelsImages image="tunnels1" />
+              </TwoImagesSameSizeOrToGroup>
+              <ImageAsLandscape>
+                <CuChiTunnelsImages image="tunnels2" />
+              </ImageAsLandscape>
+              <ImageAsPortrait>
+                <CuChiTunnelsImages image="tunnels3" />
+              </ImageAsPortrait>
+            </GroupOfImages>
+          </SectionContent>
+          <SectionContent>
+            <p>{t("visit3.part4")}</p>
+            <p>{t("visit3.part5")}</p>
+            <GroupOfImages>
+              <TwoImagesSameSizeOrToGroup>
+                <CuChiTunnelsImages image="inside1" />
+                <CuChiTunnelsImages image="inside2" />
+              </TwoImagesSameSizeOrToGroup>
+            </GroupOfImages>
+          </SectionContent>
+          <SectionContent>
+            <p>{t("visit3.part6")}</p>
+            <p>{t("visit3.part7")}</p>
+            <p>{t("visit3.part8")}</p>
+            <p>{t("visit3.part9")}</p>
+            <p>{t("visit3.part10")}</p>
+            <p>{t("visit3.part11")}</p>
+            <GroupOfImages>
+              <TwoImagesSameSizeOrToGroup>
+                <CuChiTunnelsImages image="inside3" />
+                <CuChiTunnelsImages image="inside4" />
+              </TwoImagesSameSizeOrToGroup>
+            </GroupOfImages>
+          </SectionContent>
+          <SectionContent>
+            <p>{t("visit3.part12")}</p>
+            <p>{t("visit3.part13")}</p>
+            <p>{t("visit3.part14")}</p>
+            <p>{t("visit3.part15")}</p>
+          </SectionContent>
+        </section>
+        <VietnamDivider />
+        <section>
+          <VietnamHeadline>{t("visit4.title")}</VietnamHeadline>
+          <VietnamDivider />
+          <SectionContent>
+            <p>{t("visit4.part1")}</p>
+            <p>{t("visit4.part2")}</p>
+            <ul>
+              <li>{t("visit4.part3")}</li>
+              <li>{t("visit4.part4")}</li>
+              <li>{t("visit4.part5")}</li>
+            </ul>
+            <p>{t("visit4.part6")}</p>
+            <p>{t("visit4.part7")}</p>
+            <GroupOfImages>
+              <ImageAsLandscape>
+                <CuChiTunnelsImages image="trap1" />
+              </ImageAsLandscape>
+              <TwoImagesSameSizeOrToGroup>
+                <CuChiTunnelsImages image="trap2" />
+                <CuChiTunnelsImages image="trap3" />
+              </TwoImagesSameSizeOrToGroup>
+            </GroupOfImages>
+          </SectionContent>
+        </section>
+        <VietnamDivider />
+        <section>
+          <VietnamHeadline>{t("visit5.title")}</VietnamHeadline>
+          <VietnamDivider />
+          <SectionContent>
+            <p>{t("visit5.part1")}</p>
+            <p>{t("visit5.part2")}</p>
+            <p>{t("visit5.part3")}</p>
+            <p>{t("visit5.part4")}</p>
+            <GroupOfImages>
+              <TwoImagesSameSizeOrToGroup>
+                <CuChiTunnelsImages image="rest1" />
+                <CuChiTunnelsImages image="rest2" />
+              </TwoImagesSameSizeOrToGroup>
+            </GroupOfImages>
+          </SectionContent>
+          <SectionContent>
+            <p>
+              {t("visit5.part5")}{" "}
+              <VietnamLink to="ho-chi-minh-war-museum">
+                {t("common:country.vietnam.card.ho-chi-minh-war-museum")}
+              </VietnamLink>
+              {t("visit5.part6")}
+            </p>
+          </SectionContent>
+        </section>
+        <VietnamDivider />
+        <section>
+          <VietnamHeadline>{t("visit6.title")}</VietnamHeadline>
+          <VietnamDivider />
+          <SectionContent>
+            <p>{t("visit6.part1")}</p>
+            <p>{t("visit6.part2")}</p>
+            <p>{t("visit6.part3")}</p>
+            <GroupOfImages>
+              <ImageAsPortrait>
+                <CuChiTunnelsImages image="trap4" />
+              </ImageAsPortrait>
+              <TwoImagesSameSizeOrToGroup>
+                <CuChiTunnelsImages image="bonus1" />
+                <CuChiTunnelsImages image="bonus2" />
+              </TwoImagesSameSizeOrToGroup>
+            </GroupOfImages>
+          </SectionContent>
+        </section>
         <Conclusion>
-          Ces tunnels nous montrent à quel point les Viet Cong étaient ingénieux et déterminés. On aurait limite
-          l’impression d’être enterré vivant avant de voir la lumière de sortie, une expérience à faire même si ça reste
-          une construction faite dans la douleur et qu’il ne faut pas l’oublier.
+          <p>{t("conclusion")}</p>
+          <ul>
+            <li>{t("question1")}</li>
+            <li>{t("question2")}</li>
+          </ul>
         </Conclusion>
-        <GoodToKnow>
-          <p>
-            Principalement connus pour avoir aidé les Vietnamiens à se retrancher pendant la guerre du Vietnam, les
-            tunnels ont pourtant d&apos;abord été construits pour la guerre d&apos;Indochine puis agrandis lors de la
-            guerre du Vietnam.
-          </p>
-          <p>Dans les zones les plus à risque des gens ont passé la plus grande partie de leur vie sous terre.</p>
-          <p>
-            Les tunnels de Cu Chi ont été agrandis pour abriter des villages souterrains entiers, avec des quartiers
-            d&apos;habitation, des usines de munitions ou bien encore des hôpitaux et des réserves de nourriture et
-            d&apos;armes.
-          </p>
-          <p>Des pièges artisanaux étaient dissimulés un peu partout pour blesser les ennemis et les ralentir.</p>
-          <p>Ces tunnels permettaient également de faire des attaques surprises.</p>
-          <p>
-            Les forces américaines ont entraîné des soldats à naviguer dans les tunnels afin de détecter les pièges et
-            la présence des troupes Vietnamienne. Ils étaient appelés les «rats des tunnels».
-          </p>
-          <TwoImagesSameSize>
-            <Bonus1CuChiTunnelsImage />
-            <Bonus2CuChiTunnelsImage />
-          </TwoImagesSameSize>
-        </GoodToKnow>
+        <Comments collectionName={namespace} location={location} />
       </VietnamBlogLayout>
     </>
   )
