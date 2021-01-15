@@ -25,7 +25,7 @@ export const ElNidoParadiseCard: FunctionComponent<ExtraCardProps> = ({ fluidObj
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
-    <PhilippinesCard title={common.card.philippines["el-nido-paradise"]} to="el-nido-paradise" {...card}>
+    <PhilippinesCard title={common.country.philippines.card["el-nido-paradise"]} to="el-nido-paradise" {...card}>
       <HomePhilippinesImage fluidObject={fluidObject} />
     </PhilippinesCard>
   )
@@ -35,7 +35,7 @@ export const ElNidoWhichTourCard: FunctionComponent<ExtraCardProps> = ({ fluidOb
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
-    <PhilippinesCard title={common.card.philippines["which-tour"]} to="el-nido-which-tour" {...card}>
+    <PhilippinesCard title={common.country.philippines.card["which-tour"]} to="el-nido-which-tour" {...card}>
       <ElNidoWhichTourMain fluidObject={fluidObject} />
     </PhilippinesCard>
   )

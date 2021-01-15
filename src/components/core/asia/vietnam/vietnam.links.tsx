@@ -10,7 +10,7 @@ import commonEn from "../../../../locales/en/common.json"
 
 export const vietnamLinks: CountryLink = {
   id: "vietnam",
-  label: { fr: commonFr.country.vietnam, en: commonEn.country.vietnam },
+  label: { fr: commonFr.country.vietnam.title, en: commonEn.country.vietnam.title },
   // this style is for the image in the asia page (medallion) to have the fisherman centered
   image: styled(HomeVietnamImage)`
     img {
@@ -30,7 +30,10 @@ export const vietnamLinks: CountryLink = {
       highlights: [
         {
           id: "cu-chi-tunnels",
-          label: { fr: commonFr.card.vietnam["cu-chi-tunnels"], en: commonEn.card.vietnam["cu-chi-tunnels"] },
+          label: {
+            fr: commonFr.country.vietnam.card["cu-chi-tunnels"],
+            en: commonEn.country.vietnam.card["cu-chi-tunnels"],
+          },
           published: new Date("2022-01-02"),
           card: CuChiTunnelsCard,
         },
@@ -49,8 +52,8 @@ export const vietnamLinks: CountryLink = {
         {
           id: "ho-chi-minh-war-museum",
           label: {
-            fr: commonFr.card.vietnam["ho-chi-minh-war-museum"],
-            en: commonEn.card.vietnam["ho-chi-minh-war-museum"],
+            fr: commonFr.country.vietnam.card["ho-chi-minh-war-museum"],
+            en: commonEn.country.vietnam.card["ho-chi-minh-war-museum"],
           },
           url: "war-remnants-museum",
           card: WarMuseumCard,
@@ -60,8 +63,8 @@ export const vietnamLinks: CountryLink = {
           id: "discover-southern-vietnam",
           url: "discover",
           label: {
-            fr: commonFr.card.vietnam["discover-southern-vietnam"],
-            en: commonEn.card.vietnam["discover-southern-vietnam"],
+            fr: commonFr.country.vietnam.card["discover-southern-vietnam"],
+            en: commonEn.country.vietnam.card["discover-southern-vietnam"],
           },
           published: new Date("2021-01-02"),
           card: SouthVietnamCard,

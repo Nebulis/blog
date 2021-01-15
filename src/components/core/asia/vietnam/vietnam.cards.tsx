@@ -28,7 +28,7 @@ export const CuChiTunnelsCard: FunctionComponent<ExtraCardProps> = ({ fluidObjec
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
-    <VietnamCard title={common.card.vietnam["cu-chi-tunnels"]} to="cu-chi-tunnels" {...card}>
+    <VietnamCard title={common.country.vietnam.card["cu-chi-tunnels"]} to="cu-chi-tunnels" {...card}>
       <MainCuChiTunnelsImage fluidObject={fluidObject} />
     </VietnamCard>
   )
@@ -38,7 +38,7 @@ export const WarMuseumCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, 
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
-    <VietnamCard title={common.card.vietnam["ho-chi-minh-war-museum"]} to="ho-chi-minh-war-museum" {...card}>
+    <VietnamCard title={common.country.vietnam.card["ho-chi-minh-war-museum"]} to="ho-chi-minh-war-museum" {...card}>
       <MainWarMuseumImage fluidObject={fluidObject} />
     </VietnamCard>
   )
@@ -47,7 +47,7 @@ export const CanThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, car
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
-    <VietnamCard title={common.card.vietnam["can-tho"]} to="can-tho" {...card}>
+    <VietnamCard title={common.country.vietnam.card["can-tho"]} to="can-tho" {...card}>
       <MainCanThoImage fluidObject={fluidObject} />
     </VietnamCard>
   )
@@ -56,7 +56,7 @@ export const MyThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
-    <VietnamCard title={common.card.vietnam["my-tho"]} to="my-tho" {...card}>
+    <VietnamCard title={common.country.vietnam.card["my-tho"]} to="my-tho" {...card}>
       <MainMyThoImage fluidObject={fluidObject} />
     </VietnamCard>
   )
@@ -66,7 +66,11 @@ export const SouthVietnamCard: FunctionComponent<ExtraCardProps> = ({ fluidObjec
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
-    <VietnamCard title={common.card.vietnam["discover-southern-vietnam"]} to="discover-southern-vietnam" {...card}>
+    <VietnamCard
+      title={common.country.vietnam.card["discover-southern-vietnam"]}
+      to="discover-southern-vietnam"
+      {...card}
+    >
       <HomeVietnamImage fluidObject={fluidObject} />
     </VietnamCard>
   )
