@@ -79,7 +79,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <HowMuch>
           <p>Gratuit</p>
         </HowMuch>
-        <WhereToStay location="à Tokyo">
+        <WhereToStay>
           <p>
             Tokyo est immense et ce n’est pas simple de conseiller un hôtel pour une si grande ville. Nous avons passé
             deux nuits à Tokyo à deux endroits différents. Tout dépend de ce que vous allez visiter où faire mais nous

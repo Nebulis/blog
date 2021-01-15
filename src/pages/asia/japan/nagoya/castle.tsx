@@ -109,7 +109,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <HowMuch>
           <p>500 Yens (~ 4,20 €). Gratuit pour les enfants.</p>
         </HowMuch>
-        <WhereToStay location="à Nagoya">
+        <WhereToStay>
           <p>
             Nagoya n’avait pas l’air tellement touristique, en tout cas beaucoup moins que Kyoto et Himeji. Nous n’avons
             pas eu de mal à trouver un hôtel et ça même si nous nous y étions pris un peu en retard.
@@ -131,7 +131,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </small>
           </p>
         </WhereToStay>
-        <WhereToHave location="à Nagoya">
+        <WhereToHave>
           <p>
             Après une bonne journée à marcher, on avait clairement envie de se refaire plaisir, et à deux pas de l’hôtel
             dans une petite rue nous avons trouvé le restaurant que nous cherchions, le même type qu’à Himeji où nous

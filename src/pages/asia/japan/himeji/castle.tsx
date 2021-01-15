@@ -88,7 +88,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             pour les adultes et 300 Yens (~ 2,50€) pour les enfants.
           </p>
         </HowMuch>
-        <WhereToStay location="à Himeji">
+        <WhereToStay>
           <p>
             Himeji est particulièrement touristique, vous n’aurez donc pas de mal à trouver un hôtel. Reste à voir les
             prix, car comme partout au Japon, les hôtels ne sont pas donnés.
@@ -110,7 +110,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </small>
           </p>
         </WhereToStay>
-        <WhereToHave location="à Himeji">
+        <WhereToHave>
           <p>
             Nous n’y sommes resté qu’une matinée et une nuit mais le soir on est sorti pour chercher un petit resto
             sympa. On était un peu perdu à vrai dire et nous avons pris le premier restaurant ouvert que nous avons

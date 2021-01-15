@@ -76,7 +76,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <HowMuch>
           <p>Gratuit.</p>
         </HowMuch>
-        <WhereToStay location="à Nagoya">
+        <WhereToStay>
           <p>
             Nous avions décidé de dormir près du château de Nagoya, notre hôtel le{" "}
             <JapanExternalLink href="https://www.booking.com/hotel/jp/kuretake-inn-nagoya-hisayaodori.fr.html?aid=304142;label=gen173nr-1FCAEoggI46AdIM1gEaE2IAQGYAQ24ARfIAQzYAQHoAQH4AQuIAgGoAgO4At_li-0FwAIB;sid=4bab15bee9c381d39dd9173a3a402ed8;atlas_src=sr_iw_btn;dist=0;room1=A%2CA;sb_price_type=total;type=total;ucfs=1&">

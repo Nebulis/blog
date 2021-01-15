@@ -76,7 +76,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </How>
         <HowLong>Environ 2h.</HowLong>
         <HowMuch>Gratuit</HowMuch>
-        <WhereToStay location="à Kyoto, près de Arashiyama">
+        <WhereToStay>
           <p>
             Kyoto est particulièrement cher de ce que nous avons pu voir. Partez sur un minimum de 100€ voir 200€ par
             nuit. Vérifiez bien les hôtels, on trouve un peu de tout et pas forcément très bien indiqué (des hôtels avec

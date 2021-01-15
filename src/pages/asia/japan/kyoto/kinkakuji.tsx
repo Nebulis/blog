@@ -95,7 +95,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
         </WhatTimeOfYear>
         <HowMuch>400 Yens (~3,50 €)</HowMuch>
-        <WhereToStay location="à Kyoto, près de Kinkakuji">
+        <WhereToStay>
           <p>
             Chercher un hôtel à Kyoto n’est pas une mince affaire, les prix sont quand même sacrément élevé (au Japon en
             général d’ailleurs) , environ 200€ pour dormir près de Kinkakuji. Nous vous conseillons donc de vous trouver

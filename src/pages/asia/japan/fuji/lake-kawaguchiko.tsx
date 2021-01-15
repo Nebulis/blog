@@ -55,7 +55,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </small>
         </How>
         <HowLong>Une à deux journées pas plus.</HowLong>
-        <WhereToStay location="au lac Kawakuchi">
+        <WhereToStay>
           <p>
             Nous nous y sommes pris un peu tard pour réserver notre hôtel et nous n’avons pas eu énormément de choix.
           </p>
