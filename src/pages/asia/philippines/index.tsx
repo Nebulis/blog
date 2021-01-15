@@ -23,13 +23,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation(["asia/philippines/index", "common"])
   const cities = development ? philippinesLinks.cities : philippinesLinks.cities.filter(isLinkPublished)
   const articles: React.ComponentType<ExtraCardProps>[] = []
+  const country = t("common:country.philippines.title")
   return (
     <>
-      <SEO title={t("common:country.philippines")} location={location} />
+      <SEO title={country} location={location} />
       <IndexPhilippinesBlogLayout page="philippines" location={location}>
         <MainTitleSection>
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />
-          &nbsp;{t("common:country.philippines")}&nbsp;
+          &nbsp;{country}&nbsp;
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />
         </MainTitleSection>
         {cities.length > 0 && (

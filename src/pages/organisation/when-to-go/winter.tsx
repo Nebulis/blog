@@ -23,12 +23,12 @@ i18n.addResourceBundle("en", namespace, translationEn)
 
 const elements: OrganisationCard[] = [
   {
-    label: "common:country.southern-vietnam",
+    label: "common:country.vietnam.southern-vietnam",
     image: HomeVietnamImage,
     to: "southern-vietnam",
   },
   {
-    label: "common:country.philippines",
+    label: "common:country.philippines.title",
     image: styled(CarouselAndOrganisationPhilippines2)`
       img {
         object-position: -50px 30px !important;

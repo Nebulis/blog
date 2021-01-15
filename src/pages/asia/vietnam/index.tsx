@@ -30,13 +30,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation(["asia/vietnam/index", "common"])
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
   const articles: React.ComponentType<ExtraCardProps>[] = []
+  const country = t("common:country.vietnam.title")
   return (
     <>
-      <SEO title={t("common:country.vietnam")} location={location} image={VietnamImage} />
+      <SEO title={country} location={location} image={VietnamImage} />
       <IndexVietnamBlogLayout page="vietnam" location={location}>
         <MainTitleSection>
           <TitleImage src={vietnamHat} alt="vietnam hat" />
-          &nbsp;{t("common:country.vietnam")}&nbsp;
+          &nbsp;{country}&nbsp;
           <TitleImage src={vietnamHat} alt="vietnam hat" />
         </MainTitleSection>
         {false && (

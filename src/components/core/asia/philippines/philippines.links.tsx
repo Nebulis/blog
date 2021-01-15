@@ -8,7 +8,7 @@ import { ElNidoParadiseCard } from "./philippines.card"
 
 export const philippinesLinks: CountryLink = {
   id: "philippines",
-  label: { fr: commonFr.country.philippines, en: commonEn.country.philippines },
+  label: { fr: commonFr.country.philippines.title, en: commonEn.country.philippines.title },
   // this style is for the image in the asia page (medallion) to have the fisherman centered
   image: styled(CarouselAndOrganisationPhilippines2)`
     img {
@@ -19,7 +19,7 @@ export const philippinesLinks: CountryLink = {
   cities: [
     {
       id: "el-nido",
-      label: { fr: commonFr.city.philippines["el-nido"], en: commonEn.city.philippines["el-nido"] },
+      label: { fr: commonFr.country.philippines.city["el-nido"], en: commonEn.country.philippines.city["el-nido"] },
       image: styled(HomeElNidoImage)`
         img {
           object-position: -35px -12px !important;
@@ -30,8 +30,8 @@ export const philippinesLinks: CountryLink = {
           id: "el-nido-paradise",
           card: ElNidoParadiseCard,
           label: {
-            fr: commonFr.card.philippines["el-nido-paradise"],
-            en: commonEn.card.philippines["el-nido-paradise"],
+            fr: commonFr.country.philippines.card["el-nido-paradise"],
+            en: commonEn.country.philippines.card["el-nido-paradise"],
           },
           published: new Date("2021-01-09T17:00:00.000+08:00"),
         },
@@ -39,8 +39,8 @@ export const philippinesLinks: CountryLink = {
           id: "el-nido-which-tour",
           url: "which-tour",
           label: {
-            fr: commonFr.card.philippines["which-tour"],
-            en: commonEn.card.philippines["which-tour"],
+            fr: commonFr.country.philippines.card["which-tour"],
+            en: commonEn.country.philippines.card["which-tour"],
           },
           published: new Date("2022-01-02"),
         },

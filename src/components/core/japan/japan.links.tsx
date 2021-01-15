@@ -24,7 +24,7 @@ import commonEn from "../../../locales/en/common.json"
 
 export const japanLinks: CountryLink = {
   id: "japan",
-  label: { fr: commonFr.country.japan, en: commonEn.country.japan },
+  label: { fr: commonFr.country.japan.title, en: commonEn.country.japan.title },
   // this style is for the image in the asia page (medallion) to have the geisha centered
   image: styled(HomeJapanImage)`
     img {

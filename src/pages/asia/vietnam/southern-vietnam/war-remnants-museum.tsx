@@ -49,7 +49,7 @@ i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const title = t(`common:card.vietnam.${id}`)
+  const title = t(`common:country.vietnam.card.${id}`)
   const description = t("quote")
   const googleDescription = t("introduction")
 
@@ -256,7 +256,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit4.part8")}</p>
             {t("visit4.part9")}{" "}
             <VietnamLink to="discover-southern-vietnam">
-              {t("common:card.vietnam.discover-southern-vietnam")}
+              {t("common:country.vietnam.card.discover-southern-vietnam")}
             </VietnamLink>
             {t("visit4.part10")}
           </SectionContent>

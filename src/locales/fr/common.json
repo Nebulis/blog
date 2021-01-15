@@ -30,40 +30,68 @@
     "subtitle": "À travers nos astuces, nos coups de cœur ..."
   },
   "country": {
-    "australia": "Australie",
-    "cambodia": "Cambodge",
-    "france": "France",
-    "india": "Inde",
-    "indonesia": "Indonésie",
-    "japan": "Japon",
-    "malaysia": "Malaisie",
-    "philippines": "Philippines",
-    "senegal": "Sénégal",
-    "singapore": "Singapour",
-    "spain": "Espagne",
-    "sri-lanka": "Sri Lanka",
-    "taiwan": "Taiwan",
-    "thailand": "Thaïlande",
-    "united-states": "États-Unis",
-    "vietnam": "Vietnam",
-    "southern-vietnam": "Vietnam du Sud"
-  },
-  "city": {
+    "australia": {
+      "title": "Australie"
+    },
+    "cambodia": {
+      "title": "Cambodge"
+    },
+    "france": {
+      "title": "France"
+    },
+    "india": {
+      "title": "Inde"
+    },
+    "indonesia": {
+      "title": "Indonésie"
+    },
+    "japan": {
+      "title": "Japon"
+    },
+    "malaysia": {
+      "title": "Malaisie"
+    },
     "philippines": {
-      "el-nido": "El Nido"
-    }
-  },
-  "card": {
-    "philippines": {
-      "el-nido-paradise": "El Nido : Un petit coin de Paradis",
-      "which-tour": "Archipel de Bacuit : Quel tour choisir ?"
+      "title": "Philippines",
+      "city": {
+        "el-nido": "El Nido"
+      },
+      "card": {
+        "el-nido-paradise": "El Nido : Un petit coin de Paradis",
+        "which-tour": "Archipel de Bacuit : Quel tour choisir ?"
+      }
+    },
+    "senegal": {
+      "title": "Sénégal"
+    },
+    "singapore": {
+      "title": "Singapour"
+    },
+    "spain": {
+      "title": "Espagne"
+    },
+    "sri-lanka": {
+      "title": "Sri Lanka"
+    },
+    "taiwan": {
+      "title": "Taiwan"
+    },
+    "thailand": {
+      "title": "Thaïlande"
+    },
+    "united-states": {
+      "title": "États-Unis"
     },
     "vietnam": {
-      "cu-chi-tunnels": "Les tunnels de Củ Chi",
-      "discover-southern-vietnam": "Découverte du Vietnam du Sud",
-      "my-tho": "Croisière sur le Mékong entre Mỹ Tho et Ben Tre",
-      "ho-chi-minh-war-museum": "Le Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
-      "can-tho": "Visite de Cân Thơ et son marché flottant"
+      "title": "Vietnam",
+      "southern-vietnam": "Vietnam du Sud",
+      "card": {
+        "cu-chi-tunnels": "Les tunnels de Củ Chi",
+        "discover-southern-vietnam": "Découverte du Vietnam du Sud",
+        "my-tho": "Croisière sur le Mékong entre Mỹ Tho et Ben Tre",
+        "ho-chi-minh-war-museum": "Le Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
+        "can-tho": "Visite de Cân Thơ et son marché flottant"
+      }
     }
   },
   "allArticles": "Tous nos articles",

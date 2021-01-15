@@ -40,7 +40,7 @@ i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t } = useCustomTranslation([namespace, "common"])
-  const title = t("common:card.vietnam.discover-southern-vietnam")
+  const title = t("common:country.vietnam.card.discover-southern-vietnam")
   const description = t("quote")
 
   return (

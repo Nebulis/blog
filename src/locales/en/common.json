@@ -30,40 +30,68 @@
     "subtitle": "With our suggestions, favorites ..."
   },
   "country": {
-    "australia": "Australia",
-    "cambodia": "Cambodia",
-    "france": "France",
-    "india": "India",
-    "indonesia": "Indonesia",
-    "japan": "Japan",
-    "malaysia": "Malaysia",
-    "philippines": "Philippines",
-    "senegal": "Senegal",
-    "singapore": "Singapore",
-    "spain": "Spain",
-    "sri-lanka": "Sri Lanka",
-    "taiwan": "Taiwan",
-    "thailand": "Thailand",
-    "united-states": "United States",
-    "vietnam": "Vietnam",
-    "southern-vietnam": "Southern Vietnam"
-  },
-  "city": {
+    "australia": {
+      "title": "Australia"
+    },
+    "cambodia": {
+      "title": "Cambodia"
+    },
+    "france": {
+      "title": "France"
+    },
+    "india": {
+      "title": "India"
+    },
+    "indonesia": {
+      "title": "Indonesia"
+    },
+    "japan": {
+      "title": "Japan"
+    },
+    "malaysia": {
+      "title": "Malaysia"
+    },
     "philippines": {
-      "el-nido": "El Nido"
-    }
-  },
-  "card": {
-    "philippines": {
-      "el-nido-paradise": "El Nido: A little paradise",
-      "which-tour": "Bacuit Archipelago: Which tour to choose?"
+      "title": "Philippines",
+      "city": {
+        "el-nido": "El Nido"
+      },
+      "card": {
+        "el-nido-paradise": "El Nido: A little paradise",
+        "which-tour": "Bacuit Archipelago: Which tour to choose?"
+      }
+    },
+    "senegal": {
+      "title": "Senegal"
+    },
+    "singapore": {
+      "title": "Singapore"
+    },
+    "spain": {
+      "title": "Spain"
+    },
+    "sri-lanka": {
+      "title": "Sri Lanka"
+    },
+    "taiwan": {
+      "title": "Taiwan"
+    },
+    "thailand": {
+      "title": "Thailand"
+    },
+    "united-states": {
+      "title": "United States"
     },
     "vietnam": {
-      "cu-chi-tunnels": "Củ Chi tunnels",
-      "discover-southern-vietnam": "Discover Southern Vietnam",
-      "my-tho": "Cruise on the Mekong between Mỹ Tho and Ben Tre",
-      "ho-chi-minh-war-museum": "War Remnants Museum in Ho Chi Minh City",
-      "can-tho": "Cân Thơ floating market"
+      "title": "Vietnam",
+      "southern-vietnam": "Southern Vietnam",
+      "card": {
+        "cu-chi-tunnels": "Củ Chi tunnels",
+        "discover-southern-vietnam": "Discover Southern Vietnam",
+        "my-tho": "Cruise on the Mekong between Mỹ Tho and Ben Tre",
+        "ho-chi-minh-war-museum": "War Remnants Museum in Ho Chi Minh City",
+        "can-tho": "Cân Thơ floating market"
+      }
     }
   },
   "allArticles": "All our articles",

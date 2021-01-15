@@ -265,22 +265,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     const tmp: CarouselElementType[] = [
       {
         to: "vietnam",
-        country: t("common:country.vietnam"),
+        country: t("common:country.vietnam.title"),
         image: "vietnam1",
       },
       {
         to: "vietnam",
-        country: t("common:country.vietnam"),
+        country: t("common:country.vietnam.title"),
         image: "vietnam2",
       },
       {
         to: "philippines",
-        country: t("common:country.philippines"),
+        country: t("common:country.philippines.title"),
         image: "philippines1",
       },
       {
         to: "philippines",
-        country: t("common:country.philippines"),
+        country: t("common:country.philippines.title"),
         component: CarouselAndOrganisationPhilippines2,
       },
     ].filter(({ to }) => {
@@ -402,7 +402,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </>
         )}
         <MouseToolTip>
-          {country ? <TooltipContent>{t(`common:country.${country.id}`)}</TooltipContent> : null}
+          {country ? <TooltipContent>{t(`common:country.${country.id}.title`)}</TooltipContent> : null}
         </MouseToolTip>
       </HomeBlogLayout>
     </>
