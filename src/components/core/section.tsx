@@ -16,6 +16,7 @@ import {
 } from "react-icons/all"
 import { maxWidth, mediumEnd, mobileEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n"
+import { Lang } from "./links/links.types"
 
 export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
   <div className={`mb1 flex section-title ${className}`}>{children}</div>
@@ -59,132 +60,43 @@ interface TitleProps {
   title?: string
   className?: string
 }
-export const Where: FunctionComponent<TitleProps> = ({ children, title }) => {
-  const { t } = useCustomTranslation("common")
-  return (
-    <>
-      <SectionTitle>
-        <FaMapMarkedAlt />
-        &nbsp;{title || t("section.where")}
-      </SectionTitle>
-      <SectionContent>{children}</SectionContent>
-    </>
-  )
-}
-export const When: FunctionComponent<TitleProps> = ({ children, title }) => {
-  const { t } = useCustomTranslation("common")
-  return (
-    <>
-      <SectionTitle>
-        <FaCalendarAlt />
-        &nbsp;{title || t("section.when")}
-      </SectionTitle>
-      <SectionContent>{children}</SectionContent>
-    </>
-  )
-}
 
-export const How: FunctionComponent<TitleProps> = ({ children }) => {
-  const { t } = useCustomTranslation("common")
-  return (
-    <>
-      <SectionTitle>
-        <FaBusAlt />
-        &nbsp;{t("section.how-to-get-there")}
-      </SectionTitle>
-      <SectionContent>{children}</SectionContent>
-    </>
-  )
+type IconBuilder = { build: (lang: Lang) => React.ComponentType }
+interface TitleOptions {
+  translationKey: string
+  icon: React.ComponentType | IconBuilder
 }
-export const HowLong: FunctionComponent<TitleProps> = ({ children, title }) => {
-  const { t } = useCustomTranslation("common")
-  return (
-    <>
-      <SectionTitle>
-        <FaClock />
-        &nbsp;{title || t("section.how-long")}
-      </SectionTitle>
-      <SectionContent>{children}</SectionContent>
-    </>
-  )
+const isIconBuilder = (obj: unknown): obj is IconBuilder => {
+  return obj && typeof obj === "object" && "build" in obj
 }
-export const HowMuch: FunctionComponent<TitleProps> = ({ children, title }) => {
-  const { t, i18n } = useCustomTranslation("common")
-  const PriceSign = i18n.languageCode === "fr" ? FaEuroSign : FaDollarSign
-  return (
-    <>
-      <SectionTitle>
-        <PriceSign />
-        &nbsp;{title || t("section.how-much")}
-      </SectionTitle>
-      <SectionContent>{children}</SectionContent>
-    </>
-  )
-}
-interface WhereToStayProps extends TitleProps {
-  location?: string
-}
-export const WhereToStay: FunctionComponent<WhereToStayProps> = ({ children, location, title }) => {
-  const { t } = useCustomTranslation("common")
-  return (
-    <>
-      <SectionTitle>
-        <FaBed />
-        &nbsp;{title || t("section.where-to-stay")} {location ? location + " " : ""}
-      </SectionTitle>
-      <SectionContent>{children}</SectionContent>
-    </>
-  )
-}
-export const WhatTimeOfYear: FunctionComponent<TitleProps> = ({ children, title }) => {
-  const { t } = useCustomTranslation("common")
-  return (
-    <>
-      <SectionTitle>
-        <FaCloudSun />
-        &nbsp;{title || t("section.what-time-of-year")}
-      </SectionTitle>
-      <SectionContent>{children}</SectionContent>
-    </>
-  )
-}
+export const titleBuilder = ({ translationKey, icon }: TitleOptions): React.FunctionComponent<TitleProps> =>
+  function Title({ children, title }) {
+    const { t, i18n } = useCustomTranslation("common")
+    const Icon = isIconBuilder(icon) ? icon.build(i18n.languageCode) : icon
+    return (
+      <>
+        <SectionTitle>
+          <Icon />
+          &nbsp;{title || t(translationKey)}
+        </SectionTitle>
+        <SectionContent>{children}</SectionContent>
+      </>
+    )
+  }
 
-interface WhereToHaveProps {
-  location: string
-}
-export const WhereToHave: FunctionComponent<WhereToHaveProps> = ({ children, location }) => {
-  return (
-    <>
-      <SectionTitle>
-        <FaUtensils />
-        &nbsp;Où manger {location} ?
-      </SectionTitle>
-      <SectionContent>{children}</SectionContent>
-    </>
-  )
-}
-export const Visit: FunctionComponent<TitleProps> = ({ children, className = "", title }) => {
-  const { t } = useCustomTranslation("common")
-  return (
-    <>
-      <SectionTitle>
-        <FaWalking />
-        &nbsp;{title || t("common:section.visit")}
-      </SectionTitle>
-      <SectionContent className={className}>{children}</SectionContent>
-    </>
-  )
-}
-
-export const Bonus: FunctionComponent<TitleProps> = ({ children }) => (
-  <>
-    <SectionTitle>
-      <FaLightbulb />
-      &nbsp;Le petit +
-    </SectionTitle>
-    <SectionContent>{children}</SectionContent>
-  </>
-)
+export const Where = titleBuilder({ icon: FaMapMarkedAlt, translationKey: "section.where" })
+export const When = titleBuilder({ icon: FaCalendarAlt, translationKey: "section.when" })
+export const How = titleBuilder({ icon: FaBusAlt, translationKey: "section.how-to-get-there" })
+export const HowLong = titleBuilder({ icon: FaClock, translationKey: "section.how-long" })
+export const HowMuch = titleBuilder({
+  icon: { build: (lang) => (lang === "fr" ? FaEuroSign : FaDollarSign) },
+  translationKey: "section.how-much",
+})
+export const WhereToStay = titleBuilder({ icon: FaBed, translationKey: "section.where-to-stay" })
+export const WhatTimeOfYear = titleBuilder({ icon: FaCloudSun, translationKey: "section.what-time-of-year" })
+export const WhereToHave = titleBuilder({ icon: FaUtensils, translationKey: "todo" })
+export const Visit = titleBuilder({ icon: FaWalking, translationKey: "section.visit" })
+export const Bonus = titleBuilder({ icon: FaLightbulb, translationKey: "todo" })
 
 export const GoodToKnow: FunctionComponent<TitleProps> = ({ children }) => (
   <>

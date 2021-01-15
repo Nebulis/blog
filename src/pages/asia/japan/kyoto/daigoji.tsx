@@ -97,7 +97,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
         </WhatTimeOfYear>
         <HowMuch>1500 Yen pour l’ensemble de la visite.</HowMuch>
-        <WhereToStay location="à Kyoto, près de Daigo-Ji">
+        <WhereToStay>
           <p>
             Daigo-ji est dans un coin reculé de Kyoto, il n’y a pas d’hôtels juste à côté mais de notre point de vue
             pour la visite de Kyoto nous avons justement préféré être dans ce coin reculé, plus calme et quand même
