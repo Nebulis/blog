@@ -44,16 +44,7 @@ export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ childre
 }
 
 export const Introduction: React.FunctionComponent = ({ children }) => {
-  return (
-    <SectionContent
-      className="b tc"
-      css={css`
-        font-size: 1.2rem;
-      `}
-    >
-      {children}
-    </SectionContent>
-  )
+  return <SectionContent className="b tc">{children}</SectionContent>
 }
 
 interface TitleProps {
