@@ -7,7 +7,15 @@ import {
   VietnamQuote,
   VietnamTitle,
 } from "../../../../components/core/asia/vietnam/vietnam"
-import { HowLong, HowMuch, SectionContent, Visit, WhatTimeOfYear, Where } from "../../../../components/core/section"
+import {
+  HowLong,
+  HowMuch,
+  Introduction,
+  SectionContent,
+  Visit,
+  WhatTimeOfYear,
+  Where,
+} from "../../../../components/core/section"
 import { SouthVietnamMap } from "../../../../components/core/asia/vietnam/south-vietnam-map"
 import {
   CanThoCard,
@@ -42,16 +50,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t } = useCustomTranslation([namespace, "common"])
   const title = t("common:country.vietnam.card.discover-southern-vietnam")
   const description = t("quote")
+  const googleDescription = t("introduction")
 
   return (
     <>
-      <SEO title={title} description={description} image={HomeImgUrl} location={location} />
+      <SEO
+        title={title}
+        description={description}
+        image={HomeImgUrl}
+        location={location}
+        googleDescription={googleDescription}
+      />
       <VietnamBlogLayout page="discover-southern-vietnam" location={location}>
         <VietnamTitle title={title} linkId="discover-southern-vietnam" />
         <ImageAsLandscape>
           <HomeVietnamImage />
         </ImageAsLandscape>
-        <VietnamQuote>{t("quote")}</VietnamQuote>
+        <VietnamQuote>{description}</VietnamQuote>
+        <VietnamDivider />
+        <Introduction>{googleDescription}</Introduction>
         <WhatTimeOfYear>
           <p>{t("what-time-of-year.part1")}</p>
           <p>{t("what-time-of-year.part2")}</p>

@@ -1,4 +1,11 @@
 {
+  "welcome": {
+    "title": "Bienvenue",
+    "section1": "Passionnés de voyages, nous partageons sur notre blog nos aventures autour du monde.",
+    "section2": "Entre astuces, conseils, récits de voyages, anecdotes ou coups de cœur, on espère que vous trouverez votre bonheur !",
+    "section3": "Un blog voyage et lifestyle d’un couple de voyageur qui a des rêves plein la tête !",
+    "more": "En savoir plus à propos de nous"
+  },
   "explore": {
     "title": "Explorer",
     "subtitle": "Nos voyages à travers le monde ..."

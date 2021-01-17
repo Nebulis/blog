@@ -27,6 +27,7 @@ import {
   How,
   HowLong,
   HowMuch,
+  Introduction,
   SectionContent,
   Visit,
   WhatTimeOfYear,
@@ -50,16 +51,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t("common:country.philippines.card.el-nido-paradise")
   const description = t("quote")
+  const googleDescription = t("introduction")
 
   return (
     <>
-      <SEO title={title} description={description} image={HomeImgUrl} location={location} />
+      <SEO
+        title={title}
+        description={description}
+        googleDescription={googleDescription}
+        image={HomeImgUrl}
+        location={location}
+      />
       <PhilippinesBlogLayout page="el-nido-paradise" location={location}>
         <PhilippinesTitle title={title} linkId="el-nido-paradise" />
         <ImageAsLandscape>
           <HomePhilippinesImage />
         </ImageAsLandscape>
         <PhilippinesQuote>{t("quote")}</PhilippinesQuote>
+        <PhilippinesDivider />
+        <Introduction>{googleDescription}</Introduction>
         <WhatTimeOfYear>
           <p>{t("what-time-of-year.part1")}</p>
           <p>{t("what-time-of-year.part2")}</p>

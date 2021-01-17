@@ -26,9 +26,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, displayAllArticles } = useContext(ApplicationContext)
   const countries = development ? asiaLinks.countries : asiaLinks.countries.filter(isLinkPublished)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const googleDescription = `${t("quote.part3")} ${t("seo")}`
+  const description = t("quote.part2")
   return (
     <>
-      <SEO title={t("common:continent.asia")} location={location} image={VietnamImage} />
+      <SEO
+        title={t("common:continent.asia")}
+        location={location}
+        image={VietnamImage}
+        description={description}
+        googleDescription={googleDescription}
+      />
       <IndexBlogLayoutWithDrawer page="asia" location={location}>
         <MainTitleSection>{t("common:continent.asia")}</MainTitleSection>
         <PrimaryDivider />

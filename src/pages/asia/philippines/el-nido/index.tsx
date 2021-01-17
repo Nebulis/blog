@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
-import { HomeSection, MainTitleSection } from "../../../../components/core/section"
+import { HomeSection, IndexIntroduction, MainTitleSection } from "../../../../components/core/section"
 import {
   getHighlightsFromCity,
   getLinkLabel,
@@ -50,15 +50,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const highlights = getHighlightsFromCity(philippinesLinks.cities)({ id: currentPageId, development }).sort(
     sortByPublishedDate
   )
+  const googleDescription = t("introduction.section3")
+  const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
     <>
-      <SEO title={t("title")} location={location} />
+      <SEO title={t("title")} location={location} description={description} googleDescription={googleDescription} />
       <PhilippinesBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />
           &nbsp;{t("title")}&nbsp;
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />
         </MainTitleSection>
+        <PhilippinesDivider />
+        <IndexIntroduction>
+          <p>{t("introduction.section1")}</p>
+          <p>{t("introduction.section2")}</p>
+          <p>{t("introduction.section3")}</p>
+          <p>{t("introduction.section4")}</p>
+          <p>{t("introduction.section5")}</p>
+        </IndexIntroduction>
         <PhilippinesDivider className="mb0" />
         <MainCardContainer>
           <ElNidoParadiseCard />

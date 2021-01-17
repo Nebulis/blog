@@ -42,7 +42,7 @@ describe("links", () => {
       published: false,
     })
     expect(getLink("journal")).toMatchObject({ label: { fr: "Journal", en: "Journal" }, published: false })
-    expect(getLink("who")).toMatchObject({ label: { fr: "Qui sommes nous ?", en: "Who are we ?" }, published: true })
+    expect(getLink("who")).toMatchObject({ label: { fr: "Qui sommes nous ?", en: "About us?" }, published: true })
     expect(getLink("contact")).toMatchObject({ label: { fr: "Contact", en: "Contact" }, published: true })
     expect(getLink("devices")).toMatchObject({ label: { fr: "Notre matériel", en: "Our devices" }, published: false })
     expect(getLink("about")).toMatchObject({ label: { fr: "À propos", en: "About" }, published: true })
@@ -130,7 +130,7 @@ describe("links", () => {
         en: "War Remnants Museum in Ho Chi Minh City",
         fr: "Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
       },
-      published: false,
+      published: true,
     })
     expect(getLink("discover-southern-vietnam")).toMatchObject({
       label: { fr: "Découverte du Vietnam du Sud", en: "Discover Southern Vietnam" },

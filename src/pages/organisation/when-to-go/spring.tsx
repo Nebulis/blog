@@ -43,10 +43,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t } = useCustomTranslation([namespace, "common"])
   const cards = development ? elements : elements.filter(({ to }) => isLinkPublished(to))
+  const description = `${t("part1")} ${t("part2")} ${t("part3")} ${t("part4")}`
+  const googleDescription = `${t("part1")} ${t("part2")} ${t("seo")}`
 
   return (
     <>
-      <SEO title={t("title")} location={location} />
+      <SEO title={t("title")} location={location} description={description} googleDescription={googleDescription} />
       <BlogLayoutWithDrawer page="spring" location={location}>
         <MainTitleSection>{t("title")}</MainTitleSection>
         <PrimaryDivider />
@@ -54,6 +56,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote>{t("part1")}</PageQuote>
           <PageQuote position="none">{t("part2")}</PageQuote>
           <PageQuote position="none">{t("part3")}</PageQuote>
+          <PageQuote position="none">{t("part4")}</PageQuote>
         </SectionContent>
         <CountriesContainer>
           {cards.sort(sortByField("label")).map(({ label, image, to }, index) => (

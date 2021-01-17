@@ -5,14 +5,20 @@ import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip } from "../components/core/tooltipPortal"
 import { navigate, PageProps } from "gatsby"
-import { getLink, getLinkUrl, getMostRecentArticles, isLinkPublished } from "../components/core/links/links.utils"
+import {
+  getLink,
+  getLinkUrl,
+  getMostRecentArticles,
+  isLinkPublished,
+  sortByLabel,
+} from "../components/core/links/links.utils"
 import { Carousel, CarouselImage } from "../components/core/carousel"
 import { Divider } from "../components/core/divider"
 import { Monument } from "../components/icon/monument"
 import { Hiking } from "../components/icon/hiking"
 import { CityIcon } from "../components/icon/city"
 import { Photo } from "../components/icon/photo"
-import { ButtonLink, ExternalLink } from "../components/core/links/link"
+import { ButtonLink, ExternalLink, PrimaryApplicationLink } from "../components/core/links/link"
 import {
   largeStart,
   maxWidth,
@@ -27,13 +33,12 @@ import {
 import { ApplicationContext } from "../components/application"
 import { MenuContext } from "../components/layout/menu.context"
 import SEO from "../components/layout/seo"
-import { HomeSection, HomeSubSection } from "../components/core/section"
+import { HomeSection, HomeSubSection, IndexIntroduction } from "../components/core/section"
 import { useCustomTranslation } from "../i18n"
 import i18n from "i18next"
 import indexFr from "../locales/fr/index.json"
 import indexEn from "../locales/en/index.json"
 import { CarouselAndOrganisationPhilippines2 } from "../components/images/asia/philippines/carousel-and-organisation-philippines2"
-import { sortByLabel } from "../components/core/links/links.utils"
 import { continentLinks } from "../components/core/links/links.configuration"
 import { HomeBlogLayout } from "../components/layout/main-layout"
 import { CarouselImageQuery } from "../components/images/carousel"
@@ -292,9 +297,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const countriesWithArticles = ["philippines", "vietnam"].filter((country) => {
     return development || isLinkPublished(country)
   })
+  const description = `${t("index:welcome.section1")} ${t("index:welcome.section2")} ${t("index:welcome.section3")}`
   return (
     <>
-      <SEO location={location} />
+      <SEO location={location} description={description} />
       <HomeBlogLayout page="home" className="" location={location}>
         <Carousel>
           {carouselElement.map(({ country, component: Component, to, image }, index) => {
@@ -305,6 +311,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             )
           })}
         </Carousel>
+        <HomeDivider />
+        <HomeSection>{t("index:welcome.title")}</HomeSection>
+        <IndexIntroduction>
+          <p>{t("index:welcome.section1")}</p>
+          <p>{t("index:welcome.section2")}</p>
+          <p>{t("index:welcome.section3")}</p>
+          <p>
+            <PrimaryApplicationLink className="b underline" to="who">
+              {t("index:welcome.more")}
+            </PrimaryApplicationLink>
+          </p>
+        </IndexIntroduction>
         <HomeDivider />
         <HomeSection>{t("index:explore.title")}</HomeSection>
         <HomeSubSection>{t("explore.subtitle")}</HomeSubSection>

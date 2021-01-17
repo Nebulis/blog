@@ -34,9 +34,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const [isPro] = useState(false)
   const [status, setStatus] = useState<Status>("INITIAL")
   const { t } = useCustomTranslation([namespace, "common"])
+  const description = `${t("section1")} ${t("section2")}`
   return (
     <>
-      <SEO title={t("common:link.contact")} location={location} />
+      <SEO title={t("common:link.contact")} location={location} description={description} />
       <BlogLayoutWithDrawer page="who" noStickyHeader location={location}>
         <div
           className="tc mt4 mb3"
