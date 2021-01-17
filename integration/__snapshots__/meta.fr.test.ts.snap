@@ -12,17 +12,17 @@ exports[`french pages exports meta for public/404/index.html correctly 2`] = `"4
 
 exports[`french pages exports meta for public/404/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 
-exports[`french pages exports meta for public/about/contact/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/about/contact/index.html correctly 1`] = `"Vous avez des questions ? Des conseils à nous donner ? Ou tout simplement un petit mot à nous laisser ? N’hésitez pas à nous écrire, on y répondra avec plaisir. ❤️"`;
 
 exports[`french pages exports meta for public/about/contact/index.html correctly 2`] = `"Contact | Blog Voyage"`;
 
-exports[`french pages exports meta for public/about/contact/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/about/contact/index.html correctly 3`] = `"Vous avez des questions ? Des conseils à nous donner ? Ou tout simplement un petit mot à nous laisser ? N’hésitez pas à nous écrire, on y répondra avec plaisir. ❤️"`;
 
-exports[`french pages exports meta for public/about/who/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/about/who/index.html correctly 1`] = `"Après 6 ans d’amour, une routine boulot dodo et un manque de dépaysement nous avons décidé en 2016 de changer de vie pour venir nous installer à Singapour avec nos 2 chats sans jamais y avoir mis les pieds."`;
 
 exports[`french pages exports meta for public/about/who/index.html correctly 2`] = `"Qui sommes nous ? | Blog Voyage"`;
 
-exports[`french pages exports meta for public/about/who/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/about/who/index.html correctly 3`] = `"Une sorte de journal intime que nous partageons avec vous, quelques astuces par ci par là mais surtout un carnet de souvenirs inoubliable que nous lirons nous-même dans le futur."`;
 
 exports[`french pages exports meta for public/articles/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 
@@ -30,11 +30,11 @@ exports[`french pages exports meta for public/articles/index.html correctly 2`] 
 
 exports[`french pages exports meta for public/articles/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 
-exports[`french pages exports meta for public/asia/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/index.html correctly 1`] = `"Farniente sur des plages paradisiaques, visite de temples traditionnels, trek dans la jungle ou simple promenade à la découverte de paysages à couper le souffle, des grandes villes aux petits villages, en apprenant les traditions de certaines tribus ou en observant avec discrétion les animaux sauvages ... Tant de pays qui incitent à l’évasion et font rêver."`;
 
 exports[`french pages exports meta for public/asia/index.html correctly 2`] = `"Asie | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/index.html correctly 3`] = `"Retrouvez dans notre blog les plus belles perles d’Asie ainsi que où et quand voyager pour vos vacances de rêve. Actuellement vous trouverez des articles sur le Vietnam et les Philippines."`;
 
 exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 
@@ -154,25 +154,25 @@ exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-p
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly 2`] = `"El Nido : Un petit coin de Paradis | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly 3`] = `"Décor de carte postale, sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre \\"Dream List\\" de voyage pour cette nouvelle année."`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly 3`] = `"Dans cet article on vous indique quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? Et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan."`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly 1`] = `"Et si on vous emmenait dans le joyau des Philippines sur l’île de Palawan ? Prenez votre masque et votre tuba et plongez dans ces eaux cristallines qui ne vous laisseront pas insensible. Profitez des différents tours appelés \\"Island hopping\\" pour choisir ce qui vous convient le mieux."`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly 2`] = `"El Nido | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly 3`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
 
-exports[`french pages exports meta for public/asia/philippines/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/philippines/index.html correctly 1`] = `"Sans aucun doute l’un des pays qui nous a le plus fait voyager et rêver de part ses paysages à couper le souffle, ses îles d’une beauté sans pareille et ses immenses spots de snorkeling et de plongée. Les Philippines, c'est plus de 7600 îles, autant dire que vous avez l’embarras du choix pour votre voyage de rêve.  On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines."`;
 
 exports[`french pages exports meta for public/asia/philippines/index.html correctly 2`] = `"Philippines | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/philippines/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/philippines/index.html correctly 3`] = `"Sans aucun doute l’un des pays qui nous a le plus fait voyager et rêver de part ses paysages à couper le souffle, ses îles d’une beauté sans pareille et ses immenses spots de snorkeling et de plongée. Les Philippines, c'est plus de 7600 îles, autant dire que vous avez l’embarras du choix pour votre voyage de rêve.  On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines."`;
 
-exports[`french pages exports meta for public/asia/vietnam/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/vietnam/index.html correctly 1`] = `"Le Vietnam est une destination unique. Des paysages magnifiques et variés, des parcs naturels, un héritage culturel et un patrimoine historique riche ... D'Hô Chi Minh-Ville à Hanoï, en passant par Da Nang, chaque destination offre sa propre histoire et une expérience différente. On vous fait découvrir à travers nos articles et nos photos notre itinéraire dans le Sud du Vietnam et nous vous parlerons très prochainement du Nord et du Centre alors restez connecté."`;
 
 exports[`french pages exports meta for public/asia/vietnam/index.html correctly 2`] = `"Vietnam | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/vietnam/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/vietnam/index.html correctly 3`] = `"Le Vietnam est une destination unique. Des paysages magnifiques et variés, des parcs naturels, un héritage culturel et un patrimoine historique riche ... D'Hô Chi Minh-Ville à Hanoï, en passant par Da Nang, chaque destination offre sa propre histoire et une expérience différente. On vous fait découvrir à travers nos articles et nos photos notre itinéraire dans le Sud du Vietnam et nous vous parlerons très prochainement du Nord et du Centre alors restez connecté."`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 
@@ -184,13 +184,13 @@ exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/disc
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/discover/index.html correctly 2`] = `"Découverte du Vietnam du Sud | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/discover/index.html correctly 3`] = `"Le Sud du Vietnam regorge de surprises et de découvertes, toutes plus passionnantes les unes que les autres. Entre le dynamisme de Hô Chi Minh-Ville et les excursions en bateau à l’ombre des palmiers d’eau sur le Delta du Mékong, il y en a pour tous les goûts."`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/discover/index.html correctly 3`] = `"Quand partir ? Combien de jours ? Quel budget prévoir ? Des questions qu’on se pose souvent avant de concrétiser un projet de voyage. On vous répond en se basant sur notre propre expérience. On vous indique également notre itinéraire de voyage pour 1 semaine dans le Sud du Vietnam."`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly 1`] = `"Voyagez avec nous dans le Sud du Vietnam à travers notre carnet de voyage. Découvrez les grandes villes comme Hô Chi Minh-Ville, son musée et ses tunnels, envolez-vous vers des paysages magnifiques autour du delta du Mékong sur des îles comme Ben Tre ou visitez avec nous le marché flottant de Cân Thơ."`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly 2`] = `"Vietnam du Sud | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly 3`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/war-remnants-museum/index.html correctly 1`] = `"Le musée des vestiges de guerre témoigne des atrocités de la guerre d’Indochine et de la guerre du Vietnam et nous montre l’impact encore réel et actuel sur la vie des Vietnamiens."`;
 
@@ -210,20 +210,20 @@ exports[`french pages exports meta for public/credits/index.html correctly 2`] =
 
 exports[`french pages exports meta for public/credits/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 
-exports[`french pages exports meta for public/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/index.html correctly 1`] = `"Passionnés de voyages, nous partageons sur notre blog nos aventures autour du monde. Entre astuces, conseils, récits de voyages, anecdotes ou coups de cœur, on espère que vous trouverez votre bonheur ! Un blog voyage et lifestyle d’un couple de voyageur qui a des rêves plein la tête !"`;
 
 exports[`french pages exports meta for public/index.html correctly 2`] = `"Magic of travels | Blog Voyage"`;
 
-exports[`french pages exports meta for public/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/index.html correctly 3`] = `"Passionnés de voyages, nous partageons sur notre blog nos aventures autour du monde. Entre astuces, conseils, récits de voyages, anecdotes ou coups de cœur, on espère que vous trouverez votre bonheur ! Un blog voyage et lifestyle d’un couple de voyageur qui a des rêves plein la tête !"`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly 1`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ? Les beaux jours arrivent, c’est le moment de profiter des paysages fleuris, d’un ciel bleu et ensoleillé et de températures agréables. En Asie, profitez des derniers mois favorables et d’une chaleur encore supportable. Plages paradisiaques sous un soleil éclatant, trek dans la jungle, visite de l’héritage culturel propre à chaque pays, vous avez encore le choix mais dépêchez-vous !"`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly 2`] = `"Voyager au printemps | Blog Voyage"`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly 3`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ? Actuellement vous trouverez des articles sur le Vietnam et les Philippines mais nos prochains pays arrivent prochainement."`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 1`] = `"Vous êtes plutôt magie de Noël sous la neige ? Ou le manque de soleil a plutôt tendance à vous déprimer ? Passer ses vacances près de magnifiques paysages recouverts d’un grand manteau blanc, louer un chalet pour une semaine cocooning ou partir en voyage au ski et s’initier aux sports d'hiver. Ou bien ... Fuir le froid pour des plages paradisiaques, s’évader sous le soleil des tropiques. Découvrir des paysages uniques et partir à la rencontre de nouvelles cultures. Tant d’endroits pour passer les vacances de vos rêves en décembre, janvier ou février. Alors, vous avez décidé ? Plutôt neige ou soleil en hiver ?"`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 2`] = `"Voyager en hiver | Blog Voyage"`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly 3`] = `"Vous êtes plutôt magie de Noël sous la neige ? Ou le manque de soleil a plutôt tendance à vous déprimer ? Actuellement vous trouverez des articles sur le Vietnam et les Philippines mais nos prochains pays arrivent prochainement.}"`;

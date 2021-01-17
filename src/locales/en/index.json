@@ -1,4 +1,11 @@
 {
+  "welcome": {
+    "title": "Welcome",
+    "section1": "Passionate about travel, we share our adventures around the world on our blog.",
+    "section2": "Tips, advices, journeys, journal, anecdotes, favorites... we hope you will find what you are looking for!",
+    "section3": "A travel and lifestyle blog made by a traveling couple with their heads full of dreams!",
+    "more": "Learn more about us"
+  },
   "explore": {
     "title": "Explore",
     "subtitle": "Our travels around the world ..."

@@ -23,9 +23,16 @@ i18n.addResourceBundle("en", namespace, whoEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const description = t("section1")
+  const googleDescription = t("section3")
   return (
     <>
-      <SEO title={t("common:link.who")} location={location} />
+      <SEO
+        title={t("common:link.who")}
+        location={location}
+        description={description}
+        googleDescription={googleDescription}
+      />
       <BlogLayoutWithDrawer page="who" location={location}>
         <div className="tc mb3 mt3">
           <img
@@ -36,6 +43,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             `}
           />
         </div>
+        <h3
+          className="tc"
+          css={css`
+            color: ${primaryColor};
+          `}
+        >
+          {t("title")}
+        </h3>
         <SectionContent>{t("section1")}</SectionContent>
         <SectionContent>{t("section2")}</SectionContent>
         <SectionContent>{t("section3")}</SectionContent>

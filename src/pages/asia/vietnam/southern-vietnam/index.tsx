@@ -7,7 +7,7 @@ import {
   VietnamDivider,
   VietnamImageAsMedallion,
 } from "../../../../components/core/asia/vietnam/vietnam"
-import { HomeSection, MainTitleSection } from "../../../../components/core/section"
+import { HomeSection, IndexIntroduction, MainTitleSection } from "../../../../components/core/section"
 import {
   getHighlightsFromCity,
   getLinkLabel,
@@ -51,15 +51,31 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const highlights = getHighlightsFromCity(vietnamLinks.cities)({ id: currentPageId, development }).sort(
     sortByPublishedDate
   )
+  const googleDescription = t("introduction.section3")
+  const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
     <>
-      <SEO title={t("title")} location={location} image={SouthernVietnamImage} />
+      <SEO
+        title={t("title")}
+        location={location}
+        image={SouthernVietnamImage}
+        description={description}
+        googleDescription={googleDescription}
+      />
       <VietnamBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>
           <TitleImage src={vietnamHat} alt="vietnam hat" />
           &nbsp;{t("title")}&nbsp;
           <TitleImage src={vietnamHat} alt="vietnam hat" />
         </MainTitleSection>
+        <VietnamDivider />
+        <IndexIntroduction>
+          <p>{t("introduction.section1")}</p>
+          <p>{t("introduction.section2")}</p>
+          <p>{t("introduction.section3")}</p>
+          <p>{t("introduction.section4")}</p>
+          <p>{t("introduction.section5")}</p>
+        </IndexIntroduction>
         <VietnamDivider className="mb0" />
         <MainCardContainer>
           <SouthVietnamCard />

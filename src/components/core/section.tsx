@@ -14,7 +14,7 @@ import {
   FaUtensils,
   FaWalking,
 } from "react-icons/all"
-import { maxWidth, mediumEnd, mobileEnd } from "./variables"
+import { maxWidth, mediumEnd, mediumStart, mobileEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n"
 import { Lang } from "./links/links.types"
 
@@ -45,6 +45,16 @@ export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ childre
 
 export const Introduction: React.FunctionComponent = ({ children }) => {
   return <SectionContent className="b tc">{children}</SectionContent>
+}
+const indexIntroduction = css`
+  max-width: ${mediumStart};
+`
+export const IndexIntroduction: React.FunctionComponent = ({ children }) => {
+  return (
+    <SectionContent className="tc center" css={indexIntroduction}>
+      {children}
+    </SectionContent>
+  )
 }
 
 interface TitleProps {

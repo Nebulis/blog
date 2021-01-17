@@ -73,6 +73,12 @@ const developmentMarkStyle = css`
 export const DevelopmentMark = () => <span css={developmentMarkStyle} className="development-mark" />
 
 export const ApplicationLink = linkBuilder(Link)
+export const PrimaryApplicationLink = styled(ApplicationLink)`
+  color: ${primaryColor};
+  &:visited {
+    color: ${primaryColor};
+  }
+`
 
 const BaseButtonLink = styled(ApplicationLink)`
   display: inline-flex;
