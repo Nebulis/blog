@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
 import SEO from "../../../../components/layout/seo"
@@ -41,6 +41,8 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { HoChiMinWarMuseum } from "../../../../components/images/asia/vietnam/southern-vietnam/ho-chi-min-war-museum"
 import { css } from "@emotion/core"
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
+import { getLink } from "../../../../components/core/links/links.utils"
+import { ApplicationContext } from "../../../../components/application"
 
 const namespace = "asia/vietnam/southern-vietnam/ho-chi-minh-war-museum"
 const id = "ho-chi-minh-war-museum"
@@ -49,9 +51,11 @@ i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const { development } = useContext(ApplicationContext)
   const title = t(`common:country.vietnam.card.${id}`)
   const description = t("quote")
   const googleDescription = t("introduction")
+  const transportLinkPublished = development || getLink("transports-in-vietnam").published
 
   return (
     <>
@@ -81,13 +85,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <How>
           <p>{t("how.part1")}</p>
           <p>{t("how.part2")}</p>
-          <p>
-            {t("how.part3")}{" "}
-            <VietnamLink action="hide" to="transports-in-vietnam">
-              {t("common:country.vietnam.card.transports")}
-            </VietnamLink>
-            .
-          </p>
+          {transportLinkPublished && (
+            <p>
+              {t("how.part3")}{" "}
+              <VietnamLink to="transports-in-vietnam">{t("common:country.vietnam.card.transports")}</VietnamLink>.
+            </p>
+          )}
         </How>
         <HowLong>
           <p>{t("how-long.part1")}</p>

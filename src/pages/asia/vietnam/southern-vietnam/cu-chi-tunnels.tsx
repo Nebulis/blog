@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
 import {
   VietnamBlogLayout,
@@ -38,6 +38,8 @@ import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/
 import i18n from "i18next"
 import { CuChiTunnelsImages } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels"
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
+import { getLink } from "../../../../components/core/links/links.utils"
+import { ApplicationContext } from "../../../../components/application"
 
 const namespace = "asia/vietnam/southern-vietnam/cu-chi-tunnels"
 const id = "cu-chi-tunnels"
@@ -55,9 +57,11 @@ the fastest way to fix it is to resize a bit the images to
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const { development } = useContext(ApplicationContext)
   const title = t(`common:country.vietnam.card.${id}`)
   const description = t("quote")
   const googleDescription = t("introduction")
+  const transportLinkPublished = development || getLink("transports-in-vietnam").published
 
   return (
     <>
@@ -101,13 +105,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </VietnamExternalLink>
             </li>
           </ul>
-          <p>
-            {t("how.part10")}{" "}
-            <VietnamLink action="hide" to="transports-in-vietnam">
-              {t("common:country.vietnam.card.transports")}
-            </VietnamLink>
-            .
-          </p>
+          {transportLinkPublished && (
+            <p>
+              {t("how.part10")}{" "}
+              <VietnamLink to="transports-in-vietnam">{t("common:country.vietnam.card.transports")}</VietnamLink>.
+            </p>
+          )}
         </How>
         <HowLong>
           <p>{t("how-long.part1")}</p>
