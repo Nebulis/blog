@@ -77,6 +77,10 @@ const cardStyle = css`
     text-align: center;
     margin-top: auto;
   }
+  .image-link {
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
 `
 const StyledDivider = styled(Divider)`
   background-color: black;
@@ -129,7 +133,19 @@ export const Card: FunctionComponent<
     >
       {context.development && !link.published ? <DevelopmentMark /> : null}
       {/*Adding a wrapper around the image make it overflow for some reason*/}
-      {children}
+      {/*display contents help*/}
+      <ApplicationLink
+        to={to}
+        onClick={(event) => {
+          event.stopPropagation()
+        }}
+        onAuxClick={(event) => {
+          event.stopPropagation()
+        }}
+        className="image-link"
+      >
+        {children}
+      </ApplicationLink>
       {showTags && (
         <div className="tags pb2">
           {tagsToDisplay.map((tag, index) => (
@@ -145,23 +161,33 @@ export const Card: FunctionComponent<
           ))}
         </div>
       )}
-      <div className={`title pb2 ${mustShowAndInteract ? "published" : ""}`} title={title}>
-        {title}
-      </div>
-      {mustShowAndInteract && showMore && <div className="show-more pb2">{t("show-more")}</div>}
-      {showPublished && (
-        <div className="date pb2">
-          {t("published")}{" "}
-          {link.publishedDate instanceof Date
-            ? link.publishedDate.toLocaleString("fr-FR", {
-                month: "numeric",
-                year: "numeric",
-                day: "numeric",
-              })
-            : "03/01/2010"}
+      <ApplicationLink
+        to={to}
+        onClick={(event) => {
+          event.stopPropagation()
+        }}
+        onAuxClick={(event) => {
+          event.stopPropagation()
+        }}
+      >
+        <div className={`title pb2 ${mustShowAndInteract ? "published" : ""}`} title={title}>
+          {title}
         </div>
-      )}
-      <StyledDivider />
+        {mustShowAndInteract && showMore && <div className="show-more pb2">{t("show-more")}</div>}
+        {showPublished && (
+          <div className="date pb2">
+            {t("published")}{" "}
+            {link.publishedDate instanceof Date
+              ? link.publishedDate.toLocaleString("fr-FR", {
+                  month: "numeric",
+                  year: "numeric",
+                  day: "numeric",
+                })
+              : "03/01/2010"}
+          </div>
+        )}
+        <StyledDivider />
+      </ApplicationLink>
     </span>
   )
 }
