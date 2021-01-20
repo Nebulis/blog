@@ -82,9 +82,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how.part1")}</p>
           <p>{t("how.part2")}</p>
           <p>
+            {t("how.part3")}{" "}
             <VietnamLink action="hide" to="transports-in-vietnam">
-              {t("how.part3")}
+              {t("common:country.vietnam.card.transports")}
             </VietnamLink>
+            .
           </p>
         </How>
         <HowLong>
