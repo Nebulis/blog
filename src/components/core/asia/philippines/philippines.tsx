@@ -52,6 +52,14 @@ const philippinesLayout = `
     border-color: ${philippinesPrimaryColorDarker};
     color: white;
   }
+  .comments .active svg {
+    color: ${philippinesPrimaryColor};
+  }
+  .comments .form-control:focus
+   {
+    box-shadow: 0 0 0 0.2rem rgb(122, 174, 222, 0.25);
+    border-color: ${philippinesPrimaryColor}
+  }
 
   .menu-entry {
     border-top: 1px solid ${philippinesPrimaryColor}!important;

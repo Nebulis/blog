@@ -258,7 +258,7 @@ const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, class
   const descriptionPinterest = t("comments.shared-description", { handle: `@${pinterest}` })
   const hashtags = t("comments.hashtags")
   return (
-    <div className={className} css={commentsStyle}>
+    <div className={`${className} comments`} css={commentsStyle}>
       {status === "LOADING" ? (
         <div className="flex flex-column justify-center items-center mb3 f4">
           {t("comments.loading")}
