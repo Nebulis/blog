@@ -33,6 +33,10 @@ export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & Externa
     )}
   </a>
 )
+
+export const ExternalLinkNotUnderlined = styled(ExternalLink)`
+  text-decoration: none;
+`
 // ignore ref property, typing issue
 type LinkProps = Omit<GatsbyLinkProps<any>, "ref"> & { action?: "hide" | "no-link" }
 export const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => FunctionComponent<LinkProps> = (

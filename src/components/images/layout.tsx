@@ -6,6 +6,22 @@ import { cloneElement } from "../core/cloneElement"
 import { mediumEnd, mediumStart, mobileEnd, primaryColor, smallEnd, smallStart } from "../core/variables"
 import { MenuContext } from "../layout/menu.context"
 
+const creditStyle = css`
+  .credit {
+    position: absolute;
+    opacity: 0.8;
+    bottom: 1.3rem; // use this value because there is a default margin on images
+    right: 0;
+    background-color: black;
+    line-height: initial;
+    color: white;
+    font-size: 0.6rem;
+  }
+  &:last-child .credit {
+    bottom: 0; // in case the image is the last of the group, the image does not have margin
+  }
+`
+
 const allButLastImageStyle = css`
   // needed for ImageAsTwoLandscapeLeftAndOnePortraitRight under GroupOfImages
   margin-bottom: 0;
@@ -69,10 +85,16 @@ const imageAsPortraitStyle = css`
     margin-left: auto;
     width: 100%;
   }
+  ${creditStyle}
 `
-export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
-  <div css={imageAsPortraitStyle} className={`${className} flex`}>
+export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any> & { credit?: React.ReactNode }> = ({
+  children,
+  className,
+  credit,
+}) => (
+  <div css={imageAsPortraitStyle} className={`${className} flex relative`}>
     {children}
+    {credit && <div className="credit">{credit}</div>}
   </div>
 )
 
@@ -83,7 +105,7 @@ const imageAsLandscapeStyle = css`
   }
 `
 export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
-  <div css={imageAsLandscapeStyle} className={`${className} flex justify-center`}>
+  <div css={imageAsLandscapeStyle} className={`${className} flex justify-center relative`}>
     {children}
   </div>
 )
