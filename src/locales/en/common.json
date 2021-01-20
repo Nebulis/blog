@@ -134,7 +134,7 @@
     "like": "Like the post"
   },
   "form": {
-    "name": "Name",
+    "name": "Username",
     "email": "Email"
   },
   "footer": {
