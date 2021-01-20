@@ -42,7 +42,8 @@ const cardStyle = css`
   }
 
   .gatsby-image-wrapper {
-    margin-bottom: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.7rem; // a bit bigger than text padding because it looks closer
   }
   .tags {
     text-align: center;
@@ -78,8 +79,9 @@ const cardStyle = css`
     margin-top: auto;
   }
   .image-link {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    margin-bottom: 0.5rem;
   }
 `
 const StyledDivider = styled(Divider)`
@@ -132,9 +134,8 @@ export const Card: FunctionComponent<
       role="link"
     >
       {context.development && !link.published ? <DevelopmentMark /> : null}
-      {/*Adding a wrapper around the image make it overflow for some reason*/}
-      {/*display contents help*/}
       <ApplicationLink
+        showDevelopmentMark={false}
         to={to}
         onClick={(event) => {
           event.stopPropagation()
@@ -162,6 +163,7 @@ export const Card: FunctionComponent<
         </div>
       )}
       <ApplicationLink
+        showDevelopmentMark={false}
         to={to}
         onClick={(event) => {
           event.stopPropagation()

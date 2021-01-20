@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
-import { CityHomeSection, HomeSection, IndexIntroduction, MainTitleSection } from "../../../../components/core/section"
+import { CityHomeSection, IndexIntroduction, MainTitleSection } from "../../../../components/core/section"
 import {
   getHighlightsFromCity,
   getLinkLabel,
@@ -34,7 +34,6 @@ import { PageProps } from "gatsby"
 import { TitleImage } from "../../../../components/images/layout"
 import { jsx } from "@emotion/core"
 import { SharedPhilippinesImages } from "../../../../components/images/asia/philippines/shared-philippines-images"
-import { VietnamBlogLayout, VietnamDivider } from "../../../../components/core/asia/vietnam/vietnam"
 
 const namespace = "asia/philippines/el-nido/index"
 i18n.addResourceBundle("fr", namespace, translationFr)

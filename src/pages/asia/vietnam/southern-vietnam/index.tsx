@@ -35,7 +35,6 @@ import SouthernVietnamImage from "../../../../images/asia/vietnam/southern-vietn
 import { TitleImage } from "../../../../components/images/layout"
 import { jsx } from "@emotion/core"
 import { SharedVietnamImages } from "../../../../components/images/asia/vietnam/shared-vietnam-images"
-import { PhilippinesDivider } from "../../../../components/core/asia/philippines/philippines"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
