@@ -56,7 +56,15 @@ const vietnamLayout = `
     border-color: ${vietnamPrimaryColorDarker};
     color: white;
   }
-
+  
+  .comments .active svg {
+    color: ${vietnamPrimaryColor};
+  }
+  .comments .form-control:focus
+   {
+    box-shadow: 0 0 0 0.2rem rgb(255, 217, 102, 0.25);
+    border-color: ${vietnamPrimaryColor}
+  }
   .menu-entry {
     border-top: 1px solid ${vietnamPrimaryColor}!important;
   }
