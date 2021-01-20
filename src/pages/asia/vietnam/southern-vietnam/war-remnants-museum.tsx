@@ -43,6 +43,7 @@ import { css } from "@emotion/core"
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
+import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 
 const namespace = "asia/vietnam/southern-vietnam/ho-chi-minh-war-museum"
 const id = "ho-chi-minh-war-museum"
@@ -141,7 +142,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit1.part3")}</p>
             <p>{t("visit1.part4")}</p>
             <p>{t("visit1.part5")}</p>
-            <ImageAsPortrait>
+            <ImageAsPortrait
+              credit={
+                <>
+                  Image par{" "}
+                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/saildancer-3004325">
+                    Saildancer
+                  </ExternalLinkNotUnderlined>{" "}
+                  de <ExternalLinkNotUnderlined href="https://pixabay.com">Pixabay</ExternalLinkNotUnderlined>
+                </>
+              }
+            >
               <HoChiMinWarMuseum image="memorial" />
             </ImageAsPortrait>
           </SectionContent>
@@ -241,7 +252,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>
               {t("visit3.part13")} <span className="i">{t("visit3.part14")}</span>
             </p>
-            <ImageAsPortrait>
+            <ImageAsPortrait
+              credit={
+                <>
+                  Image par{" "}
+                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/janeb13-725943">
+                    janeb13
+                  </ExternalLinkNotUnderlined>{" "}
+                  de <ExternalLinkNotUnderlined href="https://pixabay.com">Pixabay</ExternalLinkNotUnderlined>
+                </>
+              }
+            >
               <HoChiMinWarMuseum image="youngChild" />
             </ImageAsPortrait>
           </SectionContent>
