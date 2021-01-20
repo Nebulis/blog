@@ -1,5 +1,6 @@
 import { ComponentType } from "react"
 import { FluidObject } from "gatsby-image"
+import { InterpolationWithTheme } from "@emotion/core"
 
 export type Status = "INITIAL" | "LOADING" | "SUCCESS" | "ERROR"
 
@@ -12,10 +13,20 @@ export interface ExtraCardProps {
   }
 }
 
-export type ExtraImageProps = { className?: string; fluidObject?: Partial<FluidObject>; imgStyle?: object }
+export type ExtraImageProps = {
+  className?: string
+  fluidObject?: Partial<FluidObject>
+  imgStyle?: object
+  css?: InterpolationWithTheme<any>
+}
+
+export type ExtraImageLinkProps = ExtraImageProps & {
+  image: any
+}
 
 export type OrganisationCard = {
   label: string
   to: string
-  image: ComponentType
+  image: ComponentType<ExtraImageLinkProps>
+  imageProps?: ExtraImageLinkProps
 }

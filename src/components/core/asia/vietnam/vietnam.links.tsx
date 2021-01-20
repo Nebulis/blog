@@ -1,32 +1,34 @@
 import { CountryLink } from "../../links/links.types"
-import { HomeVietnamImage } from "../../../images/asia/vietnam/home-vietnam"
-import styled from "@emotion/styled"
-import { HomeCentralVietnamImage } from "../../../images/asia/vietnam/central-vietnam/home-central-vietnam"
-import { HomeSouthernVietnamImage } from "../../../images/asia/vietnam/southern-vietnam/home-southern-vietnam"
-import { HomeNorthernVietnamImage } from "../../../images/asia/vietnam/northern-vietnam/home-northern-vietnam"
 import { CanThoCard, CuChiTunnelsCard, MyThoCard, SouthVietnamCard, WarMuseumCard } from "./vietnam.cards"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
+import { css } from "@emotion/core"
 
 export const vietnamLinks: CountryLink = {
   id: "vietnam",
   label: { fr: commonFr.country.vietnam.title, en: commonEn.country.vietnam.title },
   // this style is for the image in the asia page (medallion) to have the fisherman centered
-  image: styled(HomeVietnamImage)`
-    img {
-      object-position: -90px -10px !important;
-    }
-  `,
+  imageProps: {
+    image: "homeVietnam",
+    css: css`
+      img {
+        object-position: -90px -10px !important;
+      }
+    `,
+  },
   cities: [
     {
       id: "southern-vietnam",
       label: { fr: commonFr.link.south, en: commonEn.link.south },
       // this style is for the image in the asia page (medallion)
-      image: styled(HomeSouthernVietnamImage)`
-        img {
-          object-position: -35px -12px !important;
-        }
-      `,
+      imageProps: {
+        image: "homeSouthernVietnam",
+        css: css`
+          img {
+            object-position: -35px -12px !important;
+          }
+        `,
+      },
       highlights: [
         {
           id: "cu-chi-tunnels",
@@ -77,17 +79,20 @@ export const vietnamLinks: CountryLink = {
       // this style is for the image in the asia page (medallion)
       // IMPORTANT
       // dont use more than -65px otherwise the picture goes out of the medallion in small device
-      image: styled(HomeCentralVietnamImage)`
-        img {
-          object-position: 0px -65px !important;
-        }
-      `,
+      imageProps: {
+        image: "homeCentralVietnam",
+        css: css`
+          img {
+            object-position: 0px -65px !important;
+          }
+        `,
+      },
       highlights: [],
     },
     {
       id: "northern-vietnam",
       label: { fr: commonFr.link.north, en: commonEn.link.north },
-      image: HomeNorthernVietnamImage,
+      imageProps: { image: "homeNorthernImage" },
       highlights: [],
     },
   ],

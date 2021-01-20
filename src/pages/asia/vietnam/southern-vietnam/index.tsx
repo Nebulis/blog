@@ -33,6 +33,8 @@ import { SouthVietnamCard } from "../../../../components/core/asia/vietnam/vietn
 import { PageProps } from "gatsby"
 import SouthernVietnamImage from "../../../../images/asia/vietnam/southern-vietnam/home-southern-vietnam.jpg"
 import { TitleImage } from "../../../../components/images/layout"
+import { jsx } from "@emotion/core"
+import { SharedVietnamImages } from "../../../../components/images/asia/vietnam/shared-vietnam-images"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -96,10 +98,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <HomeSection>{t("section2")}</HomeSection>
             <MedallionContainer>
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
-                return city.image ? (
+                return city.imageProps?.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
                     <VietnamImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
-                      {React.createElement(city.image)}
+                      {jsx(SharedVietnamImages, city.imageProps)}
                     </VietnamImageAsMedallion>
                   </ApplicationLink>
                 ) : null

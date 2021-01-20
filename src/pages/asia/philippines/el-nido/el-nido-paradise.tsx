@@ -22,7 +22,6 @@ import {
   PhilippinesQuote,
   PhilippinesTitle,
 } from "../../../../components/core/asia/philippines/philippines"
-import { HomePhilippinesImage } from "../../../../components/images/asia/philippines/home-philippines"
 import {
   How,
   HowLong,
@@ -42,6 +41,7 @@ import { css } from "@emotion/core"
 import { MapContainer } from "../../../../components/layout/layout"
 import { PhilippinesMap } from "../../../../components/core/asia/philippines/philippines-map"
 import { buildBookingSearchUrl } from "../../../../utils"
+import { SharedCardPhilippinesImages } from "../../../../components/images/asia/philippines/shared-card-philippines-images"
 
 const namespace = "asia/philippines/el-nido/el-nido-paradise"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -65,7 +65,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <PhilippinesBlogLayout page="el-nido-paradise" location={location}>
         <PhilippinesTitle title={title} linkId="el-nido-paradise" />
         <ImageAsLandscape>
-          <HomePhilippinesImage />
+          <SharedCardPhilippinesImages image="elNido" />
         </ImageAsLandscape>
         <PhilippinesQuote>{t("quote")}</PhilippinesQuote>
         <PhilippinesDivider />

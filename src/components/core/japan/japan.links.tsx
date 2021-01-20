@@ -1,9 +1,4 @@
 import { CountryLink } from "../links/links.types"
-import { MainArashiyamaImage } from "../../images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
-import { MainHimejiCastleImage } from "../../images/asia/japan/himeji/castle/mainHimejiCastleImage"
-import { MainNagoyaCastleImage } from "../../images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
-import { MainFujiImage } from "../../images/asia/japan/fuji/kawaguchiko/mainFujiImage"
-import { MainTokyoImage } from "../../images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
 import {
   ADayInTokyoCard,
   ArashiyamaCard,
@@ -17,20 +12,22 @@ import {
   SensojiCard,
   ToganjiCard,
 } from "./japan.cards"
-import { HomeJapanImage } from "../../images/asia/japan/home"
-import styled from "@emotion/styled"
 import commonFr from "../../../locales/fr/common.json"
 import commonEn from "../../../locales/en/common.json"
+import { css } from "@emotion/core"
 
 export const japanLinks: CountryLink = {
   id: "japan",
   label: { fr: commonFr.country.japan.title, en: commonEn.country.japan.title },
   // this style is for the image in the asia page (medallion) to have the geisha centered
-  image: styled(HomeJapanImage)`
-    img {
-      object-position: -30px 0px !important;
-    }
-  `,
+  imageProps: {
+    image: "homeJapan",
+    css: css`
+      img {
+        object-position: -30px 0px !important;
+      }
+    `,
+  },
   others: [
     {
       id: "spring-in-japan",
@@ -48,7 +45,7 @@ export const japanLinks: CountryLink = {
     {
       id: "kyoto",
       label: { fr: "Kyoto", en: "Kyoto" },
-      image: MainArashiyamaImage,
+      imageProps: { image: "mainArashiyama" },
       highlights: [
         {
           id: "arashiyama",
@@ -79,7 +76,9 @@ export const japanLinks: CountryLink = {
     {
       id: "himeji",
       label: { fr: "Himeji", en: "Himeji" },
-      image: MainHimejiCastleImage,
+      imageProps: {
+        image: "mainHimeji",
+      },
       highlights: [
         {
           id: "himeji-castle",
@@ -93,7 +92,9 @@ export const japanLinks: CountryLink = {
     {
       id: "nagoya",
       label: { fr: "Nagoya", en: "Nagoya" },
-      image: MainNagoyaCastleImage,
+      imageProps: {
+        image: "mainNagoya",
+      },
       highlights: [
         {
           id: "nagoya-castle",
@@ -113,7 +114,9 @@ export const japanLinks: CountryLink = {
     {
       id: "fuji",
       label: { fr: "Mt. Fuji", en: "Mt. Fuji" },
-      image: MainFujiImage,
+      imageProps: {
+        image: "mainFuji",
+      },
       highlights: [
         {
           id: "lake-kawaguchiko",
@@ -126,7 +129,9 @@ export const japanLinks: CountryLink = {
     {
       id: "tokyo",
       label: { fr: "Tokyo", en: "Tokyo" },
-      image: MainTokyoImage,
+      imageProps: {
+        image: "mainTokyo",
+      },
       highlights: [
         {
           id: "a-day-in-tokyo",

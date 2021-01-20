@@ -24,7 +24,6 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import HomeImgUrl from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/war-museum-main.jpg"
-import { MainWarMuseumImage } from "../../../../components/images/asia/vietnam/southern-vietnam/war-museum/war-museum-main"
 import {
   How,
   HowLong,
@@ -41,6 +40,7 @@ import { buildBookingSearchUrl, buildBookingUrl } from "../../../../utils"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { HoChiMinWarMuseum } from "../../../../components/images/asia/vietnam/southern-vietnam/ho-chi-min-war-museum"
 import { css } from "@emotion/core"
+import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
 
 const namespace = "asia/vietnam/southern-vietnam/ho-chi-minh-war-museum"
 const id = "ho-chi-minh-war-museum"
@@ -65,7 +65,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <VietnamBlogLayout page={id} location={location}>
         <VietnamTitle title={title} linkId={id} />
         <ImageAsLandscape>
-          <MainWarMuseumImage />
+          <SharedCardVietnamImages image="warMuseumMain" />
         </ImageAsLandscape>
         <VietnamQuote>{description}</VietnamQuote>
         <VietnamDivider />
@@ -166,7 +166,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <HoChiMinWarMuseum image="ch47" />
               </ImageAsLandscapeOnTheLeft>
               <ImageAsLandscapeOnTheRight title="M107 Gun">
-                <MainWarMuseumImage />
+                <SharedCardVietnamImages image="warMuseumMain" />
               </ImageAsLandscapeOnTheRight>
               <ImageAsLandscapeOnTheLeft>
                 <HoChiMinWarMuseum image="helicopter" />

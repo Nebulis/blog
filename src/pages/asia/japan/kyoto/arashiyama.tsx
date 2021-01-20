@@ -2,7 +2,6 @@ import React from "react"
 import SEO from "../../../../components/layout/seo"
 import css from "@emotion/css"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
-import { MainArashiyamaImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/mainArashiyamaImage"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -33,6 +32,7 @@ import {
   JapanTitle,
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
+import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
@@ -40,7 +40,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO title="main" location={location} />
       <BlogLayout page="arashiyama" location={location}>
         <JapanTitle title="ARASHIYAMA – Forêt de bambous" categories={["asia", "japan", "kyoto"]} linkId="arashiyama" />
-        <MainArashiyamaImage />
+        <SharedJapanImages image="mainArashiyama" />
         <ArashiyamaQuote />
         <Where>Ukyo Ward, Kyoto</Where>
         <When>

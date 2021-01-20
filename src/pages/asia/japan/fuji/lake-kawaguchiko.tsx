@@ -10,7 +10,6 @@ import {
   TwoImagesSameSizeOrToGroup,
   TwoImagesSameSize,
 } from "../../../../components/images/layout"
-import { MainFujiImage } from "../../../../components/images/asia/japan/fuji/kawaguchiko/mainFujiImage"
 import { How, HowLong, WhereToStay, Visit, Bonus } from "../../../../components/core/section"
 import { KawaguchikoTrainImage } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoTrainImage"
 import { KawaguchikoViewFujiTrainImage } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoViewFujiTrainImage"
@@ -23,6 +22,7 @@ import { KawaguchikoLake2Image } from "../../../../components/images/asia/japan/
 import { Conclusion } from "../../../../components/core/conclusion"
 import { FujiQuote, JapanExternalLink, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
+import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
@@ -31,7 +31,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <BlogLayout page="fuji" location={location}>
         <JapanTitle title="Le lac Kawaguchi" categories={["asia", "japan", "fuji"]} linkId="lake-kawaguchiko" />
         <ImageAsLandscape>
-          <MainFujiImage />
+          <SharedJapanImages image="mainFuji" />
         </ImageAsLandscape>
         <FujiQuote />
         <How>

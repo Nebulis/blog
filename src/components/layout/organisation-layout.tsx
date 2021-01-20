@@ -11,11 +11,11 @@ import {
   mediumStart,
   mediumStartSize,
 } from "../core/variables"
-import { ExtraImageProps } from "../../types/shared"
+import { ExtraImageLinkProps } from "../../types/shared"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { ApplicationLink } from "../core/links/link"
 import React, { ComponentType } from "react"
-import { css } from "@emotion/core"
+import { css, jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 
 const margin = 20
@@ -80,9 +80,11 @@ const style = css`
 `
 export const CountryContainer: React.FunctionComponent<{
   title: string
-  image: ComponentType<ExtraImageProps>
+  image: ComponentType<ExtraImageLinkProps>
+  imageProps?: ExtraImageLinkProps
   to: string
-}> = ({ title, image: Image, to }) => {
+  // use a default value otherwise typescript not happy :)
+}> = ({ title, image: Image, to, imageProps = { image: "" } }) => {
   const { windowWidth } = useWindowSize()
   const maxAllowedWidth = 300
   // margin * 3 (and others) is not completely correct, we should multiply vy the number of images displayed, but it's ok
@@ -95,16 +97,20 @@ export const CountryContainer: React.FunctionComponent<{
       ? (maxWidthMediumContainer - margin) / 2
       : windowWidth
   const width = computedWidth > maxAllowedWidth ? `${maxAllowedWidth}px` : `${computedWidth}px`
+  const { css: customCss, ...restImageProps } = imageProps
   return (
     <ApplicationLink to={to} css={style} className="custom-link mb3">
       <div className="title">{title}</div>
       <div className="overlay" />
-      <Image
-        fluidObject={{ aspectRatio: 4 / 3 }}
-        css={css`
+      {jsx(Image, {
+        fluidObject: { aspectRatio: 4 / 3 },
+        // @ts-ignore looks like the value is transformed to something different :)
+        css: css`
+          ${customCss}
           width: ${width};
-        `}
-      />
+        `,
+        ...restImageProps,
+      })}
     </ApplicationLink>
   )
 }

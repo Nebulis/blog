@@ -9,7 +9,6 @@ import {
   TwoImagesLeftBigger,
   TwoImagesSameSize,
 } from "../../../../components/images/layout"
-import { MainTokyoImage } from "../../../../components/images/asia/japan/tokyo/adayintokyo/mainTokyoImage"
 import { SectionContent, Visit } from "../../../../components/core/section"
 import { TokyoShibuyaCrossing1Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoShibuyaCrossing1Image"
 import { TokyoShibuyaCrossing2Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoShibuyaCrossing2Image"
@@ -32,6 +31,7 @@ import { largeStart } from "../../../../components/core/variables"
 import { JapanCity, JapanDivider, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
 import { SensojiCard } from "../../../../components/core/japan/japan.cards"
 import { PageProps } from "gatsby"
+import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
@@ -40,7 +40,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <BlogLayout page="a-day-in-tokyo" location={location}>
         <JapanTitle title="Une journée à Tokyo" categories={["asia", "japan", "tokyo"]} linkId="a-day-in-tokyo" />
         <ImageAsLandscape>
-          <MainTokyoImage />
+          <SharedJapanImages image="mainTokyo" />
         </ImageAsLandscape>
         <p>
           N’ayant qu’une journée à Tokyo, nous ne pouvions quand même pas passer à côté d’une petite visite des lieux

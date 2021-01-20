@@ -10,7 +10,6 @@ import {
   TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { MainSensojiImage } from "../../../../components/images/asia/japan/tokyo/sensoji/mainSensojiImage"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import { SensojiPathPeople1Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiPathPeople1Image"
 import { SensojiPathPeople2Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiPathPeople2Image"
@@ -39,6 +38,7 @@ import {
   SensojiQuote,
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
+import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
@@ -47,7 +47,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <BlogLayout page="sensoji" location={location}>
         <JapanTitle title="Le temple de Senso-Ji" categories={["asia", "japan", "tokyo"]} linkId="sensoji" />
         <ImageAsLandscape>
-          <MainSensojiImage />
+          <SharedCardJapanImages image="sensoji" />
         </ImageAsLandscape>
         <SensojiQuote />
         <Where>2 Chome-3-1 Asakusa, Taito City, Tokyo</Where>

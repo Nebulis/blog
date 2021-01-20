@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
-import { css } from "@emotion/core"
+import { css, jsx } from "@emotion/core"
 import cherryBlossom from "../../../../images/asia/japan/cherry-blossom.png"
 import { getLinkLabel, isLinkPublished } from "../../../../components/core/links/links.utils"
 import { ApplicationLink } from "../../../../components/core/links/link"
@@ -18,6 +18,7 @@ import {
 import { japanLinks } from "../../../../components/core/japan/japan.links"
 import { useCustomTranslation } from "../../../../i18n"
 import { PageProps } from "gatsby"
+import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const context = useContext(ApplicationContext)
@@ -71,10 +72,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               `}
             >
               {cities.map((city) => {
-                return city.image ? (
+                return city.imageProps?.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
                     <JapanImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
-                      {React.createElement(city.image)}
+                      {jsx(SharedJapanImages, city.imageProps)}
                     </JapanImageAsMedallion>
                   </ApplicationLink>
                 ) : null

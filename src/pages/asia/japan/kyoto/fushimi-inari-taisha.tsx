@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { MainFushimiImage } from "../../../../components/images/asia/japan/kyoto/fushimi/mainFushimiImage"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import {
   GroupOfImages,
@@ -27,6 +26,7 @@ import {
   JapanTitle,
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
+import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
@@ -38,7 +38,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           categories={["asia", "japan", "kyoto"]}
           linkId="fushimi-inari-taisha"
         />
-        <MainFushimiImage />
+        <SharedCardJapanImages image="fushimi" />
         <FushimiInariTaishaQuote />
         <Where>68 Fukakusa Yabunouchicho, Fushimi Ward, Kyoto</Where>
         <When>

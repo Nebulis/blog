@@ -1,7 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
 import { BlogLayout } from "../../../../components/layout/layout"
-import { MainHamarikyuGardenImage } from "../../../../components/images/asia/japan/tokyo/hamarikyu/mainHamarikyuGardenImage"
 import { How, HowMuch, Visit, When, Where } from "../../../../components/core/section"
 import {
   GroupOfImages,
@@ -24,6 +23,7 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { HamarikyuGardenCherry3Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenCherry3Image"
 import { HamarikyuGardenQuote, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
+import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
@@ -35,7 +35,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           categories={["asia", "japan", "tokyo"]}
           linkId="hamarikyu-garden"
         />
-        <MainHamarikyuGardenImage />
+        <SharedCardJapanImages image="hamarikyuGarden" />
         <HamarikyuGardenQuote />
         <Where>1-1 Hamarikyuteien, Chuo City, Tokyo</Where>
         <When>

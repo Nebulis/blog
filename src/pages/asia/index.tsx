@@ -4,7 +4,7 @@ import { GoToAllArticlesContainer, MedallionContainer } from "../../components/l
 import { ApplicationLink, ButtonLink } from "../../components/core/links/link"
 import { ImageAsMedallion } from "../../components/images/layout"
 import { asiaLinks } from "../../components/core/asia/asia.links"
-import { getLinkLabel, isLinkPublished } from "../../components/core/links/links.utils"
+import { getLinkLabel, isLinkPublished, sortByLabel } from "../../components/core/links/links.utils"
 import { ApplicationContext } from "../../components/application"
 import { PrimaryDivider } from "../../components/core/divider"
 import { PageQuote } from "../../components/core/quote"
@@ -16,7 +16,8 @@ import asiaIndexFr from "../../locales/fr/asia/index.json"
 import asiaIndexEn from "../../locales/en/asia/index.json"
 import { PageProps } from "gatsby"
 import VietnamImage from "../../images/asia/vietnam/home-vietnam.jpg"
-import { sortByLabel } from "../../components/core/links/links.utils"
+import { jsx } from "@emotion/core"
+import { SharedAsiaImages } from "../../components/images/asia/shared-asia-images"
 
 const namespace = "asia/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
@@ -51,10 +52,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <HomeSubSection>{t("common:inspire.subtitle")}</HomeSubSection>
         <MedallionContainer>
           {countries.sort(sortByLabel(i18n.languageCode)).map((country) =>
-            country.image ? (
+            country.imageProps?.image ? (
               <ApplicationLink to={country.id} key={country.id}>
                 <ImageAsMedallion title={getLinkLabel(i18n.languageCode)(country.id)}>
-                  {React.createElement(country.image)}
+                  {jsx(SharedAsiaImages, country.imageProps)}
                 </ImageAsMedallion>
               </ApplicationLink>
             ) : null

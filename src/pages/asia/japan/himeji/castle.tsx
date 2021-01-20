@@ -1,7 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
 import { css } from "@emotion/core"
-import { MainHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/mainHimejiCastleImage"
 import {
   Bonus,
   How,
@@ -44,6 +43,7 @@ import { BlogLayout } from "../../../../components/layout/layout"
 import { HimejiCastleWithCherry7Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry7Image"
 import { HimejiCastleQuote, JapanExternalLink, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
+import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
@@ -52,7 +52,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <BlogLayout page="himeji-castle" location={location}>
         <JapanTitle title="Château de HIMEJI" categories={["asia", "japan", "himeji"]} linkId="himeji-castle" />
         <ImageAsLandscape>
-          <MainHimejiCastleImage />
+          <SharedJapanImages image="mainHimeji" />
         </ImageAsLandscape>
         <HimejiCastleQuote />
         <Where>68 Honmachi, Himeji</Where>

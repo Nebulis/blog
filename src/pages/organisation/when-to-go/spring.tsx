@@ -7,15 +7,15 @@ import translationFr from "../../../locales/fr/organisation/when-to-go/spring.js
 import translationEn from "../../../locales/en/organisation/when-to-go/spring.json"
 import { PrimaryDivider } from "../../../components/core/divider"
 import { PageQuote } from "../../../components/core/quote"
-import { HomeVietnamImage } from "../../../components/images/asia/vietnam/home-vietnam"
 import { PageProps } from "gatsby"
 import { CountriesContainer, CountryContainer } from "../../../components/layout/organisation-layout"
 import { BlogLayoutWithDrawer } from "../../../components/layout/main-layout"
-import { CarouselAndOrganisationPhilippines2 } from "../../../components/images/asia/philippines/carousel-and-organisation-philippines2"
-import styled from "@emotion/styled"
 import { OrganisationCard } from "../../../types/shared"
 import { isLinkPublished, sortByField } from "../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../components/application"
+import { SharedCardVietnamImages } from "../../../components/images/asia/vietnam/shared-card-vietnam-images"
+import { SharedAsiaImages } from "../../../components/images/asia/shared-asia-images"
+import { css } from "@emotion/core"
 
 const namespace = "organisation/when-to-go/spring"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -24,17 +24,24 @@ i18n.addResourceBundle("en", namespace, translationEn)
 const elements: OrganisationCard[] = [
   {
     label: "common:country.vietnam.southern-vietnam",
-    image: HomeVietnamImage,
+    image: SharedCardVietnamImages,
+    imageProps: {
+      image: "discoverSouthernVietnam",
+    },
     to: "southern-vietnam",
   },
   {
     label: "common:country.philippines.title",
-    image: styled(CarouselAndOrganisationPhilippines2)`
-      img {
-        object-position: -50px 30px !important;
-        transform: scale(1.6);
-      }
-    `,
+    image: SharedAsiaImages,
+    imageProps: {
+      image: "homePhilippines",
+      css: css`
+        img {
+          object-position: -50px 30px !important;
+          transform: scale(1.6);
+        }
+      `,
+    },
     to: "philippines",
   },
 ]
@@ -59,8 +66,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote position="none">{t("part4")}</PageQuote>
         </SectionContent>
         <CountriesContainer>
-          {cards.sort(sortByField("label")).map(({ label, image, to }, index) => (
-            <CountryContainer title={t(label)} image={image} to={to} key={index} />
+          {cards.sort(sortByField("label")).map(({ label, image, to, imageProps }, index) => (
+            <CountryContainer title={t(label)} image={image} to={to} key={index} imageProps={imageProps} />
           ))}
         </CountriesContainer>
       </BlogLayoutWithDrawer>

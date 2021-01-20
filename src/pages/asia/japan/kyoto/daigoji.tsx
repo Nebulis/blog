@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { MainDaigojiImage } from "../../../../components/images/asia/japan/kyoto/daigoji/mainDaigojiImage"
 import {
   How,
   HowLong,
@@ -46,6 +45,7 @@ import {
   JapanTitle,
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
+import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
@@ -53,7 +53,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO title="main" location={location} />
       <BlogLayout page="daigoji" location={location}>
         <JapanTitle title="DAIGO-JI" categories={["asia", "japan", "kyoto"]} linkId="daigoji" />
-        <MainDaigojiImage />
+        <SharedCardJapanImages image="daigoji" />
         <DaigojiQuote />
         <Where>22 Daigohigashiojicho, Fushimi Ward, Kyoto</Where>
         <When>

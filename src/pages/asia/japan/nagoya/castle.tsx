@@ -8,7 +8,6 @@ import {
   TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { MainNagoyaCastleImage } from "../../../../components/images/asia/japan/nagoya/castle/mainNagoyaCastleImage"
 import {
   Bonus,
   How,
@@ -45,6 +44,7 @@ import {
   NagoyaCastleQuote,
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
+import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
@@ -53,7 +53,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <BlogLayout page="nagoya-castle" location={location}>
         <JapanTitle title="Château de NAGOYA" categories={["asia", "japan", "nagoya"]} linkId="nagoya-castle" />
         <ImageAsLandscape>
-          <MainNagoyaCastleImage />
+          <SharedJapanImages image="mainNagoya" />
         </ImageAsLandscape>
         <NagoyaCastleQuote />
         <Where>1-1 Honmaru, Naka Ward, Nagoya</Where>
