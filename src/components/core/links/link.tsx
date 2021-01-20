@@ -38,11 +38,11 @@ export const ExternalLinkNotUnderlined = styled(ExternalLink)`
   text-decoration: none;
 `
 // ignore ref property, typing issue
-type LinkProps = Omit<GatsbyLinkProps<any>, "ref"> & { action?: "hide" | "no-link" }
+type LinkProps = Omit<GatsbyLinkProps<any>, "ref"> & { action?: "hide" | "no-link"; showDevelopmentMark?: boolean }
 export const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => FunctionComponent<LinkProps> = (
   ApplicationLink: ComponentType<LinkProps>
 ) =>
-  function LinkIfActive({ children, to, action = "no-link", className = "", ...props }) {
+  function LinkIfActive({ children, to, action = "no-link", className = "", showDevelopmentMark = true, ...props }) {
     const context = useContext(ApplicationContext)
     const { i18n } = useCustomTranslation()
     // sometimes we need to provide extra parameters, get rid of them to find the page
@@ -59,7 +59,7 @@ export const linkBuilder: (ApplicationLink: ComponentType<LinkProps>) => Functio
         className={`relative ${className}`}
       >
         {children}
-        {!link.published ? <DevelopmentMark /> : null}
+        {!link.published && showDevelopmentMark ? <DevelopmentMark /> : null}
       </ApplicationLink>
     ) : action === "no-link" ? (
       <span className={className}>{children}</span>
