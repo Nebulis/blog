@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { MainKinkakujiImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/mainKinkakujiImage"
 import {
   How,
   HowLong,
@@ -44,6 +43,7 @@ import {
   KinkakujiQuote,
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
+import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
@@ -51,7 +51,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO title="main" location={location} />
       <BlogLayout page="kinkakuji" location={location}>
         <JapanTitle title="Temple de KINKAKUJI" categories={["asia", "japan", "kyoto"]} linkId="kinkakuji" />
-        <MainKinkakujiImage />
+        <SharedCardJapanImages image="kinkakuji" />
         <KinkakujiQuote />
         <Where>1 Kinkakujicho, Kita Ward, Kyoto</Where>
         <When>

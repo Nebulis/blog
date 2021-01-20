@@ -31,7 +31,6 @@ import {
   TwoImagesSameSize,
 } from "../../../../components/images/layout"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { HomeVietnamImage } from "../../../../components/images/asia/vietnam/home-vietnam"
 import HomeImgUrl from "../../../../images/asia/vietnam/home-vietnam.jpg"
 import { PageProps } from "gatsby"
 import { useCustomTranslation } from "../../../../i18n"
@@ -41,6 +40,7 @@ import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/
 import { Comments } from "../../../../components/core/comments"
 import { SouthernVietnam } from "../../../../components/images/asia/vietnam/southern-vietnam/southern-vietnam"
 import { MapContainer } from "../../../../components/layout/layout"
+import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
 
 const namespace = "asia/vietnam/southern-vietnam/discover"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -64,7 +64,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <VietnamBlogLayout page="discover-southern-vietnam" location={location}>
         <VietnamTitle title={title} linkId="discover-southern-vietnam" />
         <ImageAsLandscape>
-          <HomeVietnamImage />
+          <SharedCardVietnamImages image="discoverSouthernVietnam" />
         </ImageAsLandscape>
         <VietnamQuote>{description}</VietnamQuote>
         <VietnamDivider />

@@ -6,8 +6,7 @@ import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
 import { philippinesPrimaryColor } from "./philippines.colors"
 import React, { FunctionComponent } from "react"
-import { HomePhilippinesImage } from "../../../images/asia/philippines/home-philippines"
-import { ElNidoWhichTourMain } from "../../../images/asia/philippines/el-nido/which-tour/el-nido-which-tour-main"
+import { SharedCardPhilippinesImages } from "../../../images/asia/philippines/shared-card-philippines-images"
 
 export const PhilippinesCard = styled(Card)`
   .tags a {
@@ -26,7 +25,7 @@ export const ElNidoParadiseCard: FunctionComponent<ExtraCardProps> = ({ fluidObj
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
     <PhilippinesCard title={common.country.philippines.card["el-nido-paradise"]} to="el-nido-paradise" {...card}>
-      <HomePhilippinesImage fluidObject={fluidObject} />
+      <SharedCardPhilippinesImages image="elNido" fluidObject={fluidObject} />
     </PhilippinesCard>
   )
 }
@@ -36,7 +35,7 @@ export const ElNidoWhichTourCard: FunctionComponent<ExtraCardProps> = ({ fluidOb
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
     <PhilippinesCard title={common.country.philippines.card["which-tour"]} to="el-nido-which-tour" {...card}>
-      <ElNidoWhichTourMain fluidObject={fluidObject} />
+      <SharedCardPhilippinesImages image="whichTour" fluidObject={fluidObject} />
     </PhilippinesCard>
   )
 }

@@ -2,15 +2,11 @@ import React, { FunctionComponent } from "react"
 import { Card } from "../../../card"
 import { vietnamPrimaryColorDarker } from "./vietnam.colors"
 import styled from "@emotion/styled"
-import { CuChiTunnelsMain } from "../../../images/asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-main"
-import { MainWarMuseumImage } from "../../../images/asia/vietnam/southern-vietnam/war-museum/war-museum-main"
-import { MainCanThoImage } from "../../../images/asia/vietnam/southern-vietnam/can-tho/can-tho-main"
-import { MainMyThoImage } from "../../../images/asia/vietnam/southern-vietnam/my-tho/my-tho-main"
 import { ExtraCardProps } from "../../../../types/shared"
 import { useCustomTranslation } from "../../../../i18n"
-import { HomeVietnamImage } from "../../../images/asia/vietnam/home-vietnam"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
+import { SharedCardVietnamImages } from "../../../images/asia/vietnam/shared-card-vietnam-images"
 
 export const VietnamCard = styled(Card)`
   .tags a {
@@ -29,7 +25,7 @@ export const CuChiTunnelsCard: FunctionComponent<ExtraCardProps> = ({ fluidObjec
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
     <VietnamCard title={common.country.vietnam.card["cu-chi-tunnels"]} to="cu-chi-tunnels" {...card}>
-      <CuChiTunnelsMain fluidObject={fluidObject} />
+      <SharedCardVietnamImages image="cuChiTunnelsMain" fluidObject={fluidObject} />
     </VietnamCard>
   )
 }
@@ -39,7 +35,7 @@ export const WarMuseumCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, 
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
     <VietnamCard title={common.country.vietnam.card["ho-chi-minh-war-museum"]} to="ho-chi-minh-war-museum" {...card}>
-      <MainWarMuseumImage fluidObject={fluidObject} />
+      <SharedCardVietnamImages image="warMuseumMain" fluidObject={fluidObject} />
     </VietnamCard>
   )
 }
@@ -48,7 +44,7 @@ export const CanThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, car
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
     <VietnamCard title={common.country.vietnam.card["can-tho"]} to="can-tho" {...card}>
-      <MainCanThoImage fluidObject={fluidObject} />
+      <SharedCardVietnamImages image="canThoMain" fluidObject={fluidObject} />
     </VietnamCard>
   )
 }
@@ -57,7 +53,7 @@ export const MyThoCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
     <VietnamCard title={common.country.vietnam.card["my-tho"]} to="my-tho" {...card}>
-      <MainMyThoImage fluidObject={fluidObject} />
+      <SharedCardVietnamImages image="myThoMain" fluidObject={fluidObject} />
     </VietnamCard>
   )
 }
@@ -71,7 +67,7 @@ export const SouthVietnamCard: FunctionComponent<ExtraCardProps> = ({ fluidObjec
       to="discover-southern-vietnam"
       {...card}
     >
-      <HomeVietnamImage fluidObject={fluidObject} />
+      <SharedCardVietnamImages fluidObject={fluidObject} image="discoverSouthernVietnam" />
     </VietnamCard>
   )
 }

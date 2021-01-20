@@ -24,6 +24,8 @@ import { PageProps } from "gatsby"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 import { TitleImage } from "../../../components/images/layout"
 import { ExtraCardProps } from "../../../types/shared"
+import { jsx } from "@emotion/core"
+import { SharedVietnamImages } from "../../../components/images/asia/vietnam/shared-vietnam-images"
 import i18n from "i18next"
 import asiaIndexFr from "../../../locales/fr/asia/vietnam/index.json"
 import asiaIndexEn from "../../../locales/en/asia/vietnam/index.json"
@@ -70,10 +72,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <HomeSubSection>{t("common:tour.subtitle")}</HomeSubSection>
             <MedallionContainer>
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
-                return city.image ? (
+                return city.imageProps?.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
                     <VietnamImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
-                      {React.createElement(city.image)}
+                      {jsx(SharedVietnamImages, city.imageProps)}
                     </VietnamImageAsMedallion>
                   </ApplicationLink>
                 ) : null

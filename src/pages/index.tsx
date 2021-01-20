@@ -38,7 +38,6 @@ import { useCustomTranslation } from "../i18n"
 import i18n from "i18next"
 import indexFr from "../locales/fr/index.json"
 import indexEn from "../locales/en/index.json"
-import { CarouselAndOrganisationPhilippines2 } from "../components/images/asia/philippines/carousel-and-organisation-philippines2"
 import { continentLinks } from "../components/core/links/links.configuration"
 import { HomeBlogLayout } from "../components/layout/main-layout"
 import { CarouselImageQuery } from "../components/images/carousel"
@@ -286,7 +285,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       {
         to: "philippines",
         country: t("common:country.philippines.title"),
-        component: CarouselAndOrganisationPhilippines2,
+        image: "philippines2",
       },
     ].filter(({ to }) => {
       return development || isLinkPublished(to)

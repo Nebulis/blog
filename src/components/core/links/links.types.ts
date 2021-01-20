@@ -1,5 +1,6 @@
 import { ComponentType } from "react"
-import { ExtraCardProps } from "../../../types/shared"
+import { ExtraCardProps, ExtraImageLinkProps } from "../../../types/shared"
+
 export type Label = {
   fr: string
   en: string
@@ -16,7 +17,7 @@ export interface CountryLink {
   id: string
   label: Label
   url?: string
-  image?: ComponentType<ExtraCardProps>
+  imageProps?: ExtraImageLinkProps
   cities: CityLink[]
   others: OtherLink[]
 }
@@ -24,7 +25,7 @@ export interface CityLink {
   id: string
   label: Label
   url?: string
-  image?: ComponentType<ExtraCardProps>
+  imageProps?: ExtraImageLinkProps
   highlights: HighlightLink[]
 }
 

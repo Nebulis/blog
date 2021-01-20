@@ -29,6 +29,13 @@ export const CarouselImageQuery: React.FunctionComponent<ExtraImageProps & { ima
           }
         }
       }
+      philippines2: file(relativePath: { eq: "asia/philippines/carousel-philippines-2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
   return <Img fluid={data[image].childImageSharp.fluid} alt="Landscape" className={className} />

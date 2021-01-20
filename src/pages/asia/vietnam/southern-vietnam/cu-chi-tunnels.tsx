@@ -36,8 +36,8 @@ import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/cu-chi-tunnels.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/cu-chi-tunnels.json"
 import i18n from "i18next"
-import { CuChiTunnelsMain } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-main"
 import { CuChiTunnelsImages } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels"
+import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
 
 const namespace = "asia/vietnam/southern-vietnam/cu-chi-tunnels"
 const id = "cu-chi-tunnels"
@@ -71,7 +71,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <VietnamBlogLayout page={id} location={location}>
         <VietnamTitle title={title} linkId={id} />
         <ImageAsLandscape>
-          <CuChiTunnelsMain />
+          <SharedCardVietnamImages image="cuChiTunnelsMain" />
         </ImageAsLandscape>
         <VietnamQuote>{description}</VietnamQuote>
         <VietnamDivider />
@@ -212,7 +212,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit3.part3")}</p>
             <GroupOfImages>
               <TwoImagesSameSizeOrToGroup>
-                <CuChiTunnelsMain />
+                <SharedCardVietnamImages image="cuChiTunnelsMain" />
                 <CuChiTunnelsImages image="tunnels1" />
               </TwoImagesSameSizeOrToGroup>
               <ImageAsLandscape>

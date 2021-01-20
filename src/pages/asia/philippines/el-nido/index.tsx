@@ -32,6 +32,8 @@ import { philippinesLinks } from "../../../../components/core/asia/philippines/p
 import { ElNidoParadiseCard } from "../../../../components/core/asia/philippines/philippines.card"
 import { PageProps } from "gatsby"
 import { TitleImage } from "../../../../components/images/layout"
+import { jsx } from "@emotion/core"
+import { SharedPhilippinesImages } from "../../../../components/images/asia/philippines/shared-philippines-images"
 
 const namespace = "asia/philippines/el-nido/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -89,10 +91,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <HomeSection>{t("section2")}</HomeSection>
             <MedallionContainer>
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
-                return city.image ? (
+                return city.imageProps?.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
                     <PhilippinesImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
-                      {React.createElement(city.image)}
+                      {jsx(SharedPhilippinesImages, city.imageProps)}
                     </PhilippinesImageAsMedallion>
                   </ApplicationLink>
                 ) : null

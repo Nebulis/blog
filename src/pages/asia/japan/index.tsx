@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
-import { css } from "@emotion/core"
+import { css, jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
@@ -17,6 +17,7 @@ import { ArticlesContainer, MedallionContainer } from "../../../components/layou
 import { useCustomTranslation } from "../../../i18n"
 import { PageProps } from "gatsby"
 import { sortByLabel } from "../../../components/core/links/links.utils"
+import { SharedJapanImages } from "../../../components/images/asia/japan/shared-japan-images"
 
 export const Container = styled.div`
   margin-left: auto;
@@ -66,10 +67,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <HomeSubSection>Le pays de ville en ville ...</HomeSubSection>
         <MedallionContainer>
           {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
-            return city.image ? (
+            return city.imageProps?.image ? (
               <ApplicationLink to={city.id} key={city.id}>
                 <JapanImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
-                  {React.createElement(city.image)}
+                  {jsx(SharedJapanImages, city.imageProps)}
                 </JapanImageAsMedallion>
               </ApplicationLink>
             ) : null
