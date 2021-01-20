@@ -145,11 +145,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsPortrait
               credit={
                 <>
-                  Image par{" "}
                   <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/saildancer-3004325">
                     Saildancer
-                  </ExternalLinkNotUnderlined>{" "}
-                  de <ExternalLinkNotUnderlined href="https://pixabay.com">Pixabay</ExternalLinkNotUnderlined>
+                  </ExternalLinkNotUnderlined>
                 </>
               }
             >
@@ -255,11 +253,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsPortrait
               credit={
                 <>
-                  Image par{" "}
                   <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/janeb13-725943">
                     janeb13
-                  </ExternalLinkNotUnderlined>{" "}
-                  de <ExternalLinkNotUnderlined href="https://pixabay.com">Pixabay</ExternalLinkNotUnderlined>
+                  </ExternalLinkNotUnderlined>
                 </>
               }
             >

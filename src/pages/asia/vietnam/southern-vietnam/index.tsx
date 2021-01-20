@@ -7,7 +7,7 @@ import {
   VietnamDivider,
   VietnamImageAsMedallion,
 } from "../../../../components/core/asia/vietnam/vietnam"
-import { HomeSection, IndexIntroduction, MainTitleSection } from "../../../../components/core/section"
+import { CityHomeSection, IndexIntroduction, MainTitleSection } from "../../../../components/core/section"
 import {
   getHighlightsFromCity,
   getLinkLabel,
@@ -35,6 +35,7 @@ import SouthernVietnamImage from "../../../../images/asia/vietnam/southern-vietn
 import { TitleImage } from "../../../../components/images/layout"
 import { jsx } from "@emotion/core"
 import { SharedVietnamImages } from "../../../../components/images/asia/vietnam/shared-vietnam-images"
+import { PhilippinesDivider } from "../../../../components/core/asia/philippines/philippines"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -78,13 +79,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("introduction.section4")}</p>
           <p>{t("introduction.section5")}</p>
         </IndexIntroduction>
-        <VietnamDivider className="mb0" />
+        <VietnamDivider />
+        <CityHomeSection>{t("section1")}</CityHomeSection>
         <MainCardContainer>
           <SouthVietnamCard />
         </MainCardContainer>
         {highlights.length > 0 && (
           <>
-            <HomeSection>{t("section1")}</HomeSection>
+            <VietnamDivider className="mt2" />
+            <CityHomeSection>{t("section2")}</CityHomeSection>
             <CityArticleContainer>
               {highlights.map(({ card: Card, id }) => (
                 <Card key={id} fluidObject={{ aspectRatio: 4 / 3 }} />
@@ -94,8 +97,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         {cities.length > 0 && (
           <>
-            <VietnamDivider />
-            <HomeSection>{t("section2")}</HomeSection>
+            <VietnamDivider className="mt2" />
+            <CityHomeSection>{t("section3")}</CityHomeSection>
             <MedallionContainer>
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
                 return city.imageProps?.image ? (
@@ -111,7 +114,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         {displayAllArticles && (
           <>
-            <VietnamDivider />
+            <VietnamDivider className="mt2" />
             <GoToAllArticlesContainer>
               <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
             </GoToAllArticlesContainer>

@@ -118,6 +118,11 @@ export const HomeSection: FunctionComponent = ({ children }) => (
     {children}
   </h2>
 )
+export const CityHomeSection: FunctionComponent = ({ children }) => (
+  <h2 className="tc ttu mb3" css={homeSectionStyle}>
+    {children}
+  </h2>
+)
 
 export const MainTitleSection: FunctionComponent = ({ children }) => {
   return <h1 className="tc ttu flex items-center justify-center">{children}</h1>

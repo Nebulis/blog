@@ -598,9 +598,9 @@ export const MobileMenu: React.FunctionComponent = () => {
             href={`https://www.facebook.com/${facebook}`}
             target="_blank"
             rel="noopener noreferrer"
-            aria-labelledby="facebook-label"
+            aria-labelledby="facebook-mobile-label"
           >
-            <span id="facebook-label" hidden>
+            <span id="facebook-mobile-label" hidden>
               Go to Facebook
             </span>
             <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
@@ -609,9 +609,9 @@ export const MobileMenu: React.FunctionComponent = () => {
             href={`https://twitter.com/${twitter}`}
             target="_blank"
             rel="noopener noreferrer"
-            aria-labelledby="twitter-label"
+            aria-labelledby="twitter-mobile-label"
           >
-            <span id="twitter-label" hidden>
+            <span id="twitter-mobile-label" hidden>
               Go to Twitter
             </span>
             <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
@@ -620,9 +620,9 @@ export const MobileMenu: React.FunctionComponent = () => {
             href={`https://instagram.com/${instagram}`}
             target="_blank"
             rel="noopener noreferrer"
-            aria-labelledby="instagram-label"
+            aria-labelledby="instagram-mobile-label"
           >
-            <span id="instagram-label" hidden>
+            <span id="instagram-mobile-label" hidden>
               Go to Facebook
             </span>
             <FaInstagram className="instagram" aria-hidden="true" focusable="false" />
@@ -631,9 +631,9 @@ export const MobileMenu: React.FunctionComponent = () => {
             href={`https://pinterest.com/${pinterest}`}
             target="_blank"
             rel="noopener noreferrer"
-            aria-labelledby="pinterest-label"
+            aria-labelledby="pinterest-mobile-label"
           >
-            <span id="pinterest-label" hidden>
+            <span id="pinterest-mobile-label" hidden>
               Go to Facebook
             </span>
             <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
