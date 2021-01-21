@@ -1,4 +1,15 @@
 import React, { CSSProperties, ReactElement } from "react"
+import {
+  largeEnd,
+  mediumEnd,
+  mobileEnd,
+  primaryColor,
+  primaryDarkColor,
+  primaryLightColor,
+  smallEnd,
+} from "../core/variables"
+import { css } from "@emotion/core"
+import { useCustomTranslation } from "../../i18n"
 
 export type Continent = "Asia" | "Europe" | "Africa" | "North America" | "South America" | "Oceania"
 export const continents: Continent[] = ["Asia", "Europe", "Africa", "North America", "South America", "Oceania"]
@@ -1593,6 +1604,40 @@ export const CountryPath: React.FunctionComponent<CountryProps> = ({ country, cl
   <path {...country} transform="translate(-180, 0)" className={className} {...props} />
 )
 
+const textStyle = css`
+  text {
+    fill: black;
+    font-size: 1.7rem;
+    font-weight: bold;
+    stroke-width: 0.1;
+  }
+  text::selection {
+    fill: white;
+  }
+
+  @media (max-width: ${largeEnd}) {
+    text {
+      font-size: 1.9rem;
+    }
+  }
+  @media (max-width: ${mediumEnd}) {
+    display: none;
+    text {
+      font-size: 2.1rem;
+    }
+  }
+  @media (max-width: ${smallEnd}) {
+    text {
+      font-size: 2.3rem;
+    }
+  }
+  @media (max-width: ${mobileEnd}) {
+    text {
+      font-size: 2.5rem;
+    }
+  }
+`
+
 export const World: React.FunctionComponent<{
   className?: string
   style?: CSSProperties
@@ -1608,6 +1653,8 @@ export const World: React.FunctionComponent<{
   onClick = noop,
   style,
 }) => {
+  const { t } = useCustomTranslation(["index"])
+
   return (
     <svg className={className} version="1.1" viewBox="0 0 1800 1001" id="svg2" style={style}>
       {countries.map((country) => {
@@ -1619,6 +1666,20 @@ export const World: React.FunctionComponent<{
           onClick: () => onClick(country),
         })
       })}
+      <g css={textStyle}>
+        <rect width="80" height="40" x="10" y="860" fill={primaryDarkColor} />
+        <text x="100" y="890">
+          {t("map.published")}
+        </text>
+        <rect width="80" height="40" x="10" y="910" fill={primaryColor} />
+        <text x="100" y="940">
+          {t("map.visited")}
+        </text>
+        <rect width="80" height="40" x="10" y="960" fill={primaryLightColor} />
+        <text x="100" y="990">
+          {t("map.not-visited")}
+        </text>
+      </g>
     </svg>
   )
 }

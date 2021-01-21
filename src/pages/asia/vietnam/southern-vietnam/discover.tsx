@@ -189,7 +189,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ul>
         </Conclusion>
         <VietnamDivider />
-        <Comments collectionName={namespace} location={location} />
+        <Comments
+          collectionName={namespace}
+          location={location}
+          facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+        />
       </VietnamBlogLayout>
     </>
   )

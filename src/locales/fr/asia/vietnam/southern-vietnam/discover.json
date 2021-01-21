@@ -60,5 +60,9 @@
   },
   "conclusion": "De par son histoire et l'authenticité de ses paysages, le Vietnam du Sud est une destination qui ne vous laissera pas insensible.",
   "question1": "Êtes-vous déjà allé au Vietnam du Sud ? Quel en est votre meilleur souvenir ?",
-  "question2": "Ou bien, notre article vous a-t-il donné envie d'y aller ?"
+  "question2": "Ou bien, notre article vous a-t-il donné envie d'y aller ?",
+  "facebook": {
+    "part1": "♡ Coucou les voyageurs ! ♡",
+    "part2": "Venez découvrir le Vietnam du Sud, entre histoire du pays et balade sur le Mékong on vous partage nos souvenirs et nos coups de cœur."
+  }
 }

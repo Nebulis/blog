@@ -29,6 +29,7 @@ import { ApplicationContext } from "../application"
 
 interface CommentsProps {
   collectionName: string
+  facebookQuote: string
   className?: string
   location: PageProps["location"]
 }
@@ -94,7 +95,12 @@ export const Comments: FunctionComponent<CommentsProps> = (props) => {
   }
   return <div className="tc mb3">No comments in development</div>
 }
-const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, className = "", location }) => {
+const InnerComments: FunctionComponent<CommentsProps> = ({
+  collectionName,
+  className = "",
+  location,
+  facebookQuote,
+}) => {
   const [comments, setComments] = useState<CommentProp[]>([])
   const [likes, setLikes] = useState(0)
   const [localLikes, setLocalLikes] = useLocalStorage<string[]>("likes", [])
@@ -287,7 +293,7 @@ const InnerComments: FunctionComponent<CommentsProps> = ({ collectionName, class
             <span className="inline-flex">
               {t("comments.share")}&nbsp;
               <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}`}
+                href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}&quote=${encodeURI(facebookQuote)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-labelledby="facebook-label-comment"

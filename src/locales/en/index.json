@@ -33,5 +33,10 @@
       "title": "Animals",
       "content": "In their natural habitat or in protected reserves, observe the animals, get to know them, how to protect them and preserve their environment."
     }
+  },
+  "map": {
+    "published": "Published articles",
+    "visited": "Incoming articles",
+    "not-visited": "Not-visited countries"
   }
 }
