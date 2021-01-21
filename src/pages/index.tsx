@@ -4,21 +4,15 @@ import { useWindowSize } from "../components/hooks/useWindowSize"
 import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip } from "../components/core/tooltipPortal"
-import { navigate, PageProps } from "gatsby"
-import {
-  getLink,
-  getLinkUrl,
-  getMostRecentArticles,
-  isLinkPublished,
-  sortByLabel,
-} from "../components/core/links/links.utils"
+import { PageProps } from "gatsby"
+import { getLink, getMostRecentArticles, isLinkPublished, sortByLabel } from "../components/core/links/links.utils"
 import { Carousel, CarouselImage } from "../components/core/carousel"
 import { Divider } from "../components/core/divider"
 import { Monument } from "../components/icon/monument"
 import { Hiking } from "../components/icon/hiking"
 import { CityIcon } from "../components/icon/city"
 import { Photo } from "../components/icon/photo"
-import { ButtonLink, ExternalLink, PrimaryApplicationLink } from "../components/core/links/link"
+import { ApplicationLink, ButtonLink, ExternalLink, PrimaryApplicationLink } from "../components/core/links/link"
 import {
   largeStart,
   maxWidth,
@@ -28,7 +22,6 @@ import {
   primaryColor,
   primaryDarkColor,
   primaryLightColor,
-  smallEnd,
 } from "../components/core/variables"
 import { ApplicationContext } from "../components/application"
 import { MenuContext } from "../components/layout/menu.context"
@@ -56,7 +49,6 @@ const StyledWorld = styled(World)`
   }
   .visited.articles {
     fill: ${primaryDarkColor};
-    cursor: pointer;
   }
 `
 const visitedCountries = [
@@ -83,7 +75,11 @@ const transform = (countriesWithArticles: string[]) => (country: Country): React
     if (country.id === "singapore") {
       return <circle cx="1385" cy="565" r="6" className="visited" />
     } else if (countriesWithArticles.includes(country.id)) {
-      return <CountryPath country={country} className="visited articles" />
+      return (
+        <ApplicationLink to={country.id}>
+          <CountryPath country={country} className="visited articles" />
+        </ApplicationLink>
+      )
     }
     return <CountryPath country={country} className="visited" />
   }
@@ -113,34 +109,28 @@ const TravelsContainer = styled.div`
 const ButtonMapContainer = styled.div`
   display: flex;
   margin-bottom: 1rem;
-  div > * {
+  a,
+  & > span {
     width: 100%;
-  }
-  > div {
     text-align: center;
   }
 
   @media (min-width: ${largeStart}) {
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     max-width: 230px;
-    margin-top: 1rem;
-    > div {
+    a,
+    & > span {
       width: 200px;
-    }
-    div:nth-of-type(odd) {
-      align-self: flex-start;
-    }
-    div:nth-of-type(even) {
-      align-self: flex-end;
     }
   }
 
   @media (max-width: ${mediumEnd}) {
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
-    > div {
+    a,
+    & > span {
       margin-top: 0.5rem;
       width: calc(100vw / 3 - 2rem);
     }
@@ -148,7 +138,9 @@ const ButtonMapContainer = styled.div`
   @media (max-width: ${mobileEnd}) {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    > div {
+    a,
+    & > span {
+      height: 40px; //fix the height in smaller device so that if the text is too big, the height of the link does not grow
       margin-top: 0.5rem;
       width: calc(100vw / 2 - 2rem);
     }
@@ -192,7 +184,7 @@ const ContemplateContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   justify-items: center;
   grid-gap: 3rem;
   text-align: center;
@@ -219,17 +211,29 @@ const ContemplateContainer = styled.div`
   @media (max-width: ${mediumEnd}) {
     margin-top: 3rem;
     margin-bottom: 3rem;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     justify-content: space-evenly;
     grid-gap: 0;
     grid-row-gap: 2rem;
-    .content {
-      display: none;
+    .contemplate-element {
+      display: flex;
+      .title-element {
+        flex-basis: 30%;
+      }
+      .content {
+        flex-basis: 70%;
+      }
+      .content {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
     }
-  }
-
-  @media (max-width: ${smallEnd}) amd (orientation: portrait) {
-    grid-template-columns: auto auto;
+    .contemplate-element:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
   }
   @media (max-width: ${mobileEnd}) {
     svg {
@@ -338,25 +342,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 }
               }}
               onMouseLeave={() => setCountry(undefined)}
-              onClick={(country) => {
-                try {
-                  navigate(getLinkUrl(i18n.languageCode)(country.id))
-                } catch (e) {
-                  console.log(`Link doesnt exist for ${country.id}`)
-                }
-              }}
             />
           </MapContainer>
           <ButtonMapContainer>
             {continentLinks.sort(sortByLabel(i18n.languageCode)).map((continent) => (
-              <div key={continent.id}>
-                <ButtonLink
-                  to={continent.id}
-                  className={`${getLink(continent.id)?.published || development ? "" : "inactive"}`}
-                >
-                  {continent.label[i18n.languageCode]}
-                </ButtonLink>
-              </div>
+              <ButtonLink
+                key={continent.id}
+                to={continent.id}
+                className={`${getLink(continent.id)?.published || development ? "" : "inactive"}`}
+              >
+                {continent.label[i18n.languageCode]}
+              </ButtonLink>
             ))}
           </ButtonMapContainer>
         </TravelsContainer>
@@ -380,23 +376,31 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <HomeSubSection>{t("contemplate.subtitle")}</HomeSubSection>
         <ContemplateContainer>
           <div className="contemplate-element">
-            <Monument />
-            <div className="title">{t("contemplate.monuments.title")}</div>
+            <div className="title-element">
+              <Monument />
+              <div className="title">{t("contemplate.monuments.title")}</div>
+            </div>
             <div className="content">{t("contemplate.monuments.content")}</div>
           </div>
           <div className="contemplate-element">
-            <Hiking />
-            <div className="title">{t("contemplate.nature.title")}</div>
+            <div className="title-element">
+              <Hiking />
+              <div className="title">{t("contemplate.nature.title")}</div>
+            </div>
             <div className="content">{t("contemplate.nature.content")}</div>
           </div>
           <div className="contemplate-element">
-            <CityIcon />
-            <div className="title">{t("contemplate.city.title")}</div>
+            <div className="title-element">
+              <CityIcon />
+              <div className="title">{t("contemplate.city.title")}</div>
+            </div>
             <div className="content">{t("contemplate.city.content")}</div>
           </div>
           <div className="contemplate-element">
-            <Photo />
-            <div className="title">{t("contemplate.animals.title")}</div>
+            <div className="title-element">
+              <Photo />
+              <div className="title">{t("contemplate.animals.title")}</div>
+            </div>
             <div className="content">{t("contemplate.animals.content")}</div>
           </div>
         </ContemplateContainer>

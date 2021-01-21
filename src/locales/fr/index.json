@@ -33,5 +33,10 @@
       "title": "Animaux",
       "content": "Dans leur habitat ou dans des réserves protégées, observez les animaux, apprenez à les connaitre, comment les protéger et conserver leur milieu naturel."
     }
+  },
+  "map": {
+    "published": "Articles publiés",
+    "visited": "Articles à venir",
+    "not-visited": "Pays non visités"
   }
 }

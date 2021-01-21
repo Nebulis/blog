@@ -82,5 +82,9 @@
   },
   "conclusion": "A breathtaking landscape. The Bacuit Archipelago is truly the jewel of the Philippines. Full of souvenirs, you will have only one desire: to go back.",
   "question1": "Have you ever been to El Nido? What is your favorite place?",
-  "question2": "Did our post make you want to go?"
+  "question2": "Did our post make you want to go?",
+  "facebook": {
+    "part1": "♡ Hello travellers ! ♡",
+    "part2": "Do you want to come with us to discover the gem of the Philippines ? Bring your mask and dive into these crystal clear waters that will be engraved into your memory."
+  }
 }

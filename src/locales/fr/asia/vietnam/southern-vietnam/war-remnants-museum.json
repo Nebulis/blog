@@ -94,5 +94,9 @@
   },
   "conclusion": "Longtemps pris pour un endroit faisant campagne contre les États-Unis, le musée dénonce surtout l’atrocité de la guerre et les dégâts qui persistent encore des années après. Il montre et insiste bien sur le fait et l’importance de préserver la paix dans le monde.",
   "question1": "Cet article vous a-t-il intéressé ?",
-  "question2": "Est-ce que vous aussi vous aimez vous imprégner de l’histoire du pays avant de le visiter ?"
+  "question2": "Est-ce que vous aussi vous aimez vous imprégner de l’histoire du pays avant de le visiter ?",
+  "facebook": {
+    "part1": "♡ Coucou les voyageurs ! ♡",
+    "part2": "Retournons un instant dans le passé et apprenons l’histoire du Vietnam à travers les horreurs de la guerre."
+  }
 }
