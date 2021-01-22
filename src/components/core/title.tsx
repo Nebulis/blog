@@ -33,11 +33,11 @@ const titleStyle = css`
 export const Title: FunctionComponent<TitleProps> = ({ title, categories, className, linkId }) => {
   const { publishedDate, tags } = getLink(linkId)
   const { t, i18n } = useCustomTranslation("common")
-  const lol = categories || tags
+  const computedCategories = categories || tags
   return (
     <>
       <h1 className={`tc mb1 ${className}`}>{title}</h1>
-      <div className={`tc ${className}`} css={titleStyle}>
+      <div className={`tc flex flex-wrap items-center justify-center ${className}`} css={titleStyle}>
         <span className="published-date">
           {t("published")}{" "}
           {publishedDate instanceof Date
@@ -47,11 +47,13 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
                 day: "numeric",
               })
             : "03/01/2010"}
-        </span>{" "}
-        {t("in")}{" "}
-        {lol.map((c, index) => (
+        </span>
+        &nbsp;
+        <span>{t("in")}</span>
+        &nbsp;
+        {computedCategories.map((c, index) => (
           <React.Fragment key={index}>
-            {index > 0 ? " " : ""}
+            {index > 0 ? <>&nbsp;</> : ""}
             <ApplicationLink to={c}>{getLinkLabel(i18n.languageCode)(c)}</ApplicationLink>
           </React.Fragment>
         ))}
