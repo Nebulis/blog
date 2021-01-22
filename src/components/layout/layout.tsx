@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext, useEffect, useState } from "react"
+import React, { FunctionComponent, useContext, useEffect, useState, useLayoutEffect } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.utils"
@@ -96,12 +96,14 @@ export const IndexBlogLayout: FunctionComponent<{
 }> = ({ children, page, className = "", noStickyHeader = false, draw, location }) => {
   const isPublished = page === "home" ? true : getLink(page).published
   const { development } = useContext(ApplicationContext)
-  if (!isPublished && !development) {
-    navigate("/404")
-  }
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
   const { t } = useCustomTranslation("common")
+  useLayoutEffect(() => {
+    if (!isPublished && !development) {
+      navigate("/404")
+    }
+  }, [isPublished, development, navigate])
   useEffect(() => {
     if (draw) draw()
     // I really want to run this one even if the function changed which should NOT happen
