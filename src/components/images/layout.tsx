@@ -109,6 +109,11 @@ export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any>> = ({ child
     {children}
   </div>
 )
+export const MainImageAsLandscape = styled(ImageAsLandscape)`
+  .gatsby-image-wrapper {
+    margin-top: 0;
+  }
+`
 
 const margin = css`
   & .left-panel {

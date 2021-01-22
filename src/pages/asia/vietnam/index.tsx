@@ -3,11 +3,11 @@ import SEO from "../../../components/layout/seo"
 import { ApplicationContext } from "../../../components/application"
 import { getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
 import { vietnamLinks } from "../../../components/core/asia/vietnam/vietnam.links"
-import { HomeSection, HomeSubSection, IndexIntroduction, MainTitleSection } from "../../../components/core/section"
+import { HomeSection, HomeSubSection, MainTitleSection, SectionContent } from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
 import vietnamHat from "../../../images/asia/vietnam/hat.svg"
 import {
-  IndexVietnamBlogLayout,
+  VietnamBlogLayout,
   VietnamButtonLink,
   VietnamDivider,
   VietnamImageAsMedallion,
@@ -29,6 +29,7 @@ import { SharedVietnamImages } from "../../../components/images/asia/vietnam/sha
 import i18n from "i18next"
 import asiaIndexFr from "../../../locales/fr/asia/vietnam/index.json"
 import asiaIndexEn from "../../../locales/en/asia/vietnam/index.json"
+import { PageQuote } from "../../../components/core/quote"
 
 const namespace = "asia/vietnam/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
@@ -44,17 +45,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={country} location={location} image={VietnamImage} description={description} />
-      <IndexVietnamBlogLayout page="vietnam" location={location}>
+      <VietnamBlogLayout page="vietnam" location={location}>
         <MainTitleSection>
           <TitleImage src={vietnamHat} alt="vietnam hat" />
           &nbsp;{country}&nbsp;
           <TitleImage src={vietnamHat} alt="vietnam hat" />
         </MainTitleSection>
         <VietnamDivider />
-        <IndexIntroduction>
-          <p>{t("introduction.section1")}</p>
-          <p>{t("introduction.section2")}</p>
-        </IndexIntroduction>
+        <SectionContent>
+          <PageQuote>{t("introduction.section1")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section2")}</PageQuote>
+        </SectionContent>
         {false && (
           <>
             <VietnamDivider />
@@ -103,7 +104,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </GoToAllArticlesContainer>
           </>
         )}
-      </IndexVietnamBlogLayout>
+      </VietnamBlogLayout>
     </>
   )
 }

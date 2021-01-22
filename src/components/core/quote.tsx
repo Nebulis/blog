@@ -38,8 +38,12 @@ export const Quote: FunctionComponent<HTMLAttributes<any> & { position?: "before
 }
 
 export const PageQuote = styled(Quote)`
+  padding-left: 0;
+  padding-right: 0;
   font-size: 20px;
   blockquote {
     font-family: "Courgette", serif;
+    margin-left: 0;
+    margin-right: 0;
   }
 `

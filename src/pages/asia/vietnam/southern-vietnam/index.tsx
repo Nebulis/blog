@@ -7,7 +7,7 @@ import {
   VietnamDivider,
   VietnamImageAsMedallion,
 } from "../../../../components/core/asia/vietnam/vietnam"
-import { CityHomeSection, IndexIntroduction, MainTitleSection } from "../../../../components/core/section"
+import { CityHomeSection, MainTitleSection, SectionContent } from "../../../../components/core/section"
 import {
   getHighlightsFromCity,
   getLinkLabel,
@@ -35,6 +35,7 @@ import SouthernVietnamImage from "../../../../images/asia/vietnam/southern-vietn
 import { TitleImage } from "../../../../components/images/layout"
 import { jsx } from "@emotion/core"
 import { SharedVietnamImages } from "../../../../components/images/asia/vietnam/shared-vietnam-images"
+import { PageQuote } from "../../../../components/core/quote"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -71,13 +72,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <TitleImage src={vietnamHat} alt="vietnam hat" />
         </MainTitleSection>
         <VietnamDivider />
-        <IndexIntroduction>
-          <p>{t("introduction.section1")}</p>
-          <p>{t("introduction.section2")}</p>
-          <p>{t("introduction.section3")}</p>
-          <p>{t("introduction.section4")}</p>
-          <p>{t("introduction.section5")}</p>
-        </IndexIntroduction>
+        <SectionContent>
+          <PageQuote>{t("introduction.section1")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section2")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section3")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section4")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section5")}</PageQuote>
+        </SectionContent>
         <VietnamDivider />
         <CityHomeSection>{t("section1")}</CityHomeSection>
         <MainCardContainer>

@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
-import { CityHomeSection, IndexIntroduction, MainTitleSection } from "../../../../components/core/section"
+import { CityHomeSection, MainTitleSection, SectionContent } from "../../../../components/core/section"
 import {
   getHighlightsFromCity,
   getLinkLabel,
@@ -34,6 +34,7 @@ import { PageProps } from "gatsby"
 import { TitleImage } from "../../../../components/images/layout"
 import { jsx } from "@emotion/core"
 import { SharedPhilippinesImages } from "../../../../components/images/asia/philippines/shared-philippines-images"
+import { PageQuote } from "../../../../components/core/quote"
 
 const namespace = "asia/philippines/el-nido/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -64,13 +65,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />
         </MainTitleSection>
         <PhilippinesDivider />
-        <IndexIntroduction>
-          <p>{t("introduction.section1")}</p>
-          <p>{t("introduction.section2")}</p>
-          <p>{t("introduction.section3")}</p>
-          <p>{t("introduction.section4")}</p>
-          <p>{t("introduction.section5")}</p>
-        </IndexIntroduction>
+        <SectionContent>
+          <PageQuote>{t("introduction.section1")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section2")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section3")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section4")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section5")}</PageQuote>
+        </SectionContent>
         <PhilippinesDivider />
         <CityHomeSection>{t("section1")}</CityHomeSection>
         <MainCardContainer>

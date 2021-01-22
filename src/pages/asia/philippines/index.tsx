@@ -2,14 +2,14 @@ import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
 import { ApplicationContext } from "../../../components/application"
 import { getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
-import { HomeSection, HomeSubSection, IndexIntroduction, MainTitleSection } from "../../../components/core/section"
+import { HomeSection, HomeSubSection, MainTitleSection, SectionContent } from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
 import philippinesFish from "../../../images/asia/philippines/fish.svg"
 import { ArticlesContainer, GoToAllArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
 import { philippinesLinks } from "../../../components/core/asia/philippines/philippines.links"
 import {
-  IndexPhilippinesBlogLayout,
+  PhilippinesBlogLayout,
   PhilippinesButtonLink,
   PhilippinesDivider,
   PhilippinesImageAsMedallion,
@@ -22,6 +22,7 @@ import { SharedPhilippinesImages } from "../../../components/images/asia/philipp
 import i18n from "i18next"
 import asiaIndexFr from "../../../locales/fr/asia/philippines/index.json"
 import asiaIndexEn from "../../../locales/en/asia/philippines/index.json"
+import { PageQuote } from "../../../components/core/quote"
 
 const namespace = "asia/philippines/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
@@ -37,18 +38,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={country} location={location} description={description} />
-      <IndexPhilippinesBlogLayout page="philippines" location={location}>
+      <PhilippinesBlogLayout page="philippines" location={location}>
         <MainTitleSection>
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />
           &nbsp;{country}&nbsp;
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />
         </MainTitleSection>
         <PhilippinesDivider />
-        <IndexIntroduction>
-          <p>{t("introduction.section1")}</p>
-          <p>{t("introduction.section2")}</p>
-          <p>{t("introduction.section3")}</p>
-        </IndexIntroduction>
+        <SectionContent>
+          <PageQuote>{t("introduction.section1")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section2")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section3")}</PageQuote>
+        </SectionContent>
         {cities.length > 0 && (
           <>
             <PhilippinesDivider />
@@ -87,7 +88,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </GoToAllArticlesContainer>
           </>
         )}
-      </IndexPhilippinesBlogLayout>
+      </PhilippinesBlogLayout>
     </>
   )
 }

@@ -33,7 +33,7 @@ import {
 import { ApplicationContext } from "../components/application"
 import { MenuContext } from "../components/layout/menu.context"
 import SEO from "../components/layout/seo"
-import { HomeSection, HomeSubSection, IndexIntroduction } from "../components/core/section"
+import { HomeSection, HomeSubSection, SectionContent } from "../components/core/section"
 import { useCustomTranslation } from "../i18n"
 import i18n from "i18next"
 import indexFr from "../locales/fr/index.json"
@@ -41,6 +41,7 @@ import indexEn from "../locales/en/index.json"
 import { continentLinks } from "../components/core/links/links.configuration"
 import { HomeBlogLayout } from "../components/layout/main-layout"
 import { CarouselImageQuery } from "../components/images/carousel"
+import { PageQuote } from "../components/core/quote"
 
 const namespace = "index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -312,16 +313,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </Carousel>
         <HomeDivider />
         <HomeSection>{t("index:welcome.title")}</HomeSection>
-        <IndexIntroduction>
-          <p>{t("index:welcome.section1")}</p>
-          <p>{t("index:welcome.section2")}</p>
-          <p>{t("index:welcome.section3")}</p>
-          <p>
+        <SectionContent>
+          <PageQuote>{t("index:welcome.section1")}</PageQuote>
+          <PageQuote position="none">{t("index:welcome.section2")}</PageQuote>
+          <PageQuote position="none">{t("index:welcome.section3")}</PageQuote>
+          <PageQuote position="none">
             <PrimaryApplicationLink className="b underline" to="who">
               {t("index:welcome.more")}
             </PrimaryApplicationLink>
-          </p>
-        </IndexIntroduction>
+          </PageQuote>
+        </SectionContent>
         <HomeDivider />
         <HomeSection>{t("index:explore.title")}</HomeSection>
         <HomeSubSection>{t("explore.subtitle")}</HomeSubSection>

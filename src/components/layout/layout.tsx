@@ -15,8 +15,6 @@ import {
   largeStart,
   maxWidth,
   maxWidthExtraLargeContainer,
-  maxWidthLargeContainer,
-  maxWidthMediumContainer,
   mediumEnd,
   mediumStart,
   mobileEnd,
@@ -200,20 +198,13 @@ export const BlogLayout = styled(IndexBlogLayout)`
 
   @media (min-width: ${smallStart}) {
     .children-container {
-      padding: 0;
-      max-width: 540px;
+      padding: 0 20px;
     }
   }
 
   @media (min-width: ${mediumStart}) {
     .children-container {
-      max-width: ${maxWidthMediumContainer}px;
-    }
-  }
-
-  @media (min-width: ${largeStart}) {
-    .children-container {
-      max-width: ${maxWidthLargeContainer}px;
+      padding: 0 30px;
     }
   }
 
