@@ -27,7 +27,7 @@ import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
 import { Status } from "../../types/shared"
 import { useCustomTranslation } from "../../i18n"
 import { subscribe } from "../../services/newsletter"
-import { PageProps } from "gatsby"
+import { navigate, PageProps } from "gatsby"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -96,6 +96,9 @@ export const IndexBlogLayout: FunctionComponent<{
 }> = ({ children, page, className = "", noStickyHeader = false, draw, location }) => {
   const isPublished = page === "home" ? true : getLink(page).published
   const { development } = useContext(ApplicationContext)
+  if (!isPublished && !development) {
+    navigate("/404")
+  }
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
   const { t } = useCustomTranslation("common")
