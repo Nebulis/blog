@@ -189,9 +189,9 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
     subscribeToNewsletter,
   }): Promise<[void, boolean]> => {
     if (saveInBrowser) {
-      localStorage.setItem("name", name)
-      localStorage.setItem("email", email)
-      localStorage.setItem("website", website || "")
+      localStorage.setItem("name", name.trim())
+      localStorage.setItem("email", email.trim())
+      localStorage.setItem("website", website.trim())
     } else {
       localStorage.removeItem("name")
       localStorage.removeItem("email")
@@ -211,10 +211,10 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
         .ref(`comments/${transformPath(collectionName)}`)
         .push()
         .set({
-          name,
-          content: message,
+          name: name.trim(),
+          content: message.trim(),
           timestamp: Date.now(),
-          website,
+          website: website.trim(),
           avatar: md5((email || name).trim().toLowerCase()),
           ...(id ? { parent: id } : {}),
         })
@@ -361,6 +361,7 @@ const commentStyle = css`
     padding-bottom: 0.6rem;
   }
   .avatar-container {
+    min-width: 60px;
     margin-right: 20px;
   }
   .reply {

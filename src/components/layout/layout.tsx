@@ -101,7 +101,7 @@ export const IndexBlogLayout: FunctionComponent<{
     if (!isPublished && !development) {
       navigate("/404")
     }
-  }, [isPublished, development, navigate])
+  }, [isPublished, development])
   useEffect(() => {
     if (draw) draw()
     // I really want to run this one even if the function changed which should NOT happen
