@@ -14,7 +14,7 @@ import {
   FaUtensils,
   FaWalking,
 } from "react-icons/all"
-import { maxWidth, mediumEnd, mediumStart, mobileEnd } from "./variables"
+import { maxWidth, mediumEnd, mobileEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n"
 import { Lang } from "./links/links.types"
 
@@ -31,7 +31,7 @@ const sectionContentStyle = css`
 export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
   const size = React.Children.count(children)
   return (
-    <div className={`f5 content ${className}`} css={sectionContentStyle}>
+    <div className={`${className} f5 content tj`} css={sectionContentStyle}>
       {React.Children.map(children, (child, index) => {
         if (!React.isValidElement(child)) return child
         if ((child.type === "p" || child.type === "ul") && index < size - 1) {
@@ -43,15 +43,12 @@ export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ childre
   )
 }
 
-export const Introduction: React.FunctionComponent = ({ children }) => {
-  return <SectionContent className="b tc">{children}</SectionContent>
-}
-const indexIntroduction = css`
-  max-width: ${mediumStart};
+const introductionStyle = css`
+  text-align: center;
 `
-export const IndexIntroduction: React.FunctionComponent = ({ children }) => {
+export const Introduction: React.FunctionComponent = ({ children }) => {
   return (
-    <SectionContent className="tc center" css={indexIntroduction}>
+    <SectionContent className="b" css={introductionStyle}>
       {children}
     </SectionContent>
   )

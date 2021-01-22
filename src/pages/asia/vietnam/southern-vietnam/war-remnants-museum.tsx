@@ -21,6 +21,7 @@ import {
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
+  MainImageAsLandscape,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import HomeImgUrl from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/war-museum-main.jpg"
@@ -69,9 +70,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <VietnamBlogLayout page={id} location={location}>
         <VietnamTitle title={title} linkId={id} />
-        <ImageAsLandscape>
+        <MainImageAsLandscape>
           <SharedCardVietnamImages image="warMuseumMain" />
-        </ImageAsLandscape>
+        </MainImageAsLandscape>
         <VietnamQuote>{description}</VietnamQuote>
         <VietnamDivider />
         <Introduction>{googleDescription}</Introduction>
