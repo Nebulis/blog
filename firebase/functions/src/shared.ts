@@ -20,4 +20,5 @@ export const mailgunConfiguration = {
 };
 
 export const adminEmail = "Magic Of Travels Admin <admin@magicoftravels.com>";
-export const commentEmail = "Magic Of Travels Comment <coment@magicoftravels.com>";
+export const contactEmail = "Magic Of Travels Contact <contact@magicoftravels.com>";
+export const commentEmail = "Magic Of Travels Comment <comment@magicoftravels.com>";
