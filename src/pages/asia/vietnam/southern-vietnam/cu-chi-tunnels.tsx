@@ -30,7 +30,7 @@ import {
 import { Conclusion } from "../../../../components/core/conclusion"
 import { PageProps } from "gatsby"
 import { useCustomTranslation } from "../../../../i18n"
-import HomeImgUrl from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/war-museum-main.jpg"
+import HomeImgUrl from "../../../../images/asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-main.jpg"
 import { buildBookingUrl } from "../../../../utils"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/cu-chi-tunnels.json"
