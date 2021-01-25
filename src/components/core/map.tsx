@@ -3,16 +3,20 @@ import { css, SerializedStyles } from "@emotion/core"
 import { getLink, getLinkUrl } from "./links/links.utils"
 import { navigate } from "gatsby"
 import { Lang } from "./links/links.types"
+import { backgroundPrimaryColor, fillMap } from "./variables"
 
 export const mapProps: SVGProps<any> = {
-  fill: "#d4edf5",
-  stroke: "#ffffff",
+  fill: fillMap,
+  stroke: backgroundPrimaryColor,
   strokeLinecap: "round",
   strokeLinejoin: "round",
   strokeWidth: "1",
 }
 export const mapStyle = css`
   max-height: 60vh;
+  text {
+    stroke: none;
+  }
 `
 
 export const defaultTextStyle = css`
@@ -20,6 +24,9 @@ export const defaultTextStyle = css`
   font-weight: bold;
   rect {
     fill: transparent;
+  }
+  text::selection {
+    fill: white;
   }
 `
 export const propsFor = ({

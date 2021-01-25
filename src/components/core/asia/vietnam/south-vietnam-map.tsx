@@ -7,7 +7,6 @@ import { useCustomTranslation } from "../../../../i18n"
 
 const basicTextStyle = css`
   ${defaultTextStyle}
-  stroke-width: 0.3;
   text {
     font-size: 27px;
   }

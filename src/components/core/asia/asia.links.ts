@@ -27,6 +27,14 @@ export const asiaLinks: ContinentLink = {
           },
           published: false,
         },
+        {
+          id: "kampong-phluk",
+          label: {
+            en: commonEn.country.cambodia.card["kampong-phluk"],
+            fr: commonFr.country.cambodia.card["kampong-phluk"],
+          },
+          published: false,
+        },
       ],
       label: { en: commonEn.country.cambodia.title, fr: commonFr.country.cambodia.title },
     },

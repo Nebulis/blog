@@ -10,15 +10,12 @@ const creditStyle = css`
   .credit {
     position: absolute;
     opacity: 0.8;
-    bottom: 1.3rem; // use this value because there is a default margin on images
+    bottom: 0;
     right: 0;
     background-color: black;
     line-height: initial;
     color: white;
     font-size: 0.6rem;
-  }
-  &:last-child .credit {
-    bottom: 0; // in case the image is the last of the group, the image does not have margin
   }
 `
 
@@ -103,10 +100,16 @@ const imageAsLandscapeStyle = css`
     width: 100%;
     max-height: calc(100vh - 40px);
   }
+  ${creditStyle}
 `
-export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
+export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any> & { credit?: React.ReactNode }> = ({
+  children,
+  className,
+  credit,
+}) => (
   <div css={imageAsLandscapeStyle} className={`${className} flex justify-center relative`}>
     {children}
+    {credit && <div className="credit">{credit}</div>}
   </div>
 )
 export const MainImageAsLandscape = styled(ImageAsLandscape)`

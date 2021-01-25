@@ -37,6 +37,7 @@ const pageDevelopmentMarkStyle = css`
   height: 0;
   border-left: 45px solid transparent;
   border-top: 45px solid #e28de5;
+  pointer-events: none;
 `
 export const PageDevelopmentMark = () => <span css={pageDevelopmentMarkStyle} />
 
@@ -93,15 +94,15 @@ export const IndexBlogLayout: FunctionComponent<{
   location: PageProps["location"]
 }> = ({ children, page, className = "", noStickyHeader = false, draw, location }) => {
   const isPublished = page === "home" ? true : getLink(page).published
-  const { development } = useContext(ApplicationContext)
+  const { initialDevelopmentValue, development } = useContext(ApplicationContext)
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
   const { t } = useCustomTranslation("common")
   useLayoutEffect(() => {
-    if (!isPublished && !development) {
+    if (!isPublished && !initialDevelopmentValue) {
       navigate("/404")
     }
-  }, [isPublished, development])
+  }, [isPublished, initialDevelopmentValue])
   useEffect(() => {
     if (draw) draw()
     // I really want to run this one even if the function changed which should NOT happen

@@ -1,5 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
+import { backgroundPrimaryColor, fillMap } from "../../variables"
 
 export const VietnamMap = () => {
   return (
@@ -8,9 +9,9 @@ export const VietnamMap = () => {
         max-height: 85vh;
       `}
       baseProfile="tiny"
-      fill="#d4edf5"
+      fill={fillMap}
       height="2119"
-      stroke="#ffffff"
+      stroke={backgroundPrimaryColor}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"

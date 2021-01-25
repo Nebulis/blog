@@ -115,7 +115,7 @@ describe("links", () => {
     expect(getLink("southern-vietnam")).toMatchObject({ label: { fr: "Sud", en: "Southern" }, published: true })
     expect(getLink("cu-chi-tunnels")).toMatchObject({
       label: { fr: "Tunnels de Củ Chi", en: "Củ Chi tunnels" },
-      published: false,
+      published: true,
     })
     expect(getLink("my-tho")).toMatchObject({
       label: { fr: "Mỹ Tho", en: "Mỹ Tho" },
@@ -155,6 +155,10 @@ describe("links", () => {
     // cambodia assertions
     expect(getLink("s-21-prison")).toMatchObject({
       label: { en: "Tuol Sleng Genocide Museum", fr: "Musée du génocide Tuol Sleng" },
+      published: false,
+    })
+    expect(getLink("kampong-phluk")).toMatchObject({
+      label: { en: "Kampong Phluk Floating Village", fr: "Village flottant de Kampong Phluk" },
       published: false,
     })
 

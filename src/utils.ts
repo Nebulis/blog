@@ -22,3 +22,9 @@ export const pinterest = "MagicOfTravels"
 export const buildBookingUrl = (lang: Lang) => (hotel: string) => `https://www.booking.com/hotel/${hotel}.${lang}.html`
 export const buildBookingSearchUrl = (lang: Lang) => (part: string) =>
   `https://www.booking.com/searchresults.${lang}.html?ss=${part}`
+
+export const buildBaolauLink = (lang: Lang) => `https://www.baolau.com/${lang}/`
+export const buildGetYourGuideLink = (lang: Lang) => (slug = "") =>
+  `https://www.getyourguide.${lang === "fr" ? "fr" : "com"}/${slug}`
+export const buildTripAdvisorLink = (lang: Lang) => (slug = "") =>
+  `https://www.tripadvisor.${lang === "fr" ? "fr" : "com"}/${slug}`

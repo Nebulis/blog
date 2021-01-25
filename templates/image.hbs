@@ -7,10 +7,10 @@ const alt = {
   name: "TODO",
 }
 
-export const {{getComponentImageName pagePath}}: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
+export const {{getComponentImageName pagePath}}Images: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
   className = "",
   image,
-  fluidObject = {}
+  fluidObject = {},
   imgStyle = {},
 }) => {
   const data = useStaticQuery(graphql`
@@ -26,9 +26,10 @@ export const {{getComponentImageName pagePath}}: React.FunctionComponent<ExtraIm
   `)
   return (
     <Img
-      fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }}
+      fluid=\{{ ...data[image].childImageSharp.fluid, ...fluidObject }}
       alt={alt[image]}
       className={className}
       imgStyle={imgStyle}
     />
+  )
 }
