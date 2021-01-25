@@ -36,8 +36,12 @@
     "cambodia": {
       "title": "Cambodge",
       "card": {
-        "s-21-prison": "Musée du génocide Tuol Sleng"
+        "s-21-prison": "Musée du génocide Tuol Sleng",
+        "kampong-phluk": "Village flottant de Kampong Phluk"
       }
+    },
+    "china": {
+      "title": "Chine"
     },
     "france": {
       "title": "France"
@@ -51,8 +55,14 @@
     "japan": {
       "title": "Japon"
     },
+    "laos": {
+      "title": "Laos"
+    },
     "malaysia": {
       "title": "Malaisie"
+    },
+    "myanmar": {
+      "title": "Birmanie"
     },
     "philippines": {
       "title": "Philippines",

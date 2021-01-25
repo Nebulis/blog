@@ -6,7 +6,25 @@ import { useCustomTranslation } from "{{upPath pagePath}}i18n"
 import { Comments } from "{{upPath pagePath}}components/core/comments"
 import translationFr from "{{upPath pagePath}}locales/fr/{{pagePath}}.json"
 import translationEn from "{{upPath pagePath}}locales/en/{{pagePath}}.json"
-import { {{uppercase (getCountry pagePath)}}BlogLayout, {{uppercase (getCountry pagePath)}}Title } from "{{upPath pagePath}}components/core/{{getContinent pagePath}}/{{getCountry pagePath}}/{{getCountry pagePath}}"
+import {
+  {{uppercase (getCountry pagePath)}}BlogLayout,
+  {{uppercase (getCountry pagePath)}}Title,
+  {{uppercase (getCountry pagePath)}}Quote,
+  {{uppercase (getCountry pagePath)}}Divider,
+  {{uppercase (getCountry pagePath)}}Headline,
+} from "{{upPath pagePath}}components/core/{{getContinent pagePath}}/{{getCountry pagePath}}/{{getCountry pagePath}}"
+import {
+  How,
+  HowLong,
+  HowMuch,
+  Introduction,
+  SectionContent,
+  Visit,
+  WhatTimeOfYear,
+  When,
+  WhereToStay,
+} from "../../../../components/core/section"
+import { Conclusion } from "{{upPath pagePath}}components/core/conclusion"
 import HomeImgUrl from "{{upPath pagePath}}images/{{getContinent pagePath}}/{{getCountry pagePath}}/home-{{getCountry pagePath}}.jpg"
 
 const namespace = "{{pagePath}}"
@@ -18,13 +36,65 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.{{getCountry pagePath}}.card.${id}`)
   const description = t("quote")
+  const googleDescription = t("introduction")
 
   return (
     <>
-      <SEO title={title} description={description} image={HomeImgUrl} location={location} />
+      <SEO
+        title={title}
+        description={description}
+        googleDescription={googleDescription}
+        image={HomeImgUrl}
+        location={location}
+      />
       <{{uppercase (getCountry pagePath)}}BlogLayout page={id} location={location}>
         <{{uppercase (getCountry pagePath)}}Title title={title} linkId={id} />
-        <Comments collectionName={namespace} location={location} />
+        <{{uppercase (getCountry pagePath)}}Quote>{description}</{{uppercase (getCountry pagePath)}}Quote>
+        <{{uppercase (getCountry pagePath)}}Divider />
+        <Introduction>{googleDescription}</Introduction>
+        <{{uppercase (getCountry pagePath)}}Divider />
+        <When>
+          <p>{t("when.part1")}</p>
+        </When>
+        <How>
+          <p>{t("how.part1")}</p>
+        </How>
+        <HowLong>
+          <p>{t("how-long.part1")}</p>
+        </HowLong>
+        <WhatTimeOfYear>
+          <p>{t("what-time-of-year.part1")}</p>
+        </WhatTimeOfYear>
+        <HowMuch>
+          <p>{t("how-much.part1")}</p>
+        </HowMuch>
+        <WhereToStay>
+          <p>{t("where-to-stay.part1")}</p>
+        </WhereToStay>
+        <Visit>
+          <p>{t("visit.part1")}</p>
+        </Visit>
+        <{{uppercase (getCountry pagePath)}}Divider />
+        <section>
+          <VietnamHeadline>{t("visit1.title")}</VietnamHeadline>
+          <VietnamDivider />
+          <SectionContent>
+            <p>{t("visit1.part1")}</p>
+          </SectionContent>
+        </section>
+        <Conclusion>
+          <p>{t("conclusion")}</p>
+          <ul>
+            <li>{t("question1")}</li>
+            <li>{t("question2")}</li>
+          </ul>
+        </Conclusion>
+        <{{uppercase (getCountry pagePath)}}Divider />
+        <Comments
+          collectionName={namespace}
+          location={location}
+          facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+        />
       </{{uppercase (getCountry pagePath)}}BlogLayout>
     </>
   )

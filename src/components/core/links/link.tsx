@@ -73,6 +73,7 @@ const developmentMarkStyle = css`
   height: 0;
   border-left: 15px solid transparent;
   border-top: 15px solid #e28de5;
+  pointer-events: none;
 `
 export const DevelopmentMark = () => <span css={developmentMarkStyle} className="development-mark" />
 

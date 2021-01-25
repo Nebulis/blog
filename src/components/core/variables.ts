@@ -9,6 +9,8 @@ export const primaryDarkColor15Darker = "#296e59" // 15% darker than 318269
 export const darkButtonColor = "#343a40"
 export const darkButtonHoverColor = "#23272b"
 
+export const fillMap = "#d4edf5"
+
 /** sizes **/
 export const menuHeight = "35px"
 export const bannerHeight = `calc(100vh / 9.425)`

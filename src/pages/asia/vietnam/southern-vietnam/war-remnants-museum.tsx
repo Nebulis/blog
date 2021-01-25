@@ -145,11 +145,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit1.part5")}</p>
             <ImageAsPortrait
               credit={
-                <>
-                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/saildancer-3004325">
-                    Saildancer
-                  </ExternalLinkNotUnderlined>
-                </>
+                <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/saildancer-3004325">
+                  Saildancer
+                </ExternalLinkNotUnderlined>
               }
             >
               <HoChiMinWarMuseum image="memorial" />
@@ -253,11 +251,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </p>
             <ImageAsPortrait
               credit={
-                <>
-                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/janeb13-725943">
-                    janeb13
-                  </ExternalLinkNotUnderlined>
-                </>
+                <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/janeb13-725943">
+                  janeb13
+                </ExternalLinkNotUnderlined>
               }
             >
               <HoChiMinWarMuseum image="youngChild" />

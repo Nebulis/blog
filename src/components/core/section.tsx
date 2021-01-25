@@ -125,6 +125,10 @@ export const MainTitleSection: FunctionComponent = ({ children }) => {
   return <h1 className="tc ttu flex items-center justify-center">{children}</h1>
 }
 
+export const ImageDescription: FunctionComponent = ({ children }) => {
+  return <p className="tc i">{children}</p>
+}
+
 const homeSubSectionStyle = css`
   padding-left: 200px;
   max-width: calc(${maxWidth}px - 2rem);

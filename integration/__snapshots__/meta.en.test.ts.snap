@@ -192,6 +192,12 @@ exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/index.html correctly 3`] = `"In each article, we answer to your questions: When to go? How many days ? What budget to plan? For each place visited, we try to convey our visit and our feelings as well as possible. We also tell you How to get there? Why ? When? How long and at what period? Without forgetting the addresses and prices."`;
 
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/my-tho/index.html correctly 1`] = `"Away from the hustle and bustle of Ho Chi Minh City, discover the town of Mỹ Tho and take a boat trip to Ben Tre to discover the huge tropical gardens that surround you."`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/my-tho/index.html correctly 2`] = `"Cruise on the Mekong between Mỹ Tho and Ben Tre | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/my-tho/index.html correctly 3`] = `"Ready for a boat trip in Vietnam? In this article, we share our opinion on our visit from Mỹ Tho to Ben Tre, and ideas about what to do on the Mekong River Delta. We also give you advices on how to get there? How many days ? When to go? And where to stay?"`;
+
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/war-remnants-museum/index.html correctly 1`] = `"The War Remnants Museum bears witness to the atrocities of the Indochina War and the Vietnam War and reveals us the ongoing impact on Vietnamese lives."`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/war-remnants-museum/index.html correctly 2`] = `"War Remnants Museum in Ho Chi Minh City | Travel Blog"`;

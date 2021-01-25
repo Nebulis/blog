@@ -1,4 +1,4 @@
-import { adminEmail, contactEmail, createCors, mailgunConfiguration } from "./shared"
+import { adminEmail, contactEmail, createCors, mailgunConfiguration } from "./shared";
 import express from "express";
 import mailgun from "mailgun-js";
 

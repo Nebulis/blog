@@ -32,7 +32,7 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { PageProps } from "gatsby"
 import { useCustomTranslation } from "../../../../i18n"
 import HomeImgUrl from "../../../../images/asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-main.jpg"
-import { buildBookingUrl } from "../../../../utils"
+import { buildBookingSearchUrl, buildBookingUrl, buildTripAdvisorLink } from "../../../../utils"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/cu-chi-tunnels.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/cu-chi-tunnels.json"
@@ -135,7 +135,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how-much.part1")}</p>
           <p>
             {t("how-much.part2")}{" "}
-            <VietnamExternalLink href="https://www.tripadvisor.com/AttractionProductReview-g293925-d11455504-Morning_Cu_Chi_Tunnels_Tour_from_Ho_Chi_Minh_City-Ho_Chi_Minh_City.html">
+            <VietnamExternalLink
+              href={buildTripAdvisorLink(i18n.languageCode)(
+                "AttractionProductReview-g293925-d11455504-Morning_Cu_Chi_Tunnels_Tour_from_Ho_Chi_Minh_City-Ho_Chi_Minh_City.html"
+              )}
+            >
               {t("how-much.part3")}
             </VietnamExternalLink>{" "}
             {t("how-much.part4")}
@@ -151,6 +155,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               {t("where-to-stay.part4")}
             </VietnamExternalLink>{" "}
             {t("where-to-stay.part5")}
+          </p>
+          <p>
+            <VietnamExternalLink
+              href={buildBookingSearchUrl(i18n.languageCode)(
+                "H%C3%B4-Chi-Minh-Ville%2C+H%C3%B4-Chi-Minh-Ville%2C+Vietnam"
+              )}
+            >
+              {t("where-to-stay.part6")}
+            </VietnamExternalLink>
           </p>
         </WhereToStay>
         <Visit title={t("common:section.visit")}>
