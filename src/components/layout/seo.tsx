@@ -129,6 +129,7 @@ const SEO: FunctionComponent<SEOProps> = ({
         },
         { name: "twitter:image", content: `${metaImage}` },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "p:domain_verify", content: "107b7224979c7f379a91649fdca0813b" },
       ].concat(meta)}
     />
   )
