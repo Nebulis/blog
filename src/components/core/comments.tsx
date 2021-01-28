@@ -102,6 +102,7 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
   facebookQuote,
 }) => {
   const [comments, setComments] = useState<CommentProp[]>([])
+  const [numberOfComments, setNumberOfComments] = useState(0)
   const [likes, setLikes] = useState(0)
   const [localLikes, setLocalLikes] = useLocalStorage<string[]>("likes", [])
   const [commentToEdit, setCommentToEdit] = useState("")
@@ -157,6 +158,7 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
           }
         })
         setComments(transformedComments)
+        setNumberOfComments(commentsAsArray.length)
       } else {
         setComments([])
       }
@@ -273,10 +275,12 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
       ) : (
         <>
           <div className="flex justify-center">
-            <span className="br bw1 pr2 mr2">
-              {comments.length} {t("comments.comment")}
-              {comments.length > 1 ? "s" : ""}
-            </span>
+            <a href="#comments">
+              <span className="br bw1 pr2 mr2">
+                {numberOfComments} {t("comments.comment")}
+                {numberOfComments > 1 ? "s" : ""}
+              </span>
+            </a>
             <span className="inline-flex br bw1 pr2 mr2">
               {!localLikes.includes(collectionName) ? (
                 <span className="pointer inline-flex" onClick={like}>
@@ -330,18 +334,20 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
               </a>
             </span>
           </div>
-          {comments.map((comment, index) => (
-            <Comment
-              key={comment.id}
-              {...comment}
-              commentToEdit={commentToEdit}
-              setCommentToEdit={setCommentToEdit}
-              depth={0}
-              index={index}
-              isLast={index === comments.length}
-              onSubmit={onSubmit}
-            />
-          ))}
+          <div id="comments">
+            {comments.map((comment, index) => (
+              <Comment
+                key={comment.id}
+                {...comment}
+                commentToEdit={commentToEdit}
+                setCommentToEdit={setCommentToEdit}
+                depth={0}
+                index={index}
+                isLast={index === comments.length}
+                onSubmit={onSubmit}
+              />
+            ))}
+          </div>
           <hr />
           {!commentToEdit && <CommentForm deepForm={false} onSubmit={onSubmit} />}
           {commentStatus === "SUCCESS" && <SuccessAlert>{t("comments.comment-posted")}</SuccessAlert>}
