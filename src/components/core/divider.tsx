@@ -1,7 +1,11 @@
 import styled from "@emotion/styled"
 import { primaryColor } from "./variables"
+import React, { FunctionComponent, BaseHTMLAttributes } from "react"
 
-export const Divider = styled.hr`
+const Hr: FunctionComponent<BaseHTMLAttributes<any>> = ({ className, ...props }) => (
+  <hr className={`divider ${className}`} {...props} />
+)
+export const Divider = styled(Hr)`
   color: black;
   height: 2px;
   width: 72px;

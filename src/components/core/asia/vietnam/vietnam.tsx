@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react"
-import { Divider } from "../../divider"
 import styled from "@emotion/styled"
 import { vietnamPrimaryColor, vietnamPrimaryColorDarker } from "./vietnam.colors"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
@@ -56,6 +55,9 @@ const vietnamLayout = `
     border-color: ${vietnamPrimaryColorDarker};
     color: white;
   }
+  .divider {
+    background-color: ${vietnamPrimaryColor};
+  }
   
   .comments .active svg {
     color: ${vietnamPrimaryColor};
@@ -85,9 +87,6 @@ export const VietnamTitle = styled(Title)`
   }
 `
 
-export const VietnamDivider = styled(Divider)`
-  background-color: ${vietnamPrimaryColor};
-`
 // the color has been picked from the hat images and is not derived from the primary color or other
 export const VietnamImageAsMedallion = styled(ImageAsMedallion)`
   &.mobile,

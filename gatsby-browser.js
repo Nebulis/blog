@@ -1,6 +1,7 @@
 import React from "react"
 import { Application } from "./src/components/application"
 import { MenuProvider } from "./src/components/layout/menu.context"
+import { PinterestProvider } from "./src/components/layout/pinterest.context"
 const tooltipPortal = document.createElement("div")
 tooltipPortal.id = "tooltip-portal"
 const dialogPortal = document.createElement("div")
@@ -16,7 +17,9 @@ document.body.appendChild(dialogPortal)
 export const wrapPageElement = ({ element, props }) => {
   return (
     <Application {...props}>
-      <MenuProvider>{element}</MenuProvider>
+      <MenuProvider>
+        <PinterestProvider>{element}</PinterestProvider>
+      </MenuProvider>
     </Application>
   )
 }

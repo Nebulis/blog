@@ -1,6 +1,7 @@
 import { Application } from "./src/components/application"
 import React from "react"
 import { MenuProvider } from "./src/components/layout/menu.context"
+import { PinterestProvider } from "./src/components/layout/pinterest.context"
 
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
@@ -13,7 +14,9 @@ import { MenuProvider } from "./src/components/layout/menu.context"
 export const wrapPageElement = ({ element, props }) => {
   return (
     <Application {...props}>
-      <MenuProvider>{element}</MenuProvider>
+      <MenuProvider>
+        <PinterestProvider>{element}</PinterestProvider>
+      </MenuProvider>
     </Application>
   )
 }

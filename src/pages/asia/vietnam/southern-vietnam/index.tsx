@@ -4,7 +4,6 @@ import vietnamHat from "../../../../images/asia/vietnam/hat.svg"
 import {
   VietnamBlogLayout,
   VietnamButtonLink,
-  VietnamDivider,
   VietnamImageAsMedallion,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import { CityHomeSection, MainTitleSection, SectionContent } from "../../../../components/core/section"
@@ -36,6 +35,7 @@ import { TitleImage } from "../../../../components/images/layout"
 import { jsx } from "@emotion/core"
 import { SharedVietnamImages } from "../../../../components/images/asia/vietnam/shared-vietnam-images"
 import { PageQuote } from "../../../../components/core/quote"
+import { Divider } from "../../../../components/core/divider"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -71,7 +71,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           &nbsp;{t("title")}&nbsp;
           <TitleImage src={vietnamHat} alt="vietnam hat" />
         </MainTitleSection>
-        <VietnamDivider />
+        <Divider />
         <SectionContent>
           <PageQuote>{t("introduction.section1")}</PageQuote>
           <PageQuote position="none">{t("introduction.section2")}</PageQuote>
@@ -79,14 +79,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote position="none">{t("introduction.section4")}</PageQuote>
           <PageQuote position="none">{t("introduction.section5")}</PageQuote>
         </SectionContent>
-        <VietnamDivider />
+        <Divider />
         <CityHomeSection>{t("section1")}</CityHomeSection>
         <MainCardContainer>
           <SouthVietnamCard />
         </MainCardContainer>
         {highlights.length > 0 && (
           <>
-            <VietnamDivider className="mt2" />
+            <Divider className="mt2" />
             <CityHomeSection>{t("section2")}</CityHomeSection>
             <CityArticleContainer>
               {highlights.map(({ card: Card, id }) => (
@@ -97,7 +97,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         {cities.length > 0 && (
           <>
-            <VietnamDivider className="mt2" />
+            <Divider className="mt2" />
             <CityHomeSection>{t("section3")}</CityHomeSection>
             <MedallionContainer>
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
@@ -114,7 +114,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         {displayAllArticles && (
           <>
-            <VietnamDivider className="mt2" />
+            <Divider className="mt2" />
             <GoToAllArticlesContainer>
               <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
             </GoToAllArticlesContainer>
