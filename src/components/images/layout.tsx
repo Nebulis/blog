@@ -1,10 +1,12 @@
-import React, { FunctionComponent, HTMLAttributes, useContext } from "react"
+import React, { FunctionComponent, HTMLAttributes, useContext, useState } from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { cloneElement } from "../core/cloneElement"
 import { mediumEnd, mediumStart, mobileEnd, primaryColor, smallEnd, smallStart } from "../core/variables"
 import { MenuContext } from "../layout/menu.context"
+import { buildCurrentSharedUrl, buildPinterestUrl, buildSharedUrl } from "../../utils"
+import { PageProps } from "gatsby"
 
 const creditStyle = css`
   .credit {
@@ -16,6 +18,41 @@ const creditStyle = css`
     line-height: initial;
     color: white;
     font-size: 0.6rem;
+  }
+`
+const margin = css`
+  @media (max-width: ${mobileEnd}) {
+    flex-direction: row;
+  }
+  & > *:not(:last-of-type) {
+    margin-right: 0.725rem;
+  }
+  & > *:not(:first-of-type) {
+    margin-left: 0.725rem;
+  }
+  @media (max-width: ${mobileEnd}) {
+    & > *:not(:last-of-type) {
+      margin-right: 5px;
+    }
+    & > *:not(:first-of-type) {
+      margin-left: 5px;
+    }
+  }
+  @media (min-width: ${smallStart}) and (max-width: ${smallEnd}) {
+    & > *:not(:last-of-type) {
+      margin-right: 7.5px;
+    }
+    & > *:not(:first-of-type) {
+      margin-left: 7.5px;
+    }
+  }
+  @media (min-width: ${mediumStart}) and (max-width: ${mediumEnd}) {
+    & > *:not(:last-of-type) {
+      margin-right: 10px;
+    }
+    & > *:not(:first-of-type) {
+      margin-left: 10px;
+    }
   }
 `
 
@@ -95,6 +132,124 @@ export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any> & { credit?:
   </div>
 )
 
+const pinterestImageStyle = css`
+  ${margin}
+  margin-bottom: 1.3rem;
+  > div {
+    width: 100%;
+    max-width: 350px;
+  }
+  .gatsby-image-wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .pin {
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    padding: 2px 0.75rem;
+    background-color: lightgray;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
+  > div:hover .overlay,
+  > div.active .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.15;
+    z-index: 5;
+    pointer-events: none;
+  }
+  > div.active .pin,
+  > div:hover .pin {
+    opacity: 0.9;
+  }
+  @media (max-width: ${mobileEnd}) {
+    flex-direction: column;
+    align-items: center;
+    > div {
+      margin: 0;
+    }
+    > div:not(:first-of-type) {
+      margin-left: 0;
+    }
+    > div:not(:last-of-type) {
+      margin-bottom: 1.3rem;
+      margin-right: 0;
+    }
+  }
+`
+interface PinterestImageElementProps {
+  selectedPin: string
+  onSelectPin: (pin: string) => void
+  location: PageProps["location"]
+  description: string
+}
+const PinterestImageElement: FunctionComponent<PinterestImageElementProps> = ({
+  children,
+  selectedPin,
+  onSelectPin,
+  location,
+  description,
+}) => {
+  const [path, setPath] = useState("")
+
+  const url = buildPinterestUrl({
+    url: buildCurrentSharedUrl(location),
+    description,
+    media: buildSharedUrl(location, path),
+  })
+  if (!React.isValidElement(children)) return null
+  return (
+    <div
+      className={`relative ${children.props.image === selectedPin ? "active" : ""}`}
+      onClick={(event) => {
+        event.stopPropagation()
+        onSelectPin(children.props.image)
+      }}
+    >
+      <div className="overlay" />
+      <a className="absolute z-index ttu pin" href={url} target="_blank" rel="noopener noreferrer">
+        Pin
+      </a>
+      {cloneElement(children, {
+        onLoad: setPath,
+      })}
+    </div>
+  )
+}
+
+export const PinterestImage: FunctionComponent<HTMLAttributes<any> & PinterestImageElementProps> = ({
+  children,
+  className,
+  selectedPin,
+  onSelectPin,
+  location,
+  description,
+}) => {
+  return (
+    <div css={pinterestImageStyle} className={`${className} flex relative justify-center`}>
+      {React.Children.map(children, (child, index) => {
+        return (
+          <PinterestImageElement
+            key={index}
+            selectedPin={selectedPin}
+            onSelectPin={onSelectPin}
+            location={location}
+            description={description}
+          >
+            {child}
+          </PinterestImageElement>
+        )
+      })}
+    </div>
+  )
+}
+
 const imageAsLandscapeStyle = css`
   .gatsby-image-wrapper {
     width: 100%;
@@ -115,39 +270,6 @@ export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any> & { credit?
 export const MainImageAsLandscape = styled(ImageAsLandscape)`
   .gatsby-image-wrapper {
     margin-top: 0;
-  }
-`
-
-const margin = css`
-  & .left-panel {
-    margin-right: 0.725rem;
-  }
-  & .right-panel {
-    margin-left: 0.725rem;
-  }
-  @media (max-width: ${mobileEnd}) {
-    & .left-panel {
-      margin-right: 5px;
-    }
-    & .right-panel {
-      margin-left: 5px;
-    }
-  }
-  @media (min-width: ${smallStart}) and (max-width: ${smallEnd}) {
-    & .left-panel {
-      margin-right: 7.5px;
-    }
-    & .right-panel {
-      margin-left: 7.5px;
-    }
-  }
-  @media (min-width: ${mediumStart}) and (max-width: ${mediumEnd}) {
-    & .left-panel {
-      margin-right: 10px;
-    }
-    & .right-panel {
-      margin-left: 10px;
-    }
   }
 `
 

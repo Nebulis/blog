@@ -22,16 +22,26 @@ import { Status } from "../../types/shared"
 import { ErrorAlert, SuccessAlert } from "./alert"
 import { subscribe } from "../../services/newsletter"
 import { useCustomTranslation } from "../../i18n"
-import { capitalize, getHostname, pinterest, twitter } from "../../utils"
+import {
+  buildCurrentSharedUrl,
+  capitalize,
+  twitter,
+  pinterest as pinterestHandle,
+  buildPinterestUrl,
+} from "../../utils"
 import { PageProps } from "gatsby"
 import { useLocalStorage } from "../../use-local-storage"
 import { ApplicationContext } from "../application"
+import { Divider } from "./divider"
+import { PinterestImage } from "../images/layout"
+import { PinterestContext } from "../layout/pinterest.context"
 
 interface CommentsProps {
   collectionName: string
   facebookQuote: string
   className?: string
   location: PageProps["location"]
+  pinterest?: { description: string; nodes: React.ReactNode[] }
 }
 
 interface CommentType {
@@ -87,19 +97,16 @@ const transformPath = (path: string): string => path.replace(/\//g, "__")
 
 const commentsStyle = css`
   font-size: 0.9rem;
-`
-export const Comments: FunctionComponent<CommentsProps> = (props) => {
-  const { displayComments } = useContext(ApplicationContext)
-  if (displayComments) {
-    return <InnerComments {...props} />
+  .comments-social-network {
+    margin-bottom: calc(1.45rem - 1px);
   }
-  return <div className="tc mb3">No comments in development</div>
-}
-const InnerComments: FunctionComponent<CommentsProps> = ({
+`
+export const Comments: FunctionComponent<CommentsProps> = ({
   collectionName,
   className = "",
   location,
   facebookQuote,
+  pinterest,
 }) => {
   const [comments, setComments] = useState<CommentProp[]>([])
   const [numberOfComments, setNumberOfComments] = useState(0)
@@ -107,6 +114,8 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
   const [localLikes, setLocalLikes] = useLocalStorage<string[]>("likes", [])
   const [commentToEdit, setCommentToEdit] = useState("")
   const [scrollToAnchor, setScrollToAnchor] = useState(true)
+  const { displayComments } = useContext(ApplicationContext)
+  const { setSelectedPin, selectedPin } = useContext(PinterestContext)
   // set as loading, as we directly load the comments. otherwise we quickly display the comments before showing the loading message
   const [status, setStatus] = useState<Status>("LOADING")
   const [commentStatus, setCommentStatus] = useState<Status>("INITIAL")
@@ -135,6 +144,11 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
   }, [commentStatus, newsletterStatus])
 
   useEffect(() => {
+    // dont'run in development
+    if (!displayComments) {
+      setStatus("SUCCESS")
+      return
+    }
     const reference = database.ref(`comments/${transformPath(collectionName)}`)
     setStatus("LOADING")
 
@@ -168,9 +182,13 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
     return () => {
       reference.off()
     }
-  }, [collectionName])
+  }, [collectionName, displayComments])
 
   useEffect(() => {
+    // dont'run in development
+    if (!displayComments) {
+      return
+    }
     const reference = database.ref(`likes/${transformPath(collectionName)}`)
 
     reference.on("value", (snapshot) => {
@@ -179,7 +197,7 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
         setLikes(likes)
       }
     })
-  }, [collectionName])
+  }, [collectionName, displayComments])
 
   const onSubmit: (comment: CommentFormType & { id?: string }) => Promise<any> = ({
     name,
@@ -260,80 +278,99 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
     }
   }, [comments, scrollToAnchor])
 
-  const url = `${getHostname(location)}${location.pathname}`
-  const sharedUrl = encodeURI(url)
+  const sharedUrl = buildCurrentSharedUrl(location)
   const description = t("comments.shared-description", { handle: `@${twitter}` })
-  const descriptionPinterest = t("comments.shared-description", { handle: `@${pinterest}` })
+  const descriptionPinterest = t("comments.shared-description", { handle: `@${pinterestHandle}` })
   const hashtags = t("comments.hashtags")
   return (
     <div className={`${className} comments`} css={commentsStyle}>
-      {status === "LOADING" ? (
-        <div className="flex flex-column justify-center items-center mb3 f4">
-          {t("comments.loading")}
-          <FaSpinner className="fa-spin" />
-        </div>
-      ) : (
-        <>
-          <div className="flex justify-center">
-            <a href="#comments">
-              <span className="br bw1 pr2 mr2">
-                {numberOfComments} {t("comments.comment")}
-                {numberOfComments > 1 ? "s" : ""}
+      <>
+        <div className="flex justify-center mb3 comments-social-network">
+          <a href="#comments">
+            <span className="br bw1 pr2 mr2">
+              {numberOfComments} {t("comments.comment")}
+              {numberOfComments > 1 ? "s" : ""}
+            </span>
+          </a>
+          <span className="inline-flex br bw1 pr2 mr2">
+            {!localLikes.includes(collectionName) ? (
+              <span className="pointer inline-flex" onClick={like}>
+                {t("comments.like")}&nbsp;
+                <FaHeart className="likes" />
               </span>
+            ) : (
+              <span className="pointer inline-flex" onClick={unlike}>
+                {likes}&nbsp;
+                <FaHeart className="likes" />
+              </span>
+            )}
+          </span>
+          <span className="inline-flex">
+            {t("comments.share")}&nbsp;
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}&quote=${encodeURI(facebookQuote)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-labelledby="facebook-label-comment"
+              className="inline-flex mr1"
+            >
+              <span id="facebook-label-comment" hidden>
+                Share on Facebook
+              </span>
+              <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
             </a>
-            <span className="inline-flex br bw1 pr2 mr2">
-              {!localLikes.includes(collectionName) ? (
-                <span className="pointer inline-flex" onClick={like}>
-                  {t("comments.like")}&nbsp;
-                  <FaHeart className="likes" />
-                </span>
-              ) : (
-                <span className="pointer inline-flex" onClick={unlike}>
-                  {likes}&nbsp;
-                  <FaHeart className="likes" />
-                </span>
-              )}
-            </span>
-            <span className="inline-flex">
-              {t("comments.share")}&nbsp;
-              <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}&quote=${encodeURI(facebookQuote)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="facebook-label-comment"
-                className="inline-flex mr1"
-              >
-                <span id="facebook-label-comment" hidden>
-                  Share on Facebook
-                </span>
-                <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
-              </a>
-              <a
-                href={`https://twitter.com/intent/tweet?text=${description}&url=${sharedUrl}&hashtags=${hashtags}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="twitter-label-comment"
-                className="inline-flex mr1"
-              >
-                <span id="twitter-label-comment" hidden>
-                  Share on Twitter
-                </span>
-                <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
-              </a>
-              <a
-                href={`https://pinterest.com/pin/create/button/?url=${sharedUrl}&description=${descriptionPinterest}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="pinterest-label-comment"
-                className="inline-flex"
-              >
-                <span id="pinterest-label-comment" hidden>
-                  Share on Pinterest
-                </span>
-                <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
-              </a>
-            </span>
+            <a
+              href={`https://twitter.com/intent/tweet?text=${description}&url=${sharedUrl}&hashtags=${hashtags}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-labelledby="twitter-label-comment"
+              className="inline-flex mr1"
+            >
+              <span id="twitter-label-comment" hidden>
+                Share on Twitter
+              </span>
+              <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
+            </a>
+            <a
+              href={buildPinterestUrl({
+                url: sharedUrl,
+                description: pinterest?.description ?? descriptionPinterest,
+              })}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-labelledby="pinterest-label-comment"
+              className="inline-flex"
+            >
+              <span id="pinterest-label-comment" hidden>
+                Share on Pinterest
+              </span>
+              <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
+            </a>
+          </span>
+        </div>
+        {pinterest ? (
+          <>
+            <Divider />
+            <PinterestImage
+              location={location}
+              selectedPin={selectedPin}
+              onSelectPin={(p) => {
+                setSelectedPin(p)
+              }}
+              description={pinterest.description}
+            >
+              {pinterest.nodes}
+            </PinterestImage>
+            <Divider />
+          </>
+        ) : null}
+
+        {status === "LOADING" ? (
+          <div className="flex flex-column justify-center items-center mb3 f4">
+            {t("comments.loading")}
+            <FaSpinner className="fa-spin" />
           </div>
+        ) : (
           <div id="comments">
             {comments.map((comment, index) => (
               <Comment
@@ -348,14 +385,14 @@ const InnerComments: FunctionComponent<CommentsProps> = ({
               />
             ))}
           </div>
-          <hr />
-          {!commentToEdit && <CommentForm deepForm={false} onSubmit={onSubmit} />}
-          {commentStatus === "SUCCESS" && <SuccessAlert>{t("comments.comment-posted")}</SuccessAlert>}
-          {newsletterStatus === "SUCCESS" && <SuccessAlert>{t("comments.newsletter-subscribed")}</SuccessAlert>}
-          {commentStatus === "ERROR" && <ErrorAlert>{t("comments.comment-failed")}</ErrorAlert>}
-          {newsletterStatus === "ERROR" && <ErrorAlert>{t("comments.newsletter-failed")}</ErrorAlert>}
-        </>
-      )}
+        )}
+        <hr />
+        {!commentToEdit && <CommentForm deepForm={false} onSubmit={onSubmit} />}
+        {commentStatus === "SUCCESS" && <SuccessAlert>{t("comments.comment-posted")}</SuccessAlert>}
+        {newsletterStatus === "SUCCESS" && <SuccessAlert>{t("comments.newsletter-subscribed")}</SuccessAlert>}
+        {commentStatus === "ERROR" && <ErrorAlert>{t("comments.comment-failed")}</ErrorAlert>}
+        {newsletterStatus === "ERROR" && <ErrorAlert>{t("comments.newsletter-failed")}</ErrorAlert>}
+      </>
     </div>
   )
 }

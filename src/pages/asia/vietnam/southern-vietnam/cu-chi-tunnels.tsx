@@ -2,7 +2,6 @@ import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
 import {
   VietnamBlogLayout,
-  VietnamDivider,
   VietnamExternalLink,
   VietnamHeadline,
   VietnamLink,
@@ -41,6 +40,7 @@ import { CuChiTunnelsImages } from "../../../../components/images/asia/vietnam/s
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
+import { Divider } from "../../../../components/core/divider"
 
 const namespace = "asia/vietnam/southern-vietnam/cu-chi-tunnels"
 const id = "cu-chi-tunnels"
@@ -79,9 +79,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SharedCardVietnamImages image="cuChiTunnelsMain" />
         </MainImageAsLandscape>
         <VietnamQuote>{description}</VietnamQuote>
-        <VietnamDivider />
+        <Divider />
         <Introduction>{googleDescription}</Introduction>
-        <VietnamDivider />
+        <Divider />
         <When>
           <p>{t("when.part1")}</p>
         </When>
@@ -173,10 +173,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("visit.part4")}</p>
           <p>{t("visit.part5")}</p>
         </Visit>
-        <VietnamDivider />
+        <Divider />
         <section>
           <VietnamHeadline>{t("visit1.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit1.part1")}</p>
             <p>{t("visit1.part2")}</p>
@@ -185,10 +185,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit1.part5")}</p>
           </SectionContent>
         </section>
-        <VietnamDivider />
+        <Divider />
         <section>
           <VietnamHeadline>{t("visit2.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <GroupOfImages>
               <TwoImagesSameSizeOrToGroup>
@@ -219,10 +219,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </GroupOfImages>
           </SectionContent>
         </section>
-        <VietnamDivider />
+        <Divider />
         <section>
           <VietnamHeadline>{t("visit3.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit3.part1")}</p>
             <p>{t("visit3.part2")}</p>
@@ -271,10 +271,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit3.part15")}</p>
           </SectionContent>
         </section>
-        <VietnamDivider />
+        <Divider />
         <section>
           <VietnamHeadline>{t("visit4.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit4.part1")}</p>
             <p>{t("visit4.part2")}</p>
@@ -296,10 +296,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </GroupOfImages>
           </SectionContent>
         </section>
-        <VietnamDivider />
+        <Divider />
         <section>
           <VietnamHeadline>{t("visit5.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit5.part1")}</p>
             <p>{t("visit5.part2")}</p>
@@ -322,10 +322,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </p>
           </SectionContent>
         </section>
-        <VietnamDivider />
+        <Divider />
         <section>
           <VietnamHeadline>{t("visit6.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit6.part1")}</p>
             <p>{t("visit6.part2")}</p>

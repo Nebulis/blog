@@ -18,6 +18,7 @@ export type ExtraImageProps = {
   fluidObject?: Partial<FluidObject>
   imgStyle?: object
   css?: InterpolationWithTheme<any>
+  onLoad?: (path: string) => void
 }
 
 export type ExtraImageLinkProps = ExtraImageProps & {

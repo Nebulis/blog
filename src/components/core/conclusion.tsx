@@ -11,6 +11,7 @@ export const Conclusion: FunctionComponent = ({ children }) => (
       margin-bottom: 1.45rem;
       ul,
       li {
+        margin-left: 0;
         list-style-type: none;
       }
     `}

@@ -9,7 +9,6 @@ import vietnamHat from "../../../images/asia/vietnam/hat.svg"
 import {
   VietnamBlogLayout,
   VietnamButtonLink,
-  VietnamDivider,
   VietnamImageAsMedallion,
 } from "../../../components/core/asia/vietnam/vietnam"
 import { SouthVietnamCard } from "../../../components/core/asia/vietnam/vietnam.cards"
@@ -30,6 +29,7 @@ import i18n from "i18next"
 import asiaIndexFr from "../../../locales/fr/asia/vietnam/index.json"
 import asiaIndexEn from "../../../locales/en/asia/vietnam/index.json"
 import { PageQuote } from "../../../components/core/quote"
+import { Divider } from "../../../components/core/divider"
 
 const namespace = "asia/vietnam/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
@@ -51,14 +51,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           &nbsp;{country}&nbsp;
           <TitleImage src={vietnamHat} alt="vietnam hat" />
         </MainTitleSection>
-        <VietnamDivider />
+        <Divider />
         <SectionContent>
           <PageQuote>{t("introduction.section1")}</PageQuote>
           <PageQuote position="none">{t("introduction.section2")}</PageQuote>
         </SectionContent>
         {false && (
           <>
-            <VietnamDivider />
+            <Divider />
             <HomeSection>{t("common:travel.title")}</HomeSection>
             <HomeSubSection>{t("common:travel.subtitle")}</HomeSubSection>
             <MainCardContainer>
@@ -68,7 +68,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         {cities.length > 0 && (
           <>
-            <VietnamDivider />
+            <Divider />
             <HomeSection>{t("common:tour.title")}</HomeSection>
             <HomeSubSection>{t("common:tour.subtitle")}</HomeSubSection>
             <MedallionContainer>
@@ -86,7 +86,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         {articles.length > 0 && (
           <>
-            <VietnamDivider />
+            <Divider />
             <HomeSection>{t("common:inform.title")}</HomeSection>
             <HomeSubSection>{t("common:inform.subtitle")}</HomeSubSection>
             <ArticlesContainer>
@@ -98,7 +98,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         {displayAllArticles && (
           <>
-            <VietnamDivider />
+            <Divider />
             <GoToAllArticlesContainer>
               <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
             </GoToAllArticlesContainer>

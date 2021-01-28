@@ -2,6 +2,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import * as React from "react"
 import { ExtraImageProps } from "../../../../..//types/shared"
+import { useEffect } from "react"
 
 const alt = {
   vinhTrang1: "Vinh Trang Pagoda",
@@ -38,6 +39,10 @@ const alt = {
   sculpture1: "Monkey Sculpture",
   sculpture2: "Elephant Sculpture",
   sugarcane: "Sugarcane Juice",
+  cardFr1: "Pinterest card",
+  cardFr2: "Pinterest card",
+  cardEn1: "Pinterest card",
+  cardEn2: "Pinterest card",
 }
 
 export const MyThoImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
@@ -45,6 +50,7 @@ export const MyThoImages: React.FunctionComponent<ExtraImageProps & { image: key
   image,
   fluidObject = {},
   imgStyle = {},
+  onLoad,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -286,8 +292,40 @@ export const MyThoImages: React.FunctionComponent<ExtraImageProps & { image: key
           }
         }
       }
+      cardFr1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/card-fr1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardFr2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/card-fr2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/card-en1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/card-en2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
+  useEffect(() => {
+    if (onLoad) onLoad(data[image].childImageSharp.fluid.src)
+  }, [data, image, onLoad])
+
   return (
     <Img
       fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }}

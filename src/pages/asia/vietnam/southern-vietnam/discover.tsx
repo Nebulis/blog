@@ -2,7 +2,6 @@ import React from "react"
 import SEO from "../../../../components/layout/seo"
 import {
   VietnamBlogLayout,
-  VietnamDivider,
   VietnamHeadline,
   VietnamQuote,
   VietnamTitle,
@@ -42,6 +41,7 @@ import { Comments } from "../../../../components/core/comments"
 import { SouthernVietnam } from "../../../../components/images/asia/vietnam/southern-vietnam/southern-vietnam"
 import { MapContainer } from "../../../../components/layout/layout"
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
+import { Divider } from "../../../../components/core/divider"
 
 const namespace = "asia/vietnam/southern-vietnam/discover"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -68,7 +68,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SharedCardVietnamImages image="discoverSouthernVietnam" />
         </MainImageAsLandscape>
         <VietnamQuote>{description}</VietnamQuote>
-        <VietnamDivider />
+        <Divider />
         <Introduction>{googleDescription}</Introduction>
         <WhatTimeOfYear>
           <p>{t("what-time-of-year.part1")}</p>
@@ -100,10 +100,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("visit.part1")}</p>
           <p>{t("visit.part2")}</p>
         </Visit>
-        <VietnamDivider />
+        <Divider />
         <section>
           <VietnamHeadline>{t("visit1.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit1.part1")}</p>
             <p>{t("visit1.part2")}</p>
@@ -113,7 +113,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <WarMuseumCard card={{ showTags: false, showPublished: false, showMore: true }} />
             </article>
           </SectionContent>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit1.part5")}</p>
             <p>{t("visit1.part6")}</p>
@@ -122,10 +122,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </article>
           </SectionContent>
         </section>
-        <VietnamDivider />
+        <Divider />
         <section>
           <VietnamHeadline>{t("visit2.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit2.part1")}</p>
             <p>{t("visit2.part2")}</p>
@@ -150,10 +150,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ImageAsLandscape>
           </SectionContent>
         </section>
-        <VietnamDivider />
+        <Divider />
         <section>
           <VietnamHeadline>{t("visit3.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit3.part1")}</p>
             <p>{t("visit3.part2")}</p>
@@ -162,7 +162,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <article>
             <MyThoCard card={{ showTags: false, showPublished: false, showMore: true }} />
           </article>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit3.part4")}</p>
             <p>{t("visit3.part5")}</p>
@@ -171,17 +171,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <CanThoCard card={{ showTags: false, showPublished: false, showMore: true }} />
           </article>
         </section>
-        <VietnamDivider />
+        <Divider />
         <section>
           <VietnamHeadline>{t("visit4.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <Divider />
           <SectionContent>
             <p>{t("visit4.part1")}</p>
             <p>{t("visit4.part2")}</p>
             <p>{t("visit4.part3")}</p>
           </SectionContent>
         </section>
-        <VietnamDivider />
+        <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>
@@ -189,7 +189,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question2")}</li>
           </ul>
         </Conclusion>
-        <VietnamDivider />
+        <Divider />
         <Comments
           collectionName={namespace}
           location={location}

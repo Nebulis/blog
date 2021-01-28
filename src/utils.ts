@@ -28,3 +28,25 @@ export const buildGetYourGuideLink = (lang: Lang) => (slug = "") =>
   `https://www.getyourguide.${lang === "fr" ? "fr" : "com"}/${slug}`
 export const buildTripAdvisorLink = (lang: Lang) => (slug = "") =>
   `https://www.tripadvisor.${lang === "fr" ? "fr" : "com"}/${slug}`
+
+export const buildPinterestUrl = ({
+  url,
+  description,
+  media,
+}: {
+  url: string
+  description: string
+  media?: string
+}) => {
+  return `https://pinterest.com/pin/create/bookmarklet/?url=${url}&description=${description}${
+    media ? `&media=${media}` : ""
+  }&isVideo=false`
+}
+
+export const buildSharedUrl = (location: PageProps["location"], path = "") => {
+  const url = `${getHostname(location)}${path}`
+  return encodeURI(url)
+}
+export const buildCurrentSharedUrl = (location: PageProps["location"]) => {
+  return buildSharedUrl(location, location.pathname)
+}

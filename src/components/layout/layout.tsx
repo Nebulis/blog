@@ -26,6 +26,7 @@ import { Status } from "../../types/shared"
 import { useCustomTranslation } from "../../i18n"
 import { subscribe } from "../../services/newsletter"
 import { navigate, PageProps } from "gatsby"
+import { PinterestContext } from "./pinterest.context"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -95,6 +96,7 @@ export const IndexBlogLayout: FunctionComponent<{
 }> = ({ children, page, className = "", noStickyHeader = false, draw, location }) => {
   const isPublished = page === "home" ? true : getLink(page).published
   const { initialDevelopmentValue, development } = useContext(ApplicationContext)
+  const { setSelectedPin } = useContext(PinterestContext)
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
   const { t } = useCustomTranslation("common")
@@ -122,7 +124,7 @@ export const IndexBlogLayout: FunctionComponent<{
     }
   }, [status])
   return typeof window !== `undefined` ? (
-    <div className={`${className} flex flex-column min-vh-100`}>
+    <div className={`${className} flex flex-column min-vh-100`} onClick={() => setSelectedPin("")}>
       {development && !isPublished && <PageDevelopmentMark />}
       <Header noStickyHeader={noStickyHeader} location={location} />
       <ScrollToTop />
