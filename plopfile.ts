@@ -48,6 +48,10 @@ export default function (plop: NodePlopAPI) {
   plop.setHelper("getCountry", function (text: string) {
     return text.split("/")[1]
   })
+  plop.setHelper("getId", function (text: string) {
+    const parts = text.split("/")
+    return parts[parts.length - 1]
+  })
   plop.setHelper("getComponentImageName", function (text: string) {
     const parts = text.split("/")
     const unformattedName = parts[parts.length - 1]

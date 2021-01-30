@@ -1,6 +1,5 @@
 import React from "react"
-import { defaultTextStyle, mapProps, mapStyle, PinPoint, propsFor } from "../../map"
-import { vietnamPrimaryColorDarker } from "./vietnam.colors"
+import { defaultTextStyle, mapProps, mapStyle, PinPoint } from "../../map"
 import { css } from "@emotion/core"
 import { smallStart } from "../../variables"
 import { useCustomTranslation } from "../../../../i18n"
@@ -14,13 +13,6 @@ const basicTextStyle = css`
     text {
       font-size: 30px;
     }
-  }
-`
-const hoveredTextStyle = css`
-  ${basicTextStyle}
-  cursor: pointer;
-  &:hover {
-    fill: ${vietnamPrimaryColorDarker};
   }
 `
 export const SouthVietnamMap = () => {

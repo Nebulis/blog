@@ -23,11 +23,27 @@ export const buildBookingUrl = (lang: Lang) => (hotel: string) => `https://www.b
 export const buildBookingSearchUrl = (lang: Lang) => (part: string) =>
   `https://www.booking.com/searchresults.${lang}.html?ss=${part}`
 
-export const buildBaolauLink = (lang: Lang) => `https://www.baolau.com/${lang}/`
+// https://booking.baolau.com/fr/results/?transports=&origin=Ho+Chi+Minh&destination=Can+Tho
+
+const regexReplaceSpace = / /g
+export const buildBaolauLink = (lang: Lang) => ({ destination, origin }: { destination: string; origin: string }) =>
+  `https://www.baolau.com/${lang}/results/?origin=${origin.replace(
+    regexReplaceSpace,
+    "+"
+  )}&destination=${destination.replace(regexReplaceSpace, "+")}`
 export const buildGetYourGuideLink = (lang: Lang) => (slug = "") =>
   `https://www.getyourguide.${lang === "fr" ? "fr" : "com"}/${slug}`
 export const buildTripAdvisorLink = (lang: Lang) => (slug = "") =>
   `https://www.tripadvisor.${lang === "fr" ? "fr" : "com"}/${slug}`
+export const buildExpediaUrl = (lang: Lang) => (slug: string) => {
+  const date = new Date()
+  date.setDate(date.getDate() + 15)
+  return `https://www.expedia.${lang === "fr" ? "fr" : "com"}/Flights-Search?leg1=${slug}%29%2Cdeparture%3A${
+    lang === "fr" ? date.getDate() : date.getMonth() + 1
+  }%2F${
+    lang === "fr" ? date.getMonth() + 1 : date.getDate()
+  }%2F${date.getFullYear()}TANYT&mode=search&options=carrier%3A%2A%2Ccabinclass%3A%2Cmaxhops%3A1%2Cnopenalty%3AN&pageId=0&passengers=adults%3A1%2Cchildren%3A0%2Cinfantinlap%3AN&trip=oneway`
+}
 
 export const buildPinterestUrl = ({
   url,

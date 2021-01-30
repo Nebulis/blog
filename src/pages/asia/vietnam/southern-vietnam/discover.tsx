@@ -198,13 +198,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             description: t("pinterest"),
             nodes:
               i18n.languageCode === "fr"
-                ? [
-                    <SouthernVietnam image="cardFr1" key={"cardFr1"} />,
-                    <SouthernVietnam image="cardFr2" key={"cardFr2"} />,
-                  ]
+                ? [<SouthernVietnam image="cardFr1" key="cardFr1" />, <SouthernVietnam image="cardFr2" key="cardFr2" />]
                 : [
-                    <SouthernVietnam image="cardEn1" key={"cardEn1"} />,
-                    <SouthernVietnam image="cardEn2" key={"cardEn2"} />,
+                    <SouthernVietnam image="cardEn1" key="cardEn1" />,
+                    <SouthernVietnam image="cardEn2" key="cardEn2" />,
                   ],
           }}
         />
