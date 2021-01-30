@@ -10,7 +10,6 @@ import {
   {{uppercase (getCountry pagePath)}}BlogLayout,
   {{uppercase (getCountry pagePath)}}Title,
   {{uppercase (getCountry pagePath)}}Quote,
-  {{uppercase (getCountry pagePath)}}Divider,
   {{uppercase (getCountry pagePath)}}Headline,
 } from "{{upPath pagePath}}components/core/{{getContinent pagePath}}/{{getCountry pagePath}}/{{getCountry pagePath}}"
 import {
@@ -25,15 +24,16 @@ import {
   WhereToStay,
 } from "../../../../components/core/section"
 import { Conclusion } from "{{upPath pagePath}}components/core/conclusion"
+import { Divider } from "{{upPath pagePath}}components/core/divider"
 import HomeImgUrl from "{{upPath pagePath}}images/{{getContinent pagePath}}/{{getCountry pagePath}}/home-{{getCountry pagePath}}.jpg"
 
 const namespace = "{{pagePath}}"
-const id = "TODO"
+const id = "{{getId pagePath}}"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { t } = useCustomTranslation([namespace, "common"])
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.{{getCountry pagePath}}.card.${id}`)
   const description = t("quote")
   const googleDescription = t("introduction")
@@ -50,9 +50,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <{{uppercase (getCountry pagePath)}}BlogLayout page={id} location={location}>
         <{{uppercase (getCountry pagePath)}}Title title={title} linkId={id} />
         <{{uppercase (getCountry pagePath)}}Quote>{description}</{{uppercase (getCountry pagePath)}}Quote>
-        <{{uppercase (getCountry pagePath)}}Divider />
+        <Divider />
         <Introduction>{googleDescription}</Introduction>
-        <{{uppercase (getCountry pagePath)}}Divider />
+        <Divider />
         <When>
           <p>{t("when.part1")}</p>
         </When>
@@ -74,10 +74,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Visit>
           <p>{t("visit.part1")}</p>
         </Visit>
-        <{{uppercase (getCountry pagePath)}}Divider />
+        <Divider />
         <section>
-          <VietnamHeadline>{t("visit1.title")}</VietnamHeadline>
-          <VietnamDivider />
+          <{{uppercase (getCountry pagePath)}}Headline>{t("visit1.title")}</{{uppercase (getCountry pagePath)}}Headline>
+          <Divider />
           <SectionContent>
             <p>{t("visit1.part1")}</p>
           </SectionContent>
@@ -89,11 +89,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question2")}</li>
           </ul>
         </Conclusion>
-        <{{uppercase (getCountry pagePath)}}Divider />
+        <Divider />
         <Comments
           collectionName={namespace}
           location={location}
           facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+          pinterest=\{{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? []
+                : [],
+          }}
         />
       </{{uppercase (getCountry pagePath)}}BlogLayout>
     </>

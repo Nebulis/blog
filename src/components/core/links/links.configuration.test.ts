@@ -119,7 +119,7 @@ describe("links", () => {
     })
     expect(getLink("my-tho")).toMatchObject({
       label: { fr: "Mỹ Tho", en: "Mỹ Tho" },
-      published: false,
+      published: true,
     })
     expect(getLink("can-tho")).toMatchObject({
       label: { fr: "Cân Thơ", en: "Cân Thơ" },

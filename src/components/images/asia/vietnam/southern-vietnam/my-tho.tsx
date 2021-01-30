@@ -39,10 +39,10 @@ const alt = {
   sculpture1: "Monkey Sculpture",
   sculpture2: "Elephant Sculpture",
   sugarcane: "Sugarcane Juice",
-  cardFr1: "Pinterest card",
-  cardFr2: "Pinterest card",
-  cardEn1: "Pinterest card",
-  cardEn2: "Pinterest card",
+  cardFr1: "My Tho Pinterest card",
+  cardFr2: "My Tho Pinterest card",
+  cardEn1: "My Tho Pinterest card",
+  cardEn2: "My Tho Pinterest card",
 }
 
 export const MyThoImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({

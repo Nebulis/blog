@@ -305,12 +305,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes:
               i18n.languageCode === "fr"
                 ? [
-                    <HoChiMinWarMuseum image="cardFr1" key={"cardFr1"} />,
-                    <HoChiMinWarMuseum image="cardFr2" key={"cardFr2"} />,
+                    <HoChiMinWarMuseum image="cardFr1" key="cardFr1" />,
+                    <HoChiMinWarMuseum image="cardFr2" key="cardFr2" />,
                   ]
                 : [
-                    <HoChiMinWarMuseum image="cardEn1" key={"cardEn1"} />,
-                    <HoChiMinWarMuseum image="cardEn2" key={"cardEn2"} />,
+                    <HoChiMinWarMuseum image="cardEn1" key="cardEn1" />,
+                    <HoChiMinWarMuseum image="cardEn2" key="cardEn2" />,
                   ],
           }}
         />

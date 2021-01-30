@@ -85,7 +85,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how.part1")}</p>
           <p>
             {t("how.part2")}{" "}
-            <VietnamExternalLink href={buildBaolauLink(i18n.languageCode)}>{t("how.part3")}</VietnamExternalLink>{" "}
+            <VietnamExternalLink
+              href={buildBaolauLink(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "My Tho" })}
+            >
+              {t("how.part3")}
+            </VietnamExternalLink>{" "}
             {t("how.part4")}
           </p>
           <p>
@@ -390,8 +394,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             description: t("pinterest"),
             nodes:
               i18n.languageCode === "fr"
-                ? [<MyThoImages image="cardFr1" key={"cardFr1"} />, <MyThoImages image="cardFr2" key={"cardFr2"} />]
-                : [<MyThoImages image="cardEn1" key={"cardEn1"} />, <MyThoImages image="cardEn2" key={"cardEn2"} />],
+                ? [<MyThoImages image="cardFr1" key="cardFr1" />, <MyThoImages image="cardFr2" key="cardFr2" />]
+                : [<MyThoImages image="cardEn1" key="cardEn1" />, <MyThoImages image="cardEn2" key="cardEn2" />],
           }}
         />
       </VietnamBlogLayout>
