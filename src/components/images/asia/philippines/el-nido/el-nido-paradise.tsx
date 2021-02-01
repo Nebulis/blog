@@ -129,6 +129,41 @@ export const ElNidoParadise: React.FunctionComponent<ExtraImageProps & { image: 
           }
         }
       }
+      city1: file(relativePath: { eq: "asia/philippines/el-nido/el-nido-paradise/el-nido-city1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      city2: file(relativePath: { eq: "asia/philippines/el-nido/el-nido-paradise/el-nido-city2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      city3: file(relativePath: { eq: "asia/philippines/el-nido/el-nido-paradise/el-nido-city3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      city4: file(relativePath: { eq: "asia/philippines/el-nido/el-nido-paradise/el-nido-city4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      city5: file(relativePath: { eq: "asia/philippines/el-nido/el-nido-paradise/el-nido-city5.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
   return <Img fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }} alt="El Nido" className={className} />

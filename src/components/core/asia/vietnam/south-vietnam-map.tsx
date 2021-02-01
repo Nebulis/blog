@@ -167,31 +167,33 @@ export const SouthVietnamMap = () => {
         id="VNM510"
         name="Vĩnh Long"
       />
-      <g {...propsFor({ city: "cu-chi-tunnels", basicTextStyle, hoveredTextStyle, lang: i18n.languageCode })}>
-        <rect width="150" height="80" x="360" y="510" />
-        <text x="360" y="535">
-          Ho Chi Minh
-        </text>
-        <g transform="translate(410 540) scale(0.06)">
-          <PinPoint />
+      <g css={basicTextStyle}>
+        <g>
+          <rect width="200" height="80" x="340" y="510" />
+          <text x="340" y="535">
+            Hô Chi Minh{i18n.languageCode === "fr" ? "-Ville" : " City"}
+          </text>
+          <g transform="translate(410 540) scale(0.06)">
+            <PinPoint />
+          </g>
         </g>
-      </g>
-      <g {...propsFor({ city: "my-tho", basicTextStyle, hoveredTextStyle, lang: i18n.languageCode })}>
-        <rect width="90" height="80" x="350" y="600" />
-        <text x="345" y="680">
-          My Tho
-        </text>
-        <g transform="translate(360 600) scale(0.06)">
-          <PinPoint />
+        <g>
+          <rect width="90" height="80" x="350" y="600" />
+          <text x="345" y="680">
+            My Tho
+          </text>
+          <g transform="translate(360 600) scale(0.06)">
+            <PinPoint />
+          </g>
         </g>
-      </g>
-      <g {...propsFor({ city: "can-tho", basicTextStyle, hoveredTextStyle, lang: i18n.languageCode })}>
-        <rect width="90" height="80" x="255" y="650" />
-        <text x="255" y="730">
-          Can Tho
-        </text>
-        <g transform="translate(285 650) scale(0.06)">
-          <PinPoint />
+        <g>
+          <rect width="90" height="80" x="255" y="650" />
+          <text x="255" y="730">
+            Can Tho
+          </text>
+          <g transform="translate(285 650) scale(0.06)">
+            <PinPoint />
+          </g>
         </g>
       </g>
     </svg>

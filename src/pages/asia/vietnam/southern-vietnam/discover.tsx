@@ -48,7 +48,7 @@ i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { t } = useCustomTranslation([namespace, "common"])
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t("common:country.vietnam.card.discover-southern-vietnam")
   const description = t("quote")
   const googleDescription = t("introduction")
@@ -194,6 +194,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           collectionName={namespace}
           location={location}
           facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+          pinterest={{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? [
+                    <SouthernVietnam image="cardFr1" key={"cardFr1"} />,
+                    <SouthernVietnam image="cardFr2" key={"cardFr2"} />,
+                  ]
+                : [
+                    <SouthernVietnam image="cardEn1" key={"cardEn1"} />,
+                    <SouthernVietnam image="cardEn2" key={"cardEn2"} />,
+                  ],
+          }}
         />
       </VietnamBlogLayout>
     </>

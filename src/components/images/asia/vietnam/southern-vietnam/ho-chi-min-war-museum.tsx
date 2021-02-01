@@ -20,6 +20,10 @@ const alt = {
   museum3: "Gas masks",
   soldierHelmet: "Solider Helmet Peace",
   youngChild: "Young child with weapon",
+  cardFr1: "Pinterest Card War Remnants Museum",
+  cardFr2: "Pinterest Card War Remnants Museum",
+  cardEn1: "Pinterest Card War Remnants Museum",
+  cardEn2: "Pinterest Card War Remnants Museum",
 }
 
 export const HoChiMinWarMuseum: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
@@ -140,6 +144,34 @@ export const HoChiMinWarMuseum: React.FunctionComponent<ExtraImageProps & { imag
         }
       }
       youngChild: file(relativePath: { eq: "asia/vietnam/southern-vietnam/war-remnants-museum/young-child.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardFr1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/war-remnants-museum/card-fr1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardFr2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/war-remnants-museum/card-fr2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/war-remnants-museum/card-en1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/war-remnants-museum/card-en2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp

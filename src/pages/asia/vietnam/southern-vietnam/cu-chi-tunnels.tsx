@@ -41,6 +41,7 @@ import { SharedCardVietnamImages } from "../../../../components/images/asia/viet
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import { Divider } from "../../../../components/core/divider"
+import { MyThoImages } from "../../../../components/images/asia/vietnam/southern-vietnam/my-tho"
 
 const namespace = "asia/vietnam/southern-vietnam/cu-chi-tunnels"
 const id = "cu-chi-tunnels"
@@ -352,6 +353,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           collectionName={namespace}
           location={location}
           facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+          pinterest={{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? [
+                    <CuChiTunnelsImages image="cardFr1" key={"cardFr1"} />,
+                    <CuChiTunnelsImages image="cardFr2" key={"cardFr2"} />,
+                  ]
+                : [
+                    <CuChiTunnelsImages image="cardEn1" key={"cardEn1"} />,
+                    <CuChiTunnelsImages image="cardEn2" key={"cardEn2"} />,
+                  ],
+          }}
         />
       </VietnamBlogLayout>
     </>

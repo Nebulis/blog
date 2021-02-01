@@ -43,6 +43,34 @@ export const SouthernVietnam: React.FunctionComponent<ExtraImageProps & { image:
           }
         }
       }
+      cardFr1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/card-fr1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardFr2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/card-fr2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/card-en1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/card-en2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
   return <Img fluid={data[image].childImageSharp.fluid} alt="Calao" className={className} />

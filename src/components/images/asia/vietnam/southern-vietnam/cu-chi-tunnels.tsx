@@ -27,6 +27,10 @@ const alt = {
   rest2: "Cu Chi Tunnels Coconut Rest",
   bonus1: "Cu Chi Tunnels",
   bonus2: "Cu Chi Tunnels",
+  cardFr1: "Pinterest Cu Chi Tunnels Card",
+  cardFr2: "Pinterest Cu Chi Tunnels Card",
+  cardEn1: "Pinterest Cu Chi Tunnels Card",
+  cardEn2: "Pinterest Cu Chi Tunnels Card",
 }
 
 export const CuChiTunnelsImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
@@ -196,6 +200,34 @@ export const CuChiTunnelsImages: React.FunctionComponent<ExtraImageProps & { ima
         }
       }
       bonus2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-bonus2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardFr1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/card-fr1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardFr2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/card-fr2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/card-en1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/card-en2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp

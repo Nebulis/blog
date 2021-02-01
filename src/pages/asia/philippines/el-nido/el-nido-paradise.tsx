@@ -171,8 +171,23 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsPortrait>
               <ElNidoParadise image="fruit" />
             </ImageAsPortrait>
+          </SectionContent>
+          <SectionContent>
             <p>{t("visit1.part3")}</p>
             <p>{t("visit1.part4")}</p>
+            <GroupOfImages>
+              <ImageAsLandscape>
+                <ElNidoParadise image="city1" />
+              </ImageAsLandscape>
+              <TwoImagesSameSizeOrToGroup>
+                <ElNidoParadise image="city2" />
+                <ElNidoParadise image="city3" />
+              </TwoImagesSameSizeOrToGroup>
+              <TwoImagesSameSizeOrToGroup>
+                <ElNidoParadise image="city4" />
+                <ElNidoParadise image="city5" />
+              </TwoImagesSameSizeOrToGroup>
+            </GroupOfImages>
           </SectionContent>
         </section>
         <PhilippinesDivider />

@@ -105,7 +105,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("what-time-of-year.part4")}</p>
           <p>{t("what-time-of-year.part5")}</p>
         </WhatTimeOfYear>
-        <HowMuch>
+        <HowMuch title={t("common:section.how-much2")}>
           <p>{t("how-much.part1")}</p>
         </HowMuch>
         <WhereToStay title={t("where-to-stay.title")}>
@@ -300,6 +300,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           collectionName={namespace}
           location={location}
           facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+          pinterest={{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? [
+                    <HoChiMinWarMuseum image="cardFr1" key={"cardFr1"} />,
+                    <HoChiMinWarMuseum image="cardFr2" key={"cardFr2"} />,
+                  ]
+                : [
+                    <HoChiMinWarMuseum image="cardEn1" key={"cardEn1"} />,
+                    <HoChiMinWarMuseum image="cardEn2" key={"cardEn2"} />,
+                  ],
+          }}
         />
       </VietnamBlogLayout>
     </>
