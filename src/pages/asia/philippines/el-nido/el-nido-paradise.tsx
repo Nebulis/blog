@@ -9,6 +9,9 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import HomeImgUrl from "../../../../images/asia/philippines/home-philippines.jpg"
+import frendzHostelElNido from "../../../../images/asia/philippines/el-nido/el-nido-paradise/frendz-hostel-el-nido.jpg"
+import cadlaoResort from "../../../../images/asia/philippines/el-nido/el-nido-paradise/cadlao-resort-and-restaurant.jpg"
+import velagoResort from "../../../../images/asia/philippines/el-nido/el-nido-paradise/velago-resort.jpg"
 import { PageProps } from "gatsby"
 import { useCustomTranslation } from "../../../../i18n-hook"
 import i18n from "i18next"
@@ -35,11 +38,12 @@ import { ElNidoWhichTourCard } from "../../../../components/core/asia/philippine
 import { ElNidoParadiseImages } from "../../../../components/images/asia/philippines/el-nido/el-nido-paradise-images"
 import { philippinesPrimaryColor } from "../../../../components/core/asia/philippines/philippines.colors"
 import { css } from "@emotion/react"
-import { ArticleCardContainer, MapContainer } from "../../../../components/layout/layout"
+import { ArticleCardContainer, BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { PhilippinesMap } from "../../../../components/core/asia/philippines/philippines-map"
 import { SharedCardPhilippinesImages } from "../../../../components/images/asia/philippines/shared-card-philippines-images"
 import { Divider } from "../../../../components/core/divider"
 import { Quote } from "../../../../components/core/quote"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
 
 const namespace = "asia/philippines/el-nido/el-nido-paradise"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -53,6 +57,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -118,6 +123,38 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <WhereToStay>
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="ph/frendz-hostel-el-nido"
+              title="Frendz Hostel El Nido"
+              image={frendzHostelElNido}
+              note="9,1"
+              price={21}
+              people={1}
+              kind="low-cost"
+            />
+            <BookingCard
+              hotel="ph/cadlao-resort-and-restaurant"
+              title="Cadlao Resort and Restaurant"
+              image={cadlaoResort}
+              note="8,2"
+              price={64}
+              people={2}
+              kind="standard"
+            />
+            <BookingCard
+              hotel="ph/vellago-resort"
+              title="Vellago Resort"
+              image={velagoResort}
+              note="9,1"
+              price={281}
+              people={2}
+              kind="deluxe"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning />
+          <p>{t("where-to-stay.part3")}</p>
+          <p>{t("where-to-stay.part4")}</p>
         </WhereToStay>
         <Visit>
           <SectionContent

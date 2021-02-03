@@ -10,6 +10,7 @@ import { useCustomTranslation } from "../../../i18n-hook"
 
 interface ExternalLinkProps {
   noIcon?: boolean
+  underline?: boolean
 }
 const style = css`
   svg {
@@ -21,9 +22,16 @@ export const ExternalLink: FunctionComponent<AnchorHTMLAttributes<any> & Externa
   className,
   children,
   noIcon = true,
+  underline = true,
   ...rest
 }) => (
-  <a {...rest} target="_blank" rel="noopener noreferrer" css={style} className={`${className} underline`}>
+  <a
+    {...rest}
+    target="_blank"
+    rel="noopener noreferrer"
+    css={style}
+    className={`${className} ${underline ? "underline" : ""}`}
+  >
     {children}
     {noIcon ? null : (
       <>

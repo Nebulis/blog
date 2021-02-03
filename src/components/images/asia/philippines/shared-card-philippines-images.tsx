@@ -27,7 +27,7 @@ export const SharedCardPhilippinesImages: React.FunctionComponent<ExtraImageProp
       }
       whichTour: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-main.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 75, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

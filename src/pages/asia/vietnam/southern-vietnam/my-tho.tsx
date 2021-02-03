@@ -73,6 +73,41 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how.part4")}</p>
           {transportLinkPublished && <p>{t("how.part5")}</p>}
         </How>
+        {/*<div*/}
+        {/*  className="flex"*/}
+        {/*  css={css`*/}
+        {/*    margin-bottom: 1.45rem;*/}
+        {/*    row-gap: 1rem;*/}
+        {/*    column-gap: 2rem;*/}
+        {/*    justify-content: center;*/}
+        {/*    flex-wrap: wrap;*/}
+        {/*  `}*/}
+        {/*>*/}
+        {/*  <GetYourGuideCard*/}
+        {/*    to="activity/ho-chi-minh-city-l272/upper-mekong-river-full-day-tour-t69167"*/}
+        {/*    title={*/}
+        {/*      i18n.languageCode === "fr"*/}
+        {/*        ? "Rivière du haut Mékong : excursion d'une journée"*/}
+        {/*        : "Upper Mekong River: Day Tour"*/}
+        {/*    }*/}
+        {/*    rating={3.5}*/}
+        {/*    image="https://cdn.getyourguide.com/img/tour/590ac7d7e7b6a.jpeg/38"*/}
+        {/*    certified*/}
+        {/*    price={19}*/}
+        {/*    duration={{ value: 2, unit: "day" }}*/}
+        {/*    bestseller*/}
+        {/*  />*/}
+        {/*  <GetYourGuideCard*/}
+        {/*    to="activity/ho-chi-minh-city-l272/upper-mekong-river-full-day-tour-t69167"*/}
+        {/*    title={"Upper Mekong River: Day Tour"}*/}
+        {/*    rating={2}*/}
+        {/*    image="https://cdn.getyourguide.com/img/tour/590ac7d7e7b6a.jpeg/38"*/}
+        {/*    certified*/}
+        {/*    price={19}*/}
+        {/*    duration={{ value: 2, unit: "day" }}*/}
+        {/*    bestseller*/}
+        {/*  />*/}
+        {/*</div>ood solution*/}
         <HowLong>
           <p>{t("how-long.part1")}</p>
           <p>{t("how-long.part2")}</p>
