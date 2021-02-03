@@ -27,7 +27,6 @@ export const buildExpediaUrl = ({ lang, slug = "" }: { lang: Lang; slug?: string
   }%2F${date.getFullYear()}TANYT&mode=search&options=carrier%3A%2A%2Ccabinclass%3A%2Cmaxhops%3A1%2Cnopenalty%3AN&pageId=0&passengers=adults%3A1%2Cchildren%3A0%2Cinfantinlap%3AN&trip=oneway`
 }
 
-// TODO check if the build will fail if link is missing
 const buildGetYourGuideUrl = ({ lang, slug = "" }: { lang: Lang; slug: string }) =>
   `https://www.getyourguide.${lang === "fr" ? "fr" : "com"}/${slug}`
 const buildTripadvisorUrl = ({ lang, slug = "" }: { lang: Lang; slug: string }) =>

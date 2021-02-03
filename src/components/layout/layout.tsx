@@ -386,6 +386,16 @@ export const ArticleCardContainer = styled.article`
   }
 `
 
+export const BookingGygCardContainer = styled.div`
+  display: flex;
+  margin-top: 1.3rem; // like images
+  margin-bottom: 1.3rem; // like images
+  row-gap: 1.3rem; // like images
+  column-gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+`
+
 export const CityArticleContainer = styled.div`
   padding: 1rem 20px;
   @media (min-width: ${largeStart}) {
