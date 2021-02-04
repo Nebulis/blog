@@ -26,7 +26,7 @@ import {
 } from "../../../../components/core/section"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { Divider } from "../../../../components/core/divider"
-import HomeImgUrl from "../../../../images/asia/vietnam/home-vietnam.jpg"
+import HomeImgUrl from "../../../../images/asia/vietnam/southern-vietnam/can-tho/can-tho-main.jpg"
 import {
   GroupOfImages,
   ImageAsLandscape,
