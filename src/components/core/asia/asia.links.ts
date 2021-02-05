@@ -38,5 +38,29 @@ export const asiaLinks: ContinentLink = {
       ],
       label: { en: commonEn.country.cambodia.title, fr: commonFr.country.cambodia.title },
     },
+    {
+      id: "china",
+      cities: [],
+      others: [],
+      label: { en: commonEn.country.china.title, fr: commonFr.country.china.title },
+    },
+    {
+      id: "myanmar",
+      cities: [],
+      others: [],
+      label: { en: commonEn.country.myanmar.title, fr: commonFr.country.myanmar.title },
+    },
+    {
+      id: "thailand",
+      cities: [],
+      others: [],
+      label: { en: commonEn.country.thailand.title, fr: commonFr.country.thailand.title },
+    },
+    {
+      id: "laos",
+      cities: [],
+      others: [],
+      label: { en: commonEn.country.laos.title, fr: commonFr.country.laos.title },
+    },
   ],
 }

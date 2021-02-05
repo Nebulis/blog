@@ -51,6 +51,10 @@ describe("links", () => {
     expect(getLink("404")).toMatchObject({ label: { fr: "404", en: "404" }, published: true })
 
     // asia countries assertions
+    expect(getLink("china")).toMatchObject({ label: { fr: "Chine", en: "China" }, published: false })
+    expect(getLink("laos")).toMatchObject({ label: { fr: "Laos", en: "Laos" }, published: false })
+    expect(getLink("thailand")).toMatchObject({ label: { fr: "Thaïlande", en: "Thailand" }, published: false })
+    expect(getLink("myanmar")).toMatchObject({ label: { fr: "Birmanie", en: "Myanmar" }, published: false })
     expect(getLink("cambodia")).toMatchObject({ label: { fr: "Cambodge", en: "Cambodia" }, published: false })
     expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: false })
     expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: true })

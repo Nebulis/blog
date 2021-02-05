@@ -56,8 +56,12 @@
   },
   "visit4": {
     "title": "Une histoire sans fin",
-    "part1": "C’est la fin pour nous de notre visite du Vietnam du Sud, mais ce n’est clairement pas la fin de notre séjour. Le Nord et le Centre n’attendent que nous.",
-    "part2": "Nous avons également hâte de vous emmener avec nous découvrir le reste du pays."
+    "part1": "C’est la fin pour nous de notre visite du Vietnam du Sud, mais ce n’est clairement pas la fin de notre séjour. Le ",
+    "part2": "Nord",
+    "part3": "et le ",
+    "part4": "Centre",
+    "part5": "n’attendent que nous.",
+    "part6": "Nous avons également hâte de vous emmener avec nous découvrir le reste du pays."
   },
   "conclusion": "De par son histoire et l'authenticité de ses paysages, le Vietnam du Sud est une destination qui ne vous laissera pas insensible.",
   "question1": "Êtes-vous déjà allé au Vietnam du Sud ? Quel en est votre meilleur souvenir ?",
