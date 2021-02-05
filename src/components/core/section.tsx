@@ -17,6 +17,7 @@ import {
 import { maxWidth, mediumEnd, mobileEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n"
 import { Lang } from "./links/links.types"
+import styled from "@emotion/styled"
 
 export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => (
   <div className={`mb1 flex section-title ${className}`}>{children}</div>
@@ -148,3 +149,6 @@ export const HomeSubSection: FunctionComponent = ({ children }) => (
     {children}
   </h3>
 )
+export const HighLight = styled.span`
+  font-weight: bold;
+`

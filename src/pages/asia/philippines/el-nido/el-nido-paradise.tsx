@@ -24,6 +24,7 @@ import {
   PhilippinesTitle,
 } from "../../../../components/core/asia/philippines/philippines"
 import {
+  HighLight,
   How,
   HowLong,
   HowMuch,
@@ -36,7 +37,7 @@ import {
 import { Conclusion } from "../../../../components/core/conclusion"
 import { Comments } from "../../../../components/core/comments"
 import { ElNidoWhichTourCard } from "../../../../components/core/asia/philippines/philippines.card"
-import { ElNidoParadise } from "../../../../components/images/asia/philippines/el-nido/el-nido-paradise"
+import { ElNidoParadiseImages } from "../../../../components/images/asia/philippines/el-nido/el-nido-paradise-images"
 import { philippinesPrimaryColor } from "../../../../components/core/asia/philippines/philippines.colors"
 import { css } from "@emotion/core"
 import { MapContainer } from "../../../../components/layout/layout"
@@ -72,24 +73,28 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <PhilippinesDivider />
         <Introduction>{googleDescription}</Introduction>
         <WhatTimeOfYear>
-          <p>{t("what-time-of-year.part1")}</p>
-          <p>{t("what-time-of-year.part2")}</p>
+          <p>
+            {t("what-time-of-year.part1")} <HighLight>{t("what-time-of-year.part2")}</HighLight>
+          </p>
           <p>{t("what-time-of-year.part3")}</p>
+          <p>{t("what-time-of-year.part4")}</p>
           <ImageAsPortrait>
-            <ElNidoParadise image="jellyfish" />
+            <ElNidoParadiseImages image="jellyfish" />
           </ImageAsPortrait>
         </WhatTimeOfYear>
         <HowLong>
-          <p>{t("how-long.part1")}</p>
+          <p>
+            {t("how-long.part1")} <HighLight>{t("how-long.part2")}</HighLight> {t("how-long.part3")}
+          </p>
           <ul>
-            <li>{t("how-long.part2")}</li>
-            <li>{t("how-long.part3")}</li>
             <li>{t("how-long.part4")}</li>
+            <li>{t("how-long.part5")}</li>
+            <li>{t("how-long.part6")}</li>
           </ul>
-          <p>{t("how-long.part5")}</p>
-          <p>{t("how-long.part6")}</p>
           <p>{t("how-long.part7")}</p>
           <p>{t("how-long.part8")}</p>
+          <p>{t("how-long.part9")}</p>
+          <p>{t("how-long.part10")}</p>
         </HowLong>
         <HowMuch>
           <p>{t("how-much.part1")}</p>
@@ -115,22 +120,24 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
           <p>{t("how.part3")}</p>
           <p>{t("how.part4")}</p>
-          <p>{t("how.part5")}</p>
           <p>
-            {t("how.part6")}{" "}
+            {t("how.part5")} <HighLight>{t("how.part6")}</HighLight>
+          </p>
+          <p>
+            {t("how.part7")} <HighLight>{t("how.part8")}</HighLight> {t("how.part9")}{" "}
             <PhilippinesExternalLink href="https://www.elnidoparadise.com/rentals/">
               elnidoparadise
             </PhilippinesExternalLink>{" "}
-            {t("how.part7")} <PhilippinesExternalLink href="https://www.phbus.com/">phbus</PhilippinesExternalLink>.
+            {t("how.part10")} <PhilippinesExternalLink href="https://www.phbus.com/">phbus</PhilippinesExternalLink>.
           </p>
           <p>
-            {t("how.part8")}{" "}
+            {t("how.part11")} <HighLight>{t("how.part12")}</HighLight> {t("how.part13")}{" "}
             <PhilippinesExternalLink href="https://www.travel-palawan.com/ferry-from-el-nido-to-coron/">
               travel-palawan
             </PhilippinesExternalLink>
             .
           </p>
-          <p>{t("how.part9")}</p>
+          <p>{t("how.part14")}</p>
         </How>
         <WhereToStay>
           <p>
@@ -169,7 +176,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit1.part1")}</p>
             <p>{t("visit1.part2")}</p>
             <ImageAsPortrait>
-              <ElNidoParadise image="fruit" />
+              <ElNidoParadiseImages image="fruit" />
             </ImageAsPortrait>
           </SectionContent>
           <SectionContent>
@@ -177,15 +184,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit1.part4")}</p>
             <GroupOfImages>
               <ImageAsLandscape>
-                <ElNidoParadise image="city1" />
+                <ElNidoParadiseImages image="city1" />
               </ImageAsLandscape>
               <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadise image="city2" />
-                <ElNidoParadise image="city3" />
+                <ElNidoParadiseImages image="city2" />
+                <ElNidoParadiseImages image="city3" />
               </TwoImagesSameSizeOrToGroup>
               <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadise image="city4" />
-                <ElNidoParadise image="city5" />
+                <ElNidoParadiseImages image="city4" />
+                <ElNidoParadiseImages image="city5" />
               </TwoImagesSameSizeOrToGroup>
             </GroupOfImages>
           </SectionContent>
@@ -207,11 +214,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit2.part2")}</p>
             <GroupOfImages>
               <ImageAsPortrait>
-                <ElNidoParadise image="tuktuk" />
+                <ElNidoParadiseImages image="tuktuk" />
               </ImageAsPortrait>
               <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadise image="departure1" />
-                <ElNidoParadise image="departure2" />
+                <ElNidoParadiseImages image="departure1" />
+                <ElNidoParadiseImages image="departure2" />
               </TwoImagesSameSizeOrToGroup>
             </GroupOfImages>
           </SectionContent>
@@ -238,14 +245,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit3.part7")}</p>
             <GroupOfImages>
               <ImageAsLandscape>
-                <ElNidoParadise image="paradise1" />
+                <ElNidoParadiseImages image="paradise1" />
               </ImageAsLandscape>
               <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadise image="paradise2" />
-                <ElNidoParadise image="paradise3" />
+                <ElNidoParadiseImages image="paradise2" />
+                <ElNidoParadiseImages image="paradise3" />
               </TwoImagesSameSizeOrToGroup>
               <ImageAsLandscape>
-                <ElNidoParadise image="paradise4" />
+                <ElNidoParadiseImages image="paradise4" />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -253,11 +260,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit3.part8")}</p>
             <GroupOfImages>
               <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadise image="snorkeling1" />
-                <ElNidoParadise image="snorkeling2" />
+                <ElNidoParadiseImages image="snorkeling1" />
+                <ElNidoParadiseImages image="snorkeling2" />
               </TwoImagesSameSizeOrToGroup>
               <ImageAsLandscape>
-                <ElNidoParadise image="snorkeling3" />
+                <ElNidoParadiseImages image="snorkeling3" />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -272,17 +279,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit4.part3")}</p>
             <GroupOfImages>
               <ImageAsLandscapeOnTheLeft>
-                <ElNidoParadise image="paradise5" />
+                <ElNidoParadiseImages image="paradise5" />
               </ImageAsLandscapeOnTheLeft>
               <ImageAsLandscapeOnTheRight>
-                <ElNidoParadise image="paradise6" />
+                <ElNidoParadiseImages image="paradise6" />
               </ImageAsLandscapeOnTheRight>
               <ImageAsLandscape>
-                <ElNidoParadise image="paradise7" />
+                <ElNidoParadiseImages image="paradise7" />
               </ImageAsLandscape>
               <TwoImagesSameSizeOrToGroup>
-                <ElNidoParadise image="paradise8" />
-                <ElNidoParadise image="paradise9" />
+                <ElNidoParadiseImages image="paradise8" />
+                <ElNidoParadiseImages image="paradise9" />
               </TwoImagesSameSizeOrToGroup>
             </GroupOfImages>
           </SectionContent>
@@ -299,6 +306,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           collectionName={namespace}
           location={location}
           facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+          pinterest={{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? [
+                    <ElNidoParadiseImages image="cardFr1" key="cardFr1" />,
+                    <ElNidoParadiseImages image="cardFr2" key="cardFr2" />,
+                  ]
+                : [
+                    <ElNidoParadiseImages image="cardEn1" key="cardEn1" />,
+                    <ElNidoParadiseImages image="cardEn2" key="cardEn2" />,
+                  ],
+          }}
         />
       </PhilippinesBlogLayout>
     </>

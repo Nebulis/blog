@@ -43,6 +43,20 @@ export const SouthernVietnam: React.FunctionComponent<ExtraImageProps & { image:
           }
         }
       }
+      scarecrow: file(relativePath: { eq: "asia/vietnam/southern-vietnam/ho-chi-minh/ho-chi-minh-scarecrow.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      fruits: file(relativePath: { eq: "asia/vietnam/southern-vietnam/ho-chi-minh/ho-chi-minh-fruits.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
       cardFr1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/card-fr1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 90) {

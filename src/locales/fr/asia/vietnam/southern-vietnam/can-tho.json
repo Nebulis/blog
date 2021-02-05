@@ -3,31 +3,42 @@
   "introduction": "Le récit de notre voyage à Can Tho et plus particulièrement de son marché flottant avec en prime une visite dans une fabrication de feuilles de riz. Dans cet article on vous donne également nos conseils sur comment s’y rendre ? Combien de jours ? Quand partir ? Et où se loger ?",
   "how": {
     "part1": "Heureusement le Vietnam s’est très bien développé ces dernières années, les routes sont beaucoup plus confortables à emprunter et les vols domestiques sont bien plus desservis.",
-    "part2": "Si vous êtes à Hanoi, la meilleure solution est l’avion. Vous pouvez facilement trouver des vols sur ",
-    "part3": "Expedia",
-    "part4": "Si vous vous trouvez à Hô Chi Minh-Ville, vous avez le choix entre un chauffeur privé, une location de véhicules ou un bus.",
-    "part5": "La meilleure solution pour nous est le bus. Vous en avez qui passent toutes les 30 minutes la journée et toutes les heures la nuit, donc rien de plus simple.",
-    "part6": "Can Tho est à 170 km de Hô Chi Minh-Ville (Saigon) soit environ 3h30 / 4h de route.",
-    "part7": "Nous utilisons le site ",
-    "part8": "Baolau",
-    "part9": " pour des réservations de bus en Asie. On a toujours réservé donc on vous conseille de faire autant, rien ne nous certifie que sans réservation vous aurez forcément des places.",
-    "part10": "Plus d’informations sur "
+    "part2": "Si vous êtes à Hanoi, la meilleure solution est l’",
+    "part3": "avion",
+    "part4": ". Vous pouvez facilement trouver des vols sur",
+    "part5": "Expedia",
+    "part6": "Si vous vous trouvez à Hô Chi Minh-Ville, vous avez le choix entre un",
+    "part7": "chauffeur privé,",
+    "part8": "une",
+    "part9": "location de véhicules",
+    "part10": "ou un",
+    "part11": "bus.",
+    "part12": "La meilleure solution pour nous est le bus. Vous en avez qui passent toutes les 30 minutes la journée et toutes les heures la nuit, donc rien de plus simple.",
+    "part13": "Can Tho est à 170 km de Hô Chi Minh-Ville (Saigon) soit environ 3h30 / 4h de route.",
+    "part14": "Nous utilisons le site",
+    "part15": "Baolau",
+    "part16": " pour des réservations de bus en Asie. On a toujours réservé donc on vous conseille de faire autant, rien ne nous certifie que sans réservation vous aurez forcément des places.",
+    "part17": "Plus d’informations sur "
   },
   "how-long": {
     "part1": "Nous n’y sommes allés qu’une journée et demi et nous regrettons de ne pas être resté au moins une journée de plus pour faire un peu plus de balade en vélo autour de notre resort.",
-    "part2": "On vous conseille donc d’y rester au moins 2 jours. Le centre n’a, pour nous, pas vraiment d’intérêt à part pour les marchés mais les balades à vélo au bord du lac sont un vrai plus."
+    "part2": "On vous conseille donc d’y rester au moins",
+    "part3": "2 jours.",
+    "part4": "Le centre n’a, pour nous, pas vraiment d’intérêt à part pour les marchés mais les balades à vélo au bord du lac sont un vrai plus."
   },
   "what-time-of-year": {
-    "part1": "La saison sèche au Vietnam du Sud est de décembre à avril.",
-    "part2": "Le mois le moins pluvieux est février et le mois le plus chaud est avril.",
-    "part3": "La période des fruits et légumes est de mai à juin.",
-    "part4": "C'est un peu compliqué de savoir quand y aller du coup... Nous y sommes allés en Février, il manquait un peu de couleur dans le marché mais niveau météo c’était parfait."
+    "part1": "La saison sèche au Vietnam du Sud est de",
+    "part2": "décembre à avril.",
+    "part3": "Le mois le moins pluvieux est février et le mois le plus chaud est avril.",
+    "part4": "La période des fruits et légumes est de mai à juin.",
+    "part5": "C'est un peu compliqué de savoir quand y aller du coup... Nous y sommes allés en Février, il manquait un peu de couleur dans le marché mais niveau météo c’était parfait."
   },
   "how-much": {
     "part1": "Pour venir à Can Tho en bus, comptez environ 5€ par trajet. Comme dit plus haut, vous en avez qui passent toutes les 30 minutes la journée, et toutes les heures la nuit.",
     "part2": "Pour le marché flottant tout dépendra du moyen : réservation à votre hôtel, réservation sur internet ou rendez-vous sur place pour trouver une barque.",
     "part3": "Si vous prenez une barque vous-même à partir du quai Ninh Kieu, prévoyez au moins 250 000 VND pour deux (9 €), on vous donne là la plus grosse fourchette de prix, à vous de négocier.",
-    "part4": "De notre côté, nous avons réservé via notre homestay : Marché flottant, petit déjeuner sur place, fabrique de feuilles de riz, dégustation de crêpes et fruits tropicaux le tout pour 840 000 VND (30 € pour deux)."
+    "part4": "De notre côté, nous avons réservé via notre homestay : Marché flottant, petit déjeuner sur place, fabrique de feuilles de riz, dégustation de crêpes et fruits tropicaux le tout pour",
+    "part5": "840 000 VND (30 € pour deux)."
   },
   "where-to-stay": {
     "part1": "Un véritable coup de cœur pour l'hôtel ",

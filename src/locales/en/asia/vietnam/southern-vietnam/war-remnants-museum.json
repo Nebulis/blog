@@ -6,16 +6,24 @@
     "part1": "28 Võ Văn Tan Street, District 3"
   },
   "when": {
-    "part1": "Open every day from 7h30 to 18h.",
-    "part2": "Please note that the opening hours may vary depending on events. We recommend you to check beforehand to avoid any surprises."
+    "part1": "Open every day from",
+    "part2": "7h30 to 18h.",
+    "part3": "Please note that the opening hours may vary depending on events. We recommend you to check beforehand to avoid any surprises."
   },
   "how": {
-    "part1": "It all depends on where you come from, but you can get there by walking, by bus, or if you are further away by Grab-Taxi or Grab-Bike.",
-    "part2": "We strongly advise against local taxis (excluding Grab) which just wait to rip you off.",
-    "part3": "More information about"
+    "part1": "It all depends on where you come from, but you can get there by walking, by bus, or if you are further away, by",
+    "part2": "Grab-Taxi",
+    "part3": "or",
+    "part4": "Grab-Bike.",
+    "part5": "We strongly advise against local taxis (excluding Grab) which just wait to rip you off.",
+    "part6": "More information about"
   },
   "how-long": {
-    "part1": "Allow for at least 1h30 if you are in a hurry, and between 2h30 and 3h if you have time and intend to read all the descriptions."
+    "part1": "Allow for at least",
+    "part2": "1h30",
+    "part3": "if you are in a hurry, and between",
+    "part4": "2h30 and 3h",
+    "part5": "if you have time and intend to read all the descriptions."
   },
   "what-time-of-year": {
     "part1": "The best period to go is definitely during the dry season,",

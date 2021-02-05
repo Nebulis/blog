@@ -15,6 +15,7 @@ import {
   VietnamTitle,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import {
+  HighLight,
   How,
   HowLong,
   HowMuch,
@@ -82,50 +83,59 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <How>
           <p>{t("how.part1")}</p>
           <p>
-            {t("how.part2")}{" "}
+            {t("how.part2")} <HighLight>{t("how.part3")}</HighLight> {t("how.part4")}{" "}
             <VietnamExternalLink
               href={buildExpediaUrl(i18n.languageCode)(
                 "from%3AHanoi%2C%20Vietnam%20%28HAN-Noi%20Bai%20Intl.%29%2Cto%3ACan%20Tho%2C%20Vietnam%20%28VCA"
               )}
             >
-              {t("how.part3")}
+              {t("how.part5")}
             </VietnamExternalLink>
             .
           </p>
-          <p>{t("how.part4")}</p>
-          <p>{t("how.part5")}</p>
-          <p>{t("how.part6")}</p>
           <p>
-            {t("how.part7")}{" "}
+            {t("how.part6")} <HighLight>{t("how.part7")}</HighLight> {t("how.part8")}{" "}
+            <HighLight>{t("how.part9")}</HighLight> {t("how.part10")} <HighLight>{t("how.part11")}</HighLight>
+          </p>
+          <p>{t("how.part12")}</p>
+          <p>{t("how.part13")}</p>
+          <p>
+            {t("how.part14")}{" "}
             <VietnamExternalLink
               href={buildBaolauLink(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "Can Tho" })}
             >
-              {t("how.part8")}
+              {t("how.part15")}
             </VietnamExternalLink>{" "}
-            {t("how.part9")}
+            {t("how.part16")}
           </p>
           {transportLinkPublished && (
             <p>
-              {t("how.part10")}{" "}
+              {t("how.part17")}{" "}
               <VietnamLink to="transports-in-vietnam">{t("common:country.vietnam.card.transports")}</VietnamLink>.
             </p>
           )}
         </How>
         <HowLong>
           <p>{t("how-long.part1")}</p>
-          <p>{t("how-long.part2")}</p>
+          <p>
+            {t("how-long.part2")} <HighLight>{t("how-long.part3")}</HighLight> {t("how-long.part4")}
+          </p>
         </HowLong>
         <WhatTimeOfYear>
-          <p>{t("what-time-of-year.part1")}</p>
-          <p>{t("what-time-of-year.part2")}</p>
+          <p>
+            {t("what-time-of-year.part1")} <HighLight>{t("what-time-of-year.part2")}</HighLight>
+          </p>
           <p>{t("what-time-of-year.part3")}</p>
           <p>{t("what-time-of-year.part4")}</p>
+          <p>{t("what-time-of-year.part5")}</p>
         </WhatTimeOfYear>
         <HowMuch>
           <p>{t("how-much.part1")}</p>
           <p>{t("how-much.part2")}</p>
           <p>{t("how-much.part3")}</p>
-          <p>{t("how-much.part4")}</p>
+          <p>
+            {t("how-much.part4")} <HighLight>{t("how-much.part5")}</HighLight>
+          </p>
         </HowMuch>
         <WhereToStay>
           <p>

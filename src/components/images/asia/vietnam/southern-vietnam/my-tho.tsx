@@ -39,6 +39,7 @@ const alt = {
   sculpture1: "Monkey Sculpture",
   sculpture2: "Elephant Sculpture",
   sugarcane: "Sugarcane Juice",
+  bees: "My Tho Bees",
   cardFr1: "My Tho Pinterest card",
   cardFr2: "My Tho Pinterest card",
   cardEn1: "My Tho Pinterest card",
@@ -286,6 +287,13 @@ export const MyThoImages: React.FunctionComponent<ExtraImageProps & { image: key
         }
       }
       sugarcane: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/sugarcane.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      bees: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/bees.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
