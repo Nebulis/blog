@@ -252,33 +252,40 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <VietnamLink to="kampong-phluk">{t("common:country.cambodia.card.kampong-phluk")}</VietnamLink>{" "}
               {t("visit3.part4")}
             </p>
-            <p>{t("visit3.part5")}</p>
-            <p>{t("visit3.part6")}</p>
+            <p>
+              {t("visit3.part5")} <VietnamLink to="china">{t("common:country.china.title")}</VietnamLink>{" "}
+              {t("visit3.part6")} <VietnamLink to="myanmar">{t("common:country.myanmar.title")}</VietnamLink>
+              {t("visit3.part7")} <VietnamLink to="thailand">{t("common:country.thailand.title")}</VietnamLink>{" "}
+              {t("visit3.part8")} <VietnamLink to="laos">{t("common:country.laos.title")}</VietnamLink>
+              {t("visit3.part9")} <VietnamLink to="cambodia">{t("common:country.cambodia.title")}</VietnamLink>{" "}
+              {t("visit3.part10")}
+            </p>
+            <p>{t("visit3.part11")}</p>
             <ImageAsLandscape>
               <MyThoImages image="mekong1" />
             </ImageAsLandscape>
           </SectionContent>
           <SectionContent>
-            <p>{t("visit3.part7")}</p>
-            <p>{t("visit3.part8")}</p>
-            <p>{t("visit3.part9")}</p>
+            <p>{t("visit3.part12")}</p>
+            <p>{t("visit3.part13")}</p>
+            <p>{t("visit3.part14")}</p>
             <TwoImagesSameSizeOrToGroup>
               <MyThoImages image="mekong2" />
               <MyThoImages image="mekong3" />
             </TwoImagesSameSizeOrToGroup>
           </SectionContent>
           <SectionContent>
-            <p>{t("visit3.part10")}</p>
+            <p>{t("visit3.part15")}</p>
             <TwoImagesSameSizeOrToGroup>
               <MyThoImages image="mekong4" />
               <MyThoImages image="mekong5" />
             </TwoImagesSameSizeOrToGroup>
           </SectionContent>
           <SectionContent>
-            <p>{t("visit3.part11")}</p>
-            <p>{t("visit3.part12")}</p>
-            <p>{t("visit3.part13")}</p>
-            <p>{t("visit3.part14")}</p>
+            <p>{t("visit3.part16")}</p>
+            <p>{t("visit3.part17")}</p>
+            <p>{t("visit3.part18")}</p>
+            <p>{t("visit3.part19")}</p>
             <GroupOfImages>
               <ImageAsLandscape>
                 <MyThoImages image="fruit1" />
