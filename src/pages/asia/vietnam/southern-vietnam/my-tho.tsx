@@ -15,6 +15,7 @@ import {
   VietnamTitle,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import {
+  HighLight,
   How,
   HowLong,
   ImageDescription,
@@ -82,31 +83,33 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Introduction>{googleDescription}</Introduction>
         <Divider />
         <How>
-          <p>{t("how.part1")}</p>
           <p>
-            {t("how.part2")}{" "}
+            {t("how.part1")} <HighLight>{t("how.part2")}</HighLight> {t("how.part3")}
+          </p>
+          <p>
+            {t("how.part4")}{" "}
             <VietnamExternalLink
               href={buildBaolauLink(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "My Tho" })}
             >
-              {t("how.part3")}
+              {t("how.part5")}
             </VietnamExternalLink>{" "}
-            {t("how.part4")}
+            {t("how.part6")}
           </p>
           <p>
-            {t("how.part5")}{" "}
+            {t("how.part7")}{" "}
             <VietnamExternalLink
               href={buildGetYourGuideLink(i18n.languageCode)(
                 "activity/ho-chi-minh-city-l272/upper-mekong-river-full-day-tour-t69167"
               )}
             >
-              {t("how.part6")}
+              {t("how.part8")}
             </VietnamExternalLink>{" "}
-            {t("how.part7")}
+            {t("how.part9")}
           </p>
-          <p>{t("how.part8")}</p>
+          <p>{t("how.part10")}</p>
           {transportLinkPublished && (
             <p>
-              {t("how.part9")}{" "}
+              {t("how.part11")}{" "}
               <VietnamLink to="transports-in-vietnam">{t("common:country.vietnam.card.transports")}</VietnamLink>.
             </p>
           )}
@@ -363,6 +366,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <Divider />
           <SectionContent>
             <p>{t("visit6.part1")}</p>
+            <ImageAsPortrait>
+              <MyThoImages image="bees" />
+            </ImageAsPortrait>
+          </SectionContent>
+          <SectionContent>
             <p>{t("visit6.part2")}</p>
             <p>{t("visit6.part3")}</p>
             <ImageAsPortrait>

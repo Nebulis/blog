@@ -2,19 +2,22 @@
   "quote": "Décor de carte postale, sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre \"Dream List\" de voyage pour cette nouvelle année.",
   "introduction": "Dans cet article on vous indique quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? Et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan.",
   "what-time-of-year": {
-    "part1": "La période la plus favorable pour aller à El Nido est de décembre à avril.",
-    "part2": "Les mois de mars et avril sont les mois les plus chauds, on dit que ce sont les mois les plus touristiques également. Soyez cela dit prêt à avoir du monde pendant toute la saison.",
-    "part3": "Faites attention également aux méduses, on en parle rarement mais elles arrivent généralement à partir de fin mars et il serait dommage de ne pas pouvoir profiter d’une section de snorkeling parce que vous êtes encerclés et que vous ne savez plus comment retourner à votre bateau (comment ça ça sent l’expérience ?)."
+    "part1": "La période la plus favorable pour aller à El Nido est de",
+    "part2": "décembre à avril.",
+    "part3": "Les mois de mars et avril sont les mois les plus chauds, on dit que ce sont les mois les plus touristiques également. Soyez cela dit prêt à avoir du monde pendant toute la saison.",
+    "part4": "Faites attention également aux méduses, on en parle rarement mais elles arrivent généralement à partir de fin mars et il serait dommage de ne pas pouvoir profiter d’une section de snorkeling parce que vous êtes encerclés et que vous ne savez plus comment retourner à votre bateau (comment ça ça sent l’expérience ?)."
   },
   "how-long": {
-    "part1": "Nous vous conseillons de rester 4 jours sur El Nido :",
-    "part2": "2 jours de balade en bateau,",
-    "part3": "1 jour de farniente,",
-    "part4": "1 jour pour découvrir les alentours de la ville d’El Nido.",
-    "part5": "Ni trop peu, ni pas assez.",
-    "part6": "Bien sûr restez plus longtemps fait rêver, comment se passer d’un paysage pareil, mais si vous voulez rester plus longtemps aux Philippines pourquoi ne pas aller découvrir d’autres magnifiques endroits ?",
-    "part7": "Boracay, Coron Island ... ou pourquoi pas la ville de Manille, pour les plus connus.",
-    "part8": "Vous n’avez vraiment que l’embarras du choix."
+    "part1": "Nous vous conseillons de rester",
+    "part2": "5 jours",
+    "part3": "sur El Nido :",
+    "part4": "2 jours de balade en bateau et de plongée / snorkeling,",
+    "part5": "1 jour de farniente,",
+    "part6": "2 jours pour découvrir les alentours de la ville d’El Nido.",
+    "part7": "Ni trop peu, ni pas assez.",
+    "part8": "Bien sûr restez plus longtemps fait rêver, comment se passer d’un paysage pareil, mais si vous voulez rester plus longtemps aux Philippines pourquoi ne pas aller découvrir d’autres magnifiques endroits ?",
+    "part9": "Boracay, Coron Island ... ou pourquoi pas la ville de Manille, pour les plus connus.",
+    "part10": "Vous n’avez vraiment que l’embarras du choix."
   },
   "how-much": {
     "part1": "Le plus gros du budget sera consacré au voyage en avion, environ 700€ par personne. La nourriture, les déplacements ou les activités sont bon marché. Pour le logement, il faudra prévoir un budget un peu plus important.",
@@ -31,11 +34,16 @@
     "part2": "El Nido est un paradis qui se mérite !",
     "part3": "Y faire une simple escale ? Bien trop contraignant ...",
     "part4": "En fait vous n’avez pas vraiment de choix pour venir à El Nido, que ce soit en transport ou en horaire c’est plutôt assez restreint.",
-    "part5": "=> Depuis Manille, prenez l’avion vers Puerto Princesa.",
-    "part6": "Arrivé sur place, il faudra prendre un van ou un bus qui vous emmènera à El Nido. Comptez 5h en van, un peu plus en bus. Vous n’êtes pas obligé mais vu que nous arrivions de nuit nous avons préféré, par sécurité, réserver un van privé (nous étions un groupe de 4). Nous avons réservé via",
-    "part7": "mais vous pouvez également utiliser",
-    "part8": "=> Depuis Coron,vous pourrez prendre un ferry qui vous emmènera sur place en environ 4h. Vous pouvez réserver sur",
-    "part9": "=> On ne vous conseille pas l’aéroport d’El Nido. Cela vous fera certes gagner du temps mais les prix sont élevés et les horaires peu avantageux."
+    "part5": "=> Depuis Manille, prenez l’",
+    "part6": "avion vers Puerto Princesa.",
+    "part7": "Arrivé sur place, il faudra prendre",
+    "part8": "un van ou un bus",
+    "part9": "qui vous emmènera à El Nido. Comptez 5h en van, un peu plus en bus. Vous n’êtes pas obligé mais vu que nous arrivions de nuit nous avons préféré, par sécurité, réserver un van privé (nous étions un groupe de 4). Nous avons réservé via",
+    "part10": "mais vous pouvez également utiliser",
+    "part11": "=> Depuis Coron,vous pourrez prendre",
+    "part12": "un ferry",
+    "part13": "qui vous emmènera sur place en environ 4h. Vous pouvez réserver sur",
+    "part14": "=> On ne vous conseille pas l’aéroport d’El Nido. Cela vous fera certes gagner du temps mais les prix sont élevés et les horaires peu avantageux."
   },
   "where-to-stay": {
     "part1": "Nous avions dormi à",

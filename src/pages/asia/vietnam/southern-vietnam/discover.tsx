@@ -7,6 +7,7 @@ import {
   VietnamTitle,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import {
+  HighLight,
   HowLong,
   HowMuch,
   Introduction,
@@ -71,13 +72,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Introduction>{googleDescription}</Introduction>
         <WhatTimeOfYear>
-          <p>{t("what-time-of-year.part1")}</p>
-          <p>{t("what-time-of-year.part2")}</p>
+          <p>
+            {t("what-time-of-year.part1")} <HighLight>{t("what-time-of-year.part2")}</HighLight>
+          </p>
           <p>{t("what-time-of-year.part3")}</p>
+          <p>{t("what-time-of-year.part4")}</p>
         </WhatTimeOfYear>
         <HowLong>
-          <p>{t("how-long.part1")}</p>
-          <p>{t("how-long.part2")}</p>
+          <p>
+            <HighLight>{t("how-long.part1")}</HighLight> {t("how-long.part2")}
+          </p>
+          <p>{t("how-long.part3")}</p>
         </HowLong>
         <HowMuch>
           <p>{t("how-much.part1")}</p>
@@ -133,6 +138,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit2.part4")}</p>
             <GroupOfImages>
               <ImageAsLandscapeOnTheLeft>
+                <SouthernVietnam image="fruits" />
+              </ImageAsLandscapeOnTheLeft>
+              <ImageAsLandscapeOnTheRight>
+                <SouthernVietnam image="scarecrow" />
+              </ImageAsLandscapeOnTheRight>
+              <ImageAsLandscapeOnTheLeft>
                 <SouthernVietnam image="calao1" />
               </ImageAsLandscapeOnTheLeft>
               <ImageAsLandscapeOnTheRight>
@@ -178,7 +189,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SectionContent>
             <p>{t("visit4.part1")}</p>
             <p>{t("visit4.part2")}</p>
-            <p>{t("visit4.part3")}</p>
           </SectionContent>
         </section>
         <Divider />

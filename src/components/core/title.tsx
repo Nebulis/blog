@@ -37,7 +37,7 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
   return (
     <>
       <h1 className={`tc mb1 ${className}`}>{title}</h1>
-      <div className={`tc flex flex-wrap items-center justify-center ${className}`} css={titleStyle}>
+      <div className={`tc flex flex-wrap items-end justify-center ${className}`} css={titleStyle}>
         <span className="published-date">
           {t("published")}{" "}
           {publishedDate instanceof Date

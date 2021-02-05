@@ -2,13 +2,15 @@
   "quote": "Southern Vietnam is full of surprises and discoveries, each one more exciting. From dynamic cities like Hô Chi Minh City, to boat trips on the Mekong River Delta under palm trees, there is something for everyone.",
   "introduction": "When to go? How many days ? What budget to plan? Questions that we often ask ourselves before travelling. We answer to your questions based on our own experience. We also show you our travel itinerary for 1 week in Southern Vietnam.",
   "what-time-of-year": {
-    "part1": "The Best time to visit Southern Vietnam is during the dry season.",
-    "part2": "Avoid travelling to the South during the monsoon which happens between May and November, otherwise you will experience rain every day.",
-    "part3": "We went there in February, Hô Chi Minh City was quite crowded. However, it was uncrowded when we explored the surrounding areas."
+    "part1": "The Best time to visit Southern Vietnam is during the dry season, from",
+    "part2": "December to April.",
+    "part3": "Avoid travelling to the South during the monsoon which happens between May and November, otherwise you will experience rain every day.",
+    "part4": "We went there in February, Hô Chi Minh City was quite crowded. However, it was uncrowded when we explored the surrounding areas."
   },
   "how-long": {
-    "part1": "One week is enough to visit Southern Vietnam.",
-    "part2": "Of course, it all depends of your pace, or if you planned lazy days, at the beach for instance. For us that was more than enough."
+    "part1": "One week ",
+    "part2": "is enough to visit Southern Vietnam.",
+    "part3": "Of course, it all depends of your pace, or if you planned lazy days, at the beach for instance. For us that was more than enough."
   },
   "how-much": {
     "part1": "Most of the budget will be spent on air travel. For the other expenses, everything is quite cheap, whether it's for accommodations, food, transports or activities. For example, for two people we spent, per day, approximately:",
@@ -55,8 +57,7 @@
   "visit4": {
     "title": "It's just the beginning",
     "part1": "This is the end of our visit in Southern Vietnam, but it is clearly not the end of our trip. The North and the Center are waiting for us.",
-    "part2": "We look forward to take you with us to discover the rest of the country.",
-    "part3": "New articles will be posted soon to tell you more about our visits. Stay tuned!"
+    "part2": "We look forward to take you with us to discover the rest of the country."
   },
   "conclusion": "Because of its history and the authenticity of its landscapes, South Vietnam is a destination that will leave you a lasting impression.",
   "question1": "Have you ever been to Southern Vietnam? What is your best souvenir?",

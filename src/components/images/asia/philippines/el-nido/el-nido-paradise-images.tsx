@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import * as React from "react"
 import { ExtraImageProps } from "../../../../../types/shared"
 
-export const ElNidoParadise: React.FunctionComponent<ExtraImageProps & { image: string }> = ({
+export const ElNidoParadiseImages: React.FunctionComponent<ExtraImageProps & { image: string }> = ({
   className = "",
   image,
   fluidObject = {},
@@ -160,6 +160,34 @@ export const ElNidoParadise: React.FunctionComponent<ExtraImageProps & { image: 
       city5: file(relativePath: { eq: "asia/philippines/el-nido/el-nido-paradise/el-nido-city5.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardFr1: file(relativePath: { eq: "asia/philippines/el-nido/el-nido-paradise/card-fr1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardFr2: file(relativePath: { eq: "asia/philippines/el-nido/el-nido-paradise/card-fr2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn1: file(relativePath: { eq: "asia/philippines/el-nido/el-nido-paradise/card-en1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn2: file(relativePath: { eq: "asia/philippines/el-nido/el-nido-paradise/card-en2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

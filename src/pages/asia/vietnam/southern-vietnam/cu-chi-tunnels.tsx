@@ -17,6 +17,7 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import {
+  HighLight,
   How,
   HowLong,
   HowMuch,
@@ -41,6 +42,7 @@ import { SharedCardVietnamImages } from "../../../../components/images/asia/viet
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import { Divider } from "../../../../components/core/divider"
+import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 
 const namespace = "asia/vietnam/southern-vietnam/cu-chi-tunnels"
 const id = "cu-chi-tunnels"
@@ -144,7 +146,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </VietnamExternalLink>{" "}
             {t("how-much.part4")}
           </p>
-          <p>{t("how-much.part5")}</p>
+          <p>
+            {t("how-much.part5")} <HighLight>{t("how-much.part6")}</HighLight>
+            {t("how-much.part7")}
+          </p>
         </HowMuch>
         <WhereToStay>
           <p>{t("where-to-stay.part1")}</p>
@@ -304,6 +309,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit5.part1")}</p>
             <p>{t("visit5.part2")}</p>
             <p>{t("visit5.part3")}</p>
+            <ImageAsPortrait
+              credit={
+                <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/fun_lucky-2181935">
+                  Fun_Lucky
+                </ExternalLinkNotUnderlined>
+              }
+            >
+              <CuChiTunnelsImages image="weapon" />
+            </ImageAsPortrait>
+          </SectionContent>
+          <SectionContent>
             <p>{t("visit5.part4")}</p>
             <GroupOfImages>
               <TwoImagesSameSizeOrToGroup>

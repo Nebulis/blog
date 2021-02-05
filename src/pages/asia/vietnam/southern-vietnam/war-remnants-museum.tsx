@@ -25,6 +25,7 @@ import {
 } from "../../../../components/images/layout"
 import HomeImgUrl from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/war-museum-main.jpg"
 import {
+  HighLight,
   How,
   HowLong,
   HowMuch,
@@ -81,21 +82,29 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where.part1")}</p>
         </Where>
         <When>
-          <p>{t("when.part1")}</p>
-          <p>{t("when.part2")}</p>
+          <p>
+            {t("when.part1")} <HighLight>{t("when.part2")}</HighLight>
+          </p>
+          <p>{t("when.part3")}</p>
         </When>
         <How>
-          <p>{t("how.part1")}</p>
-          <p>{t("how.part2")}</p>
+          <p>
+            {t("how.part1")} <HighLight>{t("how.part2")}</HighLight> {t("how.part3")}{" "}
+            <HighLight>{t("how.part4")}</HighLight>
+          </p>
+          <p>{t("how.part5")}</p>
           {transportLinkPublished && (
             <p>
-              {t("how.part3")}{" "}
+              {t("how.part6")}{" "}
               <VietnamLink to="transports-in-vietnam">{t("common:country.vietnam.card.transports")}</VietnamLink>.
             </p>
           )}
         </How>
         <HowLong>
-          <p>{t("how-long.part1")}</p>
+          <p>
+            {t("how-long.part1")} <HighLight>{t("how-long.part2")}</HighLight> {t("how-long.part3")}{" "}
+            <HighLight>{t("how-long.part4")}</HighLight> {t("how-long.part5")}
+          </p>
         </HowLong>
         <WhatTimeOfYear>
           <p>

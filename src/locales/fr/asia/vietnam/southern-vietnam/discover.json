@@ -2,13 +2,15 @@
   "quote": "Le Sud du Vietnam regorge de surprises et de découvertes, toutes plus passionnantes les unes que les autres. Entre le dynamisme de Hô Chi Minh-Ville et les excursions en bateau à l’ombre des palmiers d’eau sur le Delta du Mékong, il y en a pour tous les goûts.",
   "introduction": "Quand partir ? Combien de jours ? Quel budget prévoir ? Des questions qu’on se pose souvent avant de concrétiser un projet de voyage. On vous répond en se basant sur notre propre expérience. On vous indique également notre itinéraire de voyage pour 1 semaine dans le Sud du Vietnam.",
   "what-time-of-year": {
-    "part1": "La meilleure période pour partir au Sud du Vietnam est la saison sèche de Décembre à Avril.",
-    "part2": "Évitez de vous rendre dans le Sud pendant la mousson qui se situe entre Mai et Novembre si vous ne voulez pas avoir de la pluie pratiquement chaque jour de votre séjour.",
-    "part3": "Nous y sommes allés en Février, il y avait énormément de monde à Hô Chi Minh-Ville par contre nous n’avons eu aucun problème lors de nos visites aux alentours."
+    "part1": "La meilleure période pour partir au Sud du Vietnam est la saison sèche de",
+    "part2": "décembre à avril.",
+    "part3": "Évitez de vous rendre dans le Sud pendant la mousson qui se situe entre Mai et Novembre si vous ne voulez pas avoir de la pluie pratiquement chaque jour de votre séjour.",
+    "part4": "Nous y sommes allés en Février, il y avait énormément de monde à Hô Chi Minh-Ville par contre nous n’avons eu aucun problème lors de nos visites aux alentours."
   },
   "how-long": {
-    "part1": "Une semaine est suffisante pour visiter le Sud du Vietnam.",
-    "part2": "Bien sûr tout dépend de la vitesse de vos visites ou si vous prévoyez des jours de farniente, mais pour nous c’était largement suffisant."
+    "part1": "Une semaine ",
+    "part2": "est suffisante pour visiter le Sud du Vietnam.",
+    "part3": "Bien sûr tout dépend de la vitesse de vos visites ou si vous prévoyez des jours de farniente, mais pour nous c’était largement suffisant."
   },
   "how-much": {
     "part1": "Le plus gros du budget sera consacré au voyage en avion. Environ 600€ par personne. Pour le reste des dépenses, il est plutôt simple de s'en sortir à moindre coût, que cela soit pour le logement, la nourriture, les déplacements ou bien les activités. Par exemple, pour deux personnes nous en avons eu, par jour, pour environ:",
@@ -55,8 +57,7 @@
   "visit4": {
     "title": "Une histoire sans fin",
     "part1": "C’est la fin pour nous de notre visite du Vietnam du Sud, mais ce n’est clairement pas la fin de notre séjour. Le Nord et le Centre n’attendent que nous.",
-    "part2": "Nous avons également hâte de vous emmener avec nous découvrir le reste du pays.",
-    "part3": "Des articles arrivent prochainement pour vous raconter plus en détail chacune de nos visites."
+    "part2": "Nous avons également hâte de vous emmener avec nous découvrir le reste du pays."
   },
   "conclusion": "De par son histoire et l'authenticité de ses paysages, le Vietnam du Sud est une destination qui ne vous laissera pas insensible.",
   "question1": "Êtes-vous déjà allé au Vietnam du Sud ? Quel en est votre meilleur souvenir ?",
