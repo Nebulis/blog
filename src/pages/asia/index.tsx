@@ -24,7 +24,7 @@ i18n.addResourceBundle("fr", namespace, asiaIndexFr)
 i18n.addResourceBundle("en", namespace, asiaIndexEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { development, displayAllArticles } = useContext(ApplicationContext)
+  const { development } = useContext(ApplicationContext)
   const countries = development ? asiaLinks.countries : asiaLinks.countries.filter(isLinkPublished)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const googleDescription = `${t("quote.part3")}}`
@@ -61,14 +61,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             ) : null
           )}
         </MedallionContainer>
-        {displayAllArticles && (
-          <>
-            <PrimaryDivider />
-            <GoToAllArticlesContainer>
-              <ButtonLink to="articles?continent=asia">{t("common:allArticles")}</ButtonLink>
-            </GoToAllArticlesContainer>
-          </>
-        )}
+        <PrimaryDivider />
+        <GoToAllArticlesContainer>
+          <ButtonLink to="articles?continent=asia">{t("common:allArticles")}</ButtonLink>
+        </GoToAllArticlesContainer>
       </BlogLayoutWithDrawer>
     </>
   )

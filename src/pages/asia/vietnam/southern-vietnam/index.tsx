@@ -39,17 +39,16 @@ const currentPageId = "southern-vietnam"
 
 const isNotCurrentPage = (city: CityLink) => city.id !== currentPageId
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { development, displayAllArticles } = useContext(ApplicationContext)
+  const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const cities = development
     ? vietnamLinks.cities.filter(isNotCurrentPage)
     : vietnamLinks.cities.filter(isLinkPublished).filter(isNotCurrentPage)
 
   const highlights = getArticles({
-    country: "vietnam",
     kind: "highlight",
     development,
-    tag: "southern-vietnam",
+    tags: ["southern-vietnam"],
     filter: (cachedLink) => cachedLink.id !== "discover-southern-vietnam",
   })
   const googleDescription = t("meta-description")
@@ -110,14 +109,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </MedallionContainer>
           </>
         )}
-        {displayAllArticles && (
-          <>
-            <Divider className="mt2" />
-            <GoToAllArticlesContainer>
-              <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
-            </GoToAllArticlesContainer>
-          </>
-        )}
+        <Divider className="mt2" />
+        <GoToAllArticlesContainer>
+          <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
+        </GoToAllArticlesContainer>
       </VietnamBlogLayout>
     </>
   )
