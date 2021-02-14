@@ -327,12 +327,12 @@ interface CarouselElementType {
 }
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { development, displayAllArticles } = useContext(ApplicationContext)
+  const { development } = useContext(ApplicationContext)
   const { isMobileView } = useContext(MenuContext)
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const lastArticle = getArticles({ development, limit: 1, country: "vietnam" })[0]
+  const lastArticle = getArticles({ development, limit: 1, tags: ["vietnam"] })[0]
   const Card = lastArticle.card
   const [carouselElement] = useState<CarouselElementType[]>(() => {
     const tmp: CarouselElementType[] = [
@@ -458,11 +458,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
             )}
           </ArticlesContainer>
-          {displayAllArticles && (
-            <div className="tc mt3">
-              <ButtonLink to="articles">{t("common:allArticles")}</ButtonLink>
-            </div>
-          )}
+          <div className="tc mt3">
+            <ButtonLink to="articles?kind=highlight">{t("discover.all-travelogue")}</ButtonLink>
+          </div>
         </div>
         <HomeDivider />
         <HomeSection>{t("contemplate.title")}</HomeSection>

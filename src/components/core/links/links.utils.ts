@@ -129,32 +129,29 @@ export const isLinkPublished = (
 
 const returnTrue = () => true
 export const getArticles = ({
-  country,
   published = true,
   development,
   card = true,
-  kind,
-  tag,
+  kind = "none",
+  tags = [],
   filter = returnTrue,
   sort = sortByPublishedDate,
   limit = Number.POSITIVE_INFINITY,
 }: {
-  country?: string
   card?: boolean
-  kind?: Kind
+  kind?: Kind | "none"
   filter?: (cachedLink: CachedLinksMap) => boolean
   published?: boolean
   development: boolean
-  tag?: string
+  tags?: string[]
   sort?: (cacheLink: CachedLinksMap, cacheLink2: CachedLinksMap) => number
   limit?: number
 }) => {
   return Array.from(cachedLinks.values())
-    .filter((cachedLink) => (country ? cachedLink.country === country : true))
     .filter((cachedLink) => (card ? cachedLink.card : true))
     .filter((cachedLink) => (published && !development ? cachedLink.published : true))
-    .filter((cachedLink) => (kind ? cachedLink.kind === kind : true))
-    .filter((cachedLink) => (tag ? cachedLink.tags.includes(tag) : true))
+    .filter((cachedLink) => (kind !== "none" ? cachedLink.kind === kind : true))
+    .filter((cachedLink) => (tags.length > 0 ? tags.some((t) => cachedLink.tags.includes(t)) : true))
     .filter(filter)
     .sort(sort)
     .slice(0, limit)

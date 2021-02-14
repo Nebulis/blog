@@ -29,7 +29,7 @@ i18n.addResourceBundle("fr", namespace, asiaIndexFr)
 i18n.addResourceBundle("en", namespace, asiaIndexEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { development, displayAllArticles } = useContext(ApplicationContext)
+  const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const cities = development ? philippinesLinks.cities : philippinesLinks.cities.filter(isLinkPublished)
   const articles: React.ComponentType<ExtraCardProps>[] = []
@@ -80,14 +80,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ArticlesContainer>
           </>
         )}
-        {displayAllArticles && (
-          <>
-            <PhilippinesDivider />
-            <GoToAllArticlesContainer>
-              <PhilippinesButtonLink to="articles?country=philippines">Tous nos articles</PhilippinesButtonLink>
-            </GoToAllArticlesContainer>
-          </>
-        )}
+        <PhilippinesDivider />
+        <GoToAllArticlesContainer>
+          <PhilippinesButtonLink to="articles?country=philippines">Tous nos articles</PhilippinesButtonLink>
+        </GoToAllArticlesContainer>
       </PhilippinesBlogLayout>
     </>
   )

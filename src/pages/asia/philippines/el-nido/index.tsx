@@ -38,17 +38,16 @@ const currentPageId = "el-nido"
 
 const isNotCurrentPage = (city: CityLink) => city.id !== currentPageId
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { development, displayAllArticles } = useContext(ApplicationContext)
+  const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const cities = development
     ? philippinesLinks.cities.filter(isNotCurrentPage)
     : philippinesLinks.cities.filter(isLinkPublished).filter(isNotCurrentPage)
 
   const highlights = getArticles({
-    country: "philippines",
     kind: "highlight",
     development,
-    tag: "el-nido",
+    tags: ["el-nido"],
     filter: (cachedLink) => cachedLink.id !== "el-nido-paradise",
   })
   const googleDescription = t("meta-description")
@@ -108,14 +107,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </MedallionContainer>
           </>
         )}
-        {displayAllArticles && (
-          <>
-            <PhilippinesDivider className="mt2" />
-            <GoToAllArticlesContainer>
-              <PhilippinesButtonLink to="articles?country=philippines">Tous nos articles</PhilippinesButtonLink>
-            </GoToAllArticlesContainer>
-          </>
-        )}
+        <PhilippinesDivider className="mt2" />
+        <GoToAllArticlesContainer>
+          <PhilippinesButtonLink to="articles?country=philippines">Tous nos articles</PhilippinesButtonLink>
+        </GoToAllArticlesContainer>
       </PhilippinesBlogLayout>
     </>
   )

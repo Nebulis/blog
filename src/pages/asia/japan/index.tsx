@@ -84,7 +84,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ArticlesContainer>
               {getArticles({
                 development,
-                country: "japan",
+                tags: ["japan"],
                 kind: "highlight",
               }).map(({ card: Card }, index) =>
                 Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null

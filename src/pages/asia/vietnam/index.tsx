@@ -37,10 +37,10 @@ i18n.addResourceBundle("fr", namespace, asiaIndexFr)
 i18n.addResourceBundle("en", namespace, asiaIndexEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { development, displayAllArticles } = useContext(ApplicationContext)
+  const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
-  const articles = getArticles({ kind: "other", country: "vietnam", development })
+  const articles = getArticles({ kind: "other", tags: ["vietnam"], development })
   const country = t("common:country.vietnam.title")
   const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
@@ -98,14 +98,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ArticlesContainer>
           </>
         )}
-        {displayAllArticles && (
-          <>
-            <Divider />
-            <GoToAllArticlesContainer>
-              <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
-            </GoToAllArticlesContainer>
-          </>
-        )}
+        <Divider />
+        <GoToAllArticlesContainer>
+          <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
+        </GoToAllArticlesContainer>
       </VietnamBlogLayout>
     </>
   )

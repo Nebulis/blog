@@ -34,7 +34,6 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
       value={{
         initialDevelopmentValue: site.siteMetadata.config.context !== "production",
         development,
-        displayAllArticles: development,
         displayComments: site.siteMetadata.config.comments === "enabled",
         toggle: () => setDevelopment(!development),
         covid: true,
@@ -47,7 +46,6 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
 
 export const ApplicationContext = React.createContext<{
   development: boolean
-  displayAllArticles: boolean
   displayComments: boolean
   /**
    * Property to keep track of the initial value of development when the page started
@@ -59,7 +57,6 @@ export const ApplicationContext = React.createContext<{
   covid: boolean
 }>({
   development: false,
-  displayAllArticles: false,
   displayComments: false,
   initialDevelopmentValue: false,
   covid: true,
