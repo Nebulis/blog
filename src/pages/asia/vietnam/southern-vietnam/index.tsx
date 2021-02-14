@@ -52,7 +52,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     tag: "southern-vietnam",
     filter: (cachedLink) => cachedLink.id !== "discover-southern-vietnam",
   })
-  const googleDescription = t("introduction.section3")
+  const googleDescription = t("meta-description")
   const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
     <>
