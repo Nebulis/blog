@@ -32,3 +32,29 @@ export type OrganisationCard = {
   image: ComponentType<ExtraImageLinkProps>
   imageProps?: ExtraImageLinkProps
 }
+
+export type WeatherType = "good" | "fair" | "poor"
+type WeatherIconType = "light-rain" | "heavy-rain" | "sun-rain" | "sun-cloud" | "sunny"
+type WeatherAltIconType = "hot" | "droplet"
+interface WeatherData {
+  type: WeatherType
+  icon: WeatherIconType
+  alt?: WeatherAltIconType
+}
+export interface WeatherEntry {
+  label: string
+  data: [
+    WeatherData,
+    WeatherData,
+    WeatherData,
+    WeatherData,
+    WeatherData,
+    WeatherData,
+    WeatherData,
+    WeatherData,
+    WeatherData,
+    WeatherData,
+    WeatherData,
+    WeatherData
+  ]
+}

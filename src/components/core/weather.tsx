@@ -1,4 +1,11 @@
-import React, { HTMLAttributes } from "react"
+import React, { HTMLAttributes, useState } from "react"
+import { largeEnd, weatherAverage, weatherBad, weatherGood } from "./variables"
+import { useCustomTranslation } from "../../i18n"
+import { Button } from "./button"
+import { css } from "@emotion/core"
+import { Table } from "../layout/layout"
+import styled from "@emotion/styled"
+import { WeatherEntry, WeatherType } from "../../types/shared"
 // https://www.flaticon.com/free-icon/drop_2204430?related_id=2204430&origin=pack
 
 export const HeavyRain: React.FunctionComponent = () => (
@@ -425,3 +432,175 @@ export const LightRain: React.FunctionComponent = () => (
     />
   </svg>
 )
+
+const weatherStyle = css`
+  .weather-container {
+    @media (max-width: ${largeEnd}) {
+      overflow-x: scroll;
+    }
+    table {
+      margin-bottom: 0;
+      td {
+        position: relative;
+      }
+      tbody.good {
+        .good {
+          border: 2px solid ${weatherGood};
+        }
+      }
+      tbody.poor {
+        .poor {
+          border: 2px solid ${weatherBad};
+        }
+      }
+      tbody.fair {
+        .fair {
+          border: 2px solid ${weatherAverage};
+        }
+      }
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+      .alt {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .weather-button-container {
+    & > *:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+`
+
+// using important because I shouldn't have tried to use global style in vietnam pages
+// will stick to custom components for button :)
+const WeatherGoodMonths = styled(Button)`
+  &&.btn {
+    background-color: transparent !important;
+    border: 2px solid ${weatherGood} !important;
+    color: ${weatherGood} !important;
+  }
+  &&.btn:hover,
+  &&.btn.active {
+    border: 2px solid ${weatherGood} !important;
+    background-color: ${weatherGood} !important;
+    color: white !important;
+  }
+`
+const WeatherBadMonths = styled(Button)`
+  &&.btn {
+    background-color: transparent !important;
+    border: 2px solid ${weatherBad} !important;
+    color: ${weatherBad} !important;
+  }
+  &&.btn:hover,
+  &&.btn.active {
+    border: 2px solid ${weatherBad} !important;
+    background-color: ${weatherBad} !important;
+    color: white !important;
+  }
+`
+const WeatherAverageMonths = styled(Button)`
+  &&.btn {
+    background-color: transparent !important;
+    border: 2px solid ${weatherAverage} !important;
+    color: ${weatherAverage} !important;
+  }
+  &&.btn:hover,
+  &&.btn.active {
+    border: 2px solid ${weatherAverage} !important;
+    background-color: ${weatherAverage} !important;
+    color: white !important;
+  }
+`
+export const Weather: React.FunctionComponent<{ entries: WeatherEntry[]; className?: string }> = ({
+  entries,
+  className = "",
+}) => {
+  const { i18n } = useCustomTranslation()
+  const [displayMonths, setDisplayMonths] = useState<"NONE" | WeatherType>("NONE")
+  return (
+    <div css={weatherStyle} className={`mb3 ${className}`}>
+      <div className="mb3 weather-container">
+        <Table>
+          <thead>
+            <tr>
+              <th />
+              <th>Jan</th>
+              <th>{i18n.languageCode === "fr" ? "Fev" : "Feb"}</th>
+              <th>Mar</th>
+              <th>{i18n.languageCode === "fr" ? "Avr" : "Apr"}</th>
+              <th>{i18n.languageCode === "fr" ? "Mai" : "May"}</th>
+              <th>Jun</th>
+              <th>Jul</th>
+              <th>{i18n.languageCode === "fr" ? "Aou" : "Aug"}</th>
+              <th>Sep</th>
+              <th>Oct</th>
+              <th>Nov</th>
+              <th>Dec</th>
+            </tr>
+          </thead>
+          <tbody className={`${displayMonths.toLowerCase()}`}>
+            {entries.map((entry, index) => {
+              return (
+                <tr key={index}>
+                  <td>{entry.label}</td>
+                  {entry.data.map((data, index2) => (
+                    <td className={data.type} key={index2}>
+                      {data.icon === "light-rain" ? (
+                        <LightRain />
+                      ) : data.icon === "heavy-rain" ? (
+                        <HeavyRain />
+                      ) : data.icon === "sun-rain" ? (
+                        <SunAndRain />
+                      ) : data.icon === "sun-cloud" ? (
+                        <SunAndCloud />
+                      ) : (
+                        <Sunny />
+                      )}
+                      {data.alt === "hot" ? (
+                        <Hot className="alt" />
+                      ) : data.alt === "droplet" ? (
+                        <Droplet className="alt" />
+                      ) : null}
+                    </td>
+                  ))}
+                </tr>
+              )
+            })}
+          </tbody>
+        </Table>
+      </div>
+      <div className="flex weather-button-container">
+        <WeatherGoodMonths
+          className={`${displayMonths === "good" ? "active" : ""} `}
+          onClick={() => (displayMonths === "good" ? setDisplayMonths("NONE") : setDisplayMonths("good"))}
+        >
+          {i18n.languageCode === "fr" ? "Favorable" : "Good"}
+        </WeatherGoodMonths>
+        <WeatherAverageMonths
+          className={`${displayMonths === "fair" ? "active" : ""} `}
+          onClick={() => (displayMonths === "fair" ? setDisplayMonths("NONE") : setDisplayMonths("fair"))}
+        >
+          {i18n.languageCode === "fr" ? "Passable" : "Fair"}
+        </WeatherAverageMonths>
+        <WeatherBadMonths
+          className={`${displayMonths === "poor" ? "active" : ""} `}
+          onClick={() => (displayMonths === "poor" ? setDisplayMonths("NONE") : setDisplayMonths("poor"))}
+        >
+          {i18n.languageCode === "fr" ? "À éviter" : "Poor"}
+        </WeatherBadMonths>
+      </div>
+    </div>
+  )
+}
+
+export const WeatherForHomePage = styled(Weather)`
+  margin-bottom: 1.45rem;
+`

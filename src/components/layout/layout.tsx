@@ -312,3 +312,13 @@ export const MapContainer = styled.div`
   overflow: hidden;
   text-align: center;
 `
+
+export const Table = styled.table`
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  td,
+  th {
+    text-align: center;
+  }
+`
