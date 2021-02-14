@@ -79,24 +79,7 @@
     "part5": "Si vous souhaitez faire région par région :",
     "part6": "Sud : de décembre à avril",
     "part7": "Centre : de février à juin",
-    "part8": "Nord : avril et d'octobre à décembre",
-    "good": "Favorables",
-    "fair": "Passables",
-    "poor": "À éviter",
-    "month": {
-      "jan": "Jan",
-      "feb": "Fev",
-      "mar": "Mar",
-      "apr": "Avr",
-      "may": "Mai",
-      "jun": "Jun",
-      "jul": "Jul",
-      "aug": "Aou",
-      "sep": "Sep",
-      "oct": "Oct",
-      "nov": "Nov",
-      "dec": "Dec"
-    }
+    "part8": "Nord : avril et d'octobre à décembre"
   },
   "section4": {
     "title": "Durée",

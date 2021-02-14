@@ -79,24 +79,7 @@
     "part5": "If you plan to travel into a specific region:",
     "part6": "Southern: from December to April",
     "part7": "Central: from February to June",
-    "part8": "Northern: April and from October to December",
-    "good": "Good",
-    "fair": "Fair",
-    "poor": "Poor",
-    "month": {
-      "jan": "Jan",
-      "feb": "Feb",
-      "mar": "Mar",
-      "apr": "Apr",
-      "may": "May",
-      "jun": "Jun",
-      "jul": "Jul",
-      "aug": "Aug",
-      "sep": "Sep",
-      "oct": "Oct",
-      "nov": "Nov",
-      "dec": "Dec"
-    }
+    "part8": "Northern: April and from October to December"
   },
   "section4": {
     "title": "Duration",

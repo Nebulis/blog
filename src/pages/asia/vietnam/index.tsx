@@ -10,6 +10,7 @@ import {
   VietnamBlogLayout,
   VietnamButtonLink,
   VietnamImageAsMedallion,
+  vietnamWeatherEntries,
 } from "../../../components/core/asia/vietnam/vietnam"
 import { SouthVietnamCard } from "../../../components/core/asia/vietnam/vietnam.cards"
 import {
@@ -29,6 +30,7 @@ import asiaIndexFr from "../../../locales/fr/asia/vietnam/index.json"
 import asiaIndexEn from "../../../locales/en/asia/vietnam/index.json"
 import { PageQuote } from "../../../components/core/quote"
 import { Divider } from "../../../components/core/divider"
+import { WeatherForHomePage } from "../../../components/core/weather"
 
 const namespace = "asia/vietnam/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
@@ -55,6 +57,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote>{t("introduction.section1")}</PageQuote>
           <PageQuote position="none">{t("introduction.section2")}</PageQuote>
         </SectionContent>
+        <WeatherForHomePage entries={vietnamWeatherEntries(t)} />
         {false && (
           <>
             <Divider />

@@ -1,6 +1,11 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
-import { VietnamBlogLayout, VietnamExternalLink, VietnamLink } from "../../../components/core/asia/vietnam/vietnam"
+import {
+  VietnamBlogLayout,
+  VietnamExternalLink,
+  VietnamLink,
+  vietnamWeatherEntries,
+} from "../../../components/core/asia/vietnam/vietnam"
 import { PageProps } from "gatsby"
 import translationFr from "../../../locales/fr/asia/vietnam/prepare.json"
 import translationEn from "../../../locales/en/asia/vietnam/prepare.json"
@@ -71,9 +76,7 @@ import {
   ThailandWithFlag,
   UKWithFlag,
 } from "../../../components/icon/flags"
-import { Droplet, HeavyRain, Hot, LightRain, SunAndCloud, SunAndRain, Sunny } from "../../../components/icon/weather"
-import { WeatherAverageMonths, WeatherBadMonths, WeatherGoodMonths } from "../../../components/core/button"
-import { largeEnd, smallEnd, weatherAverage, weatherBad, weatherGood } from "../../../components/core/variables"
+import { smallEnd } from "../../../components/core/variables"
 import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
 import {
   vietnamPrimaryColorDarker,
@@ -83,6 +86,8 @@ import { getLink } from "../../../components/core/links/links.utils"
 import HomeImgUrl from "../../../images/asia/vietnam/prepare/prepare-vietnam-main.jpg"
 import { Title } from "../../../components/core/title"
 import { Quote } from "../../../components/core/quote"
+import { Table } from "../../../components/layout/layout"
+import { Weather } from "../../../components/core/weather"
 
 const Highlight = styled.span`
   font-weight: bold;
@@ -91,21 +96,6 @@ const SubTitle = styled.p`
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-`
-const Table = styled.table`
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  td,
-  th {
-    text-align: center;
-  }
-  tbody tr:nth-of-type(even) {
-    background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
-  }
-  tbody tr:hover {
-    background-color: ${vietnamPrimaryColorWithOpacity(0.3)};
-  }
 `
 const petitCarreJauneStyle = css`
   background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
@@ -631,7 +621,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const transportLinkPublished = development || getLink("transport-vietnam").published
   const foodLinkPublished = development || getLink("food-vietnam").published
   const devicesPublished = development || getLink("devices").published
-  const [displayMonths, setDisplayMonths] = useState<"NONE" | "GOOD" | "AVERAGE" | "BAD">("NONE")
 
   return (
     <>
@@ -997,235 +986,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <WhatTimeOfYear title={t("section3.title")} id="weather">
           <SubTitle>{t("section3.part1")}</SubTitle>
-          <div
-            css={css`
-              @media (max-width: ${largeEnd}) {
-                overflow-x: scroll;
-              }
-            `}
-            className="mb3"
-          >
-            <Table
-              css={css`
-                margin-bottom: 0;
-                td {
-                  position: relative;
-                }
-                tbody.good {
-                  .good {
-                    border: 2px solid ${weatherGood};
-                  }
-                }
-                tbody.bad {
-                  .bad {
-                    border: 2px solid ${weatherBad};
-                  }
-                }
-                tbody.average {
-                  .average {
-                    border: 2px solid ${weatherAverage};
-                  }
-                }
-                svg {
-                  width: 50px;
-                  height: 50px;
-                }
-                .alt {
-                  position: absolute;
-                  bottom: 0;
-                  right: 0;
-                  width: 20px;
-                  height: 20px;
-                }
-              `}
-            >
-              <thead>
-                <tr>
-                  <th />
-                  <th>{t("section3.month.jan")}</th>
-                  <th>{t("section3.month.feb")}</th>
-                  <th>{t("section3.month.mar")}</th>
-                  <th>{t("section3.month.apr")}</th>
-                  <th>{t("section3.month.may")}</th>
-                  <th>{t("section3.month.jun")}</th>
-                  <th>{t("section3.month.jul")}</th>
-                  <th>{t("section3.month.aug")}</th>
-                  <th>{t("section3.month.sep")}</th>
-                  <th>{t("section3.month.oct")}</th>
-                  <th>{t("section3.month.nov")}</th>
-                  <th>{t("section3.month.dec")}</th>
-                </tr>
-              </thead>
-              <tbody className={`${displayMonths.toLowerCase()}`}>
-                <tr>
-                  <td>{t("common:link.north")}</td>
-                  <td className="average">
-                    <LightRain />
-                  </td>
-                  <td className="average">
-                    <HeavyRain />
-                  </td>
-                  <td className="average">
-                    <HeavyRain />
-                  </td>
-                  <td className="good">
-                    <SunAndRain />
-                  </td>
-                  <td className="average">
-                    <SunAndRain />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="good">
-                    <SunAndCloud />
-                  </td>
-                  <td className="good">
-                    <SunAndCloud />
-                  </td>
-                  <td className="good">
-                    <SunAndCloud />
-                  </td>
-                </tr>
-                <tr>
-                  <td>{t("common:link.central")}</td>
-                  <td className="average">
-                    <SunAndRain />
-                  </td>
-                  <td className="good">
-                    <Sunny />
-                  </td>
-                  <td className="good">
-                    <Sunny />
-                  </td>
-                  <td className="good">
-                    <Sunny />
-                  </td>
-                  <td className="good">
-                    <Sunny />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="good">
-                    <Sunny />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="average">
-                    <Sunny />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="average">
-                    <SunAndRain />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="average">
-                    <SunAndRain />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Droplet className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Droplet className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Droplet className="alt" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>{t("common:link.south")}</td>
-                  <td className="good">
-                    <Sunny />
-                  </td>
-                  <td className="good">
-                    <Sunny />
-                  </td>
-                  <td className="good">
-                    <Sunny />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="good">
-                    <Sunny />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="average">
-                    <SunAndRain />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Hot className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Droplet className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Droplet className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Droplet className="alt" />
-                  </td>
-                  <td className="bad">
-                    <SunAndRain />
-                    <Droplet className="alt" />
-                  </td>
-                  <td className="average">
-                    <SunAndRain />
-                  </td>
-                  <td className="good">
-                    <Sunny />
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
-          </div>
-          <div
-            className="flex mb3"
-            css={css`
-              & > *:not(:last-of-type) {
-                margin-right: 1rem;
-              }
-            `}
-          >
-            <WeatherGoodMonths
-              className={`${displayMonths === "GOOD" ? "active" : ""} `}
-              onClick={() => (displayMonths === "GOOD" ? setDisplayMonths("NONE") : setDisplayMonths("GOOD"))}
-            >
-              {t("section3.good")}
-            </WeatherGoodMonths>
-            <WeatherAverageMonths
-              className={`${displayMonths === "AVERAGE" ? "active" : ""} `}
-              onClick={() => (displayMonths === "AVERAGE" ? setDisplayMonths("NONE") : setDisplayMonths("AVERAGE"))}
-            >
-              {t("section3.fair")}
-            </WeatherAverageMonths>
-            <WeatherBadMonths
-              className={`${displayMonths === "BAD" ? "active" : ""} `}
-              onClick={() => (displayMonths === "BAD" ? setDisplayMonths("NONE") : setDisplayMonths("BAD"))}
-            >
-              {t("section3.poor")}
-            </WeatherBadMonths>
-          </div>
-
+          <Weather entries={vietnamWeatherEntries(t)} />
           <p>
             {t("section3.part2")} <Highlight>{t("section3.part3")}</Highlight> {t("section3.part4")}
           </p>
