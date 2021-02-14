@@ -30,7 +30,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO
         title={t("common:link.who")}
         location={location}
-        description={description}
+        socialNetworkDescription={description}
         googleDescription={googleDescription}
       />
       <BlogLayoutWithDrawer page="who" location={location}>

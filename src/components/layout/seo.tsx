@@ -16,7 +16,7 @@ import DefaultImgUrl from "../../images/SocialNetworkDefault.jpg"
 import { getHostname, getPathForEnglish, getPathForFrench } from "../../utils"
 
 interface SEOProps {
-  description?: string
+  socialNetworkDescription?: string
   googleDescription?: string
   lang?: string
   meta?: any
@@ -25,7 +25,7 @@ interface SEOProps {
   location: PageProps["location"]
 }
 const SEO: FunctionComponent<SEOProps> = ({
-  description,
+  socialNetworkDescription,
   googleDescription,
   lang,
   meta = [],
@@ -47,8 +47,8 @@ const SEO: FunctionComponent<SEOProps> = ({
   )
   const { t, i18n } = useCustomTranslation("common")
 
-  const metaDescription = description || t("description")
-  const metaGoogleDescription = googleDescription || metaDescription
+  const metaSocialNetworkDescription = socialNetworkDescription || t("description")
+  const metaDescription = googleDescription || metaSocialNetworkDescription
   const metaTitle = title || site.siteMetadata.title
   const metaImage = `${getHostname(location)}${image || DefaultImgUrl}`
   const metaLang = lang || i18n.languageCode
@@ -96,7 +96,7 @@ const SEO: FunctionComponent<SEOProps> = ({
       meta={[
         {
           name: `description`,
-          content: metaGoogleDescription,
+          content: metaDescription,
         },
         {
           name: `viewport`,
@@ -108,7 +108,7 @@ const SEO: FunctionComponent<SEOProps> = ({
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: metaSocialNetworkDescription,
         },
         {
           property: `og:type`,
@@ -125,7 +125,7 @@ const SEO: FunctionComponent<SEOProps> = ({
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: metaSocialNetworkDescription,
         },
         { name: "twitter:image", content: `${metaImage}` },
         { name: "twitter:card", content: "summary_large_image" },

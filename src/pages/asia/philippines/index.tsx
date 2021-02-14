@@ -37,7 +37,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const description = `${t("introduction.section1")} ${t("introduction.section2")} ${t("introduction.section3")}`
   return (
     <>
-      <SEO title={country} location={location} description={description} />
+      <SEO title={country} location={location} socialNetworkDescription={description} />
       <PhilippinesBlogLayout page="philippines" location={location}>
         <MainTitleSection>
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />

@@ -51,11 +51,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     tag: "el-nido",
     filter: (cachedLink) => cachedLink.id !== "el-nido-paradise",
   })
-  const googleDescription = t("introduction.section3")
+  const googleDescription = t("meta-description")
   const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
     <>
-      <SEO title={t("title")} location={location} description={description} googleDescription={googleDescription} />
+      <SEO
+        title={t("title")}
+        location={location}
+        socialNetworkDescription={description}
+        googleDescription={googleDescription}
+      />
       <PhilippinesBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />

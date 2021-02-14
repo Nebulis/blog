@@ -60,7 +60,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         title={t("title")}
         location={location}
         image={SouthernVietnamImage}
-        description={description}
+        socialNetworkDescription={description}
         googleDescription={googleDescription}
       />
       <VietnamBlogLayout page={currentPageId} location={location}>

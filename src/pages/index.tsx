@@ -368,7 +368,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const description = `${t("index:welcome.section1")} ${t("index:welcome.section2")} ${t("index:welcome.section3")}`
   return (
     <>
-      <SEO location={location} description={description} />
+      <SEO location={location} socialNetworkDescription={description} />
       <HomeBlogLayout page="home" className="" location={location}>
         <Carousel>
           {carouselElement.map(({ country, component: Component, to, image }, index) => {

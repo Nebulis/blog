@@ -70,7 +70,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
-        description={description}
+        socialNetworkDescription={description}
         googleDescription={googleDescription}
         image={HomeImgUrl}
         location={location}

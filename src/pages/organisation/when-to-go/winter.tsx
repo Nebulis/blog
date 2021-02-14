@@ -54,7 +54,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const googleDescription = t("part1")
   return (
     <>
-      <SEO title={t("title")} location={location} description={description} googleDescription={googleDescription} />
+      <SEO
+        title={t("title")}
+        location={location}
+        socialNetworkDescription={description}
+        googleDescription={googleDescription}
+      />
       <BlogLayoutWithDrawer page="winter" location={location}>
         <MainTitleSection>{t("title")}</MainTitleSection>
         <PrimaryDivider />

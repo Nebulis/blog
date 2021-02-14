@@ -37,7 +37,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const description = `${t("section1")} ${t("section2")}`
   return (
     <>
-      <SEO title={t("common:link.contact")} location={location} description={description} />
+      <SEO title={t("common:link.contact")} location={location} socialNetworkDescription={description} />
       <BlogLayoutWithDrawer page="who" noStickyHeader location={location}>
         <div
           className="tc mt4 mb3"
