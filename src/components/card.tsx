@@ -116,7 +116,7 @@ export const Card: FunctionComponent<
     throw new Error(`No link for ${to}`)
   }
   const mustShowAndInteract = context.development || link.published
-  const tagsToDisplay = tags || link.tags
+  const tagsToDisplay = (tags || link.tags).filter((tag) => context.development || getLink(tag).published)
 
   if (imageOnly) return <>{children}</>
 
