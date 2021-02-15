@@ -20,7 +20,7 @@ const carouselStyle = css`
   }
   .visible .gatsby-image-wrapper {
     opacity: 1;
-    // transition: opacity 0.8s linear;
+    transition: opacity 0.8s linear;
   }
   .overlay {
     position: absolute;
@@ -123,7 +123,7 @@ export const Carousel: React.FunctionComponent = ({ children }) => {
       } else {
         setCurrentElement(currentElement + 1)
       }
-    }, 13000)
+    }, 5000)
     return () => {
       clearInterval(interval)
     }
@@ -156,7 +156,18 @@ export const Carousel: React.FunctionComponent = ({ children }) => {
       <span className="overlay-border" />
       <div>
         {React.Children.map(children, (child, index) => {
-          if (React.isValidElement(child)) {
+          if (
+            React.isValidElement(child) &&
+            // this logic helps to display only 3 elements at the same time, current element, the previous, the next
+            (index === currentElement ||
+              // if the current element is the first is the list, then we display the next element, and the last element of the list
+              (currentElement === 0 && (index === currentElement + 1 || index === children.length - 1)) ||
+              // if the current element is the list is the list, then we display the previous element, and the first element of the list
+              (currentElement === children.length - 1 && (index === currentElement - 1 || index === 0)) ||
+              // otherwise we display the next and the previous element
+              index === currentElement + 1 ||
+              index === currentElement - 1)
+          ) {
             return React.cloneElement(child, {
               className: `${currentElement === index ? "visible" : "hidden"}`,
               hide: currentElement !== index,
