@@ -2,7 +2,7 @@ import React, { FunctionComponent, useContext, useEffect, useState, useLayoutEff
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.utils"
-import { css } from "@emotion/core"
+import { css, Global } from "@emotion/core"
 import { ApplicationContext } from "../application"
 import "./layout.css"
 import "./tachyons.css"
@@ -27,6 +27,9 @@ import { useCustomTranslation } from "../../i18n"
 import { subscribe } from "../../services/newsletter"
 import { navigate, PageProps } from "gatsby"
 import { PinterestContext } from "./pinterest.context"
+import FreestyleFont from "../../fonts/Freestyle-Script.ttf"
+import CourgetteFont from "../../fonts/Courgette-Regular.ttf"
+import PlayfairFont from "../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -125,6 +128,26 @@ export const IndexBlogLayout: FunctionComponent<{
   }, [status])
   return typeof window !== `undefined` ? (
     <div className={`${className} index-blog-layout flex flex-column min-vh-100`} onClick={() => setSelectedPin("")}>
+      <Global
+        styles={css`
+          @font-face {
+            font-family: "Playfair Display";
+            font-display: swap;
+            font-weight: 400;
+            src: url("${PlayfairFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+          }
+          @font-face {
+            font-family: "Freestyle Script";
+            font-display: swap;
+            src: url("${FreestyleFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+          }
+          @font-face {
+            font-family: "Courgette";
+            font-display: swap;
+            src: url("${CourgetteFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+          }
+        `}
+      />
       {development && !isPublished && <PageDevelopmentMark />}
       <Header noStickyHeader={noStickyHeader} location={location} />
       <ScrollToTop />
