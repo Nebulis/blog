@@ -28,8 +28,11 @@ import { subscribe } from "../../services/newsletter"
 import { navigate, PageProps } from "gatsby"
 import { PinterestContext } from "./pinterest.context"
 import FreestyleFont from "../../fonts/Freestyle-Script.ttf"
+import FreestyleFontWoff from "../../fonts/Freestyle-Script.woff2"
 import CourgetteFont from "../../fonts/Courgette-Regular.ttf"
+import CourgetteFontWoff from "../../fonts/Courgette-Regular.woff2"
 import PlayfairFont from "../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf"
+import PlayfairFontWoff from "../../fonts/PlayfairDisplay-Italic.woff2"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -134,17 +137,17 @@ export const IndexBlogLayout: FunctionComponent<{
             font-family: "Playfair Display";
             font-display: swap;
             font-weight: 400;
-            src: url("${PlayfairFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+            src: url(${PlayfairFontWoff}) format("woff2"), url("${PlayfairFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
           }
           @font-face {
             font-family: "Freestyle Script";
             font-display: swap;
-            src: url("${FreestyleFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+            src: url("${FreestyleFontWoff}") format("woff2"), url("${FreestyleFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
           }
           @font-face {
             font-family: "Courgette";
             font-display: swap;
-            src: url("${CourgetteFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+            src: url("${CourgetteFontWoff}") format("woff2"), url("${CourgetteFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
           }
         `}
       />

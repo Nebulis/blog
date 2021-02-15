@@ -8,9 +8,9 @@
 import React, { FunctionComponent } from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery, PageProps } from "gatsby"
-import FreestyleFont from "../../fonts/Freestyle-Script.ttf"
-import CourgetteFont from "../../fonts/Courgette-Regular.ttf"
-import PlayfairFont from "../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf"
+import FreestyleFont from "../../fonts/Freestyle-Script.woff2"
+import CourgetteFont from "../../fonts/Courgette-Regular.woff2"
+import PlayfairFont from "../../fonts/PlayfairDisplay-Italic.woff2"
 import { useCustomTranslation } from "../../i18n"
 import DefaultImgUrl from "../../images/SocialNetworkDefault.jpg"
 import { getHostname, getPathForEnglish, getPathForFrench } from "../../utils"
@@ -73,21 +73,21 @@ const SEO: FunctionComponent<SEOProps> = ({
           rel: "preload",
           as: "font",
           href: FreestyleFont,
-          type: "font/ttf",
+          type: "font/woff2",
           crossOrigin: "anonymous",
         },
         {
           rel: "preload",
           as: "font",
           href: CourgetteFont,
-          type: "font/ttf",
+          type: "font/woff2",
           crossOrigin: "anonymous",
         },
         {
           rel: "preload",
           as: "font",
           href: PlayfairFont,
-          type: "font/ttf",
+          type: "font/woff2",
           crossOrigin: "anonymous",
         },
       ]}

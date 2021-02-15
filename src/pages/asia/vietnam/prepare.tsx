@@ -27,7 +27,7 @@ import {
   NaturalDisaster,
   Opinion,
   Phone,
-  Traps,
+  Scams,
   Visa,
   Visit,
   WhatTimeOfYear,
@@ -682,7 +682,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <a href="#phone">{t("section9.title")}</a>
           </div>
           <div>
-            <a href="#traps">{t("section10.title")}</a>
+            <a href="#scams">{t("section10.title")}</a>
           </div>
           <div>
             <a href="#natural-disasters">{t("section11.title")}</a>
@@ -1197,7 +1197,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("section9.part9")}</p>
         </Phone>
         <Divider />
-        <Traps titleClassName="mb3">
+        <Scams id="scams">
           <p>{t("section10.part1")}</p>
           <p>{t("section10.part2")}</p>
           <p>
@@ -1219,7 +1219,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </VietnamExternalLink>{" "}
             {t("section10.part12")}
           </p>
-        </Traps>
+        </Scams>
         <Divider />
         <NaturalDisaster id="natural-disasters">
           <p>{t("section11.part1")}</p>

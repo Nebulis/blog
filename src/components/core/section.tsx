@@ -156,7 +156,7 @@ export const titleBuilder = ({
 
 export const Where = titleBuilder({ icon: FaMapMarkedAlt, translationKey: "section.where" })
 export const When = titleBuilder({ icon: FaCalendarAlt, translationKey: "section.when" })
-export const How = titleBuilder({ icon: FaBusAlt, translationKey: "section.how-to-get-there" })
+export const How = titleBuilder({ icon: FaBusAlt, translationKey: "section.how" })
 export const HowLong = titleBuilder({ icon: FaClock, translationKey: "section.how-long" })
 export const HowMuch = titleBuilder({
   icon: { build: (lang) => (lang === "fr" ? FaEuroSign : FaDollarSign) },
@@ -170,7 +170,7 @@ export const Bonus = titleBuilder({ icon: FaLightbulb, translationKey: "todo" })
 export const Visa = titleBuilder({ icon: FaPassport, translationKey: "section.visa" })
 export const Health = titleBuilder({ icon: FaHeartbeat, translationKey: "section.health" })
 export const Phone = titleBuilder({ icon: FaMobileAlt, translationKey: "section.phone" })
-export const Traps = titleBuilder({ icon: FaBiohazard, translationKey: "section.traps" })
+export const Scams = titleBuilder({ icon: FaBiohazard, translationKey: "section.scams" })
 export const NaturalDisaster = titleBuilder({ icon: FaMeteor, translationKey: "section.natural-disaster" })
 export const Baggage = titleBuilder({ icon: FaSuitcaseRolling, translationKey: "section.baggage" })
 export const Opinion = titleBuilder({ icon: FaComments, translationKey: "todo" })
