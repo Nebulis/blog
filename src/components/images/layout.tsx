@@ -345,12 +345,21 @@ const imageAsLandscapeOnTheLeft = css`
       flex-basis: 100%;
     }
   }
+  ${creditStyle}
 `
-export const ImageAsLandscapeOnTheLeft: FunctionComponent<HTMLAttributes<any>> = ({ children, className, title }) => {
+export const ImageAsLandscapeOnTheLeft: FunctionComponent<HTMLAttributes<any> & { credit?: React.ReactNode }> = ({
+  children,
+  className,
+  title,
+  credit,
+}) => {
   return (
     <>
       <div className={`flex image-layout ${className}`} css={imageAsLandscapeOnTheLeft}>
-        {children}
+        <div className="relative">
+          {children}
+          {credit && <div className="credit">{credit}</div>}
+        </div>
       </div>
       {title && (
         <div className={`flex ${className}`} css={imageAsLandscapeOnTheLeft}>
@@ -373,12 +382,19 @@ const imageAsLandscapeOnTheRight = css`
       flex-basis: 100%;
     }
   }
+  ${creditStyle}
 `
-export const ImageAsLandscapeOnTheRight: FunctionComponent<HTMLAttributes<any>> = ({ children, className, title }) => {
+export const ImageAsLandscapeOnTheRight: FunctionComponent<HTMLAttributes<any> & { credit?: React.ReactNode }> = ({
+  children,
+  className,
+  title,
+  credit,
+}) => {
   return (
     <>
       <div className={`flex justify-end image-layout ${className}`} css={imageAsLandscapeOnTheRight}>
         {children}
+        {credit && <div className="credit">{credit}</div>}
       </div>
       {title && (
         <div className={`flex justify-end ${className}`} css={imageAsLandscapeOnTheLeft}>

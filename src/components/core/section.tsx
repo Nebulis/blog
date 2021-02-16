@@ -22,6 +22,13 @@ import {
   FaCommentDots,
   FaMoneyBill,
   FaBiohazard,
+  FaPlane,
+  FaShip,
+  FaMotorcycle,
+  FaTaxi,
+  FaTrain,
+  FaBicycle,
+  FaCar,
 } from "react-icons/all"
 import { maxWidth, mediumEnd, mobileEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n"
@@ -48,10 +55,29 @@ const SpeechBubble: React.FunctionComponent = () => (
   </svg>
 )
 
+const RickshawIcon: React.FunctionComponent = () => (
+  <svg viewBox="0 0 64 64" width="18" height="18">
+    <circle cx="12" cy="55" r="8" />
+    <circle cx="55" cy="55" r="8" />
+    <path d="M33,49a1,1,0,0,0-1-1H29a1,1,0,0,0,0,2h3A1,1,0,0,0,33,49Z" />
+    <path d="M36,50h3a1,1,0,0,0,0-2H36a1,1,0,0,0,0,2Z" />
+    <path d="M23,54a1,1,0,0,0,0,2h7a1,1,0,0,0,0-2Z" />
+    <path d="M47,4l5.16,2.06H52V10a3,3,0,0,0,3,3h2v2.07l-7.71,1.23-6.78,6.78-6.32,1.15a3,3,0,0,1-.45,1.36l-.36.82L43.18,25a1,1,0,0,0,.53-.28L49.4,19,50,32.55,40.06,32a1,1,0,0,0-.83.37,1,1,0,0,0-.19.89l4,15h0L39.45,54H34a1,1,0,0,0,0,2h6a1,1,0,0,0,.85-.47L50.55,40H57a1,1,0,0,0,0-2H50a1,1,0,0,0-.85.47l-4.67,7.47L41.32,34.08l8.72.48,9,.77V8.8L62,10,58,2Z" />
+    <path d="M1.29,48.71a1,1,0,0,0,1.41,0l6.06-6.06L7,41.88l-.07-.19-5.6,5.6A1,1,0,0,0,1.29,48.71Z" />
+    <path d="M1.45,39.83a1,1,0,0,0,1.39-.28l3.55-5.33,2.17,6.16L24.17,47,34,24.61a1,1,0,0,0,.22-.61.88.88,0,0,0-.32-.63A6.93,6.93,0,0,1,27.41,23H26a1,1,0,0,0-.91.58L19.45,35.8l-5.91-1.69L23.17,11H37.9l-1,2.24a7,7,0,0,1,1,2.64l2-4.47A1,1,0,0,0,40,11h1V6H6v5H21L11.6,33.56,6.27,32a1,1,0,0,0-1.11.41l-4,6A1,1,0,0,0,1.45,39.83Z" />
+    <circle cx="31" cy="17" r="5" />
+  </svg>
+)
+
 export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className, id }) => (
   <div className={`mb1 flex items-center section-title ${className}`} id={id}>
     {children}
   </div>
+)
+export const SectionTitleParagraph: FunctionComponent<HTMLAttributes<any>> = ({ children, className, id }) => (
+  <p className={`mb1 flex items-center section-title ${className}`} id={id}>
+    {children}
+  </p>
 )
 const sectionContentStyle = css`
   // the last image (from layout) of a section must not have a margin bottom, otherwise there will 2 elements with margin-bottom, the section and the image
@@ -93,21 +119,22 @@ export const Introduction: React.FunctionComponent = ({ children }) => {
 const menuArticleStyle = css`
   text-align: center;
   font-weight: bold;
-  .container {
+  .menu-article-container {
+    min-width: 250px;
     display: inline-block;
     background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
     color: ${vietnamPrimaryColorDarker};
     border: 3px solid ${vietnamPrimaryColorDarker};
     padding: 1rem;
   }
-  .container a:hover {
+  .menu-article-container a:hover {
     text-decoration: underline;
   }
 `
 export const MenuArticle: React.FunctionComponent = ({ children }) => {
   return (
     <SectionContent className="menu-article" css={menuArticleStyle}>
-      <div className="container">{children}</div>
+      <div className="menu-article-container">{children}</div>
     </SectionContent>
   )
 }
@@ -176,6 +203,15 @@ export const Baggage = titleBuilder({ icon: FaSuitcaseRolling, translationKey: "
 export const Opinion = titleBuilder({ icon: FaComments, translationKey: "todo" })
 export const LocalCurrency = titleBuilder({ icon: FaMoneyBill, translationKey: "todo" })
 export const FewWords = titleBuilder({ icon: FaCommentDots, translationKey: "todo", icon2: SpeechBubble })
+export const Plane = titleBuilder({ icon: FaPlane, translationKey: "section.plane" })
+export const Boat = titleBuilder({ icon: FaShip, translationKey: "section.boat" })
+export const Bus = titleBuilder({ icon: FaBusAlt, translationKey: "section.bus" })
+export const Rickshaw = titleBuilder({ icon: RickshawIcon, translationKey: "todo" })
+export const Moto = titleBuilder({ icon: FaMotorcycle, translationKey: "todo" })
+export const Taxi = titleBuilder({ icon: FaTaxi, translationKey: "section.taxi" })
+export const Train = titleBuilder({ icon: FaTrain, translationKey: "section.train" })
+export const Bike = titleBuilder({ icon: FaBicycle, translationKey: "section.bike" })
+export const Car = titleBuilder({ icon: FaCar, translationKey: "section.car" })
 
 export const GoodToKnow: FunctionComponent<TitleProps> = ({ children }) => (
   <>

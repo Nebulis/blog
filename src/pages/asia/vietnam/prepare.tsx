@@ -626,7 +626,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
-        socialNetworkDescription={t("meta-description")}
+        socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         location={location}
         image={HomeImgUrl}
