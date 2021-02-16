@@ -5,6 +5,7 @@ import {
   MyThoCard,
   PrepareVietnamCard,
   SouthVietnamCard,
+  TransportVietnamCard,
   WarMuseumCard,
 } from "./vietnam.cards"
 import commonFr from "../../../../locales/fr/common.json"
@@ -94,13 +95,31 @@ export const vietnamLinks: CountryLink = {
           }
         `,
       },
-      highlights: [],
+      highlights: [
+        {
+          id: "hoi-an",
+          label: {
+            fr: "Hoi An",
+            en: "Hoi An",
+          },
+          published: false,
+        },
+      ],
     },
     {
       id: "northern-vietnam",
       label: { fr: commonFr.link.north, en: commonEn.link.north },
       imageProps: { image: "homeNorthernImage" },
-      highlights: [],
+      highlights: [
+        {
+          id: "halong-bay",
+          label: {
+            fr: "Baie de Halong",
+            en: "Halong Bay",
+          },
+          published: false,
+        },
+      ],
     },
   ],
   others: [
@@ -110,8 +129,9 @@ export const vietnamLinks: CountryLink = {
         fr: commonFr.country.vietnam.card.transport,
         en: commonEn.country.vietnam.card.transport,
       },
+      card: TransportVietnamCard,
       url: "transport",
-      published: false,
+      published: new Date("2021-02-20T17:00:00.000+08:00"),
     },
     {
       id: "food-vietnam",

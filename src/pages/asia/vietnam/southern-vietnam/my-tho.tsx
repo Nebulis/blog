@@ -38,7 +38,7 @@ import { SharedCardVietnamImages } from "../../../../components/images/asia/viet
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import {
-  buildBaolauLink,
+  buildBaolauSearchUrl,
   buildBookingSearchUrl,
   buildBookingUrl,
   buildGetYourGuideLink,
@@ -89,7 +89,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>
             {t("how.part4")}{" "}
             <VietnamExternalLink
-              href={buildBaolauLink(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "My Tho" })}
+              href={buildBaolauSearchUrl(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "My Tho" })}
             >
               {t("how.part5")}
             </VietnamExternalLink>{" "}

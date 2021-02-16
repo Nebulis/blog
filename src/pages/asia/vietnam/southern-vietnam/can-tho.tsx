@@ -38,7 +38,7 @@ import {
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
-import { buildBaolauLink, buildBookingSearchUrl, buildBookingUrl, buildExpediaUrl } from "../../../../utils"
+import { buildBaolauSearchUrl, buildBookingSearchUrl, buildBookingUrl, buildExpediaSearchUrl } from "../../../../utils"
 import { vietnamPrimaryColorDarker } from "../../../../components/core/asia/vietnam/vietnam.colors"
 import { CanThoImages } from "../../../../components/images/asia/vietnam/southern-vietnam/can-tho"
 import styled from "@emotion/styled"
@@ -85,7 +85,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>
             {t("how.part2")} <HighLight>{t("how.part3")}</HighLight> {t("how.part4")}{" "}
             <VietnamExternalLink
-              href={buildExpediaUrl(i18n.languageCode)(
+              href={buildExpediaSearchUrl(i18n.languageCode)(
                 "from%3AHanoi%2C%20Vietnam%20%28HAN-Noi%20Bai%20Intl.%29%2Cto%3ACan%20Tho%2C%20Vietnam%20%28VCA"
               )}
             >
@@ -102,7 +102,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>
             {t("how.part14")}{" "}
             <VietnamExternalLink
-              href={buildBaolauLink(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "Can Tho" })}
+              href={buildBaolauSearchUrl(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "Can Tho" })}
             >
               {t("how.part15")}
             </VietnamExternalLink>{" "}
