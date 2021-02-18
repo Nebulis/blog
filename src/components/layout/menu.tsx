@@ -418,6 +418,16 @@ const Content = styled(animated.div)`
   padding: 0px 0px 0px 14px;
   overflow: hidden;
 `
+const ChevronContainer = styled.span`
+  .chevron-open {
+    transition: transform 0.25s linear;
+    transform: rotate(0);
+  }
+  .chevron-closed {
+    transition: transform 0.25s linear;
+    transform: rotate(-90deg);
+  }
+`
 
 export const usePrevious = (value: boolean) => {
   const ref = useRef<boolean>()
@@ -443,13 +453,14 @@ const useMeasure = (): [{ ref: MutableRefObject<HTMLDivElement | null> }, Bounda
 }
 
 // animation is a bit weird on the last element ... animate has been created for that purpose, in order to disable the animation on the height property
-const Tree: React.FunctionComponent<{
+export const Tree: React.FunctionComponent<{
   name: string
   open?: boolean
   to?: string
   onNavigate?: () => void
+  onClick?: () => void
   animate?: boolean
-}> = ({ children, name, to, open = false, onNavigate = () => void 0, animate = true }) => {
+}> = ({ children, name, to, open = false, onNavigate = () => void 0, onClick = () => void 0, animate = true }) => {
   const [isOpen, setOpen] = useState(open)
   const prev = usePrevious(isOpen)
   const [bind, bounds] = useMeasure()
@@ -464,18 +475,22 @@ const Tree: React.FunctionComponent<{
   })
   const hasChildren = (!Array.isArray(children) && children) || (Array.isArray(children) && children.length > 0)
   return (
-    <div className="menu-entry">
+    <div className={`menu-entry ${isOpen ? "menu-entry-opened" : "menu-entry-closed"}`}>
       <div
         onClick={() => {
+          onClick()
           hasChildren && setOpen(!isOpen)
           !hasChildren && onNavigate()
         }}
-        className="menu-label"
+        className="menu-label relative"
       >
-        <span>{to ? <ApplicationLink to={to}>{name}</ApplicationLink> : name}</span>
-        <span>{hasChildren && isOpen ? <FaChevronDown /> : hasChildren ? <FaChevronRight /> : ""}</span>
+        <span className="menu-label-name">{to ? <ApplicationLink to={to}>{name}</ApplicationLink> : name}</span>
+        <ChevronContainer className="menu-label-chevron">
+          {hasChildren ? <FaChevronDown className={isOpen ? "chevron-open" : "chevron-closed"} /> : ""}
+        </ChevronContainer>
       </div>
       <Content
+        className="menu-content-container"
         style={{
           opacity,
           height: animate

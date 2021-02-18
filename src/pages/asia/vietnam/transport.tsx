@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import SEO from "../../../components/layout/seo"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
@@ -62,10 +62,90 @@ import VietnamRailwayIcon from "../../../images/asia/vietnam/transport/vietnam-r
 import VioletteIcon from "../../../images/asia/vietnam/transport/violette.png"
 import NewLivitransIcon from "../../../images/asia/vietnam/transport/new-livitrans-express.png"
 import LotusIcon from "../../../images/asia/vietnam/transport/lotus-train.png"
-import { vietnamPrimaryColorDarker } from "../../../components/core/asia/vietnam/vietnam.colors"
+import MapBus from "../../../images/asia/vietnam/transport/map-bus.png"
+import MapOpenBus from "../../../images/asia/vietnam/transport/map-open-bus.png"
+import {
+  vietnamPrimaryColor,
+  vietnamPrimaryColorDarker,
+  vietnamPrimaryColorWithOpacity,
+} from "../../../components/core/asia/vietnam/vietnam.colors"
 import { Conclusion } from "../../../components/core/conclusion"
 import { Comments } from "../../../components/core/comments"
 import { MyThoImages } from "../../../components/images/asia/vietnam/southern-vietnam/my-tho"
+import { VietnamAirportMap, VietnamTrainMap } from "../../../components/core/asia/vietnam/vietnam-map"
+import { Country } from "../../../components/layout/world"
+import { MouseToolTip } from "../../../components/core/tooltipPortal"
+import { HomeBlogLayout } from "../../../components/layout/main-layout"
+import { PetitCarreJaune } from "../../../components/layout/layout"
+import { Tree } from "../../../components/layout/menu"
+import { FaArrowRight } from "react-icons/fa"
+import { BsArrowRight, BsArrowLeftRight } from "react-icons/bs"
+import { mediumEnd, mobileEnd } from "../../../components/core/variables"
+
+const Sitting: React.FunctionComponent = () => (
+  <svg viewBox="0 0 512 512" width="20px" height="20px">
+    <title>Sitting</title>
+    <path
+      d="M443.383,225.513c-1.87-1.861-4.441-2.93-7.07-2.93c-2.64,0-5.21,1.069-7.07,2.93c-1.87,1.86-2.939,4.44-2.939,7.07
+c0,2.63,1.069,5.21,2.939,7.069c1.851,1.86,4.431,2.931,7.07,2.931c2.63,0,5.21-1.07,7.07-2.931
+c1.859-1.859,2.93-4.439,2.93-7.069C446.313,229.953,445.243,227.373,443.383,225.513z"
+    />
+    <path
+      d="M476.747,20.661c-6.711-10.22-17-17.215-28.972-19.695c-11.967-2.479-24.192-0.152-34.411,6.56
+c-10.22,6.711-17.215,17-19.695,28.972l-1.064,5.137c-7.764-22.803-29.375-39.258-54.771-39.258
+c-31.902,0-57.855,25.954-57.855,57.855v8.701c0,16.646,7.076,31.663,18.366,42.227c-4.154,1.615-8.174,3.666-11.988,6.171
+c-14.214,9.334-23.942,23.644-27.406,40.354l-8.159,40.65l-18.75,18.857h-78.055c-17.842,0-32.357,14.516-32.357,32.357
+c0,4.375,0.877,8.547,2.458,12.357h-8.106c-18.792,0-35.227,12.701-39.965,30.888l-11.803,45.298
+c-1.393,5.345,1.811,10.806,7.155,12.198c0.846,0.221,1.693,0.326,2.528,0.326c4.441-0.001,8.498-2.982,9.67-7.481l11.803-45.298
+c2.444-9.38,10.921-15.931,20.612-15.931h146.491c2.67,0,5.229-1.067,7.106-2.965l50.624-51.142
+c3.886-3.925,3.854-10.257-0.071-14.142c-3.926-3.887-10.257-3.854-14.142,0.071l-47.689,48.177H153.987
+c-6.813,0-12.357-5.544-12.357-12.357c0-6.813,5.544-12.357,12.357-12.357h82.214c2.662,0,5.214-1.062,7.091-2.949l57.241-57.57
+c3.895-3.916,3.876-10.248-0.04-14.143c-3.917-3.893-10.248-3.877-14.142,0.041l-10.003,10.061l2.198-10.949
+c2.366-11.419,9.039-21.233,18.788-27.635c9.748-6.401,21.406-8.624,32.82-6.256c11.419,2.366,21.233,9.038,27.634,18.785
+c6.401,9.748,8.623,21.404,6.257,32.823c-0.016,0.075-0.021,0.149-0.035,0.224L338.94,300.595
+c-2.872,13.855-15.227,23.912-29.376,23.912H167.402c-23.447,0-43.087,18.059-45.509,40.99c-0.194,0.455-0.368,0.922-0.496,1.415
+l-30.63,117.561c-1.154,4.431-5.159,7.525-9.738,7.525H57.804c-3.141,0-6.043-1.425-7.963-3.91
+c-1.921-2.484-2.567-5.652-1.776-8.69l16.701-64.101c1.393-5.345-1.812-10.806-7.155-12.198
+c-5.346-1.396-10.806,1.811-12.198,7.155l-16.701,64.101c-2.365,9.078-0.432,18.542,5.305,25.964
+c5.736,7.423,14.407,11.68,23.788,11.68h23.224c13.681,0,25.644-9.246,29.092-22.483l23.196-89.03
+c0.459,0.51,0.926,1.015,1.41,1.509c8.764,8.933,20.932,14.056,33.383,14.056h48.678l-34.199,82.104
+c-1.285,3.086-0.943,6.61,0.911,9.393c1.854,2.781,4.977,4.452,8.32,4.452h154.263c3.344,0,6.466-1.671,8.32-4.452
+c1.854-2.782,2.196-6.307,0.911-9.393l-34.199-82.104h50.129c21.59,0,40.438-15.344,44.818-36.483l21.891-105.633
+c1.121-5.408-2.354-10.7-7.763-11.821c-5.404-1.115-10.7,2.354-11.821,7.763l-21.891,105.634
+c-2.466,11.902-13.079,20.541-25.235,20.541H168.109c-7.115,0-14.079-2.938-19.106-8.063c-4.881-4.975-7.497-11.443-7.368-18.215
+c0.267-13.932,11.826-25.267,25.768-25.267h142.163c23.583,0,44.173-16.761,48.959-39.853l54.729-264.099
+c1.396-6.741,5.335-12.534,11.089-16.313c5.755-3.777,12.637-5.088,19.376-3.692c6.741,1.396,12.534,5.335,16.313,11.089
+c3.778,5.754,5.09,12.636,3.692,19.376l-29.713,143.38c-1.121,5.408,2.354,10.7,7.763,11.821
+c5.406,1.121,10.701-2.354,11.821-7.763l29.713-143.38C485.788,43.101,483.459,30.881,476.747,20.661z M299.448,416.05
+l31.636,75.949H206.817l31.636-75.949H299.448z M337.833,106.787c-20.874,0-37.855-16.982-37.855-37.855v-8.701
+c0-20.874,16.982-37.856,37.855-37.856c20.874,0,37.855,16.982,37.855,37.856v8.701
+C375.689,89.805,358.707,106.787,337.833,106.787z M373.449,134.074c-3.309-4.739-7.174-8.958-11.515-12.565
+c6.146-2.829,11.717-6.696,16.479-11.388L373.449,134.074z"
+    />
+    <path
+      d="M71.947,368.141c-1.859-1.859-4.439-2.93-7.07-2.93c-2.63,0-5.21,1.07-7.069,2.93c-1.86,1.87-2.931,4.44-2.931,7.07
+c0,2.64,1.07,5.21,2.931,7.07c1.859,1.869,4.439,2.93,7.069,2.93c2.631,0,5.2-1.061,7.07-2.93c1.86-1.851,2.93-4.431,2.93-7.07
+C74.877,372.581,73.808,370.001,71.947,368.141z"
+    />
+  </svg>
+)
+const Sleeping: React.FunctionComponent = () => (
+  <svg viewBox="0 0 512 512" width="20px" height="20px">
+    <title>Sleeping</title>
+    <path
+      d="M490.667,261.334v-42.667c0-32.427-20.907-53.333-53.333-53.333H192c-32.427,0-53.333,20.907-53.333,53.333V261
+			L34.88,261.227H21.333V80.32c0-5.333-3.84-10.133-9.067-10.88C5.653,68.48,0,73.6,0,80v351.68c0,5.333,3.84,10.133,9.067,10.88
+			c6.613,0.96,12.267-4.16,12.267-10.56v-64h469.333v63.68c0,5.333,3.84,10.133,9.067,10.88C506.347,443.52,512,438.4,512,432
+			V282.667C512,268.16,505.173,261.44,490.667,261.334z M160,218.667c0-27.84,20.053-32,32-32h245.333c11.947,0,32,4.16,32,32
+			v42.667H160V218.667z M490.666,346.667H21.333v-64h469.333V346.667z"
+    />
+    <path
+      d="M80.5,142.5c-32.723,0-59.25,26.527-59.25,59.25c0,32.723,26.527,59.25,59.25,59.25s59.25-26.527,59.25-59.25
+			C139.75,169.027,113.223,142.5,80.5,142.5z M80.5,242c-22.229,0-40.25-18.021-40.25-40.25S58.271,161.5,80.5,161.5
+			s40.25,18.021,40.25,40.25S102.73,242,80.5,242z"
+    />
+  </svg>
+)
 
 const ListOfThings = styled.ul`
   // remove margin-left after first element
@@ -86,6 +166,411 @@ const ThingsTitle: React.FunctionComponent = ({ children }) => (
     {children}
   </SectionTitleParagraph>
 )
+const TooltipContent = styled.div`
+  background: hsla(0, 0%, 0%, 0.75);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  text-align: center;
+`
+
+const MapAndTableTableContainer = styled.div`
+  max-width: 400px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  .menu-entry-opened .menu-label {
+    background-color: #e5e7eb;
+  }
+  .menu-label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #f7fafc;
+    border-left: 3px solid ${vietnamPrimaryColorDarker};
+    border-bottom: 1px solid #e5e7eb;
+    .menu-label-chevron {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 10px;
+    }
+  }
+  .menu-content-container {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .schedules {
+    border-left: 3px solid ${vietnamPrimaryColor};
+  }
+
+  .schedule-entry:nth-of-type(even) {
+    background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
+  }
+  .schedule-entry:hover {
+    background-color: ${vietnamPrimaryColorWithOpacity(0.3)};
+  }
+  .schedule-entry {
+    height: 40px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`
+const MapAndTableContainer = styled.div`
+  display: flex;
+  align-items: center;
+  & > * {
+    width: 50%;
+  }
+  margin-bottom: calc(1.45rem / 2);
+
+  @media (max-width: ${mediumEnd}) {
+    flex-direction: column;
+    & > svg,
+    & > img {
+      margin-bottom: calc(1.45rem / 2);
+    }
+    & > * {
+      width: 100%;
+    }
+  }
+`
+
+const cities = {
+  "ho-chi-minh": "Ho Chi Minh",
+  "da-lat": "Da Lat",
+  "da-nang": "Da Nang",
+  haiphong: "Haiphong",
+  hue: "Hue",
+  hanoi: "Hanoi",
+  "nha-trang": "Nha Trang",
+  "phu-quoc": "Phu Quoc",
+  ninh: "Ninh",
+  "buon-ma-thuot": "Buon Ma Thuot",
+  "con-dao": "Con Dao",
+  "chu-lai": "Chu Lai",
+  "dong-hoi": "Dong Hoi",
+  pleiku: "Pleiku",
+  "qui-nhon": "Qui Nhon",
+  "rach-gia": "Rach Gia",
+  "tranh-hoa": "Tranh Hoa",
+  "can-tho": "Can Tho",
+  vinh: "Vinh",
+  "dien-bien-phu": "Dien Bien Phu",
+  "thanh-hoa": "Thanh Hoa",
+  "mui-ne": "Mui Ne",
+  "tran-de": "Tran De",
+  "ha-tien": "Ha Tien",
+  "vung-tau": "Vung Tau",
+}
+
+type BusType = "sitting" | "sleeping"
+interface BusSchedule {
+  destination: keyof typeof cities
+  duration: string
+  distance: string
+  type: BusType[]
+}
+type BusSchedules = {
+  [key in keyof typeof cities]?: { id: keyof typeof cities; schedules: BusSchedule[] }
+}
+const tmpBusSchedules: BusSchedules = {
+  "ho-chi-minh": {
+    id: "ho-chi-minh",
+    schedules: [
+      {
+        destination: "mui-ne",
+        duration: "5h",
+        distance: "250km",
+        type: ["sleeping", "sitting"],
+      },
+      {
+        destination: "nha-trang",
+        duration: "11h",
+        distance: "447km",
+        type: ["sleeping"],
+      },
+      {
+        destination: "da-lat",
+        duration: "7h",
+        distance: "310km",
+        type: ["sleeping"],
+      },
+      {
+        destination: "can-tho",
+        duration: "3h30",
+        distance: "175km",
+        type: ["sleeping"],
+      },
+      {
+        destination: "rach-gia",
+        duration: "6h",
+        distance: "280km",
+        type: ["sleeping"],
+      },
+      {
+        destination: "tran-de",
+        duration: "6h",
+        distance: "220km",
+        type: ["sleeping"],
+      },
+      {
+        destination: "ha-tien",
+        duration: "8h",
+        distance: "315km",
+        type: ["sleeping"],
+      },
+    ],
+  },
+}
+
+interface PlaneSchedule {
+  destination: keyof typeof cities
+  duration: string
+  price: number
+}
+type PlaneSchedules = {
+  [key in keyof typeof cities]?: { id: keyof typeof cities; schedules: PlaneSchedule[] }
+}
+const tmpPlaneSchedules: PlaneSchedules = {
+  "ho-chi-minh": {
+    id: "ho-chi-minh",
+    schedules: [
+      {
+        destination: "da-lat",
+        duration: "55min",
+        price: 60,
+      },
+      {
+        destination: "da-nang",
+        duration: "1h15",
+        price: 60,
+      },
+      {
+        destination: "haiphong",
+        duration: "2h",
+        price: 70,
+      },
+      {
+        destination: "hanoi",
+        duration: "2h",
+        price: 70,
+      },
+      {
+        destination: "hue",
+        duration: "1h25",
+        price: 60,
+      },
+      {
+        destination: "nha-trang",
+        duration: "1h10",
+        price: 60,
+      },
+      {
+        destination: "phu-quoc",
+        duration: "1h",
+        price: 55,
+      },
+      {
+        destination: "ninh",
+        duration: "1h50",
+        price: 70,
+      },
+      {
+        destination: "buon-ma-thuot",
+        duration: "1h",
+        price: 60,
+      },
+      {
+        destination: "con-dao",
+        duration: "1h",
+        price: 160,
+      },
+      {
+        destination: "chu-lai",
+        duration: "1h20",
+        price: 60,
+      },
+      {
+        destination: "dong-hoi",
+        duration: "1h35",
+        price: 70,
+      },
+      {
+        destination: "pleiku",
+        duration: "1h10",
+        price: 60,
+      },
+      {
+        destination: "qui-nhon",
+        duration: "1h10",
+        price: 60,
+      },
+      {
+        destination: "rach-gia",
+        duration: "50min",
+        price: 70,
+      },
+      {
+        destination: "tranh-hoa",
+        duration: "2h",
+        price: 70,
+      },
+    ],
+  },
+  hanoi: {
+    id: "hanoi",
+    schedules: [
+      {
+        destination: "can-tho",
+        duration: "2h10",
+        price: 80,
+      },
+      {
+        destination: "da-lat",
+        duration: "1h45",
+        price: 70,
+      },
+      {
+        destination: "da-nang",
+        duration: "1h20",
+        price: 60,
+      },
+      {
+        destination: "hue",
+        duration: "1h15",
+        price: 65,
+      },
+      {
+        destination: "nha-trang",
+        duration: "1h45",
+        price: 70,
+      },
+      {
+        destination: "vinh",
+        duration: "1h",
+        price: 70,
+      },
+      {
+        destination: "buon-ma-thuot",
+        duration: "1h45",
+        price: 70,
+      },
+      {
+        destination: "chu-lai",
+        duration: "1h30",
+        price: 60,
+      },
+      {
+        destination: "dien-bien-phu",
+        duration: "1h20",
+        price: 70,
+      },
+      {
+        destination: "dong-hoi",
+        duration: "1h30",
+        price: 75,
+      },
+      {
+        destination: "pleiku",
+        duration: "1h30",
+        price: 75,
+      },
+      {
+        destination: "qui-nhon",
+        duration: "1h35",
+        price: 70,
+      },
+    ],
+  },
+  "can-tho": {
+    id: "can-tho",
+    schedules: [
+      {
+        destination: "da-lat",
+        duration: "45min",
+        price: 60,
+      },
+      {
+        destination: "da-nang",
+        duration: "1h30",
+        price: 70,
+      },
+      {
+        destination: "haiphong",
+        duration: "2h05",
+        price: 95,
+      },
+      {
+        destination: "vinh",
+        duration: "1h50",
+        price: 75,
+      },
+      {
+        destination: "con-dao",
+        duration: "50min",
+        price: 150,
+      },
+      {
+        destination: "thanh-hoa",
+        duration: "1h55",
+        price: 80,
+      },
+    ],
+  },
+}
+
+// bad bad not pure
+const reversePlaneSchedule = (planeSchedules: PlaneSchedules) => {
+  const newPlaneSchedules: PlaneSchedules = {}
+  for (const [city, entries] of Object.entries(planeSchedules)) {
+    if (!entries) continue
+    for (const schedule of entries?.schedules) {
+      newPlaneSchedules[city as keyof typeof cities] = { id: entries.id, schedules: [...entries.schedules] }
+      const newEntry = {
+        destination: city as keyof typeof cities,
+        duration: schedule.duration,
+        price: schedule.price,
+      }
+      if (newPlaneSchedules[schedule.destination]?.schedules) {
+        newPlaneSchedules[schedule.destination]?.schedules.push(newEntry)
+      } else {
+        newPlaneSchedules[schedule.destination] = { id: schedule.destination, schedules: [newEntry] }
+      }
+    }
+  }
+  return newPlaneSchedules
+}
+const planeSchedules = reversePlaneSchedule(tmpPlaneSchedules)
+// bad bad not pure
+const reverseBusSchedule = (busSchedules: BusSchedules) => {
+  const newBusSchedules: BusSchedules = {}
+  for (const [city, entries] of Object.entries(busSchedules)) {
+    if (!entries) continue
+    for (const schedule of entries?.schedules) {
+      newBusSchedules[city as keyof typeof cities] = { id: entries.id, schedules: [...entries.schedules] }
+      const newEntry = {
+        destination: city as keyof typeof cities,
+        duration: schedule.duration,
+        distance: schedule.distance,
+        type: schedule.type,
+      }
+      if (newBusSchedules[schedule.destination]?.schedules) {
+        newBusSchedules[schedule.destination]?.schedules.push(newEntry)
+      } else {
+        newBusSchedules[schedule.destination] = { id: schedule.destination, schedules: [newEntry] }
+      }
+    }
+  }
+  return newBusSchedules
+}
+const busSchedules = reverseBusSchedule(tmpBusSchedules)
 
 const namespace = "asia/vietnam/transport"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -94,6 +579,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t("common:country.vietnam.card.transport")
+  const [airports, setAirports] = useState<string[]>([])
+  const [tooltipContent, setTooltipContent] = useState<string>()
   return (
     <>
       <SEO
@@ -130,7 +617,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <a href="#boat">{t("section2.title")}</a>
           </div>
           <div>
-            <a href="#bus">{t("section3.title")}</a>
+            <a href="#bus-menu">{t("section3.title")}</a>
           </div>
           <div>
             <a href="#rickshaw">{t("section4.title")}</a>
@@ -229,6 +716,61 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 {t("section1.price.part4")} <HighLight>{t("section1.price.part5")}</HighLight>
               </p>
               <p>{t("section1.price.part6")}</p>
+              <MapAndTableContainer>
+                <VietnamAirportMap
+                  onMouseEnter={setTooltipContent}
+                  onMouseLeave={setTooltipContent}
+                  selected={airports}
+                />
+                <MapAndTableTableContainer>
+                  {Object.entries(planeSchedules).map(([key, entry]) => {
+                    return (
+                      <Tree
+                        key={key}
+                        name={cities[entry?.id ?? "hanoi"]}
+                        onClick={() => {
+                          if (airports.includes(key)) {
+                            setAirports(airports.filter((airport) => airport !== key))
+                          } else {
+                            setAirports([...airports, key])
+                          }
+                        }}
+                      >
+                        <div className="schedules">
+                          {entry?.schedules.map((schedule) => (
+                            <div
+                              key={schedule.destination}
+                              className="schedule-entry"
+                              css={css`
+                                .schedule-entry-destination {
+                                  flex-basis: 50%;
+                                  min-width: 50%;
+                                }
+                                .schedule-entry-price,
+                                .schedule-entry-duration {
+                                  flex-basis: 25%;
+                                  min-width: 25%;
+                                }
+                              `}
+                            >
+                              <span className="schedule-entry-destination inline-flex items-center justify-center">
+                                {/*<BsArrowRight />*/}
+                                <BsArrowLeftRight />
+                                &nbsp;
+                                {cities[schedule.destination]}
+                              </span>
+                              <span className="schedule-entry-price dib tc">
+                                {schedule.price} {i18n.languageCode === "fr" ? "€" : "$"}
+                              </span>
+                              <span className="schedule-entry-duration dib tc">{schedule.duration}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </Tree>
+                    )
+                  })}
+                </MapAndTableTableContainer>
+              </MapAndTableContainer>
             </li>
             <li>
               <ThingsTitle>{t("opinion")}</ThingsTitle>
@@ -286,7 +828,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <TransportVietnamImages image="boat2" />
                 </ImageAsLandscapeOnTheRight>
                 <ImageAsLandscapeOnTheLeft>
-                  <SharedCardVietnamImages image="transportMain" />
+                  <TransportVietnamImages image="boat4" />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
                   <TransportVietnamImages image="boat3" />
@@ -296,15 +838,29 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ListOfThings>
         </Boat>
         <Divider />
-        <Bus id="bus" title={t("section3.title")}>
+        <Bus id="bus-menu" title={t("section3.title")}>
           <p>
             {t("section3.part1")} <HighLight>{t("section3.part2")}</HighLight> {t("section3.part3")}{" "}
             <HighLight>{t("section3.part4")}</HighLight>
           </p>
           <p>{t("section3.part5")}</p>
         </Bus>
+        <MenuArticle>
+          <div>
+            <a href="#bus">{t("section3.bus.title")}</a>
+          </div>
+          <div>
+            <a href="#bus-car">{t("section3.car.title")}</a>
+          </div>
+          <div>
+            <a href="#open-tour">{t("section3.open-tour.title")}</a>
+          </div>
+          <div>
+            <a href="#guided-tour">{t("section3.guided-tour.title")}</a>
+          </div>
+        </MenuArticle>
         <Divider />
-        <Bus title={t("section3.bus.title")}>
+        <Bus title={t("section3.bus.title")} id="bus">
           <ListOfThings>
             <li>
               <ThingsTitle>{t("information")}</ThingsTitle>
@@ -329,7 +885,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ListOfThings>
         </Bus>
         <Divider />
-        <Bus title={t("section3.car.title")}>
+        <Bus title={t("section3.car.title")} id="bus-car">
           <ListOfThings>
             <li>
               <ThingsTitle>{t("information")}</ThingsTitle>
@@ -438,6 +994,74 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 {t("section3.car.price.part3")}
               </p>
               <p>{t("section3.car.price.part4")}</p>
+              <MapAndTableContainer>
+                <img
+                  src={MapBus}
+                  alt="Map Bus Vietnam"
+                  className="mr-auto ml-auto db"
+                  css={css`
+                    max-height: 80vh;
+                    max-width: 500px;
+                    object-fit: contain;
+                  `}
+                />
+                <MapAndTableTableContainer>
+                  {Object.entries(busSchedules).map(([key, entry]) => {
+                    return (
+                      <Tree
+                        key={key}
+                        name={cities[entry?.id ?? "hanoi"]}
+                        onClick={() => {
+                          if (airports.includes(key)) {
+                            setAirports(airports.filter((airport) => airport !== key))
+                          } else {
+                            setAirports([...airports, key])
+                          }
+                        }}
+                      >
+                        <div className="schedules">
+                          {entry?.schedules.map((schedule) => (
+                            <div
+                              key={schedule.destination}
+                              className="schedule-entry"
+                              css={css`
+                                .schedule-entry-icon {
+                                  flex-basis: 70px;
+                                  min-width: 70px;
+                                }
+                                .schedule-entry-destination {
+                                  flex-basis: calc(60% - 70px);
+                                  min-width: calc(60% - 70px);
+                                }
+                                .schedule-entry-distance,
+                                .schedule-entry-duration {
+                                  flex-basis: 20%;
+                                  min-width: 20%;
+                                }
+                              `}
+                            >
+                              <span className="schedule-entry-icon inline-flex items-center justify-start pl3">
+                                {schedule.type.includes("sleeping") && (
+                                  <>
+                                    <Sleeping />
+                                    &nbsp;
+                                  </>
+                                )}
+                                {schedule.type.includes("sitting") && <Sitting />}
+                              </span>
+                              <span className="schedule-entry-destination inline-flex items-center justify-center">
+                                {cities[schedule.destination]}
+                              </span>
+                              <span className="schedule-entry-distance dib tc">{schedule.distance}</span>
+                              <span className="schedule-entry-duration dib tc">{schedule.duration}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </Tree>
+                    )
+                  })}
+                </MapAndTableTableContainer>
+              </MapAndTableContainer>
             </li>
             <li>
               <ThingsTitle>{t("opinion")}</ThingsTitle>
@@ -453,7 +1077,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ListOfThings>
         </Bus>
         <Divider />
-        <Bus title={t("section3.open-tour.title")}>
+        <Bus title={t("section3.open-tour.title")} id="open-tour">
           <ListOfThings>
             <li>
               <ThingsTitle>{t("information")}</ThingsTitle>
@@ -488,6 +1112,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <VietnamLink to="halong-bay">{t("section3.open-tour.information.part18")}</VietnamLink>{" "}
                 {t("section3.open-tour.information.part19")}
               </p>
+              <div>
+                <ImageAsLandscape>
+                  <img src={MapOpenBus} alt="Open Bus Route" />
+                </ImageAsLandscape>
+              </div>
               <p>{t("section3.open-tour.information.part20")}</p>
               <p>
                 {t("section3.open-tour.information.part21")}{" "}
@@ -564,7 +1193,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ListOfThings>
         </Bus>
         <Divider />
-        <Bus title={t("section3.guided-tour.title")}>
+        <Bus title={t("section3.guided-tour.title")} id="guided-tour">
           <ListOfThings>
             <li>
               <ThingsTitle>{t("information")}</ThingsTitle>
@@ -620,6 +1249,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </Bus>
         <Divider />
         <Rickshaw id="rickshaw" title={t("section4.title")}>
+          <ImageAsLandscape>
+            <TransportVietnamImages image="rickshaw" />
+          </ImageAsLandscape>
           <ListOfThings>
             <li>
               <ThingsTitle>{t("information")}</ThingsTitle>
@@ -652,9 +1284,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>
               <ThingsTitle>{t("opinion")}</ThingsTitle>
               <p>{t("section4.opinion.part1")}</p>
-              <ImageAsLandscape>
-                <TransportVietnamImages image="rickshaw" />
-              </ImageAsLandscape>
             </li>
           </ListOfThings>
         </Rickshaw>
@@ -728,7 +1357,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 </li>
                 <li>
                   <HighLight>{t("section5.price.part6")}</HighLight> {t("section5.price.part7")}{" "}
-                  <VietnamExternalLink>{t("section5.price.part8")}</VietnamExternalLink>
+                  <VietnamExternalLink href="https://www.grab.com/vn/en/transport/bike/#section-fare-table-fare-table-grabbike">
+                    {t("section5.price.part8")}
+                  </VietnamExternalLink>
                   {t("section5.price.part9")}
                 </li>
               </ul>
@@ -910,6 +1541,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </li>
             <li>
               <ThingsTitle>{t("price")}</ThingsTitle>
+              <VietnamTrainMap
+                onMouseEnter={setTooltipContent}
+                onMouseLeave={setTooltipContent}
+              />
               <p>{t("section7.price")}</p>
             </li>
             <li>
@@ -963,22 +1598,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </Car>
         <Divider />
         <section>
-          <VietnamHeadline>{t("section10.title")}</VietnamHeadline>
-          <Divider />
           <SectionContent>
-            <p>{t("section10.part1")}</p>
-            <ul>
-              <li>{t("section10.part2")}</li>
-            </ul>
-            <ul>
-              <li>{t("section10.part3")}</li>
-            </ul>
-            <ul>
-              <li>{t("section10.part4")}</li>
-            </ul>
-            <ul>
-              <li>{t("section10.part5")}</li>
-            </ul>
+            <PetitCarreJaune>
+              <p>{t("section10.part1")}</p>
+              <p>{t("section10.part2")}</p>
+              <p>{t("section10.part3")}</p>
+              <p>{t("section10.part4")}</p>
+              <p>{t("section10.part5")}</p>
+            </PetitCarreJaune>
             <p>{t("section10.part6")}</p>
           </SectionContent>
         </section>
@@ -998,10 +1625,30 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             description: t("pinterest"),
             nodes:
               i18n.languageCode === "fr"
-                ? [<MyThoImages image="cardFr1" key="cardFr1" />, <MyThoImages image="cardFr2" key="cardFr2" />]
-                : [<MyThoImages image="cardEn1" key="cardEn1" />, <MyThoImages image="cardEn2" key="cardEn2" />],
+                ? [
+                    <TransportVietnamImages image="cardFr1" key="cardFr1" />,
+                    <TransportVietnamImages image="cardFr2" key="cardFr2" />,
+                  ]
+                : [
+                    <TransportVietnamImages image="cardEn1" key="cardEn1" />,
+                    <TransportVietnamImages image="cardEn2" key="cardEn2" />,
+                  ],
           }}
         />
+        <MouseToolTip>
+          {tooltipContent ? (
+            <TooltipContent>
+              {tooltipContent.split("\n").map((item, index) => {
+                return (
+                  <span key={index}>
+                    {item}
+                    <br />
+                  </span>
+                )
+              })}
+            </TooltipContent>
+          ) : null}
+        </MouseToolTip>
       </VietnamBlogLayout>
     </>
   )

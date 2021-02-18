@@ -532,6 +532,15 @@ const commentFormStyle = css`
     opacity: 0.6;
     font-weight: normal;
   }
+  .comment-section-title {
+    margin-bottom: 1.45rem;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+      Helvetica Neue, sans-serif;
+  }
 `
 interface CommentFormProps {
   cancellable?: boolean
@@ -554,14 +563,14 @@ const CommentForm: FunctionComponent<CommentFormProps> = ({
   const { t } = useCustomTranslation("common")
   return (
     <div css={commentFormStyle}>
-      <h4>
+      <div className="comment-section-title">
         {t("comments.post-comment")}{" "}
         {cancellable && (
           <span className="cancel" onClick={onCancel}>
             {t("comments.cancel")}
           </span>
         )}
-      </h4>
+      </div>
       <div>{t("comments.note")}</div>
       <Textarea
         id="message"
