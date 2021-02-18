@@ -86,7 +86,7 @@ import { getLink } from "../../../components/core/links/links.utils"
 import HomeImgUrl from "../../../images/asia/vietnam/prepare/prepare-vietnam-main.jpg"
 import { Title } from "../../../components/core/title"
 import { Quote } from "../../../components/core/quote"
-import { Table } from "../../../components/layout/layout"
+import { PetitCarreJaune, Table } from "../../../components/layout/layout"
 import { Weather } from "../../../components/core/weather"
 
 const Highlight = styled.span`
@@ -97,23 +97,6 @@ const SubTitle = styled.p`
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 `
-const petitCarreJauneStyle = css`
-  background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
-  border-color: ${vietnamPrimaryColorDarker};
-  & > p {
-    margin-bottom: 0;
-  }
-  svg {
-    height: 64px;
-    width: 64px;
-    margin-right: 0.5rem;
-  }
-`
-const PetitCarreJaune: React.FunctionComponent = ({ children }) => (
-  <div css={petitCarreJauneStyle} className="ba bw1 bl-0 br-0 pv2 ph3 mh3 mb3 mt3 tc">
-    {children}
-  </div>
-)
 const Flood: React.FunctionComponent = () => (
   <svg className="mr2" height="64" viewBox="0 0 512 512" width="64">
     <g id="flat">

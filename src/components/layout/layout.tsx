@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext, useEffect, useState, useLayoutEffect } from "react"
+import React, { FunctionComponent, HTMLAttributes, useContext, useEffect, useState, useLayoutEffect } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.utils"
@@ -33,6 +33,7 @@ import CourgetteFont from "../../fonts/Courgette-Regular.ttf"
 import CourgetteFontWoff from "../../fonts/Courgette-Regular.woff2"
 import PlayfairFont from "../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf"
 import PlayfairFontWoff from "../../fonts/PlayfairDisplay-Italic.woff2"
+import { vietnamPrimaryColorDarker, vietnamPrimaryColorWithOpacity } from "../core/asia/vietnam/vietnam.colors"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -304,11 +305,16 @@ export const MedallionContainer = styled.div`
   }
 `
 
-export const GoToAllArticlesContainer = styled.div`
+export const goToAllArticlesContainer = css`
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
 `
+export const GoToAllArticlesContainer: FunctionComponent<HTMLAttributes<any>> = ({ children, ...props }) => (
+  <div css={goToAllArticlesContainer} className="all-articles-container" {...props}>
+    {children}
+  </div>
+)
 
 export const MainCardContainer = styled.div`
   margin-left: auto;
@@ -348,3 +354,21 @@ export const Table = styled.table`
     text-align: center;
   }
 `
+
+const petitCarreJauneStyle = css`
+  background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
+  border-color: ${vietnamPrimaryColorDarker};
+  & > p {
+    margin-bottom: 0;
+  }
+  svg {
+    height: 64px;
+    width: 64px;
+    margin-right: 0.5rem;
+  }
+`
+export const PetitCarreJaune: React.FunctionComponent = ({ children }) => (
+  <div css={petitCarreJauneStyle} className="ba bw1 bl-0 br-0 pv2 ph3 mh3 mb3 mt3 tc">
+    {children}
+  </div>
+)

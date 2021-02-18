@@ -478,45 +478,43 @@ const weatherStyle = css`
   }
 `
 
-// using important because I shouldn't have tried to use global style in vietnam pages
-// will stick to custom components for button :)
 const WeatherGoodMonths = styled(Button)`
   &&.btn {
-    background-color: transparent !important;
-    border: 2px solid ${weatherGood} !important;
-    color: ${weatherGood} !important;
+    background-color: transparent;
+    border: 2px solid ${weatherGood};
+    color: ${weatherGood};
   }
   &&.btn:hover,
   &&.btn.active {
-    border: 2px solid ${weatherGood} !important;
-    background-color: ${weatherGood} !important;
-    color: white !important;
+    border: 2px solid ${weatherGood};
+    background-color: ${weatherGood};
+    color: white;
   }
 `
 const WeatherBadMonths = styled(Button)`
   &&.btn {
-    background-color: transparent !important;
-    border: 2px solid ${weatherBad} !important;
-    color: ${weatherBad} !important;
+    background-color: transparent;
+    border: 2px solid ${weatherBad};
+    color: ${weatherBad};
   }
   &&.btn:hover,
   &&.btn.active {
-    border: 2px solid ${weatherBad} !important;
-    background-color: ${weatherBad} !important;
-    color: white !important;
+    border: 2px solid ${weatherBad};
+    background-color: ${weatherBad};
+    color: white;
   }
 `
 const WeatherAverageMonths = styled(Button)`
   &&.btn {
-    background-color: transparent !important;
-    border: 2px solid ${weatherAverage} !important;
-    color: ${weatherAverage} !important;
+    background-color: transparent;
+    border: 2px solid ${weatherAverage};
+    color: ${weatherAverage};
   }
   &&.btn:hover,
   &&.btn.active {
-    border: 2px solid ${weatherAverage} !important;
-    background-color: ${weatherAverage} !important;
-    color: white !important;
+    border: 2px solid ${weatherAverage};
+    background-color: ${weatherAverage};
+    color: white;
   }
 `
 export const Weather: React.FunctionComponent<{ entries: WeatherEntry[]; className?: string }> = ({

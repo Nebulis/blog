@@ -23,6 +23,16 @@ export const VietnamHeadline: FunctionComponent = ({ children }) => (
 
 const drawer = withDraw(drawHat)
 
+const buttonStyle = `
+  button.btn,
+  button.btn:disabled,
+  button.btn:hover {
+    background-color: ${vietnamPrimaryColorDarker};
+    border-color: ${vietnamPrimaryColorDarker};
+    color: white;
+  }
+`
+
 const vietnamLayout = `
   svg.facebook:hover,
   svg.instagram:hover,
@@ -31,6 +41,11 @@ const vietnamLayout = `
   svg.search:hover,
   svg.likes {
     fill: ${vietnamPrimaryColor};
+  }
+  header {
+    .menu-entry {
+      border-top: 1px solid ${vietnamPrimaryColor}!important;
+    }
   }
 
   .index-blog-layout-content {
@@ -51,32 +66,31 @@ const vietnamLayout = `
     table tbody tr:hover {
       background-color: ${vietnamPrimaryColorWithOpacity(0.3)};
     }
-    button.btn:not(.not-overridable),
-    button.btn:not(.not-overridable):disabled,
-    button.btn:not(.not-overridable):hover {
-      background-color: ${vietnamPrimaryColorDarker};
-      border-color: ${vietnamPrimaryColorDarker};
-      color: white;
+    .all-articles-container {
+      ${buttonStyle}
     }
     .divider {
       background-color: ${vietnamPrimaryColor};
     }
     
-    .comments .active svg {
-      color: ${vietnamPrimaryColor};
+    .comments {
+      ${buttonStyle}
+      .active svg {
+        color: ${vietnamPrimaryColor};
+      }
+      .form-control:focus
+       {
+        box-shadow: 0 0 0 0.2rem rgb(255, 217, 102, 0.25);
+        border-color: ${vietnamPrimaryColor}
+      }
     }
-    .comments .form-control:focus
-     {
-      box-shadow: 0 0 0 0.2rem rgb(255, 217, 102, 0.25);
-      border-color: ${vietnamPrimaryColor}
-    }
-  }
-  .menu-entry {
-    border-top: 1px solid ${vietnamPrimaryColor}!important;
   }
 
-  footer a {
-    color: ${vietnamPrimaryColor};
+  footer {
+    ${buttonStyle}
+    a {
+      color: ${vietnamPrimaryColor};
+    }
   }
 `
 export const IndexVietnamBlogLayout = drawer(styled(IndexBlogLayout)`

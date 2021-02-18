@@ -8,6 +8,7 @@ const alt = {
   boat: "Transport Vietnam Boat",
   boat2: "Transport Vietnam Boat",
   boat3: "Transport Vietnam Boat",
+  boat4: "Transport Vietnam Boat",
   seaterBus: "Transport Vietnam Seater Bus",
   seaterSleeperBus: "Transport Vietnam Seater Sleeper Bus",
   berthsSleeperBus: "Transport Vietnam Berths Sleeper Bus",
@@ -54,6 +55,13 @@ export const TransportVietnamImages: React.FunctionComponent<ExtraImageProps & {
         }
       }
       boat3: file(relativePath: { eq: "asia/vietnam/transport/transport-vietnam-boat3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      boat4: file(relativePath: { eq: "asia/vietnam/transport/transport-vietnam-boat4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
@@ -138,6 +146,34 @@ export const TransportVietnamImages: React.FunctionComponent<ExtraImageProps & {
         }
       }
       softSleeperTrain: file(relativePath: { eq: "asia/vietnam/transport/transport-vietnam-train-soft-sleeper.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardFr1: file(relativePath: { eq: "asia/vietnam/transport/card-fr1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardFr2: file(relativePath: { eq: "asia/vietnam/transport/card-fr2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn1: file(relativePath: { eq: "asia/vietnam/transport/card-en1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      cardEn2: file(relativePath: { eq: "asia/vietnam/transport/card-en2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp

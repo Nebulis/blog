@@ -208,10 +208,10 @@ const StaticHeader: FunctionComponent<{
         <div className="right-menu-container">
           <div className="right-menu-element" />
           <div className="mr2">
-            <Link to={getPathForFrench(location)}>
+            <Link to={getPathForFrench(location)} aria-label="Switch to French">
               <FlagFrance selected={i18n.languageCode === "fr"} />
             </Link>
-            <Link to={getPathForEnglish(location)}>
+            <Link to={getPathForEnglish(location)} aria-label="Switch to English">
               <FlagUK selected={i18n.languageCode === "en"} />
             </Link>
             {context.development && <FaSearch onClick={onSearch} className="search" />}

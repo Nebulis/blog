@@ -29,7 +29,7 @@ import {
   FaTrain,
   FaBicycle,
   FaCar,
-} from "react-icons/all"
+} from "react-icons/fa"
 import { maxWidth, mediumEnd, mobileEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n"
 import { Lang } from "./links/links.types"
