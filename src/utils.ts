@@ -92,3 +92,6 @@ export const buildCurrentSharedUrl = (location: PageProps["location"]) => {
 export const buildCo2LogicUrl = (lang: Lang) => `https://www.co2logic.com/${lang}`
 export const build12GoAsiaUrl = (lang: Lang) => `https://12go.asia/${lang}`
 export const buildPixabayUrl = (lang: Lang) => (slug = "") => `https://pixabay.com/${lang}/${slug}`
+
+export const priceFactorEur = 1
+export const priceFactorUsd = 1.21

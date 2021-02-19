@@ -1,9 +1,11 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { backgroundPrimaryColor, fillMap } from "../../variables"
-import { defaultTextStyle, mapProps, mapStyle, PinAirport } from "../../map"
-import { Country } from "../../../layout/world"
-import { vietnamPrimaryColor, vietnamPrimaryColorDarker } from "./vietnam.colors"
+import { weatherBad, weatherGood } from "../../variables"
+import { defaultTextStyle, mapProps, PinAirport } from "../../map"
+import { vietnamPrimaryColorDarker } from "./vietnam.colors"
+import { VietnamCity } from "./vietnam"
+import { useCustomTranslation } from "../../../../i18n"
+import { priceFactorEur, priceFactorUsd } from "../../../../utils"
 
 const VietnamMap: React.FunctionComponent = () => (
   <g>
@@ -336,14 +338,15 @@ const scales: { [key in AirportKind]: number } = {
   international: 0.2,
 }
 interface Airport {
-  id?: string
+  id: VietnamCity
   label: string
   type: AirportKind
   position: { x: number; y: number }
 }
 const airports: Airport[] = [
   {
-    label: "Cat Bi International Airport",
+    id: "haiphong",
+    label: "Cat Bi International Airport\nHaiphong",
     type: "international",
     position: {
       x: 570,
@@ -352,7 +355,7 @@ const airports: Airport[] = [
   },
   {
     id: "hanoi",
-    label: "Noi Bai International Airport (Hanoi)",
+    label: "Noi Bai International Airport\nHanoi",
     type: "international",
     position: {
       x: 470,
@@ -360,6 +363,7 @@ const airports: Airport[] = [
     },
   },
   {
+    id: "vinh",
     label: "Vinh Airport",
     type: "international",
     position: {
@@ -368,7 +372,8 @@ const airports: Airport[] = [
     },
   },
   {
-    label: "Phu Bai International Airport (Hue)",
+    id: "hue",
+    label: "Phu Bai International Airport\nHue",
     type: "international",
     position: {
       x: 710,
@@ -376,6 +381,7 @@ const airports: Airport[] = [
     },
   },
   {
+    id: "da-nang",
     label: "Da Nang International Airport",
     type: "international",
     position: {
@@ -384,7 +390,8 @@ const airports: Airport[] = [
     },
   },
   {
-    label: "Cam Ranh International Airport",
+    id: "nha-trang",
+    label: "Cam Ranh International Airport\nNha Trang",
     type: "international",
     position: {
       x: 920,
@@ -392,7 +399,8 @@ const airports: Airport[] = [
     },
   },
   {
-    label: "Lien Khuong Airport (Ho Chi Minh)",
+    id: "ho-chi-minh",
+    label: "Tan Son Nhat International Airport\nHo Chi Minh",
     type: "international",
     position: {
       x: 585,
@@ -400,6 +408,7 @@ const airports: Airport[] = [
     },
   },
   {
+    id: "can-tho",
     label: "Can Tho International Airport",
     type: "international",
     position: {
@@ -408,6 +417,7 @@ const airports: Airport[] = [
     },
   },
   {
+    id: "phu-quoc",
     label: "Phu Quoc International Airport",
     type: "international",
     position: {
@@ -416,6 +426,7 @@ const airports: Airport[] = [
     },
   },
   {
+    id: "dien-bien-phu",
     label: "Dien Bien Phu Airport",
     type: "domestic",
     position: {
@@ -424,7 +435,8 @@ const airports: Airport[] = [
     },
   },
   {
-    label: "Tho Xuan Airport",
+    id: "thanh-hoa",
+    label: "Tho Xuan Airport\nThanh Hoa",
     type: "domestic",
     position: {
       x: 430,
@@ -432,6 +444,7 @@ const airports: Airport[] = [
     },
   },
   {
+    id: "dong-hoi",
     label: "Dong Hoi Airport",
     type: "domestic",
     position: {
@@ -440,6 +453,7 @@ const airports: Airport[] = [
     },
   },
   {
+    id: "chu-lai",
     label: "Chu Lai Airport",
     type: "domestic",
     position: {
@@ -448,7 +462,8 @@ const airports: Airport[] = [
     },
   },
   {
-    label: "Phu Cat Airport",
+    id: "qui-nhon",
+    label: "Phu Cat Airport\nQui Nhon",
     type: "domestic",
     position: {
       x: 930,
@@ -456,6 +471,7 @@ const airports: Airport[] = [
     },
   },
   {
+    id: "pleiku",
     label: "Pleiku Airport",
     type: "domestic",
     position: {
@@ -463,15 +479,16 @@ const airports: Airport[] = [
       y: 1305,
     },
   },
+  // {
+  //   label: "Dong Tac Airport",
+  //   type: "domestic",
+  //   position: {
+  //     x: 960,
+  //     y: 1435,
+  //   },
+  // },
   {
-    label: "Dong Tac Airport",
-    type: "domestic",
-    position: {
-      x: 960,
-      y: 1435,
-    },
-  },
-  {
+    id: "buon-ma-thuot",
     label: "Buon Ma Thuot Airport",
     type: "domestic",
     position: {
@@ -480,7 +497,8 @@ const airports: Airport[] = [
     },
   },
   {
-    label: "Lien Khuong Airport",
+    id: "da-lat",
+    label: "Lien Khuong Airport\nDa Lat",
     type: "domestic",
     position: {
       x: 835,
@@ -488,6 +506,7 @@ const airports: Airport[] = [
     },
   },
   {
+    id: "rach-gia",
     label: "Rach Gia Airport",
     type: "domestic",
     position: {
@@ -495,15 +514,16 @@ const airports: Airport[] = [
       y: 1860,
     },
   },
+  // {
+  //   label: "Ca Mau Airport",
+  //   type: "domestic",
+  //   position: {
+  //     x: 395,
+  //     y: 1960,
+  //   },
+  // },
   {
-    label: "Ca Mau Airport",
-    type: "domestic",
-    position: {
-      x: 395,
-      y: 1960,
-    },
-  },
-  {
+    id: "con-dao",
     label: "Con Dao Airport",
     type: "domestic",
     position: {
@@ -521,14 +541,19 @@ const airportStyle = css`
   ${defaultTextStyle}
   cursor:pointer;
   &.airport-pinpoint-selected {
-    fill: ${vietnamPrimaryColorDarker};
+    fill: ${weatherBad};
+  }
+  &.airport-pinpoint-destination {
+    fill: ${weatherGood};
   }
 `
 export const VietnamAirportMap: React.FunctionComponent<{
   onMouseEnter?: (text: string) => void
   onMouseLeave?: (text: string) => void
-  selected: string[]
-}> = ({ onMouseEnter = noop, onMouseLeave = noop, selected }) => {
+  onSelect: (city: VietnamCity) => void
+  selected?: string
+  destination: string[]
+}> = ({ onMouseEnter = noop, onMouseLeave = noop, selected, onSelect, destination }) => {
   return (
     <svg
       css={css`
@@ -551,10 +576,15 @@ export const VietnamAirportMap: React.FunctionComponent<{
           x={airport.position.x}
           y={airport.position.y}
           key={index}
-          onClick={() => onMouseEnter(airport.label)}
+          onClick={() => {
+            onMouseEnter(airport.label)
+            onSelect(airport.id)
+          }}
           onMouseEnter={() => onMouseEnter(airport.label)}
           onMouseLeave={() => onMouseLeave("")}
-          className={`${selected.includes(airport.id ?? "") ? "airport-pinpoint-selected" : ""}`}
+          className={`${selected === airport.id ? "airport-pinpoint-selected" : ""} ${
+            destination.includes(airport.id) ? "airport-pinpoint-destination" : ""
+          }`}
         >
           <PinAirport transform={`scale(${scales[airport.type]})`} />
         </svg>
@@ -578,6 +608,15 @@ export const VietnamTrainMap: React.FunctionComponent<{
   onMouseEnter?: (text: string) => void
   onMouseLeave?: (text: string) => void
 }> = ({ onMouseEnter = noop, onMouseLeave = noop }) => {
+  const { i18n } = useCustomTranslation()
+  const computePrice = (price: number) => {
+    return (price * (i18n.languageCode === "fr" ? priceFactorEur : priceFactorUsd)).toLocaleString(undefined, {
+      style: "currency",
+      currency: i18n.languageCode === "fr" ? "EUR" : "USD",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    })
+  }
   return (
     <svg
       css={css`
@@ -612,9 +651,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
           fill="black"
           strokeWidth="13"
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Ho Chi Minh - Bien Hoa\n45min - ${computePrice(1)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Ho Chi Minh - Bien Hoa\n45min - ${computePrice(1)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -625,9 +664,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Bien Hoa - Binh Thuan\n2h40 - ${computePrice(10)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Bien Hoa - Binh Thuan\n2h40 - ${computePrice(10)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -642,9 +681,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Binh Thuan - Thap Cham\n2h15 - ${computePrice(3)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Binh Thuan - Thap Cham\n2h15 - ${computePrice(3)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -659,9 +698,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Thap Cham - Nha Trang\n1h30 - ${computePrice(2)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Thap Cham - Nha Trang\n1h30 - ${computePrice(2)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -676,9 +715,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Nha Trang - Ninh Hoa\n 40min - ${computePrice(1)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Nha Trang - Ninh Hoa\n 40min - ${computePrice(1)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -693,9 +732,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Ninh Hoa - Tuy Hoa\n1h30 ${computePrice(2)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Ninh Hoa - Tuy Hoa\n1h30 ${computePrice(2)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -710,9 +749,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Tuy Hoa - Dieu Tri\n1h40 - ${computePrice(2)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Tuy Hoa - Dieu Tri\n1h40 - ${computePrice(2)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -727,9 +766,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Dieu Tri - Quang Ngai\n2h45 ${computePrice(4)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Dieu Tri - Quang Ngai\n2h45 ${computePrice(4)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -744,9 +783,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Quang Ngai - Tam Ky\n 1h05 - ${computePrice(1)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Quang Ngai - Tam Ky\n 1h05 - ${computePrice(1)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -761,9 +800,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Tam Ky - Da Nang\n1h20 - ${computePrice(2)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Tam Ky - Da Nang\n1h20 - ${computePrice(2)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -778,9 +817,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Da Nang - Hue\n2h30 - ${computePrice(2)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Da Nang - Hue\n2h30 - ${computePrice(2)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -795,9 +834,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Hue - Dong Ha\n 1h10 - ${computePrice(1)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Hue - Dong Ha\n 1h10 - ${computePrice(1)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -812,9 +851,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Dong Ha - Dong Hoi\n1h40 - ${computePrice(2)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Dong Ha - Dong Hoi\n1h40 - ${computePrice(2)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -829,9 +868,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Dong Hoi - Vinh\n4h - ${computePrice(5)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Dong Hoi - Vinh\n4h - ${computePrice(5)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -846,9 +885,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Vinh - Thanh Hoa\n2h30 - ${computePrice(5)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Vinh - Thanh Hoa\n2h30 - ${computePrice(5)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -863,9 +902,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Thanh Hoa - Ninh Binh\n1h - ${computePrice(2)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Thanh Hoa - Ninh Binh\n1h - ${computePrice(2)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -880,9 +919,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Ninh Binh - Nam Dinh\n30min - ${computePrice(1)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Ninh Binh - Nam Dinh\n30min - ${computePrice(1)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -897,9 +936,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Nam Dinh - Hanoi\n1h45 - ${computePrice(3)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Nam Dinh - Hanoi\n1h45 - ${computePrice(3)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -914,9 +953,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Hanoi - Hai Phong\n2h40 - ${computePrice(3)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Hanoi - Hai Phong\n2h40 - ${computePrice(3)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -929,79 +968,31 @@ export const VietnamTrainMap: React.FunctionComponent<{
         <text x="610" y="300">
           Kep
         </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
-          }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 490 340 L 570 300"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
+        <path d="M 490 340 L 570 300" stroke="black" strokeWidth="13" fill="transparent" />
         <circle cx="645" cy="350" r="13" />
         <text x="665" y="360">
           Ha Long
         </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
-          }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 570 300 L 645 350"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
+        <path d="M 570 300 L 645 350" stroke="black" strokeWidth="13" fill="transparent" />
         <circle cx="620" cy="220" r="13" />
         <text x="640" y="220">
           Dong Dang
         </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
-          }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 570 300 L 620 220"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
+        <path d="M 570 300 L 620 220" stroke="black" strokeWidth="13" fill="transparent" />
         <circle cx="500" cy="250" r="13" />
         <text x="400" y="210">
           Quan Trieu
         </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
-          }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 490 340 L 500 250"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
+        <path d="M 490 340 L 500 250" stroke="black" strokeWidth="13" fill="transparent" />
         <circle cx="380" cy="255" r="13" />
         <text x="210" y="270">
           Yen Bai
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Hanoi - Yen Bai\n4h40 - ${computePrice(3)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Hanoi - Yen Bai\n4h40 - ${computePrice(3)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}
@@ -1016,9 +1007,9 @@ export const VietnamTrainMap: React.FunctionComponent<{
         </text>
         <path
           onMouseEnter={() => {
-            onMouseEnter("Ho Chi Minh - Bien Hoa\n45min - 30 000VND")
+            onMouseEnter(`Yen Bai - Lao Cai\n3h58 - ${computePrice(6)}`)
           }}
-          onClick={() => onMouseEnter("Ho Chi Minh - Bien Hoa\n 45min - 30 000VND")}
+          onClick={() => onMouseEnter(`Yen Bai - Lao Cai\n3h58 - ${computePrice(6)}`)}
           onMouseLeave={() => {
             onMouseLeave("")
           }}

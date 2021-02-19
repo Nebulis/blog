@@ -37,7 +37,7 @@
       "part4": "Vietjet Air",
       "part5": ", pour des courts trajets elle suffit amplement, néanmoins il arrive qu’elle ne fasse pas des trajets sans escale contrairement à Vietnam Airlines. Vous trouverez de toute façon toutes les informations sur Expedia. Vous avez également une nouvelle compagnie nommée",
       "part6": "Bamboo Airways",
-      "part7": "mais nous ne la connaissons pas."
+      "part7": ", mais nous ne la connaissons pas."
     },
     "price": {
       "part1": "Les trajets sans escale ne durent pas plus de 2h, le plus souvent aux alentours de",
@@ -80,7 +80,7 @@
       "part3": "ou bien",
       "part4": "TripAdvisor"
     },
-    "opinion": "Le bateau est vraiment un incontournable au Vietnam, cela vous permettra de découvrir ce pays sous un autre jour et de profiter de paysage uniquement accessible par ce biais."
+    "opinion": "Le bateau est vraiment un incontournable au Vietnam, cela vous permettra de découvrir ce pays sous un autre angle et de profiter de paysage uniquement accessible par ce biais."
   },
   "section3": {
     "title": "Bus / Car",
@@ -88,7 +88,8 @@
     "part2": "le plus utilisé",
     "part3": "par les voyageurs. C’est également le moyen de transport longue distance",
     "part4": "le moins cher et le plus desservi",
-    "part5": "On peut différencier en 4 parties les bus du Vietnam.",
+    "part5": "",
+    "part6": "On peut différencier en 4 parties les bus du Vietnam.",
     "bus": {
       "title": "Bus de ville",
       "information": {
@@ -125,9 +126,9 @@
       "booking": {
         "part1": "Les tickets sont vendus par siège, il est donc préférable de",
         "part2": "réserver à l’avance",
-        "part3": "si vous voulez être sûr d’avoir le car à l’heure que vous souhaitez",
+        "part3": "si vous voulez être sûr d’avoir le car à l’heure que vous souhaitez.",
         "part4": "Vous pouvez acheter vos billets directement sur le site de la compagnie de bus, au guichet de leurs agences ou directement aux billetteries des gares routières.",
-        "part5": "Vous pouvez également vous rendre sur les sites des compagnies ou bien sur Internet sur",
+        "part5": "Vous pouvez également vous rendre sur Internet sur",
         "part6": "12go.asia",
         "part7": "et",
         "part8": "Baolau"
@@ -149,7 +150,7 @@
         "part1": "Le car est très intéressant lorsque l’on ne dispose peu ou pas de contraintes de temps. Ils permettent de naviguer de ville en ville tout simplement et de profiter des paysages (surtout la journée).",
         "part2": "Nous préconisons le car sur les trajets courts ou mi-longs, par exemple si vous restez dans une région (Nord, Sud, Centre) ou bien si vous passez d’une région frontalière à une autre (du Nord au Centre par exemple).",
         "part3": "En revanche, si vous souhaitez vous rendre du Nord au Sud en un seul trajet, il faudra prendre votre mal en patience.",
-        "part4": "Les bus de nuit ont deux avantages principaux. Ils permettent d’éviter de payer une nuit à l’hôtel et vous permettent de traverser le Vietnam, tout en conservant vos journées pour les excursions, activités, etc… C’est un vrai atout si vous manquez de temps. De plus, au Vietnam, ils sont vraiment confortable, pas autant qu’un vrai lit bien sûr mais déjà plus confortable que les bus de nuit au",
+        "part4": "Les bus de nuit ont deux avantages principaux. Ils permettent d’éviter de payer une nuit à l’hôtel et vous permettent de traverser le Vietnam, tout en conservant vos journées pour les excursions, activités, etc… C’est un vrai atout si vous manquez de temps. De plus, au Vietnam, ils sont vraiment confortables, pas autant qu’un vrai lit bien sûr mais déjà plus confortable que les bus de nuit au",
         "part5": "Cambodge",
         "part6": "par exemple."
       }
@@ -170,7 +171,7 @@
         "part11": "SEULES villes desservies",
         "part12": "sont : Hô Chi Minh-Ville - Dalat - Mui ne - Nha Trang - Hoi An - Da Nang - Hué - Hanoi.",
         "part13": "Contrairement aux tours avec guide, il est possible de s'arrêter dans une ville, aussi longtemps que souhaité, dans la limite de validité du billet (1 mois).",
-        "part14": "Il faut garder à l'esprit qu’il s’agit d’un service de bus entre les grandes villes du Vietnam. Si vous souhaitez explorer les environs une fois arrivée dans une de vos destinations, vous devez vous débrouiller par vos propres moyens, soit avec la même compagnie mais en car (bus inter-cité), soit en ayant réservé des excursions comme sur",
+        "part14": "Il faut garder à l'esprit qu’il s’agit d’un service de bus entre les grandes villes du Vietnam. Si vous souhaitez explorer les environs une fois arrivé dans une de vos destinations, vous devez vous débrouiller par vos propres moyens, soit avec la même compagnie mais en car (bus inter-cité), soit en ayant réservé des excursions comme sur",
         "part15": "GetYourGuide",
         "part16": ", ou encore en moto/scooter, en train … . Cela rajoute donc des frais supplémentaires.",
         "part17": "Exemple : Admettons que vous voulez visitez la",
@@ -238,7 +239,7 @@
         "part6": ", on utilise ces deux sites très régulièrement et nous n’avons jamais eu de problème, ils sont d’ailleurs plutôt réactif quand il s’agit de répondre à des questions ou encore pour aménager des tours en fonction de nos attentes.",
         "part7": "Vous pouvez également réserver sur place, à Hô Chi Minh-Ville par exemple, une rue, la",
         "part8": "Rue De Tham",
-        "part9": "est LE rendez-vous des voyageurs, vous y trouverez toutes sortes d’agences"
+        "part9": "est LE rendez-vous des voyageurs, vous y trouverez toutes sortes d’agences."
       },
       "price": {
         "part1": "Vous trouverez de tout, à tous les prix. Pensez à bien comparer les offres en détail, voir ce qui est compris dans le parcours, regarder les avis et regarder le nombre de jours. En général,",
@@ -305,7 +306,7 @@
       "part5": ", par exemple, n’hésitez pas à les contacter.",
       "part6": "Si vous comptez rester longtemps au Vietnam et ne voyager qu’en scooter/moto, vous pouvez également",
       "part7": "en acheter un et le revendre en partant",
-      "part8": ". Sur Facebook, il existe énormément de groupes au Vietnam et vous pouvez laisser une petite annonce pour l’achat puis pour la vente, vous trouverez sûrement preneur. Le groupe",
+      "part8": ". Sur Facebook, il existe énormément de groupes sur le Vietnam et vous pouvez laisser une petite annonce pour l’achat puis pour la vente, vous trouverez sûrement preneur. Le groupe",
       "part9": "ForSaleVietnam",
       "part10": "entre autre, est un groupe en anglais où vous pourrez trouver votre bonheur."
     },
@@ -321,7 +322,7 @@
       "part9": ". Environ deux fois moins cher que Grab-Taxi."
     },
     "opinion": {
-      "part1": "Le vietnam à moto c' est trop génial !",
+      "part1": "Le vietnam à moto c'est trop génial !",
       "part2": "Mr Magic ♡",
       "part3": "Si vous avez la chance de pouvoir parcourir le Vietnam par vos propres moyens, le scooter et surtout la moto sont de loin les meilleures options. Vous aurez une totale liberté sur votre trajet et vos destinations. Le scooter reste un peu moins adapté pour parcourir de longues distances.",
       "part4": "Faites juste vraiment attention dans les grandes villes comme on vous disait plus haut, vous n’êtes pas dans votre pays et donc la façon de conduire et d’appréhender les choses n'est pas la même."
@@ -345,7 +346,7 @@
       "part2": "est une compagnie de taxi plutôt sûre également. Même si de notre côté, nous ne prenons vraiment que Grab."
     },
     "price": {
-      "part1": "Les prix d’un Grab ne sont jamais les mêmes, ils évoluent en fonction de l’heure, de la demande, du trafic, des péages, etc. Cependant lors de notre séjour, nous l'avons utilisé à multiples reprises, la plupart des trajets, nous ont coûté",
+      "part1": "Les prix d’un Grab ne sont jamais les mêmes, ils évoluent en fonction de l’heure, de la demande, du trafic, des péages, etc. Cependant lors de notre séjour, nous l'avons utilisé à multiples reprises, la plupart des trajets nous ont coûté",
       "part2": "2€ pour moins de 5 km",
       "part3": ". Le plus long trajet que nous avons effectué, pour nous rendre à l'aéroport depuis le centre d’Hô Chi Minh-Ville, nous a coûté moins de 5€.",
       "part4": "Vous pouvez trouver directement sur le",
@@ -393,7 +394,7 @@
     },
     "price": "Comme un peu partout, il existe des tarifs préférentiels pour certaines catégories d'âge. Les enfants de moins de 10 ans reçoivent une réduction de 25% sur les couchettes et 50% sur les sièges.",
     "opinion": {
-      "part1": "Bien que plus lent que l’avion, si vous voulez voyager plus lentement tout en admirant les paysages et en vous arrêtant pourquoi pas à certains endroits, le train reste une bonne expérience et une bonne alternative.",
+      "part1": "Si vous voulez voyager plus lentement tout en admirant les paysages et en vous arrêtant pourquoi pas à certains endroits, le train reste une bonne expérience et une bonne alternative.",
       "part2": "Le choix des horaires n’est cela dit pas illimité, vous n’avez pas de train toutes les heures donc faites attention.",
       "part3": "Le train est plus cher que le bus mais un peu plus rapide également."
     }
@@ -402,9 +403,9 @@
     "title": "Vélo",
     "information": {
       "part1": "Le meilleur moyen de visiter les petites villes ou de partir hors des sentiers battus. Sur de courtes distances, le vélo est vraiment pour nous le moyen de transport le plus adéquat au Vietnam, hormis le scooter/moto pour les longues distances et vos petites jambes dans les grandes villes.",
-      "part2": "Et oui, car dans les grandes villes telles de Hô Chi Minh-Ville ou bien Hanoi, la circulation est telle que même le vélo est vraiment très dangereux, la circulation est beaucoup trop dense et les piétons beaucoup trop nombreux également, compliqué de se frayer un chemin entre tout ça du coup."
+      "part2": "Et oui, car dans les grandes villes telles que Hô Chi Minh-Ville ou bien Hanoi, la circulation est telle que même le vélo est vraiment très dangereux, la circulation est beaucoup trop dense et les piétons beaucoup trop nombreux également, compliqué de se frayer un chemin entre tout ça du coup."
     },
-    "booking": "Vous trouverez des vélos à louer quasiment partout, certains homestays ou hôtels vous en proposent même gratuitement parfois pour découvrir le temps d’une journée ou d’une demi-journée les alentours.",
+    "booking": "Vous trouverez des vélos à louer quasiment partout, certains homestays ou hôtels vous en proposent même gratuitement parfois, pour découvrir le temps d’une journée ou d’une demi-journée les alentours.",
     "price": {
       "part1": "Comptez entre",
       "part2": "2 et 10 €",
@@ -418,12 +419,11 @@
     "opinion": "A éviter."
   },
   "section10": {
-    "part1": "Pour rejoindre Hô Chi Minh-Ville à Hanoi, il vous faudra :",
+    "part1": "Pour rejoindre Hanoi depuis Hô Chi Minh-Ville, il vous faudra :",
     "part2": "Train : 35h",
     "part3": "Bus : 45h",
     "part4": "Voiture : 32h",
-    "part5": "Avion : 2h",
-    "part6": "Globalement faites très attention à votre conduite et à la conduite des autres personnes."
+    "part5": "Avion : 2h"
   },
   "conclusion": "Une multitude de moyen de transport pour une expérience unique à chaque fois.",
   "question1": "Quel est votre moyen de transport préféré au Vietnam ?",

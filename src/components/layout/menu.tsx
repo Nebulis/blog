@@ -12,7 +12,7 @@ import { getLinkLabel, isLinkPublished } from "../core/links/links.utils"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink, Lang } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
-import { FaChevronDown, FaChevronRight, FaTwitter, FaFacebook, FaInstagram, FaPinterest } from "react-icons/all"
+import { FaChevronDown, FaTwitter, FaFacebook, FaInstagram, FaPinterest } from "react-icons/all"
 import {
   backgroundPrimaryColor,
   bannerHeight,
@@ -460,10 +460,24 @@ export const Tree: React.FunctionComponent<{
   onNavigate?: () => void
   onClick?: () => void
   animate?: boolean
-}> = ({ children, name, to, open = false, onNavigate = () => void 0, onClick = () => void 0, animate = true }) => {
+  controlled?: boolean // use control when want to control the opening yourself
+}> = ({
+  children,
+  name,
+  to,
+  open = false,
+  onNavigate = () => void 0,
+  onClick = () => void 0,
+  animate = true,
+  controlled = false,
+}) => {
   const [isOpen, setOpen] = useState(open)
   const prev = usePrevious(isOpen)
   const [bind, bounds] = useMeasure()
+  useEffect(() => {
+    setOpen(open)
+  }, [open])
+
   // @ts-ignore
   const { height, opacity, transform } = useSpring({
     from: { height: 0, opacity: 0, transform: "translate3d(0,0,0)" },
@@ -479,7 +493,7 @@ export const Tree: React.FunctionComponent<{
       <div
         onClick={() => {
           onClick()
-          hasChildren && setOpen(!isOpen)
+          !controlled && hasChildren && setOpen(!isOpen)
           !hasChildren && onNavigate()
         }}
         className="menu-label relative"

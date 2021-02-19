@@ -113,7 +113,7 @@ describe("links", () => {
 
     // vietnam assertions
     expect(getLink("transport-vietnam")).toMatchObject({
-      label: { fr: "Les transports au Vietnam", en: "Transports in Vietnam" },
+      label: { fr: "Les Transports au Vietnam", en: "Transports in Vietnam" },
       published: false,
     })
     expect(getLink("food-vietnam")).toMatchObject({
@@ -152,8 +152,16 @@ describe("links", () => {
     })
 
     expect(getLink("northern-vietnam")).toMatchObject({ label: { fr: "Nord", en: "Northern" }, published: false })
+    expect(getLink("halong-bay")).toMatchObject({
+      label: { en: "Halong Bay", fr: "Baie de Halong" },
+      published: false,
+    })
 
     expect(getLink("central-vietnam")).toMatchObject({ label: { fr: "Centre", en: "Central" }, published: false })
+    expect(getLink("hoi-an")).toMatchObject({
+      label: { fr: "Hoi An", en: "Hoi An" },
+      published: false,
+    })
 
     // philippines assertions
     expect(getLink("el-nido")).toMatchObject({ label: { fr: "El Nido", en: "El Nido" }, published: true })
