@@ -314,3 +314,38 @@ export const vietnamWeatherEntries = (t: TFunction): WeatherEntry[] => [
     ],
   },
 ]
+
+export const vietnamCities = {
+  "ho-chi-minh": "Ho Chi Minh",
+  "da-lat": "Da Lat",
+  "da-nang": "Da Nang",
+  haiphong: "Haiphong",
+  hue: "Hue",
+  hanoi: "Hanoi",
+  "nha-trang": "Nha Trang",
+  "phu-quoc": "Phu Quoc",
+  "buon-ma-thuot": "Buon Ma Thuot",
+  "con-dao": "Con Dao",
+  "chu-lai": "Chu Lai",
+  "dong-hoi": "Dong Hoi",
+  pleiku: "Pleiku",
+  "qui-nhon": "Qui Nhon",
+  "rach-gia": "Rach Gia",
+  "can-tho": "Can Tho",
+  vinh: "Vinh",
+  "dien-bien-phu": "Dien Bien Phu",
+  "thanh-hoa": "Thanh Hoa",
+  "mui-ne": "Mui Ne",
+  "tran-de": "Tran De",
+  "ha-tien": "Ha Tien",
+  "vung-tau": "Vung Tau",
+  "hoi-an": "Hoi An",
+  "phong-nha": "Phong Nha",
+  sapa: "Sapa",
+  "mai-chau": "Mai Chau",
+  "ninh-binh": "Ninh Binh",
+  "ha-long": "Ha Long",
+  "cat-ba-island": "Cat ba Island",
+}
+
+export type VietnamCity = keyof typeof vietnamCities

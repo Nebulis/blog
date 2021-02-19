@@ -1,1 +1,436 @@
-{}
+{
+  "quote": "You have planned your visits to Vietnam, all you have to do is find how to get around? Public transport, rental of bicycles, scooters and motorcycles or even guided tours, choose the transport that suits you the most, according to your needs.",
+  "introduction": "In this article we give you all the information you need to make the correct decision.",
+  "google-description": "In this article, you will find our information and advice that will help you to choose the best mode of transport, depending on your needs. Price? How to book? We tell you every information you need and share our opinion.",
+  "social-network-description": "You have planned your visits to Vietnam, all you have to do is find how to get around? Public transport, rental of bicycles, scooters and motorcycles or even guided tours.",
+  "information": "Information",
+  "booking": "Booking",
+  "company": "Companies",
+  "price": "Price",
+  "opinion": "Opinion",
+  "section1": {
+    "title": "Airplane",
+    "information": {
+      "part1": "In this section, we do not share about airplanes coming to Vietnam. We share about so-called domestic planes, from one city to another within Vietnam itself.",
+      "part2": "Airplane is usually",
+      "part3": "is the fastest way",
+      "part4": "to travel, and in Vietnam price are quite affordable",
+      "part5": "However, the plane is the transport that releases the most CO2 into the air per kilometer traveled. If you want to be responsible and reduce your impact while still traveling, you can go to the",
+      "part6": "Co2logic",
+      "part7": " website. It computes how much CO2 that your airplane has emitted and suggests you to make a donation to support their project to reduce the impact."
+    },
+    "booking": {
+      "part1": "We always book on",
+      "part2": "Expedia",
+      "part3": ". We find that it is the safest website and we never had troubles with it.",
+      "part4": "You can also check in",
+      "part5": "Skyscanner",
+      "part6": " which offers a wider choice of prices. However it is a search engine and not a booking website. You will therefore have to book your tickets on other platforms. Which makes you more likely to find airlines listed in",
+      "part7": "the list of airlines banned within the EU",
+      "part8": "When in doubt, whether on Expedia or Skyscanner, it is important to seek information on the reputation of the airline.",
+      "part9": "You can also book through the airline companies website."
+    },
+    "company": {
+      "part1": "In Vietnam, the best airline is",
+      "part2": "Vietnam Airlines",
+      "part3": ", more comfortable, but also more expensive. For cheaper prices, we recommend",
+      "part4": "Vietjet Air",
+      "part5": " for short travels, it is more than enough. However there are sometimes connection flights, unlike Vietnam Airlines. You will find all the information on Expedia. There is also a brand new company named",
+      "part6": "Bamboo Airways",
+      "part7": ", but we never flew with it."
+    },
+    "price": {
+      "part1": "Direct flights do not last more than 2 hours, most of the time around",
+      "part2": "1h - 1h20.",
+      "part3": "Prices depend on the company you booked with, but most of the time you don't have many choices.",
+      "part4": "To give you a price range, for direct flights, expect",
+      "part5": "$70 - $180 per person.",
+      "part6": "Prices may vary, but below you will find an approximative range:"
+    },
+    "opinion": {
+      "part1": "Useful if you don't have a lot of time or don't want to use public transport for too long. Also useful if you want to get from a city to another quickly.",
+      "part2": "We advise that you only take airplanes for long journeys, for example from Hanoi to Ho Chi Minh City, from the North to the South.",
+      "part3": "If you want to enjoy the scenery, make multiple stops in major cities / destinations, flying may not be the right solution for you."
+    }
+  },
+  "section2": {
+    "title": "Boat",
+    "information": {
+      "part1": "Sampans and Junks are typical boats used in Vietnam.",
+      "part2": "You will be able to see on most of the big boats two eyes drawn. It is said that they would protect the boat and fishermen from any misfortune and that it would even bring good luck for fishing.",
+      "part3": "Like most countries in Southeast Asia, Vietnam has many rivers, the most famous of which is the Mekong.",
+      "part4": "If you want to discover the most beautiful landscapes like in the North in the",
+      "part5": "Halong Bay",
+      "part6": "or in the South in",
+      "part7": "the Mekong Delta River",
+      "part8": ", boats are unavoidable. You can admire floating markets or floating villages. Or you can just stroll under water palm trees from island to island.",
+      "part9": "From ",
+      "part10": "small boats",
+      "part11": "to",
+      "part12": "huge cruise ships",
+      "part13": ", without forgetting",
+      "part14": "tiny barks",
+      "part15": "for an authentic ride, or even",
+      "part16": "kayak",
+      "part17": "for more sensation, you will be spoiled for choice."
+    },
+    "booking": {
+      "part1": "It is possible to go on a cruise for several days or just go for a day to enjoy boat rides. You can find anything you want by comparing prices and details on",
+      "part2": "GetYourGuide",
+      "part3": "or even",
+      "part4": "TripAdvisor"
+    },
+    "opinion": "The boat is really a must-do in Vietnam. You will discover this country in a different light and to enjoy the landscape only accessible with boats."
+  },
+  "section3": {
+    "title": "Bus",
+    "part1": "It is ",
+    "part2": "the most used",
+    "part3": "mode of transportation. It is also",
+    "part4": "the cheapest and most developed",
+    "part5": "way to travel for long distances.",
+    "part6": "There are 4 kinds of buses in Vietnam.",
+    "bus": {
+      "title": "City Bus",
+      "information": {
+        "part1": "There are city buses in almost every country. They are specialised in",
+        "part2": "urban transport",
+        "part3": ". They follow the same route and have many stops",
+        "part4": "In Vietnam, they are mainly used by locals. It is not uncommon for those buses to be very crowded. The stops are not necessarily well respected, so be careful. We have seen people boarding at a traffic light or getting off while the bus was still running.",
+        "part5": "They are not very comfortable buses and most of the time there is no air conditioning."
+      },
+      "booking": {
+        "part1": "No reservation is possible since the seats are not registered. However, we recommend that you take your",
+        "part2": "tickets at a bus station",
+        "part3": ", because drivers may charge you more than necessary."
+      },
+      "opinion": "Use if you really have no other choice. Even for a short distance, with the traffic jam, it is almost sure that walking will be faster. For a long distance in cities, prefer taxis (Taxi-Grab) or scooters (Bike-Grab)."
+    },
+    "car": {
+      "title": "Inter-City Bus",
+      "information": {
+        "part1": "Inter-City Buses are buses that carry passengers",
+        "part2": "through different cities.",
+        "part3": "There are 4 different kind of inter-city bus:",
+        "part4": "Seater Bus",
+        "part5": "- Normal bus with sitting seats",
+        "part6": "Seater-Sleeper Bus",
+        "part7": "- Seats can be reclined",
+        "part8": "Berths Sleeper Bus",
+        "part9": "- Bus with bunk beds",
+        "part10": "Night Sleeper Bus",
+        "part11": "- Luxury single bunk beds - More comfortable, with tablet",
+        "part12": "In sleeper buses, you must take off your shoes at the entrance, then you will be given a plastic bag to store them.",
+        "part13": "These buses don't make a lot of stops but they do at least one in each big city. They also take some breaks in rest areas where you can find malls and small restaurants. Breaks last about twenty minutes but you do not have to go down (although we recommend that you go down because the driver turns off the air conditioning and you will regret it!)."
+      },
+      "booking": {
+        "part1": "When you book, you reserve for a specific seat, so it's better",
+        "part2": "to book in advance",
+        "part3": "if you want to get the bus you expect.",
+        "part4": "You can buy your tickets directly on the bus company website, at their agencies or directly at the ticket office in bus stations.",
+        "part5": "You can also book online on",
+        "part6": "12go.asia",
+        "part7": "and",
+        "part8": "Baolau"
+      },
+      "company": {
+        "part1": "The most renowned companies are",
+        "part2": "The Sinh Tourist",
+        "part3": "Futa Bus",
+        "part4": "and",
+        "part5": "Mai Linh Express"
+      },
+      "price": {
+        "part1": "It is complicated to give a price range since it depends on many criteria (route, company, type of bus, etc.), however the bus remains",
+        "part2": "the cheapest mode of transportation",
+        "part3": "in Vietnam",
+        "part4": "Feel free to compare prices on the different companies websites and booking websites we shared above."
+      },
+      "opinion": {
+        "part1": "The coach is very interesting when you have few or no time constraints. They allow you to go from city to city very simply and to enjoy the landscapes (especially during the day).",
+        "part2": "We recommend the coach on short or semi-long journeys, for example if you stay in a region (North, South, Center) or if you go from one region located next to another one (from North to Center for example).",
+        "part3": "On the other hand, traveling from the North to the South in a single trip is quite challenging.",
+        "part4": "Night buses have two main advantages. You save money because you don't need to pay for a night at a hotel and they are time-saving. They allow you to travel through Vietnam during the night, leaving your days free for excursions, activities, etc. This is really interesting if you are short on time. In addition, in Vietnam, they are really comfortable, not as much as a real bed of course but more comfortable than the night buses in",
+        "part5": "Cambodia",
+        "part6": "for instance."
+      }
+    },
+    "open-tour": {
+      "title": "Open Tour",
+      "information": {
+        "part1": "Very popular with backpackers, Open Tour consists of",
+        "part2": "following a route between two cities",
+        "part3": "and choosing which stops you want (at the available cities).",
+        "part4": "There are four routes available:",
+        "part5": "Ho Chi Minh City (Saigon) => Hanoi",
+        "part6": "Ho Chi Minh City (Saigon) => Hue",
+        "part7": "Hanoi => Ho Chi Minh City (Saigon)",
+        "part8": "Hue => Ho Chi Minh City (Saigon)",
+        "part9": "Once you have chosen a route, all you have to do is choose the cities on the way in which you want to stop.",
+        "part10": "The",
+        "part11": "ONLY served cities",
+        "part12": "are: Ho Chi Minh City - Dalat - Mui ne - Nha Trang - Hoi An - Da Nang - Hue - Hanoi.",
+        "part13": "Unlike guided tours, it is possible to stop in a city, as long as you wish, as long as your ticket remains valid (1 month).",
+        "part14": "Keep in mind that this is a bus service between the main cities in Vietnam. Once you arrive in one of your destinations, you will be on your own to explore the surroundings, either with the same company but by coach (inter-city bus), or by booking excursions, like in",
+        "part15": "GetYourGuide",
+        "part16": ", or even by motorbike/scooter, by train…. This therefore adds additional costs.",
+        "part17": "For instance: let's say you want to visit the",
+        "part18": "Halong Bay",
+        "part19": "located in the Northern part of Vietnam. The Open Tour bus will drop you off in Hanoi, and you will need to find an alternate transportation to take you to the Bay.",
+        "part20": "Open Tour bus stations are generally located downtown. It's up to you to find a way to reach your accommodation. Some companies will bring you to your hotel.",
+        "part21": "Do not hesitate to compare the offers from different companies, to choose the one that suits best your needs, in terms of comfort and price. Buses are often rather",
+        "part22": "modern and comfortable",
+        "part23": ", with",
+        "part24": "air conditioning and wifi",
+        "part25": ", that being said don't expect to watch Netflix.",
+        "part26": "There aren't many buses per day, on average one or two, at fixed times. Often one in the morning, and one in the evening. Night buses are also available on some Open Tour routes."
+      },
+      "booking": {
+        "part1": "You can book",
+        "part2": "online",
+        "part3": "or even in",
+        "part4": "company agencies.",
+        "part5": "To book, you just need to indicate:",
+        "part6": "your route, i.e. your city of departure and arrival",
+        "part7": "the different stops",
+        "part8": "which bus you intend to take (no the date, just the time)",
+        "part9": "Please note, not all companies offer to sell Open Tour tickets in all of their agencies. For example,",
+        "part10": "Thesinhtourist",
+        "part11": "has branches all over Vietnam, but tickets can only be purchased in the cities of Ho Chi Minh City, Hue and Hanoi.",
+        "part12": "As usual a lot of bogus agencies exist! Note correctly the addresses of the agencies available in the official company websites, and ignore anything you find along the way.",
+        "part13": "To avoid unpleasant surprises (full bus for example ...) it is best to contact the agency and",
+        "part14": "book at least 24 hours in advance",
+        "part15": "before each ride."
+      },
+      "company": {
+        "part1": "Thesinhtourist",
+        "part2": "is the only reputable company that we know of that offers this service. You can find all the information on",
+        "part3": "this link",
+        "part4": "From information we gathered, Futa Bus and Mai Linh Express offer this service as well, but we couldn't find anything on their website."
+      },
+      "price": {
+        "part1": "The more you stop, the more the price of the ticket increases, even if the departure and arrival station are the same.",
+        "part2": "Price from Ho Chi Minh City (Saigon):",
+        "part3": "HERE",
+        "part4": "Price from Hanoi:",
+        "part5": "HERE",
+        "part6": "Price from Hue:",
+        "part7": "HERE"
+      },
+      "opinion": {
+        "part1": "Open Tour is very interesting especially if you don't like to plan your trips ahead. You only choose the destinations, you don't need to plan anything at any date and you can change your journey according to your needs (be careful though some companies may impose additional fees if you choose to change your journey along the way) .",
+        "part2": "The total price is quite affordable, but you must not forget to take into account the additional costs (for the visits) at each stop.",
+        "part3": "This service is mainly used by backpackers. So if you want a more authentic mode of transportation, this is not the right choice."
+      }
+    },
+    "guided-tour": {
+      "title": "Guided Tour",
+      "information": {
+        "part1": "More or less comfortable bus with air conditioning, which takes you on",
+        "part2": "touristic places.",
+        "part3": "The guided tours are available in different formats, ranging from small groups (10 people max) to a larger number of people (40 people max)."
+      },
+      "booking": {
+        "part1": "Do not book your guided tours at your hotel, the prices are much higher than it should.",
+        "part2": "In case you fear not being able to book from Vietnam, you can book online on",
+        "part3": "TripAdvisor",
+        "part4": "or even",
+        "part5": "GetYourGuide",
+        "part6": ", we use these two sites very regularly and we never had a problem. They are also quite responsive when we have questions or when we have particular needs.",
+        "part7": "You can also book on site, in Ho Chi Minh City for example, the",
+        "part8": "De Tham Street",
+        "part9": "is THE meeting place for travelers, where you will find many travel agencies."
+      },
+      "price": {
+        "part1": "You will find everything, at different prices. Remember to compare the offers in detail, see what is included in the tour, look at the reviews and look at the duration. In general,",
+        "part2": "the smaller the group size, the higher the price."
+      },
+      "opinion": {
+        "part1": "A great option if you don't really have time to plan on your own.",
+        "part2": "If it's a private tour, feel free to discuss to change the proposed routes. In the case of a group tour, you can also ask to be picked up or dropped off at a different place, as long as you request it in advance. A guided tour is the guarantee to reach the desired location without the slightest problem.",
+        "part3": "The main drawback is the lack of freedom, in fact you follow a pre-established route and although you have breaks in some places, you still have fixed schedules to respect. The bigger the group size, the higher the constraint."
+      }
+    }
+  },
+  "section4": {
+    "title": "Cycle Rickshaw",
+    "information": {
+      "part1": "The cycle rickshaw is a kind of",
+      "part2": "bike taxi",
+      "part3": "largely replaced by taxi-scooter or taxi-motorcycle even if much less ecological.",
+      "part4": "It is becoming increasingly rare to find them in Vietnam, except in very touristy places like",
+      "part5": "Hoi An",
+      "part6": "for example. You can find it in big cities as well, such as Ho Chi Minh City or Hanoi, but in some places it became prohibited because it is considered causing traffic jams due to its slowness and width.",
+      "part7": "With a single seat or a double seat the cycle rickshaw has three wheels, two in the front and one in the rear. The driver sits behind you on a bicycle. Most of the time there is a retractable roof to protect you from the sun or from the rain.",
+      "part8": "The cycle rickshaw is no longer used Vietnamese in their daily life. It's mainly used by tourists.",
+      "part9": "He is considered to be the ancestor of",
+      "part10": "rickshaw",
+      "part11": ", seat with wheels pushed by a man. Rickshaw still exists, especially in Japan at",
+      "part12": "Arashiyama",
+      "part13": "for example."
+    },
+    "price": {
+      "part1": "Prices vary depending on travel time/city and range",
+      "part2": "between 25 000 VND and 100 000 VND",
+      "part3": "($2 to $5).",
+      "part4": "You can negotiate the price if you wish, but remember that they are very low."
+    },
+    "opinion": {
+      "part1": "Why not try it out with your children to amuse them or to take an atypical ride in the streets of Hoi An.",
+      "part2": "Group of cyclo-rickshaws in Hoi An waiting for the departure .. 1 .. 2 .. 3 .. TOURISTS!"
+    }
+  },
+  "section5": {
+    "title": "Scooter / Motorcycle",
+    "information": {
+      "part1": "Be very careful when you venture into scooter / motorbike rental, it is certainly very convenient because you are free to do what you want, to go where you want and you are not constrained by schedules. That being said, be aware that in big cities the traffic is very dense and it's very hard to drive there.",
+      "part2": "Helmets are mandatory and even if you are tempted not to put one \"because others don't\", it is at your own risk.",
+      "part3": "We advise you not to rent to drive in big cities. You should focus on the small rural villages where you can ride off the beaten paths.",
+      "part4": "In large cities, on the other hand, you can book scooter taxi or motorcycle taxi. We already shared you about it in the Taxi section but",
+      "part5": "Grab",
+      "part6": "also offers this kind of service.",
+      "part7": "It's essential to have",
+      "part8": "travel insurance",
+      "part9": "covering traffic accidents! No one is safe and while these are extra expenses, nothing is too expensive for your health and safety!",
+      "part10": "To ride a motorcycle:",
+      "part11": "less than or equal to 50cc, you don't need a driving license",
+      "part12": "greater than 50cc, you need an international motorcycle license which will be valid, if your country of origin has ratified the Vienna Convention on Road Traffic (",
+      "part13": "countries in green",
+      "part14": ")"
+    },
+    "booking": {
+      "part1": "Scooter / motorbike rental is very common and you will find many stores dedicated to it",
+      "part2": "everywhere",
+      "part3": "Some agencies even offer to rent a scooter in one city and bring it back to another(for a higher price). For instance",
+      "part4": "Flamingo Travel",
+      "part5": ". Feel free to contact them.",
+      "part6": "If you plan to stay in Vietnam for a long time and only travel by scooter / motorbike, you can also",
+      "part7": "buy one and sell it when you leave",
+      "part8": ". On Facebook, there are a lot of groups about Vietnam and you can leave an ad to buy or sell. You will find someone for sure. The group",
+      "part9": "ForSaleVietnam",
+      "part10": "will definitely help you."
+    },
+    "price": {
+      "part1": "The more powerful the scooter / motorbike, the more expensive it will be. We give you here base prices that we found in each category:",
+      "part2": "Rental",
+      "part3": "~ $12 / day",
+      "part4": "Buy :",
+      "part5": "~ $350",
+      "part6": "Bike-Grab :",
+      "part7": "Check on ",
+      "part8": "Grab",
+      "part9": " website. About half the price of Grab-Taxi."
+    },
+    "opinion": {
+      "part1": "Vietnam on a motorbike is so awesome!",
+      "part2": "Mr Magic ♡",
+      "part3": "If you are lucky enough to be able to explore Vietnam on your own, the scooter and especially the motorbike are by far the best options. You will have complete freedom on your journey and your destinations. The scooter remains a little less suitable for traveling long distances.",
+      "part4": "Just be really careful in big cities as we told you above, you are not in a different country and therefore people drive differently."
+    }
+  },
+  "section6": {
+    "title": "Taxi",
+    "information": {
+      "part1": "There are taxis everywhere in big cities, it is not difficult to find one. Even in the quiet streets, there will always be at least one passing by.",
+      "part2": "However, to avoid scams, for example one that hides the taximeter or one trying to make you believe it doesn't work, etc. we recommend you to use",
+      "part3": "Grab.",
+      "part4": "Grab is available with scooters and cars."
+    },
+    "booking": {
+      "part1": "If you don't know Grab, it's like Uber (that was bought by Grab in Asia, by the way). Book for a",
+      "part2": "ride, with the Grab application",
+      "part3": ", then you will see a map that displays where your rider is and how long before he reaches your location. The price is directly displayed on your app, all you have to do is wait for the car / scooter by locating the license plate number indicated on the app."
+    },
+    "company": {
+      "part1": "Mai Linh",
+      "part2": "is a safe taxi company to use as well. Even if on our side, we really only used Grab."
+    },
+    "price": {
+      "part1": "Prices from Grab are always different. They change according to the time of day, demand, traffic, tolls, etc. However during our stay we used it multiple times, most trips cost us",
+      "part2": "$3 for 5km",
+      "part3": ". The longest ride we had, to reach Ho Chi Minh CIty airport from downtown, cost us less than $6.",
+      "part4": "You can find directly on the",
+      "part5": "Grab website",
+      "part6": "the price per kilometer of the rides, in some cities.",
+      "part7": "However, don't panic, the price is displayed before validating the ride via the application."
+    },
+    "opinion": "Taxis are certainly very practical but avoid taking them in the middle of the day, especially in large cities such as Ho Chi Minh City or Hanoi, where traffic jams are very frequent and riding a scooter or walking will be faster.."
+  },
+  "section7": {
+    "title": "Train",
+    "information": {
+      "part1": "The train in Vietnam crosses most of the country, from the North to the South.",
+      "part2": "However, there is no high-speed line, all trains follow the same way.",
+      "part3": "There are 4 different classes:",
+      "part4": "Hard seat",
+      "part5": ": Very uncomfortable and unusual wooden seats for long journeys (more and more rare)",
+      "part6": "Soft seat",
+      "part7": ": Normal seat",
+      "part8": "Hard sleep",
+      "part9": ": 6 wooden berths",
+      "part10": "Soft sleep",
+      "part11": ": 4 berths with mattress"
+    },
+    "booking": {
+      "part1": "To book your tickets, you can either do it at a train station or on the",
+      "part2": "Baolau",
+      "part3": "or",
+      "part4": "12Go.Asia",
+      "part5": " websites. You will then receive your ticket by email, so you can either print it out or show your phone directly before departure.",
+      "part6": "We advise you to opt for the second solution, which is easiest and saves a lot of time. You can even book when you are in Vietnam but keep in mind that the number of seats is not unlimited.",
+      "part7": "You cannot book your train more than a month in advance."
+    },
+    "company": {
+      "part1": "Most trains are run by",
+      "part2": "Vietnam Railways",
+      "part3": " that you can recognise with this logo",
+      "part4": "However, some wagons are rented by other companies, that improve them and therefore offer you a more luxurious service which are more expensive:",
+      "part5": "Violette",
+      "part6": "can be recognised with the logo",
+      "part7": "New Livitrans Express",
+      "part8": "can be recognised with the logo",
+      "part9": "Lotus Train",
+      "part10": "can be recognised with the logo "
+    },
+    "price": "Like everywhere, there are discounts for some people. Children under 10 receive a 25% discount on bunks and 50% on seats.",
+    "opinion": {
+      "part1": "Although slower than the plane, if you want to take your time, admire the landscapes and stop anywhere, the train remains a good experience and a good alternative.",
+      "part2": "There are not that many trains, so be careful and be ready on time.",
+      "part3": "The train is more expensive than the bus, but also a little faster."
+    }
+  },
+  "section8": {
+    "title": "Bicycle",
+    "information": {
+      "part1": "The best way to visit small towns or to go off the beaten track. For short distances, the bicycle is really for us the most suitable mode of transportation in Vietnam, apart from the scooter / motorbike for long distances and your legs in big cities.",
+      "part2": "Because in big cities such as Ho Chi Minh City or Hanoi, riding a bike is very dangerous because of the traffic. it's too dense and there are too many pedestrians, it's hard to ride and find your path."
+    },
+    "booking": "You will find bicycles for rent almost everywhere, some homestays or hotels even offer them free of charge sometimes to explore the surroundings for a day or half a day.",
+    "price": {
+      "part1": "Expect",
+      "part2": "$3 to $10",
+      "part3": "depending on the quality of the bicycle."
+    },
+    "opinion": "If you want to get away from the tourists and the crowd, just grab a bike and explore the surroundings on your own, you won't be disappointed."
+  },
+  "section9": {
+    "title": "Car",
+    "information": "Car rental is not common in Vietnam. It’s even rather nonexistent. It is very difficult to find information, and it is also very often not recommended for tourists to rent cars, in particular because of the condition of the roads, but also because driving is hard and dangerous.",
+    "opinion": "In one word: don't"
+  },
+  "section10": {
+    "part1": "To reach Hanoi from Ho Chi Minh City, you will need:",
+    "part2": "Train : 35h",
+    "part3": "Bus : 45h",
+    "part4": "Voiture : 32h",
+    "part5": "Avion : 2h"
+  },
+  "conclusion": "A multitude of modes of transportation for a unique experience every time.",
+  "question1": "What is your favorite mode of transportation in Vietnam?",
+  "question2": "Did you use an unusual mode of transportation not listed in this article?",
+  "pinterest": "✈️ How to prepare well for your trip to Vietnam? We share through our articles and our photos, our visit and many tips. Click on the image for the full guide about transports in Vietnam … \uD83C\uDF0F",
+  "facebook": {
+    "part1": "♡ Hello travellers! ♡",
+    "part2": "We help you to choose the mode of transportation that suits you the most according to your needs and your desires."
+  }
+}

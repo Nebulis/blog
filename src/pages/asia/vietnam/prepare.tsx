@@ -78,10 +78,6 @@ import {
 } from "../../../components/icon/flags"
 import { smallEnd } from "../../../components/core/variables"
 import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
-import {
-  vietnamPrimaryColorDarker,
-  vietnamPrimaryColorWithOpacity,
-} from "../../../components/core/asia/vietnam/vietnam.colors"
 import { getLink } from "../../../components/core/links/links.utils"
 import HomeImgUrl from "../../../images/asia/vietnam/prepare/prepare-vietnam-main.jpg"
 import { Title } from "../../../components/core/title"

@@ -1,6 +1,7 @@
-import React, { FunctionComponent, useEffect, useRef, useState } from "react"
+import React, { FunctionComponent, useRef, useState, useLayoutEffect } from "react"
 import ReactDOM from "react-dom"
 import { useWindowMousePosition } from "../hooks/useWindowMousePosition"
+import { useWindowSize } from "../hooks/useWindowSize"
 
 // check this in case https://www.joshwcomeau.com/react/the-perils-of-rehydration/
 export const DialogPortal: FunctionComponent = ({ children }) => {
@@ -18,12 +19,22 @@ export const TooltipPortal: FunctionComponent = ({ children }) => {
 }
 
 export const MouseToolTip: FunctionComponent = ({ children }) => {
-  const { pageX, pageY, clientY } = useWindowMousePosition()
+  const { pageX, pageY, clientY, clientX } = useWindowMousePosition()
+  const { windowWidth } = useWindowSize()
   const ref = useRef<HTMLDivElement>(null)
-  const [width, setWidth] = useState(0)
+  const [width, setWidth] = useState(150) // random width
+  const [height, setHeight] = useState(40) // random height
 
-  useEffect(() => {
-    setWidth(ref.current?.getBoundingClientRect().width ?? 0)
+  // must use layout effect otherwise there are problems to display the tooltip
+  // go in transport vietnam page, in mobile mode
+  // click on chu lai airport
+  // click on nha trang airport
+  // => the tooltip will first be drawn with the width of the previous element (chu lai)
+  // => and eventually will display the tooltip from nha trang (sometimes it's not because the tooltip comes over the mouse and triggers on mouse leave event, which get rid of the tooltip
+  // the bug still exists :(
+  useLayoutEffect(() => {
+    setWidth(ref.current?.getBoundingClientRect().width ?? 150)
+    setHeight(ref.current?.getBoundingClientRect().height ?? 40)
   }, [children])
 
   // this is use in combination with tooltip content.
@@ -31,15 +42,20 @@ export const MouseToolTip: FunctionComponent = ({ children }) => {
   // offset accordingly (for instance in transport in vietnam page, multiple elements are provided
   // @ts-ignore
   const childrenLength = React.Children.count(children?.props?.children)
-  const offset = clientY > 80 ? -15 - 30 * childrenLength : 30
+  const offset = clientY > 80 ? -30 - 20 * childrenLength : 30
+  const offsetLeft = windowWidth - clientX < 100
   return (
     <TooltipPortal>
       <div
         ref={ref}
         style={{
           position: "absolute",
-          left: `${pageX - width / 2}px`,
-          top: `${pageY + offset}px`,
+          ...(offsetLeft
+            ? {
+                left: `${pageX - width - 30}px`,
+                top: `${pageY - height / 2}px`,
+              }
+            : { left: `${pageX - width / 2}px`, top: `${pageY + offset}px` }),
         }}
       >
         {children}
