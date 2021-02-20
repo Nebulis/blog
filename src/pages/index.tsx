@@ -495,27 +495,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <div className="content">{t("contemplate.animals.content")}</div>
           </div>
         </ContemplateContainer>
-        {/*<HomeDivider />*/}
-        {/*<div>*/}
-        {/*  <HomeSection>partager / echanger</HomeSection>*/}
-        {/*  <HomeSubSection>Conseils, Découvertes, Journal de bord...</HomeSubSection>*/}
-        {/*  <ArticlesContainer>*/}
-        {/*    {getArticles({*/}
-        {/*      development,*/}
-        {/*      kind: "other",*/}
-        {/*      limit: 3,*/}
-        {/*      filter: (cachedLink) => cachedLink.id !== lastArticle.id,*/}
-        {/*    }).map(({ card: Card }, index) =>*/}
-        {/*      Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null*/}
-        {/*    )}*/}
-        {/*  </ArticlesContainer>*/}
-        {/*  {displayAllArticles && (*/}
-        {/*    <div className="tc mt3">*/}
-        {/*      <ButtonLink to="articles">{t("common:allArticles")}</ButtonLink>*/}
-        {/*    </div>*/}
-        {/*  )}*/}
-        {/*</div>*/}
-        {/*<HomeDivider />*/}
+        <HomeDivider />
+        <div>
+          <HomeSection>{t("share.title")}</HomeSection>
+          <HomeSubSection>{t("share.subtitle")}</HomeSubSection>
+          <ArticlesContainer>
+            {getArticles({
+              development,
+              kind: "other",
+              limit: 3,
+              filter: (cachedLink) => cachedLink.id !== lastArticle.id,
+            }).map(({ card: Card }, index) =>
+              Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
+            )}
+          </ArticlesContainer>
+          <div className="tc mt3">
+            <ButtonLink to="articles?kind=other">{t("share.all-shares")}</ButtonLink>
+          </div>
+        </div>
+        <HomeDivider />
         {false && (
           <>
             <HomeDivider />
