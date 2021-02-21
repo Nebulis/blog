@@ -39,6 +39,7 @@ export const CuChiTunnelsImages: React.FunctionComponent<ExtraImageProps & { ima
   image,
   fluidObject = {},
   imgStyle = {},
+  onLoad,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -244,6 +245,9 @@ export const CuChiTunnelsImages: React.FunctionComponent<ExtraImageProps & { ima
       }
     }
   `)
+  React.useEffect(() => {
+    if (onLoad) onLoad(data[image].childImageSharp.fluid.src)
+  }, [data, image, onLoad])
   return (
     <Img
       fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }}

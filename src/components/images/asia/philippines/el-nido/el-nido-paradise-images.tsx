@@ -7,6 +7,7 @@ export const ElNidoParadiseImages: React.FunctionComponent<ExtraImageProps & { i
   className = "",
   image,
   fluidObject = {},
+  onLoad,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -194,5 +195,8 @@ export const ElNidoParadiseImages: React.FunctionComponent<ExtraImageProps & { i
       }
     }
   `)
+  React.useEffect(() => {
+    if (onLoad) onLoad(data[image].childImageSharp.fluid.src)
+  }, [data, image, onLoad])
   return <Img fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }} alt="El Nido" className={className} />
 }

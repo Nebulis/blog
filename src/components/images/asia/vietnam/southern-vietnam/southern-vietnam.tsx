@@ -5,6 +5,7 @@ import { ExtraImageProps } from "../../../../../types/shared"
 export const SouthernVietnam: React.FunctionComponent<ExtraImageProps & { image: string }> = ({
   className = "",
   image,
+  onLoad,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -87,5 +88,8 @@ export const SouthernVietnam: React.FunctionComponent<ExtraImageProps & { image:
       }
     }
   `)
+  React.useEffect(() => {
+    if (onLoad) onLoad(data[image].childImageSharp.fluid.src)
+  }, [data, image, onLoad])
   return <Img fluid={data[image].childImageSharp.fluid} alt="Calao" className={className} />
 }

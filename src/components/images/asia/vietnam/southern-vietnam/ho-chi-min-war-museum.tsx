@@ -31,6 +31,7 @@ export const HoChiMinWarMuseum: React.FunctionComponent<ExtraImageProps & { imag
   image,
   fluidObject = {},
   imgStyle = {},
+  onLoad,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -180,6 +181,9 @@ export const HoChiMinWarMuseum: React.FunctionComponent<ExtraImageProps & { imag
       }
     }
   `)
+  React.useEffect(() => {
+    if (onLoad) onLoad(data[image].childImageSharp.fluid.src)
+  }, [data, image, onLoad])
   return (
     <Img
       fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }}

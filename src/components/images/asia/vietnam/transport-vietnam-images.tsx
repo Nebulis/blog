@@ -30,6 +30,7 @@ export const TransportVietnamImages: React.FunctionComponent<ExtraImageProps & {
   className = "",
   image,
   imgStyle,
+  onLoad,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -182,5 +183,8 @@ export const TransportVietnamImages: React.FunctionComponent<ExtraImageProps & {
       }
     }
   `)
+  React.useEffect(() => {
+    if (onLoad) onLoad(data[image].childImageSharp.fluid.src)
+  }, [data, image, onLoad])
   return <Img fluid={data[image].childImageSharp.fluid} alt={alt[image]} imgStyle={imgStyle} className={className} />
 }
