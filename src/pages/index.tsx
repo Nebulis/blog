@@ -252,9 +252,11 @@ const NewArticleContainer = styled.div`
     }
     .gatsby-image-wrapper {
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 0;
+    }
+    .new-article-card-container {
+      margin-bottom: 1.3rem;
+      display: flex;
+      justify-content: center;
     }
   }
   @media (min-width: ${largeStart}) {
@@ -265,9 +267,6 @@ const NewArticleContainer = styled.div`
     }
     .new-article-card-container {
       flex-basis: 50%;
-    }
-    .gatsby-image-wrapper {
-      margin: 0;
     }
     .new-article-content-container {
       padding-left: 1.5rem;
@@ -285,9 +284,6 @@ const NewArticleContainer = styled.div`
   background-color: rgb(212, 234, 220, 0.4); //primary light color in rgb
   display: flex;
   padding: 1.5rem;
-  .gatsby-image-wrapper {
-    width: 100%;
-  }
   .new-article-card-container {
     display: flex;
   }

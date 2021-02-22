@@ -678,14 +678,13 @@ pre tt:after {
   width: 100%;
 }
 
-.gatsby-image-wrapper {
+.image-layout {
   /*most of images are below a paragraph which uses mt-2*/
   margin-top: calc(1.3rem - 0.5rem);
   margin-bottom: 1.3rem;
 }
-
-.gatsby-image-wrapper-no-top-margin .gatsby-image-wrapper {
-  margin-top: 0;
+.gatsby-image-wrapper {
+  width: 100%;
 }
 
 .fa-spin {
@@ -700,12 +699,3 @@ pre tt:after {
   }
 }
 
-/*remove margin from image that are first child of section content*/
-/* fucking-annoying-classname-because-emotion-fucking-annoying-me */
-.fucking-annoying-classname-because-emotion-fucking-annoying-me
-  .section-title
-  + .section-content
-  > div:first-child
-  > .gatsby-image-wrapper {
-  margin-top: 0;
-}

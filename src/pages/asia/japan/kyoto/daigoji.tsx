@@ -203,7 +203,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           automne, un plaisir des yeux à chaque saison.
         </Conclusion>
         <ImageAsPortrait
-          className="gatsby-image-wrapper-no-top-margin"
           css={css`
             max-width: 800px;
           `}

@@ -23,7 +23,6 @@ import {
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
-  MainImageAsLandscape,
   TwoImagesSameSize,
 } from "../../../../components/images/layout"
 import { Conclusion } from "../../../../components/core/conclusion"
@@ -62,9 +61,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <VietnamBlogLayout page="discover-southern-vietnam" location={location}>
         <Title title={title} linkId="discover-southern-vietnam" />
-        <MainImageAsLandscape>
+        <ImageAsLandscape>
           <SharedCardVietnamImages image="discoverSouthernVietnam" />
-        </MainImageAsLandscape>
+        </ImageAsLandscape>
         <Quote>{description}</Quote>
         <Divider />
         <Introduction>{googleDescription}</Introduction>

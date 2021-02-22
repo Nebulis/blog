@@ -10,7 +10,6 @@ import {
   GroupOfImages,
   ImageAsLandscape,
   ImageAsPortrait,
-  MainImageAsLandscape,
   TwoImagesRightBigger,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
@@ -77,9 +76,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <VietnamBlogLayout page={id} location={location}>
         <Title title={title} linkId={id} />
-        <MainImageAsLandscape>
+        <ImageAsLandscape>
           <SharedCardVietnamImages image="cuChiTunnelsMain" />
-        </MainImageAsLandscape>
+        </ImageAsLandscape>
         <Quote>{description}</Quote>
         <Divider />
         <Introduction>{googleDescription}</Introduction>

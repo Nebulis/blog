@@ -17,6 +17,7 @@ const vietnamPartStyle = css`
 `
 export const VietnamHeadline: FunctionComponent = ({ children }) => (
   <City css={vietnamPartStyle}>
+    {/*{children}*/}
     <TitleImage src={hat} alt="hat" /> {children} <TitleImage src={hat} alt="hat" />
   </City>
 )

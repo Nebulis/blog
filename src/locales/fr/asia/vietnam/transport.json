@@ -8,6 +8,7 @@
   "company": "Compagnies",
   "price": "Prix",
   "opinion": "Notre avis",
+  "transport-in": "Transport en",
   "section1": {
     "title": "Avion",
     "information": {
@@ -295,7 +296,7 @@
       "part10": "Pour conduire une moto :",
       "part11": "inférieure ou égal à 50cc, vous n’aurez pas besoin de permis",
       "part12": "supérieure à 50cc, vous avez besoin d’un permis moto international qui sera valide, si votre pays d’origine a ratifié la Convention de Vienne sur la circulation routière (",
-      "part13": "pays indiqué en vert",
+      "part13": "pays indiqués en vert",
       "part14": ")"
     },
     "booking": {

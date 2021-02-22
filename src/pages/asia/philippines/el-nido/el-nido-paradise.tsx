@@ -6,7 +6,6 @@ import {
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
-  MainImageAsLandscape,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import HomeImgUrl from "../../../../images/asia/philippines/home-philippines.jpg"
@@ -66,9 +65,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <PhilippinesBlogLayout page="el-nido-paradise" location={location}>
         <PhilippinesTitle title={title} linkId="el-nido-paradise" />
-        <MainImageAsLandscape>
+        <ImageAsLandscape>
           <SharedCardPhilippinesImages image="elNido" />
-        </MainImageAsLandscape>
+        </ImageAsLandscape>
         <PhilippinesQuote>{t("quote")}</PhilippinesQuote>
         <PhilippinesDivider />
         <Introduction>{googleDescription}</Introduction>

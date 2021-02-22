@@ -10,10 +10,6 @@ const overlayBorderPadding = 15
 
 const carouselStyle = css`
   position: relative;
-  .gatsby-image-wrapper {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
   .hidden .gatsby-image-wrapper {
     height: 0;
     opacity: 0;
