@@ -26,7 +26,7 @@ const cardPublishedStyle = css`
   @media (max-width: ${mediumEnd}) {
     background-color: ${backgroundPrimaryColor};
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    padding-top: 4px;
+    // padding-top: 4px;
   }
 `
 const cardStyle = css`
@@ -42,12 +42,12 @@ const cardStyle = css`
   }
 
   .gatsby-image-wrapper {
-    @media (min-width: ${largeStart}) {
-      &:nth-of-type(odd) {
-        margin-top: 0;
-      }
-    }
-    margin-bottom: 0.7rem; // a bit bigger than text padding because it looks closer
+    // @media (min-width: ${largeStart}) {
+    //   &:nth-of-type(odd) {
+    //     margin-top: 0;
+    //   }
+    // }
+    // margin-bottom: 0.7rem; // a bit bigger than text padding because it looks closer
   }
   .tags {
     text-align: center;
@@ -82,10 +82,11 @@ const cardStyle = css`
     text-align: center;
     margin-top: auto;
   }
-  .image-link {
+  .card-image-link {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-bottom: 0.7rem; // a bit bigger than text padding because it looks closer
   }
 `
 const StyledDivider = styled(Divider)`
@@ -159,7 +160,7 @@ export const Card: FunctionComponent<
         onAuxClick={(event) => {
           event.stopPropagation()
         }}
-        className="image-link"
+        className="card-image-link"
       >
         {children}
       </ApplicationLink>

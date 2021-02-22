@@ -74,9 +74,6 @@ const style = css`
   &:hover .title {
     font-size: 1.4rem;
   }
-  .gatsby-image-wrapper {
-    margin: 0;
-  }
 `
 export const CountryContainer: React.FunctionComponent<{
   title: string

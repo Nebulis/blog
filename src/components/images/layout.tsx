@@ -12,8 +12,8 @@ const creditStyle = css`
   .credit {
     position: absolute;
     opacity: 0.8;
-    bottom: 1.3rem; // margin bottom of images
-    right: 0;
+    bottom: 0.4px; // it looks a bit cleaner with this ?
+    right: 0.4px; // it looks a bit cleaner with this ?
     background-color: black;
     line-height: initial;
     color: white;
@@ -59,26 +59,26 @@ const margin = css`
 const allButLastImageStyle = css`
   // needed for ImageAsTwoLandscapeLeftAndOnePortraitRight under GroupOfImages
   margin-bottom: 0;
-  .gatsby-image-wrapper {
+  .image-layout {
     margin-bottom: 0px;
   }
 `
 const allButFirstImageStyle = css`
-  .gatsby-image-wrapper {
+  &.image-layout {
     margin-top: 1.3rem;
   }
   @media (max-width: ${mobileEnd}) {
-    .gatsby-image-wrapper {
+    &.image-layout {
       margin-top: 10px;
     }
   }
   @media (min-width: ${smallStart}) and (max-width: ${smallEnd}) {
-    .gatsby-image-wrapper {
+    &.image-layout {
       margin-top: 15px;
     }
   }
   @media (min-width: ${mediumStart}) and (max-width: ${mediumEnd}) {
-    .gatsby-image-wrapper {
+    &.image-layout {
       margin-top: 20px;
     }
   }
@@ -113,22 +113,22 @@ export const GroupOfImages: FunctionComponent<{ className?: string }> = ({ child
 
 const imageAsPortraitStyle = css`
   max-width: 600px;
-  margin: auto;
-  .gatsby-image-wrapper {
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-  }
+  margin-right: auto;
+  margin-left: auto;
   ${creditStyle}
 `
 export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any> & { credit?: React.ReactNode }> = ({
   children,
-  className,
+  className = "",
   credit,
+  title,
 }) => (
-  <div css={imageAsPortraitStyle} className={`${className} flex relative image-layout`}>
-    {children}
-    {credit && <div className="credit">{credit}</div>}
+  <div css={imageAsPortraitStyle} className={`${className} image-layout`}>
+    <div className="flex relative image-layout-image-container">
+      {children}
+      {credit && <div className="credit">{credit}</div>}
+    </div>
+    {title && <div className="title tc underline ttu">{title}</div>}
   </div>
 )
 
@@ -138,10 +138,6 @@ const pinterestImageStyle = css`
   > div {
     width: 100%;
     max-width: 350px;
-  }
-  .gatsby-image-wrapper {
-    margin-top: 0;
-    margin-bottom: 0;
   }
   .pin {
     bottom: 10px;
@@ -252,26 +248,24 @@ export const PinterestImage: FunctionComponent<HTMLAttributes<any> & PinterestIm
 
 const imageAsLandscapeStyle = css`
   .gatsby-image-wrapper {
-    width: 100%;
     max-height: calc(100vh - 40px);
   }
   ${creditStyle}
 `
 export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any> & { credit?: React.ReactNode }> = ({
   children,
-  className,
+  className = "",
   credit,
+  title,
 }) => (
-  <div css={imageAsLandscapeStyle} className={`${className} flex justify-center relative image-layout`}>
-    {children}
-    {credit && <div className="credit">{credit}</div>}
+  <div css={imageAsLandscapeStyle} className={`${className} image-layout`}>
+    <div className="flex justify-center relative image-layout-image-container">
+      {children}
+      {credit && <div className="credit">{credit}</div>}
+    </div>
+    {title && <div className="title tc underline ttu">{title}</div>}
   </div>
 )
-export const MainImageAsLandscape = styled(ImageAsLandscape)`
-  .gatsby-image-wrapper {
-    margin-top: 0;
-  }
-`
 
 const twoImagesSameSizeStyles = css`
   margin: auto;
@@ -281,9 +275,6 @@ const twoImagesSameSizeStyles = css`
   }
   & .right-panel {
     flex-basis: 100%;
-  }
-  .gatsby-image-wrapper {
-    width: 100%;
   }
   ${margin}
 `
@@ -333,16 +324,12 @@ export const TwoImagesSameSizeOrToGroup: FunctionComponent<HTMLAttributes<any>> 
 }
 
 const imageAsLandscapeOnTheLeft = css`
-  .gatsby-image-wrapper {
-    width: 100%;
-  }
-  & div:first-of-type {
-    flex-basis: 65%;
+  &.image-layout {
+    max-width: 65%;
   }
   @media (max-width: ${mediumEnd}) {
-    & div:first-of-type,
-    .title {
-      flex-basis: 100%;
+    &.image-layout {
+      max-width: 100%;
     }
   }
   ${creditStyle}
@@ -354,62 +341,23 @@ export const ImageAsLandscapeOnTheLeft: FunctionComponent<HTMLAttributes<any> & 
   credit,
 }) => {
   return (
-    <>
-      <div className={`flex image-layout ${className}`} css={imageAsLandscapeOnTheLeft}>
-        <div className="relative">
-          {children}
-          {credit && <div className="credit">{credit}</div>}
-        </div>
-      </div>
-      {title && (
-        <div className={`flex ${className}`} css={imageAsLandscapeOnTheLeft}>
-          <div className="title tc underline ttu">{title}</div>
-        </div>
-      )}
-    </>
-  )
-}
-
-const imageAsLandscapeOnTheRight = css`
-  .gatsby-image-wrapper {
-    width: 100%;
-  }
-  & div:first-of-type {
-    flex-basis: 65%;
-  }
-  @media (max-width: ${mediumEnd}) {
-    & div:first-of-type {
-      flex-basis: 100%;
-    }
-  }
-  ${creditStyle}
-`
-export const ImageAsLandscapeOnTheRight: FunctionComponent<HTMLAttributes<any> & { credit?: React.ReactNode }> = ({
-  children,
-  className,
-  title,
-  credit,
-}) => {
-  return (
-    <>
-      <div className={`flex justify-end image-layout ${className}`} css={imageAsLandscapeOnTheRight}>
+    <div className={`image-layout ${className}`} css={imageAsLandscapeOnTheLeft}>
+      <div className="flex relative image-layout-image-container">
         {children}
         {credit && <div className="credit">{credit}</div>}
       </div>
-      {title && (
-        <div className={`flex justify-end ${className}`} css={imageAsLandscapeOnTheLeft}>
-          <div className="title tc underline ttu">{title}</div>
-        </div>
-      )}
-    </>
+      {title && <div className="title tc underline ttu">{title}</div>}
+    </div>
   )
 }
+export const ImageAsLandscapeOnTheRight = styled(ImageAsLandscapeOnTheLeft)`
+  &.image-layout {
+    margin-left: auto;
+  }
+`
 
 const imageAsTwoLandscapeLeftAndOnePortraitRightStyle = css`
   align-items: flex-start;
-  .gatsby-image-wrapper {
-    width: 100%;
-  }
   & .left-panel {
     flex-basis: 100%;
   }
@@ -482,7 +430,6 @@ const imageAsMedallionStyle = css`
     transition: all 300ms linear;
   }
   .gatsby-image-wrapper {
-    margin: 0;
     width: ${medallionDimension};
     height: ${medallionDimension} !important;
   }

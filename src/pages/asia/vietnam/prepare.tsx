@@ -11,7 +11,11 @@ import translationFr from "../../../locales/fr/asia/vietnam/prepare.json"
 import translationEn from "../../../locales/en/asia/vietnam/prepare.json"
 import i18n from "i18next"
 import { useCustomTranslation } from "../../../i18n"
-import { ImageAsLandscape, ImageAsPortrait, MainImageAsLandscape } from "../../../components/images/layout"
+import {
+  ImageAsLandscape,
+  ImageAsLandscapeOnTheLeft,
+  ImageAsPortrait,
+} from "../../../components/images/layout"
 import { FaBriefcaseMedical, FaLaptop, FaShoppingBag, FaTshirt } from "react-icons/all"
 import {
   Baggage,
@@ -613,7 +617,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <VietnamBlogLayout
         page="prepare-vietnam"
         location={location}
-        className="fucking-annoying-classname-because-emotion-fucking-annoying-me"
         css={css`
           li > p {
             margin-bottom: 0;
@@ -625,9 +628,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         `}
       >
         <Title title={title} linkId="prepare-vietnam" />
-        <MainImageAsLandscape>
+        <ImageAsLandscape>
           <SharedCardVietnamImages image="prepareMain" />
-        </MainImageAsLandscape>
+        </ImageAsLandscape>
         <Quote>{t("quote")}</Quote>
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
@@ -1276,10 +1279,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </NaturalDisaster>
         <Divider />
         <Baggage id="baggage">
-          <ImageAsPortrait>
+          <ImageAsPortrait className="mb1">
             <PrepareVietnamImages image="baggage" />
           </ImageAsPortrait>
-          <p className="tc i">{t("section12.part1")}</p>
+          <p className="tc i mt2">{t("section12.part1")}</p>
           <p className="tc b">{t("section12.part2")}</p>
           <p className="flex items-center ">
             <FaTshirt />
