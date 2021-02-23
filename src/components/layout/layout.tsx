@@ -19,6 +19,7 @@ import {
   mediumStart,
   mobileEnd,
   primaryColor,
+  smallEnd,
   smallStart,
 } from "../core/variables"
 import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
@@ -226,9 +227,26 @@ export const BlogLayout = styled(IndexBlogLayout)`
     padding-right: 10px;
   }
 
-  @media (min-width: ${smallStart}) {
+  @media (max-width: ${smallEnd}) {
+    .children-container {
+      .image-layout:not(.no-reset-image) {
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(100% + 20px);
+        max-width: calc(100% + 20px);
+      }
+    }
+  }
+
+  @media (min-width: ${smallStart}) and (max-width: ${smallEnd}) {
     .children-container {
       padding: 0 20px;
+      .image-layout:not(.no-reset-image) {
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
+      }
     }
   }
 
@@ -324,6 +342,12 @@ export const MainCardContainer = styled.div`
 
   @media (min-width: ${extraLargeStart}) {
     max-width: ${maxWidthExtraLargeContainer}px;
+  }
+`
+export const ArticleCardContainer = styled.article`
+  @media (max-width: ${mobileEnd}) {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 `
 

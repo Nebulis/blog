@@ -11,11 +11,7 @@ import translationFr from "../../../locales/fr/asia/vietnam/prepare.json"
 import translationEn from "../../../locales/en/asia/vietnam/prepare.json"
 import i18n from "i18next"
 import { useCustomTranslation } from "../../../i18n"
-import {
-  ImageAsLandscape,
-  ImageAsLandscapeOnTheLeft,
-  ImageAsPortrait,
-} from "../../../components/images/layout"
+import { ImageAsLandscape, ImageAsPortrait } from "../../../components/images/layout"
 import { FaBriefcaseMedical, FaLaptop, FaShoppingBag, FaTshirt } from "react-icons/all"
 import {
   Baggage,
@@ -618,9 +614,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         page="prepare-vietnam"
         location={location}
         css={css`
-          li > p {
-            margin-bottom: 0;
-          }
           .section-title {
             font-size: 1.38316rem; // h3
             margin-bottom: 1rem; // mb3
@@ -1343,71 +1336,53 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </Baggage>
         <Divider />
         <Opinion title={t("section13.title")} id="opinion">
-          <ul
-            css={css`
-              // remove margin-left after first element
-              & > li > p:not(:first-of-type),
-              & > li > div {
-                margin-left: -1.45rem;
-              }
-              // add margin because it has been removed globally
-              li > p {
-                margin-bottom: calc(1.45rem / 2);
-              }
-            `}
+          <p className="list-item ml3">{t("section13.part1")}</p>
+          <p className="underline">{t("section13.part2")}</p>
+          <p>{t("section13.part3")}</p>
+          <ImageAsLandscape
+            credit={
+              <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/vietnguyenbui-12326427">
+                vietnguyenbui
+              </ExternalLinkNotUnderlined>
+            }
           >
-            <li>
-              <p>{t("section13.part1")}</p>
-              <p className="underline">{t("section13.part2")}</p>
-              <p>{t("section13.part3")}</p>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/vietnguyenbui-12326427">
-                    vietnguyenbui
-                  </ExternalLinkNotUnderlined>
-                }
-              >
-                <PrepareVietnamImages image="landscape" />
-              </ImageAsLandscape>
-              <p className="underline">{t("section13.part4")}</p>
-              <p>{t("section13.part5")}</p>
-              <p className="underline">{t("section13.part6")}</p>
-              <p>{t("section13.part7")}</p>
-              {foodLinkPublished && (
-                <p>
-                  {t("section13.part8")}{" "}
-                  <VietnamLink to="food-vietnam">{t("common:country.vietnam.card.food")}</VietnamLink>.
-                </p>
-              )}
-              <p className="underline">{t("section13.part9")}</p>
-              <p>{t("section13.part10")}</p>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/thangphan-11758907">
-                    thangphan
-                  </ExternalLinkNotUnderlined>
-                }
-              >
-                <PrepareVietnamImages image="laughing" />
-              </ImageAsLandscape>
-            </li>
-            <li className="mt3">
-              <p>{t("section13.part11")}</p>
-              <p className="underline">{t("section13.part12")}</p>
-              <p>{t("section13.part13")}</p>
-              <p className="underline">{t("section13.part14")}</p>
-              <p>{t("section13.part15")}</p>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/harpenz-606632">
-                    harpenz
-                  </ExternalLinkNotUnderlined>
-                }
-              >
-                <PrepareVietnamImages image="scooter" />
-              </ImageAsLandscape>
-            </li>
-          </ul>
+            <PrepareVietnamImages image="landscape" />
+          </ImageAsLandscape>
+          <p className="underline">{t("section13.part4")}</p>
+          <p>{t("section13.part5")}</p>
+          <p className="underline">{t("section13.part6")}</p>
+          <p>{t("section13.part7")}</p>
+          {foodLinkPublished && (
+            <p>
+              {t("section13.part8")}{" "}
+              <VietnamLink to="food-vietnam">{t("common:country.vietnam.card.food")}</VietnamLink>.
+            </p>
+          )}
+          <p className="underline">{t("section13.part9")}</p>
+          <p>{t("section13.part10")}</p>
+          <ImageAsLandscape
+            credit={
+              <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/thangphan-11758907">
+                thangphan
+              </ExternalLinkNotUnderlined>
+            }
+          >
+            <PrepareVietnamImages image="laughing" />
+          </ImageAsLandscape>
+          <p className="list-item ml3">{t("section13.part11")}</p>
+          <p className="underline">{t("section13.part12")}</p>
+          <p>{t("section13.part13")}</p>
+          <p className="underline">{t("section13.part14")}</p>
+          <p>{t("section13.part15")}</p>
+          <ImageAsLandscape
+            credit={
+              <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/harpenz-606632">
+                harpenz
+              </ExternalLinkNotUnderlined>
+            }
+          >
+            <PrepareVietnamImages image="scooter" />
+          </ImageAsLandscape>
         </Opinion>
         <Divider />
         <LocalCurrency title={t("section14.title")} id="currency">

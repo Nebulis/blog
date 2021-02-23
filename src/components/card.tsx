@@ -5,7 +5,7 @@ import { ApplicationLink, DevelopmentMark } from "./core/links/link"
 import { getLink, getLinkLabel, getLinkUrl } from "./core/links/links.utils"
 import { ApplicationContext } from "./application"
 import { Divider } from "./core/divider"
-import { backgroundPrimaryColor, largeStart, mediumEnd, primaryColor, primaryDarkColor } from "./core/variables"
+import { backgroundPrimaryColor, mediumEnd, primaryColor, primaryDarkColor } from "./core/variables"
 import { navigate } from "gatsby"
 import { useCustomTranslation } from "../i18n"
 
@@ -26,7 +26,6 @@ const cardPublishedStyle = css`
   @media (max-width: ${mediumEnd}) {
     background-color: ${backgroundPrimaryColor};
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    // padding-top: 4px;
   }
 `
 const cardStyle = css`
@@ -41,14 +40,6 @@ const cardStyle = css`
     -moz-outline-style: none;
   }
 
-  .gatsby-image-wrapper {
-    // @media (min-width: ${largeStart}) {
-    //   &:nth-of-type(odd) {
-    //     margin-top: 0;
-    //   }
-    // }
-    // margin-bottom: 0.7rem; // a bit bigger than text padding because it looks closer
-  }
   .tags {
     text-align: center;
     font-size: 0.8rem;

@@ -268,7 +268,8 @@ export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any> & { credit?
 )
 
 const twoImagesSameSizeStyles = css`
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
   max-height: calc(100vh - 40px);
   & .left-panel {
     flex-basis: 100%;
@@ -326,11 +327,6 @@ export const TwoImagesSameSizeOrToGroup: FunctionComponent<HTMLAttributes<any>> 
 const imageAsLandscapeOnTheLeft = css`
   &.image-layout {
     max-width: 65%;
-  }
-  @media (max-width: ${mediumEnd}) {
-    &.image-layout {
-      max-width: 100%;
-    }
   }
   ${creditStyle}
 `

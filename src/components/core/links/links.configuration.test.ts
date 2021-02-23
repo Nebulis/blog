@@ -114,7 +114,7 @@ describe("links", () => {
     // vietnam assertions
     expect(getLink("transport-vietnam")).toMatchObject({
       label: { fr: "Les Transports au Vietnam", en: "Transports in Vietnam" },
-      published: false,
+      published: true,
     })
     expect(getLink("food-vietnam")).toMatchObject({
       label: { fr: "Nos coups de cœur culinaires du Vietnam", en: "Our Vietnamese Food Favorites" },

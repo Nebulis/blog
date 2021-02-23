@@ -177,7 +177,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <VietnamHeadline>{t("visit1.title")}</VietnamHeadline>
             <Divider />
             <SectionContent>
-              <MyThoImages image="vinhTrang1" />
+              <ImageAsLandscape>
+                <MyThoImages image="vinhTrang1" />
+              </ImageAsLandscape>
               <p>{t("visit1.part1")}</p>
               <p>{t("visit1.part2")}</p>
               <p>{t("visit1.part3")}</p>
