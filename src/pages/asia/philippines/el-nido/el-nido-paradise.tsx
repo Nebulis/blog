@@ -39,7 +39,7 @@ import { ElNidoWhichTourCard } from "../../../../components/core/asia/philippine
 import { ElNidoParadiseImages } from "../../../../components/images/asia/philippines/el-nido/el-nido-paradise-images"
 import { philippinesPrimaryColor } from "../../../../components/core/asia/philippines/philippines.colors"
 import { css } from "@emotion/core"
-import { MapContainer } from "../../../../components/layout/layout"
+import { ArticleCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { PhilippinesMap } from "../../../../components/core/asia/philippines/philippines-map"
 import { buildBookingSearchUrl } from "../../../../utils"
 import { SharedCardPhilippinesImages } from "../../../../components/images/asia/philippines/shared-card-philippines-images"
@@ -222,9 +222,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit2.part3")}</p>
               <p>{t("visit2.part4")}</p>
               <p>{t("visit2.part5")}</p>
-              <article>
+              <ArticleCardContainer>
                 <ElNidoWhichTourCard card={{ showTags: false, showPublished: false, showMore: true }} />
-              </article>
+              </ArticleCardContainer>
             </SectionContent>
           </section>
           <PhilippinesDivider />

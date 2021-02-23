@@ -2,11 +2,11 @@ import React, { FunctionComponent } from "react"
 import styled from "@emotion/styled"
 import { vietnamPrimaryColor, vietnamPrimaryColorDarker, vietnamPrimaryColorWithOpacity } from "./vietnam.colors"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
-import { ImageAsMedallion, TitleImage } from "../../../images/layout"
+import { ImageAsMedallion } from "../../../images/layout"
 import { drawHat } from "./console-draw-hat"
 import { ButtonLink, ExternalLink, linkBuilder } from "../../links/link"
 import { Link } from "gatsby"
-import { City } from "../../highlight"
+import { Headline } from "../../highlight"
 import hat from "../../../../images/asia/vietnam/hat.svg"
 import { css } from "@emotion/core"
 import { TFunction } from "i18next"
@@ -16,10 +16,9 @@ const vietnamPartStyle = css`
   color: ${vietnamPrimaryColorDarker};
 `
 export const VietnamHeadline: FunctionComponent = ({ children }) => (
-  <City css={vietnamPartStyle}>
-    {/*{children}*/}
-    <TitleImage src={hat} alt="hat" /> {children} <TitleImage src={hat} alt="hat" />
-  </City>
+  <Headline css={vietnamPartStyle} image={hat} alt="hat">
+    {children}
+  </Headline>
 )
 
 const drawer = withDraw(drawHat)

@@ -34,7 +34,7 @@ import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/discover.json"
 import { Comments } from "../../../../components/core/comments"
 import { SouthernVietnam } from "../../../../components/images/asia/vietnam/southern-vietnam/southern-vietnam"
-import { MapContainer } from "../../../../components/layout/layout"
+import { ArticleCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
 import { Divider } from "../../../../components/core/divider"
 import { Title } from "../../../../components/core/title"
@@ -111,17 +111,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit1.part2")}</p>
               <p>{t("visit1.part3")}</p>
               <p>{t("visit1.part4")}</p>
-              <article>
+              <ArticleCardContainer>
                 <WarMuseumCard card={{ showTags: false, showPublished: false, showMore: true }} />
-              </article>
+              </ArticleCardContainer>
             </SectionContent>
             <Divider />
             <SectionContent>
               <p>{t("visit1.part5")}</p>
               <p>{t("visit1.part6")}</p>
-              <article>
+              <ArticleCardContainer>
                 <CuChiTunnelsCard card={{ showTags: false, showPublished: false, showMore: true }} />
-              </article>
+              </ArticleCardContainer>
             </SectionContent>
           </section>
           <Divider />
@@ -167,17 +167,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit3.part2")}</p>
               <p>{t("visit3.part3")}</p>
             </SectionContent>
-            <article>
+            <ArticleCardContainer>
               <MyThoCard card={{ showTags: false, showPublished: false, showMore: true }} />
-            </article>
+            </ArticleCardContainer>
             <Divider />
             <SectionContent>
               <p>{t("visit3.part4")}</p>
               <p>{t("visit3.part5")}</p>
             </SectionContent>
-            <article>
+            <ArticleCardContainer>
               <CanThoCard card={{ showTags: false, showPublished: false, showMore: true }} />
-            </article>
+            </ArticleCardContainer>
           </section>
           <Divider />
           <section>

@@ -284,6 +284,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               css={css`
                 max-width: 200px;
               `}
+              className="no-reset-image"
             >
               <HoChiMinWarMuseum image="soldierHelmet" />
             </ImageAsPortrait>
