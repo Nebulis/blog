@@ -452,3 +452,13 @@ export const ImageAsMedallion: FunctionComponent<HTMLAttributes<any> & { title?:
 export const TitleImage = styled.img`
   width: 24px;
 `
+export const Anchor = styled.span`
+  /*https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header/21707103#21707103*/
+  :target {
+    display: block;
+    position: relative;
+    /*section bottom margin is 1.45 rem*/
+    top: -2.9rem;
+    visibility: hidden;
+  }
+`

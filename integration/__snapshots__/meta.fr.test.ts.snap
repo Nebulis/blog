@@ -162,6 +162,12 @@ exports[`french pages exports meta for public/asia/philippines/el-nido/index.htm
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly 3`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
 
+exports[`french pages exports meta for public/asia/philippines/el-nido/which-tour/index.html correctly 1`] = `"Si El Nido fait partie d’une des destinations les plus réputées des Philippines c’est avant tout grâce à l’Archipel de Bacuit, ces îles paradisiaques qui en font la perle de Palawan sont d’une beauté rare."`;
+
+exports[`french pages exports meta for public/asia/philippines/el-nido/which-tour/index.html correctly 2`] = `"Archipel de Bacuit : Quel tour choisir ? | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/philippines/el-nido/which-tour/index.html correctly 3`] = `"Dans cet article, on vous emmène à la découverte des îles de l’Archipel de Bacuit en vous détaillant les différents tours, on vous indique également tout sur la réservation, le prix et les types de bateaux qui existent."`;
+
 exports[`french pages exports meta for public/asia/philippines/index.html correctly 1`] = `"Sans aucun doute l’un des pays qui nous a le plus fait voyager et rêver de part ses paysages à couper le souffle, ses îles d’une beauté sans pareille et ses immenses spots de snorkeling et de plongée. Les Philippines, c'est plus de 7600 îles, autant dire que vous avez l’embarras du choix pour votre voyage de rêve.  On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines."`;
 
 exports[`french pages exports meta for public/asia/philippines/index.html correctly 2`] = `"Philippines | Blog Voyage"`;
@@ -208,7 +214,7 @@ exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/my-t
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/my-tho/index.html correctly 2`] = `"Croisière sur le Mékong entre Mỹ Tho et Ben Tre | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/my-tho/index.html correctly 3`] = `"Une petite balade en bateau au Vietnam ? Dans cet article, on vous  donne notre avis sur notre visite entre Mỹ Tho et Ben Tre, un exemple de quoi faire sur le delta du Mékong. On vous donne également des conseils sur comment y aller ? Combien de jours ? Quand partir ? Et où se loger ?"`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/my-tho/index.html correctly 3`] = `"Une petite balade en bateau au Vietnam ? Dans cet article, on vous donne notre avis sur notre visite entre Mỹ Tho et Ben Tre, un exemple de quoi faire sur le delta du Mékong. On vous donne également des conseils sur comment y aller ? Combien de jours ? Quand partir ? Et où se loger ?"`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/war-remnants-museum/index.html correctly 1`] = `"Le musée des vestiges de guerre témoigne des atrocités de la guerre d’Indochine et de la guerre du Vietnam et nous montre l’impact encore réel et actuel sur la vie des Vietnamiens."`;
 

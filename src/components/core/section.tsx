@@ -25,12 +25,15 @@ import {
   FaSuitcaseRolling,
   FaUtensils,
   FaWalking,
+  FaClipboardList,
+  FaShip,
 } from "react-icons/fa"
 import { maxWidth, mediumEnd, mobileEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n"
 import { Lang } from "./links/links.types"
 import styled from "@emotion/styled"
 import { vietnamPrimaryColorDarker, vietnamPrimaryColorWithOpacity } from "./asia/vietnam/vietnam.colors"
+import { Anchor } from "../images/layout"
 
 const SpeechBubble: React.FunctionComponent = () => (
   <svg viewBox="0 -26 512 512" height="2em" width="2em">
@@ -140,7 +143,7 @@ export const titleBuilder = ({
     const Icon = isIconBuilder(icon) ? icon.build(i18n.languageCode) : icon
     return (
       <>
-        <span id={id} />
+        <Anchor id={id} />
         <SectionTitle className={titleClassName}>
           <Icon />
           &nbsp;{title || t(translationKey)}
@@ -181,6 +184,8 @@ export const FewWords = titleBuilder({ icon: FaCommentDots, translationKey: "tod
 export const Information = titleBuilder({ icon: FaInfoCircle, translationKey: "todo" })
 export const Booking = titleBuilder({ icon: FaCheckCircle, translationKey: "todo" })
 export const Company = titleBuilder({ icon: FaCopyright, translationKey: "todo" })
+export const Choice = titleBuilder({ icon: FaClipboardList, translationKey: "todo" })
+export const Boat = titleBuilder({ icon: FaShip, translationKey: "todo" })
 
 export const GoodToKnow: FunctionComponent<TitleProps> = ({ children }) => (
   <>

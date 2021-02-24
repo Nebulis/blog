@@ -277,7 +277,7 @@ export const CanThoImages: React.FunctionComponent<ExtraImageProps & { image: ke
       }
       cardFr1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/card-fr1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 90) {
+          fluid(maxWidth: 1200, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

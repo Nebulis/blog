@@ -29,7 +29,14 @@ export const continentLinks: ContinentLink[] = [
       fr: "Amérique du Sud",
       en: "South America",
     },
-    countries: [],
+    countries: [
+      {
+        id: "caribbean",
+        cities: [],
+        others: [],
+        label: { fr: "Caraibes", en: "Caraibes" },
+      },
+    ],
   },
   {
     id: "north-america",
@@ -45,7 +52,14 @@ export const continentLinks: ContinentLink[] = [
       fr: "Europe",
       en: "Europe",
     },
-    countries: [],
+    countries: [
+      {
+        id: "azores",
+        cities: [],
+        others: [],
+        label: { fr: "Acores", en: "Azores" },
+      },
+    ],
   },
   {
     id: "middle-east",
