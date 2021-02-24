@@ -18,7 +18,6 @@ import { CityLink } from "../../../../components/core/links/links.types"
 import {
   PhilippinesBlogLayout,
   PhilippinesButtonLink,
-  PhilippinesDivider,
   PhilippinesImageAsMedallion,
 } from "../../../../components/core/asia/philippines/philippines"
 import philippinesFish from "../../../../images/asia/philippines/fish.svg"
@@ -29,6 +28,7 @@ import { TitleImage } from "../../../../components/images/layout"
 import { jsx } from "@emotion/core"
 import { SharedPhilippinesImages } from "../../../../components/images/asia/philippines/shared-philippines-images"
 import { PageQuote } from "../../../../components/core/quote"
+import { Divider } from "../../../../components/core/divider"
 
 const namespace = "asia/philippines/el-nido/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -66,7 +66,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           &nbsp;{t("title")}&nbsp;
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />
         </MainTitleSection>
-        <PhilippinesDivider />
+        <Divider />
         <SectionContent>
           <PageQuote>{t("introduction.section1")}</PageQuote>
           <PageQuote position="none">{t("introduction.section2")}</PageQuote>
@@ -74,14 +74,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote position="none">{t("introduction.section4")}</PageQuote>
           <PageQuote position="none">{t("introduction.section5")}</PageQuote>
         </SectionContent>
-        <PhilippinesDivider />
+        <Divider />
         <CityHomeSection>{t("section1")}</CityHomeSection>
         <MainCardContainer>
           <ElNidoParadiseCard />
         </MainCardContainer>
         {highlights.length > 0 && (
           <>
-            <PhilippinesDivider className="mt2" />
+            <Divider className="mt2" />
             <CityHomeSection>{t("section2")}</CityHomeSection>
             <CityArticleContainer>
               {highlights.map(({ card: Card, id }) =>
@@ -92,7 +92,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         {cities.length > 0 && (
           <>
-            <PhilippinesDivider className="mt2" />
+            <Divider className="mt2" />
             <CityHomeSection>{t("section3")}</CityHomeSection>
             <MedallionContainer>
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
@@ -107,7 +107,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </MedallionContainer>
           </>
         )}
-        <PhilippinesDivider className="mt2" />
+        <Divider className="mt2" />
         <GoToAllArticlesContainer>
           <PhilippinesButtonLink to="articles?country=philippines">Tous nos articles</PhilippinesButtonLink>
         </GoToAllArticlesContainer>

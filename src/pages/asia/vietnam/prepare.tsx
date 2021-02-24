@@ -689,46 +689,46 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <VietnamExternalLink href="https://evisa.xuatnhapcanh.gov.vn/web/guest/home">
                   {t("section1.part5")}
                 </VietnamExternalLink>
-                .
-              </p>
-              <p>
+                .<br />
                 {t("section1.part6")} <Highlight>{t("section1.part7")}</Highlight> {t("section1.part8")}
               </p>
             </li>
             <li>
               <p>
                 <Highlight>{t("section1.part9")}</Highlight> {t("section1.part10")}
-              </p>
-              <p>
+                <br />
                 {t("section1.part11")} <Highlight>{t("section1.part12")}</Highlight>
                 {t("section1.part13")} <Highlight>{t("section1.part14")}</Highlight>
                 {t("section1.part15")} <Highlight>{t("section1.part16")}</Highlight>
+                <br />
+                {t("section1.part17")}
+                <br />
+                {t("section1.part18")}
+                <br />
+                {t("section1.part19")}
+                <br />
+                {t("section1.part20")}
               </p>
-              <p>{t("section1.part17")}</p>
-              <p>{t("section1.part18")}</p>
-              <p>{t("section1.part19")}</p>
-              <p>{t("section1.part20")}</p>
             </li>
             <li>
               <p>
                 <Highlight>{t("section1.part21")}</Highlight> {t("section1.part22")}
-              </p>
-              <p>
+                <br />
                 {t("section1.part23")} <Highlight>{t("section1.part24")}</Highlight>
                 {t("section1.part25")} <Highlight>{t("section1.part26")}</Highlight>
                 {t("section1.part27")} <Highlight>{t("section1.part28")}</Highlight>
-              </p>
-              <p>{t("section1.part29")}</p>
-              <p>
+                <br />
+                {t("section1.part29")}
+                <br />
                 {t("section1.part30")}{" "}
                 <VietnamExternalLink href="https://www.action-visas.com/">{t("section1.part31")}</VietnamExternalLink>,{" "}
                 <VietnamExternalLink href="https://www.vietnam-visa.com/">{t("section1.part32")}</VietnamExternalLink>,{" "}
                 <VietnamExternalLink href="https://www.vietnamvisa.org.vn/apply-visa/">
                   {t("section1.part33")}
                 </VietnamExternalLink>
-                .
+                .<br />
+                {t("section1.part34")}
               </p>
-              <p>{t("section1.part34")}</p>
             </li>
           </ul>
           <div
@@ -1117,32 +1117,36 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>
               <p>
                 <Highlight>{t("section8.part3")}</Highlight> {t("section8.part4")}
+                <br />
+                {t("section8.part5")}
               </p>
-              <p>{t("section8.part5")}</p>
             </li>
             <li>
               <p>
                 <Highlight>{t("section8.part6")}</Highlight> {t("section8.part7")}
+                <br />
+                {t("section8.part8")}
+                <br />
+                {t("section8.part9")}
+                <br />
+                {t("section8.part10")}
               </p>
-              <p>{t("section8.part8")}</p>
-              <p>{t("section8.part9")}</p>
-              <p>{t("section8.part10")}</p>
             </li>
             <li>
               <p>
                 <Highlight>{t("section8.part11")}</Highlight>
-              </p>
-              <p>
+                <br />
                 {t("section8.part12")} <Highlight>{t("section8.part13")}</Highlight>
               </p>
             </li>
             <li>
               <p>
                 <Highlight>{t("section8.part14")}</Highlight>
-              </p>
-              <p>{t("section8.part15")}</p>
-              <p>{t("section8.part16")}</p>
-              <p>
+                <br />
+                {t("section8.part15")}
+                <br />
+                {t("section8.part16")}
+                <br />
                 {t("section8.part17")} <Highlight>{t("section8.part18")}</Highlight>
               </p>
             </li>

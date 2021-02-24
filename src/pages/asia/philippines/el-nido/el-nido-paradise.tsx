@@ -16,7 +16,6 @@ import translationFr from "../../../../locales/fr/asia/philippines/el-nido/el-ni
 import translationEn from "../../../../locales/en/asia/philippines/el-nido/el-nido-paradise.json"
 import {
   PhilippinesBlogLayout,
-  PhilippinesDivider,
   PhilippinesExternalLink,
   PhilippinesHeadline,
   PhilippinesQuote,
@@ -43,6 +42,7 @@ import { ArticleCardContainer, MapContainer } from "../../../../components/layou
 import { PhilippinesMap } from "../../../../components/core/asia/philippines/philippines-map"
 import { buildBookingSearchUrl } from "../../../../utils"
 import { SharedCardPhilippinesImages } from "../../../../components/images/asia/philippines/shared-card-philippines-images"
+import { Divider } from "../../../../components/core/divider"
 
 const namespace = "asia/philippines/el-nido/el-nido-paradise"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -69,7 +69,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SharedCardPhilippinesImages image="elNido" />
         </ImageAsLandscape>
         <PhilippinesQuote>{t("quote")}</PhilippinesQuote>
-        <PhilippinesDivider />
+        <Divider />
         <Introduction>{googleDescription}</Introduction>
         <WhatTimeOfYear>
           <p>
@@ -168,10 +168,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <MapContainer>
             <PhilippinesMap />
           </MapContainer>
-          <PhilippinesDivider />
+          <Divider />
           <section>
             <PhilippinesHeadline>{t("visit1.title")}</PhilippinesHeadline>
-            <PhilippinesDivider />
+            <Divider />
             <SectionContent>
               <p>{t("visit1.part1")}</p>
               <p>{t("visit1.part2")}</p>
@@ -195,10 +195,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </GroupOfImages>
             </SectionContent>
           </section>
-          <PhilippinesDivider />
+          <Divider />
           <section>
             <PhilippinesHeadline>{t("visit2.title")}</PhilippinesHeadline>
-            <PhilippinesDivider />
+            <Divider />
             <SectionContent>
               <p>
                 {t("visit2.part1-1")}{" "}
@@ -227,10 +227,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </ArticleCardContainer>
             </SectionContent>
           </section>
-          <PhilippinesDivider />
+          <Divider />
           <section>
             <PhilippinesHeadline>{t("visit3.title")}</PhilippinesHeadline>
-            <PhilippinesDivider />
+            <Divider />
             <SectionContent>
               <p>{t("visit3.part1")}</p>
               <p>{t("visit3.part2")}</p>
@@ -263,10 +263,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </GroupOfImages>
             </SectionContent>
           </section>
-          <PhilippinesDivider />
+          <Divider />
           <section>
             <PhilippinesHeadline>{t("visit4.title")}</PhilippinesHeadline>
-            <PhilippinesDivider />
+            <Divider />
             <SectionContent>
               <p>{t("visit4.part1")}</p>
               <p>{t("visit4.part2")}</p>
@@ -289,7 +289,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </SectionContent>
           </section>
         </Visit>
-        <PhilippinesDivider />
+        <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

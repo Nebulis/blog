@@ -1,7 +1,7 @@
 import { CountryLink } from "../../links/links.types"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
-import { ElNidoParadiseCard } from "./philippines.card"
+import { ElNidoParadiseCard, ElNidoWhichTourCard } from "./philippines.card"
 import { css } from "@emotion/core"
 
 export const philippinesLinks: CountryLink = {
@@ -36,14 +36,46 @@ export const philippinesLinks: CountryLink = {
         {
           id: "el-nido-which-tour",
           url: "which-tour",
+          card: ElNidoWhichTourCard,
           label: {
             fr: commonFr.country.philippines.card["which-tour"],
             en: commonEn.country.philippines.card["which-tour"],
           },
-          published: new Date("2022-01-02"),
+          published: new Date("2021-02-27T17:00:00.000+08:00"),
         },
       ],
     },
   ],
-  others: [],
+  others: [
+    {
+      id: "boracay",
+      published: false,
+      label: { fr: "Boracay", en: "Boracay" },
+    },
+    {
+      id: "coron-island",
+      published: false,
+      label: { fr: "Coron Island", en: "Coron Island" },
+    },
+    {
+      id: "el-nido-tour-a",
+      published: false,
+      label: { fr: "Tour A", en: "Tour A" },
+    },
+    {
+      id: "el-nido-tour-b",
+      published: false,
+      label: { fr: "Tour B", en: "Tour B" },
+    },
+    {
+      id: "el-nido-tour-c",
+      published: false,
+      label: { fr: "Tour C", en: "Tour C" },
+    },
+    {
+      id: "el-nido-tour-d",
+      published: false,
+      label: { fr: "Tour D", en: "Tour D" },
+    },
+  ],
 }

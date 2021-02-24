@@ -11,7 +11,6 @@ import { philippinesLinks } from "../../../components/core/asia/philippines/phil
 import {
   PhilippinesBlogLayout,
   PhilippinesButtonLink,
-  PhilippinesDivider,
   PhilippinesImageAsMedallion,
 } from "../../../components/core/asia/philippines/philippines"
 import { PageProps } from "gatsby"
@@ -23,6 +22,7 @@ import i18n from "i18next"
 import asiaIndexFr from "../../../locales/fr/asia/philippines/index.json"
 import asiaIndexEn from "../../../locales/en/asia/philippines/index.json"
 import { PageQuote } from "../../../components/core/quote"
+import { Divider } from "../../../components/core/divider"
 
 const namespace = "asia/philippines/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
@@ -44,7 +44,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           &nbsp;{country}&nbsp;
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />
         </MainTitleSection>
-        <PhilippinesDivider />
+        <Divider />
         <SectionContent>
           <PageQuote>{t("introduction.section1")}</PageQuote>
           <PageQuote position="none">{t("introduction.section2")}</PageQuote>
@@ -52,7 +52,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </SectionContent>
         {cities.length > 0 && (
           <>
-            <PhilippinesDivider />
+            <Divider />
             <HomeSection>{t("common:tour.title")}</HomeSection>
             <HomeSubSection>{t("common:tour.subtitle")}</HomeSubSection>
             <MedallionContainer>
@@ -70,7 +70,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         {articles.length > 0 && (
           <>
-            <PhilippinesDivider />
+            <Divider />
             <HomeSection>{t("common:inform.title")}</HomeSection>
             <HomeSubSection>{t("common:inform.subtitle")}</HomeSubSection>
             <ArticlesContainer>
@@ -80,7 +80,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ArticlesContainer>
           </>
         )}
-        <PhilippinesDivider />
+        <Divider />
         <GoToAllArticlesContainer>
           <PhilippinesButtonLink to="articles?country=philippines">Tous nos articles</PhilippinesButtonLink>
         </GoToAllArticlesContainer>

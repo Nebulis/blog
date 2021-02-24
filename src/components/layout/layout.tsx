@@ -1,4 +1,4 @@
-import React, { FunctionComponent, HTMLAttributes, useContext, useEffect, useState, useLayoutEffect } from "react"
+import React, { FunctionComponent, HTMLAttributes, useContext, useEffect, useLayoutEffect, useState } from "react"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.utils"
@@ -345,6 +345,7 @@ export const MainCardContainer = styled.div`
   }
 `
 export const ArticleCardContainer = styled.article`
+  margin-bottom: 1rem;
   @media (max-width: ${mobileEnd}) {
     padding-left: 10px;
     padding-right: 10px;

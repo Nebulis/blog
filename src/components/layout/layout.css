@@ -6,14 +6,6 @@ footer ::selection {
   color: white;
   background-color: #318269;
 }
-/*https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header/21707103#21707103*/
-:target {
-  display: block;
-  position: relative;
-  /*section bottom margin is 1.45 rem*/
-  top: -2.9rem;
-  visibility: hidden;
-}
 
 html {
   font-family: sans-serif;

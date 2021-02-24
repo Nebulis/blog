@@ -51,6 +51,12 @@ describe("links", () => {
     expect(getLink("articles")).toMatchObject({ label: { fr: "Articles", en: "Articles" }, published: true })
     expect(getLink("404")).toMatchObject({ label: { fr: "404", en: "404" }, published: true })
 
+    // south-america countries assertions
+    expect(getLink("caribbean")).toMatchObject({ label: { fr: "Caraibes", en: "Caraibes" }, published: false })
+
+    // europe countries assertions
+    expect(getLink("azores")).toMatchObject({ label: { fr: "Acores", en: "Azores" }, published: false })
+
     // asia countries assertions
     expect(getLink("china")).toMatchObject({ label: { fr: "Chine", en: "China" }, published: false })
     expect(getLink("laos")).toMatchObject({ label: { fr: "Laos", en: "Laos" }, published: false })
@@ -164,6 +170,12 @@ describe("links", () => {
     })
 
     // philippines assertions
+    expect(getLink("boracay")).toMatchObject({ label: { fr: "Boracay", en: "Boracay" }, published: false })
+    expect(getLink("coron-island")).toMatchObject({
+      label: { fr: "Coron Island", en: "Coron Island" },
+      published: false,
+    })
+
     expect(getLink("el-nido")).toMatchObject({ label: { fr: "El Nido", en: "El Nido" }, published: true })
     expect(getLink("el-nido-paradise")).toMatchObject({
       label: { fr: "El Nido : Un petit coin de Paradis", en: "El Nido: A little paradise" },
@@ -171,6 +183,22 @@ describe("links", () => {
     })
     expect(getLink("el-nido-which-tour")).toMatchObject({
       label: { en: "Bacuit Archipelago: Which tour to choose?", fr: "Archipel de Bacuit : Quel tour choisir ?" },
+      published: false,
+    })
+    expect(getLink("el-nido-tour-a")).toMatchObject({
+      label: { en: "Tour A", fr: "Tour A" },
+      published: false,
+    })
+    expect(getLink("el-nido-tour-b")).toMatchObject({
+      label: { en: "Tour B", fr: "Tour B" },
+      published: false,
+    })
+    expect(getLink("el-nido-tour-c")).toMatchObject({
+      label: { en: "Tour C", fr: "Tour C" },
+      published: false,
+    })
+    expect(getLink("el-nido-tour-d")).toMatchObject({
+      label: { en: "Tour D", fr: "Tour D" },
       published: false,
     })
 

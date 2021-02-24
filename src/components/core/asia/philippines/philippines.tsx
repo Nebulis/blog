@@ -1,16 +1,16 @@
-import { Divider } from "../../divider"
 import styled from "@emotion/styled"
 import { philippinesPrimaryColor, philippinesPrimaryColorDarker } from "./philippines.colors"
 import { ImageAsMedallion } from "../../../images/layout"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
 import { drawSth } from "./console-draw-sth"
-import { ButtonLink, ExternalLink } from "../../links/link"
+import { ButtonLink, ExternalLink, linkBuilder } from "../../links/link"
 import { Title } from "../../title"
 import { Quote } from "../../quote"
 import { Headline } from "../../highlight"
 import { css } from "@emotion/core"
 import React, { FunctionComponent } from "react"
 import philippinesFish from "../../../../images/asia/philippines/fish.svg"
+import { Link } from "gatsby"
 
 const philippinesPartStyle = css`
   color: ${philippinesPrimaryColor};
@@ -20,9 +20,6 @@ export const PhilippinesHeadline: FunctionComponent = ({ children }) => (
     {children}
   </Headline>
 )
-export const PhilippinesDivider = styled(Divider)`
-  background-color: ${philippinesPrimaryColor};
-`
 export const PhilippinesImageAsMedallion = styled(ImageAsMedallion)`
   &.mobile,
   &:hover {
@@ -41,28 +38,35 @@ const philippinesLayout = `
   svg.likes {
     fill: ${philippinesPrimaryColor};
   }
+  header {
+    .menu-entry {
+      border-top: 1px solid ${philippinesPrimaryColor}!important;
+    }
+  }
+  .index-blog-layout-content {
+    .divider {
+      background-color: ${philippinesPrimaryColor};
+    }
+    button.btn,
+    button.btn:disabled,
+    button.btn:hover {
+      background-color: ${philippinesPrimaryColorDarker};
+      border-color: ${philippinesPrimaryColorDarker};
+      color: white;
+    }
+    .comments .active svg {
+      color: ${philippinesPrimaryColor};
+    }
+    .comments .form-control:focus {
+      box-shadow: 0 0 0 0.2rem rgb(122, 174, 222, 0.25);
+      border-color: ${philippinesPrimaryColor}
+    }
+  }
 
-  footer a {
-    color: ${philippinesPrimaryColor};
-  }
-  button.btn,
-  button.btn:disabled,
-  button.btn:hover {
-    background-color: ${philippinesPrimaryColorDarker};
-    border-color: ${philippinesPrimaryColorDarker};
-    color: white;
-  }
-  .comments .active svg {
-    color: ${philippinesPrimaryColor};
-  }
-  .comments .form-control:focus
-   {
-    box-shadow: 0 0 0 0.2rem rgb(122, 174, 222, 0.25);
-    border-color: ${philippinesPrimaryColor}
-  }
-
-  .menu-entry {
-    border-top: 1px solid ${philippinesPrimaryColor}!important;
+  footer {
+    a {
+      color: ${philippinesPrimaryColor};
+    }
   }
 `
 export const IndexPhilippinesBlogLayout = drawer(styled(IndexBlogLayout)`
@@ -94,6 +98,15 @@ export const PhilippinesQuote = styled(Quote)`
     color: ${philippinesPrimaryColor};
   }
 `
+
+export const PhilippinesLink = linkBuilder(styled(Link)`
+  color: ${philippinesPrimaryColor};
+  font-weight: bold;
+  &:visited {
+    color: ${philippinesPrimaryColor};
+  }
+  text-decoration: underline;
+`)
 
 export const PhilippinesExternalLink = styled(ExternalLink)`
   color: ${philippinesPrimaryColor};

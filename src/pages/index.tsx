@@ -328,7 +328,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { windowHeight } = useWindowSize()
   const [country, setCountry] = useState<Country>()
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const lastArticle = getArticles({ development, limit: 1, tags: ["vietnam"] })[0]
+  const lastArticle = getArticles({ development, limit: 1 })[0]
   const Card = lastArticle.card
   const [carouselElement] = useState<CarouselElementType[]>(() => {
     const tmp: CarouselElementType[] = [
