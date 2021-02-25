@@ -40,7 +40,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <PrimaryDivider className="mb0" />
         <ArticlesContainer>
           {articles.map(({ card: Card }, index) =>
-            Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
+            Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3, sizes: "400px" }} /> : null
           )}
         </ArticlesContainer>
       </BlogLayoutWithDrawer>

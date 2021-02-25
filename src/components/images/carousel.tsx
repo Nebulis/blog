@@ -10,28 +10,28 @@ export const CarouselImageQuery: React.FunctionComponent<ExtraImageProps & { ima
     query {
       vietnam1: file(relativePath: { eq: "asia/vietnam/carousel-vietnam.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+          fluid(maxWidth: 1200, quality: 80, webpQuality: 75, srcSetBreakpoints: [1200]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       vietnam2: file(relativePath: { eq: "asia/vietnam/carousel-2-vietnam.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+          fluid(maxWidth: 1200, quality: 80, webpQuality: 75, srcSetBreakpoints: [1200]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       philippines1: file(relativePath: { eq: "asia/philippines/carousel-philippines.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+          fluid(maxWidth: 1200, quality: 80, webpQuality: 75, srcSetBreakpoints: [1200]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       philippines2: file(relativePath: { eq: "asia/philippines/carousel-philippines-2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+          fluid(maxWidth: 1200, quality: 80, webpQuality: 75, srcSetBreakpoints: [1200]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

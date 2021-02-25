@@ -19,6 +19,7 @@ export const SharedCardVietnamImages: React.FunctionComponent<ExtraImageProps & 
   fluidObject = {},
   imgStyle = {},
 }) => {
+  // using 400 so that it looks better on smaller screen
   const data = useStaticQuery(graphql`
     query {
       discoverSouthernVietnam: file(relativePath: { eq: "asia/vietnam/home-vietnam.jpg" }) {
@@ -69,7 +70,7 @@ export const SharedCardVietnamImages: React.FunctionComponent<ExtraImageProps & 
       }
       transportMain: file(relativePath: { eq: "asia/vietnam/transport/transport-vietnam-main.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [400, 600]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
