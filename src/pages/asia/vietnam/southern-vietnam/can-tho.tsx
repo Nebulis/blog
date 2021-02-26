@@ -60,7 +60,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const description = t("quote")
   const googleDescription = t("introduction")
   const transportLinkPublished = development || getLink("transport-vietnam").published
-
   return (
     <>
       <SEO
@@ -322,7 +321,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </section>
           <Divider />
           <section>
-            <VietnamHeadline>{t("visit6.title")}</VietnamHeadline>
+            <VietnamHeadline>{t("visit6.title") || " lol"}</VietnamHeadline>
             <Divider />
             <SectionContent>
               <p className="b tc">{t("visit6.part1")}</p>

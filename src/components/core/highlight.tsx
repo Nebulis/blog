@@ -28,7 +28,7 @@ export const Headline: FunctionComponent<HeadlineProps> = ({ className = "", ima
   }
   return (
     <City className={`headline ${className}`}>
-      <TitleImage src={image} alt={alt} /> {otherWords.length > 0 ? otherWords.join(" ") : { children }}{" "}
+      <TitleImage src={image} alt={alt} /> {otherWords.length > 0 ? <>{otherWords.join(" ")} </> : ""}
       <span className="nowrap">
         {lastWord} <TitleImage src={image} alt={alt} />
       </span>
