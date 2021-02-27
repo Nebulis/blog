@@ -1,6 +1,8 @@
 {
   "quote": "Décor de carte postale, sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre \"Dream List\" de voyage pour cette nouvelle année.",
-  "introduction": "Dans cet article on vous indique quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? Et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan.",
+  "introduction": "Dans cet article on vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan.",
+  "google-description": "Dans cet article on vous indique quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan.",
+  "social-network-description": "Décor de carte postale, plage de sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre \"Dream List\" de voyage pour cette nouvelle année.",
   "what-time-of-year": {
     "part1": "La période la plus favorable pour aller à El Nido est de",
     "part2": "décembre à avril.",
@@ -16,8 +18,13 @@
     "part6": "2 jours pour découvrir les alentours de la ville d’El Nido.",
     "part7": "Ni trop peu, ni pas assez.",
     "part8": "Bien sûr restez plus longtemps fait rêver, comment se passer d’un paysage pareil, mais si vous voulez rester plus longtemps aux Philippines pourquoi ne pas aller découvrir d’autres magnifiques endroits ?",
-    "part9": "Boracay, Coron Island ... ou pourquoi pas la ville de Manille, pour les plus connus.",
-    "part10": "Vous n’avez vraiment que l’embarras du choix."
+    "part9": "Boracay",
+    "part10": ",",
+    "part11": "Coron Island",
+    "part12": " ... ou pourquoi pas la ville de",
+    "part13": "Manille",
+    "part14": ", pour les plus connus.",
+    "part15": "Vous n’avez vraiment que l’embarras du choix."
   },
   "how-much": {
     "part1": "Le plus gros du budget sera consacré au voyage en avion, environ 700€ par personne. La nourriture, les déplacements ou les activités sont bon marché. Pour le logement, il faudra prévoir un budget un peu plus important.",
@@ -95,5 +102,5 @@
     "part1": "♡ Coucou les voyageurs ! ♡",
     "part2": "Et si on vous emmenait dans le joyau des Philippines ? Prenez votre masque et votre tuba et plongez dans ces eaux cristallines qui ne vous laisseront pas insensible."
   },
-  "pinterest": "✈️ Comment bien préparer son voyage aux Philippines? Apportez votre masque et plongez dans ces eaux cristallines. Nous partageons à travers nos articles et nos photos, notre visite aux Philippines. De nombreux conseils et visites guidées pour chaque lieu. Cliquez sur l'image pour le guide complet sur El Nido... \uD83C\uDF0F"
+  "pinterest": "\uD83C\uDF0F Dans cet article on vous indique quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan. Cliquez sur l'image pour le guide complet sur El Nido ... \uD83C\uDF0F"
 }

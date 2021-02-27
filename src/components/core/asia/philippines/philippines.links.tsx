@@ -58,6 +58,11 @@ export const philippinesLinks: CountryLink = {
       label: { fr: "Coron Island", en: "Coron Island" },
     },
     {
+      id: "manilla",
+      published: false,
+      label: { fr: "", en: "" },
+    },
+    {
       id: "el-nido-tour-a",
       published: false,
       label: { fr: "Tour A", en: "Tour A" },

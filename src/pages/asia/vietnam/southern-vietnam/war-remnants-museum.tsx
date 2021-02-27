@@ -55,16 +55,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const { development } = useContext(ApplicationContext)
   const title = t(`common:country.vietnam.card.${id}`)
-  const description = t("quote")
-  const googleDescription = t("introduction")
   const transportLinkPublished = development || getLink("transport-vietnam").published
 
   return (
     <>
       <SEO
         title={title}
-        socialNetworkDescription={description}
-        googleDescription={googleDescription}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
         image={HomeImgUrl}
         location={location}
       />
@@ -73,9 +71,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <ImageAsLandscape>
           <SharedCardVietnamImages image="warMuseumMain" />
         </ImageAsLandscape>
-        <Quote>{description}</Quote>
+        <Quote>{t("quote")}</Quote>
         <Divider />
-        <Introduction>{googleDescription}</Introduction>
+        <Introduction>{t("introduction")}</Introduction>
         <Divider />
         <Where title={t("where.title")}>
           <p>{t("where.part1")}</p>
@@ -214,8 +212,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </GroupOfImages>
               {t("visit2.part10") && <Quote className="b">{t("visit2.part10")}</Quote>}
               <p>{t("visit2.part11")}</p>
-              <p>{t("visit2.part12")}</p>
-              <p>{t("visit2.part13")}</p>
+              <p>
+                {t("visit2.part12")}
+                <VietnamLink to="phu-quoc-island">{t("visit2.part13")}</VietnamLink>
+                {t("visit2.part14")}
+              </p>
+              <p>{t("visit2.part15")}</p>
             </SectionContent>
           </section>
           <Divider />

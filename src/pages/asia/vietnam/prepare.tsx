@@ -80,9 +80,10 @@ import { smallEnd } from "../../../components/core/variables"
 import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
 import { getLink } from "../../../components/core/links/links.utils"
 import HomeImgUrl from "../../../images/asia/vietnam/prepare/prepare-vietnam-main.jpg"
+import SouthernVietnamMapTransport from "../../../images/asia/vietnam/southern-vietnam-map-transport.png"
 import { Title } from "../../../components/core/title"
 import { Quote } from "../../../components/core/quote"
-import { PetitCarreJaune, Table } from "../../../components/layout/layout"
+import { MapContainer, PetitCarreJaune, Table } from "../../../components/layout/layout"
 import { Weather } from "../../../components/core/weather"
 
 const Highlight = styled.span`
@@ -1038,7 +1039,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
           <p>{t("section5.part16")}</p>
           <p>{t("section5.part17")}</p>
-          {/*<SouthVietnamMap />*/}
+          <MapContainer>
+            <img
+              src={SouthernVietnamMapTransport}
+              css={css`
+                max-height: 80vh;
+              `}
+              alt="Southern Vietnam Map Transport"
+            />
+          </MapContainer>
         </Visit>
         <Divider />
         <How title={t("section6.title")} id="transports">

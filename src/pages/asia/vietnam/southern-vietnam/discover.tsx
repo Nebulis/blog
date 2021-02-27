@@ -11,7 +11,6 @@ import {
   WhatTimeOfYear,
   Where,
 } from "../../../../components/core/section"
-import { SouthVietnamMap } from "../../../../components/core/asia/vietnam/south-vietnam-map"
 import {
   CanThoCard,
   CuChiTunnelsCard,
@@ -27,6 +26,7 @@ import {
 } from "../../../../components/images/layout"
 import { Conclusion } from "../../../../components/core/conclusion"
 import HomeImgUrl from "../../../../images/asia/vietnam/home-vietnam.jpg"
+import SouthernVietnamMap from "../../../../images/asia/vietnam/southern-vietnam-map.png"
 import { PageProps } from "gatsby"
 import { useCustomTranslation } from "../../../../i18n"
 import i18n from "i18next"
@@ -39,6 +39,7 @@ import { SharedCardVietnamImages } from "../../../../components/images/asia/viet
 import { Divider } from "../../../../components/core/divider"
 import { Title } from "../../../../components/core/title"
 import { Quote } from "../../../../components/core/quote"
+import { css } from "@emotion/react"
 
 const namespace = "asia/vietnam/southern-vietnam/discover"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -47,26 +48,23 @@ i18n.addResourceBundle("en", namespace, translationEn)
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t("common:country.vietnam.card.discover-southern-vietnam")
-  const description = t("quote")
-  const googleDescription = t("introduction")
-
   return (
     <>
       <SEO
         title={title}
-        socialNetworkDescription={description}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
         image={HomeImgUrl}
         location={location}
-        googleDescription={googleDescription}
       />
       <VietnamBlogLayout page="discover-southern-vietnam" location={location}>
         <Title title={title} linkId="discover-southern-vietnam" />
         <ImageAsLandscape>
           <SharedCardVietnamImages image="discoverSouthernVietnam" />
         </ImageAsLandscape>
-        <Quote>{description}</Quote>
+        <Quote>{t("quote")}</Quote>
         <Divider />
-        <Introduction>{googleDescription}</Introduction>
+        <Introduction>{t("introduction")}</Introduction>
         <WhatTimeOfYear>
           <p>
             {t("what-time-of-year.part1")} <HighLight>{t("what-time-of-year.part2")}</HighLight>
@@ -95,7 +93,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where.part2")}</p>
         </Where>
         <MapContainer>
-          <SouthVietnamMap />
+          <img
+            css={css`
+              max-height: 60vh;
+            `}
+            src={SouthernVietnamMap}
+            alt="Southern Vietnam Map"
+          />
         </MapContainer>
         <Visit>
           <SectionContent>

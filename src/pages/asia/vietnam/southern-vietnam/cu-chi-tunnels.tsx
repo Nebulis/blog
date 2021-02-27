@@ -61,16 +61,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const { development } = useContext(ApplicationContext)
   const title = t(`common:country.vietnam.card.${id}`)
-  const description = t("quote")
-  const googleDescription = t("introduction")
   const transportLinkPublished = development || getLink("transport-vietnam").published
 
   return (
     <>
       <SEO
         title={title}
-        socialNetworkDescription={description}
-        googleDescription={googleDescription}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
         image={HomeImgUrl}
         location={location}
       />
@@ -79,9 +77,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <ImageAsLandscape>
           <SharedCardVietnamImages image="cuChiTunnelsMain" />
         </ImageAsLandscape>
-        <Quote>{description}</Quote>
+        <Quote>{t("quote")}</Quote>
         <Divider />
-        <Introduction>{googleDescription}</Introduction>
+        <Introduction>{t("introduction")}</Introduction>
         <Divider />
         <When>
           <p>{t("when.part1")}</p>

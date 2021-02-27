@@ -21,6 +21,7 @@ const alt = {
   softSeatTrain: "Transport Vietnam Train Soft Seat",
   hardSleeperTrain: "Transport Vietnam Train Hard Sleeper",
   softSleeperTrain: "Transport Vietnam Train Soft Sleeper",
+  grabApplication: "Transport Vietnam Grab Application",
   cardFr1: "Transport Vietnam Pinterest card",
   cardFr2: "Transport Vietnam Pinterest card",
   cardEn1: "Transport Vietnam Pinterest card",
@@ -147,6 +148,13 @@ export const TransportVietnamImages: React.FunctionComponent<ExtraImageProps & {
         }
       }
       softSleeperTrain: file(relativePath: { eq: "asia/vietnam/transport/transport-vietnam-train-soft-sleeper.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      grabApplication: file(relativePath: { eq: "asia/vietnam/transport/transport-vietnam-grab-application.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
