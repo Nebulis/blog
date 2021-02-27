@@ -18,6 +18,7 @@ import {
   PhilippinesBlogLayout,
   PhilippinesExternalLink,
   PhilippinesHeadline,
+  PhilippinesLink,
   PhilippinesQuote,
   PhilippinesTitle,
 } from "../../../../components/core/asia/philippines/philippines"
@@ -51,15 +52,13 @@ i18n.addResourceBundle("en", namespace, translationEn)
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t("common:country.philippines.card.el-nido-paradise")
-  const description = t("quote")
-  const googleDescription = t("introduction")
 
   return (
     <>
       <SEO
         title={title}
-        socialNetworkDescription={description}
-        googleDescription={googleDescription}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
         image={HomeImgUrl}
         location={location}
       />
@@ -70,7 +69,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </ImageAsLandscape>
         <PhilippinesQuote>{t("quote")}</PhilippinesQuote>
         <Divider />
-        <Introduction>{googleDescription}</Introduction>
+        <Introduction>{t("introduction")}</Introduction>
         <WhatTimeOfYear>
           <p>
             {t("what-time-of-year.part1")} <HighLight>{t("what-time-of-year.part2")}</HighLight>
@@ -92,8 +91,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ul>
           <p>{t("how-long.part7")}</p>
           <p>{t("how-long.part8")}</p>
-          <p>{t("how-long.part9")}</p>
-          <p>{t("how-long.part10")}</p>
+          <p>
+            <PhilippinesLink to="boracay">{t("how-long.part9")}</PhilippinesLink>
+            {t("how-long.part10")} <PhilippinesLink to="coron-island">{t("how-long.part11")}</PhilippinesLink>
+            {t("how-long.part12")} <PhilippinesLink to="manilla">{t("how-long.part13")}</PhilippinesLink>
+            {t("how-long.part14")}
+          </p>
+          <p>{t("how-long.part15")}</p>
         </HowLong>
         <HowMuch>
           <p>{t("how-much.part1")}</p>

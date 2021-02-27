@@ -133,6 +133,11 @@ describe("links", () => {
 
     // southern vietnam
     expect(getLink("southern-vietnam")).toMatchObject({ label: { fr: "Sud", en: "Southern" }, published: true })
+    expect(getLink("phu-quoc-island")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+    expect(getLink("ho-chi-minh-city")).toMatchObject({
+      label: { en: "Ho Chi Minh City", fr: "Hô Chi Minh-Ville" },
+      published: false,
+    })
     expect(getLink("cu-chi-tunnels")).toMatchObject({
       label: { fr: "Tunnels de Củ Chi", en: "Củ Chi tunnels" },
       published: true,
@@ -175,6 +180,10 @@ describe("links", () => {
       label: { fr: "Coron Island", en: "Coron Island" },
       published: false,
     })
+    expect(getLink("manilla")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
 
     expect(getLink("el-nido")).toMatchObject({ label: { fr: "El Nido", en: "El Nido" }, published: true })
     expect(getLink("el-nido-paradise")).toMatchObject({
@@ -215,6 +224,12 @@ describe("links", () => {
     // indonesia assertions
     expect(getLink("bali")).toMatchObject({
       label: { en: "Bali", fr: "Bali" },
+      published: false,
+    })
+
+    // other
+    expect(getLink("green-pomelo")).toMatchObject({
+      label: { en: "Green pomelo", fr: "Green pomelo" },
       published: false,
     })
 

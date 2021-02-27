@@ -1,5 +1,5 @@
 import * as path from "path"
-import { CachedLinksMap, ContinentLink, NavigationLink } from "./links.types"
+import { CachedLinksMap, ContinentLink, NavigationLink, OtherLink } from "./links.types"
 import { asiaLinks } from "../asia/asia.links"
 import commonEn from "../../../locales/en/common.json"
 import commonFr from "../../../locales/fr/common.json"
@@ -188,6 +188,14 @@ export const menuLinks: NavigationLink[] = [
   },
 ]
 
+export const fruitLinks: OtherLink[] = [
+  {
+    id: "green-pomelo",
+    label: { fr: "Green pomelo", en: "Green pomelo" },
+    published: false,
+  },
+]
+
 export const noIdeaLinks: NavigationLink[] = [
   {
     id: "home",
@@ -311,5 +319,16 @@ noIdeaLinks.forEach((link) => {
     published: true,
     tags: [],
     kind: "noIdea",
+  })
+})
+
+fruitLinks.forEach((link) => {
+  cachedLinks.set(link.id, {
+    id: link.id,
+    label: link.label,
+    url: path.join("/", getUrl(link)),
+    published: isPublished(link),
+    tags: [],
+    kind: "fruit",
   })
 })

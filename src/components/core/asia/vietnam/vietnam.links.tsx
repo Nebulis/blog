@@ -70,6 +70,22 @@ export const vietnamLinks: CountryLink = {
           published: new Date("2021-01-16T17:00:00.000+08:00"),
         },
         {
+          id: "ho-chi-minh-city",
+          label: {
+            fr: "Hô Chi Minh-Ville",
+            en: "Ho Chi Minh City",
+          },
+          published: false,
+        },
+        {
+          id: "phu-quoc-island",
+          label: {
+            fr: "",
+            en: "",
+          },
+          published: false,
+        },
+        {
           id: "discover-southern-vietnam",
           url: "discover",
           label: {

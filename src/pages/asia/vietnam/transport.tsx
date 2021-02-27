@@ -20,6 +20,7 @@ import {
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
+  ImageAsPortrait,
 } from "../../../components/images/layout"
 import { SharedCardVietnamImages } from "../../../components/images/asia/vietnam/shared-card-vietnam-images"
 import { Quote } from "../../../components/core/quote"
@@ -1442,6 +1443,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <ImageAsLandscape>
             <TransportVietnamImages image="rickshaw" />
           </ImageAsLandscape>
+          <p className="tc i mb3">{t("section4.image-title")}</p>
           <Information title={t("information")}>
             <p>
               {t("section4.information.part1")} <HighLight>{t("section4.information.part2")}</HighLight>{" "}
@@ -1576,6 +1578,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               {t("section6.booking.part1")} <HighLight>{t("section6.booking.part2")}</HighLight>{" "}
               {t("section6.booking.part3")}
             </p>
+            <ImageAsPortrait>
+              <TransportVietnamImages image="grabApplication" />
+            </ImageAsPortrait>
           </Booking>
           <Company title={t("company")}>
             <p>

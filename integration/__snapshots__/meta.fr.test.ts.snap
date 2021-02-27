@@ -150,11 +150,11 @@ exports[`french pages exports meta for public/asia/japan/transports/index.html c
 
 exports[`french pages exports meta for public/asia/japan/transports/index.html correctly 3`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly 1`] = `"Décor de carte postale, sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre \\"Dream List\\" de voyage pour cette nouvelle année."`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly 1`] = `"Décor de carte postale, plage de sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre \\"Dream List\\" de voyage pour cette nouvelle année."`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly 2`] = `"El Nido : Un petit coin de Paradis | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly 3`] = `"Dans cet article on vous indique quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? Et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan."`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly 3`] = `"Dans cet article on vous indique quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan."`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly 1`] = `"Et si on vous emmenait dans le joyau des Philippines sur l’île de Palawan ? Prenez votre masque et votre tuba et plongez dans ces eaux cristallines qui ne vous laisseront pas insensible. Profitez des différents tours appelés \\"Island hopping\\" pour choisir ce qui vous convient le mieux."`;
 
@@ -190,7 +190,7 @@ exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/can-
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/can-tho/index.html correctly 2`] = `"Visite de Cân Thơ et son marché flottant | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/can-tho/index.html correctly 3`] = `"Le récit de notre voyage à Can Tho et plus particulièrement de son marché flottant avec en prime une visite dans une fabrication de feuilles de riz. Dans cet article on vous donne également nos conseils sur comment s’y rendre ? Combien de jours ? Quand partir ? Et où se loger ?"`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/can-tho/index.html correctly 3`] = `"Le récit de notre voyage à Can Tho et plus particulièrement de son marché flottant avec en prime une visite dans une fabrication de feuille de riz. Dans cet article on te donne également nos conseils sur comment s’y rendre ? Combien de jours ? Quand partir ? Et où se loger ?"`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly 1`] = `"Immense ensemble de tunnels souterrains atteignant environ 250 km, ils s’étendent de Hô Chi Minh-Ville jusqu'à la frontière du Cambodge."`;
 
@@ -210,7 +210,7 @@ exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/inde
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly 3`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/my-tho/index.html correctly 1`] = `"Loin de la foule de Hô Chi Minh-Ville, découvrez la ville de Mỹ Tho et partez en excursion en bateau jusqu’à Ben Tre pour découvrir les immenses jardins tropicaux qui vous entourent."`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/my-tho/index.html correctly 1`] = `"Loin de la foule de Hô Chi Minh-Ville, découvrez la ville de Mỹ Tho et surtout partez en excursion en bateau pour découvrir ses grands jardins tropicaux qui vous entourent."`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/my-tho/index.html correctly 2`] = `"Croisière sur le Mékong entre Mỹ Tho et Ben Tre | Blog Voyage"`;
 
