@@ -1,6 +1,6 @@
 import * as React from "react"
 import { FunctionComponent, HTMLAttributes } from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { TitleImage } from "../images/layout"
 
 const style = css`

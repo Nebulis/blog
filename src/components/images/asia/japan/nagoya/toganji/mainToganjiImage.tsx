@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import * as React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { ExtraImageProps } from "../../../../../../types/shared"
 export const MainToganjiImage: React.FunctionComponent<ExtraImageProps> = ({ className = "", fluidObject = {} }) => {
   const data = useStaticQuery(graphql`

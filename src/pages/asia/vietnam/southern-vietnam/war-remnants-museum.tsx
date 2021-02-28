@@ -37,7 +37,7 @@ import {
 import { buildBookingSearchUrl, buildBookingUrl } from "../../../../utils"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { HoChiMinWarMuseum } from "../../../../components/images/asia/vietnam/southern-vietnam/ho-chi-min-war-museum"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"

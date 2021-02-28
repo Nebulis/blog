@@ -15,7 +15,7 @@ import { isLinkPublished, sortByField } from "../../../components/core/links/lin
 import { ApplicationContext } from "../../../components/application"
 import { SharedCardVietnamImages } from "../../../components/images/asia/vietnam/shared-card-vietnam-images"
 import { SharedAsiaImages } from "../../../components/images/asia/shared-asia-images"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 const namespace = "organisation/when-to-go/winter"
 i18n.addResourceBundle("fr", namespace, translationFr)

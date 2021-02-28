@@ -6,6 +6,7 @@ describe("isPublished", () => {
   const _date = Date
   // eslint-disable-next-line jest/no-hooks
   beforeAll(() => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     jest.spyOn(global, "Date").mockImplementation((d) => (d ? new _date(d) : currentDate))
     global.Date.UTC = _date.UTC

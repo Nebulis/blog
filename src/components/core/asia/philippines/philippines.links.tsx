@@ -2,7 +2,7 @@ import { CountryLink } from "../../links/links.types"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
 import { ElNidoParadiseCard, ElNidoWhichTourCard } from "./philippines.card"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 export const philippinesLinks: CountryLink = {
   id: "philippines",

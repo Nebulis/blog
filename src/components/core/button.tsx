@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes, FunctionComponent } from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import { darkButtonColor, darkButtonHoverColor, primaryDarkColor, primaryDarkColor15Darker } from "./variables"
 

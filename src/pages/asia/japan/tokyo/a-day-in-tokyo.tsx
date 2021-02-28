@@ -16,7 +16,7 @@ import { TokyoTakeshitaStreet1Image } from "../../../../components/images/asia/j
 import { TokyoTakeshitaStreet2Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoTakeshitaStreet2Image"
 import { TokyoTakeshitaStreet3Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoTakeshitaStreet3Image"
 import { TokyoTakeshitaStreet4Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoTakeshitaStreet4Image"
-import css from "@emotion/css"
+import { css } from "@emotion/react"
 import { TokyoUenoPark1Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoUenoPark1Image"
 import { TokyoUenoPark2Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoUenoPark2Image"
 import { TokyoUenoPark3Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoUenoPark3Image"

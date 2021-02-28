@@ -38,7 +38,7 @@ import {
 } from "../../../components/core/section"
 import { TransportVietnamImages } from "../../../components/images/asia/vietnam/transport-vietnam-images"
 import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import {
   build12GoAsiaUrl,

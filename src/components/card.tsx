@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useContext } from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import { ApplicationLink, DevelopmentMark } from "./core/links/link"
 import { getLink, getLinkLabel, getLinkUrl } from "./core/links/links.utils"

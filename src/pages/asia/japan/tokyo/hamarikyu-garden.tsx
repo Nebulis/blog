@@ -15,7 +15,7 @@ import { HamarikyuBird2Image } from "../../../../components/images/asia/japan/to
 import { HamarikyuGardenCherry1Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenCherry1Image"
 import { HamarikyuGardenCherry2Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenCherry2Image"
 import { HamarikyuGardenBuilding2Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenBuilding2Image"
-import css from "@emotion/css"
+import { css } from "@emotion/react"
 import { HamarikyuGardenColzaImage } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenColzaImage"
 import { HamarikyuGardenJungleImage } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenJungleImage"
 import { HamarikyuGardenBankImage } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenBankImage"

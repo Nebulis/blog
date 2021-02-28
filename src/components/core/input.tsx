@@ -1,5 +1,5 @@
 import React, { FunctionComponent, InputHTMLAttributes, TextareaHTMLAttributes, useState } from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { IconType } from "react-icons"
 import { backgroundPrimaryColor, primaryColor } from "./variables"
 

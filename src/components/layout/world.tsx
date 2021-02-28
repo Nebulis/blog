@@ -8,7 +8,7 @@ import {
   primaryLightColor,
   smallEnd,
 } from "../core/variables"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { useCustomTranslation } from "../../i18n"
 
 export type Continent = "Asia" | "Europe" | "Africa" | "North America" | "South America" | "Oceania"

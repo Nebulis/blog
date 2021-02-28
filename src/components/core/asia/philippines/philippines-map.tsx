@@ -1,6 +1,6 @@
 import React from "react"
 import { defaultTextStyle, mapProps, mapStyle, PinPoint } from "../../map"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { smallStart } from "../../variables"
 
 const basicTextStyle = css`

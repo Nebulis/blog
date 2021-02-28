@@ -19,7 +19,7 @@ import {
   TwoImagesLeftBigger,
   TwoImagesSameSize,
 } from "../../../../components/images/layout"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { DaigojiTempleImage } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiTempleImage"
 import { DaigojiGarden1Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden1Image"
 import { DaigojiGarden2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden2Image"

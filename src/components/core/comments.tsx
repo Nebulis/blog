@@ -2,7 +2,7 @@ import React, { FunctionComponent, useContext, useEffect, useState } from "react
 import { database } from "../firebase"
 import { Checkbox, Input, Textarea } from "./input"
 import { PrimaryDarkButton } from "./button"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { ExternalLink } from "./links/link"
 import md5 from "md5"
 import styled from "@emotion/styled"
@@ -459,7 +459,6 @@ const Comment: FunctionComponent<
                 }}
               >
                 {new Date(timestamp).toLocaleString(i18n.languageCode === "fr" ? "fr-FR" : "en-GB", {
-                  // @ts-ignore
                   dateStyle: "long",
                   timeStyle: "short",
                 })}

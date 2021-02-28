@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react"
 import * as React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 export const Conclusion: FunctionComponent = ({ children }) => (
   <div

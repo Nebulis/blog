@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { weatherBad, weatherGood } from "../../variables"
 import { defaultTextStyle, mapProps, PinAirport } from "../../map"
 import { vietnamPrimaryColorDarker } from "./vietnam.colors"

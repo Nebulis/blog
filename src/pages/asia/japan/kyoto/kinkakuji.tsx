@@ -10,7 +10,7 @@ import {
   Where,
   WhereToStay,
 } from "../../../../components/core/section"
-import css from "@emotion/css"
+import { css } from "@emotion/react"
 import {
   GroupOfImages,
   ImageAsLandscape,

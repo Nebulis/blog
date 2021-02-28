@@ -1,4 +1,4 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import React, { FunctionComponent } from "react"
 import { useWindowSize } from "../hooks/useWindowSize"
 

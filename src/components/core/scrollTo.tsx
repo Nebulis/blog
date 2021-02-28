@@ -1,4 +1,4 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import React from "react"
 import { FaArrowCircleUp } from "react-icons/all"
 import { useWindowSize } from "../hooks/useWindowSize"

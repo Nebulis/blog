@@ -14,7 +14,7 @@ import {
 } from "./japan.cards"
 import commonFr from "../../../locales/fr/common.json"
 import commonEn from "../../../locales/en/common.json"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 export const japanLinks: CountryLink = {
   id: "japan",

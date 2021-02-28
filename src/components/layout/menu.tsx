@@ -1,4 +1,4 @@
-import css from "@emotion/css"
+import { css } from "@emotion/react"
 import React, {
   FunctionComponent,
   HTMLAttributes,
@@ -444,7 +444,9 @@ const useMeasure = (): [{ ref: MutableRefObject<HTMLDivElement | null> }, Bounda
     width: 0,
     height: 0,
   })
-  const [ro] = React.useState(() => new ResizeObserver(([entry]) => set(entry.contentRect)))
+  const [ro] = React.useState(
+    () => new ResizeObserver((entries: ResizeObserverEntry[]) => entries[0] && set(entries[0].contentRect))
+  )
   React.useEffect(() => {
     if (ref.current) ro.observe(ref.current)
     return () => ro.disconnect()
@@ -478,7 +480,8 @@ export const Tree: React.FunctionComponent<{
     setOpen(open)
   }, [open])
 
-  // @ts-ignore
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore https://github.com/pmndrs/react-spring/issues/912
   const { height, opacity, transform } = useSpring({
     from: { height: 0, opacity: 0, transform: "translate3d(0,0,0)" },
     to: {

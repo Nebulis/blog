@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import {
   Bonus,
   How,

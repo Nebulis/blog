@@ -47,7 +47,8 @@ import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import { ElNidoWhichTourImages } from "../../../../components/images/asia/philippines/el-nido/which-tour"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore https://github.com/Swizec/useDimensions/issues/16
 import useDimensions from "react-use-dimensions"
 

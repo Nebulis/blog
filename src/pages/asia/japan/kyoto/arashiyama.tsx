@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import css from "@emotion/css"
+import { css } from "@emotion/react"
 import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import {
   GroupOfImages,

@@ -2,7 +2,7 @@ import React, { FunctionComponent, HTMLAttributes, useContext, useEffect, useLay
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.utils"
-import { css, Global } from "@emotion/core"
+import { css, Global } from "@emotion/react"
 import { ApplicationContext } from "../application"
 import "./layout.css"
 import "./tachyons.css"

@@ -40,10 +40,12 @@ export const useCustomTranslation = (
   ready: boolean
 } => {
   const { i18n, ...rest } = useTranslation(ns, options)
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   i18n.languageCode = (i18n.language.startsWith("fr") ? "fr" : "en") as Lang
   return {
     ...rest,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     i18n,
   }
