@@ -58,6 +58,13 @@ const headerStyle = css`
     display: flex;
     justify-content: space-between;
   }
+  .right-menu-container.development-fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(100vh / 9.425);
+  }
 
   .facebook:hover,
   .twitter:hover,
@@ -142,7 +149,6 @@ const StaticHeader: FunctionComponent<{
   const context = useContext(ApplicationContext)
   const { open, setOpen } = useContext(MenuContext)
   const { i18n } = useCustomTranslation()
-
   return (
     <header css={headerStyle} className={className}>
       <div className="header">
@@ -205,24 +211,36 @@ const StaticHeader: FunctionComponent<{
             <img src={banner} alt="Welcome to Magic of Travels" id="desktop-banner" />
           </ApplicationLink>
         </div>
-        <div className="right-menu-container">
-          <div className="right-menu-element" />
-          <div className="mr2">
-            <Link to={getPathForFrench(location)} aria-label="Switch to French">
-              <FlagFrance selected={i18n.languageCode === "fr"} />
-            </Link>
-            <Link to={getPathForEnglish(location)} aria-label="Switch to English">
-              <FlagUK selected={i18n.languageCode === "en"} />
-            </Link>
-            {context.development && <FaSearch onClick={onSearch} className="search" />}
-            {context.initialDevelopmentValue ? (
+        {context.initialDevelopmentValue ? (
+          <div className="right-menu-container development-fixed-header">
+            <div className="right-menu-element" />
+            <div className="mr2">
+              <span onClick={() => i18n.changeLanguage("fr")} aria-label="Switch to French">
+                <FlagFrance selected={i18n.languageCode === "fr"} />
+              </span>
+              <span onClick={() => i18n.changeLanguage("en")} aria-label="Switch to English">
+                <FlagUK selected={i18n.languageCode === "en"} />
+              </span>
               <FaCircle
                 onClick={context.toggle}
                 className={`development-mode-button ${context.development ? "development" : "production"}`}
               />
-            ) : null}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="right-menu-container">
+            <div className="right-menu-element" />
+            <div className="mr2">
+              <Link to={getPathForFrench(location)} aria-label="Switch to French">
+                <FlagFrance selected={i18n.languageCode === "fr"} />
+              </Link>
+              <Link to={getPathForEnglish(location)} aria-label="Switch to English">
+                <FlagUK selected={i18n.languageCode === "en"} />
+              </Link>
+              {context.development && <FaSearch onClick={onSearch} className="search" />}
+            </div>
+          </div>
+        )}
       </div>
       <Menu />
       <MobileMenu />

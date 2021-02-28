@@ -20,19 +20,22 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
       }
     `
   )
-  const [development, setDevelopment] = useState(site.siteMetadata.config.context !== "production")
+  const initialDevelopmentValue = site.siteMetadata.config.context !== "production"
+  const [development, setDevelopment] = useState(initialDevelopmentValue)
 
-  // if the URL starts with /en, then we really want to display the page in english
-  if (isEnglishPage(location) && i18n.languageCode !== "en") {
-    i18n.changeLanguage("en")
-  } else if (!isEnglishPage(location) && i18n.languageCode !== "fr") {
-    i18n.changeLanguage("fr")
+  if (!initialDevelopmentValue) {
+    // if the URL starts with /en, then we really want to display the page in english
+    if (isEnglishPage(location) && i18n.languageCode !== "en") {
+      i18n.changeLanguage("en")
+    } else if (!isEnglishPage(location) && i18n.languageCode !== "fr") {
+      i18n.changeLanguage("fr")
+    }
   }
 
   return (
     <ApplicationContext.Provider
       value={{
-        initialDevelopmentValue: site.siteMetadata.config.context !== "production",
+        initialDevelopmentValue,
         development,
         displayComments: site.siteMetadata.config.comments === "enabled",
         toggle: () => setDevelopment(!development),
