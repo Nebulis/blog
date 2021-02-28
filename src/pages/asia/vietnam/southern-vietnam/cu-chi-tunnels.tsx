@@ -186,6 +186,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit1.part3")}</p>
               <p>{t("visit1.part4")}</p>
               <p>{t("visit1.part5")}</p>
+              <p>{t("visit1.part6")}</p>
             </SectionContent>
           </section>
           <Divider />

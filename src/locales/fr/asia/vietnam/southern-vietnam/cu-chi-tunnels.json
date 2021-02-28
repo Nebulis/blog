@@ -58,10 +58,11 @@
   "visit1": {
     "title": "Un peu d'histoire",
     "part1": "Site historique situé à 70 km au Nord-ouest de Hô Chi Minh-Ville.",
-    "part2": "Principalement connus pour avoir aidé les Viêt Cong à se retrancher pendant la guerre du Vietnam, les tunnels ont pourtant d’abord été construits pour la guerre d’Indochine puis agrandi ensuite.",
+    "part2": "Principalement connus pour avoir aidé la Résistance Vietnamienne à se retrancher pendant la guerre du Vietnam, les tunnels ont pourtant d’abord été construits pour la guerre d’Indochine puis agrandi ensuite.",
     "part3": "Ils ont donc été construits à partir des années 1940 par les Viêt Minh et utilisés en premier lieu pour échapper aux soldats français et largement agrandie pour atteindre 250 km lors de la guerre du Vietnam.",
     "part4": "La construction des tunnels a duré environ 25 ans.",
-    "part5": "Ces tunnels ont joué un atout majeur dans la victoire des Viêt Cong lors de la guerre du Vietnam."
+    "part5": "Ces tunnels ont joué un atout majeur dans la victoire de la Résistance lors de la guerre du Vietnam.",
+    "part6": "On vous parle de la Résistance Vietnamienne plus connue également sous le nom de Viet Cong. Cependant ce mot est un terme péjoratif utilisé pendant la guerre du Vietnam, signifiant Communiste Vietnamien, hors les résistants n'étaient pas spécialement communistes. Tous les résistants, peu importe leurs convictions, se battaient ensemble pour l'indépendance et la réunification du Vietnam."
   },
   "visit2": {
     "title": "Vestiges de guerre",
@@ -108,8 +109,8 @@
   },
   "visit6": {
     "title": "À savoir",
-    "part1": "Pour trouver les entrées cachées et détecter l’odeur des Viêt Cong, les Américains ont utilisé des bergers allemands, réputés pour leur flair.",
-    "part2": "Néanmoins pour empêcher cette tactique et pour empêcher les Américains de trouver l'entrée des tunnels, les Viêt Cong ont commencé à utiliser du savon américain pour contrer l’odorat des chiens. Outre le savon, ils volaient également les uniformes américains afin de tromper encore plus le flair des chiens.",
+    "part1": "Pour trouver les entrées cachées et détecter l’odeur de leurs ennemis, les Américains ont utilisé des bergers allemands, réputés pour leur flair.",
+    "part2": "Néanmoins pour empêcher cette tactique et pour contre-attaquer, la Résistance Vietnamienne a utilisé du savon américain pour contrer l’odorat des chiens. Outre le savon, ils volaient également les uniformes américains afin de tromper encore plus le flair des chiens.",
     "part3": "Finalement, les forces américaines ont entraîné des soldats à naviguer dans les tunnels afin de détecter les pièges et la présence des troupes Vietnamienne. Ils étaient appelés les «rats des tunnels»."
   },
   "conclusion": "Ces tunnels nous montrent à quel point les Vietnamiens étaient ingénieux et déterminés. On aurait limite l’impression d’être enterré vivant avant de voir la lumière de sortie, une expérience à faire même si ça reste une construction faite dans la douleur et qu’il ne faut pas l’oublier.",
