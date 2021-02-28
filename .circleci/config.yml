@@ -19,7 +19,7 @@ jobs:
           command: npm run test
       - run:
           name: build
-          command: GATSBY_CPU_COUNT=1 npm run build
+          command: GATSBY_CPU_COUNT=1 CONTEXT=production npm run build
       - run:
           name: integration test
           command: npm run test:integration

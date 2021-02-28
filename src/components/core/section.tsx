@@ -104,15 +104,22 @@ const menuArticleStyle = css`
     color: ${vietnamPrimaryColorDarker};
     border: 3px solid ${vietnamPrimaryColorDarker};
     padding: 1rem;
+
+    & > div:first-of-type {
+      margin-bottom: 0.5rem;
+    }
   }
   .menu-article-container a:hover {
     text-decoration: underline;
   }
 `
-export const MenuArticle: React.FunctionComponent = ({ children }) => {
+export const MenuArticle: React.FunctionComponent<{ title: string }> = ({ children, title }) => {
   return (
     <SectionContent className="menu-article" css={menuArticleStyle}>
-      <div className="menu-article-container">{children}</div>
+      <div className="menu-article-container">
+        <div className="ttu black">{title}</div>
+        {children}
+      </div>
     </SectionContent>
   )
 }
@@ -205,8 +212,8 @@ const homeSectionStyle = css`
     margin-bottom: 1rem;
   }
 `
-export const HomeSection: FunctionComponent = ({ children }) => (
-  <h2 className="tc ttu mb4-l" css={homeSectionStyle}>
+export const HomeSection: FunctionComponent<{ className?: string }> = ({ children, className = "" }) => (
+  <h2 className={`tc ttu mb4-l ${className}`} css={homeSectionStyle}>
     {children}
   </h2>
 )

@@ -23,12 +23,12 @@ i18n.addResourceBundle("en", namespace, translationEn)
 
 const elements: OrganisationCard[] = [
   {
-    label: "common:country.vietnam.southern-vietnam",
+    label: "common:country.vietnam.title",
     image: SharedCardVietnamImages,
     imageProps: {
       image: "discoverSouthernVietnam",
     },
-    to: "southern-vietnam",
+    to: "vietnam",
   },
   {
     label: "common:country.philippines.title",

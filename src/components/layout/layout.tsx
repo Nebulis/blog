@@ -368,6 +368,9 @@ export const CityArticleContainer = styled.div`
 export const MapContainer = styled.div`
   overflow: hidden;
   text-align: center;
+  & > img {
+    max-height: 80vh;
+  }
 `
 
 export const Table = styled.table`
