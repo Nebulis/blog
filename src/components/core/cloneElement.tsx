@@ -1,5 +1,5 @@
 // https://github.com/emotion-js/emotion/issues/1404
-import { jsx } from "@emotion/core"
+import { jsx } from "@emotion/react"
 
 export const cloneElement = (element: any, props: any, ...children: any) =>
   jsx(

@@ -1,6 +1,8 @@
+/// <reference types="@emotion/react/types/css-prop" />
+
 import { ComponentType } from "react"
-import { FluidObject } from "gatsby-image"
-import { InterpolationWithTheme } from "@emotion/core"
+import { FluidObject, GatsbyImageOptionalProps } from "gatsby-image"
+import { SerializedStyles } from "@emotion/react"
 
 export type Status = "INITIAL" | "LOADING" | "SUCCESS" | "ERROR"
 
@@ -17,8 +19,8 @@ export interface ExtraCardProps {
 export type ExtraImageProps = {
   className?: string
   fluidObject?: Partial<FluidObject>
-  imgStyle?: object
-  css?: InterpolationWithTheme<any>
+  imgStyle?: GatsbyImageOptionalProps["imgStyle"]
+  css?: SerializedStyles
   onLoad?: (path: string) => void
 }
 

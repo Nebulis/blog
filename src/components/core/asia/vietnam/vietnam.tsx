@@ -8,7 +8,7 @@ import { ButtonLink, ExternalLink, linkBuilder } from "../../links/link"
 import { Link } from "gatsby"
 import { Headline } from "../../highlight"
 import hat from "../../../../images/asia/vietnam/hat.svg"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { TFunction } from "i18next"
 import { WeatherEntry } from "../../../../types/shared"
 

@@ -27,7 +27,7 @@ import { SensojiGarden1Image } from "../../../../components/images/asia/japan/to
 import { SensojiGarden2Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiGarden2Image"
 import { SensojiGarden3Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiGarden3Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import css from "@emotion/css"
+import { css } from "@emotion/react"
 import { largeStart } from "../../../../components/core/variables"
 import {
   JapanDivider,

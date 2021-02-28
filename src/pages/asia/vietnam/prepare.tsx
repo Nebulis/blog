@@ -34,7 +34,7 @@ import {
   WhereToStay,
 } from "../../../components/core/section"
 import { ApplicationContext } from "../../../components/application"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { PrepareVietnamImages } from "../../../components/images/asia/vietnam/prepare-vietnam-images"
 import { Comments } from "../../../components/core/comments"
 import styled from "@emotion/styled"

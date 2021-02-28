@@ -10,7 +10,7 @@ import {
 } from "./vietnam.cards"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 export const vietnamLinks: CountryLink = {
   id: "vietnam",

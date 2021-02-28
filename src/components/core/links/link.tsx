@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import { GatsbyLinkProps, Link } from "gatsby"
 import { FaExternalLinkAlt } from "react-icons/all"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import React, { AnchorHTMLAttributes, ComponentType, FunctionComponent, useContext } from "react"
 import { getLink, getLinkUrl } from "./links.utils"
 import { ApplicationContext } from "../../application"

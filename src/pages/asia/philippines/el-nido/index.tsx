@@ -25,7 +25,7 @@ import { philippinesLinks } from "../../../../components/core/asia/philippines/p
 import { ElNidoParadiseCard } from "../../../../components/core/asia/philippines/philippines.card"
 import { PageProps } from "gatsby"
 import { TitleImage } from "../../../../components/images/layout"
-import { jsx } from "@emotion/core"
+import { jsx } from "@emotion/react"
 import { SharedPhilippinesImages } from "../../../../components/images/asia/philippines/shared-philippines-images"
 import { PageQuote } from "../../../../components/core/quote"
 import { Divider } from "../../../../components/core/divider"

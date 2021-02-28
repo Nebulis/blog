@@ -1,4 +1,4 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import React, { useContext, useEffect, useState } from "react"
 import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react-icons/all"
 import { backgroundPrimaryColor, mobileEnd } from "./variables"

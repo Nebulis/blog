@@ -9,10 +9,8 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:jest/all",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint",
-    "prettier/react",
   ],
-  plugins: ["react-hooks"],
+  plugins: ["react-hooks", "@emotion"],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module",
@@ -27,6 +25,8 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-ts-ignore": "off",
     "react/prop-types": "off",
@@ -35,5 +35,6 @@ module.exports = {
     "array-callback-return": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
+    "@emotion/pkg-renaming": "error",
   },
 }

@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
-import { css, jsx } from "@emotion/core"
+import { css, jsx } from "@emotion/react"
 import cherryBlossom from "../../../../images/asia/japan/cherry-blossom.png"
 import { getLinkLabel, isLinkPublished } from "../../../../components/core/links/links.utils"
 import { ApplicationLink } from "../../../../components/core/links/link"

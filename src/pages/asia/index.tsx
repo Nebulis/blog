@@ -16,7 +16,7 @@ import asiaIndexFr from "../../locales/fr/asia/index.json"
 import asiaIndexEn from "../../locales/en/asia/index.json"
 import { PageProps } from "gatsby"
 import VietnamImage from "../../images/asia/vietnam/home-vietnam.jpg"
-import { jsx } from "@emotion/core"
+import { jsx } from "@emotion/react"
 import { SharedAsiaImages } from "../../components/images/asia/shared-asia-images"
 
 const namespace = "asia/index"

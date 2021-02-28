@@ -1,5 +1,5 @@
 import React, { FunctionComponent, HTMLAttributes, useContext, useState } from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { cloneElement } from "../core/cloneElement"

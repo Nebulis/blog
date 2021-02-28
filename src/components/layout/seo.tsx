@@ -53,6 +53,7 @@ const SEO: FunctionComponent<SEOProps> = ({
   const metaImage = `${getHostname(location)}${image || DefaultImgUrl}`
   const metaLang = lang || i18n.languageCode
   return (
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore hreflang :(
     <Helmet
       htmlAttributes={{

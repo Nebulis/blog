@@ -21,7 +21,7 @@ import {
   WhereToStay,
 } from "../../../../components/core/section"
 import { NagoyaEntrance1Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaEntrance1Image"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { NagoyaEntrance2Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaEntrance2Image"
 import { NagoyaEntrance3Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaEntrance3Image"
 import { NagoyaHimeji1Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaHimeji1Image"

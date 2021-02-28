@@ -1,5 +1,5 @@
 import React, { FunctionComponent, SVGAttributes } from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { navigate } from "gatsby"
 import { japanPrimaryColor } from "./japan.variables"
 import { getLink, getLinkUrl } from "../links/links.utils"

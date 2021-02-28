@@ -1,6 +1,6 @@
 import * as React from "react"
 import { FunctionComponent, HTMLAttributes } from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import {
   FaBed,
   FaBiohazard,
@@ -131,7 +131,11 @@ interface TitleOptions {
   icon2?: React.ComponentType
 }
 const isIconBuilder = (obj: unknown): obj is IconBuilder => {
-  return obj && typeof obj === "object" && "build" in obj
+  // can't simplify :shrug:
+  if (obj && typeof obj === "object" && "build" in obj) {
+    return true
+  }
+  return false
 }
 export const titleBuilder = ({
   translationKey,

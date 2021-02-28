@@ -15,7 +15,7 @@ import { ExtraImageLinkProps } from "../../types/shared"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { ApplicationLink } from "../core/links/link"
 import React, { ComponentType } from "react"
-import { css, jsx } from "@emotion/core"
+import { css, jsx } from "@emotion/react"
 import styled from "@emotion/styled"
 
 const margin = 20
@@ -101,6 +101,7 @@ export const CountryContainer: React.FunctionComponent<{
       <div className="overlay" />
       {jsx(Image, {
         fluidObject: { aspectRatio: 4 / 3 },
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore looks like the value is transformed to something different :)
         css: css`
           ${customCss}

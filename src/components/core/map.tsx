@@ -1,5 +1,5 @@
 import React, { SVGProps, FunctionComponent, SVGAttributes } from "react"
-import { css, SerializedStyles } from "@emotion/core"
+import { css, SerializedStyles } from "@emotion/react"
 import { getLink, getLinkUrl } from "./links/links.utils"
 import { navigate } from "gatsby"
 import { Lang } from "./links/links.types"

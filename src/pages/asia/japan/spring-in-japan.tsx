@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { SectionContent, WhatTimeOfYear, Where } from "../../../components/core/section"
 import SEO from "../../../components/layout/seo"
 import { Conclusion } from "../../../components/core/conclusion"

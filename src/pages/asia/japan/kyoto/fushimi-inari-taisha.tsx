@@ -9,7 +9,7 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { FushimiTorii1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTorii1Image"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { FushimiTorii2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTorii2Image"
 import { FushimiTemple1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTemple1Image"
 import { FushimiTemple2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTemple2Image"

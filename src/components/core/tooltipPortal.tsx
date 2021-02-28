@@ -40,6 +40,7 @@ export const MouseToolTip: FunctionComponent = ({ children }) => {
   // this is use in combination with tooltip content.
   // we try to find how many elements in the tooltip content so that ew change the
   // offset accordingly (for instance in transport in vietnam page, multiple elements are provided
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const childrenLength = React.Children.count(children?.props?.children)
   const offset = clientY > 80 ? -30 - 20 * childrenLength : 30

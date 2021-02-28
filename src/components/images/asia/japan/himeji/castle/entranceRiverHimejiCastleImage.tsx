@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import * as React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 export const EntranceRiverHimejiCastleImage = ({ className = "" }: { className?: string }) => {
   const data = useStaticQuery(graphql`
     query {

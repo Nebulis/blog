@@ -10,7 +10,7 @@ import {
 } from "../../../../components/images/layout"
 import { MainToganjiImage } from "../../../../components/images/asia/japan/nagoya/toganji/mainToganjiImage"
 import { How, When, Where, HowLong, HowMuch, WhereToStay, Visit } from "../../../../components/core/section"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { ToganjiEntrance1Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiEntrance1Image"
 import { ToganjiEntrance2Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiEntrance2Image"
 import { ToganjiStatue1Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiStatue1Image"

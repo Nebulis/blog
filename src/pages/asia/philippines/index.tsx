@@ -16,7 +16,7 @@ import {
 import { PageProps } from "gatsby"
 import { TitleImage } from "../../../components/images/layout"
 import { ExtraCardProps } from "../../../types/shared"
-import { jsx } from "@emotion/core"
+import { jsx } from "@emotion/react"
 import { SharedPhilippinesImages } from "../../../components/images/asia/philippines/shared-philippines-images"
 import i18n from "i18next"
 import asiaIndexFr from "../../../locales/fr/asia/philippines/index.json"

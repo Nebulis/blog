@@ -1,7 +1,7 @@
 import React from "react"
 import { useCustomTranslation } from "../../../../i18n"
 import { defaultTextStyle, mapProps, mapStyle } from "../../map"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 interface Country {
   id: string
@@ -69,7 +69,7 @@ export const CountryPath: React.FunctionComponent<CountryProps> = ({ country, ..
   <path {...country} {...props} />
 )
 
-export const MekongRiverMap: React.FunctionComponent<{}> = () => {
+export const MekongRiverMap: React.FunctionComponent = () => {
   const { t } = useCustomTranslation(["asia/vietnam/southern-vietnam/my-tho", "common"])
 
   return (

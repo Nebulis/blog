@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
-import { css, jsx } from "@emotion/core"
+import { css, jsx } from "@emotion/react"
 import styled from "@emotion/styled"
 import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"

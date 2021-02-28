@@ -26,7 +26,7 @@ import { SouthVietnamCard } from "../../../../components/core/asia/vietnam/vietn
 import { PageProps } from "gatsby"
 import SouthernVietnamImage from "../../../../images/asia/vietnam/southern-vietnam/home-southern-vietnam.jpg"
 import { TitleImage } from "../../../../components/images/layout"
-import { jsx } from "@emotion/core"
+import { jsx } from "@emotion/react"
 import { SharedVietnamImages } from "../../../../components/images/asia/vietnam/shared-vietnam-images"
 import { PageQuote } from "../../../../components/core/quote"
 import { Divider } from "../../../../components/core/divider"
