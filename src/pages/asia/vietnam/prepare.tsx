@@ -629,7 +629,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
         <Divider />
-        <MenuArticle>
+        <MenuArticle title={t("index")}>
           <div>
             <a href="#visa">{t("section1.title")}</a>
           </div>
@@ -1040,13 +1040,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("section5.part16")}</p>
           <p>{t("section5.part17")}</p>
           <MapContainer>
-            <img
-              src={SouthernVietnamMapTransport}
-              css={css`
-                max-height: 80vh;
-              `}
-              alt="Southern Vietnam Map Transport"
-            />
+            <img src={SouthernVietnamMapTransport} alt="Southern Vietnam Map Transport" />
           </MapContainer>
         </Visit>
         <Divider />

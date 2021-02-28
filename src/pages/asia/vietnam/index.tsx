@@ -17,13 +17,14 @@ import {
   ArticlesContainer,
   GoToAllArticlesContainer,
   MainCardContainer,
+  MapContainer,
   MedallionContainer,
 } from "../../../components/layout/layout"
 import { useCustomTranslation } from "../../../i18n"
 import { PageProps } from "gatsby"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 import { TitleImage } from "../../../components/images/layout"
-import { jsx } from "@emotion/react"
+import { css, jsx } from "@emotion/react"
 import { SharedVietnamImages } from "../../../components/images/asia/vietnam/shared-vietnam-images"
 import i18n from "i18next"
 import asiaIndexFr from "../../../locales/fr/asia/vietnam/index.json"
@@ -31,6 +32,7 @@ import asiaIndexEn from "../../../locales/en/asia/vietnam/index.json"
 import { PageQuote } from "../../../components/core/quote"
 import { Divider } from "../../../components/core/divider"
 import { WeatherForHomePage } from "../../../components/core/weather"
+import HomeVietnamImage from "../../../images/asia/vietnam/home-vietnam-map.png"
 
 const namespace = "asia/vietnam/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
@@ -57,7 +59,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote>{t("introduction.section1")}</PageQuote>
           <PageQuote position="none">{t("introduction.section2")}</PageQuote>
         </SectionContent>
-        <WeatherForHomePage entries={vietnamWeatherEntries(t)} />
         {false && (
           <>
             <Divider />
@@ -102,6 +103,27 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
         </GoToAllArticlesContainer>
+        <Divider />
+        <HomeSection
+          css={css`
+            font-size: 1.38316rem; // h3
+          `}
+        >
+          {t("weather")}
+        </HomeSection>
+        <WeatherForHomePage entries={vietnamWeatherEntries(t)} />
+        <Divider />
+        <HomeSection
+          css={css`
+            font-size: 1.38316rem; // h3
+          `}
+        >
+          {t("map")}
+        </HomeSection>
+        <MapContainer>
+          <img src={HomeVietnamImage} alt="Home Vietnam Image" />
+        </MapContainer>
+        <Divider />
       </VietnamBlogLayout>
     </>
   )

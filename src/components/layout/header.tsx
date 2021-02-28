@@ -61,7 +61,6 @@ const headerStyle = css`
   .right-menu-container.development-fixed-header {
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
     height: calc(100vh / 9.425);
   }
@@ -159,6 +158,7 @@ const StaticHeader: FunctionComponent<{
               target="_blank"
               rel="noopener noreferrer"
               aria-labelledby="facebook-label"
+              className="ml1"
             >
               <span id="facebook-label" hidden>
                 Go to Facebook

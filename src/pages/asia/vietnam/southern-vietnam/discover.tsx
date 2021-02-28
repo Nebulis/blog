@@ -95,7 +95,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <MapContainer>
           <img
             css={css`
-              max-height: 60vh;
+              max-height: 60vh !important;
             `}
             src={SouthernVietnamMap}
             alt="Southern Vietnam Map"

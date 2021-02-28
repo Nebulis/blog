@@ -803,7 +803,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
         <Divider />
-        <MenuArticle>
+        <MenuArticle title={t("index")}>
           <div>
             <a href="#plane">{t("section1.title")}</a>
           </div>
@@ -1040,7 +1040,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
           <p>{t("section3.part6")}</p>
         </section>
-        <MenuArticle>
+        <MenuArticle title={t("index")}>
           <div>
             <a href="#bus">{t("section3.bus.title")}</a>
           </div>
