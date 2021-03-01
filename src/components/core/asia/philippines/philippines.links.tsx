@@ -44,12 +44,14 @@ export const philippinesLinks: CountryLink = {
           published: new Date("2021-02-27T17:00:00.000+08:00"),
         },
         {
-          id: "tour-a",
+          id: "el-nido-tour-a",
+          url: "tour-a",
           published: false,
           label: { fr: "Tour A", en: "Tour A" },
         },
         {
-          id: "tour-b",
+          id: "el-nido-tour-b",
+          url: "tour-b",
           published: false,
           label: { fr: "Tour B", en: "Tour B" },
         },
