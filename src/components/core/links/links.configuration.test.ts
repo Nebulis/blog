@@ -194,11 +194,11 @@ describe("links", () => {
       label: { en: "Bacuit Archipelago: Which tour to choose?", fr: "Archipel de Bacuit : Quel tour choisir ?" },
       published: true,
     })
-    expect(getLink("el-nido-tour-a")).toMatchObject({
+    expect(getLink("tour-a")).toMatchObject({
       label: { en: "Tour A", fr: "Tour A" },
       published: false,
     })
-    expect(getLink("el-nido-tour-b")).toMatchObject({
+    expect(getLink("tour-b")).toMatchObject({
       label: { en: "Tour B", fr: "Tour B" },
       published: false,
     })

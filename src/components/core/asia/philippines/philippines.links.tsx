@@ -43,6 +43,16 @@ export const philippinesLinks: CountryLink = {
           },
           published: new Date("2021-02-27T17:00:00.000+08:00"),
         },
+        {
+          id: "tour-a",
+          published: false,
+          label: { fr: "Tour A", en: "Tour A" },
+        },
+        {
+          id: "tour-b",
+          published: false,
+          label: { fr: "Tour B", en: "Tour B" },
+        },
       ],
     },
   ],
@@ -61,16 +71,6 @@ export const philippinesLinks: CountryLink = {
       id: "manilla",
       published: false,
       label: { fr: "", en: "" },
-    },
-    {
-      id: "el-nido-tour-a",
-      published: false,
-      label: { fr: "Tour A", en: "Tour A" },
-    },
-    {
-      id: "el-nido-tour-b",
-      published: false,
-      label: { fr: "Tour B", en: "Tour B" },
     },
     {
       id: "el-nido-tour-c",

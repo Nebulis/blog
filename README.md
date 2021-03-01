@@ -1,5 +1,9 @@
 [![CircleCI](https://circleci.com/gh/Nebulis/blog.svg?style=svg)](https://circleci.com/gh/Nebulis/blog)
 
+- node reset
+- npm run plop -- -- --pagePath asia/philippines/el-nido/el-nido-which-tour
+- node resize
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
