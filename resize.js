@@ -8,7 +8,7 @@ const matches1 = glob.sync(`Photos/h/*.{png,jpg,jpeg}`)
 const matches2 = glob.sync(`Photos/w/*.{png,jpg,jpeg}`)
 // const MAX_WIDTH = 1200 // portrait
 // const MAX_WIDTH = 1800
-const QUALITY = 60
+const QUALITY = 80
 
 Promise.all(
   matches1.map(async (match) => {
@@ -32,7 +32,7 @@ Promise.all(
     const stream = sharp(match)
     const info = await stream.metadata()
 
-    const width = Math.min(1200, info.width)
+    const width = Math.min(1800, info.width)
 
     const optimizedName = match.replace(/(\..+)$/, (match, ext) => `-optimized${ext}`)
     const method = info.format === "png" ? "png" : "jpeg"

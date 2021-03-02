@@ -1,7 +1,7 @@
 import { CountryLink } from "../../links/links.types"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
-import { ElNidoParadiseCard, ElNidoWhichTourCard } from "./philippines.card"
+import { ElNidoParadiseCard, ElNidoTourACard, ElNidoWhichTourCard } from "./philippines.card"
 import { css } from "@emotion/react"
 
 export const philippinesLinks: CountryLink = {
@@ -46,8 +46,12 @@ export const philippinesLinks: CountryLink = {
         {
           id: "el-nido-tour-a",
           url: "tour-a",
-          published: false,
-          label: { fr: "Tour A", en: "Tour A" },
+          published: new Date("2021-03-06T17:00:00.000+08:00"),
+          card: ElNidoTourACard,
+          label: {
+            fr: commonFr.country.philippines.card["el-nido-tour-a"],
+            en: commonEn.country.philippines.card["el-nido-tour-a"],
+          },
         },
         {
           id: "el-nido-tour-b",

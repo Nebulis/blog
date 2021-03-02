@@ -8,6 +8,47 @@ import commonFr from "./locales/fr/common.json"
 
 export const configureI18n = () => {
   i18n
+    .use({
+      type: "postProcessor",
+      name: "nameOfProcessor",
+      process: function (value: string) {
+        let mode: "normal" | "bold" | "italic" = "normal"
+        const elements: React.ReactNode[] = []
+        let currentString = ""
+        if (value.includes("#") || value.includes("_")) {
+          ;[...value].forEach((v) => {
+            if (v === "#" && mode === "normal") {
+              elements.push(currentString)
+              currentString = ""
+              mode = "bold"
+            } else if (v === "_" && mode === "normal") {
+              elements.push(currentString)
+              currentString = ""
+              mode = "italic"
+            } else if (v === "#" && mode === "bold") {
+              elements.push(<span className="b">{currentString}</span>)
+              currentString = ""
+              mode = "normal"
+            } else if (v === "_" && mode === "italic") {
+              elements.push(<span className="i">{currentString}</span>)
+              currentString = ""
+              mode = "normal"
+            } else {
+              currentString += v
+            }
+          })
+          elements.push(currentString)
+          return (
+            <>
+              {elements.map((element, index) => (
+                <React.Fragment key={index}>{element}</React.Fragment>
+              ))}
+            </>
+          )
+        }
+        return value
+      },
+    })
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
@@ -15,6 +56,7 @@ export const configureI18n = () => {
         en: { common: commonEn },
         fr: { common: commonFr },
       },
+      postProcess: ["nameOfProcessor"],
       fallbackLng: "fr",
       load: "languageOnly",
       debug: process?.env?.CONTEXT !== "production",

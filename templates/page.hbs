@@ -35,23 +35,21 @@ i18n.addResourceBundle("en", namespace, translationEn)
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.{{getCountry pagePath}}.card.${id}`)
-  const description = t("quote")
-  const googleDescription = t("introduction")
 
   return (
     <>
       <SEO
         title={title}
-        socialNetworkDescription={description}
-        googleDescription={googleDescription}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
         image={HomeImgUrl}
         location={location}
       />
       <{{uppercase (getCountry pagePath)}}BlogLayout page={id} location={location}>
         <{{uppercase (getCountry pagePath)}}Title title={title} linkId={id} />
-        <{{uppercase (getCountry pagePath)}}Quote>{description}</{{uppercase (getCountry pagePath)}}Quote>
+        <{{uppercase (getCountry pagePath)}}Quote>{t("quote")}</{{uppercase (getCountry pagePath)}}Quote>
         <Divider />
-        <Introduction>{googleDescription}</Introduction>
+        <Introduction>{t("introduction")}</Introduction>
         <Divider />
         <When>
           <p>{t("when.part1")}</p>

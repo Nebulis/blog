@@ -266,6 +266,16 @@ export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any> & { credit?
     {title && <div className="title tc underline ttu">{title}</div>}
   </div>
 )
+export const Panorama = styled(ImageAsLandscape)`
+  @media (min-width: ${mediumStart}) {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    .gatsby-image-wrapper {
+      max-height: 70vh;
+    }
+  }
+`
 
 const twoImagesSameSizeStyles = css`
   margin-right: auto;
