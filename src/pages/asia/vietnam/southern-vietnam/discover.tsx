@@ -2,7 +2,6 @@ import React from "react"
 import SEO from "../../../../components/layout/seo"
 import { VietnamBlogLayout, VietnamHeadline, VietnamLink } from "../../../../components/core/asia/vietnam/vietnam"
 import {
-  HighLight,
   HowLong,
   HowMuch,
   Introduction,
@@ -66,17 +65,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
         <WhatTimeOfYear>
-          <p>
-            {t("what-time-of-year.part1")} <HighLight>{t("what-time-of-year.part2")}</HighLight>
-          </p>
+          <p>{t("what-time-of-year.part1")}</p>
+          <p>{t("what-time-of-year.part2")}</p>
           <p>{t("what-time-of-year.part3")}</p>
-          <p>{t("what-time-of-year.part4")}</p>
         </WhatTimeOfYear>
         <HowLong>
-          <p>
-            <HighLight>{t("how-long.part1")}</HighLight> {t("how-long.part2")}
-          </p>
-          <p>{t("how-long.part3")}</p>
+          <p>{t("how-long.part1")}</p>
+          <p>{t("how-long.part2")}</p>
         </HowLong>
         <HowMuch>
           <p>{t("how-much.part1")}</p>

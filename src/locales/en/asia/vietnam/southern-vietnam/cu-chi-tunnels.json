@@ -4,19 +4,17 @@
   "google-description": "With this article we try to explain to you what the Cu Chi tunnels are. We take you with us to visit them and discover the history of Vietnam. We answer all your questions: How to get there? Why ? When? How long and at what period? We also tell you the price and where to stay.",
   "social-network-description": "Huge network of underground tunnels reaching about 250 km, from Ho Chi Minh City to the border of Cambodia.",
   "when": {
-    "part1": "Open every day from 8h to 17h."
+    "part1": "Open every day from #8h to 17h#"
   },
   "how": {
     "part1": "Several modes of transport exist from Ho Chi Minh City.",
-    "part2": "By Scooter, Bus, Taxi or",
-    "part3": "Guided Tour",
-    "part4": ", which is the best solution, in our opinion.",
-    "part5": "If you plan to go there by bus, wew made you a route on google map from the nearest bust station of the backpacker street, the Tham Street.",
-    "part6": "Ben Dinh:",
+    "part2": "By Scooter, Bus, Taxi or #Guided Tour#, which is the best solution, in our opinion.",
+    "part3": "If you plan to go there by bus, wew made you a route on google map from the nearest bust station of the backpacker street, the Tham Street.",
+    "part4": "#Ben Dinh#:",
+    "part5": "route",
+    "part6": "#Ben Duoc#:",
     "part7": "route",
-    "part8": "Ben Duoc:",
-    "part9": "route",
-    "part10": "More information about"
+    "part8": "More information about"
   },
   "how-long": {
     "part1": "Allow at least half a day. Starting from Ho Chi Minh City, it takes about 2 hours (one way) depending on traffic and weather.",
@@ -26,19 +24,16 @@
     "part5": " like for almost all guided tours, we were there 15 minutes before) and the return time was around 15h."
   },
   "what-time-of-year": {
-    "part1": "As the tunnels are located in Southern Vietnam, the best season to visit is definitely during the dry season, from",
-    "part2": "December to April",
-    "part3": "Nothing prevents you from going there during the rainy season since the tunnels can't be flooded. That being said the tunnels will transform into a very muddy place, because of humidity and rain, and it will be much less pleasant to visit. Take note that inside the tunnels you will have to walk in squatting position most of the time.",
-    "part4": "We went there in February, Ho Chi Minh City was quite crowded but we felt it might be the case all year round. On the other hand during our visits to the tunnels or on the Mekong Delta it was quite deserted."
+    "part1": "As the tunnels are located in Southern Vietnam, the best season to visit is definitely during the dry season, from #December to April#.",
+    "part2": "Nothing prevents you from going there during the rainy season since the tunnels can't be flooded. That being said the tunnels will transform into a very muddy place, because of humidity and rain, and it will be much less pleasant to visit. Take note that inside the tunnels you will have to walk in squatting position most of the time.",
+    "part3": "We went there in February, Ho Chi Minh City was quite crowded but we felt it might be the case all year round. On the other hand during our visits to the tunnels or on the Mekong Delta it was quite deserted."
   },
   "how-much": {
     "part1": "The price varies depending on your mode of transport. If you book a guided tour it will also depends on the agency.",
     "part2": "We booked our ",
     "part3": "guided tour on Tripadvisor",
     "part4": " and we payed around $15 per person, all inclusive",
-    "part5": "If you reach the tunnels by yourself, you will have to pay the entrance ticket. We do not know exactly the price, we have found different prices, from 90,000 VND to 120,000 VND depending on the site. Expect to pay",
-    "part6": "120,000 VND",
-    "part7": ", which is around $6."
+    "part5": "If you reach the tunnels by yourself, you will have to pay the entrance ticket. We do not know exactly the price, we have found different prices, from 90,000 VND to 120,000 VND depending on the site. Expect to pay #120,000 VND#, which is around $6."
   },
   "where-to-stay": {
     "part1": "We advise you to book a hotel in Ho Chi Minh City.",
@@ -49,41 +44,39 @@
     "part6": "Compare and book your hotel in Ho Chi Minh City."
   },
   "visit": {
-    "part1": "First of all, there are two different sites to visit the tunnels:",
-    "part2": "Ben Dinh et Ben Duoc.",
-    "part3": "Ben Dinh is the nearer but it's also said to be the more touristy, whereas Ben Duoc is said to be the most authentic, from the different opinions we gathered.",
-    "part4": "We didn't pay attention while booking at all. We only booked what suits best our needs, but it seems that we have been to Ben Duoc.",
-    "part5": "We don't advice you to think to much about which site to choose, the less touristy site today might be the more touristy site tomorrow ..."
+    "part1": "First of all, there are two different sites to visit the tunnels: #Ben Dinh et Ben Duoc#. Ben Dinh is the nearer but it's also said to be the more touristy, whereas Ben Duoc is said to be the most authentic, from the different opinions we gathered.",
+    "part2": "We didn't pay attention while booking at all. We only booked what suits best our needs, but it seems that we have been to Ben Duoc.",
+    "part3": "We don't advice you to think to much about which site to choose, the less touristy site today might be the more touristy site tomorrow ..."
   },
   "visit1": {
     "title": "A bit of history",
     "part1": "Historic site located 70 km northwest of Ho Chi Minh City.",
     "part2": "Mainly known because the Vietnamese Resistance were entrenched inside during the Vietnam War, the tunnels were first built during Indochina War.",
-    "part3": "The construction started during the 1940s by the Viet Minh. The tunnels were used primarily to escape from French soldiers and during the Vietnam War they were enlarged to reach 250 km.",
-    "part4": "The construction took about 25 years.",
+    "part3": "The construction started during the #1940s# by the Viet Minh. The tunnels were used primarily to escape from French soldiers and during the Vietnam War they were enlarged to reach #250 km#.",
+    "part4": "#The construction took about 25 years#.",
     "part5": "These tunnels served a key role for the victory of the Vietnamese Resistance during the Vietnam War.",
     "part6": "We mentioned the Vietnamese Resistance, also known as the Viet Cong. However, this word, meaning Vietnamese Communist, is pejorative and was used during the Vietnam War. Except that members of the Resistance were not all communists. All the fighters, regardless of their convictions, fought together for the independence and reunification of Vietnam."
   },
   "visit2": {
     "title": "Remnants of war",
     "part1": "The site is divided into different sections.",
-    "part2": "Outside, you will find exhibits of military vehicles.",
-    "part3": "Upon entering, you will find explanatory panels about the tunnels during the war, exhibition stands with weapons, replication of soldiers lives or even mannequins displaying the war camouflage."
+    "part2": "Outside, you will find #exhibits of military vehicles#.",
+    "part3": "Upon entering, you will find explanatory panels about the tunnels during the war, #exhibition stands# with weapons, #replication of soldiers lives# or even mannequins displaying the war camouflage."
   },
   "visit3": {
     "title": "Inside the tunnels",
     "part1": "The most awaited section: the tunnels.",
     "part2": "You will find several entrances and exits in different places.",
-    "part3": "It should also be noted that all these passages did not necessarily exist and have especially been added and enlarged for tourists.",
-    "part4": "Imagine that in the most dangerous places people have spent most of their lives underground.",
+    "part3": "It should also be noted that all these passages did not necessarily exist and have especially been added and #enlarged for tourists#.",
+    "part4": "Imagine that in the most dangerous places people have spent #most of their lives underground#.",
     "part5": "We wonder how people were able to move around even though everything has been enlarged. We had to walk in squatting position, sometimes on our knees even if those tunnels were probably more comfortable compare to the inaccessible ones.",
     "part6": "We have walked through two different tunnels.",
     "part7": "The first one, made for most of the tourists but where we couldn't even stand.",
     "part8": "The other one was much narrower, we walked in a squatting position all the way. Before reaching the end, it was so narrow that we had to walk on our knees.",
     "part9": "The guides are used to this and you understand it quickly. While we were in pain to reach the end of the tunnel, our guide was already out and fresh. Once, we were afraid to get lost, when our guide took a turn and disappeared, while he was quite far away.",
-    "part10": "Total immersion to  realize how it must have been harder, more than one can really imagine.",
+    "part10": "#Total immersion# to realize how it must have been harder, more than one can really imagine.",
     "part11": "We were just visitors and staying more than an hour underground is already oppressive, so to imagine they had to stay several days there sometimes...",
-    "part12": "The Cu Chi tunnels have been enlarged to house entire underground villages. They were excavated in a zig-zag pattern, to prevent enemies from having a clear view and on several floors, usually 3 levels of different depths.",
+    "part12": "The Cu Chi tunnels have been enlarged to house entire underground villages. They were excavated in a zig-zag pattern, to prevent enemies from having a clear view and on several floors, usually #3 levels of different depths#.",
     "part13": "The first level were used for defense where traps were installed.",
     "part14": "On the second floor, around 6m deep, there were the kitchens, hospitals and assembly rooms.",
     "part15": "On the last floor, around over 12m deep, there were the weapons warehouses as well as the manufacturing workshops and munitions factories. There were also dormitories and living quarters."
@@ -95,7 +88,7 @@
     "part3": "grenades attached to a wire that exploded as soon as the wire was hit",
     "part4": "scorpion traps, also attached to a wire, that was connected to a trap door that contained dozens of scorpions",
     "part5": "punji stick: traps hidden by foliage that formed a large pit with stakes at the bottom from which it was almost impossible to get out",
-    "part6": "The stakes were mostly constructed with cut wood or bamboo and were often coated with poison to be even more effective.",
+    "part6": "The stakes were mostly constructed with cut wood or bamboo and were often #coated with poison to be even more effective#.",
     "part7": "You will discover many more on site."
   },
   "visit5": {

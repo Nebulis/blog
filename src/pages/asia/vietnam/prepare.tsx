@@ -86,9 +86,6 @@ import { Quote } from "../../../components/core/quote"
 import { MapContainer, PetitCarreJaune, Table } from "../../../components/layout/layout"
 import { Weather } from "../../../components/core/weather"
 
-const Highlight = styled.span`
-  font-weight: bold;
-`
 const SubTitle = styled.p`
   text-align: center;
   text-transform: uppercase;
@@ -686,49 +683,45 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <ul>
             <li>
               <p>
-                <Highlight>{t("section1.part3")}</Highlight> {t("section1.part4")}{" "}
+                {t("section1.part3")}{" "}
                 <VietnamExternalLink href="https://evisa.xuatnhapcanh.gov.vn/web/guest/home">
-                  {t("section1.part5")}
+                  {t("section1.part4")}
                 </VietnamExternalLink>
                 .<br />
-                {t("section1.part6")} <Highlight>{t("section1.part7")}</Highlight> {t("section1.part8")}
+                {t("section1.part5")}
               </p>
             </li>
             <li>
               <p>
-                <Highlight>{t("section1.part9")}</Highlight> {t("section1.part10")}
+                {t("section1.part6")}
                 <br />
-                {t("section1.part11")} <Highlight>{t("section1.part12")}</Highlight>
-                {t("section1.part13")} <Highlight>{t("section1.part14")}</Highlight>
-                {t("section1.part15")} <Highlight>{t("section1.part16")}</Highlight>
+                {t("section1.part7")}
                 <br />
-                {t("section1.part17")}
+                {t("section1.part8")}
                 <br />
-                {t("section1.part18")}
+                {t("section1.part9")}
                 <br />
-                {t("section1.part19")}
+                {t("section1.part10")}
                 <br />
-                {t("section1.part20")}
+                {t("section1.part11")}
               </p>
             </li>
             <li>
               <p>
-                <Highlight>{t("section1.part21")}</Highlight> {t("section1.part22")}
+                {t("section1.part12")}
                 <br />
-                {t("section1.part23")} <Highlight>{t("section1.part24")}</Highlight>
-                {t("section1.part25")} <Highlight>{t("section1.part26")}</Highlight>
-                {t("section1.part27")} <Highlight>{t("section1.part28")}</Highlight>
+                {t("section1.part13")}
                 <br />
-                {t("section1.part29")}
+                {t("section1.part14")}
                 <br />
-                {t("section1.part30")}{" "}
-                <VietnamExternalLink href="https://www.action-visas.com/">{t("section1.part31")}</VietnamExternalLink>,{" "}
-                <VietnamExternalLink href="https://www.vietnam-visa.com/">{t("section1.part32")}</VietnamExternalLink>,{" "}
+                {t("section1.part15")}{" "}
+                <VietnamExternalLink href="https://www.action-visas.com/">{t("section1.part16")}</VietnamExternalLink>,{" "}
+                <VietnamExternalLink href="https://www.vietnam-visa.com/">{t("section1.part17")}</VietnamExternalLink>,{" "}
                 <VietnamExternalLink href="https://www.vietnamvisa.org.vn/apply-visa/">
-                  {t("section1.part33")}
+                  {t("section1.part18")}
                 </VietnamExternalLink>
                 .<br />
-                {t("section1.part34")}
+                {t("section1.part19")}
               </p>
             </li>
           </ul>
@@ -801,10 +794,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </tbody>
             </Table>
           </div>
-          <p>
-            {t("section1.part35")} <Highlight>{t("section1.part36")}</Highlight>
-            {t("section1.part37")}
-          </p>
+          <p>{t("section1.part20")}</p>
           <div
             className="flex flex-row-reverse"
             css={css`
@@ -915,7 +905,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </div>
           </div>
 
-          <p>{t("section1.part38")}</p>
+          <p>{t("section1.part21")}</p>
           <PetitCarreJaune>
             <p
               css={css`
@@ -924,11 +914,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 }
               `}
             >
-              {t("section1.part39")}
+              {t("section1.part22")}
             </p>
-            <p>{t("section1.part40")}</p>
+            <p>{t("section1.part23")}</p>
           </PetitCarreJaune>
-          <p>{t("section1.part41")}</p>
+          <p>{t("section1.part24")}</p>
         </Visa>
         <Divider />
         <Health id="health">
@@ -944,33 +934,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <Dragon />
             </p>
           </PetitCarreJaune>
+          <p>{t("section2.part5")}</p>
+          <p>{t("section2.part6")}</p>
+          <p>{t("section2.part7")}</p>
+          <p>{t("section2.part8")}</p>
           <p>
-            {t("section2.part5")} <Highlight>{t("section2.part6")}</Highlight> {t("section2.part7")}
-          </p>
-          <p>
-            {t("section2.part8")} <Highlight>{t("section2.part9")}</Highlight> {t("section2.part10")}
-          </p>
-          <p>{t("section2.part11")}</p>
-          <p>
-            <Highlight>{t("section2.part12")}</Highlight> {t("section2.part13")}
-          </p>
-          <p>
-            {t("section2.part14")}{" "}
-            <VietnamExternalLink href={buildAllianzUrl(i18n.languageCode)}>{t("section2.part15")}</VietnamExternalLink>.
+            {t("section2.part9")}{" "}
+            <VietnamExternalLink href={buildAllianzUrl(i18n.languageCode)}>{t("section2.part10")}</VietnamExternalLink>.
           </p>
         </Health>
         <Divider />
         <WhatTimeOfYear title={t("section3.title")} id="weather">
           <SubTitle>{t("section3.part1")}</SubTitle>
           <Weather entries={vietnamWeatherEntries(t)} />
-          <p>
-            {t("section3.part2")} <Highlight>{t("section3.part3")}</Highlight> {t("section3.part4")}
-          </p>
-          <p>{t("section3.part5")}</p>
+          <p>{t("section3.part2")}</p>
+          <p>{t("section3.part3")}</p>
           <ul>
+            <li>{t("section3.part4")}</li>
+            <li>{t("section3.part5")}</li>
             <li>{t("section3.part6")}</li>
-            <li>{t("section3.part7")}</li>
-            <li>{t("section3.part8")}</li>
           </ul>
         </WhatTimeOfYear>
         <Divider />
@@ -980,17 +962,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <PrepareVietnamImages image="duration" />
           </ImageAsLandscape>
           <p>{t("section4.part2")}</p>
-          <p>
-            {t("section4.part3")} <Highlight>{t("section4.part4")}</Highlight> {t("section4.part5")}
-          </p>
+          <p>{t("section4.part3")}</p>
           <PetitCarreJaune>
             <p>
               <Calendar />
             </p>
+            <p>{t("section4.part4")}</p>
+            <p>{t("section4.part5")}</p>
             <p>{t("section4.part6")}</p>
             <p>{t("section4.part7")}</p>
-            <p>{t("section4.part8")}</p>
-            <p>{t("section4.part9")}</p>
           </PetitCarreJaune>
         </HowLong>
         <Divider />
@@ -1048,22 +1028,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <ImageAsLandscape>
             <SharedCardVietnamImages image="transportMain" />
           </ImageAsLandscape>
-          <p>
-            {t("section6.part1")} <Highlight>{t("section6.part2")}</Highlight> {t("section6.part3")}
-          </p>
-          <p>
-            {t("section6.part4")} <Highlight>{t("section6.part5")}</Highlight> {t("section6.part6")}
-          </p>
-          <p>
-            {t("section6.part7")}
-            <Highlight>{t("section6.part8")}</Highlight> {t("section6.part9")}
-          </p>
-          <p>
-            {t("section6.part10")} <Highlight>{t("section6.part11")}</Highlight> {t("section6.part12")}
-          </p>
+          <p>{t("section6.part1")}</p>
+          <p>{t("section6.part2")}</p>
+          <p>{t("section6.part3")}</p>
+          <p>{t("section6.part4")}</p>
           {transportLinkPublished && (
             <p>
-              {t("section6.part13")}{" "}
+              {t("section6.part5")}{" "}
               <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
             </p>
           )}
@@ -1078,36 +1049,36 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("section7.part3")}</p>
           <PetitCarreJaune>
             <p>
-              <Highlight>{t("section7.part4")}</Highlight> {t("section7.part5")}{" "}
+              {t("section7.part4")}{" "}
               <VietnamExternalLink href={buildAgodaSearchUrl(i18n.languageCode)()}>
-                {t("section7.part6")}
+                {t("section7.part5")}
               </VietnamExternalLink>{" "}
-              {t("section7.part7")}{" "}
+              {t("section7.part6")}{" "}
               <VietnamExternalLink href={buildBookingSearchUrl(i18n.languageCode)("Vietnam")}>
-                {t("section7.part8")}
+                {t("section7.part7")}
               </VietnamExternalLink>
-              {t("section7.part9")}
+              {t("section7.part8")}
             </p>
             <p>
-              <Highlight>{t("section7.part10")}</Highlight> {t("section7.part11")}{" "}
+              {t("section7.part9")}{" "}
               <VietnamExternalLink href={buildAirBnbSearchUrl(i18n.languageCode)("vietnam")}>
-                {t("section7.part12")}
+                {t("section7.part10")}
               </VietnamExternalLink>
-              {t("section7.part13")}
+              {t("section7.part11")}
             </p>
             <p>
-              <Highlight>{t("section7.part14")}</Highlight> {t("section7.part15")}{" "}
+              {t("section7.part12")}{" "}
               <VietnamExternalLink href="https://www.french.hostelworld.com/logement/Vietnam/">
-                {t("section7.part16")}
+                {t("section7.part13")}
               </VietnamExternalLink>
-              {t("section7.part17")}
+              {t("section7.part14")}
             </p>
           </PetitCarreJaune>
-          <p>{t("section7.part18")}</p>
+          <p>{t("section7.part15")}</p>
           <ImageAsLandscape>
             <PrepareVietnamImages image="hammock" />
           </ImageAsLandscape>
-          <p className="tc i">{t("section7.part19")}</p>
+          <p className="tc i">{t("section7.part16")}</p>
         </WhereToStay>
         <Divider />
         <HowMuch title={t("section8.title")} id="money">
@@ -1119,17 +1090,24 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <ul>
             <li>
               <p>
-                <Highlight>{t("section8.part3")}</Highlight> {t("section8.part4")}
+                {t("section8.part3")}
                 <br />
-                {t("section8.part5")}
+                {t("section8.part4")}
               </p>
             </li>
             <li>
               <p>
-                <Highlight>{t("section8.part6")}</Highlight> {t("section8.part7")}
+                {t("section8.part5")}
+                <br />
+                {t("section8.part6")}
+                <br />
+                {t("section8.part7")}
                 <br />
                 {t("section8.part8")}
-                <br />
+              </p>
+            </li>
+            <li>
+              <p>
                 {t("section8.part9")}
                 <br />
                 {t("section8.part10")}
@@ -1137,29 +1115,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </li>
             <li>
               <p>
-                <Highlight>{t("section8.part11")}</Highlight>
+                {t("section8.part11")}
                 <br />
-                {t("section8.part12")} <Highlight>{t("section8.part13")}</Highlight>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Highlight>{t("section8.part14")}</Highlight>
+                {t("section8.part12")}
                 <br />
-                {t("section8.part15")}
+                {t("section8.part13")}
                 <br />
-                {t("section8.part16")}
-                <br />
-                {t("section8.part17")} <Highlight>{t("section8.part18")}</Highlight>
+                {t("section8.part14")}
               </p>
             </li>
           </ul>
           <PetitCarreJaune>
-            <p>
-              {t("section8.part19")} <Highlight>{t("section8.part20")}</Highlight> {t("section8.part21")}
-              <Highlight>{t("section8.part22")}</Highlight>
-              {t("section8.part23")}
-            </p>
+            <p>{t("section8.part15")}</p>
             <p>
               <Lotus />
             </p>
@@ -1167,16 +1134,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </HowMuch>
         <Divider />
         <Phone id="phone">
-          <p>
-            {t("section9.part1")} <Highlight>{t("section9.part2")}</Highlight>
-          </p>
-          <p>
-            {t("section9.part3")} <Highlight>{t("section9.part4")}</Highlight> {t("section9.part5")}
-          </p>
+          <p>{t("section9.part1")}</p>
+          <p>{t("section9.part2")}</p>
+          <p>{t("section9.part3")}</p>
+          <p>{t("section9.part4")}</p>
+          <p>{t("section9.part5")}</p>
           <p>{t("section9.part6")}</p>
-          <p>{t("section9.part7")}</p>
-          <p>{t("section9.part8")}</p>
-          <p>{t("section9.part9")}</p>
         </Phone>
         <Divider />
         <Scams id="scams">
@@ -1191,15 +1154,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <PrepareVietnamImages image="currencyApplication" />
           </ImageAsPortrait>
           <p>{t("section10.part6")}</p>
+          <p>{t("section10.part7")}</p>
           <p>
-            {t("section10.part7")} <Highlight>{t("section10.part8")}</Highlight> {t("section10.part9")}
-          </p>
-          <p>
-            {t("section10.part10")}
+            {t("section10.part8")}
             <VietnamExternalLink href="https://www.grab.com/transport/">
-              {t("section10.part11")}
+              {t("section10.part9")}
             </VietnamExternalLink>{" "}
-            {t("section10.part12")}
+            {t("section10.part10")}
           </p>
         </Scams>
         <Divider />
@@ -1286,7 +1247,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p className="tc b">{t("section12.part2")}</p>
           <p className="flex items-center ">
             <FaTshirt />
-            &nbsp;<Highlight>{t("section12.part3")}</Highlight>
+            &nbsp;{t("section12.part3")}
           </p>
           <ul>
             <li>{t("section12.part4")}</li>
@@ -1299,7 +1260,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ul>
           <p className="flex items-center ">
             <FaBriefcaseMedical />
-            &nbsp;<Highlight>{t("section12.part11")}</Highlight>
+            &nbsp;{t("section12.part11")}
           </p>
           <ul>
             <li>{t("section12.part12")}</li>
@@ -1313,7 +1274,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </PetitCarreJaune>
           <p className="flex items-center ">
             <FaLaptop />
-            &nbsp;<Highlight>{t("section12.part18")}</Highlight>
+            &nbsp;{t("section12.part18")}
           </p>
           <ul>
             <li>{t("section12.part19")}</li>
@@ -1322,7 +1283,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ul>
           <p className="flex items-center ">
             <FaShoppingBag />
-            &nbsp;<Highlight>{t("section12.part22")}</Highlight>
+            &nbsp;{t("section12.part22")}
           </p>
           <ul>
             <li>{t("section12.part23")}</li>

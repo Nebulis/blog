@@ -13,7 +13,6 @@ import {
   VietnamLink,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import {
-  HighLight,
   How,
   HowLong,
   HowMuch,
@@ -79,59 +78,50 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <How>
           <p>{t("how.part1")}</p>
           <p>
-            {t("how.part2")} <HighLight>{t("how.part3")}</HighLight> {t("how.part4")}{" "}
+            {t("how.part2")}{" "}
             <VietnamExternalLink
               href={buildExpediaSearchUrl(i18n.languageCode)(
                 "from%3AHanoi%2C%20Vietnam%20%28HAN-Noi%20Bai%20Intl.%29%2Cto%3ACan%20Tho%2C%20Vietnam%20%28VCA"
               )}
             >
-              {t("how.part5")}
+              {t("how.part3")}
             </VietnamExternalLink>
             .
           </p>
+          <p>{t("how.part4")}</p>
+          <p>{t("how.part5")}</p>
+          <p>{t("how.part6")}</p>
           <p>
-            {t("how.part6")} <HighLight>{t("how.part7")}</HighLight> {t("how.part8")}{" "}
-            <HighLight>{t("how.part9")}</HighLight> {t("how.part10")} <HighLight>{t("how.part11")}</HighLight>
-          </p>
-          <p>{t("how.part12")}</p>
-          <p>{t("how.part13")}</p>
-          <p>
-            {t("how.part14")}{" "}
+            {t("how.part7")}{" "}
             <VietnamExternalLink
               href={buildBaolauSearchUrl(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "Can Tho" })}
             >
-              {t("how.part15")}
+              {t("how.part8")}
             </VietnamExternalLink>{" "}
-            {t("how.part16")}
+            {t("how.part9")}
           </p>
           {transportLinkPublished && (
             <p>
-              {t("how.part17")}{" "}
+              {t("how.part10")}{" "}
               <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
             </p>
           )}
         </How>
         <HowLong>
           <p>{t("how-long.part1")}</p>
-          <p>
-            {t("how-long.part2")} <HighLight>{t("how-long.part3")}</HighLight> {t("how-long.part4")}
-          </p>
+          <p>{t("how-long.part2")}</p>
         </HowLong>
         <WhatTimeOfYear>
-          <p>
-            {t("what-time-of-year.part1")} <HighLight>{t("what-time-of-year.part2")}</HighLight>
-          </p>
+          <p>{t("what-time-of-year.part1")}</p>
+          <p>{t("what-time-of-year.part2")}</p>
           <p>{t("what-time-of-year.part3")}</p>
           <p>{t("what-time-of-year.part4")}</p>
-          <p>{t("what-time-of-year.part5")}</p>
         </WhatTimeOfYear>
         <HowMuch>
           <p>{t("how-much.part1")}</p>
           <p>{t("how-much.part2")}</p>
           <p>{t("how-much.part3")}</p>
-          <p>
-            {t("how-much.part4")} <HighLight>{t("how-much.part5")}</HighLight>
-          </p>
+          <p>{t("how-much.part4")}</p>
         </HowMuch>
         <WhereToStay>
           <p>
@@ -183,38 +173,32 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit2.part1")}</p>
               <p>{t("visit2.part2")}</p>
               <ul>
-                <li>
-                  <span className="b">{t("visit2.part3")}</span>
-                  {t("visit2.part4")}
-                </li>
-                <li>
-                  <span className="b">{t("visit2.part5")}</span>
-                  {t("visit2.part6")}
-                </li>
+                <li>{t("visit2.part3")}</li>
+                <li>{t("visit2.part4")}</li>
               </ul>
-              <p>{t("visit2.part7")}</p>
-              <p>{t("visit2.part8")}</p>
+              <p>{t("visit2.part5")}</p>
+              <p>{t("visit2.part6")}</p>
               <TwoImagesSameSizeOrToGroup>
                 <CanThoImages image="floatingMarket1" />
                 <CanThoImages image="floatingMarket2" />
               </TwoImagesSameSizeOrToGroup>
             </SectionContent>
             <SectionContent>
+              <p>{t("visit2.part7")}</p>
+              <p>{t("visit2.part8")}</p>
               <p>{t("visit2.part9")}</p>
               <p>{t("visit2.part10")}</p>
-              <p>{t("visit2.part11")}</p>
-              <p>{t("visit2.part12")}</p>
               {/* adding mb2 manually cause it's not working automatically: should use child.type?.__emotion_base === "p" but it's not typed*/}
-              <InsideQuote className="tc b mb2">{t("visit2.part13")}</InsideQuote>
+              <InsideQuote className="tc b mb2">{t("visit2.part11")}</InsideQuote>
               <ImageAsPortrait>
                 <CanThoImages image="floatingMarket3" />
               </ImageAsPortrait>
+              <p>{t("visit2.part12")}</p>
+              <p>{t("visit2.part13")}</p>
               <p>{t("visit2.part14")}</p>
               <p>{t("visit2.part15")}</p>
               <p>{t("visit2.part16")}</p>
               <p>{t("visit2.part17")}</p>
-              <p>{t("visit2.part18")}</p>
-              <p>{t("visit2.part19")}</p>
               <GroupOfImages>
                 <TwoImagesSameSizeOrToGroup>
                   <CanThoImages image="floatingMarket4" />
@@ -231,13 +215,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <CanThoImages image="floatingMarket9" />
                 </ImageAsPortrait>
               </GroupOfImages>
-              <p>{t("visit2.part20")}</p>
-              <p>{t("visit2.part21")}</p>
+              <p>{t("visit2.part18")}</p>
+              <p>{t("visit2.part19")}</p>
               <ImageAsLandscape>
                 <CanThoImages image="floatingMarket10" />
               </ImageAsLandscape>
-              <p>{t("visit2.part22")}</p>
-              <p>{t("visit2.part23")}</p>
+              <p>{t("visit2.part20")}</p>
+              <p>{t("visit2.part21")}</p>
               <TwoImagesLeftBigger>
                 <CanThoImages image="floatingMarket11" />
                 <CanThoImages image="floatingMarket12" />
@@ -302,6 +286,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <CanThoImages image="rice7" />
               </TwoImagesSameSize>
             </SectionContent>
+            <p>{t("visit4.part9")}</p>
           </section>
           <Divider />
           <section>

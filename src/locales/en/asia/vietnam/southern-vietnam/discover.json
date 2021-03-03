@@ -4,15 +4,13 @@
   "google-description": "When to go? How many days ? What budget to plan? Questions that we often ask ourselves before travelling. We answer to your questions based on our own experience. We also show you our travel itinerary for 1 week in Southern Vietnam.",
   "social-network-description": "Southern Vietnam is full of surprises and discoveries, each one more exciting. From dynamic cities like Hô Chi Minh City, to boat trips on the Mekong River Delta under palm trees, there is something for everyone.",
   "what-time-of-year": {
-    "part1": "The Best time to visit Southern Vietnam is during the dry season, from",
-    "part2": "December to April.",
-    "part3": "Avoid travelling to the South during the monsoon which happens between May and November, otherwise you will experience rain every day.",
-    "part4": "We went there in February, Hô Chi Minh City was quite crowded. However, it was uncrowded when we explored the surrounding areas."
+    "part1": "The Best time to visit Southern Vietnam is during the dry season, from #December to April#.",
+    "part2": "Avoid travelling to the South during the monsoon which happens between May and November, otherwise you will experience rain every day.",
+    "part3": "We went there in February, Hô Chi Minh City was quite crowded. However, it was uncrowded when we explored the surrounding areas."
   },
   "how-long": {
-    "part1": "One week ",
-    "part2": "is enough to visit Southern Vietnam.",
-    "part3": "Of course, it all depends of your pace, or if you planned lazy days, at the beach for instance. For us that was more than enough."
+    "part1": "#One week# is enough to visit Southern Vietnam.",
+    "part2": "Of course, it all depends of your pace, or if you planned lazy days, at the beach for instance. For us that was more than enough."
   },
   "how-much": {
     "part1": "Most of the budget will be spent on air travel. For the other expenses, everything is quite cheap, whether it's for accommodations, food, transports or activities. For example, for two people we spent, per day, approximately:",
@@ -33,27 +31,27 @@
   "visit1": {
     "title": "Getting to know the history",
     "part1": "It's impossible to visit Vietnam without going through the compulsory war sites.",
-    "part2": "We particularly like to learn about the history of the country we are travelling to. Especially since this, unfortunately, also concerns our country of origin, and since the end of the war is quite recent.",
-    "part3": "We start with the War Remnants Museum. Every step, every photograph, every explanation feels like a horror movie. A must-see place, of course, really gut-wrenching. We do not recommend it for young children or if you are too sensitive.",
+    "part2": "We particularly like to #learn about the history of the country we are travelling to#. Especially since this, unfortunately, also concerns our country of origin, and since the end of the war is quite recent.",
+    "part3": "We started with #the War Remnants Museum#. Every step, every photograph, every explanation feels like a horror movie. #A must-see place#, of course, really gut-wrenching. We do not recommend it for young children or if you are too sensitive.",
     "part4": "Nevertheless, if, like us, you like history, even just a tiny bit, do not hesitate to take a look. We found it a bit messy in some places but it's still worth to visit.",
-    "part5": "After that, we visited the Củ Chi Tunnels.",
-    "part6": "Total immersion in these very narrow tunnels where it is difficult to imagine how the Vietnamese Resistance could survive inside and at the same time one wonders how could they have survived without ..."
+    "part5": "After that, we visited #the Củ Chi Tunnels#.",
+    "part6": "Total immersion in these #very narrow tunnels# where it is difficult to imagine how the #Vietnamese Resistance# could survive inside and at the same time, one wonders how could they have survived without ..."
   },
   "visit2": {
     "title": "Visit the largest city in the country",
-    "part1": "Hô Chi Minh City was the starting point for almost all of our tours. It was impossible not to take a stroll.",
-    "part2": "You will be amazed by all those scooters passing around every second near you. It's like a parade. It's not easy to break through but do not be afraid to force your way. It's a bit like that here. Hô Chi Minh City is very dynamic to say the least.",
-    "part3": "If you have time to visit the city, take the opportunity to visit District 1. You can appreciate many French constructions making this district somewhat appealing: the Cathedral - based on Notre Dame de Paris -, the Central Post Office or even the Town Hall.",
+    "part1": "#Hô Chi Minh City# was the starting point for almost all of our tours. It was impossible not to take a stroll.",
+    "part2": "You will be amazed by all #those scooters# passing around every second near you. It's like a parade. It's not easy to break through but do not be afraid to force your way. It's a bit like that here. Hô Chi Minh City is very dynamic to say the least.",
+    "part3": "If you have time to visit the city, take the opportunity to visit #the District 1#. You can appreciate many French constructions making this district somewhat appealing: the Cathedral - based on Notre Dame de Paris -, the Central Post Office or even the Town Hall.",
     "part4": "Day or night, take a walk, enjoy your time, you will always discover something.",
-    "part5": "From local and authentic markets at every street corner, to the huge popular Ben Thanh market, also built by the French and located in the heart of the city or even the Binh Tay market in the Chinatown district, you only are spoilt for choice.",
-    "part6": "Talking about Chinatown, we found pictures of one dragon statue and we clearly wanted to take a look. What a disappointment. The biggest during our trip. It was supposed to be shiny gold but what we found was completely different."
+    "part5": "From local and authentic markets at every street corner, to the huge popular #Ben Thanh market# , also built by the French and located in the heart of the city or even the #Binh Tay market# in the Chinatown district, you only are spoilt for choice.",
+    "part6": "Talking about #Chinatown#, we found pictures of one dragon statue and we clearly wanted to take a look. What a disappointment. The biggest during our trip. It was supposed to be shiny gold but what we found was completely different."
   },
   "visit3": {
     "title": "Mekong River Delta",
     "part1": "After the hubbub of the city, let's head to the South, for new adventures, We stop near the Mekong River Delta for our first visit.",
-    "part2": "Let's discover Mỹ Tho and Ben Tre. We take a boat trip on the Mekong River Delta, sheltered by coconut palms and palm trees. The change of scenery is total and the calm is enjoyable.",
+    "part2": "Let's discover Mỹ Tho and Ben Tre. We took #a boat trip on the Mekong River Delta#, sheltered by coconut palms and palm trees. The change of scenery is total and the calm is enjoyable.",
     "part3": "Unlike what we read here and there, it was not so touristy and we were therefore able to make the most of an authentic landscape.",
-    "part4": "After that, exploration of Cân Thơ, its floating market and its land market making the city lively.",
+    "part4": "After that, exploration of #Cân Thơ, its floating market and its land market# making the city lively.",
     "part5": "We rarely visit a country without going through the must-see markets, this was one of them and we were not at all disappointed."
   },
   "visit4": {

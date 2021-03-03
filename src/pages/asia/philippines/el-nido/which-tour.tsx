@@ -19,7 +19,6 @@ import {
   Boat,
   Booking,
   Choice,
-  HighLight,
   HowMuch,
   Introduction,
   Opinion,
@@ -94,24 +93,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Introduction>{t("introduction.part1")}</Introduction>
         <Divider />
         <SectionContent>
+          <p>{t("introduction.part2")}</p>
+          {t("introduction.part3") && <p>{t("introduction.part3")}</p>}
           <p>
-            {t("introduction.part2")} <HighLight>{t("introduction.part3")}</HighLight>
+            {t("introduction.part4")} <PhilippinesLink to="boracay">{t("introduction.part5")}</PhilippinesLink>,{" "}
+            <PhilippinesLink to="coron-island">{t("introduction.part6")}</PhilippinesLink> {t("introduction.part7")}{" "}
+            <PhilippinesLink to="thailand">{t("introduction.part8")}</PhilippinesLink>
+            {t("introduction.part9")} <PhilippinesLink to="azores">{t("introduction.part10")}</PhilippinesLink>{" "}
+            {t("introduction.part11")} <PhilippinesLink to="caribbean">{t("introduction.part12")}</PhilippinesLink>{" "}
+            {t("introduction.part13")}
           </p>
-          {t("introduction.part4") && <p>{t("introduction.part4")}</p>}
-          <p>
-            {t("introduction.part5")} <PhilippinesLink to="boracay">{t("introduction.part6")}</PhilippinesLink>,{" "}
-            <PhilippinesLink to="coron-island">{t("introduction.part7")}</PhilippinesLink> {t("introduction.part8")}{" "}
-            <PhilippinesLink to="thailand">{t("introduction.part9")}</PhilippinesLink>
-            {t("introduction.part10")} <PhilippinesLink to="azores">{t("introduction.part11")}</PhilippinesLink>{" "}
-            {t("introduction.part12")} <PhilippinesLink to="caribbean">{t("introduction.part13")}</PhilippinesLink>{" "}
-            {t("introduction.part14")}
-          </p>
+          <p>{t("introduction.part14")}</p>
           <p>{t("introduction.part15")}</p>
-          <p>{t("introduction.part16")}</p>
           <ArticleCardContainer>
             <ElNidoParadiseCard card={{ showTags: false, showPublished: false, showMore: true }} />
           </ArticleCardContainer>
-          <p>{t("introduction.part17")}</p>
+          <p>{t("introduction.part16")}</p>
         </SectionContent>
         <Booking title={t("where-to-book.title")}>
           <p>{t("where-to-book.part1")}</p>
@@ -150,31 +147,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where-to-book.part12")}</p>
           <p>{t("where-to-book.part13")}</p>
           <p>{t("where-to-book.part14")}</p>
-          <p>
-            {t("where-to-book.part15")} <HighLight>{t("where-to-book.part16")}</HighLight> {t("where-to-book.part17")}
-          </p>
-          <p>
-            {t("where-to-book.part18")} <HighLight>{t("where-to-book.part19")}</HighLight>
-            {t("where-to-book.part20")}
-          </p>
-          <p>
-            {t("where-to-book.part21")} <HighLight>{t("where-to-book.part22")}</HighLight>
-            {t("where-to-book.part23")}
-          </p>
-          <p>{t("where-to-book.part24")}</p>
+          <p>{t("where-to-book.part15")}</p>
+          <p>{t("where-to-book.part16")}</p>
+          <p>{t("where-to-book.part17")}</p>
+          <p>{t("where-to-book.part18")}</p>
         </Booking>
         <Choice title={t("tour-category.title")}>
           <p>{t("tour-category.part1")}</p>
           <ul>
             <li>
               <p>
-                <HighLight>{t("tour-category.part2")}</HighLight> <br />
+                {t("tour-category.part2")}
+                <br />
                 {t("tour-category.part3")}
               </p>
             </li>
             <li>
               <p>
-                <HighLight>{t("tour-category.part4")}</HighLight> <br />
+                {t("tour-category.part4")}
+                <br />
                 {t("tour-category.part5")}
               </p>
             </li>
@@ -185,13 +176,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <ul>
             <li>
               <p>
-                <HighLight>{t("tour-category.part9")}</HighLight> <br />
+                {t("tour-category.part9")}
+                <br />
                 {t("tour-category.part10")}
               </p>
             </li>
             <li>
               <p>
-                <HighLight>{t("tour-category.part11")}</HighLight> <br />
+                {t("tour-category.part11")}
+                <br />
                 {t("tour-category.part12")}
               </p>
             </li>
@@ -199,60 +192,31 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </Choice>
         <HowMuch>
           <ul>
-            <li>
-              <HighLight>{t("how-much.part1")}</HighLight> {t("how-much.part2")}
-            </li>
-            <li>
-              <HighLight>{t("how-much.part3")}</HighLight> {t("how-much.part4")}
-            </li>
-            <li>
-              <HighLight>{t("how-much.part5")}</HighLight> {t("how-much.part6")}
-            </li>
-            <li>
-              <HighLight>{t("how-much.part9")}</HighLight> {t("how-much.part10")}
-            </li>
-            <li>
-              <HighLight>{t("how-much.part11")}</HighLight> {t("how-much.part12")}
-            </li>
+            <li>{t("how-much.part1")}</li>
+            <li>{t("how-much.part2")}</li>
+            <li>{t("how-much.part3")}</li>
+            <li>{t("how-much.part5")}</li>
+            <li>{t("how-much.part6")}</li>
+          </ul>
+          <p>{t("how-much.part7")}</p>
+          <ul>
+            <li>{t("how-much.part8")}</li>
+            <li>{t("how-much.part9")}</li>
+            <li>{t("how-much.part10")}</li>
+            <li>{t("how-much.part11")}</li>
+            <li>{t("how-much.part12")}</li>
           </ul>
           <p>{t("how-much.part13")}</p>
-          <ul>
-            <li>
-              {t("how-much.part14")} <HighLight>{t("how-much.part15")}</HighLight> {t("how-much.part16")}
-            </li>
-            <li>
-              {t("how-much.part17")} <HighLight>{t("how-much.part18")}</HighLight>
-            </li>
-            <li>
-              {t("how-much.part19")} <HighLight>{t("how-much.part20")}</HighLight>
-            </li>
-            <li>
-              {t("how-much.part21")} <HighLight>{t("how-much.part22")}</HighLight>
-            </li>
-            <li>
-              {t("how-much.part23")} <HighLight>{t("how-much.part24")}</HighLight>
-            </li>
-          </ul>
-          <p>{t("how-much.part25")}</p>
-          <p>{t("how-much.part26")}</p>
+          <p>{t("how-much.part14")}</p>
         </HowMuch>
         <Baggage title={t("what-to-bring.title")}>
-          <p>
-            {t("what-to-bring.part1")} <HighLight>{t("what-to-bring.part2")}</HighLight> {t("what-to-bring.part3")}{" "}
-            <HighLight>{t("what-to-bring.part4")}</HighLight>
-          </p>
-
-          <p>{t("what-to-bring.part5")} </p>
-          <p>
-            {t("what-to-bring.part6")} <HighLight>{t("what-to-bring.part7")}</HighLight>
-          </p>
-          <p>{t("what-to-bring.part8")} </p>
+          <p>{t("what-to-bring.part1")}</p>
+          <p>{t("what-to-bring.part2")}</p>
+          <p>{t("what-to-bring.part3")}</p>
+          <p>{t("what-to-bring.part4")} </p>
         </Baggage>
         <Boat title={t("which-boat.title")}>
-          <p>
-            {t("which-boat.part1")} <HighLight>{t("which-boat.part2")}</HighLight> {t("which-boat.part3")}{" "}
-            <HighLight>{t("which-boat.part4")}</HighLight> {t("which-boat.part5")}
-          </p>
+          <p>{t("which-boat.part1")}</p>
           <GroupOfImages>
             <ImageAsLandscape>
               <ElNidoWhichTourImages image="speedboat" />
@@ -699,21 +663,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             `}
           >
             <li>
-              <HighLight>{t("opinion.part4")}</HighLight> <br />
+              {t("opinion.part4")}
+              <br />
               {t("opinion.part5")}
             </li>
             <li>
-              <HighLight>{t("opinion.part6")}</HighLight> <br />
+              {t("opinion.part6")}
+              <br />
               {t("opinion.part7")} <br />
               {t("opinion.part8")}
             </li>
             <li>
-              <HighLight>{t("opinion.part9")}</HighLight> <br />
+              {t("opinion.part9")}
+              <br />
               {t("opinion.part10")} <br />
               {t("opinion.part11")}
             </li>
             <li>
-              <HighLight>{t("opinion.part12")}</HighLight> <br />
+              {t("opinion.part12")}
+              <br />
               {t("opinion.part13")} <br />
               {t("opinion.part14")}
             </li>

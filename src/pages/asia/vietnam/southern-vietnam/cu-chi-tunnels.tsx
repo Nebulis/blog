@@ -14,7 +14,6 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import {
-  HighLight,
   How,
   HowLong,
   HowMuch,
@@ -86,28 +85,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </When>
         <How>
           <p>{t("how.part1")}</p>
-          <p>
-            {t("how.part2")} <span className="b">{t("how.part3")}</span>
-            {t("how.part4")}
-          </p>
-          <p>{t("how.part5")}</p>
+          <p>{t("how.part2")}</p>
+          <p>{t("how.part3")}</p>
           <ul>
             <li>
-              <span className="b">{t("how.part6")}</span>{" "}
+              {t("how.part4")}{" "}
               <VietnamExternalLink href="https://www.google.com/maps/dir/?api=1&origin=Bến+Xe+Buýt+Sài+Gòn+Lê+Lai,+Phạm+Ngũ+Lão,+Quận+1,+Thành+phố+Hồ+Chí+Minh,+Vietnam&destination=Ben+Dinh+Tunnel,+Đường+Tỉnh+Lộ+15,+Nhuận+Đức,+Củ+Chi,+Ho+Chi+Minh+City,+Vietnam&travelmode=transit">
-                {t("how.part7")}
+                {t("how.part5")}
               </VietnamExternalLink>
             </li>
             <li>
-              <span className="b">{t("how.part8")}</span>{" "}
+              {t("how.part6")}{" "}
               <VietnamExternalLink href="https://www.google.com/maps/dir/?api=1&origin=Bến+Xe+Buýt+Sài+Gòn+Lê+Lai,+Phạm+Ngũ+Lão,+Quận+1,+Thành+phố+Hồ+Chí+Minh,+Vietnam&destination=Cu+Chi+Tunnel,+Đ.+Tỉnh+Lộ+15,+Phú+Hiệp,+Củ+Chi,+Thành+phố+Hồ+Chí+Minh+733814,+Vietnam&travelmode=transit">
-                {t("how.part9")}
+                {t("how.part7")}
               </VietnamExternalLink>
             </li>
           </ul>
           {transportLinkPublished && (
             <p>
-              {t("how.part10")}{" "}
+              {t("how.part8")}{" "}
               <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
             </p>
           )}
@@ -124,11 +120,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
         </HowLong>
         <WhatTimeOfYear>
-          <p>
-            {t("what-time-of-year.part1")} <span className="b">{t("what-time-of-year.part2")}</span>
-          </p>
+          <p>{t("what-time-of-year.part1")}</p>
+          <p>{t("what-time-of-year.part2")}</p>
           <p>{t("what-time-of-year.part3")}</p>
-          <p>{t("what-time-of-year.part4")}</p>
         </WhatTimeOfYear>
         <HowMuch>
           <p>{t("how-much.part1")}</p>
@@ -143,10 +137,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </VietnamExternalLink>{" "}
             {t("how-much.part4")}
           </p>
-          <p>
-            {t("how-much.part5")} <HighLight>{t("how-much.part6")}</HighLight>
-            {t("how-much.part7")}
-          </p>
+          <p>{t("how-much.part5")}</p>
         </HowMuch>
         <WhereToStay>
           <p>{t("where-to-stay.part1")}</p>
@@ -170,11 +161,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </WhereToStay>
         <Visit title={t("common:section.visit")}>
           <SectionContent>
-            <p>
-              {t("visit.part1")} <span className="b">{t("visit.part2")}</span> {t("visit.part3")}
-            </p>
-            <p>{t("visit.part4")}</p>
-            <p>{t("visit.part5")}</p>
+            <p>{t("visit.part1")}</p>
+            <p>{t("visit.part2")}</p>
+            <p>{t("visit.part3")}</p>
           </SectionContent>
           <Divider />
           <section>

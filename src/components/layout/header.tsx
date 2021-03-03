@@ -63,6 +63,7 @@ const headerStyle = css`
     top: 0;
     right: 0;
     height: calc(100vh / 9.425);
+    z-index: 1000;
   }
 
   .facebook:hover,
