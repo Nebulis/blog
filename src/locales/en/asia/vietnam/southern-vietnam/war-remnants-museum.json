@@ -8,31 +8,22 @@
     "part1": "28 Võ Văn Tan Street, District 3"
   },
   "when": {
-    "part1": "Open every day from",
-    "part2": "7h30 to 18h.",
-    "part3": "Please note that the opening hours may vary depending on events. We recommend you to check beforehand to avoid any surprises."
+    "part1": "Open every day from #7h30 to 18h#.",
+    "part2": "Please note that the opening hours may vary depending on events. We recommend you to check beforehand to avoid any surprises."
   },
   "how": {
-    "part1": "It all depends on where you come from, but you can get there by walking, by bus, or if you are further away, by",
-    "part2": "Grab-Taxi",
-    "part3": "or",
-    "part4": "Grab-Bike.",
-    "part5": "We strongly advise against local taxis (excluding Grab) which just wait to rip you off.",
-    "part6": "More information about"
+    "part1": "It all depends on where you come from, but you can get there by walking, by bus, or if you are further away, by #Grab-Taxi# or #Grab-Bike#.",
+    "part2": "We strongly advise against local taxis (excluding Grab) which just wait to rip you off.",
+    "part3": "More information about"
   },
   "how-long": {
-    "part1": "Allow for at least",
-    "part2": "1h30",
-    "part3": "if you are in a hurry, and between",
-    "part4": "2h30 and 3h",
-    "part5": "if you have time and intend to read all the descriptions."
+    "part1": "Allow for at least #1h30# if you are in a hurry, and between #2h30 and 3h# if you have time and intend to read all the descriptions."
   },
   "what-time-of-year": {
-    "part1": "The best period to go is definitely during the dry season,",
-    "part2": "from December to April.",
-    "part3": "February is the least rainy month of the year, while April is the hottest.",
-    "part4": "We went there in February.",
-    "part5": "The museum is a very popular place, whether it is by tourists or by locals, it will always be quite crowded."
+    "part1": "The best period to go is definitely during the dry season, #from December to April#.",
+    "part2": "February is the least rainy month of the year, while April is the hottest.",
+    "part3": "We went there in February.",
+    "part4": "The museum is a very popular place, whether it is by tourists or by locals, it will always be quite crowded."
   },
   "how-much": {
     "part1": "15 000 VND / per person - Less than $1 per person."
@@ -42,59 +33,55 @@
     "part1": "We stayed in",
     "part2": "Prague Hotel",
     "part3": ". It was ideally located right near the guided tours departure",
-    "part4": "Tham Street",
+    "part4": "Tham Street.",
     "part5": "We stayed at this hotel during most of our time in Southern Vietnam.",
     "part6": "Compare and book your hotel in Ho Chi Minh City."
   },
   "visit": {
-    "part1": "A must-see for anyone who is interested about Vietnam History. But not only. In our opinion you should not miss the opportunity to visit this museum if you are going Ho Chi Minh City."
+    "part1": "A must-see for anyone who is interested about #Vietnam History#. But not only. In our opinion you should not miss the opportunity to visit this museum if you are going Ho Chi Minh City."
   },
   "visit1": {
     "title": "A bit of history",
-    "part1": "The museum was founded on September 4, 1975 to exhibit, but above all to preserve documents, photos and images as well as objects from the Indochina wars proving damages and crimes made by opposing forces.",
+    "part1": "The museum was founded on #September 4, 1975# to exhibit, but above all to preserve documents, photos and images as well as objects from the Indochina wars proving damages and crimes made by opposing forces.",
     "part2": "We will mainly talk here about the Indochina War and the Vietnam War.",
-    "part3": "The Indochina War (also called the First Indochina War) lasted a little over 7 years, from December 1946 to July 1954. It opposed the French Union against the Việt Minh and made over 500,000 victims.",
-    "part4": "The Vietnam War (also called the Second Indochina War) lasted 19 years, from November 1955 to April 1975. It opposed South Vietnam - with the support of the USA -  to North Vietnam, supported by the USSR and China. It caused between 3 and 4 million deaths.",
-    "part5": "30 years of war transcribed and displayed by all these images, photos and objects that the museum has preserved and brought to light to show us the outcome of such deadly wars."
+    "part3": "#The Indochina War# (also called the First Indochina War) lasted a little over 7 years, from December 1946 to July 1954. It opposed the French Union against the Việt Minh and made over 500,000 victims.",
+    "part4": "#The Vietnam War# (also called the Second Indochina War) lasted 19 years, from November 1955 to April 1975. It opposed South Vietnam - with the support of the USA -  to North Vietnam, supported by the USSR and China. It caused between 3 and 4 million deaths.",
+    "part5": "#30 years of war# transcribed and displayed by all these images, photos and objects that the museum has preserved and brought to light to show us the outcome of such deadly wars."
   },
   "visit2": {
     "title": "A very disturbing exterior",
     "part1": "Everything outside tries to make you endure the Vietnam War.",
-    "part2": "Outside, upon entering you will find an exhibition of American war vehicles, military aircraft, tanks, helicopters, artilleries and bombs.",
+    "part2": "Outside, upon entering you will find an #exhibition of American war vehicles#, military aircraft, tanks, helicopters, artilleries and bombs.",
     "part3": "You will feel short next to this huge machines which have, for the most part, been recovered from the battlefields.",
-    "part4": "You will also find a place where prison cells have been reconstituted. They show us the treatment inflicted to Vietnamese prisoners of war.",
+    "part4": "You will also find a place where #prison cells have been reconstituted#. They show us the treatment inflicted to Vietnamese prisoners of war.",
     "part5": "Instruments of torture, French guillotines, torture cages and isolation rooms are on display.",
-    "part6": "The infamous",
-    "part7": "\"tiger cage\"",
-    "part8": "has been reproduced and shows us how badly the prisoners were treated.",
-    "part9": "This cage, built with barbed wire and having the form of a coffin, was the torture cage for prisoners. They were starved and tortured night and day. Every movement made them touch the barbed wire and made them bleed. Charcoal ovens were placed next to the cages despite direct sunlight exposure and a temperature reaching up to 35 degrees.",
-    "part10": "",
-    "part11": "An inconceivable atrocity which was nevertheless very real.",
-    "part12": "If you want to discover more, you can visit the ",
-    "part13": "Phu Quôc Island",
-    "part14": ". Besides its sumptuous beaches, there is the Phu Quôc prison, where the “tiger cages” were created and used.",
-    "part15": "We unfortunately did not have time to go there as the island was quite out of our way. However, if we go back to Southern Vietnam we will definitely visit this place."
+    "part6": "The infamous #« Tiger Cage »# has been reproduced and shows us how badly the prisoners were treated.",
+    "part7": "This cage, built with barbed wire and having the form of a coffin, was a torture cage for prisoners. They were starved and tortured night and day. Every movement made them touch the barbed wire and made them bleed. Charcoal ovens were placed next to the cages despite direct sunlight exposure and a temperature reaching up to 35 degrees.",
+    "part8": "",
+    "part9": "An inconceivable atrocity which was nevertheless very real.",
+    "part10": "If you want to discover more, you can visit the ",
+    "part11": "Phu Quôc Island",
+    "part12": ". Besides its sumptuous beaches, there is the Phu Quôc prison, where the « tiger cages » were created and used.",
+    "part13": "We unfortunately did not have time to go there as the island was quite out of our way. However, if we go back to Southern Vietnam we will definitely visit this place."
   },
   "visit3": {
     "title": "A chilling visit",
-    "part1": "The museum consists of 3 floors where you can find an exhibition of weapons, photographs and many (very many) explanatory texts.",
+    "part1": "The museum consists of #3 floors# where you can find an exhibition of weapons, photographs and many (very many) explanatory texts.",
     "part2": "This building looks normal from the outside, but the inside will leave a mark on you.",
-    "part3": "Photos are very upsetting and we won't share any here. It will bring tears to your eyes - if you dare to watch them all - in front of such atrocity.",
+    "part3": "#Photos are very upsetting# and we won't share any here. It will bring tears to your eyes - if you dare to watch them all - in front of such atrocity.",
     "part4": "It must be said that this museum gets straight to the point and illustrates well what war is and the damage caused.",
-    "part5": "The most upsetting",
-    "part6": "happens in the Agent Orange room where pictures depict the tragedy that took place.",
-    "part7": "Agent Orange is a very potent herbicide that was used by the United States army as early as in 1961 for about 10 years. It was, in the first place, used to destroy forests, plants and animals to prevent the Vietnamese from hiding in the forest as well as  to destroy crops in order to starve Vietnamese.",
-    "part8": "Unfortunately this dioxin will lead to serious health problems for many years. It's assumed that effects are still happening nowadays. In this space, you can especially observe photos of many newborn children with serious deformities as well as many testimonies from families, who still suffer from its devastating effects (cancer, skin diseases, birth defects, malformations and so on).",
-    "part9": "Outstanding numbers help us to understand this chemical warfare: it is estimated that more than 70 million liters (400 kg of dioxin) have been spilled, that more than 5 million hectares of forests have been destroyed and that more than 4 million people suffered from its impact, not to mention those who still suffer today.",
-    "part10": "Imagine the horror of the pictures...",
-    "part11": "No doubt everyone comes out completely shocked.",
-    "part12": "We keep in mind the photos of those deformed children having their faces and bodies completely mutilated. The photos of the children are the most unbearable but we promise you that each image remains engraved. Some are hard to endure emotionally.",
-    "part13": "You will see in most tourist places, stands dedicated to disabled people due to the chemical agents. You will see them working on site and making objects, paintings ...",
-    "part14": "Frankly speaking we don't know what to think about that"
+    "part5": "%The most upsetting% happens in the #Agent Orange# room where pictures depict the tragedy that took place.",
+    "part6": "Agent Orange is a very potent herbicide that was used by the United States army as early as in 1961 #for about 10 years#. It was, in the first place, used to destroy forests, plants and animals to prevent the Vietnamese from hiding in the forest as well as  to destroy crops in order to starve Vietnamese.",
+    "part7": "Unfortunately this dioxin will lead to #serious health problems# for many years. It's assumed that effects are still happening nowadays. In this space, you can especially observe photos of many newborn children with serious deformities as well as many testimonies from families, who still suffer from its devastating effects (cancer, skin diseases, birth defects, malformations and so on).",
+    "part8": "Outstanding numbers help us to understand this chemical warfare: it is estimated that more than 70 million liters (400 kg of dioxin) have been spilled, that more than 5 million hectares of forests have been destroyed and that more than #4 million people suffered from its impact, not to mention those who still suffer today#.",
+    "part9": "Imagine the horror of the pictures...",
+    "part10": "No doubt everyone comes out completely shocked.",
+    "part11": "We keep in mind the photos of those deformed children having their faces and bodies completely mutilated. The photos of the children are the most unbearable but we promise you that each image remains engraved. Some are hard to endure emotionally.",
+    "part12": "You will see in most tourist places, stands dedicated to disabled people due to the chemical agents. You will see them working on site and making objects, paintings ... _Frankly speaking we don't know what to think about that_"
   },
   "visit4": {
     "title": "Mixed feelings",
-    "part1": "To be truly honest, we consider the museum a must-see and essential visit, especially if, like us, you like to know more about the country you travel to.",
+    "part1": "To be truly honest, we consider the museum a #must-see# and essential visit, especially if, like us, you like to know more about the country you travel to.",
     "part2": "However, the museum is not well organised. Firstly there were too many people which doesn't make you want to stay too long or take your time. Secondly, it's not well indicated so we didn't where to start and where to continue.",
     "part3": "There is no audio guide which in our opinion is essential and makes visit much more dynamic compares to stand up for 3 hours reading texts without extra information even if they were really very interesting.",
     "part4": "If you can't read English you will only have pictures, photographs and your own analysis. It was really disappointing for such a great place.",
@@ -102,7 +89,7 @@
     "part6": "in Cambodia because the audio guide immerses you totally, and provides much more chills down the spine. it really changed the visit.",
     "part7": "This is just our feeling. We do not compare the wars in Vietnam and Cambodia, but only how we felt in the museums. Despite this, we did not regret having gone to the War Remnants Museum. We recommend it if you are in Hô Chi Minh City. You will probably appreciate it as much as we did, and eventually even more.",
     "part8": "Like we said in our article",
-    "part9": ", this museum is immersive, the photos are upsetting but realistic and we do not recommend it with young children or if you are really emotional."
+    "part9": ", this museum is immersive, the photos are upsetting but realistic and #we do not recommend it with young children or if you are really emotional.#"
   },
   "conclusion": "Long taken for a place campaigning against the United States, the museum primarily denounces the atrocity of the war and the damage that still lasts years afterward. It clearly shows and emphasizes on the importance of preserving peace in the world.",
   "question1": "Did you appreciate this article?",

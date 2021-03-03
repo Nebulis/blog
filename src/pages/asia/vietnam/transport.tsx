@@ -28,7 +28,6 @@ import { Divider } from "../../../components/core/divider"
 import {
   Booking,
   Company,
-  HighLight,
   HowMuch,
   Information,
   Introduction,
@@ -847,16 +846,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ImageAsLandscape>
           <Information title={t("information")}>
             <p>{t("section1.information.part1")}</p>
+            <p>{t("section1.information.part2")}</p>
             <p>
-              {t("section1.information.part2")} <HighLight>{t("section1.information.part3")}</HighLight>{" "}
-              {t("section1.information.part4")}
-            </p>
-            <p>
-              {t("section1.information.part5")}{" "}
+              {t("section1.information.part3")}{" "}
               <VietnamExternalLink href={buildCo2LogicUrl(i18n.languageCode)}>
-                {t("section1.information.part6")}
+                {t("section1.information.part4")}
               </VietnamExternalLink>
-              {t("section1.information.part7")}
+              {t("section1.information.part5")}
             </p>
           </Information>
           <Booking title={t("booking")}>
@@ -897,14 +893,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </p>
           </Company>
           <HowMuch title={t("price")}>
-            <p>
-              {t("section1.price.part1")} <HighLight>{t("section1.price.part2")}</HighLight>
-            </p>
+            <p>{t("section1.price.part1")}</p>
+            <p>{t("section1.price.part2")}</p>
             <p>{t("section1.price.part3")}</p>
-            <p>
-              {t("section1.price.part4")} <HighLight>{t("section1.price.part5")}</HighLight>
-            </p>
-            <p>{t("section1.price.part6")}</p>
+            <p>{t("section1.price.part4")}</p>
             <MapAndTableContainer>
               <VietnamAirportMap
                 onMouseEnter={setTooltipContent}
@@ -994,13 +986,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               {t("section2.information.part6")} <VietnamLink to="my-tho">{t("section2.information.part7")}</VietnamLink>
               {t("section2.information.part8")}
             </p>
-            <p>
-              {t("section2.information.part9")} <HighLight>{t("section2.information.part10")}</HighLight>{" "}
-              {t("section2.information.part11")} <HighLight>{t("section2.information.part12")}</HighLight>
-              {t("section2.information.part13")} <HighLight>{t("section2.information.part14")}</HighLight>{" "}
-              {t("section2.information.part15")} <HighLight>{t("section2.information.part16")}</HighLight>{" "}
-              {t("section2.information.part17")}
-            </p>
+            <p>{t("section2.information.part9")}</p>
           </Information>
           <Booking title={t("booking")}>
             <p>
@@ -1034,11 +1020,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section id="bus-menu">
           <VietnamHeadline>{buildTitle(t("section3.title"))}</VietnamHeadline>
           <Divider />
-          <p>
-            {t("section3.part1")} <HighLight>{t("section3.part2")}</HighLight> {t("section3.part3")}{" "}
-            <HighLight>{t("section3.part4")}</HighLight> {t("section3.part5")}
-          </p>
-          <p>{t("section3.part6")}</p>
+          <SectionContent>
+            <p>{t("section3.part1")}</p>
+            <p>{t("section3.part2")}</p>
+          </SectionContent>
         </section>
         <MenuArticle title={t("index")}>
           <div>
@@ -1061,18 +1046,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             &nbsp;{t("section3.bus.title")}
           </BusTitle>
           <Information title={t("information")}>
-            <p>
-              {t("section3.bus.information.part1")} <HighLight>{t("section3.bus.information.part2")}</HighLight>{" "}
-              {t("section3.bus.information.part3")}
-            </p>
-            <p>{t("section3.bus.information.part4")}</p>
-            <p>{t("section3.bus.information.part5")}</p>
+            <p>{t("section3.bus.information.part1")}</p>
+            <p>{t("section3.bus.information.part2")}</p>
+            <p>{t("section3.bus.information.part3")}</p>
           </Information>
           <Booking title={t("booking")}>
-            <p>
-              {t("section3.bus.booking.part1")} <HighLight>{t("section3.bus.booking.part2")}</HighLight>
-              {t("section3.bus.booking.part3")}
-            </p>
+            <p>{t("section3.bus.booking.part1")}</p>
           </Booking>
           <Opinion title={t("opinion")}>
             <p>{t("section3.bus.opinion")}</p>
@@ -1085,23 +1064,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             &nbsp;{t("section3.car.title")}
           </BusTitle>
           <Information title={t("information")}>
-            <p>
-              {t("section3.car.information.part1")} <HighLight>{t("section3.car.information.part2")}</HighLight>
-            </p>
-            <p>{t("section3.car.information.part3")}</p>
+            <p>{t("section3.car.information.part1")}</p>
+            <p>{t("section3.car.information.part2")}</p>
             <ul>
-              <li>
-                <HighLight>{t("section3.car.information.part4")}</HighLight> {t("section3.car.information.part5")}
-              </li>
-              <li>
-                <HighLight>{t("section3.car.information.part6")}</HighLight> {t("section3.car.information.part7")}
-              </li>
-              <li>
-                <HighLight>{t("section3.car.information.part8")}</HighLight> {t("section3.car.information.part9")}
-              </li>
-              <li>
-                <HighLight>{t("section3.car.information.part10")}</HighLight> {t("section3.car.information.part11")}
-              </li>
+              <li>{t("section3.car.information.part3")}</li>
+              <li>{t("section3.car.information.part4")}</li>
+              <li>{t("section3.car.information.part5")}</li>
+              <li>{t("section3.car.information.part6")}</li>
             </ul>
             <GroupOfImages>
               <ImageAsLandscapeOnTheLeft
@@ -1145,24 +1114,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <TransportVietnamImages image="nightSleeperBus" />
               </ImageAsLandscapeOnTheRight>
             </GroupOfImages>
-            <p>{t("section3.car.information.part12")}</p>
-            <p>{t("section3.car.information.part13")}</p>
+            <p>{t("section3.car.information.part7")}</p>
+            <p>{t("section3.car.information.part8")}</p>
           </Information>
           <Booking title={t("booking")}>
+            <p>{t("section3.car.booking.part1")}</p>
+            <p>{t("section3.car.booking.part2")}</p>
             <p>
-              {t("section3.car.booking.part1")} <HighLight>{t("section3.car.booking.part2")}</HighLight>{" "}
-              {t("section3.car.booking.part3")}
-            </p>
-            <p>{t("section3.car.booking.part4")}</p>
-            <p>
-              {t("section3.car.booking.part5")}{" "}
+              {t("section3.car.booking.part3")}{" "}
               <VietnamExternalLink href={build12GoAsiaUrl(i18n.languageCode)}>
-                {t("section3.car.booking.part6")}
+                {t("section3.car.booking.part4")}
               </VietnamExternalLink>{" "}
-              {t("section3.car.booking.part7")}{" "}
+              {t("section3.car.booking.part5")}{" "}
               <VietnamExternalLink href={buildBaolauUrl(i18n.languageCode)}>
-                {t("section3.car.booking.part8")}
+                {t("section3.car.booking.part6")}
               </VietnamExternalLink>
+              .
             </p>
           </Booking>
           <Company title={t("company")}>
@@ -1179,14 +1146,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <VietnamExternalLink href={`http://mailinhexpress.vn/`}>
                 {t("section3.car.company.part5")}
               </VietnamExternalLink>
+              .
             </p>
           </Company>
           <HowMuch title={t("price")}>
-            <p>
-              {t("section3.car.price.part1")} <HighLight>{t("section3.car.price.part2")}</HighLight>{" "}
-              {t("section3.car.price.part3")}
-            </p>
-            <p>{t("section3.car.price.part4")}</p>
+            <p>{t("section3.car.price.part1")}</p>
+            <p>{t("section3.car.price.part2")}</p>
             <MapAndTableContainer>
               <img
                 src={MapBus}
@@ -1272,36 +1237,28 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             &nbsp;{t("section3.open-tour.title")}
           </BusTitle>
           <Information title={t("information")}>
-            <p>
-              {t("section3.open-tour.information.part1")}{" "}
-              <HighLight>{t("section3.open-tour.information.part2")}</HighLight>{" "}
-              {t("section3.open-tour.information.part3")}
-            </p>
-            <p>{t("section3.open-tour.information.part4")}</p>
+            <p>{t("section3.open-tour.information.part1")}</p>
+            <p>{t("section3.open-tour.information.part2")}</p>
             <ul>
+              <li>{t("section3.open-tour.information.part3")}</li>
+              <li>{t("section3.open-tour.information.part4")}</li>
               <li>{t("section3.open-tour.information.part5")}</li>
               <li>{t("section3.open-tour.information.part6")}</li>
-              <li>{t("section3.open-tour.information.part7")}</li>
-              <li>{t("section3.open-tour.information.part8")}</li>
             </ul>
+            <p>{t("section3.open-tour.information.part7")}</p>
+            <p>{t("section3.open-tour.information.part8")}</p>
             <p>{t("section3.open-tour.information.part9")}</p>
             <p>
               {t("section3.open-tour.information.part10")}{" "}
-              <HighLight>{t("section3.open-tour.information.part11")}</HighLight>{" "}
+              <VietnamExternalLink href={buildGetYourGuideLink(i18n.languageCode)()}>
+                {t("section3.open-tour.information.part11")}
+              </VietnamExternalLink>
               {t("section3.open-tour.information.part12")}
             </p>
-            <p>{t("section3.open-tour.information.part13")}</p>
             <p>
-              {t("section3.open-tour.information.part14")}{" "}
-              <VietnamExternalLink href={buildGetYourGuideLink(i18n.languageCode)()}>
-                {t("section3.open-tour.information.part15")}
-              </VietnamExternalLink>{" "}
-              {t("section3.open-tour.information.part16")}
-            </p>
-            <p>
-              {t("section3.open-tour.information.part17")}{" "}
-              <VietnamLink to="halong-bay">{t("section3.open-tour.information.part18")}</VietnamLink>{" "}
-              {t("section3.open-tour.information.part19")}
+              {t("section3.open-tour.information.part13")}{" "}
+              <VietnamLink to="halong-bay">{t("section3.open-tour.information.part14")}</VietnamLink>
+              {t("section3.open-tour.information.part15")}
             </p>
             <ImageAsLandscape>
               <img
@@ -1313,46 +1270,31 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 alt="Open Bus Route"
               />
             </ImageAsLandscape>
-            <p>{t("section3.open-tour.information.part20")}</p>
-            <p>
-              {t("section3.open-tour.information.part21")}{" "}
-              <HighLight>{t("section3.open-tour.information.part22")}</HighLight>{" "}
-              {t("section3.open-tour.information.part23")}{" "}
-              <HighLight>{t("section3.open-tour.information.part24")}</HighLight>
-              {t("section3.open-tour.information.part25")}
-            </p>
-            <p>{t("section3.open-tour.information.part26")}</p>
+            <p>{t("section3.open-tour.information.part16")}</p>
+            <p>{t("section3.open-tour.information.part17")}</p>
+            <p>{t("section3.open-tour.information.part18")}</p>
           </Information>
           <Booking title={t("booking")}>
-            <p>
-              {t("section3.open-tour.booking.part1")} <HighLight>{t("section3.open-tour.booking.part2")}</HighLight>{" "}
-              {t("section3.open-tour.booking.part3")} <HighLight>{t("section3.open-tour.booking.part4")}</HighLight>
-            </p>
-            <p>{t("section3.open-tour.booking.part5")}</p>
+            <p>{t("section3.open-tour.booking.part1")}</p>
+            <p>{t("section3.open-tour.booking.part2")}</p>
             <ul>
-              <li>{t("section3.open-tour.booking.part6")}</li>
-              <li>{t("section3.open-tour.booking.part7")}</li>
-              <li>{t("section3.open-tour.booking.part8")}</li>
+              <li>{t("section3.open-tour.booking.part3")}</li>
+              <li>{t("section3.open-tour.booking.part4")}</li>
+              <li>{t("section3.open-tour.booking.part5")}</li>
             </ul>
-            <p>
-              {t("section3.open-tour.booking.part9")} <HighLight>{t("section3.open-tour.booking.part10")}</HighLight>{" "}
-              {t("section3.open-tour.booking.part11")}
-            </p>
-            <p>{t("section3.open-tour.booking.part12")}</p>
-            <p>
-              {t("section3.open-tour.booking.part13")} <HighLight>{t("section3.open-tour.booking.part14")}</HighLight>{" "}
-              {t("section3.open-tour.booking.part15")}
-            </p>
+            <p>{t("section3.open-tour.booking.part6")}</p>
+            <p>{t("section3.open-tour.booking.part7")}</p>
+            <p>{t("section3.open-tour.booking.part8")}</p>
           </Booking>
           <Company title={t("company")}>
             <p>
-              <HighLight>{t("section3.open-tour.company.part1")}</HighLight> {t("section3.open-tour.company.part2")}{" "}
+              {t("section3.open-tour.company.part1")}{" "}
               <VietnamExternalLink href="https://thesinhtourist.vn/openbus/vcvx/open-bus/all">
-                {t("section3.open-tour.company.part3")}
+                {t("section3.open-tour.company.part2")}
               </VietnamExternalLink>
               .
             </p>
-            <p>{t("section3.open-tour.company.part4")}</p>
+            <p>{t("section3.open-tour.company.part3")}</p>
           </Company>
           <HowMuch title={t("price")}>
             <p>{t("section3.open-tour.price.part1")}</p>
@@ -1390,11 +1332,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             &nbsp;{t("section3.guided-tour.title")}
           </BusTitle>
           <Information title={t("information")}>
-            <p>
-              {t("section3.guided-tour.information.part1")}{" "}
-              <HighLight>{t("section3.guided-tour.information.part2")}</HighLight>
-            </p>
-            <p>{t("section3.guided-tour.information.part3")}</p>
+            <p>{t("section3.guided-tour.information.part1")}</p>
+            <p>{t("section3.guided-tour.information.part2")}</p>
           </Information>
           <Booking title={t("booking")}>
             <p>{t("section3.guided-tour.booking.part1")}</p>
@@ -1426,9 +1365,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </p>
           </Booking>
           <HowMuch title={t("price")}>
-            <p>
-              {t("section3.guided-tour.price.part1")} <HighLight>{t("section3.guided-tour.price.part2")}</HighLight>
-            </p>
+            <p>{t("section3.guided-tour.price.part1")}</p>
           </HowMuch>
           <Opinion title={t("opinion")}>
             <p>{t("section3.guided-tour.opinion.part1")}</p>
@@ -1445,28 +1382,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ImageAsLandscape>
           <p className="tc i mb3">{t("section4.image-title")}</p>
           <Information title={t("information")}>
+            <p>{t("section4.information.part1")}</p>
             <p>
-              {t("section4.information.part1")} <HighLight>{t("section4.information.part2")}</HighLight>{" "}
-              {t("section4.information.part3")}
+              {t("section4.information.part2")} <VietnamLink to="hoi-an">{t("section4.information.part3")}</VietnamLink>{" "}
+              {t("section4.information.part4")}
             </p>
+            <p>{t("section4.information.part5")}</p>
+            <p>{t("section4.information.part6")}</p>
             <p>
-              {t("section4.information.part4")} <VietnamLink to="hoi-an">{t("section4.information.part5")}</VietnamLink>{" "}
-              {t("section4.information.part6")}
-            </p>
-            <p>{t("section4.information.part7")}</p>
-            <p>{t("section4.information.part8")}</p>
-            <p>
-              {t("section4.information.part9")} <HighLight>{t("section4.information.part10")}</HighLight>{" "}
-              {t("section4.information.part11")}{" "}
-              <VietnamLink to="arashiyama">{t("section4.information.part12")}</VietnamLink>{" "}
-              {t("section4.information.part13")}
+              {t("section4.information.part7")}{" "}
+              <VietnamLink to="arashiyama">{t("section4.information.part8")}</VietnamLink>{" "}
+              {t("section4.information.part9")}
             </p>
           </Information>
           <HowMuch title={t("price")}>
-            <p>
-              {t("section4.price.part1")} <HighLight>{t("section4.price.part2")}</HighLight> {t("section4.price.part3")}
-            </p>
-            <p>{t("section4.price.part4")}</p>
+            <p>{t("section4.price.part1")}</p>
+            <p>{t("section4.price.part2")}</p>
           </HowMuch>
           <Opinion title={t("opinion")}>
             <p>{t("section4.opinion.part1")}</p>
@@ -1489,61 +1420,48 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section5.information.part1")}</p>
             <p>{t("section5.information.part2")}</p>
             <p>{t("section5.information.part3")}</p>
-            <p>
-              {t("section5.information.part4")} <HighLight>{t("section5.information.part5")}</HighLight>{" "}
-              {t("section5.information.part6")}
-            </p>
-            <p>
-              {t("section5.information.part7")} <HighLight>{t("section5.information.part8")}</HighLight>{" "}
-              {t("section5.information.part9")}
-            </p>
-            <p>{t("section5.information.part10")}</p>
+            <p>{t("section5.information.part4")}</p>
+            <p>{t("section5.information.part5")}</p>
+            <p>{t("section5.information.part6")}</p>
             <ul>
-              <li>{t("section5.information.part11")}</li>
+              <li>{t("section5.information.part7")}</li>
               <li>
-                {t("section5.information.part12")}
+                {t("section5.information.part8")}
                 <VietnamExternalLink href="https://commons.wikimedia.org/wiki/File:Vienna_Convention_on_Road_Traffic.svg">
-                  {t("section5.information.part13")}
+                  {t("section5.information.part9")}
                 </VietnamExternalLink>
-                {t("section5.information.part14")}
+                {t("section5.information.part10")}
               </li>
             </ul>
           </Information>
           <Booking title={t("booking")}>
+            <p>{t("section5.booking.part1")}</p>
             <p>
-              {t("section5.booking.part1")} <HighLight>{t("section5.booking.part2")}</HighLight>
-            </p>
-            <p>
-              {t("section5.booking.part3")}{" "}
+              {t("section5.booking.part2")}{" "}
               <VietnamExternalLink href="http://www.flamingotravel.com.vn/rentals/">
-                {t("section5.booking.part4")}
+                {t("section5.booking.part3")}
               </VietnamExternalLink>
-              {t("section5.booking.part5")}
+              {t("section5.booking.part4")}
             </p>
             <p>
-              {t("section5.booking.part6")} <HighLight>{t("section5.booking.part7")}</HighLight>{" "}
-              {t("section5.booking.part8")}{" "}
+              {t("section5.booking.part5")}{" "}
               <VietnamExternalLink href="https://www.facebook.com/groups/ForSaleVietnam/">
-                {t("section5.booking.part9")}
+                {t("section5.booking.part6")}
               </VietnamExternalLink>{" "}
-              {t("section5.booking.part10")}
+              {t("section5.booking.part7")}
             </p>
           </Booking>
           <HowMuch title={t("price")}>
             <p>{t("section5.price.part1")}</p>
             <ul>
+              <li>{t("section5.price.part2")}</li>
+              <li>{t("section5.price.part3")}</li>
               <li>
-                <HighLight>{t("section5.price.part2")}</HighLight> {t("section5.price.part3")}
-              </li>
-              <li>
-                <HighLight>{t("section5.price.part4")}</HighLight> {t("section5.price.part5")}
-              </li>
-              <li>
-                <HighLight>{t("section5.price.part6")}</HighLight> {t("section5.price.part7")}{" "}
+                {t("section5.price.part4")}{" "}
                 <VietnamExternalLink href="https://www.grab.com/vn/en/transport/bike/#section-fare-table-fare-table-grabbike">
-                  {t("section5.price.part8")}
+                  {t("section5.price.part5")}
                 </VietnamExternalLink>
-                {t("section5.price.part9")}
+                {t("section5.price.part6")}
               </li>
             </ul>
           </HowMuch>
@@ -1568,37 +1486,28 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <Divider />
           <Information title={t("information")}>
             <p>{t("section6.information.part1")}</p>
-            <p>
-              {t("section6.information.part2")} <HighLight>{t("section6.information.part3")}</HighLight>
-            </p>
-            <p>{t("section6.information.part4")}</p>
+            <p>{t("section6.information.part2")}</p>
+            <p>{t("section6.information.part3")}</p>
           </Information>
           <Booking title={t("booking")}>
-            <p>
-              {t("section6.booking.part1")} <HighLight>{t("section6.booking.part2")}</HighLight>{" "}
-              {t("section6.booking.part3")}
-            </p>
+            <p>{t("section6.booking.part1")}</p>
             <ImageAsPortrait>
               <TransportVietnamImages image="grabApplication" />
             </ImageAsPortrait>
           </Booking>
           <Company title={t("company")}>
-            <p>
-              <HighLight>{t("section6.company.part1")}</HighLight> {t("section6.company.part2")}
-            </p>
+            <p>{t("section6.company.part1")}</p>
           </Company>
           <HowMuch title={t("price")}>
+            <p>{t("section6.price.part1")}</p>
             <p>
-              {t("section6.price.part1")} <HighLight>{t("section6.price.part2")}</HighLight> {t("section6.price.part3")}
-            </p>
-            <p>
-              {t("section6.price.part4")}{" "}
+              {t("section6.price.part2")}{" "}
               <VietnamExternalLink href="https://www.grab.com/vn/en/transport/justgrab/#section-fare-table-fare-table-for-justgrab">
-                {t("section6.price.part5")}
+                {t("section6.price.part3")}
               </VietnamExternalLink>{" "}
-              {t("section6.price.part6")}
+              {t("section6.price.part4")}
             </p>
-            <p>{t("section6.price.part7")}</p>
+            <p>{t("section6.price.part5")}</p>
           </HowMuch>
           <Opinion title={t("opinion")}>
             <p>{t("section6.opinion")}</p>
@@ -1622,18 +1531,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section7.information.part2")}</p>
             <p>{t("section7.information.part3")}</p>
             <ul>
-              <li>
-                <HighLight>{t("section7.information.part4")}</HighLight> {t("section7.information.part5")}
-              </li>
-              <li>
-                <HighLight>{t("section7.information.part6")}</HighLight> {t("section7.information.part7")}
-              </li>
-              <li>
-                <HighLight>{t("section7.information.part8")}</HighLight> {t("section7.information.part9")}
-              </li>
-              <li>
-                <HighLight>{t("section7.information.part10")}</HighLight> {t("section7.information.part11")}
-              </li>
+              <li>{t("section7.information.part4")}</li>
+              <li>{t("section7.information.part5")}</li>
+              <li>{t("section7.information.part6")}</li>
+              <li>{t("section7.information.part7")}</li>
             </ul>
             <GroupOfImages>
               <ImageAsLandscapeOnTheLeft
@@ -1689,22 +1590,21 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Booking>
           <Company title={t("company")}>
             <p>
-              {t("section7.company.part1")} <HighLight>{t("section7.company.part2")}</HighLight>{" "}
-              {t("section7.company.part3")}
+              {t("section7.company.part1")}
               <img src={VietnamRailwayIcon} alt="Vietnam Railway" />
             </p>
-            <p>{t("section7.company.part4")}</p>
+            <p>{t("section7.company.part2")}</p>
             <ul>
               <li>
-                <HighLight>{t("section7.company.part5")}</HighLight> {t("section7.company.part6")}
+                {t("section7.company.part3")}
                 <img src={VioletteIcon} alt="Violette" className="v-top" />
               </li>
               <li>
-                <HighLight>{t("section7.company.part7")}</HighLight> {t("section7.company.part8")}{" "}
+                {t("section7.company.part4")}{" "}
                 <img src={NewLivitransIcon} alt="New Livitrans Express" className="v-top" />
               </li>
               <li>
-                <HighLight>{t("section7.company.part9")}</HighLight> {t("section7.company.part10")}
+                {t("section7.company.part5")}
                 <img src={LotusIcon} alt="Lotus Train" className="v-top" />
               </li>
             </ul>
@@ -1734,9 +1634,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section8.booking")}</p>
           </Booking>
           <HowMuch title={t("price")}>
-            <p>
-              {t("section8.price.part1")} <HighLight>{t("section8.price.part2")}</HighLight> {t("section8.price.part3")}
-            </p>
+            <p>{t("section8.price.part1")}</p>
           </HowMuch>
           <Opinion title={t("opinion")}>
             <p>{t("section8.opinion")}</p>

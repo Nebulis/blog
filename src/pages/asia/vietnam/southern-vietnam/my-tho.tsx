@@ -13,7 +13,6 @@ import {
   VietnamLink,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import {
-  HighLight,
   How,
   HowLong,
   ImageDescription,
@@ -80,33 +79,31 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Introduction>{t("introduction")}</Introduction>
         <Divider />
         <How>
+          <p>{t("how.part1")}</p>
           <p>
-            {t("how.part1")} <HighLight>{t("how.part2")}</HighLight> {t("how.part3")}
-          </p>
-          <p>
-            {t("how.part4")}{" "}
+            {t("how.part2")}{" "}
             <VietnamExternalLink
               href={buildBaolauSearchUrl(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "My Tho" })}
             >
-              {t("how.part5")}
+              {t("how.part3")}
             </VietnamExternalLink>{" "}
-            {t("how.part6")}
+            {t("how.part4")}
           </p>
           <p>
-            {t("how.part7")}{" "}
+            {t("how.part5")}{" "}
             <VietnamExternalLink
               href={buildGetYourGuideLink(i18n.languageCode)(
                 "activity/ho-chi-minh-city-l272/upper-mekong-river-full-day-tour-t69167"
               )}
             >
-              {t("how.part8")}
+              {t("how.part6")}
             </VietnamExternalLink>{" "}
-            {t("how.part9")}
+            {t("how.part7")}
           </p>
-          <p>{t("how.part10")}</p>
+          <p>{t("how.part8")}</p>
           {transportLinkPublished && (
             <p>
-              {t("how.part11")}{" "}
+              {t("how.part9")}{" "}
               <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
             </p>
           )}
@@ -138,9 +135,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <WhatTimeOfYear>
           <p>{t("what-time-of-year.part1")}</p>
           <p>{t("what-time-of-year.part2")}</p>
-          <p>
-            {t("what-time-of-year.part3")} <span className="b">{t("what-time-of-year.part4")}</span>
-          </p>
+          <p>{t("what-time-of-year.part3")}</p>
         </WhatTimeOfYear>
         <WhereToStay title={t("where-to-stay.title")}>
           <p>
@@ -208,6 +203,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <p>{t("visit2.part1")}</p>
+              <p>{t("visit2.part2")}</p>
               <ImageAsLandscape
                 credit={
                   <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/dezalb-1045091">
@@ -217,7 +213,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               >
                 <MyThoImages image="boat1" />
               </ImageAsLandscape>
-              <p>{t("visit2.part2")}</p>
               <p>{t("visit2.part3")}</p>
               <p>{t("visit2.part4")}</p>
               <GroupOfImages>

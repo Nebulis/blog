@@ -8,31 +8,22 @@
     "part1": "28 rue Võ Văn Tan, District 3"
   },
   "when": {
-    "part1": "Ouvert tous les jours de",
-    "part2": "7h30 à 18h.",
-    "part3": "Attention les horaires d’ouverture peuvent varier en fonction des évènements, pensez à vérifier avant pour ne pas vous faire avoir."
+    "part1": "Ouvert tous les jours de #7h30 à 18h#.",
+    "part2": "Attention les horaires d’ouverture peuvent varier en fonction des évènements, pensez à vérifier avant pour ne pas vous faire avoir."
   },
   "how": {
-    "part1": "Tout dépend d’où vous venez mais vous pouvez vous y rendre à pied, en bus, ou si vous êtes situé un peu plus loin en",
-    "part2": "Grab-Taxi",
-    "part3": "ou",
-    "part4": "Grab-Bike.",
-    "part5": "On vous déconseille fortement les taxis (hors Grab) qui sont plus là pour vous arnaquer qu’autre chose.",
-    "part6": "Plus d'informations sur"
+    "part1": "Tout dépend d’où vous venez mais vous pouvez vous y rendre à pied, en bus, ou si vous êtes situé un peu plus loin en #Grab-Taxi# ou #Grab-Bike#.",
+    "part2": "On vous déconseille fortement les taxis (hors Grab) qui sont plus là pour vous arnaquer qu’autre chose.",
+    "part3": "Plus d'informations sur"
   },
   "how-long": {
-    "part1": "Comptez environ",
-    "part2": "1h30",
-    "part3": " si vous êtes pressé, et entre",
-    "part4": "2h30 et 3h",
-    "part5": "si vous avez le temps et que vous comptez lire toutes les descriptions."
+    "part1": "Comptez environ #1h30# si vous êtes pressé, et entre #2h30 et 3h# si vous avez le temps et que vous comptez lire toutes les descriptions."
   },
   "what-time-of-year": {
-    "part1": "La meilleure période pour y aller est très clairement la saison sèche, de",
-    "part2": "décembre à avril.",
-    "part3": "Février est le mois le moins pluvieux de l’année, quand à avril il est le plus chaud.",
-    "part4": "Nous y sommes allés en février.",
-    "part5": "Le musée est de toute façon un lieu très apprécié, que ce soit par les touristes ou par les locaux et vous aurez dans tous les cas toujours du monde."
+    "part1": "La meilleure période pour y aller est très clairement la saison sèche, de #décembre à avril#.",
+    "part2": "Février est le mois le moins pluvieux de l’année, quand à avril il est le plus chaud.",
+    "part3": "Nous y sommes allés en février.",
+    "part4": "Le musée est de toute façon un lieu très apprécié, que ce soit par les touristes ou par les locaux et vous aurez dans tous les cas toujours du monde."
   },
   "how-much": {
     "part1": "15 000 VND / par personne - Moins de 1€ par personne."
@@ -47,54 +38,50 @@
     "part6": "Comparez et réservez votre hôtel à Hô Chí Minh-Ville."
   },
   "visit": {
-    "part1": "Passage obligé pour toutes personnes qui s’intéressent à l’histoire du Vietnam mais pas que, ce musée est, pour nous, un incontournable à ne pas louper si vous passez par Hô Chí Minh-Ville."
+    "part1": "Passage obligé pour toutes personnes qui s’intéressent à l’#histoire du Vietnam# mais pas que, ce musée est, pour nous, un incontournable à ne pas louper si vous passez par Hô Chí Minh-Ville."
   },
   "visit1": {
     "title": "Un peu d'histoire",
-    "part1": "Le musée fut fondé le 4 Septembre 1975 pour exposer mais surtout conserver les documents, les photos et images ainsi que des objets des guerres d’Indochine ayant pour preuves les dégâts et crimes des forces ennemies.",
+    "part1": "Le musée fut fondé le #4 Septembre 1975# pour exposer mais surtout conserver les documents, les photos et images ainsi que des objets des guerres d’Indochine ayant pour preuves les dégâts et crimes des forces ennemies.",
     "part2": "On parlera ici principalement de la guerre d’Indochine et de la guerre du Vietnam.",
-    "part3": "La guerre d’Indochine (appelée aussi première guerre d’Indochine) durera un peu plus de 7 ans, du 19 décembre 1946 au 21 juillet 1954. Elle opposa l’Union française au Việt Minh et fit un peu plus de 500 000 victimes.",
-    "part4": "La guerre du Vietnam (appelé aussi seconde guerre d’Indochine) durera un peu plus de 19 ans, du 1er novembre 1955 au 30 avril 1975. Elle opposa le Sud-Viêt Nam avec le support des USA au Nord-Viêt Nam, soutenue par l’URSS et la Chine. Elle fit entre 3 et 4 millions de morts.",
-    "part5": "Un peu moins de 30 ans de guerre retranscrit par tous ces clichés, images, photos et objets que le musée a su conserver et mis en évidence pour vous montrer le résultat de guerres aussi meurtrières."
+    "part3": "#La guerre d’Indochine# (appelée aussi première guerre d’Indochine) durera un peu plus de 7 ans, du 19 décembre 1946 au 21 juillet 1954. Elle opposa l’Union française au Việt Minh et fit un peu plus de 500 000 victimes.",
+    "part4": "#La guerre du Vietnam# (appelé aussi seconde guerre d’Indochine) durera un peu plus de 19 ans, du 1er novembre 1955 au 30 avril 1975. Elle opposa le Sud-Viêt Nam avec le support des USA au Nord-Viêt Nam, soutenue par l’URSS et la Chine. Elle fit entre 3 et 4 millions de morts.",
+    "part5": "Un peu moins de #30 ans de guerre# retranscrit par tous ces clichés, images, photos et objets que le musée a su conserver et mis en évidence pour vous montrer le résultat de guerres aussi meurtrières."
   },
   "visit2": {
     "title": "Un extérieur déjà éprouvant",
     "part1": "Tout est placé pour vous faire revivre la période de la guerre au Vietnam.",
-    "part2": "À l’extérieur, dès l’entrée vous trouverez une exposition de véhicules de guerre américains, avions de combat, chars, hélicoptères, pièces d’artillerie et bombes.",
+    "part2": "À l’extérieur, dès l’entrée vous trouverez une #exposition de véhicules de guerre# américains, avions de combat, chars, hélicoptères, pièces d’artillerie et bombes.",
     "part3": "Vous vous trouverez tout petit à côté de ses immenses engins qui ont, pour la plupart, été récupérés sur les champs de bataille.",
-    "part4": "Vous trouverez également, toujours à l’extérieur, un espace dédié à la reconstitution des prisons qui nous montrent les traitements qui étaient infligés aux Vietnamiens.",
+    "part4": "Vous trouverez également, toujours à l’extérieur, un espace dédié à la #reconstitution des prisons# qui nous montrent les traitements qui étaient infligés aux Vietnamiens.",
     "part5": "Instruments de torture, guillotine française, cages de torture ou chambres d’isolement y sont exposés.",
-    "part6": "La tristement célèbre",
-    "part7": "\"Cage à tigre\"",
-    "part8": "a été reproduite et nous montre à quel point les prisonniers étaient mal traités.",
-    "part9": "Cette cage construite avec des fils barbelés et sous la forme d’un cercueil, était la cage de torture des prisonniers, ils y étaient affamés et torturés nuit et jour. Chaque mouvement leur faisait toucher le barbelé et les faisait saigner. Des fours à charbon étaient mis à côté des cages malgré une exposition en plein soleil sous une chaleur de plomb atteignant souvent les 35 degrés.",
-    "part10": "\"La cage\" est faite de fils de fer barbelés entrelacés tout autour et sur le dessus. \"Les cages\" étaient placées à l'extérieur et existent en différentes tailles. La plus petite mesure 1,8m x 0,75m x 0,4m pour y garder 2 à 3 personnes. Les prisonniers devaient s'allonger sur un sol sablonneux. D'autres mesurant 1,8m x 0,75m x 0,6m pouvaient garder de 5 à 7 personnes. Les prisonniers pouvaient seulement se baisser, ils ne pouvaient pas s'asseoir correctement dedans.",
-    "part11": "Une atrocité qu’on ne peut s’imaginer mais qui était pourtant bien réelle.",
-    "part12": "Vous pouvez d’ailleurs, si vous voulez en savoir plus, aller visiter l’",
-    "part13": "île de Phu Quôc",
-    "part14": ". Outre ses magnifiques plages, elle abrite la prison Phu Quôc, là où les ”cages de tigre“ ont été créées et utilisées.",
-    "part15": "Nous n’avons malheureusement pas eu le temps d’y aller car l’île est assez excentrée mais c’est un lieu noté si on retourne au Vietnam du Sud."
+    "part6": "La tristement célèbre #« Cage à tigre »# a été reproduite et nous montre à quel point les prisonniers étaient mal traités.",
+    "part7": "Cette cage construite avec des fils barbelés et sous la forme d’un cercueil, était la cage de torture des prisonniers, ils y étaient affamés et torturés nuit et jour. Chaque mouvement leur faisait toucher le barbelé et les faisait saigner. Des fours à charbon étaient mis à côté des cages malgré une exposition en plein soleil sous une chaleur de plomb atteignant souvent les 35 degrés.",
+    "part8": "« La cage » est faite de fils de fer barbelés entrelacés tout autour et sur le dessus. « Les cages » étaient placées à l'extérieur et existent en différentes tailles. La plus petite mesure 1,8m x 0,75m x 0,4m pour y garder 2 à 3 personnes. Les prisonniers devaient s'allonger sur un sol sablonneux. D'autres mesurant 1,8m x 0,75m x 0,6m pouvaient garder de 5 à 7 personnes. Les prisonniers pouvaient seulement se baisser, ils ne pouvaient pas s'asseoir correctement dedans.",
+    "part9": "Une atrocité qu’on ne peut s’imaginer mais qui était pourtant bien réelle.",
+    "part10": "Vous pouvez d’ailleurs, si vous voulez en savoir plus, aller visiter l’",
+    "part11": "île de Phu Quôc",
+    "part12": ". Outre ses magnifiques plages, elle abrite la prison Phu Quôc, là où les « cages de tigre » ont été créées et utilisées.",
+    "part13": "Nous n’avons malheureusement pas eu le temps d’y aller car l’île est assez excentrée mais c’est un lieu noté si on retourne au Vietnam du Sud."
   },
   "visit3": {
     "title": "Une visite glaçante",
-    "part1": "Le bâtiment se compose en 3 étages où vous pourrez découvrir tout au long de la visite une exposition d'armes, de photographies et de nombreux (très nombreux) textes explicatifs.",
+    "part1": "Le bâtiment se compose en #3 étages# où vous pourrez découvrir tout au long de la visite une exposition d'armes, de photographies et de nombreux (très nombreux) textes explicatifs.",
     "part2": "Ce bâtiment ne paye pas de mine de l’extérieur mais ce que vous découvrirez à l'intérieur ne vous laissera pas insensible.",
-    "part3": "Les photos sont très dures à voir et nous ne les montrerons pas ici, mais vous aurez bien souvent les larmes aux yeux ou le regard fuyant devant tant d’atrocité.",
+    "part3": "#Les photos sont très dures à voir# et nous ne les montrerons pas ici, mais vous aurez bien souvent les larmes aux yeux ou le regard fuyant devant tant d’atrocité.",
     "part4": "Il faut dire que ce musée n’y va pas par quatre chemins pour vous montrer la guerre et ses dégâts.",
-    "part5": "L’endroit le plus intense à visiter",
-    "part6": "est très clairement le moment où on parle de l’agent orange et de ses effets en nous montrant des photos.",
-    "part7": "L’agent orange est un herbicide très puissant utilisé par l’armée Américaine dès 1961 et répandu pendant environ 10 ans. Il était, en premier lieu, utilisé pour détruire les forêts, plantes et animaux pour empêcher les Vietnamiens de se cacher en forêt mais également pour détruire les récoltes et de ce fait les affamer.",
-    "part8": "Malheureusement cette dioxine entraînera pendant de longues années, et on suppose même encore maintenant, de graves problèmes de santé, vous y verrez notamment des photos de nombreux enfants naissants avec de graves malformations ainsi que de nombreux témoignages de familles, qui pour cette nouvelle génération souffrent encore de ses effets dévastateurs (cancers, maladies de la peau, anomalies, malformations à la naissance et bien plus).",
-    "part9": "Cette guerre chimique nous donne des chiffres énormes et nous montre à quel point elle a été terrible, on estime que plus de 70 millions de litres, soit 400 kg de dioxine, ont été répandus, que plus de 5 millions d’hectares de forêts ont été détruites et que plus de 4 millions de personnes ont souffert de son impact, sans parler de ceux qui en souffrirait encore aujourd’hui.",
-    "part10": "Imaginez donc l’horreur de ces clichés ...",
-    "part11": "On sort choqué à n’en pas douter.",
-    "part12": "On garde en tête les photos des pauvres enfants aux visages et aux corps déformés et mutilés. Les photos des enfants sont les plus marquantes mais on vous promet que chaque image reste gravée. Certaines sont d’ailleurs difficilement supportables.",
-    "part13": "Vous verrez d’ailleurs dans la plupart des endroits touristiques des stands dédiés aux personnes handicapés par ces agents chimiques, vous les verrez travailler sur place et fabriquer des objets, peintures ...",
-    "part14": "Très honnêtement nous ne savons pas quoi penser de ces espaces."
+    "part5": "#L’endroit le plus intense à visiter# est très clairement le moment où on parle de l’#agent orange# et de ses effets en nous montrant des photos.",
+    "part6": "L’agent orange est un herbicide très puissant utilisé par l’armée Américaine dès 1961 et répandu #pendant environ 10 ans#. Il était, en premier lieu, utilisé pour détruire les forêts, plantes et animaux pour empêcher les Vietnamiens de se cacher en forêt mais également pour détruire les récoltes et de ce fait les affamer.",
+    "part7": "Malheureusement cette dioxine entraînera pendant de longues années, et on suppose même encore maintenant, de #graves problèmes de santé#, vous y verrez notamment des photos de nombreux enfants naissants avec de graves malformations ainsi que de nombreux témoignages de familles, qui pour cette nouvelle génération souffrent encore de ses effets dévastateurs (cancers, maladies de la peau, anomalies, malformations à la naissance et bien plus).",
+    "part8": "Cette guerre chimique nous donne des chiffres énormes et nous montre à quel point elle a été terrible, on estime que plus de 70 millions de litres, soit 400 kg de dioxine, ont été répandus, que plus de 5 millions d’hectares de forêts ont été détruites et que plus de #4 millions de personnes ont souffert de son impact, sans parler de ceux qui en souffrirait encore aujourd’hui#.",
+    "part9": "Imaginez donc l’horreur de ces clichés ...",
+    "part10": "On sort choqué à n’en pas douter.",
+    "part11": "On garde en tête les photos des pauvres enfants aux visages et aux corps déformés et mutilés. Les photos des enfants sont les plus marquantes mais on vous promet que chaque image reste gravée. Certaines sont d’ailleurs difficilement supportables.",
+    "part12": "Vous verrez d’ailleurs dans la plupart des endroits touristiques des stands dédiés aux personnes handicapés par ces agents chimiques, vous les verrez travailler sur place et fabriquer des objets, peintures ... _Très honnêtement nous ne savons pas quoi penser de ces espaces_."
   },
   "visit4": {
     "title": "Une impression mitigée",
-    "part1": "Pour être vraiment transparent avec vous, c’est une visite à faire car incontournable si comme nous vous aimez vous intéresser à la vie du pays où vous êtes.",
+    "part1": "Pour être vraiment transparent avec vous, c’est une visite à faire car #incontournable# si comme nous vous aimez vous intéresser à la vie du pays où vous êtes.",
     "part2": "Cela dit, le musée est quelque peu fouilli, il y a beaucoup trop de monde et cela casse le goût d’y avancer, d’ailleurs on s’y perd un peu et on ne sait pas vraiment par où commencer.",
     "part3": "Il manque un service de guide audio qui est à notre sens clairement indispensable et bien plus dynamique que de rester 3h à lire des textes qui sont cela dit vraiment très intéressant.",
     "part4": "Si vous avez du mal avec l’anglais vous n’aurez que les images, les photographies et votre propre analyse, là aussi c’est un peu dommage pour un endroit si intéressant.",
@@ -102,7 +89,7 @@
     "part6": "au Cambodge qui nous mettait totalement en immersion et qui nous a fait du coup beaucoup plus froid dans le dos d’autant plus qu’il y avait un service de guide audio et que cela change vraiment la visite.",
     "part7": "Ce n’est que notre ressenti, nous ne comparons d’ailleurs aucunement les guerres au Vietnam et celle au Cambodge mais uniquement la retranscription qu’on a voulu nous en donner et nous n’avons malgré tout pas regretté d’être allé au musée du vestige de guerre. On vous le conseille si vous êtes à Hô Chi Minh-Ville, et d’ailleurs peut-être que vous n’aurez pas le même ressenti que nous et tant mieux.",
     "part8": "Comme on vous le disait dans notre article",
-    "part9": ", ce musée est immersif, les photos sont déroutantes mais réalistes et nous vous le déconseillons par contre avec des enfants en bas âges ou si vous êtes vraiment sensibles."
+    "part9": ", ce musée est immersif, les photos sont déroutantes mais réalistes et #nous vous le déconseillons par contre avec des enfants en bas âges ou si vous êtes vraiment sensibles#."
   },
   "conclusion": "Longtemps pris pour un endroit faisant campagne contre les États-Unis, le musée dénonce surtout l’atrocité de la guerre et les dégâts qui persistent encore des années après. Il montre et insiste bien sur le fait et l’importance de préserver la paix dans le monde.",
   "question1": "Cet article vous a-t-il intéressé ?",

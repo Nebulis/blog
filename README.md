@@ -1,5 +1,8 @@
 [![CircleCI](https://circleci.com/gh/Nebulis/blog.svg?style=svg)](https://circleci.com/gh/Nebulis/blog)
 
+- srcset doesnt help , without it generate 3 images, and with 3 as well
+- jpg or webp ?
+
 - node reset
 - npm run plop -- -- --pagePath asia/philippines/el-nido/el-nido-which-tour
 - node resize

@@ -14,12 +14,10 @@
     "title": "Avion",
     "information": {
       "part1": "On ne vous parle pas ici des avions pour venir dans le pays mais bien des avions dits domestiques. C'est-à-dire d’une ville à une autre au sein du Vietnam même.",
-      "part2": "L’avion est en général",
-      "part3": "le moyen le plus rapide",
-      "part4": "et au Vietnam les prix sont plutôt attractifs.",
-      "part5": "L’avion est néanmoins le transport qui diffuse le plus de CO2 dans l’air par kilomètre parcouru. Si vous souhaitez avoir un minimum d’impact sur la planète tout en voyageant malgré tout, vous pouvez aller sur le site",
-      "part6": "Co2logic",
-      "part7": ", ils vous permettent de calculer le nombre de CO2 que votre voyage en avion a émis et vous donne la possibilité de faire un don pour soutenir leur projet pour diminuer cet impact."
+      "part2": "L’avion est en général #le moyen le plus rapide# et au Vietnam les prix sont plutôt attractifs.",
+      "part3": "L’avion est néanmoins le transport qui diffuse le plus de CO2 dans l’air par kilomètre parcouru. Si vous souhaitez avoir un minimum d’impact sur la planète tout en voyageant malgré tout, vous pouvez aller sur le site",
+      "part4": "Co2logic",
+      "part5": ", ils vous permettent de calculer le nombre de CO2 que votre voyage en avion a émis et vous donne la possibilité de faire un don pour soutenir leur projet pour diminuer cet impact."
     },
     "booking": {
       "part1": "Nous faisons toujours nos réservations sur",
@@ -42,12 +40,10 @@
       "part7": ", mais nous ne la connaissons pas."
     },
     "price": {
-      "part1": "Les trajets sans escale ne durent pas plus de 2h, le plus souvent aux alentours de",
-      "part2": "1h - 1h20.",
-      "part3": "Les prix varient en fonction des compagnies que vous prenez, sachant qu'assez régulièrement vous n’aurez pas vraiment le choix.",
-      "part4": "Pour vous donner une fourchette de prix, toujours pour des trajets sans escale, comprenez",
-      "part5": "entre 60€ et 150€ par personne.",
-      "part6": "Il se peut que les prix varient quelque peu, nous vous donnons ici une fourchette approximative des prix :"
+      "part1": "Les trajets sans escale ne durent pas plus de 2h, le plus souvent aux alentours de #1h - 1h20#.",
+      "part2": "Les prix varient en fonction des compagnies que vous prenez, sachant qu'assez régulièrement vous n’aurez pas vraiment le choix.",
+      "part3": "Pour vous donner une fourchette de prix, toujours pour des trajets sans escale, comprenez #entre 60€ et 150€ par personne#.",
+      "part4": "Il se peut que les prix varient quelque peu, nous vous donnons ici une fourchette approximative des prix :"
     },
     "opinion": {
       "part1": "Utile si vous n’avez pas beaucoup de temps ou que vous ne voulez pas être trop longtemps dans les transports en commun. Utile également si vous voulez aller d’un point A à un point B assez éloigné sans avoir besoin de faire plusieurs arrêts.",
@@ -66,15 +62,7 @@
       "part6": "ou encore dans le Sud sur",
       "part7": "le Delta du Mékong",
       "part8": ", la case bateau est un indispensable pour découvrir les plus beaux paysages. Vous pourrez admirer des marchés flottants ou bien des villages flottants. Ou vous pourrez tout simplement vous balader à l’ombre des palmiers d’eau d’île en île.",
-      "part9": "Du simple",
-      "part10": "bateau de visite",
-      "part11": "jusqu’à l’immensité d’un",
-      "part12": "bateau de croisière",
-      "part13": ", en passant par les minuscules",
-      "part14": "barques",
-      "part15": "pour une balade plus authentique ou encore le",
-      "part16": "kayak",
-      "part17": "pour plus de sensation, vous n’aurez que l’embarras du choix."
+      "part9": "Du simple #bateau de visite# jusqu’à l’immensité d’un #bateau de croisière#, en passant par les minuscules #barques# pour une balade plus authentique ou encore le #kayak# pour plus de sensation, vous n’aurez que l’embarras du choix."
     },
     "booking": {
       "part1": "Il est possible de faire des croisières de plusieurs jours mais également des excursions d’une journée sur les différents spots de cours d'eau. Vous pouvez trouver tout ce que vous souhaitez en comparant les prix et les détails sur",
@@ -86,54 +74,39 @@
   },
   "section3": {
     "title": "Bus / Car",
-    "part1": "Il s’agit du moyen de transport",
-    "part2": "le plus utilisé",
-    "part3": "par les voyageurs. C’est également le moyen de transport longue distance",
-    "part4": "le moins cher et le plus desservi",
-    "part5": "",
-    "part6": "On peut différencier en 4 parties les bus du Vietnam.",
+    "part1": "Il s’agit du moyen de transport #le plus utilisé# par les voyageurs. C’est également le moyen de transport longue distance #le moins cher et le plus desservi#.",
+    "part2": "On peut différencier en 4 parties les bus du Vietnam.",
     "bus": {
       "title": "Bus de ville",
       "information": {
-        "part1": "On en trouve dans quasiment chaque pays, ce sont des bus spécialisés dans le",
-        "part2": "transport urbain",
-        "part3": ", ils ont des parcours définis et de nombreux arrêts.",
-        "part4": "Au Vietnam, ils sont utilisés principalement par les locaux. Il n’est pas rare qu’ils soient plus que bondés et que vous vous retrouviez tous entassés et sans aucune place assise. Les arrêts ne sont pas forcément bien respectés donc faites attention, on a déjà vu des personnes montées à bord juste à un feu rouge ou bien descendre alors que le bus est encore en train de rouler.",
-        "part5": "Ce ne sont pas des bus très confortables et vous n’aurez pas de climatisation."
+        "part1": "On en trouve dans quasiment chaque pays, ce sont des bus spécialisés dans le #transport urbain#, ils ont des parcours définis et de nombreux arrêts.",
+        "part2": "Au Vietnam, ils sont utilisés principalement par les locaux. Il n’est pas rare qu’ils soient plus que bondés et que vous vous retrouviez tous entassés et sans aucune place assise. Les arrêts ne sont pas forcément bien respectés donc faites attention, on a déjà vu des personnes montées à bord juste à un feu rouge ou bien descendre alors que le bus est encore en train de rouler.",
+        "part3": "Ce ne sont pas des bus très confortables et vous n’aurez pas de climatisation."
       },
       "booking": {
-        "part1": "Aucune réservation n’est possible puisque les sièges ne sont pas nominatifs. Néanmoins, on vous préconise de prendre vos",
-        "part2": "tickets à la gare routière",
-        "part3": ", les chauffeurs vous demanderont certainement plus cher sachant que vous êtes touristes."
+        "part1": "Aucune réservation n’est possible puisque les sièges ne sont pas nominatifs. Néanmoins, on vous préconise de prendre vos #tickets à la gare routière#, les chauffeurs vous demanderont certainement plus cher sachant que vous êtes touristes."
       },
       "opinion": "A utiliser si vraiment vous n’avez pas d’autres choix. Même pour une courte distance, avec les embouteillages, on est quasiment sûr que vous arriverez plus vite à pied. Et pour une longue distance en ville, préférez le taxi (Taxi-Grab) ou le scooter (Bike-Grab)."
     },
     "car": {
       "title": "Car",
       "information": {
-        "part1": "Nous on appelle ça des cars ou des bus inter-cités, ce sont des",
-        "part2": "bus qui relient les villes entre elles.",
-        "part3": "Vous en avez 4 catégories différentes :",
-        "part4": "Seater Bus",
-        "part5": "- Bus normal avec siège assis",
-        "part6": "Seater-Sleeper Bus",
-        "part7": "- Sièges légèrement inclinable",
-        "part8": "Berths Sleeper Bus",
-        "part9": "- Lits couchettes individuels",
-        "part10": "Night Sleeper Bus",
-        "part11": "- Lits couchettes individuels de luxe - Plus confortable pour la nuit avec tablette",
-        "part12": "Pour les bus “sleeper”, vous devez enlever vos chaussures à l’entrée, on vous donne alors un sac plastique pour les ranger.",
-        "part13": "Ils ne font pas beaucoup d’arrêt mais en font au moins un dans chaque ville et s’arrêtent également pour que vous puissiez manger à des aires de repos dans un centre commercial et des petits restaurants. Les pauses durent environ une vingtaine de minutes mais vous n’êtes pas obligés de descendre (même si on vous le conseille car le chauffeur coupe la climatisation et le car devient instantanément un four !)."
+        "part1": "Nous on appelle ça des cars ou des bus inter-cités, ce sont des #bus qui relient les villes entre elles#.",
+        "part2": "Vous en avez 4 catégories différentes :",
+        "part3": "#Seater Bus# - Bus normal avec siège assis",
+        "part4": "#Seater-Sleeper Bus# - Sièges légèrement inclinable",
+        "part5": "#Berths Sleeper Bus# - Lits couchettes individuels",
+        "part6": "#Night Sleeper Bus# - Lits couchettes individuels de luxe - Plus confortable pour la nuit avec tablette",
+        "part7": "Pour les bus « sleeper », vous devez enlever vos chaussures à l’entrée, on vous donne alors un sac plastique pour les ranger.",
+        "part8": "Ils ne font pas beaucoup d’arrêt mais en font au moins un dans chaque ville et s’arrêtent également pour que vous puissiez manger à des aires de repos dans un centre commercial et des petits restaurants. Les pauses durent environ une vingtaine de minutes mais vous n’êtes pas obligés de descendre (même si on vous le conseille car le chauffeur coupe la climatisation et le car devient instantanément un four !)."
       },
       "booking": {
-        "part1": "Les tickets sont vendus par siège, il est donc préférable de",
-        "part2": "réserver à l’avance",
-        "part3": "si vous voulez être sûr d’avoir le car à l’heure que vous souhaitez.",
-        "part4": "Vous pouvez acheter vos billets directement sur le site de la compagnie de bus, au guichet de leurs agences ou directement aux billetteries des gares routières.",
-        "part5": "Vous pouvez également vous rendre sur Internet sur",
-        "part6": "12go.asia",
-        "part7": "et",
-        "part8": "Baolau"
+        "part1": "Les tickets sont vendus par siège, il est donc préférable de #réserver à l’avance# si vous voulez être sûr d’avoir le car à l’heure que vous souhaitez.",
+        "part2": "Vous pouvez acheter vos billets directement sur le site de la compagnie de bus, au guichet de leurs agences ou directement aux billetteries des gares routières.",
+        "part3": "Vous pouvez également vous rendre sur Internet sur",
+        "part4": "12go.asia",
+        "part5": "et",
+        "part6": "Baolau"
       },
       "company": {
         "part1": "Les compagnies les plus réputées sont",
@@ -143,10 +116,8 @@
         "part5": "Mai Linh Express"
       },
       "price": {
-        "part1": "Il est compliqué de donner une fourchette de prix étant donné que cela dépend de beaucoup de critères (trajet, compagnie, type de bus, etc.), cependant le bus reste",
-        "part2": "le mode de déplacement le moins cher",
-        "part3": "à travers le Vietnam.",
-        "part4": "N'hésitez pas à comparer les prix sur les différentes compagnies et sites de réservation que nous avons partagé ci-dessus."
+        "part1": "Il est compliqué de donner une fourchette de prix étant donné que cela dépend de beaucoup de critères (trajet, compagnie, type de bus, etc.), cependant le bus reste #le mode de déplacement le moins cher# à travers le Vietnam.",
+        "part2": "N'hésitez pas à comparer les prix sur les différentes compagnies et sites de réservation que nous avons partagé ci-dessus."
       },
       "opinion": {
         "part1": "Le car est très intéressant lorsque l’on ne dispose peu ou pas de contraintes de temps. Ils permettent de naviguer de ville en ville tout simplement et de profiter des paysages (surtout la journée).",
@@ -160,63 +131,47 @@
     "open-tour": {
       "title": "Open Tour",
       "information": {
-        "part1": "Très prisé chez les backpackers, l’Open Tour consiste à",
-        "part2": "suivre un itinéraire entre deux villes",
-        "part3": "et choisir le nombre d'arrêts que vous souhaitez (aux villes disponibles).",
-        "part4": "Il y a quatre itinéraires disponibles :",
-        "part5": "Hô Chi Minh-Ville (Saigon) => Hanoi",
-        "part6": "Hô Chi Minh-Ville (Saigon) => Hué",
-        "part7": "Hanoi => Hô Chi Minh-Ville (Saigon)",
-        "part8": "Hué => Hô Chi Minh-Ville (Saigon)",
-        "part9": "Une fois que vous avez choisi un itinéraire, il ne vous reste plus qu'à choisir les villes sur le chemin dans lesquelles vous souhaitez vous arrêter.",
-        "part10": "Les",
-        "part11": "SEULES villes desservies",
-        "part12": "sont : Hô Chi Minh-Ville - Dalat - Mui ne - Nha Trang - Hoi An - Da Nang - Hué - Hanoi.",
-        "part13": "Contrairement aux tours avec guide, il est possible de s'arrêter dans une ville, aussi longtemps que souhaité, dans la limite de validité du billet (1 mois).",
-        "part14": "Il faut garder à l'esprit qu’il s’agit d’un service de bus entre les grandes villes du Vietnam. Si vous souhaitez explorer les environs une fois arrivé dans une de vos destinations, vous devez vous débrouiller par vos propres moyens, soit avec la même compagnie mais en car (bus inter-cité), soit en ayant réservé des excursions comme sur",
-        "part15": "GetYourGuide",
-        "part16": ", ou encore en moto/scooter, en train … . Cela rajoute donc des frais supplémentaires.",
-        "part17": "Exemple : Admettons que vous voulez visitez la",
-        "part18": "Baie d’Halong",
-        "part19": ", dans le Nord du Vietnam. L’Open tour vous déposera à Hanoi, et vous devrez trouver un autre moyen de transport pour vous emmener à la Baie.",
-        "part20": "Les stations de bus Open Tour sont très généralement situées dans le centre des villes. A vous de trouver un moyen de rejoindre votre logement sur place. Certaines compagnies offrent de vous amener à votre hôtel, renseignez-vous.",
-        "part21": "N'hésitez pas à comparer les offres de différentes compagnies pour choisir celle qui sied le mieux à vos besoins, en termes de confort et de prix. Les bus sont souvent plutôt",
-        "part22": "modernes et confortables",
-        "part23": ", avec",
-        "part24": "climatisation et wifi",
-        "part25": ", cela dit ne vous attendez pas à pouvoir regarder Netflix.",
-        "part26": "Il n’y a pas beaucoup de bus par jour, en moyenne un ou deux, à horaires fixes. Souvent un le matin, et un le soir. Les bus de nuit sont également disponibles sur certains trajets pour les Open Tour."
+        "part1": "Très prisé chez les backpackers, l’Open Tour consiste à #suivre un itinéraire entre deux villes# et choisir le nombre d'arrêts que vous souhaitez (aux villes disponibles).",
+        "part2": "Il y a quatre itinéraires disponibles :",
+        "part3": "Hô Chi Minh-Ville (Saigon) ↠ Hanoi",
+        "part4": "Hô Chi Minh-Ville (Saigon) ↠ Hué",
+        "part5": "Hanoi ↠ Hô Chi Minh-Ville (Saigon)",
+        "part6": "Hué ↠ Hô Chi Minh-Ville (Saigon)",
+        "part7": "Une fois que vous avez choisi un itinéraire, il ne vous reste plus qu'à choisir les villes sur le chemin dans lesquelles vous souhaitez vous arrêter.",
+        "part8": "Les #SEULES villes desservies# sont : Hô Chi Minh-Ville - Dalat - Mui ne - Nha Trang - Hoi An - Da Nang - Hué - Hanoi.",
+        "part9": "Contrairement aux tours avec guide, il est possible de s'arrêter dans une ville, aussi longtemps que souhaité, dans la limite de validité du billet (1 mois).",
+        "part10": "Il faut garder à l'esprit qu’il s’agit d’un service de bus entre les grandes villes du Vietnam. Si vous souhaitez explorer les environs une fois arrivé dans une de vos destinations, vous devez vous débrouiller par vos propres moyens, soit avec la même compagnie mais en car (bus inter-cité), soit en ayant réservé des excursions comme sur",
+        "part11": "GetYourGuide",
+        "part12": ", ou encore en moto/scooter, en train … . Cela rajoute donc des frais supplémentaires.",
+        "part13": "Exemple : Admettons que vous voulez visitez la",
+        "part14": "Baie d’Halong",
+        "part15": ", dans le Nord du Vietnam. L’Open tour vous déposera à Hanoi, et vous devrez trouver un autre moyen de transport pour vous emmener à la Baie.",
+        "part16": "Les stations de bus Open Tour sont très généralement situées dans le centre des villes. A vous de trouver un moyen de rejoindre votre logement sur place. Certaines compagnies offrent de vous amener à votre hôtel, renseignez-vous.",
+        "part17": "N'hésitez pas à comparer les offres de différentes compagnies pour choisir celle qui sied le mieux à vos besoins, en termes de confort et de prix. Les bus sont souvent plutôt #modernes et confortables#, avec #climatisation et wifi#, cela dit ne vous attendez pas à pouvoir regarder Netflix.",
+        "part18": "Il n’y a pas beaucoup de bus par jour, en moyenne un ou deux, à horaires fixes. Souvent un le matin, et un le soir. Les bus de nuit sont également disponibles sur certains trajets pour les Open Tour."
       },
       "booking": {
-        "part1": "Vous pouvez réserver",
-        "part2": "en ligne",
-        "part3": "ou bien directement dans les",
-        "part4": "agences des compagnies.",
-        "part5": "Pour réserver, il vous suffit d’indiquer :",
-        "part6": "votre trajet, c’est à dire le point de départ et d'arrivée",
-        "part7": "les différents arrêts",
-        "part8": "les horaires de bus entre chaque arrêt (pas besoin de la date, juste de l’heure)",
-        "part9": "Attention, toutes les compagnies ne proposent pas de vendre des tickets Open Tour dans toutes leurs agences. Par exemple,",
-        "part10": "Thesinhtourist",
-        "part11": "possède des agences un peu partout à travers tout le Vietnam, mais il n'est possible d’acheter des tickets uniquement que dans les villes de Hô Chi Minh-Ville, Hué et Hanoi.",
-        "part12": "Comme d’habitude beaucoup de fausses agences existent et essaieront de se faire passer pour ce qu’elles ne sont pas! Notez correctement les adresses des agences que vous trouverez sur les sites officielles des compagnies, et ignorez tout ce que vous trouverez en chemin.",
-        "part13": "Pour éviter les mauvaises surprises (bus plein par exemple …) il est préférable de contacter l’agence qui s’occupe de votre Open Tour et de",
-        "part14": "réserver au moins 24h à l'avance",
-        "part15": "avant chaque trajet."
+        "part1": "Vous pouvez réserver #en ligne# ou bien directement dans les #agences des compagnies#.",
+        "part2": "Pour réserver, il vous suffit d’indiquer :",
+        "part3": "votre trajet, c’est à dire le point de départ et d'arrivée",
+        "part4": "les différents arrêts",
+        "part5": "les horaires de bus entre chaque arrêt (pas besoin de la date, juste de l’heure)",
+        "part6": "Attention, toutes les compagnies ne proposent pas de vendre des tickets Open Tour dans toutes leurs agences. Par exemple, #Thesinhtourist# possède des agences un peu partout à travers tout le Vietnam, mais il n'est possible d’acheter des tickets uniquement que dans les villes de Hô Chi Minh-Ville, Hué et Hanoi.",
+        "part7": "Comme d’habitude beaucoup de fausses agences existent et essaieront de se faire passer pour ce qu’elles ne sont pas! Notez correctement les adresses des agences que vous trouverez sur les sites officielles des compagnies, et ignorez tout ce que vous trouverez en chemin.",
+        "part8": "Pour éviter les mauvaises surprises (bus plein par exemple …) il est préférable de contacter l’agence qui s’occupe de votre Open Tour et de #réserver au moins 24h à l'avance# avant chaque trajet."
       },
       "company": {
-        "part1": "Thesinhtourist",
-        "part2": "est la seule compagnie réputée, que nous connaissons, qui offre ce service, vous pouvez trouver toutes les informations sur",
-        "part3": "ce lien",
-        "part4": "D’après des informations que nous avons pu voir, Futa Bus et Mai Linh Express proposent ce service également mais nous n’avons rien trouvé sur leur site web."
+        "part1": "#Thesinhtourist# est la seule compagnie réputée, que nous connaissons, qui offre ce service, vous pouvez trouver toutes les informations sur",
+        "part2": "ce lien",
+        "part3": "D’après des informations que nous avons pu voir, Futa Bus et Mai Linh Express proposent ce service également mais nous n’avons rien trouvé sur leur site web."
       },
       "price": {
         "part1": "Plus vous faites d’arrêt, plus le prix du ticket augmente et ce même si la station de départ et d'arrivée est identique.",
-        "part2": "Prix au départ de Hô Chi Minh-Ville (Saigon) :",
+        "part2": "Prix au départ de Hô Chi Minh-Ville (Saigon) ↠",
         "part3": "ICI",
-        "part4": "Prix au départ de Hanoi :",
+        "part4": "Prix au départ de Hanoi ↠",
         "part5": "ICI",
-        "part6": "Prix au départ de Hué :",
+        "part6": "Prix au départ de Hué ↠",
         "part7": "ICI"
       },
       "opinion": {
@@ -228,9 +183,8 @@
     "guided-tour": {
       "title": "Bus avec guide",
       "information": {
-        "part1": "Bus plus ou moins confortable avec climatisation, qui vous emmène sur les",
-        "part2": "lieux touristiques.",
-        "part3": "Les tours guidés existent en différent format, allant du petit groupe (10 personnes max) à un plus grand nombre de personnes (40 personnes max)."
+        "part1": "Bus plus ou moins confortable avec climatisation, qui vous emmène sur les #lieux touristiques#.",
+        "part2": "Les tours guidés existent en différent format, allant du petit groupe (10 personnes max) à un plus grand nombre de personnes (40 personnes max)."
       },
       "booking": {
         "part1": "Ne réservez pas vos visites guidées à votre hôtel, les prix sont bien plus élevés qu’à la normale.",
@@ -244,8 +198,7 @@
         "part9": "est LE rendez-vous des voyageurs, vous y trouverez toutes sortes d’agences."
       },
       "price": {
-        "part1": "Vous trouverez de tout, à tous les prix. Pensez à bien comparer les offres en détail, voir ce qui est compris dans le parcours, regarder les avis et regarder le nombre de jours. En général,",
-        "part2": "plus la taille du groupe est restreinte, plus le prix est élevé."
+        "part1": "Vous trouverez de tout, à tous les prix. Pensez à bien comparer les offres en détail, voir ce qui est compris dans le parcours, regarder les avis et regarder le nombre de jours. En général, #plus la taille du groupe est restreinte, plus le prix est élevé#."
       },
       "opinion": {
         "part1": "Un bon moyen si vous n’avez pas vraiment le temps de planifier vous-même.",
@@ -258,25 +211,19 @@
     "title": "Cyclo-Pousse",
     "image-title": "Groupe de cyclo-pousse à Hoi An qui attend le départ .. 1 .. 2 .. 3 .. TOURISTES !",
     "information": {
-      "part1": "Le cyclo-pousse est une sorte de",
-      "part2": "taxi-vélo",
-      "part3": "largement remplacé par les taxi-scooter ou taxi-moto même si bien moins écologique.",
-      "part4": "Il devient de plus en plus rare d’en trouver au Vietnam, à part dans les lieux très touristiques comme",
-      "part5": "Hoi An",
-      "part6": "par exemple. Vous pourrez en trouver dans les grandes villes également, telles que Hô Chi Minh-Ville ou Hanoi mais à certains endroits il deviendrait interdit car considéré comme un motif d’embouteillage à cause de sa lenteur et sa largeur.",
-      "part7": "Avec un seul siège ou un double siège le cyclo-pousse à trois roues, deux à l’avant et une à l’arrière et le conducteur se trouve derrière vous sur un vélo. Le plus souvent muni d’un toit en toile rétractable pour vous protéger du soleil ou de la pluie.",
-      "part8": "Le cyclo-pousse ne ferait plus vraiment partie du quotidien des Vietnamiens mais est plus là pour les touristes.",
-      "part9": "On considère qu’il est l’ancêtre du",
-      "part10": "pousse-pousse",
-      "part11": ", siège avec des roues poussé par un homme, on en voit encore quelques-uns, notamment au Japon à",
-      "part12": "Arashiyama",
-      "part13": "par exemple."
+      "part1": "Le cyclo-pousse est une sorte de #taxi-vélo# largement remplacé par les taxi-scooter ou taxi-moto même si bien moins écologique.",
+      "part2": "Il devient de plus en plus rare d’en trouver au Vietnam, à part dans les lieux très touristiques comme",
+      "part3": "Hoi An",
+      "part4": "par exemple. Vous pourrez en trouver dans les grandes villes également, telles que Hô Chi Minh-Ville ou Hanoi mais à certains endroits il deviendrait interdit car considéré comme un motif d’embouteillage à cause de sa lenteur et sa largeur.",
+      "part5": "Avec un seul siège ou un double siège le cyclo-pousse à trois roues, deux à l’avant et une à l’arrière et le conducteur se trouve derrière vous sur un vélo. Le plus souvent muni d’un toit en toile rétractable pour vous protéger du soleil ou de la pluie.",
+      "part6": "Le cyclo-pousse ne ferait plus vraiment partie du quotidien des Vietnamiens mais est plus là pour les touristes.",
+      "part7": "On considère qu’il est l’ancêtre du #pousse-pousse#, siège avec des roues poussé par un homme, on en voit encore quelques-uns, notamment au Japon à",
+      "part8": "Arashiyama",
+      "part9": "par exemple."
     },
     "price": {
-      "part1": "Les prix varient en fonction du temps de trajet et de la ville. Un peu difficile d’avoir une idée exacte mais en grosse fourchette",
-      "part2": "entre 25 000 VND et 100 000 VND",
-      "part3": "(entre 1 et 4 €).",
-      "part4": "Vous pouvez négocier si vous le souhaitez mais n’oubliez pas que les prix sont vraiment dérisoires."
+      "part1": "Les prix varient en fonction du temps de trajet et de la ville. Un peu difficile d’avoir une idée exacte mais en grosse fourchette #entre 25 000 VND et 100 000 VND# (entre 1 et 4 €).",
+      "part2": "Vous pouvez négocier si vous le souhaitez mais n’oubliez pas que les prix sont vraiment dérisoires."
     },
     "opinion": {
       "part1": "A tester pourquoi pas avec vos enfants pour les amuser ou pour faire un tour atypique dans les rues de Hoi An."
@@ -286,45 +233,35 @@
     "title": "Scooter / Moto",
     "information": {
       "part1": "Soyez très prudent lorsque vous vous aventurez dans la location de scooter/moto, c’est certes très pratique car vous êtes libre de faire ce que vous voulez, d'aller où bon vous semble et n’êtes pas contraint par des horaires cela dit rendez-vous bien compte que dans les grandes villes la circulation est très dense, qu’il y a peu de règles au niveau du code ou en tout cas le code de la route n’est pas comme en France.",
-      "part2": "Le casque reste d’ailleurs obligatoire et même si vous êtes tenté de ne pas le mettre “parce que les autres ne le font pas” c’est à vos risques et périls.",
+      "part2": "Le casque reste d’ailleurs obligatoire et même si vous êtes tenté de ne pas le mettre « parce que les autres ne le font pas » c’est à vos risques et périls.",
       "part3": "On vous conseille de ne pas louer dans des grandes villes et si vous voulez vraiment avoir un scooter/moto concentrez vous sur les plus petits villages de campagne où vous pourrez vous balader dans les sentiers battus par vous même.",
-      "part4": "Dans les grandes villes par contre vous pouvez très bien prendre un taxi-scooter ou un taxi-moto. On vous en parlait déjà dans la catégorie Taxi mais",
-      "part5": "Grab",
-      "part6": "fait également ce genre de service, vous ne pouvez d’ailleurs pas louper les petits bonhommes en vert sur des scooters que vous croiserez un peu partout dans les grandes villes principalement.",
-      "part7": "Prenez absolument une",
-      "part8": "assurance voyage",
-      "part9": "couvrant les accidents de la route, c’est indispensable ! Personne n’est à l’abri et même si ce sont des coûts en plus, rien n’est trop cher pour votre santé et votre sécurité !",
-      "part10": "Pour conduire une moto :",
-      "part11": "inférieure ou égal à 50cc, vous n’aurez pas besoin de permis",
-      "part12": "supérieure à 50cc, vous avez besoin d’un permis moto international qui sera valide, si votre pays d’origine a ratifié la Convention de Vienne sur la circulation routière (",
-      "part13": "pays indiqués en vert",
-      "part14": ")"
+      "part4": "Dans les grandes villes par contre vous pouvez très bien prendre un taxi-scooter ou un taxi-moto. On vous en parlait déjà dans la catégorie Taxi mais #Grab# fait également ce genre de service, vous ne pouvez d’ailleurs pas louper les petits bonhommes en vert sur des scooters que vous croiserez un peu partout dans les grandes villes principalement.",
+      "part5": "Prenez absolument une #assurance voyage# couvrant les accidents de la route, c’est indispensable ! Personne n’est à l’abri et même si ce sont des coûts en plus, rien n’est trop cher pour votre santé et votre sécurité !",
+      "part6": "Pour conduire une moto :",
+      "part7": "inférieure ou égal à 50cc, vous n’aurez pas besoin de permis",
+      "part8": "supérieure à 50cc, vous avez besoin d’un permis moto international qui sera valide, si votre pays d’origine a ratifié la Convention de Vienne sur la circulation routière (",
+      "part9": "pays indiqués en vert",
+      "part10": ")"
     },
     "booking": {
-      "part1": "La location de scooter/moto est très répandue et vous trouverez des endroits pour en louer",
-      "part2": "un peu partout.",
-      "part3": "Certaines agences proposent même (pour un prix plus élevé) de louer un scooter dans une ville et de le ramener dans une autre, vous pouvez trouver ça sur",
-      "part4": "Flamingo Travel",
-      "part5": ", par exemple, n’hésitez pas à les contacter.",
-      "part6": "Si vous comptez rester longtemps au Vietnam et ne voyager qu’en scooter/moto, vous pouvez également",
-      "part7": "en acheter un et le revendre en partant",
-      "part8": ". Sur Facebook, il existe énormément de groupes sur le Vietnam et vous pouvez laisser une petite annonce pour l’achat puis pour la vente, vous trouverez sûrement preneur. Le groupe",
-      "part9": "ForSaleVietnam",
-      "part10": "entre autre, est un groupe en anglais où vous pourrez trouver votre bonheur."
+      "part1": "La location de scooter/moto est très répandue et vous trouverez des endroits pour en louer #un peu partout#.",
+      "part2": "Certaines agences proposent même (pour un prix plus élevé) de louer un scooter dans une ville et de le ramener dans une autre, vous pouvez trouver ça sur",
+      "part3": "Flamingo Travel",
+      "part4": ", par exemple, n’hésitez pas à les contacter.",
+      "part5": "Si vous comptez rester longtemps au Vietnam et ne voyager qu’en scooter/moto, vous pouvez également #en acheter un et le revendre en partant#. Sur Facebook, il existe énormément de groupes sur le Vietnam et vous pouvez laisser une petite annonce pour l’achat puis pour la vente, vous trouverez sûrement preneur. Le groupe",
+      "part6": "ForSaleVietnam",
+      "part7": "entre autre, est un groupe en anglais où vous pourrez trouver votre bonheur."
     },
     "price": {
       "part1": "Plus le scooter/moto est puissant, plus ce sera cher. On vous donne ici des prix d'entrée plus ou moins approximatif de ce que nous avons trouvé dans chaque catégorie :",
-      "part2": "Location :",
-      "part3": "~ 10€ / jour",
-      "part4": "Achat :",
-      "part5": "~ 300€",
-      "part6": "Bike-Grab :",
-      "part7": "Voir sur le site de",
-      "part8": "Grab",
-      "part9": ". Environ deux fois moins cher que Grab-Taxi."
+      "part2": "#Location# ↠ ~ 10€ / jour",
+      "part3": "#Achat# ↠ ~ 300€",
+      "part4": "#Bike-Grab# ↠ Voir sur le site de",
+      "part5": "Grab",
+      "part6": ". Environ deux fois moins cher que Grab-Taxi."
     },
     "opinion": {
-      "part1": "Le vietnam à moto c'est trop génial !",
+      "part1": "« Le vietnam à moto c'est trop génial ! »",
       "part2": "Mr Magic ♡",
       "part3": "Si vous avez la chance de pouvoir parcourir le Vietnam par vos propres moyens, le scooter et surtout la moto sont de loin les meilleures options. Vous aurez une totale liberté sur votre trajet et vos destinations. Le scooter reste un peu moins adapté pour parcourir de longues distances.",
       "part4": "Faites juste vraiment attention dans les grandes villes comme on vous disait plus haut, vous n’êtes pas dans votre pays et donc la façon de conduire et d’appréhender les choses n'est pas la même."
@@ -334,27 +271,21 @@
     "title": "Taxi",
     "information": {
       "part1": "Vous verrez des taxis un peu partout dans les grandes villes, il n’est pas difficile d’en trouver un à chaque coin de rue. Même dans les rues peu animées, il y en aura toujours au moins un qui passera par là.",
-      "part2": "Néanmoins pour éviter toute arnaque assez commune avec les taxis, par exemple cacher ce qui est affiché sur l’horodateur ou faire croire qu’il ne marche pas, et tant d’autres malheureusement … utilisez principalement les taxis",
-      "part3": "Grab.",
-      "part4": "Grab existe en taxi-voiture et taxi-scooter."
+      "part2": "Néanmoins pour éviter toute arnaque assez commune avec les taxis, par exemple cacher ce qui est affiché sur l’horodateur ou faire croire qu’il ne marche pas, et tant d’autres malheureusement … utilisez principalement les taxis #Grab#.",
+      "part3": "Grab existe en taxi-voiture et taxi-scooter."
     },
     "booking": {
-      "part1": "Si vous connaissez Uber en France, Grab fonctionne exactement de la même manière (d’ailleurs Uber a été racheté par Grab en Asie), demandez un",
-      "part2": "Grab sur votre application",
-      "part3": ", vous verrez une map s’afficher pour voir où il se trouve et dans combien de temps il arrive. Le prix est directement affiché sur votre application, vous n’avez plus qu’à attendre la voiture / scooter en repérant le numéro de plaque d’immatriculation indiqué sur l’appli."
+      "part1": "Si vous connaissez Uber en France, Grab fonctionne exactement de la même manière (d’ailleurs Uber a été racheté par Grab en Asie), demandez un #Grab sur votre application#, vous verrez une map s’afficher pour voir où il se trouve et dans combien de temps il arrive. Le prix est directement affiché sur votre application, vous n’avez plus qu’à attendre la voiture / scooter en repérant le numéro de plaque d’immatriculation indiqué sur l’appli."
     },
     "company": {
-      "part1": "Mai Linh",
-      "part2": "est une compagnie de taxi plutôt sûre également. Même si de notre côté, nous ne prenons vraiment que Grab."
+      "part1": "#Mai Linh# est une compagnie de taxi plutôt sûre également. Même si de notre côté, nous ne prenons vraiment que Grab."
     },
     "price": {
-      "part1": "Les prix d’un Grab ne sont jamais les mêmes, ils évoluent en fonction de l’heure, de la demande, du trafic, des péages, etc. Cependant lors de notre séjour, nous l'avons utilisé à multiples reprises, la plupart des trajets nous ont coûté",
-      "part2": "2€ pour moins de 5 km",
-      "part3": ". Le plus long trajet que nous avons effectué, pour nous rendre à l'aéroport depuis le centre d’Hô Chi Minh-Ville, nous a coûté moins de 5€.",
-      "part4": "Vous pouvez trouver directement sur le",
-      "part5": "site de Grab",
-      "part6": "le prix au kilomètre des courses, dans certaines villes.",
-      "part7": "Cependant pas de panique, le prix est affiché avant de valider la course via l’application."
+      "part1": "Les prix d’un Grab ne sont jamais les mêmes, ils évoluent en fonction de l’heure, de la demande, du trafic, des péages, etc. Cependant lors de notre séjour, nous l'avons utilisé à multiples reprises, la plupart des trajets nous ont coûté #2€ pour moins de 5 km#. Le plus long trajet que nous avons effectué, pour nous rendre à l'aéroport depuis le centre d’Hô Chi Minh-Ville, nous a coûté moins de 5€.",
+      "part2": "Vous pouvez trouver directement sur le",
+      "part3": "site de Grab",
+      "part4": "le prix au kilomètre des courses, dans certaines villes.",
+      "part5": "Cependant pas de panique, le prix est affiché avant de valider la course via l’application."
     },
     "opinion": "Les taxis sont certes très pratiques mais évitez de les prendre en pleine journée surtout dans les grandes villes telles que Hô Chi Minh-Ville ou Hanoi, les embouteillages sont plus que fréquents et vous passerez moins de temps en scooter ou même à pied, c’est une certitude."
   },
@@ -364,14 +295,10 @@
       "part1": "Le train au Vietnam traverse quasiment tout le pays, du Nord au Sud.",
       "part2": "Il n’existe cependant pas de ligne à grande vitesse, tous les trains empruntent le même chemin.",
       "part3": "Il existe 4 classes différentes :",
-      "part4": "Hard seat",
-      "part5": ": Siège assis dur - Siège en bois très peu confortable et peu courant pour les longs trajets (de plus en plus rare)",
-      "part6": "Soft seat",
-      "part7": ": Siège assis mou - Siège basique",
-      "part8": "Hard sleep",
-      "part9": ": Couchette dure - 6 couchettes",
-      "part10": "Soft sleep",
-      "part11": ": Couchette molle - 4 couchettes"
+      "part4": "#Hard seat# : Siège assis dur - Siège en bois très peu confortable et peu courant pour les longs trajets (de plus en plus rare)",
+      "part5": "#Soft seat# : Siège assis mou - Siège basique",
+      "part6": "#Hard sleep# : Couchette dure - 6 couchettes",
+      "part7": "#Soft sleep# : Couchette molle - 4 couchettes"
     },
     "booking": {
       "part1": "Pour réserver vos billets, vous pouvez soit le faire sur place à la gare soit sur les sites",
@@ -383,16 +310,11 @@
       "part7": "Vous ne pouvez pas réserver votre train plus d’un mois à l’avance."
     },
     "company": {
-      "part1": "La plupart des trains sont gérés par",
-      "part2": "Vietnam Railways",
-      "part3": "vous les verrez indiquez par cet icône",
-      "part4": "Néanmoins certains wagons sont loués par d’autres compagnies, ces compagnies améliorent les wagons et vous proposent donc un service plus luxueux donc forcément plus cher :",
-      "part5": "Violette",
-      "part6": "est représenté par",
-      "part7": "New Livitrans Express",
-      "part8": "est représenté par",
-      "part9": "Lotus Train",
-      "part10": "est représenté par "
+      "part1": "La plupart des trains sont gérés par #Vietnam Railways# vous les verrez indiquez par cet icône",
+      "part2": "Néanmoins certains wagons sont loués par d’autres compagnies, ces compagnies améliorent les wagons et vous proposent donc un service plus luxueux donc forcément plus cher :",
+      "part3": "#Violette# est représenté par",
+      "part4": "#New Livitrans Express# est représenté par",
+      "part5": "#Lotus Train# est représenté par "
     },
     "price": "Comme un peu partout, il existe des tarifs préférentiels pour certaines catégories d'âge. Les enfants de moins de 10 ans reçoivent une réduction de 25% sur les couchettes et 50% sur les sièges.",
     "opinion": {
@@ -409,9 +331,7 @@
     },
     "booking": "Vous trouverez des vélos à louer quasiment partout, certains homestays ou hôtels vous en proposent même gratuitement parfois, pour découvrir le temps d’une journée ou d’une demi-journée les alentours.",
     "price": {
-      "part1": "Comptez entre",
-      "part2": "2 et 10 €",
-      "part3": "en fonction de la qualité du vélo."
+      "part1": "Comptez entre #2 et 10 €# en fonction de la qualité du vélo."
     },
     "opinion": "Si vous voulez prendre un bon bol d’air frais et être un peu à l'écart des touristes, prenez simplement un vélo et explorez les alentours par vous-même, vous ne serez pas déçu."
   },

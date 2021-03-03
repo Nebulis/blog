@@ -22,7 +22,6 @@ import {
 } from "../../../../components/images/layout"
 import HomeImgUrl from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/war-museum-main.jpg"
 import {
-  HighLight,
   How,
   HowLong,
   HowMuch,
@@ -79,37 +78,27 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where.part1")}</p>
         </Where>
         <When>
-          <p>
-            {t("when.part1")} <HighLight>{t("when.part2")}</HighLight>
-          </p>
-          <p>{t("when.part3")}</p>
+          <p>{t("when.part1")}</p>
+          <p>{t("when.part2")}</p>
         </When>
         <How>
-          <p>
-            {t("how.part1")} <HighLight>{t("how.part2")}</HighLight> {t("how.part3")}{" "}
-            <HighLight>{t("how.part4")}</HighLight>
-          </p>
-          <p>{t("how.part5")}</p>
+          <p>{t("how.part1")}</p>
+          <p>{t("how.part2")}</p>
           {transportLinkPublished && (
             <p>
-              {t("how.part6")}{" "}
+              {t("how.part3")}{" "}
               <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
             </p>
           )}
         </How>
         <HowLong>
-          <p>
-            {t("how-long.part1")} <HighLight>{t("how-long.part2")}</HighLight> {t("how-long.part3")}{" "}
-            <HighLight>{t("how-long.part4")}</HighLight> {t("how-long.part5")}
-          </p>
+          <p>{t("how-long.part1")}</p>
         </HowLong>
         <WhatTimeOfYear>
-          <p>
-            {t("what-time-of-year.part1")} <span className="b">{t("what-time-of-year.part2")}</span>
-          </p>
+          <p>{t("what-time-of-year.part1")}</p>
+          <p>{t("what-time-of-year.part2")}</p>
           <p>{t("what-time-of-year.part3")}</p>
           <p>{t("what-time-of-year.part4")}</p>
-          <p>{t("what-time-of-year.part5")}</p>
         </WhatTimeOfYear>
         <HowMuch title={t("common:section.how-much2")}>
           <p>{t("how-much.part1")}</p>
@@ -198,10 +187,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <HoChiMinWarMuseum image="guillotine" />
                 <HoChiMinWarMuseum image="jail" />
               </TwoImagesSameSizeOrToGroup>
-              <p>
-                {t("visit2.part6")} <span className="b">{t("visit2.part7")}</span> {t("visit2.part8")}
-              </p>
-              <p>{t("visit2.part9")}</p>
+              <p>{t("visit2.part6")}</p>
+              <p>{t("visit2.part7")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
                   <HoChiMinWarMuseum image="tigerCage" />
@@ -210,14 +197,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <HoChiMinWarMuseum image="panelTigerCage" />
                 </ImageAsPortrait>
               </GroupOfImages>
-              {t("visit2.part10") && <Quote className="b">{t("visit2.part10")}</Quote>}
-              <p>{t("visit2.part11")}</p>
+              {t("visit2.part8") && <Quote className="b">{t("visit2.part8")}</Quote>}
+              <p>{t("visit2.part9")}</p>
               <p>
+                {t("visit2.part10")}
+                <VietnamLink to="phu-quoc-island">{t("visit2.part11")}</VietnamLink>
                 {t("visit2.part12")}
-                <VietnamLink to="phu-quoc-island">{t("visit2.part13")}</VietnamLink>
-                {t("visit2.part14")}
               </p>
-              <p>{t("visit2.part15")}</p>
+              <p>{t("visit2.part13")}</p>
             </SectionContent>
           </section>
           <Divider />
@@ -238,18 +225,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </GroupOfImages>
               <p>{t("visit3.part3")}</p>
               <p>{t("visit3.part4")}</p>
-              <p>
-                <span className="b">{t("visit3.part5")}</span> {t("visit3.part6")}
-              </p>
+              <p>{t("visit3.part5")}</p>
+              <p>{t("visit3.part6")}</p>
               <p>{t("visit3.part7")}</p>
               <p>{t("visit3.part8")}</p>
               <p>{t("visit3.part9")}</p>
               <p>{t("visit3.part10")}</p>
               <p>{t("visit3.part11")}</p>
               <p>{t("visit3.part12")}</p>
-              <p>
-                {t("visit3.part13")} <span className="i">{t("visit3.part14")}</span>
-              </p>
               <ImageAsPortrait
                 credit={
                   <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/janeb13-725943">
@@ -276,11 +259,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 {t("visit4.part6")}
               </p>
               <p>{t("visit4.part7")}</p>
-              {t("visit4.part8")}{" "}
-              <VietnamLink to="discover-southern-vietnam">
-                {t("common:country.vietnam.card.discover-southern-vietnam")}
-              </VietnamLink>
-              {t("visit4.part9")}
+              <p>
+                {t("visit4.part8")}{" "}
+                <VietnamLink to="discover-southern-vietnam">
+                  {t("common:country.vietnam.card.discover-southern-vietnam")}
+                </VietnamLink>
+                {t("visit4.part9")}
+              </p>
             </SectionContent>
             <ImageAsPortrait
               css={css`

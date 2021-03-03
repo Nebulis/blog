@@ -1,30 +1,27 @@
 {
-  "quote": "Décor de carte postale, sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre \"Dream List\" de voyage pour cette nouvelle année.",
+  "quote": "Décor de carte postale, sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre « Dream List » de voyage pour cette nouvelle année.",
   "introduction": "Dans cet article on vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan.",
   "google-description": "Dans cet article on vous indique quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan.",
-  "social-network-description": "Décor de carte postale, plage de sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre \"Dream List\" de voyage pour cette nouvelle année.",
+  "social-network-description": "Décor de carte postale, plage de sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre « Dream List » de voyage pour cette nouvelle année.",
   "what-time-of-year": {
-    "part1": "La période la plus favorable pour aller à El Nido est de",
-    "part2": "décembre à avril.",
-    "part3": "Les mois de mars et avril sont les mois les plus chauds, on dit que ce sont les mois les plus touristiques également. Soyez cela dit prêt à avoir du monde pendant toute la saison.",
-    "part4": "Faites attention également aux méduses, on en parle rarement mais elles arrivent généralement à partir de fin mars et il serait dommage de ne pas pouvoir profiter d’une section de snorkeling parce que vous êtes encerclés et que vous ne savez plus comment retourner à votre bateau (comment ça ça sent l’expérience ?)."
+    "part1": "La période la plus favorable pour aller à El Nido est de #décembre à avril#.",
+    "part2": "Les mois de mars et avril sont les mois les plus chauds, on dit que ce sont les mois les plus touristiques également. Soyez cela dit prêt à avoir du monde pendant toute la saison.",
+    "part3": "Faites attention également aux méduses, on en parle rarement mais elles arrivent généralement à partir de fin mars et il serait dommage de ne pas pouvoir profiter d’une section de snorkeling parce que vous êtes encerclés et que vous ne savez plus comment retourner à votre bateau (comment ça ça sent l’expérience ?)."
   },
   "how-long": {
-    "part1": "Nous vous conseillons de rester",
-    "part2": "5 jours",
-    "part3": "sur El Nido :",
-    "part4": "2 jours de balade en bateau et de plongée / snorkeling,",
-    "part5": "1 jour de farniente,",
-    "part6": "2 jours pour découvrir les alentours de la ville d’El Nido.",
-    "part7": "Ni trop peu, ni pas assez.",
-    "part8": "Bien sûr restez plus longtemps fait rêver, comment se passer d’un paysage pareil, mais si vous voulez rester plus longtemps aux Philippines pourquoi ne pas aller découvrir d’autres magnifiques endroits ?",
-    "part9": "Boracay",
-    "part10": ",",
-    "part11": "Coron Island",
-    "part12": " ... ou pourquoi pas la ville de",
-    "part13": "Manille",
-    "part14": ", pour les plus connus.",
-    "part15": "Vous n’avez vraiment que l’embarras du choix."
+    "part1": "Nous vous conseillons de rester #5 jours# sur El Nido :",
+    "part2": "2 jours de balade en bateau et de plongée / snorkeling,",
+    "part3": "1 jour de farniente,",
+    "part4": "2 jours pour découvrir les alentours de la ville d’El Nido.",
+    "part5": "Ni trop peu, ni pas assez.",
+    "part6": "Bien sûr restez plus longtemps fait rêver, comment se passer d’un paysage pareil, mais si vous voulez rester plus longtemps aux Philippines pourquoi ne pas aller découvrir d’autres magnifiques endroits ?",
+    "part7": "Boracay",
+    "part8": ",",
+    "part9": "Coron Island",
+    "part10": " ... ou pourquoi pas la ville de",
+    "part11": "Manille",
+    "part12": ", pour les plus connus.",
+    "part13": "Vous n’avez vraiment que l’embarras du choix."
   },
   "how-much": {
     "part1": "Le plus gros du budget sera consacré au voyage en avion, environ 700€ par personne. La nourriture, les déplacements ou les activités sont bon marché. Pour le logement, il faudra prévoir un budget un peu plus important.",
@@ -41,16 +38,11 @@
     "part2": "El Nido est un paradis qui se mérite !",
     "part3": "Y faire une simple escale ? Bien trop contraignant ...",
     "part4": "En fait vous n’avez pas vraiment de choix pour venir à El Nido, que ce soit en transport ou en horaire c’est plutôt assez restreint.",
-    "part5": "=> Depuis Manille, prenez l’",
-    "part6": "avion vers Puerto Princesa.",
-    "part7": "Arrivé sur place, il faudra prendre",
-    "part8": "un van ou un bus",
-    "part9": "qui vous emmènera à El Nido. Comptez 5h en van, un peu plus en bus. Vous n’êtes pas obligé mais vu que nous arrivions de nuit nous avons préféré, par sécurité, réserver un van privé (nous étions un groupe de 4). Nous avons réservé via",
-    "part10": "mais vous pouvez également utiliser",
-    "part11": "=> Depuis Coron,vous pourrez prendre",
-    "part12": "un ferry",
-    "part13": "qui vous emmènera sur place en environ 4h. Vous pouvez réserver sur",
-    "part14": "=> On ne vous conseille pas l’aéroport d’El Nido. Cela vous fera certes gagner du temps mais les prix sont élevés et les horaires peu avantageux."
+    "part5": "➵ Depuis Manille, prenez l’#avion vers Puerto Princesa#.",
+    "part6": "Arrivé sur place, il faudra prendre #un van ou un bus# qui vous emmènera à El Nido. Comptez 5h en van, un peu plus en bus. Vous n’êtes pas obligé mais vu que nous arrivions de nuit nous avons préféré, par sécurité, réserver un van privé (nous étions un groupe de 4). Nous avons réservé via",
+    "part7": "mais vous pouvez également utiliser",
+    "part8": "➵ Depuis Coron,vous pourrez prendre #un ferry# qui vous emmènera sur place en environ 4h. Vous pouvez réserver sur",
+    "part9": "➵ On ne vous conseille pas l’aéroport d’El Nido. Cela vous fera certes gagner du temps mais les prix sont élevés et les horaires peu avantageux."
   },
   "where-to-stay": {
     "part1": "Nous avions dormi à",
@@ -58,7 +50,7 @@
     "part3": "Vous pouvez néanmoins trouver d'autres hôtels sur"
   },
   "visit": {
-    "part1": "L’archipel des Philippines est formé par un peu plus de 7600 îles.",
+    "part1": "L’archipel des Philippines est formé par un peu plus de #7600 îles#.",
     "part2": "Parmi ses îles on trouve l’île de Palawan.",
     "part3": "C’est au Nord de Palawan qu’on a donc décidé de poser nos valises. Et si vous êtes ici c’est que vous en avez sûrement vous aussi envie !"
   },
@@ -66,7 +58,7 @@
     "title": "Plus qu'un trajet ... une aventure",
     "part1": "Comme on vous le disait juste au dessus le trajet fut long et pas de tout repos.",
     "part2": "Une fois arrivé à Puerto Princesa, on a donc pris un van de nuit pour nous amener à notre hôtel à El Nido. On se disait qu’on allait dormir dans le van mais dormir était un bien grand mot, la route n’est pas très bien goudronnée et vous avez l’impression qu’il y a un dos d’âne toutes les 10 minutes, bon on ne va pas vous mentir ça nous a quand même valu quelques fous rires surtout quand Mr Magic se tapait la tête contre le toit du van à chaque rebond ... sûrement la fatigue ... on vous a dit que le paradis se mérite !",
-    "part3": "Après une courte nuit, la découverte de notre hôtel de jour et un bon petit déjeuner, nous voilà parti pour une petite promenade dans El Nido, nous ne nous y sommes pas attardés plus que ça. Rien ne nous a vraiment attiré dans cette ville, bon il faut dire qu’on attendait surtout avec impatience notre départ pour l’Archipel de Bacuit.",
+    "part3": "Après une courte nuit, la découverte de notre hôtel de jour et un bon petit déjeuner, nous voilà parti pour une #petite promenade dans El Nido#, nous ne nous y sommes pas attardés plus que ça. Rien ne nous a vraiment attiré dans cette ville, bon il faut dire qu’on attendait surtout avec impatience notre départ pour l’Archipel de Bacuit.",
     "part4": "Mais on vous invite quand même à vous promener un peu, peut-être que vous découvrirez des choses intéressantes que nous n’avons pas vu."
   },
   "visit2": {
@@ -74,25 +66,25 @@
     "part1-1": "Une fois de retour à notre hôtel pour prendre nos sacs, direction la rue principale en tuk tuk, la rue",
     "part1-2": ", elle se situe juste avant la plage de départ et c’est là que vous trouverez la plupart des agences pour les différents tours en bateau.",
     "part2": "Nous voici donc sur le départ, il est 9h et nous sommes sur la plage là où tous les bateaux se regroupent, on avait pris un tour privé, n’hésitez pas à faire de même si vous êtes un petit groupe d’au moins 4 personnes.",
-    "part3": "On est tout de suite mis dans le bain, pour rejoindre le bateau il faut marcher dans l’eau, moi qui suis de taille moyenne (1m66) je suis trempée jusqu’à la taille, ça réveille bien et en même temps ça met directement de l’ambiance, vu que personne ne s’y attendait on entend des éclats de rire entre chaque bateau, de quoi véritablement bien commencer la journée.",
+    "part3": "On est tout de suite mis dans le bain, #pour rejoindre le bateau il faut marcher dans l’eau#, moi qui suis de taille moyenne (1m66) je suis trempée jusqu’à la taille, ça réveille bien et en même temps ça met directement de l’ambiance, vu que personne ne s’y attendait on entend des éclats de rire entre chaque bateau, de quoi véritablement bien commencer la journée.",
     "part4": "En ce qui concerne les tours, nous avons pris le Tour B pour le premier jour et le Tour A pour le deuxième. Vous avez le choix entre 4 tours, A, B, C et D.",
     "part5": "On vous parlera plus en détails de chaque tour dans un prochain article."
   },
   "visit3": {
     "title": "Le joyau des Philippines",
-    "part1": "En fait on vous parle de l’Archipel de Bacuit depuis tout à l’heure mais on ne vous a pas précisé ...  Si comme tout le monde on parle de El Nido comme d’un paradis, El Nido est en fait la porte d’entrée DU paradis, et ce paradis est appelé plus précisément l’Archipel de Bacuit.",
+    "part1": "En fait on vous parle de l’Archipel de Bacuit depuis tout à l’heure mais on ne vous a pas précisé ...  Si comme tout le monde on parle de El Nido comme d’un paradis, #El Nido est en fait la porte d’entrée DU paradis, et ce paradis est appelé plus précisément l’Archipel de Bacuit#.",
     "part2": "Comme nous en rêvions, les plages sont magnifiques, l’eau est d’un bleu turquoise à certain moment et d’une couleur émeraude éclatante à d’autres endroits.",
     "part3": "Sur le bateau, le bleu intense de la mer et celui du ciel ne font qu’un, pour nous donner un paysage spectaculaire.",
     "part4": "Un bleu différent entre chaque île. ",
     "part5": "On aperçoit de loin directement les endroits moins profonds, et probablement idéaux pour du snorkeling ou ceux pour de la plongée bien plus profonds.",
-    "part6": "On passe d'île en île et c’est à chaque fois un spectacle différent qui nous attend. Un coup une île avec des plages de sables blancs, puis des îles avec des falaises de calcaire.",
+    "part6": "On passe d'île en île et c’est à chaque fois un spectacle différent qui nous attend. Un coup une #île avec des plages de sables blancs#, puis des #îles avec des falaises de calcaire#.",
     "part7": "On ne vous mentira pas en vous disant que c’est vraiment le plus bel endroit du monde qu’on ai visité à l’heure actuelle.",
-    "part8": "Niveau spot de snorkeling nous avons vu une multitude de coraux et de poissons colorés malheureusement pas de tortues de notre côté, nous ne savons donc pas si les lieux sont favorables pour les voir ou s'il y a des périodes plus propices. Pas de déception cela dit, nous avons vraiment passé deux journées superbes."
+    "part8": "Niveau spot de snorkeling nous avons vu une #multitude de coraux et de poissons colorés# malheureusement pas de tortues de notre côté, nous ne savons donc pas si les lieux sont favorables pour les voir ou s'il y a des périodes plus propices. Pas de déception cela dit, nous avons vraiment passé deux journées superbes."
   },
   "visit4": {
     "title": "Rien n'est éternel",
     "part1": "Retour sur la terre ferme entre 16h et 17h en fonction du temps que vous avez mis sur chaque spot, le premier jour nous avons été un peu rapide sur les deux premiers arrêts par peur de ne pas pouvoir tout faire, mais ne vous inquiétez pas vous avez largement le temps si vous n’avez pris qu’un tour par jour.",
-    "part2": "On est forcément un peu triste que notre séjour se finisse déjà, le temps passe malheureusement trop vite, on serait bien resté sur place encore quelques temps on l’avoue, mais partir ne veut pas dire que nous ne reviendrons pas et comme on vous le disait, les Philippines regorgent d’endroits magnifique à découvrir et on a hâte de les découvrir également.",
+    "part2": "On est forcément un peu triste que notre séjour se finisse déjà, le temps passe malheureusement trop vite, on serait bien resté sur place encore quelques temps on l’avoue, mais partir ne veut pas dire que nous ne reviendrons pas et comme on vous le disait, #les Philippines regorgent d’endroits magnifique à découvrir# et on a hâte de les découvrir également.",
     "part3": "On vous assure un coup de foudre à tous les coups."
   },
   "conclusion": "Un paysage à couper le souffle. L’archipel de Bacuit est vraiment la perle des Philippines. Des souvenirs pleins la tête, vous n’aurez qu’une seule envie : y retourner.",

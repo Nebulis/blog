@@ -23,7 +23,6 @@ import {
   PhilippinesTitle,
 } from "../../../../components/core/asia/philippines/philippines"
 import {
-  HighLight,
   How,
   HowLong,
   HowMuch,
@@ -71,33 +70,29 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
         <WhatTimeOfYear>
-          <p>
-            {t("what-time-of-year.part1")} <HighLight>{t("what-time-of-year.part2")}</HighLight>
-          </p>
+          <p>{t("what-time-of-year.part1")}</p>
+          <p>{t("what-time-of-year.part2")}</p>
           <p>{t("what-time-of-year.part3")}</p>
-          <p>{t("what-time-of-year.part4")}</p>
           <ImageAsPortrait>
             <ElNidoParadiseImages image="jellyfish" />
           </ImageAsPortrait>
         </WhatTimeOfYear>
         <HowLong>
-          <p>
-            {t("how-long.part1")} <HighLight>{t("how-long.part2")}</HighLight> {t("how-long.part3")}
-          </p>
+          <p>{t("how-long.part1")}</p>
           <ul>
+            <li>{t("how-long.part2")}</li>
+            <li>{t("how-long.part3")}</li>
             <li>{t("how-long.part4")}</li>
-            <li>{t("how-long.part5")}</li>
-            <li>{t("how-long.part6")}</li>
           </ul>
-          <p>{t("how-long.part7")}</p>
-          <p>{t("how-long.part8")}</p>
+          <p>{t("how-long.part5")}</p>
+          <p>{t("how-long.part6")}</p>
           <p>
-            <PhilippinesLink to="boracay">{t("how-long.part9")}</PhilippinesLink>
-            {t("how-long.part10")} <PhilippinesLink to="coron-island">{t("how-long.part11")}</PhilippinesLink>
-            {t("how-long.part12")} <PhilippinesLink to="manilla">{t("how-long.part13")}</PhilippinesLink>
-            {t("how-long.part14")}
+            <PhilippinesLink to="boracay">{t("how-long.part7")}</PhilippinesLink>
+            {t("how-long.part8")} <PhilippinesLink to="coron-island">{t("how-long.part9")}</PhilippinesLink>
+            {t("how-long.part10")} <PhilippinesLink to="manilla">{t("how-long.part11")}</PhilippinesLink>
+            {t("how-long.part12")}
           </p>
-          <p>{t("how-long.part15")}</p>
+          <p>{t("how-long.part13")}</p>
         </HowLong>
         <HowMuch>
           <p>{t("how-much.part1")}</p>
@@ -123,24 +118,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
           <p>{t("how.part3")}</p>
           <p>{t("how.part4")}</p>
+          <p>{t("how.part5")}</p>
           <p>
-            {t("how.part5")} <HighLight>{t("how.part6")}</HighLight>
-          </p>
-          <p>
-            {t("how.part7")} <HighLight>{t("how.part8")}</HighLight> {t("how.part9")}{" "}
+            {t("how.part6")}{" "}
             <PhilippinesExternalLink href="https://www.elnidoparadise.com/rentals/">
               elnidoparadise
             </PhilippinesExternalLink>{" "}
-            {t("how.part10")} <PhilippinesExternalLink href="https://www.phbus.com/">phbus</PhilippinesExternalLink>.
+            {t("how.part7")} <PhilippinesExternalLink href="https://www.phbus.com/">phbus</PhilippinesExternalLink>.
           </p>
           <p>
-            {t("how.part11")} <HighLight>{t("how.part12")}</HighLight> {t("how.part13")}{" "}
+            {t("how.part8")}{" "}
             <PhilippinesExternalLink href="https://www.travel-palawan.com/ferry-from-el-nido-to-coron/">
               travel-palawan
             </PhilippinesExternalLink>
             .
           </p>
-          <p>{t("how.part14")}</p>
+          <p>{t("how.part9")}</p>
         </How>
         <WhereToStay>
           <p>
