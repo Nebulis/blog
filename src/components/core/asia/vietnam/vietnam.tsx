@@ -4,8 +4,7 @@ import { vietnamPrimaryColor, vietnamPrimaryColorDarker, vietnamPrimaryColorWith
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
 import { ImageAsMedallion } from "../../../images/layout"
 import { drawHat } from "./console-draw-hat"
-import { ButtonLink, ExternalLink, linkBuilder } from "../../links/link"
-import { Link } from "gatsby"
+import { ButtonLink } from "../../links/link"
 import { Headline } from "../../highlight"
 import hat from "../../../../images/asia/vietnam/hat.svg"
 import { css } from "@emotion/react"
@@ -84,6 +83,14 @@ const vietnamLayout = `
         border-color: ${vietnamPrimaryColor}
       }
     }
+    a.mdx-pseudo-processor-link{
+      color: ${vietnamPrimaryColorDarker};
+      font-weight: bold;
+      text-decoration: underline;
+      &:visited {
+        color: ${vietnamPrimaryColorDarker};
+      }
+    }
   }
 
   footer {
@@ -105,22 +112,6 @@ export const VietnamImageAsMedallion = styled(ImageAsMedallion)`
   &.mobile,
   &:hover {
     border: 6px solid #f8c471;
-  }
-`
-export const VietnamLink = linkBuilder(styled(Link)`
-  color: ${vietnamPrimaryColorDarker};
-  font-weight: bold;
-  &:visited {
-    color: ${vietnamPrimaryColorDarker};
-  }
-  text-decoration: underline;
-`)
-
-export const VietnamExternalLink = styled(ExternalLink)`
-  color: ${vietnamPrimaryColorDarker};
-  font-weight: bold;
-  &:visited {
-    color: ${vietnamPrimaryColorDarker};
   }
 `
 

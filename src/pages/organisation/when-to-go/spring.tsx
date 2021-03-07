@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
 import { MainTitleSection, SectionContent } from "../../../components/core/section"
-import { useCustomTranslation } from "../../../i18n"
+import { useCustomTranslation } from "../../../i18n-hook"
 import i18n from "i18next"
 import translationFr from "../../../locales/fr/organisation/when-to-go/spring.json"
 import translationEn from "../../../locales/en/organisation/when-to-go/spring.json"

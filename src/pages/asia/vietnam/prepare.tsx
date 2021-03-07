@@ -1,16 +1,11 @@
 import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
-import {
-  VietnamBlogLayout,
-  VietnamExternalLink,
-  VietnamLink,
-  vietnamWeatherEntries,
-} from "../../../components/core/asia/vietnam/vietnam"
+import { VietnamBlogLayout, vietnamWeatherEntries } from "../../../components/core/asia/vietnam/vietnam"
 import { PageProps } from "gatsby"
 import translationFr from "../../../locales/fr/asia/vietnam/prepare.json"
 import translationEn from "../../../locales/en/asia/vietnam/prepare.json"
 import i18n from "i18next"
-import { useCustomTranslation } from "../../../i18n"
+import { useCustomTranslation } from "../../../i18n-hook"
 import { ImageAsLandscape, ImageAsPortrait } from "../../../components/images/layout"
 import { FaBriefcaseMedical, FaLaptop, FaShoppingBag, FaTshirt } from "react-icons/all"
 import {
@@ -38,15 +33,6 @@ import { css } from "@emotion/react"
 import { PrepareVietnamImages } from "../../../components/images/asia/vietnam/prepare-vietnam-images"
 import { Comments } from "../../../components/core/comments"
 import styled from "@emotion/styled"
-import {
-  buildAgodaSearchUrl,
-  buildAirBnbSearchUrl,
-  buildAllianzUrl,
-  buildBookingSearchUrl,
-  buildCivivatisLink,
-  buildGetYourGuideLink,
-  buildTripAdvisorLink,
-} from "../../../utils"
 import { Conclusion } from "../../../components/core/conclusion"
 import { Divider } from "../../../components/core/divider"
 import { SharedCardVietnamImages } from "../../../components/images/asia/vietnam/shared-card-vietnam-images"
@@ -595,7 +581,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development, covid } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t("common:country.vietnam.card.prepare")
-  const transportLinkPublished = development || getLink("transport-vietnam").published
   const foodLinkPublished = development || getLink("food-vietnam").published
   const devicesPublished = development || getLink("devices").published
 
@@ -683,16 +668,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <ul>
             <li>
               <p>
-                {t("section1.part3")}{" "}
-                <VietnamExternalLink href="https://evisa.xuatnhapcanh.gov.vn/web/guest/home">
-                  {t("section1.part4")}
-                </VietnamExternalLink>
-                .<br />
-                {t("section1.part5")}
+                {t("section1.part3")}
+                <br />
+                {t("section1.part4")}
               </p>
             </li>
             <li>
               <p>
+                {t("section1.part5")}
+                <br />
                 {t("section1.part6")}
                 <br />
                 {t("section1.part7")}
@@ -702,26 +686,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 {t("section1.part9")}
                 <br />
                 {t("section1.part10")}
-                <br />
-                {t("section1.part11")}
               </p>
             </li>
             <li>
               <p>
+                {t("section1.part11")}
+                <br />
                 {t("section1.part12")}
                 <br />
                 {t("section1.part13")}
                 <br />
                 {t("section1.part14")}
                 <br />
-                {t("section1.part15")}{" "}
-                <VietnamExternalLink href="https://www.action-visas.com/">{t("section1.part16")}</VietnamExternalLink>,{" "}
-                <VietnamExternalLink href="https://www.vietnam-visa.com/">{t("section1.part17")}</VietnamExternalLink>,{" "}
-                <VietnamExternalLink href="https://www.vietnamvisa.org.vn/apply-visa/">
-                  {t("section1.part18")}
-                </VietnamExternalLink>
-                .<br />
-                {t("section1.part19")}
+                {t("section1.part15")}
               </p>
             </li>
           </ul>
@@ -794,7 +771,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </tbody>
             </Table>
           </div>
-          <p>{t("section1.part20")}</p>
+          <p>{t("section1.part16")}</p>
           <div
             className="flex flex-row-reverse"
             css={css`
@@ -905,7 +882,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </div>
           </div>
 
-          <p>{t("section1.part21")}</p>
+          <p>{t("section1.part17")}</p>
           <PetitCarreJaune>
             <p
               css={css`
@@ -914,11 +891,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 }
               `}
             >
-              {t("section1.part22")}
+              {t("section1.part18")}
             </p>
-            <p>{t("section1.part23")}</p>
+            <p>{t("section1.part19")}</p>
           </PetitCarreJaune>
-          <p>{t("section1.part24")}</p>
+          <p>{t("section1.part20")}</p>
         </Visa>
         <Divider />
         <Health id="health">
@@ -938,10 +915,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("section2.part6")}</p>
           <p>{t("section2.part7")}</p>
           <p>{t("section2.part8")}</p>
-          <p>
-            {t("section2.part9")}{" "}
-            <VietnamExternalLink href={buildAllianzUrl(i18n.languageCode)}>{t("section2.part10")}</VietnamExternalLink>.
-          </p>
+          <p>{t("section2.part9")}</p>
         </Health>
         <Divider />
         <WhatTimeOfYear title={t("section3.title")} id="weather">
@@ -987,38 +961,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <Pagoda />
               <BoatRide />
             </p>
-            <p>
-              <VietnamLink to="southern-vietnam">{t("section5.part5")}</VietnamLink>
-              {t("section5.part6")}
-            </p>
-            <p>
-              <VietnamLink to="northern-vietnam">{t("section5.part7")}</VietnamLink>
-              {t("section5.part8")}
-            </p>
-            <p>
-              <VietnamLink to="central-vietnam">{t("section5.part9")}</VietnamLink>
-              {t("section5.part10")}
-            </p>
+            <p>{t("section5.part5")}</p>
+            <p>{t("section5.part6")}</p>
+            <p>{t("section5.part7")}</p>
           </PetitCarreJaune>
-          <p>
-            {t("section5.part11")}{" "}
-            <VietnamExternalLink href={buildGetYourGuideLink(i18n.languageCode)("discovery/s?q=Vietnam")}>
-              {t("section5.part12")}
-            </VietnamExternalLink>
-            ,{" "}
-            <VietnamExternalLink
-              href={buildTripAdvisorLink(i18n.languageCode)("Tourism-g293921-Vietnam-Vacations.html")}
-            >
-              {t("section5.part13")}
-            </VietnamExternalLink>{" "}
-            {t("section5.part14")}{" "}
-            <VietnamExternalLink href={buildCivivatisLink(i18n.languageCode)("vietnam/")}>
-              {t("section5.part15")}
-            </VietnamExternalLink>
-            .
-          </p>
-          <p>{t("section5.part16")}</p>
-          <p>{t("section5.part17")}</p>
+          <p>{t("section5.part8")}</p>
+          <p>{t("section5.part9")}</p>
+          <p>{t("section5.part10")}</p>
           <MapContainer>
             <img src={SouthernVietnamMapTransport} alt="Southern Vietnam Map Transport" />
           </MapContainer>
@@ -1032,12 +981,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("section6.part2")}</p>
           <p>{t("section6.part3")}</p>
           <p>{t("section6.part4")}</p>
-          {transportLinkPublished && (
-            <p>
-              {t("section6.part5")}{" "}
-              <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
-            </p>
-          )}
+          <p>{t("section6.part5")}</p>
           <p className="tc">
             <Cyclo />
           </p>
@@ -1048,37 +992,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("section7.part2")}</p>
           <p>{t("section7.part3")}</p>
           <PetitCarreJaune>
-            <p>
-              {t("section7.part4")}{" "}
-              <VietnamExternalLink href={buildAgodaSearchUrl(i18n.languageCode)()}>
-                {t("section7.part5")}
-              </VietnamExternalLink>{" "}
-              {t("section7.part6")}{" "}
-              <VietnamExternalLink href={buildBookingSearchUrl(i18n.languageCode)("Vietnam")}>
-                {t("section7.part7")}
-              </VietnamExternalLink>
-              {t("section7.part8")}
-            </p>
-            <p>
-              {t("section7.part9")}{" "}
-              <VietnamExternalLink href={buildAirBnbSearchUrl(i18n.languageCode)("vietnam")}>
-                {t("section7.part10")}
-              </VietnamExternalLink>
-              {t("section7.part11")}
-            </p>
-            <p>
-              {t("section7.part12")}{" "}
-              <VietnamExternalLink href="https://www.french.hostelworld.com/logement/Vietnam/">
-                {t("section7.part13")}
-              </VietnamExternalLink>
-              {t("section7.part14")}
-            </p>
+            <p>{t("section7.part4")}</p>
+            <p>{t("section7.part5")}</p>
+            <p>{t("section7.part6")}</p>
           </PetitCarreJaune>
-          <p>{t("section7.part15")}</p>
+          <p>{t("section7.part7")}</p>
           <ImageAsLandscape>
             <PrepareVietnamImages image="hammock" />
           </ImageAsLandscape>
-          <p className="tc i">{t("section7.part16")}</p>
+          <p className="tc i">{t("section7.part8")}</p>
         </WhereToStay>
         <Divider />
         <HowMuch title={t("section8.title")} id="money">
@@ -1145,23 +1067,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Scams id="scams">
           <p>{t("section10.part1")}</p>
           <p>{t("section10.part2")}</p>
-          <p>
-            {t("section10.part3")}
-            <VietnamExternalLink href="http://www.currencyapp.com/">{t("section10.part4")}</VietnamExternalLink>
-            {t("section10.part5")}
-          </p>
+          <p>{t("section10.part3")}</p>
           <ImageAsPortrait>
             <PrepareVietnamImages image="currencyApplication" />
           </ImageAsPortrait>
+          <p>{t("section10.part4")}</p>
+          <p>{t("section10.part5")}</p>
           <p>{t("section10.part6")}</p>
-          <p>{t("section10.part7")}</p>
-          <p>
-            {t("section10.part8")}
-            <VietnamExternalLink href="https://www.grab.com/transport/">
-              {t("section10.part9")}
-            </VietnamExternalLink>{" "}
-            {t("section10.part10")}
-          </p>
         </Scams>
         <Divider />
         <NaturalDisaster id="natural-disasters">
@@ -1172,15 +1084,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
           <p>{t("section11.part2")}</p>
           <p>{t("section11.part3")}</p>
-          {t("section11.part4") && (
-            <p>
-              {t("section11.part4")}{" "}
-              <VietnamExternalLink href="https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/informations-pratiques/risques/risques-naturels/article/risques-climatiques-cyclones-ouragans">
-                {t("section11.part5")}
-              </VietnamExternalLink>
-              .
-            </p>
-          )}
+          {t("section11.part4") && <p>{t("section11.part4")}</p>}
           <p className="tc">
             <Flood />
             <svg height="64" viewBox="0 0 512 512" width="64">
@@ -1219,23 +1123,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </g>
             </svg>
           </p>
-          <p>{t("section11.part6")}</p>
+          <p>{t("section11.part5")}</p>
           <ul>
+            <li>{t("section11.part6")}</li>
             <li>{t("section11.part7")}</li>
-            <li>{t("section11.part8")}</li>
           </ul>
-          <p>{t("section11.part9")}</p>
+          <p>{t("section11.part8")}</p>
           <PetitCarreJaune>
-            <p className="ttu">{t("section11.part10")}</p>
-            {t("section11.part11") && (
-              <p className="mt3">
-                {t("section11.part11")}{" "}
-                <VietnamExternalLink href="https://www.service-public.fr/particuliers/vosdroits/R18974">
-                  {t("section11.part12")}
-                </VietnamExternalLink>{" "}
-                {t("section11.part13")}
-              </p>
-            )}
+            <p className="ttu">{t("section11.part9")}</p>
+            {t("section11.part10") && <p className="mt3">{t("section11.part10")}</p>}
           </PetitCarreJaune>
         </NaturalDisaster>
         <Divider />
@@ -1296,11 +1192,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("section12.part30")}</li>
             <li>{t("section12.part31")}</li>
           </ul>
-          {devicesPublished ? (
-            <p>
-              <VietnamLink to="devices">{t("section12.part32")}</VietnamLink>.
-            </p>
-          ) : null}
+          {devicesPublished ? <p>{t("section12.part32")}</p> : null}
         </Baggage>
         <Divider />
         <Opinion title={t("section13.title")} id="opinion">
@@ -1320,12 +1212,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("section13.part5")}</p>
           <p className="underline">{t("section13.part6")}</p>
           <p>{t("section13.part7")}</p>
-          {foodLinkPublished && (
-            <p>
-              {t("section13.part8")}{" "}
-              <VietnamLink to="food-vietnam">{t("common:country.vietnam.card.food")}</VietnamLink>.
-            </p>
-          )}
+          {foodLinkPublished && <p>{t("section13.part8")}</p>}
           <p className="underline">{t("section13.part9")}</p>
           <p>{t("section13.part10")}</p>
           <ImageAsLandscape
@@ -1362,11 +1249,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("section14.part5")}</li>
           </ul>
           <p>{t("section14.part6")}</p>
-          <p>
-            {t("section14.part7")} <VietnamLink to="bali">{t("section14.part8")}</VietnamLink> {t("section14.part9")}
-          </p>
-          <p>{t("section14.part10")}</p>
-          <p>{t("section14.part11")}</p>
+          <p>{t("section14.part7")}</p>
+          <p>{t("section14.part8")}</p>
+          <p>{t("section14.part9")}</p>
           <ImageAsPortrait>
             <PrepareVietnamImages image="currency2" />
           </ImageAsPortrait>

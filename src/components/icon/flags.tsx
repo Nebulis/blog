@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/react"
 import { FlagFrance } from "./flag-france"
 import { FlagUK } from "./flag-uk"
-import { useCustomTranslation } from "../../i18n"
+import { useCustomTranslation } from "../../i18n-hook"
 
 interface CountryWithFlagsProps {
   flag: React.ComponentType

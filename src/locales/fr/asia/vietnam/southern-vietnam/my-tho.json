@@ -5,24 +5,16 @@
   "social-network-description": "Loin de la foule de Hô Chi Minh-Ville, découvrez la ville de Mỹ Tho et surtout partez en excursion en bateau pour découvrir ses grands jardins tropicaux qui vous entourent.",
   "how": {
     "part1": "Si vous comptez y aller par vos propres moyens, le #bus# est la meilleure solution, ils partent de Hô Chi Minh-Ville (station Mien Tay) toutes les 30 minutes et cela jusqu’à 16h. Le trajet dure environ 1h30 et le prix est d’environ 50 000 VND.",
-    "part2": "Nous utilisons le site ",
-    "part3": "Baolau",
-    "part4": " pour des réservations de bus en Asie.",
-    "part5": "De notre côté nous avons opté pour une ",
-    "part6": "excursion d’une journée",
-    "part7": " avec guide. Nous avons croisé certes beaucoup de bus de touristes sur la route néanmoins une fois à notre bateau à Mỹ Tho et ça jusqu’à notre départ nous n’avons plus jamais croisé ne serait-ce qu’un groupe.",
-    "part8": "Départ 7h30 - Retour 18h.",
-    "part9": "En savoir plus sur "
+    "part2": "Nous utilisons le site [Baolau](baolau:Ho Chi Minh:My Tho) pour des réservations de bus en Asie.",
+    "part3": "De notre côté nous avons opté pour une [excursion d’une journée](gyg:activity/ho-chi-minh-city-l272/upper-mekong-river-full-day-tour-t69167) avec guide. Nous avons croisé certes beaucoup de bus de touristes sur la route néanmoins une fois à notre bateau à Mỹ Tho et ça jusqu’à notre départ nous n’avons plus jamais croisé ne serait-ce qu’un groupe.",
+    "part4": "Départ 7h30 - Retour 18h.",
+    "part5": "En savoir plus sur [Les Transports au Vietnam](transport-vietnam)."
   },
   "how-long": {
     "part1": "Tout dépend du moyen avec lequel vous y êtes allé.",
     "part2": "Ayant pris une excursion d’une journée, on est bien évidemment restés ... qu’une journée.",
-    "part3": "Si vous y allez directement, profitez-en pour vous balader en vélo, faire la rencontre des habitants et flâner un peu plus sur les différentes îles, rien ne vous empêche d’ailleurs d’y aller par vous-même et de demander à des excursions de vous prendre au passage, ils sont généralement plutôt conciliant et on l’a fait plus d’une fois avec les sites de réservation ",
-    "part4": "Tripadvisor",
-    "part5": " ou bien encore ",
-    "part6": "Getyourguide",
-    "part7": "Si nous avions eu plus de temps, nous serions restés 2 ou 3 jours, pour visiter un peu plus les îles en vélo. Un véritable plus dans le Sud du Vietnam et en particulier autour du Delta du Mékong, on vous le conseille également à",
-    "part8": "Cân Thơ et son marché flottant"
+    "part3": "Si vous y allez directement, profitez-en pour vous balader en vélo, faire la rencontre des habitants et flâner un peu plus sur les différentes îles, rien ne vous empêche d’ailleurs d’y aller par vous-même et de demander à des excursions de vous prendre au passage, ils sont généralement plutôt conciliant et on l’a fait plus d’une fois avec les sites de réservation [Tripadvisor](tripadvisor:Attraction_Review-g293925-d7171779-Reviews-Vietnam_Adventure_Tours-Ho_Chi_Minh_City.html) ou bien encore [GetYourGuide](gyg:discovery/s?q=Vietnam&searchSource=2).",
+    "part4": "Si nous avions eu plus de temps, nous serions restés 2 ou 3 jours, pour visiter un peu plus les îles en vélo. Un véritable plus dans le Sud du Vietnam et en particulier autour du Delta du Mékong, on vous le conseille également à [Cân Thơ et son marché flottant](can-tho)."
   },
   "what-time-of-year": {
     "part1": "Ah cette météo ! Jamais simple de savoir la véritable bonne saison pour partir.",
@@ -31,14 +23,10 @@
   },
   "where-to-stay": {
     "title": "Où dormir à Mỹ Tho ?",
-    "part1": "Nous avions opté pour l’hôtel",
-    "part2": "The Island Lodge",
-    "part3": "au bord du Mékong. Idéalement bien situé pour des promenades en vélo, puisque situé sur l’île de Thoi Son.",
-    "part4": "Cela dit cet hôtel est certes idéalement bien placé mais le prix est néanmoins très élevé et même si cela ne fait pas de mal de temps en temps, vous n’avez peut-être pas besoin d’une piscine ou d’un endroit luxueux pour passer une seule nuit.",
-    "part5": "Vous trouverez bien d'autres hôtels sur Mỹ Tho qui vous satisferont également, le",
-    "part6": "Song Tien Hotel",
-    "part7": " par exemple, est un hôtel bien plus basique mais qui est parfait niveau prix et emplacement sur Mỹ Tho même.",
-    "part8": "Comparez et réservez votre hôtel à Mỹ Tho."
+    "part1": "Nous avions opté pour l’hôtel [The Island Lodge](booking-hotel:vn/the-island-logde) au bord du Mékong. Idéalement bien situé pour des promenades en vélo, puisque situé sur l’île de Thoi Son.",
+    "part2": "Cela dit cet hôtel est certes idéalement bien placé mais le prix est néanmoins très élevé et même si cela ne fait pas de mal de temps en temps, vous n’avez peut-être pas besoin d’une piscine ou d’un endroit luxueux pour passer une seule nuit.",
+    "part3": "Vous trouverez bien d'autres hôtels sur Mỹ Tho qui vous satisferont également, le [Song Tien Hotel](booking-hotel:vn/khach-san-song-tien) par exemple, est un hôtel bien plus basique mais qui est parfait niveau prix et emplacement sur Mỹ Tho même.",
+    "part4": "[Comparez et réservez votre hôtel à Mỹ Tho](booking-search:M%E1%BB%B9+Tho%2C+Tien+Giang%2C+Vietnam)."
   },
   "visit": {
     "part1": "Vous l’avez compris nous avons pris un tour avec guide, ce qui sous entend que ce que nous allons vous raconter est notre récit de voyage par rapport à cette excursion. Cela dit, rien ne vous empêche de faire le même trajet par vous-même ou de noter quelques idées."
@@ -66,23 +54,17 @@
     "title": "LE DELTA DU MÉKONG",
     "part1": "Qu’est-ce que le delta du Mékong et où se trouve-t-il ?",
     "part2": "Le Mékong est un #fleuve d’Asie du Sud-Est#, sa longueur serait estimée à 4 500 km dont la moitié serait en Chine mais les chiffres sont loin d’être exact sachant que sa superficie bouge sans cesse.",
-    "part3": "Le Mékong est un long fleuve tranquille ... FAUX ... Malheureusement lors des fortes périodes de crue, il devient un véritable fleuve dévastateur, détruisant tout sur son passage. Vous verrez souvent des villages construits sur pilotis car les berges sont régulièrement inondés, nous avons visité le ",
-    "part4": "au Cambodge, vraiment impressionnant et en particulier quand on le visite hors cru pour nous permettre de constater la hauteur des maisons.",
-    "part5": "Le Mékong commence en",
-    "part6": " puis continue vers la",
-    "part7": ", la",
-    "part8": "et le ",
-    "part9": ". Il traverse ensuite le",
-    "part10": "où il se divise à Phnom Penh en deux branches vers le Sud du Vietnam.",
-    "part11": "Au Vietnam il est appelé #Cuu Long « fleuve des neuf dragons »# car il se divise en neuf bras principaux pour atterrir enfin vers la mer de Chine. De multiples îles et îlots sont alors créés ce qui permet d’en faire des rizières et de nombreux jardins fruitiers.",
-    "part12": "On découvre au loin les différentes îles qui se dessinent, vous avez #les îles du Phénix (Con Phuong), de la Licorne (Con Lan), du Dragon (Con Tan Long) et de la Tortue (Con Qui)#.",
-    "part13": "Un peu compliqué de savoir où nous sommes mais on aperçoit quand même les îles et îlots tout autour de nous, on croise des bateaux de pêcheurs avec leur panier en bambou, un tout petit marché flottant (la saison des fruits est de mai à juin, vous aurez peut-être la chance de voir déambuler tout un tas de bateaux colorés et de goûter à de délicieux fruits tropicaux).",
-    "part14": "Les milliers de palmiers d’eau autour de nous, nous font encore plus voyager ...",
-    "part15": "On croise également pas mal de maisons construites principalement en bois de cocotier, leur toiture est faite avec des feuilles de palmier d’eau.",
-    "part16": "On s’arrête enfin pour manger sur une petite île où on découvre toutes sortes de plantations tout autour de nous.",
-    "part17": "On a envie de s'arrêter à chaque pas, récolter tous les fruits que l’on voit et s'asseoir dans un coin pour ne plus bouger et profiter.",
-    "part18": "Se promener à pied ou à vélo hors des sentiers battus ...",
-    "part19": "Une chose qu’on ne peut malheureusement pas faire quand on prend un tour guidé mais si vous venez par vous-même profitez-en et racontez nous vos aventures."
+    "part3": "Le Mékong est un long fleuve tranquille ... FAUX ... Malheureusement lors des fortes périodes de crue, il devient un véritable fleuve dévastateur, détruisant tout sur son passage. Vous verrez souvent des villages construits sur pilotis car les berges sont régulièrement inondés, nous avons visité le [Village flottant de Kampong Phluk](kampong-phluk) au Cambodge, vraiment impressionnant et en particulier quand on le visite hors cru pour nous permettre de constater la hauteur des maisons.",
+    "part4": "Le Mékong commence en [Chine](chin) puis continue vers la [Birmanie](myanmar), la [Thaïlande](thailand) et le [Laos](laos). Il traverse ensuite le [Cambodge](cambodia) où il se divise à Phnom Penh en deux branches vers le Sud du Vietnam.",
+    "part5": "Au Vietnam il est appelé #Cuu Long « fleuve des neuf dragons »# car il se divise en neuf bras principaux pour atterrir enfin vers la mer de Chine. De multiples îles et îlots sont alors créés ce qui permet d’en faire des rizières et de nombreux jardins fruitiers.",
+    "part6": "On découvre au loin les différentes îles qui se dessinent, vous avez #les îles du Phénix (Con Phuong), de la Licorne (Con Lan), du Dragon (Con Tan Long) et de la Tortue (Con Qui)#.",
+    "part7": "Un peu compliqué de savoir où nous sommes mais on aperçoit quand même les îles et îlots tout autour de nous, on croise des bateaux de pêcheurs avec leur panier en bambou, un tout petit marché flottant (la saison des fruits est de mai à juin, vous aurez peut-être la chance de voir déambuler tout un tas de bateaux colorés et de goûter à de délicieux fruits tropicaux).",
+    "part8": "Les milliers de palmiers d’eau autour de nous, nous font encore plus voyager ...",
+    "part9": "On croise également pas mal de maisons construites principalement en bois de cocotier, leur toiture est faite avec des feuilles de palmier d’eau.",
+    "part10": "On s’arrête enfin pour manger sur une petite île où on découvre toutes sortes de plantations tout autour de nous.",
+    "part11": "On a envie de s'arrêter à chaque pas, récolter tous les fruits que l’on voit et s'asseoir dans un coin pour ne plus bouger et profiter.",
+    "part12": "Se promener à pied ou à vélo hors des sentiers battus ...",
+    "part13": "Une chose qu’on ne peut malheureusement pas faire quand on prend un tour guidé mais si vous venez par vous-même profitez-en et racontez nous vos aventures."
   },
   "visit4": {
     "title": "SOUS LES COCOTIERS",
@@ -110,10 +92,8 @@
     "part1": "Notre dernier arrêt est une petite ferme apicole, où on a dégusté un #délicieux thé avec du miel# venant de chez eux et également des fruits frais tout ça en #écoutant des musiques traditionnelles# jouées et chantées par 5 musiciens locaux.",
     "part2": "Sur le départ, une petite jeune femme est en train de presser des cannes à sucre pour en sortir le jus avec sa machine, ça a l’air sacrément dur !",
     "part3": "On se risque à goûter ce jus, qui n’est pas la chose que nous avons préféré on ne va pas vous mentir, pas sûr qu’on en reprenne un jour mais au moins on aura goûté !",
-    "part4": "On a également découvert des champs entiers d’un fruit que nous ne connaissions pas et qui est pourtant très répandu ici et en Thaïlande, le",
-    "part5": "Green pomelo",
-    "part6": ". Une sorte de pamplemousse qui peut être rouge intense à l’intérieur ou bien jaune limite blanc.",
-    "part7": "On en a trouvé en vente dans nos marchés de Singapour et on vous fait une revue dessus très prochainement dans notre prochaine catégorie des fruits tropicaux."
+    "part4": "On a également découvert des champs entiers d’un fruit que nous ne connaissions pas et qui est pourtant très répandu ici et en Thaïlande, le [Green pomelo](green-pomelo). Une sorte de pamplemousse qui peut être rouge intense à l’intérieur ou bien jaune limite blanc.",
+    "part5": "On en a trouvé en vente dans nos marchés de Singapour et on vous fait une revue dessus très prochainement dans notre prochaine catégorie des fruits tropicaux."
   },
   "conclusion": "Mỹ Tho porte le même nom que la rivière qui signifie Beaux Roseaux. Une magnifique journée, bien que trop courte mais déjà passionnante.",
   "question1": "Aviez-vous déjà remarqué la particularité des bateaux du Vietnam et connaissiez-vous son origine ?",

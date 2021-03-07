@@ -21,7 +21,7 @@ import { Burger, BurgerAbsolute, Menu, MobileMenu } from "./menu"
 import { MenuContext } from "./menu.context"
 import { FlagFrance } from "../icon/flag-france"
 import { FlagUK } from "../icon/flag-uk"
-import { useCustomTranslation } from "../../i18n"
+import { useCustomTranslation } from "../../i18n-hook"
 import { facebook, getPathForEnglish, getPathForFrench, instagram, pinterest, twitter } from "../../utils"
 import { Link, PageProps } from "gatsby"
 

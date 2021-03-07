@@ -1,17 +1,12 @@
-import React, { useContext } from "react"
+import React from "react"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
 import SEO from "../../../../components/layout/seo"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/war-remnants-museum.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/war-remnants-museum.json"
-import {
-  VietnamBlogLayout,
-  VietnamExternalLink,
-  VietnamHeadline,
-  VietnamLink,
-} from "../../../../components/core/asia/vietnam/vietnam"
+import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -33,13 +28,10 @@ import {
   Where,
   WhereToStay,
 } from "../../../../components/core/section"
-import { buildBookingSearchUrl, buildBookingUrl } from "../../../../utils"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { HoChiMinWarMuseum } from "../../../../components/images/asia/vietnam/southern-vietnam/ho-chi-min-war-museum"
 import { css } from "@emotion/react"
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
-import { getLink } from "../../../../components/core/links/links.utils"
-import { ApplicationContext } from "../../../../components/application"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { Divider } from "../../../../components/core/divider"
 import { Title } from "../../../../components/core/title"
@@ -52,9 +44,7 @@ i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const { development } = useContext(ApplicationContext)
   const title = t(`common:country.vietnam.card.${id}`)
-  const transportLinkPublished = development || getLink("transport-vietnam").published
 
   return (
     <>
@@ -84,12 +74,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <How>
           <p>{t("how.part1")}</p>
           <p>{t("how.part2")}</p>
-          {transportLinkPublished && (
-            <p>
-              {t("how.part3")}{" "}
-              <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
-            </p>
-          )}
+          <p>{t("how.part3")}</p>
         </How>
         <HowLong>
           <p>{t("how-long.part1")}</p>
@@ -104,26 +89,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how-much.part1")}</p>
         </HowMuch>
         <WhereToStay title={t("where-to-stay.title")}>
-          <p>
-            {t("where-to-stay.part1")}{" "}
-            <VietnamExternalLink href={buildBookingUrl(i18n.languageCode)("vn/prague")}>
-              {t("where-to-stay.part2")}
-            </VietnamExternalLink>
-            {t("where-to-stay.part3")}{" "}
-            <VietnamExternalLink href="https://www.google.com/maps/place/220+%C4%90%E1%BB%81+Th%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh">
-              {t("where-to-stay.part4")}
-            </VietnamExternalLink>
-          </p>
-          <p>{t("where-to-stay.part5")}</p>
-          <p>
-            <VietnamExternalLink
-              href={buildBookingSearchUrl(i18n.languageCode)(
-                "H%C3%B4-Chi-Minh-Ville%2C+H%C3%B4-Chi-Minh-Ville%2C+Vietnam"
-              )}
-            >
-              {t("where-to-stay.part6")}
-            </VietnamExternalLink>
-          </p>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
+          <p>{t("where-to-stay.part3")}</p>
         </WhereToStay>
         <Visit title={t("common:section.visit")}>
           <SectionContent>
@@ -199,12 +167,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </GroupOfImages>
               {t("visit2.part8") && <Quote className="b">{t("visit2.part8")}</Quote>}
               <p>{t("visit2.part9")}</p>
-              <p>
-                {t("visit2.part10")}
-                <VietnamLink to="phu-quoc-island">{t("visit2.part11")}</VietnamLink>
-                {t("visit2.part12")}
-              </p>
-              <p>{t("visit2.part13")}</p>
+              <p>{t("visit2.part10")}</p>
+              <p>{t("visit2.part11")}</p>
             </SectionContent>
           </section>
           <Divider />
@@ -253,19 +217,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit4.part2")}</p>
               <p>{t("visit4.part3")}</p>
               <p>{t("visit4.part4")}</p>
-              <p>
-                {t("visit4.part5")}{" "}
-                <VietnamLink to="s-21-prison">{t("common:country.cambodia.card.s-21-prison")}</VietnamLink>{" "}
-                {t("visit4.part6")}
-              </p>
+              <p>{t("visit4.part5")}</p>
+              <p>{t("visit4.part6")}</p>
               <p>{t("visit4.part7")}</p>
-              <p>
-                {t("visit4.part8")}{" "}
-                <VietnamLink to="discover-southern-vietnam">
-                  {t("common:country.vietnam.card.discover-southern-vietnam")}
-                </VietnamLink>
-                {t("visit4.part9")}
-              </p>
             </SectionContent>
             <ImageAsPortrait
               css={css`

@@ -9,7 +9,6 @@ import translationEn from "{{upPath pagePath}}locales/en/{{pagePath}}.json"
 import {
   {{uppercase (getCountry pagePath)}}BlogLayout,
   {{uppercase (getCountry pagePath)}}Title,
-  {{uppercase (getCountry pagePath)}}Quote,
   {{uppercase (getCountry pagePath)}}Headline,
 } from "{{upPath pagePath}}components/core/{{getContinent pagePath}}/{{getCountry pagePath}}/{{getCountry pagePath}}"
 import {
@@ -25,6 +24,7 @@ import {
 } from "../../../../components/core/section"
 import { Conclusion } from "{{upPath pagePath}}components/core/conclusion"
 import { Divider } from "{{upPath pagePath}}components/core/divider"
+import { Quote } from "{{upPath pagePath}}components/core/quote"
 import HomeImgUrl from "{{upPath pagePath}}images/{{getContinent pagePath}}/{{getCountry pagePath}}/home-{{getCountry pagePath}}.jpg"
 
 const namespace = "{{pagePath}}"
@@ -47,7 +47,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <{{uppercase (getCountry pagePath)}}BlogLayout page={id} location={location}>
         <{{uppercase (getCountry pagePath)}}Title title={title} linkId={id} />
-        <{{uppercase (getCountry pagePath)}}Quote>{t("quote")}</{{uppercase (getCountry pagePath)}}Quote>
+        <Quote>{t("quote")}</Quote>
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
         <Divider />

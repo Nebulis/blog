@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { VietnamBlogLayout, VietnamHeadline, VietnamLink } from "../../../../components/core/asia/vietnam/vietnam"
+import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
   HowLong,
   HowMuch,
@@ -27,7 +27,7 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import HomeImgUrl from "../../../../images/asia/vietnam/home-vietnam.jpg"
 import SouthernVietnamMap from "../../../../images/asia/vietnam/southern-vietnam-map.png"
 import { PageProps } from "gatsby"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/discover.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/discover.json"
@@ -183,12 +183,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <VietnamHeadline>{t("visit4.title")}</VietnamHeadline>
             <Divider />
             <SectionContent>
-              <p>
-                {t("visit4.part1")} <VietnamLink to="northern-vietnam">{t("visit4.part2")}</VietnamLink>{" "}
-                {t("visit4.part3")} <VietnamLink to="central-vietnam">{t("visit4.part4")}</VietnamLink>{" "}
-                {t("visit4.part5")}
-              </p>
-              <p>{t("visit4.part6")}</p>
+              <p>{t("visit4.part1")}</p>
+              <p>{t("visit4.part2")}</p>
             </SectionContent>
           </section>
           <Divider />

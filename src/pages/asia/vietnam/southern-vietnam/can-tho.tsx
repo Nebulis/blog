@@ -1,17 +1,12 @@
-import React, { useContext } from "react"
+import React from "react"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
 import SEO from "../../../../components/layout/seo"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/can-tho.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/can-tho.json"
-import {
-  VietnamBlogLayout,
-  VietnamExternalLink,
-  VietnamHeadline,
-  VietnamLink,
-} from "../../../../components/core/asia/vietnam/vietnam"
+import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
   How,
   HowLong,
@@ -34,9 +29,6 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
-import { getLink } from "../../../../components/core/links/links.utils"
-import { ApplicationContext } from "../../../../components/application"
-import { buildBaolauSearchUrl, buildBookingSearchUrl, buildBookingUrl, buildExpediaSearchUrl } from "../../../../utils"
 import { vietnamPrimaryColorDarker } from "../../../../components/core/asia/vietnam/vietnam.colors"
 import { CanThoImages } from "../../../../components/images/asia/vietnam/southern-vietnam/can-tho"
 import styled from "@emotion/styled"
@@ -54,9 +46,7 @@ const InsideQuote = styled.p`
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const { development } = useContext(ApplicationContext)
   const title = t(`common:country.vietnam.card.${id}`)
-  const transportLinkPublished = development || getLink("transport-vietnam").published
   return (
     <>
       <SEO
@@ -77,35 +67,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <How>
           <p>{t("how.part1")}</p>
-          <p>
-            {t("how.part2")}{" "}
-            <VietnamExternalLink
-              href={buildExpediaSearchUrl(i18n.languageCode)(
-                "from%3AHanoi%2C%20Vietnam%20%28HAN-Noi%20Bai%20Intl.%29%2Cto%3ACan%20Tho%2C%20Vietnam%20%28VCA"
-              )}
-            >
-              {t("how.part3")}
-            </VietnamExternalLink>
-            .
-          </p>
+          <p>{t("how.part2")}</p>
+          <p>{t("how.part3")}</p>
           <p>{t("how.part4")}</p>
           <p>{t("how.part5")}</p>
           <p>{t("how.part6")}</p>
-          <p>
-            {t("how.part7")}{" "}
-            <VietnamExternalLink
-              href={buildBaolauSearchUrl(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "Can Tho" })}
-            >
-              {t("how.part8")}
-            </VietnamExternalLink>{" "}
-            {t("how.part9")}
-          </p>
-          {transportLinkPublished && (
-            <p>
-              {t("how.part10")}{" "}
-              <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
-            </p>
-          )}
+          <p>{t("how.part7")}</p>
         </How>
         <HowLong>
           <p>{t("how-long.part1")}</p>
@@ -124,21 +91,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how-much.part4")}</p>
         </HowMuch>
         <WhereToStay>
-          <p>
-            {t("where-to-stay.part1")}{" "}
-            <VietnamExternalLink href={buildBookingUrl(i18n.languageCode)("vn/green-village-mekong")}>
-              {t("where-to-stay.part2")}
-            </VietnamExternalLink>
-            .
-          </p>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
           <p>{t("where-to-stay.part3")}</p>
-          <p>
-            <VietnamExternalLink
-              href={buildBookingSearchUrl(i18n.languageCode)("Cần+Thơ%2C+Can+Tho+Municipality%2C+Vietnam")}
-            >
-              {t("where-to-stay.part4")}
-            </VietnamExternalLink>
-          </p>
         </WhereToStay>
         <Visit>
           <SectionContent>
@@ -294,10 +249,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <p>{t("visit5.part1")}</p>
-              <p>
-                {t("visit5.part2")} <VietnamLink to="ho-chi-minh-city">{t("visit5.part3")}</VietnamLink>.
-              </p>
-              <p>{t("visit5.part4")}</p>
+              <p>{t("visit5.part2")}</p>
+              <p>{t("visit5.part3")}</p>
               <TwoImagesSameSizeOrToGroup>
                 <CanThoImages image="ride1" />
                 <CanThoImages image="ride2" />

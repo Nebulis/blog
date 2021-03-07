@@ -2,16 +2,11 @@ import React, { useContext } from "react"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
 import SEO from "../../../../components/layout/seo"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/my-tho.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/my-tho.json"
-import {
-  VietnamBlogLayout,
-  VietnamExternalLink,
-  VietnamHeadline,
-  VietnamLink,
-} from "../../../../components/core/asia/vietnam/vietnam"
+import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
   How,
   HowLong,
@@ -35,13 +30,6 @@ import {
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
-import {
-  buildBaolauSearchUrl,
-  buildBookingSearchUrl,
-  buildBookingUrl,
-  buildGetYourGuideLink,
-  buildTripAdvisorLink,
-} from "../../../../utils"
 import { MyThoImages } from "../../../../components/images/asia/vietnam/southern-vietnam/my-tho"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { MekongRiverMap } from "../../../../components/core/asia/vietnam/mekong-river-map"
@@ -80,57 +68,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <How>
           <p>{t("how.part1")}</p>
-          <p>
-            {t("how.part2")}{" "}
-            <VietnamExternalLink
-              href={buildBaolauSearchUrl(i18n.languageCode)({ origin: "Ho Chi Minh", destination: "My Tho" })}
-            >
-              {t("how.part3")}
-            </VietnamExternalLink>{" "}
-            {t("how.part4")}
-          </p>
-          <p>
-            {t("how.part5")}{" "}
-            <VietnamExternalLink
-              href={buildGetYourGuideLink(i18n.languageCode)(
-                "activity/ho-chi-minh-city-l272/upper-mekong-river-full-day-tour-t69167"
-              )}
-            >
-              {t("how.part6")}
-            </VietnamExternalLink>{" "}
-            {t("how.part7")}
-          </p>
-          <p>{t("how.part8")}</p>
-          {transportLinkPublished && (
-            <p>
-              {t("how.part9")}{" "}
-              <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
-            </p>
-          )}
+          <p>{t("how.part2")}</p>
+          <p>{t("how.part3")}</p>
+          <p>{t("how.part4")}</p>
+          {transportLinkPublished && <p>{t("how.part5")}</p>}
         </How>
         <HowLong>
           <p>{t("how-long.part1")}</p>
           <p>{t("how-long.part2")}</p>
-          <p>
-            {t("how-long.part3")}{" "}
-            <VietnamExternalLink
-              href={buildTripAdvisorLink(i18n.languageCode)(
-                "Attraction_Review-g293925-d7171779-Reviews-Vietnam_Adventure_Tours-Ho_Chi_Minh_City.html"
-              )}
-            >
-              {t("how-long.part4")}
-            </VietnamExternalLink>{" "}
-            {t("how-long.part5")}{" "}
-            <VietnamExternalLink
-              href={buildGetYourGuideLink(i18n.languageCode)("discovery/s?q=Vietnam&searchSource=2")}
-            >
-              {t("how-long.part6")}
-            </VietnamExternalLink>
-            .
-          </p>
-          <p>
-            {t("how-long.part7")} <VietnamLink to="can-tho">{t("how-long.part8")}</VietnamLink>.
-          </p>
+          <p>{t("how-long.part3")}</p>
+          <p>{t("how-long.part4")}</p>
         </HowLong>
         <WhatTimeOfYear>
           <p>{t("what-time-of-year.part1")}</p>
@@ -138,28 +85,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("what-time-of-year.part3")}</p>
         </WhatTimeOfYear>
         <WhereToStay title={t("where-to-stay.title")}>
-          <p>
-            {t("where-to-stay.part1")}{" "}
-            <VietnamExternalLink href={buildBookingUrl(i18n.languageCode)("vn/the-island-logde")}>
-              {t("where-to-stay.part2")}
-            </VietnamExternalLink>{" "}
-            {t("where-to-stay.part3")}
-          </p>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
+          <p>{t("where-to-stay.part3")}</p>
           <p>{t("where-to-stay.part4")}</p>
-          <p>
-            {t("where-to-stay.part5")}{" "}
-            <VietnamExternalLink href={buildBookingUrl(i18n.languageCode)("vn/khach-san-song-tien")}>
-              {t("where-to-stay.part6")}
-            </VietnamExternalLink>
-            {t("where-to-stay.part7")}
-          </p>
-          <p>
-            <VietnamExternalLink
-              href={buildBookingSearchUrl(i18n.languageCode)("M%E1%BB%B9+Tho%2C+Tien+Giang%2C+Vietnam")}
-            >
-              {t("where-to-stay.part8")}
-            </VietnamExternalLink>
-          </p>
         </WhereToStay>
         <Visit title={t("common:section.visit")}>
           <SectionContent>
@@ -234,39 +163,28 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <MekongRiverMap />
               <ImageDescription>{t("visit3.part1")}</ImageDescription>
               <p>{t("visit3.part2")}</p>
-              <p>
-                {t("visit3.part3")}{" "}
-                <VietnamLink to="kampong-phluk">{t("common:country.cambodia.card.kampong-phluk")}</VietnamLink>{" "}
-                {t("visit3.part4")}
-              </p>
-              <p>
-                {t("visit3.part5")} <VietnamLink to="china">{t("common:country.china.title")}</VietnamLink>{" "}
-                {t("visit3.part6")} <VietnamLink to="myanmar">{t("common:country.myanmar.title")}</VietnamLink>
-                {t("visit3.part7")} <VietnamLink to="thailand">{t("common:country.thailand.title")}</VietnamLink>{" "}
-                {t("visit3.part8")} <VietnamLink to="laos">{t("common:country.laos.title")}</VietnamLink>
-                {t("visit3.part9")} <VietnamLink to="cambodia">{t("common:country.cambodia.title")}</VietnamLink>{" "}
-                {t("visit3.part10")}
-              </p>
-              <p>{t("visit3.part11")}</p>
+              <p>{t("visit3.part3")}</p>
+              <p>{t("visit3.part4")}</p>
+              <p>{t("visit3.part5")}</p>
               <ImageAsLandscape>
                 <MyThoImages image="mekong1" />
               </ImageAsLandscape>
-              <p>{t("visit3.part12")}</p>
-              <p>{t("visit3.part13")}</p>
-              <p>{t("visit3.part14")}</p>
+              <p>{t("visit3.part6")}</p>
+              <p>{t("visit3.part7")}</p>
+              <p>{t("visit3.part8")}</p>
               <TwoImagesSameSizeOrToGroup>
                 <MyThoImages image="mekong2" />
                 <MyThoImages image="mekong3" />
               </TwoImagesSameSizeOrToGroup>
-              <p>{t("visit3.part15")}</p>
+              <p>{t("visit3.part9")}</p>
               <TwoImagesSameSizeOrToGroup>
                 <MyThoImages image="mekong4" />
                 <MyThoImages image="mekong5" />
               </TwoImagesSameSizeOrToGroup>
-              <p>{t("visit3.part16")}</p>
-              <p>{t("visit3.part17")}</p>
-              <p>{t("visit3.part18")}</p>
-              <p>{t("visit3.part19")}</p>
+              <p>{t("visit3.part10")}</p>
+              <p>{t("visit3.part11")}</p>
+              <p>{t("visit3.part12")}</p>
+              <p>{t("visit3.part13")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
                   <MyThoImages image="fruit1" />
@@ -358,11 +276,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <ImageAsPortrait>
                 <MyThoImages image="sugarcane" />
               </ImageAsPortrait>
-              <p>
-                {t("visit6.part4")} <VietnamLink to="green-pomelo">{t("visit6.part5")}</VietnamLink>
-                {t("visit6.part6")}
-              </p>
-              <p>{t("visit6.part7")}</p>
+              <p>{t("visit6.part4")}</p>
+              <p>{t("visit6.part5")}</p>
               <TwoImagesSameSize>
                 <MyThoImages image="fruit4" />
                 <MyThoImages image="fruit5" />

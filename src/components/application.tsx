@@ -1,7 +1,8 @@
 import { graphql, PageProps, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
-import { configureI18n, useCustomTranslation } from "../i18n"
+import { configureI18n } from "../i18n"
 import { isEnglishPage } from "../utils"
+import { useCustomTranslation } from "../i18n-hook"
 
 configureI18n()
 export const Application: React.FunctionComponent<PageProps> = ({ children, location }) => {

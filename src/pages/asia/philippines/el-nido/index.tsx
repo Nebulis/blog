@@ -10,7 +10,7 @@ import {
   MainCardContainer,
   MedallionContainer,
 } from "../../../../components/layout/layout"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/philippines/el-nido/index.json"
 import translationEn from "../../../../locales/en/asia/philippines/el-nido/index.json"

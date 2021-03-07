@@ -3,14 +3,12 @@ import { philippinesPrimaryColor, philippinesPrimaryColorDarker } from "./philip
 import { ImageAsMedallion } from "../../../images/layout"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
 import { drawSth } from "./console-draw-sth"
-import { ButtonLink, ExternalLink, linkBuilder } from "../../links/link"
+import { ButtonLink } from "../../links/link"
 import { Title } from "../../title"
-import { Quote } from "../../quote"
 import { Headline } from "../../highlight"
 import { css } from "@emotion/react"
 import React, { FunctionComponent } from "react"
 import philippinesFish from "../../../../images/asia/philippines/fish.svg"
-import { Link } from "gatsby"
 
 const philippinesPartStyle = css`
   color: ${philippinesPrimaryColor};
@@ -44,6 +42,9 @@ const philippinesLayout = `
     }
   }
   .index-blog-layout-content {
+    .quote::before {
+      color: ${philippinesPrimaryColor};
+    }
     .divider {
       background-color: ${philippinesPrimaryColor};
     }
@@ -60,6 +61,14 @@ const philippinesLayout = `
     .comments .form-control:focus {
       box-shadow: 0 0 0 0.2rem rgb(122, 174, 222, 0.25);
       border-color: ${philippinesPrimaryColor}
+    }
+    a.mdx-pseudo-processor-link{
+      color: ${philippinesPrimaryColor};
+      font-weight: bold;
+      text-decoration: underline;
+      &:visited {
+        color: ${philippinesPrimaryColor};
+      }
     }
   }
 
@@ -90,28 +99,5 @@ export const PhilippinesTitle = styled(Title)`
   }
   a:hover {
     box-shadow: 0px 0px 2px 1px ${philippinesPrimaryColor};
-  }
-`
-
-export const PhilippinesQuote = styled(Quote)`
-  .quote::before {
-    color: ${philippinesPrimaryColor};
-  }
-`
-
-export const PhilippinesLink = linkBuilder(styled(Link)`
-  color: ${philippinesPrimaryColor};
-  font-weight: bold;
-  &:visited {
-    color: ${philippinesPrimaryColor};
-  }
-  text-decoration: underline;
-`)
-
-export const PhilippinesExternalLink = styled(ExternalLink)`
-  color: ${philippinesPrimaryColor};
-  font-weight: bold;
-  &:visited {
-    color: ${philippinesPrimaryColor};
   }
 `

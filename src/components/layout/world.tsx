@@ -9,7 +9,7 @@ import {
   smallEnd,
 } from "../core/variables"
 import { css } from "@emotion/react"
-import { useCustomTranslation } from "../../i18n"
+import { useCustomTranslation } from "../../i18n-hook"
 
 export type Continent = "Asia" | "Europe" | "Africa" | "North America" | "South America" | "Oceania"
 export const continents: Continent[] = ["Asia", "Europe", "Africa", "North America", "South America", "Oceania"]

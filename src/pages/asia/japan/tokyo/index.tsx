@@ -11,7 +11,7 @@ import { JapanDivider } from "../../../../components/core/japan/japan"
 import { JapanImageAsMedallion } from "../../../../components/core/japan/japan.images"
 import { ADayInTokyoCard, HamarikyuGardenCard, SensojiCard } from "../../../../components/core/japan/japan.cards"
 import { japanLinks } from "../../../../components/core/japan/japan.links"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import { PageProps } from "gatsby"
 import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 

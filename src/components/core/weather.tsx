@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, useState } from "react"
 import { largeEnd, weatherAverage, weatherBad, weatherGood } from "./variables"
-import { useCustomTranslation } from "../../i18n"
+import { useCustomTranslation } from "../../i18n-hook"
 import { Button } from "./button"
 import { css } from "@emotion/react"
 import { Table } from "../layout/layout"

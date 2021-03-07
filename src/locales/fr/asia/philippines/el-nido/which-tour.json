@@ -6,40 +6,26 @@
     "part1": "Dans cet article, on vous emmène à la découverte de ses îles en vous détaillant les différents tours, on vous indique également tout sur la réservation, le prix et les types de bateaux qui existent.",
     "part2": "S’il y a bien une activité que vous ne devez pas louper à El Nido c’est bien les excursions en bateau, appelé plus couramment #Island Hopping#.",
     "part3": "La traduction de Island Hopping mot à mot reviendrait à Island = Île / Hopping = Sautillant …",
-    "part4": "Pour une définition plus concrète c’est une visite d’île en île. Très courant aux Philippines, pas que à El Nido, vous pouvez aussi trouver ce genre de proposition à",
-    "part5": "Boracay",
-    "part6": "Coron Island",
-    "part7": "et sûrement bien d’autres. Mais dans d’autres pays également comme la",
-    "part8": "Thaïlande",
-    "part9": ", les",
-    "part10": "Açores",
-    "part11": "ou bien certaines îles des",
-    "part12": "Caraïbes",
-    "part13": "par exemple.",
-    "part14": "On vous a raconté notre récit de voyage dans notre article sur El Nido, on espère qu’on vous avait mis l’eau à la bouche.",
-    "part15": "Dans cet article on vous indiquait d’ailleurs plus en détail comment aller à El Nido et où dormir en fonction de votre budget.",
-    "part16": "Il est maintenant temps d’en venir à l’essentiel et de vous en dire un peu plus sur les tours."
+    "part4": "Pour une définition plus concrète c’est une visite d’île en île. Très courant aux Philippines, pas que à El Nido, vous pouvez aussi trouver ce genre de proposition à [Boracay](boracay), [Coron Island](coron-island) et sûrement bien d’autres. Mais dans d’autres pays également comme la [Thaïlande](thailand), [les Açores](azores) ou bien certaines îles des [Caraïbes](caribbean) par exemple.",
+    "part5": "On vous a raconté notre récit de voyage dans notre article sur El Nido, on espère qu’on vous avait mis l’eau à la bouche.",
+    "part6": "Dans cet article on vous indiquait d’ailleurs plus en détail comment aller à El Nido et où dormir en fonction de votre budget.",
+    "part7": "Il est maintenant temps d’en venir à l’essentiel et de vous en dire un peu plus sur les tours."
   },
   "where-to-book": {
     "title": "Où réserver ?",
     "part1": "Pour réserver votre Island Hopping en ligne :",
-    "part2": "El Nido Paradise",
-    "part3": "(bateau traditionnel)",
-    "part4": "Tikigo",
-    "part5": "(bateau traditionnel)",
-    "part6": "Travel Palawan",
-    "part7": "(speed boat - bateau traditionnel)",
-    "part8": "El Nido Yachting Club",
-    "part9": "(prix élevé - speed boat - catamaran)",
-    "part10": "Skipper Charters",
-    "part11": " (prix élevé - speed boat)",
-    "part12": "Il en existe bien d’autres, nous vous citons là ceux que nous avons le plus comparé pour notre séjour à nous.",
-    "part13": "#Nous avons réservé sur le site El Nido Paradise.#",
-    "part14": "Il faut savoir que toutes les agences vous proposeront la même chose, les prix varient peu par catégorie donc au final le choix se fait plus à la réputation, au feeling, au nombre de personnes sur le bateau ou bien encore au type de bateau que vous souhaitez.",
-    "part15": "Les excursions comprennent les visites de plusieurs endroits classés en 4 catégories A , B, C et D ainsi que #le matériel de snorkeling, le déjeuner et l’eau potable# (il est interdit d’emmener une bouteille d’eau en plastique sur place).",
-    "part16": "Vous verrez littéralement des affiches vous proposant des tours #partout dans la ville#, si vous n’avez pas déjà réservé, vous ne saurez que faire tellement vous aurez de choix.",
-    "part17": "Attention néanmoins, contrairement à ce qu’on a pu lire de temps en temps on vous conseille vraiment de #réserver à l’avance#, il semblerait que depuis 2019, il y ait un quota de touristes à ne pas dépasser pour visiter l’archipel, on espère que c’est vrai et que c’est bien respecté, cela permettrait de continuer au maximum à protéger nos plus beaux endroits du monde.",
-    "part18": "Pensez à bien vérifier l’adresse de votre agence de réservation, vous aurez rendez-vous sur place le matin de votre départ pour récupérer vos billets d'éco tourism."
+    "part2": "[El Nido Paradise](https://www.elnidoparadise.com/fr) (bateau traditionnel)",
+    "part3": "[Tikigo](https://www.tikigo.com/) (bateau traditionnel)",
+    "part4": "[Travel Palawan](https://www.travel-palawan.com/) (speed boat - bateau traditionnel)",
+    "part5": "[El Nido Yachting Club](https://booking.philippineislandcruises.com/en) (prix élevé - speed boat - catamaran)",
+    "part6": "[Skipper Charters](http://www.skippercharters.ph/el-nido-charters.html) (prix élevé - speed boat)",
+    "part7": "Il en existe bien d’autres, nous vous citons là ceux que nous avons le plus comparé pour notre séjour à nous.",
+    "part8": "#Nous avons réservé sur le site El Nido Paradise.#",
+    "part9": "Il faut savoir que toutes les agences vous proposeront la même chose, les prix varient peu par catégorie donc au final le choix se fait plus à la réputation, au feeling, au nombre de personnes sur le bateau ou bien encore au type de bateau que vous souhaitez.",
+    "part10": "Les excursions comprennent les visites de plusieurs endroits classés en 4 catégories A , B, C et D ainsi que #le matériel de snorkeling, le déjeuner et l’eau potable# (il est interdit d’emmener une bouteille d’eau en plastique sur place).",
+    "part11": "Vous verrez littéralement des affiches vous proposant des tours #partout dans la ville#, si vous n’avez pas déjà réservé, vous ne saurez que faire tellement vous aurez de choix.",
+    "part12": "Attention néanmoins, contrairement à ce qu’on a pu lire de temps en temps on vous conseille vraiment de #réserver à l’avance#, il semblerait que depuis 2019, il y ait un quota de touristes à ne pas dépasser pour visiter l’archipel, on espère que c’est vrai et que c’est bien respecté, cela permettrait de continuer au maximum à protéger nos plus beaux endroits du monde.",
+    "part13": "Pensez à bien vérifier l’adresse de votre agence de réservation, vous aurez rendez-vous sur place le matin de votre départ pour récupérer vos billets d'éco tourism."
   },
   "tour-category": {
     "title": "Les différentes catégories de tours",
@@ -113,8 +99,7 @@
     },
     "snorkeling": {
       "title": "Site de Snorkeling",
-      "part1": "Retrouvez notre récit et d’autres photos dans notre article détaillé sur",
-      "part2": "le Tour A"
+      "part1": "Retrouvez notre récit et d’autres photos dans notre article détaillé sur [le Tour A](el-nido-tour-a)."
     }
   },
   "tour-b": {
@@ -147,8 +132,7 @@
     },
     "snorkeling": {
       "title": "Site de snorkeling",
-      "part1": "Retrouvez notre récit et d’autres photos dans notre article détaillé sur",
-      "part2": "le Tour B"
+      "part1": "Retrouvez notre récit et d’autres photos dans notre article détaillé sur [le Tour B](el-nido-tour-b)."
     }
   },
   "tour-c": {
@@ -185,8 +169,7 @@
     },
     "snorkeling": {
       "title": "Site de Snorkeling",
-      "part1": "Retrouvez notre récit et d’autres photos dans notre article détaillé sur",
-      "part2": "le Tour C"
+      "part1": "Retrouvez notre récit et d’autres photos dans notre article détaillé sur [le Tour C](el-nido-tour-c)."
     }
   },
   "tour-d": {
@@ -217,8 +200,7 @@
     },
     "snorkeling": {
       "title": "Site de Snorkeling",
-      "part1": "Retrouvez notre récit et d’autres photos dans notre article détaillé sur",
-      "part2": "le Tour D"
+      "part1": "Retrouvez notre récit et d’autres photos dans notre article détaillé sur [le Tour D](el-nido-tour-d)."
     }
   },
   "opinion": {

@@ -1,4 +1,4 @@
-import { getPathForEnglish, getPathForFrench } from "./utils"
+import { getPathForEnglish, getPathForFrench } from "../utils"
 
 describe("getPathForFrench", () => {
   it("should work when url start with /en", () => {

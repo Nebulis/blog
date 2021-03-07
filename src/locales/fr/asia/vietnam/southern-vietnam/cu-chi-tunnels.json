@@ -10,18 +10,14 @@
     "part1": "Plusieurs moyens de transports existent en partant de Hô Chi Minh-Ville.",
     "part2": "En Scooter, en Bus public, en Taxi ou en #Tour avec guide#, ce qui est la meilleure solution à nos yeux.",
     "part3": "Mais si vous comptez y aller en bus public, on vous a fait le trajet sur google map depuis l’arrêt de bus le plus proche de la rue dites des backpackers, la rue de Tham.",
-    "part4": "#Ben Dinh#:",
-    "part5": "trajet",
-    "part6": "#Ben Duoc#:",
-    "part7": "trajet",
-    "part8": "Plus d'informations sur"
+    "part4": "#Ben Dinh#: [trajet](https://www.google.com/maps/dir/?api=1&origin=Bến+Xe+Buýt+Sài+Gòn+Lê+Lai,+Phạm+Ngũ+Lão,+Quận+1,+Thành+phố+Hồ+Chí+Minh,+Vietnam&destination=Ben+Dinh+Tunnel,+Đường+Tỉnh+Lộ+15,+Nhuận+Đức,+Củ+Chi,+Ho+Chi+Minh+City,+Vietnam&travelmode=transit)",
+    "part5": "#Ben Duoc#: [trajet](https://www.google.com/maps/dir/?api=1&origin=Bến+Xe+Buýt+Sài+Gòn+Lê+Lai,+Phạm+Ngũ+Lão,+Quận+1,+Thành+phố+Hồ+Chí+Minh,+Vietnam&destination=Cu+Chi+Tunnel,+Đ.+Tỉnh+Lộ+15,+Phú+Hiệp,+Củ+Chi,+Thành+phố+Hồ+Chí+Minh+733814,+Vietnam&travelmode=transit)",
+    "part6": "Plus d'informations sur [Les Transports au Vietnam](transport-vietnam)."
   },
   "how-long": {
     "part1": "Comptez une bonne demi-journée, en partant de Hô Chi Minh-Ville, il faut environ 2h aller / 2h retour en fonction du trafic et de la météo.",
     "part2": "Cela peut paraître long et on ne va pas mentir c’est effectivement long, mais si vous vous faites emmener le matin cela permet de continuer sa nuit et l’après-midi de faire une petite sieste (Voyons le côté positif à ce temps de trajet !).",
-    "part3": "Pour un tour avec guide nous avions rendez-vous à 7h30 (point de rendez-vous ",
-    "part4": "Rue De Tham",
-    "part5": " comme quasiment tous les tours avec guide, nous y étions 15 minutes avant) et le retour était compté vers 15h."
+    "part3": "Pour un tour avec guide nous avions rendez-vous à 7h30 (point de rendez-vous [Rue De Tham](https://www.google.com/maps/place/220+%C4%90%E1%BB%81+Th%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh) comme quasiment tous les tours avec guide, nous y étions 15 minutes avant) et le retour était compté vers 15h."
   },
   "what-time-of-year": {
     "part1": "Les tunnels se trouvant dans le Sud du Vietnam, la meilleure période pour y aller est très clairement la saison sèche, de #décembre à avril#.",
@@ -30,18 +26,14 @@
   },
   "how-much": {
     "part1": "Le prix varie en fonction du moyen avec lequel vous y allez et si vous prenez un tour tout dépendra également de l’agence que vous prenez.",
-    "part2": "Nous avons réservé notre ",
-    "part3": "tour avec guide sur Tripadvisor",
-    "part4": " et on en a eu pour un peu moins de 13€ par personne tout compris.",
-    "part5": "Pour le prix d’entrée sur le site si vous y allez par vous même, on ne sait pas exactement, on voit de tout, ça passe de 90 000 VND à 120 000 VND entre chaque site donc on ne préfère pas dire de bêtise. Prévoyez #120 000 VND#, ça équivaut à 4€ environ."
+    "part2": "Nous avons réservé notre [tour avec guide sur Tripadvisor](tripadvisor:AttractionProductReview-g293925-d11455504-Morning_Cu_Chi_Tunnels_Tour_from_Ho_Chi_Minh_City-Ho_Chi_Minh_City.html) et on en a eu pour un peu moins de 13€ par personne tout compris.",
+    "part3": "Pour le prix d’entrée sur le site si vous y allez par vous même, on ne sait pas exactement, on voit de tout, ça passe de 90 000 VND à 120 000 VND entre chaque site donc on ne préfère pas dire de bêtise. Prévoyez #120 000 VND#, ça équivaut à 4€ environ."
   },
   "where-to-stay": {
     "part1": "On vous conseille très clairement de prendre un hôtel sur Hô Chi Minh-Ville.",
     "part2": "Nous voulions un hôtel proche du centre-ville et surtout proche de la rue de rassemblement des bus pour nos visites.",
-    "part3": "Nous avons donc pris ",
-    "part4": "l'hôtel Prague.",
-    "part5": "Hôtel parfait, chambre très confortable et surtout à deux minutes à pied du point de rassemblement des bus pour les excursions.",
-    "part6": "Comparez et réservez votre hôtel à Hô Chí Minh-Ville."
+    "part3": "Nous avons donc pris [l'hôtel Prague](booking-hotel:vn/prague). Hôtel parfait, chambre très confortable et surtout à deux minutes à pied du point de rassemblement des bus pour les excursions.",
+    "part4": "[Comparez et réservez votre hôtel à Hô Chí Minh-Ville](booking-search:H%C3%B4-Chi-Minh-Ville%2C+H%C3%B4-Chi-Minh-Ville%2C+Vietnam)."
   },
   "visit": {
     "part1": "Avant toute chose, il existe deux sites différents pour visiter les tunnels : #Ben Dinh et Ben Duoc#. Ben Dinh est le plus proche mais est considéré comme le plus touristique, alors que Ben Duoc est considéré le plus authentique d’après certains avis.",
@@ -97,8 +89,7 @@
     "part2": "Comptez environ 40 000 VND par balle (1,5€) et chaque set contient 10 balles.",
     "part3": "Différentes armes sont à votre disposition... Cela dit, il faut avoir au moins 16 ans pour tirer.",
     "part4": "Profitez également d’un petit temps d’arrêt pour goûter de l’eau de noix de coco frais, un délice.",
-    "part5": "Si vous vous intéressez à l’histoire du Vietnam, les tunnels de Cu chi sont un véritable bon moyen d’en apprendre plus. On vous conseille également de visiter le",
-    "part6": ", un très bon ensemble pour vous transmettre les guerres du Vietnam."
+    "part5": "Si vous vous intéressez à l’histoire du Vietnam, les tunnels de Cu chi sont un véritable bon moyen d’en apprendre plus. On vous conseille également de visiter le [Musée des Vestiges de Guerre à Hô Chi Minh-Ville](ho-chi-minh-war-museum), un très bon ensemble pour vous transmettre les guerres du Vietnam."
   },
   "visit6": {
     "title": "À savoir",

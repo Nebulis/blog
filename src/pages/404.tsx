@@ -5,7 +5,7 @@ import { BlogLayoutWithDrawer } from "../components/layout/main-layout"
 import SeeNoEvil from "../images/monkey.svg"
 import { css } from "@emotion/react"
 import { primaryColor, primaryDarkColor, smallEnd } from "../components/core/variables"
-import { useCustomTranslation } from "../i18n"
+import { useCustomTranslation } from "../i18n-hook"
 import { ApplicationLink } from "../components/core/links/link"
 
 const NotFoundPage: React.FunctionComponent<PageProps> = ({ location }) => {

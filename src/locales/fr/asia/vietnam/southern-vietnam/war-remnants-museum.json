@@ -14,7 +14,7 @@
   "how": {
     "part1": "Tout dépend d’où vous venez mais vous pouvez vous y rendre à pied, en bus, ou si vous êtes situé un peu plus loin en #Grab-Taxi# ou #Grab-Bike#.",
     "part2": "On vous déconseille fortement les taxis (hors Grab) qui sont plus là pour vous arnaquer qu’autre chose.",
-    "part3": "Plus d'informations sur"
+    "part3": "Plus d'informations sur [Les Transports au Vietnam](transport-vietnam)."
   },
   "how-long": {
     "part1": "Comptez environ #1h30# si vous êtes pressé, et entre #2h30 et 3h# si vous avez le temps et que vous comptez lire toutes les descriptions."
@@ -30,12 +30,9 @@
   },
   "where-to-stay": {
     "title": "Où dormir à Hô Chi Minh-Ville ?",
-    "part1": "Nous sommes allés à",
-    "part2": "l'Hôtel Prague",
-    "part3": ". Il était idéalement situé pour nous pour les jours de visite avec guide car juste à côté de la rue des rassemblements de bus",
-    "part4": "Rue De Tham",
-    "part5": "Nous sommes restés à cet hôtel quasiment tout le long de notre séjour dans le Sud du Vietnam.",
-    "part6": "Comparez et réservez votre hôtel à Hô Chí Minh-Ville."
+    "part1": "Nous sommes allés à [l'Hôtel Prague](booking-hotel:vn/prague). Il était idéalement situé pour nous pour les jours de visite avec guide car juste à côté de la rue des rassemblements de bus [Rue De Tham](https://www.google.com/maps/place/220+%C4%90%E1%BB%81+Th%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh).",
+    "part2": "Nous sommes restés à cet hôtel quasiment tout le long de notre séjour dans le Sud du Vietnam.",
+    "part3": "[Comparez et réservez votre hôtel à Hô Chí Minh-Ville](booking-search:H%C3%B4-Chi-Minh-Ville%2C+H%C3%B4-Chi-Minh-Ville%2C+Vietnam)."
   },
   "visit": {
     "part1": "Passage obligé pour toutes personnes qui s’intéressent à l’#histoire du Vietnam# mais pas que, ce musée est, pour nous, un incontournable à ne pas louper si vous passez par Hô Chí Minh-Ville."
@@ -59,10 +56,8 @@
     "part7": "Cette cage construite avec des fils barbelés et sous la forme d’un cercueil, était la cage de torture des prisonniers, ils y étaient affamés et torturés nuit et jour. Chaque mouvement leur faisait toucher le barbelé et les faisait saigner. Des fours à charbon étaient mis à côté des cages malgré une exposition en plein soleil sous une chaleur de plomb atteignant souvent les 35 degrés.",
     "part8": "« La cage » est faite de fils de fer barbelés entrelacés tout autour et sur le dessus. « Les cages » étaient placées à l'extérieur et existent en différentes tailles. La plus petite mesure 1,8m x 0,75m x 0,4m pour y garder 2 à 3 personnes. Les prisonniers devaient s'allonger sur un sol sablonneux. D'autres mesurant 1,8m x 0,75m x 0,6m pouvaient garder de 5 à 7 personnes. Les prisonniers pouvaient seulement se baisser, ils ne pouvaient pas s'asseoir correctement dedans.",
     "part9": "Une atrocité qu’on ne peut s’imaginer mais qui était pourtant bien réelle.",
-    "part10": "Vous pouvez d’ailleurs, si vous voulez en savoir plus, aller visiter l’",
-    "part11": "île de Phu Quôc",
-    "part12": ". Outre ses magnifiques plages, elle abrite la prison Phu Quôc, là où les « cages de tigre » ont été créées et utilisées.",
-    "part13": "Nous n’avons malheureusement pas eu le temps d’y aller car l’île est assez excentrée mais c’est un lieu noté si on retourne au Vietnam du Sud."
+    "part10": "Vous pouvez d’ailleurs, si vous voulez en savoir plus, aller visiter l’[île de Phu Quôc](phu-quoc-island). Outre ses magnifiques plages, elle abrite la prison Phu Quôc, là où les « cages de tigre » ont été créées et utilisées.",
+    "part11": "Nous n’avons malheureusement pas eu le temps d’y aller car l’île est assez excentrée mais c’est un lieu noté si on retourne au Vietnam du Sud."
   },
   "visit3": {
     "title": "Une visite glaçante",
@@ -85,11 +80,9 @@
     "part2": "Cela dit, le musée est quelque peu fouilli, il y a beaucoup trop de monde et cela casse le goût d’y avancer, d’ailleurs on s’y perd un peu et on ne sait pas vraiment par où commencer.",
     "part3": "Il manque un service de guide audio qui est à notre sens clairement indispensable et bien plus dynamique que de rester 3h à lire des textes qui sont cela dit vraiment très intéressant.",
     "part4": "Si vous avez du mal avec l’anglais vous n’aurez que les images, les photographies et votre propre analyse, là aussi c’est un peu dommage pour un endroit si intéressant.",
-    "part5": "Nous avons d’ailleurs beaucoup aimé la visite du",
-    "part6": "au Cambodge qui nous mettait totalement en immersion et qui nous a fait du coup beaucoup plus froid dans le dos d’autant plus qu’il y avait un service de guide audio et que cela change vraiment la visite.",
-    "part7": "Ce n’est que notre ressenti, nous ne comparons d’ailleurs aucunement les guerres au Vietnam et celle au Cambodge mais uniquement la retranscription qu’on a voulu nous en donner et nous n’avons malgré tout pas regretté d’être allé au musée du vestige de guerre. On vous le conseille si vous êtes à Hô Chi Minh-Ville, et d’ailleurs peut-être que vous n’aurez pas le même ressenti que nous et tant mieux.",
-    "part8": "Comme on vous le disait dans notre article",
-    "part9": ", ce musée est immersif, les photos sont déroutantes mais réalistes et #nous vous le déconseillons par contre avec des enfants en bas âges ou si vous êtes vraiment sensibles#."
+    "part5": "Nous avons d’ailleurs beaucoup aimé la visite du [Musée du génocide Tuol Sleng](s-21-prison) au Cambodge qui nous mettait totalement en immersion et qui nous a fait du coup beaucoup plus froid dans le dos d’autant plus qu’il y avait un service de guide audio et que cela change vraiment la visite.",
+    "part6": "Ce n’est que notre ressenti, nous ne comparons d’ailleurs aucunement les guerres au Vietnam et celle au Cambodge mais uniquement la retranscription qu’on a voulu nous en donner et nous n’avons malgré tout pas regretté d’être allé au musée du vestige de guerre. On vous le conseille si vous êtes à Hô Chi Minh-Ville, et d’ailleurs peut-être que vous n’aurez pas le même ressenti que nous et tant mieux.",
+    "part7": "Comme on vous le disait dans notre article [Découverte du Vietnam du Sud](discover-southern-vietnam), ce musée est immersif, les photos sont déroutantes mais réalistes et #nous vous le déconseillons par contre avec des enfants en bas âges ou si vous êtes vraiment sensibles#."
   },
   "conclusion": "Longtemps pris pour un endroit faisant campagne contre les États-Unis, le musée dénonce surtout l’atrocité de la guerre et les dégâts qui persistent encore des années après. Il montre et insiste bien sur le fait et l’importance de préserver la paix dans le monde.",
   "question1": "Cet article vous a-t-il intéressé ?",

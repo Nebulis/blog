@@ -10,16 +10,13 @@ import {
 } from "../../../../components/images/layout"
 import HomeImgUrl from "../../../../images/asia/philippines/home-philippines.jpg"
 import { PageProps } from "gatsby"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/philippines/el-nido/el-nido-paradise.json"
 import translationEn from "../../../../locales/en/asia/philippines/el-nido/el-nido-paradise.json"
 import {
   PhilippinesBlogLayout,
-  PhilippinesExternalLink,
   PhilippinesHeadline,
-  PhilippinesLink,
-  PhilippinesQuote,
   PhilippinesTitle,
 } from "../../../../components/core/asia/philippines/philippines"
 import {
@@ -40,9 +37,9 @@ import { philippinesPrimaryColor } from "../../../../components/core/asia/philip
 import { css } from "@emotion/react"
 import { ArticleCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { PhilippinesMap } from "../../../../components/core/asia/philippines/philippines-map"
-import { buildBookingSearchUrl } from "../../../../utils"
 import { SharedCardPhilippinesImages } from "../../../../components/images/asia/philippines/shared-card-philippines-images"
 import { Divider } from "../../../../components/core/divider"
+import { Quote } from "../../../../components/core/quote"
 
 const namespace = "asia/philippines/el-nido/el-nido-paradise"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -66,7 +63,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <ImageAsLandscape>
           <SharedCardPhilippinesImages image="elNido" />
         </ImageAsLandscape>
-        <PhilippinesQuote>{t("quote")}</PhilippinesQuote>
+        <Quote>{t("quote")}</Quote>
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
         <WhatTimeOfYear>
@@ -86,13 +83,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ul>
           <p>{t("how-long.part5")}</p>
           <p>{t("how-long.part6")}</p>
-          <p>
-            <PhilippinesLink to="boracay">{t("how-long.part7")}</PhilippinesLink>
-            {t("how-long.part8")} <PhilippinesLink to="coron-island">{t("how-long.part9")}</PhilippinesLink>
-            {t("how-long.part10")} <PhilippinesLink to="manilla">{t("how-long.part11")}</PhilippinesLink>
-            {t("how-long.part12")}
-          </p>
-          <p>{t("how-long.part13")}</p>
+          <p>{t("how-long.part7")}</p>
+          <p>{t("how-long.part8")}</p>
         </HowLong>
         <HowMuch>
           <p>{t("how-much.part1")}</p>
@@ -119,37 +111,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how.part3")}</p>
           <p>{t("how.part4")}</p>
           <p>{t("how.part5")}</p>
-          <p>
-            {t("how.part6")}{" "}
-            <PhilippinesExternalLink href="https://www.elnidoparadise.com/rentals/">
-              elnidoparadise
-            </PhilippinesExternalLink>{" "}
-            {t("how.part7")} <PhilippinesExternalLink href="https://www.phbus.com/">phbus</PhilippinesExternalLink>.
-          </p>
-          <p>
-            {t("how.part8")}{" "}
-            <PhilippinesExternalLink href="https://www.travel-palawan.com/ferry-from-el-nido-to-coron/">
-              travel-palawan
-            </PhilippinesExternalLink>
-            .
-          </p>
-          <p>{t("how.part9")}</p>
+          <p>{t("how.part6")}.</p>
+          <p>{t("how.part7")}</p>
+          <p>{t("how.part8")}</p>
         </How>
         <WhereToStay>
-          <p>
-            {t("where-to-stay.part1")}{" "}
-            <PhilippinesExternalLink href="http://www.amakan.ph/">
-              Amakan - Bed | Bunk | Breakfast
-            </PhilippinesExternalLink>{" "}
-            {t("where-to-stay.part2")}
-          </p>
-          <p>
-            {t("where-to-stay.part3")}{" "}
-            <PhilippinesExternalLink href={buildBookingSearchUrl(i18n.languageCode)("El+Nido%2C+Luzon%2C+Philippines")}>
-              booking
-            </PhilippinesExternalLink>
-            .
-          </p>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
         </WhereToStay>
         <Visit>
           <SectionContent
@@ -197,15 +165,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <PhilippinesHeadline>{t("visit2.title")}</PhilippinesHeadline>
             <Divider />
             <SectionContent>
-              <p>
-                {t("visit2.part1-1")}{" "}
-                <PhilippinesExternalLink
-                  href={`https://www.google.com/maps/place/Calle+Hama,+Barangay+Buena+Suerte,+El+Nido,+Palawan,+Philippines`}
-                >
-                  Calle Hama
-                </PhilippinesExternalLink>
-                {t("visit2.part1-2")}
-              </p>
+              <p>{t("visit2.part1")}</p>
               <p>{t("visit2.part2")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>

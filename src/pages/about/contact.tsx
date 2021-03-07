@@ -9,7 +9,7 @@ import { backgroundPrimaryColor, largeStart, primaryColor } from "../../componen
 import styled from "@emotion/styled"
 import { ErrorAlert, SuccessAlert } from "../../components/core/alert"
 import { Status } from "../../types/shared"
-import { useCustomTranslation } from "../../i18n"
+import { useCustomTranslation } from "../../i18n-hook"
 import i18n from "i18next"
 import contactFr from "../../locales/fr/about/contact.json"
 import contactEn from "../../locales/en/about/contact.json"

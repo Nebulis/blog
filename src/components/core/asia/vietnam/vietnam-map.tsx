@@ -4,7 +4,7 @@ import { weatherBad, weatherGood } from "../../variables"
 import { defaultTextStyle, mapProps, PinAirport } from "../../map"
 import { vietnamPrimaryColorDarker } from "./vietnam.colors"
 import { VietnamCity } from "./vietnam"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import { priceFactorEur, priceFactorUsd } from "../../../../utils"
 
 const VietnamMap: React.FunctionComponent = () => (

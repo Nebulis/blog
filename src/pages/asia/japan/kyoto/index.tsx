@@ -16,7 +16,7 @@ import {
   KinkakujiCard,
 } from "../../../../components/core/japan/japan.cards"
 import { japanLinks } from "../../../../components/core/japan/japan.links"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import { PageProps } from "gatsby"
 import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 
