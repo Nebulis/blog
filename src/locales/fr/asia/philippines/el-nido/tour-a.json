@@ -6,11 +6,8 @@
   "where-to-book": {
     "title": "Où réserver ?",
     "part1": "Vous aurez énormément de choix au niveau des agences proposant un Island Hopping. Et même si sur place vous en trouverez à tous les coins de rues, on vous préconise de #réserver à l’avance#.",
-    "part2": "Pour une réservation en ligne, on est passé par le site",
-    "part3": "El Nido Paradise",
-    "part4": "Pour en savoir plus sur les différents tours proposés et faire votre choix par vous-même, vous pouvez aller sur notre article",
-    "part5": "Archipel de Bacuit : Quel tour choisir ?",
-    "part6": "On vous y explique d’ailleurs beaucoup plus en détail le fonctionnement de l’Island Hopping."
+    "part2": "Pour une réservation en ligne, on est passé par le site [El Nido Paradise](https://www.elnidoparadise.com/fr).",
+    "part3": "Pour en savoir plus sur les différents tours proposés et faire votre choix par vous-même, vous pouvez aller sur notre article [Archipel de Bacuit : Quel tour choisir ?](el-nido-which-tour) On vous y explique d’ailleurs beaucoup plus en détail le fonctionnement de l’Island Hopping."
   },
   "how-much": {
     "title": "Combien d’argent prévoir ?",
@@ -33,9 +30,7 @@
     "part1": "Une visite d’un tour dure une journée entière.",
     "part2": "#Départ 10h - Retour 17h#.",
     "part3": "Si vous prenez un tour privé, vous avez la possibilité de changer l’heure de départ (soit plus tôt, soit plus tard).",
-    "part4": "Dans notre article sur",
-    "part5": "El Nido : Un petit coin de paradis",
-    "part6": ", on vous indique également comment aller à El Nido, à quelle période et où dormir."
+    "part4": "Dans notre article sur [El Nido : Un petit coin de paradis](el-nido-paradise), on vous indique également comment aller à El Nido, à quelle période et où dormir."
   },
   "visit": {
     "title": "Les visites",
@@ -71,8 +66,8 @@
     },
     "visit4": {
       "title": "PAYONG-PAYONG BEACH",
-      "part1": "Quant à nous, c'est sur cette toute petite île que nous nous sommes arrêtés pour manger, Payong-payong beach.",
-      "part2": "Notre guide nous awvait laissé à un endroit à l’ombre et clairement isolé des autres bateaux. Nous nous sommes retrouvés uniquement notre groupe de 4 sur ce petit coin de plage.",
+      "part1": "Quant à nous, c'est sur cette toute petite île que nous nous sommes arrêtés pour manger, Payong-Payong beach.",
+      "part2": "Notre guide nous avait laissé à un endroit à l’ombre et clairement isolé des autres bateaux. Nous nous sommes retrouvés uniquement notre groupe de 4 sur ce petit coin de plage.",
       "part3": "Un bonheur ! Sans parler du repas, qui était là aussi #un véritable festin#.",
       "part4": "Après un repas plus que copieux, des milliers de photos prises de tout et n’importe quoi … Nous voilà donc repartis pour le reste de notre journée.",
       "part5": "Si vous prenez un tour privé, n’hésitez pas à demander l’horaire du repas. Vous pourrez soit venir plus tard, soit venir plus tôt en fonction du monde sur place.",
@@ -99,12 +94,10 @@
   "opinion": {
     "title": "Notre avis",
     "part1": "Le tour A est le tour le plus réputé et il vaut largement sa réputation.",
-    "part2": "Son principal centre d’intérêt est le big lagoon et le snorkeling mais nous avons également beaucoup apprécié les autres îles.",
+    "part2": "#Son principal centre d’intérêt est le big lagoon et le snorkeling mais nous avons également beaucoup apprécié les autres îles.#",
     "part3": "Nous n’avons pas éprouvé beaucoup d'intérêt pour le Secret Lagoon, même si la plage et les alentours restent magnifiques. Peut-être était-ce dû à la trop forte présence de touristes à notre goût, même si visiblement on n’avait pas à se plaindre et que ça pouvait être largement pire.",
-    "part4": "Une journée superbe",
-    "part5": "en tout cas, où le soleil était au rendez-vous, ce qui rend les paysages encore plus à leurs avantages.",
-    "part6": "Si vous n’aviez qu’un tour à faire, on vous conseillerait celui-là. Et en deuxième",
-    "part7": "le tour B"
+    "part4": "#Une journée superbe# en tout cas, où le soleil était au rendez-vous, ce qui rend les paysages encore plus à leurs avantages.",
+    "part5": "Si vous n’aviez qu’un tour à faire, on vous conseillerait celui-là. Et en deuxième [le Tour B](el-nido-tour-b)."
   },
   "must-pack": {
     "title": "Les indispensables",

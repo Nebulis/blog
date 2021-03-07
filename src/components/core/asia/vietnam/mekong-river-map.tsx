@@ -1,5 +1,5 @@
 import React from "react"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import { defaultTextStyle, mapProps, mapStyle } from "../../map"
 import { css } from "@emotion/react"
 

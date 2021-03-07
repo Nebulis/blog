@@ -1,7 +1,7 @@
 import { Card } from "../../../card"
 import styled from "@emotion/styled"
 import { ExtraCardProps } from "../../../../types/shared"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
 import { philippinesPrimaryColor } from "./philippines.colors"

@@ -20,7 +20,7 @@ import {
   MapContainer,
   MedallionContainer,
 } from "../../../components/layout/layout"
-import { useCustomTranslation } from "../../../i18n"
+import { useCustomTranslation } from "../../../i18n-hook"
 import { PageProps } from "gatsby"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 import { TitleImage } from "../../../components/images/layout"

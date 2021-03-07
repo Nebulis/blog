@@ -1,11 +1,6 @@
-import React, { useContext } from "react"
+import React from "react"
 import SEO from "../../../../components/layout/seo"
-import {
-  VietnamBlogLayout,
-  VietnamExternalLink,
-  VietnamHeadline,
-  VietnamLink,
-} from "../../../../components/core/asia/vietnam/vietnam"
+import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -26,21 +21,17 @@ import {
 } from "../../../../components/core/section"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { PageProps } from "gatsby"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import HomeImgUrl from "../../../../images/asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-main.jpg"
-import { buildBookingSearchUrl, buildBookingUrl, buildTripAdvisorLink } from "../../../../utils"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/cu-chi-tunnels.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/cu-chi-tunnels.json"
 import i18n from "i18next"
 import { CuChiTunnelsImages } from "../../../../components/images/asia/vietnam/southern-vietnam/cu-chi-tunnels"
 import { SharedCardVietnamImages } from "../../../../components/images/asia/vietnam/shared-card-vietnam-images"
-import { getLink } from "../../../../components/core/links/links.utils"
-import { ApplicationContext } from "../../../../components/application"
 import { Divider } from "../../../../components/core/divider"
 import { Title } from "../../../../components/core/title"
 import { Quote } from "../../../../components/core/quote"
-import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 
 const namespace = "asia/vietnam/southern-vietnam/cu-chi-tunnels"
 const id = "cu-chi-tunnels"
@@ -58,9 +49,7 @@ the fastest way to fix it is to resize a bit the images to
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const { development } = useContext(ApplicationContext)
   const title = t(`common:country.vietnam.card.${id}`)
-  const transportLinkPublished = development || getLink("transport-vietnam").published
 
   return (
     <>
@@ -88,36 +77,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how.part2")}</p>
           <p>{t("how.part3")}</p>
           <ul>
-            <li>
-              {t("how.part4")}{" "}
-              <VietnamExternalLink href="https://www.google.com/maps/dir/?api=1&origin=Bến+Xe+Buýt+Sài+Gòn+Lê+Lai,+Phạm+Ngũ+Lão,+Quận+1,+Thành+phố+Hồ+Chí+Minh,+Vietnam&destination=Ben+Dinh+Tunnel,+Đường+Tỉnh+Lộ+15,+Nhuận+Đức,+Củ+Chi,+Ho+Chi+Minh+City,+Vietnam&travelmode=transit">
-                {t("how.part5")}
-              </VietnamExternalLink>
-            </li>
-            <li>
-              {t("how.part6")}{" "}
-              <VietnamExternalLink href="https://www.google.com/maps/dir/?api=1&origin=Bến+Xe+Buýt+Sài+Gòn+Lê+Lai,+Phạm+Ngũ+Lão,+Quận+1,+Thành+phố+Hồ+Chí+Minh,+Vietnam&destination=Cu+Chi+Tunnel,+Đ.+Tỉnh+Lộ+15,+Phú+Hiệp,+Củ+Chi,+Thành+phố+Hồ+Chí+Minh+733814,+Vietnam&travelmode=transit">
-                {t("how.part7")}
-              </VietnamExternalLink>
-            </li>
+            <li>{t("how.part4")}</li>
+            <li>{t("how.part5")}</li>
           </ul>
-          {transportLinkPublished && (
-            <p>
-              {t("how.part8")}{" "}
-              <VietnamLink to="transport-vietnam">{t("common:country.vietnam.card.transport")}</VietnamLink>.
-            </p>
-          )}
+          <p>{t("how.part6")}</p>
         </How>
         <HowLong>
           <p>{t("how-long.part1")}</p>
           <p>{t("how-long.part2")}</p>
-          <p>
-            {t("how-long.part3")}{" "}
-            <VietnamExternalLink href="https://www.google.com/maps/place/220+%C4%90%E1%BB%81+Th%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh">
-              {t("how-long.part4")}
-            </VietnamExternalLink>{" "}
-            {t("how-long.part5")}
-          </p>
+          <p>{t("how-long.part3")}</p>
         </HowLong>
         <WhatTimeOfYear>
           <p>{t("what-time-of-year.part1")}</p>
@@ -126,38 +94,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </WhatTimeOfYear>
         <HowMuch>
           <p>{t("how-much.part1")}</p>
-          <p>
-            {t("how-much.part2")}{" "}
-            <VietnamExternalLink
-              href={buildTripAdvisorLink(i18n.languageCode)(
-                "AttractionProductReview-g293925-d11455504-Morning_Cu_Chi_Tunnels_Tour_from_Ho_Chi_Minh_City-Ho_Chi_Minh_City.html"
-              )}
-            >
-              {t("how-much.part3")}
-            </VietnamExternalLink>{" "}
-            {t("how-much.part4")}
-          </p>
-          <p>{t("how-much.part5")}</p>
+          <p>{t("how-much.part2")}</p>
+          <p>{t("how-much.part3")}</p>
         </HowMuch>
         <WhereToStay>
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
-          <p>
-            {t("where-to-stay.part3")}{" "}
-            <VietnamExternalLink href={buildBookingUrl(i18n.languageCode)("vn/prague")}>
-              {t("where-to-stay.part4")}
-            </VietnamExternalLink>{" "}
-            {t("where-to-stay.part5")}
-          </p>
-          <p>
-            <VietnamExternalLink
-              href={buildBookingSearchUrl(i18n.languageCode)(
-                "H%C3%B4-Chi-Minh-Ville%2C+H%C3%B4-Chi-Minh-Ville%2C+Vietnam"
-              )}
-            >
-              {t("where-to-stay.part6")}
-            </VietnamExternalLink>
-          </p>
+          <p>{t("where-to-stay.part3")}</p>
+          <p>{t("where-to-stay.part4")}</p>
         </WhereToStay>
         <Visit title={t("common:section.visit")}>
           <SectionContent>
@@ -283,27 +227,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit5.part1")}</p>
               <p>{t("visit5.part2")}</p>
               <p>{t("visit5.part3")}</p>
-              <ImageAsPortrait
-                credit={
-                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/fun_lucky-2181935">
-                    Fun_Lucky
-                  </ExternalLinkNotUnderlined>
-                }
-              >
-                <CuChiTunnelsImages image="weapon" />
-              </ImageAsPortrait>
               <p>{t("visit5.part4")}</p>
               <TwoImagesSameSizeOrToGroup>
                 <CuChiTunnelsImages image="rest1" />
                 <CuChiTunnelsImages image="rest2" />
               </TwoImagesSameSizeOrToGroup>
-              <p>
-                {t("visit5.part5")}{" "}
-                <VietnamLink to="ho-chi-minh-war-museum">
-                  {t("common:country.vietnam.card.ho-chi-minh-war-museum")}
-                </VietnamLink>
-                {t("visit5.part6")}
-              </p>
+              <p>{t("visit5.part5")}</p>
             </SectionContent>
           </section>
           <Divider />

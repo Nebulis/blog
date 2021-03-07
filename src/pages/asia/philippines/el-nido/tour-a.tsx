@@ -2,22 +2,18 @@ import React from "react"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
 import SEO from "../../../../components/layout/seo"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/philippines/el-nido/tour-a.json"
 import translationEn from "../../../../locales/en/asia/philippines/el-nido/tour-a.json"
 import {
   PhilippinesBlogLayout,
-  PhilippinesExternalLink,
   PhilippinesHeadline,
-  PhilippinesLink,
-  PhilippinesQuote,
   PhilippinesTitle,
 } from "../../../../components/core/asia/philippines/philippines"
 import {
   Baggage,
   Booking,
-  HighLight,
   HowLong,
   HowMuch,
   Introduction,
@@ -44,6 +40,7 @@ import { MapContainer } from "../../../../components/layout/layout"
 import { TourAImages } from "../../../../components/images/asia/philippines/el-nido/tour-a"
 import { philippinesPrimaryColor } from "../../../../components/core/asia/philippines/philippines.colors"
 import { css } from "@emotion/react"
+import { Quote } from "../../../../components/core/quote"
 
 const namespace = "asia/philippines/el-nido/tour-a"
 const id = "el-nido-tour-a"
@@ -68,7 +65,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <ImageAsLandscape>
           <SharedCardPhilippinesImages image="tourA" />
         </ImageAsLandscape>
-        <PhilippinesQuote>{t("quote")}</PhilippinesQuote>
+        <Quote>{t("quote")}</Quote>
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
         <Divider />
@@ -79,18 +76,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </SectionContent>
         <Booking title={t("where-to-book.title")}>
           <p>{t("where-to-book.part1")}</p>
-          <p>
-            {t("where-to-book.part2")}{" "}
-            <PhilippinesExternalLink href={`https://www.elnidoparadise.com/${i18n.languageCode ? "fr" : ""}`}>
-              {t("where-to-book.part3")}
-            </PhilippinesExternalLink>
-            .
-          </p>
-          <p>
-            {t("where-to-book.part4")}{" "}
-            <PhilippinesLink to="el-nido-which-tour">{t("where-to-book.part5")}</PhilippinesLink>{" "}
-            {t("where-to-book.part6")}
-          </p>
+          <p>{t("where-to-book.part2")}</p>
+          <p>{t("where-to-book.part3")}</p>
         </Booking>
         <HowMuch>
           <p>{t("how-much.part1")}</p>
@@ -123,10 +110,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how-long.part1")}</p>
           <p>{t("how-long.part2")}</p>
           <p>{t("how-long.part3")}</p>
-          <p>
-            {t("how-long.part4")} <PhilippinesLink to="el-nido-paradise">{t("how-long.part5")}</PhilippinesLink>
-            {t("how-long.part6")}
-          </p>
+          <p>{t("how-long.part4")}</p>
         </HowLong>
         <Visit title={t("visit.title")}>
           {/* just to have the correct space*/}
@@ -358,16 +342,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </Visit>
         <Opinion title={t("opinion.title")}>
           <p>{t("opinion.part1")}</p>
-          <p>
-            <HighLight>{t("opinion.part2")}</HighLight>
-          </p>
+          <p>{t("opinion.part2")}</p>
           <p>{t("opinion.part3")}</p>
-          <p>
-            <HighLight>{t("opinion.part4")}</HighLight> {t("opinion.part5")}
-          </p>
-          <p>
-            {t("opinion.part6")} <PhilippinesLink to="el-nido-tour-b">{t("opinion.part7")}</PhilippinesLink>.
-          </p>
+          <p>{t("opinion.part4")}</p>
+          <p>{t("opinion.part5")}</p>
         </Opinion>
         <Baggage title={t("must-pack.title")}>
           <ul>

@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react"
 import { css } from "@emotion/react"
 import { getLink, getLinkLabel } from "./links/links.utils"
 import { ApplicationLink } from "./links/link"
-import { useCustomTranslation } from "../../i18n"
+import { useCustomTranslation } from "../../i18n-hook"
 
 interface TitleProps {
   title: string

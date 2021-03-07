@@ -5,24 +5,16 @@
   "social-network-description": "Away from the hustle and bustle of Ho Chi Minh City, discover the town of Mỹ Tho and take a boat trip to Ben Tre to discover the huge tropical gardens that surround you.",
   "how": {
     "part1": "If you plan to reach Mỹ Tho on your own, the #bus# is the best solution. There are departures from Ho Chi Minh City (at Mien Tay station) every 30 minutes until 4 p.m. The journey takes around 1.5 hours and the price is around 50,000 VND.",
-    "part2": "We book our buses from",
-    "part3": "Baolau",
-    "part4": "in Asia",
-    "part5": "On our side, we opted for a",
-    "part6": "one day trip",
-    "part7": "with guide. We came across a lot of tourist buses on the road. However once we reached Mỹ Tho, we didn't see any tourists groups until the end of the day.",
-    "part8": "Departure at 7h30 - Return at 18h.",
-    "part9": "More information about"
+    "part2": "We book our buses from [Baolau](baolau:Ho Chi Minh:My Tho) in Asia.",
+    "part3": "On our side, we opted for a [one day trip](gyg:activity/ho-chi-minh-city-l272/upper-mekong-river-full-day-tour-t69167) with guide. We came across a lot of tourist buses on the road. However once we reached Mỹ Tho, we didn't see any tourists groups until the end of the day.",
+    "part4": "Departure at 7h30 - Return at 18h.",
+    "part5": "More information about [Transports in Vietnam](transport-vietnam)."
   },
   "how-long": {
     "part1": "It all depends on how you got there.",
     "part2": "Having booked for a one day tour, we obviously only stayed ... for a day.",
-    "part3": "If you manage to get there on your own, take the opportunity to ride a bike, meet the locals and stroll a little more on the different islands. Nothing prevents you from going around and join excursions on the way. Usually excursions agency are quite accommodating and we have done this more than once with the",
-    "part4": "Tripadvisor",
-    "part5": "booking site, or even with",
-    "part6": "Getyourguide",
-    "part7": "If we had had more time, we would have stayed there for 2 or 3 days, to bike around the different islands. A must-do in Southern Vietnam and especially around the Mekong River Delta. We also recommend it around the",
-    "part8": "Cân Thơ floating market"
+    "part3": "If you manage to get there on your own, take the opportunity to ride a bike, meet the locals and stroll a little more on the different islands. Nothing prevents you from going around and join excursions on the way. Usually excursions agency are quite accommodating and we have done this more than once with the [Tripadvisor](tripadvisor:Attraction_Review-g293925-d7171779-Reviews-Vietnam_Adventure_Tours-Ho_Chi_Minh_City.html) booking site, or even with [GetYourGuide](gyg:discovery/s?q=Vietnam&searchSource=2).",
+    "part4": "If we had more time, we would have stayed there for 2 or 3 days, to bike around the different islands. A must-do in Southern Vietnam and especially around the Mekong River Delta. We also recommend it around the [Cân Thơ floating market](can-tho)."
   },
   "what-time-of-year": {
     "part1": "Damn weather! It's never easy to know the right season to go.",
@@ -31,14 +23,10 @@
   },
   "where-to-stay": {
     "title": "Where to stay in Mỹ Tho?",
-    "part1": "We found",
-    "part2": "The Island Lodge",
-    "part3": "hotel, by the Mekong River. Located in the Thoi Son Island, it's ideally located, especially for bike rides",
-    "part4": "However the hotel is quite expensive. While it's enjoyable from time to time, you may not need a swimming pool or a luxurious place to stay, only for one night.",
-    "part5": "You will find many other hotels in Mỹ Tho, for instance the",
-    "part6": "Song Tien Hotel",
-    "part7": ", is much more basic but which very affordable and well located in Mỹ Tho.",
-    "part8": "Compare and book your hotel in Mỹ Tho."
+    "part1": "We found [The Island Lodge](booking-hotel:vn/the-island-logde) hotel, by the Mekong River. Located in the Thoi Son Island, it's ideally located, especially for bike rides",
+    "part2": "However the hotel is quite expensive. While it's enjoyable from time to time, you may not need a swimming pool or a luxurious place to stay, only for one night.",
+    "part3": "You will find many other hotels in Mỹ Tho, for instance the [Song Tien Hotel](booking-hotel:vn/khach-san-song-tien), is much more basic but which very affordable and well located in Mỹ Tho.",
+    "part4": "[Compare and book your hotel in Mỹ Tho](booking-search:M%E1%BB%B9+Tho%2C+Tien+Giang%2C+Vietnam)."
   },
   "visit": {
     "part1": "As we explained above, we took a tour with a guide, meaning what we are going to share our travelogue related to this excursion. That being said, nothing prevents you from doing the same journey on your own or jotting down some ideas."
@@ -66,23 +54,17 @@
     "title": "Mekong Delta River",
     "part1": "What is the Mekong Delta River, and where is it located?",
     "part2": "The Mekong is a #river in Southeast Asia#. Its length is estimated at 4,500 km, half of which is in China. However the figures are not very accurate given that its area is constantly changing.",
-    "part3": "The Mekong is a long and quiet river ... WRONG ... Unfortunately during wet seasons or monsoon, it transforms into a truly devastating river, destroying all in its path. You will often see villages built on stilts because the banks are regularly flooded. We visited the",
-    "part4": "in Cambodia, really impressive, especially because we visited it during the dry season and were able to see the height of the houses.",
-    "part5": "The Mekong rises in",
-    "part6": "and then continues towards",
-    "part7": ",",
-    "part8": "and",
-    "part9": ". It then crosses",
-    "part10": "where it divides in Phnom Penh into two branches towards the South of Vietnam.",
-    "part11": "In Vietnam, it is called #Cuu Long « Nine Dragons River »# because it divides into nine branches to finally enter the China Sea. Multiple islands and islets can be found on the way, making them suitable for rice and fruit gardens cultivation.",
-    "part12": "Once the boat trip starts, different islands rise on the horizon: #the Phoenix (Con Phuong), the Unicorn (Con Lan), the Dragon (Con Tan Long) and the Turtle (Con Qui)#.",
-    "part13": "It's hard to know where we are but we still see the islands and islets surrounding us, we cross fishers boats with bamboo baskets, and a very small floating market (the fruit season starts from May to June, maybe you will be lucky enough to taste delicious tropical fruits and to see a bunch of colorful boats).",
-    "part14": "All those water palm trees surrounding us make us dream even more ...",
-    "part15": "We also come across a lot of houses built mainly using palm tree wood. Their roofs being made with water palm leaves.",
-    "part16": "We finally stop to eat on a small island where we can observe all kinds of plantations all around us.",
-    "part17": "We want to stop after every step, to reap all the fruits and sit on a bench to stay still and enjoy.",
-    "part18": "Take a walk or cycle off the beaten track ...",
-    "part19": "Unfortunately we cannot do that with a guided tour, but if you come by yourself enjoy and share us about your adventures."
+    "part3": "The Mekong is a long and quiet river ... WRONG ... Unfortunately during wet seasons or monsoon, it transforms into a truly devastating river, destroying all in its path. You will often see villages built on stilts because the banks are regularly flooded. We visited the [Kampong Phluk Floating Village](kampong-phluk) in Cambodia, really impressive, especially because we visited it during the dry season and were able to see the height of the houses.",
+    "part4": "The Mekong rises in [China](china) and then continues towards [Myanmar](myanmar), [Thailand](thailand) and [Laos](laos). It then crosses [Cambodia](cambodia) where it divides in Phnom Penh into two branches towards the South of Vietnam.",
+    "part5": "In Vietnam, it is called #Cuu Long « Nine Dragons River »# because it divides into nine branches to finally enter the China Sea. Multiple islands and islets can be found on the way, making them suitable for rice and fruit gardens cultivation.",
+    "part6": "Once the boat trip starts, different islands rise on the horizon: #the Phoenix (Con Phuong), the Unicorn (Con Lan), the Dragon (Con Tan Long) and the Turtle (Con Qui)#.",
+    "part7": "It's hard to know where we are but we still see the islands and islets surrounding us, we cross fishers boats with bamboo baskets, and a very small floating market (the fruit season starts from May to June, maybe you will be lucky enough to taste delicious tropical fruits and to see a bunch of colorful boats).",
+    "part8": "All those water palm trees surrounding us make us dream even more ...",
+    "part9": "We also come across a lot of houses built mainly using palm tree wood. Their roofs being made with water palm leaves.",
+    "part10": "We finally stop to eat on a small island where we can observe all kinds of plantations all around us.",
+    "part11": "We want to stop after every step, to reap all the fruits and sit on a bench to stay still and enjoy.",
+    "part12": "Take a walk or cycle off the beaten track ...",
+    "part13": "Unfortunately we cannot do that with a guided tour, but if you come by yourself enjoy and share us about your adventures."
   },
   "visit4": {
     "title": "Under the coconut trees",
@@ -110,10 +92,8 @@
     "part1": "We make our last stop in a small honey bee farm, where we enjoyed a #delicious honey tea# and fresh fruits, all while #listening to traditional music# played and sung by 5 local musicians.",
     "part2": "On the way back, a young woman squeezes sugar canes with her machine to get the juice out. It looks damn hard!",
     "part3": "We venture to taste this juice. We are not going to lie, but that's not what tasted the best in our opinion. Not sure if we will drink this again one day but at least we tried!",
-    "part4": "We also found fields of fruits which we did not know, but which is very widespread in Vietnam and Thailand, the ",
-    "part5": "Green pomelo",
-    "part6": ". It's like a grapefruit and the color inside changes from red to light yellow.",
-    "part7": "We have found some for sale in Singapore wet markets and we will review them quickly in our next category about tropical fruits."
+    "part4": "We also found fields of fruits which we did not know, but which is very widespread in Vietnam and Thailand, the [Green pomelo](green-pomelo). It's like a grapefruit and the color inside changes from red to light yellow.",
+    "part5": "We have found some for sale in Singapore wet markets and we will review them quickly in our next category about tropical fruits."
   },
   "conclusion": "Located in the middle of the Mekong River Delta, Mỹ Tho is an ideal city to discover Vietnamese culture and recharge your batteries thanks to nature. A wonderful day, too short but really exciting.",
   "question1": "Have you ever noticed the peculiarity of Vietnam boats and did you know its origin?",

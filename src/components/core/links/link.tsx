@@ -6,7 +6,7 @@ import React, { AnchorHTMLAttributes, ComponentType, FunctionComponent, useConte
 import { getLink, getLinkUrl } from "./links.utils"
 import { ApplicationContext } from "../../application"
 import { primaryColor, primaryDarkColor, primaryDarkColor15Darker } from "../variables"
-import { useCustomTranslation } from "../../../i18n"
+import { useCustomTranslation } from "../../../i18n-hook"
 
 interface ExternalLinkProps {
   noIcon?: boolean

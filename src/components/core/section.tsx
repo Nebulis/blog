@@ -29,7 +29,7 @@ import {
   FaShip,
 } from "react-icons/fa"
 import { maxWidth, mediumEnd, mobileEnd } from "./variables"
-import { useCustomTranslation } from "../../i18n"
+import { useCustomTranslation } from "../../i18n-hook"
 import { Lang } from "./links/links.types"
 import styled from "@emotion/styled"
 import { vietnamPrimaryColorDarker, vietnamPrimaryColorWithOpacity } from "./asia/vietnam/vietnam.colors"

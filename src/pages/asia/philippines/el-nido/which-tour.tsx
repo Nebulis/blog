@@ -2,16 +2,13 @@ import React, { useContext } from "react"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
 import SEO from "../../../../components/layout/seo"
-import { useCustomTranslation } from "../../../../i18n"
+import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/philippines/el-nido/which-tour.json"
 import translationEn from "../../../../locales/en/asia/philippines/el-nido/which-tour.json"
 import {
   PhilippinesBlogLayout,
-  PhilippinesExternalLink,
   PhilippinesHeadline,
-  PhilippinesLink,
-  PhilippinesQuote,
   PhilippinesTitle,
 } from "../../../../components/core/asia/philippines/philippines"
 import {
@@ -45,11 +42,12 @@ import styled from "@emotion/styled"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import { ElNidoWhichTourImages } from "../../../../components/images/asia/philippines/el-nido/which-tour"
-import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
+import { ApplicationLink, ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { css } from "@emotion/react"
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore https://github.com/Swizec/useDimensions/issues/16
 import useDimensions from "react-use-dimensions"
+import { Quote } from "../../../../components/core/quote"
 
 const namespace = "asia/philippines/el-nido/which-tour"
 const id = "el-nido-which-tour"
@@ -88,69 +86,37 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <ImageAsLandscape>
           <SharedCardPhilippinesImages image="whichTour" />
         </ImageAsLandscape>
-        <PhilippinesQuote>{t("quote")}</PhilippinesQuote>
+        <Quote>{t("quote")}</Quote>
         <Divider />
         <Introduction>{t("introduction.part1")}</Introduction>
         <Divider />
         <SectionContent>
           <p>{t("introduction.part2")}</p>
           {t("introduction.part3") && <p>{t("introduction.part3")}</p>}
-          <p>
-            {t("introduction.part4")} <PhilippinesLink to="boracay">{t("introduction.part5")}</PhilippinesLink>,{" "}
-            <PhilippinesLink to="coron-island">{t("introduction.part6")}</PhilippinesLink> {t("introduction.part7")}{" "}
-            <PhilippinesLink to="thailand">{t("introduction.part8")}</PhilippinesLink>
-            {t("introduction.part9")} <PhilippinesLink to="azores">{t("introduction.part10")}</PhilippinesLink>{" "}
-            {t("introduction.part11")} <PhilippinesLink to="caribbean">{t("introduction.part12")}</PhilippinesLink>{" "}
-            {t("introduction.part13")}
-          </p>
-          <p>{t("introduction.part14")}</p>
-          <p>{t("introduction.part15")}</p>
+          <p>{t("introduction.part4")}</p>
+          <p>{t("introduction.part5")}</p>
+          <p>{t("introduction.part6")}</p>
           <ArticleCardContainer>
             <ElNidoParadiseCard card={{ showTags: false, showPublished: false, showMore: true }} />
           </ArticleCardContainer>
-          <p>{t("introduction.part16")}</p>
+          <p>{t("introduction.part7")}</p>
         </SectionContent>
         <Booking title={t("where-to-book.title")}>
           <p>{t("where-to-book.part1")}</p>
           <ul>
-            <li>
-              <PhilippinesExternalLink href={`https://www.elnidoparadise.com/${i18n.languageCode ? "fr" : ""}`}>
-                {t("where-to-book.part2")}
-              </PhilippinesExternalLink>{" "}
-              {t("where-to-book.part3")}
-            </li>
-            <li>
-              <PhilippinesExternalLink href="https://www.tikigo.com/">
-                {t("where-to-book.part4")}
-              </PhilippinesExternalLink>{" "}
-              {t("where-to-book.part5")}
-            </li>
-            <li>
-              <PhilippinesExternalLink href="https://www.travel-palawan.com/">
-                {t("where-to-book.part6")}
-              </PhilippinesExternalLink>{" "}
-              {t("where-to-book.part7")}
-            </li>
-            <li>
-              <PhilippinesExternalLink href="https://booking.philippineislandcruises.com/en">
-                {t("where-to-book.part8")}
-              </PhilippinesExternalLink>{" "}
-              {t("where-to-book.part9")}
-            </li>
-            <li>
-              <PhilippinesExternalLink href="http://www.skippercharters.ph/el-nido-charters.html">
-                {t("where-to-book.part10")}
-              </PhilippinesExternalLink>{" "}
-              {t("where-to-book.part11")}
-            </li>
+            <li>{t("where-to-book.part2")}</li>
+            <li>{t("where-to-book.part3")}</li>
+            <li>{t("where-to-book.part4")}</li>
+            <li>{t("where-to-book.part5")}</li>
+            <li>{t("where-to-book.part6")}</li>
           </ul>
+          <p>{t("where-to-book.part7")}</p>
+          <p>{t("where-to-book.part8")}</p>
+          <p>{t("where-to-book.part9")}</p>
+          <p>{t("where-to-book.part10")}</p>
+          <p>{t("where-to-book.part11")}</p>
           <p>{t("where-to-book.part12")}</p>
           <p>{t("where-to-book.part13")}</p>
-          <p>{t("where-to-book.part14")}</p>
-          <p>{t("where-to-book.part15")}</p>
-          <p>{t("where-to-book.part16")}</p>
-          <p>{t("where-to-book.part17")}</p>
-          <p>{t("where-to-book.part18")}</p>
         </Booking>
         <Choice title={t("tour-category.title")}>
           <p>{t("tour-category.part1")}</p>
@@ -298,7 +264,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                     transform: rotate(50deg);
                   `}
                 />
-                <PhilippinesLink
+                <ApplicationLink
                   to="el-nido"
                   css={css`
                     position: absolute;
@@ -372,10 +338,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </SectionContent>
             {tourALinkPublished && (
               <SectionContent>
-                <p>
-                  {t("tour-a.snorkeling.part1")}{" "}
-                  <PhilippinesLink to="el-nido-tour-a">{t("tour-a.snorkeling.part2")}</PhilippinesLink>.
-                </p>
+                <p>{t("tour-a.snorkeling.part1")}</p>
               </SectionContent>
             )}
           </section>
@@ -437,12 +400,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <CustomTitle>{t("tour-b.snorkeling.title")}</CustomTitle>
             <SectionContent>{t("snorkeling")}</SectionContent>
-            {tourBLinkPublished && (
-              <SectionContent>
-                {t("tour-b.snorkeling.part1")}{" "}
-                <PhilippinesLink to="el-nido-tour-b">{t("tour-b.snorkeling.part2")}</PhilippinesLink>.
-              </SectionContent>
-            )}
+            {tourBLinkPublished && <SectionContent>{t("tour-b.snorkeling.part1")}</SectionContent>}
           </section>
           <Divider />
           <section>
@@ -531,16 +489,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <CustomTitle>{t("tour-c.snorkeling.title")}</CustomTitle>
             <SectionContent>{t("snorkeling")}</SectionContent>
-            {tourCLinkPublished && (
-              <>
-                <SectionContent>
-                  <p>
-                    {t("tour-c.snorkeling.part1")}{" "}
-                    <PhilippinesLink to="el-nido-tour-c">{t("tour-c.snorkeling.part2")}</PhilippinesLink>.
-                  </p>
-                </SectionContent>
-              </>
-            )}
+            {tourCLinkPublished && <SectionContent>{t("tour-c.snorkeling.part1")}</SectionContent>}
           </section>
           <Divider />
           <section>
@@ -633,16 +582,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <CustomTitle>{t("tour-d.snorkeling.title")}</CustomTitle>
             <SectionContent>{t("snorkeling")}</SectionContent>
-            {tourDLinkPublished && (
-              <>
-                <SectionContent>
-                  <p>
-                    {t("tour-d.snorkeling.part1")}{" "}
-                    <PhilippinesLink to="el-nido-tour-d">{t("tour-d.snorkeling.part2")}</PhilippinesLink>.
-                  </p>
-                </SectionContent>
-              </>
-            )}
+            {tourDLinkPublished && <SectionContent>{t("tour-d.snorkeling.part1")}</SectionContent>}
           </section>
         </Visit>
         <Opinion title={t("opinion.title")}>

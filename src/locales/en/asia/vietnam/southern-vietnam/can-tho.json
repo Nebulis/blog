@@ -5,15 +5,12 @@
   "social-network-description": "Can Tho is the largest city in the Mekong River Delta, located on the banks of the Hau River, it is renowned for its very large floating market.",
   "how": {
     "part1": "Fortunately Vietnam has developed very well in the past years. The roads are much more comfortable and there are more frequent domestic flights.",
-    "part2": "If you come from Hanoi, the easiest solution is to take a #flight#. You can easily find flights on",
-    "part3": "Expedia",
-    "part4": "If you are located in Ho Chi Minh City, you are spoilt for choice: #private driver#, #car rental#, or #bus#.",
-    "part5": "In our opinion, The best solution is to take the bus, with departure every 30 minutes during the day and every hour at night. Really simple.",
-    "part6": "Can Tho is located 170 km from Ho Chi Minh City (Saigon), around 3h30 / 4h drive.",
-    "part7": "We book our buses from",
-    "part8": "Baolau",
-    "part9": "in Asia. We always book in advance, so we advise you to do the same. No bad surprises.",
-    "part10": "More information about"
+    "part2": "If you come from Hanoi, the easiest solution is to take a #flight#. You can easily find flights on [Expedia](expedia:from%3AHanoi%2C%20Vietnam%20%28HAN-Noi%20Bai%20Intl.%29%2Cto%3ACan%20Tho%2C%20Vietnam%20%28VCA)",
+    "part3": "If you are located in Ho Chi Minh City, you are spoilt for choice: #private driver#, #car rental#, or #bus#.",
+    "part4": "In our opinion, The best solution is to take the bus, with departure every 30 minutes during the day and every hour at night. Really simple.",
+    "part5": "Can Tho is located 170 km from Ho Chi Minh City (Saigon), around 3h30 / 4h drive.",
+    "part6": "We book our buses on [Baolau](baolau:Ho Chi Minh:Can Tho) website in Asia. We always book in advance, so we advise you to do the same. No bad surprises.",
+    "part7": "More information about [Transports in Vietnam](transport-vietnam)."
   },
   "how-long": {
     "part1": "We only stayed a day and a half and we wish we could have stayed at least another day, to enjoy more cycling around our resort.",
@@ -32,10 +29,9 @@
     "part4": "On our side, we booked via our homestay: Floating market, breakfast on site, rice paper factory, local pancakes and tropical fruits all for #840,000 VND ($40 for two people)#."
   },
   "where-to-stay": {
-    "part1": "A real crush for our hotel, the ",
-    "part2": "Green Village Mekong",
-    "part3": "It is a bit expensive compared to what you can find in Can Tho but we tell you, it is worth it. We will tell you a little more about it, in the visit section below.",
-    "part4": "Compare and book your hotel in Can Tho."
+    "part1": "A real crush for our hotel, the [Green Village Mekong](booking-hotel:vn/green-village-mekong).",
+    "part2": "It is a bit expensive compared to what you can find in Can Tho but we tell you, it is worth it. We will tell you a little more about it, in the visit section below.",
+    "part3": "[Compare and book your hotel in Can Tho](booking-search:Cần+Thơ%2C+Can+Tho+Municipality%2C+Vietnam)."
   },
   "visit": {
     "part1": "We decided to not visit Can Tho downtown too long but rather to visit the markets and then walk away from people for a day, just to rest from a particularly intense stay."
@@ -93,9 +89,8 @@
   "visit5": {
     "title": "Cycling around",
     "part1": "You can rent bikes if you are at the same homestay as us. But if not, you can also rent a bicycle or a scooter all over Can Tho downtown.",
-    "part2": "Nothing is better than going for a ride to enjoy the calm before returning to",
-    "part3": "Ho Chi Minh City",
-    "part4": "Explore, follow the rivers, follow the paths, you will discover magnificent landscapes. You may come across locals but in any case, if you stay around our hotel you will feel alone in the world."
+    "part2": "Nothing is better than going for a ride to enjoy the calm before returning to [Ho Chi Minh City](ho-chi-minh-city).",
+    "part3": "Explore, follow the rivers, follow the paths, you will discover magnificent landscapes. You may come across locals but in any case, if you stay around our hotel you will feel alone in the world."
   },
   "visit6": {
     "title": "Tips",

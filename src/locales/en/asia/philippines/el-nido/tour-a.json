@@ -6,11 +6,8 @@
   "where-to-book": {
     "title": "How to book?",
     "part1": "You will have a huge choice of agencies offering Island Hopping. Even if you will find agencies at every corner of El Nido, we recommend that you #book in advance#.",
-    "part2": "To book online we used the",
-    "part3": "El Nido Paradise website",
-    "part4": "To find out more about the different tours offered and make your decision, you can check out our article",
-    "part5": "Bacuit Archipelago: Which tour to choose?",
-    "part6": "which explains how Island Hopping works in much more detail."
+    "part2": "To book online we used the [El Nido Paradise](https://www.elnidoparadise.com/) website.",
+    "part3": "To find out more about the different tours offered and make your decision, you can check out our article [Bacuit Archipelago: Which tour to choose?](el-nido-which-tour) which explains how Island Hopping works in much more detail."
   },
   "how-much": {
     "title": "How much?",
@@ -33,9 +30,7 @@
     "part1": "The tour lasts an entire day.",
     "part2": "#Departure 10 am - Return 5 pm#.",
     "part3": "If the event you take a private tour, you can change the departure time (either earlier or later).",
-    "part4": "In our article",
-    "part5": "El Nido: A little paradise",
-    "part6": ", we explain how to go to El Nido, what is the best time to travel and how to find accommodation."
+    "part4": "In our article [El Nido: A little paradise](el-nido-paradise), we explain how to go to El Nido, what is the best time to travel and how to find accommodation."
   },
   "visit": {
     "title": "Visits",
@@ -99,12 +94,10 @@
   "opinion": {
     "title": "Opinion",
     "part1": "Tour A is the most famous tour and it deserves it.",
-    "part2": "Its primary attractions are the big lagoon and snorkeling, but we also really enjoyed the other visits.",
+    "part2": "#Its primary attractions are the big lagoon and snorkeling, but we also really enjoyed the other visits.#",
     "part3": "We didn’t find the Secret Lagoon interesting, although the beach and surroundings were beautiful. Perhaps it was due to the crowd, much more than we like, even though we couldn't really complain about it. It could have been far worse.",
-    "part4": "A wonderful day",
-    "part5": "and very shiny, which makes landscapes even more gorgeous.",
-    "part6": "If you only had one Tour to choose, we would recommend it. And in the second position, ",
-    "part7": "the Tour B"
+    "part4": "#A wonderful day# and very shiny, which makes landscapes even more gorgeous.",
+    "part5": "If you only had one Tour to choose, we would recommend it. And in the second position, [the Tour B](el-nido-tour-b)."
   },
   "must-pack": {
     "title": "Must-pack items",

@@ -56,12 +56,8 @@
   },
   "visit4": {
     "title": "It's just the beginning",
-    "part1": "This is the end of our visit in Southern Vietnam, but it is clearly not the end of our trip. The",
-    "part2": "North",
-    "part3": "and the",
-    "part4": "Center",
-    "part5": "are waiting for us.",
-    "part6": "We look forward to take you with us to discover the rest of the country."
+    "part1": "This is the end of our visit in Southern Vietnam, but it is clearly not the end of our trip. The [North](northern-vietnam) and the [Center](central-vietnam) are waiting for us.",
+    "part2": "We look forward to take you with us to discover the rest of the country."
   },
   "conclusion": "Because of its history and the authenticity of its landscapes, South Vietnam is a destination that will leave you a lasting impression.",
   "question1": "Have you ever been to Southern Vietnam? What is your best souvenir?",

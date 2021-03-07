@@ -6,7 +6,7 @@ import { HomeSection, HomeSubSection, MainTitleSection, SectionContent } from ".
 import { ApplicationLink } from "../../../components/core/links/link"
 import philippinesFish from "../../../images/asia/philippines/fish.svg"
 import { ArticlesContainer, GoToAllArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
-import { useCustomTranslation } from "../../../i18n"
+import { useCustomTranslation } from "../../../i18n-hook"
 import { philippinesLinks } from "../../../components/core/asia/philippines/philippines.links"
 import {
   PhilippinesBlogLayout,

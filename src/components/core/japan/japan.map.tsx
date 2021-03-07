@@ -3,7 +3,7 @@ import { css } from "@emotion/react"
 import { navigate } from "gatsby"
 import { japanPrimaryColor } from "./japan.variables"
 import { getLink, getLinkUrl } from "../links/links.utils"
-import { useCustomTranslation } from "../../../i18n"
+import { useCustomTranslation } from "../../../i18n-hook"
 
 const basicTextStyle = css`
   fill: black;

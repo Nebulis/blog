@@ -24,7 +24,7 @@ import {
 } from "../core/variables"
 import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
 import { Status } from "../../types/shared"
-import { useCustomTranslation } from "../../i18n"
+import { useCustomTranslation } from "../../i18n-hook"
 import { subscribe } from "../../services/newsletter"
 import { navigate, PageProps } from "gatsby"
 import { PinterestContext } from "./pinterest.context"

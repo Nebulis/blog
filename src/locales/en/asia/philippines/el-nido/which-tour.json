@@ -6,16 +6,7 @@
     "part1": "Join us to discover the islands of the Bacuit Archipelago in this article. For each tour, we share a lot of information, for instance, the price, the different boats available or even how to book a tour",
     "part2": "If there is one thing you should not miss in El Nido, it is boat trips, more commonly called #Island Hopping#.",
     "part3": "",
-    "part4": "Very common in the Philippines, and not only in El Nido, you can also do island hopping in",
-    "part5": "Boracay",
-    "part6": "Coron Island",
-    "part7": "and probably in other places. It also exists in other countries, such as",
-    "part8": "Thailand",
-    "part9": ", the",
-    "part10": "Azores",
-    "part11": "or even some islands in the",
-    "part12": "Caribbean",
-    "part13": "for instance.",
+    "part4": "Very common in the Philippines, and not only in El Nido, you can also do island hopping in [Boracay](boracay), [Coron Island](coron-island) and probably in other places. It also exists in other countries, such as [Thailand](thailand), [the Azores](azores) or even some islands in the [Caribbean](caribbean) for instance.",
     "part14": "We already shared our travelogue in our article about El Nido. We hope you were excited about El Nido.",
     "part15": "In that article we shared in detail how to get to El Nido and where to sleep according to your budget.",
     "part16": "Here we will focus more on the different tours, and what you should expect. Let's go."
@@ -23,23 +14,18 @@
   "where-to-book": {
     "title": "How to book?",
     "part1": "To book your Island Hopping online:",
-    "part2": "El Nido Paradise",
-    "part3": "(traditional boat)",
-    "part4": "Tikigo",
-    "part5": "(traditional boat)",
-    "part6": "Travel Palawan",
-    "part7": "(speed boat - traditional boat)",
-    "part8": "El Nido Yachting Club",
-    "part9": "(higher price - speed boat - catamaran)",
-    "part10": "Skipper Charters",
-    "part11": "(higher price - speed boat)",
-    "part12": "There are many others, here we share the ones we compared for our stay.",
-    "part13": "#We booked on the El Nido Paradise website.#",
-    "part14": "You should know that all agencies will have the same offer, prices may vary a little but in the end you choose depending on the reputation, the feeling, the number of people you will share the boat with or the kind of boat.",
-    "part15": "Each offer includes visits to several places classified into 4 categories A, B, C and D as well as #snorkeling equipment, lunch and drinking water# (it is forbidden to bring a plastic water bottle).",
-    "part16": "You will really see tour offers #everywhere in the city#, if you didn't book in advance, you will not know what to do with so many choices.",
-    "part17": "Be careful, however, contrary to what we have read, we really advise you to #book in advance#, Since 2019, there is a supposedly tourist quota to visit the archipelago. We hope that it is true and that it is well respected. That would allow help to protect the most beautiful places of the world, as much as possible.",
-    "part18": "Remember to check the address of your booking agency, you will have an appointment in the morning to collect your ecotourism tickets (if you don't already have it)."
+    "part2": "[El Nido Paradise](https://www.elnidoparadise.com) (traditional boat)",
+    "part3": "[Tikigo](https://www.tikigo.com/) (traditional boat)",
+    "part4": "[Travel Palawan](https://www.travel-palawan.com/) (speed boat - traditional boat)",
+    "part5": "[El Nido Yachting Club](https://booking.philippineislandcruises.com/en) (higher price - speed boat - catamaran)",
+    "part6": "[Skipper Charters](http://www.skippercharters.ph/el-nido-charters.html) (higher price - speed boat)",
+    "part7": "There are many others, here we share the ones we compared for our stay.",
+    "part8": "#We booked on the El Nido Paradise website.#",
+    "part9": "You should know that all agencies will have the same offer, prices may vary a little but in the end you choose depending on the reputation, the feeling, the number of people you will share the boat with or the kind of boat.",
+    "part10": "Each offer includes visits to several places classified into 4 categories A, B, C and D as well as #snorkeling equipment, lunch and drinking water# (it is forbidden to bring a plastic water bottle).",
+    "part11": "You will really see tour offers #everywhere in the city#, if you didn't book in advance, you will not know what to do with so many choices.",
+    "part12": "Be careful, however, contrary to what we have read, we really advise you to #book in advance#, Since 2019, there is a supposedly tourist quota to visit the archipelago. We hope that it is true and that it is well respected. That would allow help to protect the most beautiful places of the world, as much as possible.",
+    "part13": "Remember to check the address of your booking agency, you will have an appointment in the morning to collect your ecotourism tickets (if you don't already have it)."
   },
   "tour-category": {
     "title": "The different kind of tour",
@@ -113,8 +99,7 @@
     },
     "snorkeling": {
       "title": "Snorkeling spots",
-      "part1": "Find our travelogue and photos in our article about",
-      "part2": "the tour A"
+      "part1": "Find our travelogue and photos in our article about [the Tour A](el-nido-tour-a)."
     }
   },
   "tour-b": {
@@ -147,8 +132,7 @@
     },
     "snorkeling": {
       "title": "Snorkeling spots",
-      "part1": "Find our travelogue and photos in our article about",
-      "part2": "the tour B"
+      "part1": "Find our travelogue and photos in our article about [the Tour B](el-nido-tour-b)."
     }
   },
   "tour-c": {
@@ -170,7 +154,7 @@
       "title": "Secret Beach",
       "part1": "Much less secret than its name may lead you to believe, because it is very touristy, the Secret Beach is a #small beach accessible only by the sea#.",
       "part2": "To access it, depending on the tide, you may have to go through an underwater hole.",
-      "part3": "A bit like the secret lagoon that we discussed in the tour A, except that it is not a lagoon but a beach surrounded by limestone cliffs."
+      "part3": "A bit like the secret lagoon that we discussed in the Tour A, except that it is not a lagoon but a beach surrounded by limestone cliffs."
     },
     "star-beach": {
       "title": "Star Beach",
@@ -185,8 +169,7 @@
     },
     "snorkeling": {
       "title": "Snorkeling spots",
-      "part1": "Find our travelogue and photos in our article about",
-      "part2": "the tour C"
+      "part1": "Find our travelogue and photos in our article about [the Tour C](el-nido-tour-c)."
     }
   },
   "tour-d": {
@@ -217,8 +200,7 @@
     },
     "snorkeling": {
       "title": "Snorkeling spots",
-      "part1": "Find our travelogue and photos in our article about",
-      "part2": "the tour D"
+      "part1": "Find our travelogue and photos in our article about [the Tour D](el-nido-tour-d)."
     }
   },
   "opinion": {

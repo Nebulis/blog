@@ -11,7 +11,7 @@ import { graphql, useStaticQuery, PageProps } from "gatsby"
 import FreestyleFont from "../../fonts/Freestyle-Script.woff2"
 import CourgetteFont from "../../fonts/Courgette-Regular.woff2"
 import PlayfairFont from "../../fonts/PlayfairDisplay-Italic.woff2"
-import { useCustomTranslation } from "../../i18n"
+import { useCustomTranslation } from "../../i18n-hook"
 import DefaultImgUrl from "../../images/SocialNetworkDefault.jpg"
 import { getHostname, getPathForEnglish, getPathForFrench } from "../../utils"
 

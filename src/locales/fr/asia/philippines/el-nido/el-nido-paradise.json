@@ -15,13 +15,8 @@
     "part4": "2 jours pour découvrir les alentours de la ville d’El Nido.",
     "part5": "Ni trop peu, ni pas assez.",
     "part6": "Bien sûr restez plus longtemps fait rêver, comment se passer d’un paysage pareil, mais si vous voulez rester plus longtemps aux Philippines pourquoi ne pas aller découvrir d’autres magnifiques endroits ?",
-    "part7": "Boracay",
-    "part8": ",",
-    "part9": "Coron Island",
-    "part10": " ... ou pourquoi pas la ville de",
-    "part11": "Manille",
-    "part12": ", pour les plus connus.",
-    "part13": "Vous n’avez vraiment que l’embarras du choix."
+    "part7": "[Boracay](boracay), [Coron Island](coron-island) ... ou pourquoi pas la ville de [Manille](manilla), pour les plus connus.",
+    "part8": "Vous n’avez vraiment que l’embarras du choix."
   },
   "how-much": {
     "part1": "Le plus gros du budget sera consacré au voyage en avion, environ 700€ par personne. La nourriture, les déplacements ou les activités sont bon marché. Pour le logement, il faudra prévoir un budget un peu plus important.",
@@ -39,15 +34,13 @@
     "part3": "Y faire une simple escale ? Bien trop contraignant ...",
     "part4": "En fait vous n’avez pas vraiment de choix pour venir à El Nido, que ce soit en transport ou en horaire c’est plutôt assez restreint.",
     "part5": "➵ Depuis Manille, prenez l’#avion vers Puerto Princesa#.",
-    "part6": "Arrivé sur place, il faudra prendre #un van ou un bus# qui vous emmènera à El Nido. Comptez 5h en van, un peu plus en bus. Vous n’êtes pas obligé mais vu que nous arrivions de nuit nous avons préféré, par sécurité, réserver un van privé (nous étions un groupe de 4). Nous avons réservé via",
-    "part7": "mais vous pouvez également utiliser",
-    "part8": "➵ Depuis Coron,vous pourrez prendre #un ferry# qui vous emmènera sur place en environ 4h. Vous pouvez réserver sur",
-    "part9": "➵ On ne vous conseille pas l’aéroport d’El Nido. Cela vous fera certes gagner du temps mais les prix sont élevés et les horaires peu avantageux."
+    "part6": "Arrivé sur place, il faudra prendre #un van ou un bus# qui vous emmènera à El Nido. Comptez 5h en van, un peu plus en bus. Vous n’êtes pas obligé mais vu que nous arrivions de nuit nous avons préféré, par sécurité, réserver un van privé (nous étions un groupe de 4). Nous avons réservé via [ElNidoParadise](https://www.elnidoparadise.com/rentals/) mais vous pouvez également utiliser [phbus](https://www.phbus.com).",
+    "part7": "➵ Depuis Coron,vous pourrez prendre #un ferry# qui vous emmènera sur place en environ 4h. Vous pouvez réserver sur [Travel-Palawan](https://www.travel-palawan.com/ferry-from-el-nido-to-coron/).",
+    "part8": "➵ On ne vous conseille pas l’aéroport d’El Nido. Cela vous fera certes gagner du temps mais les prix sont élevés et les horaires peu avantageux."
   },
   "where-to-stay": {
-    "part1": "Nous avions dormi à",
-    "part2": "pour 60€ par nuit. Malheureusement nous ne trouvons plus de moyen pour réserver cet hôtel même sur leur site. N’hésitez pas à nous dire si vous en savez plus car nous avions beaucoup aimé.",
-    "part3": "Vous pouvez néanmoins trouver d'autres hôtels sur"
+    "part1": "Nous avions dormi à [Amakan - Bed | Bunk | Breakfast](http://www.amakan.ph/) pour 60€ par nuit. Malheureusement nous ne trouvons plus de moyen pour réserver cet hôtel même sur leur site. N’hésitez pas à nous dire si vous en savez plus car nous avions beaucoup aimé.",
+    "part2": "Vous pouvez néanmoins trouver d'autres hôtels sur [Booking](booking-search:El+Nido%2C+Luzon%2C+Philippines)."
   },
   "visit": {
     "part1": "L’archipel des Philippines est formé par un peu plus de #7600 îles#.",
@@ -63,8 +56,7 @@
   },
   "visit2": {
     "title": "Un départ tant attendu",
-    "part1-1": "Une fois de retour à notre hôtel pour prendre nos sacs, direction la rue principale en tuk tuk, la rue",
-    "part1-2": ", elle se situe juste avant la plage de départ et c’est là que vous trouverez la plupart des agences pour les différents tours en bateau.",
+    "part1": "Une fois de retour à notre hôtel pour prendre nos sacs, direction la rue principale en tuk tuk, la rue [Calle Hama](https://www.google.com/maps/place/Calle+Hama,+Barangay+Buena+Suerte,+El+Nido,+Palawan,+Philippines), elle se situe juste avant la plage de départ et c’est là que vous trouverez la plupart des agences pour les différents tours en bateau.",
     "part2": "Nous voici donc sur le départ, il est 9h et nous sommes sur la plage là où tous les bateaux se regroupent, on avait pris un tour privé, n’hésitez pas à faire de même si vous êtes un petit groupe d’au moins 4 personnes.",
     "part3": "On est tout de suite mis dans le bain, #pour rejoindre le bateau il faut marcher dans l’eau#, moi qui suis de taille moyenne (1m66) je suis trempée jusqu’à la taille, ça réveille bien et en même temps ça met directement de l’ambiance, vu que personne ne s’y attendait on entend des éclats de rire entre chaque bateau, de quoi véritablement bien commencer la journée.",
     "part4": "En ce qui concerne les tours, nous avons pris le Tour B pour le premier jour et le Tour A pour le deuxième. Vous avez le choix entre 4 tours, A, B, C et D.",

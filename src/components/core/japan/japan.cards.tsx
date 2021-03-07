@@ -5,7 +5,7 @@ import { Card } from "../../card"
 import { japanPrimaryColor, japanPrimaryColorDarker } from "./japan.variables"
 import styled from "@emotion/styled"
 import { ExtraCardProps } from "../../../types/shared"
-import { useCustomTranslation } from "../../../i18n"
+import { useCustomTranslation } from "../../../i18n-hook"
 import { SharedCardJapanImages } from "../../images/asia/japan/shared-card-japan-images"
 
 export const JapanCard = styled(Card)`

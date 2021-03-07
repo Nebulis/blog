@@ -7,7 +7,7 @@ import { ApplicationContext } from "./application"
 import { Divider } from "./core/divider"
 import { backgroundPrimaryColor, mediumEnd, primaryColor, primaryDarkColor } from "./core/variables"
 import { navigate } from "gatsby"
-import { useCustomTranslation } from "../i18n"
+import { useCustomTranslation } from "../i18n-hook"
 
 interface CardProps {
   title?: string

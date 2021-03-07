@@ -4,15 +4,13 @@ import { PageProps } from "gatsby"
 import i18n from "i18next"
 import translationFr from "../../../locales/fr/asia/vietnam/transport.json"
 import translationEn from "../../../locales/en/asia/vietnam/transport.json"
-import { useCustomTranslation } from "../../../i18n"
+import { useCustomTranslation } from "../../../i18n-hook"
 import HomeImgUrl from "../../../images/asia/vietnam/transport/transport-vietnam-main.jpg"
 import {
   VietnamBlogLayout,
   vietnamCities,
   VietnamCity,
-  VietnamExternalLink,
   VietnamHeadline,
-  VietnamLink,
 } from "../../../components/core/asia/vietnam/vietnam"
 import { Title } from "../../../components/core/title"
 import {
@@ -41,19 +39,7 @@ import { TransportVietnamImages } from "../../../components/images/asia/vietnam/
 import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
-import {
-  build12GoAsiaUrl,
-  buildBaolauUrl,
-  buildCo2LogicUrl,
-  buildExpediaUrl,
-  buildGetYourGuideLink,
-  buildGoogleMapsUrl,
-  buildPixabayUrl,
-  buildSkyScannerUrl,
-  buildTripAdvisorLink,
-  priceFactorEur,
-  priceFactorUsd,
-} from "../../../utils"
+import { buildBaolauUrl, buildPixabayUrl, priceFactorEur, priceFactorUsd } from "../../../utils"
 import VietnamRailwayIcon from "../../../images/asia/vietnam/transport/vietnam-railways.png"
 import VioletteIcon from "../../../images/asia/vietnam/transport/violette.png"
 import NewLivitransIcon from "../../../images/asia/vietnam/transport/new-livitrans-express.png"
@@ -849,50 +835,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <Information title={t("information")}>
             <p>{t("section1.information.part1")}</p>
             <p>{t("section1.information.part2")}</p>
-            <p>
-              {t("section1.information.part3")}{" "}
-              <VietnamExternalLink href={buildCo2LogicUrl(i18n.languageCode)}>
-                {t("section1.information.part4")}
-              </VietnamExternalLink>
-              {t("section1.information.part5")}
-            </p>
+            <p>{t("section1.information.part3")}</p>
           </Information>
           <Booking title={t("booking")}>
-            <p>
-              {t("section1.booking.part1")}{" "}
-              <VietnamExternalLink href={buildExpediaUrl(i18n.languageCode)}>
-                {t("section1.booking.part2")}
-              </VietnamExternalLink>
-              {t("section1.booking.part3")}
-            </p>
-            <p>
-              {t("section1.booking.part4")}{" "}
-              <VietnamExternalLink href={buildSkyScannerUrl(i18n.languageCode)}>
-                {t("section1.booking.part5")}
-              </VietnamExternalLink>
-              {t("section1.booking.part6")}{" "}
-              <VietnamExternalLink href="https://ec.europa.eu/transport/sites/transport/files/air-safety-list_fr.pdf">
-                {t("section1.booking.part7")}
-              </VietnamExternalLink>
-              .
-            </p>
-            <p>{t("section1.booking.part8")}</p>
-            <p>{t("section1.booking.part9")}</p>
+            <p>{t("section1.booking.part1")}</p>
+            <p>{t("section1.booking.part2")}</p>
+            <p>{t("section1.booking.part3")}</p>
+            <p>{t("section1.booking.part4")}</p>
           </Booking>
           <Company title={t("company")}>
-            <p>
-              {t("section1.company.part1")}{" "}
-              <VietnamExternalLink href={`https://www.vietnamairlines.com/${i18n.languageCode}`}>
-                {t("section1.company.part2")}
-              </VietnamExternalLink>
-              {t("section1.company.part3")}{" "}
-              <VietnamExternalLink href="https://www.vietjetair.com">{t("section1.company.part4")}</VietnamExternalLink>{" "}
-              {t("section1.company.part5")}{" "}
-              <VietnamExternalLink href="https://www.bambooairways.com">
-                {t("section1.company.part6")}
-              </VietnamExternalLink>
-              {t("section1.company.part7")}
-            </p>
+            <p>{t("section1.company.part1")}</p>
           </Company>
           <HowMuch title={t("price")}>
             <p>{t("section1.price.part1")}</p>
@@ -983,26 +935,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section2.information.part1")}</p>
             <p>{t("section2.information.part2")}</p>
             <p>{t("section2.information.part3")}</p>
-            <p>
-              {t("section2.information.part4")}{" "}
-              <VietnamLink to="halong-bay">{t("section2.information.part5")}</VietnamLink>{" "}
-              {t("section2.information.part6")} <VietnamLink to="my-tho">{t("section2.information.part7")}</VietnamLink>
-              {t("section2.information.part8")}
-            </p>
-            <p>{t("section2.information.part9")}</p>
+            <p>{t("section2.information.part4")}</p>
+            <p>{t("section2.information.part5")}</p>
           </Information>
           <Booking title={t("booking")}>
-            <p>
-              {t("section2.booking.part1")}{" "}
-              <VietnamExternalLink href={buildGetYourGuideLink(i18n.languageCode)()}>
-                {t("section2.booking.part2")}
-              </VietnamExternalLink>{" "}
-              {t("section2.booking.part3")}{" "}
-              <VietnamExternalLink href={buildTripAdvisorLink(i18n.languageCode)()}>
-                {t("section2.booking.part4")}
-              </VietnamExternalLink>
-              .
-            </p>
+            <p>{t("section2.booking.part1")}</p>
           </Booking>
           <Opinion title={t("opinion")}>
             <p>{t("section2.opinion")}</p>
@@ -1126,34 +1063,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <Booking title={t("booking")}>
             <p>{t("section3.car.booking.part1")}</p>
             <p>{t("section3.car.booking.part2")}</p>
-            <p>
-              {t("section3.car.booking.part3")}{" "}
-              <VietnamExternalLink href={build12GoAsiaUrl(i18n.languageCode)}>
-                {t("section3.car.booking.part4")}
-              </VietnamExternalLink>{" "}
-              {t("section3.car.booking.part5")}{" "}
-              <VietnamExternalLink href={buildBaolauUrl(i18n.languageCode)}>
-                {t("section3.car.booking.part6")}
-              </VietnamExternalLink>
-              .
-            </p>
+            <p>{t("section3.car.booking.part3")}</p>
           </Booking>
           <Company title={t("company")}>
-            <p>
-              {t("section3.car.company.part1")}{" "}
-              <VietnamExternalLink href={`https://www.thesinhtourist.vn/`}>
-                {t("section3.car.company.part2")}
-              </VietnamExternalLink>
-              ,{" "}
-              <VietnamExternalLink href={`https://futabus.vn/en-US?lang=en-US`}>
-                {t("section3.car.company.part3")}
-              </VietnamExternalLink>{" "}
-              {t("section3.car.company.part4")}{" "}
-              <VietnamExternalLink href={`http://mailinhexpress.vn/`}>
-                {t("section3.car.company.part5")}
-              </VietnamExternalLink>
-              .
-            </p>
+            <p>{t("section3.car.company.part1")}</p>
           </Company>
           <HowMuch title={t("price")}>
             <p>{t("section3.car.price.part1")}</p>
@@ -1229,11 +1142,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section3.car.opinion.part1")}</p>
             <p>{t("section3.car.opinion.part2")}</p>
             <p>{t("section3.car.opinion.part3")}</p>
-            <p>
-              {t("section3.car.opinion.part4")}{" "}
-              <VietnamLink to="cambodia">{t("section3.car.opinion.part5")}</VietnamLink>{" "}
-              {t("section3.car.opinion.part6")}
-            </p>
+            <p>{t("section3.car.opinion.part4")}</p>
           </Opinion>
         </section>
         <Divider />
@@ -1255,18 +1164,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section3.open-tour.information.part7")}</p>
             <p>{t("section3.open-tour.information.part8")}</p>
             <p>{t("section3.open-tour.information.part9")}</p>
-            <p>
-              {t("section3.open-tour.information.part10")}{" "}
-              <VietnamExternalLink href={buildGetYourGuideLink(i18n.languageCode)()}>
-                {t("section3.open-tour.information.part11")}
-              </VietnamExternalLink>
-              {t("section3.open-tour.information.part12")}
-            </p>
-            <p>
-              {t("section3.open-tour.information.part13")}{" "}
-              <VietnamLink to="halong-bay">{t("section3.open-tour.information.part14")}</VietnamLink>
-              {t("section3.open-tour.information.part15")}
-            </p>
+            <p>{t("section3.open-tour.information.part10")}</p>
+            <p>{t("section3.open-tour.information.part11")}</p>
             <ImageAsLandscape>
               <img
                 css={css`
@@ -1277,9 +1176,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 alt="Open Bus Route"
               />
             </ImageAsLandscape>
-            <p>{t("section3.open-tour.information.part16")}</p>
-            <p>{t("section3.open-tour.information.part17")}</p>
-            <p>{t("section3.open-tour.information.part18")}</p>
+            <p>{t("section3.open-tour.information.part12")}</p>
+            <p>{t("section3.open-tour.information.part13")}</p>
+            <p>{t("section3.open-tour.information.part14")}</p>
           </Information>
           <Booking title={t("booking")}>
             <p>{t("section3.open-tour.booking.part1")}</p>
@@ -1294,36 +1193,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section3.open-tour.booking.part8")}</p>
           </Booking>
           <Company title={t("company")}>
-            <p>
-              {t("section3.open-tour.company.part1")}{" "}
-              <VietnamExternalLink href="https://thesinhtourist.vn/openbus/vcvx/open-bus/all">
-                {t("section3.open-tour.company.part2")}
-              </VietnamExternalLink>
-              .
-            </p>
-            <p>{t("section3.open-tour.company.part3")}</p>
+            <p>{t("section3.open-tour.company.part1")}</p>
+            <p>{t("section3.open-tour.company.part2")}</p>
           </Company>
           <HowMuch title={t("price")}>
             <p>{t("section3.open-tour.price.part1")}</p>
             <ul>
-              <li>
-                {t("section3.open-tour.price.part2")}{" "}
-                <VietnamExternalLink href="https://www.thesinhtourist.vn/download/OpenBus-SG.pdf">
-                  {t("section3.open-tour.price.part3")}
-                </VietnamExternalLink>
-              </li>
-              <li>
-                {t("section3.open-tour.price.part4")}{" "}
-                <VietnamExternalLink href="https://www.thesinhtourist.vn/download/OpenBus-HN.pdf">
-                  {t("section3.open-tour.price.part5")}
-                </VietnamExternalLink>
-              </li>
-              <li>
-                {t("section3.open-tour.price.part6")}{" "}
-                <VietnamExternalLink href="https://www.thesinhtourist.vn/download/OpenBus-Hue.pdf">
-                  {t("section3.open-tour.price.part7")}
-                </VietnamExternalLink>
-              </li>
+              <li>{t("section3.open-tour.price.part2")}</li>
+              <li>{t("section3.open-tour.price.part3")}</li>
+              <li>{t("section3.open-tour.price.part4")}</li>
             </ul>
           </HowMuch>
           <Opinion title={t("opinion")}>
@@ -1345,32 +1223,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Information>
           <Booking title={t("booking")}>
             <p>{t("section3.guided-tour.booking.part1")}</p>
-            <p>
-              {t("section3.guided-tour.booking.part2")}{" "}
-              <VietnamExternalLink
-                href={buildTripAdvisorLink(i18n.languageCode)(
-                  "Attraction_Review-g293925-d7171779-Reviews-Vietnam_Adventure_Tours-Ho_Chi_Minh_City.html"
-                )}
-              >
-                {t("section3.guided-tour.booking.part3")}
-              </VietnamExternalLink>{" "}
-              {t("section3.guided-tour.booking.part4")}{" "}
-              <VietnamExternalLink href={buildGetYourGuideLink(i18n.languageCode)("discovery/s?q=Vietnam")}>
-                {t("section3.guided-tour.booking.part5")}
-              </VietnamExternalLink>
-              {t("section3.guided-tour.booking.part6")}
-            </p>
-            <p>
-              {t("section3.guided-tour.booking.part7")}{" "}
-              <VietnamExternalLink
-                href={buildGoogleMapsUrl(i18n.languageCode)(
-                  "place/220+%C4%90%E1%BB%81+Th%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam"
-                )}
-              >
-                {t("section3.guided-tour.booking.part8")}
-              </VietnamExternalLink>{" "}
-              {t("section3.guided-tour.booking.part9")}
-            </p>
+            <p>{t("section3.guided-tour.booking.part2")}</p>
+            <p>{t("section3.guided-tour.booking.part3")}</p>
           </Booking>
           <HowMuch title={t("price")}>
             <p>{t("section3.guided-tour.price.part1")}</p>
@@ -1392,17 +1246,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p className="tc i mb3">{t("section4.image-title")}</p>
           <Information title={t("information")}>
             <p>{t("section4.information.part1")}</p>
-            <p>
-              {t("section4.information.part2")} <VietnamLink to="hoi-an">{t("section4.information.part3")}</VietnamLink>{" "}
-              {t("section4.information.part4")}
-            </p>
+            <p>{t("section4.information.part2")}</p>
+            <p>{t("section4.information.part3")}</p>
+            <p>{t("section4.information.part4")}</p>
             <p>{t("section4.information.part5")}</p>
-            <p>{t("section4.information.part6")}</p>
-            <p>
-              {t("section4.information.part7")}{" "}
-              <VietnamLink to="arashiyama">{t("section4.information.part8")}</VietnamLink>{" "}
-              {t("section4.information.part9")}
-            </p>
           </Information>
           <HowMuch title={t("price")}>
             <p>{t("section4.price.part1")}</p>
@@ -1435,44 +1282,20 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section5.information.part6")}</p>
             <ul>
               <li>{t("section5.information.part7")}</li>
-              <li>
-                {t("section5.information.part8")}
-                <VietnamExternalLink href="https://commons.wikimedia.org/wiki/File:Vienna_Convention_on_Road_Traffic.svg">
-                  {t("section5.information.part9")}
-                </VietnamExternalLink>
-                {t("section5.information.part10")}
-              </li>
+              <li>{t("section5.information.part8")}</li>
             </ul>
           </Information>
           <Booking title={t("booking")}>
             <p>{t("section5.booking.part1")}</p>
-            <p>
-              {t("section5.booking.part2")}{" "}
-              <VietnamExternalLink href="http://www.flamingotravel.com.vn/rentals/">
-                {t("section5.booking.part3")}
-              </VietnamExternalLink>
-              {t("section5.booking.part4")}
-            </p>
-            <p>
-              {t("section5.booking.part5")}{" "}
-              <VietnamExternalLink href="https://www.facebook.com/groups/ForSaleVietnam/">
-                {t("section5.booking.part6")}
-              </VietnamExternalLink>{" "}
-              {t("section5.booking.part7")}
-            </p>
+            <p>{t("section5.booking.part2")}</p>
+            <p>{t("section5.booking.part3")}</p>
           </Booking>
           <HowMuch title={t("price")}>
             <p>{t("section5.price.part1")}</p>
             <ul>
               <li>{t("section5.price.part2")}</li>
               <li>{t("section5.price.part3")}</li>
-              <li>
-                {t("section5.price.part4")}{" "}
-                <VietnamExternalLink href="https://www.grab.com/vn/en/transport/bike/#section-fare-table-fare-table-grabbike">
-                  {t("section5.price.part5")}
-                </VietnamExternalLink>
-                {t("section5.price.part6")}
-              </li>
+              <li>{t("section5.price.part4")}</li>
             </ul>
           </HowMuch>
           <Opinion title={t("opinion")}>
@@ -1511,14 +1334,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Company>
           <HowMuch title={t("price")}>
             <p>{t("section6.price.part1")}</p>
-            <p>
-              {t("section6.price.part2")}{" "}
-              <VietnamExternalLink href="https://www.grab.com/vn/en/transport/justgrab/#section-fare-table-fare-table-for-justgrab">
-                {t("section6.price.part3")}
-              </VietnamExternalLink>{" "}
-              {t("section6.price.part4")}
-            </p>
-            <p>{t("section6.price.part5")}</p>
+            <p>{t("section6.price.part2")}</p>
+            <p>{t("section6.price.part3")}</p>
           </HowMuch>
           <Opinion title={t("opinion")}>
             <p>{t("section6.opinion")}</p>
@@ -1586,19 +1403,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </GroupOfImages>
           </Information>
           <Booking title={t("booking")}>
-            <p>
-              {t("section7.booking.part1")}{" "}
-              <VietnamExternalLink href={buildBaolauUrl(i18n.languageCode)}>
-                {t("section7.booking.part2")}
-              </VietnamExternalLink>{" "}
-              {t("section7.booking.part3")}{" "}
-              <VietnamExternalLink href={build12GoAsiaUrl(i18n.languageCode)}>
-                {t("section7.booking.part4")}
-              </VietnamExternalLink>
-              {t("section7.booking.part5")}
-            </p>
-            <p>{t("section7.booking.part6")}</p>
-            <p>{t("section7.booking.part7")}</p>
+            <p>{t("section7.booking.part1")}</p>
+            <p>{t("section7.booking.part2")}</p>
+            <p>{t("section7.booking.part3")}</p>
           </Booking>
           <Company title={t("company")}>
             <p>

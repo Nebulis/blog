@@ -14,7 +14,7 @@
   "how": {
     "part1": "It all depends on where you come from, but you can get there by walking, by bus, or if you are further away, by #Grab-Taxi# or #Grab-Bike#.",
     "part2": "We strongly advise against local taxis (excluding Grab) which just wait to rip you off.",
-    "part3": "More information about"
+    "part3": "More information about [Transports in Vietnam](transport-vietnam)."
   },
   "how-long": {
     "part1": "Allow for at least #1h30# if you are in a hurry, and between #2h30 and 3h# if you have time and intend to read all the descriptions."
@@ -30,12 +30,9 @@
   },
   "where-to-stay": {
     "title": "Where to stay in Hô Chi Minh City?",
-    "part1": "We stayed in",
-    "part2": "Prague Hotel",
-    "part3": ". It was ideally located right near the guided tours departure",
-    "part4": "Tham Street.",
-    "part5": "We stayed at this hotel during most of our time in Southern Vietnam.",
-    "part6": "Compare and book your hotel in Ho Chi Minh City."
+    "part1": "We stayed in [Prague Hotel](booking-hotel:vn/prague). It was ideally located right near the guided tours departure [Tham Street](https://www.google.com/maps/place/220+%C4%90%E1%BB%81+Th%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh).",
+    "part2": "We stayed at this hotel during most of our time in Southern Vietnam.",
+    "part3": "[Compare and book your hotel in Ho Chi Minh City](booking-search:H%C3%B4-Chi-Minh-Ville%2C+H%C3%B4-Chi-Minh-Ville%2C+Vietnam)."
   },
   "visit": {
     "part1": "A must-see for anyone who is interested about #Vietnam History#. But not only. In our opinion you should not miss the opportunity to visit this museum if you are going Ho Chi Minh City."
@@ -59,10 +56,8 @@
     "part7": "This cage, built with barbed wire and having the form of a coffin, was a torture cage for prisoners. They were starved and tortured night and day. Every movement made them touch the barbed wire and made them bleed. Charcoal ovens were placed next to the cages despite direct sunlight exposure and a temperature reaching up to 35 degrees.",
     "part8": "",
     "part9": "An inconceivable atrocity which was nevertheless very real.",
-    "part10": "If you want to discover more, you can visit the ",
-    "part11": "Phu Quôc Island",
-    "part12": ". Besides its sumptuous beaches, there is the Phu Quôc prison, where the « tiger cages » were created and used.",
-    "part13": "We unfortunately did not have time to go there as the island was quite out of our way. However, if we go back to Southern Vietnam we will definitely visit this place."
+    "part10": "If you want to discover more, you can visit the [Phu Quôc Island](phu-quoc-island). Besides its sumptuous beaches, there is the Phu Quôc prison, where the « tiger cages » were created and used.",
+    "part11": "We unfortunately did not have time to go there as the island was quite out of our way. However, if we go back to Southern Vietnam we will definitely visit this place."
   },
   "visit3": {
     "title": "A chilling visit",
@@ -85,11 +80,9 @@
     "part2": "However, the museum is not well organised. Firstly there were too many people which doesn't make you want to stay too long or take your time. Secondly, it's not well indicated so we didn't where to start and where to continue.",
     "part3": "There is no audio guide which in our opinion is essential and makes visit much more dynamic compares to stand up for 3 hours reading texts without extra information even if they were really very interesting.",
     "part4": "If you can't read English you will only have pictures, photographs and your own analysis. It was really disappointing for such a great place.",
-    "part5": "For instance, we really enjoyed the visit of the",
-    "part6": "in Cambodia because the audio guide immerses you totally, and provides much more chills down the spine. it really changed the visit.",
-    "part7": "This is just our feeling. We do not compare the wars in Vietnam and Cambodia, but only how we felt in the museums. Despite this, we did not regret having gone to the War Remnants Museum. We recommend it if you are in Hô Chi Minh City. You will probably appreciate it as much as we did, and eventually even more.",
-    "part8": "Like we said in our article",
-    "part9": ", this museum is immersive, the photos are upsetting but realistic and #we do not recommend it with young children or if you are really emotional.#"
+    "part5": "For instance, we really enjoyed the visit of the [Tuol Sleng Genocide Museum](s-21-prison) in Cambodia because the audio guide immerses you totally, and provides much more chills down the spine. it really changed the visit.",
+    "part6": "This is just our feeling. We do not compare the wars in Vietnam and Cambodia, but only how we felt in the museums. Despite this, we did not regret having gone to the War Remnants Museum. We recommend it if you are in Hô Chi Minh City. You will probably appreciate it as much as we did, and eventually even more.",
+    "part7": "Like we said in our article [Discover Southern Vietnam](discover-southern-vietnam), this museum is immersive, the photos are upsetting but realistic and #we do not recommend it with young children or if you are really emotional.#"
   },
   "conclusion": "Long taken for a place campaigning against the United States, the museum primarily denounces the atrocity of the war and the damage that still lasts years afterward. It clearly shows and emphasizes on the importance of preserving peace in the world.",
   "question1": "Did you appreciate this article?",
