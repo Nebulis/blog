@@ -16,6 +16,7 @@ import {
 } from "../../../components/core/asia/vietnam/vietnam"
 import { Title } from "../../../components/core/title"
 import {
+  Anchor,
   GroupOfImages,
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
@@ -832,7 +833,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </div>
         </MenuArticle>
         <Divider />
-        <section id="plane">
+        <Anchor id="plane" />
+        <section>
           <VietnamHeadline>{buildTitle(t("common:section:plane"))}</VietnamHeadline>
           <Divider />
           <ImageAsLandscape
@@ -970,7 +972,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Opinion>
         </section>
         <Divider />
-        <section id="boat">
+        <Anchor id="boat" />
+        <section>
           <VietnamHeadline>{buildTitle(t("common:section:boat"))}</VietnamHeadline>
           <Divider />
           <ImageAsLandscape>
@@ -1017,7 +1020,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </GroupOfImages>
         </section>
         <Divider />
-        <section id="bus-menu">
+        <Anchor id="bus-menu" />
+        <section>
           <VietnamHeadline>{buildTitle(t("section3.title"))}</VietnamHeadline>
           <Divider />
           <SectionContent>
@@ -1040,7 +1044,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </div>
         </MenuArticle>
         <Divider />
-        <section id="bus">
+        <Anchor id="bus" />
+        <section>
           <BusTitle>
             <FaBus />
             &nbsp;{t("section3.bus.title")}
@@ -1058,7 +1063,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Opinion>
         </section>
         <Divider />
-        <section id="bus-car">
+        <Anchor id="bus-car" />
+        <section>
           <BusTitle>
             <FaBus />
             &nbsp;{t("section3.car.title")}
@@ -1231,7 +1237,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Opinion>
         </section>
         <Divider />
-        <section id="open-tour">
+        <Anchor id="open-tour" />
+        <section>
           <BusTitle>
             <FaBus />
             &nbsp;{t("section3.open-tour.title")}
@@ -1326,7 +1333,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Opinion>
         </section>
         <Divider />
-        <section id="guided-tour">
+        <Anchor id="guided-tour" />
+        <section>
           <BusTitle>
             <FaBus />
             &nbsp;{t("section3.guided-tour.title")}
@@ -1374,7 +1382,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Opinion>
         </section>
         <Divider />
-        <section id="rickshaw">
+        <Anchor id="rickshaw" />
+        <section>
           <VietnamHeadline>{buildTitle(t("section4.title"))}</VietnamHeadline>
           <Divider />
           <ImageAsLandscape>
@@ -1404,7 +1413,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Opinion>
         </section>
         <Divider />
-        <section id="moto">
+        <Anchor id="moto" />
+        <section>
           <VietnamHeadline>{buildTitle(t("section5.title"))}</VietnamHeadline>
           <Divider />
           <ImageAsLandscape
@@ -1481,7 +1491,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Opinion>
         </section>
         <Divider />
-        <section id="taxi">
+        <Anchor id="taxi" />
+        <section>
           <VietnamHeadline>{buildTitle(t("common:section.taxi"))}</VietnamHeadline>
           <Divider />
           <Information title={t("information")}>
@@ -1514,7 +1525,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Opinion>
         </section>
         <Divider />
-        <section id="train">
+        <Anchor id="train" />
+        <section>
           <VietnamHeadline>{buildTitle(t("common:section.train"))}</VietnamHeadline>
           <Divider />
           <ImageAsLandscape
@@ -1620,7 +1632,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Opinion>
         </section>
         <Divider />
-        <section id="bike">
+        <Anchor id="bike" />
+        <section>
           <VietnamHeadline>{buildTitle(t("common:section.bike"))}</VietnamHeadline>
           <Divider />
           <ImageAsLandscape>
@@ -1641,7 +1654,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </Opinion>
         </section>
         <Divider />
-        <section id="car">
+        <Anchor id="car" />
+        <section>
           <VietnamHeadline>{buildTitle(t("common:section.car"))}</VietnamHeadline>
           <Divider />
           <Information title={t("information")}>
