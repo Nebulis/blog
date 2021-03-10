@@ -162,11 +162,17 @@ exports[`english pages exports meta for public/en/asia/philippines/el-nido/index
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly: title 1`] = `"El Nido | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: meta-description 1`] = `"In this article, we share in detail about our incredible day discovering the Tour A. A description of each island with our photos and opinion. We also tell you about the price and duration of the tour."`;
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: meta-description 1`] = `"In this article, we share in detail about our incredible day discovering the Tour A. A description of each island with our photos and opinion. We also tell you about the price and duration of the Tour."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: social-network 1`] = `"Lagoons with crystal clear waters, secluded beaches just for you and still intact snorkeling and diving sites. Did you think that could only exist in your dreams? Welcome to El Nido Tour A."`;
 
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: title 1`] = `"El Nido - Tour A : Travelogue and Photos | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: title 1`] = `"El Nido - Tour A: Travelogue and Photos | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-b/index.html correctly: meta-description 1`] = `"In this article, we share in detail about our incredible day discovering the Tour B. A description of each island with our photos and opinion. We also tell you about the price and duration of the Tour."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-b/index.html correctly: social-network 1`] = `"A chaque arrêt on vous emmène dans un univers différent, banc de sable singulier, cave insolite, île déserte façon Koh Lanta ou à la Robinson Crusoé, chacun de ces endroits vous transportera."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-b/index.html correctly: title 1`] = `"El Nido - Tour B: Travelogue and Photos | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/which-tour/index.html correctly: meta-description 1`] = `"Join us to discover the islands of the Bacuit Archipelago in this article. For each tour, we share a lot of information, for instance, the price, the different boats available or even how to book a tour"`;
 

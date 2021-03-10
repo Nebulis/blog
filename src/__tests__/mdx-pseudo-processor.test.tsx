@@ -417,5 +417,16 @@ describe("mdx-pseudo-processor", () => {
         `)
       })
     })
+    describe("todo", () => {
+      it("should build todo span", () => {
+        expect(mdxPseudoProcessor("[world](todo)", "", "", { language: "fr" })).toMatchInlineSnapshot(`
+          <span
+            className="bg-dark-pink yellow bold dib"
+          >
+            world
+          </span>
+        `)
+      })
+    })
   })
 })

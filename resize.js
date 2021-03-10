@@ -8,7 +8,7 @@ const matches1 = glob.sync(`Photos/h/*.{png,jpg,jpeg}`)
 const matches2 = glob.sync(`Photos/w/*.{png,jpg,jpeg}`)
 // const MAX_WIDTH = 1200 // portrait
 // const MAX_WIDTH = 1800
-const QUALITY = 80
+const QUALITY = 60
 
 Promise.all(
   matches1.map(async (match) => {
