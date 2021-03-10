@@ -49,3 +49,13 @@ export const ElNidoTourACard: FunctionComponent<ExtraCardProps> = ({ fluidObject
     </PhilippinesCard>
   )
 }
+
+export const ElNidoTourBCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <PhilippinesCard title={common.country.philippines.card["el-nido-tour-b"]} to="el-nido-tour-b" {...card}>
+      <SharedCardPhilippinesImages image="tourB" fluidObject={fluidObject} />
+    </PhilippinesCard>
+  )
+}

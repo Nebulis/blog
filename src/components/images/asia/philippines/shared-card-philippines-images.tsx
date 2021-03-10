@@ -7,6 +7,7 @@ export const alt = {
   elNido: "Philippines / El Nido",
   whichTour: "El Nido Which Tour",
   tourA: "El Nido Tour A",
+  tourB: "El Nido Tour B",
 }
 
 export const SharedCardPhilippinesImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
@@ -35,6 +36,13 @@ export const SharedCardPhilippinesImages: React.FunctionComponent<ExtraImageProp
         childImageSharp {
           fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      tourB: file(relativePath: { eq: "asia/philippines/el-nido/tour-b/tour-b-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

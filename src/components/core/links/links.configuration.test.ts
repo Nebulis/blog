@@ -195,11 +195,11 @@ describe("links", () => {
       published: true,
     })
     expect(getLink("el-nido-tour-a")).toMatchObject({
-      label: { en: "El Nido - Tour A : Travelogue and Photos", fr: "El Nido - Tour A : Récit et Photos" },
+      label: { en: "El Nido - Tour A: Travelogue and Photos", fr: "El Nido - Tour A : Récit et Photos" },
       published: true,
     })
     expect(getLink("el-nido-tour-b")).toMatchObject({
-      label: { en: "Tour B", fr: "Tour B" },
+      label: { en: "El Nido - Tour B: Travelogue and Photos", fr: "El Nido - Tour B : Récit et Photos" },
       published: false,
     })
     expect(getLink("el-nido-tour-c")).toMatchObject({

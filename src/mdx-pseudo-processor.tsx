@@ -122,6 +122,8 @@ const buildLink = ({ lang, url, text }: { lang: Lang; url: string; text: string 
         {text}
       </ExternalLink>
     )
+  } else if (elements[0] === "todo") {
+    return <span className="bg-dark-pink yellow bold dib">{text}</span>
   }
   return (
     <ApplicationLink to={url} className="mdx-pseudo-processor-link">

@@ -168,6 +168,12 @@ exports[`french pages exports meta for public/asia/philippines/el-nido/tour-a/in
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/tour-a/index.html correctly: title 1`] = `"El Nido - Tour A : Récit et Photos | Blog Voyage"`;
 
+exports[`french pages exports meta for public/asia/philippines/el-nido/tour-b/index.html correctly: meta-description 1`] = `"Dans cet article, on vous raconte en détail notre journée incroyable à la découverte du Tour B. Une description de chaque île avec notre avis et nos photos. On vous parle également du prix et de la durée du tour."`;
+
+exports[`french pages exports meta for public/asia/philippines/el-nido/tour-b/index.html correctly: social-network 1`] = `"A chaque arrêt on vous emmène dans un univers différent, banc de sable singulier, cave insolite, île déserte façon Koh Lanta ou à la Robinson Crusoé, chacun de ces endroits vous transportera."`;
+
+exports[`french pages exports meta for public/asia/philippines/el-nido/tour-b/index.html correctly: title 1`] = `"El Nido - Tour B : Récit et Photos | Blog Voyage"`;
+
 exports[`french pages exports meta for public/asia/philippines/el-nido/which-tour/index.html correctly: meta-description 1`] = `"Dans cet article, on vous emmène à la découverte des îles de l’Archipel de Bacuit en vous détaillant les différents tours, on vous indique également tout sur la réservation, le prix et les types de bateaux qui existent."`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/which-tour/index.html correctly: social-network 1`] = `"Si El Nido fait partie d’une des destinations les plus réputées des Philippines c’est avant tout grâce à l’Archipel de Bacuit, ces îles paradisiaques qui en font la perle de Palawan sont d’une beauté rare."`;
