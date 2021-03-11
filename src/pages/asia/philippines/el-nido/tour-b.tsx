@@ -24,7 +24,7 @@ import {
 import { Conclusion } from "../../../../components/core/conclusion"
 import { Divider } from "../../../../components/core/divider"
 import { Quote } from "../../../../components/core/quote"
-import HomeImgUrl from "../../../../images/asia/philippines/home-philippines.jpg"
+import HomeImgUrl from "../../../../images/asia/philippines/el-nido/tour-b/tour-b-main.jpg"
 import {
   GroupOfImages,
   ImageAsLandscape,
