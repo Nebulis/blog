@@ -250,11 +250,13 @@ export const Comments: FunctionComponent<CommentsProps> = ({
   }
 
   const like = () => {
-    database.ref(`likes/${transformPath(collectionName)}`).set(likes + 1)
+    const newLikes = likes + 1 < 0 ? 1 : likes + 1
+    database.ref(`likes/${transformPath(collectionName)}`).set(newLikes)
     setLocalLikes([...localLikes, collectionName])
   }
   const unlike = () => {
-    database.ref(`likes/${transformPath(collectionName)}`).set(likes - 1)
+    const newLikes = likes - 1 < 0 ? 0 : likes - 1
+    database.ref(`likes/${transformPath(collectionName)}`).set(newLikes)
     setLocalLikes(localLikes.filter((like) => like !== collectionName))
   }
 
