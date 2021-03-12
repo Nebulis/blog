@@ -11,6 +11,8 @@ import { graphql, useStaticQuery, PageProps } from "gatsby"
 import FreestyleFont from "../../fonts/Freestyle-Script.woff2"
 import CourgetteFont from "../../fonts/Courgette-Regular.woff2"
 import PlayfairFont from "../../fonts/PlayfairDisplay-Italic.woff2"
+import RobotoFont from "../../fonts/Roboto.woff2"
+import RobotoFontBolder from "../../fonts/RobotoBolder.woff2"
 import { useCustomTranslation } from "../../i18n-hook"
 import DefaultImgUrl from "../../images/SocialNetworkDefault.jpg"
 import { getHostname, getPathForEnglish, getPathForFrench } from "../../utils"
@@ -69,6 +71,20 @@ const SEO: FunctionComponent<SEOProps> = ({
           rel: "alternate",
           href: `${getHostname(location)}${getPathForEnglish(location)}`,
           hreflang: "en-us",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: RobotoFont,
+          type: "font/woff2",
+          crossOrigin: "anonymous",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          href: RobotoFontBolder,
+          type: "font/woff2",
+          crossOrigin: "anonymous",
         },
         {
           rel: "preload",

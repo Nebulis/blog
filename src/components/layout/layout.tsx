@@ -34,6 +34,9 @@ import CourgetteFont from "../../fonts/Courgette-Regular.ttf"
 import CourgetteFontWoff from "../../fonts/Courgette-Regular.woff2"
 import PlayfairFont from "../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf"
 import PlayfairFontWoff from "../../fonts/PlayfairDisplay-Italic.woff2"
+import Roboto from "../../fonts/Roboto-Regular.ttf"
+import RobotoWoff from "../../fonts/Roboto.woff2"
+import RobotoBolderWoff from "../../fonts/RobotoBolder.woff2"
 import { vietnamPrimaryColorDarker, vietnamPrimaryColorWithOpacity } from "../core/asia/vietnam/vietnam.colors"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
@@ -135,6 +138,20 @@ export const IndexBlogLayout: FunctionComponent<{
     <div className={`${className} index-blog-layout flex flex-column min-vh-100`} onClick={() => setSelectedPin("")}>
       <Global
         styles={css`
+          @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(${RobotoWoff}) format("woff2"), url(${Roboto}) format("truetype");
+          }
+          @font-face {
+            font-family: "Roboto";
+            font-style: bold;
+            font-weight: 900;
+            font-display: swap;
+            src: url(${RobotoBolderWoff}) format("woff2");
+          }
           @font-face {
             font-family: "Playfair Display";
             font-display: swap;
