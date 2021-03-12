@@ -539,8 +539,7 @@ const commentFormStyle = css`
     text-rendering: optimizeLegibility;
     font-size: 1rem;
     line-height: 1.1;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-      Helvetica Neue, sans-serif;
+    font-family: Roboto, sans-serif;
   }
 `
 interface CommentFormProps {

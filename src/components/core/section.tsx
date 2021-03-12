@@ -53,14 +53,16 @@ const SpeechBubble: React.FunctionComponent = () => (
     <path d="m422 100h-126c-5.523438 0-10 4.476562-10 10s4.476562 10 10 10h126c5.523438 0 10-4.476562 10-10s-4.476562-10-10-10zm0 0" />
   </svg>
 )
-
-export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className, id }) => (
-  <div className={`mb1 flex items-center section-title ${className}`} id={id}>
+const sectionTitleStyle = css`
+  font-size: 1.1rem;
+`
+export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children, className = "", id }) => (
+  <div css={sectionTitleStyle} className={`mb2 flex items-center section-title ${className}`} id={id}>
     {children}
   </div>
 )
-export const SectionTitleParagraph: FunctionComponent<HTMLAttributes<any>> = ({ children, className, id }) => (
-  <p className={`mb1 flex items-center section-title ${className}`} id={id}>
+export const SectionTitleParagraph: FunctionComponent<HTMLAttributes<any>> = ({ children, className = "", id }) => (
+  <p css={sectionTitleStyle} className={`mb2 flex items-center section-title ${className}`} id={id}>
     {children}
   </p>
 )
