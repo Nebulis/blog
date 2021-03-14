@@ -17,9 +17,9 @@ import { FushimiWaterImage } from "../../../../components/images/asia/japan/kyot
 import { FushimiKomainu2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu2Image"
 import { FushimiKomainu1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu1Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { BlogLayout } from "../../../../components/layout/layout"
 import {
   FushimiInariTaishaQuote,
+  JapanBlogLayout,
   JapanExternalLink,
   JapanLine,
   JapanLink,
@@ -27,17 +27,31 @@ import {
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/kyoto/fushimi-inari-taisha.json"
+import translationEn from "../../../../locales/en/asia/japan/kyoto/fushimi-inari-taisha.json"
+import HomeImgUrl from "../../../../images/asia/japan/carousel-japan-2.jpg"
+import { useCustomTranslation } from "../../../../i18n-hook"
+
+const namespace = "asia/japan/kyoto/fushimi-inari-taisha.json"
+const id = "fushimi-inari-taisha"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="fushimi-inari-taisha" location={location}>
-        <JapanTitle
-          title="FUSHIMI INARI TAISHA"
-          categories={["asia", "japan", "kyoto"]}
-          linkId="fushimi-inari-taisha"
-        />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
         <SharedCardJapanImages image="fushimi" />
         <FushimiInariTaishaQuote />
         <Where>68 Fukakusa Yabunouchicho, Fushimi Ward, Kyoto</Where>
@@ -166,7 +180,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           Les Torii seraient, pour la plupart, des dons fait par des particuliers ou des entreprises. Leur nom ainsi que
           la date de pose y serait indiqué sur chacun d’eux.
         </Conclusion>
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }

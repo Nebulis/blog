@@ -21,26 +21,44 @@ import { ArashiyamaShrine1Image } from "../../../../components/images/asia/japan
 import { ArashiyamaShrine2Image } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaShrine2Image"
 import { ArashiyamaCherryImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaCherryImage"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { BlogLayout } from "../../../../components/layout/layout"
 import { ArashiyamaHouseImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaHouseImage"
 import { ArashiyamaPathImage } from "../../../../components/images/asia/japan/kyoto/arashiyama/arashiyamaPathImage"
 import {
   ArashiyamaQuote,
+  JapanBlogLayout,
   JapanExternalLink,
   JapanLine,
   JapanLink,
   JapanTitle,
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
-import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
+import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/kyoto/arashiyama.json"
+import translationEn from "../../../../locales/en/asia/japan/kyoto/arashiyama.json"
+import HomeImgUrl from "../../../../images/asia/japan/carousel-japan.jpg"
+import { useCustomTranslation } from "../../../../i18n-hook"
+
+const namespace = "asia/japan/kyoto/arashiyama"
+const id = "arashiyama"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="arashiyama" location={location}>
-        <JapanTitle title="ARASHIYAMA – Forêt de bambous" categories={["asia", "japan", "kyoto"]} linkId="arashiyama" />
-        <SharedJapanImages image="mainArashiyama" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
+        <SharedCardJapanImages image="arashiyama" />
         <ArashiyamaQuote />
         <Where>Ukyo Ward, Kyoto</Where>
         <When>
@@ -176,7 +194,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           Certains bambous sont malheureusement très abîmés et cela à cause de quelques touristes mal intentionnés qui
           s’amusent à graver leurs noms sur les bambous. Une véritable honte !
         </Conclusion>
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }

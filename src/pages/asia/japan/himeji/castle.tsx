@@ -39,20 +39,43 @@ import { HimejiCastleWithCherry4Image } from "../../../../components/images/asia
 import { HimejiCastle2Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
 import { HimejiCastle4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
 import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
-import { BlogLayout } from "../../../../components/layout/layout"
 import { HimejiCastleWithCherry7Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry7Image"
-import { HimejiCastleQuote, JapanExternalLink, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
+import {
+  HimejiCastleQuote,
+  JapanBlogLayout,
+  JapanExternalLink,
+  JapanLink,
+  JapanTitle,
+} from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
-import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
+import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/himeji/himeji-castle.json"
+import translationEn from "../../../../locales/en/asia/japan/himeji/himeji-castle.json"
+import HomeImgUrl from "../../../../images/asia/japan/carousel-japan-2.jpg"
+import { useCustomTranslation } from "../../../../i18n-hook"
+
+const namespace = "asia/japan/himeji/himeji-castle"
+const id = "himeji-castle"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="himeji-castle" location={location}>
-        <JapanTitle title="Château de HIMEJI" categories={["asia", "japan", "himeji"]} linkId="himeji-castle" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
         <ImageAsLandscape>
-          <SharedJapanImages image="mainHimeji" />
+          <SharedCardJapanImages image="himejiCastle" />
         </ImageAsLandscape>
         <HimejiCastleQuote />
         <Where>68 Honmachi, Himeji</Where>
@@ -237,7 +260,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <HimejiCastleTroup />
           </TwoImagesSameSize>
         </Bonus>
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }

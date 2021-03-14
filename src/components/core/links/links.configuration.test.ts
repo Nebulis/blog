@@ -70,7 +70,7 @@ describe("links", () => {
 
     // japan assertions
     expect(getLink("spring-in-japan")).toMatchObject({
-      label: { fr: "Le Japon au printemps", en: "Spring in Japan" },
+      label: { fr: "Le Japon au printemps", en: "Spring In Japan" },
       published: false,
     })
     expect(getLink("transports-in-japan")).toMatchObject({
@@ -90,11 +90,20 @@ describe("links", () => {
     })
 
     expect(getLink("kyoto")).toMatchObject({ label: { fr: "Kyoto", en: "Kyoto" }, published: false })
-    expect(getLink("arashiyama")).toMatchObject({ label: { fr: "Arashiyama", en: "Arashiyama" }, published: false })
-    expect(getLink("daigoji")).toMatchObject({ label: { fr: "Daigo-ji", en: "Daigo-ji" }, published: false })
-    expect(getLink("kinkakuji")).toMatchObject({ label: { fr: "Kinkaku-ji", en: "Kinkaku-ji" }, published: false })
+    expect(getLink("arashiyama")).toMatchObject({
+      label: { en: "Arashiyama Bamboo Forest", fr: "Forêt de Bambous d'Arashiyama" },
+      published: false,
+    })
+    expect(getLink("daigoji")).toMatchObject({
+      label: { en: "Daigo-ji Temple", fr: "Temple Daigo-ji" },
+      published: false,
+    })
+    expect(getLink("kinkakuji")).toMatchObject({
+      label: { en: "Kinkaku-ji Temple", fr: "Temple de Kinkaku-ji" },
+      published: false,
+    })
     expect(getLink("fushimi-inari-taisha")).toMatchObject({
-      label: { fr: "Fushimi Inari-taisha", en: "Fushimi Inari-taisha" },
+      label: { fr: "Fushimi Inari-Taisha", en: "Fushimi Inari-Taisha" },
       published: false,
     })
 

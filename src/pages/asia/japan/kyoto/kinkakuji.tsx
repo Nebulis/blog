@@ -33,9 +33,9 @@ import { KinkakujiWaterfall1Image } from "../../../../components/images/asia/jap
 import { KinkakujiLakeImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiLakeImage"
 import { KinkakujiStatueImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiStatueImage"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { BlogLayout } from "../../../../components/layout/layout"
 import { KinkakujiOtherTemple3Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiOtherTemple3Image"
 import {
+  JapanBlogLayout,
   JapanExternalLink,
   JapanLine,
   JapanLink,
@@ -44,13 +44,31 @@ import {
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/kyoto/kinkakuji.json"
+import translationEn from "../../../../locales/en/asia/japan/kyoto/kinkakuji.json"
+import HomeImgUrl from "../../../../images/asia/japan/kyoto/kinkakuji/kinkakuji-main.jpg"
+import { useCustomTranslation } from "../../../../i18n-hook"
+
+const namespace = "asia/japan/kyoto/kinkakuji"
+const id = "kinkakuji"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="kinkakuji" location={location}>
-        <JapanTitle title="Temple de KINKAKUJI" categories={["asia", "japan", "kyoto"]} linkId="kinkakuji" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
         <SharedCardJapanImages image="kinkakuji" />
         <KinkakujiQuote />
         <Where>1 Kinkakujicho, Kita Ward, Kyoto</Where>
@@ -198,7 +216,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           malheureusement totalement détruit en 1950 par un incendie volontaire, et heureusement reconstruit à
           l’identique 5 ans après.
         </Conclusion>
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }
