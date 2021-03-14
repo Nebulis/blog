@@ -1,0 +1,14 @@
+{
+  "travel": {
+    "title": "Travel",
+    "subtitle": "By following our journey ..."
+  },
+  "tour": {
+    "title": "Travel around",
+    "subtitle": "The country from region to region"
+  },
+  "inform": {
+    "title": "Get informed",
+    "subtitle": "With our suggestions, favorites ..."
+  }
+}

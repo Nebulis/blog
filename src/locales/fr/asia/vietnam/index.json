@@ -3,6 +3,18 @@
     "section1": "Le Vietnam est une destination unique. Des paysages magnifiques et variés, des parcs naturels, un héritage culturel et un patrimoine historique riche ... D'Hô Chi Minh-Ville à Hanoï, en passant par Da Nang, chaque destination offre sa propre histoire et une expérience différente.",
     "section2": "On vous fait découvrir à travers nos articles et nos photos notre itinéraire dans le Sud du Vietnam et nous vous parlerons très prochainement du Nord et du Centre alors restez connecté."
   },
+  "travel": {
+    "title": "Voyager",
+    "subtitle": "En suivant notre aventure ..."
+  },
+  "tour": {
+    "title": "Parcourir",
+    "subtitle": "Le pays de région en région ..."
+  },
+  "inform": {
+    "title": "S'informer",
+    "subtitle": "À travers nos astuces, nos coups de cœur ..."
+  },
   "weather": "Quand partir ?",
   "map": "Notre carte du Vietnam"
 }

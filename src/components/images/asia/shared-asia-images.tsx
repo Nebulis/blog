@@ -19,22 +19,22 @@ export const SharedAsiaImages: React.FunctionComponent<ExtraImageProps & { image
     query {
       homeVietnam: file(relativePath: { eq: "asia/vietnam/home-vietnam.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 400, quality: 60) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       homePhilippines: file(relativePath: { eq: "asia/philippines/carousel-philippines-2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 400, quality: 60) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       homeJapan: file(relativePath: { eq: "asia/japan/home.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 400, quality: 60) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

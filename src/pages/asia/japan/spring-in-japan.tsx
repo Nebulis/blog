@@ -3,7 +3,6 @@ import { css } from "@emotion/react"
 import { SectionContent, WhatTimeOfYear, Where } from "../../../components/core/section"
 import SEO from "../../../components/layout/seo"
 import { Conclusion } from "../../../components/core/conclusion"
-import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import { smallEnd } from "../../../components/core/variables"
 import {
   JapanBlogLayout,
@@ -22,6 +21,7 @@ import {
   KawaguchikoLakeCard,
   KinkakujiCard,
   NagoyaCastleCard,
+  SpringInJapanCard,
   ToganjiCard,
 } from "../../../components/core/japan/japan.cards"
 import { JapanMap } from "../../../components/core/japan/japan.map"
@@ -33,7 +33,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO title="Le Japon au printemps" location={location} />
       <JapanBlogLayout page="spring-in-japan" location={location}>
         <JapanTitle title="Le Japon au printemps" categories={["asia", "japan"]} linkId="spring-in-japan" />
-        <MainImage />
+        <SpringInJapanCard />
         <SpringInJapanQuote />
         <WhatTimeOfYear title="Pourquoi au printemps ?">
           <p>

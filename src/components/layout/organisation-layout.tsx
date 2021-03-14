@@ -10,6 +10,7 @@ import {
   mediumEnd,
   mediumStart,
   mediumStartSize,
+  smallEnd,
 } from "../core/variables"
 import { ExtraImageLinkProps } from "../../types/shared"
 import { useWindowSize } from "../hooks/useWindowSize"
@@ -117,4 +118,7 @@ export const CountriesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @media (max-width: ${smallEnd}) {
+    display: grid;
+  }
 `

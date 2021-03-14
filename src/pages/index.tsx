@@ -352,6 +352,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         country: t("common:country.philippines.title"),
         image: "philippines2",
       },
+      {
+        to: "japan",
+        country: t("common:country.japan.title"),
+        image: "japan1",
+      },
+      {
+        to: "japan",
+        country: t("common:country.japan.title"),
+        image: "japan2",
+      },
     ].filter(({ to }) => {
       return development || isLinkPublished(to)
     })

@@ -62,8 +62,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         {false && (
           <>
             <Divider />
-            <HomeSection>{t("common:travel.title")}</HomeSection>
-            <HomeSubSection>{t("common:travel.subtitle")}</HomeSubSection>
+            <HomeSection>{t("travel.title")}</HomeSection>
+            <HomeSubSection>{t("travel.subtitle")}</HomeSubSection>
             <MainCardContainer>
               <SouthVietnamCard />
             </MainCardContainer>
@@ -72,8 +72,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         {cities.length > 0 && (
           <>
             <Divider />
-            <HomeSection>{t("common:tour.title")}</HomeSection>
-            <HomeSubSection>{t("common:tour.subtitle")}</HomeSubSection>
+            <HomeSection>{t("tour.title")}</HomeSection>
+            <HomeSubSection>{t("tour.subtitle")}</HomeSubSection>
             <MedallionContainer>
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
                 return city.imageProps?.image ? (
@@ -90,8 +90,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         {articles.length > 0 && (
           <>
             <Divider />
-            <HomeSection>{t("common:inform.title")}</HomeSection>
-            <HomeSubSection>{t("common:inform.subtitle")}</HomeSubSection>
+            <HomeSection>{t("inform.title")}</HomeSection>
+            <HomeSubSection>{t("inform.subtitle")}</HomeSubSection>
             <ArticlesContainer>
               {articles.map(({ card: Card }, index) =>
                 Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null

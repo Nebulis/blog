@@ -7,6 +7,8 @@ import styled from "@emotion/styled"
 import { ExtraCardProps } from "../../../types/shared"
 import { useCustomTranslation } from "../../../i18n-hook"
 import { SharedCardJapanImages } from "../../images/asia/japan/shared-card-japan-images"
+import commonFr from "../../../locales/fr/common.json"
+import commonEn from "../../../locales/en/common.json"
 
 export const JapanCard = styled(Card)`
   .tags a {
@@ -15,7 +17,20 @@ export const JapanCard = styled(Card)`
   .tags a:hover {
     border-bottom: 1px solid ${japanPrimaryColorDarker};
   }
+  .show-more {
+    color: ${japanPrimaryColor};
+  }
 `
+
+export const SpringInJapanCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <JapanCard title={common.country.japan.card["spring-in-japan"]} to="spring-in-japan" {...card}>
+      <SharedCardJapanImages image="springInJapan" fluidObject={fluidObject} />
+    </JapanCard>
+  )
+}
 
 export const ArashiyamaCard: FunctionComponent<ExtraCardProps> = ({ fluidObject }) => {
   const { i18n } = useCustomTranslation()
