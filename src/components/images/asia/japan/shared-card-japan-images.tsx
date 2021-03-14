@@ -25,14 +25,14 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
 }) => {
   const data = useStaticQuery(graphql`
     query {
-      arashiyama: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-main.jpg" }) {
+      arashiyama: file(relativePath: { eq: "asia/japan/carousel-japan.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      himejiCastle: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-main.jpg" }) {
+      himejiCastle: file(relativePath: { eq: "asia/japan/carousel-japan-2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
@@ -95,7 +95,7 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      springInJapan: file(relativePath: { eq: "asia/japan/japan-in-spring-main.jpg" }) {
+      springInJapan: file(relativePath: { eq: "asia/japan/spring-in-japan/spring-in-japan-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

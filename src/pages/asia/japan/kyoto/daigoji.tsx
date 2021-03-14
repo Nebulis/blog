@@ -35,10 +35,10 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { DaigojiGarden5Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden5Image"
 import { DaigojiGarden4Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden4Image"
 import { DaigojiMonk2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiMonk2Image"
-import { BlogLayout } from "../../../../components/layout/layout"
 import { DaigojiTempleWithLake3Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiTempleWithLake3Image"
 import {
   DaigojiQuote,
+  JapanBlogLayout,
   JapanExternalLink,
   JapanLine,
   JapanLink,
@@ -46,13 +46,31 @@ import {
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/kyoto/daigoji.json"
+import translationEn from "../../../../locales/en/asia/japan/kyoto/daigoji.json"
+import HomeImgUrl from "../../../../images/asia/japan/kyoto/daigoji/daigoji-main.jpg"
+import { useCustomTranslation } from "../../../../i18n-hook"
+
+const namespace = "asia/japan/kyoto/daigoji"
+const id = "daigoji"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="daigoji" location={location}>
-        <JapanTitle title="DAIGO-JI" categories={["asia", "japan", "kyoto"]} linkId="daigoji" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
         <SharedCardJapanImages image="daigoji" />
         <DaigojiQuote />
         <Where>22 Daigohigashiojicho, Fushimi Ward, Kyoto</Where>
@@ -209,7 +227,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         >
           <DaigojiMonk2Image />
         </ImageAsPortrait>
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }

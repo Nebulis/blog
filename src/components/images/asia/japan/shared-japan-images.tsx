@@ -4,8 +4,6 @@ import * as React from "react"
 import { ExtraImageProps } from "../../../../types/shared"
 
 const alt = {
-  mainArashiyama: "Arashiyama Bamboo Forest",
-  mainHimeji: "Himeji",
   mainNagoya: "Nagoya",
   mainFuji: "Mount Fuji",
   mainTokyo: "Tokyo",
@@ -19,14 +17,14 @@ export const SharedJapanImages: React.FunctionComponent<ExtraImageProps & { imag
 }) => {
   const data = useStaticQuery(graphql`
     query {
-      mainArashiyama: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-main.jpg" }) {
+      mainArashiyama: file(relativePath: { eq: "asia/japan/carousel-japan.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      mainHimeji: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-main.jpg" }) {
+      mainHimeji: file(relativePath: { eq: "asia/japan/carousel-japan-2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid

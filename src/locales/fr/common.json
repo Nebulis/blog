@@ -60,7 +60,13 @@
     "japan": {
       "title": "Japon",
       "card": {
-        "spring-in-japan": "Le Japon au printemps"
+        "spring-in-japan": "Le Japon au printemps",
+        "himeji-castle": "Château de Himeji",
+        "arashiyama": "Forêt de Bambous d'Arashiyama",
+        "kinkakuji": "Temple de Kinkaku-ji",
+        "daigoji": "Temple Daigo-ji",
+        "fushimi-inari-taisha": "Fushimi Inari-Taisha",
+        "nagoya-castle": "Château de Nagoya"
       }
     },
     "kyrgyzstan": {

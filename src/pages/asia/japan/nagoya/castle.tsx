@@ -35,8 +35,8 @@ import { NagoyaRosebushImage } from "../../../../components/images/asia/japan/na
 import { NagoyaStatueImage } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaStatueImage"
 import { NagoyaCastle2Image } from "../../../../components/images/asia/japan/nagoya/castle/nagoyaCastle2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { BlogLayout } from "../../../../components/layout/layout"
 import {
+  JapanBlogLayout,
   JapanExternalLink,
   JapanLine,
   JapanLink,
@@ -45,13 +45,31 @@ import {
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/nagoya/nagoya-castle.json"
+import translationEn from "../../../../locales/en/asia/japan/nagoya/nagoya-castle.json"
+import HomeImgUrl from "../../../../images/asia/japan/nagoya/castle/nagoya-castle-main.jpg"
+import { useCustomTranslation } from "../../../../i18n-hook"
+
+const namespace = "asia/japan/nagoya/nagoya-castle"
+const id = "nagoya-castle"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="nagoya-castle" location={location}>
-        <JapanTitle title="Château de NAGOYA" categories={["asia", "japan", "nagoya"]} linkId="nagoya-castle" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
         <ImageAsLandscape>
           <SharedJapanImages image="mainNagoya" />
         </ImageAsLandscape>
@@ -233,7 +251,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Bonus>
           <p>Le Dimanche vous pouvez voir un spectacle de Samouraï et de Ninja dans l’après-midi.</p>
         </Bonus>
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }

@@ -26,13 +26,31 @@ import {
 } from "../../../components/core/japan/japan.cards"
 import { JapanMap } from "../../../components/core/japan/japan.map"
 import { PageProps } from "gatsby"
+import i18n from "i18next"
+import translationFr from "../../../locales/fr/asia/japan/spring-in-japan.json"
+import translationEn from "../../../locales/en/asia/japan/spring-in-japan.json"
+import HomeImgUrl from "../../../images/asia/japan/spring-in-japan/spring-in-japan-main.jpg"
+import { useCustomTranslation } from "../../../i18n-hook"
+
+const namespace = "asia/japan/spring-in-japan"
+const id = "spring-in-japan"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="Le Japon au printemps" location={location} />
-      <JapanBlogLayout page="spring-in-japan" location={location}>
-        <JapanTitle title="Le Japon au printemps" categories={["asia", "japan"]} linkId="spring-in-japan" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} categories={["asia", "japan"]} linkId={id} />
         <SpringInJapanCard />
         <SpringInJapanQuote />
         <WhatTimeOfYear title="Pourquoi au printemps ?">

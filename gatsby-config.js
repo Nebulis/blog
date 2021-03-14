@@ -51,21 +51,16 @@ module.exports = {
         policy: [
           {
             userAgent: "*",
-            allow: [...pages("/asia/vietnam/index.html"), ...pages("/asia/vietnam/southern-vietnam/")],
-            disallow: [
-              ...pages("/asia/japan"),
-              ...pages("/asia/cambodia"),
-              ...pages("/asia/vietnam/*"),
-              ...pages("/asia/vietnam/southern-vietnam/can-tho"),
-            ],
+            // allow: [...pages("/asia/vietnam/index.html"), ...pages("/asia/vietnam/southern-vietnam/")],
+            disallow: [...pages("/asia/japan"), ...pages("/asia/cambodia")],
           },
           {
             userAgent: "twitterbot",
-            allow: [...pages("/asia/vietnam/southern-vietnam/can-tho")],
+            allow: [...pages("/asia/japan/")],
           },
           {
             userAgent: "facebookexternalhit",
-            allow: [...pages("/asia/vietnam/southern-vietnam/can-tho")],
+            allow: [...pages("/asia/japan/")],
           },
         ],
       },

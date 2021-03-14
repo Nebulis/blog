@@ -32,7 +32,7 @@ export const japanLinks: CountryLink = {
   others: [
     {
       id: "spring-in-japan",
-      label: { fr: "Le Japon au printemps", en: "Spring in Japan" },
+      label: { fr: commonFr.country.japan.card["spring-in-japan"], en: commonEn.country.japan.card["spring-in-japan"] },
       published: new Date("2021-03-20T17:00:00.000+08:00"),
       card: SpringInJapanCard,
       kind: "highlight",
@@ -52,25 +52,28 @@ export const japanLinks: CountryLink = {
       highlights: [
         {
           id: "arashiyama",
-          label: { fr: "Arashiyama", en: "Arashiyama" },
+          label: { fr: commonFr.country.japan.card.arashiyama, en: commonEn.country.japan.card.arashiyama },
           card: ArashiyamaCard,
           published: false,
         },
         {
           id: "daigoji",
-          label: { fr: "Daigo-ji", en: "Daigo-ji" },
+          label: { fr: commonFr.country.japan.card.daigoji, en: commonEn.country.japan.card.daigoji },
           published: false,
           card: DaigojiCard,
         },
         {
           id: "kinkakuji",
-          label: { fr: "Kinkaku-ji", en: "Kinkaku-ji" },
+          label: { fr: commonFr.country.japan.card.kinkakuji, en: commonEn.country.japan.card.kinkakuji },
           published: false,
           card: KinkakujiCard,
         },
         {
           id: "fushimi-inari-taisha",
-          label: { fr: "Fushimi Inari-taisha", en: "Fushimi Inari-taisha" },
+          label: {
+            fr: commonFr.country.japan.card["fushimi-inari-taisha"],
+            en: commonEn.country.japan.card["fushimi-inari-taisha"],
+          },
           published: false,
           card: FushimiInariTaishaCard,
         },
@@ -85,7 +88,7 @@ export const japanLinks: CountryLink = {
       highlights: [
         {
           id: "himeji-castle",
-          label: { fr: "Château de Himeji", en: "Himeji Castle" },
+          label: { fr: commonFr.country.japan.card["himeji-castle"], en: commonEn.country.japan.card["himeji-castle"] },
           url: "castle",
           published: false,
           card: HimejiCastleCard,
@@ -101,7 +104,7 @@ export const japanLinks: CountryLink = {
       highlights: [
         {
           id: "nagoya-castle",
-          label: { fr: "Château de Nagoya", en: "Nagoya Castle" },
+          label: { fr: commonFr.country.japan.card["nagoya-castle"], en: commonEn.country.japan.card["nagoya-castle"] },
           url: "castle",
           published: false,
           card: NagoyaCastleCard,
