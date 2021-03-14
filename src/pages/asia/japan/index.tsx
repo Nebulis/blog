@@ -1,98 +1,99 @@
 import React, { useContext } from "react"
 import SEO from "../../../components/layout/seo"
-import { css, jsx } from "@emotion/react"
-import styled from "@emotion/styled"
-import { MainImage } from "../../../components/images/asia/japan/mainImage"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
-import { getLinkLabel, getArticles, isLinkPublished } from "../../../components/core/links/links.utils"
-import { ApplicationLink } from "../../../components/core/links/link"
+import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../components/application"
-import { IndexJapanBlogLayout, JapanDivider } from "../../../components/core/japan/japan"
-import { JapanImageAsMedallion } from "../../../components/core/japan/japan.images"
+import { JapanBlogLayout, JapanButtonLink } from "../../../components/core/japan/japan"
 import { japanLinks } from "../../../components/core/japan/japan.links"
-import { JapanCard } from "../../../components/core/japan/japan.cards"
-import { HomeSection, HomeSubSection } from "../../../components/core/section"
-import { extraLargeStart, mediumEnd } from "../../../components/core/variables"
-import { ArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
+import { HomeSection, HomeSubSection, MainTitleSection, SectionContent } from "../../../components/core/section"
 import { useCustomTranslation } from "../../../i18n-hook"
 import { PageProps } from "gatsby"
-import { sortByLabel } from "../../../components/core/links/links.utils"
+import { Divider } from "../../../components/core/divider"
+import { PageQuote } from "../../../components/core/quote"
+import i18n from "i18next"
+import indexFr from "../../../locales/fr/asia/japan/index.json"
+import indexEn from "../../../locales/en/asia/japan/index.json"
+import {
+  ArticlesContainer,
+  GoToAllArticlesContainer,
+  MainCardContainer,
+  MedallionContainer,
+} from "../../../components/layout/layout"
+import { ApplicationLink } from "../../../components/core/links/link"
+import { jsx } from "@emotion/react"
 import { SharedJapanImages } from "../../../components/images/asia/japan/shared-japan-images"
+import { JapanImageAsMedallion } from "../../../components/core/japan/japan.images"
+import { SpringInJapanCard } from "../../../components/core/japan/japan.cards"
+import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 
-export const Container = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  padding: 1rem 20px;
-
-  @media (min-width: ${extraLargeStart}) {
-    max-width: 1140px;
-  }
-`
+const namespace = "asia/japan/index"
+i18n.addResourceBundle("fr", namespace, indexFr)
+i18n.addResourceBundle("en", namespace, indexEn)
+// TODO english
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
-  const { i18n } = useCustomTranslation()
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const country = t("common:country.japan.title")
+  const articles = getArticles({ kind: "other", tags: ["japan"], development })
   const cities = development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished)
+  const description = `${t("introduction.section1")} ${t("introduction.section2")} ${t("introduction.section3")}`
   return (
     <>
-      <SEO title="Japon" location={location} />
-      <IndexJapanBlogLayout page="japan" location={location}>
-        <h1 className="tc ttu flex items-center justify-center">
+      <SEO title={country} location={location} image={VietnamImage} socialNetworkDescription={description} />
+      <JapanBlogLayout page="japan" location={location}>
+        <MainTitleSection>
           <img src={cherryBlossom} alt="cherry blossom" />
-          &nbsp;Japon&nbsp;
+          &nbsp;{country}&nbsp;
           <img src={cherryBlossom} alt="cherry blossom" />
-        </h1>
-        <JapanDivider />
-        <h2
-          className="tc ttu mb2-l"
-          css={css`
-            letter-spacing: 5px;
-            font-family: auto;
-            @media (max-width: ${mediumEnd}) {
-              margin-bottom: 1rem;
-            }
-          `}
-        >
-          Voyager
-        </h2>
-        <HomeSubSection>En suivant notre aventure ...</HomeSubSection>
-        <Container>
-          <JapanCard title="Le Japon au printemps" to="spring-in-japan" tags={["asia", "japan"]}>
-            <MainImage />
-          </JapanCard>
-        </Container>
-        <JapanDivider />
-        <HomeSection>Parcourir</HomeSection>
-        <HomeSubSection>Le pays de ville en ville ...</HomeSubSection>
-        <MedallionContainer>
-          {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
-            return city.imageProps?.image ? (
-              <ApplicationLink to={city.id} key={city.id}>
-                <JapanImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
-                  {jsx(SharedJapanImages, city.imageProps)}
-                </JapanImageAsMedallion>
-              </ApplicationLink>
-            ) : null
-          })}
-        </MedallionContainer>
-        <JapanDivider />
-        {development && (
+        </MainTitleSection>
+        <Divider />
+        <SectionContent>
+          <PageQuote>{t("introduction.section1")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section2")}</PageQuote>
+          <PageQuote position="none">{t("introduction.section3")}</PageQuote>
+        </SectionContent>
+        <Divider />
+        <HomeSection>{t("travel.title")}</HomeSection>
+        <HomeSubSection>{t("travel.subtitle")}</HomeSubSection>
+        <MainCardContainer>
+          <SpringInJapanCard />
+        </MainCardContainer>
+        {cities.length > 0 && (
           <>
-            <HomeSection>S&apos;informer</HomeSection>
-            <HomeSubSection>A travers nos astuces, nos coups de cœur ...</HomeSubSection>
+            <Divider />
+            <HomeSection>{t("tour.title")}</HomeSection>
+            <HomeSubSection>{t("tour.subtitle")}</HomeSubSection>
+            <MedallionContainer>
+              {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
+                return city.imageProps?.image ? (
+                  <ApplicationLink to={city.id} key={city.id}>
+                    <JapanImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
+                      {jsx(SharedJapanImages, city.imageProps)}
+                    </JapanImageAsMedallion>
+                  </ApplicationLink>
+                ) : null
+              })}
+            </MedallionContainer>
+          </>
+        )}
+        {articles.length > 0 && (
+          <>
+            <Divider />
+            <HomeSection>{t("inform.title")}</HomeSection>
+            <HomeSubSection>{t("inform.subtitle")}</HomeSubSection>
             <ArticlesContainer>
-              {getArticles({
-                development,
-                tags: ["japan"],
-                kind: "highlight",
-              }).map(({ card: Card }, index) =>
+              {articles.map(({ card: Card }, index) =>
                 Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
               )}
             </ArticlesContainer>
           </>
         )}
-      </IndexJapanBlogLayout>
+        <Divider />
+        <GoToAllArticlesContainer>
+          <JapanButtonLink to="articles?country=japan">Tous nos articles</JapanButtonLink>
+        </GoToAllArticlesContainer>
+      </JapanBlogLayout>
     </>
   )
 }

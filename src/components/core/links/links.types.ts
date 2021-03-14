@@ -36,6 +36,7 @@ export interface OtherLink {
   published: boolean | Date
   card?: ComponentType<ExtraCardProps>
   additionalTags?: string[]
+  kind?: Kind
 }
 
 export interface HighlightLink {

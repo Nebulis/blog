@@ -2,7 +2,7 @@ import { css } from "@emotion/react"
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import styled from "@emotion/styled"
 import { Quote } from "../quote"
-import { ExternalLink, linkBuilder } from "../links/link"
+import { ButtonLink, ExternalLink, linkBuilder } from "../links/link"
 import { BlogLayout, IndexBlogLayout } from "../../layout/layout"
 import {
   japanCherryBlossom,
@@ -133,25 +133,35 @@ const japanLayout = `
   svg.instagram:hover,
   svg.twitter:hover,
   svg.pinterest:hover,
-  svg.search:hover {
+  svg.search:hover,
+  svg.likes {
     fill: ${japanPrimaryColorLighter};
   }
-
-  footer a {
-    color: ${japanCherryBlossom};
-  }
-  footer button.btn,
-  footer button.btn:disabled {
-    background-color: ${japanPrimaryColor};
-    border-color: ${japanPrimaryColor};
-  }
-  footer button.btn:hover {
-    background-color: ${japanPrimaryColorDarker};
-    border-color: ${japanPrimaryColorDarker};
+  header {
+    .menu-entry {
+      border-top: 1px solid ${japanPrimaryColorLighter};
+    }
   }
 
-  .menu-entry {
-    border-top: 1px solid ${japanPrimaryColorLighter};
+  .index-blog-layout-content {
+    .divider {
+      background-color: hsl(348, 41%, 53%, 0.2);
+    }
+  }
+
+  footer{ 
+    a {
+      color: ${japanCherryBlossom};
+    }
+    button.btn,
+    button.btn:disabled {
+      background-color: ${japanPrimaryColor};
+      border-color: ${japanPrimaryColor};
+    }
+    button.btn:hover {
+      background-color: ${japanPrimaryColorDarker};
+      border-color: ${japanPrimaryColorDarker};
+    }
   }
 `
 export const IndexJapanBlogLayout = styled(IndexBlogLayout)`
@@ -159,6 +169,14 @@ export const IndexJapanBlogLayout = styled(IndexBlogLayout)`
 `
 export const JapanBlogLayout = styled(BlogLayout)`
   ${japanLayout}
+`
+
+export const JapanButtonLink = styled(ButtonLink)`
+  border: 2px solid ${japanPrimaryColorDarker};
+  background-color: ${japanPrimaryColorDarker};
+  &:not(.inactive):hover {
+    color: ${japanPrimaryColorDarker};
+  }
 `
 
 export const JapanComments = styled(Comments)`

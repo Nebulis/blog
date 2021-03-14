@@ -432,8 +432,9 @@ const imageAsMedallionStyle = css`
     width: 100%;
     bottom: 0;
     height: 55px;
-    padding-top: 12.5px;
+    padding-top: 12px;
     transition: all 300ms linear;
+    font-family: auto;
   }
   .gatsby-image-wrapper {
     width: ${medallionDimension};

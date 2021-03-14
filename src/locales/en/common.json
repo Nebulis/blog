@@ -13,22 +13,6 @@
   "continent": {
     "asia": "Asia"
   },
-  "inspire": {
-    "title": "Take inspiration",
-    "subtitle": "From our stories and advice ..."
-  },
-  "travel": {
-    "title": "Travel",
-    "subtitle": "By following our journey ..."
-  },
-  "tour": {
-    "title": "Travel around",
-    "subtitle": "The country from region to region"
-  },
-  "inform": {
-    "title": "Get informed",
-    "subtitle": "With our suggestions, favorites ..."
-  },
   "country": {
     "australia": {
       "title": "Australia"
@@ -74,7 +58,10 @@
       "title": "Italy"
     },
     "japan": {
-      "title": "Japan"
+      "title": "Japan",
+      "card": {
+        "spring-in-japan": "Spring In Japan"
+      }
     },
     "kyrgyzstan": {
       "title": "Kyrgyzstan"

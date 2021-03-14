@@ -10,6 +10,7 @@ import {
   KinkakujiCard,
   NagoyaCastleCard,
   SensojiCard,
+  SpringInJapanCard,
   ToganjiCard,
 } from "./japan.cards"
 import commonFr from "../../../locales/fr/common.json"
@@ -32,7 +33,9 @@ export const japanLinks: CountryLink = {
     {
       id: "spring-in-japan",
       label: { fr: "Le Japon au printemps", en: "Spring in Japan" },
-      published: false,
+      published: new Date("2021-03-20T17:00:00.000+08:00"),
+      card: SpringInJapanCard,
+      kind: "highlight",
     },
     {
       id: "transports-in-japan",

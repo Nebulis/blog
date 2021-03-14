@@ -48,8 +48,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </SectionContent>
         <PrimaryDivider />
 
-        <HomeSection>{t("common:inspire.title")}</HomeSection>
-        <HomeSubSection>{t("common:inspire.subtitle")}</HomeSubSection>
+        <HomeSection>{t("inspire.title")}</HomeSection>
+        <HomeSubSection>{t("inspire.subtitle")}</HomeSubSection>
         <MedallionContainer>
           {countries.sort(sortByLabel(i18n.languageCode)).map((country) =>
             country.imageProps?.image ? (

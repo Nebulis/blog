@@ -228,7 +228,7 @@ continentLinks.forEach((continent) => {
         card: other.card,
         tags: [continent.id, country.id, ...(other.additionalTags ?? [])],
         country: country.id,
-        kind: "other",
+        kind: other.kind ?? "other",
       })
     })
     country.cities.forEach((city) => {
