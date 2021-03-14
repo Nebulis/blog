@@ -30,7 +30,7 @@ import { SharedCardJapanImages } from "../../../../components/images/asia/japan/
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/japan/kyoto/fushimi-inari-taisha.json"
 import translationEn from "../../../../locales/en/asia/japan/kyoto/fushimi-inari-taisha.json"
-import HomeImgUrl from "../../../../images/asia/japan/carousel-japan-2.jpg"
+import HomeImgUrl from "../../../../images/asia/japan/kyoto/fushimi/fushimi-main.jpg"
 import { useCustomTranslation } from "../../../../i18n-hook"
 
 const namespace = "asia/japan/kyoto/fushimi-inari-taisha.json"
