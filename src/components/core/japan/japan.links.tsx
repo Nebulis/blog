@@ -89,7 +89,6 @@ export const japanLinks: CountryLink = {
         {
           id: "himeji-castle",
           label: { fr: commonFr.country.japan.card["himeji-castle"], en: commonEn.country.japan.card["himeji-castle"] },
-          url: "castle",
           published: false,
           card: HimejiCastleCard,
         },
@@ -105,7 +104,6 @@ export const japanLinks: CountryLink = {
         {
           id: "nagoya-castle",
           label: { fr: commonFr.country.japan.card["nagoya-castle"], en: commonEn.country.japan.card["nagoya-castle"] },
-          url: "castle",
           published: false,
           card: NagoyaCastleCard,
         },
