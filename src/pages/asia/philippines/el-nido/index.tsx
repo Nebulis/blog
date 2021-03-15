@@ -109,7 +109,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         <Divider className="mt2" />
         <GoToAllArticlesContainer>
-          <PhilippinesButtonLink to="articles?country=philippines">Tous nos articles</PhilippinesButtonLink>
+          <PhilippinesButtonLink to="articles?country=philippines">{t("common:allArticles")}</PhilippinesButtonLink>
         </GoToAllArticlesContainer>
       </PhilippinesBlogLayout>
     </>

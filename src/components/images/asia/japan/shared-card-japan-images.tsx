@@ -15,6 +15,7 @@ const alt = {
   sensoji: "Sensoji",
   hamarikyuGarden: "Hamarikyu Garden",
   springInJapan: "Japan In Spring",
+  toganji: "Toganji",
 }
 
 export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
@@ -96,6 +97,13 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       springInJapan: file(relativePath: { eq: "asia/japan/spring-in-japan/spring-in-japan-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      toganji: file(relativePath: { eq: "asia/japan/nagoya/toganji/toganji-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

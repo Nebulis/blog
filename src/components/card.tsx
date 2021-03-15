@@ -49,9 +49,9 @@ const cardStyle = css`
     color: black;
   }
   .title.published {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    // text-overflow: ellipsis;
+    // overflow: hidden;
+    // white-space: nowrap;
   }
   .title,
   .show-more {
