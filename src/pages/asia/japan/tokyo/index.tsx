@@ -9,7 +9,7 @@ import { BlogLayout } from "../../../../components/layout/layout"
 import { extraLargeStart, largeStart } from "../../../../components/core/variables"
 import { JapanDivider } from "../../../../components/core/japan/japan"
 import { JapanImageAsMedallion } from "../../../../components/core/japan/japan.images"
-import { ADayInTokyoCard, HamarikyuGardenCard, SensojiCard } from "../../../../components/core/japan/japan.cards"
+import { TwoDaysInTokyoCard, HamarikyuGardenCard, SensojiCard } from "../../../../components/core/japan/japan.cards"
 import { japanLinks } from "../../../../components/core/japan/japan.links"
 import { useCustomTranslation } from "../../../../i18n-hook"
 import { PageProps } from "gatsby"
@@ -47,7 +47,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             }
           `}
         >
-          <ADayInTokyoCard />
+          <TwoDaysInTokyoCard />
           <HamarikyuGardenCard />
           <SensojiCard />
         </div>

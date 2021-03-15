@@ -48,21 +48,21 @@ exports[`english pages exports meta for public/en/asia/japan/fuji/lake-kawaguchi
 
 exports[`english pages exports meta for public/en/asia/japan/fuji/lake-kawaguchiko/index.html correctly: title 1`] = `"main | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/himeji/castle/index.html correctly: meta-description 1`] = `"Discover Himeji Castle through our visit. In this article, we answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located. This article includes our travelogue and our photos."`;
+exports[`english pages exports meta for public/en/asia/japan/himeji/himeji-castle/index.html correctly: meta-description 1`] = `"Discover Himeji Castle through our visit. In this article, we answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located. This article includes our travelogue and our photos."`;
 
-exports[`english pages exports meta for public/en/asia/japan/himeji/castle/index.html correctly: social-network 1`] = `"Magnificent castle, also known as the White Heron Castle. It is considered one of the most beautiful castles in Japan. It is also known to be a great place to observe sakura, during the cherry blossom season in spring."`;
+exports[`english pages exports meta for public/en/asia/japan/himeji/himeji-castle/index.html correctly: social-network 1`] = `"Magnificent castle, also known as the White Heron Castle. It is considered one of the most beautiful castles in Japan. It is also known to be a great place to observe sakura, during the cherry blossom season in spring."`;
 
-exports[`english pages exports meta for public/en/asia/japan/himeji/castle/index.html correctly: title 1`] = `"Himeji Castle | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/himeji/himeji-castle/index.html correctly: title 1`] = `"Himeji Castle | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: meta-description 1`] = `"In each article, we answer your questions: When to go? How long ? What budget to plan? For each place visited, we try to convey our visit and our impression as well as possible. We also tell you How to get there? Why ? When? How long and at what period? Without forgetting the locations and the prices."`;
 
-exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: social-network 1`] = `"The city of Himeji is above all known for its magnificent castle, considered one of the most beautiful castles in Japan. But Himeji is not just a castle. Take a day and discover the Koko-en Garden, a huge park with multiple gardens and go on an excursion to Mount Shosha to discover the Engyō-ji temple."`;
 
-exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: title 1`] = `"japan | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: title 1`] = `"Himeji | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/index.html correctly: meta-description 1`] = `"Voyager au pays du Soleil-Levant c’est découvrir un mélange entre modernité et traditions. Visitez les multiples temples et châteaux d’un héritage culturel riche. Admirez les changements de décor fascinant des paysages entre chaque saison. Découvrez des villes animées et ses quartiers mouvementés. Ou détendez-vous tout simplement dans un onsen. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables. De Tokyo à Osaka en passant par la célèbre ville de Kyoto ou le Mont Fuji. Ou bien l’île d’Hokkaidō et ses multiples parcs et volcans. On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon, pour l’instant au printemps et nous vous parlerons très prochainement du Japon en automne et en hiver, alors restez connecté."`;
+exports[`english pages exports meta for public/en/asia/japan/index.html correctly: meta-description 1`] = `"Traveling to the Land of the Rising Sun means discovering a mix of modernity and tradition. Uncover the cultural heritage of the temples and castles. Admire the fascinating changes of scenery depending on the season. Discover bustling cities and neighborhoods, or just relax in an onsen. Follow our city-to-city guide to discover our selection of must-see places. From Tokyo to Osaka via the famous city of Kyoto or Mount Fuji. Even Hokkaidō Island and its multiple parks and volcanoes. We let you find through our articles and our photos, the magic of Japan, for the moment during spring, but we will share more about Japan during fall and winter very soon, so stay tuned."`;
 
-exports[`english pages exports meta for public/en/asia/japan/index.html correctly: social-network 1`] = `"Voyager au pays du Soleil-Levant c’est découvrir un mélange entre modernité et traditions. Visitez les multiples temples et châteaux d’un héritage culturel riche. Admirez les changements de décor fascinant des paysages entre chaque saison. Découvrez des villes animées et ses quartiers mouvementés. Ou détendez-vous tout simplement dans un onsen. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables. De Tokyo à Osaka en passant par la célèbre ville de Kyoto ou le Mont Fuji. Ou bien l’île d’Hokkaidō et ses multiples parcs et volcans. On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon, pour l’instant au printemps et nous vous parlerons très prochainement du Japon en automne et en hiver, alors restez connecté."`;
+exports[`english pages exports meta for public/en/asia/japan/index.html correctly: social-network 1`] = `"Traveling to the Land of the Rising Sun means discovering a mix of modernity and tradition. Uncover the cultural heritage of the temples and castles. Admire the fascinating changes of scenery depending on the season. Discover bustling cities and neighborhoods, or just relax in an onsen. Follow our city-to-city guide to discover our selection of must-see places. From Tokyo to Osaka via the famous city of Kyoto or Mount Fuji. Even Hokkaidō Island and its multiple parks and volcanoes. We let you find through our articles and our photos, the magic of Japan, for the moment during spring, but we will share more about Japan during fall and winter very soon, so stay tuned."`;
 
 exports[`english pages exports meta for public/en/asia/japan/index.html correctly: title 1`] = `"Japan | Travel Blog"`;
 
@@ -96,17 +96,17 @@ exports[`english pages exports meta for public/en/asia/japan/kyoto/kinkakuji/ind
 
 exports[`english pages exports meta for public/en/asia/japan/kyoto/kinkakuji/index.html correctly: title 1`] = `"Kinkaku-ji Temple | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/castle/index.html correctly: meta-description 1`] = `"Discover Nagoya Castle through our visit. In this article, we share our travelogue and photos and answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located.."`;
-
-exports[`english pages exports meta for public/en/asia/japan/nagoya/castle/index.html correctly: social-network 1`] = `"Symbol of this not-touristy city in Japan, Nagoya Castle is the pride of the city of Nagoya. Located downtown, it is surrounded by a large park."`;
-
-exports[`english pages exports meta for public/en/asia/japan/nagoya/castle/index.html correctly: title 1`] = `"Nagoya Castle | Travel Blog"`;
-
 exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: title 1`] = `"japan | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: meta-description 1`] = `"Discover Nagoya Castle through our visit. In this article, we share our travelogue and photos and answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located.."`;
+
+exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: social-network 1`] = `"Symbol of this not-touristy city in Japan, Nagoya Castle is the pride of the city of Nagoya. Located downtown, it is surrounded by a large park."`;
+
+exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: title 1`] = `"Nagoya Castle | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
@@ -114,7 +114,7 @@ exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/inde
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"main | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Let's discover Japan during Spring. How many days ? What budget to forecast? We respond to your questions based on our own experience. We also show you our travel itinerary for a week and a half."`;
+exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Let's discover Japan during Spring. How many days ? What budget to plan? We respond to your questions based on our own experience. We also show you our travel itinerary for a week and a half."`;
 
 exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: social-network 1`] = `"Japan, this unmissable country to visit in Asia. Every season has its own scenery. From quiet remote places to the hustle and bustle of big cities. Whether you prefer the city or the countryside, there will obviously be something that you will get interested in ..."`;
 

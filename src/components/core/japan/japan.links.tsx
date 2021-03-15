@@ -1,6 +1,6 @@
 import { CountryLink } from "../links/links.types"
 import {
-  ADayInTokyoCard,
+  TwoDaysInTokyoCard,
   ArashiyamaCard,
   DaigojiCard,
   FushimiInariTaishaCard,
@@ -38,9 +38,24 @@ export const japanLinks: CountryLink = {
       kind: "highlight",
     },
     {
-      id: "transports-in-japan",
+      id: "transport-japan",
       label: { fr: "Transports", en: "Transports" },
       url: "transports",
+      published: false,
+    },
+    {
+      id: "nijo-castle",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "kiyomizu-dera",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "tokugawaen-garden",
+      label: { fr: "", en: "" },
       published: false,
     },
   ],
@@ -109,7 +124,7 @@ export const japanLinks: CountryLink = {
         },
         {
           id: "toganji",
-          label: { fr: "Togan-ji", en: "Togan-ji" },
+          label: { fr: commonFr.country.japan.card.toganji, en: commonEn.country.japan.card.toganji },
           published: false,
           card: ToganjiCard,
         },
@@ -123,8 +138,11 @@ export const japanLinks: CountryLink = {
       },
       highlights: [
         {
-          id: "lake-kawaguchiko",
-          label: { fr: "Lac Kawaguchiko", en: "Kawaguchiko Lake" },
+          id: "kawaguchiko-lake",
+          label: {
+            fr: commonFr.country.japan.card["kawaguchiko-lake"],
+            en: commonEn.country.japan.card["kawaguchiko-lake"],
+          },
           published: false,
           card: KawaguchikoLakeCard,
         },
@@ -138,10 +156,13 @@ export const japanLinks: CountryLink = {
       },
       highlights: [
         {
-          id: "a-day-in-tokyo",
-          label: { fr: "Un jour à Tokyo", en: "A day in Tokyo" },
+          id: "two-days-in-tokyo",
+          label: {
+            fr: commonFr.country.japan.card["two-days-in-tokyo"],
+            en: commonEn.country.japan.card["two-days-in-tokyo"],
+          },
           published: false,
-          card: ADayInTokyoCard,
+          card: TwoDaysInTokyoCard,
         },
         {
           id: "sensoji",
@@ -151,7 +172,10 @@ export const japanLinks: CountryLink = {
         },
         {
           id: "hamarikyu-garden",
-          label: { fr: "Jardins de Hamarikyu", en: "Hamarikyu Garden" },
+          label: {
+            fr: commonFr.country.japan.card["hamarikyu-garden"],
+            en: commonEn.country.japan.card["hamarikyu-garden"],
+          },
           published: false,
           card: HamarikyuGardenCard,
         },

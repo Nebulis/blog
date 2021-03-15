@@ -11,9 +11,8 @@ import {
   japanPrimaryColorLighter,
 } from "./japan.variables"
 import { Link } from "gatsby"
-import { Comments } from "../comments"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
-import { City } from "../highlight"
+import { City, Headline } from "../highlight"
 import { Title } from "../title"
 import { Divider } from "../divider"
 
@@ -32,23 +31,12 @@ export const JapanLine: FunctionComponent<HTMLAttributes<any> & JapanLineProps> 
   </ExternalLink>
 )
 
+// TODO delete
 export const JapanQuote = styled(Quote)`
   .quote::before {
     color: #ffb7c5;
   }
 `
-interface SpringInJapanQuoteProps {
-  short?: boolean
-}
-export const SpringInJapanQuote: FunctionComponent<SpringInJapanQuoteProps> = ({ short }) => (
-  <JapanQuote>
-    Le Japon, ce pays incontournable à visiter en Asie. Un nouveau décor à chaque saison. Un mélange entre zénitude dans
-    les endroits reculés et animation et dynamisme dans
-    {short
-      ? "..."
-      : " les villes, autant dire qu’en fonction de ce que vous recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre bonheur..."}
-  </JapanQuote>
-)
 
 export const HimejiCastleQuote = () => (
   <JapanQuote>
@@ -115,6 +103,7 @@ export const HamarikyuGardenQuote = () => (
   </JapanQuote>
 )
 
+// TODO delete
 export const JapanLink = linkBuilder(styled(Link)`
   color: ${japanPrimaryColor};
   &:visited {
@@ -127,7 +116,17 @@ export const JapanExternalLink = styled(ExternalLink)`
     color: ${japanPrimaryColor};
   }
 `
-
+const buttonStyle = `
+  button.btn,
+  button.btn:disabled {
+    background-color: ${japanPrimaryColor};
+    border-color: ${japanPrimaryColor};
+  }
+  button.btn:hover {
+    background-color: ${japanPrimaryColorDarker};
+    border-color: ${japanPrimaryColorDarker};
+  }
+`
 const japanLayout = `
   svg.facebook:hover,
   svg.instagram:hover,
@@ -147,20 +146,32 @@ const japanLayout = `
     .divider {
       background-color: hsl(348, 41%, 53%, 0.2);
     }
+    .quote::before {
+      color: #ffb7c5;
+    }
+    a.mdx-pseudo-processor-link{
+      color: ${japanPrimaryColor};
+      font-weight: bold;
+      text-decoration: underline;
+      &:visited {
+        color: ${japanPrimaryColor};
+      }
+    }
+    .comments {
+      ${buttonStyle}
+      .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgb(184, 86, 106, 0.25);
+        border-color: ${japanPrimaryColor}
+      }
+      .active svg {
+        color: ${japanPrimaryColor};
+      }
+    }
   }
 
   footer{ 
     a {
       color: ${japanCherryBlossom};
-    }
-    button.btn,
-    button.btn:disabled {
-      background-color: ${japanPrimaryColor};
-      border-color: ${japanPrimaryColor};
-    }
-    button.btn:hover {
-      background-color: ${japanPrimaryColorDarker};
-      border-color: ${japanPrimaryColorDarker};
     }
   }
 `
@@ -179,20 +190,18 @@ export const JapanButtonLink = styled(ButtonLink)`
   }
 `
 
-export const JapanComments = styled(Comments)`
-  a,
-  span.reply,
-  .form-group.active svg,
-  a:visited {
-    color: ${japanPrimaryColor};
-  }
-  textarea.form-control:focus,
-  input.form-control:focus {
-    border-color: ${japanPrimaryColor};
-    box-shadow: 0 0 0 0.2rem rgba(184, 86, 106, 0.21);
+const japanHeadlineStyle = css`
+  color: ${japanPrimaryColor};
+  img {
+    width: 16px;
+    height: 16px;
   }
 `
-
+export const JapanHeadline: FunctionComponent = ({ children }) => (
+  <Headline css={japanHeadlineStyle} image={cherryBlossom} alt="cherry blossom">
+    {children}
+  </Headline>
+)
 const japanCityStyle = css`
   color: ${japanPrimaryColor};
 `

@@ -30,10 +30,10 @@
     "title": "Notre Itinéraire",
     "part1": "Après maintes et maintes recherches avant de se décider sur quel itinéraire prendre et quelle ville visiter, nous avons enfin opté pour un itinéraire précis.",
     "part2": "Nous n’avions malheureusement pas beaucoup de temps, qu’une petite semaine et demi pour visiter le #maximum de choses# et SURTOUT à divers endroits.",
-    "part3": "Il y a tellement de choses à voir que ce fut dur de choisir, mais on s’est surtout concentré sur les villes en dehors de Tokyo en tenant compte des [périodes de floraison des cerisiers](todo) lors de nos jours de visite.",
+    "part3": "Il y a tellement de choses à voir que ce fut dur de choisir, mais on s’est surtout concentré sur les villes en dehors de Tokyo en tenant compte des [périodes de floraison des cerisiers](https://www.japan-guide.com/sakura/) lors de nos jours de visite.",
     "part4": "#Tokyo ↠ Himeji ↠ Kyoto ↠ Nagoya ↠ Mt Fuji ↠ Tokyo#",
     "part5": "Nous préférions faire le grand trajet le premier jour et ensuite en remontant faire les haltes là où nous avions prévu de visiter pour en profiter au maximum et faire des pauses, parce que les transports en commun c’est bien beau, c’est bien pratique (surtout au Japon ! Et il faut quand même le dire, les trains sont très très confortables) mais au bout d’un moment c’est lassant.",
-    "part6": "N’hésitez pas à aller voir notre article sur [les transports au Japon](todo)."
+    "part6": "N’hésitez pas à aller voir notre article sur [les transports au Japon](transport-japan)."
   },
   "visit": {
     "title": "Les visites",
@@ -52,7 +52,7 @@
     "part3": "L’après midi direction #le temple de Kinkakuji#, là aussi nous avons pris notre temps, d’autant plus que le terrain est assez grand et qu'avec le monde qu’il y a à chaque fois, il faut s’armer de patience pour prendre des photos sans trop de mondes autour.",
     "part4": "Cela dit, nous avons remarqué que les gens prennent surtout des photos au début, quand on arrive en face du château, c’est certes un bon spot mais il y en a des tas d’autres où les gens ne s’attardent pas.",
     "part5": "_Savoir prendre son temps, profitez de l’instant présent_",
-    "part6": "Nous devions faire le [château de Nijo-jo](todo) dans la foulée mais il fermait à 16h et comme nous avions décidé de profiter au maximum de chaque endroit, nous n’avions plus le temps d’y aller, ce n’est que partie remise, mais on vous l’indique quand même si vous voulez l’inclure dans votre trajet."
+    "part6": "Nous devions faire le [château de Nijo-jo](nijo-castle) dans la foulée mais il fermait à 16h et comme nous avions décidé de profiter au maximum de chaque endroit, nous n’avions plus le temps d’y aller, ce n’est que partie remise, mais on vous l’indique quand même si vous voulez l’inclure dans votre trajet."
   },
   "visit3": {
     "title": "JOUR 3 - KYOTO",
@@ -61,13 +61,13 @@
     "part3": "Direction #Fushimi Inari Taisha#, vous y découvrirez des #milliers de Torii rouges# qui forment un chemin dans la montagne.",
     "part4": "Malheureusement pour nous la pluie s’est invitée pour la première fois de notre séjour et même si le soleil est réapparu pendant notre visite ça nous a quand même un peu coupés dans notre élan.",
     "part5": "Cependant ce lieu reste clairement un #incontournable# à notre sens si vous passez à Kyoto et la horde de touristes présente ne nous fera pas dire le contraire.",
-    "part6": "Nous devions visiter le [temple Kiyomizu](todo) ensuite mais il était en travaux et nous avons donc décidé de nous arrêter pour ce jour-là."
+    "part6": "Nous devions visiter le [temple Kiyomizu](kiyomizu-dera) ensuite mais il était en travaux et nous avons donc décidé de nous arrêter pour ce jour-là."
   },
   "visit4": {
     "title": "JOUR 4 - NAGOYA",
     "part1": "Petite journée à #Nagoya# pour visiter un deuxième château, après le magnifique château blanc de Himeji nous voulions également voir celui de Nagoya, les jardins sont d’ailleurs beaucoup plus grand et plus fleuries, contrairement à Himeji il n’y a pas que des cerisiers.",
     "part2": "Direction #le temple de Togan-Ji# très peu connu, un peu caché d’ailleurs, on vous le conseille vraiment si vous êtes de passage à Nagoya, une petite promenade pour découvrir #son immense statue de Bouddha#, ce n’est pas un incontournable mais si vous avez du temps profitez-en.",
-    "part3": "Si vous êtes à Nagoya en automne on vous conseille également de faire le [Tokugawa-En Garden](todo), un parc qui a l’air juste magnifique quand les feuilles rouges des érables apparaissent."
+    "part3": "Si vous êtes à Nagoya en automne on vous conseille également de faire le [Tokugawa-En Garden](tokugawaen-garden), un parc qui a l’air juste magnifique quand les feuilles rouges des érables apparaissent."
   },
   "visit5": {
     "title": "JOUR 5 & 6 - TOKYO",

@@ -31,7 +31,7 @@ const style = css`
     box-shadow: 0 0 0 0.2rem rgba(212, 234, 220, 0.25);
   }
   label {
-    margin: 0;
+    margin: 0 0 0.25rem 0;
     font-size: 0.7rem;
     color: #495057;
     font-weight: bold;
