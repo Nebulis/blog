@@ -27,6 +27,16 @@ export const PhilippinesImageAsMedallion = styled(ImageAsMedallion)`
 
 const drawer = withDraw(drawSth)
 
+const buttonStyle = `
+  button.btn,
+  button.btn:disabled,
+  button.btn:hover {
+    background-color: ${philippinesPrimaryColorDarker};
+    border-color: ${philippinesPrimaryColorDarker};
+    color: white;
+  }
+`
+
 const philippinesLayout = `
   svg.facebook:hover,
   svg.instagram:hover,
@@ -42,18 +52,12 @@ const philippinesLayout = `
     }
   }
   .index-blog-layout-content {
+    ${buttonStyle}
     .quote::before {
       color: ${philippinesPrimaryColor};
     }
     .divider {
       background-color: ${philippinesPrimaryColor};
-    }
-    button.btn,
-    button.btn:disabled,
-    button.btn:hover {
-      background-color: ${philippinesPrimaryColorDarker};
-      border-color: ${philippinesPrimaryColorDarker};
-      color: white;
     }
     .comments .active svg {
       color: ${philippinesPrimaryColor};
@@ -73,6 +77,7 @@ const philippinesLayout = `
   }
 
   footer {
+    ${buttonStyle}
     a {
       color: ${philippinesPrimaryColor};
     }

@@ -44,21 +44,29 @@ const elements: OrganisationCard[] = [
     },
     to: "philippines",
   },
+  {
+    label: "common:country.japan.title",
+    image: SharedAsiaImages,
+    imageProps: {
+      image: "homeJapan",
+    },
+    to: "japan",
+  },
 ]
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t } = useCustomTranslation([namespace, "common"])
   const cards = development ? elements : elements.filter(({ to }) => isLinkPublished(to))
-  const description = `${t("part1")} ${t("part2")} ${t("part3")} ${t("part4")}`
-  const googleDescription = `${t("part1")} ${t("part2")}`
+  const socialNetworkDescription = `${t("part1")} ${t("part2")} ${t("part3")}`
+  const googleDescription = t("part1")
 
   return (
     <>
       <SEO
         title={t("title")}
         location={location}
-        socialNetworkDescription={description}
+        socialNetworkDescription={socialNetworkDescription}
         googleDescription={googleDescription}
       />
       <BlogLayoutWithDrawer page="spring" location={location}>
@@ -68,8 +76,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote>{t("part1")}</PageQuote>
           <PageQuote position="none">{t("part2")}</PageQuote>
           <PageQuote position="none">{t("part3")}</PageQuote>
-          <PageQuote position="none">{t("part4")}</PageQuote>
         </SectionContent>
+        <PrimaryDivider />
         <CountriesContainer>
           {cards.sort(sortByField("label")).map(({ label, image, to, imageProps }, index) => (
             <CountryContainer title={t(label)} image={image} to={to} key={index} imageProps={imageProps} />

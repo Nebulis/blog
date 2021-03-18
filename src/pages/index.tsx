@@ -319,7 +319,6 @@ interface CarouselElementType {
   component?: React.ComponentType
   image?: string
   to: string
-  country: string
 }
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
@@ -334,32 +333,26 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     const tmp: CarouselElementType[] = [
       {
         to: "vietnam",
-        country: t("common:country.vietnam.title"),
         image: "vietnam1",
       },
       {
         to: "vietnam",
-        country: t("common:country.vietnam.title"),
         image: "vietnam2",
       },
       {
         to: "philippines",
-        country: t("common:country.philippines.title"),
         image: "philippines1",
       },
       {
         to: "philippines",
-        country: t("common:country.philippines.title"),
         image: "philippines2",
       },
       {
         to: "japan",
-        country: t("common:country.japan.title"),
         image: "japan1",
       },
       {
         to: "japan",
-        country: t("common:country.japan.title"),
         image: "japan2",
       },
     ].filter(({ to }) => {
@@ -368,7 +361,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     return shuffleArray(tmp)
   })
 
-  const countriesWithArticles = ["philippines", "vietnam"].filter((country) => {
+  const countriesWithArticles = ["philippines", "vietnam", "japan"].filter((country) => {
     return development || isLinkPublished(country)
   })
   const description = `${t("index:welcome.section1")} ${t("index:welcome.section2")} ${t("index:welcome.section3")}`
@@ -377,9 +370,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <SEO location={location} socialNetworkDescription={description} />
       <HomeBlogLayout page="home" className="" location={location}>
         <Carousel>
-          {carouselElement.map(({ country, component: Component, to, image }, index) => {
+          {carouselElement.map(({ component: Component, to, image }, index) => {
             return (
-              <CarouselImage to={to} country={country} key={index}>
+              <CarouselImage to={to} country={t(`common:country.${to}.title`)} key={index}>
                 {image ? <CarouselImageQuery image={image} /> : Component ? <Component /> : null}
               </CarouselImage>
             )

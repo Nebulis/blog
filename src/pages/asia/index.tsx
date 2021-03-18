@@ -27,16 +27,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const countries = development ? asiaLinks.countries : asiaLinks.countries.filter(isLinkPublished)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const googleDescription = `${t("quote.part3")}}`
-  const description = t("quote.part2")
   return (
     <>
       <SEO
         title={t("common:continent.asia")}
         location={location}
         image={VietnamImage}
-        socialNetworkDescription={description}
-        googleDescription={googleDescription}
+        socialNetworkDescription={t("quote.part1")}
+        googleDescription={t("quote.part2")}
       />
       <BlogLayoutWithDrawer page="asia" location={location}>
         <MainTitleSection>{t("common:continent.asia")}</MainTitleSection>
@@ -44,7 +42,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <SectionContent>
           <PageQuote>{t("quote.part1")}</PageQuote>
           <PageQuote position="none">{t("quote.part2")}</PageQuote>
-          <PageQuote position="none">{t("quote.part3")}</PageQuote>
         </SectionContent>
         <PrimaryDivider />
 
