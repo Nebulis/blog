@@ -1,4 +1,5 @@
-export const japanPrimaryColor = "#b8566a"
-export const japanPrimaryColorLighter = "#d0919e" // 35% lighter
-export const japanPrimaryColorDarker = "#a14357" // 15% darker
+// main #C97E8D
+
+export const japanPrimaryColor = "#C97E8D" // contrast of 3 with white
+export const japanPrimaryColorDarker = "#ba5b6e" // 15% darker
 export const japanCherryBlossom = "#f0bed6"

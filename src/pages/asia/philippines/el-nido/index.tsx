@@ -71,8 +71,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote>{t("introduction.section1")}</PageQuote>
           <PageQuote position="none">{t("introduction.section2")}</PageQuote>
           <PageQuote position="none">{t("introduction.section3")}</PageQuote>
-          <PageQuote position="none">{t("introduction.section4")}</PageQuote>
-          <PageQuote position="none">{t("introduction.section5")}</PageQuote>
         </SectionContent>
         <Divider />
         <CityHomeSection>{t("section1")}</CityHomeSection>

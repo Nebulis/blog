@@ -29,7 +29,6 @@ import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 const namespace = "asia/japan/index"
 i18n.addResourceBundle("fr", namespace, indexFr)
 i18n.addResourceBundle("en", namespace, indexEn)
-// TODO english
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
@@ -37,10 +36,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const country = t("common:country.japan.title")
   const articles = getArticles({ kind: "other", tags: ["japan"], development })
   const cities = development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished)
-  const description = `${t("introduction.section1")} ${t("introduction.section2")} ${t("introduction.section3")}`
+  const description = `${t("introduction.section2")} ${t("introduction.section3")}`
   return (
     <>
-      <SEO title={country} location={location} image={VietnamImage} socialNetworkDescription={description} />
+      <SEO
+        title={country}
+        location={location}
+        image={VietnamImage}
+        socialNetworkDescription={description}
+        googleDescription={description}
+      />
       <JapanBlogLayout page="japan" location={location}>
         <MainTitleSection>
           <img src={cherryBlossom} alt="cherry blossom" />
@@ -57,7 +62,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <HomeSection>{t("travel.title")}</HomeSection>
         <HomeSubSection>{t("travel.subtitle")}</HomeSubSection>
         <MainCardContainer>
-          <SpringInJapanCard />
+          <SpringInJapanCard fluidObject={{ aspectRatio: 4 / 3 }} />
         </MainCardContainer>
         {cities.length > 0 && (
           <>

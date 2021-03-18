@@ -4,12 +4,7 @@ import styled from "@emotion/styled"
 import { Quote } from "../quote"
 import { ButtonLink, ExternalLink, linkBuilder } from "../links/link"
 import { BlogLayout, IndexBlogLayout } from "../../layout/layout"
-import {
-  japanCherryBlossom,
-  japanPrimaryColor,
-  japanPrimaryColorDarker,
-  japanPrimaryColorLighter,
-} from "./japan.variables"
+import { japanCherryBlossom, japanPrimaryColor, japanPrimaryColorDarker } from "./japan.variables"
 import { Link } from "gatsby"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import { City, Headline } from "../highlight"
@@ -134,11 +129,11 @@ const japanLayout = `
   svg.pinterest:hover,
   svg.search:hover,
   svg.likes {
-    fill: ${japanPrimaryColorLighter};
+    fill: ${japanPrimaryColor};
   }
   header {
     .menu-entry {
-      border-top: 1px solid ${japanPrimaryColorLighter};
+      border-top: 1px solid ${japanPrimaryColor};
     }
   }
 
@@ -170,6 +165,7 @@ const japanLayout = `
   }
 
   footer{ 
+    ${buttonStyle}
     a {
       color: ${japanCherryBlossom};
     }
@@ -183,10 +179,10 @@ export const JapanBlogLayout = styled(BlogLayout)`
 `
 
 export const JapanButtonLink = styled(ButtonLink)`
-  border: 2px solid ${japanPrimaryColorDarker};
-  background-color: ${japanPrimaryColorDarker};
+  border: 2px solid ${japanPrimaryColor};
+  background-color: ${japanPrimaryColor};
   &:not(.inactive):hover {
-    color: ${japanPrimaryColorDarker};
+    color: ${japanPrimaryColor};
   }
 `
 

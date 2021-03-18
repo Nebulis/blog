@@ -30,7 +30,7 @@ exports[`french pages exports meta for public/articles/index.html correctly: soc
 
 exports[`french pages exports meta for public/articles/index.html correctly: title 1`] = `"Tous nos articles | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/index.html correctly: meta-description 1`] = `"Retrouvez dans notre blog les plus belles perles d’Asie ainsi que où et quand voyager pour vos vacances de rêve.}"`;
+exports[`french pages exports meta for public/asia/index.html correctly: meta-description 1`] = `"Retrouvez dans notre blog les plus belles perles d’Asie ainsi que où et quand voyager pour vos vacances de rêve."`;
 
 exports[`french pages exports meta for public/asia/index.html correctly: social-network 1`] = `"Farniente sur des plages paradisiaques, visite de temples traditionnels, trek dans la jungle ou simple promenade à la découverte de paysages à couper le souffle, des grandes villes aux petits villages, en apprenant les traditions de certaines tribus ou en observant avec discrétion les animaux sauvages ... Tant de pays qui incitent à l’évasion et font rêver."`;
 
@@ -60,9 +60,9 @@ exports[`french pages exports meta for public/asia/japan/himeji/index.html corre
 
 exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly: title 1`] = `"Himeji | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/index.html correctly: meta-description 1`] = `"Voyager au pays du Soleil-Levant c’est découvrir un mélange entre modernité et traditions. Visitez les multiples temples et châteaux d’un héritage culturel riche. Admirez les changements de décor fascinant des paysages entre chaque saison. Découvrez des villes animées et ses quartiers mouvementés. Ou détendez-vous tout simplement dans un onsen. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables. De Tokyo à Osaka en passant par la célèbre ville de Kyoto ou le Mont Fuji. Ou bien l’île d’Hokkaidō et ses multiples parcs et volcans. On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon, pour l’instant au printemps et nous vous parlerons très prochainement du Japon en automne et en hiver, alors restez connecté."`;
+exports[`french pages exports meta for public/asia/japan/index.html correctly: meta-description 1`] = `"Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables. On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon, pour l’instant au printemps et nous vous parlerons très prochainement du Japon en automne et en hiver, alors restez connecté."`;
 
-exports[`french pages exports meta for public/asia/japan/index.html correctly: social-network 1`] = `"Voyager au pays du Soleil-Levant c’est découvrir un mélange entre modernité et traditions. Visitez les multiples temples et châteaux d’un héritage culturel riche. Admirez les changements de décor fascinant des paysages entre chaque saison. Découvrez des villes animées et ses quartiers mouvementés. Ou détendez-vous tout simplement dans un onsen. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables. De Tokyo à Osaka en passant par la célèbre ville de Kyoto ou le Mont Fuji. Ou bien l’île d’Hokkaidō et ses multiples parcs et volcans. On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon, pour l’instant au printemps et nous vous parlerons très prochainement du Japon en automne et en hiver, alors restez connecté."`;
+exports[`french pages exports meta for public/asia/japan/index.html correctly: social-network 1`] = `"Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables. On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon, pour l’instant au printemps et nous vous parlerons très prochainement du Japon en automne et en hiver, alors restez connecté."`;
 
 exports[`french pages exports meta for public/asia/japan/index.html correctly: title 1`] = `"Japon | Blog Voyage"`;
 
@@ -114,7 +114,7 @@ exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.ht
 
 exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"main | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Ici nous partons au Japon à la saison du printemps. Combien de jours ? Quel budget prévoir ? On vous répond en se basant sur notre propre expérience. On vous indique également notre itinéraire de voyage pour une semaine et demie."`;
+exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Ici nous partons au Japon à la saison du printemps. Combien de jours ? Quel budget prévoir ? On vous répond en se basant sur notre propre expérience. On vous indique également notre itinéraire de voyage pour une semaine."`;
 
 exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: social-network 1`] = `"Le Japon, ce pays incontournable à visiter en Asie. Un nouveau décor à chaque saison. Un mélange entre zénitude dans les endroits reculés et animation et dynamisme dans les villes, autant dire qu’en fonction de ce que vous recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre bonheur ..."`;
 
@@ -254,12 +254,12 @@ exports[`french pages exports meta for public/index.html correctly: title 1`] = 
 
 exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: meta-description 1`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ?"`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: social-network 1`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ? Les beaux jours arrivent, c’est le moment de profiter des paysages fleuris, d’un ciel bleu et ensoleillé et de températures agréables. En Asie, profitez des derniers mois favorables et d’une chaleur encore supportable. Plages paradisiaques sous un soleil éclatant, trek dans la jungle, visite de l’héritage culturel propre à chaque pays, vous avez encore le choix mais dépêchez-vous !"`;
+exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: social-network 1`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ? Les beaux jours arrivent, c’est le moment de profiter des paysages fleuris, d’un ciel bleu et ensoleillé et de températures agréables. En Asie, profitez des derniers mois favorables et d’une chaleur encore supportable."`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: title 1`] = `"Voyager au printemps | Blog Voyage"`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly: meta-description 1`] = `"Vous êtes plutôt magie de Noël sous la neige ? Ou le manque de soleil a plutôt tendance à vous déprimer ?"`;
+exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly: meta-description 1`] = `"Vous êtes plutôt magie de Noël sous la neige ? Ou le manque de soleil a plutôt tendance à vous déprimer ? Tant d’endroits pour passer les vacances de vos rêves en décembre, janvier ou février."`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly: social-network 1`] = `"Vous êtes plutôt magie de Noël sous la neige ? Ou le manque de soleil a plutôt tendance à vous déprimer ? Passer ses vacances près de magnifiques paysages recouverts d’un grand manteau blanc, louer un chalet pour une semaine cocooning ou partir en voyage au ski et s’initier aux sports d'hiver. Ou bien ... Fuir le froid pour des plages paradisiaques, s’évader sous le soleil des tropiques. Découvrir des paysages uniques et partir à la rencontre de nouvelles cultures. Tant d’endroits pour passer les vacances de vos rêves en décembre, janvier ou février. Alors, vous avez décidé ? Plutôt neige ou soleil en hiver ?"`;
+exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly: social-network 1`] = `"Passer ses vacances près de magnifiques paysages recouverts d’un grand manteau blanc ou bien fuir le froid pour des plages paradisiaques et s’évader sous le soleil des tropiques. Tant d’endroits pour passer les vacances de vos rêves en décembre, janvier ou février."`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly: title 1`] = `"Voyager en hiver | Blog Voyage"`;
