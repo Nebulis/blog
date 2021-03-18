@@ -252,6 +252,12 @@ exports[`french pages exports meta for public/index.html correctly: social-netwo
 
 exports[`french pages exports meta for public/index.html correctly: title 1`] = `"Magic of travels | Blog Voyage"`;
 
+exports[`french pages exports meta for public/organisation/when-to-go/autumn/index.html correctly: meta-description 1`] = `"Envie de prolonger votre été ? Tant d’endroits pour passer vos vacances en octobre, novembre ou décembre."`;
+
+exports[`french pages exports meta for public/organisation/when-to-go/autumn/index.html correctly: social-network 1`] = `"Profitez de la rentrée pour découvrir des pays près de chez vous sans les hordes de touristes … Ou partez loin de chez vous pour un dépaysement total, l’Asie par exemple, vous rouvre ses portes.  Vous pouvez également profiter pleinement de l’automne en admirant les couleurs des arbres à cette saison qui rendent les paysages magnifiques."`;
+
+exports[`french pages exports meta for public/organisation/when-to-go/autumn/index.html correctly: title 1`] = `"Voyager en automne | Blog Voyage"`;
+
 exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: meta-description 1`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ?"`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: social-network 1`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ? Les beaux jours arrivent, c’est le moment de profiter des paysages fleuris, d’un ciel bleu et ensoleillé et de températures agréables. En Asie, profitez des derniers mois favorables et d’une chaleur encore supportable."`;

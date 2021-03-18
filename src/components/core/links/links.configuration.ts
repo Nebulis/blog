@@ -102,6 +102,7 @@ export const menuLinks: NavigationLink[] = [
           {
             id: "autumn",
             label: { fr: "Automne", en: "Autumn" },
+            published: true,
             sections: [],
           },
           {

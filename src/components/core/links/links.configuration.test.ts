@@ -22,7 +22,7 @@ const categoriesLinks = () => {
   expect(getLink("spring")).toMatchObject({ label: { en: "Spring", fr: "Printemps" }, published: true })
   expect(getLink("summer")).toMatchObject({ label: { fr: "Été", en: "Summer" }, published: false })
   expect(getLink("winter")).toMatchObject({ label: { fr: "Hiver", en: "Winter" }, published: true })
-  expect(getLink("autumn")).toMatchObject({ label: { fr: "Automne", en: "Autumn" }, published: false })
+  expect(getLink("autumn")).toMatchObject({ label: { fr: "Automne", en: "Autumn" }, published: true })
   expect(getLink("when-to-go")).toMatchObject({ label: { fr: "Quand Partir", en: "When to go" }, published: true })
   expect(getLink("prepare")).toMatchObject({ label: { fr: "Prepare", en: "Prepare" }, published: false })
   expect(getLink("organisation")).toMatchObject({
