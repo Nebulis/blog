@@ -79,7 +79,7 @@ const asiaLinks = () => {
 const japanLinks = () => {
   // japan assertions
   expect(getLink("spring-in-japan")).toMatchObject({
-    label: { fr: "Le Japon au printemps", en: "Spring In Japan" },
+    label: { fr: "Le Japon au printemps : Au milieu des Sakuras", en: "Spring In Japan: Under the Sakuras" },
     published: false,
   })
   expect(getLink("transport-japan")).toMatchObject({

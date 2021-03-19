@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { css } from "@emotion/react"
 import {
   HowLong,
@@ -44,6 +44,8 @@ import SpringInJapanMap from "../../../images/asia/japan/spring-in-japan/spring-
 import { japanPrimaryColor } from "../../../components/core/japan/japan.variables"
 import { Comments } from "../../../components/core/comments"
 import { SpringInJapanImages } from "../../../components/images/asia/japan/spring-in-japan-images"
+import { getLink } from "../../../components/core/links/links.utils"
+import { ApplicationContext } from "../../../components/application"
 
 const namespace = "asia/japan/spring-in-japan"
 const id = "spring-in-japan"
@@ -51,8 +53,10 @@ i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.${id}`)
+  const transportLinkPublished = development || getLink("transport-japan").published
   return (
     <>
       <SEO
@@ -99,7 +103,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("itinerary.part3")}</p>
           <p>{t("itinerary.part4")}</p>
           <p>{t("itinerary.part5")}</p>
-          <p>{t("itinerary.part6")}</p>
+          {transportLinkPublished && <p>{t("itinerary.part6")}</p>}
         </Where>
         <Divider />
         <SectionContent>
