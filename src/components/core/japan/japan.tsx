@@ -34,13 +34,6 @@ export const JapanQuote = styled(Quote)`
   }
 `
 
-export const HimejiCastleQuote = () => (
-  <JapanQuote>
-    Magnifique château, surnommé le château du Héron Blanc, il est considéré comme l’un des plus beaux châteaux du
-    Japon...
-  </JapanQuote>
-)
-
 export const ArashiyamaQuote = () => (
   <JapanQuote>
     Le bambou serait capable de repousser les mauvais esprits, il représenterait la force et la prospérité...

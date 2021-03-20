@@ -24,6 +24,7 @@ import { TitleImage } from "../../../../components/images/layout"
 import { Divider } from "../../../../components/core/divider"
 import { PageQuote } from "../../../../components/core/quote"
 import { CityLink } from "../../../../components/core/links/links.types"
+import HomeImage from "../../../../images/asia/japan/carousel-japan-2.jpg"
 
 const namespace = "asia/japan/himeji/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -52,6 +53,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         location={location}
         socialNetworkDescription={description}
         googleDescription={t("meta-description")}
+        image={HomeImage}
       />
       <JapanBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>

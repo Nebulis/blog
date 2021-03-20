@@ -44,6 +44,17 @@ export const japanLinks: CountryLink = {
       published: false,
     },
     {
+      id: "food-japan",
+      label: { fr: "", en: "" },
+      url: "food",
+      published: false,
+    },
+    {
+      id: "osaka-castle",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
       id: "nijo-castle",
       label: { fr: "", en: "" },
       published: false,
@@ -55,6 +66,11 @@ export const japanLinks: CountryLink = {
     },
     {
       id: "tokugawaen-garden",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "koko-en-garden",
       label: { fr: "", en: "" },
       published: false,
     },
@@ -104,7 +120,7 @@ export const japanLinks: CountryLink = {
         {
           id: "himeji-castle",
           label: { fr: commonFr.country.japan.card["himeji-castle"], en: commonEn.country.japan.card["himeji-castle"] },
-          published: false,
+          published: new Date("2021-03-27T17:00:00.000+08:00"),
           card: HimejiCastleCard,
         },
       ],

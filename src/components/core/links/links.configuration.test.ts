@@ -142,7 +142,7 @@ const japanLinks = () => {
 
   expect(getLink("himeji")).toMatchObject({ label: { fr: "Himeji", en: "Himeji" }, published: false })
   expect(getLink("himeji-castle")).toMatchObject({
-    label: { en: "Himeji Castle", fr: "Château de Himeji" },
+    label: { en: "The magnificent white Himeji Castle", fr: "Le magnifique château blanc de Himeji" },
     published: false,
   })
 
@@ -170,6 +170,18 @@ const japanLinks = () => {
     published: false,
   })
   expect(getLink("tokugawaen-garden")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("koko-en-garden")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("food-japan")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("osaka-castle")).toMatchObject({
     label: { en: "", fr: "" },
     published: false,
   })

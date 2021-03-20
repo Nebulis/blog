@@ -1,11 +1,11 @@
-import React from "react"
+import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
-import { css } from "@emotion/react"
 import {
-  Bonus,
   How,
   HowLong,
   HowMuch,
+  Introduction,
+  SectionContent,
   Visit,
   WhatTimeOfYear,
   When,
@@ -13,40 +13,19 @@ import {
   WhereToHave,
   WhereToStay,
 } from "../../../../components/core/section"
-import { EntranceHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/entranceHimejiCastleImage"
-import { EntranceRiverHimejiCastleImage } from "../../../../components/images/asia/japan/himeji/castle/entranceRiverHimejiCastleImage"
-import { HimejiCastle1Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle1Image"
-import { HimejiCastleWithCherryImage } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherryImage"
-import { HimejiCastleWithCherry2Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry2Image"
-import { HimejiCastleWithCherry6Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry6Image"
-import { HimejiCastleWithCherry5Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry5Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { HimejiCastleTroup } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleTroup"
-import { HimejiCastleMarket } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleMarket"
-import { HimejiGyuKaku } from "../../../../components/images/asia/japan/himeji/castle/himejiGyukaku"
 import {
   GroupOfImages,
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
-  TwoImagesLeftBigger,
+  ImageAsPortraitOnTheLeft,
+  ImageAsPortraitOnTheRight,
   TwoImagesSameSize,
+  TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { HimejiCastleWithTreeImage } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithTreeImage"
-import { HimejiCastle3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle3Image"
-import { HimejiCastleWithCherry4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry4Image"
-import { HimejiCastle2Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle2Image"
-import { HimejiCastle4Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastle4Image"
-import { HimejiCastleWithCherry3Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry3Image"
-import { HimejiCastleWithCherry7Image } from "../../../../components/images/asia/japan/himeji/castle/himejiCastleWithCherry7Image"
-import {
-  HimejiCastleQuote,
-  JapanBlogLayout,
-  JapanExternalLink,
-  JapanLink,
-  JapanTitle,
-} from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 import i18n from "i18next"
@@ -54,6 +33,18 @@ import translationFr from "../../../../locales/fr/asia/japan/himeji/himeji-castl
 import translationEn from "../../../../locales/en/asia/japan/himeji/himeji-castle.json"
 import HomeImgUrl from "../../../../images/asia/japan/carousel-japan-2.jpg"
 import { useCustomTranslation } from "../../../../i18n-hook"
+import { Quote } from "../../../../components/core/quote"
+import { Divider } from "../../../../components/core/divider"
+import { getLink } from "../../../../components/core/links/links.utils"
+import { ApplicationContext } from "../../../../components/application"
+import { Comments } from "../../../../components/core/comments"
+import { HimejiCastleImages } from "../../../../components/images/asia/japan/himeji/himeji-castle-images"
+import HimejiCastleMap from "../../../../images/asia/japan/himeji/castle/himeji-castle-map.jpg"
+import { MapContainer } from "../../../../components/layout/layout"
+import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
+import { buildPixabayUrl } from "../../../../utils"
+import { css } from "@emotion/react"
+import { mediumStart } from "../../../../components/core/variables"
 
 const namespace = "asia/japan/himeji/himeji-castle"
 const id = "himeji-castle"
@@ -61,8 +52,11 @@ i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { t } = useCustomTranslation([namespace, "common"])
+  const { development } = useContext(ApplicationContext)
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.${id}`)
+  const transportLinkPublished = development || getLink("transport-japan").published
+  const foodLinkPublished = development || getLink("food-japan").published
   return (
     <>
       <SEO
@@ -77,189 +71,331 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <ImageAsLandscape>
           <SharedCardJapanImages image="himejiCastle" />
         </ImageAsLandscape>
-        <HimejiCastleQuote />
-        <Where>68 Honmachi, Himeji</Where>
-        <When>Tous les jours de 9h à 17h (16h pour les dernières entrées)</When>
-        <How>
-          Depuis la plupart des grandes villes il est possible de se rendre à Himeji en Shinkansen.
+        <Quote>{t("quote")}</Quote>
+        <Divider />
+        <Introduction>{t("introduction")}</Introduction>
+        <Divider />
+        <Where title={t("where.title")}>
+          <p>{t("where.part1")}</p>
+        </Where>
+        <When title={t("when.title")}>
+          <p>{t("when.part1")}</p>
+          <p>{t("when.part2")}</p>
+          <p>{t("when.part3")}</p>
+        </When>
+        <How title={t("how.title")}>
+          <p>{t("how.part1")}</p>
           <ul>
-            <li>Depuis Tokyo environ 3h40</li>
-            <li>Depuis Kyoto environ 1h</li>
-            <small>
-              <JapanLink action="hide" to="transports-in-japan">
-                Plus d’information sur les transports.
-              </JapanLink>
-            </small>
+            <li>{t("how.part2")}</li>
+            <li>{t("how.part3")}</li>
+            <li>{t("how.part4")}</li>
           </ul>
-          <p>
-            En sortant de la gare, prendre la sortie nord, le château se situe tout droit pendant une vingtaine de
-            minutes le long d’une grande avenue.{" "}
-          </p>
-          <p>
-            En fonction du temps, vous pouvez l’apercevoir de la gare, la nuit le château est illuminé et offre une
-            magnifique vue de loin.
-          </p>
+          {transportLinkPublished && <p>{t("how.part5")}</p>}
+          <p>{t("how.part6")}</p>
+          <p>{t("how.part7")}</p>
         </How>
-        <HowLong>Entre une demi-journée et une journée si vous visitez les jardins aux alentours.</HowLong>
-        <WhatTimeOfYear>
-          On vous conseille d’y aller au printemps, vers début Avril, pour son parc et ses magnifiques cerisiers.
+        <HowLong title={t("how-long.title")}>
+          <p>{t("how-long.part1")}</p>
+          <p>{t("how-long.part2")}</p>
+          <p>{t("how-long.part3")}</p>
+        </HowLong>
+        <WhatTimeOfYear title={t("what-time-of-year.title")}>
+          <p>{t("what-time-of-year.part1")}</p>
+          <p>{t("what-time-of-year.part2")}</p>
+          <p>{t("what-time-of-year.part3")}</p>
         </WhatTimeOfYear>
-        <HowMuch>
-          <p>Vous pouvez visiter les jardins aux alentours gratuitement.</p>
-          <p>
-            Pour la visite de l’intérieur du château et des jardins au plus proche, il faudra payer 1 000 Yens (~ 8,50€)
-            pour les adultes et 300 Yens (~ 2,50€) pour les enfants.
-          </p>
+        <HowMuch title={t("how-much.title")}>
+          <p>{t("how-much.part1")}</p>
+          <ul>
+            <li>{t("how-much.part2")}</li>
+            <li>{t("how-much.part3")}</li>
+            <li>{t("how-much.part4")}</li>
+            <li>{t("how-much.part5")}</li>
+          </ul>
         </HowMuch>
-        <WhereToStay>
-          <p>
-            Himeji est particulièrement touristique, vous n’aurez donc pas de mal à trouver un hôtel. Reste à voir les
-            prix, car comme partout au Japon, les hôtels ne sont pas donnés.
-          </p>
-          <p>
-            Nous sommes arrivés le soir et avons pris une nuit à l’hôtel{" "}
-            <JapanExternalLink href="https://www.booking.com/hotel/jp/apa-himeji-eki-kita.fr.html">
-              APA Hotel Himeji-Eki-Kita
-            </JapanExternalLink>
-            , pas forcément le mieux noté mais juste pour une nuit cela nous suffisait amplement, excellent rapport
-            qualité prix, à 5 minutes à pied de la gare dans une rue plutôt calme la nuit. Tout ce qu’il nous fallait
-            pour nous reposer après ce long trajet et avant la visite du château le lendemain matin.
-          </p>
-          <p>
-            <small>
-              <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Himeji%2C+Himeji%2C+Japon">
-                Comparez et réservez votre hôtel à Himeji.
-              </JapanExternalLink>
-            </small>
-          </p>
+        <WhereToStay title={t("where-to-stay.title")}>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
+          <p>{t("where-to-stay.part3")}</p>
         </WhereToStay>
-        <WhereToHave>
-          <p>
-            Nous n’y sommes resté qu’une matinée et une nuit mais le soir on est sorti pour chercher un petit resto
-            sympa. On était un peu perdu à vrai dire et nous avons pris le premier restaurant ouvert que nous avons
-            trouvé et mon dieu quel plaisir !
-          </p>
-          <p>
-            <JapanExternalLink href="https://gurunavi.com/en/kcrb202/mp/rst/?__ngt__=TT0fec08682006ac1e4ae465ky9FQHkshfX1q4wKS7sFbw">
-              Gyu-Kaku
-            </JapanExternalLink>{" "}
-            est un restaurant qui fait principalement des barbecues, nous n’y connaissions rien et le serveur qui s’est
-            occupé de nous nous a tout expliqué et conseillé. En tout cas pour un premier repas, restaurant trouvé au
-            pif on vous le conseille mais 1000 fois, un régal. (N’hésitez pas à demander un menu en anglais).
-          </p>
+        <WhereToHave title={t("where-to-have.title")}>
+          <p>{t("where-to-have.part1")}</p>
+          <p>{t("where-to-have.part2")}</p>
           <ImageAsPortrait>
-            <HimejiGyuKaku />
+            <HimejiCastleImages image="gyuKaku" />
           </ImageAsPortrait>
+          {foodLinkPublished && <p>{t("where-to-have.part3")}</p>}
         </WhereToHave>
-        <Visit>
-          <p>
-            Après avoir parcouru la rue principale, on arrive en face du château, il paraît encore si loin mais si
-            proche à la fois. Traversé d’un petit pont en bois qui nous fait passer au dessus d’une sorte de douve
-            rempli d’eau.
-          </p>
-          <GroupOfImages>
-            <ImageAsPortrait>
-              <EntranceHimejiCastleImage />
-            </ImageAsPortrait>
-            <ImageAsPortrait>
-              <EntranceRiverHimejiCastleImage />
-            </ImageAsPortrait>
-          </GroupOfImages>
-          <p>
-            On arrive enfin dans les jardins (gratuit) qui entoure le château, il y a déjà beaucoup de monde alors qu’il
-            n’est que 9h, les fleurs des cerisiers sont timides mais quelques-unes sont déjà de sorties et nous font
-            rêver et imaginer leurs beautés si c’était la pleine saison.
-          </p>
-          <GroupOfImages>
-            <ImageAsLandscape>
-              <HimejiCastle1Image />
-            </ImageAsLandscape>
-            <TwoImagesSameSize>
-              <HimejiCastleWithCherryImage />
-              <HimejiCastleWithCherry2Image />
-            </TwoImagesSameSize>
-            <ImageAsLandscape>
-              <HimejiCastleWithCherry7Image />
-            </ImageAsLandscape>
-          </GroupOfImages>
-          <p>
-            Nous hésitons à rentrer, on se demande si on en vera vraiment plus en continuant, le château est déjà
-            magnifique d’ici et les cerisiers ne sont pas vraiment en fleurs pour le moment. Et puis le monde, rha ce
-            monde, bon allez on est venu pour visiter oui ou non, nous n’allons pas nous arrêter en chemin !
-          </p>
-
-          <p>
-            A l’entrée, un magnifique cerisier en fleur, et nous n’en sommes qu’au début. Ils se sont peut-être donné le
-            mot d’ordre, sublimer en premier lieu les intérieurs du parc tout près du château. En tout cas c’est chose
-            faites, les chemins, entre montées et descentes, sont magnifiques, on ne sait pas vraiment quoi prendre en
-            photo et où poser les yeux.
-          </p>
-          <TwoImagesSameSize>
-            <HimejiCastle4Image />
-            <HimejiCastleWithCherry3Image />
-          </TwoImagesSameSize>
-          <p>
-            Nous avons le choix de visiter l’intérieur ou de continuer vers l’extérieur, les deux se valent. Le château
-            est à plusieurs étages où les marchent se rétrécissent au fur et à mesure de la montée pour arriver tout en
-            haut offrant une vue sur la ville.
-          </p>
-
-          <p>
-            A l’extérieur, rien ne se ressemble. On passe du “désert”, aux cerisiers blancs puis roses. Des vues
-            sublimes qui ne nous font pas regretter d’être rentré.
-          </p>
-          <GroupOfImages>
-            <TwoImagesLeftBigger>
-              <HimejiCastle2Image />
-              <HimejiCastleWithTreeImage />
-            </TwoImagesLeftBigger>
-            <ImageAsPortrait>
-              <HimejiCastle3Image />
-            </ImageAsPortrait>
-            <ImageAsPortrait
-              css={css`
-                max-width: 800px;
-              `}
-            >
-              <HimejiCastleWithCherry4Image />
-            </ImageAsPortrait>
-          </GroupOfImages>
-          <p>
-            Connu pour être un véritable spot pour admirer les cerisiers, Sakura. On vous conseille donc d’y aller
-            plutôt au printemps quand les cerisiers sont en fleurs, pour admirer ce magnifique endroit si paisible.
-          </p>
-          <GroupOfImages>
-            <ImageAsLandscapeOnTheLeft>
-              <HimejiCastleWithCherry5Image />
-            </ImageAsLandscapeOnTheLeft>
-            <ImageAsLandscapeOnTheRight>
-              <HimejiCastleWithCherry6Image />
-            </ImageAsLandscapeOnTheRight>
-          </GroupOfImages>
+        <Visit title={t("visit.title")}>
+          <section>
+            <SectionContent>
+              <p>{t("visit.part1")}</p>
+              <p>{t("visit.part2")}</p>
+              <p>{t("visit.part3")}</p>
+              <ImageAsLandscape>
+                <HimejiCastleImages image="visit" />
+              </ImageAsLandscape>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit1.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit1.part1")}</p>
+              <p>{t("visit1.part2")}</p>
+              <p>{t("visit1.part3")}</p>
+              <p>{t("visit1.part4")}</p>
+              <p>{t("visit1.part5")}</p>
+              <p>{t("visit1.part6")}</p>
+              <ImageAsLandscape>
+                <HimejiCastleImages image="history" />
+              </ImageAsLandscape>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit2.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <HimejiCastleImages image="garden" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="garden2" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit2.part1")}</p>
+              <p>{t("visit2.part2")}</p>
+              <p>{t("visit2.part3")}</p>
+              <p>{t("visit2.part4")}</p>
+              <p>{t("visit2.part5")}</p>
+              <ImageAsLandscape>
+                <HimejiCastleImages image="garden3" />
+              </ImageAsLandscape>
+              <p>{t("visit2.part6")}</p>
+              <ImageAsLandscape>
+                <HimejiCastleImages image="garden4" />
+              </ImageAsLandscape>
+              <p>{t("visit2.part7")}</p>
+              <p>{t("visit2.part8")}</p>
+              <p>{t("visit2.part9")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="garden5" />
+                </ImageAsLandscape>
+                <ImageAsLandscapeOnTheLeft>
+                  <HimejiCastleImages image="garden6" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <HimejiCastleImages image="garden7" />
+                </ImageAsLandscapeOnTheRight>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit3.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <MapContainer className="mb2">
+                <img src={HimejiCastleMap} alt="Himeji Castle Map" />
+              </MapContainer>
+              <p>{t("visit3.part1")}</p>
+              <p>{t("visit3.part2")}</p>
+              <p>{t("visit3.part3")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <HimejiCastleImages image="maze" />
+                  <HimejiCastleImages image="maze2" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="maze3" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit3.part4")}</p>
+              <p>{t("visit3.part5")}</p>
+              <p>{t("visit3.part6")}</p>
+              <ImageAsLandscape>
+                <HimejiCastleImages image="maze4" />
+              </ImageAsLandscape>
+              <p>{t("visit3.part7")}</p>
+              <p>{t("visit3.part8")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="maze5" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <HimejiCastleImages image="maze6" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit3.part9")}</p>
+              <p>{t("visit3.part10")}</p>
+              <p>{t("visit3.part11")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="maze7" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <HimejiCastleImages image="maze8" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="maze9" />
+                </ImageAsLandscape>
+                <ImageAsPortraitOnTheLeft>
+                  <HimejiCastleImages image="maze10" />
+                </ImageAsPortraitOnTheLeft>
+                <ImageAsPortraitOnTheRight>
+                  <HimejiCastleImages image="maze11" />
+                </ImageAsPortraitOnTheRight>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="maze12" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit4.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit4.part1")}</p>
+              <p>{t("visit4.part2")}</p>
+              <p>{t("visit4.part3")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <HimejiCastleImages image="inside" />
+                </ImageAsPortrait>
+                <ImageAsLandscapeOnTheLeft>
+                  <HimejiCastleImages image="inside2" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <HimejiCastleImages image="inside3" />
+                </ImageAsLandscapeOnTheRight>
+              </GroupOfImages>
+              <p>{t("visit4.part4")}</p>
+              <p>{t("visit4.part5")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape
+                  credit={
+                    <ExternalLinkNotUnderlined href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Himeji#/media/Fichier:Inside_the_Main_Tower_(2856041800).jpg">
+                      wikipedia
+                    </ExternalLinkNotUnderlined>
+                  }
+                >
+                  <HimejiCastleImages image="inside4" />
+                </ImageAsLandscape>
+                <ImageAsPortrait
+                  credit={
+                    <ExternalLinkNotUnderlined href="https://en.wikipedia.org/wiki/File:Himeji_Castle_No09_044.jpg">
+                      wikipedia
+                    </ExternalLinkNotUnderlined>
+                  }
+                >
+                  <HimejiCastleImages image="inside5" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit4.part6")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="inside6" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="inside7" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="inside8" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit4.part7")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="inside9" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <HimejiCastleImages image="inside10" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <HimejiCastleImages image="inside11" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit5.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit5.part1")}</p>
+              <p>{t("visit5.part2")}</p>
+              <p>{t("visit5.part3")}</p>
+              <p>{t("visit5.part4")}</p>
+              <p>{t("visit5.part5")}</p>
+              <ImageAsLandscape
+                credit={
+                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/jackmac34-483877")}>
+                    jackmac34
+                  </ExternalLinkNotUnderlined>
+                }
+              >
+                <HimejiCastleImages image="kokoEn" />
+              </ImageAsLandscape>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit6.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit6.part1")}</p>
+              <p>{t("visit6.part2")}</p>
+              <p>{t("visit6.part3")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <HimejiCastleImages image="bonus" />
+                  <HimejiCastleImages image="bonus2" />
+                </TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSize
+                  css={css`
+                    @media (min-width: ${mediumStart}) {
+                      max-width: 80%;
+                    }
+                  `}
+                >
+                  <HimejiCastleImages image="bonus3" />
+                  <HimejiCastleImages image="bonus4" />
+                </TwoImagesSameSize>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
         </Visit>
         <Conclusion>
-          Construit au XVIIe siècle, le château de Himeji est l’un des rares châteaux du Japon à ne pas avoir été
-          détruit ou endommagé lors de la guerre ou par des catastrophes naturelles.
+          <p>{t("conclusion")}</p>
+          <ul>
+            <li>{t("question1")}</li>
+            <li>{t("question2")}</li>
+          </ul>
         </Conclusion>
-        <Bonus>
-          <p>
-            A la sortie du château, nous avons fait le tour du marché qui se trouve à gauche en sortant, il n’y avait
-            pas grand chose mais la nourriture donnait envie.
-          </p>
-          <p>
-            Nous avons également eu la chance de voir des enfants danser sur une musique typiquement japonaise, pas le
-            temps de trop s’attarder cela dit, la musique finit nous devons filer à la gare !
-          </p>
-          <p>Direction KYOTO.</p>
-          <TwoImagesSameSize
-            css={css`
-              max-width: 700px;
-            `}
-          >
-            <HimejiCastleMarket />
-            <HimejiCastleTroup />
-          </TwoImagesSameSize>
-        </Bonus>
+        <Divider />
+        <Comments
+          collectionName={namespace}
+          location={location}
+          facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+          pinterest={{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? [
+                    <HimejiCastleImages image="cardFr1" key="cardFr1" />,
+                    <HimejiCastleImages image="cardFr2" key="cardFr1" />,
+                  ]
+                : [
+                    <HimejiCastleImages image="cardEn1" key="cardEn1" />,
+                    <HimejiCastleImages image="cardEn2" key="cardEn1" />,
+                  ],
+          }}
+        />
       </JapanBlogLayout>
     </>
   )
