@@ -17,9 +17,9 @@
     "title": "Comment y aller ?",
     "part1": "Depuis la plupart des grandes villes, il est possible de se rendre à Himeji en Shinkansen.",
     "part2": "Depuis Tokyo ↠ environ 3h40.",
-    "part3": "Depuis Osaka ↠ environ .",
+    "part3": "Depuis Osaka ↠ environ 45 mins.",
     "part4": "Depuis Kyoto ↠ environ 1h.",
-    "part5": "Plus d'informations dans notre article sur [Les transports au Japon](todo).",
+    "part5": "Plus d'informations dans notre article sur [Les transports au Japon](transport-japan).",
     "part6": "Une fois arrivé à Himeji, #en sortant de la gare#, prendre la sortie nord, le château se situe #tout droit à pied pendant une vingtaine de minutes# le long d’une grande avenue.",
     "part7": "En fonction du temps, vous pouvez l’apercevoir de la gare, la nuit le château est illuminé et offre une magnifique vue de loin."
   },
@@ -33,7 +33,7 @@
     "title": "A quelle période ?",
     "part1": "Vous pouvez y aller à n’importe quelle période en sachant que le site est plutôt connu pour être visité #au printemps#, vers début Avril / Mai, pour son parc et #ses magnifiques cerisiers#.",
     "part2": "La saison de l’#automne# est également une des saisons célèbre pour ses #érables rouges# même si un peu moins présent au château de Himeji mais beaucoup plus spectaculaire sur le parc juste à côté, le jardin Koko-En.",
-    "part3": "Si vous voulez en savoir plus sur les saisons, on vous raconte notre visite du [Japon au printemps](todo)."
+    "part3": "Si vous voulez en savoir plus sur les saisons, on vous raconte notre visite du [Japon au printemps](spring-in-japan)."
   },
   "how-much": {
     "title": "Prix ?",
@@ -46,14 +46,14 @@
   "where-to-stay": {
     "title": "Où dormir à Himeji ?",
     "part1": "Himeji est particulièrement touristique, vous n’aurez donc pas de mal à trouver un hôtel. Reste à voir les prix, car comme partout au Japon, les hôtels ne sont pas donnés.",
-    "part2": "Nous sommes arrivés le soir et avons pris une nuit à l’hôtel [APA Hotel Himeji-Eki-Kita](todo), pas forcément le mieux noté mais juste pour une nuit cela nous suffisait amplement, excellent rapport qualité prix, à 5 minutes à pied de la gare dans une rue plutôt calme la nuit. Tout ce qu’il nous fallait pour nous reposer après ce long trajet et avant la visite du château le lendemain matin.",
-    "part3": "[Comparez et réservez votre hôtel à Himeji](todo)."
+    "part2": "Nous sommes arrivés le soir et avons pris une nuit à l’hôtel [APA Hotel Himeji-Eki-Kita](booking-hotel:jp/apa-himeji-eki-kita), pas forcément le mieux noté mais juste pour une nuit cela nous suffisait amplement, excellent rapport qualité prix, à 5 minutes à pied de la gare dans une rue plutôt calme la nuit. Tout ce qu’il nous fallait pour nous reposer après ce long trajet et avant la visite du château le lendemain matin.",
+    "part3": "[Comparez et réservez votre hôtel à Himeji](booking-search:Himeji)."
   },
   "where-to-have": {
     "title": "Où manger à Himeji ?",
     "part1": "Nous n’y sommes restés qu’une nuit mais le soir on est sorti pour chercher un petit resto sympa. On était un peu perdu à vrai dire et nous avons pris le premier restaurant ouvert que nous avons trouvé et quel plaisir !",
-    "part2": "[Gyu-Kaku](todo) est un restaurant qui fait principalement #des barbecues#, nous n’y connaissions rien et le serveur qui s’est occupé de nous, nous a tout expliqué et conseillé. En tout cas pour un premier repas, restaurant trouvé au pif on vous le conseille mais 1000 fois, un régal. (N’hésitez pas à demander un menu en anglais, dans ce restaurant en tout cas).",
-    "part3": "N’hésitez pas à lire notre article sur [Nos coups de cœur culinaire du Japon](todo)."
+    "part2": "[Gyu-Kaku](https://www.gyu-kaku.com/) est un restaurant qui fait principalement #des barbecues#, nous n’y connaissions rien et le serveur qui s’est occupé de nous, nous a tout expliqué et conseillé. En tout cas pour un premier repas, restaurant trouvé au pif on vous le conseille mais 1000 fois, un régal. (N’hésitez pas à demander un menu en anglais, dans ce restaurant en tout cas).",
+    "part3": "N’hésitez pas à lire notre article sur [Nos coups de cœur culinaire du Japon](food-japan)."
   },
   "visit": {
     "title": "La visite",
@@ -68,7 +68,7 @@
     "part3": "Il est reconnu pour sa #magnifique couleur blanche# qui lui a donné comme surnoms « Hakuro-jō » et « Shirasagi-jō » qui veut dire « Château du Héron blanc » et « Aigrette blanche ».",
     "part4": "D’ailleurs, de 2010 à 2015, il fut en travaux et donc inaccessible à la visite, une rénovation qui aura donc duré 5 ans pour lui redonner son éclat et qui marqua ces tous premiers travaux depuis 1964.",
     "part5": "L’ensemble du château fait #1600 m de long et 1700 m de large#. Un immense ensemble qui est constitué de 83 bâtiments dont 32 murs, 16 tourelles et 15 portes.",
-    "part6": "Dans les mêmes styles de construction vous pouvez également aller voir le [château d’Osaka](todo) mais aussi le [château de Nagoya](todo)."
+    "part6": "Dans les mêmes styles de construction vous pouvez également aller voir le [château d’Osaka](osaka-castle) mais aussi le [château de Nagoya](nagoya-castle)."
   },
   "visit2": {
     "title": "LES JARDINS EXTÉRIEURS GRATUITS",
@@ -77,7 +77,7 @@
     "part3": "Il y a déjà beaucoup de monde alors qu’il n’est que 9h.",
     "part4": "Les fleurs des cerisiers sont timides mais quelques-unes sont déjà sorties et nous font rêver et imaginer leurs beautés si c’était la pleine saison.",
     "part5": "Cette partie est totalement gratuite et vous pouvez déjà #observer le château de loin#.",
-    "part6": "Vous avez également un grand espace d’herbes pour vous asseoir et admirer le château juste en face de vous. Très courant au Japon, vous y verrez certainement des bâches bleues poser au sol, tout le monde s’assoit dessus … pas du tout esthétique, très clairement horrible pour faire des photos, ces bâches remplacent les bancs et permettent de vous poser sans vous salir (à priori … parce que bon, tous ceux qui mettent leurs chaussures dessus n’ont pas la même vision de la chose).",
+    "part6": "Vous avez également un grand espace d’herbes pour vous asseoir et admirer le château juste en face de vous. Très courant au Japon, vous y verrez certainement des bâches bleues poser au sol, tout le monde s’assoit dessus … pas du tout esthétique, très clairement horrible pour faire des photos, ces bâches remplacent les bancs et permettent de vous poser sans vous salir (à priori ... parce que bon, tous ceux qui mettent leurs chaussures dessus n’ont pas la même vision de la chose).",
     "part7": "Pour continuer vers le château, rendez vous au guichet, tout au fond du premier parc.",
     "part8": "Nous hésitons à rentrer, on se demande si on en verra vraiment plus en continuant, le château est déjà magnifique d’ici et les cerisiers ne sont pas vraiment en fleurs pour le moment.",
     "part9": "Et puis le monde, rha ce monde, bon allez on est venu pour visiter oui ou non, nous n’allons pas nous arrêter en chemin !"
@@ -94,7 +94,7 @@
     "part8": "Vous avez dû apercevoir sur quelques photos que sur les toits on pouvait distinguer des motifs d’animaux en forme de poisson, ce sont #des shashi-gawara#. Ces animaux mythiques ont la réputation de protéger les bâtiments du feu.",
     "part9": "Les jardins et les cerisiers sont cette fois-ci bien en fleurs.",
     "part10": "Nous ne connaissons pas la différence entre les deux, mais nous avions de magnifiques cerisiers de couleurs blanches ainsi que de splendides cerisiers aux fleurs roses.",
-    "part11": "#Un véritable coup de coeur pour ce rose intense qui va si bien avec ce chateau blanc.#"
+    "part11": "#Un véritable coup de coeur pour ce rose intense qui va si bien avec ce château blanc.#"
   },
   "visit4": {
     "title": "L’INTÉRIEUR DU CHâTEAU",
@@ -108,7 +108,7 @@
   },
   "visit5": {
     "title": "LE JARDIN KOKO-EN",
-    "part1": "Si vous venez au château, autant en profiter pour venir à ce parc magnifique, impressionnant à chaque saison.",
+    "part1": "Si vous venez au château, autant en profiter pour venir à ce parc magnifique qu’est le [jardin Koko-En](koko-en-garden), impressionnant à chaque saison.",
     "part2": "Situé à l'ouest du château, à environ 20 minutes à pied, vous pourrez vous y promener pour découvrir #neufs jardins dans différents styles#, cerisiers, bonzaïs, bambous, érables, jardin de thé, jardin avec une fontaine, cascade et bassin avec les célèbres carpe koï du Japon.",
     "part3": "#3,5 hectares de mise en scène, d’ambiance et d’architecture arboricole impressionnante.#",
     "part4": "Un ensemble de jardin zen qui ravira vos yeux tout autant que le château et avec bien moins de monde.",
@@ -118,11 +118,11 @@
     "title": "LE PETIT PLUS",
     "part1": "A la sortie du château, nous avons fait le tour du marché qui se trouve à gauche en sortant, il n’y avait pas grand chose mais la nourriture donnait envie.",
     "part2": "Nous avons également eu la chance de voir des enfants danser sur une musique typiquement japonaise, pas le temps de trop s’attarder cela dit, la musique finit nous devons filer à la gare !",
-    "part3": "Direction [KYOTO](todo)."
+    "part3": "Direction [Kyoto](kyoto)."
   },
   "conclusion": "Le château de Himeji apparaît dans différents films japonais, mais vous pouvez surtout le voir dans le film de 1967 James Bond - On ne vit que deux fois.",
   "question1": "Êtes-vous déjà allé à Himeji ?",
-  "question2": "",
+  "question2": "Quel est votre château favori au Japon, ou même dans un autre pays ?",
   "pinterest": "✈️ Découvrez le château de Himeji à travers notre visite. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos. Cliquez sur l'image pour le guide complet sur le château de Himeji … 🌏",
   "facebook": {
     "part1": "♡ Coucou les voyageurs ! ♡",

@@ -361,6 +361,16 @@ export const ImageAsLandscapeOnTheRight = styled(ImageAsLandscapeOnTheLeft)`
     margin-left: auto;
   }
 `
+export const ImageAsPortraitOnTheLeft = styled(ImageAsLandscapeOnTheLeft)`
+  .gatsby-image-wrapper {
+    max-height: calc(100vh - 40px);
+  }
+`
+export const ImageAsPortraitOnTheRight = styled(ImageAsPortraitOnTheLeft)`
+  &.image-layout {
+    margin-left: auto;
+  }
+`
 
 const imageAsTwoLandscapeLeftAndOnePortraitRightStyle = css`
   align-items: flex-start;

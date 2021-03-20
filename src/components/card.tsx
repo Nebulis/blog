@@ -48,11 +48,6 @@ const cardStyle = css`
     color: ${primaryColor};
     color: black;
   }
-  .title.published {
-    // text-overflow: ellipsis;
-    // overflow: hidden;
-    // white-space: nowrap;
-  }
   .title,
   .show-more {
     font-size: 0.9rem;
