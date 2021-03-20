@@ -3,9 +3,15 @@ import SEO from "../../../components/layout/seo"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../components/application"
-import { JapanBlogLayout, JapanButtonLink } from "../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanButtonLink, japanWeatherEntries } from "../../../components/core/japan/japan"
 import { japanLinks } from "../../../components/core/japan/japan.links"
-import { HomeSection, HomeSubSection, MainTitleSection, SectionContent } from "../../../components/core/section"
+import {
+  HomeSection,
+  HomeSubSection,
+  MainTitleSection,
+  SectionContent,
+  SubHomeSection,
+} from "../../../components/core/section"
 import { useCustomTranslation } from "../../../i18n-hook"
 import { PageProps } from "gatsby"
 import { Divider } from "../../../components/core/divider"
@@ -25,6 +31,7 @@ import { SharedJapanImages } from "../../../components/images/asia/japan/shared-
 import { JapanImageAsMedallion } from "../../../components/core/japan/japan.images"
 import { SpringInJapanCard } from "../../../components/core/japan/japan.cards"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
+import { WeatherForHomePage } from "../../../components/core/weather"
 
 const namespace = "asia/japan/index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -98,6 +105,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <JapanButtonLink to="articles?country=japan">Tous nos articles</JapanButtonLink>
         </GoToAllArticlesContainer>
+        <Divider />
+        <SubHomeSection>{t("weather")}</SubHomeSection>
+        <WeatherForHomePage extraButton entries={japanWeatherEntries()} />
       </JapanBlogLayout>
     </>
   )

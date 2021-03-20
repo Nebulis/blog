@@ -219,6 +219,10 @@ export const HomeSection: FunctionComponent<{ className?: string }> = ({ childre
     {children}
   </h2>
 )
+export const SubHomeSection = styled(HomeSection)`
+  font-size: 1.38316rem; // h3
+`
+
 export const CityHomeSection: FunctionComponent = ({ children }) => (
   <h2 className="tc ttu mb3" css={homeSectionStyle}>
     {children}

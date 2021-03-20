@@ -10,6 +10,7 @@ import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import { City, Headline } from "../highlight"
 import { Title } from "../title"
 import { Divider } from "../divider"
+import { WeatherEntry } from "../../../types/shared"
 
 const japanLineStyle = css`
   padding: 2px 5px;
@@ -223,3 +224,487 @@ export const JapanTitle = styled(Title)`
 export const JapanDivider = styled(Divider)`
   background-color: hsl(348, 41%, 53%, 0.2);
 `
+
+export const japanWeatherEntries = (): WeatherEntry[] => [
+  {
+    label: "Sapporo",
+    data: [
+      {
+        type: "poor",
+        icon: "snow",
+        alt: ["arctic", "snow-man"],
+      },
+      {
+        type: "poor",
+        icon: "snow",
+        alt: ["arctic", "snow-man"],
+      },
+      {
+        type: "poor",
+        icon: "snow",
+        alt: ["arctic", "snow-man"],
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: ["cold", "sakura"],
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+      },
+      {
+        type: "good",
+        icon: "sunny",
+      },
+      {
+        type: "good",
+        icon: "sunny",
+      },
+      {
+        type: "good",
+        icon: "sunny",
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: "autumn",
+      },
+      {
+        type: "poor",
+        icon: "snow",
+        alt: ["cold", "snow-man"],
+      },
+      {
+        type: "poor",
+        icon: "snow",
+        alt: ["arctic", "snow-man"],
+      },
+    ],
+  },
+  {
+    label: "Tokyo",
+    data: [
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+      },
+      {
+        type: "fair",
+        icon: "sunny",
+        alt: "cold",
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        alt: "sakura",
+      },
+      {
+        type: "good",
+        icon: "sunny",
+      },
+      {
+        type: "fair",
+        icon: "sun-rain",
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: "hot",
+      },
+      {
+        type: "poor",
+        icon: "sunny",
+        alt: "hot",
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: "droplet",
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: "droplet",
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: "autumn",
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+      },
+    ],
+  },
+  {
+    label: "Osaka",
+    data: [
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: ["sakura", "cold"],
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        alt: "sakura",
+      },
+      {
+        type: "good",
+        icon: "sunny",
+      },
+      {
+        type: "fair",
+        icon: "sun-rain",
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: "hot",
+      },
+      {
+        type: "poor",
+        icon: "sunny",
+        alt: "hot",
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: "hot",
+      },
+      {
+        type: "good",
+        icon: "sunny",
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: "autumn",
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["cold", "snow-man"],
+      },
+    ],
+  },
+  {
+    label: "Fukuoka",
+    data: [
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: ["cold", "snow-man"],
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: ["cold", "snow-man"],
+      },
+      {
+        type: "fair",
+        icon: "sun-rain",
+        alt: ["cold", "sakura"],
+      },
+      {
+        type: "fair",
+        icon: "sun-rain",
+      },
+      {
+        type: "fair",
+        icon: "sun-rain",
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: "droplet",
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: ["droplet", "hot"],
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: "hot",
+      },
+      {
+        type: "fair",
+        icon: "sun-rain",
+      },
+      {
+        type: "good",
+        icon: "sun-cloud",
+      },
+      {
+        type: "good",
+        icon: "sun-cloud",
+        alt: "autumn",
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: ["cold"],
+      },
+    ],
+  },
+]
+
+// export const japanWeatherEntries = (t: TFunction): WeatherEntry[] => [
+//   {
+//     label: "Tokyo",
+//     data: [
+//       {
+//         type: "poor",
+//         icon: "sunny",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sunny",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sunny",
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//       },
+//       {
+//         type: "good",
+//         icon: "sun-rain",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-rain",
+//         alt: "hot",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-rain",
+//         alt: "hot",
+//       },
+//       {
+//         type: "good",
+//         icon: "sun-rain",
+//       },
+//       {
+//         type: "good",
+//         icon: "sun-rain",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-cloud",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-cloud",
+//       },
+//     ],
+//   },
+//   {
+//     label: "Osaka",
+//     data: [
+//       {
+//         type: "poor",
+//         icon: "sun-cloud",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-cloud",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-cloud",
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//       },
+//       {
+//         type: "good",
+//         icon: "sun-rain",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-rain",
+//         alt: "hot",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-cloud",
+//         alt: "hot",
+//       },
+//       {
+//         type: "good",
+//         icon: "sun-cloud",
+//       },
+//       {
+//         type: "good",
+//         icon: "sun-cloud",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-cloud",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-cloud",
+//       },
+//     ],
+//   },
+//   {
+//     label: "Sapporo",
+//     data: [
+//       {
+//         type: "poor",
+//         icon: "sunny", // snow
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//         alt: "hot",
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//         alt: "hot",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-rain",
+//         alt: "hot",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-rain",
+//         alt: "hot",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-rain",
+//         alt: "droplet",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-rain",
+//         alt: "droplet",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-rain",
+//         alt: "droplet",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-rain",
+//         alt: "droplet",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-rain",
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//       },
+//     ],
+//   },
+//   {
+//     label: "Fukuoka",
+//     data: [
+//       {
+//         type: "poor",
+//         icon: "sunny", // snow
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//         alt: "hot",
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//         alt: "hot",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-rain",
+//         alt: "hot",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-rain",
+//         alt: "hot",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-rain",
+//         alt: "droplet",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-rain",
+//         alt: "droplet",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-rain",
+//         alt: "droplet",
+//       },
+//       {
+//         type: "poor",
+//         icon: "sun-rain",
+//         alt: "droplet",
+//       },
+//       {
+//         type: "fair",
+//         icon: "sun-rain",
+//       },
+//       {
+//         type: "good",
+//         icon: "sunny",
+//       },
+//     ],
+//   },
+// ]

@@ -71,7 +71,7 @@ const asiaLinks = () => {
   expect(getLink("myanmar")).toMatchObject({ label: { fr: "Birmanie", en: "Myanmar" }, published: false })
   expect(getLink("cambodia")).toMatchObject({ label: { fr: "Cambodge", en: "Cambodia" }, published: false })
   expect(getLink("indonesia")).toMatchObject({ label: { fr: "Indonésie", en: "Indonesia" }, published: false })
-  expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: false })
+  expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: true })
   expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: true })
   expect(getLink("philippines")).toMatchObject({ label: { fr: "Philippines", en: "Philippines" }, published: true })
 }
@@ -80,7 +80,7 @@ const japanLinks = () => {
   // japan assertions
   expect(getLink("spring-in-japan")).toMatchObject({
     label: { fr: "Le Japon au printemps : Au milieu des Sakuras", en: "Spring In Japan: Under the Sakuras" },
-    published: false,
+    published: true,
   })
   expect(getLink("transport-japan")).toMatchObject({
     label: { en: "Transports", fr: "Transports" },

@@ -12,6 +12,8 @@ export const darkButtonHoverColor = "#23272b"
 export const weatherGood = "green"
 export const weatherAverage = "#f5c71a"
 export const weatherBad = "red"
+export const weatherAutumn = "#fc8769"
+export const weatherSki = "#88c5fd"
 
 export const fillMap = "#d4edf5"
 

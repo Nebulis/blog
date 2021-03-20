@@ -3,7 +3,13 @@ import SEO from "../../../components/layout/seo"
 import { ApplicationContext } from "../../../components/application"
 import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
 import { vietnamLinks } from "../../../components/core/asia/vietnam/vietnam.links"
-import { HomeSection, HomeSubSection, MainTitleSection, SectionContent } from "../../../components/core/section"
+import {
+  HomeSection,
+  HomeSubSection,
+  MainTitleSection,
+  SectionContent,
+  SubHomeSection,
+} from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
 import vietnamHat from "../../../images/asia/vietnam/hat.svg"
 import {
@@ -24,7 +30,7 @@ import { useCustomTranslation } from "../../../i18n-hook"
 import { PageProps } from "gatsby"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 import { TitleImage } from "../../../components/images/layout"
-import { css, jsx } from "@emotion/react"
+import { jsx } from "@emotion/react"
 import { SharedVietnamImages } from "../../../components/images/asia/vietnam/shared-vietnam-images"
 import i18n from "i18next"
 import asiaIndexFr from "../../../locales/fr/asia/vietnam/index.json"
@@ -104,22 +110,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
         </GoToAllArticlesContainer>
         <Divider />
-        <HomeSection
-          css={css`
-            font-size: 1.38316rem; // h3
-          `}
-        >
-          {t("weather")}
-        </HomeSection>
+        <SubHomeSection>{t("weather")}</SubHomeSection>
         <WeatherForHomePage entries={vietnamWeatherEntries(t)} />
         <Divider />
-        <HomeSection
-          css={css`
-            font-size: 1.38316rem; // h3
-          `}
-        >
-          {t("map")}
-        </HomeSection>
+        <SubHomeSection>{t("map")}</SubHomeSection>
         <MapContainer>
           <img src={HomeVietnamImage} alt="Home Vietnam Image" />
         </MapContainer>
