@@ -42,11 +42,11 @@ exports[`french pages exports meta for public/asia/japan/fuji/index.html correct
 
 exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: title 1`] = `"japan | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/fuji/lake-kawaguchiko/index.html correctly: meta-description 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/fuji/kawaguchiko-lake/index.html correctly: meta-description 1`] = `"Découvrez le Mont Fuji à travers notre article et nos photos depuis les paysages magnifiques du lac Kawaguchi. Comment y aller ? Comment et quand le visiter ? Que faire autour ? Où loger ? On vous explique tout."`;
 
-exports[`french pages exports meta for public/asia/japan/fuji/lake-kawaguchiko/index.html correctly: social-network 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/fuji/kawaguchiko-lake/index.html correctly: social-network 1`] = `"Le Mont Fuji est un véritable symbole au pays du Soleil-Levant. Situé au sud-ouest de Tokyo, il est également le point culminant du Japon. Entouré de cinq lacs, nous avons tenté l’expérience au lac Kawaguchi."`;
 
-exports[`french pages exports meta for public/asia/japan/fuji/lake-kawaguchiko/index.html correctly: title 1`] = `"main | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/fuji/kawaguchiko-lake/index.html correctly: title 1`] = `"Lac Kawaguchi : La vue sur le Mont Fuji | Blog Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/himeji/himeji-castle/index.html correctly: meta-description 1`] = `"Découvrez le château de Himeji à travers notre visite. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos."`;
 
@@ -108,11 +108,11 @@ exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/in
 
 exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/index.html correctly: title 1`] = `"Château de Nagoya | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: meta-description 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: meta-description 1`] = `"Découvrez le temple Togan-ji et son grand Bouddha à travers notre récit de voyage. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos."`;
 
-exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: social-network 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: social-network 1`] = `"Entrer dans l'enceinte du temple Togan-ji c’est comme entrer dans un nouveau monde caché derrière les feuillages. On ne soupçonne pas du tout la présence d'un tel lieu depuis les rues adjacentes."`;
 
-exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"main | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"Temple Togan-Ji | Blog Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Ici nous partons au Japon à la saison du printemps. Combien de jours ? Quel budget prévoir ? On vous répond en se basant sur notre propre expérience. On vous indique également notre itinéraire de voyage pour une semaine."`;
 
@@ -120,17 +120,11 @@ exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.h
 
 exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: title 1`] = `"Le Japon au printemps : Au milieu des Sakuras | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/a-day-in-tokyo/index.html correctly: meta-description 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/index.html correctly: meta-description 1`] = `"Dans cet article on répond à vos questions comment y aller ? Combien de temps ? A quelle saison ? On vous indique également son adresse et son prix. Le tout avec notre récit de voyage et nos photos de ce séduisant jardin japonais."`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/a-day-in-tokyo/index.html correctly: social-network 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/index.html correctly: social-network 1`] = `"Derrière les gratte-ciels et la frénésie de la ville se trouve un véritable havre de paix, le jardin Hama Rikyu est un endroit parfait pour vous ressourcer au milieu de la plus grande mégapole du monde."`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/a-day-in-tokyo/index.html correctly: title 1`] = `"main | Blog Voyage"`;
-
-exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/index.html correctly: meta-description 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
-
-exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/index.html correctly: social-network 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
-
-exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/index.html correctly: title 1`] = `"main | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/index.html correctly: title 1`] = `"Jardin Hama-Rikyu : Un havre de paix en plein Tokyo | Blog Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly: meta-description 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 
@@ -138,11 +132,35 @@ exports[`french pages exports meta for public/asia/japan/tokyo/index.html correc
 
 exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly: title 1`] = `"japan | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: meta-description 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: meta-description 1`] = `"Dans cet article, on répond à toutes vos questions : Comment y aller ? Quand ? Combien de temps et à quelle période ? Le tout en vous partageant notre récit de voyage et nos photos de ce sanctuaire majestueux qu’est le temple Senso-ji."`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: social-network 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: social-network 1`] = `"Le temple Senso-Ji est le plus vieux temple de Tokyo, c’est un temple bouddhiste situé dans le quartier populaire d'Asakusa, il regroupe chaque jour des milliers de visiteurs et est certainement l’un des temples les plus photographiés."`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: title 1`] = `"main | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: title 1`] = `"Sensō-ji, le plus vieux temple de Tokyo | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/shibuya-district/index.html correctly: meta-description 1`] = `"Embarquez avec nous à la découverte du célèbre quartier de Shibuya. On vous raconte notre journée dans cet endroit branché. Dans cet article, on vous explique tout ce qu’il faut savoir : Comment s’y rendre ? A quelle saison ? Ainsi que le budget et le temps à prévoir."`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/shibuya-district/index.html correctly: social-network 1`] = `"Shibuya est un arrondissement incontournable de Tokyo. Véritable symbole de la culture, c’est un quartier tendance, jeune et branché. Perdez-vous dans les rues de Shibuya, de jour comme de nuit et vivez quelques jours la vie trépidante de Tokyo."`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/shibuya-district/index.html correctly: title 1`] = `"Tokyo : Le quartier déjanté de Shibuya | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: meta-description 1`] = `"Découvrez nos deux jours à travers la ville de Tokyo pour découvrir le maximum en si peu de temps. Dans cet article, on répond à toutes vos questions : Combien de temps et à quelle période ? On vous indique également les lieux que nous avons visités. Cliquez sur l'image pour le guide complet sur nos deux jours à Tokyo."`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: social-network 1`] = `"Bienvenue à Tokyo, avec ses 40 millions d'habitants, elle est la ville la plus peuplée du monde. Du quartier des affaires au quartier de la mode, de la culture à l'univers geek, chaque quartier a son univers différent."`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: title 1`] = `"Deux journées à Tokyo | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/ueno-park/index.html correctly: meta-description 1`] = `"Découvrez à travers notre récit de voyage notre visite de ce parc gigantesque qu’est le parc de Ueno à Tokyo. Dans cet article, on répond également à toutes vos questions : Comment y aller ? Quand ? Combien de temps et à quelle période ? On vous indique également son adresse et tout ce que vous pouvez y faire."`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/ueno-park/index.html correctly: social-network 1`] = `"Situé dans le quartier d’Ueno, le parc du même nom est le plus ancien parc du Japon. Ouvert depuis 1873, le parc est principalement connu pour ses nombreux cerisiers qui attirent des milliers de personnes au printemps. Mais il abrite également bien d’autres attractions."`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/ueno-park/index.html correctly: title 1`] = `"Parc Ueno à Tokyo : Le rendez-vous des Sakuras | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/yasukuni-dori/index.html correctly: meta-description 1`] = `"Découvrez à travers notre article, une rue tant animée de jour comme de nuit, l’avenue Yasukuni-Dori. On vous indique, d’après notre expérience, comment y aller, combien de temps y rester et où se loger. Le tout avec notre récit de voyage et nos photos."`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/yasukuni-dori/index.html correctly: social-network 1`] = `"Et tout d’un coup la lumière fut. Un peu sans crier gare, on se retrouve au milieu de la rue Yasukuni-Dori entouré de grands buildings remplis de panneaux lumineux, de bas en haut. Faites attention, Godzilla rode."`;
+
+exports[`french pages exports meta for public/asia/japan/tokyo/yasukuni-dori/index.html correctly: title 1`] = `"Yasukuni-Dori : La rue aux milles lumières de Shinjuku | Blog Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/transports/index.html correctly: meta-description 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 

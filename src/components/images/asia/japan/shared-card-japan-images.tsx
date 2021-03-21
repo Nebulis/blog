@@ -8,7 +8,7 @@ const alt = {
   himejiCastle: "Himeji Castle",
   nagoyaCastle: "Nagoya Castle",
   mountFuji: "Mount Fuji",
-  aDayInTokyo: "A Day In Tokyo",
+  twoDaysInTokyo: "A Day In Tokyo",
   daigoji: "Daigoji Temple",
   kinkakuji: "Kinkaku-ji Temple",
   fushimi: "Fushimi Inari Taisha",
@@ -54,7 +54,7 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      aDayInTokyo: file(relativePath: { eq: "asia/japan/tokyo/adayintokyo/tokyo-main.jpg" }) {
+      twoDaysInTokyo: file(relativePath: { eq: "asia/japan/tokyo/adayintokyo/tokyo-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
@@ -82,7 +82,7 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      sensoji: file(relativePath: { eq: "asia/japan/tokyo/sensoji/main-sensoji.jpg" }) {
+      sensoji: file(relativePath: { eq: "asia/japan/tokyo/sensoji/sensoji-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

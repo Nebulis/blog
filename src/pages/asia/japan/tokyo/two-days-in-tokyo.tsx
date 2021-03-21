@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { BlogLayout } from "../../../../components/layout/layout"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -28,17 +27,41 @@ import { TokyoYasukuni4Image } from "../../../../components/images/asia/japan/to
 import { TokyoYasukuni5Image } from "../../../../components/images/asia/japan/tokyo/adayintokyo/tokyoYasukuni5Image"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { largeStart } from "../../../../components/core/variables"
-import { JapanCity, JapanDivider, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
+import {
+  JapanBlogLayout,
+  JapanCity,
+  JapanDivider,
+  JapanLink,
+  JapanTitle,
+} from "../../../../components/core/japan/japan"
 import { SensojiCard } from "../../../../components/core/japan/japan.cards"
 import { PageProps } from "gatsby"
 import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/tokyo/two-days-in-tokyo.json"
+import translationEn from "../../../../locales/en/asia/japan/tokyo/two-days-in-tokyo.json"
+import HomeImgUrl from "../../../../images/asia/japan/tokyo/adayintokyo/tokyo-main.jpg"
+import { useCustomTranslation } from "../../../../i18n-hook"
+
+const namespace = "asia/japan/tokyo/two-days-in-tokyo"
+const id = "two-days-in-tokyo"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="two-days-in-tokyo" location={location}>
-        <JapanTitle title="Une journée à Tokyo" categories={["asia", "japan", "tokyo"]} linkId="a-day-in-tokyo" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
         <ImageAsLandscape>
           <SharedJapanImages image="mainTokyo" />
         </ImageAsLandscape>
@@ -188,7 +211,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           d’endroits à visiter et de découvertes à faire.
         </Conclusion>
         <JapanDivider />
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }

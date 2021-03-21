@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { BlogLayout } from "../../../../components/layout/layout"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -30,6 +29,7 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { css } from "@emotion/react"
 import { largeStart } from "../../../../components/core/variables"
 import {
+  JapanBlogLayout,
   JapanDivider,
   JapanExternalLink,
   JapanLine,
@@ -39,13 +39,31 @@ import {
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/tokyo/sensoji.json"
+import translationEn from "../../../../locales/en/asia/japan/tokyo/sensoji.json"
+import HomeImgUrl from "../../../../images/asia/japan/tokyo/sensoji/sensoji-main.jpg"
+import { useCustomTranslation } from "../../../../i18n-hook"
+
+const namespace = "asia/japan/tokyo/sensoji"
+const id = "sensoji"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="sensoji" location={location}>
-        <JapanTitle title="Le temple de Senso-Ji" categories={["asia", "japan", "tokyo"]} linkId="sensoji" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
         <ImageAsLandscape>
           <SharedCardJapanImages image="sensoji" />
         </ImageAsLandscape>
@@ -209,7 +227,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           respect le plus total puisqu’il ne faut pas oublier que c’est une fête religieuse.
         </Conclusion>
         <JapanDivider />
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }

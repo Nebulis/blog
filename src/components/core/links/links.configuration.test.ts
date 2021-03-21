@@ -71,7 +71,7 @@ const asiaLinks = () => {
   expect(getLink("myanmar")).toMatchObject({ label: { fr: "Birmanie", en: "Myanmar" }, published: false })
   expect(getLink("cambodia")).toMatchObject({ label: { fr: "Cambodge", en: "Cambodia" }, published: false })
   expect(getLink("indonesia")).toMatchObject({ label: { fr: "Indonésie", en: "Indonesia" }, published: false })
-  expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: false })
+  expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: true })
   expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: true })
   expect(getLink("philippines")).toMatchObject({ label: { fr: "Philippines", en: "Philippines" }, published: true })
 }
@@ -80,7 +80,7 @@ const japanLinks = () => {
   // japan assertions
   expect(getLink("spring-in-japan")).toMatchObject({
     label: { fr: "Le Japon au printemps : Au milieu des Sakuras", en: "Spring In Japan: Under the Sakuras" },
-    published: false,
+    published: true,
   })
   expect(getLink("transport-japan")).toMatchObject({
     label: { en: "Transports", fr: "Transports" },
@@ -92,9 +92,33 @@ const japanLinks = () => {
     label: { en: "Two Days In Tokyo", fr: "Deux journées à Tokyo" },
     published: false,
   })
-  expect(getLink("sensoji")).toMatchObject({ label: { fr: "Senso-ji", en: "Senso-ji" }, published: false })
+  expect(getLink("shibuya-district")).toMatchObject({
+    label: { en: "Tokyo : The crazy Shibuya district", fr: "Tokyo : Le quartier déjanté de Shibuya" },
+    published: false,
+  })
+  expect(getLink("ueno-park")).toMatchObject({
+    label: {
+      en: "Ueno Park in Tokyo: The meeting place of Sakuras",
+      fr: "Parc Ueno à Tokyo : Le rendez-vous des Sakuras",
+    },
+    published: false,
+  })
+  expect(getLink("yasukuni-dori")).toMatchObject({
+    label: {
+      en: "Yasukuni-Dori: The street of a thousand lights in Shinjuku",
+      fr: "Yasukuni-Dori : La rue aux milles lumières de Shinjuku",
+    },
+    published: false,
+  })
+  expect(getLink("sensoji")).toMatchObject({
+    label: { fr: "Sensō-ji, le plus vieux temple de Tokyo", en: "Sensō-ji,the oldest Temple in Tokyo" },
+    published: false,
+  })
   expect(getLink("hamarikyu-garden")).toMatchObject({
-    label: { en: "Hamarikyu Garden", fr: "Jardin Hama Rikyu" },
+    label: {
+      en: "Hamarikyu Gardens : A Haven of Peace in the Middle of Tokyo",
+      fr: "Jardin Hama-Rikyu : Un havre de paix en plein Tokyo",
+    },
     published: false,
   })
 
@@ -124,7 +148,7 @@ const japanLinks = () => {
 
   expect(getLink("fuji")).toMatchObject({ label: { en: "Mt. Fuji", fr: "Mt. Fuji" }, published: false })
   expect(getLink("kawaguchiko-lake")).toMatchObject({
-    label: { fr: "Lac Kawaguchiko", en: "Kawaguchiko Lake" },
+    label: { fr: "Lac Kawaguchi : La vue sur le Mont Fuji", en: "Kawaguchi Lake: View of Mount Fuji" },
     published: false,
   })
 

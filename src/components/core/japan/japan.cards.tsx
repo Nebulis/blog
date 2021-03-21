@@ -71,7 +71,7 @@ export const TwoDaysInTokyoCard: FunctionComponent<ExtraCardProps> = ({ fluidObj
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
     <JapanCard title={common.country.japan.card["two-days-in-tokyo"]} to="two-days-in-tokyo" {...card}>
-      <SharedCardJapanImages image="aDayInTokyo" fluidObject={fluidObject} />
+      <SharedCardJapanImages image="twoDaysInTokyo" fluidObject={fluidObject} />
     </JapanCard>
   )
 }

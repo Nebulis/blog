@@ -1,15 +1,13 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { BlogLayout } from "../../../../components/layout/layout"
 import {
-  ImageAsLandscape,
-  TwoImagesSameSize,
   GroupOfImages,
+  ImageAsLandscape,
   ImageAsPortrait,
+  TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { MainToganjiImage } from "../../../../components/images/asia/japan/nagoya/toganji/mainToganjiImage"
-import { How, When, Where, HowLong, HowMuch, WhereToStay, Visit } from "../../../../components/core/section"
+import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
 import { css } from "@emotion/react"
 import { ToganjiEntrance1Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiEntrance1Image"
 import { ToganjiEntrance2Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiEntrance2Image"
@@ -24,6 +22,7 @@ import { Conclusion } from "../../../../components/core/conclusion"
 import { ToganjiEntrance4Image } from "../../../../components/images/asia/japan/nagoya/toganji/toganjiEntrance4Image"
 import { largeStart } from "../../../../components/core/variables"
 import {
+  JapanBlogLayout,
   JapanExternalLink,
   JapanLine,
   JapanLink,
@@ -31,15 +30,34 @@ import {
   ToganjiQuote,
 } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
+import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/nagoya/toganji.json"
+import translationEn from "../../../../locales/en/asia/japan/nagoya/toganji.json"
+import HomeImgUrl from "../../../../images/asia/japan/nagoya/toganji/toganji-main.jpg"
+import { useCustomTranslation } from "../../../../i18n-hook"
+
+const namespace = "asia/japan/nagoya/toganji"
+const id = "toganji"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="toganji" location={location}>
-        <JapanTitle title="Temple de Togan-Ji" categories={["asia", "japan", "nagoya"]} linkId="toganji" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
         <ImageAsLandscape>
-          <MainToganjiImage />
+          <SharedJapanImages image="mainNagoya" />
         </ImageAsLandscape>
         <ToganjiQuote />
         <Where>2 Chome-16 Yotsuyatori, Chikusa Ward, Nagoya</Where>
@@ -164,7 +182,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           Endroit totalement isolé, presque comme coupé du monde, il ne faut pas hésiter à s’y aventurer pour découvrir
           ce géant vert surnommé le Grand Bouddha de Nagoya.
         </Conclusion>
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }
