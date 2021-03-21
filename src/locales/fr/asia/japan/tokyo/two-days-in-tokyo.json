@@ -1,0 +1,79 @@
+{
+  "quote": "Bienvenue à Tokyo, avec ses 40 millions d'habitants, elle est la ville la plus peuplée du monde. Du quartier des affaires au quartier de la mode, de la culture à l'univers geek, chaque quartier a son univers différent.",
+  "introduction": "Découvrez nos deux jours à travers la ville de Tokyo pour voir le maximum en si peu de temps.",
+  "google-description": "Découvrez nos deux jours à travers la ville de Tokyo pour découvrir le maximum en si peu de temps. Dans cet article, on répond à toutes vos questions : Combien de temps et à quelle période ? On vous indique également les lieux que nous avons visités. Cliquez sur l'image pour le guide complet sur nos deux jours à Tokyo.",
+  "social-network-description": "Bienvenue à Tokyo, avec ses 40 millions d'habitants, elle est la ville la plus peuplée du monde. Du quartier des affaires au quartier de la mode, de la culture à l'univers geek, chaque quartier a son univers différent.",
+  "what-time-of-year": {
+    "title": "À quelle période ?",
+    "part1": "[Au printemps](todo), profitez-en pour venir à la période des cerisiers en fleurs. On y est allé fin mars, début avril et c’était le début de la floraison.",
+    "part2": "[En automne](todo), admirez les paysages embellit par les érables de couleur orange, jaune ou rouge.",
+    "part3": "[En hiver](todo), peut-être pas la meilleure saison pour la ville de Tokyo en soit mais si vous prévoyez de visiter d’autres villes, pourquoi pas en profiter pour découvrir les paysages et leur joli manteau blanc.",
+    "part4": "En été, surement l’une des périodes les moins touristiques cela dit l’été il fait vraiment très chaud et l’humidité en plus peut vraiment être encore plus insupportable."
+  },
+  "how-long": {
+    "title": "Combien de temps ?",
+    "part1": "Plus vous y resterez, plus vous verrez de choses cela va de soi.",
+    "part2": "On suppose qu’#une semaine# serait plutôt pas mal pour découvrir un maximum de quartiers. Après, faites en fonction de votre programme.",
+    "part3": "Nous n’y sommes restés que deux jours et on a quand même réussi à faire pas mal de choses."
+  },
+  "where-to-stay": {
+    "title": "Où dormir ?",
+    "part1": "Tokyo est tellement bien desservie niveau transport que vous n’êtes pas obligé de dormir dans les quartiers que vous visitez. Tout dépend de ce que vous allez faire mais nous vous conseillons d’aller dans des hôtels plus au calme. Vous n’aurez de toute façon pas de mal à vous déplacer.",
+    "part2": "Prenez aussi en considération si vous allez sortir le soir, dans ce cas là il serait peut-être effectivement plus simple pour vous de dormir pas loin de rues animées.",
+    "part3": "N’hésitez pas à comparer les offres sur [Booking](todo).",
+    "part4": "En savoir plus sur [les transports au Japon](todo)."
+  },
+  "visit": {
+    "title": "Les visites",
+    "part1": "N’ayant que #deux journées à Tokyo#, nous ne pouvions quand même pas passer à côté d’une petite visite des lieux que nous avons jugé incontournable pour nous.",
+    "part2": "Quel quartier choisir ? Pas évident on vous l’accorde, on a surtout fait en fonction de ce que Tokyo nous inspirait au premier abord, et on a donc choisi des quartiers plutôt animés de jour comme de nuit. "
+  },
+  "day1": {
+    "title": "JOUR 1",
+    "visit1": {
+      "title": "QUARTIER DE SHIBUYA",
+      "part1": "En premier lieu, direction le célèbre quartier de Shibuya, cet immense quartier qui rassemble les spots que nous avons préférés à Tokyo.",
+      "part2": "#Quartier branché et animé de jour comme de nuit#, nous y sommes allés pour 4 choses principales :",
+      "part3": "#Shibuya Crossing#",
+      "part4": "Si vous vous intéressez au Japon, vous en avez déjà forcément entendu parlé. La traversée sur ces célèbres passages piétons est une véritable attraction. Et se trouver un endroit pour regarder ses milliers de petites fourmis se presser quand ils peuvent traverser, l’est tout autant.",
+      "part5": "#Takeshita Street#",
+      "part6": "Cette rue très animée est le rdv des jeunes et des cosplays. Endroit totalement déjanté où on peut trouver toutes sortes de magasins quelque peu excentriques. Vous pourrez même y acheter une barbe à papa arc-en-ciel pour vous fondre dans la masse.",
+      "part7": "#Statue de Hachiko#",
+      "part8": "A la fois belle et émouvante histoire, celle de ce chien très célèbre au Japon pour avoir attendu le retour de son maître pendant plusieurs années au même endroit alors que celui-ci était décédé. Une statue est donc faite à son effigie et représente un peu le symbole de Shibuya.",
+      "part9": "#Centre Commercial + Rues animées#",
+      "part10": "Un quartier animé regorgeant de boutiques, de discothèques et d'innombrables restaurants. Le quartier est également connu pour ses écrans géants et ses rues trépidantes."
+    }
+  },
+  "day2": {
+    "title": "JOUR 2",
+    "visit2": {
+      "title": "PARC D’UENO",
+      "part1": "Nous y étions en avril et qui dit mois d’avril dit #saison des cerisiers#. Qui dit saison des cerisiers dit l’incontournable parc d’Ueno, le plus grand parc de Tokyo. Il est d’ailleurs principalement connu pour son immense allée de cerisiers.",
+      "part2": "#En plus d’un parc et d’un lac pour se promener, vous pourrez y découvrir de nombreux temples et musées ainsi qu’un zoo.#",
+      "part3": "Le parc est clairement intéressant si vous venez à la saison des Sakura et que vous n’avez pas prévu de sortir de Tokyo, quelques monuments y sont retranscrits en miniature."
+    },
+    "visit3": {
+      "title": "LE TEMPLE DE SENSO-JI",
+      "part1": "Nous y sommes allés en fin d’après-midi et malheureusement le soleil était parti, la nuit commençait à tomber et la pluie s’est invitée (tout un programme !).  Cela dit ça n’a pas empêché le lieu d’être bondé et les temples et jardins autour valent vraiment le détour.",
+      "part2": "#Le temple est parmi les plus célèbres à Tokyo. Il est entouré de gigantesques portes et abrite une des plus grandes pagodes de la ville.#",
+      "part3": "Impossible de ne pas s’y arrêter."
+    },
+    "visit4": {
+      "title": "AVENUE YASUKUNI-DORI",
+      "part1": "Situé dans le #quartier de Shinjuku#, un mélange de quartier des affaires la journée et de quartier à la vie nocturne trépidante, l’avenue Yasukuni-Dori est donc une rue très animée et ressemblerait même à un #Time Square japonais#.",
+      "part2": "Ce n’est pas du tout un endroit incontournable mais nous dormions pas loin et nous avons beaucoup aimé nous promener dans ces rues de jour comme de nuit, une sorte de mini Tokyo à elle toute seule.",
+      "part3": "Pas si simple de faire Tokyo en si peu de temps, il y a tellement de choses à voir, mais nous voulions nous concentrer sur les plus petites villes et au final nous ne le regrettons pas, le calme ça fait du bien.",
+      "part4": "On vous propose d’ailleurs [un véritable havre de paix en plein Tokyo](todo) pour vous ressourcer après ce brouhaha de la ville.",
+      "part5": "Cela dit même avec uniquement ces #5 endroits à Tokyo# nous avons l’impression d’avoir pu expérimenter différentes facettes de la ville.",
+      "part6": "Retrouvez tous les samedis des articles détaillés sur chacune de nos visites."
+    }
+  },
+  "conclusion": "Tokyo, une ville à cent à l’heure qui mérite qu’on s’y attarde. Entre modernité et authenticité, elle regorge d'endroits à visiter et de découvertes à faire.",
+  "question 1": "Quel est votre quartier préféré à Tokyo ?",
+  "question 2": "Préférez vous découvrir Tokyo ou le reste du Japon ?",
+  "pinterest": "🌏 Découvrez nos deux jours à travers la ville de Tokyo pour découvrir le maximum en si peu de temps. Dans cet article, on répond à toutes vos questions : Combien de temps et à quelle période ? On vous indique également les lieux que nous avons visités. Cliquez sur l'image pour le guide complet sur nos deux jours à Tokyo. Cliquez sur l'image pour le guide complet ... 🌏",
+  "facebook": {
+    "part1": "♡ Coucou les voyageurs ! ♡",
+    "part2": "Deux jours à Tokyo c’est très court pour visiter cette ville si animée. On vous propose malgré tout une petite liste de sites incontournables à visiter de notre point de vue."
+  }
+}

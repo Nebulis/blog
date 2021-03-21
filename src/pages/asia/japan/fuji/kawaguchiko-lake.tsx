@@ -1,16 +1,15 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { BlogLayout } from "../../../../components/layout/layout"
 import {
-  ImageAsLandscape,
   GroupOfImages,
+  ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
-  TwoImagesSameSizeOrToGroup,
   TwoImagesSameSize,
+  TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { How, HowLong, WhereToStay, Visit, Bonus } from "../../../../components/core/section"
+import { Bonus, How, HowLong, Visit, WhereToStay } from "../../../../components/core/section"
 import { KawaguchikoTrainImage } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoTrainImage"
 import { KawaguchikoViewFujiTrainImage } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoViewFujiTrainImage"
 import { KawaguchikoFuji1Image } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoFuji1Image"
@@ -20,16 +19,40 @@ import { KawaguchikoFuji3Image } from "../../../../components/images/asia/japan/
 import { KawaguchikoLake1Image } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoLake1Image"
 import { KawaguchikoLake2Image } from "../../../../components/images/asia/japan/fuji/kawaguchiko/kawaguchikoLake2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { FujiQuote, JapanExternalLink, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
+import {
+  FujiQuote,
+  JapanBlogLayout,
+  JapanExternalLink,
+  JapanLink,
+  JapanTitle,
+} from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/fuji/kawaguchiko-lake.json"
+import translationEn from "../../../../locales/en/asia/japan/fuji/kawaguchiko-lake.json"
+import HomeImgUrl from "../../../../images/asia/japan/fuji/kawaguchiko/fuji-main.jpg"
+import { useCustomTranslation } from "../../../../i18n-hook"
+
+const namespace = "asia/japan/fuji/kawaguchiko-lake"
+const id = "kawaguchiko-lake"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="fuji" location={location}>
-        <JapanTitle title="Le lac Kawaguchi" categories={["asia", "japan", "fuji"]} linkId="lake-kawaguchiko" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
         <ImageAsLandscape>
           <SharedJapanImages image="mainFuji" />
         </ImageAsLandscape>
@@ -133,7 +156,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           Si vous avez envie d’une autre vue du Mont Fuji vous pouvez vous rendre à la <b>Chureito Pagoda</b>. Il y a
           pas mal de marches pour y accéder (environ 400), mais la vue est paraît-il splendide.
         </Bonus>
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }

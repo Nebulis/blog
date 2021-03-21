@@ -42,11 +42,11 @@ exports[`english pages exports meta for public/en/asia/japan/fuji/index.html cor
 
 exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: title 1`] = `"japan | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/fuji/lake-kawaguchiko/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/fuji/kawaguchiko-lake/index.html correctly: meta-description 1`] = `"Discover Mount Fuji through our article and our photos from Kawaguchi Lake. How to get there ? When to visit it? What to do around? Where to stay? We will explain everything to you."`;
 
-exports[`english pages exports meta for public/en/asia/japan/fuji/lake-kawaguchiko/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/fuji/kawaguchiko-lake/index.html correctly: social-network 1`] = `"Mount Fuji is a symbol of the land of the Rising Sun. Located southwest of Tokyo, it is also the highest summit in Japan. Surrounded by five lakes, we stayed at Kawaguchi Lake."`;
 
-exports[`english pages exports meta for public/en/asia/japan/fuji/lake-kawaguchiko/index.html correctly: title 1`] = `"main | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/fuji/kawaguchiko-lake/index.html correctly: title 1`] = `"Kawaguchi Lake: View of Mount Fuji | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/japan/himeji/himeji-castle/index.html correctly: meta-description 1`] = `"Discover Himeji Castle through our visit. In this article, we answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located. This article includes our travelogue and our photos."`;
 
@@ -102,17 +102,17 @@ exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html c
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: title 1`] = `"japan | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: meta-description 1`] = `"Discover Nagoya Castle through our visit. In this article, we share our travelogue and photos and answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located.."`;
+exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: meta-description 1`] = `"Discover Nagoya Castle through our visit. In this article, we share our travelogue and photos and answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located."`;
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: social-network 1`] = `"Symbol of this not-touristy city in Japan, Nagoya Castle is the pride of the city of Nagoya. Located downtown, it is surrounded by a large park."`;
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: title 1`] = `"Nagoya Castle | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: meta-description 1`] = `"Discover the Togan-ji temple and its huge Buddha with our travelogue. In this article, we answer all your questions: How to get there? How long and at what period? We also tell about the opening hours, the price and where it's located."`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: social-network 1`] = `"Entering into the Togan-ji temple is like entering a new world hidden behind the foliage. We do not suspect at all the presence of such a place from the adjacent streets."`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"main | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"Togan-Ji Temple | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Let's discover Japan during Spring. How many days ? What budget to plan? We respond to your questions based on our own experience. We also show you our travel itinerary for a week."`;
 
@@ -120,17 +120,11 @@ exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/ind
 
 exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: title 1`] = `"Spring In Japan: Under the Sakuras | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/a-day-in-tokyo/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: meta-description 1`] = `"In this article we answer your questions: how to get there? How long ? What's the best time to visit ? We also tell you where it's located and what budget to plan. All with our travelogue and photos of this amazing Japanese garden."`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/a-day-in-tokyo/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: social-network 1`] = `"Hidden in the middle of skyscrapers lies a true haven of peace, the HamaRikyu Garden. It is the perfect place to recharge your batteries in the middle of the largest megalopolis in the world."`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/a-day-in-tokyo/index.html correctly: title 1`] = `"main | Travel Blog"`;
-
-exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
-
-exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
-
-exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: title 1`] = `"main | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: title 1`] = `"Hamarikyu Gardens : A Haven of Peace in the Middle of Tokyo | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
@@ -138,11 +132,35 @@ exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html co
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: title 1`] = `"japan | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/sensoji/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/sensoji/index.html correctly: meta-description 1`] = `"In this article, we answer all your questions: How to get there? When? How long and at what period? All this while sharing our travelogue and photos of this majestic sanctuary that is the Senso-ji temple."`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/sensoji/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/sensoji/index.html correctly: social-network 1`] = `"Senso-Ji temple is the oldest temple in Tokyo. It is a Buddhist temple located in the popular district of Asakusa. It attracts thousands of visitors every day and is certainly one of the most photographed temples."`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/sensoji/index.html correctly: title 1`] = `"main | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/sensoji/index.html correctly: title 1`] = `"Sensō-ji,the oldest Temple in Tokyo | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/shibuya-district/index.html correctly: meta-description 1`] = `"Embark with us to discover the famous district of Shibuya. We tell you about our day in this trendy place. In this article, we'll explain everything you need to know: How to get there? What season? How long to stay and what budget to plan."`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/shibuya-district/index.html correctly: social-network 1`] = `"Shibuya is a must-see district in Tokyo. A true symbol of culture, trendy, young and dynamic district. Stroll in the streets of Shibuya, at day or at night and experience the hectic life of Tokyo for a few days."`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/shibuya-district/index.html correctly: title 1`] = `"Tokyo : The crazy Shibuya district | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: meta-description 1`] = `"Discover our two days in Tokyo where we tried to visit the most we could in such a short time. In this article, we answer all your questions: How long and when? We also tell you the places we visited. Click on the image for the full guide."`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: social-network 1`] = `"Welcome to Tokyo, the most populous city in the world with its 40 million inhabitants. From the business district to the fashion district, from culture to the geek world, each district has its different universe."`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: title 1`] = `"Two Days In Tokyo | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/ueno-park/index.html correctly: meta-description 1`] = `"Discover through our travelogue our visit to this gigantic park in Tokyo, the Ueno Park. In this article, we also answer all your questions: How to get there? When? How long and at what period? We will tell you where it's located and everything you can do there."`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/ueno-park/index.html correctly: social-network 1`] = `"Located in the Ueno district, the park, bearing the same name, is the oldest park in Japan. Open since 1873, it is famous for its cherry trees which attract thousands of people in spring. But it is also home to many other activities."`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/ueno-park/index.html correctly: title 1`] = `"Ueno Park in Tokyo: The meeting place of Sakuras | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/yasukuni-dori/index.html correctly: meta-description 1`] = `"Discover through our article, a street so lively day and night, Yasukuni-Dori Avenue. We tell you, from our experience, how to get there, how long to stay and where to stay. All with our travelogue and our photos."`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/yasukuni-dori/index.html correctly: social-network 1`] = `"All of a sudden, let there be light. Without warning, we are in the middle of Yasukuni-Dori Street, surrounded by large buildings filled with light panels, from the bottom to the top. Watch out, Godzilla is around."`;
+
+exports[`english pages exports meta for public/en/asia/japan/tokyo/yasukuni-dori/index.html correctly: title 1`] = `"Yasukuni-Dori: The street of a thousand lights in Shinjuku | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/japan/transports/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 

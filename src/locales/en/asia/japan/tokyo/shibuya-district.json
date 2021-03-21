@@ -1,55 +1,9 @@
 {
   "quote": "",
   "introduction": "",
-  "google-description": "Discover Nagoya Castle through our visit. In this article, we share our travelogue and photos and answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located.",
-  "social-network-description": "Symbol of this not-touristy city in Japan, Nagoya Castle is the pride of the city of Nagoya. Located downtown, it is surrounded by a large park.",
-  "where": {
-    "title": "",
-    "part1": ""
-  },
-  "when": {
-    "title": "",
-    "part1": ""
-  },
+  "google-description": "Embark with us to discover the famous district of Shibuya. We tell you about our day in this trendy place. In this article, we'll explain everything you need to know: How to get there? What season? How long to stay and what budget to plan.",
+  "social-network-description": "Shibuya is a must-see district in Tokyo. A true symbol of culture, trendy, young and dynamic district. Stroll in the streets of Shibuya, at day or at night and experience the hectic life of Tokyo for a few days.",
   "how": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": ""
-  },
-  "how-long": {
-    "title": "",
-    "part1": ""
-  },
-  "what-time-of-year": {
-    "title": "",
-    "part1": "",
-    "part2": ""
-  },
-  "how-much": {
-    "title": "",
-    "part1": ""
-  },
-  "where-to-stay": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": ""
-  },
-  "where-to-have": {
-    "title": "",
-    "part1": "",
-    "part2": ""
-  },
-  "visit": {
-    "title": "",
-    "part1": "",
-    "part2": ""
-  },
-  "visit1": {
     "title": "",
     "part1": "",
     "part2": "",
@@ -59,6 +13,36 @@
     "part6": "",
     "part7": "",
     "part8": ""
+  },
+  "how-long": {
+    "title": "",
+    "part1": ""
+  },
+  "what-time-of-year": {
+    "title": "",
+    "part1": "",
+    "part2": "",
+    "part3": ""
+  },
+  "where-to-stay": {
+    "title": "",
+    "part1": "",
+    "part2": "",
+    "part3": ""
+  },
+  "visit": {
+    "title": "",
+    "part1": "",
+    "part2": "",
+    "part3": ""
+  },
+  "visit1": {
+    "title": "",
+    "part1": "",
+    "part2": "",
+    "part3": "",
+    "part4": "",
+    "part5": ""
   },
   "visit2": {
     "title": "",
@@ -83,20 +67,6 @@
     "part5": "",
     "part6": "",
     "part7": ""
-  },
-  "visit5": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": ""
-  },
-  "bonus": {
-    "title": "",
-    "part1": ""
   },
   "conclusion": "",
   "question1": "",

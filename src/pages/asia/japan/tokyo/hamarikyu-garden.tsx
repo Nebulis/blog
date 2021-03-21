@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../../../../components/layout/seo"
-import { BlogLayout } from "../../../../components/layout/layout"
 import { How, HowMuch, Visit, When, Where } from "../../../../components/core/section"
 import {
   GroupOfImages,
@@ -21,21 +20,37 @@ import { HamarikyuGardenJungleImage } from "../../../../components/images/asia/j
 import { HamarikyuGardenBankImage } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenBankImage"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { HamarikyuGardenCherry3Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenCherry3Image"
-import { HamarikyuGardenQuote, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
+import { HamarikyuGardenQuote, JapanBlogLayout, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
+import { useCustomTranslation } from "../../../../i18n-hook"
+import i18n from "i18next"
+import translationFr from "../../../../locales/fr/asia/japan/tokyo/hamarikyu-garden.json"
+import translationEn from "../../../../locales/en/asia/japan/tokyo/hamarikyu-garden.json"
+import HomeImgUrl from "../../../../images/asia/japan/tokyo/hamarikyu/hamarikyu-garden-main.jpg"
+
+const namespace = "asia/japan/tokyo/hamarikyu-garden"
+const id = "hamarikyu-garden"
+i18n.addResourceBundle("fr", namespace, translationFr)
+i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { t } = useCustomTranslation([namespace, "common"])
+  const title = t(`common:country.japan.card.${id}`)
   return (
     <>
-      <SEO title="main" location={location} />
-      <BlogLayout page="hamarikyu-garden" location={location}>
-        <JapanTitle
-          title="Un havre de paix en plein Tokyo - Le jardin Hama-Rikyu"
-          categories={["asia", "japan", "tokyo"]}
-          linkId="hamarikyu-garden"
-        />
-        <SharedCardJapanImages image="hamarikyuGarden" />
+      <SEO
+        title={title}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
+        image={HomeImgUrl}
+        location={location}
+      />
+      <JapanBlogLayout page={id} location={location}>
+        <JapanTitle title={title} linkId={id} />
+        <ImageAsLandscape>
+          <SharedCardJapanImages image="hamarikyuGarden" />
+        </ImageAsLandscape>
         <HamarikyuGardenQuote />
         <Where>1-1 Hamarikyuteien, Chuo City, Tokyo</Where>
         <When>
@@ -112,7 +127,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <ImageAsPortrait>
           <HamarikyuGardenCherry3Image />
         </ImageAsPortrait>
-      </BlogLayout>
+      </JapanBlogLayout>
     </>
   )
 }

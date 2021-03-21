@@ -166,7 +166,10 @@ export const japanLinks: CountryLink = {
         },
         {
           id: "sensoji",
-          label: { fr: "Senso-ji", en: "Senso-ji" },
+          label: {
+            fr: commonFr.country.japan.card.sensoji,
+            en: commonEn.country.japan.card.sensoji,
+          },
           published: false,
           card: SensojiCard,
         },
@@ -178,6 +181,30 @@ export const japanLinks: CountryLink = {
           },
           published: false,
           card: HamarikyuGardenCard,
+        },
+        {
+          id: "shibuya-district",
+          label: {
+            fr: commonFr.country.japan.card["shibuya-district"],
+            en: commonEn.country.japan.card["shibuya-district"],
+          },
+          published: false,
+        },
+        {
+          id: "ueno-park",
+          label: {
+            fr: commonFr.country.japan.card["ueno-park"],
+            en: commonEn.country.japan.card["ueno-park"],
+          },
+          published: false,
+        },
+        {
+          id: "yasukuni-dori",
+          label: {
+            fr: commonFr.country.japan.card["yasukuni-dori"],
+            en: commonEn.country.japan.card["yasukuni-dori"],
+          },
+          published: false,
         },
       ],
     },
