@@ -56,7 +56,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <JapanBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>
           <TitleImage src={cherryBlossom} alt="cherry blossom" />
-          &nbsp;Himeji&nbsp;
+          &nbsp;{t("title")}&nbsp;
           <TitleImage src={cherryBlossom} alt="cherry blossom" />
         </MainTitleSection>
         <Divider />

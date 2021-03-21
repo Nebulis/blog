@@ -40,7 +40,7 @@ exports[`english pages exports meta for public/en/asia/japan/fuji/index.html cor
 
 exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
-exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: title 1`] = `"japan | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: title 1`] = `"Mount Fuji | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/japan/fuji/kawaguchiko-lake/index.html correctly: meta-description 1`] = `"Discover Mount Fuji through our article and our photos from Kawaguchi Lake. How to get there ? When to visit it? What to do around? Where to stay? We will explain everything to you."`;
 
@@ -88,7 +88,7 @@ exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html co
 
 exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
-exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html correctly: title 1`] = `"japan | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html correctly: title 1`] = `"Kyoto | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/japan/kyoto/kinkakuji/index.html correctly: meta-description 1`] = `"In this article, we try to explain to you as well as possible our visit to this temple. We answer all your questions: How to get there? How long and at what period? We also tell you its address, opening hours and price."`;
 
@@ -100,7 +100,7 @@ exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html c
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: title 1`] = `"japan | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: title 1`] = `"Nagoya | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: meta-description 1`] = `"Discover Nagoya Castle through our visit. In this article, we share our travelogue and photos and answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located."`;
 
@@ -130,7 +130,7 @@ exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html co
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: title 1`] = `"japan | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: title 1`] = `"Tokyo | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/sensoji/index.html correctly: meta-description 1`] = `"In this article, we answer all your questions: How to get there? When? How long and at what period? All this while sharing our travelogue and photos of this majestic sanctuary that is the Senso-ji temple."`;
 
