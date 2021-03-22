@@ -1,12 +1,16 @@
 {
   "introduction": {
-    "section1": "",
-    "section2": ""
+    "section1": "Renowned for its many temples and monuments classified as World Heritage by Unesco, Kyoto is the most visited city after Tokyo.",
+    "section2": "From the North to the South, from the gorgeous gardens of Arashiyama to the Geisha culture of Gion, discover gems in the different districts that make the Japanese culture so incredible.",
+    "section3": "Find out our travelogue followed by our detailed visits."
   },
   "title": "Kyoto",
-  "meta-description": "",
-  "social-network-description": "",
-  "section1": "",
-  "section2": "",
-  "section3": ""
+  "meta-description": "Discover Kyoto with our travelogue. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?",
+  "social-network-description": "Renowned for its many temples and monuments classified as World Heritage by Unesco, Kyoto is the most visited city after Tokyo, a destination not to be missed during your stay in Japan. Discover gems in the different districts that make the Japanese culture so incredible.",
+  "section1": "Point of interest",
+  "monuments": "Monuments",
+  "city": "City",
+  "section2": "Our travelogue",
+  "section3": "Our detailed visits",
+  "section4": "Discover Japan"
 }

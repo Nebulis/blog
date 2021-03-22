@@ -1,12 +1,16 @@
 {
   "introduction": {
-    "section1": "Réputée pour ses multiples temples et monuments classés au Patrimoine Mondial de l'Unesco, Kyoto est la ville la plus visitée après Tokyo, une destination à ne pas manquer durant votre séjour au Japon.",
-    "section2": "Du Nord au Sud en passant par exemple par le quartier d’Arashiyama et ses grandioses jardins ou bien le quartier Gion et sa culture Geisha. Découvrez les différents quartiers qui abritent de véritables joyaux de cette culture japonaise qui nous plaît tant."
+    "section1": "Réputée pour ses multiples temples et monuments classés au Patrimoine Mondial de l'Unesco, Kyoto est la ville la plus visitée après Tokyo.",
+    "section2": "Du Nord au Sud en passant par exemple par le quartier d’Arashiyama et ses grandioses jardins ou bien le quartier Gion et sa culture Geisha. Découvrez les différents quartiers qui abritent de véritables joyaux de cette culture japonaise qui nous plaît tant.",
+    "section3": "Découvrez dans l’ordre : Notre récit de voyage puis nos visites détaillées."
   },
   "title": "Kyoto",
-  "meta-description": "Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix.",
+  "meta-description": "Découvrez la ville de Kyoto et les multiples temples et joyaux qu'elle nous offre à travers nos récits de voyages. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?",
   "social-network-description": "Réputée pour ses multiples temples et monuments classés au Patrimoine Mondial de l'Unesco, Kyoto est la ville la plus visitée après Tokyo, une destination à ne pas manquer durant votre séjour au Japon. Découvrez les différents quartiers qui abritent de véritables joyaux de cette culture japonaise qui nous plaît tant.",
-  "section1": "Notre récit de voyage",
-  "section2": "Nos visites détaillées",
-  "section3": "Découvre le Japon"
+  "section1": "POINTS D'INTÉRÊTS",
+  "monuments": "Monuments",
+  "city": "Ville",
+  "section2": "Notre récit de voyage",
+  "section3": "Nos visites détaillées",
+  "section4": "Découvre le Japon"
 }

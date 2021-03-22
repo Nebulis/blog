@@ -124,7 +124,7 @@ const japanLinks = () => {
 
   expect(getLink("kyoto")).toMatchObject({ label: { fr: "Kyoto", en: "Kyoto" }, published: false })
   expect(getLink("arashiyama")).toMatchObject({
-    label: { en: "Arashiyama Bamboo Forest", fr: "Forêt de Bambous d'Arashiyama" },
+    label: { en: "Kyoto: Arashiyama Bamboo Forest", fr: "Kyoto : La forêt de Bambous d'Arashiyama" },
     published: false,
   })
   expect(getLink("daigoji")).toMatchObject({
@@ -182,6 +182,46 @@ const japanLinks = () => {
     published: false,
   })
   expect(getLink("osaka-castle")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("winter-in-japan")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("autumn-in-japan")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("tenryuji")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("hogonin")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("arashiyama-monkey-park")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("arashiyama-kimono-forest")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("arashiyama-katsura-river")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("togetsukyo-bridge")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("kameyama-park")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("jojakkoji")).toMatchObject({
     label: { en: "", fr: "" },
     published: false,
   })
@@ -308,10 +348,18 @@ describe("links", () => {
       label: { en: "Kampong Phluk Floating Village", fr: "Village flottant de Kampong Phluk" },
       published: false,
     })
+    expect(getLink("angkor-wat")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
 
     // indonesia assertions
     expect(getLink("bali")).toMatchObject({
       label: { en: "Bali", fr: "Bali" },
+      published: false,
+    })
+    expect(getLink("ubud-monkey-park")).toMatchObject({
+      label: { en: "", fr: "" },
       published: false,
     })
 

@@ -7,7 +7,7 @@
     "title": "Où ?",
     "part1": "Ukyo Ward, Kyoto"
   },
-  "when":  {
+  "when": {
     "title": "Quand ?",
     "part1": "Ouvert #tous les jours 24h/24h#.",
     "part2": "N’hésitez donc pas à profiter du fait que ce soit ouvert non stop pour voir la forêt avec les illuminations de nuit si vous en avez l’occasion."
@@ -18,8 +18,8 @@
     "part2": "Depuis Tokyo ↠ environ 2h30",
     "part3": "Depuis Himeji ↠ environ 1h",
     "part4": "Depuis Nagoya ↠ environ 1h",
-    "part5": "Plus d'informations dans notre article sur [Les transports au Japon](todo).",
-    "part6": "Depuis la gare de Kyoto, prendre la [San-In Line](todo) jusqu’à Saga-Arashiyama Station (17 mins - 7 arrêts). Prendre la sortie sud de la gare, puis se diriger vers l'ouest pendant environ 10 minutes. On arrive sur une rue où se trouvent plusieurs restaurants et magasins, il suffit de traverser et l’entrée se situe sur votre gauche (direction sud)."
+    "part5": "Plus d'informations dans notre article sur [Les transports au Japon](transport-japan).",
+    "part6": "Depuis la gare de Kyoto, prendre la [San-In Line](japan-line:#ffffff:#800080:https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Saga-Arashiyama%20Station%2C%20Sagatenryuji%20Kurumamichicho%2C%20Ukyo%20Ward%2C%20Kyoto%2C%20616-8373%2C%20Japan&travelmode=transit) jusqu’à Saga-Arashiyama Station (17 mins - 7 arrêts). Prendre la sortie sud de la gare, puis se diriger vers l'ouest pendant environ 10 minutes. On arrive sur une rue où se trouvent plusieurs restaurants et magasins, il suffit de traverser et l’entrée se situe sur votre gauche (direction sud)."
   },
   "how-long": {
     "title": "Combien de temps ?",
@@ -28,24 +28,24 @@
   "what-time-of-year": {
     "title": "A quelle période ?",
     "part1": "Vous pouvez y aller #à n’importe quelle saison#, fiez-vous surtout au style de paysages que vous voulez voir dans vos autres visites aux alentours.",
-    "part2": "[Le Japon au printemps](todo) avec les cerisiers en fleur, [Le Japon en automne](todo) avec les érables rouges ou bien [Le Japon en hiver](todo) avec la neige. On vous déconseille le Japon en été dans tous les cas.",
+    "part2": "[Le Japon au printemps](spring-in-japan) avec les cerisiers en fleur, [Le Japon en automne](autumn-in-japan) avec les érables rouges ou bien [Le Japon en hiver](winter-in-japan) avec la neige. On vous déconseille le Japon en été dans tous les cas.",
     "part3": "Par rapport aux endroits qu’on vous propose de faire à Arashiyama plus bas, la meilleure période pour venir dans ce quartier reste à notre sens l’automne. Les érables sont bien plus présents dans ce quartier que les cerisiers."
   },
   "how-much": {
     "title": "Prix ?",
-    "part1": "Gratuit"
+    "part1": "Gratuit."
   },
   "where-to-stay": {
     "title": "Où dormir à Kyoto, près de Arashiyama ?",
     "part1": "Kyoto est particulièrement chère pour ce que nous avons pu voir. Partez sur un minimum de 100€ voir 200€ par nuit. Vérifiez bien les hôtels, on trouve un peu de tout et pas forcément très bien indiqué (des hôtels avec chambre commune ou salle de bains commune mais indiqué en tout petit, lisez bien !). Vérifiez aussi les chambres fumeurs et non-fumeurs, c’est l’un des rares pays où nous avons été étonné que cela existe encore autant.",
-    "part2": "[Comparez et réservez votre hôtel à Kyoto](todo)."
+    "part2": "[Comparez et réservez votre hôtel à Kyoto](booking-search:Kyoto)."
   },
   "visit": {
     "title": "La visite",
     "part1": "La forêt de bambou d’Arashiyama est la plus connue du Japon et est également très célèbre à travers le monde entier.",
     "part2": "Vous la connaissez sûrement sous le nom de #Bambouseraie d’Arashiyama#, appelé comme ça car elle se situe dans le quartier d’Arashiyama mais elle est également surnommée #Bambouseraie de Sagano#, car elle est située dans la forêt de Sagano.",
     "part3": "Tant de noms distinct pour cette toute petite forêt de Kyoto.",
-    "part4": "A Kyoto vous découvrirez certainement les lieux les plus connus des paysages japonais, la forêt de bambou en fait parti mais vous avez aussi les Torii de [Fushimi Inari-taisha](todo) ou également le temple d’or, le [temple Kinkaku-ji](todo), des lieux incontournables que vous ne pouvez pas louper si vous venez au Japon et encore moins à Kyoto."
+    "part4": "A Kyoto vous découvrirez certainement les lieux les plus connus des paysages japonais, la forêt de bambou en fait parti mais vous avez aussi les Torii de [Fushimi Inari-Taisha](fushimi-inari-taisha) ou également le temple d’or, le [temple Kinkaku-Ji](kinkakuji), des lieux incontournables que vous ne pouvez pas louper si vous venez au Japon et encore moins à Kyoto."
   },
   "visit1": {
     "title": "DANS LES RUES D’ARASHIYAMA",
@@ -53,12 +53,12 @@
     "part2": "On marche pendant une dizaine de minutes dans des rues habitées avec quelques jardins fleuris de cerisiers et des temples.",
     "part3": "#Même le chemin est déjà plus que dépaysant, plus que des rues on a même l’impression d’être dans un petit village.#",
     "part4": "Les maisons sont très typiques, toutes très carrées, assez petites, clairement loin de nos maisons de France. Je ne sais pas si on se verrait vivre ici, même si à la visite on se sent bien que ça a l’air tout cosy, tout mignon, je pense que sur le long terme on se sentirait oppressé et sans oublier le monde aussi, une horde de touristes tous les jours dans notre rue nous déplairait sûrement beaucoup plus. Il n’empêche que se promener dans ces rues nous dépaysent quand même pas mal.",
-    "part5": "On aperçoit aussi quelques bâtiments avec des toits qui nous rappellent avec plaisir le toit du [château de Himeji](todo). Ce toit courbé en bois avec les statues en forme de poisson, les shashi-gawara. Un souvenir pas très lointain certes, puisque visité la veille, mais qui nous ravie malgré tout.",
+    "part5": "On aperçoit aussi quelques bâtiments avec des toits qui nous rappellent avec plaisir le toit du [château de Himeji](himeji-castle). Ce toit courbé en bois avec les statues en forme de poisson, les shashi-gawara. Un souvenir pas très lointain certes, puisque visité la veille, mais qui nous ravie malgré tout.",
     "part6": "Au bout du chemin, nous arrivons dans une rue animée où il y a déjà pas mal de monde.",
-    "part7": "jusqu’à Saga-Arashiyama Station (17 mins - 7 arrêts). Prendre la sortie sud de la gare, puis se diriger vers l'ouest pendant environ 10 minutes. On arrive sur une rue où se trouvent plusieurs restaurants et magasins, il suffit de traverser et l’entrée se situe sur votre gauche (direction sud)."
+    "part7": "Ici vous trouverez de tout, des restaurants, des magasins typiques, on a vu principalement des magasins de thés et de vaisselles mais la rue est assez longue et nous ne sommes pas allés au bout."
   },
   "visit2": {
-    "title:": "LA BAMBOUSERAIE D’ARASHIYAMA",
+    "title": "LA BAMBOUSERAIE D’ARASHIYAMA",
     "part1": "Pour entrer dans le chemin d’Arashiyama vous pouvez y #aller à pied ou en pousse-pousse# (~ 5000 Yens). On a vu que certaines personnes disent qu’on peut le faire en vélo, en tout cas à la période où nous y étions c’était interdit, peut-être dû au monde ce jour-là ou à la saison (printemps dans notre cas).",
     "part2": "Malgré le monde, l’ambiance est apaisante.",
     "part3": "Lorsque le vent souffle, laissez-vous guider au son pour écouter les bambous se cogner les uns les autres, un moment unique.",
@@ -67,30 +67,28 @@
     "part6": "Mais on se demande comment échapper à cette vague de personnes, et si pour y échapper il ne faut tout simplement pas venir c’est quand même dommage de ne pas profiter de ce lieu. Dites vous que vous êtes au Japon et que de toute façon vous serez rarement seul. Et ne vous privez pas de visiter des lieux si incontournables à cause des touristes.",
     "part7": "Nous arrivons malgré tout à trouver des endroits où il n’y a personne, ce qui est d’autant plus plaisant, on doit quand même l’avouer.",
     "part8": "Se retrouver seul au milieu de ces gigantesques arbres est impressionnant et offre un cadre magnifique, nous qui sommes #amoureux de la nature#, on ne peut pas se sentir mieux qu’ici à cet instant.",
-    "part9": "Je m’imagine même rêver qu’un petit panda nous fasse l’honneur d’apparaître, un rêve bien loin de la réalité c’est sûr mais j’avais quand même envie de vous le partager, ce rêve de petite fille, qui me fait d’autant plus réaliser à quel point j’ai hâte de visiter la",
-    "part10": "Chine",
-    "part11": "et surtout les réserves de réinsertion de ses gros nounours.",
-    "part12": "Bref, je m’évade ...",
-    "part13": "Revenons à notre visite ...",
-    "part14": "Le chemin se rétrécit de plus en plus. Les bambous, #hauts de plusieurs dizaines de mètres#, se dressent devant vous et laissent passer juste un filet de lumière du soleil. La météo est clairement un véritable plus.",
-    "part15": "Aux endroits les moins denses, vous pouvez apercevoir le ciel, nous aaaaaaaaaaaaaaaaaaaaavons eu la chance d'avoir un beau ciel bleu ce matin là et la vue est également d’autant plus appréciable.",
-    "part16": "#Le bambou est un symbole de longévité, de jeunesse, de prospérité et de force. Il serait capable de repousser les mauvais esprits et les ondes négatives et pourrait également porter chance.#",
-    "part17": "Tant d’effets pour cette plante qui devient au final un véritable porte-bonheur.",
-    "part18": "D’ailleurs en fonction du nombre de ses tiges, le bambou pourrait nous aider de différentes façons :",
-    "part19": "1 tige ↠ augmente la chance",
-    "part20": "2 tiges ↠ augmente la chance et le bonheur en amour",
-    "part21": "3 tiges ↠ augmente le bonheur et la durée de vie",
-    "part22": "4 tiges ↠ porte malheur",
-    "part23": "5 et 7 tiges ↠ donne et préserve une bonne santé",
-    "part24": "6 et 8 tiges ↠ augmente la prospérité (réussite / richesse / bonheur / succès)",
-    "part25": "9 tiges ↠ apporte le succès professionnel et augmente la chance",
-    "part26": "10 tiges ↠ indique un désir d’appréciation,",
-    "part27": "21 tiges ↠ la bénédiction divine, excellente santé, grande richesse et protection de votre maison",
-    "part28": "A un moment donné le chemin se sépare en deux, avec en son centre le “Nonomiya Shrine”, d’un côté vous allez vers le Kameyama Park et de l’autre côté vous continuez vers une autre petite forêt de bambous.",
-    "part29": "#Une promenade assez courte# en soit, puisqu’elle ne fait que #500 mètres#, d’autant plus que certains endroits sont uniquement là pour les pousse-pousse. Ce qui fait qu’il n’y a vraiment qu’un chemin pour nous tous, et qu’on peut vite se retrouver bloqué.",
-    "part30": "Certains bambous sont malheureusement très abîmés et cela à cause de quelques touristes mal intentionnés qui s’amusent à graver leurs noms sur les bambous. Une véritable honte !",
-    "part31": "Svp on ne le dira jamais assez mais prenez soin des choses qui nous entourent, la nature est si belle, nous devons tous continuez à la préserver au maximum et faire ce genre de bêtises ne sert juste à rien, clairement qui cela intéresse que Dylan soit venu le 17 Mars 2019 sur ce lieu. Pas nous en tout cas.",
-    "part32": "Pour cacher les noms écrits vous verrez que certains bambous sont entourés d’une sorte de bâche … un véritable gâchis pour un si bel endroit."
+    "part9": "Je m’imagine même rêver qu’un petit panda nous fasse l’honneur d’apparaître, un rêve bien loin de la réalité c’est sûr mais j’avais quand même envie de vous le partager, ce rêve de petite fille, qui me fait d’autant plus réaliser à quel point j’ai hâte de visiter la [Chine](china) et surtout les réserves de réinsertion de ses gros nounours.",
+    "part10": "Bref, je m’évade ...",
+    "part11": "Revenons à notre visite ...",
+    "part12": "Le chemin se rétrécit de plus en plus. Les bambous, #hauts de plusieurs dizaines de mètres#, se dressent devant vous et laissent passer juste un filet de lumière du soleil. La météo est clairement un véritable plus.",
+    "part13": "Aux endroits les moins denses, vous pouvez apercevoir le ciel, nous avons eu la chance d'avoir un beau ciel bleu ce matin là et la vue est également d’autant plus appréciable.",
+    "part14": "#Le bambou est un symbole de longévité, de jeunesse, de prospérité et de force. Il serait capable de repousser les mauvais esprits et les ondes négatives et pourrait également porter chance.#",
+    "part15": "Tant d’effets pour cette plante qui devient au final un véritable porte-bonheur.",
+    "part16": "D’ailleurs en fonction du nombre de ses tiges, le bambou pourrait nous aider de différentes façons :",
+    "part17": "1 tige ↠ augmente la chance",
+    "part18": "2 tiges ↠ augmente la chance et le bonheur en amour",
+    "part19": "3 tiges ↠ augmente le bonheur et la durée de vie",
+    "part20": "4 tiges ↠ porte malheur",
+    "part21": "5 et 7 tiges ↠ donne et préserve une bonne santé",
+    "part22": "6 et 8 tiges ↠ augmente la prospérité (réussite / richesse / bonheur / succès)",
+    "part23": "9 tiges ↠ apporte le succès professionnel et augmente la chance",
+    "part24": "10 tiges ↠ indique un désir d’appréciation,",
+    "part25": "21 tiges ↠ la bénédiction divine, excellente santé, grande richesse et protection de votre maison",
+    "part26": "A un moment donné le chemin se sépare en deux, avec en son centre le “Nonomiya Shrine”, d’un côté vous allez vers le Kameyama Park et de l’autre côté vous continuez vers une autre petite forêt de bambous.",
+    "part27": "#Une promenade assez courte# en soit, puisqu’elle ne fait que #500 mètres#, d’autant plus que certains endroits sont uniquement là pour les pousse-pousse. Ce qui fait qu’il n’y a vraiment qu’un chemin pour nous tous, et qu’on peut vite se retrouver bloqué.",
+    "part28": "Certains bambous sont malheureusement très abîmés et cela à cause de quelques touristes mal intentionnés qui s’amusent à graver leurs noms sur les bambous. Une véritable honte !",
+    "part29": "Svp on ne le dira jamais assez mais prenez soin des choses qui nous entourent, la nature est si belle, nous devons tous continuez à la préserver au maximum et faire ce genre de bêtises ne sert juste à rien, clairement qui cela intéresse que Dylan soit venu le 17 Mars 2019 sur ce lieu. Pas nous en tout cas.",
+    "part30": "Pour cacher les noms écrits vous verrez que certains bambous ont du scotch vert ... un véritable gâchis pour un si bel endroit."
   },
   "visit3": {
     "title": "QUE FAIRE À ARASHIYAMA ?",
@@ -98,27 +96,27 @@
     "part2": "Nous n’avons pas eu le temps de tout faire mais on vous montre quand même quelques endroits connus à faire avec cette petite map.",
     "part3": "Dans cette carte on vous indique les lieux suivants :",
     "part4": "#Forêt d’Arashiyama# ↠ Bamboo Forest.",
-    "part5": "[#Temple Tenryu-ji#](todo) ↠ Tenryu-ji Temple : Entrée payante pour le jardin (500 Yen) et l’entrée dans le temple est payante également (300 Yen). Ouvert tous les jours de 8h30 à 17h.",
+    "part5": "#[Temple Tenryu-ji](tenryuji)# ↠ Tenryu-ji Temple : Entrée payante pour le jardin (500 Yen) et l’entrée dans le temple est payante également (300 Yen). Ouvert tous les jours de 8h30 à 17h.",
     "part6": "Magnifique parc avec le temple, un étang et un jardin paysager rempli de pins et d’érables, idéal pour de jolies photos en octobre et novembre lors de la saison des Momiji (érable d’un rouge intense en pleine saison).",
-    "part7": "[#Temple Hōgon-in#](todo) ↠ Hōgon-in Temple : Entrée payante (500 Yen). Ouvert tous les jours 9h / 17h.",
+    "part7": "#[Temple Hōgon-in](hogonin)# ↠ Hōgon-in Temple : Entrée payante (500 Yen). Ouvert tous les jours 9h / 17h.",
     "part8": "Annexe du Temple Tenryu-ji, magnifique jardin paysager rempli de pins et d’érables, idéal pour de jolies photos en automne.",
-    "part9": "[#Parc aux singes d’Arashiyama#](todo) ↠ Monkey Park Iwatayama : Entrée payante (550 Yen). Ouvert tous les jours de 9h à 17h.",
-    "part10": "En haut d’une montagne, accédez à une plateforme pour avoir une vue sur Arashiyama. Vous y verrez forcément les macaques qui connaissent les touristes et sont en totale liberté dans ce parc. Faites attention à vos sacs, vos appareils photos et tout ce que vous tenez en main, comme un peu partout les singes sont des chipeurs et peuvent être parfois agressifs s’ils n’ont pas ce qu’ils veulent. On en a eu en exemple au Cambodge dans les [Temples d’Angkor](todo) et à Bali, à la [Forêt des singes d'Ubud](todo).",
-    "part11": "[#Pont Togetsukyo#](todo) ↠ Togetsukyo Bridge.",
+    "part9": "#[Parc aux singes d’Arashiyama](arashiyama-monkey-park)# ↠ Monkey Park Iwatayama : Entrée payante (550 Yen). Ouvert tous les jours de 9h à 17h.",
+    "part10": "En haut d’une montagne, accédez à une plateforme pour avoir une vue sur Arashiyama. Vous y verrez forcément les macaques qui connaissent les touristes et sont en totale liberté dans ce parc. Faites attention à vos sacs, vos appareils photos et tout ce que vous tenez en main, comme un peu partout les singes sont des chipeurs et peuvent être parfois agressifs s’ils n’ont pas ce qu’ils veulent. On en a eu en exemple au Cambodge dans les [Temples d’Angkor](angkor-wat) et à Bali, à la [Forêt des singes d'Ubud](ubud-monkey-park).",
+    "part11": "#[Pont Togetsukyo](togetsukyo-bridge)# ↠ Togetsukyo Bridge.",
     "part12": "Le très célèbre pont Togetsukyo qui est un véritable spot à photos grâce à sa montagne boisée en arrière-plan avec au printemps les cerisiers en fleurs et en automne les érables.",
-    "part13": "[#Parc Kameyama#](todo) ↠ Kameyama Park.",
+    "part13": "#[Parc Kameyama](kameyama-park)# ↠ Kameyama Park.",
     "part14": "Simple promenade dans ce parc immense.",
-    "part15": "[#Temple Jojakko-ji#](todo) ↠ Jojakko-ji Temple : Entrée payante (500 Yen). Ouvert tous les jours de 9h à 17h.",
+    "part15": "#[Temple Jojakko-ji](jojakkoji)# ↠ Jojakko-ji Temple : Entrée payante (500 Yen). Ouvert tous les jours de 9h à 17h.",
     "part16": "Jardin arboré avec plusieurs édifices. Le jardin se situe sur une colline où plus vous montez, plus vous avez une magnifique vue quelque peu dégagée sur Kyoto. En automne, les multiples érables vous couperont peut-être un peu la vue mais cela rendra votre visite encore plus belle grâce à leur couleur si intense en pleine saison. Tout en haut vous pourrez visiter la pagode Taho-to.",
-    "part17": "[#Forêt de kimonos#](todo) ↠ Kimono Forest :  Ouvert tous les jours jusqu'à 23h.",
+    "part17": "#[Forêt de kimonos](arashiyama-kimono-forest)# ↠ Kimono Forest :  Ouvert tous les jours jusqu'à 23h.",
     "part18": "Situé à la station de tramway d’Arashiyama. Ensemble de piliers recouverts de motifs de kimonos colorés. La nuit les piliers sont illuminés pour faire apparaître encore plus les couleurs.",
-    "part19": "[#Rivière Katsura#](todo) ↠ Katsura River.",
+    "part19": "#[Rivière Katsura](arashiyama-katsura-river)# ↠ Katsura River.",
     "part20": "Vous pouvez vous promener près de la rivière, admirer les paysages et profiter tout simplement d’une promenade en plein air pour un grand bol d’air frais. Venez en automne, vous serez ravis de la couleur des érables."
   },
   "conclusion": "Tant de choses à faire dans ce quartier si prisé. Concernant la forêt de bambous, dès que vous y rentrerez, vous n’aurez plus qu'une seule envie, que cette visite dure le plus longtemps possible.",
   "question1": "Êtes-vous déjà allé à cette forêt de bambous ?",
   "question2": "Avez-vous déjà visité un endroit aussi insolite ?",
-  "pinterest": "🌏 Le récit de notre visite à Arashiyama et plus particulièrement de cette magnifique forêt de bambous avec en prime d’autres idées de quoi faire dans ce quartier. Dans cet article on vous indique également Comment y aller ? Combien de temps et à quelle période ? On vous donne également son adresse, les horaires et le prix. Cliquez sur l'image pour le guide complet sur la forêt de bambous … 🌏",
+  "pinterest": "🌏 Le récit de notre visite à Arashiyama et plus particulièrement de cette magnifique forêt de bambous avec en prime d’autres idées de quoi faire dans ce quartier. Dans cet article on vous indique également Comment y aller ? Combien de temps et à quelle période ? On vous donne également son adresse, les horaires et le prix. Cliquez sur l'image pour le guide complet sur la forêt de bambous ... 🌏",
   "facebook": {
     "part1": "♡ Coucou les voyageurs ! ♡",
     "part2": "Promenez-vous, profitez et admirez ces gigantesques bambous qui se dressent devant vous et que vous ne verrez sûrement nulle part ailleurs."

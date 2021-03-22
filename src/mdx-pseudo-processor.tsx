@@ -1,3 +1,4 @@
+import { css } from "@emotion/react"
 import React from "react"
 import { ApplicationLink, ExternalLink } from "./components/core/links/link"
 import { Lang } from "./components/core/links/links.types"
@@ -116,6 +117,25 @@ const buildLink = ({ lang, url, text }: { lang: Lang; url: string; text: string 
         {text}
       </ExternalLink>
     )
+  } else if (elements[0] === "japan-line") {
+    return (
+      <ExternalLink
+        href={elements.slice(3).join(":")}
+        css={css`
+          padding-right: 0.25rem; //p1
+          padding-left: 0.25rem; //p1
+          color: ${elements[1]} !important;
+          background-color: ${elements[2]} !important;
+          &:visited {
+            color: ${elements[1]} !important;
+            background-color: ${elements[2]} !important;
+          }
+        `}
+        className="mdx-pseudo-processor-link japan-line"
+      >
+        {text}
+      </ExternalLink>
+    )
   } else if (elements[0] === "http" || elements[0] === "https") {
     return (
       <ExternalLink href={elements.join(":")} className="mdx-pseudo-processor-link">
@@ -132,58 +152,66 @@ const buildLink = ({ lang, url, text }: { lang: Lang; url: string; text: string 
   )
 }
 
-export const mdxPseudoProcessor = (value: string, _key: string, _options: any, translator: { language: Lang }) => {
-  let mode: "normal" | "bold" | "italic" | "link_text" | "link" = "normal"
+const parseUntil = (value: string, language: Lang, from = 0, stopChar = "") => {
   const elements: React.ReactNode[] = []
-  let linkText = ""
   let currentString = ""
+  let index = from
   const push = () => currentString && elements.push(currentString)
-  if (value.includes("#") || value.includes("_") || value.includes("[")) {
-    ;[...value].forEach((v) => {
-      if (v === "#" && mode === "normal") {
-        push()
-        currentString = ""
-        mode = "bold"
-      } else if (v === "_" && mode === "normal") {
-        push()
-        currentString = ""
-        mode = "italic"
-      } else if (v === "[" && mode === "normal") {
-        push()
-        currentString = ""
-        mode = "link_text"
-      } else if (v === "]" && mode === "link_text") {
-        linkText = currentString
-        currentString = ""
-        mode = "link"
-      } else if (v === "(" && mode === "link") {
-        // nothing to do
-      } else if (v === ")" && mode === "link") {
-        elements.push(buildLink({ lang: translator.language, url: currentString, text: linkText }))
-        currentString = ""
-        mode = "normal"
-      } else if (v === "#" && mode === "bold") {
-        elements.push(<span className="b">{currentString}</span>)
-        currentString = ""
-        mode = "normal"
-      } else if (v === "_" && mode === "italic") {
-        elements.push(<span className="i">{currentString}</span>)
-        currentString = ""
-        mode = "normal"
-      } else {
-        currentString += v
-      }
-    })
-    push()
-    return elements.length === 1 ? (
-      elements[0]
-    ) : (
-      <>
-        {elements.map((element, index) => (
-          <React.Fragment key={index}>{element}</React.Fragment>
-        ))}
-      </>
-    )
+  const back = () => {
+    const children =
+      elements.length <= 1 ? (
+        elements[0]
+      ) : (
+        <>
+          {elements.map((element, index) => (
+            <React.Fragment key={index}>{element}</React.Fragment>
+          ))}
+        </>
+      )
+    return {
+      index,
+      children,
+    }
   }
-  return value
+  for (; index < value.length; index++) {
+    const currentChar = value[index]
+    if (currentChar === stopChar) {
+      break
+    }
+    // link mode => collect only
+    if (stopChar === ")" || stopChar === "]") {
+      currentString += currentChar
+    } else if (currentChar === "#") {
+      push()
+      currentString = ""
+      const { index: nextIndex, children } = parseUntil(value, language, index + 1, "#")
+      elements.push(<span className="b">{children}</span>)
+      index = nextIndex
+    } else if (currentChar === "_") {
+      push()
+      currentString = ""
+      const { index: nextIndex, children } = parseUntil(value, language, index + 1, "_")
+      elements.push(<span className="i">{children}</span>)
+      index = nextIndex
+    } else if (currentChar === "[") {
+      push()
+      currentString = ""
+      const { index: nextIndex, children: linkText } = parseUntil(value, language, index + 1, "]")
+      // nextIndex +2 because of ]( notation
+      const { index: nextNextIndex, children: linkUrl } = parseUntil(value, language, nextIndex + 2, ")")
+      elements.push(buildLink({ lang: language, url: linkUrl as string, text: linkText as string }))
+
+      index = nextNextIndex
+    } else {
+      currentString += currentChar
+    }
+  }
+
+  push()
+  return back()
+}
+
+export const mdxPseudoProcessor = (value: string, _key: string, _options: any, translator: { language: Lang }) => {
+  const { children } = parseUntil(value, translator.language, 0, "")
+  return children
 }

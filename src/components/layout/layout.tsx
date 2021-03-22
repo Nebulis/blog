@@ -252,6 +252,12 @@ export const BlogLayout = styled(IndexBlogLayout)`
         width: calc(100% + 20px);
         max-width: calc(100% + 20px);
       }
+      li > .image-layout:not(.no-reset-image) {
+        margin-left: calc(-10px - 1.45rem); // ul margin
+        margin-right: -10px;
+        width: calc(100% + 20px + 1.45rem);
+        max-width: calc(100% + 20px + 1.45rem);
+      }
     }
   }
 
@@ -264,12 +270,21 @@ export const BlogLayout = styled(IndexBlogLayout)`
         width: calc(100% + 40px);
         max-width: calc(100% + 40px);
       }
+      li > .image-layout:not(.no-reset-image) {
+        margin-left: calc(-1.45rem - 20px); // ul margin
+        margin-right: -20px;
+        width: calc(100% + 40px + 1.45rem);
+        max-width: calc(100% + 40px + 1.45rem);
+      }
     }
   }
 
   @media (min-width: ${mediumStart}) {
     .children-container {
       padding: 0 30px;
+      li > .image-layout:not(.no-reset-image) {
+        transform: translateX(calc(-1.45rem / 2));
+      }
     }
   }
 

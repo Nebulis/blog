@@ -34,12 +34,6 @@ export const JapanQuote = styled(Quote)`
   }
 `
 
-export const ArashiyamaQuote = () => (
-  <JapanQuote>
-    Le bambou serait capable de repousser les mauvais esprits, il représenterait la force et la prospérité...
-  </JapanQuote>
-)
-
 export const KinkakujiQuote = () => (
   <JapanQuote>
     Temple bouddhiste reconnu pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages sont

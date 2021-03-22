@@ -54,13 +54,13 @@ exports[`english pages exports meta for public/en/asia/japan/himeji/himeji-castl
 
 exports[`english pages exports meta for public/en/asia/japan/himeji/himeji-castle/index.html correctly: title 1`] = `"The magnificent white Himeji Castle | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: meta-description 1`] = `"In each article, we answer your questions: When to go? How long ? What budget to plan? For each place visited, we try to convey our visit and our impression as well as possible. We also tell you How to get there? Why ? When? How long and at what period? Without forgetting the locations and the prices."`;
+exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: meta-description 1`] = `"In each article, we answer your questions: When to go? How long ? What budget to plan? For each place visited, we try to transcribe our visit and our impression as well as possible. We also tell you How to get there? Why ? When? How long and at what period? Without forgetting the locations and the prices."`;
 
 exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: social-network 1`] = `"Himeji is a city located in the Hyogo Prefecture in the Kansai region of Japan. It is above all known for its magnificent castle, considered one of the most beautiful castles in Japan. But Himeji is not just a castle. Take a day and discover the Koko-en Garden, a huge park with multiple gardens and go on an excursion to Mount Shosha."`;
 
 exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: title 1`] = `"Himeji | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/index.html correctly: meta-description 1`] = `"Discover through our articles and our photos, the magic of Japan. Follow our city-to-city guide to discover our selection of must-see places in the Land of the Rising Sun. For each place visited, we try to convey our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+exports[`english pages exports meta for public/en/asia/japan/index.html correctly: meta-description 1`] = `"Discover through our articles and our photos, the magic of Japan. Follow our city-to-city guide to discover our selection of must-see places in the Land of the Rising Sun. For each place visited, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/japan/index.html correctly: social-network 1`] = `"Traveling to the Land of the Rising Sun means discovering a mix of modernity and tradition. Admire the fascinating changes of scenery depending on the season. Discover bustling cities and neighborhoods. Follow our city-to-city guide to discover our selection of must-see places."`;
 
@@ -70,7 +70,7 @@ exports[`english pages exports meta for public/en/asia/japan/kyoto/arashiyama/in
 
 exports[`english pages exports meta for public/en/asia/japan/kyoto/arashiyama/index.html correctly: social-network 1`] = `"Arashiyama Bamboo Forest is arguably Japan's most famous bamboo grove, located northwest of Kyoto, near the Katsura River and Arashiyama Monkey Park."`;
 
-exports[`english pages exports meta for public/en/asia/japan/kyoto/arashiyama/index.html correctly: title 1`] = `"Arashiyama Bamboo Forest | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/kyoto/arashiyama/index.html correctly: title 1`] = `"Kyoto: Arashiyama Bamboo Forest | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/japan/kyoto/daigoji/index.html correctly: meta-description 1`] = `"Discover the Daigo-ji Temple with our travelogue, guide and photos. We answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, price and where it's located."`;
 
@@ -84,9 +84,9 @@ exports[`english pages exports meta for public/en/asia/japan/kyoto/fushimi-inari
 
 exports[`english pages exports meta for public/en/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly: title 1`] = `"Fushimi Inari-Taisha | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html correctly: meta-description 1`] = `"Discover Kyoto with our travelogue. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
-exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html correctly: social-network 1`] = `"Renowned for its many temples and monuments classified as World Heritage by Unesco, Kyoto is the most visited city after Tokyo, a destination not to be missed during your stay in Japan. Discover gems in the different districts that make the Japanese culture so incredible."`;
 
 exports[`english pages exports meta for public/en/asia/japan/kyoto/index.html correctly: title 1`] = `"Kyoto | Travel Blog"`;
 
@@ -144,7 +144,7 @@ exports[`english pages exports meta for public/en/asia/japan/tokyo/shibuya-distr
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/shibuya-district/index.html correctly: title 1`] = `"Tokyo : The crazy Shibuya district | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: meta-description 1`] = `"Discover our two days in Tokyo where we tried to visit the most we could in such a short time. In this article, we answer all your questions: How long and when? We also tell you the places we visited. Click on the image for the full guide."`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: meta-description 1`] = `"Discover our two days in Tokyo where we tried to visit the most we could in such a short time. In this article, we answer all your questions: How long and when? We also tell you the places we visited."`;
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: social-network 1`] = `"Welcome to Tokyo, the most populous city in the world with its 40 million inhabitants. From the business district to the fashion district, from culture to the geek world, each district has its different universe."`;
 
@@ -198,13 +198,13 @@ exports[`english pages exports meta for public/en/asia/philippines/el-nido/which
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/which-tour/index.html correctly: title 1`] = `"Bacuit Archipelago: Which tour to choose? | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: meta-description 1`] = `"Discover through our articles and our photos, our trip to the Philippines. Follow our guide from region to region. For each place visited we try to convey our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: meta-description 1`] = `"Discover through our articles and our photos, our trip to the Philippines. Follow our guide from region to region. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: social-network 1`] = `"There is no doubt this is the country that made us travel and dream the most, thanks to its breathtaking landscapes, its unique gorgeous islands and its immense snorkeling and diving spots. The Philippines comprises more than 7,600 islands, which means that you are spoilt for choice for your dream vacation. Enjoy discover through our articles and our photos, our trip to the Philippines."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: title 1`] = `"Philippines | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: meta-description 1`] = `"Discover Himeji through our articles, as well as different places to visit. For each place visited we try to convey our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: meta-description 1`] = `"Discover Himeji through our articles, as well as different places to visit. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: social-network 1`] = `"Vietnam is a unique destination. Magnificent and varied landscapes, natural parks, a cultural heritage and a rich historical heritage ... From Ho Chi Minh City to Hanoi, via Da Nang, each destination offers its own history and a different experience. Discover through our articles and our photos, our travels to Vietnam"`;
 
@@ -234,7 +234,7 @@ exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/discover/index.html correctly: title 1`] = `"Discover Southern Vietnam | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/index.html correctly: meta-description 1`] = `"Travel with us in Southern Vietnam through our travelogue. For each place visited we try to convey our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/index.html correctly: meta-description 1`] = `"Travel with us in Southern Vietnam through our travelogue. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/index.html correctly: social-network 1`] = `"Travel with us in Southern Vietnam through our travelogue. Discover big cities like Ho Chi Minh City, its museum and tunnels, take off to magnificent landscapes around the Mekong Delta River on islands like Ben Tre or visit the Cân Thơ floating market with us."`;
 

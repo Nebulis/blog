@@ -74,6 +74,56 @@ export const japanLinks: CountryLink = {
       label: { fr: "", en: "" },
       published: false,
     },
+    {
+      id: "winter-in-japan",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "autumn-in-japan",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "tenryuji",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "hogonin",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "arashiyama-monkey-park",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "arashiyama-kimono-forest",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "arashiyama-katsura-river",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "togetsukyo-bridge",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "kameyama-park",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "jojakkoji",
+      label: { fr: "", en: "" },
+      published: false,
+    },
   ],
   cities: [
     {
@@ -85,7 +135,7 @@ export const japanLinks: CountryLink = {
           id: "arashiyama",
           label: { fr: commonFr.country.japan.card.arashiyama, en: commonEn.country.japan.card.arashiyama },
           card: ArashiyamaCard,
-          published: false,
+          published: new Date("2021-04-03T17:00:00.000+08:00"),
         },
         {
           id: "daigoji",

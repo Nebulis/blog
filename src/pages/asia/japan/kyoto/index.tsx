@@ -20,11 +20,19 @@ import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/japan/kyoto/index.json"
 import translationEn from "../../../../locales/en/asia/japan/kyoto/index.json"
 import { CityLink } from "../../../../components/core/links/links.types"
-import { CityHomeSection, MainTitleSection, SectionContent } from "../../../../components/core/section"
+import {
+  CityHomeSection,
+  MainTitleSection,
+  PointOfInterestSection,
+  SectionContent,
+  SubSubHomeSection,
+} from "../../../../components/core/section"
 import { TitleImage } from "../../../../components/images/layout"
 import { Divider } from "../../../../components/core/divider"
 import { PageQuote } from "../../../../components/core/quote"
 import HomeImage from "../../../../images/asia/japan/carousel-japan.jpg"
+import { Monument } from "../../../../components/icon/monument"
+import { CityIcon } from "../../../../components/icon/city"
 
 const namespace = "asia/japan/kyoto/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -63,11 +71,24 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <SectionContent>
           <PageQuote>{t("introduction.section1")}</PageQuote>
           <PageQuote position="none">{t("introduction.section2")}</PageQuote>
+          {development && <PageQuote position="none">{t("introduction.section3")}</PageQuote>}
         </SectionContent>
+        <Divider />
+        <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
+        <PointOfInterestSection>
+          <div className="title-element">
+            <Monument />
+            <div className="title mt2">{t("monuments")}</div>
+          </div>
+          <div className="title-element">
+            <CityIcon />
+            <div className="title mt2">{t("city")}</div>
+          </div>
+        </PointOfInterestSection>
         {highlights.length > 0 && (
           <>
             <Divider className="mt2" />
-            <CityHomeSection>{t("section2")}</CityHomeSection>
+            <CityHomeSection>{t("section3")}</CityHomeSection>
             <CityArticleContainer>
               {highlights.map(({ card: Card, id }) =>
                 Card ? <Card key={id} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
@@ -78,7 +99,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         {cities.length > 0 && (
           <>
             <Divider className="mt2" />
-            <CityHomeSection>{t("section3")}</CityHomeSection>
+            <CityHomeSection>{t("section4")}</CityHomeSection>
             <MedallionContainer>
               {cities.map((city) => {
                 return city.imageProps?.image ? (
