@@ -70,7 +70,7 @@ exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.
 
 exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly: social-network 1`] = `"La forêt de bambous d’Arashiyama est certainement la bambouseraie la plus connue du Japon, elle se situe au nord-ouest de Kyoto, près de la rivière Katsura et du parc des singes d’Arashiyama."`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly: title 1`] = `"Forêt de Bambous d'Arashiyama | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly: title 1`] = `"Kyoto : La forêt de Bambous d'Arashiyama | Blog Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/kyoto/daigoji/index.html correctly: meta-description 1`] = `"Découvrez le temple Daigo-ji à travers notre récit de voyage avec notre guide et nos photos. On répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix."`;
 
@@ -84,7 +84,7 @@ exports[`french pages exports meta for public/asia/japan/kyoto/fushimi-inari-tai
 
 exports[`french pages exports meta for public/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly: title 1`] = `"Fushimi Inari-Taisha | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/index.html correctly: meta-description 1`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
+exports[`french pages exports meta for public/asia/japan/kyoto/index.html correctly: meta-description 1`] = `"Découvrez la ville de Kyoto et les multiples temples et joyaux qu'elle nous offre à travers nos récits de voyages. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/japan/kyoto/index.html correctly: social-network 1`] = `"Réputée pour ses multiples temples et monuments classés au Patrimoine Mondial de l'Unesco, Kyoto est la ville la plus visitée après Tokyo, une destination à ne pas manquer durant votre séjour au Japon. Découvrez les différents quartiers qui abritent de véritables joyaux de cette culture japonaise qui nous plaît tant."`;
 
@@ -144,7 +144,7 @@ exports[`french pages exports meta for public/asia/japan/tokyo/shibuya-district/
 
 exports[`french pages exports meta for public/asia/japan/tokyo/shibuya-district/index.html correctly: title 1`] = `"Tokyo : Le quartier déjanté de Shibuya | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: meta-description 1`] = `"Découvrez nos deux jours à travers la ville de Tokyo pour découvrir le maximum en si peu de temps. Dans cet article, on répond à toutes vos questions : Combien de temps et à quelle période ? On vous indique également les lieux que nous avons visités. Cliquez sur l'image pour le guide complet sur nos deux jours à Tokyo."`;
+exports[`french pages exports meta for public/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: meta-description 1`] = `"Découvrez nos deux jours à travers la ville de Tokyo pour découvrir le maximum en si peu de temps. Dans cet article, on répond à toutes vos questions : Combien de temps et à quelle période ? On vous indique également les lieux que nous avons visités."`;
 
 exports[`french pages exports meta for public/asia/japan/tokyo/two-days-in-tokyo/index.html correctly: social-network 1`] = `"Bienvenue à Tokyo, avec ses 40 millions d'habitants, elle est la ville la plus peuplée du monde. Du quartier des affaires au quartier de la mode, de la culture à l'univers geek, chaque quartier a son univers différent."`;
 

@@ -23,6 +23,63 @@ describe("mdx-pseudo-processor", () => {
       </React.Fragment>
     `)
   })
+  it("should combine bold and italic", () => {
+    expect(mdxPseudoProcessor("hello #w_or_ld#!", "", "", { language: "fr" })).toMatchInlineSnapshot(`
+      <React.Fragment>
+        <React.Fragment>
+          hello 
+        </React.Fragment>
+        <React.Fragment>
+          <span
+            className="b"
+          >
+            <React.Fragment>
+              <React.Fragment>
+                w
+              </React.Fragment>
+              <React.Fragment>
+                <span
+                  className="i"
+                >
+                  or
+                </span>
+              </React.Fragment>
+              <React.Fragment>
+                ld
+              </React.Fragment>
+            </React.Fragment>
+          </span>
+        </React.Fragment>
+        <React.Fragment>
+          !
+        </React.Fragment>
+      </React.Fragment>
+    `)
+  })
+  it("should combine bold and link", () => {
+    expect(mdxPseudoProcessor("hello #[hello](asia)#!", "", "", { language: "fr" })).toMatchInlineSnapshot(`
+      <React.Fragment>
+        <React.Fragment>
+          hello 
+        </React.Fragment>
+        <React.Fragment>
+          <span
+            className="b"
+          >
+            <LinkIfActive
+              className="mdx-pseudo-processor-link"
+              to="asia"
+            >
+              hello
+            </LinkIfActive>
+          </span>
+        </React.Fragment>
+        <React.Fragment>
+          !
+        </React.Fragment>
+      </React.Fragment>
+    `)
+  })
   it("should return an italic expression when there is _", () => {
     expect(mdxPseudoProcessor("hello _world_!", "", "", { language: "fr" })).toMatchInlineSnapshot(`
       <React.Fragment>
@@ -425,6 +482,19 @@ describe("mdx-pseudo-processor", () => {
           >
             world
           </span>
+        `)
+      })
+    })
+    describe("japan-line", () => {
+      it("should build japan-line link", () => {
+        expect(mdxPseudoProcessor("[test](japan-line:red:blue:https://test.com)", "", "", { language: "fr" }))
+          .toMatchInlineSnapshot(`
+          <ExternalLink
+            className="mdx-pseudo-processor-link japan-line"
+            href="https://test.com"
+          >
+            test
+          </ExternalLink>
         `)
       })
     })

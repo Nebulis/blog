@@ -35,6 +35,14 @@ export const asiaLinks: ContinentLink = {
           },
           published: false,
         },
+        {
+          id: "angkor-wat",
+          label: {
+            en: "",
+            fr: "",
+          },
+          published: false,
+        },
       ],
       label: { en: commonEn.country.cambodia.title, fr: commonFr.country.cambodia.title },
     },
@@ -71,7 +79,16 @@ export const asiaLinks: ContinentLink = {
             en: "Bali",
             fr: "Bali",
           },
-          highlights: [],
+          highlights: [
+            {
+              id: "ubud-monkey-park",
+              label: {
+                en: "",
+                fr: "",
+              },
+              published: false,
+            },
+          ],
         },
       ],
       others: [],
