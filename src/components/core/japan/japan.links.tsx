@@ -124,6 +124,11 @@ export const japanLinks: CountryLink = {
       label: { fr: "", en: "" },
       published: false,
     },
+    {
+      id: "ginkakuji",
+      label: { fr: "", en: "" },
+      published: false,
+    },
   ],
   cities: [
     {
@@ -146,7 +151,7 @@ export const japanLinks: CountryLink = {
         {
           id: "kinkakuji",
           label: { fr: commonFr.country.japan.card.kinkakuji, en: commonEn.country.japan.card.kinkakuji },
-          published: false,
+          published: new Date("2021-04-10T17:00:00.000+08:00"),
           card: KinkakujiCard,
         },
         {

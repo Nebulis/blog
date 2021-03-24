@@ -1,47 +1,30 @@
-import React from "react"
+import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
 import {
   How,
   HowLong,
   HowMuch,
+  Introduction,
+  SectionContent,
   Visit,
   WhatTimeOfYear,
   When,
   Where,
   WhereToStay,
 } from "../../../../components/core/section"
-import { css } from "@emotion/react"
 import {
   GroupOfImages,
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
-  TwoImagesSameSize,
+  ImageAsPortraitOnTheLeft,
+  ImageAsPortraitOnTheRight,
+  TwoImagesRightBigger,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { KinkakujiKanjiImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiKanjiImage"
-import { KinkakujiTempleWithLake1Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiTempleWithLake1Image"
-import { KinkakujiTempleWithLake2Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiTempleWithLake2Image"
-import { KinkakujiOtherTemple1Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiOtherTemple1Image"
-import { KinkakujiOtherTemple2Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiOtherTemple2Image"
-import { KinkakujiTemple1Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiTemple1Image"
-import { KinkakujiFenghuangImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiFenghuangImage"
-import { KinkakujiTemple2Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiTemple2Image"
-import { KinkakujiWaterfall2Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiWaterfall2Image"
-import { KinkakujiWaterfall1Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiWaterfall1Image"
-import { KinkakujiLakeImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiLakeImage"
-import { KinkakujiStatueImage } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiStatueImage"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { KinkakujiOtherTemple3Image } from "../../../../components/images/asia/japan/kyoto/kinkakuji/kinkakujiOtherTemple3Image"
-import {
-  JapanBlogLayout,
-  JapanExternalLink,
-  JapanLine,
-  JapanLink,
-  JapanTitle,
-  KinkakujiQuote,
-} from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 import i18n from "i18next"
@@ -49,6 +32,12 @@ import translationFr from "../../../../locales/fr/asia/japan/kyoto/kinkakuji.jso
 import translationEn from "../../../../locales/en/asia/japan/kyoto/kinkakuji.json"
 import HomeImgUrl from "../../../../images/asia/japan/kyoto/kinkakuji/kinkakuji-main.jpg"
 import { useCustomTranslation } from "../../../../i18n-hook"
+import { Quote } from "../../../../components/core/quote"
+import { Divider } from "../../../../components/core/divider"
+import { getLink } from "../../../../components/core/links/links.utils"
+import { ApplicationContext } from "../../../../components/application"
+import { Comments } from "../../../../components/core/comments"
+import { KinkakujiImages } from "../../../../components/images/asia/japan/kyoto/kinkakuji"
 
 const namespace = "asia/japan/kyoto/kinkakuji"
 const id = "kinkakuji"
@@ -56,8 +45,10 @@ i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { t } = useCustomTranslation([namespace, "common"])
+  const { development } = useContext(ApplicationContext)
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.${id}`)
+  const transportLinkPublished = development || getLink("transport-japan").published
   return (
     <>
       <SEO
@@ -69,153 +60,241 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <JapanBlogLayout page={id} location={location}>
         <JapanTitle title={title} linkId={id} />
-        <SharedCardJapanImages image="kinkakuji" />
-        <KinkakujiQuote />
-        <Where>1 Kinkakujicho, Kita Ward, Kyoto</Where>
-        <When>
-          <p>Tous les jours de 9h à 17h.</p>
+        <ImageAsLandscape>
+          <SharedCardJapanImages image="kinkakuji" />
+        </ImageAsLandscape>
+        <Quote>{t("quote")}</Quote>
+        <Divider />
+        <Introduction>{t("introduction")}</Introduction>
+        <Divider />
+        <Where title={t("where.title")}>
+          <p>{t("where.part1")}</p>
+        </Where>
+        <When title={t("when.title")}>
+          <p>{t("when.part1")}</p>
         </When>
-        <How>
-          Depuis la plupart des grandes villes il est possible de se rendre à Kyoto en Shinkansen.
+        <How title={t("how.title")}>
+          <p>{t("how.part1")}</p>
           <ul>
-            <li>Depuis Tokyo environ 2h30</li>
-            <li>Depuis Himeji environ 1h</li>
-            <li>Depuis Nagoya environ 1h</li>
-            <small>
-              <JapanLink action="hide" to="transport-japan">
-                Plus d’information sur les transports.
-              </JapanLink>
-            </small>
+            <li>{t("how.part2")}</li>
+            <li>{t("how.part3")}</li>
+            <li>{t("how.part4")}</li>
           </ul>
-          <p>
-            Depuis la gare de Kyoto, prendre la{" "}
-            <JapanLine
-              href="https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Kinkaku-ji%2C%201%20Kinkakujicho%2C%20Kita%20Ward%2C%20Kyoto%2C%20603-8361%2C%20Japan&travelmode=transit"
-              css={css`
-                background-color: #800080;
-                color: #ffffff;
-              `}
-            >
-              San-In Line
-            </JapanLine>{" "}
-            jusqu’à Emmachi (9 mins - 4 arrêts). Prendre ensuite le bus ligne 204 ou 205 depuis Kita Oji Bus Terminal
-            vers Waratenjin-mae (9 mins - 6 arrêts). Marcher vers l’Ouest pendant 2 minutes (en descendant du bus
-            redescendre vers la dernière intersection puis tourner à droite).
-          </p>
+          {transportLinkPublished && <p>{t("how.part5")}</p>}
+          <p>{t("how.part6")}</p>
         </How>
-        <HowLong>Une demi-journée</HowLong>
-        <WhatTimeOfYear>
-          <p> Pas de période spécifique, à chaque saison vous y découvrirez un nouveau paysage. </p>
-          <p>
-            Nous y sommes allés au printemps où le soleil était au rendez-vous, nous aimerions beaucoup y retourner à
-            l’automne, pour voir les érables rouges et encore plus en hiver, avec le lac gelé et la neige recouvrir le
-            toit du temple. Un régal à chaque saison, nous en sommes convaincu.{" "}
-          </p>
+        <HowLong title={t("how-long.title")}>
+          <p>{t("how-long.part1")}</p>
+        </HowLong>
+        <WhatTimeOfYear title={t("what-time-of-year.title")}>
+          <p>{t("what-time-of-year.part1")}</p>
+          <p>{t("what-time-of-year.part2")}</p>
         </WhatTimeOfYear>
-        <HowMuch>400 Yens (~3,50 €)</HowMuch>
-        <WhereToStay>
-          <p>
-            Chercher un hôtel à Kyoto n’est pas une mince affaire, les prix sont quand même sacrément élevé (au Japon en
-            général d’ailleurs) , environ 200€ pour dormir près de Kinkakuji. Nous vous conseillons donc de vous trouver
-            un hôtel dans Kyoto et de ne pas chercher en fonction des lieux de vos visites.{" "}
-          </p>
-          <p>
-            {" "}
-            Les transports en commun à Kyoto sont très efficaces, il n’est pas difficile de trouver son chemin, et puis
-            comme partout au Japon, Google Map est clairement votre meilleur ami !
-          </p>
-          <p>
-            <small>
-              <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Kyoto%2C+Kyoto%2C+Japon">
-                Comparez et réservez votre hôtel à Kyoto.
-              </JapanExternalLink>
-            </small>
-          </p>
+        <HowMuch title={t("how-much.title")}>
+          <p>{t("how-much.part1")}</p>
+        </HowMuch>
+        <WhereToStay title={t("where-to-stay.title")}>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
         </WhereToStay>
-        <Visit>
-          <p>
-            A l’entrée, on nous donne un billet écrit en Kana ou Kanji, nous ne savons malheureusement pas ce qu’il y a
-            écrit dessus mais en tout cas une chose est sûr cela nous plonge directement dans l’atmosphère et la beauté
-            du lieu.
-          </p>
-          <ImageAsPortrait>
-            <KinkakujiKanjiImage
-              css={css`
-                max-width: 450px;
-              `}
-            />
-          </ImageAsPortrait>
-          <p>
-            On arrive ensuite en face du temple où on a une vue d’ensemble sur celui-ci et sur le lac. Nous avons la
-            chance que le beau temps soit au rendez-vous, on peut donc apercevoir les parois recouvertes de feuilles
-            d’or qui se reflètent dans l’eau.
-          </p>
-          <TwoImagesSameSizeOrToGroup>
-            <KinkakujiTempleWithLake1Image />
-            <KinkakujiTempleWithLake2Image />
-          </TwoImagesSameSizeOrToGroup>
-          <p>On fait ensuite le tour du lac pour se rapprocher du temple d’or.</p>
-          <p>En passant, on y découvre d’autres temples beaucoup moins prestigieux certes mais tout aussi jolis.</p>
-          <GroupOfImages>
-            <ImageAsLandscapeOnTheLeft>
-              <KinkakujiOtherTemple1Image />
-            </ImageAsLandscapeOnTheLeft>
-            <ImageAsLandscapeOnTheRight>
-              <KinkakujiOtherTemple2Image />
-            </ImageAsLandscapeOnTheRight>
-          </GroupOfImages>
-          <p>
-            On s’approche donc de plus en plus du temple, pour admirer les feuilles d’or d’encore plus près et qui
-            paraissent si lisses. On peut enfin apercevoir le phénix chinois Fenghuang qui surplombe le temple à son
-            sommet.
-          </p>
-          <GroupOfImages>
-            <ImageAsLandscapeOnTheLeft>
-              <KinkakujiTemple1Image />
-            </ImageAsLandscapeOnTheLeft>
-            <ImageAsLandscapeOnTheRight>
-              <KinkakujiFenghuangImage />
-            </ImageAsLandscapeOnTheRight>
-            <ImageAsLandscapeOnTheLeft>
-              <KinkakujiOtherTemple3Image />
-            </ImageAsLandscapeOnTheLeft>
-          </GroupOfImages>
-          <p>
-            Le chemin continue sur des jardins à perte de vue, vous pouvez continuer à monter ou prendre un raccourci
-            pour terminer la visite mais vous louperez la vue d’en haut sur le temple, les différentes petites statues
-            et cascades qui font de la visite un endroit spécial.
-          </p>
-          <GroupOfImages>
-            <ImageAsLandscape>
-              <KinkakujiTemple2Image />
-            </ImageAsLandscape>
-            <TwoImagesSameSize>
-              <KinkakujiWaterfall1Image />
-              <KinkakujiWaterfall2Image />
-            </TwoImagesSameSize>
-          </GroupOfImages>
-          <p>
-            Monter nous offre également une vue panoramique sur la montagne de pins derrière le temple, un magnifique
-            spectacle.
-          </p>
-          <p>
-            Des édifices sont dispersés un peu partout pour vous permettre de méditer ou de faire des voeux, jetez-y une
-            pièce la fortune vous sourira peut-être.
-          </p>
-          <TwoImagesSameSize
-            css={css`
-              max-width: 700px;
-            `}
-          >
-            <KinkakujiLakeImage />
-            <KinkakujiStatueImage />
-          </TwoImagesSameSize>
+        <Visit title={t("visit.title")}>
+          <section>
+            <SectionContent>
+              <p>{t("visit.part1")}</p>
+              <p>{t("visit.part2")}</p>
+              <GroupOfImages>
+                <ImageAsPortraitOnTheLeft>
+                  <KinkakujiImages image="visit" />
+                </ImageAsPortraitOnTheLeft>
+                <ImageAsPortraitOnTheRight>
+                  <KinkakujiImages image="visit2" />
+                </ImageAsPortraitOnTheRight>
+              </GroupOfImages>
+              <p>{t("visit.part3")}</p>
+              <p>{t("visit.part4")}</p>
+              <p>{t("visit.part5")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="visit3" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="visit4" />
+                </ImageAsLandscape>
+                <TwoImagesRightBigger>
+                  <KinkakujiImages image="visit5" />
+                  <KinkakujiImages image="visit6" />
+                </TwoImagesRightBigger>
+              </GroupOfImages>
+              <p>{t("visit.part6")}</p>
+              <p>{t("visit.part7")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit1.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <ImageAsLandscape>
+                <KinkakujiImages image="history" />
+              </ImageAsLandscape>
+              <p>{t("visit1.part1")}</p>
+              <p>{t("visit1.part2")}</p>
+              <p>{t("visit1.part3")}</p>
+              <p>{t("visit1.part4")}</p>
+              <p>{t("visit1.part5")}</p>
+              <p>{t("visit1.part6")}</p>
+              <p>{t("visit1.part7")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit2.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit2.part1")}</p>
+              <p>{t("visit2.part2")}</p>
+              <p>{t("visit2.part3")}</p>
+              <p>{t("visit2.part4")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <KinkakujiImages image="temple" />
+                  <KinkakujiImages image="temple2" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="temple3" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit2.part5")}</p>
+              <p>{t("visit2.part6")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="temple4" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="temple5" />
+                </ImageAsLandscape>
+                <ImageAsLandscapeOnTheLeft>
+                  <KinkakujiImages image="temple6" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <KinkakujiImages image="temple7" />
+                </ImageAsLandscapeOnTheRight>
+              </GroupOfImages>
+              <p>{t("visit2.part7")}</p>
+              <p>{t("visit2.part8")}</p>
+              <GroupOfImages>
+                <ImageAsPortraitOnTheLeft>
+                  <KinkakujiImages image="temple8" />
+                </ImageAsPortraitOnTheLeft>
+                <ImageAsPortraitOnTheRight>
+                  <KinkakujiImages image="temple9" />
+                </ImageAsPortraitOnTheRight>
+              </GroupOfImages>
+              <p>{t("visit2.part9")}</p>
+              <p>{t("visit2.part10")}</p>
+              <p>{t("visit2.part11")}</p>
+              <p>{t("visit2.part12")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit3.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit3.part1")}</p>
+              <p>{t("visit3.part2")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="garden" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <KinkakujiImages image="garden2" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="garden3" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit3.part3")}</p>
+              <p>{t("visit3.part4")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="garden4" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <KinkakujiImages image="garden5" />
+                  <KinkakujiImages image="garden6" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="garden7" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="garden8" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <KinkakujiImages image="garden9" />
+                </ImageAsPortrait>
+                <ImageAsPortraitOnTheLeft>
+                  <KinkakujiImages image="garden10" />
+                </ImageAsPortraitOnTheLeft>
+                <ImageAsPortraitOnTheRight>
+                  <KinkakujiImages image="garden11" />
+                </ImageAsPortraitOnTheRight>
+                <ImageAsPortraitOnTheLeft>
+                  <KinkakujiImages image="garden12" />
+                </ImageAsPortraitOnTheLeft>
+                <ImageAsPortraitOnTheRight>
+                  <KinkakujiImages image="garden13" />
+                </ImageAsPortraitOnTheRight>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="garden14" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="garden15" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="garden16" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit3.part5")}</p>
+              <p>{t("visit3.part6")}</p>
+              <p>{t("visit3.part7")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <KinkakujiImages image="garden17" />
+                </ImageAsLandscape>
+                <ImageAsPortraitOnTheLeft>
+                  <KinkakujiImages image="garden18" />
+                </ImageAsPortraitOnTheLeft>
+                <ImageAsPortraitOnTheRight>
+                  <KinkakujiImages image="garden19" />
+                </ImageAsPortraitOnTheRight>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
         </Visit>
         <Conclusion>
-          Pavillon d’or, temple impérial du jardin des cerfs, que de surnom pour ce splendide temple qui fût
-          malheureusement totalement détruit en 1950 par un incendie volontaire, et heureusement reconstruit à
-          l’identique 5 ans après.
+          <p>{t("conclusion")}</p>
+          <ul>
+            <li>{t("question1")}</li>
+            <li>{t("question2")}</li>
+          </ul>
         </Conclusion>
+        <Divider />
+        <Comments
+          collectionName={namespace}
+          location={location}
+          facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+          pinterest={{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? [<KinkakujiImages image="cardFr1" key="cardFr1" />, <KinkakujiImages image="cardFr2" key="cardFr1" />]
+                : [
+                    <KinkakujiImages image="cardEn1" key="cardEn1" />,
+                    <KinkakujiImages image="cardEn2" key="cardEn1" />,
+                  ],
+          }}
+        />
       </JapanBlogLayout>
     </>
   )
