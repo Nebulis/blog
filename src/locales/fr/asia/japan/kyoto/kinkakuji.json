@@ -1,7 +1,7 @@
 {
   "quote": "Temple bouddhiste situé à Kyoto, il est l’un des temples les plus reconnus pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages sont entièrement recouverts de feuilles d’or.",
   "introduction": "Dans cet article, on tente de vous retranscrire au mieux notre visite de ce parc et de cette beauté sans pareille.",
-  "google-description": "Dans cet article, on tente de vous retranscrire au mieux notre visite de ce parc et de cette beauté sans pareil. On répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix.",
+  "google-description": "Dans cet article, on tente de vous retranscrire au mieux notre visite de ce parc et de cette beauté sans pareille. On répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix.",
   "social-network-description": "Temple bouddhiste situé à Kyoto, il est l’un des temples les plus reconnus pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages sont entièrement recouverts de feuilles d’or.",
   "where": {
     "title": "Où ?",
@@ -17,8 +17,8 @@
     "part2": "Depuis Tokyo ↠ environ 2h30",
     "part3": "Depuis Himeji ↠ environ 1h",
     "part4": "Depuis Nagoya ↠ environ 1h",
-    "part5": "[Plus d’informations sur les transports](todo).",
-    "part6": "Depuis la gare de Kyoto, prendre la [San-In Line](todo) jusqu’à Emmachi (9 mins - 4 arrêts). Prendre ensuite le bus ligne 204 ou 205 depuis Kitaoji Bus Terminal vers Wara Tenjin-mae (9 mins - 6 arrêts). Marcher vers l’Ouest pendant 2 minutes (en descendant du bus redescendre vers la dernière intersection puis tourner à droite)."
+    "part5": "[Plus d’informations sur les transports](transport-japan).",
+    "part6": "Depuis la gare de Kyoto, prendre la [San-In Line](japan-line:#ffffff:#800080:https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Kinkaku-ji%2C%201%20Kinkakujicho%2C%20Kita%20Ward%2C%20Kyoto%2C%20603-8361%2C%20Japan&travelmode=transit) jusqu’à Emmachi (9 mins - 4 arrêts). Prendre ensuite le bus ligne 204 ou 205 depuis Kitaoji Bus Terminal vers Wara Tenjin-mae (9 mins - 6 arrêts). Marcher vers l’Ouest pendant 2 minutes (en descendant du bus redescendre vers la dernière intersection puis tourner à droite)."
   },
   "how-long": {
     "title": "Combien de temps ?",
@@ -35,8 +35,8 @@
   },
   "where-to-stay": {
     "title": "Où dormir à Kyoto, près de Kinkaku-ji ?",
-    "part1": "Chercher un hôtel à Kyoto n’est pas une mince affaire, les prix sont quand même sacrément élevés (au Japon en général d’ailleurs) , environ 200€ pour dormir près de Kinkaku-ji. Nous vous conseillons donc de vous trouver un hôtel dans Kyoto et de ne pas chercher en fonction des lieux de vos visites. Les transports en commun à Kyoto sont très efficaces, il n’est pas difficile de trouver son chemin, et puis comme partout au Japon, Google Map est clairement votre meilleur ami !",
-    "part2": "[Comparez et réservez votre hôtel à Kyoto](todo)."
+    "part1": "Chercher un hôtel à Kyoto n’est pas une mince affaire, les prix sont quand même sacrément élevés (au Japon en général d’ailleurs), environ 200€ pour dormir près de Kinkaku-ji. Nous vous conseillons donc de vous trouver un hôtel dans Kyoto et de ne pas chercher en fonction des lieux de vos visites. Les transports en commun à Kyoto sont très efficaces, il n’est pas difficile de trouver son chemin, et puis comme partout au Japon, Google Map est clairement votre meilleur ami !",
+    "part2": "[Comparez et réservez votre hôtel à Kyoto](booking-search:Kyoto)."
   },
   "visit": {
     "title": "La visite",
@@ -56,7 +56,7 @@
     "part4": "En 1987, il est rénové et reçoit une nouvelle couche de feuilles d'or beaucoup plus épaisse. #Sa dernière rénovation date de 2020#, une rénovation toute récente pour lui donner encore plus d’éclat et permettre à la beauté de ses couleurs de rester intacte au fil des saisons.",
     "part5": "Malgré toutes ces péripéties, Kinkaku-ji tel qu'il apparaît aujourd'hui est une reconstitution fidèle de son design original.",
     "part6": "En 1994, le temple est #inscrit au patrimoine mondial de l'UNESCO#.",
-    "part7": "Kyoto est l’une des villes du Japon où vous pourrez voir de nombreux sites emblématiques, le temple de Kinkaku-ji en fait bien entendu partie mais vous avez également la très [célèbre bambouseraie](todo) ou bien les Torii de [Fushimi Inari Taisha](todo). Et si de l’or ne vous suffit pas, le temple d'argent [Ginkaku-ji](todo) vous ravira peut-être aussi."
+    "part7": "Kyoto est l’une des villes du Japon où vous pourrez voir de nombreux sites emblématiques, le temple de Kinkaku-ji en fait bien entendu partie mais vous avez également la très [célèbre bambouseraie](arashiyama) ou bien les Torii de [Fushimi Inari Taisha](fushimi-inari-taisha). Et si de l’or ne vous suffit pas, le temple d'argent [Ginkaku-ji](ginkakuji) vous ravira peut-être aussi."
   },
   "visit2": {
     "title": "LE TEMPLE",
@@ -69,9 +69,9 @@
     "part7": "Le bâtiment est entièrement recouvert d'or, à l'exception du rez-de-chaussée. Bien que l'intérieur soit fermé au public, vous pouvez quand même y apercevoir #des reliques de Bouddha#.",
     "part8": "Ce temple est tellement connu qu’on ne va pas vous faire croire que vous serez tout seul, le monde enlève quelque peu le plaisir de se retrouver dans un endroit aussi zen, mais comme on vous le répète assez régulièrement, si vous voulez faire des lieux tout seul ne faites pas des lieux touristiques ou ne venez tout simplement pas au Japon.",
     "part9": "Temple célèbre de par sa beauté unique mais également par son incrustation parfaite avec la forêt qui l’entoure au fil des saisons.",
-    "part10": "[#Au Japon au printemps#](todo) et par un beau ciel bleu vous pourrez admirer le reflet du temple dans l’étang.",
-    "part11": "[#Au Japon en automne#](todo), les quelques érables de couleur rouge, orange ou jaune, mélangés à la couleur or du temple donneront un effet différent, comme un paysage enflammé.",
-    "part12": "[#Au Japon en hiver#](todo), c'est certainement la plus belle saison à nos yeux pour y aller malgré le froid, avec son étang gelé et son grand manteau de neige."
+    "part10": "#[Au Japon au printemps](spring-in-japan)# et par un beau ciel bleu vous pourrez admirer le reflet du temple dans l’étang.",
+    "part11": "#[Au Japon en automne](autumn-in-japan)#, les quelques érables de couleur rouge, orange ou jaune, mélangés à la couleur or du temple donneront un effet différent, comme un paysage enflammé.",
+    "part12": "#[Au Japon en hiver](winter-in-japan)#, c'est certainement la plus belle saison à nos yeux pour y aller malgré le froid, avec son étang gelé et son grand manteau de neige."
   },
   "visit3": {
     "title": "LES JARDINS",

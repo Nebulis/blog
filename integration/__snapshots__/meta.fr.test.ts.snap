@@ -90,11 +90,11 @@ exports[`french pages exports meta for public/asia/japan/kyoto/index.html correc
 
 exports[`french pages exports meta for public/asia/japan/kyoto/index.html correctly: title 1`] = `"Kyoto | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: meta-description 1`] = `"Dans cet article, on tente de vous retranscrire au mieux notre visite de ce parc et de cette beauté sans pareil. On répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix."`;
+exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: meta-description 1`] = `"Dans cet article, on tente de vous retranscrire au mieux notre visite de ce parc et de cette beauté sans pareille. On répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix."`;
 
 exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: social-network 1`] = `"Temple bouddhiste situé à Kyoto, il est l’un des temples les plus reconnus pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages sont entièrement recouverts de feuilles d’or."`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: title 1`] = `"Temple de Kinkaku-ji | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: title 1`] = `"Kinkaku-ji : Le temple doré de Kyoto | Blog Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly: meta-description 1`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
 

@@ -132,7 +132,7 @@ const japanLinks = () => {
     published: false,
   })
   expect(getLink("kinkakuji")).toMatchObject({
-    label: { en: "Kinkaku-ji Temple", fr: "Temple de Kinkaku-ji" },
+    label: { en: "Kinkaku-ji Temple", fr: "Kinkaku-ji : Le temple doré de Kyoto" },
     published: false,
   })
   expect(getLink("fushimi-inari-taisha")).toMatchObject({
@@ -222,6 +222,10 @@ const japanLinks = () => {
     published: false,
   })
   expect(getLink("jojakkoji")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("ginkakuji")).toMatchObject({
     label: { en: "", fr: "" },
     published: false,
   })

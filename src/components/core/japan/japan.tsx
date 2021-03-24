@@ -34,13 +34,6 @@ export const JapanQuote = styled(Quote)`
   }
 `
 
-export const KinkakujiQuote = () => (
-  <JapanQuote>
-    Temple bouddhiste reconnu pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages sont
-    entièrement recouverts de feuilles d’or...
-  </JapanQuote>
-)
-
 export const FushimiInariTaishaQuote = () => (
   <JapanQuote>
     Le sanctuaire est surtout connu pour ses quelques milliers de Torii Vermillon qui crée un chemin dans une forêt
