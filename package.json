@@ -79,7 +79,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build && cp _headers /public/",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build && cp _headers public/",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
     "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
