@@ -3,6 +3,7 @@
   "introduction": "Découvrez le temple Daigo-ji à travers notre récit de voyage avec notre guide, nos photos et quelques astuces.",
   "google-description": "Découvrez le temple Daigo-ji à travers notre récit de voyage avec notre guide et nos photos. On répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix.",
   "social-network-description": "Daigo-ji est un ensemble de temples bouddhiste et de jardins construits en 874 au pied de la montagne Daigo-san à Kyoto. Surnommé « Temple des fleurs », il vous émerveillera à chaque saison.",
+  "full-title": "Daigo-ji : La carte postale des cerisiers en fleurs de Kyoto | Guide de Voyage",
   "where": {
     "title": "Où ?",
     "part1": "22 Daigo Higashio Ji Cho, Fushimi Ward, Kyoto"
@@ -17,8 +18,8 @@
     "part2": "Depuis Tokyo ↠ environ 2h30",
     "part3": "Depuis Himeji ↠ environ 1h",
     "part4": "Depuis Nagoya ↠ environ 1h",
-    "part5": "[Plus d’informations sur les transports](todo).",
-    "part6": "Depuis la gare de Kyoto, prendre la Tokaido-Sanyo Line jusqu’à Yamashina Station (5 min - premier arrêt), Prendre le bus 22a à la sortie, de Yamashina Station à Daigojizen (21 min - 14 arrêts) -> il s'arrête pile en face de Daigo-Ji."
+    "part5": "[Plus d’informations sur les transports](transport-japan).",
+    "part6": "Depuis la gare de Kyoto, prendre la [Tokaido-Sanyo Line](japan-line:#ffffff:#1073c0:https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Daigoji,+Daigohigashiojicho,+Fushimi+Ward,+Kyoto,+Japan&travelmode=transit) jusqu’à Yamashina Station (5 min - premier arrêt). Prendre le bus 22a à la sortie, de Yamashina Station à Daigojizen (21 min - 14 arrêts) -> il s'arrête pile en face de Daigo-Ji."
   },
   "how-long": {
     "title": "Combien de temps ?",
@@ -26,7 +27,7 @@
   },
   "what-time-of-year": {
     "title": "A quelle période ?",
-    "part1": "[Au printemps](todo), les sakuras sont un véritable atout. [En automne](todo), les feuilles rouges des érables, qui entourent ce lieu incontournable, est également un point fort. [En hiver](todo) nous n’avons trouvé aucun avis mais qu’est-ce que nous aimerions y aller à cette période également. Le lac gelé et son paysage enneigé doit être totalement féérique."
+    "part1": "[Au printemps](spring-in-japan), les sakuras sont un véritable atout. [En automne](autumn-in-japan), les feuilles rouges des érables, qui entourent ce lieu incontournable, est également un point fort. [En hiver](winter-in-japan) nous n’avons trouvé aucun avis mais qu’est-ce que nous aimerions y aller à cette période également. Le lac gelé et son paysage enneigé doit être totalement féérique."
   },
   "how-much": {
     "title": "Prix ?",
@@ -35,7 +36,7 @@
   "where-to-stay": {
     "title": "Où dormir à Kyoto, près de Daigo-Ji ?",
     "part1": "Daigo-ji est dans un coin reculé de Kyoto, il n’y a pas d'hôtels vraiment juste à côté mais de notre point de vue pour la visite de Kyoto en général nous avons justement préféré être dans un coin reculé, plus calme et quand même particulièrement bien desservi par les transports.",
-    "part2": "[Kyoto Yamashina Hotel Sanraku](todo) est un hôtel plutôt sympa, moderne, chambre et salle de bain de taille standard pour le japon. Très bien situé et au niveau du prix on est dans la moyenne."
+    "part2": "[Kyoto Yamashina Hotel Sanraku](booking-hotel:jp/kyoto-yamashina-hotel-sanraku) est un hôtel plutôt sympa, moderne, chambre et salle de bain de taille standard pour le japon. Très bien situé et au niveau du prix on est dans la moyenne."
   },
   "visit": {
     "title": "La visite",
@@ -53,7 +54,7 @@
     "part3": "L’intérieur est très sympa, tout est typiquement japonais, le sol est recouvert de tatami, les Shoji (porte coulissante typique japonaise) sont recouverts de dessins, c’est d’ailleurs la première fois que nous en voyons avec des dessins.",
     "part4": "Vous avez également des #paravents japonais# avec de multiples peintures ou dessins (des Byōbu). Un intérieur vraiment sympa.",
     "part5": "Les photos étant interdites à l’intérieur du temple, on vous laisse donc découvrir par vous-mêmes ces magnifiques peintures.",
-    "part6": "Comme dans chaque temple que nous avons visité, vous devez enlever vos chaussures. Ici nous avons continué la visite en chaussettes, mais au [Château de Himeji](todo) par exemple on nous avait prêté des chaussons. Cela dépend des lieux ou de la saison peut-être également.",
+    "part6": "Comme dans chaque temple que nous avons visité, vous devez enlever vos chaussures. Ici nous avons continué la visite en chaussettes, mais au [Château de Himeji](himeji-castle) par exemple on nous avait prêté des chaussons. Cela dépend des lieux ou de la saison peut-être également.",
     "part7": "Au centre du temple, vous avez un petit jardin avec un étang, un petit pont en bois, des bonsaïs, de multiples rochers … Tout ce qui nous rappelle très clairement les #jardins zen japonais#.",
     "part8": "Vous pouvez observer de loin la magnifique porte du temple. On la verra mieux de l’autre côté.",
     "part9": "Toujours sur la partie gauche, derrière le temple Sanbō-in, vous avez deux autres temples, mais surtout un petit chemin qui vous mène à un #jardin rempli de cerisiers#.",
@@ -61,7 +62,7 @@
     "part11": "Vous passerez d’ailleurs devant #la porte de Sanbō-in, nommé le Karamon#, que vous verrez beaucoup mieux d’ici.",
     "part12": "Au bout du chemin, une grande porte rouge intense qui nous fait rentrer dans un jardin encore plus immense et plus particulièrement dans la partie 2 : Shimo-Daigo.",
     "part13": "#Cette autre porte rouge nommée Niō ou Niōmon, empêche les mauvais esprits de rentrer dans les lieux cultes.#",
-    "part14": "Elle ressemble énormément aux portes de quelques temples que nous avons visité au Japon tel que le [Fushimi Inari-taisha](todo), ou bien à Tokyo au [temple Senso-ji](todo). Elle nous rappelle d’ailleurs, de par sa couleur et sa forme, quelque peu un Torii mais forcément en plus volumineux."
+    "part14": "Elle ressemble énormément aux portes de quelques temples que nous avons visité au Japon tel que le [Fushimi Inari-taisha](fushimi-inari-taisha), ou bien à Tokyo au [temple Senso-ji](sensoji). Elle nous rappelle d’ailleurs, de par sa couleur et sa forme, quelque peu un Torii mais forcément en plus volumineux."
   },
   "visit2": {
     "title": "SHIMO-DAIHO : UNE RENCONTRE SAISISSANTE",

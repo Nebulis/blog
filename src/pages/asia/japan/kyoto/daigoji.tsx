@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
 import {
   How,
   HowLong,
   HowMuch,
+  Introduction,
+  SectionContent,
   Visit,
   WhatTimeOfYear,
   When,
@@ -16,34 +18,10 @@ import {
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
-  TwoImagesLeftBigger,
-  TwoImagesSameSize,
+  TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { css } from "@emotion/react"
-import { DaigojiTempleImage } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiTempleImage"
-import { DaigojiGarden1Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden1Image"
-import { DaigojiGarden2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden2Image"
-import { DaigojiGarden3Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden3Image"
-import { DaigojiDoorImage } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiDoorImage"
-import { DaigojiCherry1Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiCherry1Image"
-import { DaigojiCherry2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiCherry2Image"
-import { DaigojiPagodaImage } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiPagodaImage"
-import { DaigojiMonk1Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiMonk1Image"
-import { DaigojiTempleWithLake1Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiTempleWithLake1Image"
-import { DaigojiTempleWithLake2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiTempleWithLake2Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { DaigojiGarden5Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden5Image"
-import { DaigojiGarden4Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiGarden4Image"
-import { DaigojiMonk2Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiMonk2Image"
-import { DaigojiTempleWithLake3Image } from "../../../../components/images/asia/japan/kyoto/daigoji/daigojiTempleWithLake3Image"
-import {
-  DaigojiQuote,
-  JapanBlogLayout,
-  JapanExternalLink,
-  JapanLine,
-  JapanLink,
-  JapanTitle,
-} from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 import i18n from "i18next"
@@ -51,6 +29,14 @@ import translationFr from "../../../../locales/fr/asia/japan/kyoto/daigoji.json"
 import translationEn from "../../../../locales/en/asia/japan/kyoto/daigoji.json"
 import HomeImgUrl from "../../../../images/asia/japan/kyoto/daigoji/daigoji-main.jpg"
 import { useCustomTranslation } from "../../../../i18n-hook"
+import { Quote } from "../../../../components/core/quote"
+import { Divider } from "../../../../components/core/divider"
+import { getLink } from "../../../../components/core/links/links.utils"
+import { ApplicationContext } from "../../../../components/application"
+import { Comments } from "../../../../components/core/comments"
+import DaigojiMap from "../../../../images/asia/japan/kyoto/daigoji/daigoji-map.jpg"
+import { MapContainer } from "../../../../components/layout/layout"
+import { DaigojiImages } from "../../../../components/images/asia/japan/kyoto/daigoji"
 
 const namespace = "asia/japan/kyoto/daigoji"
 const id = "daigoji"
@@ -58,12 +44,15 @@ i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { t } = useCustomTranslation([namespace, "common"])
+  const { development } = useContext(ApplicationContext)
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.${id}`)
+  const transportLinkPublished = development || getLink("transport-japan").published
   return (
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -71,162 +60,232 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <JapanBlogLayout page={id} location={location}>
         <JapanTitle title={title} linkId={id} />
-        <SharedCardJapanImages image="daigoji" />
-        <DaigojiQuote />
-        <Where>22 Daigohigashiojicho, Fushimi Ward, Kyoto</Where>
-        <When>
-          <p>Tous les jours 9h - 16h.</p>
+        <ImageAsLandscape>
+          <SharedCardJapanImages image="daigoji" />
+        </ImageAsLandscape>
+        <Quote>{t("quote")}</Quote>
+        <Divider />
+        <Introduction>{t("introduction")}</Introduction>
+        <Divider />
+        <Where title={t("where.title")}>
+          <p>{t("where.part1")}</p>
+        </Where>
+        <When title={t("when.title")}>
+          <p>{t("when.part1")}</p>
         </When>
-        <How>
-          Depuis la plupart des grandes villes il est possible de se rendre à Kyoto en Shinkansen.
+        <How title={t("how.title")}>
+          <p>{t("how.part1")}</p>
           <ul>
-            <li>Depuis Tokyo environ 2h30</li>
-            <li>Depuis Himeji environ 1h</li>
-            <li>Depuis Nagoya environ 1h</li>
-            <small>
-              <JapanLink action="hide" to="transport-japan">
-                Plus d’information sur les transports.
-              </JapanLink>
-            </small>
+            <li>{t("how.part2")}</li>
+            <li>{t("how.part3")}</li>
+            <li>{t("how.part4")}</li>
           </ul>
-          <p>
-            Depuis la gare de Kyoto, prendre la{" "}
-            <JapanLine
-              href="https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Daigoji%2C%2022%20Daigohigashiojicho%2C%20Fushimi%20Ward%2C%20Kyoto%2C%20601-1325%2C%20Japan&travelmode=transit"
-              css={css`
-                background-color: #1073c0;
-                color: #ffffff;
-              `}
-            >
-              Tokaido-Sanyo Line
-            </JapanLine>{" "}
-            jusqu’à Yamashina Station (5 mins - 1er arrêt). Prendre le bus 22a, de Yamashina Station à Daigojizen (21
-            mins - 14 arrêts). Il s’arrête pile en face de Daigo-Ji.
-          </p>
+          {transportLinkPublished && <p>{t("how.part5")}</p>}
+          <p>{t("how.part6")}</p>
         </How>
-        <HowLong>Entre 2h et 4h.</HowLong>
-        <WhatTimeOfYear>
-          <p>
-            {" "}
-            Au printemps, les cerisiers sont un véritable atout. A l’automne, les feuilles rouges des érables, qui
-            entourent ce lieu incontournable, est également un point fort. Nous n’avons vu aucun avis pour l’hiver mais
-            qu’est-ce que nous aimerions y aller à cette période également. Le lac gelé et sont paysages enneigés doit
-            être totalement féérique.{" "}
-          </p>
+        <HowLong title={t("how-long.title")}>
+          <p>{t("how-long.part1")}</p>
+        </HowLong>{" "}
+        <WhatTimeOfYear title={t("what-time-of-year.title")}>
+          <p>{t("what-time-of-year.part1")}</p>
         </WhatTimeOfYear>
-        <HowMuch>1500 Yen pour l’ensemble de la visite.</HowMuch>
-        <WhereToStay>
-          <p>
-            Daigo-ji est dans un coin reculé de Kyoto, il n’y a pas d’hôtels juste à côté mais de notre point de vue
-            pour la visite de Kyoto nous avons justement préféré être dans ce coin reculé, plus calme et quand même
-            particulièrement bien desservi par les transports.{" "}
-          </p>
-          <p>
-            <JapanExternalLink href="https://www.booking.com/hotel/jp/kyoto-yamashina-hotel-sanraku.fr.html?label=gen173nr-1DCAEoggI46AdIM1gEaE2IAQGYAQ24ARfIAQzYAQPoAQGIAgGoAgO4AqWi5-wFwAIB;sid=4bab15bee9c381d39dd9173a3a402ed8;all_sr_blocks=340404218_145933648_2_2_0;checkin=2020-04-02;checkout=2020-04-03;dest_id=900054542;dest_type=landmark;dist=0;group_adults=2;group_children=0;hapos=2;highlighted_blocks=340404218_145933648_2_2_0;hpos=2;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1570361654;srpvid=3b9c515aa764003b;type=total;ucfs=1&#tab-main">
-              Kyoto Yamashina Hotel Sanraku
-            </JapanExternalLink>{" "}
-            est un hôtel plutôt sympa, moderne, chambre et salle de bain de taille standard pour le japon. Très bien
-            situé et au niveau du prix on est dans la moyenne.
-          </p>
-          <p>
-            <small>
-              <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Kyoto%2C+Kyoto%2C+Japon">
-                Comparez et réservez votre hôtel à Kyoto.
-              </JapanExternalLink>
-            </small>
-          </p>
+        <HowMuch title={t("how-much.title")}>
+          <p>{t("how-much.part1")}</p>
+        </HowMuch>
+        <WhereToStay title={t("where-to-stay.title")}>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
         </WhereToStay>
-        <Visit>
-          <p>
-            Arrivé à Daigo-Ji nous voici déjà impressionné par l’endroit, cela paraît immense et effectivement nous ne
-            sommes pas au bout de nos surprises.
-          </p>
-          <p>
-            Sur la droite, vous avez un musée et sur la gauche vous trouvez le Sanbo-in, le pavillon des trois trésors.
-            L’intérieur est très sympa, tout est typiquement japonais, le sol est recouvert de tatami, les Shoji (porte
-            coulissante typique) sont recouvertes de peinture. Vraiment un intérieur à faire, en tout cas nous avons
-            beaucoup aimé malgré le fait que nous n’avions pas le droit de prendre de photos. Les extérieurs sont
-            magnifiques également, très zen-attitude.
-          </p>
-          <GroupOfImages>
-            <ImageAsPortrait
-              css={css`
-                max-width: 800px;
-              `}
-            >
-              <DaigojiTempleImage />
-            </ImageAsPortrait>
-            <TwoImagesSameSize>
-              <DaigojiGarden1Image />
-              <DaigojiGarden2Image />
-            </TwoImagesSameSize>
-            <ImageAsLandscape>
-              <DaigojiGarden3Image />
-            </ImageAsLandscape>
-          </GroupOfImages>
-          <p>On continue dans une longue allée pavée remplie de cerisiers.</p>
-          <p>On passe devant la magnifique porte du Sanbo-in que nous avions déjà pu apercevoir de l’intérieur.</p>
-          <GroupOfImages>
-            <ImageAsLandscapeOnTheLeft>
-              <DaigojiDoorImage />
-            </ImageAsLandscapeOnTheLeft>
-            <ImageAsLandscapeOnTheRight>
-              <DaigojiCherry1Image />
-            </ImageAsLandscapeOnTheRight>
-          </GroupOfImages>
-          <p>Au bout du chemin, une grande porte où on arrive dans un jardin encore plus immense. </p>
-          <p>Une pagode en bois de 5 étages, nous apparaît ainsi que quelques autres temples bouddhiste.</p>
-          <GroupOfImages>
-            <ImageAsPortrait
-              css={css`
-                max-width: 800px;
-              `}
-            >
-              <DaigojiCherry2Image />
-            </ImageAsPortrait>
-            <TwoImagesLeftBigger>
-              <DaigojiMonk1Image />
-              <DaigojiPagodaImage />
-            </TwoImagesLeftBigger>
-          </GroupOfImages>
-          <p>
-            Et en continuant nous voici à l’endroit le plus connu de Daigo-Ji, le temple Bentendo et son célèbre pont
-            rouge. Vous pouvez vous reposer près du lac, le temps de quelques instants, l’endroit est très calme et
-            reposant.
-          </p>
-          <p>Dans le lac, on y voit refléter le temple ainsi que le pont et les cerisiers.</p>
-          <GroupOfImages>
-            <ImageAsLandscapeOnTheLeft>
-              <DaigojiTempleWithLake1Image />
-            </ImageAsLandscapeOnTheLeft>
-            <ImageAsLandscapeOnTheRight>
-              <DaigojiTempleWithLake2Image />
-            </ImageAsLandscapeOnTheRight>
-            <ImageAsLandscapeOnTheLeft>
-              <DaigojiTempleWithLake3Image />
-            </ImageAsLandscapeOnTheLeft>
-          </GroupOfImages>
-          <p>
-            Si vous avez encore du temps, profitez-en pour aller derrière le temple et continuez à vous promener, il y a
-            des chemins de randonnées avec quelques cascades, pont et petits temples. Autant profiter au maximum de ce
-            lieu.
-          </p>
-          <TwoImagesSameSize>
-            <DaigojiGarden4Image />
-            <DaigojiGarden5Image />
-          </TwoImagesSameSize>
+        <Visit title={t("visit.title")}>
+          <section>
+            <SectionContent>
+              <p>{t("visit.part1")}</p>
+              <p>{t("visit.part2")}</p>
+              <ul>
+                <li>{t("visit.part3")}</li>
+                <li>{t("visit.part4")}</li>
+                <li>{t("visit.part5")}</li>
+              </ul>
+              <MapContainer className="mb2">
+                <img src={DaigojiMap} alt="Daigoji Map" />
+              </MapContainer>
+              <p>{t("visit.part6")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit1.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit1.part1")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <DaigojiImages image="samboin" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <DaigojiImages image="samboin2" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit1.part2")}</p>
+              <p>{t("visit1.part3")}</p>
+              <p>{t("visit1.part4")}</p>
+              <p>{t("visit1.part5")}</p>
+              <p>{t("visit1.part6")}</p>
+              <ImageAsLandscape>
+                <DaigojiImages image="samboin3" />
+              </ImageAsLandscape>
+              <p>{t("visit1.part7")}</p>
+              <p>{t("visit1.part8")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <DaigojiImages image="samboin4" />
+                  <DaigojiImages image="samboin5" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <DaigojiImages image="samboin6" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <DaigojiImages image="samboin7" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <DaigojiImages image="samboin8" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit1.part9")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <DaigojiImages image="samboin9" />
+                  <DaigojiImages image="samboin10" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <DaigojiImages image="samboin11" />
+                </ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
+                  <DaigojiImages image="samboin12" />
+                  <DaigojiImages image="samboin13" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <DaigojiImages image="samboin14" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <DaigojiImages image="samboin15" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit1.part10")}</p>
+              <p>{t("visit1.part11")}</p>
+              <ImageAsLandscape>
+                <DaigojiImages image="samboin16" />
+              </ImageAsLandscape>
+              <p>{t("visit1.part12")}</p>
+              <p>{t("visit1.part13")}</p>
+              <p>{t("visit1.part14")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <DaigojiImages image="samboin17" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <DaigojiImages image="samboin18" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit2.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit2.part1")}</p>
+              <p>{t("visit2.part2")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <DaigojiImages image="shimoDaiho" />
+                  <DaigojiImages image="shimoDaiho2" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <DaigojiImages image="shimoDaiho3" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit2.part3")}</p>
+              <p>{t("visit2.part4")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <DaigojiImages image="shimoDaiho4" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <DaigojiImages image="shimoDaiho5" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <DaigojiImages image="shimoDaiho6" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit2.part5")}</p>
+              <p>{t("visit2.part6")}</p>
+              <p>{t("visit2.part7")}</p>
+              <GroupOfImages>
+                <ImageAsLandscapeOnTheLeft>
+                  <DaigojiImages image="shimoDaiho7" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <DaigojiImages image="shimoDaiho8" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsLandscape>
+                  <DaigojiImages image="shimoDaiho9" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <DaigojiImages image="shimoDaiho10" />
+                  <DaigojiImages image="shimoDaiho11" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <DaigojiImages image="shimoDaiho12" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit3.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit3.part1")}</p>
+              <p>{t("visit3.part2")}</p>
+              <p>{t("visit3.part3")}</p>
+              <p>{t("visit3.part4")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <DaigojiImages image="kamiDaigo2" />
+                </ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
+                  <DaigojiImages image="kamiDaigo3" />
+                  <DaigojiImages image="kamiDaigo4" />
+                </TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSizeOrToGroup>
+                  <DaigojiImages image="kamiDaigo5" />
+                  <DaigojiImages image="kamiDaigo6" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
         </Visit>
         <Conclusion>
-          Daigo-ji est connu pour ses cerisiers au printemps mais également pour ses arbres de couleurs rouges vifs en
-          automne, un plaisir des yeux à chaque saison.
+          <p>{t("conclusion")}</p>
+          <ul>
+            <li>{t("question1")}</li>
+            <li>{t("question2")}</li>
+          </ul>
         </Conclusion>
-        <ImageAsPortrait
-          css={css`
-            max-width: 800px;
-          `}
-        >
-          <DaigojiMonk2Image />
-        </ImageAsPortrait>
+        <Divider />
+        <Comments
+          collectionName={namespace}
+          location={location}
+          facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+          pinterest={{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? [<DaigojiImages image="cardFr1" key="cardFr1" />, <DaigojiImages image="cardFr2" key="cardFr1" />]
+                : [<DaigojiImages image="cardEn1" key="cardEn1" />, <DaigojiImages image="cardEn2" key="cardEn1" />],
+          }}
+        />
       </JapanBlogLayout>
     </>
   )
