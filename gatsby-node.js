@@ -15,3 +15,18 @@ exports.onCreatePage = ({ page, actions }) => {
   createPage(newPage)
   // }
 }
+
+exports.onCreateWebpackConfig = ({ loaders, actions }) => {
+  const urlLoader = loaders.url()
+  urlLoader.options.name = `static/fonts/[name]-[hash].[ext]`
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          use: [urlLoader],
+          test: /\.(eot|otf|ttf|woff(2)?)(\?.*)?$/,
+        },
+      ],
+    },
+  })
+}
