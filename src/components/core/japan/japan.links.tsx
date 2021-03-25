@@ -147,7 +147,7 @@ export const japanLinks: CountryLink = {
         {
           id: "daigoji",
           label: { fr: commonFr.country.japan.card.daigoji, en: commonEn.country.japan.card.daigoji },
-          published: false,
+          published: new Date("2021-04-17T17:00:00.000+08:00"),
           card: DaigojiCard,
         },
         {

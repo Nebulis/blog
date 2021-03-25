@@ -41,12 +41,6 @@ export const FushimiInariTaishaQuote = () => (
   </JapanQuote>
 )
 
-export const DaigojiQuote = () => (
-  <JapanQuote>
-    Daigo-ji est un ensemble de temples bouddhiste et de jardins, haut en couleur à chaque saison...
-  </JapanQuote>
-)
-
 export const NagoyaCastleQuote = () => (
   <JapanQuote>
     Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya et ses vastes jardins sont
