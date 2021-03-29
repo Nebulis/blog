@@ -1,30 +1,28 @@
-import React from "react"
+import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
-import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
+import {
+  How,
+  HowLong,
+  HowMuch,
+  Introduction,
+  SectionContent,
+  Visit,
+  WhatTimeOfYear,
+  When,
+  Where,
+  WhereToHave,
+  WhereToStay,
+} from "../../../../components/core/section"
 import {
   GroupOfImages,
   ImageAsLandscape,
+  ImageAsLandscapeOnTheLeft,
+  ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
-  TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { FushimiTorii1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTorii1Image"
-import { css } from "@emotion/react"
-import { FushimiTorii2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTorii2Image"
-import { FushimiTemple1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTemple1Image"
-import { FushimiTemple2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiTemple2Image"
-import { FushimiWaterImage } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiWaterImage"
-import { FushimiKomainu2Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu2Image"
-import { FushimiKomainu1Image } from "../../../../components/images/asia/japan/kyoto/fushimi/fushimiKomainu1Image"
 import { Conclusion } from "../../../../components/core/conclusion"
-import {
-  FushimiInariTaishaQuote,
-  JapanBlogLayout,
-  JapanExternalLink,
-  JapanLine,
-  JapanLink,
-  JapanTitle,
-} from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 import i18n from "i18next"
@@ -32,154 +30,255 @@ import translationFr from "../../../../locales/fr/asia/japan/kyoto/fushimi-inari
 import translationEn from "../../../../locales/en/asia/japan/kyoto/fushimi-inari-taisha.json"
 import HomeImgUrl from "../../../../images/asia/japan/kyoto/fushimi/fushimi-main.jpg"
 import { useCustomTranslation } from "../../../../i18n-hook"
+import { Quote } from "../../../../components/core/quote"
+import { Divider } from "../../../../components/core/divider"
+import { ApplicationContext } from "../../../../components/application"
+import { getLink } from "../../../../components/core/links/links.utils"
+import { Comments } from "../../../../components/core/comments"
+import { FushimiInariTaishaImages } from "../../../../components/images/asia/japan/kyoto/fushimi-inari-taisha"
+import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
+import { buildPixabayUrl } from "../../../../utils"
 
-const namespace = "asia/japan/kyoto/fushimi-inari-taisha.json"
+const namespace = "asia/japan/kyoto/fushimi-inari-taisha"
 const id = "fushimi-inari-taisha"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { t } = useCustomTranslation([namespace, "common"])
+  const { development } = useContext(ApplicationContext)
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.${id}`)
+  const transportLinkPublished = development || getLink("transport-japan").published
+
   return (
     <>
       <SEO
         title={title}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
+        fullTitle={t("full-title")}
         image={HomeImgUrl}
         location={location}
       />
       <JapanBlogLayout page={id} location={location}>
         <JapanTitle title={title} linkId={id} />
-        <SharedCardJapanImages image="fushimi" />
-        <FushimiInariTaishaQuote />
-        <Where>68 Fukakusa Yabunouchicho, Fushimi Ward, Kyoto</Where>
-        <When>
-          <p>Tous les jours 24h/24h.</p>
-          <p>
-            Plutôt tôt le matin ou le soir pour éviter le monde. Nous y étions allés en fin de matinée, c’était noir de
-            monde, impossible de faire des photos ou de se promener sans se faire bousculer, éviter les heures de pointe
-            en haute saison du coup.
-          </p>
+        <ImageAsLandscape>
+          <SharedCardJapanImages image="fushimi" />
+        </ImageAsLandscape>
+        <Quote>{t("quote")}</Quote>
+        <Divider />
+        <Introduction>{t("introduction")}</Introduction>
+        <Divider />
+        <Where title={t("where.title")}>
+          <p>{t("where.part1")}</p>
+        </Where>
+        <When title={t("when.title")}>
+          <p>{t("when.part1")}</p>
+          <p>{t("when.part2")}</p>
         </When>
-        <How>
-          Depuis la plupart des grandes villes il est possible de se rendre à Kyoto en Shinkansen.
+        <How title={t("how.title")}>
+          <p>{t("how.part1")}</p>
           <ul>
-            <li>Depuis Tokyo environ 2h30</li>
-            <li>Depuis Himeji environ 1h</li>
-            <li>Depuis Nagoya environ 1h</li>
-            <small>
-              <JapanLink action="hide" to="transport-japan">
-                Plus d’information sur les transports.
-              </JapanLink>
-            </small>
+            <li>{t("how.part2")}</li>
+            <li>{t("how.part3")}</li>
+            <li>{t("how.part4")}</li>
           </ul>
-          <p>
-            Depuis la gare de Kyoto, prendre la{" "}
-            <JapanLine
-              href="https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Fushimi%20Inari%20Taisha%2C%2068%20Fukakusa%20Yabunouchicho%2C%20Fushimi%20Ward%2C%20Kyoto%2C%20612-0882%2C%20Japan&travelmode=transit"
-              css={css`
-                background-color: #b67c2b;
-                color: #ffffff;
-              `}
-            >
-              Nara Line
-            </JapanLine>{" "}
-            jusqu’à Inari Station (5mins - 2 arrêts). Attention tous les trains ne s’y arrêtent pas{" "}
-            <JapanExternalLink href="https://www.westjr.co.jp/global/en/timetable/">
-              (Vérifier quel train prendre)
-            </JapanExternalLink>
-            . Une fois à la gare, prenez la seule sortie et vous serez juste en face de Fushimi Inari Taisha.
-          </p>
+          {transportLinkPublished && <p>{t("how.part5")}</p>}
+          <p>{t("how.part6")}</p>
+          <p>{t("how.part7")}</p>
         </How>
-        <HowLong>Environ 4h si vous comptez faire la randonnée.</HowLong>
-        <HowMuch>Gratuit</HowMuch>
-        <WhereToStay>
-          <p>
-            Comme déjà expliqué dans <JapanLink to="kyoto">nos autres articles sur Kyoto</JapanLink>, nous sommes
-            toujours effaré par les prix des hôtels surtout pour une nuit, cela dit au moins près de Fushimi il y en a
-            et ils ont l’air tous plutôt pas mal, c’est déjà ça.
-          </p>
-          <p>
-            Parce qu’on a quand même mis du temps à chercher à Kyoto, un véritable casse tête qu’on se le dise ! Si vous
-            cherchez du traditionnel les prix montent très vite, si vous ne cherchez pas trop cher, ça devient vite
-            n’importe quoi. Le logement au Japon un vrai investissement sur vos vacances.
-          </p>
-          <p>
-            <small>
-              <JapanExternalLink href="https://www.booking.com/searchresults.fr.html?ss=Kyoto%2C+Kyoto%2C+Japon">
-                Trouver un hôtel vers Fushimi.
-              </JapanExternalLink>
-            </small>
-          </p>
+        <HowLong title={t("how-long.title")}>
+          <p>{t("how-long.part1")}</p>
+        </HowLong>
+        <WhatTimeOfYear title={t("what-time-of-year.title")}>
+          <p>{t("what-time-of-year.part1")}</p>
+          <p>{t("what-time-of-year.part2")}</p>
+        </WhatTimeOfYear>
+        <HowMuch title={t("how-much.title")}>
+          <p>{t("how-much.part1")}</p>
+        </HowMuch>
+        <WhereToStay title={t("where-to-stay.title")}>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
+          <p>{t("where-to-stay.part3")}</p>
         </WhereToStay>
-        <Visit>
-          <p>
-            Sorti du train nous voici à la gare, pas de chance pour nous, c’est le seul jour où il pleut depuis notre
-            arrivée au Japon, quelle galère quand on sait qu’on peut faire une randonnée de 2h environ dans la forêt.
-          </p>
-          <p>
-            La pluie n’a cela dit pas empêché les gens de venir, nous y compris. Le soleil va bien réapparaître à un
-            moment donné, on y croit !
-          </p>
-          <ImageAsLandscape>
-            <FushimiTorii1Image />
-          </ImageAsLandscape>
-          <p>
-            La visite commence donc en bas de la colline, où un premier temple nous apparaît, ici y est concentré toute
-            la foule qui attend que la pluie cesse. On peut malgré tout voir quelques personnes prier.
-          </p>
-          <p>Sur notre gauche il y a quelques boutiques de souvenirs.</p>
-          <p>On suit le chemin en ayant un peu peur de se perdre à vrai dire tellement l’endroit à l’air immense.</p>
-          <GroupOfImages>
-            <ImageAsPortrait
-              css={css`
-                max-width: 800px;
-              `}
-            >
-              <FushimiTorii2Image />
-            </ImageAsPortrait>
-            <ImageAsLandscape>
-              <FushimiTemple1Image />
-            </ImageAsLandscape>
-          </GroupOfImages>
-          <p>Nous suivons les escaliers depuis le pied de la colline.</p>
-          <p>
-            Avant de passer en dessous des Torii, on croise quelques monuments pour prier et se purifier. Avant d’entrer
-            dans un temple il serait coutume de se laver les mains et la bouche.
-          </p>
-          <TwoImagesSameSizeOrToGroup>
-            <FushimiTemple2Image />
-            <FushimiWaterImage />
-          </TwoImagesSameSizeOrToGroup>
-          <p>
-            La promenade commence avec un grand nombre de marches puis de chemins. Autour de vous ces célèbres Torii,
-            quelques sanctuaires visibles de temps en temps, des lieux pour se reposer ou admirer la vue.
-          </p>
-          <p>
-            On croise également des statues de pierres qui sont dissimulés un peu partout. Appelé Komainu, elles sont
-            généralement représentés sous forme de renard “Kitsune” avec son foulard rouge. D’après l’histoire ces
-            statues monteraient la garde et éloignerait les mauvais esprits.
-          </p>
-          <p>
-            Vous n’êtes pas obligé de faire la randonnée, l’endroit est déjà prestigieux et rien qu’en vous promenant
-            près du temple, vous y découvrirez pleins de petits endroits.
-          </p>
-          <TwoImagesSameSize>
-            <FushimiKomainu1Image />
-            <FushimiKomainu2Image />
-          </TwoImagesSameSize>
-          <p>Nous n’avons malheureusement pas pu prendre de photos sous les Torii car c’était noir de monde.</p>
-          <p>
-            Nous y retournerons certainement à une période moins touristique, et en essayant d’avoir un peu plus de
-            chance sur la météo cette fois-ci. Nous sommes restés un peu sur notre faim.
-          </p>
+        <Visit title={t("visit.title")}>
+          <section>
+            <SectionContent>
+              <p>{t("visit.part1")}</p>
+              <p>{t("visit.part2")}</p>
+              <p>{t("visit.part3")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <FushimiInariTaishaImages image="visit" />
+                  <FushimiInariTaishaImages image="visit2" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <FushimiInariTaishaImages image="visit3" />
+                </ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
+                  <FushimiInariTaishaImages image="visit4" />
+                  <FushimiInariTaishaImages image="visit5" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <FushimiInariTaishaImages image="visit6" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <FushimiInariTaishaImages image="visit7" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit1.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <ImageAsLandscape>
+                <FushimiInariTaishaImages image="history2" />
+              </ImageAsLandscape>
+              <p>{t("visit1.part1")}</p>
+              <p>{t("visit1.part2")}</p>
+              <p>{t("visit1.part3")}</p>
+              <p>{t("visit1.part4")}</p>
+              <p>{t("visit1.part5")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <FushimiInariTaishaImages image="history3" />
+                </ImageAsPortrait>
+                <ImageAsPortrait>
+                  <FushimiInariTaishaImages image="history4" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <FushimiInariTaishaImages image="history5" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit2.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit2.part1")}</p>
+              <ImageAsLandscape>
+                <FushimiInariTaishaImages image="toriis" />
+              </ImageAsLandscape>
+              <p>{t("visit2.part2")}</p>
+              <p>{t("visit2.part3")}</p>
+              <p>{t("visit2.part4")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <FushimiInariTaishaImages image="toriis2" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <FushimiInariTaishaImages image="toriis3" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit3.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <ImageAsLandscape
+                credit={
+                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/michelleraponi-165491")}>
+                    michelleraponi
+                  </ExternalLinkNotUnderlined>
+                }
+              >
+                <FushimiInariTaishaImages image="discovery" />
+              </ImageAsLandscape>
+              <p>{t("visit3.part1")}</p>
+              <p>{t("visit3.part2")}</p>
+              <p>{t("visit3.part3")}</p>
+              <p>{t("visit3.part4")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <FushimiInariTaishaImages image="discovery2" />
+                </ImageAsPortrait>
+                <ImageAsPortrait>
+                  <FushimiInariTaishaImages image="discovery3" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit3.part5")}</p>
+              <p>{t("visit3.part6")}</p>
+              <p>{t("visit3.part7")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <FushimiInariTaishaImages image="discovery4" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <FushimiInariTaishaImages image="discovery5" />
+                </ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
+                  <FushimiInariTaishaImages image="discovery7" />
+                  <FushimiInariTaishaImages image="discovery8" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
+              <p>{t("visit3.part8")}</p>
+              <p>{t("visit3.part9")}</p>
+              <p>{t("visit3.part10")}</p>
+              <p>{t("visit3.part11")}</p>
+              <GroupOfImages>
+                <ImageAsLandscapeOnTheLeft>
+                  <FushimiInariTaishaImages image="discovery9" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <FushimiInariTaishaImages image="discovery10" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsPortrait
+                  credit={
+                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/gadgetstou-17189958")}>
+                      gadgetstou
+                    </ExternalLinkNotUnderlined>
+                  }
+                >
+                  <FushimiInariTaishaImages image="discovery11" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <FushimiInariTaishaImages image="discovery12" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <FushimiInariTaishaImages image="discovery13" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
         </Visit>
+        <WhereToHave title={t("where-to-have.title")}>
+          <p>{t("where-to-have.part1")}</p>
+          <p>{t("where-to-have.part2")}</p>
+          <p>{t("where-to-have.part3")}</p>
+        </WhereToHave>
         <Conclusion>
-          Les Torii seraient, pour la plupart, des dons fait par des particuliers ou des entreprises. Leur nom ainsi que
-          la date de pose y serait indiqué sur chacun d’eux.
+          <p>{t("conclusion")}</p>
+          <ul>
+            <li>{t("question1")}</li>
+            <li>{t("question2")}</li>
+          </ul>
         </Conclusion>
+        <Divider />
+        <Comments
+          collectionName={namespace}
+          location={location}
+          facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}\n${t("facebook.part3")}`}
+          pinterest={{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? [
+                    <FushimiInariTaishaImages image="cardFr1" key="cardFr1" />,
+                    <FushimiInariTaishaImages image="cardFr2" key="cardFr1" />,
+                  ]
+                : [
+                    <FushimiInariTaishaImages image="cardEn1" key="cardEn1" />,
+                    <FushimiInariTaishaImages image="cardEn2" key="cardEn1" />,
+                  ],
+          }}
+        />
       </JapanBlogLayout>
     </>
   )

@@ -78,11 +78,11 @@ exports[`french pages exports meta for public/asia/japan/kyoto/daigoji/index.htm
 
 exports[`french pages exports meta for public/asia/japan/kyoto/daigoji/index.html correctly: title 1`] = `"Daigo-ji : La carte postale des cerisiers en fleurs de Kyoto | Guide de Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly: meta-description 1`] = `"Embarquez avec nous pour une balade au milieu de ses multiples Toriis et dans ce sanctuaire gigantesque, avec la description de notre journée là-bas. Dans cet article, on vous explique tout ce qu’il faut savoir : Comment s’y rendre ? A quelle saison ? Combien de temps prévoir ? Ainsi que son adresse, ses horaires et son prix."`;
+exports[`french pages exports meta for public/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly: meta-description 1`] = `"Embarquez avec nous pour une balade au milieu de ses multiples Torii et dans ce sanctuaire gigantesque, avec la description de notre journée là-bas. Dans cet article, on vous explique tout ce qu’il faut savoir : Comment s’y rendre ? A quelle saison ? Combien de temps prévoir ? Ainsi que son adresse, ses horaires et son prix."`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly: social-network 1`] = `"Le Fushimi Inari-taisha est un sanctuaire situé dans le district de Fushimi-ku à Kyoto au Japon. Il est surtout connu pour ses quelques milliers de Torii Vermillon qui créent un chemin dans une forêt remplie de pins."`;
+exports[`french pages exports meta for public/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly: social-network 1`] = `"Fushimi Inari-taisha est un sanctuaire situé dans le district de Fushimi-ku à Kyoto au Japon. Il est surtout connu pour ses quelques milliers de Torii Vermillon qui créent un chemin dans une forêt remplie de pins."`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly: title 1`] = `"Fushimi Inari-Taisha | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/kyoto/fushimi-inari-taisha/index.html correctly: title 1`] = `"Fushimi Inari-Taisha : Le chemin des milles Torii à Kyoto | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/kyoto/index.html correctly: meta-description 1`] = `"Découvrez la ville de Kyoto et les multiples temples et joyaux qu'elle nous offre à travers nos récits de voyages. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 

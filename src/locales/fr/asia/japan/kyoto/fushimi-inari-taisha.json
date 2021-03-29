@@ -1,8 +1,9 @@
 {
   "quote": "Fushimi Inari-taisha est un sanctuaire situé dans le district de Fushimi-ku à Kyoto au Japon. Il est surtout connu pour ses quelques milliers de Torii Vermillon qui créent un chemin dans une forêt remplie de pins.",
-  "introduction": "Embarquez avec nous pour une balade au milieu de ses multiples Toriis et dans ce sanctuaire gigantesque.",
-  "google-description": "Embarquez avec nous pour une balade au milieu de ses multiples Toriis et dans ce sanctuaire gigantesque, avec la description de notre journée là-bas. Dans cet article, on vous explique tout ce qu’il faut savoir : Comment s’y rendre ? A quelle saison ? Combien de temps prévoir ? Ainsi que son adresse, ses horaires et son prix.",
-  "social-network-description": "Le Fushimi Inari-taisha est un sanctuaire situé dans le district de Fushimi-ku à Kyoto au Japon. Il est surtout connu pour ses quelques milliers de Torii Vermillon qui créent un chemin dans une forêt remplie de pins.",
+  "introduction": "Embarquez avec nous pour une balade au milieu de ses multiples Torii et dans ce sanctuaire gigantesque.",
+  "google-description": "Embarquez avec nous pour une balade au milieu de ses multiples Torii et dans ce sanctuaire gigantesque, avec la description de notre journée là-bas. Dans cet article, on vous explique tout ce qu’il faut savoir : Comment s’y rendre ? A quelle saison ? Combien de temps prévoir ? Ainsi que son adresse, ses horaires et son prix.",
+  "social-network-description": "Fushimi Inari-taisha est un sanctuaire situé dans le district de Fushimi-ku à Kyoto au Japon. Il est surtout connu pour ses quelques milliers de Torii Vermillon qui créent un chemin dans une forêt remplie de pins.",
+  "full-title": "Fushimi Inari-Taisha : Le chemin des milles Torii à Kyoto | Guide de Voyage",
   "where": {
     "title": "Où ?",
     "part1": "68 Fukakusa Yabunouchicho, Fushimi Ward, Kyoto"
@@ -18,8 +19,9 @@
     "part2": "Depuis Tokyo ↠ environ 2h30",
     "part3": "Depuis Himeji ↠ environ 1h",
     "part4": "Depuis Nagoya ↠ environ 1h",
-    "part5": "[Plus d’information sur les transports](todo).",
-    "part6": "Depuis la gare de Kyoto, prendre la Nara Line jusqu’à Inari Station (5 mins - 2 arrêts). Attention, tous les trains ne s'y arrêtent pas, vous pouvez vérifier quel train prendre sur le site de [Japan Railway](todo). Une fois à la gare, Fushimi Inari Taisha n’est pas difficile d’accès car il n’y a qu’une seule sortie et vous serez juste en face du sanctuaire."
+    "part5": "[Plus d’information sur les transports](transport-japan).",
+    "part6": "Depuis la gare de Kyoto, prendre la [Nara Line](japan-line:#ffffff:#b67c2b:https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Fushimi%20Inari%20Taisha%2C%2068%20Fukakusa%20Yabunouchicho%2C%20Fushimi%20Ward%2C%20Kyoto%2C%20612-0882%2C%20Japan&travelmode=transit) jusqu’à Inari Station (5 mins - 2 arrêts). Attention, tous les trains ne s'y arrêtent pas, vous pouvez vérifier quel train prendre sur le site de [Japan Railway](https://www.westjr.co.jp/global/en/timetable/). Une fois à la gare, Fushimi Inari Taisha n’est pas difficile d’accès car il n’y a qu’une seule sortie et vous serez juste en face du sanctuaire.",
+    "part7": "Le train est le moyen le plus efficace pour se rendre à Fushimi Inari Taisha. Plus efficace qu’en bus ou en métro. Si vous le souhaitez réellement, vous pouvez prendre la ligne de bus numéro 5, dont le départ se situe à 5 minutes à pied de la gare de Kyoto."
   },
   "how-long": {
     "title": "Combien de temps ?",
@@ -28,7 +30,7 @@
   "what-time-of-year": {
     "title": "A quelle période ?",
     "part1": "Aucune période spécifique, #chaque saison est propice à votre visite dans ce sanctuaire#. Si on devait vous donner malgré tout le meilleur temps pour visiter ce serait fin printemps ou début automne pour éviter la pluie, le froid mais également d’avoir trop chaud en été, surtout si vous comptez faire la randonnée.",
-    "part2": "En fonction de la saison, n’hésitez pas à faire un tour au temple d’or, le [temple Kinkaku-ji](todo), ainsi qu’à la [forêt de bambou d’Arashiyama](todo). Deux lieux très célèbres à Kyoto, en plus de Fushimi Inari."
+    "part2": "En fonction de la saison, n’hésitez pas à faire un tour au temple d’or, le [temple Kinkaku-ji](kinkakuji), ainsi qu’à la [forêt de bambou d’Arashiyama](arashiyama). Deux lieux très célèbres à Kyoto, en plus de Fushimi Inari."
   },
   "how-much": {
     "title": "Prix ?",
@@ -36,15 +38,15 @@
   },
   "where-to-stay": {
     "title": "Où dormir à Kyoto, près de Fushimi Inari Taisha ?",
-    "part1": "Comme déjà expliqué dans [nos autres articles sur Kyoto](todo), nous sommes toujours effarés par les prix des hôtels surtout pour une nuit, cela dit au moins près de Fushimi il y en a et ils ont l’air tous plutôt pas mal, c’est déjà ça.",
+    "part1": "Comme déjà expliqué dans [nos autres articles sur Kyoto](kyoto), nous sommes toujours effarés par les prix des hôtels surtout pour une nuit, cela dit au moins près de Fushimi il y en a et ils ont l’air tous plutôt pas mal, c’est déjà ça.",
     "part2": "Parce qu’on a quand même mis du temps à chercher à Kyoto, un véritable casse-tête qu’on se le dise ! Si vous cherchez du traditionnel les prix montent très vite, si vous ne cherchez pas trop cher, ça devient vite n’importe quoi. Le logement au Japon est un vrai investissement sur vos vacances.",
-    "part3": "[Trouver un hôtel vers Fushimi](todo)."
+    "part3": "[Trouver un hôtel vers Fushimi](booking-search:Kyoto)."
   },
   "visit": {
     "title": "La visite",
     "part1": "Sorti du train nous voici à la gare, pas de chance pour nous, c’est le seul jour où il pleut depuis notre arrivée au Japon, quel manque de chance quand on sait qu’il y a une randonnée à faire dans la forêt ...",
     "part2": "#Le sanctuaire est juste en face de la gare#, vous ne pouvez pas le louper. Juste une petite rue à traverser, 50 mètres à peine et vous voilà à Fushimi Inari-taisha.",
-    "part3": "La pluie n’a pas empêché les gens de venir, le sanctuaire est peuplé de monde, nous y compris cela dit. Le soleil va bien réapparaître à un moment donné, on y croit (pour vous rassurer il est bien réapparu pour notre plus grand bonheur)!"
+    "part3": "La pluie n’a pas empêché les gens de venir, le sanctuaire est peuplé de monde, nous y compris cela dit. Le soleil va bien réapparaître à un moment donné, on y croit (pour vous rassurer il est bien réapparu pour notre plus grand bonheur!)."
   },
   "visit1": {
     "title": "UN PEU D’HISTOIRE",
@@ -55,11 +57,11 @@
     "part5": "Chacune de ces statues tient dans sa bouche un objet relié à Inari Okami, comme une tige de riz, une clé de grenier à riz ou encore un parchemin."
   },
   "visit2": {
-    "title": "LES TORIIS",
-    "part1": "Un torii est un #portail traditionnel japonais#. Il est généralement construit à l’entrée d’un sanctuaire afin d’empêcher les mauvais esprits de rentrer. Plus communément seul, vous en verrez #environ dix mille à Fushimi Inari-taisha#, ce qui explique pourquoi ce sanctuaire est autant célèbre. En effet, il est très rare de voir autant de toriis au même endroit et encore moins alignés à ce point.",
+    "title": "LES TORII",
+    "part1": "Un torii est un #portail traditionnel japonais#. Il est généralement construit à l’entrée d’un sanctuaire afin d’empêcher les mauvais esprits de rentrer. Plus communément seul, vous en verrez #environ dix mille à Fushimi Inari-taisha#, ce qui explique pourquoi ce sanctuaire est autant célèbre. En effet, il est très rare de voir autant de torii au même endroit et encore moins alignés à ce point.",
     "part2": "Traditionnellement construits en bois, il en existe également de plus en plus en pierre. Ils sont principalement #peints en vermillon#, un rouge vif tirant sur l'orangé, car cette couleur représente la force vitale.",
-    "part3": "Ces milliers de Toriis forment un chemin dans la forêt du #mont Inari, montagne culminant à 233 mètres#, pour se rendre jusqu’au bâtiment principal du sanctuaire, ces multiples colonnes de Toriis sont appelées #« Senbon torii »#. Une architecture époustouflante.",
-    "part4": "Chaque torii est un don fait par des particuliers ou des entreprises. #Ils représentent l'espoir qu'un souhait se réalisera, ou le remerciement pour un souhait qui s'est réalisé#. Sur chaque torii, vous trouverez le nom et la date du don, bien sûr écrit en Japonais ce qui fait que pour nous niveau esthétique cela rend particulièrement jolie et attractif. Le prix d’un Torii peut aller jusqu’à plus d’un million de yens, en fonction de son emplacement, de son état et de ceux qui l'entourent. C’est également à chaque propriétaire de torii de s’occuper de son entretien, c’est pour ca que vous verrez certain torii surement bien moins coloré que d’autre et bien moins entretenu."
+    "part3": "Ces milliers de Torii forment un chemin dans la forêt du #mont Inari, montagne culminant à 233 mètres#, pour se rendre jusqu’au bâtiment principal du sanctuaire. Ces multiples colonnes de Torii sont appelées #« Senbon torii »#. Une architecture époustouflante.",
+    "part4": "Chaque torii est un don fait par des particuliers ou des entreprises, #soit en remerciement d’un souhait réalisé, soit dans l’espoir d’exaucer un vœu#. Sur chaque torii, vous trouverez le nom et la date du don, bien sûr écrit en Japonais ce qui fait que pour nous niveau esthétique cela rend particulièrement jolie et attractif. Le prix d’un Torii peut aller jusqu’à plus d’un million de yens, en fonction de son emplacement, de son état et de ceux qui l'entourent. C’est également à chaque propriétaire de torii de s’occuper de son entretien, c’est pour ca que vous verrez certain torii surement bien moins coloré que d’autre et bien moins entretenu."
   },
   "visit3": {
     "title": "LA DÉCOUVERTE",
@@ -71,7 +73,7 @@
     "part6": "Nous suivons les escaliers depuis le pied de la colline.",
     "part7": "Avant de #passer en dessous des Torii#, on croise quelques monuments pour prier et se purifier. Avant d’entrer dans un temple, il serait coutume de se laver les mains et la bouche.",
     "part8": "La promenade commence avec un grand nombre de marches puis de chemins. Un itinéraire autour de ces célèbres Torii, quelques sanctuaires visibles de temps en temps, des lieux pour se reposer ou admirer la vue.",
-    "part9": "La plupart des gens ne viennent d’ailleurs que pour faire quelques photos dans le tunnel de toriis et repartir, ce qui vous laissera seul pour l’ascension de la montagne.",
+    "part9": "La plupart des gens ne viennent d’ailleurs que pour faire quelques photos dans le tunnel de torii et repartir, ce qui vous laissera seul pour l’ascension de la montagne.",
     "part10": "Vous n’êtes donc pas obligé de faire la #randonnée qui dure environ 2 heures# en fonction du monde et du temps, l’endroit est déjà prestigieux et rien qu’en vous promenant près du temple, vous y découvrirez pleins de petits endroits, vous pouvez d’ailleurs faire demi-tour à n’importe quel moment.",
     "part11": "Nous y retournerons certainement à une période moins touristique, et en essayant d’avoir un peu plus de chance sur la météo cette fois-ci (Faites attention quand il pleut, j’ai failli me retrouver les fesses par terre plus d’une fois, ce qui nous a valu de ne pas pouvoir aller jusqu’au bout de la randonnée)."
   },
@@ -79,12 +81,12 @@
     "title": "Où manger ?",
     "part1": "D'après la légende, les « Kitsune » (les renards) adorent le tofu frit. Les restaurants près de Fushimi Inari-taisha vendent donc deux plats spécifiques cuisinés avec cet ingrédient : des #sushis inari# (bouchées de tofu frit remplies de riz à sushi) et des #kitsune udon# (soupe de nouilles avec un bouillon et du tofu frit).",
     "part2": "Tentez l’un de ses plats pour vous imprégner encore plus du lieu.",
-    "part3": "Le restaurant [Nezameya](todo) se trouve juste à côté de Fushimi Inari. Un endroit parfait pour déguster de délicieux sushis inari."
+    "part3": "Le restaurant [Nezameya](http://nezameya.com/eng/) se trouve juste à côté de Fushimi Inari. Un endroit parfait pour déguster de délicieux sushis inari."
   },
-  "conclusion": "Avec autant de toriis vous pouvez être sûr qu'aucun mauvais esprit ne pourra vous atteindre.",
+  "conclusion": "Avec autant de torii vous pouvez être sûr qu'aucun mauvais esprit ne pourra vous atteindre.",
   "question1": "Avez-vous déjà visité un endroit similaire ?",
   "question2": "Connaissiez-vous l’histoire derrière ce sanctuaire ?",
-  "pinterest": "🌏 Embarquez avec nous pour une balade au milieu de ses multiples Toriis et dans ce sanctuaire gigantesque. Dans cet article, on vous explique tout ce qu’il faut savoir : Comment s’y rendre ? A quelle saison ? Combien de temps prévoir ? Ainsi que son adresse, ses horaires et son prix. Cliquez sur l'image pour le guide complet sur le sanctuaire de Fushimi Inari-taisha … 🌏",
+  "pinterest": "🌏 Embarquez avec nous pour une balade au milieu de ses multiples Torii et dans ce sanctuaire gigantesque. Dans cet article, on vous explique tout ce qu’il faut savoir : Comment s’y rendre ? A quelle saison ? Combien de temps prévoir ? Ainsi que son adresse, ses horaires et son prix. Cliquez sur l'image pour le guide complet sur le sanctuaire de Fushimi Inari-taisha … 🌏",
   "facebook": {
     "part1": "♡ Coucou les voyageurs ! ♡",
     "part2": "Si on vous parle du Japon, vous aurez forcément en tête ces célèbres portails traditionnels rouges qu’on voit un peu partout ↠ Connu sous le nom de Torii.",

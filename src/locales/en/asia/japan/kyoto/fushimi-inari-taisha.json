@@ -1,93 +1,95 @@
 {
-  "quote": "",
-  "introduction": "",
-  "google-description": "Join us for a walk in this gigantic sanctuary, in the middle of its Toriis. In this article, we'll share our visit and everything you need to know: How to get there? What season? How long to stay? As well as its address, opening hours and price.",
+  "quote": "Fushimi Inari-taisha is a shrine located in the Fushimi-ku district of Kyoto, Japan. He is famous for the thousands of Vermilion Torii which create a path in a forest filled with pine trees.",
+  "introduction": "Join us for a walk in this gigantic sanctuary, in the middle of its Torii",
+  "google-description": "Join us for a walk in this gigantic sanctuary, in the middle of its Torii. In this article, we'll share our visit and everything you need to know: How to get there? What season? How long to stay? As well as its address, opening hours and price.",
   "social-network-description": "Fushimi Inari-taisha is a shrine located in the Fushimi-ku district of Kyoto, Japan. He is famous for the thousands of Vermilion Torii which create a path in a forest filled with pine trees.",
+  "full-title": "Fushimi Inari-Taisha: The Thousand Torii Trail in Kyoto | Travel Guide",
   "where": {
-    "title": "",
-    "part1": ""
+    "title": "Where?",
+    "part1": "68 Fukakusa Yabunouchicho, Fushimi Ward, Kyoto"
   },
   "when": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "When?",
+    "part1": "Open every day, #24h#",
+    "part2": "Rather early in the morning or the evening to avoid the crowd. We went around lunchtime, it was crowded. Impossible to take pictures or to walk without being jostled. The shrine is also open at night, it becomes illuminated by thousands of lanterns."
   },
   "how": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": ""
+    "title": "How to get there?",
+    "part1": "It is possible to get to Kyoto by Shinkansen, from most cities.",
+    "part2": "From Tokyo ↠ about 2h40.",
+    "part3": "From Osaka ↠ about 1h.",
+    "part4": "From Kyoto ↠ about 1h.",
+    "part5": "More information about [Transports in Japan](transport-japan).",
+    "part6": "From Kyoto Station, take the [Nara Line](japan-line:#ffffff:#b67c2b:https://www.google.com/maps/dir/?api=1&origin=Kyoto%20Station%2C%20Higashishiokoji%20Kamadonocho%2C%20Shimogyo%20Ward%2C%20Kyoto%2C%20Japan&destination=Fushimi%20Inari%20Taisha%2C%2068%20Fukakusa%20Yabunouchicho%2C%20Fushimi%20Ward%2C%20Kyoto%2C%20612-0882%2C%20Japan&travelmode=transit) to Inari Station (5 mins - 2 stops). Be careful because not all trains stop there. You can check which train to take on the [Japan Railway](https://www.westjr.co.jp/global/en/timetable/) website. Once at the station, Fushimi Inari Taisha is not difficult to access as there is only one exit right in front of the shrine.",
+    "part7": "The most efficient way to get to Fushimi Inari Taisha is by train. More efficient than by bus or metro. If you want to, you can take bus line number 5, which departs a 5-minute walk from Kyoto Station"
   },
   "how-long": {
-    "title": "",
-    "part1": ""
+    "title": "How long?",
+    "part1": "#About 4h# if you plan to follow the trail."
   },
   "what-time-of-year": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Best time to visit?",
+    "part1": "No specific period, #each season is suitable to visit this sanctuary#. If we had to choose a period, it would be late spring or early fall to avoid the rain, the cold or hot summer, especially if you plan to hike.",
+    "part2": "Depending on the season, check out the Golden Temple [Kinkaku-Ji](kinkakuji), as well as [Arashiyama bamboo forest](arashiyama). Two very famous places in Kyoto, besides Fushimi Inari."
   },
   "how-much": {
-    "title": "",
-    "part1": ""
+    "title": "How much?",
+    "part1": "Free."
   },
   "where-to-stay": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": ""
+    "title": "Where to stay in Kyoto, near Fushimi Inari Taisha?",
+    "part1": "As already explained in [our other articles on Kyoto](kyoto), we are always appalled by the prices of hotels, especially for one night. At least there are some hotels near Fushimi that look correct.",
+    "part2": "We spent a lot of time finding our hotels in Kyoto. A real headache. If you are looking for standard hotels, prices go up very quickly. However, if you are looking for a cheap one, it quickly becomes a hassle. Make sure to budget accommodations carefully in Japan.",
+    "part3": "[Find a hotel near Fushimi](booking-search:Kyoto)."
   },
   "visit": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": ""
+    "title": "Visit",
+    "part1": "We reach the station, and unfortunately, it's the first rainy day since our arrival in Japan. Hot unfortunate when we know that there is a hike to do in the forest...",
+    "part2": "#The sanctuary is right in front of the station#. You can't miss it. Just a short street to cross, barely 50 meters, and you are at Fushimi Inari-Taisha.",
+    "part3": "The rain didn’t stop people from coming. The shrine is full of people, including us. The sun will reappear at some point, we strongly believe it (to reassure you it was a case and we were delighted about it!)."
   },
   "visit1": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": ""
+    "title": "A bit of history",
+    "part1": "Located in the Fushimi-Ku district of Kyoto, Fushimi Inari-Taisha is a Shinto shrine, also known as « Oinari-san ». It was #built in 711# and spans #over 850,000 square meters#.",
+    "part2": "This shrine is #dedicated to the goddess Inari Okami#, worshiped as the guardian deity of harvest, trade, peace, and prosperity.",
+    "part3": "#You will be able to see many statues inside the sanctuary. These statues are called « Komainu ». They have the form of a mythical fox called « Kitsune ».#",
+    "part4": "These foxes are believed to be the messengers and servants of this goddess. Each fox spirit would communicate our wishes to Inari Okami and stand guard while warding off evil spirits.",
+    "part5": "Each statue holds in its mouth an object related to Inari Okami, such as a rice stalk, a rice granary key, or even a parchment."
   },
   "visit2": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": ""
+    "title": "The Torii",
+    "part1": "A torii is a #traditional Japanese gate#. It is usually built at the sanctuary entrance to chase away evil spirits. Most of the time, there is only one Torii. However, you will see #around ten thousand of them at Fushimi Inari-Taisha#, which is why this shrine is so famous. It is rare to see so many torii in the same place and even less aligned like that.",
+    "part2": "Traditionally built of wood, there are also more and more made of stone. They are mainly #painted in vermilion#, a bright red with a bit of orange, because this color is the symbol of life force.",
+    "part3": "These thousands of Torii form a path in the forest of #Mount Inari, a mountain culminating at 233 meters#, to reach the main building of the sanctuary. These multiple columns of Torii are called « #Senbon Torii# ». Breathtaking architecture.",
+    "part4": "Each torii is a donation made by individuals or companies. #Either in appreciation of a wish made or to make one#. On each torii, you will find the name and the date of the donation. The information is written in Japanese making it particularly pretty and attractive, aesthetically speaking. The price of a Torii can go up to over a million yen depending on its location, condition, and the other Torii around it. It is also up to each torii owner to take care of its maintenance, which is why you will probably see some torii much less colorful than others and much less maintained."
   },
   "visit3": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": "",
-    "part8": "",
-    "part9": "",
-    "part10": "",
-    "part11": ""
+    "title": "The discovery",
+    "part1": "The visit begins at the bottom of the hill.",
+    "part2": "You will proceed to the main entrance, represented by a large gate named « #Rōmon# », which is one of two types of gates commonly used in Japan at shrines entrance.",
+    "part3": "Then a first temple appears in front of us, where all the crowd waits for the rain to stop. We can still see a few people praying.",
+    "part4": "On our left, there are #a few souvenir shops#.",
+    "part5": "We follow the path being a little afraid of getting lost because the complex looks so huge.",
+    "part6": "We follow the stairs from the base of the hill.",
+    "part7": "Before #going under the Torii#, we come across some monuments to pray and purify ourselves. Before entering a temple, it would be customary to wash your hands and mouth.",
+    "part8": "The walk begins with a lot of steps and then some paths. A route around these famous Torii. Some shrines visible from time to time to rest or admire the view.",
+    "part9": "Most people only come to take a few photos in the Torii tunnel and then leave. At least you will feel alone to climb up the mountain.",
+    "part10": "You don't need to do #the hike, which lasts about 2 hours#. The complex is already prestigious, and just by walking near the temple, you will discover lots of small places. You can also turn back at any time.",
+    "part11": "We will be going back at a less touristy period. We hope we will be luckier with the weather next time (be careful when it rains the floor is slippery)."
   },
   "where-to-have": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": ""
+    "title": "Where to have?",
+    "part1": "According to legend, « Kitsune » (foxes) love fried tofu. That's why restaurants near Fushimi Inari-Taisha sell two specific dishes: #inari sushi# (fried tofu bites filled with sushi rice) and #udon kitsune# (noodle soup with broth and fried tofu).",
+    "part2": "Try one of his dishes to enjoy the place even more.",
+    "part3": "[Nezameya](http://nezameya.com/eng/) Restaurant can be found right next to Fushimi Inari. A perfect place to enjoy delicious inari sushi."
   },
-  "conclusion": "",
-  "question1": "",
-  "question2": "",
-  "pinterest": "",
+  "conclusion": "With so many torii, you can be sure that no evil spirit will be able to reach you.",
+  "question1": "Have you ever visited a similar place?",
+  "question2": "Did you know the history of this shrine?",
+  "pinterest": "\uD83C\uDF0F Join us for a walk in this gigantic sanctuary, in the middle of its Torii. In this article, we'll share our visit and everything you need to know: How to get there? What season? How long to stay? As well as its address, opening hours and price. Click on the image for the full guide about Fushimi Inari-taisha shrine... \uD83C\uDF0F",
   "facebook": {
-    "part1": "",
-    "part2": "",
-    "part3": ""
+    "part1": "♡ Hello travellers! ♡",
+    "part2": "If anyone talks to you about Japan, you will inevitably have in mind these famous traditional red portals that can be seen everywhere ↠ Known as the Torii.",
+    "part3": "Discover with us the sanctuary of Fushimi Inari-Taisha, where you will have the chance to see thousands of portals."
   }
 }
