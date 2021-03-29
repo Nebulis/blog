@@ -6,8 +6,13 @@ describe("sectionContent", () => {
   it("should not add mb2 className when children is only a text string", () => {
     const tree = renderer.create(<SectionContent>aaaa</SectionContent>).toJSON()
     expect(tree).toMatchInlineSnapshot(`
+      .emotion-0 {
+        line-height: 1.5em;
+        margin-bottom: 1.45rem;
+      }
+
       <div
-        className=" f5 section-content tj css-117o7rs-sectionContentStyle"
+        className=" f5 section-content tj emotion-0"
       >
         aaaa
       </div>
@@ -23,8 +28,13 @@ describe("sectionContent", () => {
       )
       .toJSON()
     expect(tree).toMatchInlineSnapshot(`
+      .emotion-0 {
+        line-height: 1.5em;
+        margin-bottom: 1.45rem;
+      }
+
       <div
-        className=" f5 section-content tj css-117o7rs-sectionContentStyle"
+        className=" f5 section-content tj emotion-0"
       >
         aaaa
         <p>
@@ -43,8 +53,13 @@ describe("sectionContent", () => {
       )
       .toJSON()
     expect(tree).toMatchInlineSnapshot(`
+      .emotion-0 {
+        line-height: 1.5em;
+        margin-bottom: 1.45rem;
+      }
+
       <div
-        className=" f5 section-content tj css-117o7rs-sectionContentStyle"
+        className=" f5 section-content tj emotion-0"
       >
         <p
           className="mb2 "
@@ -67,8 +82,13 @@ describe("sectionContent", () => {
       )
       .toJSON()
     expect(tree).toMatchInlineSnapshot(`
+      .emotion-0 {
+        line-height: 1.5em;
+        margin-bottom: 1.45rem;
+      }
+
       <div
-        className=" f5 section-content tj css-117o7rs-sectionContentStyle"
+        className=" f5 section-content tj emotion-0"
       >
         <p
           className="mb2 foo"
@@ -93,8 +113,13 @@ describe("sectionContent", () => {
       )
       .toJSON()
     expect(tree).toMatchInlineSnapshot(`
+      .emotion-0 {
+        line-height: 1.5em;
+        margin-bottom: 1.45rem;
+      }
+
       <div
-        className=" f5 section-content tj css-117o7rs-sectionContentStyle"
+        className=" f5 section-content tj emotion-0"
       >
         <p
           className="mb2 "
@@ -127,8 +152,13 @@ describe("sectionContent", () => {
       )
       .toJSON()
     expect(tree).toMatchInlineSnapshot(`
+      .emotion-0 {
+        line-height: 1.5em;
+        margin-bottom: 1.45rem;
+      }
+
       <div
-        className=" f5 section-content tj css-117o7rs-sectionContentStyle"
+        className=" f5 section-content tj emotion-0"
       >
         <ul
           className="mb2 "
