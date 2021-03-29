@@ -140,10 +140,10 @@ const japanLinks = () => {
     published: false,
   })
 
-  expect(getLink("himeji")).toMatchObject({ label: { fr: "Himeji", en: "Himeji" }, published: false })
+  expect(getLink("himeji")).toMatchObject({ label: { fr: "Himeji", en: "Himeji" }, published: true })
   expect(getLink("himeji-castle")).toMatchObject({
     label: { en: "The magnificent white Himeji Castle", fr: "Le magnifique château blanc de Himeji" },
-    published: false,
+    published: true,
   })
 
   expect(getLink("fuji")).toMatchObject({ label: { en: "Mt. Fuji", fr: "Mt. Fuji" }, published: false })

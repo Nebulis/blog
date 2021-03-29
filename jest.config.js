@@ -17,4 +17,5 @@ module.exports = {
   setupFiles: [`<rootDir>/loadershim.js`],
   setupFilesAfterEnv: ["./jest.setup.js"],
   watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
+  snapshotSerializers: ["@emotion/jest/serializer"],
 }
