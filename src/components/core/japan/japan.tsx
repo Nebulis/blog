@@ -34,13 +34,6 @@ export const JapanQuote = styled(Quote)`
   }
 `
 
-export const FushimiInariTaishaQuote = () => (
-  <JapanQuote>
-    Le sanctuaire est surtout connu pour ses quelques milliers de Torii Vermillon qui crée un chemin dans une forêt
-    remplie de pins...
-  </JapanQuote>
-)
-
 export const NagoyaCastleQuote = () => (
   <JapanQuote>
     Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya et ses vastes jardins sont

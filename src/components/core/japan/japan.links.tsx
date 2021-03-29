@@ -162,7 +162,7 @@ export const japanLinks: CountryLink = {
             fr: commonFr.country.japan.card["fushimi-inari-taisha"],
             en: commonEn.country.japan.card["fushimi-inari-taisha"],
           },
-          published: false,
+          published: new Date("2021-04-24T17:00:00.000+08:00"),
           card: FushimiInariTaishaCard,
         },
       ],

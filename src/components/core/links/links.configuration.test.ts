@@ -136,14 +136,17 @@ const japanLinks = () => {
       en: "Daigo-ji : Cherry Blossom Spot in Kyoto",
       fr: "Daigo-ji : La carte postale des cerisiers en fleurs de Kyoto",
     },
-    published: false,
+    published: true,
   })
   expect(getLink("kinkakuji")).toMatchObject({
     label: { en: "Kinkaku-Ji: The Golden Temple of Kyoto", fr: "Kinkaku-ji : Le temple doré de Kyoto" },
     published: true,
   })
   expect(getLink("fushimi-inari-taisha")).toMatchObject({
-    label: { fr: "Fushimi Inari-Taisha", en: "Fushimi Inari-Taisha" },
+    label: {
+      fr: "Fushimi Inari-Taisha : Le chemin des milles Torii à Kyoto",
+      en: "Fushimi Inari-Taisha: The Thousand Torii Trail in Kyoto",
+    },
     published: false,
   })
 
