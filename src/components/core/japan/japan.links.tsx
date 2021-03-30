@@ -189,8 +189,8 @@ export const japanLinks: CountryLink = {
         {
           id: "nagoya-castle",
           label: { fr: commonFr.country.japan.card["nagoya-castle"], en: commonEn.country.japan.card["nagoya-castle"] },
-          published: false,
           card: NagoyaCastleCard,
+          published: new Date("2021-05-01T17:00:00.000+08:00"),
         },
         {
           id: "toganji",

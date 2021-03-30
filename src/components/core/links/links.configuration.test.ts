@@ -193,7 +193,7 @@ const japanLinks = () => {
 
   expect(getLink("nagoya")).toMatchObject({ label: { fr: "Nagoya", en: "Nagoya" }, published: false })
   expect(getLink("nagoya-castle")).toMatchObject({
-    label: { en: "Nagoya Castle", fr: "Château de Nagoya" },
+    label: { en: "The second life of Nagoya Castle", fr: "La seconde vie du château de Nagoya" },
     published: false,
   })
   expect(getLink("toganji")).toMatchObject({

@@ -1,8 +1,9 @@
 {
-  "quote": "Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya est pourtant une des fiertés de la ville de Nagoya. Situé en plein centre ville, il est entouré d’un vaste parc.",
+  "quote": "Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya est aussi une de ses fiertés. Situé en plein centre ville, il est entouré d’un vaste parc.",
   "introduction": "Découvrez ce château à travers notre récit, nos photos et nos conseils.",
-  "google-description": "Découvrez le château de Nagoya à travers notre visite. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos.",
-  "social-network-description": "Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya est pourtant une des fiertés de la ville de Nagoya. Situé en plein centre ville, il est entouré d’un vaste parc.",
+  "google-description": "Découvrez le château de Nagoya à travers notre récit de voyage et nos photos. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix.",
+  "social-network-description": "Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya est aussi une de ses fiertés. Situé en plein centre ville, il est entouré d’un vaste parc.",
+  "full-title": "La seconde vie du château de Nagoya | Guide de Voyage",
   "where": {
     "title": "Où ?",
     "part1": "1-1 Honmaru, Naka Ward, Nagoya"
@@ -17,8 +18,8 @@
     "part2": "Depuis Tokyo environ 2h.",
     "part3": "Depuis Kyoto environ 40 minutes.",
     "part4": "Depuis Osaka environ 1h.",
-    "part5": "[Plus d’information sur les transports ici](todo).",
-    "part6": "Depuis la gare de Nagoya, prendre la Higashiyama Line jusqu’à Sakae (5 mins – 2 arrêts). Puis prendre la Meijo Line jusqu’à Shiyakusho Station (3 mins – 2 arrêts). Prendre la sortie 7 puis continuez tout droit (direction Nord) l’entrée du château est à 2 minutes à pied sur votre gauche."
+    "part5": "[Plus d’information sur les transports ici](transport-japan).",
+    "part6": "Depuis la gare de Nagoya, prendre la [Higashiyama Line](japan-line:#000000:#f2f200:https://www.google.com/maps/dir/?api=1&origin=Nagoya%20Station%2C%201%20Chome-1-4%20Meieki%2C%20Nakamura%20Ward%2C%20Nagoya%2C%20Aichi%2C%20Japan&destination=Shiyakusho%20Station%2C%20Japan&travelmode=transit) jusqu’à Sakae (5 mins – 2 arrêts). Puis prendre la [Meijo Line](japan-line:#ffffff:#800080:https://www.google.com/maps/dir/?api=1&origin=Nagoya%20Station%2C%201%20Chome-1-4%20Meieki%2C%20Nakamura%20Ward%2C%20Nagoya%2C%20Aichi%2C%20Japan&destination=Shiyakusho%20Station%2C%20Japan&travelmode=transit) jusqu’à Shiyakusho Station (3 mins – 2 arrêts). Prendre la sortie 7 puis continuez tout droit (direction Nord) l’entrée du château est à 2 minutes à pied sur votre gauche."
   },
   "how-long": {
     "title": "Combien de temps ?",
@@ -26,8 +27,8 @@
   },
   "what-time-of-year": {
     "title": "A quelle période ?",
-    "part1": "[Au printemps](todo), les cerisiers sont une véritable attraction. Vous en verrez absolument tout autour de la bâtisse.",
-    "part2": "[A l’automne](todo), les érables vous font découvrir un autre endroit, aux couleurs rouge et orange, tout aussi prestigieux."
+    "part1": "[Au printemps](spring-in-japan), les cerisiers sont une véritable attraction. Vous en verrez absolument tout autour de la bâtisse.",
+    "part2": "[A l’automne](autumn-in-japan), les érables vous font découvrir un autre endroit, aux couleurs rouge et orange, tout aussi prestigieux."
   },
   "how-much": {
     "title": "Prix ?",
@@ -35,14 +36,14 @@
   },
   "where-to-stay": {
     "title": "Où dormir à Nagoya ?",
-    "part1": "Nagoya n’avait pas l’air tellement touristique, en tout cas beaucoup moins que [Kyoto](todo) et [Himeji](todo). Nous n’avons pas eu de mal à trouver un hôtel et ça même si nous nous y étions pris un peu en retard.",
+    "part1": "Nagoya n’avait pas l’air tellement touristique, en tout cas beaucoup moins que [Kyoto](kyoto) et [Himeji](himeji). Nous n’avons pas eu de mal à trouver un hôtel et ça même si nous nous y étions pris un peu en retard.",
     "part2": "Nous avons cherché au plus proche de nos visites pour que ce soit le plus pratique pour nous.",
-    "part3": "[Kuretake Inn Nagoya Hisaya Odori](todo) est un très bel hôtel, idéalement situé à 10-15 minutes à pied du Château de Nagoya. La chambre et la SDB étaient très propres, un peu petites mais très clairement pour une ou deux nuits c’était parfait, très cosy."
+    "part3": "[Kuretake Inn Nagoya Hisaya Odori](booking-hotel:jp/kuretake-inn-nagoya-hisayaodori) est un très bel hôtel, idéalement situé à 10-15 minutes à pied du Château de Nagoya. La chambre et la SDB étaient très propres, un peu petites mais très clairement pour une ou deux nuits c’était parfait, très cosy."
   },
   "where-to-have": {
     "title": "Où manger à Nagoya ?",
     "part1": "Après une bonne journée à marcher, on avait clairement envie de se refaire plaisir, et à deux pas de l’hôtel dans une petite rue nous avons trouvé le restaurant que nous cherchions, le même type qu’à Himeji où nous nous étions régalés. Un restaurant de barbecue typiquement coréen que vous retrouverez énormément au Japon.",
-    "part2": "On vous met quand même [le lien du site](todo) même s’il est en Japonais vous y trouverez la map pour y accéder, pas compliqué si vous logez au même endroit que nous. Le serveur qui s’est occupé de nous, parlait parfaitement anglais et nous a très bien conseillé."
+    "part2": "On vous met quand même [le lien du site](https://www.shoya.com/shop-info/shop-izumi) même s’il est en Japonais vous y trouverez la map pour y accéder, pas compliqué si vous logez au même endroit que nous. Le serveur qui s’est occupé de nous, parlait parfaitement anglais et nous a très bien conseillé."
   },
   "visit": {
     "title": "La visite",
@@ -58,14 +59,14 @@
     "part5": "L’année 2009 marque une nouvelle section de travaux, un #projet gigantesque qui consiste à reconstruire l’ensemble des bâtisses avec les matériaux utilisés de l’époque#, reconstruction notamment du palais Honmaru, dont une partie est maintenant de nouveau ouverte au public.",
     "part6": "Depuis 2019, le donjon principal est lui aussi en rénovation. Le but étant de le reconstruire en bois pour lui redonner son authenticité. Travaux qui devraient finir en 2022.",
     "part7": "#Malgré tous ces travaux, la majorité des édifices restent ouverts au public.#",
-    "part8": "Vous pourrez remarquer que le château de Nagoya et le [château d'Osaka](todo) se ressemblent particulièrement de l’extérieur, de par leur couleur et leur forme de construction. Bien que celui d’Osaka soit bien plus connu, une visite des deux vaut largement le détour."
+    "part8": "Vous pourrez remarquer que le château de Nagoya et le [château d'Osaka](osaka-castle) se ressemblent particulièrement de l’extérieur, de par leur couleur et leur forme de construction. Bien que celui d’Osaka soit bien plus connu, une visite des deux vaut largement le détour."
   },
   "visit2": {
     "title": "ENTRÉE DANS L’ENCEINTE",
     "part1": "L’entrée est déjà un véritable spectacle dès l’arrivée. #Encerclé de douves# et entouré de cerisiers, on passe par un petit pont qui nous amène peu à peu dans l’immense parc du château. La nature a quelque peu repris ses droits dans les premières douves que nous voyons.",
     "part2": "En entrant dans le parc, on a l’embarras du choix tellement c’est grand.",
     "part3": "L’ensemble du parc et du château est #protégé par une grande muraille avec des tours de guets aux extrémités#. On en dénombre trois qui sont toutes dans leur état d’origine.",
-    "part4": "Ces tours ressemblent à des petites répliques du [château de Himeji](todo), ce qui nous rappelle déjà nos souvenirs du premier jour.",
+    "part4": "Ces tours ressemblent à des petites répliques du [château de Himeji](himeji-castle), ce qui nous rappelle déjà nos souvenirs du premier jour.",
     "part5": "L’intérieur de la tour de guet du sud-ouest est ouvert au public et offre une vue d’ensemble depuis le dernier étage ainsi qu’une vue sur les buildings de Nagoya, au loin."
   },
   "visit3": {
@@ -100,7 +101,7 @@
   },
   "conclusion": "Énorme château entouré d’un très grand jardin, le château de Nagoya est idéal pour faire une pause citadine et se sentir comme à la campagne.",
   "question1": "Avez-vous déjà visité le château de Nagoya ?",
-  "question2": "Appréciez-vous aussi de visiter des endroits calmes au centre de grandes villes ?",
+  "question2": "Est-ce que vous appréciez aussi la visite d’endroits calme au centre de grandes villes ?\n",
   "pinterest": "🌏 Découvrez le château de Nagoya à travers notre visite. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos. Cliquez sur l'image pour le guide complet sur le château de Nagoya … 🌏",
   "facebook": {
     "part1": "♡ Coucou les voyageurs ! ♡",

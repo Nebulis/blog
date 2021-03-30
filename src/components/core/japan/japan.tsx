@@ -34,13 +34,6 @@ export const JapanQuote = styled(Quote)`
   }
 `
 
-export const NagoyaCastleQuote = () => (
-  <JapanQuote>
-    Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya et ses vastes jardins sont
-    clairement un lieu à faire si vous y êtes de passage...
-  </JapanQuote>
-)
-
 export const ToganjiQuote = () => (
   <JapanQuote>
     Impressionnante statue d’un vert très vif d’environ 10 mètres de haut, ce grand Bouddha est entouré à son pied

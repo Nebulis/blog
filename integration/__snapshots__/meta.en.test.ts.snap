@@ -140,9 +140,9 @@ exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html c
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: meta-description 1`] = `"Discover Nagoya Castle through our visit. In this article, we share our travelogue and photos and answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located."`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: social-network 1`] = `"Symbol of this not-touristy city in Japan, Nagoya Castle is the pride of the city of Nagoya. Located downtown, it is surrounded by a large park."`;
+exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: social-network 1`] = `"Symbol of this not-touristy city in Japan, Nagoya Castle is the pride of Nagoya. Located downtown, it is surrounded by a large park."`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: title 1`] = `"Nagoya Castle | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: title 1`] = `"The second life of Nagoya Castle | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: meta-description 1`] = `"Discover the Togan-ji temple and its huge Buddha with our travelogue. In this article, we answer all your questions: How to get there? How long and at what period? We also tell about the opening hours, the price and where it's located."`;
 

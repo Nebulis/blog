@@ -138,11 +138,11 @@ exports[`french pages exports meta for public/asia/japan/nagoya/index.html corre
 
 exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly: title 1`] = `"Nagoya | Guide de Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/index.html correctly: meta-description 1`] = `"Découvrez le château de Nagoya à travers notre visite. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos."`;
+exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/index.html correctly: meta-description 1`] = `"Découvrez le château de Nagoya à travers notre récit de voyage et nos photos. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix."`;
 
-exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/index.html correctly: social-network 1`] = `"Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya est pourtant une des fiertés de la ville de Nagoya. Situé en plein centre ville, il est entouré d’un vaste parc."`;
+exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/index.html correctly: social-network 1`] = `"Véritable symbole de cette ville très peu touristique du Japon, le château de Nagoya est aussi une de ses fiertés. Situé en plein centre ville, il est entouré d’un vaste parc."`;
 
-exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/index.html correctly: title 1`] = `"Château de Nagoya | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/index.html correctly: title 1`] = `"La seconde vie du château de Nagoya | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: meta-description 1`] = `"Découvrez le temple Togan-ji et son grand Bouddha à travers notre récit de voyage. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos."`;
 
