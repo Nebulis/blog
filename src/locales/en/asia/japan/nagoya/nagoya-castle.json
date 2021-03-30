@@ -1,109 +1,110 @@
 {
-  "quote": "",
-  "introduction": "",
+  "quote": "Symbol of this not-touristy city in Japan, Nagoya Castle is the pride of Nagoya. Located downtown, it is surrounded by a large park.",
+  "introduction": "Discover Nagoya Castle through our visit, photos, and advice.",
   "google-description": "Discover Nagoya Castle through our visit. In this article, we share our travelogue and photos and answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located.",
-  "social-network-description": "Symbol of this not-touristy city in Japan, Nagoya Castle is the pride of the city of Nagoya. Located downtown, it is surrounded by a large park.",
+  "social-network-description": "Symbol of this not-touristy city in Japan, Nagoya Castle is the pride of Nagoya. Located downtown, it is surrounded by a large park.",
+  "full-title": "The second life of Nagoya Castle | Travel Guide",
   "where": {
-    "title": "",
-    "part1": ""
+    "title": "Where?",
+    "part1": "1-1 Honmaru, Naka Ward, Nagoya"
   },
   "when": {
-    "title": "",
-    "part1": ""
+    "title": "When?",
+    "part1": "Every day from #9 a.m. to 4:30 p.m.#."
   },
   "how": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": ""
+    "title": "How to get there?",
+    "part1": "It is possible to get to Nagoya by Shinkansen, from most cities.",
+    "part2": "From Tokyo ↠ about 2 hours.",
+    "part3": "From Kyoto ↠ about 40 mins.",
+    "part4": "From Osaka ↠ about 1 hour.",
+    "part5": "More information about [Transports in Japan](transport-japan).",
+    "part6": "From Nagoya Station, take the [Higashiyama Line](japan-line:#000000:#f2f200:https://www.google.com/maps/dir/?api=1&origin=Nagoya%20Station%2C%201%20Chome-1-4%20Meieki%2C%20Nakamura%20Ward%2C%20Nagoya%2C%20Aichi%2C%20Japan&destination=Shiyakusho%20Station%2C%20Japan&travelmode=transit) to Sakae (5 mins - 2 stops). Then take the [Meijo Line](japan-line:#ffffff:#800080:https://www.google.com/maps/dir/?api=1&origin=Nagoya%20Station%2C%201%20Chome-1-4%20Meieki%2C%20Nakamura%20Ward%2C%20Nagoya%2C%20Aichi%2C%20Japan&destination=Shiyakusho%20Station%2C%20Japan&travelmode=transit) to Shiyakusho Station (3 mins - 2 stops). Take exit 7, then continue straight ahead (north direction). The entrance to the castle is a 2-minute walk on your left."
   },
   "how-long": {
-    "title": "",
-    "part1": ""
+    "title": "How long?",
+    "part1": "Half a day."
   },
   "what-time-of-year": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Best time to visit?",
+    "part1": "[In Spring](spring-in-japan), the cherry trees make it an attraction. You will see many all around the castle.",
+    "part2": "[In Autumn](autumn-in-japan), the maples allow you to discover a different site, full of red and orange colors."
   },
   "how-much": {
-    "title": "",
-    "part1": ""
+    "title": "How much?",
+    "part1": "500 Yen (~ $5). Free for children."
   },
   "where-to-stay": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": ""
+    "title": "Where to stay in Nagoya?",
+    "part1": "Nagoya didn't look so touristy, at least a lot less than [Kyoto](kyoto) and [Himeji](himeji). We had no trouble finding a hotel, even though we searched one a little late.",
+    "part2": "We looked as close as possible to our visits to make it the most convenient.",
+    "part3": "[Kuretake Inn Nagoya Hisaya Odori](booking-hotel:jp/kuretake-inn-nagoya-hisayaodori) is a very nice hotel, conveniently located 10-15 minutes walk from Nagoya Castle. The room and the bathroom were clean though a bit small. For one or two nights, it was perfect, very cozy."
   },
   "where-to-have": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Where to have in Nagoya?",
+    "part1": "After walking the whole day, we wanted to treat ourselves. Just near the hotel, in a small street, we found the restaurant we were looking for. The same kind as in Himeji. A typical Korean barbecue restaurant like you will find a lot in Japan.",
+    "part2": "We share [the website link](https://www.shoya.com/shop-info/shop-izumi), even if it is in Japanese. You will find the map to access it, not complicated if you stay in the same place as us. The waiter who looked after us spoke perfect English and gave us great advice."
   },
   "visit": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Visit",
+    "part1": "Despite being #the fourth most populous city in Japan#, Nagoya is too little known. We had heard about it, and this is why we went there, but we have experienced it.",
+    "part2": "In each city and visit we made, there were a lot of people. However, in Nagoya, there were almost #no tourists except us#. Quite a shock, but not displeasing at all."
   },
   "visit1": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": "",
-    "part8": ""
+    "title": "A bit of History",
+    "part1": "Nagoya Castle owes its name to the city it is located, Nagoya, in Aichi Prefecture, Japan.",
+    "part2": "#Completed in 1615#, it is one of the many castles in Japan to have been partially destroyed, especially by bombardments during World War II in 1945.",
+    "part3": "In 1930, it was the first castle to be designated a national treasure.",
+    "part4": "In 1959, the main dungeon was rebuilt identically, and the interior transformed into a museum.",
+    "part5": "In 2009 started a #gigantic project: the renovation of all the buildings by using the original materials#. This project includes the reconstruction of the Honmaru Palace, which is now partially open to the public.",
+    "part6": "Since 2019, the main dungeon is also under renovation. The goal is to rebuild it in wood to restore its authenticity. The renovation should be completed in 2022.",
+    "part7": "#Despite all this work, most of the buildings remain open to the public#.",
+    "part8": "You may notice that Nagoya Castle and Osaka Castle look similar from the outside, whether in color or construction shape. Even if [Osaka Castle](osaka-castle) is much more famous, a visit to both is well worth the detour"
   },
   "visit2": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": ""
+    "title": "Entry of the castle",
+    "part1": "The entrance is already a spectacle from afar. #Surrounded by a moat# and cherry trees, we cross a small bridge which gradually brings us into the immense park of the castle. Nature has somewhat regained its rights in the first moat that we see.",
+    "part2": "When entering the park, you are spoiled for choice because it is so big.",
+    "part3": "The park and the castle are #protected by a huge wall and watchtowers#. There are three of them, all in their original condition.",
+    "part4": "These towers look like replicas of [Himeji Castle](himeji-castle), which already reminds us of memories of the first day.",
+    "part5": "The interior of the Southwest Watchtower is open to the public and offers an overview from the top floor as well as a view of the buildings of Nagoya."
   },
   "visit3": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": ""
+    "title": "Honmaru palace",
+    "part1": "Before reaching the castle, you will pass the Honmaru Palace.",
+    "part2": "After about ten years of reconstruction and renovation to restore its authenticity thanks to original photos and archives, the palace opens its doors. You will discover a resplendent architecture, #multiple paintings transcribed identically on the walls and sliding doors#, tigers, leopards, birds, landscapes, and temples, all with a dazzling golden yellow.",
+    "part3": "As with most places to visit, you must take off your shoes to enter the palace. Slippers are available."
   },
   "visit4": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": ""
+    "title": "Visit of the castle",
+    "part1": "Arrived at the castle, we discover that we cannot visit the interior because it is under construction. Unfortunately, we didn't check beforehand. A little disappointed, we still appreciate the view from the outside.",
+    "part2": "Inside the castle, you will have the chance to discover an #art museum#. It contains many paintings and many objects that depict the castle's history.",
+    "part3": "On the top floor, the seventh, you can enjoy a #panoramic view# of the entire city of Nagoya.",
+    "part4": "From the outside, you will notice elevators inside the dungeon (there is one outside too). It is a bit shocking. The interior would therefore be much #more modern# than you might think from afar. According to a few reviews from fellow travelers, it is still worth the visit. It's just a little less authentic.",
+    "part5": "You can visit the castle with a tour guide, tours in English start at 1:00 p.m. each day. No reservations are required, and the guided tour is free. Tour guides are waiting for people near the main gate.",
+    "part6": "As we told you earlier, Nagoya Castle is similar to Osaka Castle, in color and shape. Indeed, its walls are white, and its multiple roofs are green.",
+    "part7": "#At the top of the main dungeon, you can observe two gold statues. These statues are named « Kinshachi », « Shachihoko » or even « Shachi-Gawara » . They represent dolphins, mythical animals protecting the building from fires#"
   },
   "visit5": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": ""
+    "title": "The gardens",
+    "part1": "In front of the castle, there is a perfect cherry blossom spot. During the annual cherry blossom festival, the paths are illuminated and the castle stays open longer.",
+    "part2": "Of course, depending on the season, you will be entitled to different colors. In autumn, the red maples and in spring, the cherry trees. Talking about cherry trees, their dark trunk and their pinkish-white flowers change from the intense pink cherry trees that we have often seen previously.",
+    "part3": "#The gardens extend all around the castle#.",
+    "part4": "On one side, you have a lake, and swans seem to like it. A path allows you to go around it, which is quite nice since most people stay near the castle to take pictures. You will find yourself alone in the world.",
+    "part5": "On the other side, there is an even more spacious garden, surprisingly calm again, where #rose bushes replace cherry trees#.",
+    "part6": "Enjoy this park to discover the #historic downtown# and escape the hustle and bustle of the city.",
+    "part7": "Before leaving, observe the castle that appears through the trees one last time."
   },
   "bonus": {
-    "title": "",
-    "part1": ""
+    "title": "Bonus",
+    "part1": "On Sunday afternoon, you can appreciate a Samurai and Ninja show."
   },
-  "conclusion": "",
-  "question1": "",
-  "question2": "",
-  "pinterest": "",
+  "conclusion": "A large castle surrounded by a vast garden, Nagoya Castle is ideal for taking a break from the city and feeling like being in the countryside.",
+  "question1": "Have you ever visited Nagoya Castle?",
+  "question2": "Do you also enjoy visiting quiet places in the center of big cities?",
+  "pinterest": "\uD83C\uDF0F Discover Nagoya Castle through our visit. In this article, we share our travelogue and photos and answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located. Click on the image for the full guide about Nagoya Castle... \uD83C\uDF0F",
   "facebook": {
-    "part1": "",
-    "part2": ""
+    "part1": "♡ Hello travellers! ♡",
+    "part2": "We present to you one of the pride and symbol of Nagoya."
   }
 }
