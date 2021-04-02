@@ -1,6 +1,12 @@
 import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
-import { CityHomeSection, MainTitleSection, SectionContent } from "../../../../components/core/section"
+import {
+  CityHomeSection,
+  MainTitleSection,
+  PointOfInterestSection,
+  SectionContent,
+  SubSubHomeSection,
+} from "../../../../components/core/section"
 import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../../components/core/links/links.utils"
 import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
@@ -29,6 +35,9 @@ import { jsx } from "@emotion/react"
 import { SharedPhilippinesImages } from "../../../../components/images/asia/philippines/shared-philippines-images"
 import { PageQuote } from "../../../../components/core/quote"
 import { Divider } from "../../../../components/core/divider"
+import { Farniente, Scuba } from "../../../../components/icon/monument"
+import { Hiking } from "../../../../components/icon/hiking"
+import { Photo } from "../../../../components/icon/photo"
 
 const namespace = "asia/philippines/el-nido/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -73,14 +82,34 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote position="none">{t("introduction.section3")}</PageQuote>
         </SectionContent>
         <Divider />
-        <CityHomeSection>{t("section1")}</CityHomeSection>
+        <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
+        <PointOfInterestSection>
+          <div className="title-element">
+            <Farniente />
+            <div className="title mt2">{t("lazy")}</div>
+          </div>
+          <div className="title-element">
+            <Hiking />
+            <div className="title mt2">{t("nature")}</div>
+          </div>
+          <div className="title-element">
+            <Photo />
+            <div className="title mt2">{t("animals")}</div>
+          </div>
+          <div className="title-element">
+            <Scuba />
+            <div className="title mt2">{t("water-activities")}</div>
+          </div>
+        </PointOfInterestSection>
+        <Divider />
+        <CityHomeSection>{t("section2")}</CityHomeSection>
         <MainCardContainer>
           <ElNidoParadiseCard />
         </MainCardContainer>
         {highlights.length > 0 && (
           <>
             <Divider className="mt2" />
-            <CityHomeSection>{t("section2")}</CityHomeSection>
+            <CityHomeSection>{t("section3")}</CityHomeSection>
             <CityArticleContainer>
               {highlights.map(({ card: Card, id }) =>
                 Card ? <Card key={id} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
@@ -91,7 +120,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         {cities.length > 0 && (
           <>
             <Divider className="mt2" />
-            <CityHomeSection>{t("section3")}</CityHomeSection>
+            <CityHomeSection>{t("section4")}</CityHomeSection>
             <MedallionContainer>
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
                 return city.imageProps?.image ? (

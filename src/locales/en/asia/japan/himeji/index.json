@@ -1,11 +1,15 @@
 {
   "introduction": {
-    "section1": "The city of Himeji is above all known for its magnificent castle, considered one of the most beautiful castles in Japan.",
-    "section2": "But Himeji is not just a castle. Take a day and discover the Koko-en Garden, a huge park with multiple gardens and go on an excursion to Mount Shosha to discover the Engyō-ji temple."
+    "section1": "Himeji is a city located in the Hyogo Prefecture in the Kansai region of Japan. It is above all known for its magnificent castle, considered one of the most beautiful castles in Japan.",
+    "section2": "But Himeji is not just a castle. Take a day and discover the Koko-en Garden, a huge park with multiple gardens and go on an excursion to Mount Shosha.",
+    "section3": "Find out our travelogue followed by our detailed visits."
   },
   "title": "Himeji",
   "meta-description": "In each article, we answer your questions: When to go? How long ? What budget to plan? For each place visited, we try to convey our visit and our impression as well as possible. We also tell you How to get there? Why ? When? How long and at what period? Without forgetting the locations and the prices.",
-  "section1": "Our travelogue",
-  "section2": "Our detailed visits",
-  "section3": "Discover Japan"
+  "section1": "Point of interest",
+  "monuments": "Monuments",
+  "city": "City",
+  "section2": "Our travelogue",
+  "section3": "Our detailed visits",
+  "section4": "Discover Japan"
 }

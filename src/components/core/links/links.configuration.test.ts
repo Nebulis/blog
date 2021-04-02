@@ -190,7 +190,10 @@ const japanLinks = () => {
 const vietnamLinks = () => {
   // vietnam assertions
   expect(getLink("transport-vietnam")).toMatchObject({
-    label: { fr: "Les Transports au Vietnam", en: "Transports in Vietnam" },
+    label: {
+      fr: "Tout savoir sur les transports au Vietnam",
+      en: "All you need to know about transportation in Vietnam",
+    },
     published: true,
   })
   expect(getLink("food-vietnam")).toMatchObject({
@@ -198,7 +201,7 @@ const vietnamLinks = () => {
     published: false,
   })
   expect(getLink("prepare-vietnam")).toMatchObject({
-    label: { en: "Prepare your travel to Vietnam", fr: "Préparer son voyage au Vietnam" },
+    label: { en: "Prepare your travel to Vietnam", fr: "Bien préparer son voyage au Vietnam" },
     published: true,
   })
 
@@ -210,7 +213,7 @@ const vietnamLinks = () => {
     published: false,
   })
   expect(getLink("cu-chi-tunnels")).toMatchObject({
-    label: { fr: "Tunnels de Củ Chi", en: "Củ Chi tunnels" },
+    label: { fr: "Histoire du Vietnam : Visite des tunnels de Cu Chi", en: "History of Vietnam: Củ Chi tunnels visit" },
     published: true,
   })
   expect(getLink("my-tho")).toMatchObject({
@@ -223,8 +226,8 @@ const vietnamLinks = () => {
   })
   expect(getLink("ho-chi-minh-war-museum")).toMatchObject({
     label: {
-      en: "War Remnants Museum in Ho Chi Minh City",
-      fr: "Musée des Vestiges de Guerre à Hô Chi Minh-Ville",
+      en: "History of Vietnam: War Remnants Museum",
+      fr: "Histoire du Vietnam : Le Musée des Vestiges de Guerre",
     },
     published: true,
   })

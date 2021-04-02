@@ -30,7 +30,7 @@ exports[`english pages exports meta for public/en/articles/index.html correctly:
 
 exports[`english pages exports meta for public/en/articles/index.html correctly: title 1`] = `"All our articles | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/index.html correctly: meta-description 1`] = `"Find below the most beautiful wonders of Asia as well as when and where to travel for your dream holidays."`;
+exports[`english pages exports meta for public/en/asia/index.html correctly: meta-description 1`] = `"Asia has so much to offer. Find in our blog the most beautiful wonders of this continent for your dream holidays. Where to go? How? Why? When? How long and what's the best period?"`;
 
 exports[`english pages exports meta for public/en/asia/index.html correctly: social-network 1`] = `"Rest on wonderful beaches, visit of traditional temples, trek in the jungle or simply walk to discover breathtaking landscapes, from big cities to small villages, discovering the traditions of some tribes or observing silently wild animals... So many countries calling for evasion and making you dream."`;
 
@@ -48,7 +48,7 @@ exports[`english pages exports meta for public/en/asia/japan/fuji/kawaguchiko-la
 
 exports[`english pages exports meta for public/en/asia/japan/fuji/kawaguchiko-lake/index.html correctly: title 1`] = `"Kawaguchi Lake: View of Mount Fuji | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/himeji/himeji-castle/index.html correctly: meta-description 1`] = `"Discover Himeji Castle through our visit. In this article, we answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located. This article includes our travelogue and our photos."`;
+exports[`english pages exports meta for public/en/asia/japan/himeji/himeji-castle/index.html correctly: meta-description 1`] = `"Discover the magnificent Himeji Castle, considered one of the most beautiful castles in Japan. In addition to our travelogue and our photos, we answer all your questions: How to get there? How long and at what period? We also tell you its address, opening hours, and price."`;
 
 exports[`english pages exports meta for public/en/asia/japan/himeji/himeji-castle/index.html correctly: social-network 1`] = `"Magnificent castle, also known as the White Heron Castle. It is considered one of the most beautiful castles in Japan. It is also known to be a great place to observe sakura, during the cherry blossom season in spring."`;
 
@@ -56,13 +56,13 @@ exports[`english pages exports meta for public/en/asia/japan/himeji/himeji-castl
 
 exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: meta-description 1`] = `"In each article, we answer your questions: When to go? How long ? What budget to plan? For each place visited, we try to convey our visit and our impression as well as possible. We also tell you How to get there? Why ? When? How long and at what period? Without forgetting the locations and the prices."`;
 
-exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: social-network 1`] = `"The city of Himeji is above all known for its magnificent castle, considered one of the most beautiful castles in Japan. But Himeji is not just a castle. Take a day and discover the Koko-en Garden, a huge park with multiple gardens and go on an excursion to Mount Shosha to discover the Engyō-ji temple."`;
+exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: social-network 1`] = `"Himeji is a city located in the Hyogo Prefecture in the Kansai region of Japan. It is above all known for its magnificent castle, considered one of the most beautiful castles in Japan. But Himeji is not just a castle. Take a day and discover the Koko-en Garden, a huge park with multiple gardens and go on an excursion to Mount Shosha."`;
 
 exports[`english pages exports meta for public/en/asia/japan/himeji/index.html correctly: title 1`] = `"Himeji | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/index.html correctly: meta-description 1`] = `"Follow our city-to-city guide to discover our selection of must-see places. We let you find through our articles and our photos, the magic of Japan, for the moment during spring, but we will share more about Japan during autumn and winter very soon, so stay tuned."`;
+exports[`english pages exports meta for public/en/asia/japan/index.html correctly: meta-description 1`] = `"Discover through our articles and our photos, the magic of Japan. Follow our city-to-city guide to discover our selection of must-see places in the Land of the Rising Sun. For each place visited, we try to convey our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
-exports[`english pages exports meta for public/en/asia/japan/index.html correctly: social-network 1`] = `"Follow our city-to-city guide to discover our selection of must-see places. We let you find through our articles and our photos, the magic of Japan, for the moment during spring, but we will share more about Japan during autumn and winter very soon, so stay tuned."`;
+exports[`english pages exports meta for public/en/asia/japan/index.html correctly: social-network 1`] = `"Traveling to the Land of the Rising Sun means discovering a mix of modernity and tradition. Admire the fascinating changes of scenery depending on the season. Discover bustling cities and neighborhoods. Follow our city-to-city guide to discover our selection of must-see places."`;
 
 exports[`english pages exports meta for public/en/asia/japan/index.html correctly: title 1`] = `"Japan | Travel Blog"`;
 
@@ -114,7 +114,7 @@ exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/inde
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"Togan-Ji Temple | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Let's discover Japan during Spring. How many days ? What budget to plan? We respond to your questions based on our own experience. We also show you our travel itinerary for a week."`;
+exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Let's discover Japan during Spring. We share our travel itinerary for a week. How many days ? What budget to plan? We respond to your questions based on our own experiences."`;
 
 exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: social-network 1`] = `"Japan, this unmissable country to visit in Asia. Every season has its own scenery. From quiet remote places to the hustle and bustle of big cities. Whether you prefer the city or the countryside, there will obviously be something that you will get interested in ..."`;
 
@@ -168,13 +168,13 @@ exports[`english pages exports meta for public/en/asia/japan/transports/index.ht
 
 exports[`english pages exports meta for public/en/asia/japan/transports/index.html correctly: title 1`] = `"main | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly: meta-description 1`] = `"In this article we tell you when to go? How many days ? What budget to plan? How to get there ? And where to stay? We give you advice based on our own experience and tell you about our adventure on the island of Palawan."`;
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly: meta-description 1`] = `"Breathtaking landscapes, white sands and turquoise water. We give you advice based on our own experience and tell you about our adventure on the island of Palawan. In this article we tell you when to go? How many days ? What budget to plan? How to get there ? And where to stay?"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly: social-network 1`] = `"Breathtaking landscapes, white sands and turquoise water ... El Nido must imperatively be part of your dream travel list for this new year."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly: title 1`] = `"El Nido: A little paradise | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly: meta-description 1`] = `"In each article, we answer to your questions: When to go? How many days ? What budget to plan? For each place visited, we try to convey our visit and our feelings as well as possible. We also tell you How to get there? Why ? When? How long and at what period? Without forgetting the addresses and prices."`;
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly: meta-description 1`] = `"Join us to discover the jewel of the Philippines. In each article, we answer to your questions: When to go? How many days ? What budget to plan? How to get there? Why ? When? How long and at what period? Without forgetting the addresses and prices."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly: social-network 1`] = `"Do you want to join us to discover the jewel of the Philippines on the Palawan Island? Grab your mask and snorkel or dive in these crystal clear waters that will leave you a lasting impression. Take advantage of the different tours called \\"Island hopping\\" to choose what suits you best."`;
 
@@ -198,15 +198,15 @@ exports[`english pages exports meta for public/en/asia/philippines/el-nido/which
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/which-tour/index.html correctly: title 1`] = `"Bacuit Archipelago: Which tour to choose? | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: meta-description 1`] = `"There is no doubt this is the country that made us travel and dream the most, thanks to its breathtaking landscapes, its unique gorgeous islands and its immense snorkeling and diving spots. The Philippines comprises more than 7,600 islands, which means that you are spoilt for choice for your dream vacation. Enjoy discover through our articles and our photos, our trip to the Philippines."`;
+exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: meta-description 1`] = `"Discover through our articles and our photos, our trip to the Philippines. Follow our guide from region to region. For each place visited we try to convey our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: social-network 1`] = `"There is no doubt this is the country that made us travel and dream the most, thanks to its breathtaking landscapes, its unique gorgeous islands and its immense snorkeling and diving spots. The Philippines comprises more than 7,600 islands, which means that you are spoilt for choice for your dream vacation. Enjoy discover through our articles and our photos, our trip to the Philippines."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: title 1`] = `"Philippines | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: meta-description 1`] = `"Vietnam is a unique destination. Magnificent and varied landscapes, natural parks, a cultural heritage and a rich historical heritage ... From Ho Chi Minh City to Hanoi, via Da Nang, each destination offers its own history and a different experience. Discover through our articles and our photos our itinerary in the Southern Vietnam. We will share very soon about the North and the Center so stay tuned."`;
+exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: meta-description 1`] = `"Discover Himeji through our articles, as well as different places to visit. For each place visited we try to convey our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: social-network 1`] = `"Vietnam is a unique destination. Magnificent and varied landscapes, natural parks, a cultural heritage and a rich historical heritage ... From Ho Chi Minh City to Hanoi, via Da Nang, each destination offers its own history and a different experience. Discover through our articles and our photos our itinerary in the Southern Vietnam. We will share very soon about the North and the Center so stay tuned."`;
+exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: social-network 1`] = `"Vietnam is a unique destination. Magnificent and varied landscapes, natural parks, a cultural heritage and a rich historical heritage ... From Ho Chi Minh City to Hanoi, via Da Nang, each destination offers its own history and a different experience. Discover through our articles and our photos, our travels to Vietnam"`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: title 1`] = `"Vietnam | Travel Blog"`;
 
@@ -226,15 +226,15 @@ exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly: social-network 1`] = `"Huge network of underground tunnels reaching about 250 km, from Ho Chi Minh City to the border of Cambodia."`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly: title 1`] = `"Củ Chi tunnels | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly: title 1`] = `"History of Vietnam: Củ Chi tunnels visit | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/discover/index.html correctly: meta-description 1`] = `"When to go? How many days ? What budget to plan? Questions that we often ask ourselves before travelling. We answer to your questions based on our own experience. We also show you our travel itinerary for 1 week in Southern Vietnam."`;
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/discover/index.html correctly: meta-description 1`] = `"Our travel itinerary to South Vietnam. When to go? How many days? What budget to foresee? Questions that we often ask ourselves before realizing a travel plan. We respond to you based on our own experiences."`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/discover/index.html correctly: social-network 1`] = `"Southern Vietnam is full of surprises and discoveries, each one more exciting. From dynamic cities like Hô Chi Minh City, to boat trips on the Mekong River Delta under palm trees, there is something for everyone."`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/discover/index.html correctly: title 1`] = `"Discover Southern Vietnam | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/index.html correctly: meta-description 1`] = `"In each article, we answer to your questions: When to go? How many days ? What budget to plan? For each place visited, we try to convey our visit and our feelings as well as possible. We also tell you How to get there? Why ? When? How long and at what period? Without forgetting the addresses and prices."`;
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/index.html correctly: meta-description 1`] = `"Travel with us in Southern Vietnam through our travelogue. For each place visited we try to convey our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/index.html correctly: social-network 1`] = `"Travel with us in Southern Vietnam through our travelogue. Discover big cities like Ho Chi Minh City, its museum and tunnels, take off to magnificent landscapes around the Mekong Delta River on islands like Ben Tre or visit the Cân Thơ floating market with us."`;
 
@@ -250,13 +250,13 @@ exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/war-remnants-museum/index.html correctly: social-network 1`] = `"The War Remnants Museum bears witness to the atrocities of the Indochina War and the Vietnam War and reveals us the ongoing impact on Vietnamese lives."`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/war-remnants-museum/index.html correctly: title 1`] = `"War Remnants Museum in Ho Chi Minh City | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/war-remnants-museum/index.html correctly: title 1`] = `"History of Vietnam: War Remnants Museum | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/transport/index.html correctly: meta-description 1`] = `"In this article, you will find our information and advice that will help you to choose the best mode of transport, depending on your needs. Price? How to book? We tell you every information you need and share our opinion."`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/transport/index.html correctly: social-network 1`] = `"You have planned your visits to Vietnam, all you have to do is find how to get around? Public transport, rental of bicycles, scooters and motorcycles or even guided tours."`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/transport/index.html correctly: title 1`] = `"Transports in Vietnam | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/vietnam/transport/index.html correctly: title 1`] = `"All you need to know about transportation in Vietnam | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/credits/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 

@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import SEO from "../../../components/layout/seo"
 import { ApplicationContext } from "../../../components/application"
 import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
@@ -7,8 +7,10 @@ import {
   HomeSection,
   HomeSubSection,
   MainTitleSection,
+  PointOfInterestSection,
   SectionContent,
   SubHomeSection,
+  SubSubHomeSection,
 } from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
 import vietnamHat from "../../../images/asia/vietnam/hat.svg"
@@ -39,6 +41,10 @@ import { PageQuote } from "../../../components/core/quote"
 import { Divider } from "../../../components/core/divider"
 import { WeatherForHomePage } from "../../../components/core/weather"
 import HomeVietnamImage from "../../../images/asia/vietnam/home-vietnam-map.png"
+import { Monument } from "../../../components/icon/monument"
+import { Hiking } from "../../../components/icon/hiking"
+import { CityIcon } from "../../../components/icon/city"
+import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
 
 const namespace = "asia/vietnam/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
@@ -47,13 +53,19 @@ i18n.addResourceBundle("en", namespace, asiaIndexEn)
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const [tooltipLabel, setTooltipLabel] = useState("")
   const cities = development ? vietnamLinks.cities : vietnamLinks.cities.filter(isLinkPublished)
   const articles = getArticles({ kind: "other", tags: ["vietnam"], development })
   const country = t("common:country.vietnam.title")
-  const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
     <>
-      <SEO title={country} location={location} image={VietnamImage} socialNetworkDescription={description} />
+      <SEO
+        title={country}
+        location={location}
+        image={VietnamImage}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("meta-description")}
+      />
       <VietnamBlogLayout page="vietnam" location={location}>
         <MainTitleSection>
           <TitleImage src={vietnamHat} alt="vietnam hat" />
@@ -65,6 +77,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote>{t("introduction.section1")}</PageQuote>
           <PageQuote position="none">{t("introduction.section2")}</PageQuote>
         </SectionContent>
+        <Divider />
+        <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
+        <PointOfInterestSection>
+          <div className="title-element">
+            <Monument />
+            <div className="title mt2">{t("monuments")}</div>
+          </div>
+          <div className="title-element">
+            <Hiking />
+            <div className="title mt2">{t("nature")}</div>
+          </div>
+          <div className="title-element">
+            <CityIcon />
+            <div className="title mt2">{t("city")}</div>
+          </div>
+        </PointOfInterestSection>
         {false && (
           <>
             <Divider />
@@ -111,13 +139,31 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </GoToAllArticlesContainer>
         <Divider />
         <SubHomeSection>{t("weather")}</SubHomeSection>
-        <WeatherForHomePage entries={vietnamWeatherEntries(t)} />
+        <WeatherForHomePage
+          entries={vietnamWeatherEntries(t)}
+          onMouseLeave={() => setTooltipLabel("")}
+          onMouseEnter={setTooltipLabel}
+        />
         <Divider />
         <SubHomeSection>{t("map")}</SubHomeSection>
         <MapContainer>
           <img src={HomeVietnamImage} alt="Home Vietnam Image" />
         </MapContainer>
         <Divider />
+        <MouseToolTip>
+          {tooltipLabel ? (
+            <TooltipContent>
+              {tooltipLabel.split("\n").map((item, index) => {
+                return (
+                  <span key={index}>
+                    {item}
+                    <br />
+                  </span>
+                )
+              })}
+            </TooltipContent>
+          ) : null}
+        </MouseToolTip>
       </VietnamBlogLayout>
     </>
   )

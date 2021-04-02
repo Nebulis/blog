@@ -199,7 +199,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <JapanHeadline>{t("visit3.title")}</JapanHeadline>
             <Divider />
             <SectionContent>
-              <MapContainer className="mb2">
+              <MapContainer>
                 <img src={HimejiCastleMap} alt="Himeji Castle Map" />
               </MapContainer>
               <p>{t("visit3.part1")}</p>

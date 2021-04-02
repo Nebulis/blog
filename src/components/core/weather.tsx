@@ -5,8 +5,9 @@ import { Button } from "./button"
 import { css } from "@emotion/react"
 import { Table } from "../layout/layout"
 import styled from "@emotion/styled"
-import { WeatherAltIconType, WeatherEntry, WeatherType } from "../../types/shared"
+import { WeatherAltIconType, WeatherEntry, WeatherIconType, WeatherType } from "../../types/shared"
 import { japanCherryBlossom } from "./japan/japan.variables"
+import { Lang } from "./links/links.types"
 // https://www.flaticon.com/free-icon/drop_2204430?related_id=2204430&origin=pack
 
 export const HeavyRain: React.FunctionComponent = () => (
@@ -738,6 +739,167 @@ export const LightRain: React.FunctionComponent = () => (
     />
   </svg>
 )
+export const Scuba: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
+  <svg height="512" viewBox="-72 0 512 512" width="512" className={className}>
+    <title>Scuba / Plongée</title>
+    <path
+      d="m12.742188 512c0-94.675781 76.75-171.425781 171.425781-171.425781s171.425781 76.75 171.425781 171.425781zm0 0"
+      fill="#64505a"
+    />
+    <g fill="#5a4650">
+      <path d="m184.167969 470.566406c-4.140625 0-7.5-3.359375-7.5-7.5v-90.394531c0-4.144531 3.359375-7.5 7.5-7.5 4.144531 0 7.5 3.355469 7.5 7.5v90.394531c0 4.140625-3.355469 7.5-7.5 7.5zm0 0" />
+      <path d="m199.621094 470.566406h-30.90625c-4.140625 0-7.5-3.359375-7.5-7.5s3.359375-7.5 7.5-7.5h30.90625c4.144531 0 7.5 3.359375 7.5 7.5s-3.355469 7.5-7.5 7.5zm0 0" />
+      <path d="m184.167969 340.574219c-33.757813 0-65.234375 9.765625-91.769531 26.613281 27.621093 13.90625 58.792968 21.75 91.769531 21.75 32.976562 0 64.148437-7.84375 91.769531-21.75-26.535156-16.847656-58.011719-26.613281-91.769531-26.613281zm0 0" />
+      <path d="m210.722656 342.625c-8.652344-1.347656-17.523437-2.050781-26.554687-2.050781-94.675781 0-171.425781 76.75-171.425781 171.425781h53.113281c0-85.644531 62.804687-156.613281 144.867187-169.375zm0 0" />
+    </g>
+    <path
+      d="m368.335938 184.167969c0 101.714843-82.453126 184.167969-184.167969 184.167969-101.714844 0-184.167969-82.453126-184.167969-184.167969 0-101.714844 82.453125-184.167969 184.167969-184.167969 101.714843 0 184.167969 82.453125 184.167969 184.167969zm0 0"
+      fill="#6e5a64"
+    />
+    <path
+      d="m51.507812 184.167969c0-92.972657 68.894532-169.839844 158.414063-182.367188-8.417969-1.179687-17.011719-1.800781-25.753906-1.800781-101.714844 0-184.167969 82.453125-184.167969 184.167969 0 101.714843 82.453125 184.167969 184.167969 184.167969 8.742187 0 17.335937-.625 25.753906-1.800782-89.519531-12.53125-158.414063-89.394531-158.414063-182.367187zm0 0"
+      fill="#64505a"
+    />
+    <path
+      d="m308.242188 224.527344c0 68.523437-55.550782 124.074218-124.074219 124.074218-68.523438 0-124.074219-55.550781-124.074219-124.074218 0-68.523438 55.550781-124.074219 124.074219-124.074219 68.523437 0 124.074219 55.550781 124.074219 124.074219zm0 0"
+      fill="#ffe1a0"
+    />
+    <path
+      d="m111.601562 224.527344c0-59.691406 42.15625-109.53125 98.320313-121.390625-8.308594-1.753907-16.921875-2.683594-25.753906-2.683594-68.523438 0-124.074219 55.550781-124.074219 124.074219 0 68.523437 55.550781 124.074218 124.074219 124.074218 8.832031 0 17.445312-.929687 25.753906-2.683593-56.164063-11.859375-98.320313-61.699219-98.320313-121.390625zm0 0"
+      fill="#f0c382"
+    />
+    <path
+      d="m37.472656 167.359375v28.894531c0 47.433594 38.453125 85.886719 85.886719 85.886719h27.902344c6.628906 0 12.808593-3.347656 16.425781-8.902344 7.734375-11.867187 25.117188-11.867187 32.851562 0 3.621094 5.554688 9.800782 8.902344 16.429688 8.902344h27.898438c47.4375 0 85.890624-38.453125 85.890624-85.886719v-28.894531c0-7.007813-5.683593-12.6875-12.6875-12.6875h-267.910156c-7.007812 0-12.6875 5.683594-12.6875 12.6875zm0 0"
+      fill="#bd70ff"
+    />
+    <path
+      d="m88.980469 196.253906v-28.890625c0-7.007812 5.679687-12.6875 12.6875-12.6875h-51.507813c-7.007812 0-12.6875 5.679688-12.6875 12.6875v28.890625c0 47.433594 38.453125 85.886719 85.886719 85.886719h27.902344c2.632812 0 5.191406-.535156 7.550781-1.519531-39.757812-7.523438-69.832031-42.421875-69.832031-84.367188zm0 0"
+      fill="#a35bef"
+    />
+    <path
+      d="m217.84375 260.898438c-7.621094-11.167969-20.164062-17.804688-33.730469-17.804688-13.5625 0-26.105469 6.636719-33.726562 17.804688h-27.027344c-35.703125 0-64.644531-28.945313-64.644531-64.644532v-15.234375c0-2.816406 2.285156-5.101562 5.105468-5.101562h240.589844c2.820313 0 5.105469 2.285156 5.105469 5.101562v15.234375c0 35.699219-28.945313 64.644532-64.644531 64.644532zm0 0"
+      fill="#a5cdff"
+    />
+    <path
+      d="m110.226562 196.253906v-15.230468c0-2.820313 2.285157-5.105469 5.101563-5.105469h-51.507813c-2.820312 0-5.105468 2.285156-5.105468 5.105469v15.230468c0 35.703125 28.941406 64.644532 64.644531 64.644532h27.027344c.886719-1.304688 1.851562-2.539063 2.871093-3.714844-25.074218-8.894532-43.03125-32.8125-43.03125-60.929688zm0 0"
+      fill="#8cb4eb"
+    />
+    <path
+      d="m330.757812 7.179688v329.554687c0 35.308594-28.621093 63.929687-63.929687 63.929687-35.304687 0-63.925781-28.621093-63.925781-63.929687v-20.039063h-37.578125v20.039063c0 56.0625 45.445312 101.507813 101.503906 101.507813 56.0625 0 101.507813-45.445313 101.507813-101.507813v-329.554687c0-3.964844-3.214844-7.179688-7.179688-7.179688h-23.21875c-3.964844 0-7.179688 3.214844-7.179688 7.179688zm0 0"
+      fill="#edebed"
+    />
+    <path
+      d="m347.96875 341.96875v-341.96875h-10.03125c-3.964844 0-7.179688 3.214844-7.179688 7.179688v329.554687c0 35.308594-28.621093 63.929687-63.929687 63.929687-35.304687 0-63.925781-28.621093-63.925781-63.929687v-20.039063h-18.734375v25.273438c0 45.234375 36.667969 81.898438 81.898437 81.898438 45.234375 0 81.902344-36.664063 81.902344-81.898438zm0 0"
+      fill="#fff"
+    />
+    <path
+      d="m213.011719 325.210938h-57.6875c-8.535157 0-15.453125-6.917969-15.453125-15.453126 0-8.53125 6.917968-15.453124 15.453125-15.453124h57.6875c8.535156 0 15.453125 6.917968 15.453125 15.453124 0 8.535157-6.917969 15.453126-15.453125 15.453126zm0 0"
+      fill="#bd70ff"
+    />
+    <path
+      d="m181.078125 309.757812c0-8.53125 6.917969-15.453124 15.453125-15.453124h-41.207031c-8.535157 0-15.453125 6.917968-15.453125 15.453124 0 8.535157 6.917968 15.453126 15.453125 15.453126h41.207031c-8.535156 0-15.453125-6.917969-15.453125-15.453126zm0 0"
+      fill="#a35bef"
+    />
+    <path
+      d="m361.15625 0h-23.21875c-3.964844 0-7.179688 3.214844-7.179688 7.179688v115.925781h37.578126v-115.925781c0-3.964844-3.214844-7.179688-7.179688-7.179688zm0 0"
+      fill="#bd70ff"
+    />
+    <path
+      d="m347.96875 0h-10.03125c-3.964844 0-7.179688 3.214844-7.179688 7.179688v115.925781h17.210938zm0 0"
+      fill="#a35bef"
+    />
+  </svg>
+)
+export const JellyFish: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
+  <svg x="0px" y="0px" viewBox="0 0 512 512" className={className}>
+    <g>
+      <path
+        fill="#FF98C5"
+        d="M87.454,479.129c-3.139,0-6.329-0.593-9.417-1.844c-12.845-5.206-19.04-19.839-13.834-32.685
+		c15.155-37.401,14.427-57.952,13.583-81.749c-0.997-28.142-2.127-60.04,21.477-115.857c5.398-12.766,20.125-18.738,32.89-13.34
+		c12.765,5.398,18.738,20.124,13.34,32.889c-19.28,45.589-18.437,69.361-17.545,94.53c0.915,25.803,1.951,55.051-17.226,102.375
+		C106.766,473.209,97.371,479.129,87.454,479.129z"
+      />
+      <path
+        fill="#FF98C5"
+        d="M157.638,512c-7.426,0-14.778-3.28-19.73-9.566c-8.578-10.888-6.705-26.667,4.182-35.245
+		c23.474-18.494,24.786-48.71,24.984-96.477c0.191-46.122,0.407-98.4,33.25-145.178c7.964-11.344,23.616-14.083,34.96-6.119
+		c11.343,7.964,14.084,23.617,6.119,34.96c-23.795,33.893-23.969,75.911-24.137,116.545c-0.098,23.687-0.2,48.182-5.109,70.627
+		c-6.105,27.916-18.864,49.199-39.006,65.069C168.552,510.241,163.075,512,157.638,512z"
+      />
+      <path
+        fill="#FF98C5"
+        d="M424.545,479.129c3.139,0,6.329-0.593,9.417-1.844c12.845-5.206,19.04-19.839,13.834-32.685
+		c-15.155-37.401-14.427-57.952-13.583-81.749c0.997-28.142,2.127-60.04-21.477-115.857c-5.398-12.766-20.125-18.738-32.89-13.34
+		c-12.765,5.398-18.738,20.124-13.34,32.889c19.28,45.589,18.437,69.361,17.545,94.53c-0.915,25.803-1.951,55.051,17.226,102.375
+		C405.233,473.209,414.627,479.129,424.545,479.129z"
+      />
+      <path
+        fill="#FF98C5"
+        d="M354.36,512c7.426,0,14.778-3.28,19.73-9.566c8.578-10.888,6.705-26.667-4.181-35.245
+		c-23.474-18.494-24.786-48.71-24.984-96.477c-0.191-46.122-0.407-98.4-33.25-145.178c-7.964-11.344-23.616-14.083-34.96-6.119
+		c-11.343,7.964-14.084,23.617-6.119,34.96c23.795,33.893,23.969,75.911,24.137,116.545c0.098,23.687,0.2,48.182,5.109,70.627
+		c6.105,27.916,18.864,49.199,39.006,65.069C343.447,510.241,348.924,512,354.36,512z"
+      />
+    </g>
+    <g>
+      <path
+        fill="#EB5E8A"
+        d="M412.736,246.995c-5.398-12.766-20.125-18.738-32.89-13.339
+		c-12.765,5.398-18.738,20.124-13.339,32.89c9.858,23.309,14.448,40.907,16.467,55.913c3.678,0.398,7.442,0.635,11.303,0.635
+		l0.697-0.002c13.156-0.094,25.91-2.24,37.922-6.27C430.456,298.034,424.866,275.677,412.736,246.995z"
+      />
+      <path
+        fill="#EB5E8A"
+        d="M342.565,312.905c-3.274-29.428-11.24-59.384-30.89-87.372c-7.964-11.343-23.616-14.083-34.96-6.119
+		c-11.343,7.964-14.084,23.617-6.119,34.96c10.431,14.857,16.322,31.276,19.664,48.455c16.105,1.648,31.681,4.467,46.563,8.456
+		C338.693,311.787,340.606,312.333,342.565,312.905z"
+      />
+      <path
+        fill="#EB5E8A"
+        d="M235.286,219.414c-11.345-7.963-26.996-5.225-34.96,6.119c-19.65,27.988-27.616,57.944-30.89,87.372
+		c1.958-0.572,3.87-1.118,5.742-1.619c14.883-3.989,30.459-6.807,46.564-8.456c3.342-17.179,9.234-33.597,19.664-48.455
+		C249.368,243.031,246.629,227.378,235.286,219.414z"
+      />
+      <path
+        fill="#EB5E8A"
+        d="M132.152,233.655c-12.765-5.398-27.491,0.574-32.89,13.339
+		c-12.13,28.682-17.72,51.039-20.161,69.826c12.012,4.03,24.766,6.176,37.922,6.27c0,0,0.697,0.002,0.698,0.002
+		c3.861,0,7.624-0.237,11.302-0.635c2.02-15.006,6.611-32.604,16.467-55.913C150.89,253.779,144.917,239.054,132.152,233.655z"
+      />
+    </g>
+    <path
+      fill="#FF98C5"
+      d="M255.999,270.194c30.1,0,59.748,3.447,88.824,11.24c16.323,4.375,32.797,10.874,49.932,10.751
+	c52.799-0.376,91.929-44.747,88.779-96.14C476.487,81.11,359.825,0,255.999,0C152.175,0,35.512,81.11,28.465,196.046
+	c-3.15,51.393,35.98,95.764,88.779,96.14c17.134,0.123,33.609-6.376,49.932-10.751C196.251,273.641,225.9,270.194,255.999,270.194z"
+    />
+    <path
+      fill="#EB5E8A"
+      d="M59.371,196.046C66.069,86.783,171.831,8.096,271.452,0.594C266.28,0.205,261.124,0,255.999,0
+	C152.175,0,35.512,81.11,28.465,196.046c-3.15,51.393,35.98,95.764,88.779,96.14c5.14,0.036,10.218-0.531,15.253-1.448
+	C87.832,282.703,56.541,242.211,59.371,196.046z"
+    />
+    <g>
+      <path
+        fill="#3A484A"
+        d="M161.509,212.413c-4.268,0-7.726-3.459-7.726-7.726v-17.101c0-4.267,3.458-7.726,7.726-7.726
+		s7.726,3.459,7.726,7.726v17.101C169.236,208.954,165.777,212.413,161.509,212.413z"
+      />
+      <path
+        fill="#3A484A"
+        d="M350.49,212.413c-4.268,0-7.726-3.459-7.726-7.726v-17.101c0-4.267,3.458-7.726,7.726-7.726
+		c4.268,0,7.726,3.459,7.726,7.726v17.101C358.216,208.954,354.757,212.413,350.49,212.413z"
+      />
+      <path
+        fill="#3A484A"
+        d="M255.999,221.541c-11.319,0-21.94-4.723-29.139-12.96c-2.809-3.213-2.481-8.093,0.731-10.902
+		c3.213-2.809,8.094-2.482,10.902,0.731c4.266,4.879,10.646,7.677,17.505,7.677c6.86,0,13.24-2.798,17.504-7.676
+		c2.807-3.214,7.69-3.542,10.901-0.732c3.213,2.808,3.542,7.689,0.732,10.902C277.939,216.818,267.318,221.541,255.999,221.541z"
+      />
+    </g>
+  </svg>
+)
 
 const weatherStyle = css`
   .weather-container {
@@ -798,6 +960,10 @@ const weatherStyle = css`
         right: 5px;
         top: 2px;
       }
+      .alt.alt-top-left {
+        left: 5px;
+        top: 2px;
+      }
     }
   }
   .weather-button-container {
@@ -828,11 +994,110 @@ const WeatherAutumn = createButton(weatherAutumn)
 const WeatherAverageMonths = createButton(weatherAverage)
 const WeatherSki = createButton(weatherSki)
 
+const getMonth = (lang: Lang, month: number) => {
+  switch (month) {
+    case 0:
+      return lang === "fr" ? "JANVIER" : "JANUARY"
+    case 1:
+      return lang === "fr" ? "FÉVRIER" : "FEBRUARY"
+    case 2:
+      return lang === "fr" ? "MARS" : "MARCH"
+    case 3:
+      return lang === "fr" ? "AVRIL" : "APRIL"
+    case 4:
+      return lang === "fr" ? "MAI" : "MAY"
+    case 5:
+      return lang === "fr" ? "JUIN" : "JUNE"
+    case 6:
+      return lang === "fr" ? "JUILLET" : "JULY"
+    case 7:
+      return lang === "fr" ? "AOUT" : "AUGUST"
+    case 8:
+      return lang === "fr" ? "SEPTEMBRE" : "SEPTEMBER"
+    case 9:
+      return lang === "fr" ? "OCTOBRE" : "OCTOBER"
+    case 10:
+      return lang === "fr" ? "NOVEMBRE" : "NOVEMBER"
+    case 11:
+      return lang === "fr" ? "DÉCEMBRE" : "DECEMBER"
+  }
+}
+const getWeatherType = (lang: Lang, weatherType: WeatherType) => {
+  switch (weatherType) {
+    case "good":
+      return lang === "fr" ? "Mois favorable" : "Good month"
+    case "fair":
+      return lang === "fr" ? "Mois passable" : "Fair month"
+    case "poor":
+      return lang === "fr" ? "Mois défavorable" : "Poor month"
+  }
+}
+
+const getWeather = (lang: Lang, icon: WeatherIconType) => {
+  switch (icon) {
+    case "sunny":
+      return lang === "fr" ? "Soleil" : "Sunny"
+      break
+    case "heavy-rain":
+      return lang === "fr" ? "Fortes Pluies" : "Heavy Rain"
+      break
+    case "light-rain":
+      return lang === "fr" ? "Pluvieux" : "Rainy"
+      break
+    case "sun-cloud":
+      return lang === "fr" ? "Partiellement nuageux" : "Partly Cloudy"
+      break
+    case "sun-rain":
+      return lang === "fr" ? "Temps instable" : "Unstable weather"
+      break
+    case "snow":
+      return lang === "fr" ? "Neige" : "Snow"
+      break
+  }
+}
+const getWeatherAddition = (lang: Lang, alt: WeatherAltIconType[]) => {
+  const weatherAddition: string[] = []
+  if (alt.includes("arctic")) {
+    weatherAddition.push(lang === "fr" ? "Très froid" : "Arctic")
+  }
+  if (alt.includes("hot")) {
+    weatherAddition.push(lang === "fr" ? "Très chaud" : "Hot")
+  }
+  if (alt.includes("cold")) {
+    weatherAddition.push(lang === "fr" ? "Froid" : "Cold")
+  }
+  if (alt.includes("droplet")) {
+    weatherAddition.push(lang === "fr" ? "Mousson" : "Monsoon")
+  }
+  return weatherAddition.join(" - ")
+}
+const getOtherAddition = (lang: Lang, alt: WeatherAltIconType[]) => {
+  const weatherAddition: string[] = []
+  if (alt.includes("scuba")) {
+    weatherAddition.push(lang === "fr" ? "Plongée" : "Scuba Diving")
+  }
+  if (alt.includes("jelly-fish")) {
+    weatherAddition.push(lang === "fr" ? "Méduse" : "Jellyfish")
+  }
+  if (alt.includes("sakura")) {
+    weatherAddition.push("Sakura")
+  }
+  if (alt.includes("autumn")) {
+    weatherAddition.push("Momoji")
+  }
+  if (alt.includes("snow-man")) {
+    weatherAddition.push(lang === "fr" ? "Neige" : "Snow")
+  }
+  return weatherAddition.join(" - ")
+}
+
 export const Weather: React.FunctionComponent<{
   entries: WeatherEntry[]
   className?: string
   extraButton?: boolean
-}> = ({ entries, className = "", extraButton = false }) => {
+  onMouseEnter?: (value: string) => void
+  onMouseLeave?: () => void
+}> = ({ entries, className = "", extraButton = false, onMouseEnter = () => void 0, onMouseLeave = () => void 0 }) => {
   const { i18n } = useCustomTranslation()
   const [displayMonths, setDisplayMonths] = useState<"NONE" | WeatherType | WeatherAltIconType>("NONE")
   return (
@@ -865,6 +1130,27 @@ export const Weather: React.FunctionComponent<{
                     <td
                       className={`${data.type} ${Array.isArray(data.alt) ? data.alt.join(" ") : data.alt}`}
                       key={index2}
+                      onMouseEnter={() => {
+                        const month = getMonth(i18n.languageCode, index2)
+                        const weatherType = getWeatherType(i18n.languageCode, data.type)
+                        const weather = getWeather(i18n.languageCode, data.icon)
+                        const weatherAddition = getWeatherAddition(
+                          i18n.languageCode,
+                          Array.isArray(data.alt) ? data.alt : ([] as WeatherAltIconType[]).concat(data.alt ?? [])
+                        )
+                        const temperature =
+                          i18n.languageCode === "fr" ? `Temp Moyenne ${data.temp}°C` : `Average Temp ${data.temp}°C`
+                        const otherAddition = getOtherAddition(
+                          i18n.languageCode,
+                          Array.isArray(data.alt) ? data.alt : ([] as WeatherAltIconType[]).concat(data.alt ?? [])
+                        )
+                        onMouseEnter(
+                          `${month}\n${weatherType}\n${weather}${
+                            weatherAddition ? `\n${weatherAddition}` : ""
+                          }\n${temperature}${otherAddition ? `\n${otherAddition}` : ""}`
+                        )
+                      }}
+                      onMouseLeave={onMouseLeave}
                     >
                       {data.icon === "light-rain" ? (
                         <LightRain />
@@ -888,14 +1174,18 @@ export const Weather: React.FunctionComponent<{
                             <Droplet className={`alt alt-right`} />
                           ) : alt === "cold" ? (
                             <Cold className={`alt alt-left`} />
+                          ) : alt === "arctic" ? (
+                            <Arctic className={`alt alt-left`} />
                           ) : alt === "snow-man" ? (
                             <SnowMan className={`alt alt-right`} />
                           ) : alt === "sakura" ? (
                             <Sakura className={`alt alt-right`} />
                           ) : alt === "autumn" ? (
                             <Autumn className={`alt alt-right`} />
-                          ) : alt === "arctic" ? (
-                            <Arctic className={`alt alt-left`} />
+                          ) : alt === "scuba" ? (
+                            <Scuba className={`alt alt-right`} />
+                          ) : alt === "jelly-fish" ? (
+                            <JellyFish className={`alt alt-top-left`} />
                           ) : null
                         )}
                     </td>

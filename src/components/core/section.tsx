@@ -7,6 +7,7 @@ import {
   FaBusAlt,
   FaCalendarAlt,
   FaCheckCircle,
+  FaClipboardList,
   FaClock,
   FaCloudSun,
   FaCommentDots,
@@ -22,11 +23,10 @@ import {
   FaMobileAlt,
   FaMoneyBill,
   FaPassport,
+  FaShip,
   FaSuitcaseRolling,
   FaUtensils,
   FaWalking,
-  FaClipboardList,
-  FaShip,
 } from "react-icons/fa"
 import { maxWidth, mediumEnd, mobileEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n-hook"
@@ -222,11 +222,46 @@ export const HomeSection: FunctionComponent<{ className?: string }> = ({ childre
 export const SubHomeSection = styled(HomeSection)`
   font-size: 1.38316rem; // h3
 `
+export const SubSubHomeSection = styled(HomeSection)`
+  font-size: 1.2rem; // h3.5
+  margin-bottom: 1.45rem !important;
+`
 
 export const CityHomeSection: FunctionComponent = ({ children }) => (
   <h2 className="tc ttu mb3" css={homeSectionStyle}>
     {children}
   </h2>
+)
+
+const pointOfInterestSectionStyle = css`
+  margin-bottom: 0.45rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .title-element {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+  .title {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+`
+export const PointOfInterestSection: FunctionComponent<{ className?: string }> = ({ children, className = "" }) => (
+  <section className={`${className} point-of-interest-section`} css={pointOfInterestSectionStyle}>
+    {children}
+  </section>
 )
 
 export const MainTitleSection: FunctionComponent = ({ children }) => {

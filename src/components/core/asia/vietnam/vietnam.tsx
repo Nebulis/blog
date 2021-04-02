@@ -48,6 +48,14 @@ const vietnamLayout = `
   }
 
   .index-blog-layout-content {
+    .point-of-interest-section {
+      svg {
+        fill: ${vietnamPrimaryColorDarker};
+      }
+      .title {
+        color: ${vietnamPrimaryColorDarker};
+      }
+    }
     a.title-tag {
       background-color: ${vietnamPrimaryColorDarker};
     }
@@ -130,55 +138,67 @@ export const vietnamWeatherEntries = (t: TFunction): WeatherEntry[] => [
       {
         type: "fair",
         icon: "light-rain",
+        temp: 19,
       },
       {
         type: "fair",
         icon: "heavy-rain",
+        temp: 22,
       },
       {
         type: "fair",
         icon: "heavy-rain",
+        temp: 25,
       },
       {
         type: "good",
         icon: "sun-rain",
+        temp: 29,
       },
       {
         type: "fair",
         icon: "sun-rain",
         alt: "hot",
+        temp: 33,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "hot",
+        temp: 34,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "hot",
+        temp: 33,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "hot",
+        temp: 32,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "hot",
+        temp: 31,
       },
       {
         type: "good",
         icon: "sun-cloud",
+        temp: 28,
       },
       {
         type: "good",
         icon: "sun-cloud",
+        temp: 25,
       },
       {
         type: "good",
         icon: "sun-cloud",
+        temp: 21,
       },
     ],
   },
@@ -188,58 +208,69 @@ export const vietnamWeatherEntries = (t: TFunction): WeatherEntry[] => [
       {
         type: "fair",
         icon: "sun-rain",
+        temp: 22,
       },
       {
         type: "good",
         icon: "sunny",
+        temp: 24,
       },
       {
         type: "good",
         icon: "sunny",
+        temp: 26,
       },
       {
         type: "good",
         icon: "sunny",
+        temp: 28,
       },
       {
         type: "good",
         icon: "sunny",
         alt: "hot",
+        temp: 30,
       },
       {
         type: "good",
         icon: "sunny",
         alt: "hot",
+        temp: 30,
       },
       {
         type: "fair",
         icon: "sunny",
         alt: "hot",
+        temp: 30,
       },
       {
         type: "fair",
         icon: "sun-rain",
         alt: "hot",
+        temp: 30,
       },
       {
         type: "fair",
         icon: "sun-rain",
-        alt: "hot",
+        temp: 29,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "droplet",
+        temp: 27,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "droplet",
+        temp: 25,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "droplet",
+        temp: 22,
       },
     ],
   },
@@ -249,58 +280,71 @@ export const vietnamWeatherEntries = (t: TFunction): WeatherEntry[] => [
       {
         type: "good",
         icon: "sunny",
-      },
-      {
-        type: "good",
-        icon: "sunny",
-      },
-      {
-        type: "good",
-        icon: "sunny",
-        alt: "hot",
+        temp: 30,
       },
       {
         type: "good",
         icon: "sunny",
         alt: "hot",
+        temp: 31,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        alt: "hot",
+        temp: 32,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        alt: "hot",
+        temp: 33,
       },
       {
         type: "fair",
         icon: "sun-rain",
         alt: "hot",
+        temp: 32,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "hot",
+        temp: 30,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "droplet",
+        temp: 29,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "droplet",
+        temp: 29,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "droplet",
+        temp: 29,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "droplet",
+        temp: 29,
       },
       {
         type: "fair",
         icon: "sun-rain",
+        temp: 29,
       },
       {
         type: "good",
         icon: "sunny",
+        temp: 29,
       },
     ],
   },

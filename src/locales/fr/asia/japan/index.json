@@ -4,6 +4,8 @@
     "section2": "Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables.",
     "section3": "On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon, pour l’instant au printemps et nous vous parlerons très prochainement du Japon en automne et en hiver, alors restez connecté."
   },
+  "google-description": "On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables du pays du Soleil-Levant. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?",
+  "social-network-description": "Voyager au pays du Soleil-Levant c’est découvrir un mélange entre modernité et traditions. Admirez les changements de décor fascinant des paysages entre chaque saison. Découvrez des villes animées et ses quartiers mouvementés. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables.",
   "tour": {
     "title": "Parcourir",
     "subtitle": "Le pays de ville en ville ..."
@@ -16,5 +18,11 @@
     "title": "S'informer",
     "subtitle": "À travers nos astuces, nos coups de cœur ..."
   },
-  "weather": "Quand partir ?"
+  "weather": "Quand partir ?",
+  "section1": "POINTS D'INTÉRÊTS",
+  "monuments": "Monuments",
+  "city": "Ville",
+  "nature": "Nature",
+  "winter-activities": "Neige",
+  "map": "Notre carte du Japon"
 }

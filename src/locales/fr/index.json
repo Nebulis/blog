@@ -29,7 +29,7 @@
     },
     "nature": {
       "title": "Nature",
-      "content": "Trek, randonnées ou farniente, dans la montagne, dans la jungle comme sur la plage, admirez les paysages que la nature nous offre"
+      "content": "Trek, randonnées ou simple promenade, dans la montagne, dans la forêt ou dans des parcs, admirez les paysages que la nature nous offre"
     },
     "city": {
       "title": "Ville",
@@ -37,7 +37,23 @@
     },
     "animals": {
       "title": "Animaux",
-      "content": "Dans leur habitat ou dans des réserves protégées, observez les animaux, apprenez à les connaitre, comment les protéger et conserver leur milieu naturel."
+      "content": "Dans leur habitat ou dans des réserves protégées, observez les animaux, apprenez à les connaitre, comment les protéger et conserver leur milieu naturel"
+    },
+    "lazy": {
+      "title": "Farniente",
+      "content": "Allongez vous dans un transat pour profiter d’un moment rien qu'à vous au bord de la plage. Se ressourcer et décompresser en sirotant un bon cocktail"
+    },
+    "water-activities": {
+      "title": "Activités nautiques",
+      "content": "Plongée et snorkeling pour admirer les merveilles des fonds marins ou bien surf et jet-ski pour vivre des sensations fortes"
+    },
+    "winter-activities": {
+      "title": "Activités hivernales",
+      "content": "Profitez de la neige et de son beau manteau blanc. Enfilez vos raquettes ou vos skis et partez à l'aventure. Ou prenez votre luge pour dévaler les montagnes"
+    },
+    "fruit": {
+      "title": "Fruits d'ici et d'ailleurs",
+      "content": "Des plus répandus ou plus méconnus, découvrez des fruits sous toutes leurs facettes à travers nos photos et notre avis, avec quelques recettes"
     }
   },
   "map": {

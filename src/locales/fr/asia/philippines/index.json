@@ -4,6 +4,7 @@
     "section2": "Les Philippines, c'est plus de 7600 îles, autant dire que vous avez l’embarras du choix pour votre voyage de rêve. ",
     "section3": "On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines."
   },
+  "meta-description": "On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines. Suivez notre guide de région en région. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?",
   "travel": {
     "title": "Voyager",
     "subtitle": "En suivant notre aventure ..."
@@ -15,5 +16,12 @@
   "inform": {
     "title": "S'informer",
     "subtitle": "À travers nos astuces, nos coups de cœur ..."
-  }
+  },
+  "map": "Notre carte des philippines",
+  "weather": "Quand partir ?",
+  "section1": "POINTS D'INTÉRÊTS",
+  "animals": "Animaux",
+  "lazy": "Farniente",
+  "nature": "Nature",
+  "water-activities": "OCÉAN"
 }

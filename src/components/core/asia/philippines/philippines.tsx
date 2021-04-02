@@ -9,6 +9,7 @@ import { Headline } from "../../highlight"
 import { css } from "@emotion/react"
 import React, { FunctionComponent } from "react"
 import philippinesFish from "../../../../images/asia/philippines/fish.svg"
+import { WeatherEntry } from "../../../../types/shared"
 
 const philippinesPartStyle = css`
   color: ${philippinesPrimaryColor};
@@ -52,7 +53,17 @@ const philippinesLayout = `
     }
   }
   .index-blog-layout-content {
-    ${buttonStyle}
+    .point-of-interest-section {
+      svg {
+        fill: ${philippinesPrimaryColor};
+      }
+      .title {
+        color: ${philippinesPrimaryColorDarker};
+      }
+    }
+    .all-articles-container {
+      ${buttonStyle}
+    }
     .quote::before {
       color: ${philippinesPrimaryColor};
     }
@@ -106,3 +117,82 @@ export const PhilippinesTitle = styled(Title)`
     box-shadow: 0px 0px 2px 1px ${philippinesPrimaryColor};
   }
 `
+
+export const philippinesWeatherEntries = (): WeatherEntry[] => [
+  {
+    label: "Philippines",
+    data: [
+      {
+        type: "good",
+        icon: "sunny",
+        alt: "scuba",
+        temp: 27,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        alt: "scuba",
+        temp: 27,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        alt: ["scuba", "jelly-fish"],
+        temp: 29,
+      },
+      {
+        type: "fair",
+        icon: "sunny",
+        alt: ["hot", "jelly-fish"],
+        temp: 31,
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: ["hot", "jelly-fish"],
+        temp: 31,
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: ["droplet", "jelly-fish", "hot"],
+        temp: 30,
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: ["droplet"],
+        temp: 29,
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: ["droplet"],
+        temp: 29,
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: ["droplet"],
+        temp: 29,
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        temp: 29,
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: ["scuba"],
+        temp: 29,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        alt: ["scuba"],
+        temp: 28,
+      },
+    ],
+  },
+]

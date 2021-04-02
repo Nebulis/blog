@@ -383,6 +383,7 @@ export const CityArticleContainer = styled.div`
   }
 `
 export const MapContainer = styled.div`
+  margin-bottom: 1.45rem;
   overflow: hidden;
   text-align: center;
   & > img {
