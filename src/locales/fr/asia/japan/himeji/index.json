@@ -1,11 +1,15 @@
 {
   "introduction": {
-    "section1": "La ville de Himeji est avant tout connue pour son magnifique château considéré comme l’un des plus beaux châteaux du Japon.",
-    "section2": "Mais Himeji ce n’est pas qu’un château, prenez votre temps pour passer une journée dans cette ville pour y découvrir également le Koko-en Garden, un immense parc aux multiples jardins et partez en excursion sur le Mont Shosha à la découverte du temple Engyō-ji."
+    "section1": "La ville de Himeji est située dans la préfecture de Hyogo dans la région du Kansai au Japon, elle est avant tout connue pour son magnifique château considéré comme l’un des plus beaux châteaux du Japon. ",
+    "section2": "Mais Himeji ce n’est pas qu’un château, prenez votre temps pour passer une journée dans cette ville pour y découvrir également le Koko-en Garden, un immense parc aux multiples jardins et partez en excursion sur le Mont Shosha.",
+    "section3": "Découvrez dans l’ordre : Notre récit de voyage puis nos visites détaillées."
   },
   "title": "Himeji",
   "meta-description": "Dans chaque article, on répond à vos questions : Quand partir ? Combien de temps ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix.",
-  "section1": "Notre récit de voyage",
-  "section2": "Nos visites détaillées",
-  "section3": "Découvre le Japon"
+  "section1": "POINTS D'INTÉRÊTS",
+  "monuments": "Monuments",
+  "city": "Ville",
+  "section2": "Notre récit de voyage",
+  "section3": "Nos visites détaillées",
+  "section4": "Découvre le Japon"
 }

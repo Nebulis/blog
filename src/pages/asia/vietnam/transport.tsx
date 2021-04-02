@@ -54,7 +54,7 @@ import {
 import { Conclusion } from "../../../components/core/conclusion"
 import { Comments } from "../../../components/core/comments"
 import { VietnamAirportMap, VietnamTrainMap } from "../../../components/core/asia/vietnam/vietnam-map"
-import { MouseToolTip } from "../../../components/core/tooltipPortal"
+import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
 import { PetitCarreJaune } from "../../../components/layout/layout"
 import { Tree } from "../../../components/layout/menu"
 import { BsArrowLeftRight } from "react-icons/bs"
@@ -126,14 +126,6 @@ const Sleeping: React.FunctionComponent = () => (
   </svg>
 )
 
-const TooltipContent = styled.div`
-  background: hsla(0, 0%, 0%, 0.75);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 0.5em 1em;
-  text-align: center;
-`
 const BusTitle = styled(SectionTitle)`
   font-size: 1.38316rem; // h3
   margin-bottom: 1rem; // mb3

@@ -29,7 +29,7 @@
     },
     "nature": {
       "title": "Nature",
-      "content": "Trek, hikes or idleness, in the mountains, in the jungle as on the beach, admire the landscapes that nature gives us"
+      "content": "Treks, hikes, or strolls, in the mountains, in the forest, or parks, admire the landscapes that nature gives us"
     },
     "city": {
       "title": "City",
@@ -37,7 +37,23 @@
     },
     "animals": {
       "title": "Animals",
-      "content": "In their natural habitat or in protected reserves, observe the animals, get to know them, how to protect them and preserve their environment."
+      "content": "In their natural habitat or in protected reserves, observe the animals, get to know them, how to protect them and preserve their environment"
+    },
+    "lazy": {
+      "title": "Beach Holiday",
+      "content": "Lie down on a deckchair to take a moment to yourself by the beach. Relax and unwind while sipping a good cocktail"
+    },
+    "water-activities": {
+      "title": "Water activities",
+      "content": "Dive and snorkel to admire the wonders of the sea or surf and jet-ski to experience thrills"
+    },
+    "winter-activities": {
+      "title": "Winter activities",
+      "content": "Enjoy the snow and its beautiful white scenery. Put on your snowshoes or skis and go on an adventure. Or take your sled to slide down the mountains"
+    },
+    "fruit": {
+      "title": "Fruits from around the world",
+      "content": "From the most widespread to the less known, discover fruits in all their facets through our photos and our opinion, along with a few recipes."
     }
   },
   "map": {

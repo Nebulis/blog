@@ -3,12 +3,12 @@ import { ArticlesContainer } from "../components/layout/layout"
 import { useWindowSize } from "../components/hooks/useWindowSize"
 import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
-import { MouseToolTip } from "../components/core/tooltipPortal"
+import { MouseToolTip, TooltipContent } from "../components/core/tooltipPortal"
 import { PageProps } from "gatsby"
 import { getArticles, getLink, isLinkPublished, sortByLabel } from "../components/core/links/links.utils"
 import { Carousel, CarouselImage } from "../components/core/carousel"
 import { Divider } from "../components/core/divider"
-import { Monument } from "../components/icon/monument"
+import { Farniente, Fruit, Monument, Scuba, Ski } from "../components/icon/monument"
 import { Hiking } from "../components/icon/hiking"
 import { CityIcon } from "../components/icon/city"
 import { Photo } from "../components/icon/photo"
@@ -86,13 +86,6 @@ const transform = (countriesWithArticles: string[]) => (country: Country): React
   }
   return <CountryPath country={country} />
 }
-const TooltipContent = styled.span`
-  background: hsla(0, 0%, 0%, 0.75);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 0.5em 1em;
-`
 
 const MapContainer = styled.div`
   max-width: ${maxWidthExtraLargeContainer}px;
@@ -180,8 +173,8 @@ const InstagramContainer = styled.div`
 `
 const ContemplateContainer = styled.div`
   max-width: ${maxWidth}px;
-  margin-top: 5.5rem;
-  margin-bottom: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -190,8 +183,8 @@ const ContemplateContainer = styled.div`
   grid-gap: 3rem;
   text-align: center;
   svg {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 1rem;
     fill: ${primaryColor};
   }
@@ -210,19 +203,29 @@ const ContemplateContainer = styled.div`
   }
 
   @media (max-width: ${mediumEnd}) {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     justify-content: space-evenly;
     grid-gap: 0;
     grid-row-gap: 2rem;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
     .contemplate-element {
       display: flex;
       .title-element {
         flex-basis: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       .content {
         flex-basis: 70%;
+      }
+      .title {
+        margin-bottom: 0;
       }
       .content {
         display: flex;
@@ -234,12 +237,6 @@ const ContemplateContainer = styled.div`
     }
     .contemplate-element:nth-of-type(even) {
       flex-direction: row-reverse;
-    }
-  }
-  @media (max-width: ${mobileEnd}) {
-    svg {
-      width: 80px;
-      height: 80px;
     }
   }
 `
@@ -493,6 +490,36 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </div>
             <div className="content">{t("contemplate.animals.content")}</div>
           </div>
+          <div className="contemplate-element">
+            <div className="title-element">
+              <Farniente />
+              <div className="title">{t("contemplate.lazy.title")}</div>
+            </div>
+            <div className="content">{t("contemplate.lazy.content")}</div>
+          </div>
+          <div className="contemplate-element">
+            <div className="title-element">
+              <Scuba />
+              <div className="title">{t("contemplate.water-activities.title")}</div>
+            </div>
+            <div className="content">{t("contemplate.water-activities.content")}</div>
+          </div>
+          <div className="contemplate-element">
+            <div className="title-element">
+              <Ski />
+              <div className="title">{t("contemplate.winter-activities.title")}</div>
+            </div>
+            <div className="content">{t("contemplate.winter-activities.content")}</div>
+          </div>
+          {development && (
+            <div className="contemplate-element">
+              <div className="title-element">
+                <Fruit />
+                <div className="title">{t("contemplate.fruit.title")}</div>
+              </div>
+              <div className="content">{t("contemplate.fruit.content")}</div>
+            </div>
+          )}
         </ContemplateContainer>
         <HomeDivider />
         <div>

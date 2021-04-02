@@ -1,8 +1,24 @@
+import styled from "@emotion/styled"
 import React, { FunctionComponent, useRef, useState, useLayoutEffect } from "react"
 import ReactDOM from "react-dom"
 import { useWindowMousePosition } from "../hooks/useWindowMousePosition"
 import { useWindowSize } from "../hooks/useWindowSize"
 
+export const TooltipContent = styled.div`
+  background: hsla(0, 0%, 0%, 0.75);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  text-align: center;
+`
+const Div = styled.div`
+  position: absolute;
+  pointer-events: none;
+  & > * {
+    pointer-events: none;
+  }
+`
 // check this in case https://www.joshwcomeau.com/react/the-perils-of-rehydration/
 export const DialogPortal: FunctionComponent = ({ children }) => {
   if (typeof window === `undefined`) return null
@@ -44,13 +60,12 @@ export const MouseToolTip: FunctionComponent = ({ children }) => {
   // @ts-ignore
   const childrenLength = React.Children.count(children?.props?.children)
   const offset = clientY > 80 ? -30 - 20 * childrenLength : 30
-  const offsetLeft = windowWidth - clientX < 100
+  const offsetLeft = windowWidth - clientX < 130
   return (
     <TooltipPortal>
-      <div
+      <Div
         ref={ref}
         style={{
-          position: "absolute",
           ...(offsetLeft
             ? {
                 left: `${pageX - width - 30}px`,
@@ -60,7 +75,7 @@ export const MouseToolTip: FunctionComponent = ({ children }) => {
         }}
       >
         {children}
-      </div>
+      </Div>
     </TooltipPortal>
   )
 }

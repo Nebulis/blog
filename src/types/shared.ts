@@ -37,10 +37,20 @@ export type OrganisationCard = {
 
 export type WeatherType = "good" | "fair" | "poor"
 export type WeatherIconType = "light-rain" | "heavy-rain" | "sun-rain" | "sun-cloud" | "sunny" | "snow"
-export type WeatherAltIconType = "hot" | "droplet" | "cold" | "snow-man" | "sakura" | "autumn" | "arctic"
+export type WeatherAltIconType =
+  | "hot"
+  | "droplet"
+  | "cold"
+  | "snow-man"
+  | "sakura"
+  | "autumn"
+  | "arctic"
+  | "scuba"
+  | "jelly-fish"
 interface WeatherData {
   type: WeatherType
   icon: WeatherIconType
+  temp: number
   alt?: WeatherAltIconType | WeatherAltIconType[]
 }
 export interface WeatherEntry {

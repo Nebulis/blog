@@ -30,7 +30,7 @@ exports[`french pages exports meta for public/articles/index.html correctly: soc
 
 exports[`french pages exports meta for public/articles/index.html correctly: title 1`] = `"Tous nos articles | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/index.html correctly: meta-description 1`] = `"Retrouvez dans notre blog les plus belles perles d’Asie ainsi que où et quand voyager pour vos vacances de rêve."`;
+exports[`french pages exports meta for public/asia/index.html correctly: meta-description 1`] = `"L’Asie nous offre tant de pays qui incitent à l’évasion. Retrouvez dans notre blog les plus belles perles de ce continent pour vos vacances de rêve. Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/index.html correctly: social-network 1`] = `"Farniente sur des plages paradisiaques, visite de temples traditionnels, trek dans la jungle ou simple promenade à la découverte de paysages à couper le souffle, des grandes villes aux petits villages, en apprenant les traditions de certaines tribus ou en observant avec discrétion les animaux sauvages ... Tant de pays qui incitent à l’évasion et font rêver."`;
 
@@ -48,7 +48,7 @@ exports[`french pages exports meta for public/asia/japan/fuji/kawaguchiko-lake/i
 
 exports[`french pages exports meta for public/asia/japan/fuji/kawaguchiko-lake/index.html correctly: title 1`] = `"Lac Kawaguchi : La vue sur le Mont Fuji | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/himeji/himeji-castle/index.html correctly: meta-description 1`] = `"Découvrez le château de Himeji à travers notre visite. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos."`;
+exports[`french pages exports meta for public/asia/japan/himeji/himeji-castle/index.html correctly: meta-description 1`] = `"Découvrez le magnifique château de Himeji, considéré comme l’un des plus beaux châteaux du Japon. En plus de notre récit de voyage et nos photos, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix."`;
 
 exports[`french pages exports meta for public/asia/japan/himeji/himeji-castle/index.html correctly: social-network 1`] = `"Magnifique château, surnommé le château du Héron Blanc, il est considéré comme l’un des plus beaux châteaux du Japon et est également reconnu pour être un véritable spot pour admirer les cerisiers, Sakura, en fleurs au printemps."`;
 
@@ -56,13 +56,13 @@ exports[`french pages exports meta for public/asia/japan/himeji/himeji-castle/in
 
 exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly: meta-description 1`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de temps ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
 
-exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly: social-network 1`] = `"La ville de Himeji est avant tout connue pour son magnifique château considéré comme l’un des plus beaux châteaux du Japon. Mais Himeji ce n’est pas qu’un château, prenez votre temps pour passer une journée dans cette ville pour y découvrir également le Koko-en Garden, un immense parc aux multiples jardins et partez en excursion sur le Mont Shosha à la découverte du temple Engyō-ji."`;
+exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly: social-network 1`] = `"La ville de Himeji est située dans la préfecture de Hyogo dans la région du Kansai au Japon, elle est avant tout connue pour son magnifique château considéré comme l’un des plus beaux châteaux du Japon.  Mais Himeji ce n’est pas qu’un château, prenez votre temps pour passer une journée dans cette ville pour y découvrir également le Koko-en Garden, un immense parc aux multiples jardins et partez en excursion sur le Mont Shosha."`;
 
 exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly: title 1`] = `"Himeji | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/index.html correctly: meta-description 1`] = `"Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables. On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon, pour l’instant au printemps et nous vous parlerons très prochainement du Japon en automne et en hiver, alors restez connecté."`;
+exports[`french pages exports meta for public/asia/japan/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables du pays du Soleil-Levant. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
-exports[`french pages exports meta for public/asia/japan/index.html correctly: social-network 1`] = `"Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables. On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon, pour l’instant au printemps et nous vous parlerons très prochainement du Japon en automne et en hiver, alors restez connecté."`;
+exports[`french pages exports meta for public/asia/japan/index.html correctly: social-network 1`] = `"Voyager au pays du Soleil-Levant c’est découvrir un mélange entre modernité et traditions. Admirez les changements de décor fascinant des paysages entre chaque saison. Découvrez des villes animées et ses quartiers mouvementés. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables."`;
 
 exports[`french pages exports meta for public/asia/japan/index.html correctly: title 1`] = `"Japon | Blog Voyage"`;
 
@@ -114,7 +114,7 @@ exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.ht
 
 exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"Temple Togan-Ji | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Ici nous partons au Japon à la saison du printemps. Combien de jours ? Quel budget prévoir ? On vous répond en se basant sur notre propre expérience. On vous indique également notre itinéraire de voyage pour une semaine."`;
+exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Ici nous partons au Japon à la saison du printemps. On vous indique notre itinéraire de voyage. Combien de jours ? Quel budget prévoir ? On vous répond en se basant sur notre propre expérience."`;
 
 exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: social-network 1`] = `"Le Japon, ce pays incontournable à visiter en Asie. Un nouveau décor à chaque saison. Un mélange entre zénitude dans les endroits reculés et animation et dynamisme dans les villes, autant dire qu’en fonction de ce que vous recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre bonheur ..."`;
 
@@ -168,13 +168,13 @@ exports[`french pages exports meta for public/asia/japan/transports/index.html c
 
 exports[`french pages exports meta for public/asia/japan/transports/index.html correctly: title 1`] = `"main | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly: meta-description 1`] = `"Dans cet article on vous indique quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure sur l'île de Palawan."`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly: meta-description 1`] = `"Décor de carte postale, plage de sable blanc et eau turquoise, on vous raconte notre aventure sur l'île de Palawan. On vous donne des conseils en se fixant sur notre propre expérience. Quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? et où loger ?"`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly: social-network 1`] = `"Décor de carte postale, plage de sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre « Dream List » de voyage pour cette nouvelle année."`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly: title 1`] = `"El Nido : Un petit coin de Paradis | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly: meta-description 1`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly: meta-description 1`] = `"On vous emmène dans le joyau des Philippines. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly: social-network 1`] = `"Et si on vous emmenait dans le joyau des Philippines sur l’île de Palawan ? Prenez votre masque et votre tuba et plongez dans ces eaux cristallines qui ne vous laisseront pas insensible. Profitez des différents tours appelés \\"Island hopping\\" pour choisir ce qui vous convient le mieux."`;
 
@@ -198,15 +198,15 @@ exports[`french pages exports meta for public/asia/philippines/el-nido/which-tou
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/which-tour/index.html correctly: title 1`] = `"Archipel de Bacuit : Quel tour choisir ? | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/philippines/index.html correctly: meta-description 1`] = `"Sans aucun doute l’un des pays qui nous a le plus fait voyager et rêver de part ses paysages à couper le souffle, ses îles d’une beauté sans pareille et ses immenses spots de snorkeling et de plongée. Les Philippines, c'est plus de 7600 îles, autant dire que vous avez l’embarras du choix pour votre voyage de rêve.  On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines."`;
+exports[`french pages exports meta for public/asia/philippines/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines. Suivez notre guide de région en région. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/philippines/index.html correctly: social-network 1`] = `"Sans aucun doute l’un des pays qui nous a le plus fait voyager et rêver de part ses paysages à couper le souffle, ses îles d’une beauté sans pareille et ses immenses spots de snorkeling et de plongée. Les Philippines, c'est plus de 7600 îles, autant dire que vous avez l’embarras du choix pour votre voyage de rêve.  On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines."`;
 
 exports[`french pages exports meta for public/asia/philippines/index.html correctly: title 1`] = `"Philippines | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/vietnam/index.html correctly: meta-description 1`] = `"Le Vietnam est une destination unique. Des paysages magnifiques et variés, des parcs naturels, un héritage culturel et un patrimoine historique riche ... D'Hô Chi Minh-Ville à Hanoï, en passant par Da Nang, chaque destination offre sa propre histoire et une expérience différente. On vous fait découvrir à travers nos articles et nos photos notre itinéraire dans le Sud du Vietnam et nous vous parlerons très prochainement du Nord et du Centre alors restez connecté."`;
+exports[`french pages exports meta for public/asia/vietnam/index.html correctly: meta-description 1`] = `"Découvrez la ville de Himeji et les différents endroits à visiter à travers nos articles. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
-exports[`french pages exports meta for public/asia/vietnam/index.html correctly: social-network 1`] = `"Le Vietnam est une destination unique. Des paysages magnifiques et variés, des parcs naturels, un héritage culturel et un patrimoine historique riche ... D'Hô Chi Minh-Ville à Hanoï, en passant par Da Nang, chaque destination offre sa propre histoire et une expérience différente. On vous fait découvrir à travers nos articles et nos photos notre itinéraire dans le Sud du Vietnam et nous vous parlerons très prochainement du Nord et du Centre alors restez connecté."`;
+exports[`french pages exports meta for public/asia/vietnam/index.html correctly: social-network 1`] = `"Le Vietnam est une destination unique. Des paysages magnifiques et variés, des parcs naturels, un héritage culturel et un patrimoine historique riche ... D'Hô Chi Minh-Ville à Hanoï, en passant par Da Nang, chaque destination offre sa propre histoire et une expérience différente. On vous fait découvrir à travers nos articles et nos photos nos voyages au Vietnam."`;
 
 exports[`french pages exports meta for public/asia/vietnam/index.html correctly: title 1`] = `"Vietnam | Blog Voyage"`;
 
@@ -214,7 +214,7 @@ exports[`french pages exports meta for public/asia/vietnam/prepare/index.html co
 
 exports[`french pages exports meta for public/asia/vietnam/prepare/index.html correctly: social-network 1`] = `"Que de questions à se poser quand on prépare un voyage et surtout comment bien s’organiser ? Vous trouverez dans cet article nos informations et conseils qui vous permettront de préparer votre voyage au Vietnam."`;
 
-exports[`french pages exports meta for public/asia/vietnam/prepare/index.html correctly: title 1`] = `"Préparer son voyage au Vietnam | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/vietnam/prepare/index.html correctly: title 1`] = `"Bien préparer son voyage au Vietnam | Blog Voyage"`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/can-tho/index.html correctly: meta-description 1`] = `"Le récit de notre voyage à Can Tho et plus particulièrement de son marché flottant avec en prime une visite dans une fabrication de feuille de riz. Dans cet article on te donne également nos conseils sur comment s’y rendre ? Combien de jours ? Quand partir ? Et où se loger ?"`;
 
@@ -226,15 +226,15 @@ exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/cu-c
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly: social-network 1`] = `"Immense ensemble de tunnels souterrains atteignant environ 250 km, ils s’étendent de Hô Chi Minh-Ville jusqu'à la frontière du Cambodge."`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly: title 1`] = `"Tunnels de Củ Chi | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/cu-chi-tunnels/index.html correctly: title 1`] = `"Histoire du Vietnam : Visite des tunnels de Cu Chi | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/discover/index.html correctly: meta-description 1`] = `"Quand partir ? Combien de jours ? Quel budget prévoir ? Des questions qu’on se pose souvent avant de concrétiser un projet de voyage. On vous répond en se basant sur notre propre expérience. On vous indique également notre itinéraire de voyage pour 1 semaine dans le Sud du Vietnam."`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/discover/index.html correctly: meta-description 1`] = `"Notre itinéraire de voyage pour le Sud du Vietnam. Quand partir ? Combien de jours ? Quel budget prévoir ? Des questions qu’on se pose souvent avant de concrétiser un projet de voyage. On vous répond en se basant sur notre propre expérience."`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/discover/index.html correctly: social-network 1`] = `"Le Sud du Vietnam regorge de surprises et de découvertes, toutes plus passionnantes les unes que les autres. Entre le dynamisme de Hô Chi Minh-Ville et les excursions en bateau à l’ombre des palmiers d’eau sur le Delta du Mékong, il y en a pour tous les goûts."`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/discover/index.html correctly: title 1`] = `"Découverte du Vietnam du Sud | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly: meta-description 1`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly: meta-description 1`] = `"Voyagez avec nous dans le Sud du Vietnam à travers notre carnet de voyage. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly: social-network 1`] = `"Voyagez avec nous dans le Sud du Vietnam à travers notre carnet de voyage. Découvrez les grandes villes comme Hô Chi Minh-Ville, son musée et ses tunnels, envolez-vous vers des paysages magnifiques autour du delta du Mékong sur des îles comme Ben Tre ou visitez avec nous le marché flottant de Cân Thơ."`;
 
@@ -250,13 +250,13 @@ exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/war-
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/war-remnants-museum/index.html correctly: social-network 1`] = `"Le musée des vestiges de guerre témoigne des atrocités de la guerre d’Indochine et de la guerre du Vietnam et nous montre l’impact encore réel et actuel sur la vie des Vietnamiens."`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/war-remnants-museum/index.html correctly: title 1`] = `"Musée des Vestiges de Guerre à Hô Chi Minh-Ville | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/war-remnants-museum/index.html correctly: title 1`] = `"Histoire du Vietnam : Le Musée des Vestiges de Guerre | Blog Voyage"`;
 
 exports[`french pages exports meta for public/asia/vietnam/transport/index.html correctly: meta-description 1`] = `"Vous trouverez dans cet article nos informations et conseils qui vous permettront de bien choisir votre moyen de transport en fonction de vos besoins. Prix ? Où réserver ? On vous dit tout en vous donnant notre avis."`;
 
 exports[`french pages exports meta for public/asia/vietnam/transport/index.html correctly: social-network 1`] = `"Vous avez planifié vos visites au Vietnam, il ne vous reste plus qu'à trouver comment vous déplacer ? Entre transports en commun, location de vélos, scooters et motos ou bien encore réservation de tours guidés."`;
 
-exports[`french pages exports meta for public/asia/vietnam/transport/index.html correctly: title 1`] = `"Les Transports au Vietnam | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/vietnam/transport/index.html correctly: title 1`] = `"Tout savoir sur les transports au Vietnam | Blog Voyage"`;
 
 exports[`french pages exports meta for public/credits/index.html correctly: meta-description 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 

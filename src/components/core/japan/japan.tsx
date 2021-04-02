@@ -132,6 +132,14 @@ const japanLayout = `
   }
 
   .index-blog-layout-content {
+    .point-of-interest-section {
+      svg {
+        fill: ${japanPrimaryColor};
+      }
+      .title {
+        color: ${japanPrimaryColorDarker};
+      }
+    }
     .divider {
       background-color: hsl(348, 41%, 53%, 0.2);
     }
@@ -226,56 +234,68 @@ export const japanWeatherEntries = (): WeatherEntry[] => [
         type: "poor",
         icon: "snow",
         alt: ["arctic", "snow-man"],
+        temp: -6,
       },
       {
         type: "poor",
         icon: "snow",
         alt: ["arctic", "snow-man"],
+        temp: -6,
       },
       {
         type: "poor",
         icon: "snow",
         alt: ["arctic", "snow-man"],
+        temp: -2,
       },
       {
         type: "fair",
         icon: "sun-cloud",
         alt: ["cold", "sakura"],
+        temp: 6,
       },
       {
         type: "fair",
         icon: "sun-cloud",
+        temp: 13,
       },
       {
         type: "good",
         icon: "sunny",
+        temp: 17,
       },
       {
         type: "good",
         icon: "sunny",
+        temp: 21,
       },
       {
         type: "good",
         icon: "sunny",
+        temp: 22,
       },
       {
         type: "fair",
         icon: "sun-cloud",
+        temp: 18,
       },
       {
         type: "fair",
         icon: "sun-cloud",
-        alt: "autumn",
+        alt: ["autumn", "cold"],
+        temp: 10,
       },
       {
         type: "poor",
         icon: "snow",
         alt: ["cold", "snow-man"],
+        temp: 4,
       },
       {
         type: "poor",
         icon: "snow",
         alt: ["arctic", "snow-man"],
+        temp: -3,
       },
     ],
   },
@@ -286,59 +306,71 @@ export const japanWeatherEntries = (): WeatherEntry[] => [
         type: "poor",
         icon: "sun-cloud",
         alt: ["snow-man", "cold"],
+        temp: 8,
       },
       {
         type: "poor",
         icon: "sun-cloud",
         alt: ["snow-man", "cold"],
+        temp: 8,
       },
       {
         type: "fair",
         icon: "sunny",
         alt: "cold",
+        temp: 12,
       },
       {
         type: "good",
         icon: "sunny",
         alt: "sakura",
+        temp: 17,
       },
       {
         type: "good",
         icon: "sunny",
+        temp: 22,
       },
       {
         type: "fair",
         icon: "sun-rain",
+        temp: 24,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "hot",
+        temp: 28,
       },
       {
         type: "poor",
         icon: "sunny",
         alt: "hot",
+        temp: 30,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "droplet",
+        temp: 26,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "droplet",
+        temp: 21,
       },
       {
         type: "fair",
         icon: "sun-cloud",
         alt: "autumn",
+        temp: 15,
       },
       {
         type: "poor",
         icon: "sun-cloud",
         alt: ["snow-man", "cold"],
+        temp: 10,
       },
     ],
   },
@@ -349,58 +381,70 @@ export const japanWeatherEntries = (): WeatherEntry[] => [
         type: "poor",
         icon: "sun-cloud",
         alt: ["snow-man", "cold"],
+        temp: 5,
       },
       {
         type: "poor",
         icon: "sun-cloud",
         alt: ["snow-man", "cold"],
+        temp: 6,
       },
       {
         type: "fair",
         icon: "sun-cloud",
         alt: ["sakura", "cold"],
+        temp: 9,
       },
       {
         type: "good",
         icon: "sunny",
         alt: "sakura",
+        temp: 14,
       },
       {
         type: "good",
         icon: "sunny",
+        temp: 20,
       },
       {
         type: "fair",
         icon: "sun-rain",
+        temp: 23,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "hot",
+        temp: 27,
       },
       {
         type: "poor",
         icon: "sunny",
         alt: "hot",
+        temp: 29,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "hot",
+        temp: 25,
       },
       {
         type: "good",
         icon: "sunny",
+        temp: 19,
       },
       {
         type: "fair",
         icon: "sun-cloud",
         alt: "autumn",
+        temp: 14,
       },
       {
         type: "poor",
         icon: "sun-cloud",
         alt: ["cold", "snow-man"],
+        temp: 8,
       },
     ],
   },
@@ -411,293 +455,70 @@ export const japanWeatherEntries = (): WeatherEntry[] => [
         type: "poor",
         icon: "sun-rain",
         alt: ["cold", "snow-man"],
+        temp: 8,
       },
       {
         type: "poor",
         icon: "sun-rain",
-        alt: ["cold", "snow-man"],
+        alt: ["cold"],
+        temp: 9,
       },
       {
         type: "fair",
         icon: "sun-rain",
         alt: ["cold", "sakura"],
+        temp: 12,
       },
       {
         type: "fair",
         icon: "sun-rain",
+        temp: 16,
       },
       {
         type: "fair",
         icon: "sun-rain",
+        temp: 21,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "droplet",
+        temp: 24,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: ["droplet", "hot"],
+        temp: 28,
       },
       {
         type: "poor",
         icon: "sun-rain",
         alt: "hot",
+        temp: 29,
       },
       {
         type: "fair",
         icon: "sun-rain",
+        temp: 26,
       },
       {
         type: "good",
         icon: "sun-cloud",
+        temp: 21,
       },
       {
         type: "good",
         icon: "sun-cloud",
         alt: "autumn",
+        temp: 16,
       },
       {
         type: "fair",
         icon: "sun-cloud",
         alt: ["cold"],
+        temp: 10,
       },
     ],
   },
 ]
-
-// export const japanWeatherEntries = (t: TFunction): WeatherEntry[] => [
-//   {
-//     label: "Tokyo",
-//     data: [
-//       {
-//         type: "poor",
-//         icon: "sunny",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sunny",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sunny",
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//       },
-//       {
-//         type: "good",
-//         icon: "sun-rain",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-rain",
-//         alt: "hot",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-rain",
-//         alt: "hot",
-//       },
-//       {
-//         type: "good",
-//         icon: "sun-rain",
-//       },
-//       {
-//         type: "good",
-//         icon: "sun-rain",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-cloud",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-cloud",
-//       },
-//     ],
-//   },
-//   {
-//     label: "Osaka",
-//     data: [
-//       {
-//         type: "poor",
-//         icon: "sun-cloud",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-cloud",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-cloud",
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//       },
-//       {
-//         type: "good",
-//         icon: "sun-rain",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-rain",
-//         alt: "hot",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-cloud",
-//         alt: "hot",
-//       },
-//       {
-//         type: "good",
-//         icon: "sun-cloud",
-//       },
-//       {
-//         type: "good",
-//         icon: "sun-cloud",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-cloud",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-cloud",
-//       },
-//     ],
-//   },
-//   {
-//     label: "Sapporo",
-//     data: [
-//       {
-//         type: "poor",
-//         icon: "sunny", // snow
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//         alt: "hot",
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//         alt: "hot",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-rain",
-//         alt: "hot",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-rain",
-//         alt: "hot",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-rain",
-//         alt: "droplet",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-rain",
-//         alt: "droplet",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-rain",
-//         alt: "droplet",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-rain",
-//         alt: "droplet",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-rain",
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//       },
-//     ],
-//   },
-//   {
-//     label: "Fukuoka",
-//     data: [
-//       {
-//         type: "poor",
-//         icon: "sunny", // snow
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//         alt: "hot",
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//         alt: "hot",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-rain",
-//         alt: "hot",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-rain",
-//         alt: "hot",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-rain",
-//         alt: "droplet",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-rain",
-//         alt: "droplet",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-rain",
-//         alt: "droplet",
-//       },
-//       {
-//         type: "poor",
-//         icon: "sun-rain",
-//         alt: "droplet",
-//       },
-//       {
-//         type: "fair",
-//         icon: "sun-rain",
-//       },
-//       {
-//         type: "good",
-//         icon: "sunny",
-//       },
-//     ],
-//   },
-// ]

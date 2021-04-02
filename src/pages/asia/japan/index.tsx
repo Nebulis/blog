@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import SEO from "../../../components/layout/seo"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
@@ -9,8 +9,10 @@ import {
   HomeSection,
   HomeSubSection,
   MainTitleSection,
+  PointOfInterestSection,
   SectionContent,
   SubHomeSection,
+  SubSubHomeSection,
 } from "../../../components/core/section"
 import { useCustomTranslation } from "../../../i18n-hook"
 import { PageProps } from "gatsby"
@@ -23,6 +25,7 @@ import {
   ArticlesContainer,
   GoToAllArticlesContainer,
   MainCardContainer,
+  MapContainer,
   MedallionContainer,
 } from "../../../components/layout/layout"
 import { ApplicationLink } from "../../../components/core/links/link"
@@ -32,6 +35,11 @@ import { JapanImageAsMedallion } from "../../../components/core/japan/japan.imag
 import { SpringInJapanCard } from "../../../components/core/japan/japan.cards"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 import { WeatherForHomePage } from "../../../components/core/weather"
+import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
+import { Monument, Ski } from "../../../components/icon/monument"
+import { CityIcon } from "../../../components/icon/city"
+import { Hiking } from "../../../components/icon/hiking"
+import JapanMap from "../../../images/asia/japan/japan-map.png"
 
 const namespace = "asia/japan/index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -40,18 +48,18 @@ i18n.addResourceBundle("en", namespace, indexEn)
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const [tooltipLabel, setTooltipLabel] = useState("")
   const country = t("common:country.japan.title")
   const articles = getArticles({ kind: "other", tags: ["japan"], development })
   const cities = development ? japanLinks.cities : japanLinks.cities.filter(isLinkPublished)
-  const description = `${t("introduction.section2")} ${t("introduction.section3")}`
   return (
     <>
       <SEO
         title={country}
         location={location}
         image={VietnamImage}
-        socialNetworkDescription={description}
-        googleDescription={description}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("google-description")}
       />
       <JapanBlogLayout page="japan" location={location}>
         <MainTitleSection>
@@ -65,6 +73,26 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote position="none">{t("introduction.section2")}</PageQuote>
           <PageQuote position="none">{t("introduction.section3")}</PageQuote>
         </SectionContent>
+        <Divider />
+        <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
+        <PointOfInterestSection>
+          <div className="title-element">
+            <Hiking />
+            <div className="title mt2">{t("nature")}</div>
+          </div>
+          <div className="title-element">
+            <Monument />
+            <div className="title mt2">{t("monuments")}</div>
+          </div>
+          <div className="title-element">
+            <CityIcon />
+            <div className="title mt2">{t("city")}</div>
+          </div>
+          <div className="title-element">
+            <Ski />
+            <div className="title mt2">{t("winter-activities")}</div>
+          </div>
+        </PointOfInterestSection>
         <Divider />
         <HomeSection>{t("travel.title")}</HomeSection>
         <HomeSubSection>{t("travel.subtitle")}</HomeSubSection>
@@ -107,7 +135,32 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </GoToAllArticlesContainer>
         <Divider />
         <SubHomeSection>{t("weather")}</SubHomeSection>
-        <WeatherForHomePage extraButton entries={japanWeatherEntries()} />
+        <WeatherForHomePage
+          extraButton
+          entries={japanWeatherEntries()}
+          onMouseLeave={() => setTooltipLabel("")}
+          onMouseEnter={setTooltipLabel}
+        />
+        <Divider />
+        <SubHomeSection>{t("map")}</SubHomeSection>
+        <MapContainer>
+          <img src={JapanMap} alt="Japan Map" />
+        </MapContainer>
+        <Divider />
+        <MouseToolTip>
+          {tooltipLabel ? (
+            <TooltipContent>
+              {tooltipLabel.split("\n").map((item, index) => {
+                return (
+                  <span key={index}>
+                    {item}
+                    <br />
+                  </span>
+                )
+              })}
+            </TooltipContent>
+          ) : null}
+        </MouseToolTip>
       </JapanBlogLayout>
     </>
   )
