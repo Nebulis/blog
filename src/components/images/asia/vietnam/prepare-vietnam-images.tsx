@@ -31,113 +31,113 @@ export const PrepareVietnamImages: React.FunctionComponent<ExtraImageProps & { i
     query {
       visa: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-visa.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       hammock: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-hammock.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       baggage: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-baggage.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       landscape: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-landscape.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       laughing: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-laughing.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       scooter: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-scooter.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       currency: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-currency.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       currency2: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-currency2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       health: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-health.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       duration: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-duration.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       activities: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-activities.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       currencyApplication: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-currency-application.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardFr1: file(relativePath: { eq: "asia/vietnam/prepare/card-fr1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardFr2: file(relativePath: { eq: "asia/vietnam/prepare/card-fr2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardEn1: file(relativePath: { eq: "asia/vietnam/prepare/card-en1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardEn2: file(relativePath: { eq: "asia/vietnam/prepare/card-en2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

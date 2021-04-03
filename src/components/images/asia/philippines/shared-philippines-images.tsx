@@ -17,7 +17,7 @@ export const SharedPhilippinesImages: React.FunctionComponent<ExtraImageProps & 
     query {
       homeElNido: file(relativePath: { eq: "asia/philippines/el-nido/home-el-nido.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+          fluid(maxWidth: 1200, quality: 75, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

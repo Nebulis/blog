@@ -46,8 +46,8 @@ export const CuChiTunnelsImages: React.FunctionComponent<ExtraImageProps & { ima
         relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-entrance1.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -55,183 +55,183 @@ export const CuChiTunnelsImages: React.FunctionComponent<ExtraImageProps & { ima
         relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-entrance2.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       expo1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-expo1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       expo2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-expo2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       expo3: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-expo3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       expo4: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-expo4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       expo5: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-expo5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       expo6: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-expo6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       tunnels1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-tunnels1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       tunnels2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-tunnels2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       tunnels3: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-tunnels3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       inside1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-inside1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       inside2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-inside2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       inside3: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-inside3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       inside4: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-inside4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       trap1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-trap1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       trap2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-trap2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       trap3: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-trap3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       trap4: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-trap4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       rest1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-rest1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       rest2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-rest2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       bonus1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-bonus1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       bonus2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-bonus2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardFr1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/card-fr1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardFr2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/card-fr2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardEn1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/card-en1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardEn2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/card-en2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

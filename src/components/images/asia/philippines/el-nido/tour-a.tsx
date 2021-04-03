@@ -61,168 +61,168 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       bigLagoon: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       bigLagoon2: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       bigLagoon3: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       bigLagoon4: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       bigLagoon5: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon5.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       bigLagoon6: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon6.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       secretLagoon: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       secretLagoon2: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       secretLagoon3: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       secretLagoon4: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       secretLagoon5: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon5.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       secretLagoon6: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon6.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       secretLagoon7: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon7.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       secretLagoon8: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon8.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       secretLagoon9: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon9.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       shimizuIsland: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-shimizu-island.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       shimizuIsland2: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-shimizu-island2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       shimizuIsland3: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-shimizu-island3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       shimizuIsland4: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-shimizu-island4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [600, 1200]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       payongBeach: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-payong-beach.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       payongBeach2: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-payong-beach2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       payongBeach3: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-payong-beach3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       payongBeach4: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-payong-beach4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       payongBeach5: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-payong-beach5.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -231,7 +231,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -240,7 +240,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -249,7 +249,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       ) {
         childImageSharp {
           fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [600, 1200]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -258,7 +258,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -267,7 +267,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -276,70 +276,70 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       ) {
         childImageSharp {
           fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [600, 1200]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       snorkeling: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-snorkeling.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       snorkeling2: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-snorkeling2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       snorkeling3: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-snorkeling3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       snorkeling4: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-snorkeling4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       snorkeling5: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-snorkeling5.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       snorkeling6: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-snorkeling6.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       snorkeling7: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-snorkeling7.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       snorkeling8: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-snorkeling8.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       snorkeling9: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-snorkeling9.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -353,21 +353,21 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       cardFr2: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/card-fr2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 60, srcSetBreakpoints: [1000]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardEn1: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/card-en1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 60, srcSetBreakpoints: [1000]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardEn2: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/card-en2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 60, srcSetBreakpoints: [1000]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
