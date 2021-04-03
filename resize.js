@@ -21,7 +21,7 @@ Promise.all(
     const optimizedName = match.replace(/(\..+)$/, (match, ext) => `-optimized${ext}`)
     const method = info.format === "png" ? "png" : "jpeg"
 
-    await stream.resize(width)[method]({ quality: QUALITY }).toFile(optimizedName)
+    await stream.resize(width)[method]({ quality: QUALITY, mozjpeg: true }).toFile(optimizedName)
 
     // return fs.rename(optimizedName, match)
   })
@@ -37,7 +37,7 @@ Promise.all(
     const optimizedName = match.replace(/(\..+)$/, (match, ext) => `-optimized${ext}`)
     const method = info.format === "png" ? "png" : "jpeg"
 
-    await stream.resize(width)[method]({ quality: QUALITY }).toFile(optimizedName)
+    await stream.resize(width)[method]({ quality: QUALITY, mozjpeg: true }).toFile(optimizedName)
 
     // return fs.rename(optimizedName, match)
   })

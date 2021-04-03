@@ -1,16 +1,18 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import SEO from "../../../../components/layout/seo"
 import vietnamHat from "../../../../images/asia/vietnam/hat.svg"
 import {
   VietnamBlogLayout,
   VietnamButtonLink,
   VietnamImageAsMedallion,
+  vietnamWeatherEntries,
 } from "../../../../components/core/asia/vietnam/vietnam"
 import {
   CityHomeSection,
   MainTitleSection,
   PointOfInterestSection,
   SectionContent,
+  SubHomeSection,
   SubSubHomeSection,
 } from "../../../../components/core/section"
 import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../../components/core/links/links.utils"
@@ -39,6 +41,8 @@ import { Divider } from "../../../../components/core/divider"
 import { Monument } from "../../../../components/icon/monument"
 import { Hiking } from "../../../../components/icon/hiking"
 import { CityIcon } from "../../../../components/icon/city"
+import { WeatherForHomePage } from "../../../../components/core/weather"
+import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -50,6 +54,7 @@ const isNotCurrentPage = (city: CityLink) => city.id !== currentPageId
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const [tooltipLabel, setTooltipLabel] = useState("")
   const cities = development
     ? vietnamLinks.cities.filter(isNotCurrentPage)
     : vietnamLinks.cities.filter(isLinkPublished).filter(isNotCurrentPage)
@@ -115,6 +120,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </CityArticleContainer>
           </>
         )}
+        <Divider />
+        <SubHomeSection>{t("weather")}</SubHomeSection>
+        <WeatherForHomePage
+          entries={vietnamWeatherEntries(t).filter((entry) => entry.id === "south")}
+          onMouseLeave={() => setTooltipLabel("")}
+          onMouseEnter={setTooltipLabel}
+        />
         {cities.length > 0 && (
           <>
             <Divider className="mt2" />
@@ -136,6 +148,20 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
         </GoToAllArticlesContainer>
+        <MouseToolTip>
+          {tooltipLabel ? (
+            <TooltipContent>
+              {tooltipLabel.split("\n").map((item, index) => {
+                return (
+                  <span key={index}>
+                    {item}
+                    <br />
+                  </span>
+                )
+              })}
+            </TooltipContent>
+          ) : null}
+        </MouseToolTip>
       </VietnamBlogLayout>
     </>
   )

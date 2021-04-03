@@ -133,6 +133,7 @@ export const VietnamButtonLink = styled(ButtonLink)`
 `
 export const vietnamWeatherEntries = (t: TFunction): WeatherEntry[] => [
   {
+    id: "north",
     label: t("common:link.north"),
     data: [
       {
@@ -203,6 +204,7 @@ export const vietnamWeatherEntries = (t: TFunction): WeatherEntry[] => [
     ],
   },
   {
+    id: "central",
     label: t("common:link.central"),
     data: [
       {
@@ -275,6 +277,7 @@ export const vietnamWeatherEntries = (t: TFunction): WeatherEntry[] => [
     ],
   },
   {
+    id: "south",
     label: t("common:link.south"),
     data: [
       {

@@ -22,5 +22,6 @@
   "city": "City",
   "nature": "Nature",
   "weather": "Best time to visit ?",
-  "map": "Our map of Vietnam"
+  "map": "Our map of",
+  "country": "Vietnam"
 }

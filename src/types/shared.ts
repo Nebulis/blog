@@ -54,6 +54,7 @@ interface WeatherData {
   alt?: WeatherAltIconType | WeatherAltIconType[]
 }
 export interface WeatherEntry {
+  id?: string
   label: string
   data: [
     WeatherData,

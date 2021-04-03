@@ -1169,23 +1169,23 @@ export const Weather: React.FunctionComponent<{
                         .concat(data.alt || [])
                         .map((alt) =>
                           alt === "hot" ? (
-                            <Hot className={`alt alt-left`} />
+                            <Hot className={`alt alt-left`} key={alt} />
                           ) : alt === "droplet" ? (
-                            <Droplet className={`alt alt-right`} />
+                            <Droplet className={`alt alt-right`} key={alt} />
                           ) : alt === "cold" ? (
-                            <Cold className={`alt alt-left`} />
+                            <Cold className={`alt alt-left`} key={alt} />
                           ) : alt === "arctic" ? (
-                            <Arctic className={`alt alt-left`} />
+                            <Arctic className={`alt alt-left`} key={alt} />
                           ) : alt === "snow-man" ? (
-                            <SnowMan className={`alt alt-right`} />
+                            <SnowMan className={`alt alt-right`} key={alt} />
                           ) : alt === "sakura" ? (
-                            <Sakura className={`alt alt-right`} />
+                            <Sakura className={`alt alt-right`} key={alt} />
                           ) : alt === "autumn" ? (
-                            <Autumn className={`alt alt-right`} />
+                            <Autumn className={`alt alt-right`} key={alt} />
                           ) : alt === "scuba" ? (
-                            <Scuba className={`alt alt-right`} />
+                            <Scuba className={`alt alt-right`} key={alt} />
                           ) : alt === "jelly-fish" ? (
-                            <JellyFish className={`alt alt-top-left`} />
+                            <JellyFish className={`alt alt-top-left`} key={alt} />
                           ) : null
                         )}
                     </td>

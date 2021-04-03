@@ -9,6 +9,7 @@ import {
   HomeSection,
   HomeSubSection,
   MainTitleSection,
+  MapSubHomeSection,
   PointOfInterestSection,
   SectionContent,
   SubHomeSection,
@@ -142,7 +143,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           onMouseEnter={setTooltipLabel}
         />
         <Divider />
-        <SubHomeSection>{t("map")}</SubHomeSection>
+        <MapSubHomeSection title={t("map")} country={t("country")} />
         <MapContainer>
           <img src={JapanMap} alt="Japan Map" />
         </MapContainer>

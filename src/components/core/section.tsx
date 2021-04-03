@@ -28,7 +28,7 @@ import {
   FaUtensils,
   FaWalking,
 } from "react-icons/fa"
-import { maxWidth, mediumEnd, mobileEnd } from "./variables"
+import { maxWidth, mediumEnd, mediumStart, mobileEnd, smallEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n-hook"
 import { Lang } from "./links/links.types"
 import styled from "@emotion/styled"
@@ -214,7 +214,7 @@ const homeSectionStyle = css`
     margin-bottom: 1rem;
   }
 `
-export const HomeSection: FunctionComponent<{ className?: string }> = ({ children, className = "" }) => (
+export const HomeSection: FunctionComponent<{ className?: string; id?: string }> = ({ children, className = "" }) => (
   <h2 className={`tc ttu mb4-l ${className}`} css={homeSectionStyle}>
     {children}
   </h2>
@@ -222,6 +222,33 @@ export const HomeSection: FunctionComponent<{ className?: string }> = ({ childre
 export const SubHomeSection = styled(HomeSection)`
   font-size: 1.38316rem; // h3
 `
+
+const mapSubHomeSectionStyle = css`
+  @media (min-width: ${mediumStart}) {
+    &.map-sub-home-section-break {
+      display: none;
+    }
+  }
+  @media (max-width: ${smallEnd}) {
+    &.map-sub-home-section-space {
+      display: none;
+    }
+  }
+`
+export const MapSubHomeSection: FunctionComponent<{ title: string; country: string }> = ({ title, country }) => {
+  return (
+    <>
+      <SubHomeSection className="map-sub-home-section-break" css={mapSubHomeSectionStyle}>
+        {title}
+        <br />
+        {country}
+      </SubHomeSection>
+      <SubHomeSection className="map-sub-home-section-space" css={mapSubHomeSectionStyle}>
+        {title} {country}
+      </SubHomeSection>
+    </>
+  )
+}
 export const SubSubHomeSection = styled(HomeSection)`
   font-size: 1.2rem; // h3.5
   margin-bottom: 1.45rem !important;

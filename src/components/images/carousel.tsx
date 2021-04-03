@@ -5,6 +5,7 @@ import { ExtraImageProps } from "../../types/shared"
 export const CarouselImageQuery: React.FunctionComponent<ExtraImageProps & { image: string }> = ({
   className = "",
   image,
+  fluidObject = {},
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -24,8 +25,8 @@ export const CarouselImageQuery: React.FunctionComponent<ExtraImageProps & { ima
       }
       philippines1: file(relativePath: { eq: "asia/philippines/carousel-philippines.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [1200]) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [1800]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -52,5 +53,5 @@ export const CarouselImageQuery: React.FunctionComponent<ExtraImageProps & { ima
       }
     }
   `)
-  return <Img fluid={data[image].childImageSharp.fluid} alt="Landscape" className={className} />
+  return <Img fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }} alt="Landscape" className={className} />
 }
