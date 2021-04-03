@@ -53,253 +53,253 @@ export const CanThoImages: React.FunctionComponent<ExtraImageProps & { image: ke
     query {
       hotel1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/hotel1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       hotel2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/hotel2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       hotel3: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/hotel3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket3: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket4: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket5: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket6: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket7: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market7.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket8: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market8.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket9: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market9.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket10: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market10.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket11: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market11.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       floatingMarket12: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market12.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       market1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/market1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       market2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/market2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       market3: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/market3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       market4: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/market4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       market5: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/market5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       market6: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/market6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       market7: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/market7.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       rice1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/rice1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       rice2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/rice2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       rice3: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/rice3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       rice4: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/rice4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       rice5: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/rice5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       rice6: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/rice6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       rice7: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/rice7.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       ride1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/ride1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       ride2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/ride2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       pineapple: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/pineapple.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardFr1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/card-fr1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardFr2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/card-fr2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardEn1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/card-en1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardEn2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/card-en2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1000]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

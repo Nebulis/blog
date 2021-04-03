@@ -24,7 +24,7 @@ export const SharedCardVietnamImages: React.FunctionComponent<ExtraImageProps & 
     query {
       discoverSouthernVietnam: file(relativePath: { eq: "asia/vietnam/home-vietnam.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+          fluid(maxWidth: 1200, quality: 75, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -33,21 +33,21 @@ export const SharedCardVietnamImages: React.FunctionComponent<ExtraImageProps & 
         relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-main.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60) {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       myThoMain: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/my-tho-main.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+          fluid(maxWidth: 1200, quality: 75, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       canThoMain: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/can-tho-main.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+          fluid(maxWidth: 1200, quality: 75, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -56,14 +56,14 @@ export const SharedCardVietnamImages: React.FunctionComponent<ExtraImageProps & 
         relativePath: { eq: "asia/vietnam/southern-vietnam/war-remnants-museum/war-museum-main.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, webpQuality: 75) {
+          fluid(maxWidth: 1200, quality: 75, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       prepareMain: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-main.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70) {
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -77,7 +77,7 @@ export const SharedCardVietnamImages: React.FunctionComponent<ExtraImageProps & 
       }
       foodMain: file(relativePath: { eq: "asia/vietnam/food/food-vietnam-main.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 100) {
+          fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

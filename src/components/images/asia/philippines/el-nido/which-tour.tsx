@@ -47,21 +47,21 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       boat: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-boat.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       speedboat: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-speedboat.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       bigLagoon: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-big-lagoon.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -70,7 +70,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -79,7 +79,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -88,7 +88,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -97,7 +97,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -106,7 +106,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -115,7 +115,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -124,7 +124,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -133,7 +133,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -142,7 +142,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -151,7 +151,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -160,7 +160,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -169,7 +169,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -178,7 +178,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -187,14 +187,14 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       starBeach: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-star-beach.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -203,14 +203,14 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       ipilBeach: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-ipil-beach.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -219,7 +219,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -228,7 +228,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -237,7 +237,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -246,7 +246,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -255,7 +255,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -269,21 +269,21 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
       cardFr2: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/card-fr2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 60, srcSetBreakpoints: [1000]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardEn1: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/card-en1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 60, srcSetBreakpoints: [1000]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cardEn2: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/card-en2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 60, srcSetBreakpoints: [1000]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }

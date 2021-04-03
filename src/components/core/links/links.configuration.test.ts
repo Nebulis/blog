@@ -122,10 +122,10 @@ const japanLinks = () => {
     published: false,
   })
 
-  expect(getLink("kyoto")).toMatchObject({ label: { fr: "Kyoto", en: "Kyoto" }, published: false })
+  expect(getLink("kyoto")).toMatchObject({ label: { fr: "Kyoto", en: "Kyoto" }, published: true })
   expect(getLink("arashiyama")).toMatchObject({
     label: { en: "Kyoto: Arashiyama Bamboo Forest", fr: "Kyoto : La forêt de Bambous d'Arashiyama" },
-    published: false,
+    published: true,
   })
   expect(getLink("daigoji")).toMatchObject({
     label: { en: "Daigo-ji Temple", fr: "Temple Daigo-ji" },
