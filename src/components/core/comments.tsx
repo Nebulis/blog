@@ -548,18 +548,22 @@ interface CommentFormProps {
   deepForm: boolean
   onSubmit: (comment: CommentFormType) => Promise<any>
 }
+
+// TODO use useLocalStorage (but needs to update the part above that updates the content, because it's not compatible with the current saved format: the hook stringify the value
+const getFromLocalStorage = (key: string, defaultValue = "") =>
+  typeof window !== "undefined" ? localStorage.getItem(key) ?? defaultValue : defaultValue
 const CommentForm: FunctionComponent<CommentFormProps> = ({
   onSubmit,
   cancellable,
   onCancel = () => void 0,
   deepForm,
 }) => {
-  const [name, setName] = useState(localStorage.getItem("name") || "")
+  const [name, setName] = useState(getFromLocalStorage("name"))
   const [message, setMessage] = useState("")
-  const [email, setEmail] = useState(localStorage.getItem("email") || "")
-  const [website, setWebsite] = useState(localStorage.getItem("website") || "")
+  const [email, setEmail] = useState(getFromLocalStorage("email"))
+  const [website, setWebsite] = useState(getFromLocalStorage("website"))
   const [subscribeToNewsletter, setSubscribeToNewsletter] = useState(false)
-  const [saveInBrowser, setSaveInBrowser] = useState(!!localStorage.getItem("name"))
+  const [saveInBrowser, setSaveInBrowser] = useState(!!name)
   const { t } = useCustomTranslation("common")
   return (
     <div css={commentFormStyle}>

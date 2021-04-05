@@ -106,7 +106,7 @@ export const IndexBlogLayout: FunctionComponent<{
   location: PageProps["location"]
 }> = ({ children, page, className = "", noStickyHeader = false, draw, location }) => {
   const isPublished = page === "home" ? true : getLink(page).published
-  const { initialDevelopmentValue, development } = useContext(ApplicationContext)
+  const { initialDevelopmentValue, development, ssrBuild } = useContext(ApplicationContext)
   const { setSelectedPin } = useContext(PinterestContext)
   const [mail, setMail] = useState("")
   const [status, setStatus] = useState<Status>("INITIAL")
@@ -134,7 +134,7 @@ export const IndexBlogLayout: FunctionComponent<{
       clearTimeout(timeout)
     }
   }, [status])
-  return typeof window !== `undefined` ? (
+  return typeof window !== `undefined` || ssrBuild ? (
     <div className={`${className} index-blog-layout flex flex-column min-vh-100`} onClick={() => setSelectedPin("")}>
       <Global
         styles={css`

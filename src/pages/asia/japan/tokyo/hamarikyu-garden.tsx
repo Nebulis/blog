@@ -69,7 +69,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             Il est possible de prendre le bus 01 en sortant de Shimbashi Station pour se rapprocher à 5 mins du jardin.
           </p>
           <small>
-            <JapanLink action="hide" to="transports-in-japan">
+            <JapanLink action="hide" to="transport-japan">
               Plus d’information sur les transports.
             </JapanLink>
           </small>

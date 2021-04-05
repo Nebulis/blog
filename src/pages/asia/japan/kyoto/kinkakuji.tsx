@@ -82,7 +82,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>Depuis Himeji environ 1h</li>
             <li>Depuis Nagoya environ 1h</li>
             <small>
-              <JapanLink action="hide" to="transports-in-japan">
+              <JapanLink action="hide" to="transport-japan">
                 Plus d’information sur les transports.
               </JapanLink>
             </small>

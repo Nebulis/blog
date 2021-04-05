@@ -62,6 +62,15 @@ jobs:
       - run:
           name: integration test
           command: npm run test:integration
+  build_with_ssr:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/data
+      - run:
+          name: build
+          command: GATSBY_CPU_COUNT=1 CONTEXT=production SSR_BUILD=enabled npm run build
 
 workflows:
   version: 2
@@ -78,5 +87,8 @@ workflows:
           requires:
             - bundle_dependencies
       - build:
+          requires:
+            - bundle_dependencies
+      - build_with_ssr:
           requires:
             - bundle_dependencies

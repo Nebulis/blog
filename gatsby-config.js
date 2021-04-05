@@ -9,6 +9,7 @@ module.exports = {
     config: {
       context: process.env.CONTEXT || "local",
       comments: process.env.COMMENTS_FEATURE || "disabled",
+      ssrBuild: process.env.SSR_BUILD || "disabled",
     },
   },
   plugins: [
