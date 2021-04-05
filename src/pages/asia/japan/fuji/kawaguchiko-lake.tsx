@@ -72,7 +72,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             pass (1140 Yens aller).
           </p>
           <small>
-            <JapanLink action="hide" to="transports-in-japan">
+            <JapanLink action="hide" to="transport-japan">
               Plus d’information sur les transports.
             </JapanLink>
           </small>

@@ -102,7 +102,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             Tokyo est immense et ce n’est pas simple de conseiller un hôtel pour une si grande ville. Nous avons passé
             deux nuits à Tokyo à deux endroits différents. Tout dépend de ce que vous allez visiter où faire mais nous
             vous conseillons quand même de prendre un hôtel dans un coin reculé des grandes rues,{" "}
-            <JapanLink action="hide" to="transports-in-japan">
+            <JapanLink action="hide" to="transport-japan">
               les transports
             </JapanLink>{" "}
             sont très efficaces à Tokyo et rien ne vous empêchera de les prendre pour aller à diverses endroits.

@@ -15,6 +15,7 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
             config {
               context
               comments
+              ssrBuild
             }
           }
         }
@@ -39,6 +40,7 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
         initialDevelopmentValue,
         development,
         displayComments: site.siteMetadata.config.comments === "enabled",
+        ssrBuild: site.siteMetadata.config.ssrBuild === "enabled",
         toggle: () => setDevelopment(!development),
         covid: true,
       }}
@@ -51,6 +53,7 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
 export const ApplicationContext = React.createContext<{
   development: boolean
   displayComments: boolean
+  ssrBuild: boolean
   /**
    * Property to keep track of the initial value of development when the page started
    * This property is useful because development property can be changed over the time by calling the toggle function
@@ -62,6 +65,7 @@ export const ApplicationContext = React.createContext<{
 }>({
   development: false,
   displayComments: false,
+  ssrBuild: false,
   initialDevelopmentValue: false,
   covid: true,
 })
