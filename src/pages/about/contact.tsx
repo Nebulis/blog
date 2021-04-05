@@ -15,7 +15,7 @@ import contactFr from "../../locales/fr/about/contact.json"
 import contactEn from "../../locales/en/about/contact.json"
 import { facebook, instagram, twitter } from "../../utils"
 import { PageProps } from "gatsby"
-import { BlogLayoutWithDrawer } from "../../components/layout/main-layout"
+import { PrimaryBlogLayoutWithDrawer } from "../../components/layout/main-layout"
 
 const namespace = "about/contact"
 i18n.addResourceBundle("fr", namespace, contactFr)
@@ -38,7 +38,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title={t("common:link.contact")} location={location} socialNetworkDescription={description} />
-      <BlogLayoutWithDrawer page="who" noStickyHeader location={location}>
+      <PrimaryBlogLayoutWithDrawer page="who" noStickyHeader location={location}>
         <div
           className="tc mt4 mb3"
           css={css`
@@ -179,7 +179,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </div>
           </section>
         </div>
-      </BlogLayoutWithDrawer>
+      </PrimaryBlogLayoutWithDrawer>
     </>
   )
 }

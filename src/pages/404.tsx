@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../components/layout/seo"
 import { PageProps } from "gatsby"
-import { BlogLayoutWithDrawer } from "../components/layout/main-layout"
+import { PrimaryBlogLayoutWithDrawer } from "../components/layout/main-layout"
 import SeeNoEvil from "../images/monkey.svg"
 import { css } from "@emotion/react"
 import { primaryColor, primaryDarkColor, smallEnd } from "../components/core/variables"
@@ -13,7 +13,7 @@ const NotFoundPage: React.FunctionComponent<PageProps> = ({ location }) => {
   return (
     <>
       <SEO title="404: Not found" location={location} />
-      <BlogLayoutWithDrawer page="404" location={location}>
+      <PrimaryBlogLayoutWithDrawer page="404" location={location}>
         <div
           className="flex justify-center items-center flex-grow-1 flex-column h-100"
           css={css`
@@ -53,7 +53,7 @@ const NotFoundPage: React.FunctionComponent<PageProps> = ({ location }) => {
             {i18n.languageCode === "fr" ? "Retour a l'accueil" : "Return to home"}
           </ApplicationLink>
         </div>
-      </BlogLayoutWithDrawer>
+      </PrimaryBlogLayoutWithDrawer>
     </>
   )
 }

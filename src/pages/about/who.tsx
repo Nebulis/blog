@@ -13,7 +13,7 @@ import i18n from "i18next"
 import whoFr from "../../locales/fr/about/who.json"
 import whoEn from "../../locales/en/about/who.json"
 import { PageProps } from "gatsby"
-import { BlogLayoutWithDrawer } from "../../components/layout/main-layout"
+import { PrimaryBlogLayoutWithDrawer } from "../../components/layout/main-layout"
 
 // redirection page non publiee :)
 
@@ -33,7 +33,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         socialNetworkDescription={description}
         googleDescription={googleDescription}
       />
-      <BlogLayoutWithDrawer page="who" location={location}>
+      <PrimaryBlogLayoutWithDrawer page="who" location={location}>
         <div className="tc mb3 mt3">
           <img
             src={i18n.languageCode === "fr" ? whoImageFr : whoImageEn}
@@ -78,7 +78,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             {t("contact")} <FaChevronRight />
           </PrimaryDarkButtonLink>
         </SectionContent>
-      </BlogLayoutWithDrawer>
+      </PrimaryBlogLayoutWithDrawer>
     </>
   )
 }

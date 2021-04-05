@@ -9,7 +9,7 @@ import { ApplicationContext } from "../../components/application"
 import { PrimaryDivider } from "../../components/core/divider"
 import { PageQuote } from "../../components/core/quote"
 import { HomeSection, HomeSubSection, MainTitleSection, SectionContent } from "../../components/core/section"
-import { BlogLayoutWithDrawer } from "../../components/layout/main-layout"
+import { PrimaryBlogLayoutWithDrawer } from "../../components/layout/main-layout"
 import { useCustomTranslation } from "../../i18n-hook"
 import i18n from "i18next"
 import asiaIndexFr from "../../locales/fr/asia/index.json"
@@ -36,7 +36,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         socialNetworkDescription={t("quote.part1")}
         googleDescription={t("meta-description")}
       />
-      <BlogLayoutWithDrawer page="asia" location={location}>
+      <PrimaryBlogLayoutWithDrawer page="asia" location={location}>
         <MainTitleSection>{t("common:continent.asia")}</MainTitleSection>
         <PrimaryDivider />
         <SectionContent>
@@ -62,7 +62,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <ButtonLink to="articles?continent=asia">{t("common:allArticles")}</ButtonLink>
         </GoToAllArticlesContainer>
-      </BlogLayoutWithDrawer>
+      </PrimaryBlogLayoutWithDrawer>
     </>
   )
 }

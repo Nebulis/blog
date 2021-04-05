@@ -9,7 +9,7 @@ import { PrimaryDivider } from "../../../components/core/divider"
 import { PageQuote } from "../../../components/core/quote"
 import { PageProps } from "gatsby"
 import { CountriesContainer, CountryContainer } from "../../../components/layout/organisation-layout"
-import { BlogLayoutWithDrawer } from "../../../components/layout/main-layout"
+import { PrimaryBlogLayoutWithDrawer } from "../../../components/layout/main-layout"
 import { OrganisationCard } from "../../../types/shared"
 import { isLinkPublished, sortByField } from "../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../components/application"
@@ -68,7 +68,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         socialNetworkDescription={socialNetworkDescription}
         googleDescription={googleDescription}
       />
-      <BlogLayoutWithDrawer page="winter" location={location}>
+      <PrimaryBlogLayoutWithDrawer page="winter" location={location}>
         <MainTitleSection>{t("title")}</MainTitleSection>
         <PrimaryDivider />
         <SectionContent>
@@ -82,7 +82,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <CountryContainer title={t(label)} image={image} to={to} key={index} imageProps={imageProps} />
           ))}
         </CountriesContainer>
-      </BlogLayoutWithDrawer>
+      </PrimaryBlogLayoutWithDrawer>
     </>
   )
 }
