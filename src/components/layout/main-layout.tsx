@@ -5,7 +5,8 @@ import styled from "@emotion/styled"
 
 const drawer = withDraw(drawEarth)
 export const IndexBlogLayoutWithDrawer = drawer(IndexBlogLayout)
-export const BlogLayoutWithDrawer = styled(drawer(BlogLayout))`
+export const BlogLayoutWithDrawer = drawer(BlogLayout)
+export const PrimaryBlogLayoutWithDrawer = styled(drawer(BlogLayout))`
   .card .tags a {
     color: ${primaryColor};
   }
