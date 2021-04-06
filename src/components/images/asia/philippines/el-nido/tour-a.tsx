@@ -230,7 +230,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
         relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-seven-commando-beach.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

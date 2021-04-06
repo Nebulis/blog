@@ -121,7 +121,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <WhereToHave title={t("where-to-have.title")}>
           <p>{t("where-to-have.part1")}</p>
           <p>{t("where-to-have.part2")}</p>
-          <ImageAsPortrait>
+          <ImageAsPortrait
+            css={css`
+              max-width: 50%;
+              @media (min-width: ${mediumStart}) {
+                max-width: 40%;
+              }
+            `}
+            className="no-reset-image"
+          >
             <HimejiCastleImages image="gyuKaku" />
           </ImageAsPortrait>
           {foodLinkPublished && <p>{t("where-to-have.part3")}</p>}
