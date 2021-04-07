@@ -24,6 +24,7 @@ interface SEOProps {
   meta?: any
   title?: string
   image?: string
+  fullTitle?: string
   location: PageProps["location"]
 }
 const SEO: FunctionComponent<SEOProps> = ({
@@ -34,6 +35,7 @@ const SEO: FunctionComponent<SEOProps> = ({
   title,
   image,
   location,
+  fullTitle,
 }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -108,8 +110,7 @@ const SEO: FunctionComponent<SEOProps> = ({
           crossOrigin: "anonymous",
         },
       ]}
-      title={metaTitle}
-      titleTemplate={`${metaTitle} | ${t("head")}`}
+      title={fullTitle || `${metaTitle} | ${t("head")}`}
       meta={[
         {
           name: `description`,

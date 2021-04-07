@@ -36,11 +36,11 @@ exports[`english pages exports meta for public/en/asia/index.html correctly: soc
 
 exports[`english pages exports meta for public/en/asia/index.html correctly: title 1`] = `"Asia | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: meta-description 1`] = `"Visible from Tokyo, known throughout the world, Mount Fuji is one of the most famous peaks. For each spot, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
-exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: social-network 1`] = `"Visible from Tokyo, known throughout the world, Mount Fuji is one of the most famous peaks. Sacred mountain and a true inspiration for artists, it deserves its reputation. Trekking in summer, skiing in winter, or walking all year round in the surroundings, in the region of the five lakes, for example, you will be spoiled for choice."`;
 
-exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: title 1`] = `"Mount Fuji | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: title 1`] = `"Mount Fuji | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/japan/fuji/kawaguchiko-lake/index.html correctly: meta-description 1`] = `"Discover Mount Fuji through our article and our photos from Kawaguchi Lake. How to get there ? When to visit it? What to do around? Where to stay? We will explain everything to you."`;
 
@@ -96,11 +96,11 @@ exports[`english pages exports meta for public/en/asia/japan/kyoto/kinkakuji/ind
 
 exports[`english pages exports meta for public/en/asia/japan/kyoto/kinkakuji/index.html correctly: title 1`] = `"Kinkaku-ji Temple | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: meta-description 1`] = `"Nagoya, the fourth most populous city in Japan, is far too little known to travelers, yet it is home to many lovely places to visit. For each spot, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: social-network 1`] = `"Despite being the fourth most populous city in Japan, Nagoya is far too little known to travelers, yet it is home to many lovely places to visit. Numerous temples and parks without forgetting its splendid castle, not less beautiful than other castles in Japan. And if you want a more lively area day or night, explore the Sakae district."`;
 
-exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: title 1`] = `"Nagoya | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/nagoya/index.html correctly: title 1`] = `"Nagoya | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/nagoya-castle/index.html correctly: meta-description 1`] = `"Discover Nagoya Castle through our visit. In this article, we share our travelogue and photos and answer all your questions: How to get there? How long and at what period? We also tell you about the opening hours, the price and where it's located."`;
 
@@ -126,11 +126,11 @@ exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-gar
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: title 1`] = `"Hamarikyu Gardens : A Haven of Peace in the Middle of Tokyo | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: meta-description 1`] = `"Discover the bustling life of Tokyo, the most populous megacity in the world. For each spot, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: social-network 1`] = `"Discover the bustling life of Tokyo, the most populous megacity in the world. Tokyo is so big that there must be a neighborhood to your liking. From trendy, vibrant, and ultra-modern neighborhoods to the deafening silence of downtown parks, every trip to Tokyo offers a different experience."`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: title 1`] = `"Tokyo | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: title 1`] = `"Tokyo | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/sensoji/index.html correctly: meta-description 1`] = `"In this article, we answer all your questions: How to get there? When? How long and at what period? All this while sharing our travelogue and photos of this majestic sanctuary that is the Senso-ji temple."`;
 

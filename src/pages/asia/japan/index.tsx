@@ -138,7 +138,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <SubHomeSection>{t("weather")}</SubHomeSection>
         <WeatherForHomePage
           extraButton
-          entries={japanWeatherEntries()}
+          entries={japanWeatherEntries().filter((entry) => entry.id !== "nagoya")}
           onMouseLeave={() => setTooltipLabel("")}
           onMouseEnter={setTooltipLabel}
         />
