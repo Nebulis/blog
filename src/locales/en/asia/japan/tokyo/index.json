@@ -1,13 +1,19 @@
 {
   "introduction": {
-    "section1": "",
-    "section2": "",
-    "section3": ""
+    "section1": "Discover the bustling life of Tokyo, the most populous megacity in the world.",
+    "section2": "Tokyo is so big that there must be a neighborhood to your liking.",
+    "section3": "From trendy, vibrant, and ultra-modern neighborhoods to the deafening silence of downtown parks, every trip to Tokyo offers a different experience.",
+    "section4": "Find out our travelogue followed by our detailed visits."
   },
   "title": "Tokyo",
-  "meta-description": "",
-  "social-network-description": "",
-  "section1": "",
-  "section2": "",
-  "section3": ""
+  "full-title": "Tokyo | Travel Guide",
+  "meta-description": "Discover the bustling life of Tokyo, the most populous megacity in the world. For each spot, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?",
+  "social-network-description": "Discover the bustling life of Tokyo, the most populous megacity in the world. Tokyo is so big that there must be a neighborhood to your liking. From trendy, vibrant, and ultra-modern neighborhoods to the deafening silence of downtown parks, every trip to Tokyo offers a different experience.",
+  "section1": "Point of interest",
+  "monuments": "Monuments",
+  "city": "City",
+  "section2": "Our travelogue",
+  "section3": "Our detailed visits",
+  "section4": "Discover Japan",
+  "weather": "Best time to visit Nagoya ?"
 }

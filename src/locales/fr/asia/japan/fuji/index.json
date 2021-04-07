@@ -1,12 +1,18 @@
 {
   "introduction": {
     "section1": "Visible depuis Tokyo, connue à travers le monde entier, le Mont Fuji est un des sommets les plus célèbres. Montagne sacrée et véritable inspiration pour les artistes, sa renommée n’est pas volée.",
-    "section2": "Trekking en été, ski en hiver ou balade tout au long de l'année aux alentours, dans la région des cinq lacs par exemple, vous aurez l’embarras du choix."
+    "section2": "Trekking en été, ski en hiver ou balade tout au long de l'année aux alentours, dans la région des cinq lacs par exemple, vous aurez l’embarras du choix.",
+    "section3": "Découvrez dans l’ordre : Notre récit de voyage puis nos visites détaillées."
   },
   "title": "Mont Fuji",
-  "meta-description": "Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix.",
-  "social-network-description": "",
-  "section1": "Notre récit de voyage",
-  "section2": "Nos visites détaillées",
-  "section3": "Découvre le Japon"
+  "full-title": "Mont Fuji | Guide de Voyage",
+  "meta-description": "Visible depuis Tokyo, connue à travers le monde entier, le Mont Fuji est un des sommets les plus célèbres. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?",
+  "social-network-description": "Visible depuis Tokyo, connue à travers le monde entier, le Mont Fuji est un des sommets les plus célèbres. Montagne sacrée et véritable inspiration pour les artistes, sa renommée n’est pas volée. Trekking en été, ski en hiver ou balade tout au long de l'année aux alentours, dans la région des cinq lacs par exemple, vous aurez l’embarras du choix.",
+  "section1": "POINTS D'INTÉRÊTS",
+  "nature": "Nature",
+  "winter-activities": "Ski",
+  "section2": "Notre récit de voyage",
+  "section3": "Nos visites détaillées",
+  "section4": "Découvre le Japon",
+  "weather": "Quand partir au Mont Fuji ?"
 }

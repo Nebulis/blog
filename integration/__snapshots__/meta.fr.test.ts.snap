@@ -36,11 +36,11 @@ exports[`french pages exports meta for public/asia/index.html correctly: social-
 
 exports[`french pages exports meta for public/asia/index.html correctly: title 1`] = `"Asie | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: meta-description 1`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
+exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: meta-description 1`] = `"Visible depuis Tokyo, connue à travers le monde entier, le Mont Fuji est un des sommets les plus célèbres. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
-exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: social-network 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: social-network 1`] = `"Visible depuis Tokyo, connue à travers le monde entier, le Mont Fuji est un des sommets les plus célèbres. Montagne sacrée et véritable inspiration pour les artistes, sa renommée n’est pas volée. Trekking en été, ski en hiver ou balade tout au long de l'année aux alentours, dans la région des cinq lacs par exemple, vous aurez l’embarras du choix."`;
 
-exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: title 1`] = `"Mont Fuji | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: title 1`] = `"Mont Fuji | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/fuji/kawaguchiko-lake/index.html correctly: meta-description 1`] = `"Découvrez le Mont Fuji à travers notre article et nos photos depuis les paysages magnifiques du lac Kawaguchi. Comment y aller ? Comment et quand le visiter ? Que faire autour ? Où loger ? On vous explique tout."`;
 
@@ -96,11 +96,11 @@ exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.h
 
 exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: title 1`] = `"Kinkaku-ji : Le temple doré de Kyoto | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly: meta-description 1`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
+exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly: meta-description 1`] = `"Quatrième ville la plus peuplée du Japon, Nagoya est bien trop peu connue des voyageurs, pourtant elle abrite de nombreux endroits charmants à visiter. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly: social-network 1`] = `"Malgré le fait que ce soit la quatrième ville la plus peuplée du Japon, Nagoya est bien trop peu connue des voyageurs, pourtant elle abrite de nombreux endroits charmants à visiter. De multiples temples et parcs, sans oublier son splendide château, qui n’a rien à envier aux autres châteaux du Japon. Et si vous voulez un quartier plus animé de jour comme de nuit, partez à la découverte du quartier Sakae."`;
 
-exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly: title 1`] = `"Nagoya | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly: title 1`] = `"Nagoya | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/index.html correctly: meta-description 1`] = `"Découvrez le château de Nagoya à travers notre visite. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos."`;
 
@@ -126,11 +126,11 @@ exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/
 
 exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/index.html correctly: title 1`] = `"Jardin Hama-Rikyu : Un havre de paix en plein Tokyo | Blog Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly: meta-description 1`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de jours ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
+exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly: meta-description 1`] = `"Découvrez la vie effervescente de Tokyo, la mégapole la plus peuplée du monde. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly: social-network 1`] = `"Découvrez dans la vie effervescente de Tokyo, la mégapole la plus peuplée du monde. La ville de Tokyo est tellement grande qu’il y aura forcément un quartier à votre goût. Des quartiers branchés, animés et ultra modernes au silence assourdissant des parcs du centre ville, chaque voyage a Tokyo offre une expérience différente."`;
+exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly: social-network 1`] = `"Découvrez la vie effervescente de Tokyo, la mégapole la plus peuplée du monde. La ville de Tokyo est tellement grande qu’il y aura forcément un quartier à votre goût. Des quartiers branchés, animés et ultra modernes au silence assourdissant des parcs du centre ville, chaque voyage a Tokyo offre une expérience différente."`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly: title 1`] = `"Tokyo | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly: title 1`] = `"Tokyo | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: meta-description 1`] = `"Dans cet article, on répond à toutes vos questions : Comment y aller ? Quand ? Combien de temps et à quelle période ? Le tout en vous partageant notre récit de voyage et nos photos de ce sanctuaire majestueux qu’est le temple Senso-ji."`;
 

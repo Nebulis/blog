@@ -215,6 +215,7 @@ export const JapanDivider = styled(Divider)`
 
 export const japanWeatherEntries = (): WeatherEntry[] => [
   {
+    id: "sapporo",
     label: "Sapporo",
     data: [
       {
@@ -287,6 +288,7 @@ export const japanWeatherEntries = (): WeatherEntry[] => [
     ],
   },
   {
+    id: "tokyo",
     label: "Tokyo",
     data: [
       {
@@ -362,6 +364,155 @@ export const japanWeatherEntries = (): WeatherEntry[] => [
     ],
   },
   {
+    id: "fuji",
+    label: "Mt. Fuji",
+    data: [
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+        temp: 5,
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+        temp: 6,
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+        temp: 9,
+      },
+      {
+        type: "fair",
+        icon: "sunny",
+        alt: ["cold", "sakura"],
+        temp: 12,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        temp: 20,
+      },
+      {
+        type: "fair",
+        icon: "sun-rain",
+        temp: 22,
+      },
+      {
+        type: "fair",
+        icon: "sun-rain",
+        alt: "climb",
+        temp: 26,
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: "climb",
+        temp: 27,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        alt: "climb",
+        temp: 24,
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        temp: 18,
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        temp: 13,
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+        temp: 8,
+      },
+    ],
+  },
+  {
+    id: "nagoya",
+    label: "Nagoya",
+    data: [
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+        temp: 6,
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+        temp: 7,
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: "cold",
+        temp: 11,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        alt: "sakura",
+        temp: 16,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        temp: 22,
+      },
+      {
+        type: "fair",
+        icon: "sun-rain",
+        temp: 25,
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: "hot",
+        temp: 28,
+      },
+      {
+        type: "poor",
+        icon: "sunny",
+        alt: "hot",
+        temp: 31,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        temp: 27,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        temp: 21,
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: "autumn",
+        temp: 14,
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+        temp: 8,
+      },
+    ],
+  },
+  {
+    id: "osaka",
     label: "Osaka",
     data: [
       {
@@ -436,6 +587,7 @@ export const japanWeatherEntries = (): WeatherEntry[] => [
     ],
   },
   {
+    id: "fukuoka",
     label: "Fukuoka",
     data: [
       {

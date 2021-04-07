@@ -47,6 +47,7 @@ export type WeatherAltIconType =
   | "arctic"
   | "scuba"
   | "jelly-fish"
+  | "climb"
 interface WeatherData {
   type: WeatherType
   icon: WeatherIconType
