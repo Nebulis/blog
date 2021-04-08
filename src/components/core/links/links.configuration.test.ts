@@ -74,6 +74,10 @@ const asiaLinks = () => {
   expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: true })
   expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: true })
   expect(getLink("philippines")).toMatchObject({ label: { fr: "Philippines", en: "Philippines" }, published: true })
+  expect(getLink("malaysia")).toMatchObject({ label: { fr: "Malaisie", en: "Malaysia" }, published: false })
+}
+const oceaniaLinks = () => {
+  expect(getLink("australia")).toMatchObject({ label: { fr: "Australie", en: "Australia" }, published: false })
 }
 
 const japanLinks = () => {
@@ -328,6 +332,8 @@ const philippinesLinks = () => {
   })
 }
 
+const malaysiaLinks = () => {}
+
 describe("links", () => {
   it("should populate cache", () => {
     continentsLinks()
@@ -335,9 +341,11 @@ describe("links", () => {
     southAmericaLinks()
     europeLinks()
     asiaLinks()
+    oceaniaLinks()
     japanLinks()
     vietnamLinks()
     philippinesLinks()
+    malaysiaLinks()
 
     // cambodia assertions
     expect(getLink("s-21-prison")).toMatchObject({

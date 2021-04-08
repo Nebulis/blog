@@ -3,6 +3,7 @@ import { CachedLinksMap, ContinentLink, NavigationLink, OtherLink } from "./link
 import { asiaLinks } from "../asia/asia.links"
 import commonEn from "../../../locales/en/common.json"
 import commonFr from "../../../locales/fr/common.json"
+import { oceaniaLinks } from "../oceania/oceania.links"
 
 export const isPublished = (element: { published: boolean | Date }) => {
   if (typeof element.published === "boolean") {
@@ -15,6 +16,7 @@ const getUrl = (object: { url?: string; id: string }): string => object.url || o
 
 export const continentLinks: ContinentLink[] = [
   asiaLinks,
+  oceaniaLinks,
   {
     id: "africa",
     label: {
@@ -66,14 +68,6 @@ export const continentLinks: ContinentLink[] = [
     label: {
       fr: "Moyen-Orient",
       en: "Middle-East",
-    },
-    countries: [],
-  },
-  {
-    id: "oceania",
-    label: {
-      fr: "Océanie",
-      en: "Oceania",
     },
     countries: [],
   },

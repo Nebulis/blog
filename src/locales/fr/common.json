@@ -11,7 +11,8 @@
     "transports": "Transports"
   },
   "continent": {
-    "asia": "Asie"
+    "asia": "Asie",
+    "oceania": "Océanie"
   },
   "country": {
     "australia": {

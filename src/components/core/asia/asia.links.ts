@@ -4,10 +4,9 @@ import { vietnamLinks } from "./vietnam/vietnam.links"
 import commonFr from "../../../locales/fr/common.json"
 import commonEn from "../../../locales/en/common.json"
 import { philippinesLinks } from "./philippines/philippines.links"
+import { malaysiaLinks } from "./malaysia/malaysia.links"
+import { indonesiaLinks } from "./indonesia/indonesia.links"
 
-// TODO OMG WE ARE DEAD
-// ALL QUERIES OF ALL IMAGES ARE ADDED ON EVERY PAGES
-// NOOO
 export const asiaLinks: ContinentLink = {
   id: "asia",
   label: { fr: commonFr.continent.asia, en: commonEn.continent.asia },
@@ -15,6 +14,8 @@ export const asiaLinks: ContinentLink = {
     japanLinks,
     vietnamLinks,
     philippinesLinks,
+    malaysiaLinks,
+    indonesiaLinks,
     {
       id: "cambodia",
       cities: [],
@@ -69,30 +70,6 @@ export const asiaLinks: ContinentLink = {
       cities: [],
       others: [],
       label: { en: commonEn.country.laos.title, fr: commonFr.country.laos.title },
-    },
-    {
-      id: "indonesia",
-      cities: [
-        {
-          id: "bali",
-          label: {
-            en: "Bali",
-            fr: "Bali",
-          },
-          highlights: [
-            {
-              id: "ubud-monkey-park",
-              label: {
-                en: "",
-                fr: "",
-              },
-              published: false,
-            },
-          ],
-        },
-      ],
-      others: [],
-      label: { en: commonEn.country.indonesia.title, fr: commonFr.country.indonesia.title },
     },
   ],
 }
