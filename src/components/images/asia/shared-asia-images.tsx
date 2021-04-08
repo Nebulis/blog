@@ -7,6 +7,8 @@ const alt = {
   homeVietnam: "Vietnam",
   homePhilippines: "Philippines",
   homeJapan: "Japan",
+  homeMalaysia: "Malaysia",
+  homeIndonesia: "Indonesia",
 }
 
 export const SharedAsiaImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
@@ -32,6 +34,20 @@ export const SharedAsiaImages: React.FunctionComponent<ExtraImageProps & { image
         }
       }
       homeJapan: file(relativePath: { eq: "asia/japan/home.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, quality: 60) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      homeMalaysia: file(relativePath: { eq: "asia/malaysia/home-malaysia.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, quality: 60) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      homeIndonesia: file(relativePath: { eq: "asia/indonesia/home-indonesia.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400, quality: 60) {
             ...GatsbyImageSharpFluid
