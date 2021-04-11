@@ -222,6 +222,7 @@ continentLinks.forEach((continent) => {
         publishedDate: other.published instanceof Date ? other.published : undefined,
         card: other.card,
         tags: [continent.id, country.id, ...(other.additionalTags ?? [])],
+        pointOfInterest: [],
         country: country.id,
         kind: other.kind ?? "other",
       })
@@ -233,6 +234,7 @@ continentLinks.forEach((continent) => {
         url: path.join("/", getUrl(continent), getUrl(country), getUrl(city)),
         published: city.highlights.some(isPublished),
         tags: [continent.id, country.id],
+        pointOfInterest: city.pointOfInterest || [],
         country: country.id,
         kind: "city",
       })
@@ -245,6 +247,7 @@ continentLinks.forEach((continent) => {
           publishedDate: highlight.published instanceof Date ? highlight.published : undefined,
           card: highlight.card,
           tags: [continent.id, country.id, city.id],
+          pointOfInterest: [],
           country: country.id,
           kind: "highlight",
         })
@@ -259,6 +262,7 @@ continentLinks.forEach((continent) => {
         country.others.some((o) => cachedLinks.get(o.id)?.published) ||
         country.cities.some((c) => cachedLinks.get(c.id)?.published),
       tags: [continent.id],
+      pointOfInterest: country.pointOfInterest || [],
       country: country.id,
       kind: "country",
     })
@@ -269,6 +273,7 @@ continentLinks.forEach((continent) => {
     url: path.join("/", getUrl(continent)),
     published: continent.countries.some((country) => cachedLinks.get(country.id)?.published),
     tags: [],
+    pointOfInterest: [],
     kind: "continent",
   })
 })
@@ -282,6 +287,7 @@ menuLinks.forEach((menu) => {
         url: path.join("/", getUrl(menu), getUrl(submenu), getUrl(subsubmenu)),
         published: !!subsubmenu.published,
         tags: [],
+        pointOfInterest: [],
         kind: "menu",
       })
     })
@@ -293,6 +299,7 @@ menuLinks.forEach((menu) => {
       published:
         submenu.sections.some((subsubmenu) => cachedLinks.get(subsubmenu.id)?.published) || !!submenu.published,
       tags: [],
+      pointOfInterest: [],
       kind: "menu",
     })
   })
@@ -302,6 +309,7 @@ menuLinks.forEach((menu) => {
     url: path.join("/", getUrl(menu)),
     published: menu.sections.some((submenu) => cachedLinks.get(submenu.id)?.published) || !!menu.published,
     tags: [],
+    pointOfInterest: [],
     kind: "menu",
   })
 })
@@ -313,6 +321,7 @@ noIdeaLinks.forEach((link) => {
     url: path.join("/", getUrl(link)),
     published: true,
     tags: [],
+    pointOfInterest: [],
     kind: "noIdea",
   })
 })
@@ -324,6 +333,7 @@ fruitLinks.forEach((link) => {
     url: path.join("/", getUrl(link)),
     published: isPublished(link),
     tags: [],
+    pointOfInterest: [],
     kind: "fruit",
   })
 })

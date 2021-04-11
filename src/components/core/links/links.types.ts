@@ -1,5 +1,5 @@
-import { ComponentType } from "react"
-import { ExtraCardProps, ExtraImageLinkProps } from "../../../types/shared"
+import React, { ComponentType } from "react"
+import { ExtraCardProps, ExtraImageLinkProps, PointOfInterest } from "../../../types/shared"
 
 export type Label = {
   fr: string
@@ -20,6 +20,7 @@ export interface CountryLink {
   imageProps?: ExtraImageLinkProps
   cities: CityLink[]
   others: OtherLink[]
+  pointOfInterest?: PointOfInterest[]
 }
 export interface CityLink {
   id: string
@@ -27,6 +28,7 @@ export interface CityLink {
   url?: string
   imageProps?: ExtraImageLinkProps
   highlights: HighlightLink[]
+  pointOfInterest?: PointOfInterest[]
 }
 
 export interface OtherLink {
@@ -67,6 +69,7 @@ export interface CachedLinksMap {
   published: boolean
   publishedDate?: Date
   tags: string[]
+  pointOfInterest: PointOfInterest[]
   card?: React.ComponentType<ExtraCardProps>
   kind: Kind
 }

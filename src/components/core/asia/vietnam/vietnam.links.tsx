@@ -16,6 +16,7 @@ export const vietnamLinks: CountryLink = {
   id: "vietnam",
   label: { fr: commonFr.country.vietnam.title, en: commonEn.country.vietnam.title },
   // this style is for the image in the asia page (medallion) to have the fisherman centered
+  pointOfInterest: ["city", "nature", "monument"],
   imageProps: {
     image: "homeVietnam",
     css: css`
@@ -28,6 +29,7 @@ export const vietnamLinks: CountryLink = {
     {
       id: "southern-vietnam",
       label: { fr: commonFr.link.south, en: commonEn.link.south },
+      pointOfInterest: ["city", "nature", "monument"],
       // this style is for the image in the asia page (medallion)
       imageProps: {
         image: "homeSouthernVietnam",
@@ -100,6 +102,7 @@ export const vietnamLinks: CountryLink = {
     {
       id: "central-vietnam",
       label: { fr: commonFr.link.central, en: commonEn.link.central },
+      pointOfInterest: ["city", "nature", "monument", "lazy", "water-activities"],
       // this style is for the image in the asia page (medallion)
       // IMPORTANT
       // dont use more than -65px otherwise the picture goes out of the medallion in small device
@@ -125,6 +128,7 @@ export const vietnamLinks: CountryLink = {
     {
       id: "northern-vietnam",
       label: { fr: commonFr.link.north, en: commonEn.link.north },
+      pointOfInterest: ["city", "nature", "monument"],
       imageProps: { image: "homeNorthernImage" },
       highlights: [
         {

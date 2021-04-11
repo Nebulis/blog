@@ -48,7 +48,9 @@ export type WeatherAltIconType =
   | "scuba"
   | "jelly-fish"
   | "climb"
-interface WeatherData {
+  | "swim"
+  | "shower"
+export interface WeatherData {
   type: WeatherType
   icon: WeatherIconType
   temp: number
@@ -72,3 +74,12 @@ export interface WeatherEntry {
     WeatherData
   ]
 }
+
+export type PointOfInterest =
+  | "monument"
+  | "nature"
+  | "city"
+  | "animals"
+  | "lazy"
+  | "water-activities"
+  | "winter-activities"

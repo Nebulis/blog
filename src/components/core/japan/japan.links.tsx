@@ -20,6 +20,7 @@ import { css } from "@emotion/react"
 export const japanLinks: CountryLink = {
   id: "japan",
   label: { fr: commonFr.country.japan.title, en: commonEn.country.japan.title },
+  pointOfInterest: ["nature", "monument", "city", "winter-activities"],
   // this style is for the image in the asia page (medallion) to have the geisha centered
   imageProps: {
     image: "homeJapan",
@@ -134,6 +135,7 @@ export const japanLinks: CountryLink = {
     {
       id: "kyoto",
       label: { fr: "Kyoto", en: "Kyoto" },
+      pointOfInterest: ["monument", "city"],
       imageProps: { image: "mainArashiyama" },
       highlights: [
         {
@@ -167,6 +169,7 @@ export const japanLinks: CountryLink = {
     },
     {
       id: "himeji",
+      pointOfInterest: ["monument", "city"],
       label: { fr: "Himeji", en: "Himeji" },
       imageProps: {
         image: "mainHimeji",
@@ -183,6 +186,7 @@ export const japanLinks: CountryLink = {
     {
       id: "nagoya",
       label: { fr: "Nagoya", en: "Nagoya" },
+      pointOfInterest: ["monument", "city"],
       imageProps: {
         image: "mainNagoya",
       },
@@ -204,6 +208,7 @@ export const japanLinks: CountryLink = {
     {
       id: "fuji",
       label: { fr: "Mt. Fuji", en: "Mt. Fuji" },
+      pointOfInterest: ["nature", "winter-activities"],
       imageProps: {
         image: "mainFuji",
       },
@@ -222,6 +227,7 @@ export const japanLinks: CountryLink = {
     {
       id: "tokyo",
       label: { fr: "Tokyo", en: "Tokyo" },
+      pointOfInterest: ["monument", "city"],
       imageProps: {
         image: "mainTokyo",
       },

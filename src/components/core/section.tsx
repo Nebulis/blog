@@ -223,27 +223,27 @@ export const SubHomeSection = styled(HomeSection)`
   font-size: 1.38316rem; // h3
 `
 
-const mapSubHomeSectionStyle = css`
+const subHomeSectionTwoLines = css`
   @media (min-width: ${mediumStart}) {
-    &.map-sub-home-section-break {
+    &.sub-home-section-two-lines-break {
       display: none;
     }
   }
   @media (max-width: ${smallEnd}) {
-    &.map-sub-home-section-space {
+    &.sub-home-section-two-lines-space {
       display: none;
     }
   }
 `
-export const MapSubHomeSection: FunctionComponent<{ title: string; country: string }> = ({ title, country }) => {
+export const SubHomeSectionTwoLines: FunctionComponent<{ title: string; country: string }> = ({ title, country }) => {
   return (
     <>
-      <SubHomeSection className="map-sub-home-section-break" css={mapSubHomeSectionStyle}>
+      <SubHomeSection className="sub-home-section-two-lines-break" css={subHomeSectionTwoLines}>
         {title}
         <br />
         {country}
       </SubHomeSection>
-      <SubHomeSection className="map-sub-home-section-space" css={mapSubHomeSectionStyle}>
+      <SubHomeSection className="sub-home-section-two-lines-space" css={subHomeSectionTwoLines}>
         {title} {country}
       </SubHomeSection>
     </>
@@ -258,37 +258,6 @@ export const CityHomeSection: FunctionComponent = ({ children }) => (
   <h2 className="tc ttu mb3" css={homeSectionStyle}>
     {children}
   </h2>
-)
-
-const pointOfInterestSectionStyle = css`
-  margin-bottom: 0.45rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  .title-element {
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  svg {
-    width: 50px;
-    height: 50px;
-  }
-  .title {
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-`
-export const PointOfInterestSection: FunctionComponent<{ className?: string }> = ({ children, className = "" }) => (
-  <section className={`${className} point-of-interest-section`} css={pointOfInterestSectionStyle}>
-    {children}
-  </section>
 )
 
 export const MainTitleSection: FunctionComponent = ({ children }) => {

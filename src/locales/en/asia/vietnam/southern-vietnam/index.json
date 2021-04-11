@@ -6,12 +6,11 @@
   },
   "meta-description": "Travel with us in Southern Vietnam through our travelogue. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?",
   "title": "Southern Vietnam",
+  "full-title": "Southern Vietnam | Travel Guide",
   "section1": "Point of interest",
-  "monuments": "Monuments",
-  "city": "City",
-  "nature": "Nature",
   "section2": "Our travelogue",
   "section3": "Our detailed visits",
   "section4": "Discover Vietnam",
-  "weather": "Best time to visit ?"
+  "weather": "Best time to visit",
+  "weather-region": "Southern Vietnam ?"
 }

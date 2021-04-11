@@ -6,12 +6,11 @@
   },
   "meta-description": "Voyagez avec nous dans le Sud du Vietnam à travers notre carnet de voyage. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?",
   "title": "Vietnam du Sud",
+  "full-title": "Vietnam du Sud | Guide de Voyage",
   "section1": "POINTS D'INTÉRÊTS",
-  "monuments": "Monuments",
-  "city": "Ville",
-  "nature": "Nature",
   "section2": "Notre récit de voyage",
   "section3": "Nos visites détaillées",
   "section4": "Découvre le Vietnam",
-  "weather": "Quand partir ?"
+  "weather": "Quand partir au",
+  "weather-region": "Vietnam du Sud ?"
 }

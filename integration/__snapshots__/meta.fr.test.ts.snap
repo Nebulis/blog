@@ -168,6 +168,24 @@ exports[`french pages exports meta for public/asia/japan/transports/index.html c
 
 exports[`french pages exports meta for public/asia/japan/transports/index.html correctly: title 1`] = `"main | Blog Voyage"`;
 
+exports[`french pages exports meta for public/asia/malaysia/east-malaysia/index.html correctly: meta-description 1`] = `"Découvrez la Malaisie Orientale, un paysage junglissime où résident encore quelques animaux sauvages. Pour chaque lieu nous essayons de vous retranscrire au mieux notre visite en vous indiquant comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/malaysia/east-malaysia/index.html correctly: social-network 1`] = `"Cette partie de la Malaisie vous emmènera dans un paysage sauvage et dans la jungle encore présente malgré la déforestation abusive. Les forêts, montagnes et rivières de Bornéo vous feront découvrir une île où résident encore quelques animaux sauvages ou en réhabilitation tels que les éléphants, les orangs-outans ou les nasiques."`;
+
+exports[`french pages exports meta for public/asia/malaysia/east-malaysia/index.html correctly: title 1`] = `"Malaisie Orientale | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/asia/malaysia/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos la Malaisie entre modernité et forêt tropicale. Suivez notre guide de région en région pour découvrir notre sélection des lieux incontournables. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/malaysia/index.html correctly: social-network 1`] = `"La Malaisie est composée en deux parties. La Malaisie Occidentale (Péninsulaire ou Malaya) qui regroupe la plupart des grandes villes modernes et la Malaisie Orientale qui comprend le Nord de l’île de Bornéo et qui vous emmènera dans la jungle encore présente et peuplée d’animaux. Suivez notre guide de région en région pour découvrir notre sélection des lieux incontournables."`;
+
+exports[`french pages exports meta for public/asia/malaysia/index.html correctly: title 1`] = `"Malaisie | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/asia/malaysia/west-malaysia/index.html correctly: meta-description 1`] = `"Découvrez la Malaisie Occidentale, de la ville jusqu’aux plantations de thé, on vous fait visiter ses différentes attractions à travers nos articles. Pour chaque lieu nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/malaysia/west-malaysia/index.html correctly: social-network 1`] = `"Outre ses grandes villes et son modernisme, la Malaisie Occidentale nous amène également dans de nombreux parcs à la recherche de la célèbre rafflesia et nous laisse admirer de somptueuses plantations de thé tel que Cameron Highlands."`;
+
+exports[`french pages exports meta for public/asia/malaysia/west-malaysia/index.html correctly: title 1`] = `"Malaisie Occidentale | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly: meta-description 1`] = `"Décor de carte postale, plage de sable blanc et eau turquoise, on vous raconte notre aventure sur l'île de Palawan. On vous donne des conseils en se fixant sur notre propre expérience. Quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? et où loger ?"`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly: social-network 1`] = `"Décor de carte postale, plage de sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre « Dream List » de voyage pour cette nouvelle année."`;
@@ -204,11 +222,23 @@ exports[`french pages exports meta for public/asia/philippines/index.html correc
 
 exports[`french pages exports meta for public/asia/philippines/index.html correctly: title 1`] = `"Philippines | Blog Voyage"`;
 
+exports[`french pages exports meta for public/asia/vietnam/central-vietnam/index.html correctly: meta-description 1`] = `"Voyagez avec nous dans le Centre du Vietnam à travers notre carnet de voyage. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/vietnam/central-vietnam/index.html correctly: social-network 1`] = `"Voyagez avec nous dans le Centre du Vietnam à travers notre carnet de voyage. Caractérisé par des villes culturelles telles que Hué pour visiter des monuments, des plages sublimes à Da Nang pour vous reposer, de magnifiques parcs nationaux comme celui de Bach Ma ou de Phong Nha pour découvrir d’extraordinaires paysages ou bien la petite Venise du Vietnam, Hoi An et ses milles lumières."`;
+
+exports[`french pages exports meta for public/asia/vietnam/central-vietnam/index.html correctly: title 1`] = `"Centre du Vietnam | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/asia/vietnam/index.html correctly: meta-description 1`] = `"Découvrez la ville de Himeji et les différents endroits à visiter à travers nos articles. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/vietnam/index.html correctly: social-network 1`] = `"Le Vietnam est une destination unique. Des paysages magnifiques et variés, des parcs naturels, un héritage culturel et un patrimoine historique riche ... D'Hô Chi Minh-Ville à Hanoï, en passant par Da Nang, chaque destination offre sa propre histoire et une expérience différente. On vous fait découvrir à travers nos articles et nos photos nos voyages au Vietnam."`;
 
 exports[`french pages exports meta for public/asia/vietnam/index.html correctly: title 1`] = `"Vietnam | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/vietnam/northern-vietnam/index.html correctly: meta-description 1`] = `"Voyagez avec nous dans le Nord du Vietnam à travers notre carnet de voyage. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/vietnam/northern-vietnam/index.html correctly: social-network 1`] = `"Voyagez avec nous dans le Nord du Vietnam à travers notre carnet de voyage. Découvrez Hanoi la capitale, envolez-vous vers des paysages magnifiques comme la Baie d’Halong, Tam Coc, Ninh Binh ou bien plus au Nord avec ses somptueuses rizières en terrasses. N’oubliez pas également de vous arrêter manger des spécialités, le Vietnam ravira vos papilles."`;
+
+exports[`french pages exports meta for public/asia/vietnam/northern-vietnam/index.html correctly: title 1`] = `"Vietnam du Nord | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/vietnam/prepare/index.html correctly: meta-description 1`] = `"Vous trouverez dans cet article nos informations et conseils qui vous permettront de préparer votre voyage au Vietnam. Pourquoi partir au Vietnam ? Quand partir ? Combien de jours ou semaines ? Combien d’argent prévoir ? Quelles sont les formalités ? On vous parle également des logements, des incontournables à faire et des dangers tout en vous donnant notre avis."`;
 
@@ -238,7 +268,7 @@ exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/inde
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly: social-network 1`] = `"Voyagez avec nous dans le Sud du Vietnam à travers notre carnet de voyage. Découvrez les grandes villes comme Hô Chi Minh-Ville, son musée et ses tunnels, envolez-vous vers des paysages magnifiques autour du delta du Mékong sur des îles comme Ben Tre ou visitez avec nous le marché flottant de Cân Thơ."`;
 
-exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly: title 1`] = `"Vietnam du Sud | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/index.html correctly: title 1`] = `"Vietnam du Sud | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/my-tho/index.html correctly: meta-description 1`] = `"Une petite balade en bateau au Vietnam ? Dans cet article, on vous donne notre avis sur notre visite entre Mỹ Tho et Ben Tre, un exemple de quoi faire sur le delta du Mékong. On vous donne également des conseils sur comment y aller ? Combien de jours ? Quand partir ? Et où se loger ?"`;
 
@@ -269,6 +299,12 @@ exports[`french pages exports meta for public/index.html correctly: meta-descrip
 exports[`french pages exports meta for public/index.html correctly: social-network 1`] = `"Passionnés de voyages, nous partageons sur notre blog nos aventures autour du monde. Entre astuces, conseils, récits de voyages, anecdotes ou coups de cœur, on espère que vous trouverez votre bonheur ! Un blog voyage et lifestyle d’un couple de voyageur qui a des rêves plein la tête !"`;
 
 exports[`french pages exports meta for public/index.html correctly: title 1`] = `"Magic of travels | Blog Voyage"`;
+
+exports[`french pages exports meta for public/oceania/index.html correctly: meta-description 1`] = `" L’Océanie nous offre tant de choses à découvrir … paysages, animaux, villes. Retrouvez dans notre blog les plus belles perles de ce continent pour vos vacances de rêves. Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/oceania/index.html correctly: social-network 1`] = `"L’Océanie c’est le continent situé à l’autre bout du monde. Amoureux de la nature, amoureux des animaux, adeptes des grandes randonnées et treks, adepte des road trips vous serez servi avec l’Australie et la Nouvelle Zélande ... Ou bien tout simplement farniente sur les îles Fidji, vous ne pourrez être que séduit par ce continent."`;
+
+exports[`french pages exports meta for public/oceania/index.html correctly: title 1`] = `"Océanie | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/autumn/index.html correctly: meta-description 1`] = `"Envie de prolonger votre été ? Tant d’endroits pour passer vos vacances en octobre, novembre ou décembre."`;
 

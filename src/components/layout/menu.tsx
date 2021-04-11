@@ -47,7 +47,7 @@ const renderCity = (
       </ApplicationLink>
       {inDevelopment && highlights.length > 0 ? (
         <ul className="dropdown-highlight" aria-label="submenu">
-          {highlights.sort(sortByLabel(lang)).map((highlight) => (
+          {[...highlights].sort(sortByLabel(lang)).map((highlight) => (
             <li key={`${continent.id}_${country.id}_${city.id}_${highlight.id}`}>
               <ApplicationLink to={highlight.id}>{getLinkLabel(lang)(highlight.id)}</ApplicationLink>
             </li>
@@ -68,7 +68,7 @@ const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelop
       </ApplicationLink>
       {inDevelopment && cities.length > 0 ? (
         <ul className="submenu" aria-label="submenu">
-          {cities.sort(sortByLabel(lang)).map((city) => renderCity(continent, country, city, inDevelopment, lang))}
+          {[...cities].sort(sortByLabel(lang)).map((city) => renderCity(continent, country, city, inDevelopment, lang))}
         </ul>
       ) : null}
     </li>
@@ -260,11 +260,11 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
             <span className="white-arrow"> </span>
             <span className="black-arrow"> </span>
             <ul className="submenu" aria-label="submenu">
-              {(inDevelopment ? continentLinks : continentLinks.filter(isLinkPublished))
+              {(inDevelopment ? [...continentLinks] : continentLinks.filter(isLinkPublished))
                 .sort(sortByLabel(i18n.languageCode))
                 .map((continent) => {
                   const publishedCountries = inDevelopment
-                    ? continent.countries
+                    ? [...continent.countries]
                     : continent.countries.filter(isLinkPublished)
                   return (
                     <li key={continent.id}>

@@ -25,7 +25,7 @@ i18n.addResourceBundle("en", namespace, asiaIndexEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
-  const countries = development ? asiaLinks.countries : asiaLinks.countries.filter(isLinkPublished)
+  const countries = development ? [...asiaLinks.countries] : asiaLinks.countries.filter(isLinkPublished)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   return (
     <>

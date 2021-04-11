@@ -1,15 +1,14 @@
 import React, { useContext, useState } from "react"
 import SEO from "../../../components/layout/seo"
 import { ApplicationContext } from "../../../components/application"
-import { getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
+import { getCities, getLinkLabel, sortByLabel } from "../../../components/core/links/links.utils"
 import {
   HomeSection,
   HomeSubSection,
   MainTitleSection,
-  MapSubHomeSection,
-  PointOfInterestSection,
   SectionContent,
   SubHomeSection,
+  SubHomeSectionTwoLines,
   SubSubHomeSection,
 } from "../../../components/core/section"
 import { ApplicationLink } from "../../../components/core/links/link"
@@ -38,22 +37,21 @@ import asiaIndexFr from "../../../locales/fr/asia/philippines/index.json"
 import asiaIndexEn from "../../../locales/en/asia/philippines/index.json"
 import { PageQuote } from "../../../components/core/quote"
 import { Divider } from "../../../components/core/divider"
-import { Farniente, Scuba } from "../../../components/icon/monument"
-import { Hiking } from "../../../components/icon/hiking"
-import { Photo } from "../../../components/icon/photo"
 import { WeatherForHomePage } from "../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
 import PhilippinesMap from "../../../images/asia/philippines/philippines-map.png"
+import { PointOfInterestSection } from "../../../components/core/point-of-interest"
 
 const namespace = "asia/philippines/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)
 i18n.addResourceBundle("en", namespace, asiaIndexEn)
+const currentPageId = "philippines"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const [tooltipLabel, setTooltipLabel] = useState("")
-  const cities = development ? philippinesLinks.cities : philippinesLinks.cities.filter(isLinkPublished)
+  const cities = getCities({ links: philippinesLinks, development, lang: i18n.languageCode })
   const articles: React.ComponentType<ExtraCardProps>[] = []
   const country = t("common:country.philippines.title")
   const description = `${t("introduction.section1")} ${t("introduction.section2")} ${t("introduction.section3")}`
@@ -65,7 +63,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         socialNetworkDescription={description}
         googleDescription={t("meta-description")}
       />
-      <PhilippinesBlogLayout page="philippines" location={location}>
+      <PhilippinesBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>
           <TitleImage src={philippinesFish} alt="philippines scuba diving" />
           &nbsp;{country}&nbsp;
@@ -79,24 +77,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </SectionContent>
         <Divider />
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
-        <PointOfInterestSection>
-          <div className="title-element">
-            <Farniente />
-            <div className="title mt2">{t("lazy")}</div>
-          </div>
-          <div className="title-element">
-            <Hiking />
-            <div className="title mt2">{t("nature")}</div>
-          </div>
-          <div className="title-element">
-            <Photo />
-            <div className="title mt2">{t("animals")}</div>
-          </div>
-          <div className="title-element">
-            <Scuba />
-            <div className="title mt2">{t("water-activities")}</div>
-          </div>
-        </PointOfInterestSection>
+        <PointOfInterestSection page={currentPageId} />
         {cities.length > 0 && (
           <>
             <Divider />
@@ -129,7 +110,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         <Divider />
         <GoToAllArticlesContainer>
-          <PhilippinesButtonLink to="articles?country=philippines">Tous nos articles</PhilippinesButtonLink>
+          <PhilippinesButtonLink to="articles?country=philippines">{t("common:allArticles")}</PhilippinesButtonLink>
         </GoToAllArticlesContainer>
         <Divider />
         <SubHomeSection>{t("weather")}</SubHomeSection>
@@ -139,7 +120,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           onMouseEnter={setTooltipLabel}
         />
         <Divider />
-        <MapSubHomeSection title={t("map")} country={t("country")} />
+        <SubHomeSectionTwoLines title={t("map")} country={t("country")} />
         <MapContainer>
           <img src={PhilippinesMap} alt="Philippines Map" />
         </MapContainer>

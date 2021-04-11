@@ -3,11 +3,10 @@ import SEO from "../../../../components/layout/seo"
 import {
   CityHomeSection,
   MainTitleSection,
-  PointOfInterestSection,
   SectionContent,
   SubSubHomeSection,
 } from "../../../../components/core/section"
-import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../../components/core/links/links.utils"
+import { getArticles, getCities, getLinkLabel, sortByLabel } from "../../../../components/core/links/links.utils"
 import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import {
@@ -20,7 +19,6 @@ import { useCustomTranslation } from "../../../../i18n-hook"
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/philippines/el-nido/index.json"
 import translationEn from "../../../../locales/en/asia/philippines/el-nido/index.json"
-import { CityLink } from "../../../../components/core/links/links.types"
 import {
   PhilippinesBlogLayout,
   PhilippinesButtonLink,
@@ -35,9 +33,8 @@ import { jsx } from "@emotion/react"
 import { SharedPhilippinesImages } from "../../../../components/images/asia/philippines/shared-philippines-images"
 import { PageQuote } from "../../../../components/core/quote"
 import { Divider } from "../../../../components/core/divider"
-import { Farniente, Scuba } from "../../../../components/icon/monument"
-import { Hiking } from "../../../../components/icon/hiking"
-import { Photo } from "../../../../components/icon/photo"
+import { PointOfInterestSection } from "../../../../components/core/point-of-interest"
+import HomeElNido from "../../../../images/asia/philippines/el-nido/home-el-nido.jpg"
 
 const namespace = "asia/philippines/el-nido/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -45,14 +42,10 @@ i18n.addResourceBundle("en", namespace, translationEn)
 
 const currentPageId = "el-nido"
 
-const isNotCurrentPage = (city: CityLink) => city.id !== currentPageId
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const cities = development
-    ? philippinesLinks.cities.filter(isNotCurrentPage)
-    : philippinesLinks.cities.filter(isLinkPublished).filter(isNotCurrentPage)
-
+  const cities = getCities({ links: philippinesLinks, development, lang: i18n.languageCode, currentPageId })
   const highlights = getArticles({
     kind: "highlight",
     development,
@@ -68,6 +61,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         location={location}
         socialNetworkDescription={description}
         googleDescription={googleDescription}
+        image={HomeElNido}
       />
       <PhilippinesBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>
@@ -83,24 +77,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </SectionContent>
         <Divider />
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
-        <PointOfInterestSection>
-          <div className="title-element">
-            <Farniente />
-            <div className="title mt2">{t("lazy")}</div>
-          </div>
-          <div className="title-element">
-            <Hiking />
-            <div className="title mt2">{t("nature")}</div>
-          </div>
-          <div className="title-element">
-            <Photo />
-            <div className="title mt2">{t("animals")}</div>
-          </div>
-          <div className="title-element">
-            <Scuba />
-            <div className="title mt2">{t("water-activities")}</div>
-          </div>
-        </PointOfInterestSection>
+        <PointOfInterestSection page={currentPageId} />
         <Divider />
         <CityHomeSection>{t("section2")}</CityHomeSection>
         <MainCardContainer>

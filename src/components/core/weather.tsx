@@ -5,7 +5,7 @@ import { Button } from "./button"
 import { css } from "@emotion/react"
 import { Table } from "../layout/layout"
 import styled from "@emotion/styled"
-import { WeatherAltIconType, WeatherEntry, WeatherIconType, WeatherType } from "../../types/shared"
+import { WeatherAltIconType, WeatherData, WeatherEntry, WeatherIconType, WeatherType } from "../../types/shared"
 import { japanCherryBlossom } from "./japan/japan.variables"
 import { Lang } from "./links/links.types"
 // https://www.flaticon.com/free-icon/drop_2204430?related_id=2204430&origin=pack
@@ -256,57 +256,49 @@ export const Droplet: React.FunctionComponent<HTMLAttributes<any>> = ({ classNam
       <path d="m372.01 395.789c-.187-.188-.374-.375-.56-.56l-.025-.025c-2.427-2.385-6.349-2.375-8.762.025-14.927 14.845-35.607 41.07-35.607 62.026v.002h.024c0 22.581 17.991 39.743 39.975 39.743 6.147 0 11.969-1.38 17.171-3.843 13.488-6.387 22.805-20.063 22.805-35.901h.025c0-21.134-19.946-46.322-35.046-61.467z" />
       <path d="m127.747 74.905c-.328-.329-.655-.657-.98-.98l-.043-.043c-4.247-4.173-11.111-4.156-15.333.043-26.122 25.979-62.313 71.874-62.313 108.547v.003h.043c0 39.518 31.483 69.551 69.955 69.551 10.758.001 20.946-2.414 30.049-6.725z" />
     </g>
-    <path
-      d="m127.747 74.905c-31.742 52.998-22.893 127.309 21.378 170.396 23.604-11.177 39.909-35.11 39.909-62.828h.043c.001-36.984-34.905-81.063-61.33-107.568z"
-      fill="#b9f0ff"
-    />
-    <path
-      d="m404.115 2.958c-.234-.235-.468-.469-.7-.7l-.031-.031c-3.033-2.981-7.936-2.968-10.952.031-18.659 18.557-44.509 51.338-44.509 77.533v.002h.031c0 28.227 22.488 49.679 49.968 49.679 7.684.001 14.961-1.724 21.464-4.803z"
-      fill="#7ce3ff"
-    />
-    <path d="" fill="#b9f0ff" />
-    <path
-      d="m404.115 2.958c-.178.255-.356.517-.534.774-.005.007-.009.013-.014.02-.921 1.335-1.64 2.803-2.111 4.355-11.987 39.452-5.484 82.353 17.93 116.562 16.86-7.983 28.507-25.079 28.507-44.877h.031c-.001-26.417-24.934-57.902-43.809-76.834z"
-      fill="#b9f0ff"
-    />
-    <path
-      d="m74.5 173.537c-4.142 0-7.5 3.358-7.5 7.5v10c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-10c0-4.142-3.358-7.5-7.5-7.5z"
-      fill="#313d40"
-    />
-    <path
-      d="m162.5 173.537c-4.142 0-7.5 3.358-7.5 7.5v10c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-10c0-4.142-3.358-7.5-7.5-7.5z"
-      fill="#313d40"
-    />
-    <path
-      d="m138.235 184.271c-3.737-1.789-8.215-.206-10.001 3.531-1.666 3.484-5.291 5.735-9.234 5.735s-7.568-2.251-9.234-5.735c-1.787-3.737-6.266-5.317-10.001-3.531-3.737 1.787-5.318 6.265-3.531 10.001 4.144 8.666 13.08 14.265 22.766 14.265s18.623-5.599 22.766-14.265c1.787-3.737.206-8.215-3.531-10.001z"
-      fill="#313d40"
-    />
-    <path
-      d="m227.975 40.025c-.094-.094-.187-.188-.28-.28l-.012-.012c-1.213-1.192-3.175-1.188-4.381.012-7.464 7.423-17.804 20.535-17.804 31.013v.001h.012c0 11.291 8.995 19.872 19.987 19.872 3.074 0 5.984-.69 8.585-1.921 6.744-3.193 11.403-10.031 11.403-17.951h.012c.001-10.567-9.972-23.161-17.522-30.734z"
-      fill="#7ce3ff"
-    />
-    <path
-      d="m22.477 277.775c-.094-.094-.187-.188-.28-.28l-.012-.012c-1.213-1.192-3.175-1.188-4.381.012-7.464 7.423-17.804 20.535-17.804 31.013v.001h.012c0 11.291 8.995 19.872 19.987 19.872 3.074 0 5.984-.69 8.585-1.921 6.744-3.193 11.403-10.031 11.403-17.951h.013c0-10.567-9.973-23.161-17.523-30.734z"
-      fill="#7ce3ff"
-    />
-    <path
-      d="m234.5 282.042c-4.142 0-7.5 3.358-7.5 7.5v10c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-10c0-4.142-3.358-7.5-7.5-7.5z"
-      fill="#313d40"
-    />
-    <path
-      d="m362.5 282.042c-4.142 0-7.5 3.358-7.5 7.5v10c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-10c0-4.142-3.358-7.5-7.5-7.5z"
-      fill="#313d40"
-    />
-    <path
-      d="m318.235 295.776c-3.737-1.789-8.215-.206-10.001 3.531-1.666 3.484-5.291 5.735-9.234 5.735s-7.568-2.251-9.234-5.735c-1.787-3.737-6.266-5.317-10.001-3.531-3.737 1.787-5.318 6.265-3.531 10.001 4.144 8.666 13.08 14.265 22.766 14.265s18.623-5.599 22.766-14.265c1.787-3.736.206-8.214-3.531-10.001z"
-      fill="#313d40"
-    />
-    <path
-      d="m479.477 165.358c-.094-.094-.187-.188-.28-.28l-.012-.012c-1.213-1.192-3.175-1.188-4.381.012-7.464 7.422-17.804 20.535-17.804 31.013v.001h.012c0 11.291 8.995 19.872 19.987 19.872 3.074 0 5.984-.69 8.585-1.921 6.744-3.193 11.403-10.031 11.403-17.951h.013c0-10.568-9.973-23.162-17.523-30.734z"
-      fill="#7ce3ff"
-    />
   </svg>
 )
+
+export const Shower: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
+  <svg
+    className={className}
+    css={css`
+      transform: scale(0.8);
+    `}
+    viewBox="0 0 497 497"
+  >
+    <path
+      d="m272.27 11.355c-.899-.901-1.797-1.801-2.688-2.688l-.118-.119c-11.644-11.441-30.465-11.394-42.042.12-71.625 71.232-170.854 197.07-170.854 297.623v.008h.118c0 108.353 86.324 190.701 191.81 190.701 29.498.002 57.431-6.62 82.391-18.438z"
+      fill="#7ce3ff"
+    />
+    <path
+      d="m440.314 306.295h.118c0-101.406-95.708-222.266-168.162-294.939-46.163 66.306-95.702 156.099-95.702 237.248h.154c0 106.371 63.877 193.489 154.166 229.958 64.717-30.645 109.426-96.269 109.426-172.267z"
+      fill="#b9f0ff"
+    />
+    <ellipse
+      cx="169.331"
+      cy="384.305"
+      fill="#ff8e9e"
+      rx="29.212"
+      ry="23.263"
+      transform="matrix(1 .003 -.003 1 1.205 -.529)"
+    />
+    <ellipse
+      cx="327.669"
+      cy="384.802"
+      fill="#ff8e9e"
+      rx="29.212"
+      ry="23.263"
+      transform="matrix(-1 -.003 .003 -1 654.132 770.627)"
+    />
+    <g fill="#313d40">
+      <path d="m184.5 342.042c-4.142 0-7.5 3.358-7.5 7.5v10c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-10c0-4.142-3.358-7.5-7.5-7.5z" />
+      <path d="m312.5 342.042c-4.142 0-7.5 3.358-7.5 7.5v10c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-10c0-4.142-3.358-7.5-7.5-7.5z" />
+      <path d="m268.235 355.776c-3.737-1.789-8.215-.206-10.001 3.531-1.666 3.484-5.291 5.735-9.234 5.735s-7.568-2.251-9.234-5.735c-1.787-3.737-6.266-5.317-10.001-3.531-3.737 1.787-5.318 6.265-3.531 10.001 4.144 8.666 13.08 14.265 22.766 14.265s18.623-5.599 22.766-14.265c1.787-3.736.206-8.214-3.531-10.001z" />
+    </g>
+  </svg>
+)
+
 export const Hot: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
   <svg viewBox="0 0 497 497" className={className}>
     <path
@@ -990,6 +982,75 @@ export const Climb: React.FunctionComponent<HTMLAttributes<any>> = ({ className 
   </svg>
 )
 
+export const Swim: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
+  <svg viewBox="0 0 512.001 512.001" className={className}>
+    <g>
+      <path
+        fill="#FDC9A6"
+        d="M392.533,343.42L196.267,147.153l61.38-68.198c8.644-9.609,8.26-24.303-0.879-33.442l0,0
+		c-9.737-9.737-25.617-9.446-34.987,0.649l-71.39,76.885c-12.493,13.457-12.109,34.381,0.879,47.36l70.596,70.613l-128,128v34.133
+		h296.286L392.533,343.42z"
+      />
+      <path
+        fill="#FDC9A6"
+        d="M342.724,259.648l-12.049-12.083c-19.968-20.028-19.917-52.446,0.111-72.405l34.389-34.287
+		c20.028-19.968,52.446-19.917,72.405,0.111l12.049,12.083c19.968,20.028,19.917,52.446-0.111,72.405l-34.389,34.287
+		C395.11,279.727,362.692,279.676,342.724,259.648z"
+      />
+    </g>
+    <path
+      fill="#277BAA"
+      d="M374.007,133.909l82.509,82.748c12.595-19.78,10.359-46.293-6.886-63.59l-12.049-12.083
+	C420.326,123.686,393.822,121.365,374.007,133.909z"
+    />
+    <g>
+      <path
+        fill="#176177"
+        d="M372.992,218.918c-0.009,0-0.026,0-0.043,0c-6.835-0.009-13.261-2.679-18.091-7.526l-12.049-12.083
+		c-4.83-4.838-7.484-11.273-7.467-18.116c0.009-6.835,2.679-13.261,7.526-18.091c4.83-4.821,11.247-7.467,18.074-7.467
+		c0.017,0,0.026,0,0.043,0c6.835,0.009,13.261,2.679,18.091,7.526l12.049,12.083c4.83,4.838,7.484,11.273,7.475,18.116
+		c-0.009,6.844-2.679,13.269-7.526,18.091C386.236,216.273,379.819,218.918,372.992,218.918z"
+      />
+      <path
+        fill="#176177"
+        d="M415.164,261.227c-0.009,0-0.017,0-0.034,0c-6.844-0.009-13.269-2.679-18.091-7.526l-12.049-12.092
+		c-9.967-9.993-9.941-26.24,0.051-36.207c4.83-4.821,11.247-7.467,18.074-7.467c0.017,0,0.026,0,0.043,0
+		c6.835,0.009,13.261,2.679,18.091,7.526l12.049,12.092c4.83,4.838,7.484,11.273,7.475,18.108
+		c-0.009,6.844-2.679,13.269-7.526,18.091C428.416,258.573,421.99,261.227,415.164,261.227z"
+      />
+    </g>
+    <polyline
+      fill="#FDC9A6"
+      points="342.724,259.648 324.267,275.153 318.387,279.991 294.042,254.579 298.667,249.553
+	324.267,232.486 "
+    />
+    <g>
+      <path
+        fill="#6FBBC6"
+        d="M360.909,205.376l-12.049-12.083c-6.656-6.673-6.639-17.485,0.034-24.132l0,0
+		c6.673-6.656,17.485-6.639,24.132,0.034l12.049,12.083c6.656,6.673,6.639,17.485-0.034,24.132l0,0
+		C378.368,212.066,367.565,212.049,360.909,205.376z"
+      />
+      <path
+        fill="#6FBBC6"
+        d="M403.081,247.676l-12.049-12.083c-6.656-6.673-6.639-17.485,0.034-24.132l0,0
+		c6.673-6.656,17.485-6.639,24.132,0.034l12.049,12.083c6.656,6.673,6.639,17.485-0.034,24.132l0,0
+		C420.548,254.366,409.737,254.349,403.081,247.676z"
+      />
+    </g>
+    <path
+      fill="#6CBAE5"
+      d="M0,473.604h512v-87.518c-85.333,0-85.333-51.2-170.675-51.2s-85.333,51.2-170.675,51.2
+	c-85.325,0-85.325-51.2-170.65-51.2L0,473.604L0,473.604z"
+    />
+    <path
+      fill="#4799CF"
+      d="M0,403.153c85.325,0,85.325,51.2,170.65,51.2c85.333,0,85.333-51.2,170.675-51.2
+	s85.333,51.2,170.675,51.2v19.251H0V403.153z"
+    />
+  </svg>
+)
+
 const weatherStyle = css`
   .weather-container {
     @media (max-width: ${largeEnd}) {
@@ -1151,54 +1212,116 @@ const getWeather = (lang: Lang, icon: WeatherIconType) => {
       break
   }
 }
-const getWeatherAddition = (lang: Lang, alt: WeatherAltIconType[]) => {
+const getWeatherAddition = (
+  lang: Lang,
+  alt: WeatherAltIconType[],
+  transformAddition: (alt: WeatherAltIconType) => string | undefined
+) => {
   const weatherAddition: string[] = []
   if (alt.includes("arctic")) {
-    weatherAddition.push(lang === "fr" ? "Très froid" : "Arctic")
+    weatherAddition.push(transformAddition("arctic") ?? (lang === "fr" ? "Très froid" : "Arctic"))
   }
   if (alt.includes("hot")) {
-    weatherAddition.push(lang === "fr" ? "Très chaud" : "Hot")
+    weatherAddition.push(transformAddition("hot") ?? (lang === "fr" ? "Très chaud" : "Hot"))
   }
   if (alt.includes("cold")) {
-    weatherAddition.push(lang === "fr" ? "Froid" : "Cold")
+    weatherAddition.push(transformAddition("cold") ?? (lang === "fr" ? "Froid" : "Cold"))
   }
   if (alt.includes("droplet")) {
-    weatherAddition.push(lang === "fr" ? "Mousson" : "Monsoon")
+    weatherAddition.push(transformAddition("droplet") ?? (lang === "fr" ? "Mousson" : "Monsoon"))
+  }
+  if (alt.includes("shower")) {
+    weatherAddition.push(transformAddition("shower") ?? (lang === "fr" ? "Quelques averses" : "A few showers"))
   }
   return weatherAddition.join(" - ")
 }
-const getOtherAddition = (lang: Lang, alt: WeatherAltIconType[]) => {
+const getOtherAddition = (
+  lang: Lang,
+  alt: WeatherAltIconType[],
+  transformAddition: (alt: WeatherAltIconType) => string | undefined
+) => {
   const weatherAddition: string[] = []
   if (alt.includes("scuba")) {
-    weatherAddition.push(lang === "fr" ? "Plongée" : "Scuba Diving")
+    weatherAddition.push(transformAddition("scuba") ?? (lang === "fr" ? "Plongée" : "Scuba Diving"))
   }
   if (alt.includes("jelly-fish")) {
-    weatherAddition.push(lang === "fr" ? "Méduse" : "Jellyfish")
+    weatherAddition.push(transformAddition("jelly-fish") ?? (lang === "fr" ? "Méduse" : "Jellyfish"))
   }
   if (alt.includes("sakura")) {
-    weatherAddition.push("Sakura")
+    weatherAddition.push(transformAddition("sakura") ?? "Sakura")
   }
   if (alt.includes("autumn")) {
-    weatherAddition.push("Momiji")
+    weatherAddition.push(transformAddition("autumn") ?? "Momiji")
   }
   if (alt.includes("snow-man")) {
-    weatherAddition.push(lang === "fr" ? "Neige" : "Snow")
+    weatherAddition.push(transformAddition("snow-man") ?? (lang === "fr" ? "Neige" : "Snow"))
   }
   if (alt.includes("climb")) {
-    weatherAddition.push(lang === "fr" ? "Ascension" : "Ascent")
+    weatherAddition.push(transformAddition("climb") ?? (lang === "fr" ? "Ascension" : "Ascent"))
+  }
+  if (alt.includes("swim")) {
+    weatherAddition.push(transformAddition("swim") ?? (lang === "fr" ? "Baignade" : "Swimming"))
   }
   return weatherAddition.join(" - ")
 }
 
+const WeatherAlt: React.FunctionComponent<{ data: WeatherData }> = ({ data }) => {
+  let position = "alt-right"
+  return (
+    <>
+      {([] as WeatherAltIconType[]).concat(data.alt || []).map((alt) => {
+        const component =
+          alt === "hot" ? (
+            <Hot className={`alt alt-left`} key={alt} />
+          ) : alt === "cold" ? (
+            <Cold className={`alt alt-left`} key={alt} />
+          ) : alt === "arctic" ? (
+            <Arctic className={`alt alt-left`} key={alt} />
+          ) : alt === "droplet" ? (
+            <Droplet className={`alt ${position}`} key={alt} />
+          ) : alt === "snow-man" ? (
+            <SnowMan className={`alt ${position}`} key={alt} />
+          ) : alt === "sakura" ? (
+            <Sakura className={`alt ${position}`} key={alt} />
+          ) : alt === "autumn" ? (
+            <Autumn className={`alt ${position}`} key={alt} />
+          ) : alt === "scuba" ? (
+            <Scuba className={`alt ${position}`} key={alt} />
+          ) : alt === "climb" ? (
+            <Climb className={`alt ${position}`} key={alt} />
+          ) : alt === "swim" ? (
+            <Swim className={`alt ${position}`} key={alt} />
+          ) : alt === "shower" ? (
+            <Shower className={`alt ${position}`} key={alt} />
+          ) : alt === "jelly-fish" ? (
+            <JellyFish className={`alt alt-top-left`} key={alt} />
+          ) : null
+        if (alt !== "hot" && alt !== "cold" && alt !== "arctic" && alt !== "jelly-fish") position = "alt-top-left"
+        return component
+      })}
+    </>
+  )
+}
 export const Weather: React.FunctionComponent<{
   entries: WeatherEntry[]
   className?: string
   extraButton?: boolean
   onMouseEnter?: (value: string) => void
   onMouseLeave?: () => void
-}> = ({ entries, className = "", extraButton = false, onMouseEnter = () => void 0, onMouseLeave = () => void 0 }) => {
+  transformAddition?: (alt: WeatherAltIconType) => string | undefined
+}> = ({
+  entries,
+  className = "",
+  extraButton = false,
+  onMouseEnter = () => void 0,
+  onMouseLeave = () => void 0,
+  transformAddition = () => void 0,
+}) => {
   const { i18n } = useCustomTranslation()
   const [displayMonths, setDisplayMonths] = useState<"NONE" | WeatherType | WeatherAltIconType>("NONE")
+  const hasGoodWeather = entries.find((entry) => entry.data.find((data) => data.type === "good"))
+  const hasPoorWeather = entries.find((entry) => entry.data.find((data) => data.type === "poor"))
+  const hasFairWeather = entries.find((entry) => entry.data.find((data) => data.type === "fair"))
   return (
     <div css={weatherStyle} className={`mb3 ${className}`}>
       <div className="mb3 weather-container">
@@ -1235,13 +1358,15 @@ export const Weather: React.FunctionComponent<{
                         const weather = getWeather(i18n.languageCode, data.icon)
                         const weatherAddition = getWeatherAddition(
                           i18n.languageCode,
-                          Array.isArray(data.alt) ? data.alt : ([] as WeatherAltIconType[]).concat(data.alt ?? [])
+                          Array.isArray(data.alt) ? data.alt : ([] as WeatherAltIconType[]).concat(data.alt ?? []),
+                          transformAddition
                         )
                         const temperature =
                           i18n.languageCode === "fr" ? `Temp Moyenne ${data.temp}°C` : `Average Temp ${data.temp}°C`
                         const otherAddition = getOtherAddition(
                           i18n.languageCode,
-                          Array.isArray(data.alt) ? data.alt : ([] as WeatherAltIconType[]).concat(data.alt ?? [])
+                          Array.isArray(data.alt) ? data.alt : ([] as WeatherAltIconType[]).concat(data.alt ?? []),
+                          transformAddition
                         )
                         onMouseEnter(
                           `${month}\n${weatherType}\n${weather}${
@@ -1264,31 +1389,7 @@ export const Weather: React.FunctionComponent<{
                       ) : (
                         <Sunny />
                       )}
-                      {([] as WeatherAltIconType[])
-                        .concat(data.alt || [])
-                        .map((alt) =>
-                          alt === "hot" ? (
-                            <Hot className={`alt alt-left`} key={alt} />
-                          ) : alt === "droplet" ? (
-                            <Droplet className={`alt alt-right`} key={alt} />
-                          ) : alt === "cold" ? (
-                            <Cold className={`alt alt-left`} key={alt} />
-                          ) : alt === "arctic" ? (
-                            <Arctic className={`alt alt-left`} key={alt} />
-                          ) : alt === "snow-man" ? (
-                            <SnowMan className={`alt alt-right`} key={alt} />
-                          ) : alt === "sakura" ? (
-                            <Sakura className={`alt alt-right`} key={alt} />
-                          ) : alt === "autumn" ? (
-                            <Autumn className={`alt alt-right`} key={alt} />
-                          ) : alt === "scuba" ? (
-                            <Scuba className={`alt alt-right`} key={alt} />
-                          ) : alt === "climb" ? (
-                            <Climb className={`alt alt-right`} key={alt} />
-                          ) : alt === "jelly-fish" ? (
-                            <JellyFish className={`alt alt-top-left`} key={alt} />
-                          ) : null
-                        )}
+                      <WeatherAlt data={data} />
                     </td>
                   ))}
                 </tr>
@@ -1298,24 +1399,30 @@ export const Weather: React.FunctionComponent<{
         </Table>
       </div>
       <div className="flex weather-button-container mb3">
-        <WeatherGoodMonths
-          className={`${displayMonths === "good" ? "active" : ""} `}
-          onClick={() => (displayMonths === "good" ? setDisplayMonths("NONE") : setDisplayMonths("good"))}
-        >
-          {i18n.languageCode === "fr" ? "Favorable" : "Good"}
-        </WeatherGoodMonths>
-        <WeatherAverageMonths
-          className={`${displayMonths === "fair" ? "active" : ""} `}
-          onClick={() => (displayMonths === "fair" ? setDisplayMonths("NONE") : setDisplayMonths("fair"))}
-        >
-          {i18n.languageCode === "fr" ? "Passable" : "Fair"}
-        </WeatherAverageMonths>
-        <WeatherBadMonths
-          className={`${displayMonths === "poor" ? "active" : ""} `}
-          onClick={() => (displayMonths === "poor" ? setDisplayMonths("NONE") : setDisplayMonths("poor"))}
-        >
-          {i18n.languageCode === "fr" ? "À éviter" : "Poor"}
-        </WeatherBadMonths>
+        {hasGoodWeather && (
+          <WeatherGoodMonths
+            className={`${displayMonths === "good" ? "active" : ""} `}
+            onClick={() => (displayMonths === "good" ? setDisplayMonths("NONE") : setDisplayMonths("good"))}
+          >
+            {i18n.languageCode === "fr" ? "Favorable" : "Good"}
+          </WeatherGoodMonths>
+        )}
+        {hasFairWeather && (
+          <WeatherAverageMonths
+            className={`${displayMonths === "fair" ? "active" : ""} `}
+            onClick={() => (displayMonths === "fair" ? setDisplayMonths("NONE") : setDisplayMonths("fair"))}
+          >
+            {i18n.languageCode === "fr" ? "Passable" : "Fair"}
+          </WeatherAverageMonths>
+        )}
+        {hasPoorWeather && (
+          <WeatherBadMonths
+            className={`${displayMonths === "poor" ? "active" : ""} `}
+            onClick={() => (displayMonths === "poor" ? setDisplayMonths("NONE") : setDisplayMonths("poor"))}
+          >
+            {i18n.languageCode === "fr" ? "À éviter" : "Poor"}
+          </WeatherBadMonths>
+        )}
       </div>
       {extraButton && (
         <div className="flex weather-button-container">

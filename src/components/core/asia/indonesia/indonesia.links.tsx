@@ -1,7 +1,6 @@
 import { CountryLink } from "../../links/links.types"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
-import { css } from "@emotion/react"
 
 export const indonesiaLinks: CountryLink = {
   id: "indonesia",

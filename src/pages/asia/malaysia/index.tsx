@@ -1,16 +1,14 @@
 import React, { useContext, useState } from "react"
 import SEO from "../../../components/layout/seo"
-import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
-import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
+import rafflesia from "../../../images/asia/malaysia/rafflesia.svg"
+import { getArticles, getCities, getLinkLabel, sortByLabel } from "../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../components/application"
-import { JapanBlogLayout, JapanButtonLink, japanWeatherEntries } from "../../../components/core/japan/japan"
 import {
   HomeSection,
   HomeSubSection,
   MainTitleSection,
-  PointOfInterestSection,
   SectionContent,
-  SubHomeSection,
+  SubHomeSectionTwoLines,
   SubSubHomeSection,
 } from "../../../components/core/section"
 import { useCustomTranslation } from "../../../i18n-hook"
@@ -21,22 +19,21 @@ import i18n from "i18next"
 import indexFr from "../../../locales/fr/asia/malaysia/index.json"
 import indexEn from "../../../locales/en/asia/malaysia/index.json"
 import { ArticlesContainer, GoToAllArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
-import { ApplicationLink } from "../../../components/core/links/link"
+import { ApplicationLink, ButtonLink } from "../../../components/core/links/link"
 import { jsx } from "@emotion/react"
-import { SharedJapanImages } from "../../../components/images/asia/japan/shared-japan-images"
-import { JapanImageAsMedallion } from "../../../components/core/japan/japan.images"
-import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
+import MalaysiaImage from "../../../images/asia/malaysia/home-malaysia.jpg"
 import { WeatherForHomePage } from "../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
-import { Farniente, Monument, Scuba } from "../../../components/icon/monument"
-import { CityIcon } from "../../../components/icon/city"
-import { Hiking } from "../../../components/icon/hiking"
 import { malaysiaLinks } from "../../../components/core/asia/malaysia/malaysia.links"
-import { Photo } from "../../../components/icon/photo"
+import { PointOfInterestSection } from "../../../components/core/point-of-interest"
+import { ImageAsMedallion, TitleImage } from "../../../components/images/layout"
+import { MalaysiaBlogLayout, malaysiaWeatherEntries } from "../../../components/core/asia/malaysia/malaysia"
+import { SharedMalaysiaImages } from "../../../components/images/asia/malaysia/shared-malaysia-images"
 
 const namespace = "asia/malaysia/index"
 i18n.addResourceBundle("fr", namespace, indexFr)
 i18n.addResourceBundle("en", namespace, indexEn)
+const currentPageId = "malaysia"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
@@ -44,21 +41,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const [tooltipLabel, setTooltipLabel] = useState("")
   const country = t("common:country.malaysia.title")
   const articles = getArticles({ kind: "other", tags: ["malaysia"], development })
-  const cities = development ? malaysiaLinks.cities : malaysiaLinks.cities.filter(isLinkPublished)
+  const cities = getCities({ links: malaysiaLinks, development, lang: i18n.languageCode })
   return (
     <>
       <SEO
         title={country}
+        fullTitle={t("full-title")}
         location={location}
-        image={VietnamImage}
+        image={MalaysiaImage}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
       />
-      <JapanBlogLayout page="japan" location={location}>
+      <MalaysiaBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>
-          <img src={cherryBlossom} alt="cherry blossom" />
+          <TitleImage src={rafflesia} alt="rafflesia" />
           &nbsp;{country}&nbsp;
-          <img src={cherryBlossom} alt="cherry blossom" />
+          <TitleImage src={rafflesia} alt="rafflesia" />
         </MainTitleSection>
         <Divider />
         <SectionContent>
@@ -67,32 +65,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </SectionContent>
         <Divider />
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
-        <PointOfInterestSection>
-          <div className="title-element">
-            <Farniente />
-            <div className="title mt2">{t("farniente")}</div>
-          </div>
-          <div className="title-element">
-            <Monument />
-            <div className="title mt2">{t("monuments")}</div>
-          </div>
-          <div className="title-element">
-            <Hiking />
-            <div className="title mt2">{t("nature")}</div>
-          </div>
-          <div className="title-element">
-            <Photo />
-            <div className="title mt2">{t("animals")}</div>
-          </div>
-          <div className="title-element">
-            <CityIcon />
-            <div className="title mt2">{t("city")}</div>
-          </div>
-          <div className="title-element">
-            <Scuba />
-            <div className="title mt2">{t("water-activities")}</div>
-          </div>
-        </PointOfInterestSection>
+        <PointOfInterestSection page={currentPageId} />
         {cities.length > 0 && (
           <>
             <Divider />
@@ -102,9 +75,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
                 return city.imageProps?.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
-                    <JapanImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
-                      {jsx(SharedJapanImages, city.imageProps)}
-                    </JapanImageAsMedallion>
+                    <ImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
+                      {jsx(SharedMalaysiaImages, city.imageProps)}
+                    </ImageAsMedallion>
                   </ApplicationLink>
                 ) : null
               })}
@@ -125,13 +98,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         <Divider />
         <GoToAllArticlesContainer>
-          <JapanButtonLink to="articles?country=japan">Tous nos articles</JapanButtonLink>
+          <ButtonLink to="articles?country=malaysia">{t("common:allArticles")}</ButtonLink>
         </GoToAllArticlesContainer>
         <Divider />
-        <SubHomeSection>{t("weather")}</SubHomeSection>
+        <SubHomeSectionTwoLines title={t("weather")} country={t("weather-country")} />
         <WeatherForHomePage
-          extraButton
-          entries={japanWeatherEntries().filter((entry) => entry.id !== "nagoya")}
+          entries={malaysiaWeatherEntries(i18n.languageCode)}
           onMouseLeave={() => setTooltipLabel("")}
           onMouseEnter={setTooltipLabel}
         />
@@ -150,7 +122,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </TooltipContent>
           ) : null}
         </MouseToolTip>
-      </JapanBlogLayout>
+      </MalaysiaBlogLayout>
     </>
   )
 }
