@@ -1,22 +1,16 @@
 import React, { useContext, useState } from "react"
 import SEO from "../../../../components/layout/seo"
 import vietnamHat from "../../../../images/asia/vietnam/hat.svg"
-import {
-  VietnamBlogLayout,
-  VietnamButtonLink,
-  VietnamImageAsMedallion,
-  vietnamWeatherEntries,
-} from "../../../../components/core/asia/vietnam/vietnam"
+import { VietnamBlogLayout, vietnamWeatherEntries } from "../../../../components/core/asia/vietnam/vietnam"
 import {
   CityHomeSection,
   MainTitleSection,
-  PointOfInterestSection,
   SectionContent,
-  SubHomeSection,
+  SubHomeSectionTwoLines,
   SubSubHomeSection,
 } from "../../../../components/core/section"
-import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../../components/core/links/links.utils"
-import { ApplicationLink } from "../../../../components/core/links/link"
+import { getArticles, getCities, getLinkLabel, sortByLabel } from "../../../../components/core/links/links.utils"
+import { ApplicationLink, ButtonLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import { vietnamLinks } from "../../../../components/core/asia/vietnam/vietnam.links"
 import {
@@ -29,36 +23,28 @@ import { useCustomTranslation } from "../../../../i18n-hook"
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/index.json"
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/index.json"
-import { CityLink } from "../../../../components/core/links/links.types"
 import { SouthVietnamCard } from "../../../../components/core/asia/vietnam/vietnam.cards"
 import { PageProps } from "gatsby"
 import SouthernVietnamImage from "../../../../images/asia/vietnam/southern-vietnam/home-southern-vietnam.jpg"
-import { TitleImage } from "../../../../components/images/layout"
+import { ImageAsMedallion, TitleImage } from "../../../../components/images/layout"
 import { jsx } from "@emotion/react"
 import { SharedVietnamImages } from "../../../../components/images/asia/vietnam/shared-vietnam-images"
 import { PageQuote } from "../../../../components/core/quote"
 import { Divider } from "../../../../components/core/divider"
-import { Monument } from "../../../../components/icon/monument"
-import { Hiking } from "../../../../components/icon/hiking"
-import { CityIcon } from "../../../../components/icon/city"
 import { WeatherForHomePage } from "../../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
+import { PointOfInterestSection } from "../../../../components/core/point-of-interest"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
-
 const currentPageId = "southern-vietnam"
 
-const isNotCurrentPage = (city: CityLink) => city.id !== currentPageId
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const [tooltipLabel, setTooltipLabel] = useState("")
-  const cities = development
-    ? vietnamLinks.cities.filter(isNotCurrentPage)
-    : vietnamLinks.cities.filter(isLinkPublished).filter(isNotCurrentPage)
-
+  const cities = getCities({ links: vietnamLinks, development, lang: i18n.languageCode, currentPageId })
   const highlights = getArticles({
     kind: "highlight",
     development,
@@ -71,6 +57,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={t("title")}
+        fullTitle={t("full-title")}
         location={location}
         image={SouthernVietnamImage}
         socialNetworkDescription={description}
@@ -90,20 +77,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </SectionContent>
         <Divider />
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
-        <PointOfInterestSection>
-          <div className="title-element">
-            <Monument />
-            <div className="title mt2">{t("monuments")}</div>
-          </div>
-          <div className="title-element">
-            <Hiking />
-            <div className="title mt2">{t("nature")}</div>
-          </div>
-          <div className="title-element">
-            <CityIcon />
-            <div className="title mt2">{t("city")}</div>
-          </div>
-        </PointOfInterestSection>
+        <PointOfInterestSection page={currentPageId} />
         <Divider />
         <CityHomeSection>{t("section2")}</CityHomeSection>
         <MainCardContainer>
@@ -121,7 +95,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </>
         )}
         <Divider />
-        <SubHomeSection>{t("weather")}</SubHomeSection>
+        <SubHomeSectionTwoLines title={t("weather")} country={t("weather-region")} />
         <WeatherForHomePage
           entries={vietnamWeatherEntries(t).filter((entry) => entry.id === "south")}
           onMouseLeave={() => setTooltipLabel("")}
@@ -135,9 +109,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
                 return city.imageProps?.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
-                    <VietnamImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
+                    <ImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
                       {jsx(SharedVietnamImages, city.imageProps)}
-                    </VietnamImageAsMedallion>
+                    </ImageAsMedallion>
                   </ApplicationLink>
                 ) : null
               })}
@@ -146,7 +120,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         <Divider className="mt2" />
         <GoToAllArticlesContainer>
-          <VietnamButtonLink to="articles?country=vietnam">Tous nos articles</VietnamButtonLink>
+          <ButtonLink to="articles?country=vietnam">{t("common:allArticles")}</ButtonLink>
         </GoToAllArticlesContainer>
         <MouseToolTip>
           {tooltipLabel ? (

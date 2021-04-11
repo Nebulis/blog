@@ -9,8 +9,7 @@ import {
   HomeSection,
   HomeSubSection,
   MainTitleSection,
-  MapSubHomeSection,
-  PointOfInterestSection,
+  SubHomeSectionTwoLines,
   SectionContent,
   SubHomeSection,
   SubSubHomeSection,
@@ -37,10 +36,8 @@ import { SpringInJapanCard } from "../../../components/core/japan/japan.cards"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 import { WeatherForHomePage } from "../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
-import { Monument, Ski } from "../../../components/icon/monument"
-import { CityIcon } from "../../../components/icon/city"
-import { Hiking } from "../../../components/icon/hiking"
 import JapanMap from "../../../images/asia/japan/japan-map.png"
+import { PointOfInterestSection } from "../../../components/core/point-of-interest"
 
 const namespace = "asia/japan/index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -76,24 +73,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </SectionContent>
         <Divider />
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
-        <PointOfInterestSection>
-          <div className="title-element">
-            <Hiking />
-            <div className="title mt2">{t("nature")}</div>
-          </div>
-          <div className="title-element">
-            <Monument />
-            <div className="title mt2">{t("monuments")}</div>
-          </div>
-          <div className="title-element">
-            <CityIcon />
-            <div className="title mt2">{t("city")}</div>
-          </div>
-          <div className="title-element">
-            <Ski />
-            <div className="title mt2">{t("winter-activities")}</div>
-          </div>
-        </PointOfInterestSection>
+        <PointOfInterestSection page="japan" />
         <Divider />
         <HomeSection>{t("travel.title")}</HomeSection>
         <HomeSubSection>{t("travel.subtitle")}</HomeSubSection>
@@ -132,7 +112,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         )}
         <Divider />
         <GoToAllArticlesContainer>
-          <JapanButtonLink to="articles?country=japan">Tous nos articles</JapanButtonLink>
+          <JapanButtonLink to="articles?country=japan">{t("common:allArticles")}</JapanButtonLink>
         </GoToAllArticlesContainer>
         <Divider />
         <SubHomeSection>{t("weather")}</SubHomeSection>
@@ -143,7 +123,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           onMouseEnter={setTooltipLabel}
         />
         <Divider />
-        <MapSubHomeSection title={t("map")} country={t("country")} />
+        <SubHomeSectionTwoLines title={t("map")} country={t("country")} />
         <MapContainer>
           <img src={JapanMap} alt="Japan Map" />
         </MapContainer>

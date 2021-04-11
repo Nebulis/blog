@@ -463,7 +463,7 @@ export const ImageAsMedallion: FunctionComponent<HTMLAttributes<any> & { title?:
   const { isMobileView } = useContext(MenuContext)
 
   return (
-    <div css={imageAsMedallionStyle} className={`${className}${isMobileView ? " mobile" : ""}`}>
+    <div css={imageAsMedallionStyle} className={`image-as-medallion ${className}${isMobileView ? " mobile" : ""}`}>
       {children}
       {title && <span>{title}</span>}
     </div>

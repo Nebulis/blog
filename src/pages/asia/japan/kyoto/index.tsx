@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
 import { jsx } from "@emotion/react"
 import cherryBlossom from "../../../../images/asia/japan/cherry-blossom.png"
-import { getArticles, getLinkLabel, isLinkPublished } from "../../../../components/core/links/links.utils"
+import { getArticles, getCities, getLinkLabel } from "../../../../components/core/links/links.utils"
 import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import {
@@ -19,11 +19,9 @@ import { SharedJapanImages } from "../../../../components/images/asia/japan/shar
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/japan/kyoto/index.json"
 import translationEn from "../../../../locales/en/asia/japan/kyoto/index.json"
-import { CityLink } from "../../../../components/core/links/links.types"
 import {
   CityHomeSection,
   MainTitleSection,
-  PointOfInterestSection,
   SectionContent,
   SubSubHomeSection,
 } from "../../../../components/core/section"
@@ -31,22 +29,18 @@ import { TitleImage } from "../../../../components/images/layout"
 import { Divider } from "../../../../components/core/divider"
 import { PageQuote } from "../../../../components/core/quote"
 import HomeImage from "../../../../images/asia/japan/carousel-japan.jpg"
-import { Monument } from "../../../../components/icon/monument"
-import { CityIcon } from "../../../../components/icon/city"
+import { PointOfInterestSection } from "../../../../components/core/point-of-interest"
 
 const namespace = "asia/japan/kyoto/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const currentPageId = "kyoto"
-const isNotCurrentPage = (city: CityLink) => city.id !== currentPageId
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const cities = development
-    ? japanLinks.cities.filter(isNotCurrentPage)
-    : japanLinks.cities.filter(isLinkPublished).filter(isNotCurrentPage)
+  const cities = getCities({ links: japanLinks, development, lang: i18n.languageCode, currentPageId })
   const highlights = getArticles({
     kind: "highlight",
     development,
@@ -75,16 +69,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </SectionContent>
         <Divider />
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
-        <PointOfInterestSection>
-          <div className="title-element">
-            <Monument />
-            <div className="title mt2">{t("monuments")}</div>
-          </div>
-          <div className="title-element">
-            <CityIcon />
-            <div className="title mt2">{t("city")}</div>
-          </div>
-        </PointOfInterestSection>
+        <PointOfInterestSection page={currentPageId} />
         {highlights.length > 0 && (
           <>
             <Divider className="mt2" />

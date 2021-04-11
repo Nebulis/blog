@@ -8,6 +8,7 @@ export const philippinesLinks: CountryLink = {
   id: "philippines",
   label: { fr: commonFr.country.philippines.title, en: commonEn.country.philippines.title },
   // this style is for the image in the asia page (medallion) to have the fisherman centered
+  pointOfInterest: ["lazy", "nature", "animals", "water-activities"],
   imageProps: {
     image: "homePhilippines",
   },
@@ -15,6 +16,7 @@ export const philippinesLinks: CountryLink = {
     {
       id: "el-nido",
       label: { fr: commonFr.country.philippines.city["el-nido"], en: commonEn.country.philippines.city["el-nido"] },
+      pointOfInterest: ["lazy", "nature", "animals", "water-activities"],
       imageProps: {
         image: "homeElNido",
         css: css`

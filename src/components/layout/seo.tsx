@@ -122,7 +122,7 @@ const SEO: FunctionComponent<SEOProps> = ({
         },
         {
           property: `og:title`,
-          content: metaTitle,
+          content: fullTitle || metaTitle,
         },
         {
           property: `og:description`,
@@ -139,7 +139,7 @@ const SEO: FunctionComponent<SEOProps> = ({
         },
         {
           name: `twitter:title`,
-          content: metaTitle,
+          content: fullTitle || metaTitle,
         },
         {
           name: `twitter:description`,

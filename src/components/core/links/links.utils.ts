@@ -127,6 +127,25 @@ export const isLinkPublished = (
   return isPublished(getLink(id))
 }
 
+export const getCities = ({
+  links,
+  development,
+  currentPageId = "",
+  lang,
+}: {
+  links: CountryLink
+  development: boolean
+  currentPageId?: string
+  lang: Lang
+}) => {
+  return development
+    ? links.cities.filter((city) => city.id !== currentPageId).sort(sortByLabel(lang))
+    : links.cities
+        .filter(isLinkPublished)
+        .filter((city) => city.id !== currentPageId)
+        .sort(sortByLabel(lang))
+}
+
 const returnTrue = () => true
 export const getArticles = ({
   published = true,

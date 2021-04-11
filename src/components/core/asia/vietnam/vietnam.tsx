@@ -2,9 +2,7 @@ import React, { FunctionComponent } from "react"
 import styled from "@emotion/styled"
 import { vietnamPrimaryColor, vietnamPrimaryColorDarker, vietnamPrimaryColorWithOpacity } from "./vietnam.colors"
 import { BlogLayout, IndexBlogLayout, withDraw } from "../../../layout/layout"
-import { ImageAsMedallion } from "../../../images/layout"
 import { drawHat } from "./console-draw-hat"
-import { ButtonLink } from "../../links/link"
 import { Headline } from "../../highlight"
 import hat from "../../../../images/asia/vietnam/hat.svg"
 import { css } from "@emotion/react"
@@ -54,6 +52,22 @@ const vietnamLayout = `
       }
       .title {
         color: ${vietnamPrimaryColorDarker};
+      }
+    }
+    .image-as-medallion {
+      &.mobile,
+      &:hover {
+        // the color has been picked from the hat images and is not derived from the primary color or other
+        border: 6px solid #f8c471;
+      }
+    }
+    .all-articles-container a {
+      // #d8a200 is vietnamPrimaryColorDarker lighten by 10%
+      border: 2px solid #d8a200;
+      background-color: #d8a200;
+      &:not(.inactive):hover {
+        background-color: white;
+        color: #d8a200;
       }
     }
     a.title-tag {
@@ -115,22 +129,6 @@ export const VietnamBlogLayout = drawer(styled(BlogLayout)`
   ${vietnamLayout}
 `)
 
-// the color has been picked from the hat images and is not derived from the primary color or other
-export const VietnamImageAsMedallion = styled(ImageAsMedallion)`
-  &.mobile,
-  &:hover {
-    border: 6px solid #f8c471;
-  }
-`
-
-// #d8a200 is vietnamPrimaryColorDarker lighten by 10%
-export const VietnamButtonLink = styled(ButtonLink)`
-  border: 2px solid #d8a200;
-  background-color: #d8a200;
-  &:not(.inactive):hover {
-    color: #d8a200;
-  }
-`
 export const vietnamWeatherEntries = (t: TFunction): WeatherEntry[] => [
   {
     id: "north",

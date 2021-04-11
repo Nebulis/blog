@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 import SEO from "../../../../components/layout/seo"
 import { jsx } from "@emotion/react"
 import cherryBlossom from "../../../../images/asia/japan/cherry-blossom.png"
-import { getArticles, getLinkLabel, isLinkPublished } from "../../../../components/core/links/links.utils"
+import { getArticles, getCities, getLinkLabel } from "../../../../components/core/links/links.utils"
 import { ApplicationLink } from "../../../../components/core/links/link"
 import { ApplicationContext } from "../../../../components/application"
 import {
@@ -19,38 +19,33 @@ import { SharedJapanImages } from "../../../../components/images/asia/japan/shar
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/japan/fuji/index.json"
 import translationEn from "../../../../locales/en/asia/japan/fuji/index.json"
-import { CityLink } from "../../../../components/core/links/links.types"
 import {
   CityHomeSection,
   MainTitleSection,
-  PointOfInterestSection,
   SectionContent,
-  SubHomeSection,
+  SubHomeSectionTwoLines,
   SubSubHomeSection,
 } from "../../../../components/core/section"
 import { TitleImage } from "../../../../components/images/layout"
 import { Divider } from "../../../../components/core/divider"
 import { PageQuote } from "../../../../components/core/quote"
 import HomeImage from "../../../../images/asia/japan/fuji/kawaguchiko/fuji-main.jpg"
-import { Ski } from "../../../../components/icon/monument"
-import { Hiking } from "../../../../components/icon/hiking"
 import { WeatherForHomePage } from "../../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
+import { PointOfInterestSection } from "../../../../components/core/point-of-interest"
 
 const namespace = "asia/japan/fuji/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const currentPageId = "fuji"
-const isNotCurrentPage = (city: CityLink) => city.id !== currentPageId
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const [tooltipLabel, setTooltipLabel] = useState("")
-  const cities = development
-    ? japanLinks.cities.filter(isNotCurrentPage)
-    : japanLinks.cities.filter(isLinkPublished).filter(isNotCurrentPage)
+  const cities = getCities({ links: japanLinks, development, lang: i18n.languageCode, currentPageId })
+
   const highlights = getArticles({
     kind: "highlight",
     development,
@@ -80,16 +75,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </SectionContent>
         <Divider />
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
-        <PointOfInterestSection>
-          <div className="title-element">
-            <Hiking />
-            <div className="title mt2">{t("nature")}</div>
-          </div>
-          <div className="title-element">
-            <Ski />
-            <div className="title mt2">{t("winter-activities")}</div>
-          </div>
-        </PointOfInterestSection>
+        <PointOfInterestSection page={currentPageId} />
         {highlights.length > 0 && (
           <>
             <Divider className="mt2" />
@@ -102,7 +88,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </>
         )}
         <Divider />
-        <SubHomeSection>{t("weather")}</SubHomeSection>
+        <SubHomeSectionTwoLines title={t("weather")} country={t("weather-city")} />
         <WeatherForHomePage
           entries={japanWeatherEntries().filter((entry) => entry.id === "fuji")}
           onMouseLeave={() => setTooltipLabel("")}

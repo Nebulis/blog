@@ -85,7 +85,11 @@
       "title": "Laos"
     },
     "malaysia": {
-      "title": "Malaysia"
+      "title": "Malaysia",
+      "city": {
+        "west-malaysia": "West",
+        "east-malaysia": "East"
+      }
     },
     "myanmar": {
       "title": "Myanmar"

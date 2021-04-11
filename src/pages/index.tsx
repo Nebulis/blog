@@ -453,7 +453,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             />
           </MapContainer>
           <ButtonMapContainer>
-            {continentLinks.sort(sortByLabel(i18n.languageCode)).map((continent) => (
+            {[...continentLinks].sort(sortByLabel(i18n.languageCode)).map((continent) => (
               <ButtonLink
                 key={continent.id}
                 to={continent.id}

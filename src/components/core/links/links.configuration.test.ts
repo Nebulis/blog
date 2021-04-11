@@ -332,7 +332,16 @@ const philippinesLinks = () => {
   })
 }
 
-const malaysiaLinks = () => {}
+const malaysiaLinks = () => {
+  expect(getLink("west-malaysia")).toMatchObject({
+    label: { en: "West", fr: "Occidentale" },
+    published: false,
+  })
+  expect(getLink("east-malaysia")).toMatchObject({
+    label: { en: "East", fr: "Orientale" },
+    published: false,
+  })
+}
 
 describe("links", () => {
   it("should populate cache", () => {

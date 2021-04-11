@@ -1,30 +1,26 @@
 {
   "introduction": {
-    "section1": "",
-    "section2": ""
+    "section1": "Malaysia is divided into two parts. West Malaysia (Peninsular or Malaya) includes most of the large modern cities, such as Kuala Lumpur, Johor, and Malacca. While East Malaysia, in the north of Borneo island, is mainly covered by rainforests, populated by animals.",
+    "section2": "We let you discover with our articles and photos the different faces of Malaysia."
   },
-  "google-description": "",
-  "social-network-description": "",
-  "tour": {
-    "title": "",
-    "subtitle": ""
-  },
+  "google-description": "Discover Malaysia through our articles and our photos. From modern cities to tropical forests. Follow our guide from region to region to discover our selection of must-see places. For each visit, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?",
+  "social-network-description": "Malaysia is divided into two parts. West Malaysia (Peninsular or Malaya) includes most of the large modern cities, such as Kuala Lumpur, Johor, and Malacca. While East Malaysia, in the north of Borneo island, is mainly covered by rainforests, populated by animals. Follow our guide from region to region to discover our selection of must-see places.",
+  "full-title": "Malaysia | Travel Guide",
   "travel": {
-    "title": "",
-    "subtitle": ""
+    "title": "Travel",
+    "subtitle": "By following our journey ..."
+  },
+  "tour": {
+    "title": "Travel around",
+    "subtitle": "The country from region to region"
   },
   "inform": {
-    "title": "",
-    "subtitle": ""
+    "title": "Get informed",
+    "subtitle": "With our suggestions, favorites ..."
   },
-  "weather": "",
-  "section1": "",
-  "lazy": "",
-  "monuments": "",
-  "nature": "",
-  "animals": "",
-  "city": "",
-  "water-activities": "",
-  "map": "",
-  "country": ""
+  "weather": "Best time to visit",
+  "weather-country": "malaysia?",
+  "section1": "Point of interest",
+  "map": "Our map of",
+  "country": "malaysia"
 }
