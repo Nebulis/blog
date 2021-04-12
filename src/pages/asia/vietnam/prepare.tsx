@@ -1197,7 +1197,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Opinion title={t("section13.title")} id="opinion">
           <p className="list-item ml3">{t("section13.part1")}</p>
-          <p className="underline">{t("section13.part2")}</p>
+          <p>{t("section13.part2")}</p>
           <p>{t("section13.part3")}</p>
           <ImageAsLandscape
             credit={
@@ -1208,12 +1208,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           >
             <PrepareVietnamImages image="landscape" />
           </ImageAsLandscape>
-          <p className="underline">{t("section13.part4")}</p>
+          <p>{t("section13.part4")}</p>
           <p>{t("section13.part5")}</p>
-          <p className="underline">{t("section13.part6")}</p>
+          <p>{t("section13.part6")}</p>
           <p>{t("section13.part7")}</p>
           {foodLinkPublished && <p>{t("section13.part8")}</p>}
-          <p className="underline">{t("section13.part9")}</p>
+          <p>{t("section13.part9")}</p>
           <p>{t("section13.part10")}</p>
           <ImageAsLandscape
             credit={
@@ -1225,9 +1225,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <PrepareVietnamImages image="laughing" />
           </ImageAsLandscape>
           <p className="list-item ml3">{t("section13.part11")}</p>
-          <p className="underline">{t("section13.part12")}</p>
+          <p>{t("section13.part12")}</p>
           <p>{t("section13.part13")}</p>
-          <p className="underline">{t("section13.part14")}</p>
+          <p>{t("section13.part14")}</p>
           <p>{t("section13.part15")}</p>
           <ImageAsLandscape
             credit={
