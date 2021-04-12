@@ -8,7 +8,17 @@
     "south": "Southern",
     "north": "Northern",
     "central": "Central",
-    "transports": "Transports"
+    "transports": "Transports",
+    "discovery": {
+      "monuments": "Monuments",
+      "nature": "Nature",
+      "city": "City",
+      "animals": "Animals",
+      "lazy": "Beach Holidays",
+      "water-activities": "Water activities",
+      "winter-activities": "Winter activities",
+      "fruit": "Fruits from around the world"
+    }
   },
   "continent": {
     "asia": "Asia",

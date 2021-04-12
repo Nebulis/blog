@@ -53,6 +53,14 @@ const vietnamLayout = `
       .title {
         color: ${vietnamPrimaryColorDarker};
       }
+      @media (hover: hover) {
+        .title-element:hover {
+          border-bottom-color: ${vietnamPrimaryColorDarker};
+          svg {
+            fill: ${vietnamPrimaryColorDarker};
+          }
+        }
+      }
     }
     .image-as-medallion {
       &.mobile,

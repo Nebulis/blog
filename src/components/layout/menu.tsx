@@ -294,7 +294,7 @@ export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
                     <span className="white-arrow"> </span>
                     <span className="black-arrow"> </span>
                     <ul className="submenu" aria-label="submenu">
-                      {subLinks.map((subLink) => {
+                      {[...subLinks].sort(sortByLabel(i18n.languageCode)).map((subLink) => {
                         const subSubLinks = inDevelopment ? subLink.sections : subLink.sections.filter(isLinkPublished)
                         return (
                           <li key={subLink.id}>
@@ -702,7 +702,7 @@ export const MobileMenu: React.FunctionComponent = () => {
                 name={menuLink.label[i18n.languageCode]}
                 animate={menuLink.id !== "about"}
               >
-                {subMenuLinks.map((subMenuLink) => {
+                {[...subMenuLinks].sort(sortByLabel(i18n.languageCode)).map((subMenuLink) => {
                   const subSubMenuLinks = development
                     ? subMenuLink.sections
                     : subMenuLink.sections.filter(isLinkPublished)

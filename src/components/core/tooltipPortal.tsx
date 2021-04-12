@@ -61,6 +61,7 @@ export const MouseToolTip: FunctionComponent = ({ children }) => {
   const childrenLength = React.Children.count(children?.props?.children)
   const offset = clientY > 80 ? -30 - 20 * childrenLength : 30
   const offsetLeft = windowWidth - clientX < 130
+  const offsetRight = clientX < 130
   return (
     <TooltipPortal>
       <Div
@@ -69,6 +70,11 @@ export const MouseToolTip: FunctionComponent = ({ children }) => {
           ...(offsetLeft
             ? {
                 left: `${pageX - width - 30}px`,
+                top: `${pageY - height / 2}px`,
+              }
+            : offsetRight
+            ? {
+                left: `${pageX + 15}px`,
                 top: `${pageY - height / 2}px`,
               }
             : { left: `${pageX - width / 2}px`, top: `${pageY + offset}px` }),

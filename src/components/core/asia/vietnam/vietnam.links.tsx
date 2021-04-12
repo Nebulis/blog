@@ -10,7 +10,6 @@ import {
 } from "./vietnam.cards"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
-import { css } from "@emotion/react"
 
 export const vietnamLinks: CountryLink = {
   id: "vietnam",
@@ -19,11 +18,9 @@ export const vietnamLinks: CountryLink = {
   pointOfInterest: ["city", "nature", "monument"],
   imageProps: {
     image: "homeVietnam",
-    css: css`
-      img {
-        object-position: -90px -10px !important;
-      }
-    `,
+    imgStyle: {
+      objectPosition: "-90px -10px",
+    },
   },
   cities: [
     {
@@ -33,11 +30,9 @@ export const vietnamLinks: CountryLink = {
       // this style is for the image in the asia page (medallion)
       imageProps: {
         image: "homeSouthernVietnam",
-        css: css`
-          img {
-            object-position: -35px -12px !important;
-          }
-        `,
+        imgStyle: {
+          objectPosition: "-35px -12px",
+        },
       },
       highlights: [
         {
@@ -108,11 +103,9 @@ export const vietnamLinks: CountryLink = {
       // dont use more than -65px otherwise the picture goes out of the medallion in small device
       imageProps: {
         image: "homeCentralVietnam",
-        css: css`
-          img {
-            object-position: 0px -65px !important;
-          }
-        `,
+        imgStyle: {
+          objectPosition: "0px -65px",
+        },
       },
       highlights: [
         {

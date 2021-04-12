@@ -30,11 +30,47 @@ exports[`english pages exports meta for public/en/articles/index.html correctly:
 
 exports[`english pages exports meta for public/en/articles/index.html correctly: title 1`] = `"All our articles | Travel Blog"`;
 
+exports[`english pages exports meta for public/en/asia/cambodia/index.html correctly: meta-description 1`] = `"Discover through our articles and our photos Cambodia, the ruined temples of Angkor, the floating villages, and many other must-see places. Follow us to discover our selection of must-see places. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/asia/cambodia/index.html correctly: social-network 1`] = `"Famous for Siem Reap and the ruins of Angkor Wat, you can also sail on Tonle Sap Lake and observe the life of floating villages. In Phnom Penh, visit the royal palace and the former prison from the Khmer Rouge regime, a moving story that will make you discover Cambodia differently. Follow our city-to-city guide to discover our selection of must-see places."`;
+
+exports[`english pages exports meta for public/en/asia/cambodia/index.html correctly: title 1`] = `"Cambodia | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/asia/cambodia/phnom-penh/index.html correctly: meta-description 1`] = `"Discover Phnom Penh, its royal palace, its art museum, a modern city full of cultural monuments but also the genocide museum which will teach you the history of Cambodia. For each place, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/asia/cambodia/phnom-penh/index.html correctly: social-network 1`] = `"Phnom Penh is modern city with many cultural monuments. Its sumptuous royal palace, its sublime national museum, and so many more. Besides, discover the overwhelming history of Cambodia with its former prison from the Khmer Rouge regime."`;
+
+exports[`english pages exports meta for public/en/asia/cambodia/phnom-penh/index.html correctly: title 1`] = `"Phnom Penh | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/asia/cambodia/siem-reap/index.html correctly: meta-description 1`] = `"Discover Siem Reap and the ruins of Angkor Wat, and the life of floating villages on Tonle Sap Lake. For each place, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/asia/cambodia/siem-reap/index.html correctly: social-network 1`] = `"Siem Reap is famous for the Angkor Wat ruins which on its own makes a good reason to come to Cambodia You can also sail on Tonlé Sap Lake and observe the life of floating villages or take a walk in the markets at night. Discover these must-haves places with us."`;
+
+exports[`english pages exports meta for public/en/asia/cambodia/siem-reap/index.html correctly: title 1`] = `"Siem Reap | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/asia/index.html correctly: meta-description 1`] = `"Asia has so much to offer. Find in our blog the most beautiful wonders of this continent for your dream holidays. Where to go? How? Why? When? How long and what's the best period?"`;
 
 exports[`english pages exports meta for public/en/asia/index.html correctly: social-network 1`] = `"Rest on wonderful beaches, visit of traditional temples, trek in the jungle or simply walk to discover breathtaking landscapes, from big cities to small villages, discovering the traditions of some tribes or observing silently wild animals... So many countries calling for evasion and making you dream."`;
 
 exports[`english pages exports meta for public/en/asia/index.html correctly: title 1`] = `"Asia | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/asia/indonesia/bali/index.html correctly: meta-description 1`] = `"Discover Bali, the crazy island, from beaches to tropical forests, rice fields to volcanoes by day, and bars open all night long. For each place, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/asia/indonesia/bali/index.html correctly: social-network 1`] = `"During the day, enjoy and rest on the immense beaches, or admire the landscapes in front of you, with rice terraces and impressive volcanoes. At night, Bali transforms into a party island, with its bars open all night long. Day and night, Discover this crazy island."`;
+
+exports[`english pages exports meta for public/en/asia/indonesia/bali/index.html correctly: title 1`] = `"Bali | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/asia/indonesia/index.html correctly: meta-description 1`] = `"Discover the gorgeous islands of Indonesia through our articles and our photos. Follow us to find our selection of must-see places. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/asia/indonesia/index.html correctly: social-network 1`] = `"Trek on the volcanoes of Java, rice fields and temples in Bali, hike in the tropical forests of Sumatra, rest on the beaches of Lombok or find out the dragons of Komodo Island. Follow our guide from island to island to discover our selection of must-see places."`;
+
+exports[`english pages exports meta for public/en/asia/indonesia/index.html correctly: title 1`] = `"Indonesia | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/asia/indonesia/komodo-island/index.html correctly: meta-description 1`] = `"Discover the Komodo Dragon National Park in Komodo, the pink sand beaches in Rinca, and rest on Flores Island in Labuan Bajo. For each place, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/asia/indonesia/komodo-island/index.html correctly: social-network 1`] = `"Komodo is mainly famous for its huge lizard, the largest living in the world which owes its name from the island, the Komodo dragon. In addition to this National Park, you can also enjoy Flores Island, in Labuan Bajo, for accommodation or Rinca Island for diving or resting on the pink sand beaches."`;
+
+exports[`english pages exports meta for public/en/asia/indonesia/komodo-island/index.html correctly: title 1`] = `"Komodo | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: meta-description 1`] = `"Visible from Tokyo, known throughout the world, Mount Fuji is one of the most famous peaks. For each spot, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
@@ -222,6 +258,18 @@ exports[`english pages exports meta for public/en/asia/philippines/index.html co
 
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: title 1`] = `"Philippines | Travel Blog"`;
 
+exports[`english pages exports meta for public/en/asia/singapore/index.html correctly: meta-description 1`] = `"Discover Singapore through our articles and our photos, from a modern city to the jungles. Follow our guide to discover our selection of known and little-known must-see places. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/asia/singapore/index.html correctly: social-network 1`] = `"Singapore is a forgotten country. The transit between two flights, rarely visited. Yet if you take the trouble to stop there, you will discover gorgeous places with extraordinary flora and fauna that will make you forget the city. Walk in botanical garden or in the jungle to observe monitor lizards or hornbills. Follow our guide to discover our selection of must-see places."`;
+
+exports[`english pages exports meta for public/en/asia/singapore/index.html correctly: title 1`] = `"Singapore | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/asia/taiwan/index.html correctly: meta-description 1`] = `"Discover Taiwan through our articles and our photos. Follow our guide to find out about our selection of must-see places. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/asia/taiwan/index.html correctly: social-network 1`] = `"Discover the island of Taiwan beyond its modern capital. Go on treks in Taroko National Park, discover the mountainous city of Jiufen and its extraordinary peak view, or walk near the beaches to discover atypical rock formations. Follow our guide to discover our selection of must-see places."`;
+
+exports[`english pages exports meta for public/en/asia/taiwan/index.html correctly: title 1`] = `"Taiwan | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/asia/vietnam/central-vietnam/index.html correctly: meta-description 1`] = `"Discover Central Vietnam through our travelogue. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/central-vietnam/index.html correctly: social-network 1`] = `"Discover Central Vietnam through our travelogue. Characterized by cultural cities such as Hue and its monuments, sublime beaches in Da Nang to rest, magnificent national parks such as Bach Ma or Phong Nha to discover extraordinary landscapes, or the little Venice of Vietnam, Hoi An, and its thousand lights."`;
@@ -294,11 +342,77 @@ exports[`english pages exports meta for public/en/credits/index.html correctly: 
 
 exports[`english pages exports meta for public/en/credits/index.html correctly: title 1`] = `"main | Travel Blog"`;
 
+exports[`english pages exports meta for public/en/discovery/animals/index.html correctly: meta-description 1`] = `"Each country is unique and full of discoveries and attractions. We will list, based on our experience and our visits, the countries where you can observe animals."`;
+
+exports[`english pages exports meta for public/en/discovery/animals/index.html correctly: social-network 1`] = `"In their habitat or protected reserves, observe the animals, get to know them, how to protect them, and preserve their natural environment."`;
+
+exports[`english pages exports meta for public/en/discovery/animals/index.html correctly: title 1`] = `"Observe animals | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/discovery/beach-holidays/index.html correctly: meta-description 1`] = `"Each country is unique and full of discoveries and attractions. We will list, based on our experience and our visits, the countries where you can take a break from the hustle and bustle of city life."`;
+
+exports[`english pages exports meta for public/en/discovery/beach-holidays/index.html correctly: social-network 1`] = `"A well-deserved rest. Stretch out on a deckchair and enjoy a moment all by yourself by the beach. Relax and unwind while sipping a good cocktail."`;
+
+exports[`english pages exports meta for public/en/discovery/beach-holidays/index.html correctly: title 1`] = `"Beach Holidays | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/discovery/cities/index.html correctly: meta-description 1`] = `"Each country is unique and full of discoveries and attractions. We will list, based on our experience and our visits, the countries where you can discover cities"`;
+
+exports[`english pages exports meta for public/en/discovery/cities/index.html correctly: social-network 1`] = `"Stroll through the streets and unique district, visit the lively places and soak up the culture of the locals"`;
+
+exports[`english pages exports meta for public/en/discovery/cities/index.html correctly: title 1`] = `"Explorer Cities | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/discovery/monuments/index.html correctly: meta-description 1`] = `"Each country is unique and full of discoveries and attractions. We will list, based on our experience and our visits, the countries where you can visit monuments."`;
+
+exports[`english pages exports meta for public/en/discovery/monuments/index.html correctly: social-network 1`] = `"Visit Pyramids, Temples, Pagodas ... Let's discover the heritage of different civilizations"`;
+
+exports[`english pages exports meta for public/en/discovery/monuments/index.html correctly: title 1`] = `"Visit of Monuments | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/discovery/nature/index.html correctly: meta-description 1`] = `"Each country is unique and full of discoveries and attractions. We will list, based on our experience and our visits, the countries where you can observe Nature."`;
+
+exports[`english pages exports meta for public/en/discovery/nature/index.html correctly: social-network 1`] = `"Treks, hikes, or strolls, in the mountains, in the forest, or parks, admire the landscapes that Nature gives us"`;
+
+exports[`english pages exports meta for public/en/discovery/nature/index.html correctly: title 1`] = `"Observe Nature | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/discovery/water-activities/index.html correctly: meta-description 1`] = `"Each country is unique and full of discoveries and attractions. We will list, based on our experience and our visits, the countries where you can do all kinds of water activities."`;
+
+exports[`english pages exports meta for public/en/discovery/water-activities/index.html correctly: social-network 1`] = `"Diving and snorkeling to admire the wonders of the seabed or surf and jet-ski for thrill experiences."`;
+
+exports[`english pages exports meta for public/en/discovery/water-activities/index.html correctly: title 1`] = `"Water activities | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/discovery/winter-activities/index.html correctly: meta-description 1`] = `"Each country is unique and full of discoveries and attractions. We will list, based on our experience and our visits, the countries where you can do all kinds of winter activities."`;
+
+exports[`english pages exports meta for public/en/discovery/winter-activities/index.html correctly: social-network 1`] = `"Go on an adventure with your snowshoes or skis, take your sled and slide down the mountains. Enjoy the snow and admire the snowy landscapes."`;
+
+exports[`english pages exports meta for public/en/discovery/winter-activities/index.html correctly: title 1`] = `"Winter activities | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/index.html correctly: meta-description 1`] = `"Passionate about travel, we share our adventures around the world on our blog. Tips, advice, journeys, journal, anecdotes, favorites... we hope you will find what you are looking for! A travel and lifestyle blog made by a traveling couple with their heads full of dreams!"`;
 
 exports[`english pages exports meta for public/en/index.html correctly: social-network 1`] = `"Passionate about travel, we share our adventures around the world on our blog. Tips, advice, journeys, journal, anecdotes, favorites... we hope you will find what you are looking for! A travel and lifestyle blog made by a traveling couple with their heads full of dreams!"`;
 
 exports[`english pages exports meta for public/en/index.html correctly: title 1`] = `"Magic of travels | Travel Blog"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/index.html correctly: meta-description 1`] = `"If you love animals, nature, beautiful outdoors, and road trips, Australia is for you. Follow our guide from state to state to discover our selection of must-see places through our articles and photos. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/index.html correctly: social-network 1`] = `"There is so much to discover in Australia that it would take years to visit everything thoroughly. If you love animals, nature, beautiful outdoors, and road trips, Australia is for you."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/index.html correctly: title 1`] = `"Australia | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/northern-territory/index.html correctly: meta-description 1`] = `"Discover the Northern Territory, a state located in the North of Australia. Darwin, lakes with crocodiles, Kakadu National Park, Katherine, Daly Waters and its pubs. For each place, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/northern-territory/index.html correctly: social-network 1`] = `"With many lakes and parks, the largest and most famous being Kakadu National Park, as well as a tropical climate, this state is a perfect spot for crocodile sightseeing. You will also have the opportunity to visit many pubs."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/northern-territory/index.html correctly: title 1`] = `"Northern Territory | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/outback/index.html correctly: meta-description 1`] = `"Discover Outback, a vast arid desert in central Australia. Alice Spring, Ayers Rock, Mount Olgas, and Kings Canyon, but also a lot of wild animals such as dingoes, kangaroos, camels, and reptiles. Through our articles discover the different places to visit. For each place, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/outback/index.html correctly: social-network 1`] = `"Outback is a vast arid desert home to the massive sandstone of Ayers Rock, composed of Mount Olgas and Kings Canyon and sacred for aborigines. In Alice Spring or on red sand roads, you may be able to see a lot of wild animals such as dingoes, kangaroos, camels, and of course many reptiles"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/outback/index.html correctly: title 1`] = `"Outback | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/index.html correctly: meta-description 1`] = `"Discover Queensland, the second-largest state in Australia. The great barrier reef, tropical forest, or meeting with koalas, through our articles we will show you different places to visit. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/index.html correctly: social-network 1`] = `"A paradise for surfers, famous for the Great Barrier Reef, with a coastline full of sublime beaches, there are also endless plains or tropical rain forests. It is the perfect place to see koalas in their natural habitat."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/index.html correctly: title 1`] = `"Queensland | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/oceania/index.html correctly: meta-description 1`] = `"There are so many things to discover in Oceania... landscapes, animals, cities. Find in our blog the most beautiful pearls of this continent for your dream vacation. Where to go? How to go there? Why going there? When to go? How long and when?"`;
 

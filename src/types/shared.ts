@@ -50,15 +50,28 @@ export type WeatherAltIconType =
   | "climb"
   | "swim"
   | "shower"
+  | "surf"
+  | "whale"
+  | "floating-market"
+  | "typhoon"
+
+type WeatherAltIconPosition = "alt-bottom-right" | "alt-top-right" | "alt-top-left" | "alt-bottom-left"
+
+export type WeatherAltType = WeatherAltIconType | { type: WeatherAltIconType; position: WeatherAltIconPosition }
+export const getWeatherAltIconType = (alt: WeatherAltType): WeatherAltIconType =>
+  typeof alt === "object" ? alt.type : alt
+export const getWeatherAltIconPosition = (alt: WeatherAltType): WeatherAltIconPosition | undefined =>
+  typeof alt === "object" ? alt.position : undefined
 export interface WeatherData {
   type: WeatherType
   icon: WeatherIconType
   temp: number
-  alt?: WeatherAltIconType | WeatherAltIconType[]
+  alt?: WeatherAltType | WeatherAltType[]
 }
 export interface WeatherEntry {
   id?: string
   label: string
+  tooltipLabel?: string
   data: [
     WeatherData,
     WeatherData,

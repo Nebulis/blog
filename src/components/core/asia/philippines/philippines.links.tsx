@@ -2,7 +2,6 @@ import { CountryLink } from "../../links/links.types"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
 import { ElNidoParadiseCard, ElNidoTourACard, ElNidoTourBCard, ElNidoWhichTourCard } from "./philippines.card"
-import { css } from "@emotion/react"
 
 export const philippinesLinks: CountryLink = {
   id: "philippines",
@@ -19,11 +18,9 @@ export const philippinesLinks: CountryLink = {
       pointOfInterest: ["lazy", "nature", "animals", "water-activities"],
       imageProps: {
         image: "homeElNido",
-        css: css`
-          img {
-            object-position: -35px -12px !important;
-          }
-        `,
+        imgStyle: {
+          objectPosition: "-35px -12px",
+        },
       },
       highlights: [
         {

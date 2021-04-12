@@ -15,7 +15,6 @@ import { isLinkPublished, sortByField } from "../../../components/core/links/lin
 import { ApplicationContext } from "../../../components/application"
 import { SharedCardVietnamImages } from "../../../components/images/asia/vietnam/shared-card-vietnam-images"
 import { SharedAsiaImages } from "../../../components/images/asia/shared-asia-images"
-import { css } from "@emotion/react"
 
 const namespace = "organisation/when-to-go/winter"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -35,12 +34,10 @@ const elements: OrganisationCard[] = [
     image: SharedAsiaImages,
     imageProps: {
       image: "homePhilippines",
-      css: css`
-        img {
-          object-position: -50px 30px !important;
-          transform: scale(1.6);
-        }
-      `,
+      imgStyle: {
+        objectPosition: "-50px 30px",
+        transform: "scale(1.6)",
+      },
     },
     to: "philippines",
   },

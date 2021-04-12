@@ -6,6 +6,9 @@ import { css } from "@emotion/react"
 import { useCustomTranslation } from "../../i18n-hook"
 import { getLink } from "./links/links.utils"
 import { Photo } from "../icon/photo"
+import styled from "@emotion/styled"
+import { primaryColor, primaryDarkColor } from "./variables"
+import { ApplicationLink } from "./links/link"
 
 const pointOfInterestSectionStyle = css`
   margin-bottom: 0.45rem;
@@ -20,6 +23,8 @@ const pointOfInterestSectionStyle = css`
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.2s linear;
+    border-bottom: 2px solid transparent;
   }
   svg {
     width: 50px;
@@ -32,56 +37,70 @@ const pointOfInterestSectionStyle = css`
     text-transform: uppercase;
   }
 `
-export const PointOfInterestSection: FunctionComponent<{ className?: string; page: string }> = ({
+export const PointOfInterestSection: FunctionComponent<{ className?: string; page: string; fullTitle?: boolean }> = ({
   className = "",
   page,
+  fullTitle = false,
 }) => {
-  const { i18n } = useCustomTranslation()
+  const { t, i18n } = useCustomTranslation("common")
   const link = getLink(page)
   return (
     <section className={`${className} point-of-interest-section`} css={pointOfInterestSectionStyle}>
       {link.pointOfInterest.includes("nature") && (
-        <div className="title-element">
+        <ApplicationLink to="nature" className="title-element">
           <Hiking />
           <div className="title mt2">Nature</div>
-        </div>
+        </ApplicationLink>
       )}
       {link.pointOfInterest.includes("monument") && (
-        <div className="title-element">
+        <ApplicationLink to="monuments" className="title-element">
           <Monument />
           <div className="title mt2">Monuments</div>
-        </div>
+        </ApplicationLink>
       )}
       {link.pointOfInterest.includes("city") && (
-        <div className="title-element">
+        <ApplicationLink to="cities" className="title-element">
           <CityIcon />
           <div className="title mt2">{i18n.languageCode === "fr" ? "Ville" : "City"}</div>
-        </div>
+        </ApplicationLink>
       )}
       {link.pointOfInterest.includes("animals") && (
-        <div className="title-element">
+        <ApplicationLink to="animals" className="title-element">
           <Photo />
           <div className="title mt2">{i18n.languageCode === "fr" ? "Animaux" : "Animals"}</div>
-        </div>
+        </ApplicationLink>
       )}
       {link.pointOfInterest.includes("lazy") && (
-        <div className="title-element">
+        <ApplicationLink to="beach-holidays" className="title-element">
           <Farniente />
           <div className="title mt2">{i18n.languageCode === "fr" ? "Farniente" : "Lazy"}</div>
-        </div>
+        </ApplicationLink>
       )}
       {link.pointOfInterest.includes("water-activities") && (
-        <div className="title-element">
+        <ApplicationLink to="water-activities" className="title-element">
           <Scuba />
-          <div className="title mt2">{i18n.languageCode === "fr" ? "Océan" : "Ocean"}</div>
-        </div>
+          <div className="title mt2">
+            {fullTitle ? t("common:link.discovery.water-activities") : i18n.languageCode === "fr" ? "Océan" : "Ocean"}
+          </div>
+        </ApplicationLink>
       )}
       {link.pointOfInterest.includes("winter-activities") && (
-        <div className="title-element">
+        <ApplicationLink to="winter-activities" className="title-element">
           <Ski />
-          <div className="title mt2">{i18n.languageCode === "fr" ? "Neige" : "Snow"}</div>
-        </div>
+          <div className="title mt2">
+            {fullTitle ? t("common:link.discovery.winter-activities") : i18n.languageCode === "fr" ? "Neige" : "Snow"}
+          </div>
+        </ApplicationLink>
       )}
     </section>
   )
 }
+
+export const PrimaryPointOfInterestSection = styled(PointOfInterestSection)`
+  svg {
+    fill: ${primaryColor};
+  }
+  .title {
+    color: ${primaryDarkColor};
+  }
+`

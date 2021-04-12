@@ -5,7 +5,13 @@ import { Country, CountryPath, World } from "../components/layout/world"
 import styled from "@emotion/styled"
 import { MouseToolTip, TooltipContent } from "../components/core/tooltipPortal"
 import { PageProps } from "gatsby"
-import { getArticles, getLink, isLinkPublished, sortByLabel } from "../components/core/links/links.utils"
+import {
+  getArticles,
+  getLink,
+  getPublishedCountries,
+  isLinkPublished,
+  sortByLabel,
+} from "../components/core/links/links.utils"
 import { Carousel, CarouselImage } from "../components/core/carousel"
 import { Divider } from "../components/core/divider"
 import { Farniente, Fruit, Monument, Scuba, Ski } from "../components/icon/monument"
@@ -180,7 +186,7 @@ const ContemplateContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   justify-items: center;
-  grid-gap: 3rem;
+  grid-gap: 1rem;
   text-align: center;
   svg {
     width: 60px;
@@ -200,6 +206,17 @@ const ContemplateContainer = styled.div`
     font-size: 0.9rem;
     line-height: 1.3rem;
     font-family: monospace;
+  }
+
+  @media (min-width: ${largeStart}) {
+    .contemplate-element {
+      transition: all 0.2s linear;
+      padding: 1rem;
+      background-color: white;
+    }
+    a.contemplate-element:hover {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
   }
 
   @media (max-width: ${mediumEnd}) {
@@ -235,7 +252,8 @@ const ContemplateContainer = styled.div`
         padding-left: 1rem;
       }
     }
-    .contemplate-element:nth-of-type(even) {
+    // TODO change to nth-of-type once the fruit page is released
+    .contemplate-element:nth-child(even) {
       flex-direction: row-reverse;
     }
   }
@@ -376,15 +394,38 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         to: "australia",
         image: "australia2",
       },
+      {
+        to: "singapore",
+        image: "singapore1",
+      },
+      {
+        to: "singapore",
+        image: "singapore2",
+      },
+      {
+        to: "cambodia",
+        image: "cambodia1",
+      },
+      {
+        to: "cambodia",
+        image: "cambodia2",
+      },
+      {
+        to: "taiwan",
+        image: "taiwan1",
+      },
+      {
+        to: "taiwan",
+        image: "taiwan2",
+      },
     ].filter(({ to }) => {
+      // return to === "taiwan" && (development || isLinkPublished(to))
       return development || isLinkPublished(to)
     })
     return shuffleArray(tmp)
   })
 
-  const countriesWithArticles = ["philippines", "vietnam", "japan"].filter((country) => {
-    return development || isLinkPublished(country)
-  })
+  const countriesWithArticles = getPublishedCountries({ development })
   const description = `${t("index:welcome.section1")} ${t("index:welcome.section2")} ${t("index:welcome.section3")}`
   return (
     <>
@@ -486,55 +527,55 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <HomeSection>{t("contemplate.title")}</HomeSection>
         <HomeSubSection>{t("contemplate.subtitle")}</HomeSubSection>
         <ContemplateContainer>
-          <div className="contemplate-element">
+          <ApplicationLink to="monuments" className="contemplate-element">
             <div className="title-element">
               <Monument />
               <div className="title">{t("contemplate.monuments.title")}</div>
             </div>
             <div className="content">{t("contemplate.monuments.content")}</div>
-          </div>
-          <div className="contemplate-element">
+          </ApplicationLink>
+          <ApplicationLink to="nature" className="contemplate-element">
             <div className="title-element">
               <Hiking />
               <div className="title">{t("contemplate.nature.title")}</div>
             </div>
             <div className="content">{t("contemplate.nature.content")}</div>
-          </div>
-          <div className="contemplate-element">
+          </ApplicationLink>
+          <ApplicationLink to="cities" className="contemplate-element">
             <div className="title-element">
               <CityIcon />
               <div className="title">{t("contemplate.city.title")}</div>
             </div>
             <div className="content">{t("contemplate.city.content")}</div>
-          </div>
-          <div className="contemplate-element">
+          </ApplicationLink>
+          <ApplicationLink to="animals" className="contemplate-element">
             <div className="title-element">
               <Photo />
               <div className="title">{t("contemplate.animals.title")}</div>
             </div>
             <div className="content">{t("contemplate.animals.content")}</div>
-          </div>
-          <div className="contemplate-element">
+          </ApplicationLink>
+          <ApplicationLink to="beach-holidays" className="contemplate-element">
             <div className="title-element">
               <Farniente />
               <div className="title">{t("contemplate.lazy.title")}</div>
             </div>
             <div className="content">{t("contemplate.lazy.content")}</div>
-          </div>
-          <div className="contemplate-element">
+          </ApplicationLink>
+          <ApplicationLink to="water-activities" className="contemplate-element">
             <div className="title-element">
               <Scuba />
               <div className="title">{t("contemplate.water-activities.title")}</div>
             </div>
             <div className="content">{t("contemplate.water-activities.content")}</div>
-          </div>
-          <div className="contemplate-element">
+          </ApplicationLink>
+          <ApplicationLink to="winter-activities" className="contemplate-element">
             <div className="title-element">
               <Ski />
               <div className="title">{t("contemplate.winter-activities.title")}</div>
             </div>
             <div className="content">{t("contemplate.winter-activities.content")}</div>
-          </div>
+          </ApplicationLink>
           {development && (
             <div className="contemplate-element">
               <div className="title-element">

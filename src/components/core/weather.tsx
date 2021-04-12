@@ -5,7 +5,16 @@ import { Button } from "./button"
 import { css } from "@emotion/react"
 import { Table } from "../layout/layout"
 import styled from "@emotion/styled"
-import { WeatherAltIconType, WeatherData, WeatherEntry, WeatherIconType, WeatherType } from "../../types/shared"
+import {
+  getWeatherAltIconPosition,
+  getWeatherAltIconType,
+  WeatherAltIconType,
+  WeatherAltType,
+  WeatherData,
+  WeatherEntry,
+  WeatherIconType,
+  WeatherType,
+} from "../../types/shared"
 import { japanCherryBlossom } from "./japan/japan.variables"
 import { Lang } from "./links/links.types"
 // https://www.flaticon.com/free-icon/drop_2204430?related_id=2204430&origin=pack
@@ -731,6 +740,127 @@ export const LightRain: React.FunctionComponent = () => (
     />
   </svg>
 )
+export const Whale: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
+  <svg viewBox="0 0 512 512" className={className}>
+    <g>
+      <path
+        d="m348.904 196.213c-36.538 0-70.27 8.954-97.461 24.077-33.039 17.671-93.015 37.965-107.899-27.297 14.287-1.962 29.464-9.615 43.662-23.812 30.251-30.251 48.182-82.295 27.141-103.335-20.875-20.875-72.258-3.381-102.607 26.439-30.348-29.819-81.731-47.313-102.606-26.438-21.04 21.04-3.109 73.084 27.142 103.335 15.718 15.718 32.636 23.416 48.218 24.246 10.64 160.782 96.787 245.862 264.411 245.862 90.075-.001 163.095-54.415 163.095-121.539 0-67.123-73.02-121.538-163.096-121.538z"
+        fill="#cde9fa"
+      />
+      <path
+        d="m194.857 237.78c-22.643.471-43.381-10.008-51.312-44.787 14.287-1.962 29.464-9.615 43.662-23.812 30.251-30.251 48.182-82.295 27.141-103.335-20.875-20.875-72.258-3.381-102.607 26.439-30.349-29.819-81.732-47.313-102.607-26.438-21.04 21.04-3.109 73.083 27.141 103.335 15.718 15.717 32.636 23.416 48.218 24.246 7.213 108.997 49.141 183.189 127.615 219.683-38.648-46.086-34.243-124.395-17.251-175.331z"
+        fill="#a2ddfd"
+      />
+      <path
+        d="m176.228 312.79c-28.831-40.079-57.582-43.418-75.73-30.459 33.198 103.06 114.994 156.957 248.406 156.957 75.862 0 139.622-38.598 157.857-90.877-158.919 86.404-276.2 39.911-330.533-35.621z"
+        fill="#7ca1dc"
+      />
+      <path
+        d="m316.425 421.152c-24.531 24.531-76.015 45.686-94.721 26.98s2.449-70.19 26.98-94.721 52.221-21.893 70.927-3.186c18.706 18.706 21.345 46.396-3.186 70.927z"
+        fill="#a2ddfd"
+      />
+      <g>
+        <g>
+          <ellipse cx="360.626" cy="332.348" fill="#fff" rx="32.309" ry="25.729" />
+        </g>
+        <g fill="#4e5660">
+          <path d="m379.456 315.08c-4.143 0-7.5-3.358-7.5-7.5v-13.208c0-4.142 3.357-7.5 7.5-7.5s7.5 3.358 7.5 7.5v13.208c0 4.142-3.357 7.5-7.5 7.5z" />
+          <path d="m448.189 322.942c-9.112 0-17.778-3.946-23.775-10.828-2.722-3.122-2.396-7.86.727-10.582 3.122-2.722 7.86-2.397 10.582.726 3.147 3.612 7.691 5.683 12.467 5.683 4.775 0 9.319-2.071 12.467-5.683 2.722-3.122 7.459-3.448 10.582-.726 3.123 2.721 3.448 7.459.727 10.582-5.999 6.882-14.665 10.828-23.777 10.828z" />
+        </g>
+      </g>
+      <g fill="#5a8bd5">
+        <path d="m341.374 115.575c-4.143 0-7.5-3.358-7.5-7.5 0-10.642-8.657-19.299-19.299-19.299-4.143 0-7.5-3.358-7.5-7.5s3.357-7.5 7.5-7.5c10.832 0 20.509 5.048 26.799 12.915 6.29-7.867 15.967-12.915 26.799-12.915 4.143 0 7.5 3.358 7.5 7.5s-3.357 7.5-7.5 7.5c-10.642 0-19.299 8.657-19.299 19.299 0 4.142-3.357 7.5-7.5 7.5z" />
+        <path d="m341.374 160.46c-4.143 0-7.5-3.358-7.5-7.5v-5.608c0-4.142 3.357-7.5 7.5-7.5s7.5 3.358 7.5 7.5v5.608c0 4.142-3.357 7.5-7.5 7.5z" />
+        <path d="m176.228 312.79c-28.831-40.079-57.582-43.418-75.729-30.459 19.767 61.364 56.766 105.295 111.628 130.8-20.634-24.59-29.001-58.359-29.736-92.257-2.133-2.654-4.194-5.347-6.163-8.084z" />
+      </g>
+    </g>
+  </svg>
+)
+export const Surf: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
+  <svg viewBox="0 0 512 512" className={className}>
+    <g>
+      <path
+        fill="#F29C1F"
+        d="M229.517,260.59c0.456,50.321-6.474,100.436-20.568,148.745l-85.363,33.368l-17.655,6.885
+		l-58.086,22.687C18.891,424.96,0,347.807,0,260.59C0,123.321,46.698,11.034,105.931,0.883c5.826-1.177,11.829-1.177,17.655,0
+		C182.819,11.034,229.517,123.321,229.517,260.59z"
+      />
+      <path
+        fill="#D25627"
+        d="M215.128,134.268c-19.862,57.556-65.589,92.866-136.916,108.491
+		c-32.38,6.793-60.357,27.006-76.977,55.614C0.441,286.102,0,273.39,0,260.59c0-4.502,0.088-9.004,0.177-13.418
+		c14.696-27.03,40.396-46.354,70.444-52.966c71.503-15.89,114.406-46.08,128.706-109.815
+		C205.783,100.617,211.064,117.285,215.128,134.268z"
+      />
+      <path
+        fill="#C03A2B"
+        d="M223.868,180.171v0.088c-15.89,58.615-58.174,86.952-126.764,102.223
+		c-59.498,13.241-79.36,65.942-85.539,91.719c-5.354-24.979-8.806-50.328-10.328-75.829c16.619-28.608,44.597-48.821,76.977-55.614
+		c71.327-15.625,117.054-50.935,136.916-108.491C218.825,149.409,221.742,164.73,223.868,180.171z"
+      />
+      <g>
+        <path
+          fill="#E57E25"
+          d="M123.586,335.448v107.255l-17.655,6.885V335.448c0-4.875,3.952-8.828,8.828-8.828
+			S123.586,330.573,123.586,335.448z"
+        />
+        <path
+          fill="#E57E25"
+          d="M123.586,0.883v131.531c0,4.875-3.952,8.828-8.828,8.828s-8.828-3.952-8.828-8.828V0.883
+			C111.757-0.294,117.76-0.294,123.586,0.883z"
+        />
+      </g>
+      <path
+        fill="#4482C3"
+        d="M512,260.59c0,87.217-18.891,164.37-47.845,211.685l-58.086-22.687l-17.655-6.885l-85.363-33.368
+		c-14.095-48.309-21.025-98.424-20.568-148.745c0-137.269,46.698-249.556,105.931-259.708c5.826-1.177,11.829-1.177,17.655,0
+		C465.302,11.034,512,123.321,512,260.59z"
+      />
+      <g>
+        <path
+          fill="#285680"
+          d="M406.069,353.103v96.486l-17.655-6.885v-89.6c0-4.875,3.952-8.828,8.828-8.828
+			C402.117,344.276,406.069,348.228,406.069,353.103z"
+        />
+        <path
+          fill="#285680"
+          d="M406.069,0.883v105.048c0,4.875-3.952,8.828-8.828,8.828c-4.875,0-8.828-3.952-8.828-8.828V0.883
+			C394.24-0.294,400.243-0.294,406.069,0.883z"
+        />
+      </g>
+      <path
+        fill="#E4C05C"
+        d="M512,512c-68.401-67.121-160.171-105.095-256-105.931C160.171,406.905,68.401,444.878,0,512H512z"
+      />
+      <g>
+        <path
+          fill="#F9EAB0"
+          d="M125.44,459.741c-6.483,2.776-13.034,5.823-19.482,9.056c-4.359,2.185-6.121,7.49-3.935,11.849
+			c2.185,4.359,7.49,6.121,11.849,3.935c6.138-3.078,12.362-5.974,18.517-8.608c4.483-1.919,6.561-7.108,4.642-11.591
+			C135.112,459.901,129.923,457.823,125.44,459.741z"
+        />
+        <path
+          fill="#F9EAB0"
+          d="M256,432.552c-30.702,0.024-61.248,4.38-90.733,12.94c-3.054,0.857-5.414,3.286-6.181,6.363
+			c-0.768,3.078,0.175,6.33,2.469,8.521c2.294,2.19,5.587,2.982,8.626,2.073c27.888-8.096,56.779-12.217,85.819-12.241
+			c4.875,0,8.828-3.952,8.828-8.828S260.875,432.552,256,432.552z"
+        />
+      </g>
+      <g>
+        <path
+          fill="#F3D55B"
+          d="M511.912,264.827c0,15.095-0.706,29.837-1.942,44.138H284.513
+			c-1.235-14.301-1.942-29.043-2.03-44.138H511.912z"
+        />
+        <path
+          fill="#F3D55B"
+          d="M508.204,194.207H286.279c1.766-15.36,4.061-30.102,7.062-44.138h207.801
+			C504.143,164.105,506.439,178.847,508.204,194.207z"
+        />
+      </g>
+    </g>
+  </svg>
+)
 export const Scuba: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
   <svg height="512" viewBox="-72 0 512 512" width="512" className={className}>
     <title>Scuba / Plongée</title>
@@ -890,6 +1020,107 @@ export const JellyFish: React.FunctionComponent<HTMLAttributes<any>> = ({ classN
 		c2.807-3.214,7.69-3.542,10.901-0.732c3.213,2.808,3.542,7.689,0.732,10.902C277.939,216.818,267.318,221.541,255.999,221.541z"
       />
     </g>
+  </svg>
+)
+export const FloatingMarket: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
+  <svg viewBox="0 0 512 512" className={className}>
+    <path
+      fill="#A78966"
+      d="M498.226,215.738c-16.48,48.229-61.806,80.639-112.773,80.639H173.868
+c-38.622,0-75.58-15.73-102.355-43.565L3.588,182.2c-3.57-3.712-4.579-9.196-2.562-13.934s6.668-7.814,11.818-7.814h486.31
+c4.146,0,8.036,2.002,10.448,5.374s3.047,7.701,1.707,11.624L498.226,215.738z"
+    />
+    <path
+      fill="#957856"
+      d="M509.603,165.824c-2.411-3.372-6.302-5.374-10.448-5.374H271.923v135.927h113.531
+c50.967,0,96.292-32.411,112.773-80.639l13.084-38.29C512.65,173.526,512.015,169.196,509.603,165.824z"
+    />
+    <g>
+      <path
+        fill="#5AAAE7"
+        d="M335.479,406.585H123.419c-9.222,0-16.698-7.476-16.698-16.698s7.476-16.698,16.698-16.698h212.061
+c9.222,0,16.698,7.476,16.698,16.698S344.701,406.585,335.479,406.585z"
+      />
+      <path
+        fill="#5AAAE7"
+        d="M439.004,473.377H257.521c-9.222,0-16.698-7.476-16.698-16.698s7.476-16.698,16.698-16.698h181.484
+c9.222,0,16.698,7.476,16.698,16.698S448.227,473.377,439.004,473.377z"
+      />
+    </g>
+    <g>
+      <path
+        fill="#3D9AE2"
+        d="M439.004,439.98h-90.742v33.397h90.742c9.222,0,16.698-7.476,16.698-16.698
+S448.227,439.98,439.004,439.98z"
+      />
+      <path
+        fill="#3D9AE2"
+        d="M335.479,373.188H229.448v33.397h106.031c9.222,0,16.698-7.476,16.698-16.698
+S344.701,373.188,335.479,373.188z"
+      />
+    </g>
+    <path
+      fill="#5AAAE6"
+      d="M476.888,329.775H82.703c-9.222,0-16.698-7.476-16.698-16.698s7.476-16.698,16.698-16.698h394.184
+c9.222,0,16.698,7.476,16.698,16.698S486.11,329.775,476.888,329.775z"
+    />
+    <path
+      fill="#3D9AE2"
+      d="M476.888,296.378H271.923v33.397h204.966c9.222,0,16.698-7.476,16.698-16.698
+S486.11,296.378,476.888,296.378z"
+    />
+    <g>
+      <polygon fill="#806749" points="495.13,223.744 43.701,223.744 14.263,193.135 505.95,193.135 	" />
+      <polygon fill="#806749" points="351.946,160.451 304.717,160.451 272.032,193.135 319.262,193.135 	" />
+    </g>
+    <polygon fill="#957856" points="168.791,296.378 216.021,296.378 288.655,223.744 241.425,223.744 " />
+    <polygon fill="url(#SVGID_1_)" points="272.032,193.135 241.425,223.744 288.655,223.744 319.262,193.135 " />
+    <polygon fill="#6A563D" points="272.032,193.135 241.425,223.744 288.655,223.744 319.262,193.135 " />
+    <path
+      fill="#FFDAAA"
+      d="M125.304,405.149c-4.954,4.954-12.986,4.954-17.94,0l-61.168-61.168
+c-4.954-4.954-4.954-12.986,0-17.94l41.488-41.488c21.845-21.845,57.262-21.845,79.107,0c21.845,21.845,21.845,57.262,0,79.107
+L125.304,405.149z"
+    />
+    <path
+      fill="#FFB655"
+      d="M110.729,357.316c-4.274,0-8.547-1.63-11.807-4.892c-6.521-6.521-6.521-17.094,0-23.615
+L384.218,43.514c6.52-6.521,17.094-6.521,23.615,0c6.521,6.521,6.521,17.094,0,23.615L122.537,352.424
+C119.276,355.686,115.003,357.316,110.729,357.316z"
+    />
+  </svg>
+)
+export const Typhoon: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
+  <svg viewBox="0 0 480 480" className={className}>
+    <path
+      fill="#A5E4F2"
+      d="M399.998,239.992c0.004,88.366-71.626,160.004-159.992,160.008S80.003,328.374,79.998,240.008
+C79.994,151.642,151.625,80.004,239.99,80c0.003,0,0.005,0,0.008,0c88.358-0.007,159.993,71.615,160,159.974
+C399.998,239.98,399.998,239.986,399.998,239.992z"
+    />
+    <g>
+      <circle fill="#66AAB5" cx="240" cy="240" r="64" />
+      <path
+        fill="#66AAB5"
+        d="M240,376c-75.111,0-136-60.889-136-136s60.889-136,136-136v16c-66.274,0-120,53.726-120,120
+s53.726,120,120,120s120-53.726,120-120h16C375.916,315.076,315.076,375.916,240,376z"
+      />
+      <path
+        fill="#66AAB5"
+        d="M240,344v-16c48.601,0,88-39.399,88-88s-39.399-88-88-88s-88,39.399-88,88h-16
+c0-57.438,46.562-104,104-104s104,46.562,104,104S297.438,344,240,344z"
+      />
+    </g>
+    <path
+      fill="#61ABE2"
+      d="M240,72c-34.389-0.011-67.942,10.6-96.073,30.38C192.285,49.862,267.546,16,352,16V0
+c-154.383,0-279.988,107.653-280,239.981l0,0.011V240h0c-0.009,34.391,10.604,67.946,30.387,96.077
+C49.869,287.72,16.004,212.457,16,128H0c0.008,154.391,107.668,280,239.992,280v0l0.008,0c34.392,0.01,67.948-10.603,96.079-30.388
+C287.72,430.131,212.456,463.996,128,464v16c154.395-0.008,280.004-107.672,280.004-239.992h-0.005l0.001-0.016
+c0.01-34.385-10.599-67.935-30.377-96.062C430.14,192.288,464,267.547,464,352h16C480,197.609,372.336,72,240,72L240,72z
+M392,239.992c0.001,83.947-68.051,152.001-151.999,152.001C156.054,391.994,88.001,323.942,88,239.995l0-0.014
+c0.152-83.947,68.328-151.876,152.276-151.724C324.012,88.409,391.854,156.256,392,239.992z"
+    />
   </svg>
 )
 export const Climb: React.FunctionComponent<HTMLAttributes<any>> = ({ className }) => (
@@ -1103,10 +1334,13 @@ const weatherStyle = css`
         width: 20px;
         height: 20px;
       }
-      .alt.alt-left {
+      .alt.alt-bottom-left {
         left: 5px;
       }
-      .alt.alt-right {
+      .alt.alt-bottom-right {
+        right: 5px;
+      }
+      .alt.alt-top-right {
         right: 5px;
         top: 2px;
       }
@@ -1214,89 +1448,119 @@ const getWeather = (lang: Lang, icon: WeatherIconType) => {
 }
 const getWeatherAddition = (
   lang: Lang,
-  alt: WeatherAltIconType[],
+  alt: WeatherAltType[],
   transformAddition: (alt: WeatherAltIconType) => string | undefined
 ) => {
   const weatherAddition: string[] = []
-  if (alt.includes("arctic")) {
+  const weatherAltIconTypes = alt.map(getWeatherAltIconType)
+  if (weatherAltIconTypes.includes("arctic")) {
     weatherAddition.push(transformAddition("arctic") ?? (lang === "fr" ? "Très froid" : "Arctic"))
   }
-  if (alt.includes("hot")) {
+  if (weatherAltIconTypes.includes("hot")) {
     weatherAddition.push(transformAddition("hot") ?? (lang === "fr" ? "Très chaud" : "Hot"))
   }
-  if (alt.includes("cold")) {
+  if (weatherAltIconTypes.includes("cold")) {
     weatherAddition.push(transformAddition("cold") ?? (lang === "fr" ? "Froid" : "Cold"))
   }
-  if (alt.includes("droplet")) {
+  if (weatherAltIconTypes.includes("droplet")) {
     weatherAddition.push(transformAddition("droplet") ?? (lang === "fr" ? "Mousson" : "Monsoon"))
   }
-  if (alt.includes("shower")) {
+  if (weatherAltIconTypes.includes("shower")) {
     weatherAddition.push(transformAddition("shower") ?? (lang === "fr" ? "Quelques averses" : "A few showers"))
   }
   return weatherAddition.join(" - ")
 }
 const getOtherAddition = (
   lang: Lang,
-  alt: WeatherAltIconType[],
+  alt: WeatherAltType[],
   transformAddition: (alt: WeatherAltIconType) => string | undefined
 ) => {
   const weatherAddition: string[] = []
-  if (alt.includes("scuba")) {
+  const weatherAltIconTypes = alt.map(getWeatherAltIconType)
+  if (weatherAltIconTypes.includes("scuba")) {
     weatherAddition.push(transformAddition("scuba") ?? (lang === "fr" ? "Plongée" : "Scuba Diving"))
   }
-  if (alt.includes("jelly-fish")) {
+  if (weatherAltIconTypes.includes("jelly-fish")) {
     weatherAddition.push(transformAddition("jelly-fish") ?? (lang === "fr" ? "Méduse" : "Jellyfish"))
   }
-  if (alt.includes("sakura")) {
+  if (weatherAltIconTypes.includes("sakura")) {
     weatherAddition.push(transformAddition("sakura") ?? "Sakura")
   }
-  if (alt.includes("autumn")) {
+  if (weatherAltIconTypes.includes("autumn")) {
     weatherAddition.push(transformAddition("autumn") ?? "Momiji")
   }
-  if (alt.includes("snow-man")) {
+  if (weatherAltIconTypes.includes("snow-man")) {
     weatherAddition.push(transformAddition("snow-man") ?? (lang === "fr" ? "Neige" : "Snow"))
   }
-  if (alt.includes("climb")) {
+  if (weatherAltIconTypes.includes("climb")) {
     weatherAddition.push(transformAddition("climb") ?? (lang === "fr" ? "Ascension" : "Ascent"))
   }
-  if (alt.includes("swim")) {
+  if (weatherAltIconTypes.includes("swim")) {
     weatherAddition.push(transformAddition("swim") ?? (lang === "fr" ? "Baignade" : "Swimming"))
+  }
+  if (weatherAltIconTypes.includes("whale")) {
+    weatherAddition.push(transformAddition("whale") ?? (lang === "fr" ? "Baleine" : "Whale"))
+  }
+  if (weatherAltIconTypes.includes("surf")) {
+    weatherAddition.push(transformAddition("surf") ?? "Surf")
+  }
+  if (weatherAltIconTypes.includes("floating-market")) {
+    weatherAddition.push(
+      transformAddition("floating-market") ?? (lang === "fr" ? "Village Flottant" : "Floating Market")
+    )
+  }
+  if (weatherAltIconTypes.includes("typhoon")) {
+    weatherAddition.push(transformAddition("typhoon") ?? (lang === "fr" ? "Ouragan" : "Hurricane"))
   }
   return weatherAddition.join(" - ")
 }
 
 const WeatherAlt: React.FunctionComponent<{ data: WeatherData }> = ({ data }) => {
-  let position = "alt-right"
+  let position = "alt-top-right"
   return (
     <>
-      {([] as WeatherAltIconType[]).concat(data.alt || []).map((alt) => {
+      {([] as WeatherAltType[]).concat(data.alt || []).map((alt) => {
+        const weatherAltIconType = getWeatherAltIconType(alt)
+        const weatherAltIconPosition = getWeatherAltIconPosition(alt)
         const component =
-          alt === "hot" ? (
-            <Hot className={`alt alt-left`} key={alt} />
-          ) : alt === "cold" ? (
-            <Cold className={`alt alt-left`} key={alt} />
-          ) : alt === "arctic" ? (
-            <Arctic className={`alt alt-left`} key={alt} />
-          ) : alt === "droplet" ? (
-            <Droplet className={`alt ${position}`} key={alt} />
-          ) : alt === "snow-man" ? (
-            <SnowMan className={`alt ${position}`} key={alt} />
-          ) : alt === "sakura" ? (
-            <Sakura className={`alt ${position}`} key={alt} />
-          ) : alt === "autumn" ? (
-            <Autumn className={`alt ${position}`} key={alt} />
-          ) : alt === "scuba" ? (
-            <Scuba className={`alt ${position}`} key={alt} />
-          ) : alt === "climb" ? (
-            <Climb className={`alt ${position}`} key={alt} />
-          ) : alt === "swim" ? (
-            <Swim className={`alt ${position}`} key={alt} />
-          ) : alt === "shower" ? (
-            <Shower className={`alt ${position}`} key={alt} />
-          ) : alt === "jelly-fish" ? (
-            <JellyFish className={`alt alt-top-left`} key={alt} />
+          weatherAltIconType === "hot" ? (
+            <Hot className={`alt alt-bottom-left`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "cold" ? (
+            <Cold className={`alt alt-bottom-left`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "arctic" ? (
+            <Arctic className={`alt alt-bottom-left`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "droplet" ? (
+            <Droplet className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "snow-man" ? (
+            <SnowMan className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "sakura" ? (
+            <Sakura className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "autumn" ? (
+            <Autumn className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "scuba" ? (
+            <Scuba className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "climb" ? (
+            <Climb className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "swim" ? (
+            <Swim className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "shower" ? (
+            <Shower className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "surf" ? (
+            <Surf className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "whale" ? (
+            <Whale className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "jelly-fish" ? (
+            <JellyFish className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "floating-market" ? (
+            <FloatingMarket className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
+          ) : weatherAltIconType === "typhoon" ? (
+            <Typhoon className={`alt ${weatherAltIconPosition || position}`} key={weatherAltIconType} />
           ) : null
-        if (alt !== "hot" && alt !== "cold" && alt !== "arctic" && alt !== "jelly-fish") position = "alt-top-left"
+
+        if (weatherAltIconPosition === undefined && alt !== "hot" && alt !== "cold" && alt !== "arctic") {
+          if (position === "alt-top-right") position = "alt-top-left"
+          else if (position === "alt-top-left") position = "alt-bottom-left"
+        }
         return component
       })}
     </>
@@ -1347,7 +1611,16 @@ export const Weather: React.FunctionComponent<{
             {entries.map((entry, index) => {
               return (
                 <tr key={index}>
-                  <td>{entry.label}</td>
+                  <td
+                    onMouseEnter={() => {
+                      if (entry.tooltipLabel) {
+                        onMouseEnter(entry.tooltipLabel)
+                      }
+                    }}
+                    onMouseLeave={onMouseLeave}
+                  >
+                    {entry.label}
+                  </td>
                   {entry.data.map((data, index2) => (
                     <td
                       className={`${data.type} ${Array.isArray(data.alt) ? data.alt.join(" ") : data.alt}`}
@@ -1358,14 +1631,14 @@ export const Weather: React.FunctionComponent<{
                         const weather = getWeather(i18n.languageCode, data.icon)
                         const weatherAddition = getWeatherAddition(
                           i18n.languageCode,
-                          Array.isArray(data.alt) ? data.alt : ([] as WeatherAltIconType[]).concat(data.alt ?? []),
+                          Array.isArray(data.alt) ? data.alt : ([] as WeatherAltType[]).concat(data.alt ?? []),
                           transformAddition
                         )
                         const temperature =
                           i18n.languageCode === "fr" ? `Temp Moyenne ${data.temp}°C` : `Average Temp ${data.temp}°C`
                         const otherAddition = getOtherAddition(
                           i18n.languageCode,
-                          Array.isArray(data.alt) ? data.alt : ([] as WeatherAltIconType[]).concat(data.alt ?? []),
+                          Array.isArray(data.alt) ? data.alt : ([] as WeatherAltType[]).concat(data.alt ?? []),
                           transformAddition
                         )
                         onMouseEnter(
