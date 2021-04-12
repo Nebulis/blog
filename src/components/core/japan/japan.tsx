@@ -113,6 +113,14 @@ const japanLayout = `
       .title {
         color: ${japanPrimaryColorDarker};
       }
+      @media (hover: hover) {
+        .title-element:hover {
+          border-bottom-color: ${japanPrimaryColorDarker};
+          svg {
+            fill: ${japanPrimaryColorDarker};
+          }
+        }
+      }
     }
     .divider {
       background-color: hsl(348, 41%, 53%, 0.2);

@@ -15,7 +15,6 @@ import {
 } from "./japan.cards"
 import commonFr from "../../../locales/fr/common.json"
 import commonEn from "../../../locales/en/common.json"
-import { css } from "@emotion/react"
 
 export const japanLinks: CountryLink = {
   id: "japan",
@@ -24,11 +23,7 @@ export const japanLinks: CountryLink = {
   // this style is for the image in the asia page (medallion) to have the geisha centered
   imageProps: {
     image: "homeJapan",
-    css: css`
-      img {
-        object-position: -30px 0px !important;
-      }
-    `,
+    imgStyle: { objectPosition: "-30px 0px" },
   },
   others: [
     {

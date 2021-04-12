@@ -85,7 +85,7 @@ export const CountryContainer: React.FunctionComponent<{
 }> = ({ title, image: Image, to, imageProps = { image: "" } }) => {
   const { windowWidth } = useWindowSize()
   const maxAllowedWidth = 300
-  // margin * 3 (and others) is not completely correct, we should multiply vy the number of images displayed, but it's ok
+  // margin * 3 (and others) is not completely correct, we should multiply by the number of images displayed, but it's ok
   const computedWidth =
     windowWidth > extraLargeStartSize
       ? (maxWidthExtraLargeContainer - margin * 3) / 4

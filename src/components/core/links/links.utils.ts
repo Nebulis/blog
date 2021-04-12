@@ -9,7 +9,8 @@ import {
   Lang,
   NavigationLink,
 } from "./links.types"
-import { cachedLinks, isPublished } from "./links.configuration"
+import { cachedLinks, isPublished, continentLinks } from "./links.configuration"
+import { PointOfInterest } from "../../../types/shared"
 
 type Day =
   | 0
@@ -126,6 +127,21 @@ export const isLinkPublished = (
   const id = typeof element === "string" ? element : element.id
   return isPublished(getLink(id))
 }
+export const getPublishedCountries = ({ development }: { development: boolean }) => {
+  const countries = Array.from(cachedLinks.values())
+    .filter(({ country }) => development || (country && isLinkPublished(country)))
+    .map(({ country }) => country)
+  return [...new Set(countries)] as string[]
+}
+
+export const getContinentsFromCountries = (links: CachedLinksMap[]) => {
+  const continentsIds = continentLinks.map((continent) => continent.id)
+  const tags = links
+    .map((country) => country.tags)
+    .flat()
+    .filter((tag) => continentsIds.includes(tag))
+  return [...new Set(tags)]
+}
 
 export const getCities = ({
   links,
@@ -153,6 +169,7 @@ export const getArticles = ({
   card = true,
   kind = "none",
   tags = [],
+  pointOfInterests = [],
   filter = returnTrue,
   sort = sortByPublishedDate,
   limit = Number.POSITIVE_INFINITY,
@@ -163,6 +180,7 @@ export const getArticles = ({
   published?: boolean
   development: boolean
   tags?: string[]
+  pointOfInterests?: PointOfInterest[]
   sort?: (cacheLink: CachedLinksMap, cacheLink2: CachedLinksMap) => number
   limit?: number
 }) => {
@@ -171,6 +189,9 @@ export const getArticles = ({
     .filter((cachedLink) => (published && !development ? cachedLink.published : true))
     .filter((cachedLink) => (kind !== "none" ? cachedLink.kind === kind : true))
     .filter((cachedLink) => (tags.length > 0 ? tags.some((t) => cachedLink.tags.includes(t)) : true))
+    .filter((cachedLink) =>
+      pointOfInterests.length > 0 ? pointOfInterests.some((p) => cachedLink.pointOfInterest.includes(p)) : true
+    )
     .filter(filter)
     .sort(sort)
     .slice(0, limit)

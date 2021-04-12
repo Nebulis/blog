@@ -38,6 +38,14 @@ const malaysiaLayout = `
       .title {
         color: ${malaysiaPrimaryColorDarker};
       }
+      @media (hover: hover) {
+        .title-element:hover {
+          border-bottom-color: ${malaysiaPrimaryColorDarker};
+          svg {
+            fill: ${malaysiaPrimaryColorDarker};
+          }
+        }
+      }
     }
     .image-as-medallion {
       &.mobile,

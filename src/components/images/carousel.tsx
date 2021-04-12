@@ -79,6 +79,48 @@ export const CarouselImageQuery: React.FunctionComponent<ExtraImageProps & { ima
           }
         }
       }
+      singapore1: file(relativePath: { eq: "asia/singapore/carousel-singapore.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      singapore2: file(relativePath: { eq: "asia/singapore/carousel-singapore2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cambodia1: file(relativePath: { eq: "asia/cambodia/cambodia-carousel.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cambodia2: file(relativePath: { eq: "asia/cambodia/cambodia-carousel2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      taiwan1: file(relativePath: { eq: "asia/taiwan/carousel-taiwan.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      taiwan2: file(relativePath: { eq: "asia/taiwan/carousel-taiwan2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       australia1: file(relativePath: { eq: "oceania/australia/carousel-australia.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [1200]) {

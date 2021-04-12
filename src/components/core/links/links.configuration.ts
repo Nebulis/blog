@@ -116,22 +116,44 @@ export const menuLinks: NavigationLink[] = [
     sections: [
       {
         id: "monuments",
-        label: { fr: "Monuments", en: "Monuments" },
+        label: { fr: commonFr.link.discovery.monuments, en: commonEn.link.discovery.monuments },
+        pointOfInterest: ["monument"],
         sections: [],
       },
       {
         id: "nature",
-        label: { fr: "Nature", en: "Nature" },
+        label: { fr: commonFr.link.discovery.nature, en: commonEn.link.discovery.nature },
+        pointOfInterest: ["nature"],
         sections: [],
       },
       {
-        id: "city",
-        label: { fr: "Ville", en: "City" },
+        id: "cities",
+        label: { fr: commonFr.link.discovery.city, en: commonEn.link.discovery.city },
+        pointOfInterest: ["city"],
         sections: [],
       },
       {
-        id: "temples",
-        label: { fr: "Temples", en: "Temples" },
+        id: "animals",
+        label: { fr: commonFr.link.discovery.animals, en: commonEn.link.discovery.animals },
+        pointOfInterest: ["animals"],
+        sections: [],
+      },
+      {
+        id: "water-activities",
+        label: { fr: commonFr.link.discovery["water-activities"], en: commonEn.link.discovery["water-activities"] },
+        pointOfInterest: ["water-activities"],
+        sections: [],
+      },
+      {
+        id: "winter-activities",
+        label: { fr: commonFr.link.discovery["winter-activities"], en: commonEn.link.discovery["winter-activities"] },
+        pointOfInterest: ["winter-activities"],
+        sections: [],
+      },
+      {
+        id: "beach-holidays",
+        label: { fr: "Vacances farniente", en: commonEn.link.discovery.lazy },
+        pointOfInterest: ["lazy"],
         sections: [],
       },
     ],
@@ -264,6 +286,7 @@ continentLinks.forEach((continent) => {
       tags: [continent.id],
       pointOfInterest: country.pointOfInterest || [],
       country: country.id,
+      imageProps: country.imageProps,
       kind: "country",
     })
   })
@@ -299,7 +322,7 @@ menuLinks.forEach((menu) => {
       published:
         submenu.sections.some((subsubmenu) => cachedLinks.get(subsubmenu.id)?.published) || !!submenu.published,
       tags: [],
-      pointOfInterest: [],
+      pointOfInterest: submenu.pointOfInterest ?? [],
       kind: "menu",
     })
   })

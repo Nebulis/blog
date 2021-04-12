@@ -1,4 +1,11 @@
-import { getCacheSize, getLink } from "./links.utils"
+import { getCacheSize, getLink as outerGetLink } from "./links.utils"
+
+const set = new Set<string>()
+const getLink = (id: string) => {
+  if (set.has(id)) throw new Error(`Can only expect ${id} once`)
+  set.add(id)
+  return outerGetLink(id)
+}
 
 const continentsLinks = () => {
   // continents assertions
@@ -31,8 +38,20 @@ const categoriesLinks = () => {
   })
   expect(getLink("monuments")).toMatchObject({ label: { fr: "Monuments", en: "Monuments" }, published: false })
   expect(getLink("nature")).toMatchObject({ label: { fr: "Nature", en: "Nature" }, published: false })
-  expect(getLink("city")).toMatchObject({ label: { fr: "Ville", en: "City" }, published: false })
-  expect(getLink("temples")).toMatchObject({ label: { fr: "Temples", en: "Temples" }, published: false })
+  expect(getLink("cities")).toMatchObject({ label: { fr: "Ville", en: "City" }, published: false })
+  expect(getLink("animals")).toMatchObject({ label: { fr: "Animaux", en: "Animals" }, published: false })
+  expect(getLink("winter-activities")).toMatchObject({
+    label: { en: "Winter activities", fr: "Activités hivernales" },
+    published: false,
+  })
+  expect(getLink("water-activities")).toMatchObject({
+    label: { en: "Water activities", fr: "Activités nautiques" },
+    published: false,
+  })
+  expect(getLink("beach-holidays")).toMatchObject({
+    label: { fr: "Vacances farniente", en: "Beach Holidays" },
+    published: false,
+  })
   expect(getLink("discovery")).toMatchObject({ label: { fr: "Découverte", en: "Discovery" }, published: false })
   expect(getLink("travelling")).toMatchObject({ label: { fr: "Voyage", en: "Travelling" }, published: false })
   expect(getLink("living-foreign-country")).toMatchObject({
@@ -75,9 +94,19 @@ const asiaLinks = () => {
   expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: true })
   expect(getLink("philippines")).toMatchObject({ label: { fr: "Philippines", en: "Philippines" }, published: true })
   expect(getLink("malaysia")).toMatchObject({ label: { fr: "Malaisie", en: "Malaysia" }, published: false })
+  expect(getLink("taiwan")).toMatchObject({ label: { fr: "Taiwan", en: "Taiwan" }, published: false })
+  expect(getLink("singapore")).toMatchObject({ label: { fr: "Singapour", en: "Singapore" }, published: false })
 }
 const oceaniaLinks = () => {
   expect(getLink("australia")).toMatchObject({ label: { fr: "Australie", en: "Australia" }, published: false })
+}
+const australiaLinks = () => {
+  expect(getLink("queensland")).toMatchObject({ label: { fr: "Queensland", en: "Queensland" }, published: false })
+  expect(getLink("northern-territory")).toMatchObject({
+    label: { fr: "Territoire du Nord", en: "Northern Territory" },
+    published: false,
+  })
+  expect(getLink("outback")).toMatchObject({ label: { fr: "Outback", en: "Outback" }, published: false })
 }
 
 const japanLinks = () => {
@@ -147,7 +176,7 @@ const japanLinks = () => {
       fr: "Fushimi Inari-Taisha : Le chemin des milles Torii à Kyoto",
       en: "Fushimi Inari-Taisha: The Thousand Torii Trail in Kyoto",
     },
-    published: false,
+    published: true,
   })
 
   expect(getLink("himeji")).toMatchObject({ label: { fr: "Himeji", en: "Himeji" }, published: true })
@@ -354,6 +383,10 @@ const malaysiaLinks = () => {
 }
 
 describe("links", () => {
+  // eslint-disable-next-line jest/no-hooks
+  beforeAll(() => {
+    set.clear()
+  })
   it("should populate cache", () => {
     continentsLinks()
     categoriesLinks()
@@ -365,6 +398,7 @@ describe("links", () => {
     vietnamLinks()
     philippinesLinks()
     malaysiaLinks()
+    australiaLinks()
 
     // cambodia assertions
     expect(getLink("s-21-prison")).toMatchObject({
@@ -379,6 +413,14 @@ describe("links", () => {
       label: { en: "", fr: "" },
       published: false,
     })
+    expect(getLink("phnom-penh")).toMatchObject({
+      label: { en: "Phnom Penh", fr: "Phnom Penh" },
+      published: false,
+    })
+    expect(getLink("siem-reap")).toMatchObject({
+      label: { en: "Siem Reap", fr: "Siem Reap" },
+      published: false,
+    })
 
     // indonesia assertions
     expect(getLink("bali")).toMatchObject({
@@ -387,6 +429,10 @@ describe("links", () => {
     })
     expect(getLink("ubud-monkey-park")).toMatchObject({
       label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("komodo-island")).toMatchObject({
+      label: { en: "Komodo", fr: "Komodo" },
       published: false,
     })
 

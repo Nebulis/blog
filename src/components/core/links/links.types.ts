@@ -53,6 +53,7 @@ export interface NavigationLink {
   label: Label
   url?: string
   published?: boolean | Date
+  pointOfInterest?: PointOfInterest[]
   sections: NavigationLink[]
 }
 
@@ -71,5 +72,6 @@ export interface CachedLinksMap {
   tags: string[]
   pointOfInterest: PointOfInterest[]
   card?: React.ComponentType<ExtraCardProps>
+  imageProps?: ExtraImageLinkProps
   kind: Kind
 }

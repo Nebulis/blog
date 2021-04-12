@@ -6,6 +6,9 @@ import commonEn from "../../../locales/en/common.json"
 import { philippinesLinks } from "./philippines/philippines.links"
 import { malaysiaLinks } from "./malaysia/malaysia.links"
 import { indonesiaLinks } from "./indonesia/indonesia.links"
+import { singaporeLinks } from "./singapore/singapore.links"
+import { cambodiaLinks } from "./cambodia/cambodia.links"
+import { taiwanLinks } from "./taiwan/taiwan.links"
 
 export const asiaLinks: ContinentLink = {
   id: "asia",
@@ -16,37 +19,9 @@ export const asiaLinks: ContinentLink = {
     philippinesLinks,
     malaysiaLinks,
     indonesiaLinks,
-    {
-      id: "cambodia",
-      cities: [],
-      others: [
-        {
-          id: "s-21-prison",
-          label: {
-            en: commonEn.country.cambodia.card["s-21-prison"],
-            fr: commonFr.country.cambodia.card["s-21-prison"],
-          },
-          published: false,
-        },
-        {
-          id: "kampong-phluk",
-          label: {
-            en: commonEn.country.cambodia.card["kampong-phluk"],
-            fr: commonFr.country.cambodia.card["kampong-phluk"],
-          },
-          published: false,
-        },
-        {
-          id: "angkor-wat",
-          label: {
-            en: "",
-            fr: "",
-          },
-          published: false,
-        },
-      ],
-      label: { en: commonEn.country.cambodia.title, fr: commonFr.country.cambodia.title },
-    },
+    singaporeLinks,
+    cambodiaLinks,
+    taiwanLinks,
     {
       id: "china",
       cities: [],

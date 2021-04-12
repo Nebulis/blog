@@ -4,6 +4,7 @@ import commonEn from "../../../../locales/en/common.json"
 
 export const indonesiaLinks: CountryLink = {
   id: "indonesia",
+  pointOfInterest: ["lazy", "monument", "nature", "water-activities", "city", "animals"],
   imageProps: {
     image: "homeIndonesia",
     imgStyle: {
@@ -17,6 +18,14 @@ export const indonesiaLinks: CountryLink = {
         en: "Bali",
         fr: "Bali",
       },
+      pointOfInterest: ["lazy", "monument", "nature", "water-activities", "city"],
+      imageProps: {
+        image: "bali",
+        imgStyle: {
+          transform: "scale(1.3)",
+          objectPosition: "-10px 20px",
+        },
+      },
       highlights: [
         {
           id: "ubud-monkey-park",
@@ -27,6 +36,18 @@ export const indonesiaLinks: CountryLink = {
           published: false,
         },
       ],
+    },
+    {
+      id: "komodo-island",
+      label: {
+        en: "Komodo",
+        fr: "Komodo",
+      },
+      pointOfInterest: ["lazy", "animals", "nature", "water-activities"],
+      imageProps: {
+        image: "komodoIsland",
+      },
+      highlights: [],
     },
   ],
   others: [],

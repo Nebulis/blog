@@ -60,6 +60,14 @@ const philippinesLayout = `
       .title {
         color: ${philippinesPrimaryColorDarker};
       }
+      @media (hover: hover) {
+        .title-element:hover {
+          border-bottom-color: ${philippinesPrimaryColorDarker};
+          svg {
+            fill: ${philippinesPrimaryColorDarker};
+          }
+        }
+      }
     }
     .all-articles-container {
       ${buttonStyle}
@@ -143,13 +151,13 @@ export const philippinesWeatherEntries = (): WeatherEntry[] => [
       {
         type: "fair",
         icon: "sunny",
-        alt: ["hot", "jelly-fish"],
+        alt: ["hot", { type: "jelly-fish", position: "alt-top-left" }],
         temp: 31,
       },
       {
         type: "poor",
         icon: "sun-rain",
-        alt: ["hot", "jelly-fish"],
+        alt: ["hot", { type: "jelly-fish", position: "alt-top-left" }],
         temp: 31,
       },
       {

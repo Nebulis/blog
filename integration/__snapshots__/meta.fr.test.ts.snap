@@ -30,11 +30,47 @@ exports[`french pages exports meta for public/articles/index.html correctly: soc
 
 exports[`french pages exports meta for public/articles/index.html correctly: title 1`] = `"Tous nos articles | Blog Voyage"`;
 
+exports[`french pages exports meta for public/asia/cambodia/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos le Cambodge, les temples en ruines d’Angkor, ses villages flottants et bien d’autres lieux incontournables. Suivez-nous pour découvrir notre sélection. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/cambodia/index.html correctly: social-network 1`] = `"Connu pour Siem Reap et ses multiples ruines d’Angkor Vat qui font à eux seuls une raison de venir au Cambodge, vous pouvez aussi naviguer sur le lac Tonlé Sap et observer la vie des villages flottants. A Phnom Penh, visiter son palais royal et l’ancienne prison de la période des Khmers rouges, histoire bouleversante qui vous fera découvrir le Cambodge autrement. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables."`;
+
+exports[`french pages exports meta for public/asia/cambodia/index.html correctly: title 1`] = `"Cambodge | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/asia/cambodia/phnom-penh/index.html correctly: meta-description 1`] = `"Découvrez Phnom Penh, son palais royal, son musée d’art, une ville moderne qui regorge de monuments culturels mais également le musée du génocide qui vous apprendra l’histoire du Cambodge. Pour chaque lieu nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/cambodia/phnom-penh/index.html correctly: social-network 1`] = `"Phnom Penh est une ville moderne qui regorge de multiples monuments culturelles. Son somptueux palais royal, son sublime musée national et tant d’autres. Découvrez également l'histoire bouleversante du Cambodge avec son ancienne prison de la période des Khmers rouges, qui vous fera découvrir le pays autrement."`;
+
+exports[`french pages exports meta for public/asia/cambodia/phnom-penh/index.html correctly: title 1`] = `"Phnom Penh | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/asia/cambodia/siem-reap/index.html correctly: meta-description 1`] = `"Découvrez la ville de Siem Reap mais surtout ses multiples ruines d’Angkor Vat et découvrez la vie des villages flottants sur le lac Tonlé Sap. Pour chaque lieu nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/cambodia/siem-reap/index.html correctly: social-network 1`] = `"La ville de Siem Reap est surtout connue pour ses multiples ruines d’Angkor Vat qui font à eux seuls une raison de venir au Cambodge, mais vous pouvez aussi naviguer sur le lac Tonlé Sap et observer la vie des villages flottants ou encore vous promener dans les marchés la nuit. Découvrez ces incontournables avec nous."`;
+
+exports[`french pages exports meta for public/asia/cambodia/siem-reap/index.html correctly: title 1`] = `"Siem Reap | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/asia/index.html correctly: meta-description 1`] = `"L’Asie nous offre tant de pays qui incitent à l’évasion. Retrouvez dans notre blog les plus belles perles de ce continent pour vos vacances de rêve. Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/index.html correctly: social-network 1`] = `"Farniente sur des plages paradisiaques, visite de temples traditionnels, trek dans la jungle ou simple promenade à la découverte de paysages à couper le souffle, des grandes villes aux petits villages, en apprenant les traditions de certaines tribus ou en observant avec discrétion les animaux sauvages ... Tant de pays qui incitent à l’évasion et font rêver."`;
 
 exports[`french pages exports meta for public/asia/index.html correctly: title 1`] = `"Asie | Blog Voyage"`;
+
+exports[`french pages exports meta for public/asia/indonesia/bali/index.html correctly: meta-description 1`] = `"Découvrez Bali, l’île de toutes les folies, des plages aux forêts tropicales, rizières et volcans de jour, et les bars ouverts jusqu’au bout de la nuit. Pour chaque lieu nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/indonesia/bali/index.html correctly: social-network 1`] = `"Le jour, profitez des immenses plages pour vous reposer ou admirer les paysages qui s’offrent à vous, rizières en terrasse et volcans impressionnants. Le soir, Bali est l’île de la fête, avec ses bars ouverts jusqu’au bout de la nuit. Découvrez cette île de toutes les folies."`;
+
+exports[`french pages exports meta for public/asia/indonesia/bali/index.html correctly: title 1`] = `"Bali | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/asia/indonesia/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos l’Indonésie et ses innombrables îles plus belles et plus attrayantes les unes que les autres. Suivez-nous pour découvrir notre sélection des lieux incontournables. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/indonesia/index.html correctly: social-network 1`] = `"Trek sur les volcans de Java, rizières et multiples temples sur Bali, randonnée dans les forêts tropicales de Sumatra, détente sur les plages de Lombok ou encore rencontre avec les dragons de l'île de Komodo. Suivez notre guide d’île en île pour découvrir notre sélection des lieux incontournables."`;
+
+exports[`french pages exports meta for public/asia/indonesia/index.html correctly: title 1`] = `"Indonésie | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/asia/indonesia/komodo-island/index.html correctly: meta-description 1`] = `"Découvrez l’île de Komodo, parc national des dragons de Komodo, plages de sables roses de Rinca et repos sur l’île de Florès à Labuan Bajo. Pour chaque lieu nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/indonesia/komodo-island/index.html correctly: social-network 1`] = `"Komodo est principalement connu pour son énorme lézard, le plus grand vivant au monde qui tire son nom de l’île, le dragon de Komodo. Outre son Parc national vous pourrez également profiter de l’île de Florès, à Labuan Bajo, pour vous loger ou de l'île de Rinca pour faire de la plongée ou vous reposer sur les plages de sables roses."`;
+
+exports[`french pages exports meta for public/asia/indonesia/komodo-island/index.html correctly: title 1`] = `"Komodo | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: meta-description 1`] = `"Visible depuis Tokyo, connue à travers le monde entier, le Mont Fuji est un des sommets les plus célèbres. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
@@ -222,6 +258,18 @@ exports[`french pages exports meta for public/asia/philippines/index.html correc
 
 exports[`french pages exports meta for public/asia/philippines/index.html correctly: title 1`] = `"Philippines | Blog Voyage"`;
 
+exports[`french pages exports meta for public/asia/singapore/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos Singapour entre urbanisation et jungle tropicale. Suivez notre guide pour découvrir notre sélection des lieux incontournables connus et méconnus. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/singapore/index.html correctly: social-network 1`] = `"Singapour est souvent le pays oublié, le transit entre deux vols mais rarement visité, pourtant si vous prenez la peine de vous y arrêter, vous y découvrirez des endroits grandioses à la faune et la flore extraordinaire qui vous fera oublier d’être en pleine ville. Jardin botanique ou promenade dans la jungle pour observer les varans ou les calaos. Suivez notre guide pour découvrir notre sélection des lieux incontournables."`;
+
+exports[`french pages exports meta for public/asia/singapore/index.html correctly: title 1`] = `"Singapour | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/asia/taiwan/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos, Taiwan et ses milles secrets. Suivez notre guide pour découvrir notre sélection des lieux incontournables. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/asia/taiwan/index.html correctly: social-network 1`] = `"Découvrez l’île de Taiwan au-delà de sa ville moderne. Partez faire des treks dans le parc national de Taroko, découvrez la ville montagneuse de Jiufen et sa vue extraordinaire depuis ses sommets ou bien promenez vous près des plages pour découvrir des formations rocheuses atypiques. Suivez notre guide pour découvrir notre sélection des lieux incontournables."`;
+
+exports[`french pages exports meta for public/asia/taiwan/index.html correctly: title 1`] = `"Taiwan | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/asia/vietnam/central-vietnam/index.html correctly: meta-description 1`] = `"Voyagez avec nous dans le Centre du Vietnam à travers notre carnet de voyage. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/vietnam/central-vietnam/index.html correctly: social-network 1`] = `"Voyagez avec nous dans le Centre du Vietnam à travers notre carnet de voyage. Caractérisé par des villes culturelles telles que Hué pour visiter des monuments, des plages sublimes à Da Nang pour vous reposer, de magnifiques parcs nationaux comme celui de Bach Ma ou de Phong Nha pour découvrir d’extraordinaires paysages ou bien la petite Venise du Vietnam, Hoi An et ses milles lumières."`;
@@ -294,11 +342,77 @@ exports[`french pages exports meta for public/credits/index.html correctly: soci
 
 exports[`french pages exports meta for public/credits/index.html correctly: title 1`] = `"main | Blog Voyage"`;
 
+exports[`french pages exports meta for public/discovery/animals/index.html correctly: meta-description 1`] = `"Chaque pays apporte son lot de découvertes et d’attractions. Ici nous nommerons, à travers notre expérience et nos visites, les pays où vous pourrez observer des animaux."`;
+
+exports[`french pages exports meta for public/discovery/animals/index.html correctly: social-network 1`] = `"Dans leur habitat ou dans des réserves protégées, observez les animaux, apprenez à les connaître, comment les protéger et conserver leur milieu naturel."`;
+
+exports[`french pages exports meta for public/discovery/animals/index.html correctly: title 1`] = `"Observer les animaux | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/discovery/beach-holidays/index.html correctly: meta-description 1`] = `"Chaque pays apporte son lot de découvertes et d’attractions. Ici nous nommerons, à travers notre expérience et nos visites, les pays où vous pourrez vous la couler douce sous les cocotiers."`;
+
+exports[`french pages exports meta for public/discovery/beach-holidays/index.html correctly: social-network 1`] = `"Un peu de repos bien mérité. Allongez-vous dans un transat pour profiter d’un moment rien qu’à vous au bord de la plage. Se ressourcer et décompresser en sirotant un bon cocktail."`;
+
+exports[`french pages exports meta for public/discovery/beach-holidays/index.html correctly: title 1`] = `"Vacances farniente | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/discovery/cities/index.html correctly: meta-description 1`] = `"Chaque pays apporte son lot de découvertes et d’attractions. Ici nous nommerons, à travers notre expérience et nos visites, les pays où vous pourrez découvrir le modernisme de certaines grandes villes."`;
+
+exports[`french pages exports meta for public/discovery/cities/index.html correctly: social-network 1`] = `"Promenez-vous dans les rues et les quartiers atypiques, visitez les endroits animés et imprégnez-vous de la culture des habitants."`;
+
+exports[`french pages exports meta for public/discovery/cities/index.html correctly: title 1`] = `"Explorer les villes | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/discovery/monuments/index.html correctly: meta-description 1`] = `"Chaque pays apporte son lot de découvertes et d’attractions. Ici nous nommerons, à travers notre expérience et nos visites, les pays où vous pourrez visiter des monuments."`;
+
+exports[`french pages exports meta for public/discovery/monuments/index.html correctly: social-network 1`] = `"Visite de Pyramides, Temples, Pagodes … A la poursuite de l’héritage des différentes civilisations."`;
+
+exports[`french pages exports meta for public/discovery/monuments/index.html correctly: title 1`] = `"Visite de monuments | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/discovery/nature/index.html correctly: meta-description 1`] = `"Chaque pays apporte son lot de découvertes et d’attractions. Ici nous nommerons, à travers notre expérience et nos visites, les pays où vous pourrez contempler la nature."`;
+
+exports[`french pages exports meta for public/discovery/nature/index.html correctly: social-network 1`] = `"Trek, randonnées ou simple promenade, dans la montagne, dans la forêt ou dans des parcs, admirez les paysages que la nature nous offre."`;
+
+exports[`french pages exports meta for public/discovery/nature/index.html correctly: title 1`] = `"Contempler la nature | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/discovery/water-activities/index.html correctly: meta-description 1`] = `"Chaque pays apporte son lot de découvertes et d’attractions. Ici nous nommerons, à travers notre expérience et nos visites, les pays où vous pourrez faire des activités nautiques."`;
+
+exports[`french pages exports meta for public/discovery/water-activities/index.html correctly: social-network 1`] = `"Plongée et snorkeling pour admirer les merveilles des fonds marins ou bien surf et jet-ski pour vivre des sensations fortes."`;
+
+exports[`french pages exports meta for public/discovery/water-activities/index.html correctly: title 1`] = `"Activités nautiques | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/discovery/winter-activities/index.html correctly: meta-description 1`] = `"Chaque pays apporte son lot de découvertes et d’attractions. Ici nous nommerons, à travers notre expérience et nos visites, les pays où vous pourrez faire des activités hivernales."`;
+
+exports[`french pages exports meta for public/discovery/winter-activities/index.html correctly: social-network 1`] = `"Profitez de la neige et de son beau manteau blanc. Enfilez vos raquettes ou vos skis et partez à l’aventure. Ou prenez votre luge et dévalez les montagnes."`;
+
+exports[`french pages exports meta for public/discovery/winter-activities/index.html correctly: title 1`] = `"Activités hivernales | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/index.html correctly: meta-description 1`] = `"Passionnés de voyages, nous partageons sur notre blog nos aventures autour du monde. Entre astuces, conseils, récits de voyages, anecdotes ou coups de cœur, on espère que vous trouverez votre bonheur ! Un blog voyage et lifestyle d’un couple de voyageur qui a des rêves plein la tête !"`;
 
 exports[`french pages exports meta for public/index.html correctly: social-network 1`] = `"Passionnés de voyages, nous partageons sur notre blog nos aventures autour du monde. Entre astuces, conseils, récits de voyages, anecdotes ou coups de cœur, on espère que vous trouverez votre bonheur ! Un blog voyage et lifestyle d’un couple de voyageur qui a des rêves plein la tête !"`;
 
 exports[`french pages exports meta for public/index.html correctly: title 1`] = `"Magic of travels | Blog Voyage"`;
+
+exports[`french pages exports meta for public/oceania/australia/index.html correctly: meta-description 1`] = `"Si comme nous vous aimez les animaux, la nature, les grands espaces et les Roads trips, l’Australie est faite pour vous. Suivez notre guide d’un État à l’autre pour découvrir notre sélection des lieux incontournables à travers nos articles et nos photos. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/oceania/australia/index.html correctly: social-network 1`] = `"L’Australie est un pays avec tellement de choses à découvrir qu’il faudrait des années pour réussir à tout visiter. Si comme nous vous aimez les animaux, la nature, les grands espaces et les Roads trips, l’Australie est faite pour vous."`;
+
+exports[`french pages exports meta for public/oceania/australia/index.html correctly: title 1`] = `"Australie | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/oceania/australia/northern-territory/index.html correctly: meta-description 1`] = `"Découvrez l'État du Territoire du Nord, l’un des 8 États de l’Australie. Darwin, lacs aux crocodiles, Kakadu National Park, Katherine, Daly Waters et ses pubs, à travers nos articles on vous fait découvrir différents endroits à visiter. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/oceania/australia/northern-territory/index.html correctly: social-network 1`] = `"Possédant de nombreux lacs et parcs dont le plus grand et connu étant le Kakadu National Park, et un climat tropical, l'État du Territoire du Nord est un parfait spot pour l’observation des crocodiles. Vous aurez également l’occasion de parcourir de nombreux pubs et parcs."`;
+
+exports[`french pages exports meta for public/oceania/australia/northern-territory/index.html correctly: title 1`] = `"Territoire du Nord | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/oceania/australia/outback/index.html correctly: meta-description 1`] = `"Découvrez l'Outback, la partie désertique de l’Australie. Alice Springs, Ayers Rock, les monts Olgas et Kings Canyon mais aussi ses nombreux animaux comme les dingos, les kangourous, les dromadaires et les reptiles. A travers nos articles on vous fait découvrir ses différents endroits à visiter. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/oceania/australia/outback/index.html correctly: social-network 1`] = `"L’Outback est une énorme partie désertique où vous pourrez y découvrir de nombreuses formations rocheuses telles que Ayers Rock, les monts Olgas et Kings Canyon, considérées comme sacrés pour les aborigènes. Dans la ville d’Alice Springs ou sur les routes de sables rouges, vous aurez peut-être la chance d’y voir de nombreux animaux sauvages tels que les dingos, les kangourous et les dromadaires mais aussi de nombreux reptiles."`;
+
+exports[`french pages exports meta for public/oceania/australia/outback/index.html correctly: title 1`] = `"Outback | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/index.html correctly: meta-description 1`] = `"Découvrez l'État du Queensland, l’un des 8 États de l’Australie. Grande barrière de corail, forêt tropicale ou rencontre avec les koalas, à travers nos articles on vous fait découvrir différents endroits à visiter. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/index.html correctly: social-network 1`] = `"Véritable paradis des surfeurs et connu pour la grande barrière de corail, en plus de son littoral de plages sublimes vous vous retrouverez également dans des plaines interminables ou des forêts tropicales humides. C’est également l'endroit parfait pour voir des koalas dans leur habitat naturel."`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/index.html correctly: title 1`] = `"Queensland | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/oceania/index.html correctly: meta-description 1`] = `" L’Océanie nous offre tant de choses à découvrir … paysages, animaux, villes. Retrouvez dans notre blog les plus belles perles de ce continent pour vos vacances de rêves. Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 

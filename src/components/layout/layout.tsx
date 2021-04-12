@@ -290,6 +290,8 @@ export const BlogLayout = styled(IndexBlogLayout)`
 
   @media (min-width: ${extraLargeStart}) {
     .children-container {
+      // added for discovery / organisation pages. without, we can't display 4 elements side by side on big screen
+      padding: 0 0;
       max-width: ${maxWidthExtraLargeContainer}px;
     }
   }

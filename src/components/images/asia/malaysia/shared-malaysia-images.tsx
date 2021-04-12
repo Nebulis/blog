@@ -5,6 +5,7 @@ import { ExtraImageProps } from "../../../../types/shared"
 
 const alt = {
   westMalaysia: "West Malaysia",
+  eastMalaysia: "East Malaysia",
 }
 
 export const SharedMalaysiaImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
