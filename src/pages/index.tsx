@@ -36,6 +36,7 @@ import { continentLinks } from "../components/core/links/links.configuration"
 import { HomeBlogLayout } from "../components/layout/main-layout"
 import { CarouselImageQuery } from "../components/images/carousel"
 import { PageQuote, Quote } from "../components/core/quote"
+import { css } from "@emotion/react"
 
 const namespace = "index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -412,6 +413,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </PageQuote>
         </SectionContent>
         <HomeDivider />
+        <div
+          css={css`
+            font-family: Emoji;
+          `}
+        >
+          Hello world 😀
+        </div>
         <NewArticleContainer>
           <div className="new-article-section-title-small-screen">
             <div>
