@@ -111,7 +111,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how.part3")}</p>
           <p>{t("how.part4")}</p>
           <p>{t("how.part5")}</p>
-          <p>{t("how.part6")}.</p>
+          <p>{t("how.part6")}</p>
           <p>{t("how.part7")}</p>
           <p>{t("how.part8")}</p>
         </How>
