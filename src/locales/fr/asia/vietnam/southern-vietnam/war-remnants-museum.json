@@ -3,6 +3,7 @@
   "introduction": "Découvrez le musée des vestiges de la guerre de Hô Chi Minh-Ville (anciennement Saigon) à travers notre visite, notre avis et apprenez-en plus sur la guerre du Vietnam.",
   "google-description": "Découvrez le musée des vestiges de la guerre de Hô Chi Minh-Ville (anciennement Saigon) à travers notre visite, notre avis et apprenez-en plus sur la guerre du Vietnam. Dans cet article, on répond également à toutes vos questions : Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? On vous indique également son adresse et le prix.",
   "social-network-description": "Le musée des vestiges de guerre témoigne des atrocités de la guerre d’Indochine et de la guerre du Vietnam et nous montre l’impact encore réel et actuel sur la vie des Vietnamiens.",
+  "full-title": "Le Musée des Vestiges de Guerre : Histoire du Vietnam | Guide de Voyage",
   "where": {
     "title": "Où ?",
     "part1": "28 rue Võ Văn Tan, District 3"
@@ -30,9 +31,13 @@
   },
   "where-to-stay": {
     "title": "Où dormir à Hô Chi Minh-Ville ?",
-    "part1": "Nous sommes allés à [l'Hôtel Prague](booking-hotel:vn/prague). Il était idéalement situé pour nous pour les jours de visite avec guide car juste à côté de la rue des rassemblements de bus [Rue De Tham](https://www.google.com/maps/place/220+%C4%90%E1%BB%81+Th%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh).",
-    "part2": "Nous sommes restés à cet hôtel quasiment tout le long de notre séjour dans le Sud du Vietnam.",
-    "part3": "[Comparez et réservez votre hôtel à Hô Chí Minh-Ville](booking-search:H%C3%B4-Chi-Minh-Ville%2C+H%C3%B4-Chi-Minh-Ville%2C+Vietnam)."
+    "part1": "Pour réserver votre hôtel, pensez à prendre en compte que la plupart des excursions qui vous proposent de venir vous chercher ne viennent que dans le District 1.",
+    "part2": "Vous pouvez également prendre en compte que la rue des rassemblements de bus et le départ pour les excursions se fait quasiment toujours au même endroit, dans la [Rue De Tham](https://www.google.com/maps/place/220+%C4%90%E1%BB%81+Th%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh), et donc prendre un hôtel aux alentours pour pouvoir vous y rendre à pied.",
+    "part3": "Au Vietnam vous n’êtes pas obligé de chercher un hôtel qui fait restaurant, vous n’aurez vraiment pas de mal à trouver de quoi manger à chaque coin de rue.",
+    "part4": "On vous propose 3 différents hôtels. Nous avons choisi des résidences proches de la rue pour pouvoir nous y rendre facilement, ce critère étant important à nos yeux.",
+    "part5": "Nous sommes restés à [l'Hôtel Prague](booking-hotel:vn/prague) quasiment tout le long de notre séjour dans le Sud du Vietnam et même si nous avions pris une chambre sans fenêtre on y reste généralement que pour dormir donc ce n’était pas du tout un inconvénient pour nous.",
+    "part6": "Vous pourrez trouver de tout et à n’importe quel prix, pas besoin de dépenser des centaines d’euros pour vous trouver une chambre très bien.",
+    "part7": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:H%C3%B4-Chi-Minh-Ville%2C+H%C3%B4-Chi-Minh-Ville%2C+Vietnam)."
   },
   "visit": {
     "part1": "Passage obligé pour toutes personnes qui s’intéressent à l’#histoire du Vietnam# mais pas que, ce musée est, pour nous, un incontournable à ne pas louper si vous passez par Hô Chí Minh-Ville."

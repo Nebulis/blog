@@ -36,6 +36,11 @@ import { ExternalLinkNotUnderlined } from "../../../../components/core/links/lin
 import { Divider } from "../../../../components/core/divider"
 import { Title } from "../../../../components/core/title"
 import { Quote } from "../../../../components/core/quote"
+import { BookingGygCardContainer } from "../../../../components/layout/layout"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import pragueHotel from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/prague-hotel.jpg"
+import naNueHotel from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/na-nue-hotel.jpg"
+import yenTrangHotel from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/yen-trang-hotel.jpg"
 
 const namespace = "asia/vietnam/southern-vietnam/ho-chi-minh-war-museum"
 const id = "ho-chi-minh-war-museum"
@@ -50,6 +55,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -92,6 +98,40 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
           <p>{t("where-to-stay.part3")}</p>
+          <p>{t("where-to-stay.part4")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="vn/prague"
+              title="Prague Hotel"
+              image={pragueHotel}
+              note="8,4"
+              price={15}
+              people={2}
+              kind="standard"
+            />
+            <BookingCard
+              hotel="vn/na-nue"
+              title="Na Nue Hotel"
+              image={naNueHotel}
+              note="8,4"
+              price={12}
+              people={2}
+              kind="standard"
+            />
+            <BookingCard
+              hotel="vn/yen-trang-2"
+              title="Yen Trang 2 Hotel"
+              image={yenTrangHotel}
+              note="8,0"
+              price={17}
+              people={2}
+              kind="standard"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning />
+          <p>{t("where-to-stay.part5")}</p>
+          <p>{t("where-to-stay.part6")}</p>
+          <p>{t("where-to-stay.part7")}</p>
         </WhereToStay>
         <Visit title={t("common:section.visit")}>
           <SectionContent>

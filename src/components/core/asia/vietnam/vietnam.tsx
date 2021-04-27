@@ -69,6 +69,14 @@ const vietnamLayout = `
         border: 6px solid #f8c471;
       }
     }
+    .booking-card {
+      .information, .photo-container {
+        border-color: ${vietnamPrimaryColorDarker}
+      }
+      .activity {
+        background-color: ${vietnamPrimaryColorDarker};
+      }
+    }
     .all-articles-container a {
       // #d8a200 is vietnamPrimaryColorDarker lighten by 10%
       border: 2px solid #d8a200;
