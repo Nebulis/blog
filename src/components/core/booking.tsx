@@ -3,8 +3,8 @@ import { useCustomTranslation } from "../../i18n-hook"
 import { css } from "@emotion/react"
 import React from "react"
 import { Lang } from "./links/links.types"
-import { FaUser, FaStar } from "react-icons/all"
-import { philippinesPrimaryColorDarker } from "./asia/philippines/philippines.colors"
+import { FaStar, FaUser } from "react-icons/all"
+import { primaryDarkColor } from "./variables"
 
 const buildBookingHotelUrl = ({ lang, hotel = "" }: { lang: Lang; hotel: string }) =>
   `https://www.booking.com/hotel/${hotel}.${lang}.html`
@@ -23,22 +23,24 @@ const getKind = (lang: Lang, kind: Kind) => {
 const bookingCardStyle = css`
   width: 320px;
   line-height: 1.15;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  &:hover,
+  &:focus {
+    box-shadow: 0 17px 25px rgba(0, 0, 0, 0.5);
+  }
   .photo-container {
     // no idea why it's needed but otherwise there is an extra space which prevents the activities to be correctly centered
     height: 200px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-  }
-  &:hover .photo-container,
-  &:focus .photo-container {
-    box-shadow: 0 17px 25px rgba(0, 0, 0, 0.5);
+    border: 4px solid ${primaryDarkColor};
+    border-top: none;
   }
   .photo-container img {
-    height: 200px;
+    height: 196px; // 200px-4px for the border
     object-fit: cover;
   }
   .information {
     background-color: whitesmoke;
-    border: 2px solid ${philippinesPrimaryColorDarker};
+    border: 4px solid ${primaryDarkColor};
     border-bottom: none;
   }
   .title {
@@ -48,7 +50,7 @@ const bookingCardStyle = css`
     margin-right: 0.5rem;
   }
   .activity {
-    background-color: ${philippinesPrimaryColorDarker};
+    background-color: ${primaryDarkColor};
     padding: 3px 6px;
     border-radius: 4px;
     font-size: 0.7rem;
@@ -96,7 +98,7 @@ export const BookingCard: React.FunctionComponent<{
         lang: i18n.languageCode,
         hotel,
       })}
-      className="get-your-guide-card inline-flex flex-column"
+      className="booking-card inline-flex flex-column"
     >
       <div className="information">
         <div className="title b tc mt2 mb1">{title}</div>
@@ -131,7 +133,7 @@ export const BookingWarning = () => {
     <p css={bookingWarningStyle}>
       {i18n.languageCode === "fr"
         ? "Les prix varient en fonction de la saison a laquelle vous réservez."
-        : "Prices vary depending on the season you book."}
+        : "Prices vary depending on the period you book."}
     </p>
   )
 }

@@ -72,6 +72,14 @@ const philippinesLayout = `
     .all-articles-container {
       ${buttonStyle}
     }
+    .booking-card {
+      .information, .photo-container {
+        border-color: ${philippinesPrimaryColorDarker}
+      }
+      .activity {
+        background-color: ${philippinesPrimaryColorDarker};
+      }
+    }
     .quote::before {
       color: ${philippinesPrimaryColor};
     }
