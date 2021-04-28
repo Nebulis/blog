@@ -8,6 +8,7 @@ import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/my-tho.json"
 import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
+  Covid,
   How,
   HowLong,
   ImageDescription,
@@ -36,6 +37,13 @@ import { MekongRiverMap } from "../../../../components/core/asia/vietnam/mekong-
 import { Divider } from "../../../../components/core/divider"
 import { Title } from "../../../../components/core/title"
 import { Quote } from "../../../../components/core/quote"
+import { css } from "@emotion/react"
+import { GetYourGuideCard } from "../../../../components/core/get-your-guide"
+import { BookingGygCardContainer } from "../../../../components/layout/layout"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import thachTHaoHomestay from "../../../../images/asia/vietnam/southern-vietnam/my-tho/thach-thao-homestay.jpg"
+import mekongTasteBungalow from "../../../../images/asia/vietnam/southern-vietnam/my-tho/mekong-taste-bungalow.jpg"
+import theIslandLodge from "../../../../images/asia/vietnam/southern-vietnam/my-tho/the-island-logde.jpg"
 
 const namespace = "asia/vietnam/southern-vietnam/my-tho"
 const id = "my-tho"
@@ -43,6 +51,7 @@ i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { covid } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const { development } = useContext(ApplicationContext)
   const title = t(`common:country.vietnam.card.${id}`)
@@ -52,6 +61,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -69,45 +79,60 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <How>
           <p>{t("how.part1")}</p>
           <p>{t("how.part2")}</p>
-          <p>{t("how.part3")}</p>
+          {transportLinkPublished && <p>{t("how.part3")}</p>}
           <p>{t("how.part4")}</p>
-          {transportLinkPublished && <p>{t("how.part5")}</p>}
+          <p>{t("how.part5")}</p>
+          <BookingGygCardContainer>
+            <GetYourGuideCard
+              to="h-chi-minh-ville-l272/visite-du-haut-mkong-et-du-temple-de-vinh-trang-t69167"
+              title={
+                i18n.languageCode === "fr"
+                  ? "Rivière du haut Mékong : excursion d'une journée"
+                  : "Upper Mekong River: Day Tour"
+              }
+              rating={4.4}
+              certified
+              image="https://cdn.getyourguide.com/img/tour/590ac7d7e7b6a.jpeg/38"
+              price={16}
+              duration={{ value: 1, unit: "day" }}
+            />
+            <GetYourGuideCard
+              to="h-chi-minh-ville-l272/delta-du-mkong-tour-en-petit-groupe-my-tho-et-ben-tre-t97020"
+              title={
+                i18n.languageCode === "fr"
+                  ? "Delta du Mékong : tour en petit groupe à My Tho et Ben Tre"
+                  : "Mekong Delta Small Group Tour to My Tho and Ben Tre"
+              }
+              rating={4.3}
+              image="https://cdn.getyourguide.com/img/tour/5adcf9e422d8e.jpeg/38"
+              certified
+              price={21}
+              duration={{ value: 1, unit: "day" }}
+              groupSize="small"
+            />
+            <GetYourGuideCard
+              to="h-chi-minh-ville-l272/circuit-de-2-jours-en-petit-groupe-au-delta-du-mkong-avec-t125249"
+              title={
+                i18n.languageCode === "fr"
+                  ? "Excursion de 2 jours dans le delta du Mékong et le marché flottant"
+                  : "Mekong Delta and Floating Market 2-Day Small Group Tour"
+              }
+              rating={4.2}
+              image="https://cdn.getyourguide.com/img/tour/5e58ba1e4b64e.jpeg/38"
+              price={96}
+              duration={{ value: 2, unit: "day" }}
+              groupSize="small"
+            />
+          </BookingGygCardContainer>
+          <p
+            css={css`
+              margin-bottom: 1.45rem;
+            `}
+          >
+            {t("how.part6")}
+          </p>
+          {covid && <Covid>{t("how.part7")}</Covid>}
         </How>
-        {/*<div*/}
-        {/*  className="flex"*/}
-        {/*  css={css`*/}
-        {/*    margin-bottom: 1.45rem;*/}
-        {/*    row-gap: 1rem;*/}
-        {/*    column-gap: 2rem;*/}
-        {/*    justify-content: center;*/}
-        {/*    flex-wrap: wrap;*/}
-        {/*  `}*/}
-        {/*>*/}
-        {/*  <GetYourGuideCard*/}
-        {/*    to="activity/ho-chi-minh-city-l272/upper-mekong-river-full-day-tour-t69167"*/}
-        {/*    title={*/}
-        {/*      i18n.languageCode === "fr"*/}
-        {/*        ? "Rivière du haut Mékong : excursion d'une journée"*/}
-        {/*        : "Upper Mekong River: Day Tour"*/}
-        {/*    }*/}
-        {/*    rating={3.5}*/}
-        {/*    image="https://cdn.getyourguide.com/img/tour/590ac7d7e7b6a.jpeg/38"*/}
-        {/*    certified*/}
-        {/*    price={19}*/}
-        {/*    duration={{ value: 2, unit: "day" }}*/}
-        {/*    bestseller*/}
-        {/*  />*/}
-        {/*  <GetYourGuideCard*/}
-        {/*    to="activity/ho-chi-minh-city-l272/upper-mekong-river-full-day-tour-t69167"*/}
-        {/*    title={"Upper Mekong River: Day Tour"}*/}
-        {/*    rating={2}*/}
-        {/*    image="https://cdn.getyourguide.com/img/tour/590ac7d7e7b6a.jpeg/38"*/}
-        {/*    certified*/}
-        {/*    price={19}*/}
-        {/*    duration={{ value: 2, unit: "day" }}*/}
-        {/*    bestseller*/}
-        {/*  />*/}
-        {/*</div>ood solution*/}
         <HowLong>
           <p>{t("how-long.part1")}</p>
           <p>{t("how-long.part2")}</p>
@@ -122,8 +147,37 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="vn/thach-thao-homestay"
+              title="Thach Thao homestay"
+              image={thachTHaoHomestay}
+              note="9,2"
+              price={10}
+              people={2}
+              kind="low-cost"
+            />
+            <BookingCard
+              hotel="vn/mekong-taste-bungalow"
+              title="Mekong Taste Bungalow"
+              image={mekongTasteBungalow}
+              note="8,1"
+              price={29}
+              people={2}
+              kind="standard"
+            />
+            <BookingCard
+              hotel="vn/the-island-logde"
+              title="The Island Lodge"
+              image={theIslandLodge}
+              note="9,3"
+              price={182}
+              people={2}
+              kind="deluxe"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning />
           <p>{t("where-to-stay.part3")}</p>
-          <p>{t("where-to-stay.part4")}</p>
         </WhereToStay>
         <Visit title={t("common:section.visit")}>
           <SectionContent>

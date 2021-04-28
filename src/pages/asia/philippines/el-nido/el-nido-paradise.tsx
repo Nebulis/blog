@@ -131,7 +131,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               note="9,1"
               price={21}
               people={1}
-              kind="low-cost"
+              kind="inn"
             />
             <BookingCard
               hotel="ph/cadlao-resort-and-restaurant"
