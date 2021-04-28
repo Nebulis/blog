@@ -4,7 +4,7 @@ import { useCustomTranslation } from "../../i18n-hook"
 import { css } from "@emotion/react"
 import React from "react"
 import { Lang } from "./links/links.types"
-import { FaClock } from "react-icons/all"
+import { FaClock, FaUser } from "react-icons/all"
 
 const buildGetYourGuideUrl = ({ lang, slug = "" }: { lang: Lang; slug: string }) =>
   `https://www.getyourguide.${lang === "fr" ? "fr" : "com"}/${slug}`
@@ -240,9 +240,12 @@ export const InternalCard: React.FunctionComponent<
             &nbsp;{duration.value} {transformDurationUnit(duration.value, duration.unit, i18n.languageCode)}
           </span>
         </span>
-        <span className="activity">{computedPrice}</span>
+        <span className="activity">
+          <FaUser />
+          <span>&nbsp;{computedPrice}</span>
+        </span>
         {groupSize === "small" && (
-          <span className="activity">{i18n.languageCode === "fr" ? "petit groupe" : "small oroup"}</span>
+          <span className="activity">{i18n.languageCode === "fr" ? "petit groupe" : "small group"}</span>
         )}
       </div>
     </ExternalLink>
