@@ -8,6 +8,7 @@ import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/can-tho.json"
 import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
+  Covid,
   How,
   HowLong,
   HowMuch,
@@ -34,6 +35,15 @@ import { CanThoImages } from "../../../../components/images/asia/vietnam/souther
 import styled from "@emotion/styled"
 import { Title } from "../../../../components/core/title"
 import { Quote } from "../../../../components/core/quote"
+import { ApplicationContext } from "../../../../components/application"
+import { useContext } from "react"
+import { css } from "@emotion/react"
+import { GetYourGuideCard } from "../../../../components/core/get-your-guide"
+import { BookingGygCardContainer } from "../../../../components/layout/layout"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import winterSpringColorsHouse from "../../../../images/asia/vietnam/southern-vietnam/can-tho/winter-spring-colors-house.jpg"
+import queenieHouse from "../../../../images/asia/vietnam/southern-vietnam/can-tho/queenie-house.jpg"
+import greenVillageMekong from "../../../../images/asia/vietnam/southern-vietnam/can-tho/green-village-mekong.jpg"
 
 const namespace = "asia/vietnam/southern-vietnam/can-tho"
 const id = "can-tho"
@@ -45,12 +55,14 @@ const InsideQuote = styled.p`
 `
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { covid } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.vietnam.card.${id}`)
   return (
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -89,9 +101,89 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how-much.part2")}</p>
           <p>{t("how-much.part3")}</p>
           <p>{t("how-much.part4")}</p>
+          <p>{t("how-much.part5")}</p>
+          <BookingGygCardContainer>
+            <GetYourGuideCard
+              to="h-chi-minh-ville-l272/circuit-de-2-jours-en-petit-groupe-au-delta-du-mkong-avec-t125249"
+              title={
+                i18n.languageCode === "fr"
+                  ? "Excursion de 2 jours dans le delta du Mékong et le marché flottant"
+                  : "Mekong Delta and Floating Market 2-Day Small Group Tour"
+              }
+              rating={4.2}
+              image="https://cdn.getyourguide.com/img/tour/5e58ba1e4b64e.jpeg/38"
+              price={96}
+              duration={{ value: 2, unit: "day" }}
+              groupSize="small"
+            />
+            <GetYourGuideCard
+              to="h-chi-minh-ville-l272/march-flottant-de-cai-rang-et-delta-du-mkong-2-jours-t111085"
+              title={
+                i18n.languageCode === "fr"
+                  ? "Marché flottant de Cai Rang et delta du Mékong"
+                  : "Cai Rang Floating Market and Mekong Delta"
+              }
+              rating={4.1}
+              image="https://cdn.getyourguide.com/img/tour/59d75898331b0.jpeg/38"
+              certified
+              price={54}
+              duration={{ value: 2, unit: "day" }}
+            />
+            <GetYourGuideCard
+              to="h-chi-minh-ville-l272/depuis-h-chi-minh-3-jours-du-delta-du-mkong-au-cambodge-t111100"
+              title={
+                i18n.languageCode === "fr"
+                  ? "Depuis Hô-Chi-Minh-Ville : 3 jours dans le delta du Mékong"
+                  : "Mekong Delta: 3-Day 2-Night with Phnom Penh Exit, Cambodia"
+              }
+              rating={4.3}
+              certified
+              image="https://cdn.getyourguide.com/img/tour/595e01c8d9aed.jpeg/38"
+              price={112}
+              duration={{ value: 3, unit: "day" }}
+            />
+          </BookingGygCardContainer>
+          <p
+            css={css`
+              margin-bottom: 1.45rem;
+            `}
+          >
+            {t("how-much.part6")}
+          </p>
+          {covid && <Covid>{t("how-much.part7")}</Covid>}
         </HowMuch>
         <WhereToStay>
           <p>{t("where-to-stay.part1")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="vn/winter-spring-colors-house-can-tho"
+              title="Winter Spring Colors House"
+              image={winterSpringColorsHouse}
+              note="9,3"
+              price={10}
+              people={2}
+              kind="low-cost"
+            />
+            <BookingCard
+              hotel="vn/queenie-house"
+              title="Queenie House"
+              image={queenieHouse}
+              note="9,6"
+              price={18}
+              people={2}
+              kind="standard"
+            />
+            <BookingCard
+              hotel="vn/green-village-mekong"
+              title="Green Village Mekong"
+              image={greenVillageMekong}
+              note="9,4"
+              price={31}
+              people={2}
+              kind="standard"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning />
           <p>{t("where-to-stay.part2")}</p>
           <p>{t("where-to-stay.part3")}</p>
         </WhereToStay>

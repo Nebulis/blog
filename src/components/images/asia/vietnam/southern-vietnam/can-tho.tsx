@@ -95,7 +95,7 @@ export const CanThoImages: React.FunctionComponent<ExtraImageProps & { image: ke
       }
       floatingMarket4: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -123,7 +123,7 @@ export const CanThoImages: React.FunctionComponent<ExtraImageProps & { image: ke
       }
       floatingMarket8: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market8.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -137,7 +137,7 @@ export const CanThoImages: React.FunctionComponent<ExtraImageProps & { image: ke
       }
       floatingMarket10: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market10.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
