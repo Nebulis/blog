@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
 import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
@@ -9,6 +9,7 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import {
+  Covid,
   How,
   HowLong,
   HowMuch,
@@ -32,6 +33,14 @@ import { SharedCardVietnamImages } from "../../../../components/images/asia/viet
 import { Divider } from "../../../../components/core/divider"
 import { Title } from "../../../../components/core/title"
 import { Quote } from "../../../../components/core/quote"
+import { BookingGygCardContainer } from "../../../../components/layout/layout"
+import { GetYourGuideCard, TripadvisorCard } from "../../../../components/core/get-your-guide"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import pragueHotel from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/prague-hotel.jpg"
+import naNueHotel from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/na-nue-hotel.jpg"
+import yenTrangHotel from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/yen-trang-hotel.jpg"
+import { ApplicationContext } from "../../../../components/application"
+import { css } from "@emotion/react"
 
 const namespace = "asia/vietnam/southern-vietnam/cu-chi-tunnels"
 const id = "cu-chi-tunnels"
@@ -48,6 +57,7 @@ the fastest way to fix it is to resize a bit the images to
  */
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
+  const { covid } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.vietnam.card.${id}`)
 
@@ -55,6 +65,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -96,12 +107,90 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how-much.part1")}</p>
           <p>{t("how-much.part2")}</p>
           <p>{t("how-much.part3")}</p>
+          <BookingGygCardContainer>
+            <TripadvisorCard
+              to="AttractionProductReview-g293925-d11455504-Morning_Cu_Chi_Tunnels_Tour_from_Ho_Chi_Minh_City-Ho_Chi_Minh_City.html"
+              title={
+                i18n.languageCode === "fr"
+                  ? "Visite des tunnels de Cu Chi, au départ de Ho-Chi-Minh-Ville"
+                  : "Morning Cu Chi Tunnels Tour from Ho Chi Minh City"
+              }
+              rating={4.5}
+              image="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/74/2f/c5.jpg"
+              price={30}
+              duration={{ value: 6, unit: "hour" }}
+              groupSize={"small"}
+            />
+            <GetYourGuideCard
+              to="h-chi-minh-ville-l272/tunnels-de-cu-chi-visite-vip-en-hors-bord-t26653"
+              title={
+                i18n.languageCode === "fr"
+                  ? "Tunnels de Cu Chi et visite en hors-bord VIP"
+                  : "Cu Chi Tunnels & VIP Speedboat Tour"
+              }
+              rating={4.8}
+              image="https://cdn.getyourguide.com/img/tour/5aef87214d356.jpeg/38"
+              certified
+              price={68}
+              duration={{ value: 5, unit: "hour" }}
+            />
+            <GetYourGuideCard
+              to="h-chi-minh-ville-l272/excursion-au-temple-de-cao-i-et-dans-les-tunnels-de-c-chi-t69151"
+              title={
+                i18n.languageCode === "fr"
+                  ? "Temples de Củ Chi et Cao Đài : visite d’une journée"
+                  : "Cao Đài Temple and Củ Chi Tunnels Full-Day Tour"
+              }
+              rating={4.4}
+              image="https://cdn.getyourguide.com/img/tour/577b5bf87b8e7.jpeg/38"
+              certified
+              price={29}
+              duration={{ value: 1, unit: "day" }}
+            />
+          </BookingGygCardContainer>
+          <p
+            css={css`
+              margin-bottom: 1.45rem;
+            `}
+          >
+            {t("how-much.part4")}
+          </p>
+          {covid && <Covid>{t("how-much.part5")}</Covid>}
         </HowMuch>
         <WhereToStay>
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="vn/prague"
+              title="Prague Hotel"
+              image={pragueHotel}
+              note="8,4"
+              price={15}
+              people={2}
+              kind="standard"
+            />
+            <BookingCard
+              hotel="vn/na-nue"
+              title="Na Nue Hotel"
+              image={naNueHotel}
+              note="8,4"
+              price={12}
+              people={2}
+              kind="standard"
+            />
+            <BookingCard
+              hotel="vn/yen-trang-2"
+              title="Yen Trang 2 Hotel"
+              image={yenTrangHotel}
+              note="8,0"
+              price={17}
+              people={2}
+              kind="standard"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning />
           <p>{t("where-to-stay.part3")}</p>
-          <p>{t("where-to-stay.part4")}</p>
         </WhereToStay>
         <Visit title={t("common:section.visit")}>
           <SectionContent>
