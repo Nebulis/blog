@@ -47,3 +47,22 @@ export const buildPixabayUrl = (lang: Lang) => (slug = "") => `https://pixabay.c
 
 export const priceFactorEur = 1
 export const priceFactorUsd = 1.21
+export const price = (value: number, lang: Lang) =>
+  (value * (lang === "fr" ? priceFactorEur : priceFactorUsd)).toLocaleString(undefined, {
+    style: "currency",
+    currency: lang === "fr" ? "EUR" : "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  })
+
+export const convertTime = (time: number) => {
+  const hours = Math.floor(time / 60)
+  const minutes = Math.round((time / 60 - hours) * 60)
+  if (hours > 0 && minutes > 0) {
+    return `${hours}h${minutes}`
+  } else if (hours > 0) {
+    return `${hours}h`
+  } else {
+    return `${minutes}min`
+  }
+}

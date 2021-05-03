@@ -9,9 +9,9 @@ import {
   HomeSection,
   HomeSubSection,
   MainTitleSection,
-  SubHomeSectionTwoLines,
   SectionContent,
   SubHomeSection,
+  SubHomeSectionTwoLines,
   SubSubHomeSection,
 } from "../../../components/core/section"
 import { useCustomTranslation } from "../../../i18n-hook"

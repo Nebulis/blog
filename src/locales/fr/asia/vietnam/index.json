@@ -5,6 +5,7 @@
   },
   "meta-description": "Découvrez la ville de Himeji et les différents endroits à visiter à travers nos articles. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?",
   "social-network-description": "Le Vietnam est une destination unique. Des paysages magnifiques et variés, des parcs naturels, un héritage culturel et un patrimoine historique riche ... D'Hô Chi Minh-Ville à Hanoï, en passant par Da Nang, chaque destination offre sa propre histoire et une expérience différente. On vous fait découvrir à travers nos articles et nos photos nos voyages au Vietnam.",
+  "full-title": "Vietnam | Guide de Voyage",
   "travel": {
     "title": "Voyager",
     "subtitle": "En suivant notre aventure ..."
@@ -18,7 +19,8 @@
     "subtitle": "À travers nos astuces, nos coups de cœur ..."
   },
   "section1": "POINTS D'INTÉRÊTS",
-  "weather": "Quand partir ?",
+  "weather": "Quand partir au",
+  "weather-country": "Vietnam ?",
   "map": "Notre carte du",
   "country": "Vietnam"
 }

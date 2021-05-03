@@ -588,6 +588,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         location={location}

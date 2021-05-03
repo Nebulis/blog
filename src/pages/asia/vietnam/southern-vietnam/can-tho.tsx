@@ -152,7 +152,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
           {covid && <Covid>{t("how-much.part7")}</Covid>}
         </HowMuch>
-        <WhereToStay>
+        <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>
           <BookingGygCardContainer>
             <BookingCard

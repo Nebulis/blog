@@ -52,7 +52,7 @@ exports[`english pages exports meta for public/en/asia/index.html correctly: met
 
 exports[`english pages exports meta for public/en/asia/index.html correctly: social-network 1`] = `"Rest on wonderful beaches, visit of traditional temples, trek in the jungle or simply walk to discover breathtaking landscapes, from big cities to small villages, discovering the traditions of some tribes or observing silently wild animals... So many countries calling for evasion and making you dream."`;
 
-exports[`english pages exports meta for public/en/asia/index.html correctly: title 1`] = `"Asia | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/index.html correctly: title 1`] = `"Asia | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/indonesia/bali/index.html correctly: meta-description 1`] = `"Discover Bali, the crazy island, from beaches to tropical forests, rice fields to volcanoes by day, and bars open all night long. For each place, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
@@ -280,7 +280,7 @@ exports[`english pages exports meta for public/en/asia/vietnam/index.html correc
 
 exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: social-network 1`] = `"Vietnam is a unique destination. Magnificent and varied landscapes, natural parks, a cultural heritage and a rich historical heritage ... From Ho Chi Minh City to Hanoi, via Da Nang, each destination offers its own history and a different experience. Discover through our articles and our photos, our travels to Vietnam"`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: title 1`] = `"Vietnam | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/vietnam/index.html correctly: title 1`] = `"Vietnam | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/northern-vietnam/index.html correctly: meta-description 1`] = `"Travel with us in Northern Vietnam through our travelogue. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
@@ -292,7 +292,7 @@ exports[`english pages exports meta for public/en/asia/vietnam/prepare/index.htm
 
 exports[`english pages exports meta for public/en/asia/vietnam/prepare/index.html correctly: social-network 1`] = `"So many questions to ask yourself when planning a trip and especially how to organize yourself? In this article, you will find information and advice that will help you prepare for your trip to Vietnam."`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/prepare/index.html correctly: title 1`] = `"Prepare your travel to Vietnam | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/vietnam/prepare/index.html correctly: title 1`] = `"Prepare your travel to Vietnam | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/southern-vietnam/can-tho/index.html correctly: meta-description 1`] = `"Our trip to Can Tho and more particularly in the Cai Rang Floating Market, and in addition, a visit to a rice paper factory. In this article we also give you advice on how to get there? How many days ? When to go? And where to stay?"`;
 
@@ -334,7 +334,7 @@ exports[`english pages exports meta for public/en/asia/vietnam/transport/index.h
 
 exports[`english pages exports meta for public/en/asia/vietnam/transport/index.html correctly: social-network 1`] = `"You have planned your visits to Vietnam, all you have to do is find how to get around? Public transport, rental of bicycles, scooters and motorcycles or even guided tours."`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/transport/index.html correctly: title 1`] = `"All you need to know about transportation in Vietnam | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/vietnam/transport/index.html correctly: title 1`] = `"All you need to know about transportation in Vietnam | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/credits/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 

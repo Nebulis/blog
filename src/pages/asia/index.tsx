@@ -31,6 +31,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={t("common:continent.asia")}
+        fullTitle={t("full-title")}
         location={location}
         image={VietnamImage}
         socialNetworkDescription={t("quote.part1")}

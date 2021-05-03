@@ -52,7 +52,7 @@ exports[`french pages exports meta for public/asia/index.html correctly: meta-de
 
 exports[`french pages exports meta for public/asia/index.html correctly: social-network 1`] = `"Farniente sur des plages paradisiaques, visite de temples traditionnels, trek dans la jungle ou simple promenade à la découverte de paysages à couper le souffle, des grandes villes aux petits villages, en apprenant les traditions de certaines tribus ou en observant avec discrétion les animaux sauvages ... Tant de pays qui incitent à l’évasion et font rêver."`;
 
-exports[`french pages exports meta for public/asia/index.html correctly: title 1`] = `"Asie | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/index.html correctly: title 1`] = `"Asie | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/indonesia/bali/index.html correctly: meta-description 1`] = `"Découvrez Bali, l’île de toutes les folies, des plages aux forêts tropicales, rizières et volcans de jour, et les bars ouverts jusqu’au bout de la nuit. Pour chaque lieu nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
@@ -280,7 +280,7 @@ exports[`french pages exports meta for public/asia/vietnam/index.html correctly:
 
 exports[`french pages exports meta for public/asia/vietnam/index.html correctly: social-network 1`] = `"Le Vietnam est une destination unique. Des paysages magnifiques et variés, des parcs naturels, un héritage culturel et un patrimoine historique riche ... D'Hô Chi Minh-Ville à Hanoï, en passant par Da Nang, chaque destination offre sa propre histoire et une expérience différente. On vous fait découvrir à travers nos articles et nos photos nos voyages au Vietnam."`;
 
-exports[`french pages exports meta for public/asia/vietnam/index.html correctly: title 1`] = `"Vietnam | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/vietnam/index.html correctly: title 1`] = `"Vietnam | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/vietnam/northern-vietnam/index.html correctly: meta-description 1`] = `"Voyagez avec nous dans le Nord du Vietnam à travers notre carnet de voyage. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
@@ -292,7 +292,7 @@ exports[`french pages exports meta for public/asia/vietnam/prepare/index.html co
 
 exports[`french pages exports meta for public/asia/vietnam/prepare/index.html correctly: social-network 1`] = `"Que de questions à se poser quand on prépare un voyage et surtout comment bien s’organiser ? Vous trouverez dans cet article nos informations et conseils qui vous permettront de préparer votre voyage au Vietnam."`;
 
-exports[`french pages exports meta for public/asia/vietnam/prepare/index.html correctly: title 1`] = `"Bien préparer son voyage au Vietnam | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/vietnam/prepare/index.html correctly: title 1`] = `"Bien préparer son voyage au Vietnam | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/vietnam/southern-vietnam/can-tho/index.html correctly: meta-description 1`] = `"Le récit de notre voyage à Can Tho et plus particulièrement de son marché flottant avec en prime une visite dans une fabrication de feuille de riz. Dans cet article on te donne également nos conseils sur comment s’y rendre ? Combien de jours ? Quand partir ? Et où se loger ?"`;
 
@@ -334,7 +334,7 @@ exports[`french pages exports meta for public/asia/vietnam/transport/index.html 
 
 exports[`french pages exports meta for public/asia/vietnam/transport/index.html correctly: social-network 1`] = `"Vous avez planifié vos visites au Vietnam, il ne vous reste plus qu'à trouver comment vous déplacer ? Entre transports en commun, location de vélos, scooters et motos ou bien encore réservation de tours guidés."`;
 
-exports[`french pages exports meta for public/asia/vietnam/transport/index.html correctly: title 1`] = `"Tout savoir sur les transports au Vietnam | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/vietnam/transport/index.html correctly: title 1`] = `"Tout savoir sur les transports au Vietnam | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/credits/index.html correctly: meta-description 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 

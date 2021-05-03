@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useCallback, useState } from "react"
 import SEO from "../../../components/layout/seo"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
@@ -7,6 +7,8 @@ import translationEn from "../../../locales/en/asia/vietnam/transport.json"
 import { useCustomTranslation } from "../../../i18n-hook"
 import HomeImgUrl from "../../../images/asia/vietnam/transport/transport-vietnam-main.jpg"
 import {
+  MapAndTableContainer,
+  MapAndTableTableContainer,
   VietnamBlogLayout,
   vietnamCities,
   VietnamCity,
@@ -39,27 +41,23 @@ import { TransportVietnamImages } from "../../../components/images/asia/vietnam/
 import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
-import { buildBaolauUrl, buildPixabayUrl, priceFactorEur, priceFactorUsd } from "../../../utils"
+import { buildBaolauUrl, buildPixabayUrl, convertTime } from "../../../utils"
 import VietnamRailwayIcon from "../../../images/asia/vietnam/transport/vietnam-railways.png"
 import VioletteIcon from "../../../images/asia/vietnam/transport/violette.png"
 import NewLivitransIcon from "../../../images/asia/vietnam/transport/new-livitrans-express.png"
 import LotusIcon from "../../../images/asia/vietnam/transport/lotus-train.png"
 import MapBus from "../../../images/asia/vietnam/transport/map-bus.png"
 import MapOpenBus from "../../../images/asia/vietnam/transport/map-open-bus.png"
-import {
-  vietnamPrimaryColor,
-  vietnamPrimaryColorDarker,
-  vietnamPrimaryColorWithOpacity,
-} from "../../../components/core/asia/vietnam/vietnam.colors"
+import { vietnamPrimaryColorDarker } from "../../../components/core/asia/vietnam/vietnam.colors"
 import { Conclusion } from "../../../components/core/conclusion"
 import { Comments } from "../../../components/core/comments"
-import { VietnamAirportMap, VietnamTrainMap } from "../../../components/core/asia/vietnam/vietnam-map"
+import { trainSchedules as _trainSchedules, VietnamTrainMap } from "../../../components/core/asia/vietnam/vietnam-map"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
 import { PetitCarreJaune } from "../../../components/layout/layout"
 import { Tree } from "../../../components/layout/menu"
-import { BsArrowLeftRight } from "react-icons/bs"
-import { mediumEnd } from "../../../components/core/variables"
 import { FaBus } from "react-icons/fa"
+import { PlaneSchedule } from "../../../components/core/asia/vietnam/plane-schedule"
+import { reverseSchedules, Schedule, Schedules, SearchItinerary, Step } from "../../../components/core/search-itinerary"
 
 const Sitting: React.FunctionComponent = () => (
   <svg viewBox="0 0 512 512" width="20px" height="20px">
@@ -131,127 +129,55 @@ const BusTitle = styled(SectionTitle)`
   margin-bottom: 1rem; // mb3
 `
 
-const MapAndTableTableContainer = styled.div`
-  max-width: 400px;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  .menu-entry-opened .menu-label {
-    background-color: #e5e7eb;
-  }
-  .menu-label {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.9rem;
-    height: 30px;
-    background-color: #f7fafc;
-    border-left: 3px solid ${vietnamPrimaryColorDarker};
-    border-bottom: 1px solid #e5e7eb;
-    .menu-label-chevron {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      right: 10px;
-    }
-  }
-  .menu-content-container {
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .schedules {
-    border-left: 3px solid ${vietnamPrimaryColor};
-    font-size: 0.8rem;
-  }
-
-  .schedule-entry:nth-of-type(even) {
-    background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
-  }
-  .schedule-entry:hover {
-    background-color: ${vietnamPrimaryColorWithOpacity(0.3)};
-  }
-  .schedule-entry {
-    height: 25px;
-    border-bottom: 1px solid #e5e7eb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-`
-const MapAndTableContainer = styled.div`
-  display: flex;
-  align-items: center;
-  & > * {
-    width: 50%;
-  }
-  margin-bottom: calc(1.45rem / 2);
-
-  @media (max-width: ${mediumEnd}) {
-    flex-direction: column;
-    & > svg,
-    & > img {
-      margin-bottom: calc(1.45rem / 2);
-    }
-    & > * {
-      width: 100%;
-    }
-  }
-`
 type BusType = "sitting" | "sleeping"
-interface BusSchedule {
-  destination: VietnamCity
-  duration: string
+interface BusSchedule extends Schedule<VietnamCity> {
   distance: string
   type: BusType[]
 }
-type BusSchedules = {
-  [key in VietnamCity]?: { id: VietnamCity; schedules: BusSchedule[] }
-}
+type BusSchedules = Schedules<VietnamCity, BusSchedule>
 const tmpBusSchedules: BusSchedules = {
   "ho-chi-minh": {
     id: "ho-chi-minh",
     schedules: [
       {
         destination: "mui-ne",
-        duration: "5h",
+        duration: 300,
         distance: "250km",
         type: ["sleeping", "sitting"],
       },
       {
         destination: "nha-trang",
-        duration: "11h",
+        duration: 660,
         distance: "447km",
         type: ["sleeping"],
       },
       {
         destination: "da-lat",
-        duration: "7h",
+        duration: 420,
         distance: "310km",
         type: ["sleeping"],
       },
       {
         destination: "can-tho",
-        duration: "3h30",
+        duration: 210,
         distance: "175km",
         type: ["sleeping"],
       },
       {
         destination: "rach-gia",
-        duration: "6h",
+        duration: 360,
         distance: "280km",
         type: ["sleeping"],
       },
       {
         destination: "tran-de",
-        duration: "6h",
+        duration: 360,
         distance: "220km",
         type: ["sleeping"],
       },
       {
         destination: "ha-tien",
-        duration: "8h",
+        duration: 480,
         distance: "315km",
         type: ["sleeping"],
       },
@@ -262,13 +188,13 @@ const tmpBusSchedules: BusSchedules = {
     schedules: [
       {
         destination: "nha-trang",
-        duration: "5h",
+        duration: 300,
         distance: "250km",
         type: ["sleeping"],
       },
       {
         destination: "da-lat",
-        duration: "4h",
+        duration: 240,
         distance: "160km",
         type: ["sitting"],
       },
@@ -279,13 +205,13 @@ const tmpBusSchedules: BusSchedules = {
     schedules: [
       {
         destination: "nha-trang",
-        duration: "4h",
+        duration: 240,
         distance: "140km",
         type: ["sitting"],
       },
       {
         destination: "buon-ma-thuot",
-        duration: "5h",
+        duration: 300,
         distance: "210km",
         type: ["sitting"],
       },
@@ -296,7 +222,7 @@ const tmpBusSchedules: BusSchedules = {
     schedules: [
       {
         destination: "hoi-an",
-        duration: "11h",
+        duration: 660,
         distance: "530km",
         type: ["sleeping"],
       },
@@ -307,13 +233,13 @@ const tmpBusSchedules: BusSchedules = {
     schedules: [
       {
         destination: "da-nang",
-        duration: "45min",
+        duration: 45,
         distance: "30km",
         type: ["sleeping"],
       },
       {
         destination: "hue",
-        duration: "4h",
+        duration: 240,
         distance: "130km",
         type: ["sleeping"],
       },
@@ -324,7 +250,7 @@ const tmpBusSchedules: BusSchedules = {
     schedules: [
       {
         destination: "hue",
-        duration: "3h",
+        duration: 180,
         distance: "100km",
         type: ["sleeping"],
       },
@@ -335,13 +261,13 @@ const tmpBusSchedules: BusSchedules = {
     schedules: [
       {
         destination: "phong-nha",
-        duration: "5h",
+        duration: 300,
         distance: "210km",
         type: ["sleeping", "sitting"],
       },
       {
         destination: "hanoi",
-        duration: "14h",
+        duration: 840,
         distance: "685km",
         type: ["sleeping"],
       },
@@ -352,31 +278,31 @@ const tmpBusSchedules: BusSchedules = {
     schedules: [
       {
         destination: "sapa",
-        duration: "5h30",
+        duration: 330,
         distance: "290km",
         type: ["sleeping"],
       },
       {
         destination: "mai-chau",
-        duration: "4h",
+        duration: 240,
         distance: "140km",
         type: ["sitting"],
       },
       {
         destination: "ninh-binh",
-        duration: "2h30",
+        duration: 150,
         distance: "100km",
         type: ["sitting"],
       },
       {
         destination: "ha-long",
-        duration: "4h",
+        duration: 240,
         distance: "150km",
         type: ["sitting"],
       },
       {
         destination: "cat-ba-island",
-        duration: "4h",
+        duration: 240,
         distance: "150km",
         type: ["sitting"],
       },
@@ -384,372 +310,8 @@ const tmpBusSchedules: BusSchedules = {
   },
 }
 
-interface PlaneSchedule {
-  destination: VietnamCity
-  duration: string
-  price: number
-}
-type PlaneSchedules = {
-  [key in VietnamCity]?: { id: VietnamCity; schedules: PlaneSchedule[] }
-}
-const tmpPlaneSchedules: PlaneSchedules = {
-  "ho-chi-minh": {
-    id: "ho-chi-minh",
-    schedules: [
-      {
-        destination: "da-lat",
-        duration: "55min",
-        price: 60,
-      },
-      {
-        destination: "da-nang",
-        duration: "1h15",
-        price: 60,
-      },
-      {
-        destination: "haiphong",
-        duration: "2h",
-        price: 70,
-      },
-      {
-        destination: "hanoi",
-        duration: "2h",
-        price: 70,
-      },
-      {
-        destination: "hue",
-        duration: "1h25",
-        price: 60,
-      },
-      {
-        destination: "nha-trang",
-        duration: "1h10",
-        price: 60,
-      },
-      {
-        destination: "phu-quoc",
-        duration: "1h",
-        price: 55,
-      },
-      {
-        destination: "vinh",
-        duration: "1h50",
-        price: 70,
-      },
-      {
-        destination: "buon-ma-thuot",
-        duration: "1h",
-        price: 60,
-      },
-      {
-        destination: "con-dao",
-        duration: "1h",
-        price: 160,
-      },
-      {
-        destination: "chu-lai",
-        duration: "1h20",
-        price: 60,
-      },
-      {
-        destination: "dong-hoi",
-        duration: "1h35",
-        price: 70,
-      },
-      {
-        destination: "pleiku",
-        duration: "1h10",
-        price: 60,
-      },
-      {
-        destination: "qui-nhon",
-        duration: "1h10",
-        price: 60,
-      },
-      {
-        destination: "rach-gia",
-        duration: "50min",
-        price: 70,
-      },
-      {
-        destination: "thanh-hoa",
-        duration: "2h",
-        price: 70,
-      },
-    ],
-  },
-  hanoi: {
-    id: "hanoi",
-    schedules: [
-      {
-        destination: "can-tho",
-        duration: "2h10",
-        price: 80,
-      },
-      {
-        destination: "da-lat",
-        duration: "1h45",
-        price: 70,
-      },
-      {
-        destination: "da-nang",
-        duration: "1h20",
-        price: 60,
-      },
-      {
-        destination: "hue",
-        duration: "1h15",
-        price: 65,
-      },
-      {
-        destination: "nha-trang",
-        duration: "1h45",
-        price: 70,
-      },
-      {
-        destination: "phu-quoc",
-        duration: "2h05",
-        price: 75,
-      },
-      {
-        destination: "vinh",
-        duration: "1h",
-        price: 70,
-      },
-      {
-        destination: "buon-ma-thuot",
-        duration: "1h45",
-        price: 70,
-      },
-      {
-        destination: "chu-lai",
-        duration: "1h30",
-        price: 60,
-      },
-      {
-        destination: "dien-bien-phu",
-        duration: "1h20",
-        price: 70,
-      },
-      {
-        destination: "dong-hoi",
-        duration: "1h30",
-        price: 75,
-      },
-      {
-        destination: "pleiku",
-        duration: "1h30",
-        price: 75,
-      },
-      {
-        destination: "qui-nhon",
-        duration: "1h35",
-        price: 70,
-      },
-    ],
-  },
-  "can-tho": {
-    id: "can-tho",
-    schedules: [
-      {
-        destination: "da-lat",
-        duration: "45min",
-        price: 60,
-      },
-      {
-        destination: "da-nang",
-        duration: "1h30",
-        price: 70,
-      },
-      {
-        destination: "haiphong",
-        duration: "2h05",
-        price: 95,
-      },
-      {
-        destination: "vinh",
-        duration: "1h50",
-        price: 75,
-      },
-      {
-        destination: "con-dao",
-        duration: "50min",
-        price: 150,
-      },
-      {
-        destination: "thanh-hoa",
-        duration: "1h55",
-        price: 80,
-      },
-    ],
-  },
-  haiphong: {
-    id: "haiphong",
-    schedules: [
-      {
-        destination: "da-lat",
-        duration: "1h45",
-        price: 75,
-      },
-      {
-        destination: "da-nang",
-        duration: "1h20",
-        price: 65,
-      },
-      {
-        destination: "nha-trang",
-        duration: "1h45",
-        price: 75,
-      },
-      {
-        destination: "phu-quoc",
-        duration: "1h50",
-        price: 80,
-      },
-      {
-        destination: "buon-ma-thuot",
-        duration: "1h40",
-        price: 70,
-      },
-      {
-        destination: "pleiku",
-        duration: "1h35",
-        price: 70,
-      },
-    ],
-  },
-  "da-lat": {
-    id: "da-lat",
-    schedules: [
-      {
-        destination: "da-nang",
-        duration: "1h05",
-        price: 65,
-      },
-      {
-        destination: "hue",
-        duration: "1h15",
-        price: 90,
-      },
-      {
-        destination: "vinh",
-        duration: "1h35",
-        price: 65,
-      },
-    ],
-  },
-  "da-nang": {
-    id: "da-nang",
-    schedules: [
-      {
-        destination: "nha-trang",
-        duration: "1h05",
-        price: 60,
-      },
-    ],
-  },
-  "nha-trang": {
-    id: "nha-trang",
-    schedules: [
-      {
-        destination: "vinh",
-        duration: "1h35",
-        price: 70,
-      },
-      {
-        destination: "thanh-hoa",
-        duration: "1h45",
-        price: 75,
-      },
-    ],
-  },
-  "phu-quoc": {
-    id: "phu-quoc",
-    schedules: [
-      {
-        destination: "vinh",
-        duration: "1h40",
-        price: 80,
-      },
-    ],
-  },
-  vinh: {
-    id: "vinh",
-    schedules: [
-      {
-        destination: "buon-ma-thuot",
-        duration: "1h25",
-        price: 65,
-      },
-    ],
-  },
-}
-
-// bad bad not pure
-const reversePlaneSchedule = (planeSchedules: PlaneSchedules) => {
-  const unorderedPlaneSchedules: PlaneSchedules = {}
-  for (const [city, entries] of Object.entries(planeSchedules)) {
-    if (!entries) continue
-    const cityTyped = city as VietnamCity
-    unorderedPlaneSchedules[cityTyped] = {
-      id: entries.id,
-      schedules: [...entries.schedules, ...(unorderedPlaneSchedules[cityTyped]?.schedules ?? [])],
-    }
-    for (const schedule of entries?.schedules) {
-      const newEntry = {
-        destination: cityTyped,
-        duration: schedule.duration,
-        price: schedule.price,
-      }
-      if (unorderedPlaneSchedules[schedule.destination]?.schedules) {
-        unorderedPlaneSchedules[schedule.destination]?.schedules.push(newEntry)
-      } else {
-        unorderedPlaneSchedules[schedule.destination] = { id: schedule.destination, schedules: [newEntry] }
-      }
-    }
-  }
-  return Object.keys(unorderedPlaneSchedules)
-    .sort()
-    .reduce((obj, key) => {
-      obj[key as VietnamCity] = unorderedPlaneSchedules[key as VietnamCity]
-      obj[key as VietnamCity]?.schedules.sort((a, b) => a.destination.localeCompare(b.destination))
-      return obj
-    }, {} as PlaneSchedules)
-}
-const planeSchedules = reversePlaneSchedule(tmpPlaneSchedules)
-// bad bad not pure
-const reverseBusSchedule = (busSchedules: BusSchedules) => {
-  const unorderedBusSchedules: BusSchedules = {}
-  for (const [city, entries] of Object.entries(busSchedules)) {
-    if (!entries) continue
-    const cityTyped = city as VietnamCity
-    unorderedBusSchedules[cityTyped] = {
-      id: entries.id,
-      schedules: [...entries.schedules, ...(unorderedBusSchedules[cityTyped]?.schedules ?? [])],
-    }
-    for (const schedule of entries?.schedules) {
-      const newEntry = {
-        destination: cityTyped,
-        duration: schedule.duration,
-        distance: schedule.distance,
-        type: schedule.type,
-      }
-      if (unorderedBusSchedules[schedule.destination]?.schedules) {
-        unorderedBusSchedules[schedule.destination]?.schedules.push(newEntry)
-      } else {
-        unorderedBusSchedules[schedule.destination] = { id: schedule.destination, schedules: [newEntry] }
-      }
-    }
-  }
-  return Object.keys(unorderedBusSchedules)
-    .sort()
-    .reduce((obj, key) => {
-      obj[key as VietnamCity] = unorderedBusSchedules[key as VietnamCity]
-      obj[key as VietnamCity]?.schedules.sort((a, b) => a.destination.localeCompare(b.destination))
-      return obj
-    }, {} as BusSchedules)
-}
-const busSchedules = reverseBusSchedule(tmpBusSchedules)
+const busSchedules = reverseSchedules(tmpBusSchedules)
+const trainSchedules = reverseSchedules(_trainSchedules)
 
 const namespace = "asia/vietnam/transport"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -758,8 +320,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t("common:country.vietnam.card.transport")
   const [tooltipContent, setTooltipContent] = useState<string>()
-  const [selectedAirport, setSelectedAirport] = useState<VietnamCity>()
   const [selectedBus, setSelectedBus] = useState<VietnamCity>()
+  const [trainSteps, setTrainSteps] = useState<Step<VietnamCity>>()
+  const onSelectTrainSteps = useCallback((steps: Step<VietnamCity>[]) => {
+    setTrainSteps(steps[0])
+  }, [])
+
   const buildTitle = (title: string) => {
     return i18n.languageCode === "fr" ? `${t("transport-in")} ${title}` : `${title} ${t("transport-in")}`
   }
@@ -767,6 +333,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         location={location}
@@ -843,71 +410,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section1.price.part2")}</p>
             <p>{t("section1.price.part3")}</p>
             <p>{t("section1.price.part4")}</p>
-            <MapAndTableContainer>
-              <VietnamAirportMap
-                onMouseEnter={setTooltipContent}
-                onMouseLeave={setTooltipContent}
-                selected={selectedAirport}
-                destination={
-                  selectedAirport
-                    ? planeSchedules[selectedAirport]?.schedules.map((schedule) => schedule.destination) ?? []
-                    : []
-                }
-                onSelect={(city: VietnamCity) => setSelectedAirport(selectedAirport === city ? undefined : city)}
-              />
-              <MapAndTableTableContainer>
-                {Object.entries(planeSchedules).map(([key, entry]) => {
-                  return (
-                    <Tree
-                      key={key}
-                      name={vietnamCities[entry?.id ?? "hanoi"]}
-                      onClick={() => {
-                        setSelectedAirport(selectedAirport === entry?.id ? undefined : entry?.id)
-                      }}
-                      controlled
-                      open={entry?.id === selectedAirport}
-                    >
-                      <div className="schedules">
-                        {entry?.schedules.map((schedule) => (
-                          <div
-                            key={schedule.destination}
-                            className="schedule-entry"
-                            css={css`
-                              .schedule-entry-destination {
-                                flex-basis: 50%;
-                                min-width: 50%;
-                              }
-                              .schedule-entry-price,
-                              .schedule-entry-duration {
-                                flex-basis: 25%;
-                                min-width: 25%;
-                              }
-                            `}
-                          >
-                            <span className="schedule-entry-destination inline-flex items-center justify-center">
-                              <BsArrowLeftRight />
-                              &nbsp;
-                              {vietnamCities[schedule.destination]}
-                            </span>
-                            <span className="schedule-entry-price dib tc">
-                              {(
-                                schedule.price * (i18n.languageCode === "fr" ? priceFactorEur : priceFactorUsd)
-                              ).toLocaleString(undefined, {
-                                style: "currency",
-                                currency: i18n.languageCode === "fr" ? "EUR" : "USD",
-                                minimumFractionDigits: 0,
-                                maximumFractionDigits: 0,
-                              })}
-                            </span>
-                            <span className="schedule-entry-duration dib tc">{schedule.duration}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </Tree>
-                  )
-                })}
-              </MapAndTableTableContainer>
-            </MapAndTableContainer>
+            <PlaneSchedule setTooltipContent={setTooltipContent} />
           </HowMuch>
           <Opinion title={t("opinion")}>
             <p>{t("section1.opinion.part1")}</p>
@@ -1120,7 +623,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                               {vietnamCities[schedule.destination]}
                             </span>
                             <span className="schedule-entry-distance dib tc">{schedule.distance}</span>
-                            <span className="schedule-entry-duration dib tc">{schedule.duration}</span>
+                            <span className="schedule-entry-duration dib tc">{convertTime(schedule.duration)}</span>
                           </div>
                         ))}
                       </div>
@@ -1129,6 +632,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 })}
               </MapAndTableTableContainer>
             </MapAndTableContainer>
+            <SearchItinerary
+              schedules={busSchedules}
+              cities={vietnamCities}
+              showPrice={false}
+              stepsLimit={20}
+              allowDifferentSteps
+              displayItinerary={(length) =>
+                length === 1
+                  ? i18n.languageCode === "fr"
+                    ? "Bus direct"
+                    : "Direct Bus"
+                  : i18n.languageCode === "fr"
+                  ? `Bus avec correspondance (${length})`
+                  : `Connection Bus (${length})`
+              }
+            />
           </HowMuch>
           <Opinion title={t("opinion")}>
             <p>{t("section3.car.opinion.part1")}</p>
@@ -1421,7 +940,23 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ul>
           </Company>
           <HowMuch title={t("price")}>
-            <VietnamTrainMap onMouseEnter={setTooltipContent} onMouseLeave={setTooltipContent} />
+            <VietnamTrainMap
+              onMouseEnter={setTooltipContent}
+              onMouseLeave={setTooltipContent}
+              selectedTrainSteps={trainSteps}
+            />
+            <SearchItinerary
+              showNote={false}
+              onSelectSteps={onSelectTrainSteps}
+              schedules={trainSchedules}
+              cities={vietnamCities}
+              stepsLimit={20}
+              displayItinerary={(length) =>
+                i18n.languageCode === "fr"
+                  ? `Train - ${length} arrêt${length > 1 ? "s" : ""}`
+                  : `Train - ${length} stop${length > 1 ? "s" : ""}`
+              }
+            />
             <p>{t("section7.price")}</p>
           </HowMuch>
           <Opinion title={t("opinion")}>

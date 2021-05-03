@@ -1,16 +1,16 @@
 import React from "react"
 import { primaryColor, primaryDarkColor } from "./variables"
 import { css } from "@emotion/react"
-import Select from "react-select"
+import ReactSelect, { OptionTypeBase } from "react-select"
 import { useCustomTranslation } from "../../i18n-hook"
 
-export const SelectByContinent: React.FunctionComponent<{
-  continents: string[]
+export const Select: React.FunctionComponent<{
+  options: OptionTypeBase[]
   onChange: (value: string | undefined) => void
-}> = ({ continents, onChange }) => {
-  const { i18n, t } = useCustomTranslation("common")
+  placeholder: string
+}> = ({ options, onChange, placeholder }) => {
   return (
-    <Select
+    <ReactSelect
       css={css`
         width: 300px;
         margin-left: auto;
@@ -33,7 +33,6 @@ export const SelectByContinent: React.FunctionComponent<{
         option: (provided, state) => ({
           ...provided,
           backgroundColor: state.isSelected ? primaryColor : provided.backgroundColor,
-          cursor: !state.isSelected ? primaryColor : provided.cursor,
         }),
         menu: (provided) => ({
           ...provided,
@@ -56,9 +55,23 @@ export const SelectByContinent: React.FunctionComponent<{
       className="react-select-container mb3"
       classNamePrefix="react-select"
       isClearable
-      placeholder={i18n.languageCode === "fr" ? "Sélectionner un continent" : "Select a continent"}
+      placeholder={placeholder}
       onChange={(element) => (element ? onChange(element.value) : onChange(undefined))}
+      options={options}
+    />
+  )
+}
+
+export const SelectByContinent: React.FunctionComponent<{
+  continents: string[]
+  onChange: (value: string | undefined) => void
+}> = ({ continents, onChange }) => {
+  const { i18n, t } = useCustomTranslation("common")
+  return (
+    <Select
       options={continents.map((continent) => ({ value: continent, label: t(`common:continent.${continent}`) }))}
+      onChange={onChange}
+      placeholder={i18n.languageCode === "fr" ? "Sélectionner un continent" : "Select a continent"}
     />
   )
 }

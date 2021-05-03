@@ -5,6 +5,7 @@ import React from "react"
 import { Lang } from "./links/links.types"
 import { FaStar, FaUser } from "react-icons/all"
 import { primaryDarkColor } from "./variables"
+import { Note } from "./section"
 
 const buildBookingHotelUrl = ({ lang, hotel = "" }: { lang: Lang; hotel: string }) =>
   `https://www.booking.com/hotel/${hotel}.${lang}.html`
@@ -122,19 +123,13 @@ export const BookingCard: React.FunctionComponent<{
     </ExternalLink>
   )
 }
-
-const bookingWarningStyle = css`
-  font-size: 0.8rem;
-  text-align: center;
-  margin-bottom: 1rem;
-`
 export const BookingWarning = () => {
   const { i18n } = useCustomTranslation()
   return (
-    <p css={bookingWarningStyle}>
+    <Note>
       {i18n.languageCode === "fr"
         ? "Les prix varient en fonction de la saison a laquelle vous réservez."
         : "Prices vary depending on the period you book."}
-    </p>
+    </Note>
   )
 }
