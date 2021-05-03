@@ -61,11 +61,6 @@ export const SectionTitle: FunctionComponent<HTMLAttributes<any>> = ({ children,
     {children}
   </div>
 )
-export const SectionTitleParagraph: FunctionComponent<HTMLAttributes<any>> = ({ children, className = "", id }) => (
-  <p css={sectionTitleStyle} className={`mb2 flex items-center section-title ${className}`} id={id}>
-    {children}
-  </p>
-)
 const sectionContentStyle = css`
   line-height: 1.5em;
   margin-bottom: 1.45rem;
@@ -200,13 +195,6 @@ export const Company = titleBuilder({ icon: FaCopyright, translationKey: "todo" 
 export const Choice = titleBuilder({ icon: FaClipboardList, translationKey: "todo" })
 export const Boat = titleBuilder({ icon: FaShip, translationKey: "todo" })
 
-export const GoodToKnow: FunctionComponent<TitleProps> = ({ children }) => (
-  <>
-    <SectionTitle>Bon à savoir</SectionTitle>
-    <SectionContent>{children}</SectionContent>
-  </>
-)
-
 const homeSectionStyle = css`
   letter-spacing: 5px;
   font-family: auto;
@@ -307,3 +295,16 @@ export const Covid: FunctionComponent = ({ children }) => (
     <div className="covid-content pv2 ph3 mh3 ba bt-0 br2 br--bottom ">{children}</div>
   </div>
 )
+
+const noteStyle = css`
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+`
+export const Note: FunctionComponent<{ className?: string }> = ({ children, className = "" }) => {
+  return (
+    <p css={noteStyle} className={className}>
+      {children}
+    </p>
+  )
+}

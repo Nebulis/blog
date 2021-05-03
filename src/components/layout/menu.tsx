@@ -463,6 +463,7 @@ export const Tree: React.FunctionComponent<{
   onClick?: () => void
   animate?: boolean
   controlled?: boolean // use control when want to control the opening yourself
+  hideArrow?: boolean
 }> = ({
   children,
   name,
@@ -472,6 +473,7 @@ export const Tree: React.FunctionComponent<{
   onClick = () => void 0,
   animate = true,
   controlled = false,
+  hideArrow = false,
 }) => {
   const [isOpen, setOpen] = useState(open)
   const prev = usePrevious(isOpen)
@@ -502,9 +504,11 @@ export const Tree: React.FunctionComponent<{
         className="menu-label relative"
       >
         <span className="menu-label-name">{to ? <ApplicationLink to={to}>{name}</ApplicationLink> : name}</span>
-        <ChevronContainer className="menu-label-chevron">
-          {hasChildren ? <FaChevronDown className={isOpen ? "chevron-open" : "chevron-closed"} /> : ""}
-        </ChevronContainer>
+        {!hideArrow && (
+          <ChevronContainer className="menu-label-chevron">
+            {hasChildren ? <FaChevronDown className={isOpen ? "chevron-open" : "chevron-closed"} /> : ""}
+          </ChevronContainer>
+        )}
       </div>
       <Content
         className="menu-content-container"

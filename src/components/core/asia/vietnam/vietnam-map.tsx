@@ -1,11 +1,12 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { css } from "@emotion/react"
 import { weatherBad, weatherGood } from "../../variables"
 import { defaultTextStyle, mapProps, PinAirport } from "../../map"
 import { vietnamPrimaryColorDarker } from "./vietnam.colors"
-import { VietnamCity } from "./vietnam"
+import { vietnamCities, VietnamCity } from "./vietnam"
 import { useCustomTranslation } from "../../../../i18n-hook"
-import { priceFactorEur, priceFactorUsd } from "../../../../utils"
+import { convertTime, price } from "../../../../utils"
+import { Schedule, Step } from "../../search-itinerary"
 
 const VietnamMap: React.FunctionComponent = () => (
   <g>
@@ -593,6 +594,349 @@ export const VietnamAirportMap: React.FunctionComponent<{
   )
 }
 
+type TrainSchedules<T extends string, S = Schedule<T>> = {
+  [key in T]?: {
+    id: T
+    schedules: S[]
+    circleProps: React.SVGProps<SVGCircleElement>
+    textProps: React.SVGProps<SVGTextElement>
+  }
+}
+
+interface TrainSchedule extends Schedule<VietnamCity> {
+  d: string
+}
+
+export const trainSchedules: TrainSchedules<VietnamCity, TrainSchedule> = {
+  "ho-chi-minh": {
+    id: "ho-chi-minh",
+    circleProps: { cx: "615", cy: "1800", r: "13" },
+    textProps: { x: "465", y: "1850" },
+    schedules: [
+      {
+        destination: "bien-hoa",
+        price: 1,
+        duration: 45,
+        d: "M 615 1800 L 645 1770",
+      },
+    ],
+  },
+  "bien-hoa": {
+    id: "bien-hoa",
+    circleProps: { cx: "645", cy: "1770", r: "13" },
+    textProps: { x: "550", y: "1730" },
+    schedules: [
+      {
+        destination: "binh-thuan",
+        price: 10,
+        duration: 160,
+        d: "M 645 1770 C 750 1720, 750 1820, 805 1770",
+      },
+    ],
+  },
+  "binh-thuan": {
+    id: "binh-thuan",
+    circleProps: { cx: "805", cy: "1770", r: "13" },
+    textProps: { x: "805", y: "1830" },
+    schedules: [
+      {
+        destination: "thap-cham",
+        price: 3,
+        duration: 135,
+        d: "M 805 1770 Q 900 1720, 920 1680",
+      },
+    ],
+  },
+  "thap-cham": {
+    id: "thap-cham",
+    circleProps: { cx: "920", cy: "1680", r: "13" },
+    textProps: { x: "940", y: "1720" },
+    schedules: [
+      {
+        destination: "nha-trang",
+        price: 2,
+        duration: 90,
+        d: "M 920 1680 Q 940 1580, 950 1600",
+      },
+    ],
+  },
+  "nha-trang": {
+    id: "nha-trang",
+    circleProps: { cx: "950", cy: "1600", r: "13" },
+    textProps: { x: "970", y: "1640" },
+    schedules: [
+      {
+        destination: "ninh-hoa",
+        price: 1,
+        duration: 40,
+        d: "M 950 1600 L 950 1550",
+      },
+    ],
+  },
+  "ninh-hoa": {
+    id: "ninh-hoa",
+    circleProps: { cx: "950", cy: "1550", r: "13" },
+    textProps: { x: "740", y: "1550" },
+    schedules: [
+      {
+        destination: "tuy-hoa",
+        price: 2,
+        duration: 90,
+        d: "M 950 1550 C 1000 1500, 960 1470, 975 1475",
+      },
+    ],
+  },
+  "tuy-hoa": {
+    id: "tuy-hoa",
+    circleProps: { cx: "975", cy: "1475", r: "13" },
+    textProps: { x: "1010", y: "1500" },
+    schedules: [
+      {
+        destination: "dieu-tri",
+        price: 2,
+        duration: 100,
+        d: "M 975 1475 Q 940 1410, 960 1370",
+      },
+    ],
+  },
+  "dieu-tri": {
+    id: "dieu-tri",
+    circleProps: { cx: "960", cy: "1370", r: "13" },
+    textProps: { x: "1000", y: "1400" },
+    schedules: [
+      {
+        destination: "quang-ngai",
+        price: 4,
+        duration: 165,
+        d: "M 960 1370 Q 960 1250, 900 1190",
+      },
+    ],
+  },
+  "quang-ngai": {
+    id: "quang-ngai",
+    circleProps: { cx: "900", cy: "1190", r: "13" },
+    textProps: { x: "930", y: "1190" },
+    schedules: [
+      {
+        destination: "tam-ky",
+        price: 1,
+        duration: 65,
+        d: "M 900 1190 L 850 1120",
+      },
+    ],
+  },
+  "tam-ky": {
+    id: "tam-ky",
+    circleProps: { cx: "850", cy: "1120", r: "13" },
+    textProps: { x: "690", y: "1150" },
+    schedules: [
+      {
+        destination: "da-nang",
+        price: 2,
+        duration: 80,
+        d: "M 850 1120 Q 820 1090, 810 1045",
+      },
+    ],
+  },
+  "da-nang": {
+    id: "da-nang",
+    circleProps: { cx: "810", cy: "1045", r: "13" },
+    textProps: { x: "830", y: "1020" },
+    schedules: [
+      {
+        destination: "hue",
+        price: 2,
+        duration: 150,
+        d: "M 810 1045 L 735 1005",
+      },
+    ],
+  },
+  hue: {
+    id: "hue",
+    circleProps: { cx: "735", cy: "1005", r: "13" },
+    textProps: { x: "635", y: "1040" },
+    schedules: [
+      {
+        destination: "dong-ha",
+        price: 1,
+        duration: 70,
+        d: "M 735 1005 L 665 950",
+      },
+    ],
+  },
+  "dong-ha": {
+    id: "dong-ha",
+    circleProps: { cx: "665", cy: "950", r: "13" },
+    textProps: { x: "695", y: "950" },
+    schedules: [
+      {
+        destination: "dong-hoi",
+        price: 2,
+        duration: 100,
+        d: "M 665 950 Q 620 900, 600 860",
+      },
+    ],
+  },
+  "dong-hoi": {
+    id: "dong-hoi",
+    circleProps: { cx: "600", cy: "860", r: "13" },
+    textProps: { x: "400", y: "880" },
+    schedules: [
+      {
+        destination: "vinh",
+        price: 5,
+        duration: 240,
+        d: "M 600 860 C 600 830, 460 780, 480 690",
+      },
+    ],
+  },
+  vinh: {
+    id: "vinh",
+    circleProps: { cx: "480", cy: "690", r: "13" },
+    textProps: { x: "355", y: "700" },
+    schedules: [
+      {
+        destination: "thanh-hoa",
+        price: 5,
+        duration: 150,
+        d: "M 480 690 Q 480 550, 490 510",
+      },
+    ],
+  },
+  "thanh-hoa": {
+    id: "thanh-hoa",
+    circleProps: { cx: "490", cy: "510", r: "13" },
+    textProps: { x: "260", y: "530" },
+    schedules: [
+      {
+        destination: "ninh-binh",
+        price: 2,
+        duration: 60,
+        d: "M 490 510 L 520 460",
+      },
+    ],
+  },
+  "ninh-binh": {
+    id: "ninh-binh",
+    circleProps: { cx: "520", cy: "460", r: "13" },
+    textProps: { x: "540", y: "500" },
+    schedules: [
+      {
+        destination: "nam-dinh",
+        price: 1,
+        duration: 30,
+        d: "M 520 460 L 545 425",
+      },
+    ],
+  },
+  "nam-dinh": {
+    id: "nam-dinh",
+    circleProps: { cx: "545", cy: "425", r: "13" },
+    textProps: { x: "320", y: "440" },
+    schedules: [
+      {
+        destination: "hanoi",
+        price: 3,
+        duration: 95,
+        d: "M 545 425 L 490 340",
+      },
+    ],
+  },
+  hanoi: {
+    id: "hanoi",
+    circleProps: { cx: "490", cy: "340", r: "13" },
+    textProps: { x: "350", y: "370" },
+    schedules: [
+      {
+        destination: "haiphong",
+        price: 3,
+        duration: 160,
+        d: "M 490 340 L 610 380",
+      },
+      {
+        destination: "kep",
+        price: 0,
+        duration: 0,
+        d: "M 490 340 L 570 300",
+      },
+      {
+        destination: "quan-trieu",
+        price: 0,
+        duration: 0,
+        d: "M 490 340 L 500 250",
+      },
+      {
+        destination: "yen-bai",
+        price: 3,
+        duration: 280,
+        d: "M 490 340 L 380 255",
+      },
+    ],
+  },
+  haiphong: {
+    id: "haiphong",
+    circleProps: { cx: "610", cy: "380", r: "13" },
+    textProps: { x: "630", y: "420" },
+    schedules: [],
+  },
+  kep: {
+    id: "kep",
+    circleProps: { cx: "570", cy: "300", r: "13" },
+    textProps: { x: "610", y: "300" },
+    schedules: [
+      {
+        destination: "ha-long",
+        price: 0,
+        duration: 0,
+        d: "M 570 300 L 645 350",
+      },
+      {
+        destination: "dong-dang",
+        price: 0,
+        duration: 0,
+        d: "M 570 300 L 620 220",
+      },
+    ],
+  },
+  "ha-long": {
+    id: "ha-long",
+    circleProps: { cx: "645", cy: "350", r: "13" },
+    textProps: { x: "665", y: "360" },
+    schedules: [],
+  },
+  "dong-dang": {
+    id: "dong-dang",
+    circleProps: { cx: "620", cy: "220", r: "13" },
+    textProps: { x: "640", y: "220" },
+    schedules: [],
+  },
+  "quan-trieu": {
+    id: "quan-trieu",
+    circleProps: { cx: "500", cy: "250", r: "13" },
+    textProps: { x: "400", y: "210" },
+    schedules: [],
+  },
+  "yen-bai": {
+    id: "yen-bai",
+    circleProps: { cx: "380", cy: "255", r: "13" },
+    textProps: { x: "210", y: "270" },
+    schedules: [
+      {
+        destination: "lao-cai",
+        price: 6,
+        duration: 238,
+        d: "M 380 255 L 255 130",
+      },
+    ],
+  },
+  "lao-cai": {
+    id: "lao-cai",
+    circleProps: { cx: "255", cy: "130", r: "13" },
+    textProps: { x: "90", y: "130" },
+    schedules: [],
+  },
+}
+
 const trainStyle = css`
   ${defaultTextStyle}
   font-size: 2.3rem;
@@ -600,23 +944,25 @@ const trainStyle = css`
     cursor: pointer;
     pointer-events: all;
   }
-  path:hover {
+  path.selected {
     stroke: ${vietnamPrimaryColorDarker};
+  }
+  text.selected,
+  circle.selected {
+    stroke: ${vietnamPrimaryColorDarker};
+    fill: ${vietnamPrimaryColorDarker};
   }
 `
 export const VietnamTrainMap: React.FunctionComponent<{
   onMouseEnter?: (text: string) => void
   onMouseLeave?: (text: string) => void
-}> = ({ onMouseEnter = noop, onMouseLeave = noop }) => {
+  selectedTrainSteps: Step<VietnamCity> | undefined
+}> = ({ onMouseEnter = noop, onMouseLeave = noop, selectedTrainSteps }) => {
   const { i18n } = useCustomTranslation()
-  const computePrice = (price: number) => {
-    return (price * (i18n.languageCode === "fr" ? priceFactorEur : priceFactorUsd)).toLocaleString(undefined, {
-      style: "currency",
-      currency: i18n.languageCode === "fr" ? "EUR" : "USD",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    })
-  }
+  const [selectedCities, setSelectedCities] = useState<VietnamCity[]>([])
+  useEffect(() => {
+    setSelectedCities(selectedTrainSteps?.steps.flatMap((step) => [step.from, step.to]) ?? [])
+  }, [selectedTrainSteps])
   return (
     <svg
       css={css`
@@ -637,387 +983,62 @@ export const VietnamTrainMap: React.FunctionComponent<{
     >
       <VietnamMap />
       <g css={trainStyle}>
-        <circle cx="615" cy="1800" r="13" />
-        <text x="465" y="1850">
-          Ho Chi Minh
-        </text>
-        <circle cx="645" cy="1770" r="13" />
-        <text x="550" y="1730">
-          Bien Hoa
-        </text>
-        <path
-          d="M 615 1800 L 645 1770"
-          stroke="black"
-          fill="black"
-          strokeWidth="13"
-          onMouseEnter={() => {
-            onMouseEnter(`Ho Chi Minh - Bien Hoa\n45min - ${computePrice(1)}`)
-          }}
-          onClick={() => onMouseEnter(`Ho Chi Minh - Bien Hoa\n45min - ${computePrice(1)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-        />
-        <circle cx="805" cy="1770" r="13" />
-        <text x="805" y="1830">
-          Binh Thuan
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Bien Hoa - Binh Thuan\n2h40 - ${computePrice(10)}`)
-          }}
-          onClick={() => onMouseEnter(`Bien Hoa - Binh Thuan\n2h40 - ${computePrice(10)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 645 1770 C 750 1720, 750 1820, 805 1770"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="920" cy="1680" r="13" />
-        <text x="940" y="1720">
-          Thap Cham
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Binh Thuan - Thap Cham\n2h15 - ${computePrice(3)}`)
-          }}
-          onClick={() => onMouseEnter(`Binh Thuan - Thap Cham\n2h15 - ${computePrice(3)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 805 1770 Q 900 1720, 920 1680"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="950" cy="1600" r="13" />
-        <text x="970" y="1640">
-          Nha Trang
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Thap Cham - Nha Trang\n1h30 - ${computePrice(2)}`)
-          }}
-          onClick={() => onMouseEnter(`Thap Cham - Nha Trang\n1h30 - ${computePrice(2)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 920 1680 Q 940 1580, 950 1600"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="950" cy="1550" r="13" />
-        <text x="740" y="1550">
-          Ninh Hoa
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Nha Trang - Ninh Hoa\n 40min - ${computePrice(1)}`)
-          }}
-          onClick={() => onMouseEnter(`Nha Trang - Ninh Hoa\n 40min - ${computePrice(1)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 950 1600 L 950 1550"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="975" cy="1475" r="13" />
-        <text x="1010" y="1500">
-          Tuy Hoa
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Ninh Hoa - Tuy Hoa\n1h30 ${computePrice(2)}`)
-          }}
-          onClick={() => onMouseEnter(`Ninh Hoa - Tuy Hoa\n1h30 ${computePrice(2)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 950 1550 C 1000 1500, 960 1470, 975 1475"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="960" cy="1370" r="13" />
-        <text x="1000" y="1400">
-          Dieu Tri
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Tuy Hoa - Dieu Tri\n1h40 - ${computePrice(2)}`)
-          }}
-          onClick={() => onMouseEnter(`Tuy Hoa - Dieu Tri\n1h40 - ${computePrice(2)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 975 1475 Q 940 1410, 960 1370"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="900" cy="1190" r="13" />
-        <text x="930" y="1190">
-          Quang Ngai
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Dieu Tri - Quang Ngai\n2h45 ${computePrice(4)}`)
-          }}
-          onClick={() => onMouseEnter(`Dieu Tri - Quang Ngai\n2h45 ${computePrice(4)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 960 1370 Q 960 1250, 900 1190"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="850" cy="1120" r="13" />
-        <text x="690" y="1150">
-          Tam Ky
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Quang Ngai - Tam Ky\n 1h05 - ${computePrice(1)}`)
-          }}
-          onClick={() => onMouseEnter(`Quang Ngai - Tam Ky\n 1h05 - ${computePrice(1)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 900 1190 L 850 1120"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="810" cy="1045" r="13" />
-        <text x="830" y="1020">
-          Da Nang
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Tam Ky - Da Nang\n1h20 - ${computePrice(2)}`)
-          }}
-          onClick={() => onMouseEnter(`Tam Ky - Da Nang\n1h20 - ${computePrice(2)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 850 1120 Q 820 1090, 810 1045"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="735" cy="1005" r="13" />
-        <text x="635" y="1040">
-          Hue
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Da Nang - Hue\n2h30 - ${computePrice(2)}`)
-          }}
-          onClick={() => onMouseEnter(`Da Nang - Hue\n2h30 - ${computePrice(2)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 810 1045 L 735 1005"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="665" cy="950" r="13" />
-        <text x="695" y="950">
-          Dong Ha
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Hue - Dong Ha\n 1h10 - ${computePrice(1)}`)
-          }}
-          onClick={() => onMouseEnter(`Hue - Dong Ha\n 1h10 - ${computePrice(1)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 735 1005 L 665 950"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="600" cy="860" r="13" />
-        <text x="400" y="880">
-          Dong Hoi
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Dong Ha - Dong Hoi\n1h40 - ${computePrice(2)}`)
-          }}
-          onClick={() => onMouseEnter(`Dong Ha - Dong Hoi\n1h40 - ${computePrice(2)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 665 950 Q 620 900, 600 860"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="480" cy="690" r="13" />
-        <text x="355" y="700">
-          Vinh
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Dong Hoi - Vinh\n4h - ${computePrice(5)}`)
-          }}
-          onClick={() => onMouseEnter(`Dong Hoi - Vinh\n4h - ${computePrice(5)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 600 860 C 600 830, 460 780, 480 690"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="490" cy="510" r="13" />
-        <text x="260" y="530">
-          Thanh Hoa
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Vinh - Thanh Hoa\n2h30 - ${computePrice(5)}`)
-          }}
-          onClick={() => onMouseEnter(`Vinh - Thanh Hoa\n2h30 - ${computePrice(5)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 480 690 Q 480 550, 490 510"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="520" cy="460" r="13" />
-        <text x="540" y="500">
-          Ninh Binh
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Thanh Hoa - Ninh Binh\n1h - ${computePrice(2)}`)
-          }}
-          onClick={() => onMouseEnter(`Thanh Hoa - Ninh Binh\n1h - ${computePrice(2)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 490 510 L 520 460"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="545" cy="425" r="13" />
-        <text x="320" y="440">
-          Nam Dinh
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Ninh Binh - Nam Dinh\n30min - ${computePrice(1)}`)
-          }}
-          onClick={() => onMouseEnter(`Ninh Binh - Nam Dinh\n30min - ${computePrice(1)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 520 460 L 545 425"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="490" cy="340" r="13" />
-        <text x="350" y="370">
-          Hanoi
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Nam Dinh - Hanoi\n1h45 - ${computePrice(3)}`)
-          }}
-          onClick={() => onMouseEnter(`Nam Dinh - Hanoi\n1h45 - ${computePrice(3)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 545 425 L 490 340"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="610" cy="380" r="13" />
-        <text x="630" y="420">
-          Hai Phong
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Hanoi - Hai Phong\n2h40 - ${computePrice(3)}`)
-          }}
-          onClick={() => onMouseEnter(`Hanoi - Hai Phong\n2h40 - ${computePrice(3)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 490 340 L 610 380"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="570" cy="300" r="13" />
-        <text x="610" y="300">
-          Kep
-        </text>
-        <path d="M 490 340 L 570 300" stroke="black" strokeWidth="13" fill="transparent" />
-        <circle cx="645" cy="350" r="13" />
-        <text x="665" y="360">
-          Ha Long
-        </text>
-        <path d="M 570 300 L 645 350" stroke="black" strokeWidth="13" fill="transparent" />
-        <circle cx="620" cy="220" r="13" />
-        <text x="640" y="220">
-          Dong Dang
-        </text>
-        <path d="M 570 300 L 620 220" stroke="black" strokeWidth="13" fill="transparent" />
-        <circle cx="500" cy="250" r="13" />
-        <text x="400" y="210">
-          Quan Trieu
-        </text>
-        <path d="M 490 340 L 500 250" stroke="black" strokeWidth="13" fill="transparent" />
-        <circle cx="380" cy="255" r="13" />
-        <text x="210" y="270">
-          Yen Bai
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Hanoi - Yen Bai\n4h40 - ${computePrice(3)}`)
-          }}
-          onClick={() => onMouseEnter(`Hanoi - Yen Bai\n4h40 - ${computePrice(3)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 490 340 L 380 255"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
-        <circle cx="255" cy="130" r="13" />
-        <text x="90" y="130">
-          Lao Cai
-        </text>
-        <path
-          onMouseEnter={() => {
-            onMouseEnter(`Yen Bai - Lao Cai\n3h58 - ${computePrice(6)}`)
-          }}
-          onClick={() => onMouseEnter(`Yen Bai - Lao Cai\n3h58 - ${computePrice(6)}`)}
-          onMouseLeave={() => {
-            onMouseLeave("")
-          }}
-          d="M 380 255 L 255 130"
-          stroke="black"
-          strokeWidth="13"
-          fill="transparent"
-        />
+        {Object.entries(trainSchedules).map(([id, trainSchedule]) => (
+          <React.Fragment key={id}>
+            {trainSchedule?.schedules.map((schedule) => (
+              <path
+                className={
+                  selectedCities.includes(trainSchedule.id) && selectedCities.includes(schedule.destination)
+                    ? "selected"
+                    : ""
+                }
+                key={schedule.destination}
+                onMouseEnter={() => {
+                  setSelectedCities([trainSchedule?.id, schedule.destination])
+                  onMouseEnter(
+                    `${vietnamCities[trainSchedule?.id ?? "hanoi"]} - ${
+                      vietnamCities[schedule.destination ?? "hanoi"]
+                    }${
+                      schedule.price && schedule.duration
+                        ? `\n${convertTime(schedule.duration)} - ${price(schedule.price ?? 0, i18n.languageCode)}`
+                        : ""
+                    }`
+                  )
+                }}
+                onClick={() => {
+                  setSelectedCities([trainSchedule?.id, schedule.destination])
+                  onMouseEnter(
+                    `${vietnamCities[trainSchedule?.id ?? "hanoi"]} - ${
+                      vietnamCities[schedule.destination ?? "hanoi"]
+                    }${
+                      schedule.price && schedule.duration
+                        ? `\n${convertTime(schedule.duration)} - ${price(schedule.price ?? 0, i18n.languageCode)}`
+                        : ""
+                    }`
+                  )
+                }}
+                onMouseLeave={() => {
+                  setSelectedCities(selectedTrainSteps?.steps.flatMap((step) => [step.from, step.to]) ?? [])
+                  onMouseLeave("")
+                }}
+                d={schedule.d}
+                stroke="black"
+                strokeWidth="13"
+                fill="transparent"
+              />
+            ))}
+          </React.Fragment>
+        ))}
+        {Object.entries(trainSchedules).map(([id, trainSchedule]) => (
+          <React.Fragment key={id}>
+            <circle
+              stroke="transparent"
+              {...trainSchedule?.circleProps}
+              className={trainSchedule?.id && selectedCities.includes(trainSchedule.id) ? "selected" : ""}
+            />
+            <text {...trainSchedule?.textProps}>{vietnamCities[trainSchedule?.id ?? "hanoi"]}</text>
+          </React.Fragment>
+        ))}
       </g>
     </svg>
   )

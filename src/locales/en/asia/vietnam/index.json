@@ -5,6 +5,7 @@
   },
   "meta-description": "Discover Himeji through our articles, as well as different places to visit. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?",
   "social-network-description": "Vietnam is a unique destination. Magnificent and varied landscapes, natural parks, a cultural heritage and a rich historical heritage ... From Ho Chi Minh City to Hanoi, via Da Nang, each destination offers its own history and a different experience. Discover through our articles and our photos, our travels to Vietnam",
+  "full-title": "Vietnam | Travel Guide",
   "travel": {
     "title": "Travel",
     "subtitle": "By following our journey ..."
@@ -18,7 +19,8 @@
     "subtitle": "With our suggestions, favorites ..."
   },
   "section1": "Point of interest",
-  "weather": "Best time to visit ?",
+  "weather": "Best time to visit",
+  "weather-country": "Vietnam?",
   "map": "Our map of",
   "country": "Vietnam"
 }

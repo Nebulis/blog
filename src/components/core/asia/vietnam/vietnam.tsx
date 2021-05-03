@@ -8,6 +8,7 @@ import hat from "../../../../images/asia/vietnam/hat.svg"
 import { css } from "@emotion/react"
 import { TFunction } from "i18next"
 import { WeatherEntry } from "../../../../types/shared"
+import { mediumEnd } from "../../variables"
 
 const vietnamPartStyle = css`
   color: ${vietnamPrimaryColorDarker};
@@ -46,6 +47,17 @@ const vietnamLayout = `
   }
 
   .index-blog-layout-content {
+    
+    .react-select-container {
+      .react-select__option--is-selected {
+        background-color: ${vietnamPrimaryColorDarker};
+      }
+      .react-select__control,
+      .react-select__control:hover {
+        border-color: ${vietnamPrimaryColorDarker};
+        box-shadow: 0 0 0 1px ${vietnamPrimaryColorDarker};
+      }
+    }
     .point-of-interest-section {
       svg {
         fill: ${vietnamPrimaryColorDarker};
@@ -398,6 +410,91 @@ export const vietnamCities = {
   "ninh-binh": "Ninh Binh",
   "ha-long": "Ha Long",
   "cat-ba-island": "Cat ba Island",
+  "bien-hoa": "Bien Hoa",
+  "binh-thuan": "Binh Thuan",
+  "thap-cham": "Thap Cham",
+  "ninh-hoa": "Ninh Hoa",
+  "tuy-hoa": "Tuy Hoa",
+  "dieu-tri": "Dieu Tri",
+  "quang-ngai": "Quang Ngai",
+  "tam-ky": "Tam Ky",
+  "dong-ha": "Dong Ha",
+  "nam-dinh": "Nam Dinh",
+  "dong-dang": "Dong Dang",
+  "quan-trieu": "Quan Trieu",
+  "yen-bai": "Yen Bai",
+  "lao-cai": "Lao Cai",
+  kep: "Kep",
 }
 
 export type VietnamCity = keyof typeof vietnamCities
+
+export const MapAndTableContainer = styled.div`
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  & > * {
+    width: 50%;
+  }
+
+  @media (max-width: ${mediumEnd}) {
+    flex-direction: column;
+    & > svg,
+    & > img {
+      margin-bottom: calc(1.45rem / 2);
+    }
+    & > * {
+      width: 100%;
+    }
+  }
+`
+
+export const MapAndTableTableContainer = styled.div`
+  max-width: 400px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  .menu-entry-opened .menu-label {
+    background-color: #e5e7eb;
+  }
+  .menu-label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    height: 30px;
+    background-color: #f7fafc;
+    border-left: 3px solid ${vietnamPrimaryColorDarker};
+    border-bottom: 1px solid #e5e7eb;
+    .menu-label-chevron {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 10px;
+    }
+  }
+  .menu-content-container {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .schedules {
+    border-left: 3px solid ${vietnamPrimaryColor};
+    font-size: 0.8rem;
+  }
+
+  .schedule-entry:nth-of-type(even) {
+    background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
+  }
+  .schedule-entry:hover {
+    background-color: ${vietnamPrimaryColorWithOpacity(0.3)};
+  }
+  .schedule-entry {
+    height: 25px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`
