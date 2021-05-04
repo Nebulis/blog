@@ -16,6 +16,9 @@ const alt = {
   hamarikyuGarden: "Hamarikyu Garden",
   springInJapan: "Japan In Spring",
   toganji: "Toganji",
+  uenoPark: "Ueno Park",
+  shibuyaDistrict: "Shibuya District",
+  yasukuniDori: "Yasukuni Dori",
 }
 
 export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
@@ -54,13 +57,6 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      twoDaysInTokyo: file(relativePath: { eq: "asia/japan/tokyo/adayintokyo/tokyo-main.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       daigoji: file(relativePath: { eq: "asia/japan/kyoto/daigoji/daigoji-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -84,7 +80,7 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
       }
       sensoji: file(relativePath: { eq: "asia/japan/tokyo/sensoji/sensoji-main.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -106,6 +102,34 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
       toganji: file(relativePath: { eq: "asia/japan/nagoya/toganji/toganji-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      uenoPark: file(relativePath: { eq: "asia/japan/tokyo/ueno-park/ueno-park-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      twoDaysInTokyo: file(relativePath: { eq: "asia/japan/tokyo/two-days-in-tokyo/two-days-in-tokyo-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      shibuyaDistrict: file(relativePath: { eq: "asia/japan/tokyo/shibuya-district/shibuya-district-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yasukuniDori: file(relativePath: { eq: "asia/japan/tokyo/yasukuni-dori/yasukuni-dori-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

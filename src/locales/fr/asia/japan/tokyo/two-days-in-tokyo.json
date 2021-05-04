@@ -3,11 +3,12 @@
   "introduction": "Découvrez nos deux jours à travers la ville de Tokyo pour voir le maximum en si peu de temps.",
   "google-description": "Découvrez nos deux jours à travers la ville de Tokyo pour découvrir le maximum en si peu de temps. Dans cet article, on répond à toutes vos questions : Combien de temps et à quelle période ? On vous indique également les lieux que nous avons visités.",
   "social-network-description": "Bienvenue à Tokyo, avec ses 40 millions d'habitants, elle est la ville la plus peuplée du monde. Du quartier des affaires au quartier de la mode, de la culture à l'univers geek, chaque quartier a son univers différent.",
+  "full-title": "Deux journées à Tokyo | Guide de Voyage",
   "what-time-of-year": {
     "title": "À quelle période ?",
-    "part1": "[Au printemps](todo), profitez-en pour venir à la période des cerisiers en fleurs. On y est allé fin mars, début avril et c’était le début de la floraison.",
-    "part2": "[En automne](todo), admirez les paysages embellit par les érables de couleur orange, jaune ou rouge.",
-    "part3": "[En hiver](todo), peut-être pas la meilleure saison pour la ville de Tokyo en soit mais si vous prévoyez de visiter d’autres villes, pourquoi pas en profiter pour découvrir les paysages et leur joli manteau blanc.",
+    "part1": "[Au printemps](spring-in-japan), profitez-en pour venir à la période des cerisiers en fleurs. On y est allé fin mars, début avril et c’était le début de la floraison.",
+    "part2": "[En automne](autumn-in-japan), admirez les paysages embellit par les érables de couleur orange, jaune ou rouge.",
+    "part3": "[En hiver](winter-in-japan), peut-être pas la meilleure saison pour la ville de Tokyo en soit mais si vous prévoyez de visiter d’autres villes, pourquoi pas en profiter pour découvrir les paysages et leur joli manteau blanc.",
     "part4": "En été, surement l’une des périodes les moins touristiques cela dit l’été il fait vraiment très chaud et l’humidité en plus peut vraiment être encore plus insupportable."
   },
   "how-long": {
@@ -17,11 +18,12 @@
     "part3": "Nous n’y sommes restés que deux jours et on a quand même réussi à faire pas mal de choses."
   },
   "where-to-stay": {
-    "title": "Où dormir ?",
+    "title": "Où dormir à Tokyo ?",
     "part1": "Tokyo est tellement bien desservie niveau transport que vous n’êtes pas obligé de dormir dans les quartiers que vous visitez. Tout dépend de ce que vous allez faire mais nous vous conseillons d’aller dans des hôtels plus au calme. Vous n’aurez de toute façon pas de mal à vous déplacer.",
     "part2": "Prenez aussi en considération si vous allez sortir le soir, dans ce cas là il serait peut-être effectivement plus simple pour vous de dormir pas loin de rues animées.",
-    "part3": "N’hésitez pas à comparer les offres sur [Booking](todo).",
-    "part4": "En savoir plus sur [les transports au Japon](todo)."
+    "part3": "En gros tout dépend de ce que vous préférez faire, mais ne vous inquiétez pas vous trouverez dans tous les cas.",
+    "part4": "N’hésitez pas à comparer les offres sur [Booking](booking-search:Tokyo).",
+    "part5": "En savoir plus sur [les transports au Japon](transport-japan)."
   },
   "visit": {
     "title": "Les visites",
@@ -63,14 +65,14 @@
       "part1": "Situé dans le #quartier de Shinjuku#, un mélange de quartier des affaires la journée et de quartier à la vie nocturne trépidante, l’avenue Yasukuni-Dori est donc une rue très animée et ressemblerait même à un #Time Square japonais#.",
       "part2": "Ce n’est pas du tout un endroit incontournable mais nous dormions pas loin et nous avons beaucoup aimé nous promener dans ces rues de jour comme de nuit, une sorte de mini Tokyo à elle toute seule.",
       "part3": "Pas si simple de faire Tokyo en si peu de temps, il y a tellement de choses à voir, mais nous voulions nous concentrer sur les plus petites villes et au final nous ne le regrettons pas, le calme ça fait du bien.",
-      "part4": "On vous propose d’ailleurs [un véritable havre de paix en plein Tokyo](todo) pour vous ressourcer après ce brouhaha de la ville.",
+      "part4": "On vous propose d’ailleurs [un véritable havre de paix en plein Tokyo](hamarikyu-garden) pour vous ressourcer après ce brouhaha de la ville.",
       "part5": "Cela dit même avec uniquement ces #5 endroits à Tokyo# nous avons l’impression d’avoir pu expérimenter différentes facettes de la ville.",
       "part6": "Retrouvez tous les samedis des articles détaillés sur chacune de nos visites."
     }
   },
   "conclusion": "Tokyo, une ville à cent à l’heure qui mérite qu’on s’y attarde. Entre modernité et authenticité, elle regorge d'endroits à visiter et de découvertes à faire.",
-  "question 1": "Quel est votre quartier préféré à Tokyo ?",
-  "question 2": "Préférez vous découvrir Tokyo ou le reste du Japon ?",
+  "question1": "Quel est votre quartier préféré à Tokyo ?",
+  "question2": "Préférez-vous découvrir Tokyo ou le reste du Japon ?",
   "pinterest": "🌏 Découvrez nos deux jours à travers la ville de Tokyo pour découvrir le maximum en si peu de temps. Dans cet article, on répond à toutes vos questions : Combien de temps et à quelle période ? On vous indique également les lieux que nous avons visités. Cliquez sur l'image pour le guide complet sur nos deux jours à Tokyo. Cliquez sur l'image pour le guide complet ... 🌏",
   "facebook": {
     "part1": "♡ Coucou les voyageurs ! ♡",

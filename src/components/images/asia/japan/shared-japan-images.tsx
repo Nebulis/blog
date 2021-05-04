@@ -45,9 +45,9 @@ export const SharedJapanImages: React.FunctionComponent<ExtraImageProps & { imag
           }
         }
       }
-      mainTokyo: file(relativePath: { eq: "asia/japan/tokyo/adayintokyo/tokyo-main.jpg" }) {
+      mainTokyo: file(relativePath: { eq: "asia/japan/tokyo/two-days-in-tokyo/two-days-in-tokyo-main.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

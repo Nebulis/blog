@@ -233,7 +233,7 @@ export const japanLinks: CountryLink = {
             fr: commonFr.country.japan.card["two-days-in-tokyo"],
             en: commonEn.country.japan.card["two-days-in-tokyo"],
           },
-          published: false,
+          published: new Date("2021-05-15T17:00:00.000+08:00"),
           card: TwoDaysInTokyoCard,
         },
         {
