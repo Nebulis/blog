@@ -144,11 +144,11 @@ exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/in
 
 exports[`french pages exports meta for public/asia/japan/nagoya/nagoya-castle/index.html correctly: title 1`] = `"La seconde vie du château de Nagoya | Guide de Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: meta-description 1`] = `"Découvrez le temple Togan-ji et son grand Bouddha à travers notre récit de voyage. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos."`;
+exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: meta-description 1`] = `"Découvrez le temple Togan-ji et son grand Bouddha à travers notre récit de voyage et nos photos. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix."`;
 
 exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: social-network 1`] = `"Entrer dans l'enceinte du temple Togan-ji c’est comme entrer dans un nouveau monde caché derrière les feuillages. On ne soupçonne pas du tout la présence d'un tel lieu depuis les rues adjacentes."`;
 
-exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"Temple Togan-Ji | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"Nagoya : Le temple Togan-Ji et son grand Bouddha | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Ici nous partons au Japon à la saison du printemps. On vous indique notre itinéraire de voyage. Combien de jours ? Quel budget prévoir ? On vous répond en se basant sur notre propre expérience."`;
 

@@ -1,8 +1,9 @@
 {
   "quote": "Entrer dans l'enceinte du temple Togan-ji c’est comme entrer dans un nouveau monde. Caché derrière les feuillages, on ne soupçonne pas du tout la présence d'un tel lieu depuis les rues adjacentes.",
   "introduction": "Découvrez le temple Togan-ji et son grand Bouddha à travers notre récit de voyage avec notre guide et nos photos.",
-  "google-description": "Découvrez le temple Togan-ji et son grand Bouddha à travers notre récit de voyage. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix. Le tout avec notre récit de voyage et nos photos.",
+  "google-description": "Découvrez le temple Togan-ji et son grand Bouddha à travers notre récit de voyage et nos photos. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix.",
   "social-network-description": "Entrer dans l'enceinte du temple Togan-ji c’est comme entrer dans un nouveau monde caché derrière les feuillages. On ne soupçonne pas du tout la présence d'un tel lieu depuis les rues adjacentes.",
+  "full-title": "Nagoya : Le temple Togan-Ji et son grand Bouddha | Guide de Voyage",
   "where": {
     "title": "Où ?",
     "part1": "2 Chome-16 Yotsuyatori, Chikusa Ward, Nagoya"
@@ -18,8 +19,8 @@
     "part2": "Depuis Tokyo environ 2h.",
     "part3": "Depuis Kyoto environ 40 minutes.",
     "part4": "Depuis Osaka environ 1h.",
-    "part5": "Plus d'informations sur [Les transports au Japon](todo).",
-    "part6": "Depuis la gare de Nagoya, prendre la Higashiyama Line jusqu’à Motoyama Station (16 mins – 8 arrêts). Prendre la sortie A puis continuez tout droit pendant environ 5 minutes (direction Sud), l’entrée se trouve sur votre gauche dans une petite allée juste après un grand mur en pierre."
+    "part5": "Plus d'informations sur [Les transports au Japon](transport-japan).",
+    "part6": "Depuis la gare de Nagoya, prendre la [Higashiyama Line](japan-line:#000000:#f2f200:https://www.google.com/maps/dir/?api=1&origin=Nagoya%20Station%2C%201%20Chome-1-4%20Meieki%2C%20Nakamura%20Ward%2C%20Nagoya%2C%20Aichi%2C%20Japan&destination=Motoyama%20Station%2C%201%20Chome-18-1%20Yotsuyatori%2C%20Chikusa%20Ward%2C%20Nagoya%2C%20Aichi%20464-0819%2C%20Japan&travelmode=transit) jusqu’à Motoyama Station (16 mins – 8 arrêts). Prendre la sortie A puis continuez tout droit pendant environ 5 minutes (direction Sud), l’entrée se trouve sur votre gauche dans une petite allée juste après un grand mur en pierre."
   },
   "how-long": {
     "title": "Combien de temps ?",
@@ -27,7 +28,7 @@
   },
   "what-time-of-year": {
     "title": "A quelle période ?",
-    "part1": "Pas de saison prérequise pour venir visiter ce temple. Nous y sommes allés [au printemps](todo) mais il n’y avait pas plus de cerisier que ça dans le parc."
+    "part1": "Pas de saison prérequise pour venir visiter ce temple. Nous y sommes allés [au printemps](spring-in-japan) mais il n’y avait pas plus de cerisiers que ça dans le parc donc fiez-vous plutôt à vos autres visites."
   },
   "how-much": {
     "title": "Prix ?",
@@ -35,12 +36,14 @@
   },
   "where-to-stay": {
     "title": "Où dormir à Nagoya ?",
-    "part1": "Nous avions décidé de dormir près du château de Nagoya, notre hôtel le [Kuretake Inn Nagoya Hisaya Odori](todo) était très bien situé, tout proche du métro et du château, tout ce que nous recherchions.",
-    "part2": "Cela dit pour aller au temple c’était à environ 30-40 minutes. Cela nous convenait mais vous préférez peut-être [un hôtel plus proche](todo)."
+    "part1": "Nous avions décidé de dormir près du [château de Nagoya](nagoya-castle), notre hôtel était très bien situé, tout proche du métro et du château, tout ce que nous recherchions.",
+    "part2": "Cela dit pour aller au temple c’était à environ 30-40 minutes. Cela nous convenait mais on vous propose 3 différents logements, pour s’adapter à différents budgets et qui ne sont pas très loin de Togan-ji, si vous préférez ce critère.",
+    "part3": "Les prix varient énormément en fonction des saisons, pour cet article on vous indique des hôtels / prix pour une saison neutre, par exemple le mois de mai.",
+    "part4": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:Nagoya)."
   },
   "visit": {
     "title": "La visite",
-    "part1": "Si Nagoya est une ville déjà peu visitée par les voyageurs, le temple Togan-ji est presque inexistant. Temple jamais recommandé par les sites de voyage, peu de blogs en parlent. En faisant notre trajet pour le Japon, je suis tombée par hasard sur une photo d’une statue et après maintes recherches pour voir où elle se trouvait je suis tombée par hasard sur ce temple à [Nagoya](todo).",
+    "part1": "Si Nagoya est une ville déjà peu visitée par les voyageurs, le temple Togan-ji est presque inexistant. Temple jamais recommandé par les sites de voyage, peu de blogs en parlent. En faisant notre trajet pour le Japon, je suis tombée par hasard sur une photo d’une statue et après maintes recherches pour voir où elle se trouvait je suis tombée par hasard sur ce temple à [Nagoya](nagoya).",
     "part2": "#Le peu d’information sur ce lieu m’a donc donné envie de le rajouter sur notre liste de découverte pendant notre séjour.#",
     "part3": "Par contre, qui dit peu d’informations dit une galère à trouver le lieu sur place. Une fois sorti du métro, nous avons un peu douté d’être au bon endroit. Il n’y avait clairement personne. Mais nous avons fait confiance à Google Map.",
     "part4": "Au bout d’#une petite dizaine de minutes de marche#, on aperçoit sur le côté une rue qui contraste un peu avec tout le reste, #un chemin un peu plus étroit avec une entrée en pierre au bout#. Nous avons d’ailleurs eu d’abord l’impression de rentrer chez des gens. Mais non nous étions au bon endroit."
@@ -53,10 +56,10 @@
   "visit2": {
     "title": "LES JARDINS ET LE SANCTUAIRE",
     "part1": "Lorsque vous entrez vous arrivez à un portail d’inspiration chinoise où #2 statues de lion gardent les portes#.",
-    "part2": "Après avoir passé le portail, il y a un jardin de style japonais avec un #étang de tortues# et une #petite bambouseraie# ((bien moins impressionnante que celle d’[Arashiyama](todo)).",
+    "part2": "Après avoir passé le portail, il y a un jardin de style japonais avec un #étang de tortues# et une #petite bambouseraie# (bien moins impressionnante que celle d’[Arashiyama](arashiyama)).",
     "part3": "Pour être honnête, nous ne comprenons pas tout ce que nous voyons, c’est un peu le fouilli, on a l’impression d’être rentré à un endroit un peu interdit.",
     "part4": "On se retrouve malgré tout en pleine ville dans une #atmosphère calme et paisible#, comme si nous avions passé une entrée magique pour atterrir autre part. L'endroit est vraiment silencieux et donne la sensation d'être dans un nouvel univers.",
-    "part5": "Malheureusement fermé quand nous y sommes allés, vous pouvez #visiter l’intérieur du sanctuaire#, celui-ci est dédié à la divinité indienne Sarasvati et vous pourrez y avoir sa statue. A l’intérieur vous avez également un autel chinois, de multiples images japonaises et de décorations dorées ainsi qu’un gros bloc de bois supposé laver les péchés si vous le touchez d’une seule main.",
+    "part5": "Malheureusement fermé quand nous y sommes allés, vous pouvez #visiter l’intérieur du sanctuaire#, celui-ci est dédié à la divinité indienne Sarasvati et vous pourrez y voir sa statue. A l’intérieur vous avez également un autel chinois, de multiples images japonaises et de décorations dorées ainsi qu’un gros bloc de bois supposé laver les péchés si vous le touchez d’une seule main.",
     "part6": "En ressortant du sanctuaire, vous pourrez apercevoir un #petit cimetière#, ce serait un autel pour les animaux domestiques décédés. Et bien d’autres petits édifices et statues donc nous ne connaissons pas vraiment la signification.",
     "part7": "Puis descendez les escaliers en pierre."
   },
@@ -64,7 +67,7 @@
     "title": "LE GRAND BOUDDHA",
     "part1": "En descendant les escaliers, vous pourrez apercevoir, dissimulée entre les feuilles, la statue du « #Grand Bouddha de Nagoya# ».",
     "part2": "Vu sa grandeur, cela fait d’autant plus bizarre de l’apercevoir au dernier moment. C’est un peu ce qui en fait son charme d’ailleurs.",
-    "part3": "#Construite en 1987, initialement de couleur bronze pure, elle a été recouvertes d’un vert éclatant en 2006 ainsi que de feuilles d’or sur les yeux, la bouche et les oreilles.#",
+    "part3": "#Construite en 1987, initialement de couleur bronze pure, la statue a été recouverte d’un vert éclatant en 2006 ainsi que de feuilles d’or sur les yeux, la bouche et les oreilles.#",
     "part4": "Connue sous le nom de « Grand Bouddha de Nagoya », au Japon on le nomme #Daibutsu# ce qui veut dire tout simplement « Grand Bouddha ».",
     "part5": "Le Daibutsu a une hauteur à lui seul de 10 mètres et est installé sur un socle de 5 mètres de haut ce qui fait de lui une impressionnante statue de #15 mètres de hauteur#.",
     "part6": "#Son socle est magnifiquement décoré# par des moines faisant leur prière et des cerfs mais les plus importants décors sont les éléphants qui font tout le tour de la statue.",

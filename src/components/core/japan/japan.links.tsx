@@ -195,7 +195,7 @@ export const japanLinks: CountryLink = {
         {
           id: "toganji",
           label: { fr: commonFr.country.japan.card.toganji, en: commonEn.country.japan.card.toganji },
-          published: false,
+          published: new Date("2021-05-08T17:00:00.000+08:00"),
           card: ToganjiCard,
         },
       ],

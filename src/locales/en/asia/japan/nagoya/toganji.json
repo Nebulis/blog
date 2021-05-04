@@ -1,84 +1,87 @@
 {
-  "quote": "",
-  "introduction": "",
-  "google-description": "Discover the Togan-ji temple and its huge Buddha with our travelogue. In this article, we answer all your questions: How to get there? How long and at what period? We also tell about the opening hours, the price and where it's located.",
+  "quote": "Entering into the Togan-ji temple is like entering a new world hidden behind the foliage. We do not suspect at all the presence of such a place from the adjacent streets.",
+  "introduction": "Discover the Togan-ji temple and its huge Buddha with our travelogue and our photos",
+  "google-description": "Discover the Togan-ji temple and its huge Buddha with our travelogue and our photos. In this article, we answer all your questions: How to get there? How long and at what period? We also tell about the opening hours, the price and where it's located.",
   "social-network-description": "Entering into the Togan-ji temple is like entering a new world hidden behind the foliage. We do not suspect at all the presence of such a place from the adjacent streets.",
+  "full-title": "Nagoya : Togan-Ji Temple and its Huge Buddha | Travel Guide",
   "where": {
-    "title": "",
-    "part1": ""
+    "title": "Where?",
+    "part1": "2 Chome-16 Yotsuyatori, Chikusa Ward, Nagoya"
   },
   "when": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "When?",
+    "part1": "Open #every day, 24h#",
+    "part2": "We could not find any information about the opening hours to visit the shrine. Generally, temples in Japan are open from 9 am to 4 pm."
   },
   "how": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": ""
+    "title": "How to get there?",
+    "part1": "It is possible to get to Nagoya by Shinkansen, from most cities.",
+    "part2": "From Tokyo ↠ about 2 hours.",
+    "part3": "From Kyoto ↠ about 40 mins.",
+    "part4": "From Osaka ↠ about 1 hour.",
+    "part5": "More information about [Transports in Japan](transport-japan).",
+    "part6": "From Nagoya Station, take the [Higashiyama Line](japan-line:#000000:#f2f200:https://www.google.com/maps/dir/?api=1&origin=Nagoya%20Station%2C%201%20Chome-1-4%20Meieki%2C%20Nakamura%20Ward%2C%20Nagoya%2C%20Aichi%2C%20Japan&destination=Motoyama%20Station%2C%201%20Chome-18-1%20Yotsuyatori%2C%20Chikusa%20Ward%2C%20Nagoya%2C%20Aichi%20464-0819%2C%20Japan&travelmode=transit) to Motoyama Station (16 mins - 8 stops). Take exit A  Then, continue straight for about 5 minutes (south direction). The entrance is on your left in a small alley just after a large stone wall."
   },
   "how-long": {
-    "title": "",
-    "part1": ""
+    "title": "How long?",
+    "part1": "Half a day."
   },
   "what-time-of-year": {
-    "title": "",
-    "part1": ""
+    "title": "Best time to visit?",
+    "part1": "No specific season to come and visit this temple. We went [in Spring](spring-in-japan) but there were no cherry trees in the garden."
   },
   "how-much": {
-    "title": "",
-    "part1": ""
+    "title": "How much?",
+    "part1": "Free."
   },
   "where-to-stay": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Where to stay in Nagoya?",
+    "part1": "We decided to stay near [Nagoya Castle](nagoya-castle). Our hotel was ideally located, very close to the metro and the castle.",
+    "part2": "However, the temple was 30-40 minutes far. It suited us, but we share three different accommodations, to suit different budgets and that are not very far from Togan-Ji if you prefer that criterion.",
+    "part3": "The prices vary enormously depending on the seasons. For this article, we share you hotels/prices for a neutral season, for example in May.",
+    "part4": "You can compare more offers on [Booking](booking-search:Nagoya)."
   },
   "visit": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": ""
+    "title": "Visit",
+    "part1": "Nagoya is quite non-touristy, and the Togan-Ji temple is relatively unknown. It is never recommended by travel sites and blogs. While on our way to Japan, I stumbled upon a photo of a statue. After much research to see where it was, I found this temple in [Nagoya](nagoya).",
+    "part2": "#The little information about this place made me want to add it to the temple to discover during our stay#.",
+    "part3": "On the other hand, when there is little information, it's a hassle to find the location. When we got out of the subway, we were a little doubtful that we were in the right place. There was nothing specific around. But we trusted Google Map.",
+    "part4": "After about #ten minutes walk#, you can notice a street that contrasts with the rest. #A slightly narrower path with a stone entrance at the end#. At first, we felt like we were entering inside someone's property. But no, we were in the right place."
   },
   "visit1": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "A bit of history",
+    "part1": "It is a #Buddhist temple built in 1532# by the warlord Oda Nobuyuki in memory of his father, Oda Nobuhide.",
+    "part2": "In 1714, it was moved to its present location in the Chikusa district of Nagoya."
   },
   "visit2": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": ""
+    "title": "The garden and the sanctuary",
+    "part1": "As you enter, you arrive at a portal where #two lion statues guard the doors#.",
+    "part2": "After passing the gate, there is a Japanese-style garden with a #turtle pond# and a #small bamboo grove# (much less impressive than [Arashiyama](arashiyama)).",
+    "part3": "To be honest, we don't understand what we see. It's a bit messy. It feels like you've entered a somewhat forbidden place.",
+    "part4": "Even if we are in the middle of a big city, we are surrounded by a #calm and peaceful atmosphere#, as if we had passed a magical entrance to elsewhere. The place is so quiet. It's like being in a new universe.",
+    "part5": "Unfortunately closed when we went, you can #visit the shrine#. It is devoted to the Indian deity Saraswati. Inside, there is also a Chinese altar, multiple Japanese images, and golden decorations, as well as a large block of wood supposed to wash away sins if you touch it with one hand.",
+    "part6": "Coming out of the sanctuary, you will see a #small cemetery#. It would be an altar for the deceased domestic animals. You will also find many other small buildings and statues. However, we don't know what they represent.",
+    "part7": "Then go down the stone stairs."
   },
   "visit3": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": "",
-    "part8": "",
-    "part9": "",
-    "part10": ""
+    "title": "The huge Buddha",
+    "part1": "Going down the stairs, you can see, hidden between the leaves, the statue of the « #Great Buddha of Nagoya# ».",
+    "part2": "Considering his size, it feels weird to see it at the last moment. That's kind of what makes it so charming.",
+    "part3": "#Built in 1987 and initially with a bronze color, it was covered by a vibrant green in 2006. Additionally, golden leaves were added to the eyes, mouth, and ears.#",
+    "part4": "Known as the « Big Buddha of Nagoya », it is also called #Daibutsu# in Japan, which simply means « Big Buddha ».",
+    "part5": "The Daibutsu alone is 10 meters high and lies on a 5 meters high plinth. In total, it is an impressive #15 meters high statue#.",
+    "part6": "#Its base is beautifully decorated# with praying monks and deers. However, elephants are the most important part of the decoration and there are some all around the statue.",
+    "part7": "In one of its palms, you will notice a symbol. It is the #Dharmachakra# represented in the form of a chariot wheel.",
+    "part8": "It is one of the most significant and sacred symbols of Buddhism. It represents the Buddha's teaching: the hub, in the center of the Dharma Wheel, represents moral discipline, the rays represent wisdom, and the rim refers to concentration. Most of the time it is made up of 8 rays. Sometimes it can be made of 12, 24, or 31 rays, with more or less different meanings.",
+    "part9": "In front of the « Big Buddha » you have a #representation of its hand# resting on a stone plinth, perhaps to see this symbol more closely.",
+    "part10": "In the end, the place can be a little scary. There is nobody as if the place was abandoned or forgotten. But the statue is so impressive that we enjoyed this little adventure."
   },
-  "conclusion": "",
-  "question1": "",
-  "question2": "",
-  "pinterest": "",
+  "conclusion": "Completely isolated place, almost cut off from the world, do not hesitate to venture there to discover this magnificent giant buddha.",
+  "question1": "Have you ever visited hidden places like this?",
+  "question2": "What is the park with the most impressive Buddha statue that you visited?",
+  "pinterest": "\uD83C\uDF0F Discover the Togan-ji temple and its huge Buddha with our travelogue. In this article, we answer all your questions: How to get there? How long and at what period? We also tell about the opening hours, the price and where it's located. Click on the image for the full guide about this temple... \uD83C\uDF0F",
   "facebook": {
-    "part1": "",
-    "part2": ""
+    "part1": "♡ Hello travellers! ♡",
+    "part2": "Discover this forgotten temple in Nagoya that deserves the detour."
   }
 }
