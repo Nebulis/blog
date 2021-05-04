@@ -34,13 +34,6 @@ export const JapanQuote = styled(Quote)`
   }
 `
 
-export const ToganjiQuote = () => (
-  <JapanQuote>
-    Impressionnante statue d’un vert très vif d’environ 10 mètres de haut, ce grand Bouddha est entouré à son pied
-    d’éléphants, de rennes et de moines.
-  </JapanQuote>
-)
-
 export const SensojiQuote = () => (
   <JapanQuote>
     Le temple de Senso-Ji serait le plus vieux temple de Tokyo, situé dans le quartier de Asakusa, il regroupe chaque

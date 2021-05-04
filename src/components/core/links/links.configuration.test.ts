@@ -197,7 +197,10 @@ const japanLinks = () => {
     published: true,
   })
   expect(getLink("toganji")).toMatchObject({
-    label: { en: "Togan-Ji Temple", fr: "Temple Togan-Ji" },
+    label: {
+      en: "Nagoya : Togan-Ji Temple and its Huge Buddha",
+      fr: "Nagoya : Le temple Togan-Ji et son grand Bouddha",
+    },
     published: false,
   })
   expect(getLink("nijo-castle")).toMatchObject({
