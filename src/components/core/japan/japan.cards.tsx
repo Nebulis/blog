@@ -85,11 +85,15 @@ export const HamarikyuGardenCard: FunctionComponent<ExtraCardProps> = ({ fluidOb
     </JapanCard>
   )
 }
-export const SensojiCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => (
-  <JapanCard title="Le temple de Senso-Ji" to="sensoji" {...card}>
-    <SharedCardJapanImages image="sensoji" fluidObject={fluidObject} />
-  </JapanCard>
-)
+export const SensojiCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <JapanCard title={common.country.japan.card.sensoji} to="sensoji" {...card}>
+      <SharedCardJapanImages image="sensoji" fluidObject={fluidObject} />
+    </JapanCard>
+  )
+}
 export const KawaguchikoLakeCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
@@ -125,6 +129,35 @@ export const ToganjiCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, ca
   return (
     <JapanCard title={common.country.japan.card["toganji"]} to="toganji" {...card}>
       <SharedCardJapanImages image="toganji" fluidObject={fluidObject} />
+    </JapanCard>
+  )
+}
+
+export const UenoParkCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <JapanCard title={common.country.japan.card["ueno-park"]} to="ueno-park" {...card}>
+      <SharedCardJapanImages image="uenoPark" fluidObject={fluidObject} />
+    </JapanCard>
+  )
+}
+
+export const ShibuyaDistrictCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <JapanCard title={common.country.japan.card["shibuya-district"]} to="shibuya-district" {...card}>
+      <SharedCardJapanImages image="shibuyaDistrict" fluidObject={fluidObject} />
+    </JapanCard>
+  )
+}
+export const YasukuniDoriCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <JapanCard title={common.country.japan.card["yasukuni-dori"]} to="yasukuni-dori" {...card}>
+      <SharedCardJapanImages image="yasukuniDori" fluidObject={fluidObject} />
     </JapanCard>
   )
 }

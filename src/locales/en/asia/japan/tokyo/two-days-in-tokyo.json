@@ -1,79 +1,81 @@
 {
-  "quote": "",
-  "introduction": "",
+  "quote": "Welcome to Tokyo, the most populous city in the world with its 40 million inhabitants. From the business district to the fashion district, from culture to the geek world, each district has its different universe.",
+  "introduction": "Discover our two days in Tokyo where we tried to visit the most we could in such a short time.",
   "google-description": "Discover our two days in Tokyo where we tried to visit the most we could in such a short time. In this article, we answer all your questions: How long and when? We also tell you the places we visited.",
   "social-network-description": "Welcome to Tokyo, the most populous city in the world with its 40 million inhabitants. From the business district to the fashion district, from culture to the geek world, each district has its different universe.",
+  "full-title": "Two Days In Tokyo | Travel Guide",
   "what-time-of-year": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": ""
+    "title": "Best time to visit?",
+    "part1": "[In spring](spring-in-japan), it's the best season to admire cherry blossoms. We went there in late March, early April for the first bloom.",
+    "part2": "[In autumn](autumn-in-japan), admire the landscapes embellished by the maple trees with orange, yellow, or red color.",
+    "part3": "[In winter](winter-in-japan), perhaps not the best season to visit Tokyo, but if you plan to visit other cities, why not take the opportunity to appreciate snowy landscapes.",
+    "part4": "Summer is the least touristy season. However, the weather is hot, and the humidity makes it unbearable."
   },
   "how-long": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": ""
+    "title": "How long?",
+    "part1": "The longer you stay there, the more you will see, of course.",
+    "part2": "We suppose that a week would be pretty good to discover as many districts as possible.",
+    "part3": "We only stayed there for two days and still managed to do a lot of things."
   },
   "where-to-stay": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": ""
+    "title": "Where to stay in Tokyo?",
+    "part1": "Tokyo public transport is very well-developed, so you don't have to stay near the districts you visit. It all depends on what you plan to do, but we recommend calm hotels. You won't have a hard time getting around anyway.",
+    "part2": "Also if you plan to go out at night, it might be easier for you to sleep near busy streets.",
+    "part3": "It all depends on what you prefer to do, but don't worry, you will find something that suits your needs.",
+    "part4": "You can compare more offers on [Booking](booking-search:Tokyo).",
+    "part5": "More information about [Transports in Japan](transport-japan)."
   },
   "visit": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Visits",
+    "part1": "With only #two days in Tokyo#, we couldn't miss some places that we deemed indispensable.",
+    "part2": "Which district to choose? It's not easy to make a decision. We mainly selected what inspired us at first sight. Therefore, we preferred lively districts day and night."
   },
   "day1": {
-    "title": "",
+    "title": "Day 1",
     "visit1": {
-      "title": "",
-      "part1": "",
-      "part2": "",
-      "part3": "",
-      "part4": "",
-      "part5": "",
-      "part6": "",
-      "part7": "",
-      "part8": "",
-      "part9": "",
-      "part10": ""
+      "title": "Shibuya District",
+      "part1": "First, head to the famous Shibuya district, this vast district gathers everything we like in Tokyo.",
+      "part2": "#Trendy and lively area day and night#, we went there for four main things:",
+      "part3": "#Shibuya Crossing#",
+      "part4": "If you are interested in Japan, you must have heard of it before. This famous pedestrian crossing is an attraction. Finding a place to watch these thousands of people rushing around when they can get through is an adventure.",
+      "part5": "#Takeshita Street#",
+      "part6": "This very lively street is the meeting place for young people and cosplays. A completely crazy place where you can find all kinds of eccentric stores. You can even buy a rainbow cotton candy there to blend in with the crowd.",
+      "part7": "#Hachikō Statue#",
+      "part8": "A beautiful and moving story about this dog that waited several years for his master, after he passed away. The statue was put up in honor of the dog's unwavering loyalty. It is a symbol of Shibuya.",
+      "part9": "#Mall + lively streets#",
+      "part10": "A lively area full of shops, nightclubs, and countless restaurants. The neighborhood is also known for its giant screens and bustling streets."
     }
   },
   "day2": {
-    "title": "",
+    "title": "Day 2",
     "visit2": {
-      "title": "",
-      "part1": "",
-      "part2": "",
-      "part3": ""
+      "title": "Ueno Park",
+      "part1": "We were there in April, during the #cherry blossom season#. Ueno Park is a must-see place to admire cherry blossoms. It is the largest park in Tokyo and is famous for its huge avenue of cherry trees.",
+      "part2": "#You will find a park and a lake to walk around as well as many temples, museums, and even a zoo.#",
+      "part3": "The park is interesting if you come during the Sakura season and did not plan to leave Tokyo. You can even find some miniatures of other famous statues."
     },
     "visit3": {
-      "title": "",
-      "part1": "",
-      "part2": "",
-      "part3": ""
+      "title": "Senso-Ji Temple",
+      "part1": "We went in the late afternoon. Unfortunately, the sun was gone. On top of that, the rain started. That didn't prevent the place from being crowded. But the temples and gardens around are worth a visit.",
+      "part2": "#The temple is among the most famous in Tokyo. It is surrounded by massive gates and houses one of the tallest pagodas in the city#.",
+      "part3": "A must-see place."
     },
     "visit4": {
-      "title": "",
-      "part1": "",
-      "part2": "",
-      "part3": "",
-      "part4": "",
-      "part5": "",
-      "part6": ""
+      "title": "Yasukuni-dori Street",
+      "part1": "Located in the #Shinjuku district#, Yasukuni-Dori Avenue is a mix of a business district during the day and a bustling nightlife district. It is a busy street and would even look like a small #Japanese Time Square#.",
+      "part2": "We don't consider it a must-see place at all. But our hotel was near, and we enjoyed walking around day and night. It felt like a sort of mini Tokyo.",
+      "part3": "Not so easy to visit Tokyo in such a short time. There is so much to see. But we wanted to focus on the smaller cities, and in the end, we didn't regret it. Quieter places are great.",
+      "part4": "We also share with you a [haven of peace in the heart of Tokyo](hamarikyu-garden) to recharge your batteries.",
+      "part5": "Even with just these #five places in Tokyo#, we feel like we were able to experience different facets of the city.",
+      "part6": "Stay tuned for detailed articles on each of our visits every Saturday."
     }
   },
-  "conclusion": "",
-  "question 1": "",
-  "question 2": "",
-  "pinterest": "",
+  "conclusion": "Tokyo, a bustling city that deserves a detour. Mix of modernity and authenticity, it is full of surprising places and discoveries.",
+  "question1": "What is your favorite district in Tokyo?",
+  "question2": "Do you prefer to visit Tokyo or the rest of Japan?",
+  "pinterest": "\uD83C\uDF0F Discover our two days in Tokyo where we tried to visit the most we could in such a short time. In this article, we answer all your questions: How long and when? We also tell you the places we visited.. Click on the image for the full guide... \uD83C\uDF0F",
   "facebook": {
-    "part1": "",
-    "part2": ""
+    "part1": "♡ Hello travellers! ♡",
+    "part2": "Two days in Tokyo is a very short time to visit this bustling city. Despite this constraint, we share with you our list of must-see places to visit."
   }
 }
