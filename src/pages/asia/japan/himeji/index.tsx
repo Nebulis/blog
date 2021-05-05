@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import SEO from "../../../../components/layout/seo"
 import { jsx } from "@emotion/react"
 import cherryBlossom from "../../../../images/asia/japan/cherry-blossom.png"
@@ -11,7 +11,7 @@ import {
   MedallionContainer,
 } from "../../../../components/layout/layout"
 import { japanLinks } from "../../../../components/core/japan/japan.links"
-import { JapanBlogLayout, JapanButtonLink } from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanButtonLink, japanWeatherEntries } from "../../../../components/core/japan/japan"
 import { JapanImageAsMedallion } from "../../../../components/core/japan/japan.images"
 import { PageProps } from "gatsby"
 import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
@@ -23,6 +23,7 @@ import {
   CityHomeSection,
   MainTitleSection,
   SectionContent,
+  SubHomeSectionTwoLines,
   SubSubHomeSection,
 } from "../../../../components/core/section"
 import { TitleImage } from "../../../../components/images/layout"
@@ -30,6 +31,8 @@ import { Divider } from "../../../../components/core/divider"
 import { PageQuote } from "../../../../components/core/quote"
 import HomeImage from "../../../../images/asia/japan/carousel-japan-2.jpg"
 import { PointOfInterestSection } from "../../../../components/core/point-of-interest"
+import { WeatherForHomePage } from "../../../../components/core/weather"
+import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
 
 const namespace = "asia/japan/himeji/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -46,11 +49,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     development,
     tags: ["himeji"],
   })
+  const [tooltipLabel, setTooltipLabel] = useState("")
   const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
     <>
       <SEO
         title={t("title")}
+        fullTitle={t("full-title")}
         location={location}
         socialNetworkDescription={description}
         googleDescription={t("meta-description")}
@@ -82,6 +87,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </CityArticleContainer>
           </>
         )}
+        <SubHomeSectionTwoLines title={t("weather")} country={t("weather-country")} />
+        <WeatherForHomePage
+          entries={japanWeatherEntries()
+            .filter((entry) => entry.id === "osaka")
+            .map((entry) => ({ ...entry, label: "Himeji" }))}
+          onMouseLeave={() => setTooltipLabel("")}
+          onMouseEnter={setTooltipLabel}
+          extraButton
+        />
         {cities.length > 0 && (
           <>
             <Divider className="mt2" />
@@ -103,6 +117,20 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <JapanButtonLink to="articles?country=japan">{t("common:allArticles")}</JapanButtonLink>
         </GoToAllArticlesContainer>
+        <MouseToolTip>
+          {tooltipLabel ? (
+            <TooltipContent>
+              {tooltipLabel.split("\n").map((item, index) => {
+                return (
+                  <span key={index}>
+                    {item}
+                    <br />
+                  </span>
+                )
+              })}
+            </TooltipContent>
+          ) : null}
+        </MouseToolTip>
       </JapanBlogLayout>
     </>
   )

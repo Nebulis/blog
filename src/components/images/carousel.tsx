@@ -40,14 +40,14 @@ export const CarouselImageQuery: React.FunctionComponent<ExtraImageProps & { ima
       japan1: file(relativePath: { eq: "asia/japan/carousel-japan.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }
       japan2: file(relativePath: { eq: "asia/japan/carousel-japan-2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [1200]) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

@@ -66,7 +66,7 @@ export const HimejiCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       visit: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-visit.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -80,49 +80,49 @@ export const HimejiCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       garden: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-garden.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       garden2: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-garden2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       garden3: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-garden3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       garden4: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-garden4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       garden5: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-garden5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       garden6: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-garden6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       garden7: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-garden7.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -150,14 +150,14 @@ export const HimejiCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       maze4: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-maze4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       maze5: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-maze5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -171,7 +171,7 @@ export const HimejiCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       maze7: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-maze7.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -192,21 +192,21 @@ export const HimejiCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       maze10: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-maze10.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       maze11: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-maze11.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       maze12: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-maze12.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -262,14 +262,14 @@ export const HimejiCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       inside8: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-inside8.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       inside9: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-inside9.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -311,7 +311,7 @@ export const HimejiCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       bonus4: file(relativePath: { eq: "asia/japan/himeji/castle/himeji-castle-bonus4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 600, quality: 90, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

@@ -191,10 +191,10 @@ const japanLinks = () => {
     published: false,
   })
 
-  expect(getLink("nagoya")).toMatchObject({ label: { fr: "Nagoya", en: "Nagoya" }, published: false })
+  expect(getLink("nagoya")).toMatchObject({ label: { fr: "Nagoya", en: "Nagoya" }, published: true })
   expect(getLink("nagoya-castle")).toMatchObject({
     label: { en: "The second life of Nagoya Castle", fr: "La seconde vie du château de Nagoya" },
-    published: false,
+    published: true,
   })
   expect(getLink("toganji")).toMatchObject({
     label: { en: "Togan-Ji Temple", fr: "Temple Togan-Ji" },
