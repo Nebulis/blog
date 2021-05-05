@@ -98,14 +98,14 @@ export const DaigojiImages: React.FunctionComponent<ExtraImageProps & { image: k
       }
       shimoDaiho2: file(relativePath: { eq: "asia/japan/kyoto/daigoji/daigoji-shimo-daiho2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       shimoDaiho3: file(relativePath: { eq: "asia/japan/kyoto/daigoji/daigoji-shimo-daiho3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -119,7 +119,7 @@ export const DaigojiImages: React.FunctionComponent<ExtraImageProps & { image: k
       }
       shimoDaiho5: file(relativePath: { eq: "asia/japan/kyoto/daigoji/daigoji-shimo-daiho5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -189,7 +189,7 @@ export const DaigojiImages: React.FunctionComponent<ExtraImageProps & { image: k
       }
       samboin3: file(relativePath: { eq: "asia/japan/kyoto/daigoji/daigoji-samboin3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -203,7 +203,7 @@ export const DaigojiImages: React.FunctionComponent<ExtraImageProps & { image: k
       }
       samboin5: file(relativePath: { eq: "asia/japan/kyoto/daigoji/daigoji-samboin5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

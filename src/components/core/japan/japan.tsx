@@ -500,6 +500,80 @@ export const japanWeatherEntries = (): WeatherEntry[] => [
     ],
   },
   {
+    id: "kyoto",
+    label: "Kyoto",
+    data: [
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+        temp: 4,
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["snow-man", "cold"],
+        temp: 4,
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: ["sakura", "cold"],
+        temp: 8,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        alt: "sakura",
+        temp: 13,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        temp: 19,
+      },
+      {
+        type: "fair",
+        icon: "sun-rain",
+        temp: 22,
+      },
+      {
+        type: "poor",
+        icon: "sun-rain",
+        alt: "hot",
+        temp: 26,
+      },
+      {
+        type: "poor",
+        icon: "sunny",
+        alt: "hot",
+        temp: 28,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        temp: 23,
+      },
+      {
+        type: "good",
+        icon: "sunny",
+        temp: 17,
+      },
+      {
+        type: "fair",
+        icon: "sun-cloud",
+        alt: "autumn",
+        temp: 12,
+      },
+      {
+        type: "poor",
+        icon: "sun-cloud",
+        alt: ["cold", "snow-man"],
+        temp: 6,
+      },
+    ],
+  },
+  {
     id: "osaka",
     label: "Osaka",
     data: [
