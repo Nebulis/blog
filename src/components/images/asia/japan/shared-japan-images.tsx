@@ -26,7 +26,7 @@ export const SharedJapanImages: React.FunctionComponent<ExtraImageProps & { imag
       }
       mainHimeji: file(relativePath: { eq: "asia/japan/carousel-japan-2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

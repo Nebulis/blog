@@ -88,13 +88,13 @@ exports[`french pages exports meta for public/asia/japan/himeji/himeji-castle/in
 
 exports[`french pages exports meta for public/asia/japan/himeji/himeji-castle/index.html correctly: social-network 1`] = `"Magnifique château, surnommé le château du Héron Blanc, il est considéré comme l’un des plus beaux châteaux du Japon et est également reconnu pour être un véritable spot pour admirer les cerisiers, Sakura, en fleurs au printemps."`;
 
-exports[`french pages exports meta for public/asia/japan/himeji/himeji-castle/index.html correctly: title 1`] = `"Le magnifique château blanc de Himeji | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/himeji/himeji-castle/index.html correctly: title 1`] = `"Le magnifique château blanc de Himeji | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly: meta-description 1`] = `"Dans chaque article, on répond à vos questions : Quand partir ? Combien de temps ? Quel budget prévoir ? Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite et notre ressenti en vous indiquant également Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ? Sans oublier les adresses et les prix."`;
 
 exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly: social-network 1`] = `"La ville de Himeji est située dans la préfecture de Hyogo dans la région du Kansai au Japon, elle est avant tout connue pour son magnifique château considéré comme l’un des plus beaux châteaux du Japon.  Mais Himeji ce n’est pas qu’un château, prenez votre temps pour passer une journée dans cette ville pour y découvrir également le Koko-en Garden, un immense parc aux multiples jardins et partez en excursion sur le Mont Shosha."`;
 
-exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly: title 1`] = `"Himeji | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/himeji/index.html correctly: title 1`] = `"Himeji | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos, la magie du Japon. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables du pays du Soleil-Levant. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
