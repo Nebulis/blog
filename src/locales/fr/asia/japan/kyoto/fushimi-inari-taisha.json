@@ -38,9 +38,11 @@
   },
   "where-to-stay": {
     "title": "Où dormir à Kyoto, près de Fushimi Inari Taisha ?",
-    "part1": "Comme déjà expliqué dans [nos autres articles sur Kyoto](kyoto), nous sommes toujours effarés par les prix des hôtels surtout pour une nuit, cela dit au moins près de Fushimi il y en a et ils ont l’air tous plutôt pas mal, c’est déjà ça.",
+    "part1": "Comme déjà expliqué dans [nos autres articles sur Kyoto](kyoto), nous sommes toujours effarés par les prix des hôtels surtout pour une nuit.",
     "part2": "Parce qu’on a quand même mis du temps à chercher à Kyoto, un véritable casse-tête qu’on se le dise ! Si vous cherchez du traditionnel les prix montent très vite, si vous ne cherchez pas trop cher, ça devient vite n’importe quoi. Le logement au Japon est un vrai investissement sur vos vacances.",
-    "part3": "[Trouver un hôtel vers Fushimi](booking-search:Kyoto)."
+    "part3": "On vous propose 3 différents logements, pour s’adapter à différents budgets. Nous avons choisi des résidences proches de Fushimi Inari Taisha mais ce n’est pas du tout une priorité, Kyoto est vraiment très bien desservie et vous n’aurez pas de mal à vous déplacer.",
+    "part4": "Les prix varient énormément en fonction des saisons, pour cet article on vous indique des hôtels / prix pour une saison neutre, par exemple le mois de mai.",
+    "part5": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:Kyoto)."
   },
   "visit": {
     "title": "La visite",

@@ -115,6 +115,14 @@ const japanLayout = `
         }
       }
     }
+    .booking-card {
+      .information, .photo-container {
+        border-color: ${japanPrimaryColorDarker}
+      }
+      .activity {
+        background-color: ${japanPrimaryColorDarker};
+      }
+    }
     .divider {
       background-color: hsl(348, 41%, 53%, 0.2);
     }

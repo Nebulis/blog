@@ -17,6 +17,7 @@ const alt = {
   street8: "Arashiyama Street",
   street9: "Arashiyama Street",
   street10: "Arashiyama Street",
+  street11: "Arashiyama Street",
   bamboo: "Arashiyama Bamboo Forest",
   bamboo2: "Arashiyama Bamboo Forest",
   bamboo3: "Arashiyama Bamboo Forest",
@@ -72,14 +73,14 @@ export const ArashiyamaImages: React.FunctionComponent<ExtraImageProps & { image
       }
       street: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-street.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       street2: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-street2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -100,40 +101,47 @@ export const ArashiyamaImages: React.FunctionComponent<ExtraImageProps & { image
       }
       street5: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-street5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       street6: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-street6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       street7: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-street7.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       street8: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-street8.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       street9: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-street9.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       street10: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-street10.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      street11: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-street11.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
@@ -142,7 +150,7 @@ export const ArashiyamaImages: React.FunctionComponent<ExtraImageProps & { image
       }
       bamboo: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-bamboo.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -212,7 +220,7 @@ export const ArashiyamaImages: React.FunctionComponent<ExtraImageProps & { image
       }
       bamboo11: file(relativePath: { eq: "asia/japan/kyoto/arashiyama/arashiyama-bamboo11.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 90, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

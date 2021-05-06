@@ -39,9 +39,13 @@ import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import { Comments } from "../../../../components/core/comments"
 import { ArashiyamaImages } from "../../../../components/images/asia/japan/kyoto/arashiyama"
-import { MapContainer } from "../../../../components/layout/layout"
+import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { buildPixabayUrl } from "../../../../utils"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import sunMembersKyotoSaga from "../../../../images/asia/japan/kyoto/arashiyama/sun-members-kyoto-saga.jpg"
+import businessArashiyama from "../../../../images/asia/japan/kyoto/arashiyama/business-arashiyama.jpg"
+import binarioSagaArashiyama from "../../../../images/asia/japan/kyoto/arashiyama/binario-saga-arashiyama.jpg"
 
 const namespace = "asia/japan/kyoto/arashiyama"
 const id = "arashiyama"
@@ -58,6 +62,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -103,6 +108,37 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="jp/sun-members-kyoto-saga"
+              title="Sun Members Kyoto Saga"
+              image={sunMembersKyotoSaga}
+              note="7,9"
+              price={100}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/business-arashiyama"
+              title="Hotel Arashiyama"
+              image={businessArashiyama}
+              note="8,2"
+              price={110}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/binario-saga-arashiyama"
+              title="Hotel Binario Saga Arashiyama"
+              image={binarioSagaArashiyama}
+              note="8,1"
+              price={124}
+              people={2}
+              kind="hotel"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning>{t("where-to-stay.part3")}</BookingWarning>
+          <p>{t("where-to-stay.part4")}</p>
         </WhereToStay>
         <Visit title={t("visit.title")}>
           <section>
@@ -135,9 +171,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <ImageAsLandscape>
                   <ArashiyamaImages image="street" />
                 </ImageAsLandscape>
-                <ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
                   <ArashiyamaImages image="street2" />
-                </ImageAsPortrait>
+                  <ArashiyamaImages image="street11" />
+                </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
                   <ArashiyamaImages image="street3" />
                   <ArashiyamaImages image="street4" />

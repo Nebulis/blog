@@ -106,7 +106,7 @@ exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.
 
 exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly: social-network 1`] = `"La forêt de bambous d’Arashiyama est certainement la bambouseraie la plus connue du Japon, elle se situe au nord-ouest de Kyoto, près de la rivière Katsura et du parc des singes d’Arashiyama."`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly: title 1`] = `"Kyoto : La forêt de Bambous d'Arashiyama | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly: title 1`] = `"La forêt de Bambous d’Arashiyama à Kyoto | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/kyoto/daigoji/index.html correctly: meta-description 1`] = `"Découvrez le temple Daigo-ji à travers notre récit de voyage avec notre guide et nos photos. On répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix."`;
 
@@ -130,7 +130,7 @@ exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.h
 
 exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: social-network 1`] = `"Temple bouddhiste situé à Kyoto, il est l’un des temples les plus reconnus pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages sont entièrement recouverts de feuilles d’or."`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: title 1`] = `"Kinkaku-ji : Le temple doré de Kyoto | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: title 1`] = `"Kinkaku-ji : Le temple doré de Kyoto | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly: meta-description 1`] = `"Quatrième ville la plus peuplée du Japon, Nagoya est bien trop peu connue des voyageurs, pourtant elle abrite de nombreux endroits charmants à visiter. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 

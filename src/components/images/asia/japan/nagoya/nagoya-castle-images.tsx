@@ -92,14 +92,14 @@ export const NagoyaCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       entrance: file(relativePath: { eq: "asia/japan/nagoya/castle/nagoya-castle-entrance.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       entrance2: file(relativePath: { eq: "asia/japan/nagoya/castle/nagoya-castle-entrance2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -169,7 +169,7 @@ export const NagoyaCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       garden: file(relativePath: { eq: "asia/japan/nagoya/castle/nagoya-castle-garden.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -225,7 +225,7 @@ export const NagoyaCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       garden9: file(relativePath: { eq: "asia/japan/nagoya/castle/nagoya-castle-garden9.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 800, quality: 60, srcSetBreakpoints: [400]) {
+          fluid(maxWidth: 800, quality: 80, srcSetBreakpoints: [400]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -253,7 +253,7 @@ export const NagoyaCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       garden13: file(relativePath: { eq: "asia/japan/nagoya/castle/nagoya-castle-garden13.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -295,14 +295,14 @@ export const NagoyaCastleImages: React.FunctionComponent<ExtraImageProps & { ima
       }
       garden19: file(relativePath: { eq: "asia/japan/nagoya/castle/nagoya-castle-garden19.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       garden20: file(relativePath: { eq: "asia/japan/nagoya/castle/nagoya-castle-garden20.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

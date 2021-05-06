@@ -3,6 +3,7 @@
   "introduction": "Dans cet article, on tente de vous retranscrire au mieux notre visite de ce parc et de cette beauté sans pareille.",
   "google-description": "Dans cet article, on tente de vous retranscrire au mieux notre visite de ce parc et de cette beauté sans pareille. On répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix.",
   "social-network-description": "Temple bouddhiste situé à Kyoto, il est l’un des temples les plus reconnus pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages sont entièrement recouverts de feuilles d’or.",
+  "full-title": "Kinkaku-ji : Le temple doré de Kyoto | Guide de Voyage",
   "where": {
     "title": "Où ?",
     "part1": "1 Kinkakujicho, Kita Ward, Kyoto"
@@ -35,8 +36,11 @@
   },
   "where-to-stay": {
     "title": "Où dormir à Kyoto, près de Kinkaku-ji ?",
-    "part1": "Chercher un hôtel à Kyoto n’est pas une mince affaire, les prix sont quand même sacrément élevés (au Japon en général d’ailleurs), environ 200€ pour dormir près de Kinkaku-ji. Nous vous conseillons donc de vous trouver un hôtel dans Kyoto et de ne pas chercher en fonction des lieux de vos visites. Les transports en commun à Kyoto sont très efficaces, il n’est pas difficile de trouver son chemin, et puis comme partout au Japon, Google Map est clairement votre meilleur ami !",
-    "part2": "[Comparez et réservez votre hôtel à Kyoto](booking-search:Kyoto)."
+    "part1": "Chercher un hôtel à Kyoto n’est pas une mince affaire, les prix sont quand même sacrément élevés (au Japon en général d’ailleurs).",
+    "part2": "Nous vous conseillons donc de vous trouver un hôtel dans Kyoto et de #ne pas chercher en fonction des lieux de vos visites#. Les transports en commun à Kyoto sont très efficaces, il n’est pas difficile de trouver son chemin, et puis comme partout au Japon, Google Map est clairement votre meilleur ami !",
+    "part3": "On vous propose quand même 3 différents logements proches de Kinkakuji, environ 5 km. Vous en trouverez beaucoup plus proches mais vu les prix nous ne préférons pas les conseiller.",
+    "part4": "Les prix varient énormément en fonction des saisons, pour cet article on vous indique des hôtels / prix pour une saison neutre, par exemple le mois de mai.",
+    "part5": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:Kyoto)."
   },
   "visit": {
     "title": "La visite",

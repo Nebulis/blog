@@ -117,7 +117,7 @@ export const FushimiInariTaishaImages: React.FunctionComponent<ExtraImageProps &
       }
       discovery12: file(relativePath: { eq: "asia/japan/kyoto/fushimi/fushimi-inari-taisha-discovery12.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -131,7 +131,7 @@ export const FushimiInariTaishaImages: React.FunctionComponent<ExtraImageProps &
       }
       toriis: file(relativePath: { eq: "asia/japan/kyoto/fushimi/fushimi-inari-taisha-toriis.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 90, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -152,7 +152,7 @@ export const FushimiInariTaishaImages: React.FunctionComponent<ExtraImageProps &
       }
       history2: file(relativePath: { eq: "asia/japan/kyoto/fushimi/fushimi-inari-taisha-history2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -173,7 +173,7 @@ export const FushimiInariTaishaImages: React.FunctionComponent<ExtraImageProps &
       }
       history5: file(relativePath: { eq: "asia/japan/kyoto/fushimi/fushimi-inari-taisha-history5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

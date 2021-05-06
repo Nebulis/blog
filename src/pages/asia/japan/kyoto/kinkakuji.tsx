@@ -38,6 +38,11 @@ import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import { Comments } from "../../../../components/core/comments"
 import { KinkakujiImages } from "../../../../components/images/asia/japan/kyoto/kinkakuji"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import granMsKyoto from "../../../../images/asia/japan/kyoto/kinkakuji/gran-ms-kyoto.jpg"
+import mitsuiGarden from "../../../../images/asia/japan/kyoto/kinkakuji/mitsui-garden-kyoto-sanjo.jpg"
+import solariaHotel from "../../../../images/asia/japan/kyoto/kinkakuji/solaria-nishitetsu-hotel-kyoto-premier.jpg"
+import { BookingGygCardContainer } from "../../../../components/layout/layout"
 
 const namespace = "asia/japan/kyoto/kinkakuji"
 const id = "kinkakuji"
@@ -53,6 +58,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -96,6 +102,38 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
+          <p>{t("where-to-stay.part3")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="jp/gran-ms-kyoto"
+              title="Hotel Gran Ms Kyoto"
+              image={granMsKyoto}
+              note="8,5"
+              price={40}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/mitsui-garden-kyoto-sanjo"
+              title="Mitsui Garden Hotel Kyoto Sanjo"
+              image={mitsuiGarden}
+              note="8,5"
+              price={50}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/solaria-nishitetsu-hotel-kyoto-premier"
+              title="Solaria Nishitetsu Hotel Kyoto Premier"
+              image={solariaHotel}
+              note="9,0"
+              price={150}
+              people={2}
+              kind="hotel"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning>{t("where-to-stay.part4")}</BookingWarning>
+          <p>{t("where-to-stay.part5")}</p>
         </WhereToStay>
         <Visit title={t("visit.title")}>
           <section>
