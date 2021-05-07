@@ -100,13 +100,13 @@ exports[`french pages exports meta for public/asia/japan/index.html correctly: m
 
 exports[`french pages exports meta for public/asia/japan/index.html correctly: social-network 1`] = `"Voyager au pays du Soleil-Levant c’est découvrir un mélange entre modernité et traditions. Admirez les changements de décor fascinant des paysages entre chaque saison. Découvrez des villes animées et ses quartiers mouvementés. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables."`;
 
-exports[`french pages exports meta for public/asia/japan/index.html correctly: title 1`] = `"Japon | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/index.html correctly: title 1`] = `"Japon | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly: meta-description 1`] = `"Le récit de notre visite à Arashiyama et plus particulièrement de cette magnifique forêt de bambous avec en prime d’autres idées de quoi faire dans ce quartier. Dans cet article on vous indique également Comment y aller ? Combien de temps et à quelle période ? On vous donne également son adresse, les horaires et le prix."`;
 
 exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly: social-network 1`] = `"La forêt de bambous d’Arashiyama est certainement la bambouseraie la plus connue du Japon, elle se situe au nord-ouest de Kyoto, près de la rivière Katsura et du parc des singes d’Arashiyama."`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly: title 1`] = `"Kyoto : La forêt de Bambous d'Arashiyama | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/kyoto/arashiyama/index.html correctly: title 1`] = `"La forêt de Bambous d’Arashiyama à Kyoto | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/kyoto/daigoji/index.html correctly: meta-description 1`] = `"Découvrez le temple Daigo-ji à travers notre récit de voyage avec notre guide et nos photos. On répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix."`;
 
@@ -124,13 +124,13 @@ exports[`french pages exports meta for public/asia/japan/kyoto/index.html correc
 
 exports[`french pages exports meta for public/asia/japan/kyoto/index.html correctly: social-network 1`] = `"Réputée pour ses multiples temples et monuments classés au Patrimoine Mondial de l'Unesco, Kyoto est la ville la plus visitée après Tokyo, une destination à ne pas manquer durant votre séjour au Japon. Découvrez les différents quartiers qui abritent de véritables joyaux de cette culture japonaise qui nous plaît tant."`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/index.html correctly: title 1`] = `"Kyoto | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/kyoto/index.html correctly: title 1`] = `"Kyoto | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: meta-description 1`] = `"Dans cet article, on tente de vous retranscrire au mieux notre visite de ce parc et de cette beauté sans pareille. On répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix."`;
 
 exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: social-network 1`] = `"Temple bouddhiste situé à Kyoto, il est l’un des temples les plus reconnus pour sa beauté. Surnommé le Pavillon d’or, il doit ce nom au fait que ses étages sont entièrement recouverts de feuilles d’or."`;
 
-exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: title 1`] = `"Kinkaku-ji : Le temple doré de Kyoto | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/kyoto/kinkakuji/index.html correctly: title 1`] = `"Kinkaku-ji : Le temple doré de Kyoto | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/nagoya/index.html correctly: meta-description 1`] = `"Quatrième ville la plus peuplée du Japon, Nagoya est bien trop peu connue des voyageurs, pourtant elle abrite de nombreux endroits charmants à visiter. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
@@ -154,7 +154,7 @@ exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.h
 
 exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: social-network 1`] = `"Le Japon, ce pays incontournable à visiter en Asie. Un nouveau décor à chaque saison. Un mélange entre zénitude dans les endroits reculés et animation et dynamisme dans les villes, autant dire qu’en fonction de ce que vous recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre bonheur ..."`;
 
-exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: title 1`] = `"Le Japon au printemps : Au milieu des Sakuras | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: title 1`] = `"Le Japon au printemps : Au milieu des Sakuras | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/tokyo/hamarikyu-garden/index.html correctly: meta-description 1`] = `"Dans cet article on répond à vos questions comment y aller ? Combien de temps ? A quelle saison ? On vous indique également son adresse et son prix. Le tout avec notre récit de voyage et nos photos de ce séduisant jardin japonais."`;
 

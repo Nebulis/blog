@@ -10,7 +10,6 @@ import {
   HomeSubSection,
   MainTitleSection,
   SectionContent,
-  SubHomeSection,
   SubHomeSectionTwoLines,
   SubSubHomeSection,
 } from "../../../components/core/section"
@@ -54,6 +53,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={country}
+        fullTitle={t("full-title")}
         location={location}
         image={VietnamImage}
         socialNetworkDescription={t("social-network-description")}
@@ -115,7 +115,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <JapanButtonLink to="articles?country=japan">{t("common:allArticles")}</JapanButtonLink>
         </GoToAllArticlesContainer>
         <Divider />
-        <SubHomeSection>{t("weather")}</SubHomeSection>
+        <SubHomeSectionTwoLines title={t("weather")} country={t("weather-country")} />
         <WeatherForHomePage
           extraButton
           entries={japanWeatherEntries().filter((entry) => entry.id !== "nagoya")}

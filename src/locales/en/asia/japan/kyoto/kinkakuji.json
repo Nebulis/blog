@@ -3,6 +3,7 @@
   "introduction": "In this article, we try to transcribe our visit to this beautiful park as well as possible.",
   "google-description": "In this article, we try to explain to you as well as possible our visit to this temple. We answer all your questions: How to get there? How long and at what period? We also tell you its address, opening hours and price.",
   "social-network-description": "Buddhist temple located in Kyoto. It is one of the temples most renowned for its aesthetic. Also known as the Golden Pavilion, it owes its name to the fact that it is completely covered in gold leaf.",
+  "full-title": "Kinkaku-Ji: The Golden Temple of Kyoto | Travel Guide",
   "where": {
     "title": "Where?",
     "part1": "1 Kinkakujicho, Kita Ward, Kyoto"
@@ -35,8 +36,11 @@
   },
   "where-to-stay": {
     "title": "Where to stay in Kyoto, near Kinkaku-ji?",
-    "part1": "Looking for a hotel in Kyoto is not an easy task. The prices are high (in Japan in general), about $230 to stay near Kinkaku-ji. So we advise you to find a hotel in Kyoto and to not look for a hotel near the places you will visit. Public transportation in Kyoto is very efficient, it is not difficult to find your way, and as everywhere in Japan, Google Map is your best friend!",
-    "part2": "[Compare and book your hotel in Kyoto](booking-search:Kyoto)."
+    "part1": "Looking for a hotel in Kyoto is not an easy task. The prices are high (in Japan in general).",
+    "part2": "Therefore, We advise you to find a hotel in Kyoto #not necessarily near the places your visit#. Kyoto public transport is well-developed. It is not difficult to get around, and then like everywhere in Japan, Google Map is your best friend!",
+    "part3": "We still share three different accommodations near Kinkakuji, about 5 km far. Due to the prices, we do not advise nearer hotels.",
+    "part4": "The prices vary enormously depending on the seasons. For this article, we share you hotels/prices for a neutral season, for example in May.",
+    "part5": "You can compare more offers on [Booking](booking-search:Kyoto)."
   },
   "visit": {
     "title": "Visit",

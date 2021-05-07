@@ -10,7 +10,7 @@ import { Note } from "./section"
 const buildBookingHotelUrl = ({ lang, hotel = "" }: { lang: Lang; hotel: string }) =>
   `https://www.booking.com/hotel/${hotel}.${lang}.html`
 
-type Kind = "low-cost" | "standard" | "deluxe" | "inn"
+type Kind = "low-cost" | "standard" | "deluxe" | "inn" | "hotel" | "flat"
 
 const getKind = (lang: Lang, kind: Kind) => {
   if (lang === "fr" && kind === "inn") return "Auberge"
@@ -19,6 +19,10 @@ const getKind = (lang: Lang, kind: Kind) => {
   else if (kind === "low-cost") return "Low-cost"
   else if (lang === "fr" && kind === "deluxe") return "De luxe"
   else if (lang === "en" && kind === "deluxe") return "Deluxe"
+  else if (lang === "fr" && kind === "flat") return "Appartement"
+  else if (lang === "en" && kind === "flat") return "Flat"
+  else if (lang === "fr" && kind === "hotel") return "Hôtel"
+  else if (lang === "en" && kind === "hotel") return "Hotel"
   return ":)"
 }
 
@@ -123,13 +127,14 @@ export const BookingCard: React.FunctionComponent<{
     </ExternalLink>
   )
 }
-export const BookingWarning = () => {
+export const BookingWarning: React.FunctionComponent = ({ children }) => {
   const { i18n } = useCustomTranslation()
   return (
     <Note>
-      {i18n.languageCode === "fr"
-        ? "Les prix varient en fonction de la saison a laquelle vous réservez."
-        : "Prices vary depending on the period you book."}
+      {children ??
+        (i18n.languageCode === "fr"
+          ? "Les prix varient en fonction de la saison a laquelle vous réservez."
+          : "Prices vary depending on the period you book.")}
     </Note>
   )
 }

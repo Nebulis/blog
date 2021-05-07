@@ -56,7 +56,7 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
     query {
       history: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-history.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -70,7 +70,7 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
       }
       garden2: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-garden2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 800, quality: 60, srcSetBreakpoints: [400]) {
+          fluid(maxWidth: 800, quality: 80, srcSetBreakpoints: [400]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -98,7 +98,7 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
       }
       garden6: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-garden6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -126,14 +126,14 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
       }
       garden10: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-garden10.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       garden11: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-garden11.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -147,7 +147,7 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
       }
       garden13: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-garden13.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -161,7 +161,7 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
       }
       garden15: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-garden15.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -175,7 +175,7 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
       }
       garden17: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-garden17.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -217,14 +217,14 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
       }
       temple4: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-temple4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       temple5: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-temple5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -245,14 +245,14 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
       }
       temple8: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-temple8.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 800, quality: 60, srcSetBreakpoints: [400]) {
+          fluid(maxWidth: 800, quality: 80, srcSetBreakpoints: [400]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       temple9: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-temple9.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -273,7 +273,7 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
       }
       visit3: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-visit3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -287,7 +287,7 @@ export const KinkakujiImages: React.FunctionComponent<ExtraImageProps & { image:
       }
       visit5: file(relativePath: { eq: "asia/japan/kyoto/kinkakuji/kinkakuji-visit5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 800, quality: 60, srcSetBreakpoints: [400]) {
+          fluid(maxWidth: 800, quality: 80, srcSetBreakpoints: [400]) {
             ...GatsbyImageSharpFluid
           }
         }

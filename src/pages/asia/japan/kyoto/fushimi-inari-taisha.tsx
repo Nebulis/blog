@@ -38,6 +38,11 @@ import { Comments } from "../../../../components/core/comments"
 import { FushimiInariTaishaImages } from "../../../../components/images/asia/japan/kyoto/fushimi-inari-taisha"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { buildPixabayUrl } from "../../../../utils"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import urbanKyoto from "../../../../images/asia/japan/kyoto/fushimi/urban-kyoto-kyoto.jpg"
+import yamashinaHotel from "../../../../images/asia/japan/kyoto/fushimi/kyoto-yamashina-hotel-sanraku.jpg"
+import jingTing from "../../../../images/asia/japan/kyoto/fushimi/jing-ting-wu-yu-wu-song.jpg"
+import { BookingGygCardContainer } from "../../../../components/layout/layout"
 
 const namespace = "asia/japan/kyoto/fushimi-inari-taisha"
 const id = "fushimi-inari-taisha"
@@ -101,6 +106,37 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
           <p>{t("where-to-stay.part3")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="jp/urban-kyoto-kyoto"
+              title="Urban Hotel Kyoto"
+              image={urbanKyoto}
+              note="7,1"
+              price={67}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/kyoto-yamashina-hotel-sanraku"
+              title="Kyoto Yamashina Hotel Sanraku"
+              image={yamashinaHotel}
+              note="8,5"
+              price={90}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/jing-ting-wu-yu-wu-song"
+              title="京町屋 御屋・松"
+              image={jingTing}
+              note="9,4"
+              price={230}
+              people={2}
+              kind="flat"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning>{t("where-to-stay.part4")}</BookingWarning>
+          <p>{t("where-to-stay.part5")}</p>
         </WhereToStay>
         <Visit title={t("visit.title")}>
           <section>

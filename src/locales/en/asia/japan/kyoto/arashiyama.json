@@ -3,6 +3,7 @@
   "introduction": "The story of our visit to Arashiyama and more particularly to this magnificent bamboo forest. In addition we give you ideas of what to do in this district.",
   "google-description": "The story of our visit to Arashiyama and more particularly to this magnificent bamboo forest. In addition we give you ideas of what to do in this district. We explain to you how to get there? How long to stay and at what period? We also tell you about the price, opening hours and where it's located.",
   "social-network-description": "Arashiyama Bamboo Forest is arguably Japan's most famous bamboo grove, located northwest of Kyoto, near the Katsura River and Arashiyama Monkey Park.",
+  "full-title": "Kyoto: Arashiyama Bamboo Forest | Travel Guide",
   "where": {
     "title": "Where?",
     "part1": "Ukyo Ward, Kyoto"
@@ -37,8 +38,10 @@
   },
   "where-to-stay": {
     "title": "Where to stay in Kyoto, near Arashiyama?",
-    "part1": "Kyoto is particularly expensive. Expect at least $120 per night, up to $200. Check the hotels carefully. There are many different kinds of hotels, and it's not necessarily very well indicated (hotels with a shared room or shared bathroom. Read carefully!). Also, check out smoking and non-smoking rooms. It's one of the few countries where there are many smoking rooms.",
-    "part2": "[Compare and book your hotel in Kyoto](booking-search:Kyoto)."
+    "part1": "Kyoto is particularly expensive. Check the hotels carefully. There are many different kinds of hotels, and it's not necessarily very well indicated (hotels with a shared room or shared bathroom. Read carefully!). Also, check out smoking and non-smoking rooms. It's one of the few countries where there are many smoking rooms.",
+    "part2": "We share three different accommodations to suit different budgets. These hotels are located near Arashiyama. Keep in mind that you don’t have to stay close to this place as you will not face any issue getting around Kyoto.",
+    "part3": "The prices vary enormously depending on the seasons. For this article, we share you hotels/prices for a neutral season, for example in May.",
+    "part4": "You can compare more offers on [Booking](booking-search:Kyoto)."
   },
   "visit": {
     "title": "Visit",

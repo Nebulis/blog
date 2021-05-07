@@ -3,6 +3,7 @@
   "introduction": "Le récit de notre visite à Arashiyama et plus particulièrement de cette magnifique forêt de bambous avec en prime d’autres idées de quoi faire dans ce quartier.",
   "google-description": "Le récit de notre visite à Arashiyama et plus particulièrement de cette magnifique forêt de bambous avec en prime d’autres idées de quoi faire dans ce quartier. Dans cet article on vous indique également Comment y aller ? Combien de temps et à quelle période ? On vous donne également son adresse, les horaires et le prix.",
   "social-network-description": "La forêt de bambous d’Arashiyama est certainement la bambouseraie la plus connue du Japon, elle se situe au nord-ouest de Kyoto, près de la rivière Katsura et du parc des singes d’Arashiyama.",
+  "full-title": "La forêt de Bambous d’Arashiyama à Kyoto | Guide de Voyage",
   "where": {
     "title": "Où ?",
     "part1": "Ukyo Ward, Kyoto"
@@ -37,8 +38,10 @@
   },
   "where-to-stay": {
     "title": "Où dormir à Kyoto, près de Arashiyama ?",
-    "part1": "Kyoto est particulièrement chère pour ce que nous avons pu voir. Partez sur un minimum de 100€ voir 200€ par nuit. Vérifiez bien les hôtels, on trouve un peu de tout et pas forcément très bien indiqué (des hôtels avec chambre commune ou salle de bains commune mais indiqué en tout petit, lisez bien !). Vérifiez aussi les chambres fumeurs et non-fumeurs, c’est l’un des rares pays où nous avons été étonné que cela existe encore autant.",
-    "part2": "[Comparez et réservez votre hôtel à Kyoto](booking-search:Kyoto)."
+    "part1": "Kyoto est particulièrement chère pour ce que nous avons pu voir. Vérifiez bien les hôtels, on trouve un peu de tout et pas forcément très bien indiqué (des hôtels avec chambre commune ou salle de bains commune mais indiqué en tout petit, lisez bien !). Vérifiez aussi les chambres fumeurs et non-fumeurs, c’est l’un des rares pays où nous avons été étonné que cela existe encore autant.",
+    "part2": "On vous propose 3 différents logements, pour s’adapter à différents budgets. Ici nous vous indiquons des hôtels près de Arashiyama, mais gardez en tête que vous n’êtes pas obligés de dormir près de vos lieux de visite, vous n 'aurez aucun mal à vous déplacer à Kyoto.",
+    "part3": "Les prix varient énormément en fonction des saisons, pour cet article on vous indique des hôtels / prix pour une saison neutre, par exemple le mois de mai.",
+    "part4": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:Kyoto)."
   },
   "visit": {
     "title": "La visite",
