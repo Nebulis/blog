@@ -139,7 +139,7 @@ export const menuLinks: NavigationLink[] = [
         id: "animals",
         label: { fr: commonFr.link.discovery.animals, en: commonEn.link.discovery.animals },
         pointOfInterest: ["animals"],
-        published: true,
+        published: false,
         sections: [],
       },
       {

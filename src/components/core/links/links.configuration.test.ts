@@ -39,7 +39,7 @@ const categoriesLinks = () => {
   expect(getLink("monuments")).toMatchObject({ label: { fr: "Monuments", en: "Monuments" }, published: true })
   expect(getLink("nature")).toMatchObject({ label: { fr: "Nature", en: "Nature" }, published: true })
   expect(getLink("cities")).toMatchObject({ label: { fr: "Ville", en: "City" }, published: true })
-  expect(getLink("animals")).toMatchObject({ label: { fr: "Animaux", en: "Animals" }, published: true })
+  expect(getLink("animals")).toMatchObject({ label: { fr: "Animaux", en: "Animals" }, published: false })
   expect(getLink("winter-activities")).toMatchObject({
     label: { en: "Winter activities", fr: "Activités hivernales" },
     published: true,
