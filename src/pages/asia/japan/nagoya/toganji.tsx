@@ -125,7 +125,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               note="7,3"
               price={115}
               people={2}
-              kind="hotel"
+              kind="flat"
             />
           </BookingGygCardContainer>
           <BookingWarning>{t("where-to-stay.part3")}</BookingWarning>
