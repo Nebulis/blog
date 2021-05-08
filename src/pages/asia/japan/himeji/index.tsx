@@ -87,6 +87,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </CityArticleContainer>
           </>
         )}
+        <Divider />
         <SubHomeSectionTwoLines title={t("weather")} country={t("weather-country")} />
         <WeatherForHomePage
           entries={japanWeatherEntries()
