@@ -36,23 +36,23 @@ const categoriesLinks = () => {
     label: { fr: "Organisation", en: "Organisation" },
     published: true,
   })
-  expect(getLink("monuments")).toMatchObject({ label: { fr: "Monuments", en: "Monuments" }, published: false })
-  expect(getLink("nature")).toMatchObject({ label: { fr: "Nature", en: "Nature" }, published: false })
-  expect(getLink("cities")).toMatchObject({ label: { fr: "Ville", en: "City" }, published: false })
-  expect(getLink("animals")).toMatchObject({ label: { fr: "Animaux", en: "Animals" }, published: false })
+  expect(getLink("monuments")).toMatchObject({ label: { fr: "Monuments", en: "Monuments" }, published: true })
+  expect(getLink("nature")).toMatchObject({ label: { fr: "Nature", en: "Nature" }, published: true })
+  expect(getLink("cities")).toMatchObject({ label: { fr: "Ville", en: "City" }, published: true })
+  expect(getLink("animals")).toMatchObject({ label: { fr: "Animaux", en: "Animals" }, published: true })
   expect(getLink("winter-activities")).toMatchObject({
     label: { en: "Winter activities", fr: "Activités hivernales" },
-    published: false,
+    published: true,
   })
   expect(getLink("water-activities")).toMatchObject({
     label: { en: "Water activities", fr: "Activités nautiques" },
-    published: false,
+    published: true,
   })
   expect(getLink("beach-holidays")).toMatchObject({
     label: { fr: "Vacances farniente", en: "Beach Holidays" },
-    published: false,
+    published: true,
   })
-  expect(getLink("discovery")).toMatchObject({ label: { fr: "Découverte", en: "Discovery" }, published: false })
+  expect(getLink("discovery")).toMatchObject({ label: { fr: "Découverte", en: "Discovery" }, published: true })
   expect(getLink("travelling")).toMatchObject({ label: { fr: "Voyage", en: "Travelling" }, published: false })
   expect(getLink("living-foreign-country")).toMatchObject({
     label: { fr: "Vivre à l'étranger", en: "Living abroad" },
@@ -201,7 +201,7 @@ const japanLinks = () => {
       en: "Nagoya : Togan-Ji Temple and its Huge Buddha",
       fr: "Nagoya : Le temple Togan-Ji et son grand Bouddha",
     },
-    published: false,
+    published: true,
   })
   expect(getLink("nijo-castle")).toMatchObject({
     label: { en: "", fr: "" },
