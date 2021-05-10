@@ -8,7 +8,7 @@ const alt = {
   himejiCastle: "Himeji Castle",
   nagoyaCastle: "Nagoya Castle",
   mountFuji: "Mount Fuji",
-  twoDaysInTokyo: "A Day In Tokyo",
+  twoDaysInTokyo: "Two Days In Tokyo",
   daigoji: "Daigoji Temple",
   kinkakuji: "Kinkaku-ji Temple",
   fushimi: "Fushimi Inari Taisha",

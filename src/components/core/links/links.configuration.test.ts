@@ -72,6 +72,11 @@ const categoriesLinks = () => {
   expect(getLink("404")).toMatchObject({ label: { fr: "404", en: "404" }, published: true })
 }
 
+const northAmericaLinks = () => {
+  // south-america countries assertions
+  expect(getLink("united-states")).toMatchObject({ label: { fr: "États-Unis", en: "United States" }, published: false })
+  expect(getLink("times-square")).toMatchObject({ label: { fr: "Times Square", en: "Times Square" }, published: false })
+}
 const southAmericaLinks = () => {
   // south-america countries assertions
   expect(getLink("caribbean")).toMatchObject({ label: { fr: "Caraibes", en: "Caraibes" }, published: false })
@@ -126,7 +131,7 @@ const japanLinks = () => {
     published: true,
   })
   expect(getLink("shibuya-district")).toMatchObject({
-    label: { en: "Tokyo : The crazy Shibuya district", fr: "Tokyo : Le quartier déjanté de Shibuya" },
+    label: { en: "Tokyo: The crazy Shibuya district", fr: "Tokyo : Le quartier déjanté de Shibuya" },
     published: false,
   })
   expect(getLink("ueno-park")).toMatchObject({
@@ -394,6 +399,7 @@ describe("links", () => {
     continentsLinks()
     categoriesLinks()
     southAmericaLinks()
+    northAmericaLinks()
     europeLinks()
     asiaLinks()
     oceaniaLinks()
