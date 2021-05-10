@@ -1,8 +1,9 @@
 {
   "quote": "Shibuya est un arrondissement incontournable de Tokyo. Véritable symbole de la culture, c’est un quartier tendance, jeune et branché. Perdez-vous dans les rues de Shibuya, de jour comme de nuit et vivez quelques jours la vie trépidante de Tokyo.",
   "introduction": "Embarquez avec nous à la découverte du célèbre quartier de Shibuya. On vous raconte notre journée dans cet endroit branché.",
-  "google-description": "Embarquez avec nous à la découverte du célèbre quartier de Shibuya. On vous raconte notre journée dans cet endroit branché. Dans cet article, on vous explique tout ce qu’il faut savoir : Comment s’y rendre ? A quelle saison ? Ainsi que le budget et le temps à prévoir.",
+  "google-description": "Embarquez avec nous à la découverte du célèbre quartier de Shibuya. On vous raconte notre journée dans cet endroit branché en vous expliquant tout ce qu’il faut savoir : Comment s’y rendre ? A quelle saison ? Ainsi que le budget et le temps à prévoir.",
   "social-network-description": "Shibuya est un arrondissement incontournable de Tokyo. Véritable symbole de la culture, c’est un quartier tendance, jeune et branché. Perdez-vous dans les rues de Shibuya, de jour comme de nuit et vivez quelques jours la vie trépidante de Tokyo.",
+  "full-title": "Le quartier déjanté de Shibuya à Tokyo | Guide de Voyage",
   "how": {
     "title": "Comment y aller ?",
     "part1": "#Pour aller au quartier de Shibuya :#",
@@ -12,7 +13,7 @@
     "part5": "prendre la sortie Hachikō depuis la gare de Shibuya",
     "part6": "#Pour rejoindre Takeshita Street :#",
     "part7": "ligne JR Yamanote - Harajuku Station",
-    "part8": "En savoir plus avec notre article sur [les transports au Japon](todo)."
+    "part8": "En savoir plus avec notre article sur [les transports au Japon](transport-japan)."
   },
   "how-long": {
     "title": "Combien de temps ?",
@@ -20,15 +21,17 @@
   },
   "what-time-of-year": {
     "title": "À quelle période ?",
-    "part1": "On le répète dans chacun de nos articles sur le [Japon](todo), mais il n'y a pas de meilleure période à proprement parler pour visiter ce pays. Tout dépend de ce que vous voulez y faire et de quel type de paysage vous voulez voir.",
+    "part1": "On le répète dans chacun de nos articles sur le [Japon](japan), mais il n'y a pas de meilleure période à proprement parler pour visiter ce pays. Tout dépend de ce que vous voulez y faire et de quel type de paysage vous voulez voir.",
     "part2": "Pour la ville de Tokyo, on peut vous conseiller d’y aller plutôt #fin printemps ou début octobre#. Éviter la fraîcheur et éviter la chaleur et l'humidité de l’été.",
-    "part3": "Nous y étions [au printemps](todo) car nous avons visité principalement le Japon pour les cerisiers en fleur, mais pour ce quartier cela n’a vraiment aucun intérêt."
+    "part3": "Nous y étions [au printemps](spring-in-japan) car nous avons visité principalement le Japon pour les cerisiers en fleur, mais pour ce quartier cela n’a vraiment aucun intérêt."
   },
   "where-to-stay": {
     "title": "Où dormir près du quartier de Shibuya ?",
-    "part1": "Tokyo est tellement bien desservie niveau transport que vous n’êtes pas obligé de dormir dans les quartiers que vous visitez. Shibuya est d’ailleurs très animé de jour comme de nuit et si vous voulez un peu de tranquillité on vous conseille d’aller dans des hôtels plus au calme.",
+    "part1": "Tokyo est tellement bien desservie niveau transport que vous n’êtes pas obligé de dormir dans les quartiers que vous visitez. Shibuya est d’ailleurs très animé de jour comme de nuit et si vous voulez un peu de tranquillité on vous conseille d’aller dans des quartiers plus au calme.",
     "part2": "Néanmoins si vous souhaitez quand même dormir dans le quartier de Shibuya, vous trouverez de tout. #Des hôtels, des capsules-hôtels, des auberges de jeunesse et des Airbnb#.",
-    "part3": "N’hésitez pas à comparer les offres sur [Booking](todo)."
+    "part3": "On vous propose 3 différents logements, pour s’adapter à différents budgets.",
+    "part4": "Les prix varient énormément en fonction des saisons, pour cet article on vous indique des hôtels / prix pour une saison neutre, par exemple le mois de mai.",
+    "part5": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:Shibuya)."
   },
   "visit": {
     "title": "Les visites",
@@ -54,7 +57,7 @@
   },
   "visit3": {
     "title": "CENTRE COMMERCIAL ET RUE ANIMÉE",
-    "part1": "Souvent comparé à [Times Square](todo) de New York à cause de ces énormes affiches et pubs sur écrans géants, le carrefour de Shibuya regorge de #magasins de mode# principalement.",
+    "part1": "Souvent comparé à [Times Square](times-square) de New York à cause de ces énormes affiches et pubs sur écrans géants, le carrefour de Shibuya regorge de #magasins de mode# principalement.",
     "part2": "Faites-y du shopping pour découvrir les dernières tendances à la mode de Tokyo. Les magasins ferment d’ailleurs généralement assez tard (entre 20h et même 23h pour certains). Le plus grand centre commercial est #Shibuya 109#.",
     "part3": "Vous pouvez également profitez des innombrables #bar et karaoké# ouvert le soir et qui font de Shibuya un quartier autant animé le soir que la journée."
   },
@@ -66,7 +69,7 @@
     "part4": "Beaucoup de boutiques de gourmandises également. Vous pourrez même y acheter une barbe à papa arc-en-ciel pour vous fondre dans la masse.",
     "part5": "Allez-y le dimanche, vous y verrez de nombreux #cosplays#. Vous en verrez également quelques-uns la semaine, mais bien souvent ils se réunissent le Dimanche ou le week-end.",
     "part6": "Un #Japon décalé# comme je l’aime tant et comme je me l’imagine.",
-    "part7": "N’hésitez pas à aller voir notre article sur nos [deux journées à Tokyo](todo)."
+    "part7": "N’hésitez pas à aller voir notre article sur nos [deux journées à Tokyo](two-days-in-tokyo) pour découvrir quels autres quartiers nous avons visités."
   },
   "conclusion": "A la fois animé, déjanté, branché, moderne et authentique, Shibuya est un quartier rendant grâce à l’image du Japon.",
   "question1": "Vous êtes vous déjà promené dans le quartier de Shibuya ?",
@@ -76,5 +79,4 @@
     "part1": "♡ Coucou les voyageurs ! ♡",
     "part2": "On vous emmène dans les endroits les plus populaires d’un de mes quartiers préférés à Tokyo, le quartier de Shibuya."
   }
-
 }

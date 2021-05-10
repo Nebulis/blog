@@ -46,7 +46,20 @@ export const continentLinks: ContinentLink[] = [
       fr: "Amérique du Nord",
       en: "North America",
     },
-    countries: [],
+    countries: [
+      {
+        id: "united-states",
+        others: [
+          {
+            id: "times-square",
+            label: { fr: "Times Square", en: "Times Square" },
+            published: false,
+          },
+        ],
+        label: { fr: commonFr.country["united-states"].title, en: commonEn.country["united-states"].title },
+        cities: [],
+      },
+    ],
   },
   {
     id: "europe",

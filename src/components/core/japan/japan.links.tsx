@@ -12,6 +12,7 @@ import {
   SensojiCard,
   SpringInJapanCard,
   ToganjiCard,
+  ShibuyaDistrictCard,
 } from "./japan.cards"
 import commonFr from "../../../locales/fr/common.json"
 import commonEn from "../../../locales/en/common.json"
@@ -260,7 +261,8 @@ export const japanLinks: CountryLink = {
             fr: commonFr.country.japan.card["shibuya-district"],
             en: commonEn.country.japan.card["shibuya-district"],
           },
-          published: false,
+          published: new Date("2021-05-22T17:00:00.000+08:00"),
+          card: ShibuyaDistrictCard,
         },
         {
           id: "ueno-park",
