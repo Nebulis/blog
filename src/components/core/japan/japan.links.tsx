@@ -12,6 +12,7 @@ import {
   SensojiCard,
   SpringInJapanCard,
   ToganjiCard,
+  UenoParkCard,
   ShibuyaDistrictCard,
 } from "./japan.cards"
 import commonFr from "../../../locales/fr/common.json"
@@ -271,7 +272,8 @@ export const japanLinks: CountryLink = {
             fr: commonFr.country.japan.card["ueno-park"],
             en: commonEn.country.japan.card["ueno-park"],
           },
-          published: false,
+          published: new Date("2021-05-29T17:00:00.000+08:00"),
+          card: UenoParkCard,
         },
         {
           id: "yasukuni-dori",
