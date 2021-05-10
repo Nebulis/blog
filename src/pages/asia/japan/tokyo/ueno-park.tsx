@@ -6,22 +6,37 @@ import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/japan/tokyo/ueno-park.json"
 import translationEn from "../../../../locales/en/asia/japan/tokyo/ueno-park.json"
-import { JapanBlogLayout, JapanTitle, JapanHeadline } from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanTitle } from "../../../../components/core/japan/japan"
 import {
   How,
   HowLong,
-  HowMuch,
   Introduction,
   SectionContent,
   Visit,
   WhatTimeOfYear,
   When,
+  Where,
+  WhereToHave,
   WhereToStay,
 } from "../../../../components/core/section"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { Divider } from "../../../../components/core/divider"
 import { Quote } from "../../../../components/core/quote"
 import HomeImgUrl from "../../../../images/asia/japan/tokyo/ueno-park/ueno-park-main.jpg"
+import {
+  GroupOfImages,
+  ImageAsLandscape,
+  ImageAsLandscapeOnTheLeft,
+  ImageAsLandscapeOnTheRight,
+  ImageAsPortrait,
+  ImageAsPortraitOnTheLeft,
+  ImageAsPortraitOnTheRight,
+  TwoImagesSameSizeOrToGroup,
+} from "../../../../components/images/layout"
+import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
+import { UenoParkImages } from "../../../../components/images/asia/japan/tokyo/ueno-park"
+import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
+import { buildPixabayUrl } from "../../../../utils"
 
 const namespace = "asia/japan/tokyo/ueno-park"
 const id = "ueno-park"
@@ -36,6 +51,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -43,39 +59,137 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <JapanBlogLayout page={id} location={location}>
         <JapanTitle title={title} linkId={id} />
+        <ImageAsLandscape>
+          <SharedCardJapanImages image="uenoPark" />
+        </ImageAsLandscape>
         <Quote>{t("quote")}</Quote>
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
         <Divider />
-        <When>
+        <Where title={t("where.title")}>
+          <p>{t("where.part1")}</p>
+        </Where>
+        <When title={t("when.title")}>
           <p>{t("when.part1")}</p>
         </When>
-        <How>
-          <p>{t("how.part1")}</p>
+        <How title={t("how.title")}>
+          <ul>
+            <li>{t("how.part1")}</li>
+            <li>{t("how.part2")}</li>
+          </ul>
+          <p>{t("how.part3")}</p>
+          <p>{t("how.part4")}</p>
         </How>
-        <HowLong>
+        <HowLong title={t("how-long.title")}>
           <p>{t("how-long.part1")}</p>
+          <p>{t("how-long.part2")}</p>
+          <p>{t("how-long.part3")}</p>
         </HowLong>
-        <WhatTimeOfYear>
+        <WhatTimeOfYear title={t("what-time-of-year.title")}>
           <p>{t("what-time-of-year.part1")}</p>
+          <p>{t("what-time-of-year.part2")}</p>
+          <p>{t("what-time-of-year.part3")}</p>
         </WhatTimeOfYear>
-        <HowMuch>
-          <p>{t("how-much.part1")}</p>
-        </HowMuch>
-        <WhereToStay>
+        <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
         </WhereToStay>
-        <Visit>
-          <p>{t("visit.part1")}</p>
+        <WhereToHave title={t("where-to-have.title")}>
+          <p>{t("where-to-have.part1")}</p>
+          <p>{t("where-to-have.part2")}</p>
+          <ImageAsPortrait>
+            <UenoParkImages image="restaurant" />
+          </ImageAsPortrait>
+        </WhereToHave>
+        <Visit title={t("visit.title")}>
+          <section>
+            <SectionContent>
+              <p>{t("visit.part1")}</p>
+              <p>{t("visit.part2")}</p>
+              <p>{t("visit.part3")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <UenoParkImages image="park" />
+                </ImageAsLandscape>
+                <ImageAsLandscapeOnTheLeft>
+                  <UenoParkImages image="park2" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <UenoParkImages image="park3" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsPortraitOnTheLeft>
+                  <UenoParkImages image="park4" />
+                </ImageAsPortraitOnTheLeft>
+                <ImageAsPortraitOnTheRight>
+                  <UenoParkImages image="park5" />
+                </ImageAsPortraitOnTheRight>
+              </GroupOfImages>
+              <p>{t("visit.part4")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <UenoParkImages image="park6" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <UenoParkImages image="park7" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part5")}</p>
+              <p>{t("visit.part6")}</p>
+              <p>{t("visit.part7")}</p>
+              <p>{t("visit.part8")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <UenoParkImages image="park8" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <UenoParkImages image="park9" />
+                  <UenoParkImages image="park10" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <UenoParkImages image="park11" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit.part9")}</p>
+              <p>{t("visit.part10")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape
+                  credit={
+                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/yui_ma-406082")}>
+                      yui_ma
+                    </ExternalLinkNotUnderlined>
+                  }
+                >
+                  <UenoParkImages image="park12" />
+                </ImageAsLandscape>
+                <ImageAsLandscape
+                  credit={
+                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/yui_ma-406082")}>
+                      yui_ma
+                    </ExternalLinkNotUnderlined>
+                  }
+                >
+                  <UenoParkImages image="park13" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part11")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <UenoParkImages image="park14" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <UenoParkImages image="park15" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <UenoParkImages image="park16" />
+                  <UenoParkImages image="park17" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <UenoParkImages image="park18" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
         </Visit>
-        <Divider />
-        <section>
-          <JapanHeadline>{t("visit1.title")}</JapanHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit1.part1")}</p>
-          </SectionContent>
-        </section>
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>
@@ -90,7 +204,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
           pinterest={{
             description: t("pinterest"),
-            nodes: i18n.languageCode === "fr" ? [] : [],
+            nodes:
+              i18n.languageCode === "fr"
+                ? [<UenoParkImages image="cardFr1" key="cardFr1" />, <UenoParkImages image="cardFr2" key="cardFr1" />]
+                : [<UenoParkImages image="cardEn1" key="cardEn1" />, <UenoParkImages image="cardEn2" key="cardEn1" />],
           }}
         />
       </JapanBlogLayout>
