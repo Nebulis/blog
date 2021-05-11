@@ -6,37 +6,21 @@ import {
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
-  TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { How, HowLong, HowMuch, Visit, When, Where, WhereToStay } from "../../../../components/core/section"
-import { SensojiPathPeople1Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiPathPeople1Image"
-import { SensojiPathPeople2Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiPathPeople2Image"
-import { SensojiCherryPagodaImage } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiCherryPagodaImage"
-import { SensojiLantern1Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiLantern1Image"
-import { SensojiLantern2Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiLantern2Image"
-import { SensojiTemple1Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiTemple1Image"
-import { SensojiTemple2Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiTemple2Image"
-import { SensojiTemple3Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiTemple3Image"
-import { SensojiTemple4Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiTemple4Image"
-import { SensojiTemple5Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiTemple5Image"
-import { SensojiPagoda1Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiPagoda1Image"
-import { SensojiPagoda2Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiPagoda2Image"
-import { SensojiGarden1Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiGarden1Image"
-import { SensojiGarden2Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiGarden2Image"
-import { SensojiGarden3Image } from "../../../../components/images/asia/japan/tokyo/sensoji/sensojiGarden3Image"
-import { Conclusion } from "../../../../components/core/conclusion"
-import { css } from "@emotion/react"
-import { largeStart } from "../../../../components/core/variables"
 import {
-  JapanBlogLayout,
-  JapanDivider,
-  JapanExternalLink,
-  JapanLine,
-  JapanLink,
-  JapanTitle,
-  SensojiQuote,
-} from "../../../../components/core/japan/japan"
+  How,
+  HowLong,
+  HowMuch,
+  Introduction,
+  SectionContent,
+  Visit,
+  When,
+  Where,
+  WhereToStay,
+} from "../../../../components/core/section"
+import { Conclusion } from "../../../../components/core/conclusion"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 import i18n from "i18next"
@@ -44,6 +28,10 @@ import translationFr from "../../../../locales/fr/asia/japan/tokyo/sensoji.json"
 import translationEn from "../../../../locales/en/asia/japan/tokyo/sensoji.json"
 import HomeImgUrl from "../../../../images/asia/japan/tokyo/sensoji/sensoji-main.jpg"
 import { useCustomTranslation } from "../../../../i18n-hook"
+import { Quote } from "../../../../components/core/quote"
+import { Divider } from "../../../../components/core/divider"
+import { Comments } from "../../../../components/core/comments"
+import { SensojiImages } from "../../../../components/images/asia/japan/tokyo/sensoji"
 
 const namespace = "asia/japan/tokyo/sensoji"
 const id = "sensoji"
@@ -51,12 +39,13 @@ i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { t } = useCustomTranslation([namespace, "common"])
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.${id}`)
   return (
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -67,166 +56,184 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <ImageAsLandscape>
           <SharedCardJapanImages image="sensoji" />
         </ImageAsLandscape>
-        <SensojiQuote />
-        <Where>2 Chome-3-1 Asakusa, Taito City, Tokyo</Where>
-        <When>Tous les jours 24h/24h</When>
-        <When>Tous les jours de 9h à 17h (16h pour les dernières entrées)</When>
-        <How>
-          <p>
-            Depuis Tokyo Station, prendre la{" "}
-            <JapanLine
-              href="https://www.google.com/maps/dir/?api=1&origin=Tokyo%20Station%2C%201%20Chome%20Marunouchi%2C%20Chiyoda%20City%2C%20Tokyo%2C%20Japan&destination=Asakusa%20Station%2C%203%20Chome-1-11%20Nishiasakusa%2C%20Taito%20City%2C%20Tokyo%20111-0035%2C%20Japan &travelmode=transit"
-              css={css`
-                background-color: #ed9927;
-                color: black;
-              `}
-            >
-              Ginza Line
-            </JapanLine>{" "}
-            jusqu’à Asakusa Station (14 mins, 8 arrêts).
-          </p>
-          <p>Prendre la sortie 3 et continuer tout droit sur 100m, l’entrée se trouvera sur votre droite.</p>
+        <Quote>{t("quote")}</Quote>
+        <Divider />
+        <Introduction>{t("introduction")}</Introduction>
+        <Divider />
+        <Where title={t("where.title")}>
+          <p>{t("where.part1")}</p>
+        </Where>
+        <When title={t("when.title")}>
+          <p>{t("when.part1")}</p>
+        </When>
+        <How title={t("how.title")}>
+          <p>{t("how.part1")}</p>
+          <p>{t("how.part2")}</p>
         </How>
-        <HowLong>
-          <p>Une demi-journée.</p>
-          <p>
-            Au premier abord on vous aurait plutôt conseillé d’y aller le matin ou en fin d’après midi, cela dit nous y
-            sommes allés vers 18h et il y avait encore énormément de mondes.
-          </p>
+        <HowLong title={t("how-long.title")}>
+          <p>{t("how-long.part1")}</p>
+          <p>{t("how-long.part2")}</p>
+          <p>{t("how-long.part3")}</p>
         </HowLong>
-        <HowMuch>
-          <p>Gratuit</p>
+        <HowMuch title={t("how-much.title")}>
+          <p>{t("how-much.part1")}</p>
         </HowMuch>
-        <WhereToStay>
-          <p>
-            Tokyo est immense et ce n’est pas simple de conseiller un hôtel pour une si grande ville. Nous avons passé
-            deux nuits à Tokyo à deux endroits différents. Tout dépend de ce que vous allez visiter où faire mais nous
-            vous conseillons quand même de prendre un hôtel dans un coin reculé des grandes rues,{" "}
-            <JapanLink action="hide" to="transport-japan">
-              les transports
-            </JapanLink>{" "}
-            sont très efficaces à Tokyo et rien ne vous empêchera de les prendre pour aller à diverses endroits.
-          </p>
-          <ul>
-            <li>
-              <b>Quartier UENO :</b> Nous avons dormi à{" "}
-              <JapanExternalLink href="https://www.booking.com/hotel/jp/ueno-touganeya.fr.html?label=gen173nr-1DCAEoggI46AdIM1gEaE2IAQGYAQ24ARfIAQzYAQPoAQGIAgGoAgO4AozLzO0FwAIB">
-                Ueno Touganeya Hotel,
-              </JapanExternalLink>{" "}
-              parfaitement bien situé, tout proche du métro dans une rue un peu perdu et donc très calme. Vous n’aurez
-              pas de mal à trouver des restaurants juste à côté.
-            </li>
-            <li>
-              <b>Quartier Shinjuku :</b> Quartier très animé, nous avons décidé de nous éloigner un peu, à 15 minutes à
-              pied nous avons réservé à{" "}
-              <JapanExternalLink href="https://www.booking.com/hotel/jp/listel-shinjuku.fr.html?label=gen173nr-1DCAEoggI46AdIM1gEaE2IAQGYAQ24ARfIAQzYAQPoAQGIAgGoAgO4AozLzO0FwAIB">
-                Hotel Listel Shinjuku,
-              </JapanExternalLink>{" "}
-              la chambre est plutôt grande comparé à la moyenne du Japon, le restaurant n’est pas top mais le but était
-              d’aller passer la soirée dans les rues animées et d’être au calme pour dormir donc parfait de ce côté là.
-            </li>
-          </ul>
+        <WhereToStay title={t("where-to-stay.title")}>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
+          <p>{t("where-to-stay.part3")}</p>
         </WhereToStay>
-        <Visit>
-          <p>
-            La nuit tombe, le soleil disparaît, il commence à faire froid et la pluie arrive, des péripéties qui ne nous
-            empêche pas de venir visiter ce temple dont tout le monde parle.
-          </p>
-          <p>
-            On arrive devant une première porte immense qui est l’entrée principale de la visite. D’un rouge éclatant
-            elle nous invite à entrer pour découvrir cette grande allée remplie de monde.
-          </p>
-          <GroupOfImages>
-            <ImageAsLandscapeOnTheLeft>
-              <SensojiPathPeople1Image />
-            </ImageAsLandscapeOnTheLeft>
-            <ImageAsLandscapeOnTheRight>
-              <SensojiPathPeople2Image />
-            </ImageAsLandscapeOnTheRight>
-          </GroupOfImages>
-          <p>
-            L’allée est une sorte de petit marché, stands de souvenirs et de nourritures, on ne s’y attarde pas trop vu
-            le temps mais ça a l’air d’être un véritable fourre-tout de souvenirs et de babioles en tout genre.
-          </p>
-          <p>
-            On aperçoit de loin sur notre gauche la pagode au 5 étages, cachés derrière les quelques cerisiers en
-            fleurs.
-          </p>
-          <ImageAsPortrait>
-            <SensojiCherryPagodaImage />
-          </ImageAsPortrait>
-          <p>On marche le long du chemin, où les lanternes surplombent toute l’allée.</p>
-          <p>
-            Cela nous emmène à une deuxième porte tout aussi impressionnante, dur d’en profiter avec un monde pareil,
-            mais bon nous sommes à Tokyo et on savait à quoi s’en tenir.
-          </p>
-          <GroupOfImages>
-            <ImageAsLandscapeOnTheLeft>
-              <SensojiLantern1Image />
-            </ImageAsLandscapeOnTheLeft>
-            <ImageAsLandscapeOnTheRight>
-              <SensojiLantern2Image />
-            </ImageAsLandscapeOnTheRight>
-            <TwoImagesSameSizeOrToGroup>
-              <SensojiTemple1Image />
-              <SensojiTemple2Image />
-            </TwoImagesSameSizeOrToGroup>
-          </GroupOfImages>
-          <p>
-            On arrive enfin au temple, malgré le monde, on est quand même bien content de s’être déplacé, les immenses
-            portes sont magnifiques, le temple également, on aurait pu passer des heures à tout observer dans les
-            moindres détails.
-          </p>
-          <GroupOfImages>
-            <ImageAsPortrait>
-              <SensojiTemple3Image />
-            </ImageAsPortrait>
-            <TwoImagesSameSize>
-              <SensojiTemple4Image />
-              <SensojiTemple5Image />
-            </TwoImagesSameSize>
-          </GroupOfImages>
-          <p>
-            Une fois le temple visité on en profite pour aller faire un tour au jardin qui est juste à côté, en passant
-            par la pagode que nous apercevions de loin.
-          </p>
-          <TwoImagesSameSize
-            css={css`
-              @media (min-width: ${largeStart}) {
-                width: 80%;
-              }
-            `}
-          >
-            <SensojiPagoda1Image />
-            <SensojiPagoda2Image />
-          </TwoImagesSameSize>
-          <p>
-            Soudain on a l’impression d’être parti à des kilomètres du temple tellement c’est calme. Petit temple,
-            mémorial, lac, un jardin petit à côté de l’immensité du temple de Senso-Ji mais qui fait un plus à ce lieu
-            si incontournable.
-          </p>
-          <GroupOfImages>
-            <ImageAsPortrait>
-              <SensojiGarden1Image />
-            </ImageAsPortrait>
-            <TwoImagesSameSize
-              css={css`
-                @media (min-width: ${largeStart}) {
-                  width: 80%;
-                }
-              `}
-            >
-              <SensojiGarden2Image />
-              <SensojiGarden3Image />
-            </TwoImagesSameSize>
-          </GroupOfImages>
+        <Visit title={t("visit.title")}>
+          <section>
+            <SectionContent>
+              <p>{t("visit.part1")}</p>
+              <p>{t("visit.part2")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit1.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit1.part1")}</p>
+              <p>{t("visit1.part2")}</p>
+              <p>{t("visit1.part3")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit2.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit2.part1")}</p>
+              <p>{t("visit2.part2")}</p>
+              <p>{t("visit2.part3")}</p>
+              <ImageAsLandscape>
+                <SensojiImages image="sensojiComplex" />
+              </ImageAsLandscape>
+              <p>{t("visit2.part4")}</p>
+              <p>{t("visit2.part5")}</p>
+              <p>{t("visit2.part6")}</p>
+              <p>{t("visit2.part7")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <SensojiImages image="sensojiComplex2" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <SensojiImages image="sensojiComplex3" />
+                  <SensojiImages image="sensojiComplex4" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <SensojiImages image="sensojiComplex5" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit2.part8")}</p>
+              <p>{t("visit2.part9")}</p>
+              <p>{t("visit2.part10")}</p>
+              <p>{t("visit2.part11")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <SensojiImages image="sensojiComplex6" />
+                </ImageAsLandscape>
+                <ImageAsLandscapeOnTheLeft>
+                  <SensojiImages image="sensojiComplex7" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <SensojiImages image="sensojiComplex8" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsLandscape>
+                  <SensojiImages image="sensojiComplex9" />
+                </ImageAsLandscape>
+                <ImageAsLandscapeOnTheLeft>
+                  <SensojiImages image="sensojiComplex10" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <SensojiImages image="sensojiComplex11" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsPortrait>
+                  <SensojiImages image="sensojiComplex12" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit2.part12")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <SensojiImages image="sensojiComplex13" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <SensojiImages image="sensojiComplex14" />
+                  <SensojiImages image="sensojiComplex15" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <SensojiImages image="sensojiComplex16" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit2.part13")}</p>
+              <p>{t("visit2.part14")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <SensojiImages image="sensojiComplex17" />
+                  <SensojiImages image="sensojiComplex18" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <SensojiImages image="sensojiComplex19" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit3.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit3.part1")}</p>
+              <p>{t("visit3.part2")}</p>
+              <p>{t("visit3.part3")}</p>
+              <p>{t("visit3.part4")}</p>
+              <GroupOfImages>
+                <ImageAsLandscapeOnTheLeft>
+                  <SensojiImages image="sensojiGarden" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <SensojiImages image="sensojiGarden2" />
+                </ImageAsLandscapeOnTheRight>
+                <TwoImagesSameSizeOrToGroup>
+                  <SensojiImages image="sensojiGarden3" />
+                  <SensojiImages image="sensojiGarden4" />
+                </TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSizeOrToGroup>
+                  <SensojiImages image="sensojiGarden5" />
+                  <SensojiImages image="sensojiGarden6" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <SensojiImages image="sensojiGarden7" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit3.part5")}</p>
+              <p>{t("visit3.part6")}</p>
+              <p>{t("visit3.part7")}</p>
+            </SectionContent>
+          </section>
         </Visit>
         <Conclusion>
-          Le troisième week-end du mois de Mai on y célèbre le Sanja Matsuri qui attire énormément de monde, Japonais
-          comme étrangers. Vous pourrez y observer des Yakuzas, faire parti du défilé ou encore danser tout ça dans le
-          respect le plus total puisqu’il ne faut pas oublier que c’est une fête religieuse.
+          <p>{t("conclusion")}</p>
+          <ul>
+            <li>{t("question1")}</li>
+            <li>{t("question2")}</li>
+          </ul>
         </Conclusion>
-        <JapanDivider />
+        <Divider />
+        <Comments
+          collectionName={namespace}
+          location={location}
+          facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+          pinterest={{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? [<SensojiImages image="cardFr1" key="cardFr1" />, <SensojiImages image="cardFr2" key="cardFr1" />]
+                : [<SensojiImages image="cardEn1" key="cardEn1" />, <SensojiImages image="cardEn2" key="cardEn1" />],
+          }}
+        />
       </JapanBlogLayout>
     </>
   )

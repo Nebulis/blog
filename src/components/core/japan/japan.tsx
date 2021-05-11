@@ -33,13 +33,6 @@ export const JapanQuote = styled(Quote)`
     color: #ffb7c5;
   }
 `
-
-export const SensojiQuote = () => (
-  <JapanQuote>
-    Le temple de Senso-Ji serait le plus vieux temple de Tokyo, situé dans le quartier de Asakusa, il regroupe chaque
-    jour des milliers de visiteurs.
-  </JapanQuote>
-)
 export const FujiQuote = () => (
   <JapanQuote>
     Le Mont Fuji est un véritable symbole au Japon. Par beau temps il serait même visible de Tokyo. Entouré de cinq

@@ -1,8 +1,9 @@
 {
   "quote": "Le temple Senso-Ji est le plus vieux temple de Tokyo, c’est un temple bouddhiste situé dans le quartier populaire d'Asakusa, il regroupe chaque jour des milliers de visiteurs et est certainement l’un des temples les plus photographiés.",
   "introduction": "Découvrez à travers notre récit de voyage et nos photos, ce sanctuaire majestueux.",
-  "google-description": "Dans cet article, on répond à toutes vos questions : Comment y aller ? Quand ? Combien de temps et à quelle période ? Le tout en vous partageant notre récit de voyage et nos photos de ce sanctuaire majestueux qu’est le temple Senso-ji.",
+  "google-description": "On vous partage notre récit de voyage et nos photos de ce sanctuaire majestueux qu’est le temple Senso-ji, le plus vieux temple de Tokyo. Dans cet article, on répond également à toutes vos questions : Comment y aller ? Quand ? Combien de temps et à quelle période ?",
   "social-network-description": "Le temple Senso-Ji est le plus vieux temple de Tokyo, c’est un temple bouddhiste situé dans le quartier populaire d'Asakusa, il regroupe chaque jour des milliers de visiteurs et est certainement l’un des temples les plus photographiés.",
+  "full-title": "Senso-ji, le plus vieux temple de Tokyo | Guide de Voyage",
   "where": {
     "title": "Où ?",
     "part1": "2 Chome-3-1 Asakusa, Taito City, Tokyo"
@@ -13,7 +14,7 @@
   },
   "how": {
     "title": "Comment y aller ?",
-    "part1": "Depuis Tokyo Station, prendre la Ginza Line jusqu’à Asakusa Station (14 mins, 8 arrêts).",
+    "part1": "Depuis Tokyo Station, prendre la [Ginza Line](japan-line:#000000:#ed9927:https://www.google.com/maps/dir/?api=1&origin=Tokyo%20Station%2C%201%20Chome%20Marunouchi%2C%20Chiyoda%20City%2C%20Tokyo%2C%20Japan&destination=Asakusa%20Station%2C%203%20Chome-1-11%20Nishiasakusa%2C%20Taito%20City%2C%20Tokyo%20111-0035%2C%20Japan &travelmode=transit) jusqu’à Asakusa Station (14 mins, 8 arrêts).",
     "part2": "Prendre la sortie 3 et continuer tout droit sur 100m, l’entrée se trouvera sur votre droite."
   },
   "how-long": {
@@ -27,20 +28,20 @@
     "part1": "Gratuit"
   },
   "where-to-stay": {
-    "title": "Où dormir à Tokyo ?",
+    "title": "Où dormir dans le quartier d’Asakusa ?",
     "part1": "Tokyo est immense et ce n’est pas simple de conseiller un hôtel pour une si grande ville. Nous avons passé deux nuits à Tokyo à deux endroits différents.",
-    "part2": "Tout dépend de ce que vous allez visiter où faire mais nous vous conseillons quand même de prendre un hôtel dans un coin reculé des grandes rues, [les transports au Japon](todo) sont très efficaces et rien ne vous empêchera de les prendre pour aller à divers endroits.",
-    "part3": "Comparez les offres sur [Booking](todo)."
+    "part2": "Tout dépend de ce que vous allez visiter ou faire mais nous vous conseillons quand même de prendre un hôtel dans un coin reculé des grandes rues, [les transports au Japon](transport-japan) sont très efficaces et rien ne vous empêchera de les prendre pour aller à divers endroits.",
+    "part3": "Comparez les offres sur [Booking](booking-search:Asakusa)."
   },
   "visit": {
     "title": "La visite",
     "part1": "La nuit tombe, le soleil disparaît, il commence à faire froid et la pluie arrive, des péripéties qui ne nous empêchent pas de venir visiter ce temple dont tout le monde parle.",
-    "part2": "On aurait préféré avoir un plus beau temps pour avoir de plus belles photos de souvenirs mais bon ce sont les aléas des voyages. Et puis il faut avouer que pour un mois d'avril, on a vraiment eu un temps parfait tout au long de [notre séjour au Japon](todo)."
+    "part2": "On aurait préféré avoir un plus beau temps pour avoir de plus belles photos de souvenirs mais bon ce sont les aléas des voyages. Et puis il faut avouer que pour un mois d'avril, on a vraiment eu un temps parfait tout au long de [notre séjour au Japon](spring-in-japan)."
   },
   "visit1": {
     "title": "UN PEU D’HISTOIRE",
     "part1": "Le temple fut initialement #créé en 645#, il est dédié à la déesse Kannon, déesse très populaire au Japon car elle est associée à la compassion.",
-    "part2": "Malheureusement détruit lors de la Seconde Guerre mondiale, comme beaucoup de monuments du Japon, le [château de Nagoya](todo) par exemple mais il y a en a malheureusement beaucoup d’autres.  Le monument actuel est une reconstruction de 1958.",
+    "part2": "Malheureusement détruit lors de la Seconde Guerre mondiale, comme beaucoup de monuments du Japon, le [château de Nagoya](nagoya-castle) par exemple mais il y a en a malheureusement beaucoup d’autres.  Le monument actuel est une reconstruction de 1958.",
     "part3": "Le temple Senso-Ji est donc #le plus vieux temple de Tokyo# mais il est également le temple le plus visité chaque année. Ne vous attendez donc pas à y trouver de la tranquillité. Que ce soit due aux touristes ou aux habitants de Tokyo, la foule y est impressionnante."
   },
   "visit2": {
@@ -63,7 +64,7 @@
   "visit3": {
     "title": "LE JARDIN",
     "part1": "Soudain on a l’impression d’être parti à des kilomètres du temple tellement c’est calme. On se retrouve vraiment comme à l'extérieur de la foule, voire même à l'extérieur du temple.",
-    "part2": "Petit temple , mémorial, étang avec des carpes. #Un petit jardin à côté de l’immensité du temple de Senso-Ji# mais qui fait un plus à ce lieu si incontournable.",
+    "part2": "Petit temple, mémorial, étang avec des carpes. #Un petit jardin à côté de l’immensité du temple de Senso-Ji# mais qui fait un plus à ce lieu si incontournable.",
     "part3": "Le jardin n’est pas très grand, mais plutôt joli. Il se visite en une dizaine de minutes.",
     "part4": "Au printemps, #la floraison des cerisiers# embellit le décor.",
     "part5": "N’hésitez pas à visiter ce sanctuaire si vous n’avez pas l'opportunité de sortir de Tokyo.",
