@@ -168,11 +168,11 @@ exports[`french pages exports meta for public/asia/japan/tokyo/index.html correc
 
 exports[`french pages exports meta for public/asia/japan/tokyo/index.html correctly: title 1`] = `"Tokyo | Guide de Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: meta-description 1`] = `"Dans cet article, on répond à toutes vos questions : Comment y aller ? Quand ? Combien de temps et à quelle période ? Le tout en vous partageant notre récit de voyage et nos photos de ce sanctuaire majestueux qu’est le temple Senso-ji."`;
+exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: meta-description 1`] = `"On vous partage notre récit de voyage et nos photos de ce sanctuaire majestueux qu’est le temple Senso-ji, le plus vieux temple de Tokyo. Dans cet article, on répond également à toutes vos questions : Comment y aller ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: social-network 1`] = `"Le temple Senso-Ji est le plus vieux temple de Tokyo, c’est un temple bouddhiste situé dans le quartier populaire d'Asakusa, il regroupe chaque jour des milliers de visiteurs et est certainement l’un des temples les plus photographiés."`;
 
-exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: title 1`] = `"Sensō-ji, le plus vieux temple de Tokyo | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/tokyo/sensoji/index.html correctly: title 1`] = `"Senso-ji, le plus vieux temple de Tokyo | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/japan/tokyo/shibuya-district/index.html correctly: meta-description 1`] = `"Embarquez avec nous à la découverte du célèbre quartier de Shibuya. On vous raconte notre journée dans cet endroit branché en vous expliquant tout ce qu’il faut savoir : Comment s’y rendre ? A quelle saison ? Ainsi que le budget et le temps à prévoir."`;
 

@@ -245,7 +245,7 @@ export const japanLinks: CountryLink = {
             fr: commonFr.country.japan.card.sensoji,
             en: commonEn.country.japan.card.sensoji,
           },
-          published: false,
+          published: new Date("2021-06-05T17:00:00.000+08:00"),
           card: SensojiCard,
         },
         {

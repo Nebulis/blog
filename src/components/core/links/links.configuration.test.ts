@@ -132,14 +132,14 @@ const japanLinks = () => {
   })
   expect(getLink("shibuya-district")).toMatchObject({
     label: { en: "Tokyo: The crazy Shibuya district", fr: "Tokyo : Le quartier déjanté de Shibuya" },
-    published: false,
+    published: true,
   })
   expect(getLink("ueno-park")).toMatchObject({
     label: {
       en: "Ueno Park in Tokyo: The meeting place of Sakuras",
       fr: "Parc Ueno à Tokyo : Le rendez-vous des Sakuras",
     },
-    published: false,
+    published: true,
   })
   expect(getLink("yasukuni-dori")).toMatchObject({
     label: {
@@ -149,7 +149,7 @@ const japanLinks = () => {
     published: false,
   })
   expect(getLink("sensoji")).toMatchObject({
-    label: { fr: "Sensō-ji, le plus vieux temple de Tokyo", en: "Sensō-ji,the oldest Temple in Tokyo" },
+    label: { fr: "Sensō-ji, le plus vieux temple de Tokyo", en: "Sensō-ji, the oldest Temple in Tokyo" },
     published: false,
   })
   expect(getLink("hamarikyu-garden")).toMatchObject({

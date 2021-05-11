@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import React, { FunctionComponent, useRef, useState, useEffect } from "react"
+import React, { FunctionComponent, useEffect, useRef, useState } from "react"
 import ReactDOM from "react-dom"
 import { useWindowMousePosition } from "../hooks/useWindowMousePosition"
 import { useWindowSize } from "../hooks/useWindowSize"
