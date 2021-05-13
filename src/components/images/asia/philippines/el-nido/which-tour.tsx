@@ -6,11 +6,7 @@ import { ExtraImageProps } from "../../../../../types/shared"
 const alt = {
   boat: "El Nido Which Tour Boat",
   speedboat: "El Nido Which Tour SpeedBoat",
-  bigLagoon: "El Nido Which Tour Big Lagoon",
-  secretLagoon1: "El Nido Which Tour Secret Lagoon",
   secretLagoon2: "El Nido Which Tour Secret Lagoon",
-  shimizuIsland: "El Nido Which Tour Shimizu Island",
-  commandoBeach1: "El Nido Which Tour Commando Beach",
   commandoBeach2: "El Nido Which Tour Commando Beach",
   entalulaBeach: "El Nido Which Tour Entalula Beach",
   snakeIsland1: "El Nido Which Tour Snake Island",
@@ -46,30 +42,14 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
     query {
       boat: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-boat.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       speedboat: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-speedboat.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      bigLagoon: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-big-lagoon.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      secretLagoon1: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-secret-lagoon1.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -83,29 +63,11 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      shimizuIsland: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-shimizu-island.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      commandoBeach1: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-commando-beach1.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       commandoBeach2: file(
         relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-commando-beach2.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -141,7 +103,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-pinagbuyutan-island.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -150,7 +112,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-yumyum-island.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -159,7 +121,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-cudugnon-cave.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

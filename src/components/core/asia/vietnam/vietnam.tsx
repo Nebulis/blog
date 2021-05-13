@@ -81,7 +81,7 @@ const vietnamLayout = `
         border: 6px solid #f8c471;
       }
     }
-    .booking-card {
+    .booking-card, .get-your-guide-card {
       .information, .photo-container {
         border-color: ${vietnamPrimaryColorDarker}
       }

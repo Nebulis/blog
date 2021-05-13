@@ -1,10 +1,11 @@
 import { ExternalLink } from "./links/link"
-import { vietnamPrimaryColorDarker } from "./asia/vietnam/vietnam.colors"
 import { useCustomTranslation } from "../../i18n-hook"
 import { css } from "@emotion/react"
 import React from "react"
 import { Lang } from "./links/links.types"
 import { FaClock, FaUser } from "react-icons/all"
+import { primaryDarkColor } from "./variables"
+import { DurationUnit, transformDurationUnit } from "../../utils"
 
 const buildGetYourGuideUrl = ({ lang, slug = "" }: { lang: Lang; slug: string }) =>
   `https://www.getyourguide.${lang === "fr" ? "fr" : "com"}/${slug}`
@@ -40,30 +41,17 @@ const Rating: React.FunctionComponent<{ value: number; to: string }> = ({ value,
   )
 }
 
-type DurationUnit = "day" | "hour"
-
-const transformDurationUnit = (value: number, unit: DurationUnit, lang: Lang) => {
-  let duration = ""
-  if (unit === "day") {
-    duration = lang === "fr" ? "Jour" : "Day"
-  }
-  if (unit === "hour") {
-    duration = lang === "fr" ? "Heure" : "Hour"
-  }
-  if (value > 1) duration += "s"
-  return duration
-}
-
 interface BaseProps {
   to: string
   title: string
   image: string
-  rating: number
+  rating?: number
   certified?: boolean
   price: number
   duration: { value: number; unit: DurationUnit }
   bestseller?: boolean
   groupSize?: "none" | "small"
+  groupType?: "public" | "private"
 }
 
 const internalCardStyle = css`
@@ -80,7 +68,7 @@ const internalCardStyle = css`
   .photo-container {
     // no idea why it's needed but otherwise there is an extra space which prevents the activities to be correctly centered
     height: 200px;
-    border: 4px solid ${vietnamPrimaryColorDarker};
+    border: 4px solid ${primaryDarkColor};
     border-top: none;
   }
   .photo-container img {
@@ -98,7 +86,7 @@ const internalCardStyle = css`
   }
   .information {
     background-color: whitesmoke;
-    border: 4px solid ${vietnamPrimaryColorDarker};
+    border: 4px solid ${primaryDarkColor};
     border-bottom: none;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -114,7 +102,7 @@ const internalCardStyle = css`
     margin-right: 0.5rem;
   }
   .activity {
-    background-color: ${vietnamPrimaryColorDarker};
+    background-color: ${primaryDarkColor};
     padding: 4px 6px 3px; // more padding at the top because of uppercase
     border-radius: 4px;
     font-size: 0.7rem;
@@ -187,7 +175,19 @@ export const InternalCard: React.FunctionComponent<
     linkBuilder: (data: { lang: Lang; slug: string }) => string
     Image: React.ReactElement
   }
-> = ({ to, title, rating, certified, price, duration, bestseller, Image, linkBuilder, groupSize = "none" }) => {
+> = ({
+  to,
+  title,
+  rating,
+  certified,
+  price,
+  duration,
+  bestseller,
+  Image,
+  linkBuilder,
+  groupSize = "none",
+  groupType,
+}) => {
   const { i18n } = useCustomTranslation()
   const computedPrice = i18n.language === "fr" ? `${price}€` : `$${Math.trunc(price * 1.2)}`
   return (
@@ -203,9 +203,7 @@ export const InternalCard: React.FunctionComponent<
       <div className="internal-travel-card-container">
         <div className="information">
           <div className="title b tc mt2 mb1">{title}</div>
-          <div className="stars tc pb1">
-            <Rating value={rating} to={to} />
-          </div>
+          <div className="stars tc pb1">{rating && <Rating value={rating} to={to} />}</div>
         </div>
         <div className="photo-container relative">
           {Image}
@@ -247,6 +245,10 @@ export const InternalCard: React.FunctionComponent<
         {groupSize === "small" && (
           <span className="activity">{i18n.languageCode === "fr" ? "petit groupe" : "small group"}</span>
         )}
+        {groupType === "public" && <span className="activity">Public</span>}
+        {groupType === "private" && (
+          <span className="activity">{i18n.languageCode === "fr" ? "privé" : "private"}</span>
+        )}
       </div>
     </ExternalLink>
   )
@@ -272,6 +274,17 @@ export const TripadvisorCard: React.FunctionComponent<BaseProps> = (props) => {
     <InternalCard
       {...props}
       linkBuilder={buildTripadvisorUrl}
+      Image={<img alt={props.title} src={`${props.image}`} className="w-100" />}
+    />
+  )
+}
+
+const basicLinkBuilder = ({ slug }: { slug: string }) => slug
+export const BasicTourCard: React.FunctionComponent<BaseProps> = (props) => {
+  return (
+    <InternalCard
+      {...props}
+      linkBuilder={basicLinkBuilder}
       Image={<img alt={props.title} src={`${props.image}`} className="w-100" />}
     />
   )

@@ -15,8 +15,6 @@ import whoEn from "../../locales/en/about/who.json"
 import { PageProps } from "gatsby"
 import { PrimaryBlogLayoutWithDrawer } from "../../components/layout/main-layout"
 
-// redirection page non publiee :)
-
 const namespace = "about/who"
 i18n.addResourceBundle("fr", namespace, whoFr)
 i18n.addResourceBundle("en", namespace, whoEn)

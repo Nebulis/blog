@@ -120,10 +120,10 @@ const japanLinks = () => {
     published: false,
   })
 
-  expect(getLink("tokyo")).toMatchObject({ label: { fr: "Tokyo", en: "Tokyo" }, published: false })
+  expect(getLink("tokyo")).toMatchObject({ label: { fr: "Tokyo", en: "Tokyo" }, published: true })
   expect(getLink("two-days-in-tokyo")).toMatchObject({
     label: { en: "Two Days In Tokyo", fr: "Deux journées à Tokyo" },
-    published: false,
+    published: true,
   })
   expect(getLink("shibuya-district")).toMatchObject({
     label: { en: "Tokyo : The crazy Shibuya district", fr: "Tokyo : Le quartier déjanté de Shibuya" },

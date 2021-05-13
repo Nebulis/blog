@@ -72,7 +72,7 @@ const philippinesLayout = `
     .all-articles-container {
       ${buttonStyle}
     }
-    .booking-card {
+    .booking-card, .get-your-guide-card {
       .information, .photo-container {
         border-color: ${philippinesPrimaryColorDarker}
       }

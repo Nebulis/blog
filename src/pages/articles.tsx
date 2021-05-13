@@ -34,7 +34,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   })
   return (
     <>
-      <SEO title={title} location={location} />
+      <SEO title={title} location={location} fullTitle={t("full-title")} />
       <BlogLayoutWithDrawer page="articles" location={location}>
         <MainTitleSection>{title}</MainTitleSection>
         <PrimaryDivider className="mb0" />

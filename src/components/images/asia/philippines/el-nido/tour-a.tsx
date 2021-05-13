@@ -60,28 +60,28 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
     query {
       bigLagoon: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       bigLagoon2: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       bigLagoon3: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       bigLagoon4: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -95,14 +95,14 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       }
       bigLagoon6: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-big-lagoon6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       secretLagoon: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -144,7 +144,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       }
       secretLagoon7: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-secret-lagoon7.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -165,21 +165,21 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       }
       shimizuIsland: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-shimizu-island.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       shimizuIsland2: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-shimizu-island2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       shimizuIsland3: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-shimizu-island3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -193,7 +193,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       }
       payongBeach: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-payong-beach.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -207,14 +207,14 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
       }
       payongBeach3: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-payong-beach3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       payongBeach4: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-payong-beach4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -239,7 +239,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
         relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-seven-commando-beach2.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -248,7 +248,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
         relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-seven-commando-beach3.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [600, 1200]) {
+          fluid(maxWidth: 1800, quality: 90, srcSetBreakpoints: [600, 1200]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -257,7 +257,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
         relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-seven-commando-beach4.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -266,7 +266,7 @@ export const TourAImages: React.FunctionComponent<ExtraImageProps & { image: key
         relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-seven-commando-beach5.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

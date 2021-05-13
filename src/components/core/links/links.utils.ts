@@ -10,7 +10,7 @@ import {
   NavigationLink,
 } from "./links.types"
 import { cachedLinks, isPublished, continentLinks } from "./links.configuration"
-import { PointOfInterest } from "../../../types/shared"
+import { PointOfInterest, Season } from "../../../types/shared"
 
 type Day =
   | 0
@@ -170,6 +170,7 @@ export const getArticles = ({
   kind = "none",
   tags = [],
   pointOfInterests = [],
+  seasons = [],
   filter = returnTrue,
   sort = sortByPublishedDate,
   limit = Number.POSITIVE_INFINITY,
@@ -181,6 +182,7 @@ export const getArticles = ({
   development: boolean
   tags?: string[]
   pointOfInterests?: PointOfInterest[]
+  seasons?: Season[]
   sort?: (cacheLink: CachedLinksMap, cacheLink2: CachedLinksMap) => number
   limit?: number
 }) => {
@@ -192,6 +194,7 @@ export const getArticles = ({
     .filter((cachedLink) =>
       pointOfInterests.length > 0 ? pointOfInterests.some((p) => cachedLink.pointOfInterest.includes(p)) : true
     )
+    .filter((cachedLink) => (seasons.length > 0 ? seasons.some((s) => cachedLink.seasons.includes(s)) : true))
     .filter(filter)
     .sort(sort)
     .slice(0, limit)

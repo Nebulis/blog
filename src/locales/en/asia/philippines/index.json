@@ -5,6 +5,7 @@
     "section3": "Enjoy discover through our articles and our photos, our trip to the Philippines."
   },
   "meta-description": "Discover through our articles and our photos, our trip to the Philippines. Follow our guide from region to region. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?",
+  "full-title": "Philippines | Travel Guide",
   "travel": {
     "title": "Travel",
     "subtitle": "By following our journey ..."
@@ -19,6 +20,7 @@
   },
   "map": "Our map of",
   "country": "the philippines",
-  "weather": "Best time to visit ?",
+  "weather": "Best time to visit",
+  "weather-country": "The Philippines?",
   "section1": "Point of interest"
 }

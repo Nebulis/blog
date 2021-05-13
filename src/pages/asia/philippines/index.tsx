@@ -7,7 +7,6 @@ import {
   HomeSubSection,
   MainTitleSection,
   SectionContent,
-  SubHomeSection,
   SubHomeSectionTwoLines,
   SubSubHomeSection,
 } from "../../../components/core/section"
@@ -59,6 +58,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={country}
+        fullTitle={t("full-title")}
         location={location}
         socialNetworkDescription={description}
         googleDescription={t("meta-description")}
@@ -113,7 +113,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PhilippinesButtonLink to="articles?country=philippines">{t("common:allArticles")}</PhilippinesButtonLink>
         </GoToAllArticlesContainer>
         <Divider />
-        <SubHomeSection>{t("weather")}</SubHomeSection>
+        <SubHomeSectionTwoLines title={t("weather")} country={t("weather-country")} />
         <WeatherForHomePage
           entries={philippinesWeatherEntries()}
           onMouseLeave={() => setTooltipLabel("")}

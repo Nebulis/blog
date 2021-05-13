@@ -66,3 +66,17 @@ export const convertTime = (time: number) => {
     return `${minutes}min`
   }
 }
+
+export type DurationUnit = "day" | "hour"
+
+export const transformDurationUnit = (value: number, unit: DurationUnit, lang: Lang) => {
+  let duration = ""
+  if (unit === "day") {
+    duration = lang === "fr" ? "Jour" : "Day"
+  }
+  if (unit === "hour") {
+    duration = lang === "fr" ? "Heure" : "Hour"
+  }
+  if (value > 1) duration += "s"
+  return duration
+}
