@@ -252,6 +252,7 @@ continentLinks.forEach((continent) => {
         card: other.card,
         tags: [continent.id, country.id, ...(other.additionalTags ?? [])],
         pointOfInterest: [],
+        seasons: [],
         country: country.id,
         kind: other.kind ?? "other",
       })
@@ -264,6 +265,7 @@ continentLinks.forEach((continent) => {
         published: city.highlights.some(isPublished),
         tags: [continent.id, country.id],
         pointOfInterest: city.pointOfInterest || [],
+        seasons: [],
         country: country.id,
         kind: "city",
       })
@@ -276,6 +278,7 @@ continentLinks.forEach((continent) => {
           publishedDate: highlight.published instanceof Date ? highlight.published : undefined,
           card: highlight.card,
           tags: [continent.id, country.id, city.id],
+          seasons: [],
           pointOfInterest: [],
           country: country.id,
           kind: "highlight",
@@ -292,6 +295,7 @@ continentLinks.forEach((continent) => {
         country.cities.some((c) => cachedLinks.get(c.id)?.published),
       tags: [continent.id],
       pointOfInterest: country.pointOfInterest || [],
+      seasons: country.seasons || [],
       country: country.id,
       imageProps: country.imageProps,
       kind: "country",
@@ -304,6 +308,7 @@ continentLinks.forEach((continent) => {
     published: continent.countries.some((country) => cachedLinks.get(country.id)?.published),
     tags: [],
     pointOfInterest: [],
+    seasons: [],
     kind: "continent",
   })
 })
@@ -318,6 +323,7 @@ menuLinks.forEach((menu) => {
         published: !!subsubmenu.published,
         tags: [],
         pointOfInterest: [],
+        seasons: [],
         kind: "menu",
       })
     })
@@ -330,6 +336,7 @@ menuLinks.forEach((menu) => {
         submenu.sections.some((subsubmenu) => cachedLinks.get(subsubmenu.id)?.published) || !!submenu.published,
       tags: [],
       pointOfInterest: submenu.pointOfInterest ?? [],
+      seasons: [],
       kind: "menu",
     })
   })
@@ -340,6 +347,7 @@ menuLinks.forEach((menu) => {
     published: menu.sections.some((submenu) => cachedLinks.get(submenu.id)?.published) || !!menu.published,
     tags: [],
     pointOfInterest: [],
+    seasons: [],
     kind: "menu",
   })
 })
@@ -352,6 +360,7 @@ noIdeaLinks.forEach((link) => {
     published: true,
     tags: [],
     pointOfInterest: [],
+    seasons: [],
     kind: "noIdea",
   })
 })
@@ -364,6 +373,7 @@ fruitLinks.forEach((link) => {
     published: isPublished(link),
     tags: [],
     pointOfInterest: [],
+    seasons: [],
     kind: "fruit",
   })
 })

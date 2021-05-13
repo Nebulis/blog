@@ -25,7 +25,7 @@ import {
 } from "../../../../components/core/section"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { Divider } from "../../../../components/core/divider"
-import HomeImgUrl from "../../../../images/asia/philippines/el-nido/which-tour/el-nido-which-tour-main.jpg"
+import HomeImgUrl from "../../../../images/asia/philippines/carousel-philippines-2.jpg"
 import ElNidoMap from "../../../../images/asia/philippines/el-nido/which-tour/el-nido-which-tour-map.png"
 import {
   Anchor,
@@ -48,6 +48,8 @@ import { css } from "@emotion/react"
 // @ts-ignore https://github.com/Swizec/useDimensions/issues/16
 import useDimensions from "react-use-dimensions"
 import { Quote } from "../../../../components/core/quote"
+import { TourAImages } from "../../../../components/images/asia/philippines/el-nido/tour-a"
+import { CarouselImageQuery } from "../../../../components/images/carousel"
 
 const namespace = "asia/philippines/el-nido/which-tour"
 const id = "el-nido-which-tour"
@@ -76,6 +78,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -84,7 +87,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <PhilippinesBlogLayout page={id} location={location}>
         <PhilippinesTitle title={title} linkId={id} />
         <ImageAsLandscape>
-          <SharedCardPhilippinesImages image="whichTour" />
+          <CarouselImageQuery image="philippines2" />
         </ImageAsLandscape>
         <Quote>{t("quote")}</Quote>
         <Divider />
@@ -288,7 +291,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-a.big-lagoon.part2")}</p>
               <p>{t("tour-a.big-lagoon.part3")}</p>
               <ImageAsLandscape>
-                <ElNidoWhichTourImages image="bigLagoon" />
+                <SharedCardPhilippinesImages image="tourA" />
               </ImageAsLandscape>
             </SectionContent>
             <Divider />
@@ -299,7 +302,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-a.secret-lagoon.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <ElNidoWhichTourImages image="secretLagoon1" />
+                  <TourAImages image="secretLagoon" />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
                   <ElNidoWhichTourImages image="secretLagoon2" />
@@ -313,7 +316,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-a.shimizu-island.part2")}</p>
               <p>{t("tour-a.shimizu-island.part3")}</p>
               <ImageAsLandscape>
-                <ElNidoWhichTourImages image="shimizuIsland" />
+                <TourAImages image="shimizuIsland" />
               </ImageAsLandscape>
             </SectionContent>
             <Divider />
@@ -324,7 +327,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-a.commando-beach.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <ElNidoWhichTourImages image="commandoBeach1" />
+                  <TourAImages image="sevenCommandoBeach" />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
                   <ElNidoWhichTourImages image="commandoBeach2" />

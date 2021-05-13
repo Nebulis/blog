@@ -34,11 +34,16 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { SharedCardPhilippinesImages } from "../../../../components/images/asia/philippines/shared-card-philippines-images"
-import { MapContainer } from "../../../../components/layout/layout"
+import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import ElNidoMap from "../../../../images/asia/philippines/el-nido/tour-b/tour-b-map.png"
 import { TourBImages } from "../../../../components/images/asia/philippines/el-nido/tour-b"
-import { philippinesPrimaryColor } from "../../../../components/core/asia/philippines/philippines.colors"
+import {
+  philippinesPrimaryColor,
+  philippinesPrimaryColorDarker,
+} from "../../../../components/core/asia/philippines/philippines.colors"
 import { css } from "@emotion/react"
+import { CarouselImageQuery } from "../../../../components/images/carousel"
+import { TravelCardBookingStyle } from "../../../../components/core/booking"
 
 const namespace = "asia/philippines/el-nido/tour-b"
 const id = "el-nido-tour-b"
@@ -53,6 +58,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -81,20 +87,82 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how-much.part1")}</p>
           <ul>
             <li>
-              {t("how-much.part2")}
+              <span
+                css={css`
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  color: ${philippinesPrimaryColorDarker};
+                `}
+              >
+                {t("how-much.part2")}
+              </span>
               <ul>
                 <li>{t("how-much.part3")}</li>
                 <li>{t("how-much.part4")}</li>
               </ul>
             </li>
+          </ul>
+          <BookingGygCardContainer>
+            <TravelCardBookingStyle
+              to="https://www.elnidoparadise.com/booking/private-tours/private-tour-b/"
+              title={
+                i18n.languageCode === "fr" ? "El Nido Paradise - Tour B - Privé" : "El Nido Paradise - Private Tour B"
+              }
+              image="https://www.elnidoparadise.com/wp-content/uploads/booking-el-nido-tour-b.jpg"
+              price={145}
+              duration={{ value: 1, unit: "day" }}
+              groupType="private"
+            />
+            <TravelCardBookingStyle
+              to="https://www.elnidoparadise.com/booking/main-island-hopping-tours/tour-b/"
+              title={
+                i18n.languageCode === "fr" ? "El Nido Paradise - Tour B - Public" : "El Nido Paradise - Public Tour B"
+              }
+              image="https://www.elnidoparadise.com/wp-content/uploads/cudugnon-cave.jpg"
+              price={22}
+              duration={{ value: 1, unit: "day" }}
+              groupType="public"
+            />
+          </BookingGygCardContainer>
+          <ul>
             <li>
-              {t("how-much.part5")}
+              <span
+                css={css`
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  color: ${philippinesPrimaryColorDarker};
+                `}
+              >
+                {t("how-much.part5")}
+              </span>
               <ul>
                 <li>{t("how-much.part6")}</li>
                 <li>{t("how-much.part7")}</li>
               </ul>
             </li>
           </ul>
+          <BookingGygCardContainer>
+            <TravelCardBookingStyle
+              to="http://www.skippercharters.ph/el-nido-charters.html"
+              title={
+                i18n.languageCode === "fr" ? "El Nido Charters - Tour B - Privé" : "El Nido Charters - Private Tour B"
+              }
+              image="http://www.skippercharters.ph/uploads/5/3/8/0/53809937/img-8139_orig.jpg"
+              price={400}
+              duration={{ value: 1, unit: "day" }}
+              groupType="private"
+            />
+            <TravelCardBookingStyle
+              to="http://www.skippercharters.ph/el-nido-charters.html"
+              title={
+                i18n.languageCode === "fr" ? "El Nido Charters - Tour B - Public" : "El Nido Charters - Public Tour B"
+              }
+              image="http://www.skippercharters.ph/uploads/5/3/8/0/53809937/img-3489.jpg?289"
+              price={60}
+              duration={{ value: 1, unit: "day" }}
+              groupType="public"
+            />
+          </BookingGygCardContainer>
           <p>{t("how-much.part8")}</p>
           <ul>
             <li>{t("how-much.part9")}</li>
@@ -212,7 +280,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <ImageAsLandscape>
-                <TourBImages image="pinagbuyutanIsland" />
+                <CarouselImageQuery image="philippines1" />
               </ImageAsLandscape>
               <p>{t("visit.visit3.part1")}</p>
               <p

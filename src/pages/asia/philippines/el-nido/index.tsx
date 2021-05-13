@@ -1,9 +1,10 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import SEO from "../../../../components/layout/seo"
 import {
   CityHomeSection,
   MainTitleSection,
   SectionContent,
+  SubHomeSectionTwoLines,
   SubSubHomeSection,
 } from "../../../../components/core/section"
 import { getArticles, getCities, getLinkLabel, sortByLabel } from "../../../../components/core/links/links.utils"
@@ -23,6 +24,7 @@ import {
   PhilippinesBlogLayout,
   PhilippinesButtonLink,
   PhilippinesImageAsMedallion,
+  philippinesWeatherEntries,
 } from "../../../../components/core/asia/philippines/philippines"
 import philippinesFish from "../../../../images/asia/philippines/fish.svg"
 import { philippinesLinks } from "../../../../components/core/asia/philippines/philippines.links"
@@ -35,6 +37,8 @@ import { PageQuote } from "../../../../components/core/quote"
 import { Divider } from "../../../../components/core/divider"
 import { PointOfInterestSection } from "../../../../components/core/point-of-interest"
 import HomeElNido from "../../../../images/asia/philippines/el-nido/home-el-nido.jpg"
+import { WeatherForHomePage } from "../../../../components/core/weather"
+import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
 
 const namespace = "asia/philippines/el-nido/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -45,6 +49,7 @@ const currentPageId = "el-nido"
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const [tooltipLabel, setTooltipLabel] = useState("")
   const cities = getCities({ links: philippinesLinks, development, lang: i18n.languageCode, currentPageId })
   const highlights = getArticles({
     kind: "highlight",
@@ -58,6 +63,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={t("title")}
+        fullTitle={t("full-title")}
         location={location}
         socialNetworkDescription={description}
         googleDescription={googleDescription}
@@ -94,6 +100,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </CityArticleContainer>
           </>
         )}
+        <Divider />
+        <SubHomeSectionTwoLines title={t("weather")} country={t("weather-city")} />
+        <WeatherForHomePage
+          entries={philippinesWeatherEntries().map((entry) => ({ ...entry, label: "El Nido" }))}
+          onMouseLeave={() => setTooltipLabel("")}
+          onMouseEnter={setTooltipLabel}
+        />
         {cities.length > 0 && (
           <>
             <Divider className="mt2" />
@@ -115,6 +128,20 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <PhilippinesButtonLink to="articles?country=philippines">{t("common:allArticles")}</PhilippinesButtonLink>
         </GoToAllArticlesContainer>
+        <MouseToolTip>
+          {tooltipLabel ? (
+            <TooltipContent>
+              {tooltipLabel.split("\n").map((item, index) => {
+                return (
+                  <span key={index}>
+                    {item}
+                    <br />
+                  </span>
+                )
+              })}
+            </TooltipContent>
+          ) : null}
+        </MouseToolTip>
       </PhilippinesBlogLayout>
     </>
   )

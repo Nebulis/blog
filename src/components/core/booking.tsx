@@ -3,9 +3,10 @@ import { useCustomTranslation } from "../../i18n-hook"
 import { css } from "@emotion/react"
 import React from "react"
 import { Lang } from "./links/links.types"
-import { FaStar, FaUser } from "react-icons/all"
+import { FaClock, FaStar, FaUser } from "react-icons/all"
 import { primaryDarkColor } from "./variables"
 import { Note } from "./section"
+import { DurationUnit, transformDurationUnit } from "../../utils"
 
 const buildBookingHotelUrl = ({ lang, hotel = "" }: { lang: Lang; hotel: string }) =>
   `https://www.booking.com/hotel/${hotel}.${lang}.html`
@@ -85,40 +86,63 @@ const bookingCardStyle = css`
     }
   }
 `
-export const BookingCard: React.FunctionComponent<{
-  hotel: string
+
+interface BaseProps {
+  to: string
   title: string
   image: string
-  note: string
+  note?: string
   price: number
-  people: number
-  kind: Kind
-}> = ({ hotel, title, image, note, price, people, kind }) => {
+  people?: number
+  kind?: Kind
+  duration?: { value: number; unit: DurationUnit }
+  groupType?: "public" | "private"
+}
+// actually used for some travel card too
+const InternalCard: React.FunctionComponent<BaseProps> = ({
+  to,
+  title,
+  image,
+  note,
+  price,
+  people,
+  kind,
+  duration,
+  groupType,
+}) => {
   const { i18n } = useCustomTranslation()
   const computedPrice = i18n.language === "fr" ? `${price}€` : `$${Math.trunc(price * 1.2)}`
   return (
-    <ExternalLink
-      css={bookingCardStyle}
-      underline={false}
-      href={buildBookingHotelUrl({
-        lang: i18n.languageCode,
-        hotel,
-      })}
-      className="booking-card inline-flex flex-column"
-    >
+    <ExternalLink css={bookingCardStyle} underline={false} href={to} className="booking-card inline-flex flex-column">
       <div className="information">
         <div className="title b tc mt2 mb1">{title}</div>
         <div className="ml-auto mr-auto flex justify-center ttu b activity-container white mb2">
-          <span className="activity">{getKind(i18n.languageCode, kind)}</span>
-          <span className="activity">
-            <FaUser />
-            <span>&nbsp;{people}</span>
-          </span>
+          {kind && <span className="activity">{getKind(i18n.languageCode, kind)}</span>}
+          {groupType === "public" && <span className="activity">Public</span>}
+          {groupType === "private" && (
+            <span className="activity">{i18n.languageCode === "fr" ? "privé" : "private"}</span>
+          )}
+          {people && (
+            <span className="activity">
+              <FaUser />
+              <span>&nbsp;{people}</span>
+            </span>
+          )}
           <span className="activity">{computedPrice}</span>
-          <span className="activity">
-            <FaStar />
-            <span>&nbsp;{note}</span>
-          </span>
+          {note && (
+            <span className="activity">
+              <FaStar />
+              <span>&nbsp;{note}</span>
+            </span>
+          )}
+          {duration && (
+            <span className="activity">
+              <FaClock />
+              <span>
+                &nbsp;{duration.value} {transformDurationUnit(duration.value, duration.unit, i18n.languageCode)}
+              </span>
+            </span>
+          )}
         </div>
       </div>
       <div className="photo-container relative">
@@ -126,6 +150,26 @@ export const BookingCard: React.FunctionComponent<{
       </div>
     </ExternalLink>
   )
+}
+
+export const BookingCard: React.FunctionComponent<Omit<BaseProps, "to"> & { hotel: string }> = ({
+  hotel,
+  ...props
+}) => {
+  const { i18n } = useCustomTranslation()
+  return (
+    <InternalCard
+      {...props}
+      to={buildBookingHotelUrl({
+        lang: i18n.languageCode,
+        hotel,
+      })}
+    />
+  )
+}
+
+export const TravelCardBookingStyle: React.FunctionComponent<BaseProps> = (props) => {
+  return <InternalCard {...props} />
 }
 export const BookingWarning: React.FunctionComponent = ({ children }) => {
   const { i18n } = useCustomTranslation()

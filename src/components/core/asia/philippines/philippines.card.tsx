@@ -7,6 +7,7 @@ import commonEn from "../../../../locales/en/common.json"
 import { philippinesPrimaryColor } from "./philippines.colors"
 import React, { FunctionComponent } from "react"
 import { SharedCardPhilippinesImages } from "../../../images/asia/philippines/shared-card-philippines-images"
+import { CarouselImageQuery } from "../../../images/carousel"
 
 export const PhilippinesCard = styled(Card)`
   .tags a {
@@ -35,7 +36,7 @@ export const ElNidoWhichTourCard: FunctionComponent<ExtraCardProps> = ({ fluidOb
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
     <PhilippinesCard title={common.country.philippines.card["which-tour"]} to="el-nido-which-tour" {...card}>
-      <SharedCardPhilippinesImages image="whichTour" fluidObject={fluidObject} />
+      <CarouselImageQuery image="philippines2" fluidObject={fluidObject} />
     </PhilippinesCard>
   )
 }

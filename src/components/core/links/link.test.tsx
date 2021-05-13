@@ -23,10 +23,10 @@ describe("link", () => {
   it("should render a link when the article is not published and mode is development", () => {
     const { container, getByText } = render(
       <ApplicationContext.Provider value={{ development: true, displayComments: false, covid: false, ssrBuild: false }}>
-        <ApplicationLink to="tokyo">Abc</ApplicationLink>
+        <ApplicationLink to="osaka-castle">Abc</ApplicationLink>
       </ApplicationContext.Provider>
     )
-    expect(container.querySelector("a")?.href).toMatch("/asia/japan/tokyo")
+    expect(container.querySelector("a")?.href).toMatch("/asia/japan/osaka-castle")
     // eslint-disable-next-line jest/no-truthy-falsy
     expect(container.querySelector("span")).toBeTruthy()
     // eslint-disable-next-line jest/no-truthy-falsy
@@ -37,7 +37,7 @@ describe("link", () => {
       <ApplicationContext.Provider
         value={{ development: false, displayComments: false, covid: false, ssrBuild: false }}
       >
-        <ApplicationLink to="tokyo">Abc</ApplicationLink>
+        <ApplicationLink to="osaka-castle">Abc</ApplicationLink>
       </ApplicationContext.Provider>
     )
     expect(container.querySelector("a")).toBeNull()
@@ -49,7 +49,7 @@ describe("link", () => {
       <ApplicationContext.Provider
         value={{ development: false, displayComments: false, covid: false, ssrBuild: false }}
       >
-        <ApplicationLink to="tokyo" action="hide" />
+        <ApplicationLink to="osaka-castle" action="hide" />
       </ApplicationContext.Provider>
     )
     expect(container.querySelector("a")).toBeNull()

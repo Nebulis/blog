@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import SEO from "../../../components/layout/seo"
 import { MainTitleSection, SectionContent } from "../../../components/core/section"
 import { useCustomTranslation } from "../../../i18n-hook"
@@ -10,39 +10,34 @@ import { PageQuote } from "../../../components/core/quote"
 import { PageProps } from "gatsby"
 import { CountriesContainer, CountryContainer } from "../../../components/layout/organisation-layout"
 import { PrimaryBlogLayoutWithDrawer } from "../../../components/layout/main-layout"
-import { OrganisationCard } from "../../../types/shared"
-import { isLinkPublished, sortByField } from "../../../components/core/links/links.utils"
+import { getArticles, getContinentsFromCountries, sortByLabel } from "../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../components/application"
-import { SharedAsiaImages } from "../../../components/images/asia/shared-asia-images"
+import { SelectByContinent } from "../../../components/core/select"
+import { getImageProps, getSharedImages } from "../../../components/core/discovery"
 
 const namespace = "organisation/when-to-go/autumn"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
-
-const elements: OrganisationCard[] = [
-  {
-    label: "common:country.japan.title",
-    image: SharedAsiaImages,
-    imageProps: {
-      image: "homeJapan",
-    },
-    to: "japan",
-  },
-]
-
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
-  const { t } = useCustomTranslation([namespace, "common"])
-  const cards = development ? elements : elements.filter(({ to }) => isLinkPublished(to))
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
+  const [selectedContinent, setSelectedContinent] = useState<string>()
   const socialNetworkDescription = `${t("part2")} ${t("part3")}`
-  const googleDescription = t("part1")
+  const countries = getArticles({
+    kind: "country",
+    card: false,
+    development,
+    seasons: ["autumn"],
+  })
+  const continents = getContinentsFromCountries(countries)
   return (
     <>
       <SEO
         title={t("title")}
+        fullTitle={t("full-title")}
         location={location}
         socialNetworkDescription={socialNetworkDescription}
-        googleDescription={googleDescription}
+        googleDescription={t("google-description")}
       />
       <PrimaryBlogLayoutWithDrawer page="autumn" location={location}>
         <MainTitleSection>{t("title")}</MainTitleSection>
@@ -53,10 +48,20 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote position="none">{t("part3")}</PageQuote>
         </SectionContent>
         <PrimaryDivider />
+        <SelectByContinent continents={continents} onChange={(value) => setSelectedContinent(value)} />
         <CountriesContainer>
-          {cards.sort(sortByField("label")).map(({ label, image, to, imageProps }, index) => (
-            <CountryContainer title={t(label)} image={image} to={to} key={index} imageProps={imageProps} />
-          ))}
+          {countries
+            .filter((country) => (selectedContinent ? country.tags.includes(selectedContinent) : true))
+            .sort(sortByLabel(i18n.languageCode))
+            .map(({ label, imageProps, id, tags }, index) => (
+              <CountryContainer
+                title={label[i18n.languageCode]}
+                image={getSharedImages(tags)}
+                to={id}
+                key={index}
+                imageProps={{ image: imageProps?.image, ...getImageProps(id) }}
+              />
+            ))}
         </CountriesContainer>
       </PrimaryBlogLayoutWithDrawer>
     </>

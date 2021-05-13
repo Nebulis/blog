@@ -28,7 +28,7 @@ exports[`french pages exports meta for public/articles/index.html correctly: met
 
 exports[`french pages exports meta for public/articles/index.html correctly: social-network 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
 
-exports[`french pages exports meta for public/articles/index.html correctly: title 1`] = `"Tous nos articles | Blog Voyage"`;
+exports[`french pages exports meta for public/articles/index.html correctly: title 1`] = `"Tous nos articles | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/cambodia/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos le Cambodge, les temples en ruines d’Angkor, ses villages flottants et bien d’autres lieux incontournables. Suivez-nous pour découvrir notre sélection. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
@@ -232,31 +232,31 @@ exports[`french pages exports meta for public/asia/philippines/el-nido/index.htm
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly: social-network 1`] = `"Et si on vous emmenait dans le joyau des Philippines sur l’île de Palawan ? Prenez votre masque et votre tuba et plongez dans ces eaux cristallines qui ne vous laisseront pas insensible. Profitez des différents tours appelés \\"Island hopping\\" pour choisir ce qui vous convient le mieux."`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly: title 1`] = `"El Nido | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/index.html correctly: title 1`] = `"El Nido | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/tour-a/index.html correctly: meta-description 1`] = `"Dans cet article, on vous raconte en détail notre journée incroyable à la découverte du Tour A. Une description de chaque île avec notre avis et nos photos. On vous parle également du prix et de la durée du tour."`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/tour-a/index.html correctly: social-network 1`] = `"Des lagons aux eaux cristallines, des plages désertiques rien que pour vous et des sites de snorkeling ou de plongée encore intacts. Vous pensiez ne voir ça que dans vos rêves ? Bienvenue au tour A d’El Nido."`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/tour-a/index.html correctly: title 1`] = `"El Nido - Tour A : Récit et Photos | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/tour-a/index.html correctly: title 1`] = `"El Nido - Tour A : Récit et Photos | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/tour-b/index.html correctly: meta-description 1`] = `"Dans cet article, on vous raconte en détail notre journée incroyable à la découverte du Tour B. Une description de chaque île avec notre avis et nos photos. On vous parle également du prix et de la durée du tour."`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/tour-b/index.html correctly: social-network 1`] = `"A chaque arrêt on vous emmène dans un univers différent, banc de sable singulier, cave insolite, île déserte façon Koh Lanta ou à la Robinson Crusoé, chacun de ces endroits vous transportera."`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/tour-b/index.html correctly: title 1`] = `"El Nido - Tour B : Récit et Photos | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/tour-b/index.html correctly: title 1`] = `"El Nido - Tour B : Récit et Photos | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/which-tour/index.html correctly: meta-description 1`] = `"Dans cet article, on vous emmène à la découverte des îles de l’Archipel de Bacuit en vous détaillant les différents tours, on vous indique également tout sur la réservation, le prix et les types de bateaux qui existent."`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/which-tour/index.html correctly: social-network 1`] = `"Si El Nido fait partie d’une des destinations les plus réputées des Philippines c’est avant tout grâce à l’Archipel de Bacuit, ces îles paradisiaques qui en font la perle de Palawan sont d’une beauté rare."`;
 
-exports[`french pages exports meta for public/asia/philippines/el-nido/which-tour/index.html correctly: title 1`] = `"Archipel de Bacuit : Quel tour choisir ? | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/philippines/el-nido/which-tour/index.html correctly: title 1`] = `"Archipel de Bacuit : Quel tour choisir ? | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/philippines/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines. Suivez notre guide de région en région. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
-exports[`french pages exports meta for public/asia/philippines/index.html correctly: social-network 1`] = `"Sans aucun doute l’un des pays qui nous a le plus fait voyager et rêver de part ses paysages à couper le souffle, ses îles d’une beauté sans pareille et ses immenses spots de snorkeling et de plongée. Les Philippines, c'est plus de 7600 îles, autant dire que vous avez l’embarras du choix pour votre voyage de rêve.  On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines."`;
+exports[`french pages exports meta for public/asia/philippines/index.html correctly: social-network 1`] = `"Sans aucun doute l’un des pays qui nous a le plus fait voyager et rêver de par ses paysages à couper le souffle, ses îles d’une beauté sans pareille et ses immenses spots de snorkeling et de plongée. Les Philippines, c'est plus de 7600 îles, autant dire que vous avez l’embarras du choix pour votre voyage de rêve.  On vous laisse découvrir à travers nos articles et nos photos, notre voyage aux Philippines."`;
 
-exports[`french pages exports meta for public/asia/philippines/index.html correctly: title 1`] = `"Philippines | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/philippines/index.html correctly: title 1`] = `"Philippines | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/singapore/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos Singapour entre urbanisation et jungle tropicale. Suivez notre guide pour découvrir notre sélection des lieux incontournables connus et méconnus. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
@@ -420,20 +420,20 @@ exports[`french pages exports meta for public/oceania/index.html correctly: soci
 
 exports[`french pages exports meta for public/oceania/index.html correctly: title 1`] = `"Océanie | Guide de Voyage"`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/autumn/index.html correctly: meta-description 1`] = `"Envie de prolonger votre été ? Tant d’endroits pour passer vos vacances en octobre, novembre ou décembre."`;
+exports[`french pages exports meta for public/organisation/when-to-go/autumn/index.html correctly: meta-description 1`] = `"Envie de prolonger votre été ? Tant d’endroits pour passer vos vacances en octobre, novembre ou décembre. On vous guide en fonction de nos voyages dans différents pays."`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/autumn/index.html correctly: social-network 1`] = `"Profitez de la rentrée pour découvrir des pays près de chez vous sans les hordes de touristes … Ou partez loin de chez vous pour un dépaysement total, l’Asie par exemple, vous rouvre ses portes.  Vous pouvez également profiter pleinement de l’automne en admirant les couleurs des arbres à cette saison qui rendent les paysages magnifiques."`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/autumn/index.html correctly: title 1`] = `"Voyager en automne | Blog Voyage"`;
+exports[`french pages exports meta for public/organisation/when-to-go/autumn/index.html correctly: title 1`] = `"Voyager en automne | Guide de Voyage"`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: meta-description 1`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ?"`;
+exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: meta-description 1`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps dans le monde. Mais où voyager en mars, avril et mai ? On vous guide en fonction de nos voyages dans différents pays."`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: social-network 1`] = `"L’hiver est fini ! Il est temps d’organiser vos vacances de printemps. Mais où voyager en mars, avril et mai ? Les beaux jours arrivent, c’est le moment de profiter des paysages fleuris, d’un ciel bleu et ensoleillé et de températures agréables. En Asie, profitez des derniers mois favorables et d’une chaleur encore supportable."`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: title 1`] = `"Voyager au printemps | Blog Voyage"`;
+exports[`french pages exports meta for public/organisation/when-to-go/spring/index.html correctly: title 1`] = `"Voyager au printemps | Guide de Voyage"`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly: meta-description 1`] = `"Vous êtes plutôt magie de Noël sous la neige ? Ou le manque de soleil a plutôt tendance à vous déprimer ? Tant d’endroits pour passer les vacances de vos rêves en décembre, janvier ou février."`;
+exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly: meta-description 1`] = `"Vous êtes plutôt magie de Noël sous la neige ? Ou le manque de soleil a plutôt tendance à vous déprimer ? Tant d’endroits pour passer les vacances de vos rêves en décembre, janvier ou février. On vous guide en fonction de nos voyages dans différents pays."`;
 
 exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly: social-network 1`] = `"Passer ses vacances près de magnifiques paysages recouverts d’un grand manteau blanc ou bien fuir le froid pour des plages paradisiaques et s’évader sous le soleil des tropiques. Tant d’endroits pour passer les vacances de vos rêves en décembre, janvier ou février."`;
 
-exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly: title 1`] = `"Voyager en hiver | Blog Voyage"`;
+exports[`french pages exports meta for public/organisation/when-to-go/winter/index.html correctly: title 1`] = `"Voyager en hiver | Guide de Voyage"`;

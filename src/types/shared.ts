@@ -96,3 +96,5 @@ export type PointOfInterest =
   | "lazy"
   | "water-activities"
   | "winter-activities"
+
+export type Season = "autumn" | "winter" | "spring" | "summer"

@@ -28,7 +28,7 @@ exports[`english pages exports meta for public/en/articles/index.html correctly:
 
 exports[`english pages exports meta for public/en/articles/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
-exports[`english pages exports meta for public/en/articles/index.html correctly: title 1`] = `"All our articles | Travel Blog"`;
+exports[`english pages exports meta for public/en/articles/index.html correctly: title 1`] = `"All our articles | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/cambodia/index.html correctly: meta-description 1`] = `"Discover through our articles and our photos Cambodia, the ruined temples of Angkor, the floating villages, and many other must-see places. Follow us to discover our selection of must-see places. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
@@ -232,31 +232,31 @@ exports[`english pages exports meta for public/en/asia/philippines/el-nido/index
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly: social-network 1`] = `"Do you want to join us to discover the jewel of the Philippines on the Palawan Island? Grab your mask and snorkel or dive in these crystal clear waters that will leave you a lasting impression. Take advantage of the different tours called \\"Island hopping\\" to choose what suits you best."`;
 
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly: title 1`] = `"El Nido | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly: title 1`] = `"El Nido | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: meta-description 1`] = `"In this article, we share in detail about our incredible day discovering the Tour A. A description of each island with our photos and opinion. We also tell you about the price and duration of the Tour."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: social-network 1`] = `"Lagoons with crystal clear waters, secluded beaches just for you and still intact snorkeling and diving sites. Did you think that could only exist in your dreams? Welcome to El Nido Tour A."`;
 
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: title 1`] = `"El Nido - Tour A: Travelogue and Photos | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: title 1`] = `"El Nido - Tour A: Travelogue and Photos | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-b/index.html correctly: meta-description 1`] = `"In this article, we share in detail about our incredible day discovering the Tour B. A description of each island with our photos and opinion. We also tell you about the price and duration of the Tour."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-b/index.html correctly: social-network 1`] = `"A chaque arrêt on vous emmène dans un univers différent, banc de sable singulier, cave insolite, île déserte façon Koh Lanta ou à la Robinson Crusoé, chacun de ces endroits vous transportera."`;
 
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-b/index.html correctly: title 1`] = `"El Nido - Tour B: Travelogue and Photos | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-b/index.html correctly: title 1`] = `"El Nido - Tour B: Travelogue and Photos | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/which-tour/index.html correctly: meta-description 1`] = `"Join us to discover the islands of the Bacuit Archipelago in this article. For each tour, we share a lot of information, for instance, the price, the different boats available or even how to book a tour"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/which-tour/index.html correctly: social-network 1`] = `"El Nido is one of the most famous destinations in the Philippines, mainly thanks to the Bacuit Archipelago, Dotted with paradisiacal islands and islets, it truly is the gem of Palawan."`;
 
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/which-tour/index.html correctly: title 1`] = `"Bacuit Archipelago: Which tour to choose? | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/philippines/el-nido/which-tour/index.html correctly: title 1`] = `"Bacuit Archipelago: Which tour to choose? | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: meta-description 1`] = `"Discover through our articles and our photos, our trip to the Philippines. Follow our guide from region to region. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: social-network 1`] = `"There is no doubt this is the country that made us travel and dream the most, thanks to its breathtaking landscapes, its unique gorgeous islands and its immense snorkeling and diving spots. The Philippines comprises more than 7,600 islands, which means that you are spoilt for choice for your dream vacation. Enjoy discover through our articles and our photos, our trip to the Philippines."`;
 
-exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: title 1`] = `"Philippines | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: title 1`] = `"Philippines | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/singapore/index.html correctly: meta-description 1`] = `"Discover Singapore through our articles and our photos, from a modern city to the jungles. Follow our guide to discover our selection of known and little-known must-see places. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
@@ -424,16 +424,16 @@ exports[`english pages exports meta for public/en/organisation/when-to-go/autumn
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/autumn/index.html correctly: social-network 1`] = `"Take advantage of the start of the school year to discover countries near you without tourists ... Or go far from home for a total change of scenery, in Asia for example. You can also enjoy the season by admiring autumn leaf color changing the landscapes."`;
 
-exports[`english pages exports meta for public/en/organisation/when-to-go/autumn/index.html correctly: title 1`] = `"Travel in autumn | Travel Blog"`;
+exports[`english pages exports meta for public/en/organisation/when-to-go/autumn/index.html correctly: title 1`] = `"Travel in autumn | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/spring/index.html correctly: meta-description 1`] = `"Winter is over! It's time to organize your spring holidays. But where to travel during March, April and May?"`;
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/spring/index.html correctly: social-network 1`] = `"Winter is over! It's time to organize your spring holidays. But where to travel during March, April and May? Sunny days are back. It's time to enjoy the flowery landscapes, blue and sunny skies, and perfect outdoors temperatures. In Asia, before the summer, appreciate the last favorable months and the still bearable heat."`;
 
-exports[`english pages exports meta for public/en/organisation/when-to-go/spring/index.html correctly: title 1`] = `"Travel in spring | Travel Blog"`;
+exports[`english pages exports meta for public/en/organisation/when-to-go/spring/index.html correctly: title 1`] = `"Travel in spring | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: meta-description 1`] = `"Do you prefer snowy and magical Christmas? Or lack of sunlight make you feel low? So many places to spend your dream holidays during December, January or February."`;
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: social-network 1`] = `"Have holidays near astounding landscapes covered with a large white coat, or else escape cold winter for heavenly beaches and for the tropical sun. So many places to spend your dream holidays during December, January or February."`;
 
-exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: title 1`] = `"Travel in winter | Travel Blog"`;
+exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: title 1`] = `"Travel in winter | Travel Guide"`;

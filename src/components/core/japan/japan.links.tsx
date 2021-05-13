@@ -20,6 +20,7 @@ export const japanLinks: CountryLink = {
   id: "japan",
   label: { fr: commonFr.country.japan.title, en: commonEn.country.japan.title },
   pointOfInterest: ["nature", "monument", "city", "winter-activities"],
+  seasons: ["autumn", "winter", "spring"],
   // this style is for the image in the asia page (medallion) to have the geisha centered
   imageProps: {
     image: "homeJapan",

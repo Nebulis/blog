@@ -16,6 +16,7 @@ export const vietnamLinks: CountryLink = {
   label: { fr: commonFr.country.vietnam.title, en: commonEn.country.vietnam.title },
   // this style is for the image in the asia page (medallion) to have the fisherman centered
   pointOfInterest: ["city", "nature", "monument"],
+  seasons: ["winter", "spring"],
   imageProps: {
     image: "homeVietnam",
     imgStyle: {
