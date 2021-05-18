@@ -59,7 +59,7 @@ export const convertTime = (time: number) => {
   const hours = Math.floor(time / 60)
   const minutes = Math.round((time / 60 - hours) * 60)
   if (hours > 0 && minutes > 0) {
-    return `${hours}h${minutes}`
+    return `${hours}h${minutes.toString(10).padStart(2, "0")}`
   } else if (hours > 0) {
     return `${hours}h`
   } else {
