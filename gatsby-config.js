@@ -2,6 +2,10 @@ const pages = (page) => {
   return [page, `/en${page}`]
 }
 module.exports = {
+  flags: {
+    FAST_DEV: true,
+    PRESERVE_WEBPACK_CACHE: true,
+  },
   siteMetadata: {
     siteUrl: `https://magicoftravels.com`,
     title: `Magic of travels`,

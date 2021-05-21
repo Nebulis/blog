@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import React, { FunctionComponent, useRef, useState, useLayoutEffect } from "react"
+import React, { FunctionComponent, useRef, useState, useEffect } from "react"
 import ReactDOM from "react-dom"
 import { useWindowMousePosition } from "../hooks/useWindowMousePosition"
 import { useWindowSize } from "../hooks/useWindowSize"
@@ -41,14 +41,7 @@ export const MouseToolTip: FunctionComponent = ({ children }) => {
   const [width, setWidth] = useState(150) // random width
   const [height, setHeight] = useState(40) // random height
 
-  // must use layout effect otherwise there are problems to display the tooltip
-  // go in transport vietnam page, in mobile mode
-  // click on chu lai airport
-  // click on nha trang airport
-  // => the tooltip will first be drawn with the width of the previous element (chu lai)
-  // => and eventually will display the tooltip from nha trang (sometimes it's not because the tooltip comes over the mouse and triggers on mouse leave event, which get rid of the tooltip
-  // the bug still exists :(
-  useLayoutEffect(() => {
+  useEffect(() => {
     setWidth(ref.current?.getBoundingClientRect().width ?? 150)
     setHeight(ref.current?.getBoundingClientRect().height ?? 40)
   }, [children])

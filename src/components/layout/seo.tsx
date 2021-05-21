@@ -67,12 +67,12 @@ const SEO: FunctionComponent<SEOProps> = ({
         {
           rel: "alternate",
           href: `${getHostname(location)}${getPathForFrench(location)}`,
-          hreflang: "fr-fr",
+          hrefLang: "fr-fr",
         },
         {
           rel: "alternate",
           href: `${getHostname(location)}${getPathForEnglish(location)}`,
-          hreflang: "en-us",
+          hrefLang: "en-us",
         },
         {
           rel: "preload",
