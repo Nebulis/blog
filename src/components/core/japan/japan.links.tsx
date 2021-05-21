@@ -14,6 +14,7 @@ import {
   ToganjiCard,
   UenoParkCard,
   ShibuyaDistrictCard,
+  YasukuniDoriCard,
 } from "./japan.cards"
 import commonFr from "../../../locales/fr/common.json"
 import commonEn from "../../../locales/en/common.json"
@@ -280,6 +281,15 @@ export const japanLinks: CountryLink = {
           label: {
             fr: commonFr.country.japan.card["yasukuni-dori"],
             en: commonEn.country.japan.card["yasukuni-dori"],
+          },
+          published: new Date("2021-06-12T17:00:00.000+08:00"),
+          card: YasukuniDoriCard,
+        },
+        {
+          id: "shinjuku-gyoen-national-garden",
+          label: {
+            fr: "",
+            en: "",
           },
           published: false,
         },
