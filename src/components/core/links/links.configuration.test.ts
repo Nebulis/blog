@@ -148,9 +148,16 @@ const japanLinks = () => {
     },
     published: false,
   })
+  expect(getLink("shinjuku-gyoen-national-garden")).toMatchObject({
+    label: {
+      en: "",
+      fr: "",
+    },
+    published: false,
+  })
   expect(getLink("sensoji")).toMatchObject({
     label: { fr: "Sensō-ji, le plus vieux temple de Tokyo", en: "Sensō-ji, the oldest Temple in Tokyo" },
-    published: false,
+    published: true,
   })
   expect(getLink("hamarikyu-garden")).toMatchObject({
     label: {

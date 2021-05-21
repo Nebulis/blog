@@ -1,25 +1,27 @@
 {
   "quote": "Et tout d’un coup la lumière fut. Un peu sans crier gare, on se retrouve au milieu de la rue Yasukuni-Dori entouré de grands buildings remplis de panneaux lumineux, de bas en haut. Faites attention, Godzilla rode.",
   "introduction": "Découvrez à travers notre article, une rue tant animée de jour comme de nuit, l’avenue Yasukuni-Dori.",
-  "google-description": "Découvrez à travers notre article, une rue tant animée de jour comme de nuit, l’avenue Yasukuni-Dori. On vous indique, d’après notre expérience, comment y aller, combien de temps y rester et où se loger. Le tout avec notre récit de voyage et nos photos.",
+  "google-description": "Découvrez à travers notre article, une rue tant animée de jour comme de nuit, l’avenue Yasukuni-Dori. Avec notre récit de voyage et nos photos, on vous indique également, d’après notre expérience, comment y aller, combien de temps y rester et où se loger.",
   "social-network-description": "Et tout d’un coup la lumière fut. Un peu sans crier gare, on se retrouve au milieu de la rue Yasukuni-Dori entouré de grands buildings remplis de panneaux lumineux, de bas en haut. Faites attention, Godzilla rode.",
+  "full-title": "Yasukuni-Dori : La rue aux milles lumières de Tokyo | Guide de Voyage",
   "how": {
     "title": "Comment y aller ?",
     "part1": "_Tous les chemins mènent à Shinjuku Station._",
-    "part2": "Extrêmement bien desservie, que ce soit en train ou en MRT, rejoignez la #station Shinjuku#, puis dirigez vous vers la sortie est “JR Shinjuku East Exit Station Square”. La rue se trouve juste en face de la sortie.",
+    "part2": "Extrêmement bien desservie, que ce soit en train ou en MRT, rejoignez la #station Shinjuku#, puis dirigez vous vers la sortie EST \"JR Shinjuku East Exit Station Square\". La rue se trouve juste en face de la sortie.",
     "part3": "Attention, la gare est très grande, et il est simple de s’y perdre."
   },
   "how-long": {
     "title": "Combien de temps ?",
     "part1": "Vous pouvez vous y promener de jour comme de nuit pendant des jours en y découvrant à chaque fois de nouvelles choses ou endroits.",
     "part2": "Nous n’avions pas forcément prévu de nombre de jours à proprement parler, c'était surtout un lieu de passage entre notre hôtel et la gare et nous en profitions à chaque fois que l’on passait pour nous y attarder un peu.",
-    "part3": "Promenez vous au moins une #demi-journée# et testez aussi le soir pour découvrir deux ambiances différentes."
+    "part3": "Promenez-vous au moins une #demi-journée# et testez aussi le soir pour découvrir deux ambiances différentes."
   },
   "where-to-stay": {
     "title": "Où dormir dans le quartier de Shinjuku ?",
     "part1": "Vous n’aurez pas de mal à trouver un hôtel dans ce quartier, de l’hôtel classique au capsule hôtel en passant par les multiples love hôtel vous avez l’embarras du choix.",
-    "part2": "Un peu à l’écart des rues animées nous avions réservé l’hôtel [Hotel Listel Shinjuku](todo), certes assez éloigné de la gare mais c’est ce que nous recherchions.",
-    "part3": "Comparer les différentes offres sur [Booking](todo)."
+    "part2": "On vous propose 3 différents logements. Pour nous repérer, nous avons surtout choisi de chercher des hôtels proches du Godzilla.",
+    "part3": "Les prix varient énormément en fonction des saisons, pour cet article on vous indique des hôtels / prix pour une saison neutre, par exemple le mois de mai.",
+    "part4": "Comparer les différentes offres sur [Booking](booking-search:Shinjuku)."
   },
   "visit": {
     "title": "La visite",
@@ -31,7 +33,7 @@
     "title": "DE JOUR ...",
     "part1": "Des #gratte-ciels gigantesques#, de multiples boutiques ce qui sous entend du #shopping à n’en plus finir# et des jeux et attrape-peluches à volonté appelé « UFO catcher » au Japon.",
     "part2": "Le spot certainement le plus photographié est #l’immense Godzilla qui surplombe un centre commercial#.",
-    "part3": "Vous pourriez passer des jours dans ce quartier que vous y découvrirez toujours un nouveau coin.",
+    "part3": "Vous pourriez passer des jours dans ce quartier que vous découvrirez toujours un nouveau coin.",
     "part4": "Bon on ne comprend franchement rien à tous les spots publicitaires qui surplombent les rues vu qu’ils sont écrits en japonais mais l’ambiance est identique à Time Square."
   },
   "visit2": {
@@ -41,7 +43,7 @@
   },
   "visit3": {
     "title": "LE PARC",
-    "part1": "Si vous voulez également vous ressourcer dans un immense parc, on vous propose le [Shinjuku Gyoen National Garden](todo), tout proche de la gare, il vous fera sortir un peu de la frénésie de ses labyrinthes de rues animés.",
+    "part1": "Si vous voulez également vous ressourcer dans un immense parc, on vous propose le #[Shinjuku Gyoen National Garden](shinjuku-gyoen-national-garden)#, tout proche de la gare, il vous fera sortir un peu de la frénésie de ses labyrinthes de rues animés.",
     "part2": "#Pour l’anecdote :# Il nous a fallu au moins 30 minutes sans exagérer pour sortir de la gare de Shinjuku et trouver la bonne sortie. Pendant ses 30 minutes nous avons essayé en vain de passer par différents souterrains et ascenseurs pour nous retrouver au final tout le temps à la même sortie. Une boucle sans fin qui nous a limite fait peur, dormir dans la gare n’étant pas vraiment dans notre projet."
   },
   "conclusion": "De jour comme de nuit, une petite balade sympathique à faire dans cette rue animée de Tokyo.",
