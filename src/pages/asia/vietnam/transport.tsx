@@ -58,6 +58,7 @@ import { Tree } from "../../../components/layout/menu"
 import { FaBus } from "react-icons/fa"
 import { PlaneSchedule } from "../../../components/core/asia/vietnam/plane-schedule"
 import { reverseSchedules, Schedule, Schedules, SearchItinerary, Step } from "../../../components/core/search-itinerary"
+import { BookingWarning } from "../../../components/core/booking"
 
 const Sitting: React.FunctionComponent = () => (
   <svg viewBox="0 0 512 512" width="20px" height="20px">
@@ -411,6 +412,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section1.price.part3")}</p>
             <p>{t("section1.price.part4")}</p>
             <PlaneSchedule setTooltipContent={setTooltipContent} />
+            <BookingWarning>{t("section1.price.part5")}</BookingWarning>
           </HowMuch>
           <Opinion title={t("opinion")}>
             <p>{t("section1.opinion.part1")}</p>
