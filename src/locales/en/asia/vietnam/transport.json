@@ -31,7 +31,8 @@
       "part1": "Direct flights do not last more than 2 hours, most of the time around #1h - 1h20#.",
       "part2": "Prices depend on the company you booked with, but most of the time you don't have many choices.",
       "part3": "To give you a price range, for direct flights, expect #$70 - $180 per person#.",
-      "part4": "Prices may vary, but below you will find an approximative range:"
+      "part4": "Prices may vary, but below you will find an approximative range:",
+      "part5": "The prices shown are on average and include direct flights only. They may change depending on availability. We mainly noted the prices of low-cost planes."
     },
     "opinion": {
       "part1": "Useful if you don't have a lot of time or don't want to use public transport for too long. Also useful if you want to get from a city to another quickly.",
