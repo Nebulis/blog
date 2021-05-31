@@ -39,10 +39,10 @@
   "how-much": {
     "title": "Prix ?",
     "part1": "Vous pouvez visiter les jardins aux alentours gratuitement.",
-    "part2": "#Château ➵ 1 000 Yen# (~ 8€) pour les adultes et 300 Yen (~ 2€) pour les étudiants et enfants.",
-    "part3": "#Groupes de 30 personnes ➵ 800 Yen# (~ 6,25€) pour les adultes et 240 Yen (~ 1,80€) pour les enfants.",
-    "part4": "#Château + Jardin Koko-En ➵ 1 050 Yen# (~ 8,50€) pour les adultes et 360 Yen (~ 2,80€) pour les étudiants et enfants.",
-    "part5": "#Visite des douves en barque ➵ 1 000 Yen# (~ 8€)."
+    "part2": "#Château ➵ 1 000¥# (~ 8€) pour les adultes et 300¥ (~ 2€) pour les étudiants et enfants.",
+    "part3": "#Groupes de 30 personnes ➵ 800¥# (~ 6,25€) pour les adultes et 240¥ (~ 1,80€) pour les enfants.",
+    "part4": "#Château + Jardin Koko-En ➵ 1 050¥# (~ 8,50€) pour les adultes et 360¥ (~ 2,80€) pour les étudiants et enfants.",
+    "part5": "#Visite des douves en barque ➵ 1 000¥# (~ 8€)."
   },
   "where-to-stay": {
     "title": "Où dormir à Himeji ?",
