@@ -14,7 +14,7 @@
     "part1": "Après une multitude de recherches, nous avons trouvé que passer par Tokyo pour redescendre au lac était la meilleure solution.",
     "part2": "#Depuis Tokyo environ 2h30#",
     "part3": "Depuis la Shinjuku Station prendre la JR Chuo Line jusqu’à Otsuki Station ↠ Environ 1h10 ↠ Fonctionne avec le JR pass.",
-    "part4": "Une fois à Otsuki Station aller jusqu’à Fujikyu Railway ↠ Environ 1h ↠ ne fonctionne pas avec le JR pass (~ 1150 Yens aller).",
+    "part4": "Une fois à Otsuki Station aller jusqu’à Fujikyu Railway ↠ Environ 1h ↠ ne fonctionne pas avec le JR pass (~ 1150¥ aller).",
     "part5": "En savoir plus sur [les transports au Japon](todo)."
   },
   "how-long": {
@@ -58,7 +58,7 @@
     "part2": "Cadre parfait pour des #balades en vélo ou de la randonnée#, le tout en admirant en arrière plan le volcan et ses multiples changements de décor tout au long de la journée, du lever au coucher du soleil.",
     "part3": "Profitez d’un changement de paysages entre chaque saison également. Cerisier au printemps, lavande et multiples fleurs en été, érable rouge en automne et neige en hiver. De quoi vous ravir à chaque saison en fonction de vos préférences.",
     "part4": "#Lac Motosu# « Motosuko »",
-    "part5": "Particulièrement difficile d’accès au niveau des transports en commun et peu développé au niveau des infrastructures, il est surtout connu par les campeurs. C’est l’un des seuls lacs de la zone de Fujigoko à ne pas geler en hiver car son eau ne descend jamais en dessous de 4°C. C’est la vue de ce lac qui apparaît sur le billet de 1000 Yens.",
+    "part5": "Particulièrement difficile d’accès au niveau des transports en commun et peu développé au niveau des infrastructures, il est surtout connu par les campeurs. C’est l’un des seuls lacs de la zone de Fujigoko à ne pas geler en hiver car son eau ne descend jamais en dessous de 4°C. C’est la vue de ce lac qui apparaît sur le billet de 1000¥.",
     "part6": "#Lac Shoji# « Shojiko »",
     "part7": "C’est le plus petit des cinq lacs de la zone. Il est situé entre le lac Motosu et le lac Sai. Un peu mieux desservi que le lac Motosu, il ne possède pas énormément d'hôtels mais vous pouvez également y faire du camping.",
     "part8": "#Lac Sai# « Saiko »",
@@ -82,8 +82,8 @@
     "part9": "#Une vue différente à chaque moment de la journée.#",
     "part10": "#Pour ce qui est du téléphérique :#",
     "part11": "Départs toutes les 5 à 10 minutes de 9h à 16h30 - Ouvert tous les jours",
-    "part12": "Adulte : 900 Yens aller - retour",
-    "part13": "Enfant : 450 Yens aller - retour"
+    "part12": "Adulte : 900¥ aller - retour",
+    "part13": "Enfant : 450¥ aller - retour"
   },
   "visit5": {
     "title": "UN AUTRE POINT DE VUE",
