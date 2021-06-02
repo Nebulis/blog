@@ -1,101 +1,102 @@
 {
-  "quote": "",
-  "introduction": "",
+  "quote": "Mount Fuji is a symbol of the land of the Rising Sun. Located southwest of Tokyo, it is also the highest summit in Japan, with five lakes around it. We decided to observe it from Kawaguchi Lake.",
+  "introduction": "Discover Mount Fuji through our article and our photos from Kawaguchi Lake.",
   "google-description": "Discover Mount Fuji through our article and our photos from Kawaguchi Lake. How to get there ? When to visit it? What to do around? Where to stay? We will explain everything to you.",
-  "social-network-description": "Mount Fuji is a symbol of the land of the Rising Sun. Located southwest of Tokyo, it is also the highest summit in Japan. Surrounded by five lakes, we stayed at Kawaguchi Lake.",
+  "social-network-description": "Mount Fuji is a symbol of the land of the Rising Sun. Located southwest of Tokyo, it is also the highest summit in Japan, with five lakes around it. We decided to observe it from Kawaguchi Lake.",
+  "full-title": "Kawaguchi Lake: View of Mount Fuji | Travel Guide",
   "what-time-of-year": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": ""
+    "title": "Best time to visit?",
+    "part1": "For the ascent, the best season is during summer, mainly #July and August#.",
+    "part2": "To walk around the lakes, you can take the opportunity to come [in spring](spring-in-japan) and have a magnificent view of Mount Fuji with the cherry blossoms, or [in autumn](autumn-in-japan) to admire fiery colors.",
+    "part3": "Of course, to admire Mount Fuji you will need a clear sky. If you have the opportunity to check the weather forecast before coming, it would be a real advantage."
   },
   "how": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": ""
+    "title": "How to get there?",
+    "part1": "After a lot of research, we found that going through Tokyo to go back down to the lake was the best solution.",
+    "part2": "#From Tokyo, expect around 2h30#",
+    "part3": "From Shinjuku Station take the JR Chuo Line to Otsuki Station ↠ for around 1h10 ↠ covered by JR pass.\n",
+    "part4": "Once at Otsuki Station go to Fujikyu Railway ↠ for around 1 hour ↠ it's not covered by JR pass, so you will have to buy tickets (~ ¥ 1150 one way).",
+    "part5": "More information about [Transports in Japan](transport-japan)."
   },
   "how-long": {
-    "title": "",
-    "part1": ""
+    "title": "How long?",
+    "part1": "One day and one night."
   },
   "where-to-stay": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": ""
+    "title": "Where to stay near Kawaguchiko Lake?",
+    "part1": "We booked our hotel a bit late and did not have a lot of choices.",
+    "part2": "We booked the [Shiki-No Yado Fujisan](booking-hotel:jp/shiki-no-yado-popura) hotel, which was reasonably priced. The rooms are a bit dated though, but the view of the lake or Mount Fuji is appreciable. It’s not luxury, but fine for few nights. Right in front of the lake, the location is perfect.",
+    "part3": "Compare and book your hotel on [Booking](booking-search:Fujikawaguchiko)."
   },
   "visit": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": ""
+    "title": "Visit",
+    "part1": "It is the highest summit in Japan, standing at #3,776 meters above sea level#. It is located on the main island of Honshu.",
+    "part2": "Often used on postcards to represent Japan, it is one of the most famous mountains in the world. Its snow-capped cone with almost perfect symmetry gives us the illusion of observing a sort of artwork.",
+    "part3": "Also named #Fujiyama and Fuji-San#, it is a sacred mountain and a symbol of Japan. For the Japanese, it symbolizes peace and prosperity.",
+    "part4": "Mount Fuji is a volcano, and although it has not erupted for over 300 years, the volcano is still considered active.",
+    "part5": "You may be lucky enough to spot it from your plane's window.",
+    "part6": "For more information, read our article on [Climbing Mount Fuji](mount-fuji-ascent)."
   },
   "visit1": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": ""
+    "title": "Train",
+    "part1": "Taking the train to Mount Fuji is already an adventure.",
+    "part2": "It feels like you are no longer in Japan but in a world apart.",
+    "part3": "The train is particularly slow. It's so different from what we were used to with the Shinkansen. You can #enjoy the scenery, observe small villages and already see Mount Fuji# during the journey"
   },
   "visit2": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": ""
+    "title": "Miscellaneous information",
+    "part1": "663 ➵ #First ascent of Mount Fuji# by the Buddhist monk En no Gyōja",
+    "part2": "781 ➵ First recorded eruption",
+    "part3": "1707 ➵ Last recorded eruption",
+    "part4": "1860 ➵ #First ascent by a non-Japanese#, Sir Rutherford Alcock",
+    "part5": "1872 ➵ Women are allowed to climb",
+    "part6": "2013 ➵ Added to the UNESCO World Heritage List",
+    "part7": "Since the first eruption, there would have been 16 other eruptions recorded."
   },
   "visit3": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": "",
-    "part8": "",
-    "part9": "",
-    "part10": "",
-    "part11": "",
-    "part12": "",
-    "part13": "",
-    "part14": ""
+    "title": "Which Lake to choose?",
+    "part1": "#There are five large lakes at Mount Fuji base. The area is called « Fujigoko ».#",
+    "part2": "It's perfect for #bike rides or hiking# while admiring the volcano in the background, and its multiple scenery changes throughout the day, from sunrise to sunset.",
+    "part3": "Enjoy a change of scenery between each season as well. Cherry trees in spring, lavenders and multiple flowers in summer, red maples in autumn, and snow in winter. There will always be something to delight you according to your preferences.",
+    "part4": "#Motosuko Lake#",
+    "part5": "Particularly difficult to access by public transportation, with poorly developed infrastructures. It is popular for camping. It is one of the only lakes in Fujigoko that does not freeze in winter because the water never drops below 4° C. The view of Mount Fuji from this lake appears on the ¥ 1,000 banknote.",
+    "part6": "#Shojiko Lake#",
+    "part7": "It is the smallest of the five lakes, located between Motosu Lake and Sai Lake. Better served by public transportation than Lake Motosu, there are few hotels, but you can enjoy camping.",
+    "part8": "#Saiko Lake#",
+    "part9": "Not the best spot to observe Mount Fuji because of the mountains between the lake and the volcano. However, you have great hiking trails and caves to explore.",
+    "part10": "These three lakes border the mysterious [Aokigahara Forest](aokigahara-forest), the infamous Suicide Forest.",
+    "part11": "#Kawaguchiko Lake#",
+    "part12": "The most famous lake with the best view of Mount Fuji. To have a panoramic view of the lake and Mount Fuji, you can take the cable car and climb to the top of Mount Kachi Kachi. It is also the most accessible lake by public transportation.",
+    "part13": "#Yamanakako Lake#",
+    "part14": "The third highest lake in Japan, with a surface altitude around 1,000 meters above sea level. It is also the largest of the five lakes in Fujigoko. Yamanakako Lake is especially popular in the summer for water sports."
   },
   "visit4": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": "",
-    "part8": "",
-    "part9": "",
-    "part10": "",
-    "part11": "",
-    "part12": "",
-    "part13": ""
+    "title": "Kawaguchiko Lake",
+    "part1": "So we opted for Kawaguchiko Lake.",
+    "part2": "Once at the station, head to the lake for a walk before the sunset.",
+    "part3": "The view of Mount Fuji is magnificent when the sun begins to fall. The lake also shows us all its charm.",
+    "part4": "In April, it's still a bit cold in the evening. We do not venture too far from our hotel but we already appreciate this very nice first sight.",
+    "part5": "Going around the lake is interesting if you are looking for #the best spot to take photos#. You can simply stroll and breathe some fresh air. Bike rentals can be found all over the place. Our hotel lends some, but we assume that is the case all around.",
+    "part6": "However, the city itself is of very little interest.",
+    "part7": "#Like a ghost town#. There were no restaurants open at night, despite being there during the touristy season. We were a little disappointed. We think they open mainly in summer.",
+    "part8": "That said, the place is worth the detour for a day. The train is like an attraction. The walk around the lake is pleasant and helps to escape the hustle and bustle. Lastly, the view of Mount Fuji is exceptional.",
+    "part9": "#A different view at every moment of the day.#",
+    "part10": "Regarding the cable car:",
+    "part11": "Departures every 5 to 10 minutes from 9 a.m. to 4:30 p.m. - Open every day",
+    "part12": "Adult: ¥ 900 round trip",
+    "part13": "Child: ¥ 450 round trip"
   },
   "visit5": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Other spots",
+    "part1": "We recommend you to go to [Chureito Pagoda](chureito-pagoda) for another fantastic view of Mount Fuji. There are quite a few steps to get there (around 400), but the view is said to be splendid.",
+    "part2": "The supreme way to observe Mount Fuji is directly from an onsen."
   },
-  "conclusion": "",
-  "question1": "",
-  "question2": "",
-  "pinterest": "",
+  "conclusion": "Each year, between 200,000 and 300,000 people attempt to climb to the top of Mount Fuji.",
+  "question1": "Have you ever climbed Mount Fuji?",
+  "question2": "What is your favorite lake?",
+  "pinterest": "\uD83C\uDF0F Discover Mount Fuji through our article and our photos from Kawaguchi Lake. How to get there ? When to visit it? What to do around? Where to stay? We will explain everything to you. Click on the image for the full guide about Mount Fuji... \uD83C\uDF0F",
   "facebook": {
-    "part1": "",
-    "part2": ""
+    "part1": "♡ Hello travellers! ♡",
+    "part2": "Ascending Mount Fuji must be incredible. However, we decided to observe it from afar while walking among magnificent landscapes. Find more in our article."
   }
 }

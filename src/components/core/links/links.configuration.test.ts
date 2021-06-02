@@ -283,6 +283,18 @@ const japanLinks = () => {
     label: { en: "", fr: "" },
     published: false,
   })
+  expect(getLink("mount-fuji-ascent")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("aokigahara-forest")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("chureito-pagoda")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
 }
 
 const vietnamLinks = () => {
