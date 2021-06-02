@@ -29,7 +29,7 @@ import {
 import { TitleImage } from "../../../../components/images/layout"
 import { Divider } from "../../../../components/core/divider"
 import { PageQuote } from "../../../../components/core/quote"
-import HomeImage from "../../../../images/asia/japan/fuji/kawaguchiko/fuji-main.jpg"
+import HomeImage from "../../../../images/asia/japan/fuji/kawaguchiko-lake/kawaguchiko-lake-main.jpg"
 import { WeatherForHomePage } from "../../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
 import { PointOfInterestSection } from "../../../../components/core/point-of-interest"

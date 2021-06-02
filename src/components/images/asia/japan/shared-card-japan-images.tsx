@@ -50,9 +50,9 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      mountFuji: file(relativePath: { eq: "asia/japan/fuji/kawaguchiko/fuji-main.jpg" }) {
+      mountFuji: file(relativePath: { eq: "asia/japan/fuji/kawaguchiko-lake/kawaguchiko-lake-main.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

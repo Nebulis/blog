@@ -1,12 +1,13 @@
 {
   "quote": "Le Mont Fuji est un véritable symbole au pays du Soleil-Levant. Situé au sud-ouest de Tokyo, il est également le point culminant du Japon. Entouré de cinq lacs, nous avons tenté l’expérience au lac Kawaguchi.",
   "introduction": "Découvrez le Mont Fuji à travers notre article et nos photos depuis les paysages magnifiques du lac Kawaguchi.",
-  "google-description": "Découvrez le Mont Fuji à travers notre article et nos photos depuis les paysages magnifiques du lac Kawaguchi. Comment y aller ? Comment et quand le visiter ? Que faire autour ? Où loger ? On vous explique tout.",
+  "google-description": "Découvrez le Mont Fuji à travers notre article et nos photos depuis les paysages magnifiques du lac Kawaguchi. Comment y aller ? Où loger ? Que faire ? Pourquoi choisir ce lac ? On vous explique tout.",
   "social-network-description": "Le Mont Fuji est un véritable symbole au pays du Soleil-Levant. Situé au sud-ouest de Tokyo, il est également le point culminant du Japon. Entouré de cinq lacs, nous avons tenté l’expérience au lac Kawaguchi.",
+  "full-title": "Lac Kawaguchi : La vue sur le Mont Fuji | Guide de Voyage",
   "what-time-of-year": {
     "title": "À quelle période ?",
     "part1": "Pour l’ascension, la meilleure saison est en été, #Juillet et Août# principalement.",
-    "part2": "Pour vous promener autour des lacs, vous pouvez en profiter pour venir [au printemps](todo) et avoir une magnifique vue sur le Mont Fuji avec les cerisiers en fleurs, ou bien [en automne](todo) et ses couleurs enflammées.",
+    "part2": "Pour vous promener autour des lacs, vous pouvez en profiter pour venir [au printemps](spring-in-japan) et avoir une magnifique vue sur le Mont Fuji avec les cerisiers en fleurs, ou bien [en automne](autumn-in-japan) et ses couleurs enflammées.",
     "part3": "Bien sûr pour admirer le Mont il vous faudra du beau temps et si vous avez la possibilité de regarder la météo avant de venir ce serait un véritable plus même si ce n’est pas forcément évident."
   },
   "how": {
@@ -15,17 +16,17 @@
     "part2": "#Depuis Tokyo environ 2h30#",
     "part3": "Depuis la Shinjuku Station prendre la JR Chuo Line jusqu’à Otsuki Station ↠ Environ 1h10 ↠ Fonctionne avec le JR pass.",
     "part4": "Une fois à Otsuki Station aller jusqu’à Fujikyu Railway ↠ Environ 1h ↠ ne fonctionne pas avec le JR pass (~ 1150¥ aller).",
-    "part5": "En savoir plus sur [les transports au Japon](todo)."
+    "part5": "En savoir plus sur [les transports au Japon](transport-japan)."
   },
   "how-long": {
     "title": "Combien de temps ?",
-    "part1": "Une journée et une nuit"
+    "part1": "Une journée et une nuit."
   },
   "where-to-stay": {
     "title": "Où dormir près du lac Kawaguchiko ?",
     "part1": "Nous nous y sommes pris un peu tard pour réserver notre hôtel et nous n’avons pas eu énormément de choix.",
-    "part2": "Nous avons réservé l’hôtel [Shiki-No Yado Fujisan](todo), prix raisonnable. Les chambres sont un peu vieillottes par contre, mais la vue sur le lac ou le Mont Fuji est appréciable. Ce n’est clairement pas du grand luxe mais pour quelques nuits cela fait l’affaire. Pile en face du lac, il a vraiment un très bon emplacement.",
-    "part3": "Comparez et réservez votre hôtel sur [Booking](todo)."
+    "part2": "Nous avons réservé l’hôtel [Shiki-No Yado Fujisan](booking-hotel:jp/shiki-no-yado-popura), prix raisonnable. Les chambres sont un peu vieillottes par contre, mais la vue sur le lac ou le Mont Fuji est appréciable. Ce n’est clairement pas du grand luxe mais pour quelques nuits cela fait l’affaire. Pile en face du lac, il a vraiment un très bon emplacement.",
+    "part3": "Comparez et réservez votre hôtel sur [Booking](booking-search:Fujikawaguchiko)."
   },
   "visit": {
     "title": "La visite",
@@ -34,7 +35,7 @@
     "part3": "Nommé également #Fujiyama et Fuji-San# c’est une montagne sacrée et un véritable symbole du Japon, il symbolise pour eux la paix et leur apporte la prospérité.",
     "part4": "Le Mont Fuji est un volcan, et bien que n’ayant plus été en éruption depuis plus de 300 ans, le volcan est quand même considéré comme actif.",
     "part5": "Vous aurez peut-être la chance de l’apercevoir depuis le hublot de votre avion.",
-    "part6": "Pour en savoir plus, n’hésitez pas à lire notre article sur l’[ascension du Mont Fuji](todo)."
+    "part6": "Pour en savoir plus, n’hésitez pas à lire notre article sur l’[ascension du Mont Fuji](mount-fuji-ascent)."
   },
   "visit1": {
     "title": "LE TRAIN",
@@ -63,7 +64,7 @@
     "part7": "C’est le plus petit des cinq lacs de la zone. Il est situé entre le lac Motosu et le lac Sai. Un peu mieux desservi que le lac Motosu, il ne possède pas énormément d'hôtels mais vous pouvez également y faire du camping.",
     "part8": "#Lac Sai# « Saiko »",
     "part9": "La vue sur le Mont Fuji est sûrement la plus subtile à cause des montagnes qui sont entre le Mont et le lac. Vous y avez néanmoins de grands sentiers de randonnées et des grottes sont également accessibles.",
-    "part10": "Ces 3 premiers lacs bordent la mystérieuse [forêt d'Aokigahara](todo), la tristement célèbre forêt de suicide.",
+    "part10": "Ces 3 premiers lacs bordent la mystérieuse [forêt d'Aokigahara](aokigahara-forest), la tristement célèbre forêt de suicide.",
     "part11": "#Lac Kawaguchi# « Kawaguchiko »",
     "part12": "Certainement le lac le plus connu et qui offre la meilleure vue sur le Mont Fuji. Pour avoir une vue panoramique sur le lac et le Mont Fuji vous pouvez prendre le téléphérique et monter au sommet du Mont Kachi Kachi. C’est également le lac le plus facile d’accès au niveau des transports en commun.",
     "part13": "#Lac Yamanaka# « Yamanakako »",
@@ -87,7 +88,7 @@
   },
   "visit5": {
     "title": "UN AUTRE POINT DE VUE",
-    "part1": "Si vous avez envie d’une autre vue du Mont Fuji vous pouvez vous rendre à la [Chureito Pagoda](todo). Il y a pas mal de marches pour y accéder (environ 400), mais la vue est paraît-il splendide.",
+    "part1": "Si vous avez envie d’une autre vue du Mont Fuji vous pouvez vous rendre à la [Chureito Pagoda](chureito-pagoda). Il y a pas mal de marches pour y accéder (environ 400), mais la vue est paraît-il splendide.",
     "part2": "L’image qui donne forcément le plus envie est la #baignade dans un onsen# avec en face de vous le Mont Fuji."
   },
   "conclusion": "Chaque année il y aurait entre 200 000 et 300 000 personnes qui tenteraient l’aventure de l’ascension du Mont Fuji.",

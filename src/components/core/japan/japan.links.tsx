@@ -129,6 +129,21 @@ export const japanLinks: CountryLink = {
       label: { fr: "", en: "" },
       published: false,
     },
+    {
+      id: "mount-fuji-ascent",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "aokigahara-forest",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "chureito-pagoda",
+      label: { fr: "", en: "" },
+      published: false,
+    },
   ],
   cities: [
     {
@@ -218,7 +233,7 @@ export const japanLinks: CountryLink = {
             fr: commonFr.country.japan.card["kawaguchiko-lake"],
             en: commonEn.country.japan.card["kawaguchiko-lake"],
           },
-          published: false,
+          published: new Date("2021-06-19T17:00:00.000+08:00"),
           card: KawaguchikoLakeCard,
         },
       ],

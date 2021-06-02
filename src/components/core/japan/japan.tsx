@@ -33,12 +33,6 @@ export const JapanQuote = styled(Quote)`
     color: #ffb7c5;
   }
 `
-export const FujiQuote = () => (
-  <JapanQuote>
-    Le Mont Fuji est un véritable symbole au Japon. Par beau temps il serait même visible de Tokyo. Entouré de cinq
-    lacs, nous avons tenté l’expérience au lac Kawaguchi.
-  </JapanQuote>
-)
 export const HamarikyuGardenQuote = () => (
   <JapanQuote>
     Un jardin paisible et calme, parfait endroit pour se ressourcer au milieu de la plus grande mégapole du monde.
