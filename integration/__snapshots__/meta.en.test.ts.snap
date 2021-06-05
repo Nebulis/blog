@@ -156,11 +156,11 @@ exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/ind
 
 exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: title 1`] = `"Spring In Japan: Under the Sakuras | Travel Guide"`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: meta-description 1`] = `"In this article we answer your questions: how to get there? How long ? What's the best time to visit ? We also tell you where it's located and what budget to plan. All with our travelogue and photos of this amazing Japanese garden."`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: meta-description 1`] = `"Discover our travelogue and our photos of this charming Japanese garden, the Hamarikyu Gardens. How to get there? How long? What's the best time to visit? We also tell you its address and price."`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: social-network 1`] = `"Hidden in the middle of skyscrapers lies a true haven of peace, the HamaRikyu Garden. It is the perfect place to recharge your batteries in the middle of the largest megalopolis in the world."`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: social-network 1`] = `"Hidden in the middle of skyscrapers lies a true haven of peace, the Hamarikyu Gardens. It is the perfect place to recharge your batteries in the middle of the largest megalopolis in the world."`;
 
-exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: title 1`] = `"Hamarikyu Gardens : A Haven of Peace in the Middle of Tokyo | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/tokyo/hamarikyu-garden/index.html correctly: title 1`] = `"Hamarikyu Gardens : A Haven of Peace in the Middle of Tokyo | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/index.html correctly: meta-description 1`] = `"Discover the bustling life of Tokyo, the most populous megacity in the world. For each spot, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 

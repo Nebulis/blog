@@ -1,7 +1,6 @@
 import { css } from "@emotion/react"
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import styled from "@emotion/styled"
-import { Quote } from "../quote"
 import { ButtonLink, ExternalLink, linkBuilder } from "../links/link"
 import { BlogLayout, IndexBlogLayout } from "../../layout/layout"
 import { japanCherryBlossom, japanPrimaryColor, japanPrimaryColorDarker } from "./japan.variables"
@@ -25,18 +24,6 @@ export const JapanLine: FunctionComponent<HTMLAttributes<any> & JapanLineProps> 
       {children}
     </span>
   </ExternalLink>
-)
-
-// TODO delete
-export const JapanQuote = styled(Quote)`
-  .quote::before {
-    color: #ffb7c5;
-  }
-`
-export const HamarikyuGardenQuote = () => (
-  <JapanQuote>
-    Un jardin paisible et calme, parfait endroit pour se ressourcer au milieu de la plus grande mégapole du monde.
-  </JapanQuote>
 )
 
 // TODO delete

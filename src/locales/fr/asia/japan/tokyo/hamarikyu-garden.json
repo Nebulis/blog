@@ -1,8 +1,9 @@
 {
   "quote": "Derrière les gratte-ciels et la frénésie de la ville se trouve un véritable havre de paix, le jardin Hamarikyu est un endroit parfait pour vous ressourcer au milieu de la plus grande mégapole du monde.",
   "introduction": "Découvrez à travers notre récit et nos photos ce séduisant jardin japonais.",
-  "google-description": "Dans cet article on répond à vos questions comment y aller ? Combien de temps ? A quelle saison ? On vous indique également son adresse et son prix. Le tout avec notre récit de voyage et nos photos de ce séduisant jardin japonais.",
+  "google-description": "Découvrez notre récit de voyage et nos photos de ce séduisant jardin japonais, le jardin Hama Rikyu. Comment y aller ? Combien de temps ? A quelle saison ? On vous indique également son adresse et son prix.",
   "social-network-description": "Derrière les gratte-ciels et la frénésie de la ville se trouve un véritable havre de paix, le jardin Hama Rikyu est un endroit parfait pour vous ressourcer au milieu de la plus grande mégapole du monde.",
+  "full-title": "Jardin Hama-Rikyu : Un havre de paix en plein Tokyo | Guide de Voyage",
   "where": {
     "title": "Où ?",
     "part1": "1-1 Hamarikyuteien, Chuo City, Tokyo"
@@ -17,7 +18,7 @@
     "part2": "Keihintohoku Line, Yamanote Line ou Tokaido Line",
     "part3": "Descendre à Shimbashi Station ↠ entre 3 et 6 mins de train, avec un nombre d'arrêt dépendant de la ligne que vous aurez pris. Ensuite 10 à 15 minutes de marche.",
     "part4": "Il est possible de prendre le bus 01 en sortant de Shimbashi Station pour se rapprocher à 5 mins du jardin.",
-    "part5": "En savoir plus sur [les transports au Japon](todo)."
+    "part5": "En savoir plus sur [les transports au Japon](transport-japan)."
   },
   "how-long": {
     "title": "Combien de temps ?",
@@ -27,6 +28,13 @@
     "title": "A quelle période ?",
     "part1": "Pas vraiment de moment prérequis, vous pouvez y aller à #n’importe quelle saison#. Vous aurez forcément quelques paysages différents mais il n’y a pas de grand spot à cerisier par exemple pour le printemps, ni de splendide érable rouge éclatant en automne.",
     "part2": "Cela ne nous a pas empêché d’y aller en Avril, mais ce n'était pas forcément pour les sakuras juste pour le jardin en lui-même."
+  },
+  "where-to-stay": {
+    "title": "Où dormir près du jardin ?",
+    "part1": "On le répète assez régulièrement pour le Japon, et en particulier pour [Tokyo](tokyo), mais vous n’êtes pas obligé de réserver votre logement en fonction de vos visites car les villes sont vraiment très bien desservies niveau transport.",
+    "part2": "Cela dit, si vous avez quand même envie de réserver près du jardin Hama-Rikyu, on vous propose 3 différents logements, pour s’adapter à différents budgets.",
+    "part3": "Les prix varient énormément en fonction des saisons, pour cet article on vous indique des hôtels / prix pour une saison neutre, par exemple le mois de mai.",
+    "part4": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:Arrondissement+de+Ch%C5%AB%C5%8D%2C+Tokyo%2C+Pr%C3%A9fecture+de+Tokyo%2C+Japon)."
   },
   "how-much": {
     "title": "Prix",
@@ -46,7 +54,7 @@
     "part10": "Quel plaisir de trouver un endroit au calme dans cette frénésie qu'est Tokyo.",
     "part11": "Vous trouverez même un #embarcadère pour rejoindre la baie de Tokyo#.",
     "part12": "Bien mieux que des mots, on vous laisse avec quelques autres photos de notre visite de Hamarikyu.",
-    "part13": "N’hésitez pas à aller voir notre article sur Nos deux journées à Tokyo."
+    "part13": "N’hésitez pas à aller voir notre article sur [Nos deux journées à Tokyo](two-days-in-tokyo) pour découvrir nos autres visites de lieux incontournables en si peu de temps."
   },
   "conclusion": "Une fois entré dans le jardin Hama-Rikyu, on a vraiment l’impression d'être transporté à l'extérieur de Tokyo.",
   "question1": "Connaissez-vous d'autres endroits à Tokyo pour échapper au brouhaha de la ville ?",

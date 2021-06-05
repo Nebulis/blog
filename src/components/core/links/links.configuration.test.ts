@@ -197,10 +197,10 @@ const japanLinks = () => {
     published: true,
   })
 
-  expect(getLink("fuji")).toMatchObject({ label: { en: "Mt. Fuji", fr: "Mt. Fuji" }, published: false })
+  expect(getLink("fuji")).toMatchObject({ label: { en: "Mt. Fuji", fr: "Mt. Fuji" }, published: true })
   expect(getLink("kawaguchiko-lake")).toMatchObject({
     label: { fr: "Lac Kawaguchi : La vue sur le Mont Fuji", en: "Kawaguchi Lake: View of Mount Fuji" },
-    published: false,
+    published: true,
   })
 
   expect(getLink("nagoya")).toMatchObject({ label: { fr: "Nagoya", en: "Nagoya" }, published: true })

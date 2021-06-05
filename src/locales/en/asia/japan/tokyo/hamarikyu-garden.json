@@ -1,59 +1,67 @@
 {
-  "quote": "",
-  "introduction": "",
-  "google-description": "In this article we answer your questions: how to get there? How long ? What's the best time to visit ? We also tell you where it's located and what budget to plan. All with our travelogue and photos of this amazing Japanese garden.",
-  "social-network-description": "Hidden in the middle of skyscrapers lies a true haven of peace, the HamaRikyu Garden. It is the perfect place to recharge your batteries in the middle of the largest megalopolis in the world.",
+  "quote": "Hidden in the middle of skyscrapers lies a true haven of peace, the Hamarikyu Gardens. It is the perfect place to recharge your batteries in the middle of the largest megalopolis in the world.",
+  "introduction": "Discover our travelogue and our photos of this charming Japanese garden.",
+  "google-description": "Discover our travelogue and our photos of this charming Japanese garden, the Hamarikyu Gardens. How to get there? How long? What's the best time to visit? We also tell you its address and price.",
+  "social-network-description": "Hidden in the middle of skyscrapers lies a true haven of peace, the Hamarikyu Gardens. It is the perfect place to recharge your batteries in the middle of the largest megalopolis in the world.",
+  "full-title": "Hamarikyu Gardens : A Haven of Peace in the Middle of Tokyo | Travel Guide",
   "where": {
-    "title": "",
-    "part1": ""
+    "title": "Where?",
+    "part1": "1-1 Hamarikyuteien, Chuo City, Tokyo"
   },
   "when": {
-    "title": "",
-    "part1": ""
+    "title": "When?",
+    "part1": "Every day from 9 a.m. to 5 p.m.."
   },
   "how": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": ""
+    "title": "How to get there?",
+    "part1": "#From Tokyo Station, you have several choices:#",
+    "part2": "Keihintohoku Line, Yamanote Line or Tokaido Line",
+    "part3": "Get off at Shimbashi Station ↠ between 3 and 6 mins by train. The number of stops depends on the line you take. Then walk for 10 to 15 minutes.",
+    "part4": "It is possible to take bus number 01 leaving Shimbashi Station to get as close as 5 minutes walk from the gardens.",
+    "part5": "More information about [Transports in Japan](transport-japan)."
   },
   "how-long": {
-    "title": "",
-    "part1": ""
+    "title": "How long?",
+    "part1": "Enjoy the calm to walk there for at least #two hours# to discover all the nooks and crannies."
   },
   "what-time-of-year": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Best time to visit?",
+    "part1": "No specific time. You can go #any season#. Of course, depending on the season, the view will be different, but unlike other places, the gardens are not famous for cherry blossom (in spring) or red maple trees (in autumn).",
+    "part2": "That didn't stop us from going in April. We haven't been there for the sakura, but we really wanted to discover those gardens."
+  },
+  "where-to-stay": {
+    "title": "Where to stay near the gardens?",
+    "part1": "We repeat this quite regularly for Japan, and it's particularly true for [Tokyo](tokyo), but you do not have to book your accommodation according to your visits because public transports are well-developed.",
+    "part2": "That said, if you still want to book near the Hamarikyu Gardens, we share three different accommodations to suit different budgets.",
+    "part3": "The prices vary enormously depending on the seasons. For this article, we share you hotels/prices for a neutral season, for example in May.",
+    "part4": "You can compare more offers on [Booking](booking-search:Chuo+Ward%2C+Tokyo%2C+Tokyo-to%2C+Japan)."
   },
   "how-much": {
-    "title": "",
-    "part1": ""
+    "title": "How much?",
+    "part1": "¥ 300"
   },
   "visit": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": "",
-    "part8": "",
-    "part9": "",
-    "part10": "",
-    "part11": "",
-    "part12": "",
-    "part13": ""
+    "title": "Visit",
+    "part1": "Hamarikyu Gardens are #a 25-hectare Japanese garden# located in the middle of the city, in the Tsukiji district more precisely.",
+    "part2": "It has been open to the public since 1946.",
+    "part3": "From the moment you enter, you will be amazed by the immense contrast between the traffic of the surrounding roads and the sudden calm once you are in the park.",
+    "part4": "You will also be impressed by the contrast between the buildings in the background and the relaxing strolls.",
+    "part5": "We feel a #different atmosphere in each place#. Paths are going in every direction. Sometimes you will be with few people, and suddenly you will be alone in the world.",
+    "part6": "From the dirt roads to the gravel paths, different landscapes emerge in front of you as you venture through the gardens.",
+    "part7": "Some cherry trees. A small rapeseed garden. A small hill to observe the surroundings. Places to rest. Then the vegetation is suddenly intense, and finally, we reach some ponds.",
+    "part8": "Pass over the Nakajima Bridge, which overlooks Shioiri Pond. This pond is the last seawater pond in Tokyo. The bridge will take you to the #Ochaya tea house#. Take some rest and have a cup of tea.",
+    "part9": "So many places that soothe in no time. It brings us so many emotions before we leave Japan. A breath of fresh air.",
+    "part10": "What a pleasure to find a quiet place in this frenzy city that is Tokyo.",
+    "part11": "You will even find a pier to reach Tokyo Bay.",
+    "part12": "Much better than words, we leave you with some other photos of our visit to Hamarikyu Gardens.",
+    "part13": "Check out our article on [Our Two Days in Tokyo](two-days-in-tokyo) to find out about our other must-see places in such a short time.\n"
   },
-  "conclusion": "",
-  "question1": "",
-  "question2": "",
-  "pinterest": "",
+  "conclusion": "Once you enter the Hamarikyu Gardens, you feel like you have been transported outside of Tokyo.",
+  "question1": "Do you know any other places in Tokyo to escape the hubbub of the city?",
+  "question2": "Have you ever visited the Hamarikyu Gardens?",
+  "pinterest": "\uD83C\uDF0F In this article we answer your questions: how to get there? How long ? What's the best time to visit ? We also tell you where it's located and what budget to plan. All with our travelogue and photos of this amazing Japanese garden. Click on the image for the full guide about this garden... \uD83C\uDF0F",
   "facebook": {
-    "part1": "",
-    "part2": ""
+    "part1": "♡ Hello travellers! ♡",
+    "part2": "Join us to discover the Hamarikyu garden, a garden that will help you to escape the hustle and bustle of the city in the middle of Tokyo, an impressive contrast."
   }
 }

@@ -30,7 +30,7 @@ import {
 import { TitleImage } from "../../../../components/images/layout"
 import { Divider } from "../../../../components/core/divider"
 import { PageQuote } from "../../../../components/core/quote"
-import HomeImage from "../../../../images/asia/japan/tokyo/hamarikyu/hamarikyu-garden-main.jpg"
+import HomeImage from "../../../../images/asia/japan/tokyo/hamarikyu-garden/hamarikyu-garden-main.jpg"
 import { TwoDaysInTokyoCard } from "../../../../components/core/japan/japan.cards"
 import { WeatherForHomePage } from "../../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
