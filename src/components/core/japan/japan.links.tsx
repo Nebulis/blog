@@ -270,7 +270,7 @@ export const japanLinks: CountryLink = {
             fr: commonFr.country.japan.card["hamarikyu-garden"],
             en: commonEn.country.japan.card["hamarikyu-garden"],
           },
-          published: false,
+          published: new Date("2021-06-26T17:00:00.000+08:00"),
           card: HamarikyuGardenCard,
         },
         {

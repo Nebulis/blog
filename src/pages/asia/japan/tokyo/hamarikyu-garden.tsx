@@ -1,33 +1,47 @@
-import React from "react"
+import React, { useContext } from "react"
 import SEO from "../../../../components/layout/seo"
-import { How, HowMuch, Visit, When, Where } from "../../../../components/core/section"
+import {
+  How,
+  HowLong,
+  HowMuch,
+  SectionContent,
+  Visit,
+  WhatTimeOfYear,
+  When,
+  Where,
+  WhereToStay,
+} from "../../../../components/core/section"
 import {
   GroupOfImages,
   ImageAsLandscape,
+  ImageAsLandscapeOnTheLeft,
+  ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
-  TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { HamarikyuGardenBuilding1Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenBuilding1Image"
-import { HamarikyuBird1Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuBird1Image"
-import { HamarikyuBird2Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuBird2Image"
-import { HamarikyuGardenCherry1Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenCherry1Image"
-import { HamarikyuGardenCherry2Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenCherry2Image"
-import { HamarikyuGardenBuilding2Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenBuilding2Image"
-import { css } from "@emotion/react"
-import { HamarikyuGardenColzaImage } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenColzaImage"
-import { HamarikyuGardenJungleImage } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenJungleImage"
-import { HamarikyuGardenBankImage } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenBankImage"
-import { Conclusion } from "../../../../components/core/conclusion"
-import { HamarikyuGardenCherry3Image } from "../../../../components/images/asia/japan/tokyo/hamarikyu/hamarikyuGardenCherry3Image"
-import { HamarikyuGardenQuote, JapanBlogLayout, JapanLink, JapanTitle } from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanTitle } from "../../../../components/core/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 import { useCustomTranslation } from "../../../../i18n-hook"
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/japan/tokyo/hamarikyu-garden.json"
 import translationEn from "../../../../locales/en/asia/japan/tokyo/hamarikyu-garden.json"
-import HomeImgUrl from "../../../../images/asia/japan/tokyo/hamarikyu/hamarikyu-garden-main.jpg"
+import HomeImgUrl from "../../../../images/asia/japan/tokyo/hamarikyu-garden/hamarikyu-garden-main.jpg"
+import HamarikyuGardensMap from "../../../../images/asia/japan/tokyo/hamarikyu-garden/hamarikyu-garden-map.jpg"
+import HamarikyuGardensMapEn from "../../../../images/asia/japan/tokyo/hamarikyu-garden/hamarikyu-garden-map-en.jpg"
+import { Divider } from "../../../../components/core/divider"
+import { ApplicationContext } from "../../../../components/application"
+import { getLink } from "../../../../components/core/links/links.utils"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import { Conclusion } from "../../../../components/core/conclusion"
+import { Comments } from "../../../../components/core/comments"
+import { HamarikyuGardensImages } from "../../../../components/images/asia/japan/tokyo/hamarikyu-garden"
+import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
+import hotelTavinos from "../../../../images/asia/japan/tokyo/hamarikyu-garden/hotel-tavinos-hamamatsucho.jpg"
+import bay from "../../../../images/asia/japan/tokyo/hamarikyu-garden/bay-tokyohamamatsucho.jpg"
+import villaFontaine from "../../../../images/asia/japan/tokyo/hamarikyu-garden/villa-fontaine-shiodome.jpg"
+import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
+import { buildPixabayUrl } from "../../../../utils"
 
 const namespace = "asia/japan/tokyo/hamarikyu-garden"
 const id = "hamarikyu-garden"
@@ -35,12 +49,15 @@ i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { t } = useCustomTranslation([namespace, "common"])
+  const { development } = useContext(ApplicationContext)
+  const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.${id}`)
+  const transportLinkPublished = development || getLink("transport-japan").published
   return (
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
@@ -51,82 +68,202 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <ImageAsLandscape>
           <SharedCardJapanImages image="hamarikyuGarden" />
         </ImageAsLandscape>
-        <HamarikyuGardenQuote />
-        <Where>1-1 Hamarikyuteien, Chuo City, Tokyo</Where>
-        <When>
-          <p>Tous les jours de 9h à 17h</p>
+        <Where title={t("where.title")}>
+          <p>{t("where.part1")}</p>
+        </Where>
+        <When title={t("when.title")}>
+          <p>{t("when.part1")}</p>
         </When>
-        <How>
-          Depuis Tokyo Station, plusieurs choix :
+        <How title={t("how.title")}>
+          <p>{t("how.part1")}</p>
           <ul>
-            <li>Keihintohoku Line, Yamanote Line ou Tokaido Line</li>
+            <li>{t("how.part2")}</li>
           </ul>
-          <p>
-            Descendre à Shimbashi Station entre 3 et 6 mins de train, avec un nombre d&apos;arrêt dépendant de la ligne
-            que vous aurez pris. Ensuite 10 à 15 mins de marche.
-          </p>
-          <p>
-            Il est possible de prendre le bus 01 en sortant de Shimbashi Station pour se rapprocher à 5 mins du jardin.
-          </p>
-          <small>
-            <JapanLink action="hide" to="transport-japan">
-              Plus d’information sur les transports.
-            </JapanLink>
-          </small>
+          <p>{t("how.part3")}</p>
+          <p>{t("how.part4")}</p>
+          {transportLinkPublished && <p>{t("how.part5")}</p>}
         </How>
-        <HowMuch>Gratuit</HowMuch>
-        <Visit>
-          <p>
-            L’entrée est impressionnante tant par son contraste entre l’énorme circulation des routes qu’il y a autour
-            et le calme soudain une fois que vous êtes dans le parc.
-          </p>
-          <ImageAsPortrait>
-            <HamarikyuGardenBuilding1Image />
-          </ImageAsPortrait>
-          <p>
-            On ressent une atmosphère différente à chaque endroit. Il y a des chemins en peu partout, on se retrouve
-            avec des gens et d’un coup seul au monde.
-          </p>
-          <TwoImagesSameSize>
-            <HamarikyuBird1Image />
-            <HamarikyuBird2Image />
-          </TwoImagesSameSize>
-          <p>
-            Entre les chemins en terre et les chemins en gravier, se dessinent devant vos yeux des paysages différents
-            au fur et à mesure que vous vous y aventurez.
-          </p>
-          <p>Le lac avec en son centre un restaurant.</p>
-          <p>Le petit spot à cerisiers.</p>
-          <GroupOfImages>
-            <TwoImagesSameSizeOrToGroup>
-              <HamarikyuGardenCherry1Image />
-              <HamarikyuGardenCherry2Image />
-            </TwoImagesSameSizeOrToGroup>
-            <ImageAsPortrait>
-              <HamarikyuGardenBuilding2Image
-                css={css`
-                  max-width: 450px;
-                `}
-              />
-            </ImageAsPortrait>
-          </GroupOfImages>
-          <p>La végétation soudainement intense en plein milieu.</p>
-          <p>Le champ de colza.</p>
-          <GroupOfImages>
-            <ImageAsLandscape>
-              <HamarikyuGardenColzaImage />
-            </ImageAsLandscape>
-            <TwoImagesSameSizeOrToGroup>
-              <HamarikyuGardenJungleImage />
-              <HamarikyuGardenBankImage />
-            </TwoImagesSameSizeOrToGroup>
-          </GroupOfImages>
-          <p>Que d’endroits qui apaisent en un rien de temps et qui nous font partir du Japon avec tant d’émotions.</p>
+        <HowLong title={t("how-long.title")}>
+          <p>{t("how-long.part1")}</p>
+        </HowLong>
+        <WhatTimeOfYear title={t("what-time-of-year.title")}>
+          <p>{t("what-time-of-year.part1")}</p>
+          <p>{t("what-time-of-year.part2")}</p>
+        </WhatTimeOfYear>
+        <WhereToStay title={t("where-to-stay.title")}>
+          <p>{t("where-to-stay.part1")}</p>
+          <p>{t("where-to-stay.part2")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="jp/hotel-tavinos-hamamatsucho"
+              title="Hotel Tavinos Hamamatsucho"
+              image={hotelTavinos}
+              note="8,5"
+              price={56}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/bay-tokyohamamatsucho"
+              title="Bay Hotel Tokyo Hamamatsucho"
+              image={bay}
+              note="8,4"
+              price={72}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/villa-fontaine-shiodome"
+              title="Hotel Villa Fontaine Grand Tokyo-Shiodome"
+              image={villaFontaine}
+              note="8,5"
+              price={96}
+              people={2}
+              kind="hotel"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning>{t("where-to-stay.part3")}</BookingWarning>
+          <p>{t("where-to-stay.part4")}</p>
+        </WhereToStay>
+        <HowMuch title={t("how-much.title")}>
+          <p>{t("how-much.part1")}</p>
+        </HowMuch>
+        <Visit title={t("visit.title")}>
+          <section>
+            <SectionContent>
+              <MapContainer>
+                {i18n.languageCode === "fr" && <img src={HamarikyuGardensMap} alt="Hamarikyu Garden Map" />}
+                {i18n.languageCode === "en" && <img src={HamarikyuGardensMapEn} alt="Hamarikyu Garden Map" />}
+              </MapContainer>
+              <p>{t("visit.part1")}</p>
+              <p>{t("visit.part2")}</p>
+              <p>{t("visit.part3")}</p>
+              <p>{t("visit.part4")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <HamarikyuGardensImages image="hamarikyuGarden" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <HamarikyuGardensImages image="hamarikyuGarden2" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <HamarikyuGardensImages image="hamarikyuGarden3" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit.part5")}</p>
+              <p>{t("visit.part6")}</p>
+              <p>{t("visit.part7")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <HamarikyuGardensImages image="hamarikyuGarden4" />
+                </ImageAsLandscape>
+                <ImageAsLandscapeOnTheLeft>
+                  <HamarikyuGardensImages image="hamarikyuGarden5" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <HamarikyuGardensImages image="hamarikyuGarden6" />
+                </ImageAsLandscapeOnTheRight>
+                <TwoImagesSameSizeOrToGroup>
+                  <HamarikyuGardensImages image="hamarikyuGarden7" />
+                  <HamarikyuGardensImages image="hamarikyuGarden8" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <HamarikyuGardensImages image="hamarikyuGarden9" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <HamarikyuGardensImages image="hamarikyuGarden10" />
+                  <HamarikyuGardensImages image="hamarikyuGarden11" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
+              <p>{t("visit.part8")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <HamarikyuGardensImages image="hamarikyuGarden12" />
+                </ImageAsLandscape>
+                <ImageAsLandscapeOnTheLeft>
+                  <HamarikyuGardensImages image="hamarikyuGarden13" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <HamarikyuGardensImages image="hamarikyuGarden14" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsLandscape
+                  credit={
+                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/stocksnap-894430")}>
+                      StockSnap
+                    </ExternalLinkNotUnderlined>
+                  }
+                >
+                  <HamarikyuGardensImages image="hamarikyuGarden15" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part9")}</p>
+              <p>{t("visit.part10")}</p>
+              <p>{t("visit.part11")}</p>
+              <p>{t("visit.part12")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <HamarikyuGardensImages image="hamarikyuGarden16" />
+                </ImageAsLandscape>
+                <ImageAsLandscapeOnTheLeft>
+                  <HamarikyuGardensImages image="hamarikyuGarden17" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <HamarikyuGardensImages image="hamarikyuGarden18" />
+                </ImageAsLandscapeOnTheRight>
+                <TwoImagesSameSizeOrToGroup>
+                  <HamarikyuGardensImages image="hamarikyuGarden19" />
+                  <HamarikyuGardensImages image="hamarikyuGarden20" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <HamarikyuGardensImages image="hamarikyuGarden21" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <HamarikyuGardensImages image="hamarikyuGarden22" />
+                </ImageAsLandscape>
+                <ImageAsLandscapeOnTheLeft>
+                  <HamarikyuGardensImages image="hamarikyuGarden23" />
+                </ImageAsLandscapeOnTheLeft>
+                <ImageAsLandscapeOnTheRight>
+                  <HamarikyuGardensImages image="hamarikyuGarden24" />
+                </ImageAsLandscapeOnTheRight>
+                <ImageAsLandscape>
+                  <HamarikyuGardensImages image="hamarikyuGarden25" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <HamarikyuGardensImages image="hamarikyuGarden26" />
+                  <HamarikyuGardensImages image="hamarikyuGarden27" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
+              <p>{t("visit.part13")}</p>
+            </SectionContent>
+          </section>
         </Visit>
-        <Conclusion>Quel plaisir de trouver un endroit au calme dans cette frénésie qu&apos;est Tokyo.</Conclusion>
-        <ImageAsPortrait>
-          <HamarikyuGardenCherry3Image />
-        </ImageAsPortrait>
+        <Conclusion>
+          <p>{t("conclusion")}</p>
+          <ul>
+            <li>{t("question1")}</li>
+            <li>{t("question2")}</li>
+          </ul>
+        </Conclusion>
+        <Divider />
+        <Comments
+          collectionName={namespace}
+          location={location}
+          facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
+          pinterest={{
+            description: t("pinterest"),
+            nodes:
+              i18n.languageCode === "fr"
+                ? [
+                    <HamarikyuGardensImages image="cardFr1" key="cardFr1" />,
+                    <HamarikyuGardensImages image="cardFr2" key="cardFr1" />,
+                  ]
+                : [
+                    <HamarikyuGardensImages image="cardEn1" key="cardEn1" />,
+                    <HamarikyuGardensImages image="cardEn2" key="cardEn1" />,
+                  ],
+          }}
+        />
       </JapanBlogLayout>
     </>
   )
