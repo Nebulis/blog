@@ -72,6 +72,12 @@ exports[`english pages exports meta for public/en/asia/indonesia/komodo-island/i
 
 exports[`english pages exports meta for public/en/asia/indonesia/komodo-island/index.html correctly: title 1`] = `"Komodo | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/asia/japan/customs-in-japan/index.html correctly: meta-description 1`] = `"Here is a small list of the main customs and traditions of Japan to follow in transports, in the street, in restaurants, or for daily life. Good manners that are certainly different from the ones of your country of origin."`;
+
+exports[`english pages exports meta for public/en/asia/japan/customs-in-japan/index.html correctly: social-network 1`] = `"The Japanese are known to be the most polite people in the world and to strictly follow many customs and traditions. Good manners that make sense but can sometimes be confusing depending on the differences with our country of origin."`;
+
+exports[`english pages exports meta for public/en/asia/japan/customs-in-japan/index.html correctly: title 1`] = `"Customs to know before visiting Japan | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: meta-description 1`] = `"Visible from Tokyo, known throughout the world, Mount Fuji is one of the most famous peaks. For each spot, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: social-network 1`] = `"Visible from Tokyo, known throughout the world, Mount Fuji is one of the most famous peaks. Sacred mountain and a true inspiration for artists, it deserves its reputation. Trekking in summer, skiing in winter, or walking all year round in the surroundings, in the region of the five lakes, for example, you will be spoiled for choice."`;

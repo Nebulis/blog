@@ -15,6 +15,7 @@ import {
   UenoParkCard,
   ShibuyaDistrictCard,
   YasukuniDoriCard,
+  CustomsInJapanCard,
 } from "./japan.cards"
 import commonFr from "../../../locales/fr/common.json"
 import commonEn from "../../../locales/en/common.json"
@@ -42,6 +43,15 @@ export const japanLinks: CountryLink = {
       label: { fr: "Transports", en: "Transports" },
       url: "transports",
       published: false,
+    },
+    {
+      id: "customs-in-japan",
+      label: {
+        fr: commonFr.country.japan.card["customs-in-japan"],
+        en: commonEn.country.japan.card["customs-in-japan"],
+      },
+      card: CustomsInJapanCard,
+      published: new Date("2021-07-03T17:00:00.000+08:00"),
     },
     {
       id: "food-japan",

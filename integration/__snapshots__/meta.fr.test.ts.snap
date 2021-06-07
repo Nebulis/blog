@@ -72,6 +72,12 @@ exports[`french pages exports meta for public/asia/indonesia/komodo-island/index
 
 exports[`french pages exports meta for public/asia/indonesia/komodo-island/index.html correctly: title 1`] = `"Komodo | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/asia/japan/customs-in-japan/index.html correctly: meta-description 1`] = `"Que ce soit dans les transports, dans la rue, dans les restaurants ou dans la vie courante. Voici une petite liste des principales coutumes et us du Japon. Un savoir-vivre sûrement différent en fonction de votre pays d’origine."`;
+
+exports[`french pages exports meta for public/asia/japan/customs-in-japan/index.html correctly: social-network 1`] = `"Le Japon est connu pour ses nombreuses règles de politesse et ses nombreuses coutumes et traditions. Un savoir-vivre qui est bien souvent logique mais qui peut également parfois être déroutant en fonction des différences avec notre pays d’origine."`;
+
+exports[`french pages exports meta for public/asia/japan/customs-in-japan/index.html correctly: title 1`] = `"Coutumes à connaître avant de vous rendre au Japon | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: meta-description 1`] = `"Visible depuis Tokyo, connue à travers le monde entier, le Mont Fuji est un des sommets les plus célèbres. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: social-network 1`] = `"Visible depuis Tokyo, connue à travers le monde entier, le Mont Fuji est un des sommets les plus célèbres. Montagne sacrée et véritable inspiration pour les artistes, sa renommée n’est pas volée. Trekking en été, ski en hiver ou balade tout au long de l'année aux alentours, dans la région des cinq lacs par exemple, vous aurez l’embarras du choix."`;
