@@ -30,6 +30,16 @@ export const SpringInJapanCard: FunctionComponent<ExtraCardProps> = ({ fluidObje
   )
 }
 
+export const CustomsInJapanCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <JapanCard title={common.country.japan.card["customs-in-japan"]} to="customs-in-japan" {...card}>
+      <SharedCardJapanImages image="customsInJapan" fluidObject={fluidObject} />
+    </JapanCard>
+  )
+}
+
 export const ArashiyamaCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn

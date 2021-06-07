@@ -124,6 +124,10 @@ const japanLinks = () => {
     label: { en: "Transports", fr: "Transports" },
     published: false,
   })
+  expect(getLink("customs-in-japan")).toMatchObject({
+    label: { en: "Customs to know before visiting Japan", fr: "Coutumes à connaître avant de vous rendre au Japon" },
+    published: false,
+  })
 
   expect(getLink("tokyo")).toMatchObject({ label: { fr: "Tokyo", en: "Tokyo" }, published: true })
   expect(getLink("two-days-in-tokyo")).toMatchObject({
