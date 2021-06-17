@@ -339,6 +339,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <MyThoImages image="sweets2" />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsPortrait>
+                  <MyThoImages image="sweets4" />
+                </ImageAsPortrait>
+                <ImageAsPortrait>
                   <MyThoImages image="sweets3" />
                 </ImageAsPortrait>
               </GroupOfImages>
@@ -357,14 +360,26 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <p>{t("visit6.part1")}</p>
-              <ImageAsPortrait>
-                <MyThoImages image="bees" />
-              </ImageAsPortrait>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <MyThoImages image="bees" />
+                </ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
+                  <MyThoImages image="song1" />
+                  <MyThoImages image="song2" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
               <p>{t("visit6.part2")}</p>
               <p>{t("visit6.part3")}</p>
-              <ImageAsPortrait>
-                <MyThoImages image="sugarcane" />
-              </ImageAsPortrait>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <MyThoImages image="sugarcane2" />
+                  <MyThoImages image="sugarcane3" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <MyThoImages image="sugarcane" />
+                </ImageAsPortrait>
+              </GroupOfImages>
               <p>{t("visit6.part4")}</p>
               <p>{t("visit6.part5")}</p>
               <TwoImagesSameSize>

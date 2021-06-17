@@ -177,7 +177,7 @@ export const BookingWarning: React.FunctionComponent = ({ children }) => {
     <Note>
       {children ??
         (i18n.languageCode === "fr"
-          ? "Les prix varient en fonction de la saison a laquelle vous réservez."
+          ? "Les prix varient en fonction de la saison à laquelle vous réservez."
           : "Prices vary depending on the period you book.")}
     </Note>
   )

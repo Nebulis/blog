@@ -173,7 +173,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("day2.visit4.part3")}</p>
               {hamarikyuGardenPublished && <p>{t("day2.visit4.part4")}</p>}
               <p>{t("day2.visit4.part5")}</p>
-              <p>{t("day2.visit4.part6")}</p>
             </SectionContent>
           </section>
         </Visit>
