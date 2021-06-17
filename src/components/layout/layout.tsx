@@ -176,7 +176,7 @@ export const IndexBlogLayout: FunctionComponent<{
       <div className="children-container index-blog-layout-content flex-grow-1">{children}</div>
 
       <Footer className="pa2">
-        <div className="f6 copyright">© 2020 Magic of Travels</div>
+        <div className="f6 copyright">© 2020 - {new Date().getFullYear()} Magic of Travels</div>
         <div className="newsletter">
           <div className="tc text">NEWSLETTER</div>
           <div className="inline-flex">

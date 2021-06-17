@@ -264,9 +264,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </GroupOfImages>
               <p>{t("visit2.part18")}</p>
               <p>{t("visit2.part19")}</p>
-              <ImageAsLandscape>
-                <CanThoImages image="floatingMarket10" />
-              </ImageAsLandscape>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <CanThoImages image="floatingMarket10" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroup>
+                  <CanThoImages image="floatingMarket13" />
+                  <CanThoImages image="floatingMarket14" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
               <p>{t("visit2.part20")}</p>
               <p>{t("visit2.part21")}</p>
               <TwoImagesLeftBigger>

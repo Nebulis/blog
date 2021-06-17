@@ -146,7 +146,7 @@ const japanLinks = () => {
       en: "Yasukuni-Dori: The street of a thousand lights in Shinjuku",
       fr: "Yasukuni-Dori : La rue aux milles lumières de Shinjuku",
     },
-    published: false,
+    published: true,
   })
   expect(getLink("shinjuku-gyoen-national-garden")).toMatchObject({
     label: {

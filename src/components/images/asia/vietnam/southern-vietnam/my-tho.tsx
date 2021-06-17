@@ -36,10 +36,15 @@ const alt = {
   sweets1: "Coconut Candy",
   sweets2: "Coconut Candy",
   sweets3: "Coconut Candy",
+  sweets4: "Coconut Candy",
   sculpture1: "Monkey Sculpture",
   sculpture2: "Elephant Sculpture",
   sugarcane: "Sugarcane Juice",
+  sugarcane2: "Sugarcane Juice",
+  sugarcane3: "Sugarcane Juice",
   bees: "My Tho Bees",
+  song1: "My Tho Song",
+  song2: "My Tho Song",
   cardFr1: "My Tho Pinterest card",
   cardFr2: "My Tho Pinterest card",
   cardEn1: "My Tho Pinterest card",
@@ -272,6 +277,13 @@ export const MyThoImages: React.FunctionComponent<ExtraImageProps & { image: key
           }
         }
       }
+      sweets4: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/sweets4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       sculpture1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/sculpture1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -293,7 +305,35 @@ export const MyThoImages: React.FunctionComponent<ExtraImageProps & { image: key
           }
         }
       }
+      sugarcane2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/sugarcane2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sugarcane3: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/sugarcane3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       bees: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/bees.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      song1: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/song1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      song2: file(relativePath: { eq: "asia/vietnam/southern-vietnam/my-tho/song2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

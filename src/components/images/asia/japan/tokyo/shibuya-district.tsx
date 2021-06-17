@@ -8,6 +8,8 @@ const alt = {
   crossing2: "Shibuya Crossing",
   crossing3: "Shibuya Crossing",
   crossing4: "Shibuya Crossing",
+  crossing5: "Shibuya Crossing",
+  crossing6: "Shibuya Crossing",
   hachiko: "Shibuya District Hachiko Statue",
   mall: "Shibuya District Mall",
   takeshitaStreet: "Shibuya District Takeshita Street",
@@ -69,6 +71,20 @@ export const ShibuyaDistrictImages: React.FunctionComponent<ExtraImageProps & { 
       crossing4: file(relativePath: { eq: "asia/japan/tokyo/shibuya-district/shibuya-district-crossing4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      crossing5: file(relativePath: { eq: "asia/japan/tokyo/shibuya-district/shibuya-district-crossing5.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      crossing6: file(relativePath: { eq: "asia/japan/tokyo/shibuya-district/shibuya-district-crossing6.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

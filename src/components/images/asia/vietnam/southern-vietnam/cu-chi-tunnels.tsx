@@ -15,6 +15,7 @@ const alt = {
   tunnels1: "Cu Chi Tunnels",
   tunnels2: "Cu Chi Tunnels",
   tunnels3: "Cu Chi Tunnels",
+  tunnels4: "Cu Chi Tunnels",
   inside1: "Cu Chi Tunnels",
   inside2: "Cu Chi Tunnels",
   inside3: "Cu Chi Tunnels",
@@ -117,6 +118,13 @@ export const CuChiTunnelsImages: React.FunctionComponent<ExtraImageProps & { ima
         }
       }
       tunnels3: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-tunnels3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      tunnels4: file(relativePath: { eq: "asia/vietnam/southern-vietnam/cu-chi-tunnels/cu-chi-tunnels-tunnels4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

@@ -258,6 +258,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <CuChiTunnelsImages image="tunnels2" />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
+                  <CuChiTunnelsImages image="tunnels4" />
+                </ImageAsPortrait>
+                <ImageAsPortrait>
                   <CuChiTunnelsImages image="tunnels3" />
                 </ImageAsPortrait>
               </GroupOfImages>

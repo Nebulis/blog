@@ -19,6 +19,8 @@ const alt = {
   floatingMarket10: "Can Tho Floating Market Boat Merchants",
   floatingMarket11: "Can Tho Floating Market Boat Merchants",
   floatingMarket12: "Can Tho Floating Market Boat Merchants",
+  floatingMarket13: "Can Tho Floating Market Boat Merchants",
+  floatingMarket14: "Can Tho Floating Market Boat Merchants",
   market1: "Can Tho Wet Market",
   market2: "Can Tho Wet Market",
   market3: "Can Tho Wet Market",
@@ -152,6 +154,20 @@ export const CanThoImages: React.FunctionComponent<ExtraImageProps & { image: ke
       floatingMarket12: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market12.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      floatingMarket13: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market13.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      floatingMarket14: file(relativePath: { eq: "asia/vietnam/southern-vietnam/can-tho/floating-market14.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
