@@ -28,11 +28,10 @@ import {
   FaUtensils,
   FaWalking,
 } from "react-icons/fa"
-import { maxWidth, mediumEnd, mediumStart, mobileEnd, smallEnd } from "./variables"
+import { maxWidth, mediumEnd, mediumStart, mobileEnd, primaryDarkColor, primaryLightColor, smallEnd } from "./variables"
 import { useCustomTranslation } from "../../i18n-hook"
 import { Lang } from "./links/links.types"
 import styled from "@emotion/styled"
-import { vietnamPrimaryColorDarker, vietnamPrimaryColorWithOpacity } from "./asia/vietnam/vietnam.colors"
 import { Anchor } from "../images/layout"
 
 const SpeechBubble: React.FunctionComponent = () => (
@@ -71,7 +70,7 @@ export const SectionContent: FunctionComponent<HTMLAttributes<any>> = ({ childre
     <div className={`${className} f5 section-content tj`} css={sectionContentStyle}>
       {React.Children.map(children, (child, index) => {
         if (!React.isValidElement(child)) return child
-        if ((child.type === "p" || child.type === "ul") && index < size - 1) {
+        if ((child.type === "p" || child.type === "ul" || child.type === "ol") && index < size - 1) {
           return React.cloneElement(child, { className: `mb2 ${child.props.className || ""}` })
         }
         return React.cloneElement(child)
@@ -97,9 +96,9 @@ const menuArticleStyle = css`
   .menu-article-container {
     min-width: 250px;
     display: inline-block;
-    background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
-    color: ${vietnamPrimaryColorDarker};
-    border: 3px solid ${vietnamPrimaryColorDarker};
+    background-color: ${primaryLightColor};
+    color: ${primaryDarkColor};
+    border: 3px solid ${primaryDarkColor};
     padding: 1rem;
 
     & > div:first-of-type {

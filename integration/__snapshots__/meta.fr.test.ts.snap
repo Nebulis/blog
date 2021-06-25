@@ -78,6 +78,12 @@ exports[`french pages exports meta for public/asia/japan/customs-in-japan/index.
 
 exports[`french pages exports meta for public/asia/japan/customs-in-japan/index.html correctly: title 1`] = `"Coutumes à connaître avant de vous rendre au Japon | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/asia/japan/food-in-japan/index.html correctly: meta-description 1`] = `"Qu’est-ce qu’on mange au Japon ? On vous propose un top 10 des spécialités culinaires du Japon en se basant sur nos coups de cœur. Nous vous partageons notre avis avec nos photos et une description de chaque plat."`;
+
+exports[`french pages exports meta for public/asia/japan/food-in-japan/index.html correctly: social-network 1`] = `"Le pays du Soleil Levant nous offre un patrimoine culturel impressionnant et des paysages époustouflants mais si vous venez au Japon vous y découvrirez également un patrimoine culinaire qui ne vous laissera pas insensible."`;
+
+exports[`french pages exports meta for public/asia/japan/food-in-japan/index.html correctly: title 1`] = `"Que mange-t-on au Japon ? 10 spécialités culinaires à découvrir | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: meta-description 1`] = `"Visible depuis Tokyo, connue à travers le monde entier, le Mont Fuji est un des sommets les plus célèbres. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/japan/fuji/index.html correctly: social-network 1`] = `"Visible depuis Tokyo, connue à travers le monde entier, le Mont Fuji est un des sommets les plus célèbres. Montagne sacrée et véritable inspiration pour les artistes, sa renommée n’est pas volée. Trekking en été, ski en hiver ou balade tout au long de l'année aux alentours, dans la région des cinq lacs par exemple, vous aurez l’embarras du choix."`;
@@ -156,6 +162,12 @@ exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.ht
 
 exports[`french pages exports meta for public/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"Nagoya : Le temple Togan-Ji et son grand Bouddha | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/asia/japan/prepare-japan/index.html correctly: meta-description 1`] = `"Vous trouverez dans cet article nos informations et conseils qui vous permettront de préparer votre voyage au Pays du Soleil Levant. Pourquoi partir au Japon? Quand partir ? Combien de jours ou semaines ? Combien d’argent prévoir ? Quelles sont les formalités ? On vous parle également des logements, des incontournables à faire et des dangers tout en vous donnant notre avis."`;
+
+exports[`french pages exports meta for public/asia/japan/prepare-japan/index.html correctly: social-network 1`] = `"Que de questions à se poser quand on prépare un voyage et surtout comment bien s’organiser ? Vous trouverez dans cet article nos informations et conseils qui vous permettront de préparer votre voyage au Japon."`;
+
+exports[`french pages exports meta for public/asia/japan/prepare-japan/index.html correctly: title 1`] = `"Bien préparer son voyage au Japon | Blog Voyage"`;
+
 exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Ici nous partons au Japon à la saison du printemps. On vous indique notre itinéraire de voyage. Combien de jours ? Quel budget prévoir ? On vous répond en se basant sur notre propre expérience."`;
 
 exports[`french pages exports meta for public/asia/japan/spring-in-japan/index.html correctly: social-network 1`] = `"Le Japon, ce pays incontournable à visiter en Asie. Un nouveau décor à chaque saison. Un mélange entre zénitude dans les endroits reculés et animation et dynamisme dans les villes, autant dire qu’en fonction de ce que vous recherchez, que vous aimiez la ville ou la campagne, à n’importe quel endroit vous trouverez votre bonheur ..."`;
@@ -204,11 +216,11 @@ exports[`french pages exports meta for public/asia/japan/tokyo/yasukuni-dori/ind
 
 exports[`french pages exports meta for public/asia/japan/tokyo/yasukuni-dori/index.html correctly: title 1`] = `"Yasukuni-Dori : La rue aux milles lumières de Tokyo | Guide de Voyage"`;
 
-exports[`french pages exports meta for public/asia/japan/transports/index.html correctly: meta-description 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/transports-in-japan/index.html correctly: meta-description 1`] = `"Vous trouverez dans cet article nos informations et conseils qui vous permettront de bien choisir votre moyen de transport en fonction de vos besoins et de votre budget avant de partir au Japon. Prix ? Où réserver ? On vous dit tout en vous donnant notre avis."`;
 
-exports[`french pages exports meta for public/asia/japan/transports/index.html correctly: social-network 1`] = `"Embarquez avec nous dans cette folle aventure, un blog qui retrace tous nos voyages, et bien plus!"`;
+exports[`french pages exports meta for public/asia/japan/transports-in-japan/index.html correctly: social-network 1`] = `"Pour planifier votre voyage au Japon, il est essentiel de savoir quel moyen de transport vous voulez utiliser, cela impactera sur votre budget, sur la vitesse à laquelle vous allez vous déplacer de ville en ville et également sur la distance que vous allez parcourir."`;
 
-exports[`french pages exports meta for public/asia/japan/transports/index.html correctly: title 1`] = `"main | Blog Voyage"`;
+exports[`french pages exports meta for public/asia/japan/transports-in-japan/index.html correctly: title 1`] = `"Tout savoir sur les transports au Japon | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/asia/malaysia/east-malaysia/index.html correctly: meta-description 1`] = `"Découvrez la Malaisie Orientale, un paysage junglissime où résident encore quelques animaux sauvages. Pour chaque lieu nous essayons de vous retranscrire au mieux notre visite en vous indiquant comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 

@@ -1,0 +1,441 @@
+{
+  "full-title": "Tout savoir sur les transports au Japon | Guide de Voyage",
+  "quote": "Pour planifier votre voyage au Japon, il est essentiel de savoir quel moyen de transport vous voulez utiliser, cela impactera sur votre budget, sur la vitesse à laquelle vous allez vous déplacer de ville en ville et également sur la distance que vous allez parcourir.",
+  "introduction": "Dans cet article on vous donne toutes les informations dont vous avez besoin pour faire le choix qui vous convient le plus, en fonction de vos besoins et de votre budget avant de partir.",
+  "google-description": "Vous trouverez dans cet article nos informations et conseils qui vous permettront de bien choisir votre moyen de transport en fonction de vos besoins et de votre budget avant de partir au Japon. Prix ? Où réserver ? On vous dit tout en vous donnant notre avis.",
+  "social-network-description": "Pour planifier votre voyage au Japon, il est essentiel de savoir quel moyen de transport vous voulez utiliser, cela impactera sur votre budget, sur la vitesse à laquelle vous allez vous déplacer de ville en ville et également sur la distance que vous allez parcourir.",
+  "plane": {
+    "title": "TRANSPORT EN AVION",
+    "information": {
+      "title": "Information",
+      "part1": "On ne vous parle pas ici des avions pour venir dans le pays mais bien des avions dits #domestiques ou internes#. C'est-à-dire d’une ville à une autre au sein du Japon même.",
+      "part2": "Pour les longs trajets, l’avion peut s’avérer être #le moyen de déplacement le plus rapide#, en particulier si vous souhaitez vous déplacer du nord au sud et en particulier d’île en île. Plus le trajet est long, plus l’avion sera le choix le plus pertinent, car plus pratique et économique que le train.",
+      "part3": "Il s’agit également de la meilleure option pour certaines destinations, comme pour rejoindre l’île de [Okinawa](todo) par exemple. Vous pouvez vous y rendre en bateau si vous le souhaitez mais sachez qu’il vous faudra 25h depuis le sud du Japon et que le prix n’est pas du tout attractif, pas besoin de beaucoup réfléchir pour savoir que l’avion est quand même bien plus pratique.",
+      "part4": "L’avion est néanmoins le transport qui diffuse #le plus de CO2 dans l’air# par kilomètre parcouru. Si vous souhaitez avoir un minimum d’impact sur la planète tout en voyageant malgré tout, vous pouvez aller sur le site [Co2logic](todo), ils vous permettent de calculer le nombre de CO2 que votre voyage en avion a émis et vous donne la possibilité de faire un don pour soutenir leur projet pour diminuer cet impact."
+    },
+    "booking": {
+      "title": "Réservation",
+      "part1": "Nous faisons toujours nos réservations sur [Expedia](todo), nous trouvons que c’est le site le plus sûr et nous n’avons jamais eu aucun souci.",
+      "part2": "Vous pouvez si vous le souhaitez utiliser le site [Skyscanner](todo), ce site propose un plus large choix de prix, néanmoins c’est un moteur de recherche et non pas un site de réservation. Vous serez donc amené à réserver vos billets sur d’autres plateformes. Ce qui vous rend plus susceptible de vous retourner sur des compagnies aériennes figurant sur [la liste noire des compagnies aériennes interdites en Europe](todo).",
+      "part3": "En cas de doute, que ce soit sur Expedia ou Skyscanner, il est important de chercher à se renseigner sur la réputation de la compagnie aérienne.",
+      "part4": "Vous pouvez également réserver #via les sites des compagnies elles-mêmes#. Dans certains cas, vous n’aurez pas le choix de passer par leur site si vous voulez bénéficier de certaines offres dont on vous parle ci-dessous."
+    },
+    "company": {
+      "title": "Compagnies",
+      "part1": "Les deux meilleures compagnies aériennes sont [Japan Airlines](todo) et [ANA](todo) (All Nippon Airlines). Plus de confort et donc forcément plus cher. Néanmoins, si vous réservez sur leur site, vous pouvez bénéficier d’offres / promotions :",
+      "part2": "Japan Airlines propose :",
+      "part3": "#Pass Japan Explorer# ↠ Il s’agit de prix réduits sur certains trajets domestiques définis, le prix du billet allant de 5 500 à 11 000 YEN (~ 50 à 85€) - Possibilité de réserver depuis le Japon sur internet - Plus d’informations sur [leur site](todo).",
+      "part4": "#Welcome to Japan Fare# ↠ Acheter entre 2 et 5 billets depuis l’étranger obligatoirement -  Chaque billet coûte 14 300 YEN (~ 110€) et permet de prendre n’importe quel vol d’un avion de la Japan Airlines ou de la Japan Transocean Air - Plus d’informations sur [leur site](todo).",
+      "part5": "ANA propose :",
+      "part6": "#Visit Japan Fare# ↠ Acheter entre 2 et 5 billets depuis l’étranger obligatoirement -  Chaque billet coûte 14 300 YEN et permet de prendre n’importe quel vol d’un avion de All Nippon Airlines - Plus d’informations sur [leur site](todo).",
+      "part7": "Vous pouvez également trouver des compagnies low cost qui vous proposeront donc des prix normalement moins chers. [Jetstar](todo) qui est certainement la plus connue en Asie et en Océanie mais vous avez aussi [Peach Aviation](todo), [StarFlyer](todo) ou bien encore [Skymark Airlines](todo)."
+    },
+    "price": {
+      "title": "Prix",
+      "part1": "Les trajets sans escale ne durent pas plus de 3h, le plus souvent aux alentours de #1h30-2h#, à l'exception des vols à destination d’Okinawa.",
+      "part2": "Les prix varient en fonction des compagnies que vous prenez, sachant qu'assez régulièrement vous n’aurez pas vraiment le choix.",
+      "part3": "Pour vous donner une fourchette de prix, toujours pour des trajets sans escale, comprenez #entre 60€ et 200€ par personne#, sachant que la plus grosse fourchette se situe vers les 100 / 150€.",
+      "part4": "Vous avez également de #nombreux vols avec escale#, que nous ne vous indiquons pas dans notre tableau, les prix deviennent vite plus chers commençant très rarement en dessous de 150€ par personne et allant bien souvent vers les 300 / 350€ par personne.",
+      "part5": "Les prix indiqués sont une moyenne et n'incluent que des vols directs, ils peuvent changer selon la disponibilité."
+    },
+    "opinion": {
+      "title": "Notre avis",
+      "part1": "Les vols domestiques sont principalement #avantageux pour visiter des lieux reculés du Japon ou pour passer d’un bout à l’autre du pays#.",
+      "part2": "Cela revient par contre assez cher si vous ne souhaitez voyager que comme ça. Si vous avez du temps, on vous conseille d’opter plus pour le [car](todo) qui est certes plus long mais qui vous fait faire pas mal d’économie ou bien le [train](todo) avec le Shinkansen, rapide, confortable et toujours plus économique que l’avion si vous bougez beaucoup.",
+      "part3": "Comme pour tous les moyens de transports, #le Japon est très efficace# au niveau des aéroports."
+    }
+  },
+  "boat": {
+    "title": "TRANSPORT EN BATEAU",
+    "information": {
+      "title": "Information",
+      "part1": "Le bateau n’est pas le mode de transport qui vient directement dans notre esprit quand on évoque le Japon. Pourtant, il s’agit d’un moyen de transport assez répandu, que ce soit pour les touristes ou les locaux.",
+      "part2": "En effet, le Japon est #composé de plusieurs milliers d'îles#. Même si les îles principales sont accessibles assez facilement, certaines îles reculées sont #uniquement accessibles en bateau#. On pensera par exemple à l'[archipel d’Ogasawara](todo), accessible uniquement en ferry. Il est également possible de s’aventurer vers les îles d’Okinawa en bateau depuis Kagoshima.",
+      "part3": "Si vous avez décidé de louer une voiture pour découvrir le Japon, il est important de noter que les ferry prennent également en charge les véhicules. Cela vous permettra de poursuivre vos différentes explorations avec votre propre voiture, ce qui est un avantage par rapport aux trains et aux avions.",
+      "part4": "#Vous pouvez trouver des bateaux à grande vitesse ou des ferry, la traversée en ferry se fait principalement de nuit.#",
+      "part5": "Le Japon possède également d’innombrables lacs, où vous pourrez faire de magnifiques croisières, le temps d’une demi-journée ou d’une journée :",
+      "part6": "le [lac Biwa](todo), le plus grand lac du pays",
+      "part7": "le [lac Towada](todo) et sa magnifique couleur bleu",
+      "part8": "le [lac Ashinoko](todo) et son célèbre Torii",
+      "part9": "Fujigoko, la région des 5 grands lacs, pour admirer la beauté du [Mont Fuji](todo)"
+    },
+    "booking": {
+      "title": "Réservation / Compagnies / Prix",
+      "part1": "Il n’y a pas d'opérateur principal, comme pour le train. On va plutôt trouver différents opérateurs nationaux, s’occupant de différents grands trajets ou bien des opérateurs locaux pour les croisières de tourisme sur les lacs, les îles de Tokyo ou Okinawa.",
+      "part2": "Vous pouvez acheter vos tickets en ligne, par téléphone (en japonais principalement) ou bien directement au terminal d’embarquement. Attention, certains sites sont uniquement disponibles en japonais.",
+      "part3": "Pour les #îles au Sud de Tokyo#, on en dénombre 9 qu’on distingue en deux groupes ↠ 7 qui sont proches de Tokyo (Oshima, Toshima, Niijima, Shikinejima, Kozushima, Miyakejima et Mikurashima) et deux plus éloignées (Hachijojima et Aogashima).",
+      "part4": "Pour les 7 îles les plus proches, vous pouvez réserver via le site [Tokyo Island](todo). Le temps de trajet est entre 2 à 3h en speed jet et de 6 à 8h en ferry (en sachant que Miyakejima et Mikurashima ne sont pas accessibles en speed jet). Les tarifs sont compris entre 4 300 ¥ et 15 500 ¥ (entre 35 et 120€), en fonction du bateau et de la classe que vous prenez en ferry.",
+      "part5": "Hachijojima est également une île que vous pouvez réserver sur [Tokyo Island](todo), accessible en 10 h uniquement en ferry pour un tarif compris entre 8 500 ¥ et 17 000 ¥ (entre 65 et 130€) en fonction de la classe que vous prenez.",
+      "part6": "Aogashima est quant à elle accessible depuis son île la plus proche, c'est-à-dire Hachijojima, environ 3h pour un tarif d'environ 2 700 ¥ (20€) pour une classe éco. Vous pouvez réserver sur le site [Izu Shoto Kaihatsu](todo).",
+      "part7": "#A noter que les prix évoluent chaque mois et que vous ne pouvez réserver que pour les 3 prochains mois.#",
+      "part8": "Plus au sud des îles de Tokyo, se trouve l'#archipel Ogasawara#. Le seul moyen de s’y rendre est par bateau, via l’[Ogasawara-maru Ferry](todo). Avec des départs depuis Tokyo au mieux tous les trois jours, il est compliqué de s’y rendre. Le trajet dure 24h pour un prix compris entre 25 000 et 75 000 ¥ (entre 190 et 570€), en fonction de la classe que vous prenez.",
+      "part9": "Nous ne recommandons pas de vous rendre à l'archipel d’Okinawa en bateau. En revanche, vous pouvez trouver des informations sur les déplacements en bateau au sein de l’archipel, sur le [site de tourisme d’Okinawa](todo).",
+      "part10": "Si vous ne voulez pas vous embêter à utiliser toujours des sites différents, nous utilisons principalement le site [Direct Ferries](todo) dans quasiment chaque pays où nous en avons besoin, c’est un site de recherche qui se rattache aux sites que nous vous avons communiqué plus haut, disponible dans énormément de langues. Les prix sont quasiment les mêmes que si vous passez par les compagnies.",
+      "part11": "Les durées indiquées sont des estimations. Elles sont susceptibles de varier en fonction des jours, des mois, des conditions météorologiques et de tout autre élément. Les prix peuvent être amenés à changer également, nous vous donnons ici un ordre d’idée, il est donc nécessaire de vérifier à l’avance ces informations.",
+      "part12": "Pour les croisières :",
+      "part13": "Lac Biwa ↠ [Lien du site](todo)",
+      "part14": "Lac Towada ↠ [Lien du PDF](todo) - site en japonais",
+      "part15": "Lake Ashinoko ↠ [Lien du site](todo)",
+      "part16": "Fujigoko (le territoire des 5 lacs) ↠ [Lien du site](todo)"
+    },
+    "opinion": {
+      "title": "Notre avis",
+      "part1": "Ce n’est pas du tout ce que nous préférons et si il faut choisir entre 10h de bateau et 2h d’avion notre choix est vite fait.",
+      "part2": "Néanmoins, pour #casser un peu la routine# des transports en bus et train, et découvrir de magnifiques paysages, les croisières sur les différents lacs sont ce qui nous attirent le plus."
+    }
+  },
+  "bus": {
+    "title": "TRANSPORT EN BUS / CAR",
+    "part1": "On peut différencier en 3 parties les bus du Japon.",
+    "bus": {
+      "title": "Bus de ville",
+      "information": {
+        "title": "Information",
+        "part1": "Le bus est #l’un des moyens principaux# pour se déplacer dans les villes du Japon. Quasiment indispensable, au même titre que le métro, les bus de ville ont des parcours définis et de nombreux arrêts."
+      },
+      "booking": {
+        "title": "Réservation / Prix",
+        "part1": "Deux solutions s’offrent à vous :",
+        "part2": "soit vous achetez un ticket de bus directement en rentrant dedans, auprès du chauffeur. Pièces et billets sont acceptés.",
+        "part3": "soit vous optez pour des cartes NFC rechargeables, supportées dans la plupart des transports publics des grandes villes. Les cartes les plus connues sont PASMO et SUICA.",
+        "part4": "On vous parle plus en détail de la carte NFC (Suica) dans [les indispensables](todo).",
+        "part5": "Le prix du trajet ne dépend pas de votre moyen de paiement.",
+        "part6": "#Le tarif dépend de la distance parcourue#, lorsque vous entrez dans le bus, prenez votre ticket au guichet ou bipez votre carte NFC sur la machine à l'entrée. Le paiement se fait lorsque vous descendez, passez votre ticket dans la machine et payez le prix indiqué ou bipez votre carte à nouveau et le montant sera prélevé automatiquement.",
+        "part7": "N'hésitez pas à utiliser [Google Maps](todo) ou [Hyperdia](todo) pour avoir des informations sur le trajet et le prix."
+      },
+      "opinion": {
+        "title": "Notre avis",
+        "part1": "Impossible de se passer du bus de ville au Japon, vous serez très probablement amené à l’utiliser et à l’apprécier.",
+        "part2": "La carte SUICA est un indispensable, utile dans les grandes villes mais également dans des plus petites."
+      }
+    },
+    "car": {
+      "title": "Car / Bus longues distances",
+      "information": {
+        "title": "Information",
+        "part1": "Vous avez également la possibilité de prendre le car #pour aller de ville en ville#.",
+        "part2": "Si vous avez un budget limité, ou si vous souhaitez réaliser des économies, c’est définitivement la solution à privilégier pour voyager au Japon.",
+        "part3": "Il faudra néanmoins prendre la durée en considération, s'ils sont effectivement plus économiques que les trains à grande vitesse ils sont par contre beaucoup plus lents.",
+        "part4": "Niveau confort, aucun souci à se faire, sièges confortables et inclinables, accès WIFI, prises USB et toilettes dans certains cas."
+      },
+      "booking": {
+        "title": "Réservation / Compagnies",
+        "part1": "Vous pouvez acheter vos billets sur internet ou aux guichets des compagnies de car.",
+        "part2": "S’ils existent de nombreuses compagnies de car, celle qui nous intéresse le plus est #Willer Express#. En effet, si la plupart des sites sont en japonais, ce site est principalement fait pour les touristes et est donc en anglais, c’est d’ailleurs du coup la compagnie la plus réputée.",
+        "part3": "D’ailleurs on vous parlait du confort juste avant, si vous réservez via Willer Express, en plus des bus basiques, vous pouvez également avoir le choix avec d’autres bus, cela dépendra des trajets que vous faites ou si vous prenez un car de jour ou de nuit mais on vous montre quelques exemples.",
+        "part4": "On peut aussi ajouter que le JR Pass donne accès aux bus locaux opérés par la Japan Railway. Malheureusement c’est compliqué d’obtenir des informations globales, car les lignes sont séparées en 8 régions distinctes, gérées différemment.",
+        "part5": "Faites bien attention car les “Highway Bus” ne sont la plupart du temps pas inclus dans le JR Pass."
+      },
+      "price": {
+        "title": "Prix",
+        "part1": "Les prix sont beaucoup moins élevés que les trains.",
+        "part2": "On ne vous parlera ici que de la compagnie de bus Willer Express car nous trouvons que c’est #la plus attractive# et il serait compliqué de tout vous indiquer.",
+        "part3": "En plus, Willer Express propose pour les touristes, le [Japan Bus Pass](todo). Valide pendant deux mois, il permet de sélectionner #3, 5 ou 7 jours# pendant lesquels vous pouvez emprunter des bus Willer Express. Le nombre de bus est #limité à 3 par jour#. Il coûte entre 10 200 ¥ et 15 300 ¥ (80 et 120€) en fonction de la formule choisie.",
+        "part4": "Tous les étrangers peuvent utiliser ce pass, peu importe le visa et sa durée.",
+        "part5": "Comme sur leur site, nous avons trié #par région et préfecture#. Cliquez sur votre préfecture de départ et cela vous affichera les préfectures où vous pouvez arriver ainsi que le temps de trajet et le prix. N’oubliez pas de vérifier les villes desservies sur leur site.",
+        "part6": "Les prix indiqués sont une moyenne entre les prix les plus élevés et les meilleures offres du mois, n’hésitez pas à vérifier les jours pour prendre la meilleure offre."
+      },
+      "opinion": {
+        "title": "Notre avis",
+        "part1": "Le car est très intéressant lorsque l’on ne dispose peu ou pas de contraintes de temps. Il permet de naviguer de ville en ville tout simplement et de profiter des paysages (surtout la journée).",
+        "part2": "Le Japan Bus Pass est le petit plus qui permet de réaliser des économies supplémentaires.",
+        "part3": "#Au Japon, il faut toujours essayer de chercher quel est le moyen de transport qui s’adapte le mieux à notre voyage#. N'hésitez pas à comparer avec le JR Pass. Si le bus s’avère être un excellent moyen de faire des économies, calculez bien vos trajets et vérifiez si le fait de prendre le JR-Pass et le Shinkansen ne s’avère pas plus avantageux pour vous.",
+        "part4": "On vous parle du JR-Pass dans [les indispensables](todo)."
+      }
+    },
+    "night-tour": {
+      "title": "Bus de nuit",
+      "information": {
+        "title": "Information",
+        "part1": "Le bus de nuit n’est en soit pas bien différent du bus de jour. La vraie différence réside dans le moment de voyage car comme son nom l’indique c’est un bus qui fera le #trajet de nuit#. Cela peut vous permettre d’économiser une nuit à l’hôtel, au vu des prix des hôtels au Japon, ce n’est pas à négliger.",
+        "part2": "La rigueur est de mise. Veillez à arriver en avance. Si vous êtes en retard, le bus ne vous attendra pas, même si vous avez réservé. Dans tous les cas, ils vous recommandent d’arriver environ 20 minutes avant, pour récupérer vos billets."
+      },
+      "booking": {
+        "title": "Réservation / Compagnies / Prix",
+        "part1": "Encore une fois, on privilégiera Willer Express, vous pouvez d’ailleurs trouver l’option #Willer Express « Sleeper »# sur leur site, pas de gros changement avec les cars de la journée si ce n’est qu’il y aura forcément des rideaux pour vous séparer de vos voisins (la journée il en a aussi donc est-ce vraiment une différence ?) et que ce sera forcément des cars avec sièges inclinables.",
+        "part2": "Pour une expérience différente, et beaucoup plus luxueuse, on notera le lancement du [Dream Sleeper](todo) en 2017, entre Tokyo et Osaka. Coûtant entre 18 000 et 20 000 YEN (~ 140€), c’est le bus de nuit le plus confortable que l’on peut trouver. Ce bus vous met à disposition une cabine individuelle, bien plus intimiste qu’un simple rideau. On ne vous parlera pas d'économiser une nuit d'hôtel cette fois-ci mais plutôt de tenter une nouvelle expérience.",
+        "part3": "En plus du Dream Sleeper, la compagnie Kanto Bus propose de multiples [trajets de nuit](todo) au départ de Tokyo. Beaucoup plus abordables, ils coûtent entre 4 500 et 8 000 YEN (entre 30 et 60€).",
+        "part4": "Dans tous les cas, le prix varie en fonction du niveau de confort. Plus c’est cher, plus ça sera confortable avec un siège plus large, de meilleures séparations, etc. Cela dit, même les bus les moins chers proposent de #très bonnes prestations#, avec WIFI, prises électriques et toilettes."
+      },
+      "opinion": {
+        "title": "Notre avis",
+        "part1": "Si on avait un seul conseil à vous donner, c’est de #tenter l’expérience au moins une fois#.",
+        "part2": "Les bus de nuit ont deux avantages principaux. Ils permettent d’éviter de payer une nuit à l’hôtel et vous permettent de traverser le Japon, tout en étant totalement disponible dès le matin et de conserver vos journées pour vos visites … C’est un vrai atout si vous manquez de temps.",
+        "part3": "Au Japon, vous aurez rarement de mauvaises surprises, le confort est toujours privilégié. Cela ne vaut pas une nuit dans un vrai lit mais c’est une véritable expérience à part.",
+        "part4": "De notre côté, on avait également tenté l’expérience au [Vietnam](todo) et au [Cambodge](todo). Et on vous certifie que le Japon est plus luxueux et pourtant nous n’avons malgré tout pas de préférence, une expérience qu’on aime à tenter dans chaque pays."
+      }
+    }
+  },
+  "mrt": {
+    "title": "TRANSPORT EN MÉTRO",
+    "information": {
+      "title": "Information",
+      "part1": "Un autre #mode de transport indispensable# au Japon. On en trouve dans la plupart des grandes villes japonaises. A Tokyo, le réseau est gigantesque (comme à peu près tout d’ailleurs).",
+      "part2": "#Modernes et efficaces#, ils sont particulièrement bien adaptés pour les touristes. On y trouve de plus en plus de panneaux et d’indications en anglais. Il en va de même pour les annonces, où l’anglais est également de plus en plus utilisé.",
+      "part3": "Avec le bus, c’est le moyen de transport le plus efficace pour se déplacer en ville."
+    },
+    "booking": {
+      "title": "Réservation / Prix",
+      "part1": "Le mode de fonctionnement est quasiment identique à celui du bus: soit vous achetez un ticket au distributeur automatique, soit vous utilisez une carte NFC type SUICA.",
+      "part2": "On vous parle plus en détail de la carte NFC (Suica) dans [les indispensables](todo).",
+      "part3": "Le prix du trajet ne dépend pas de votre moyen de paiement.",
+      "part4": "Si vous optez pour le ticket, il vous faudra vous rendre à une borne devant l'entrée du métro. Vous devrez ensuite sélectionner votre destination correctement. En effet, au Japon le prix n’est pas unique, il #dépend de la distance et du nombre de stations parcourues#. A l’inverse du bus, vous devez payer avant d'entrer si vous n’avez pas de carte.",
+      "part5": "N'hésitez pas à utiliser [Google Maps](todo) ou [Hyperdia](todo) pour avoir des informations sur le trajet, les horaires et le prix.",
+      "part6": "Le prix varie de ville en ville.",
+      "part7": "Vous avez également le JR Pass qui permet d'accéder gratuitement à la Yamanote Line à Tokyo et au Tokyo Monorail.",
+      "part8": "On vous parle plus en détail du JR-Pass dans [les indispensables](todo)."
+    },
+    "opinion": {
+      "title": "Notre avis",
+      "part1": "Tout autant indispensable que le bus dans les grandes villes voir même encore plus à Tokyo tellement la ville est grande.",
+      "part2": "Les quais sont propres, le temps d’attente entre les métros est faible. C’est vraiment plaisant. Le seul petit bémol concerne le monde, notamment aux heures de pointe.",
+      "part3": "Comme pour le bus, la carte SUICA reste également un indispensable."
+    }
+  },
+  "rickshaw": {
+    "title": "TRANSPORT EN POUSSE-POUSSE",
+    "information": {
+      "title": "Information",
+      "part1": "Si on parlait d’un moyen de transport écologique et atypique.",
+      "part2": "On considère qu’il est l’ancêtre du #cyclo-pousse#, on en voit encore quelques-uns, en particulier au [Vietnam](todo).",
+      "part3": "Au Japon il est connu sous le nom de #Jinrikisha#. C’est devenu plus une attraction qu’un véritable moyen de transport, vous en croiserez surtout dans les lieux touristiques, à Arashiyama par exemple dans la [célèbre forêt de bambous](todo)."
+    },
+    "opinion": {
+      "title": "Notre avis",
+      "part1": "A tester pourquoi pas avec vos enfants pour les amuser ou pour faire un tour atypique."
+    }
+  },
+  "taxi": {
+    "title": "TRANSPORT EN TAXI",
+    "information": {
+      "title": "Information",
+      "part1": "Vous verrez des taxis un peu partout dans les grandes villes, il n’est pas difficile d’en trouver un à chaque coin de rue. Même dans les rues peu animées, il y en aura toujours au moins un qui passera par là.",
+      "part2": "#Les taxis sont reconnaissables avec leur plaque d’immatriculation verte et leur enseigne lumineuse sur le toit.#",
+      "part3": "Pas de particularité au Japon pour appeler un taxi, il suffit de lever la main ou se rendre aux emplacements réservés.",
+      "part4": "La réelle particularité est dans le fait que le chauffeur a une manette ou un bouton sur le côté qui lui permet d’ouvrir ou de fermer votre porte. C’est très important, ne le faites pas par vous-même. Ne vous approchez pas trop de la porte non plus si vous ne voulez pas avoir de mauvaises surprises.",
+      "part5": "On peut aussi noter la #différence avec l’enseigne lumineuse qui indique si le taxi est libre ou non#. Une couleur verte vous indique que le taxi est occupé, une couleur rouge qu’il est libre, en contradiction avec ce que nous avons l’habitude de voir. La nuit, l’enseigne est allumée si le taxi est libre."
+    },
+    "booking": {
+      "title": "Réservation / Compagnies",
+      "part1": "Outre le fait que vous pouvez en trouver assez facilement vous avez également la possibilité de réserver via différentes applications.",
+      "part2": "Japan Taxi ↠ [Android](todo) - [IOS](todo)",
+      "part3": "Uber ↠ [Android](todo) - [IOS](todo)"
+    },
+    "price": {
+      "title": "Prix",
+      "part1": "Difficile de vous donnez un prix exact, ils #varient en fonction des villes#. Cependant sachez que le Japon est l’un des pays où le taxi est le #plus cher au monde#.",
+      "part2": "Attention, entre 22h et 5h, les tarifs sont augmentés de 20%, et si le taxi emprunte la voie rapide, le prix du péage sera ajouté.",
+      "part3": "Le plupart des taxis acceptent la carte de crédit, et de plus en plus de taxis acceptent les cartes NFC, comme la SUICA. Les cartes acceptées sont affichées via des autocollants sur les vitres du taxi. Au cas où, ayez toujours du liquide sur vous.",
+      "part4": "Au Japon, il n’y a pas besoin de donner de pourboires. C’est toujours bon à savoir."
+    },
+    "opinion": {
+      "title": "Notre avis",
+      "part1": "Même si l’anglais se démocratise de plus en plus, n'espérez pas tomber sur un chauffeur anglophone.",
+      "part2": "Les seuls moments où nous utilisons le taxi sont pour le trajet depuis ou vers l’aéroport. Il est rare que nous l’utilisions à d’autres moments, sauf cas de force majeure. Cependant au Japon, nous avons privilégié le train, l'aéroport étant très éloigné du centre de Tokyo.",
+      "part3": "Il peut être utile si vous rentrez tard le soir et qu’il n’y a plus d’autres moyens de transports ou comme pour nous pour vous rendre à l’aéroport avec vos bagages. Mais on vous déconseille de le prendre pour des longs trajets ... #Les prix augmentent très vite#."
+    }
+  },
+  "train": {
+    "title": "TRANSPORT EN TRAIN",
+    "information": {
+      "title": "Information",
+      "part1": "Le Japon est connu et reconnu dans le monde entier pour la #qualité de son réseau ferroviaire#. Tout le monde essaie d’en prendre modèle.",
+      "part2": "Sa qualité, sa modernité et son efficacité en font une renommée du Japon.",
+      "part3": "Le train est #le moyen le plus simple et efficace# de se déplacer au Japon, et si vous optez en plus pour les trains à grande vitesse vous serez à votre destination en un temps record.",
+      "part4": "On voit de temps en temps en gros titre dans les journaux qu’un train au Japon a eu une minute de retard, cela peut faire rire mais au Japon la ponctualité du train n’est vraiment pas prit à la légère, des cas de suicide ont même été reporté juste pour quelques secondes ou minutes de retard … Un comble quand on sait qu’en France par exemple on peut attendre plus de 30 minutes sans être prévenu de quoi que ce soit.",
+      "part5": "Les gares au final ne sont pas si surprenantes que ça, elles sont justes plutôt bien organisées. Il est indiqué directement sur le quai là où le train va s'arrêter, c'est-à-dire là où vous devez attendre pour monter à l'intérieur. Ensuite le train s'arrête simplement à l'endroit prévu, au millimètre près.",
+      "part6": "Ce qui nous a surpris se trouve plutôt à l’intérieur du train. En effet, chaque place est surplombé par une lumière verte, orange ou rouge :",
+      "part7": "#lumière verte# ↠ la place est libre tout le trajet",
+      "part8": "#lumière orange# ↠ la place est occupée sur une partie du trajet",
+      "part9": "#lumière rouge# ↠ la place est occupée jusqu'à la fin du trajet",
+      "part10": "Encore une fois simple mais efficace. Faites juste attention, si vous n’avez pas de place attitrée de vous asseoir sous une lumière verte et veillez à ce que la couleur ne change pas en route."
+    },
+    "company": {
+      "title": "Compagnies",
+      "part1": "La compagnie principale se nomme la #Japan Railway# (JR). Elle dessert la quasi-totalité du Japon, de [Hokkaido](todo) dans le Nord à [Kyushu](todo) dans le Sud. C’est elle qui gère les fameux shinkansen, un train à grande vitesse qui relie les principales villes. Elle gère également de nombreux réseaux secondaires. Si vous prenez le train au Japon, il est quasiment impossible de ne pas passer par eux.",
+      "part2": "Il existe ensuite de nombreuses lignes privées qui opèrent localement. Par exemple :",
+      "part3": "Kintetsu Railways ↠ à [Osaka](todo), permet de se rendre à [Nara](todo)",
+      "part4": "Keihan Railways ↠ relie Osaka à [Kyoto](todo)",
+      "part5": "Meitetsu ↠ opère à [Nagoya](todo)",
+      "part6": "Les lignes locales sont aussi ponctuelles et modernes que celles de la JR."
+    },
+    "booking": {
+      "title": "Réservation",
+      "part1": "#La réservation pour les shinkansen est obligatoire#. Que vous ayez un pass ou non. Il faudra vous rendre dans un guichet “JR Ticket Office” dans une gare pour récupérer votre billet, qui vous donnera une place nominative. Ensuite plus qu'à prendre place dans votre train, à la place indiquée.",
+      "part2": "A noter que les “JR Ticket Office” sont reconnaissables à leur grand panneau vert.",
+      "part3": "Pour les autres trains de la Japan Railway, la réservation n’est pas obligatoire, mais recommandé, encore plus durant certaines périodes :",
+      "part4": "27 avril au 6 mai",
+      "part5": "11 au 20 août",
+      "part6": "28 décembre au 6 janvier",
+      "part7": "Pour les autres trains, la réservation est forcément obligatoire si vous n’avez pas de pass. Cependant pour les compagnies locales il ne s’agit pas de billets avec place spécifique : premier arrivé, premier servi.",
+      "part8": "A noter qu’il y a aussi des machines automatiques, cependant quand nous y sommes allés l’anglais n'était pas disponible. Nous nous sommes donc rabattus sur les comptoirs."
+    },
+    "price": {
+      "title": "Prix",
+      "part1": "Les prix varient #en fonction de la distance et du type de train#. Plus le train est rapide, plus cela sera cher. Cependant le trajet sera souvent plus cher qu’un trajet en bus.",
+      "part2": "En tant que voyageur, on considère que vous avez pris le JR-Pass, qui vous permet d’avoir accès à tout ou partie du réseau japan Railway et on vous indique ci-dessous #les distances et durée entre chaque ville#, en prenant un shinkansen.",
+      "part3": "Le temps de trajet est à titre indicatif en fonction de votre point de départ, de votre point d’arrivée mais également du nombre d'arrêts.",
+      "part4": "Plus d'informations sur le fonctionnement du JR-Pass dans [les indispensables](todo).",
+      "part5": "[Hyperdia](todo) vous permet de savoir quels trains sont compatibles avec le JR Pass. [Google Maps](todo) fonctionne aussi très bien pour trouver les prochains trains disponibles."
+    },
+    "opinion": {
+      "title": "Notre avis",
+      "part1": "Le meilleur rapport prix / confort / efficacité. Notre mode de transport préféré au Japon.",
+      "part2": "Attention à la ponctualité au Japon. Les trains ne sont jamais en retard et ne vous attendent pas. Soyez donc toujours à l'heure et même en avance.",
+      "part3": "Certaines gares sont tellement immenses qu’il n’est pas rare de s'y perdre. On parle d'expérience, 30 minutes pour trouver la bonne sortie dans l’une des gares de Tokyo, mais ça valait le coup pour découvrir [La rue aux milles lumières de Tokyo](todo)."
+    },
+    "night-train": {
+      "title": "Les trains de nuit",
+      "part1": "Les trains de nuit sont de plus en plus rares au Japon à cause de l’essor des shinkansen, avions low-cost et bus de nuit.",
+      "part2": "Cependant il en existe encore quelques uns. La plupart opère par la Japan Railway.",
+      "part3": "Le plus célèbre est le #Sunrise Express# reliant Tokyo à Takamatsu et Izumo. Pour la petite histoire, le train est composé de deux wagons se séparant à Okayama pour relier chacun une des deux villes.",
+      "part4": "Le prix varie de 9 500 ¥ à 17 000 ¥ (de 75 à 130€) et est couvert en grande partie par le JR-Pass.",
+      "part5": "Les trains sont composés de couchettes, cabine de douche et toilette, ainsi que de wagons pour pouvoir se retrouver et s'asseoir. Vous avez 3 types de couchettes :",
+      "part6": "Couchette simple",
+      "part7": "Lits simples superposés",
+      "part8": "Dortoir nommée Nobinobi",
+      "part9": "Les trains de nuit reviennent à la mode mais en version luxe touristique. Avec un trajet durant plusieurs jours et propose des arrêts pour effectuer des visites. Par exemple :",
+      "part10": "le [Seven Stars Kyushu](todo) qui opère sur l'île de Kyushu",
+      "part11": "le [Train Suite Shikishima](todo), un train luxueux allant de Tokyo à Aomori en plusieurs jours, qui propose des arrêts touristiques",
+      "part12": "le [Twilight Express Mikukaze](todo), un train luxueux de la même sorte, allant de Kyoto/Osaka à Shimonoseki",
+      "part13": "Ces trains sont vraiment très chers cependant, au minimum 300 000 ¥ (2 000€) par personne pour 2 jours.",
+      "part14": "Le Moonlight Nagara est un train de nuit plus classique, reliant Tokyo à Ogaki, en passant par Nagoya."
+    }
+  },
+  "bike": {
+    "title": "TRANSPORT EN VÉLO",
+    "information": {
+      "title": "Information",
+      "part1": "Prenez votre vélo et partez à la #découverte de la campagne japonaise# ou bien baladez-vous dans les quartiers populaires.",
+      "part2": "À [Kyoto](todo) par exemple, le quartier d'Arashiyama propose de nombreuses visites pas trop éloignées les unes des autres, pourquoi ne pas enfourcher votre vélo pour parcourir ce quartier.",
+      "part3": "Une #découverte du Japon# autrement que par tous les moyens de transports déjà omniprésents et qui vous fera vous sentir libre dans un pays qui peut parfois être oppressant de par le monde quasi toujours présent.",
+      "part4": "Prendre votre vélo vous fera également découvrir des paysages que vous n’aurez sûrement jamais découverts autrement."
+    },
+    "booking": {
+      "title": "Réservation",
+      "part1": "Vous pouvez en trouver dans les offices de tourisme, certains magasins proposent également des vélos en location.",
+      "part2": "Vous pouvez également en trouver dans des hôtels. Lors de notre visite au [lac Kawaguchi](todo) près du mont Fuji, notre hôtel nous en proposait gratuitement, un véritable plus pour faire un tour autour du lac.",
+      "part3": "A Tokyo, le [Tokyo Great Cycling Tour](todo) propose des tours pour découvrir la ville, séparés en 8 routes différentes en fonction de ce que vous voulez visiter. Les tours durent en général 6h, pour un prix de 12 000 YEN, vélo, guide, repas et eau compris. Les tours se font entre 2 et 15 personnes. Vous avez aussi un tour le soir, au coucher du soleil, trajet de 1h30 pour 5 000 YEN (40€)."
+    }
+  },
+  "car": {
+    "title": "TRANSPORT EN VOITURE",
+    "information": {
+      "title": "Information",
+      "part1": "Il y a deux informations à prendre en compte impérativement. D’une part, #la conduite au Japon se fait à gauche#. Même si on prend vite le coup de main, ça peut être stressant pendant les premières minutes. La deuxième, plus problématique à notre avis, concerne les panneaux de circulation. Si dans les grands axes l’affichage se fait en japonais et en anglais, sur les routes secondaires il est uniquement en japonais, ce qui peut être un vrai problème.",
+      "part2": "N’oubliez pas de faire traduire votre permis en japonais dans un des centres de la [JAF](todo) (Japan Automobile Federation), c’est obligatoire. Vous pouvez voir ici la [liste des centres](todo) capables de traduire votre permis. Rendez-vous sur place avec votre permis valide et remplissez les documents. Il est préférable de contacter en avance l’agence dans laquelle vous souhaitez vous rendre pour avoir une estimation du temps de la procédure. Ce permis local coûte 3000 Yen (25€)."
+    },
+    "booking": {
+      "title": "Réservation",
+      "part1": "[Tabirai](todo) est probablement le site le plus connu. Avec un large choix de type de véhicule ainsi que de nombreuses options incluses dans le prix, vous trouverez votre bonheur, sans mauvaises surprises.",
+      "part2": "Le site propose des voitures louées par d’autres entreprises telles que #Orix, Nissan, Times Car, Toyota et Nippon#. Vous pouvez bien sûr réserver directement sur leur site si vous le souhaitez sans passer par Tabirai, néanmoins ce site vous garantit un plus large choix de modèles ainsi que des prix plus fiables et un GPS en anglais."
+    },
+    "price": {
+      "title": "Prix",
+      "part1": "Le prix dépend bien évidemment du #type de véhicule, de la durée de la location, ainsi que de l’agence#. Les périodes plus touristiques entraîneront également une hausse du prix.",
+      "part2": "Dans de très rare cas, il est possible de restituer son véhicule dans une agence différente, entraînant un surcoût.",
+      "part3": "Il est possible de demander l’ajout d’un appareil pour [ETC](todo), une carte qui collecte automatiquement les péages. Charge à vous de fournir la carte. Attention les péages sont chers au Japon.",
+      "part4": "Comptez #environ 50€ par jour# pour une voiture compacte."
+    },
+    "opinion": {
+      "title": "Notre avis",
+      "part1": "La voiture est le moyen de transport qui offre le plus de liberté. Aucune contrainte de temps et tous les chemins s’offrent à vous. Vous avez envie de découvrir des endroits reculés sans touristes ? C’est de loin la meilleure option.",
+      "part2": "C’est également une solution qui peut s'avérer idéale #en groupe, ou en famille#, pour profiter de vacances moins onéreuses. Le train c’est bien, mais ça peut vite devenir cher en groupe.",
+      "part3": "Mais surtout n’oubliez pas que tous les panneaux ne sont pas traduits en anglais, et ça peut être un vrai frein pour se décider de partir en vacances en voiture.",
+      "part4": "Un véritable problème également, et à surtout bien vérifier avant de réserver, c’est le fait que l’on ne peut pas rendre le véhicule dans une autre agence que celle où on l’a pris. Vous devrez donc obligatoirement refaire le chemin inverse."
+    }
+  },
+  "essential": {
+    "title": "LES INDISPENSABLES",
+    "section1": {
+      "title": "LA CARTE SUICA",
+      "information": {
+        "title": "Information",
+        "part1": "Il s’agit d’une #carte prépayée# qui permet principalement d’utiliser beaucoup de transports en commun au Japon, sans avoir à prendre de tickets. Elle est valable pour les bus, métros à [Tokyo](todo) et dans toutes les grandes villes équipées d’un système de carte prépayée, ainsi que sur toute la ligne JR East.",
+        "part2": "La carte est disponible pour adultes et pour enfants et lors de vos trajets, le prix sera déduit en fonction (prix adulte pour les adultes et prix enfant pour les enfants). #Chaque personne doit en posséder une, elle n’est cependant pas nominative#.",
+        "part3": "A savoir que pendant plusieurs années, chaque ville avait son propre système de carte prépayée. La carte SUICA est simplement compatible avec tous ces systèmes.",
+        "part4": "Si vous voyez un de ces logos, la carte SUICA sera compatible.",
+        "part5": "En plus des transports en commun, la carte fonctionne dans de nombreux magasins ou restaurants.",
+        "part6": "Si vous avez déjà prévu de retourner au Japon, sachez que la carte est #valable 10 ans#."
+      },
+      "operation": {
+        "title": "Fonctionnement",
+        "part1": "Vous avez juste besoin de biper votre carte sur les machines disponibles dans les transports. Rien de plus simple.",
+        "part2": "Si vous n’avez plus assez d’argent sur la carte, vous devez trouver une #machine automatique pour la recharger#. Vous en trouverez dans toutes les stations de métro et de train.",
+        "part3": "Vous ne pouvez pas utiliser de carte de crédit pour recharger la carte SUICA, uniquement en pièces ou en billets."
+      },
+      "booking": {
+        "title": "Réservation",
+        "part1": "Il est possible de récupérer une carte SUICA dès son arrivée au Japon, depuis les aéroports. Comme elle peut être utilisée sur la JR East lines, vous pouvez également la trouver dans ces stations.",
+        "part2": "Attention cependant, si vous récupérez une carte depuis une station JR East vous ne pourrez la ramener que dans une station JR East. De même, vous ne pouvez pas retourner une carte prise en dehors d’une station JR East dans une station JR East."
+      },
+      "price": {
+        "title": "Prix",
+        "part1": "Lors de l’achat, la carte vaut de #1 000 à 10 000 yen#, en fonction de l’argent que vous souhaitez mettre dessus. Ce montant sera disponible sur la carte directement, moins les 500 yens de dépôt.",
+        "part2": "Les frais de restitution sont de 220 yen (moins de 2€). Lors de la restitution, le dépôt vous est rendu ainsi que le montant restant sur la carte. En revanche, si vous ne restituez pas votre carte, vous ne récupérerez pas le dépôt, ainsi que l’argent restant.",
+        "part3": "La carte est plafonnée à 20 000 yen (150€).",
+        "part4": "Pour avoir d’autres informations, n’hésitez pas à aller sur le [site officiel](todo)."
+      }
+    },
+    "section2": {
+      "title": "JAPAN RAIL PASS (JRP - JR-Pass)",
+      "information": {
+        "title": "Information",
+        "part1": "Le Japan Rail pass, aussi connu sous le nom JR-Pass, est un forfait qui vous permet d'accéder à pratiquement tout le réseau géré par la Japan Railway. Comme nous l’avons expliqué précédemment, la Japan Railway gère la majeure partie du réseau ferroviaire du pays. #Le pass vous offre donc accès à quasiment l’ensemble du Japon#.",
+        "part2": "Les shinkansen, trains à grande vitesse, sont également inclus, à l'exception des shinkansen Nozomi et Mizuho pour lesquels il vous faudra payer un ticket normal.",
+        "part3": "En addition, le JR-pass vous permet d’emprunter entre autres :",
+        "part4": "les [lignes de bus JR](todo),",
+        "part5": "le JR-West Miyajima ferry, pour se rendre à Miyajima,",
+        "part6": "le [Tokyo Monorail](todo) ainsi que la [Yamanote line](todo) à Tokyo,",
+        "part7": "Le Narita Express, qui relie Tokyo à l'aéroport international de Narita",
+        "part8": "Il existe plusieurs types de pass :",
+        "part9": "le #pass national#, qui permet d'accéder à l’ensemble du réseau, sans limitation géographique,",
+        "part10": "le #green pass#, qui est l'équivalent du pass national mais qui permet de voyager en première classe,",
+        "part11": "le #pass régional#, qui n’est valide que dans une des 6 régions. Il est bien entendu possible de cumuler plusieurs pass régionaux. Chaque pass régional a ses propres spécificités en termes de durée et d’offre.",
+        "part12": "Le JR-Pass n’est disponible que pour les “visiteurs temporaires”, c'est-à- dire les touristes #qui restent moins de 90 jours#.",
+        "part13": "Vous trouverez plus d'informations sur [le site du JR-Pass](todo)."
+      },
+      "booking": {
+        "title": "Réservation",
+        "part1": "Vous devez réserver le pass dans votre pays et vous pourrez le récupérer en arrivant au Japon.",
+        "part2": "Il n’y a pas de sites officiels, cependant il existe une multitude de revendeurs en magasins ou via internet. Dans notre cas, nous avons préféré commander le nôtre sur internet. Quelques exemples de site :",
+        "part3": "[jrailpass.com](todo)",
+        "part4": "[japanrailpass.net](todo)",
+        "part5": "[japan-rail-pass.com](todo)",
+        "part6": "Une fois la réservation faite, vous recevrez un coupon à échanger lors de votre arrivée au Japon. Ne le perdez surtout pas.",
+        "part7": "Le #pass national peut être d’une durée de 7, 14 ou 21 jours# et n’est valable que 3 mois à compter de la date de réservation et de 30 jours à compter de la date de récupération au Japon. #Le pass régional est lui en général valable au maximum une semaine#. Vous pouvez réserver autant de pass que nécessaire.",
+        "part8": "Sur place vous aurez quand même besoin de réserver un billet pour prendre le shinkansen. Pour les autres trains, pas de réservation nécessaire, même si on vous le recommande."
+      },
+      "price": {
+        "title": "Prix",
+        "part1": "Le prix dépend de plein de choses : #le type# (national / régional), #la durée, l'âge# (forfait enfant pour les 6-11 ans) #et le site de réservation#. Même si le prix varie assez peu entre chaque revendeur, n'hésitez pas à vérifier et comparer les offres.",
+        "part2": "Voici un ordre d'idée de prix, pour un adulte :",
+        "part3": "Pour les autres pass :",
+        "part4": "Hokkaido ➵ à partir de 150€",
+        "part5": "Est ➵ à partir de 200€",
+        "part6": "Kansai ➵ à partir de 20€",
+        "part7": "Central ➵ à partir de 110€",
+        "part8": "Ouest ➵à partir de 150€",
+        "part9": "Shikoku ➵ à partir de 70€",
+        "part10": "Kyushu ➵ à partir de 115€",
+        "part11": "Il est difficile de proposer des pass précis et des tarifs fiables pour les pass régionaux, car les offres changent régulièrement. Les prix ci-dessus sont à titre indicatif."
+      },
+      "opinion": {
+        "title": "Notre avis",
+        "part1": "On nous en avait vanté les mérites à mainte et mainte reprise. Cela dit nous en avons vu quelques points négatifs quand même, c’est loin d’être super bien pensé.",
+        "part2": "Pour voyager dans les shinkansen #il nous fallait obligatoirement réserver nos places# alors que sur la plupart des sites c’est marqué que non (soit on ne nous laissait pas passer sans tickets soit il y avait des contrôles pendant le trajet) donc il nous fallait aller prendre un ticket et donc faire la queue au guichet. Une fois votre ticket en main vous ne pouvez quand même pas passer par les bornes automatiques, #il faut passer au guichet à côté des bornes et montrer votre ticket# et JR-Pass, c’est cela dit souvent assez rapide (quoique) mais ce n'est clairement pas ce que nous imaginions. #On s'imaginait que tout était beaucoup plus automatique#.",
+        "part3": "Malheureusement il n’y a pas de pass couvrant Tokyo et le Kansai (Kyoto, Osaka), deux régions très touristiques. Cela signifie qu’il faut prendre au moins deux pass régionaux. Dans notre cas, nous avions même besoin de 3 pass régionaux, Himeji ne faisant pas partie du Kansai. C’est pourquoi lors de notre visite du [Japon au printemps](todo) par exemple, nous avons opté pour un pass national.",
+        "part4": "Au final, avec le JR-Pass on n’a pas trop à se soucier des trains, tellement la couverture est énorme. Dans les rares cas où il n’y a pas de trains JR disponibles, il suffit de se rabattre sur d’autres choix.",
+        "part5": "Le JR-Pass reste un bon gain d’argent si vous comptez, comme nous, prendre souvent le train et voyager en dehors de Tokyo."
+      }
+    }
+  },
+  "conclusion": "Autant de moyens de transport qui vous permettront de voyager sereinement et à votre rythme. A vous de voir si vous préférez le confort et la rapidité, ou plutôt le côté économique.",
+  "question1": "Quel est votre moyen de transport préféré au Japon ?",
+  "question2": "Avez-vous utilisé des moyens de transport originaux ?",
+  "pinterest": "🌏 Vous trouverez dans cet article nos informations et conseils qui vous permettront de bien choisir votre moyen de transport en fonction de vos besoins et de votre budget avant de partir au Japon. Prix ? Où réserver ? On vous dit tout en vous donnant notre avis. Cliquez sur l'image pour le guide complet sur les transports au Japon ... 🌏",
+  "facebook": {
+    "part1": "♡ Coucou les voyageurs ! ♡",
+    "part2": "On vous aide à choisir le moyen de transport qui vous convient le plus en fonction de vos besoins, de votre budget et de vos envies avant de partir au Japon."
+  }
+}

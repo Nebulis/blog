@@ -3,8 +3,9 @@ const pages = (page) => {
 }
 module.exports = {
   flags: {
-    FAST_DEV: true,
+    // FAST_DEV: true,
     PRESERVE_WEBPACK_CACHE: true,
+    // DEV_SSR: false, // can't disable this fucker
   },
   siteMetadata: {
     siteUrl: `https://magicoftravels.com`,

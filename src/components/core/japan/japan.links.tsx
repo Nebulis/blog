@@ -15,7 +15,10 @@ import {
   UenoParkCard,
   ShibuyaDistrictCard,
   YasukuniDoriCard,
+  PrepareJapanCard,
   CustomsInJapanCard,
+  TransportsJapanCard,
+  FoodJapanCard,
 } from "./japan.cards"
 import commonFr from "../../../locales/fr/common.json"
 import commonEn from "../../../locales/en/common.json"
@@ -39,10 +42,17 @@ export const japanLinks: CountryLink = {
       kind: "highlight",
     },
     {
-      id: "transport-japan",
-      label: { fr: "Transports", en: "Transports" },
-      url: "transports",
-      published: false,
+      id: "transports-in-japan",
+      label: { fr: commonFr.country.japan.card.transports, en: commonEn.country.japan.card.transports },
+      published: new Date("2021-07-17T17:00:00.000+08:00"),
+      card: TransportsJapanCard,
+    },
+    {
+      id: "prepare-japan",
+      label: { fr: commonFr.country.japan.card.prepare, en: commonEn.country.japan.card.prepare },
+      card: PrepareJapanCard,
+      published: new Date("2021-07-10T17:00:00.000+08:00"),
+      additionalTags: ["prepare"],
     },
     {
       id: "customs-in-japan",
@@ -54,10 +64,10 @@ export const japanLinks: CountryLink = {
       published: new Date("2021-07-03T17:00:00.000+08:00"),
     },
     {
-      id: "food-japan",
-      label: { fr: "", en: "" },
-      url: "food",
-      published: false,
+      id: "food-in-japan",
+      label: { fr: commonFr.country.japan.card.food, en: commonEn.country.japan.card.food },
+      published: new Date("2021-07-24T17:00:00.000+08:00"),
+      card: FoodJapanCard,
     },
     {
       id: "osaka-castle",
@@ -320,5 +330,7 @@ export const japanLinks: CountryLink = {
         },
       ],
     },
+    { id: "osaka", highlights: [], label: { en: "Osaka", fr: "Osaka" } },
+    { id: "nara", highlights: [], label: { en: "Nara", fr: "Nara" } },
   ],
 }

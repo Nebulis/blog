@@ -3,6 +3,7 @@ import { css } from "@emotion/react"
 import { getLink, getLinkLabel } from "./links/links.utils"
 import { ApplicationLink } from "./links/link"
 import { useCustomTranslation } from "../../i18n-hook"
+import styled from "@emotion/styled"
 
 interface TitleProps {
   title: string
@@ -62,3 +63,9 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
     </>
   )
 }
+
+export const PrepareSubTitle = styled.p`
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+`

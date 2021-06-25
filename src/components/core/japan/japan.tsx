@@ -3,7 +3,12 @@ import React, { FunctionComponent, HTMLAttributes } from "react"
 import styled from "@emotion/styled"
 import { ButtonLink, ExternalLink, linkBuilder } from "../links/link"
 import { BlogLayout, IndexBlogLayout } from "../../layout/layout"
-import { japanCherryBlossom, japanPrimaryColor, japanPrimaryColorDarker } from "./japan.variables"
+import {
+  japanCherryBlossom,
+  japanPrimaryColor,
+  japanPrimaryColorDarker,
+  japanPrimaryColorWithOpacity,
+} from "./japan.variables"
 import { Link } from "gatsby"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import { City, Headline } from "../highlight"
@@ -66,6 +71,17 @@ const japanLayout = `
   }
 
   .index-blog-layout-content {
+  
+    .petit-carre-colore {
+      background-color: ${japanPrimaryColorWithOpacity(0.2)};
+      border-color: ${japanPrimaryColorDarker};
+    }
+    .menu-article .menu-article-container {
+      background-color: ${japanPrimaryColorWithOpacity(0.2)};
+      color: ${japanPrimaryColorDarker};
+      border: 3px solid ${japanPrimaryColorDarker};
+    }
+    
     .point-of-interest-section {
       svg {
         fill: ${japanPrimaryColor};
@@ -698,3 +714,5 @@ export const japanWeatherEntries = (): WeatherEntry[] => [
     ],
   },
 ]
+
+export const defaultExcludedWeatherEntries = ["nagoya", "kyoto"]

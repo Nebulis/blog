@@ -485,6 +485,18 @@ describe("mdx-pseudo-processor", () => {
         `)
       })
     })
+    describe("anchor", () => {
+      it("should build link with anchor", () => {
+        expect(mdxPseudoProcessor("[Hello](#here)", "", "", { language: "fr" })).toMatchInlineSnapshot(`
+          <a
+            className="mdx-pseudo-processor-link"
+            href="#here"
+          >
+            Hello
+          </a>
+        `)
+      })
+    })
     describe("japan-line", () => {
       it("should build japan-line link", () => {
         expect(mdxPseudoProcessor("[test](japan-line:red:blue:https://test.com)", "", "", { language: "fr" }))

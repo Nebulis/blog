@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import * as React from "react"
 import { ExtraImageProps } from "../../../../types/shared"
+import { useCustomTranslation } from "../../../../i18n-hook"
 
 const alt = {
   arashiyama: "Arashiyama Bamboo Forest",
@@ -15,7 +16,10 @@ const alt = {
   sensoji: "Sensoji",
   hamarikyuGarden: "Hamarikyu Garden",
   springInJapan: "Japan In Spring",
+  prepareJapan: "Prepare Your Travel To Japan",
   customsInJapan: "Customs In Japan",
+  transportsInJapan: "Transports In Japan",
+  foodInJapan: "Food In Japan",
   toganji: "Toganji",
   uenoPark: "Ueno Park",
   shibuyaDistrict: "Shibuya District",
@@ -28,6 +32,9 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
   fluidObject = {},
   imgStyle = {},
 }) => {
+  const { i18n } = useCustomTranslation()
+  const imageToDisplay =
+    image !== "foodInJapan" ? image : i18n.languageCode === "fr" ? "foodInJapanFr" : "foodInJapanEn"
   const data = useStaticQuery(graphql`
     query {
       arashiyama: file(relativePath: { eq: "asia/japan/carousel-japan.jpg" }) {
@@ -100,9 +107,37 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
+      prepareJapan: file(relativePath: { eq: "asia/japan/prepare-japan/prepare-japan-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       customsInJapan: file(relativePath: { eq: "asia/japan/home.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      transportsInJapan: file(relativePath: { eq: "asia/japan/transports-in-japan/transports-in-japan-main.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      foodInJapanEn: file(relativePath: { eq: "asia/japan/food-in-japan/food-in-japan-main-en.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      foodInJapanFr: file(relativePath: { eq: "asia/japan/food-in-japan/food-in-japan-main-fr.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -146,7 +181,7 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
   `)
   return (
     <Img
-      fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }}
+      fluid={{ ...data[imageToDisplay].childImageSharp.fluid, ...fluidObject }}
       alt={alt[image]}
       className={className}
       imgStyle={imgStyle}

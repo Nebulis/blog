@@ -42,7 +42,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.${id}`)
-  const transportLinkPublished = development || getLink("transport-japan").published
+  const transportLinkPublished = development || getLink("transports-in-japan").published
   const hamarikyuGardenPublished = development || getLink("hamarikyu-garden").published
   return (
     <>

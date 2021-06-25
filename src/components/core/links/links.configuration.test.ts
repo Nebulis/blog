@@ -120,12 +120,16 @@ const japanLinks = () => {
     label: { fr: "Le Japon au printemps : Au milieu des Sakuras", en: "Spring In Japan: Under the Sakuras" },
     published: true,
   })
-  expect(getLink("transport-japan")).toMatchObject({
-    label: { en: "Transports", fr: "Transports" },
+  expect(getLink("transports-in-japan")).toMatchObject({
+    label: { en: "All you need to know about transportation in Japan", fr: "Tout savoir sur les transports au Japon" },
     published: false,
   })
   expect(getLink("customs-in-japan")).toMatchObject({
     label: { en: "Customs to know before visiting Japan", fr: "Coutumes à connaître avant de vous rendre au Japon" },
+    published: false,
+  })
+  expect(getLink("prepare-japan")).toMatchObject({
+    label: { en: "Prepare your travel to Japan", fr: "Bien préparer son voyage au Japon" },
     published: false,
   })
 
@@ -168,7 +172,7 @@ const japanLinks = () => {
       en: "Hamarikyu Gardens : A Haven of Peace in the Middle of Tokyo",
       fr: "Jardin Hama-Rikyu : Un havre de paix en plein Tokyo",
     },
-    published: false,
+    published: true,
   })
 
   expect(getLink("kyoto")).toMatchObject({ label: { fr: "Kyoto", en: "Kyoto" }, published: true })
@@ -235,8 +239,11 @@ const japanLinks = () => {
     label: { en: "", fr: "" },
     published: false,
   })
-  expect(getLink("food-japan")).toMatchObject({
-    label: { en: "", fr: "" },
+  expect(getLink("food-in-japan")).toMatchObject({
+    label: {
+      en: "What to eat in Japan? Discover 10 famous Japanese food",
+      fr: "Que mange-t-on au Japon ? 10 spécialités culinaires à découvrir",
+    },
     published: false,
   })
   expect(getLink("osaka-castle")).toMatchObject({
@@ -297,6 +304,14 @@ const japanLinks = () => {
   })
   expect(getLink("chureito-pagoda")).toMatchObject({
     label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("osaka")).toMatchObject({
+    label: { en: "Osaka", fr: "Osaka" },
+    published: false,
+  })
+  expect(getLink("nara")).toMatchObject({
+    label: { en: "Nara", fr: "Nara" },
     published: false,
   })
 }

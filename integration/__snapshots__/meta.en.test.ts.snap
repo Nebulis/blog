@@ -78,6 +78,12 @@ exports[`english pages exports meta for public/en/asia/japan/customs-in-japan/in
 
 exports[`english pages exports meta for public/en/asia/japan/customs-in-japan/index.html correctly: title 1`] = `"Customs to know before visiting Japan | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/asia/japan/food-in-japan/index.html correctly: meta-description 1`] = `"What to eat in Japan? Find out our 10 Japanese food favorites. We share our opinion with you with our photos and a description of each dish."`;
+
+exports[`english pages exports meta for public/en/asia/japan/food-in-japan/index.html correctly: social-network 1`] = `"The land of the Rising Sun has an impressive cultural heritage and breathtaking landscapes. However, if you come to Japan, you will also discover a culinary heritage that will leave a lasting impression."`;
+
+exports[`english pages exports meta for public/en/asia/japan/food-in-japan/index.html correctly: title 1`] = `"What to eat in Japan? Discover 10 famous Japanese food | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: meta-description 1`] = `"Visible from Tokyo, known throughout the world, Mount Fuji is one of the most famous peaks. For each spot, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/japan/fuji/index.html correctly: social-network 1`] = `"Visible from Tokyo, known throughout the world, Mount Fuji is one of the most famous peaks. Sacred mountain and a true inspiration for artists, it deserves its reputation. Trekking in summer, skiing in winter, or walking all year round in the surroundings, in the region of the five lakes, for example, you will be spoiled for choice."`;
@@ -156,6 +162,12 @@ exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/inde
 
 exports[`english pages exports meta for public/en/asia/japan/nagoya/toganji/index.html correctly: title 1`] = `"Nagoya : Togan-Ji Temple and its Huge Buddha | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/asia/japan/prepare-japan/index.html correctly: meta-description 1`] = `"In this article, you will find information and advice that will help you to prepare for your trip to the Land of the Rising Sun. Why go to Japan? When to go? How many days or weeks? How much money to budget? What are the procedures to follow? We also share with you about accommodations, what you need to bring, the dangers you may face, and our opinion about Japan."`;
+
+exports[`english pages exports meta for public/en/asia/japan/prepare-japan/index.html correctly: social-network 1`] = `"We all have so many questions when planning a trip and especially how to organize? In this article, you will find our information and advice to help you prepare for your trip to Japan."`;
+
+exports[`english pages exports meta for public/en/asia/japan/prepare-japan/index.html correctly: title 1`] = `"Prepare your travel to Japan | Travel Blog"`;
+
 exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: meta-description 1`] = `"Let's discover Japan during Spring. We share our travel itinerary for a week. How many days ? What budget to plan? We respond to your questions based on our own experiences."`;
 
 exports[`english pages exports meta for public/en/asia/japan/spring-in-japan/index.html correctly: social-network 1`] = `"Japan, this unmissable country to visit in Asia. Every season has its own scenery. From quiet remote places to the hustle and bustle of big cities. Whether you prefer the city or the countryside, there will obviously be something that you will get interested in ..."`;
@@ -204,11 +216,14 @@ exports[`english pages exports meta for public/en/asia/japan/tokyo/yasukuni-dori
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/yasukuni-dori/index.html correctly: title 1`] = `"Yasukuni-Dori: The street of a thousand lights in Shinjuku | Travel Guide"`;
 
-exports[`english pages exports meta for public/en/asia/japan/transports/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/transports-in-japan/index.html correctly: meta-description 1`] = `
+"In this article, you will find our information and advice that will help you to choose the best mode of transport, depending on your needs. Price? How to book? We tell you all the information you need and share our opinion.
+"
+`;
 
-exports[`english pages exports meta for public/en/asia/japan/transports/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
+exports[`english pages exports meta for public/en/asia/japan/transports-in-japan/index.html correctly: social-network 1`] = `"It is necessary to know which mode of transport you want to use to plan your trip to Japan. It will impact your budget as well as the speed and the duration of your travels from city to city."`;
 
-exports[`english pages exports meta for public/en/asia/japan/transports/index.html correctly: title 1`] = `"main | Travel Blog"`;
+exports[`english pages exports meta for public/en/asia/japan/transports-in-japan/index.html correctly: title 1`] = `"All you need to know about transportation in Japan | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/index.html correctly: meta-description 1`] = `"Discover East Malaysia, a jungle landscape where some endemic and wild animals still reside. For each place, we try to transcribe our visit as best as possible by telling you how to get there? Why? When? How long and at what period?"`;
 
@@ -294,7 +309,7 @@ exports[`english pages exports meta for public/en/asia/vietnam/northern-vietnam/
 
 exports[`english pages exports meta for public/en/asia/vietnam/northern-vietnam/index.html correctly: title 1`] = `"Northern Vietnam | Travel Guide"`;
 
-exports[`english pages exports meta for public/en/asia/vietnam/prepare/index.html correctly: meta-description 1`] = `"In this article, you will find information and advice that will help you to prepare your trip to Vietnam. Why go to Vietnam? When to go? How many days or weeks? How much to budget? What are the procedures to follow ? We also share with you about accommodations, what you need to bring, the dangers you may face, and our opinion about Vietnam."`;
+exports[`english pages exports meta for public/en/asia/vietnam/prepare/index.html correctly: meta-description 1`] = `"In this article, you will find information and advice that will help you to prepare for your trip to Vietnam. Why go to Vietnam? When to go? How many days or weeks? How much to budget? What are the procedures to follow? We also share with you about accommodations, what you need to bring, the dangers you may face, and our opinion about Vietnam."`;
 
 exports[`english pages exports meta for public/en/asia/vietnam/prepare/index.html correctly: social-network 1`] = `"So many questions to ask yourself when planning a trip and especially how to organize yourself? In this article, you will find information and advice that will help you prepare for your trip to Vietnam."`;
 

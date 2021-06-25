@@ -53,7 +53,7 @@ import { Conclusion } from "../../../components/core/conclusion"
 import { Comments } from "../../../components/core/comments"
 import { trainSchedules as _trainSchedules, VietnamTrainMap } from "../../../components/core/asia/vietnam/vietnam-map"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
-import { PetitCarreJaune } from "../../../components/layout/layout"
+import { PetitCarreColore } from "../../../components/layout/layout"
 import { Tree } from "../../../components/layout/menu"
 import { FaBus } from "react-icons/fa"
 import { PlaneSchedule } from "../../../components/core/asia/vietnam/plane-schedule"
@@ -1004,13 +1004,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <section>
           <SectionContent>
-            <PetitCarreJaune>
+            <PetitCarreColore>
               <p>{t("section10.part1")}</p>
               <p>{t("section10.part2")}</p>
               <p>{t("section10.part3")}</p>
               <p>{t("section10.part4")}</p>
               <p>{t("section10.part5")}</p>
-            </PetitCarreJaune>
+            </PetitCarreColore>
           </SectionContent>
         </section>
         <Conclusion>

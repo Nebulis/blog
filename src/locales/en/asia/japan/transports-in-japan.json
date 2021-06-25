@@ -1,0 +1,441 @@
+{
+  "full-title": "All you need to know about transportation in Japan | Travel Guide",
+  "quote": "",
+  "introduction": "",
+  "google-description": "In this article, you will find our information and advice that will help you to choose the best mode of transport, depending on your needs. Price? How to book? We tell you all the information you need and share our opinion.\n",
+  "social-network-description": "It is necessary to know which mode of transport you want to use to plan your trip to Japan. It will impact your budget as well as the speed and the duration of your travels from city to city.",
+  "plane": {
+    "title": "",
+    "information": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": ""
+    },
+    "booking": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": ""
+    },
+    "company": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": "",
+      "part6": "",
+      "part7": ""
+    },
+    "price": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": ""
+    },
+    "opinion": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": ""
+    }
+  },
+  "boat": {
+    "title": "",
+    "information": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": "",
+      "part6": "",
+      "part7": "",
+      "part8": "",
+      "part9": ""
+    },
+    "booking": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": "",
+      "part6": "",
+      "part7": "",
+      "part8": "",
+      "part9": "",
+      "part10": "",
+      "part11": "",
+      "part12": "",
+      "part13": "",
+      "part14": "",
+      "part15": "",
+      "part16": ""
+    },
+    "opinion": {
+      "title": "",
+      "part1": "",
+      "part2": ""
+    }
+  },
+  "bus": {
+    "title": "",
+    "part1": "",
+    "bus": {
+      "title": "",
+      "information": {
+        "title": "",
+        "part1": ""
+      },
+      "booking": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": "",
+        "part5": "",
+        "part6": "",
+        "part7": ""
+      },
+      "opinion": {
+        "title": "",
+        "part1": "",
+        "part2": ""
+      }
+    },
+    "car": {
+      "title": "",
+      "information": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": ""
+      },
+      "booking": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": "",
+        "part5": ""
+      },
+      "price": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": "",
+        "part5": "",
+        "part6": ""
+      },
+      "opinion": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": ""
+      }
+    },
+    "night-tour": {
+      "title": "",
+      "information": {
+        "title": "",
+        "part1": "",
+        "part2": ""
+      },
+      "booking": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": ""
+      },
+      "opinion": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": ""
+      }
+    }
+  },
+  "mrt": {
+    "title": "",
+    "information": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": ""
+    },
+    "booking": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": "",
+      "part6": "",
+      "part7": "",
+      "part8": ""
+    },
+    "opinion": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": ""
+    }
+  },
+  "rickshaw": {
+    "title": "",
+    "information": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": ""
+    },
+    "opinion": {
+      "title": "",
+      "part1": ""
+    }
+  },
+  "taxi": {
+    "title": "",
+    "information": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": ""
+    },
+    "booking": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": ""
+    },
+    "price": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": ""
+    },
+    "opinion": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": ""
+    }
+  },
+  "train": {
+    "title": "",
+    "information": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": "",
+      "part6": "",
+      "part7": "",
+      "part8": "",
+      "part9": "",
+      "part10": ""
+    },
+    "company": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": "",
+      "part6": ""
+    },
+    "booking": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": "",
+      "part6": "",
+      "part7": "",
+      "part8": ""
+    },
+    "price": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": ""
+    },
+    "opinion": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": ""
+    },
+    "night-train": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": "",
+      "part5": "",
+      "part6": "",
+      "part7": "",
+      "part8": "",
+      "part9": "",
+      "part10": "",
+      "part11": "",
+      "part12": "",
+      "part13": "",
+      "part14": ""
+    }
+  },
+  "bike": {
+    "title": "",
+    "information": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": ""
+    },
+    "booking": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": ""
+    }
+  },
+  "car": {
+    "title": "",
+    "information": {
+      "title": "",
+      "part1": "",
+      "part2": ""
+    },
+    "booking": {
+      "title": "",
+      "part1": "",
+      "part2": ""
+    },
+    "price": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": ""
+    },
+    "opinion": {
+      "title": "",
+      "part1": "",
+      "part2": "",
+      "part3": "",
+      "part4": ""
+    }
+  },
+  "essential": {
+    "title": "",
+    "section1": {
+      "title": "",
+      "information": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": "",
+        "part5": "",
+        "part6": ""
+      },
+      "operation": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": ""
+      },
+      "booking": {
+        "title": "",
+        "part1": "",
+        "part2": ""
+      },
+      "price": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": ""
+      }
+    },
+    "section2": {
+      "title": "",
+      "information": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": "",
+        "part5": "",
+        "part6": "",
+        "part7": "",
+        "part8": "",
+        "part9": "",
+        "part10": "",
+        "part11": "",
+        "part12": "",
+        "part13": ""
+      },
+      "booking": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": "",
+        "part5": "",
+        "part6": "",
+        "part7": "",
+        "part8": ""
+      },
+      "price": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": "",
+        "part5": "",
+        "part6": "",
+        "part7": "",
+        "part8": "",
+        "part9": "",
+        "part10": "",
+        "part11": ""
+      },
+      "opinion": {
+        "title": "",
+        "part1": "",
+        "part2": "",
+        "part3": "",
+        "part4": "",
+        "part5": ""
+      }
+    }
+  },
+  "conclusion": "",
+  "question1": "",
+  "question2": "",
+  "pinterest": "",
+  "facebook": {
+    "part1": "",
+    "part2": ""
+  }
+}

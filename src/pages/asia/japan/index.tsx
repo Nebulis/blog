@@ -3,7 +3,12 @@ import SEO from "../../../components/layout/seo"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import { getArticles, getLinkLabel, isLinkPublished, sortByLabel } from "../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../components/application"
-import { JapanBlogLayout, JapanButtonLink, japanWeatherEntries } from "../../../components/core/japan/japan"
+import {
+  defaultExcludedWeatherEntries,
+  JapanBlogLayout,
+  JapanButtonLink,
+  japanWeatherEntries,
+} from "../../../components/core/japan/japan"
 import { japanLinks } from "../../../components/core/japan/japan.links"
 import {
   HomeSection,
@@ -118,7 +123,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <SubHomeSectionTwoLines title={t("weather")} country={t("weather-country")} />
         <WeatherForHomePage
           extraButton
-          entries={japanWeatherEntries().filter((entry) => !["nagoya", "kyoto"].includes(entry.id ?? ""))}
+          entries={japanWeatherEntries().filter((entry) => !defaultExcludedWeatherEntries.includes(entry.id ?? ""))}
           onMouseLeave={() => setTooltipLabel("")}
           onMouseEnter={setTooltipLabel}
         />

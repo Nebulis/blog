@@ -47,6 +47,16 @@ const vietnamLayout = `
   }
 
   .index-blog-layout-content {
+  
+    .petit-carre-colore {
+      background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
+      border-color: ${vietnamPrimaryColorDarker};
+    }
+    .menu-article .menu-article-container {
+      background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
+      color: ${vietnamPrimaryColorDarker};
+      border: 3px solid ${vietnamPrimaryColorDarker};
+    }
     
     .react-select-container {
       .react-select__option--is-selected {
