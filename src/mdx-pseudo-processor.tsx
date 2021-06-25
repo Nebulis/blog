@@ -143,6 +143,12 @@ const buildLink = ({ lang, url, text }: { lang: Lang; url: string; text: string 
     )
   } else if (elements[0] === "todo") {
     return <span className="bg-dark-pink yellow bold dib">{text}</span>
+  } else if (elements[0].startsWith("#")) {
+    return (
+      <a href={elements[0]} className="mdx-pseudo-processor-link">
+        {text}
+      </a>
+    )
   }
   return (
     <ApplicationLink to={url} className="mdx-pseudo-processor-link">

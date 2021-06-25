@@ -55,8 +55,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.${id}`)
-  const transportLinkPublished = development || getLink("transport-japan").published
-  const foodLinkPublished = development || getLink("food-japan").published
+  const transportLinkPublished = development || getLink("transports-in-japan").published
+  const foodLinkPublished = development || getLink("food-in-japan").published
   return (
     <>
       <SEO

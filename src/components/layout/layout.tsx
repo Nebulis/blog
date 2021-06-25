@@ -19,6 +19,8 @@ import {
   mediumStart,
   mobileEnd,
   primaryColor,
+  primaryDarkColor,
+  primaryLightColor,
   smallEnd,
   smallStart,
 } from "../core/variables"
@@ -37,7 +39,6 @@ import PlayfairFontWoff from "../../fonts/PlayfairDisplay-Italic.woff2"
 import Roboto from "../../fonts/Roboto-Regular.ttf"
 import RobotoWoff from "../../fonts/Roboto.woff2"
 import RobotoBolderWoff from "../../fonts/RobotoBolder.woff2"
-import { vietnamPrimaryColorDarker, vietnamPrimaryColorWithOpacity } from "../core/asia/vietnam/vietnam.colors"
 
 typeof window !== `undefined` && smoothscroll.polyfill()
 
@@ -433,20 +434,22 @@ export const Table = styled.table`
   }
 `
 
-const petitCarreJauneStyle = css`
-  background-color: ${vietnamPrimaryColorWithOpacity(0.2)};
-  border-color: ${vietnamPrimaryColorDarker};
+const petitCarreColoreStyle = css`
+  background-color: ${primaryLightColor};
+  border-color: ${primaryDarkColor};
   & > p {
     margin-bottom: 0;
   }
   svg {
     height: 64px;
     width: 64px;
-    margin-right: 0.5rem;
+  }
+  svg:not(:first-of-type) {
+    margin-left: 0.5rem;
   }
 `
-export const PetitCarreJaune: React.FunctionComponent = ({ children }) => (
-  <div css={petitCarreJauneStyle} className="ba bw1 bl-0 br-0 pv2 ph3 mh3 mb3 mt3 tc">
+export const PetitCarreColore: React.FunctionComponent = ({ children }) => (
+  <div css={petitCarreColoreStyle} className="petit-carre-colore ba bw1 bl-0 br-0 pv2 ph3 mh3 mb3 mt3 tc">
     {children}
   </div>
 )

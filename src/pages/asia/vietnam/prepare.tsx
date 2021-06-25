@@ -32,7 +32,6 @@ import { ApplicationContext } from "../../../components/application"
 import { css } from "@emotion/react"
 import { PrepareVietnamImages } from "../../../components/images/asia/vietnam/prepare-vietnam-images"
 import { Comments } from "../../../components/core/comments"
-import styled from "@emotion/styled"
 import { Conclusion } from "../../../components/core/conclusion"
 import { Divider } from "../../../components/core/divider"
 import { SharedCardVietnamImages } from "../../../components/images/asia/vietnam/shared-card-vietnam-images"
@@ -67,16 +66,13 @@ import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
 import { getLink } from "../../../components/core/links/links.utils"
 import HomeImgUrl from "../../../images/asia/vietnam/prepare/prepare-vietnam-main.jpg"
 import SouthernVietnamMapTransport from "../../../images/asia/vietnam/southern-vietnam-map-transport.png"
-import { Title } from "../../../components/core/title"
+import { PrepareSubTitle, Title } from "../../../components/core/title"
 import { Quote } from "../../../components/core/quote"
-import { MapContainer, PetitCarreJaune, Table } from "../../../components/layout/layout"
+import { MapContainer, PetitCarreColore, Table } from "../../../components/layout/layout"
 import { Weather } from "../../../components/core/weather"
+import { Tornado } from "../../../components/icon/tornado"
+import { Hurricane } from "../../../components/icon/hurricane"
 
-const SubTitle = styled.p`
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-`
 const Flood: React.FunctionComponent = () => (
   <svg className="mr2" height="64" viewBox="0 0 512 512" width="64">
     <g id="flat">
@@ -164,87 +160,6 @@ const Flood: React.FunctionComponent = () => (
         d="m448 208a8 8 0 0 1 -5.657-13.657l8-8a8 8 0 0 1 11.314 11.314l-8 8a7.976 7.976 0 0 1 -5.657 2.343z"
         fill="#75c2d4"
       />
-    </g>
-  </svg>
-)
-const Hurricane: React.FunctionComponent = () => (
-  <svg height="64" viewBox="1 1 511.999 511.999" width="64">
-    <path
-      d="m506.429688 269.476562c.609374 2.613282 4.414062 2.382813 4.664062-.289062.597656-6.433594.90625-12.953125.90625-19.542969 0-115.992187-94.03125-210.023437-210.023438-210.023437-50.425781 0-96.699218 17.773437-132.902343 47.394531-8.070313 6.605469-18.804688-4.253906-12.085938-12.226563 28.613281-33.960937 67.800781-58.722656 112.488281-69.214843 2.613282-.613281 2.378907-4.417969-.292968-4.667969-6.429688-.597656-12.949219-.90625-19.539063-.90625-115.996093 0-210.027343 94.03125-210.027343 210.023438 0 50.425781 17.777343 96.699218 47.398437 132.898437 6.605469 8.070313-4.253906 18.808594-12.230469 12.089844-33.960937-28.617188-58.71875-67.800781-69.214844-112.488281-.609374-2.613282-4.414062-2.382813-4.664062.289062-.597656 6.433594-.90625 12.953125-.90625 19.542969 0 115.996093 94.03125 210.027343 210.023438 210.027343 50.425781 0 96.699218-17.777343 132.898437-47.398437 8.070313-6.605469 18.808594 4.253906 12.089844 12.230469-28.617188 33.960937-67.800781 58.71875-112.488281 69.214844-2.613282.609374-2.382813 4.414062.289062 4.664062 6.433594.597656 12.953125.90625 19.542969.90625 115.992187 0 210.023437-94.03125 210.023437-210.023438 0-50.425781-17.769531-96.695312-47.390625-132.894531-6.664062-8.144531 4.304688-18.777343 12.34375-11.992187 33.898438 28.605468 58.617188 67.753906 69.097657 112.386718zm0 0"
-      fill="#e7eced"
-    />
-    <g fill="#d8d8d8">
-      <path d="m169.269531 247.71875c-4.265625 0-7.726562-3.460938-7.726562-7.726562 0-74.4375 60.558593-135 135-135 4.265625 0 7.726562 3.460937 7.726562 7.726562 0 4.269531-3.460937 7.726562-7.726562 7.726562-65.917969 0-119.546875 53.628907-119.546875 119.546876 0 4.269531-3.460938 7.726562-7.726563 7.726562zm0 0" />
-      <path d="m383.964844 323.644531c-.707032 0-1.421875-.097656-2.132813-.300781-4.101562-1.179688-6.476562-5.457031-5.300781-9.558594 18.164062-63.363281-18.613281-129.691406-81.976562-147.855468-4.101563-1.175782-6.476563-5.453126-5.300782-9.554688 1.175782-4.105469 5.457032-6.472656 9.558594-5.300781 71.554688 20.511719 113.085938 95.414062 92.574219 166.96875-.972657 3.390625-4.0625 5.601562-7.421875 5.601562zm0 0" />
-      <path d="m215.460938 407.007812c-4.269532 0-7.726563-3.460937-7.726563-7.726562 0-4.269531 3.457031-7.726562 7.726563-7.726562 65.914062 0 119.542968-53.628907 119.542968-119.546876 0-4.265624 3.460938-7.726562 7.726563-7.726562s7.726562 3.460938 7.726562 7.726562c0 74.4375-60.558593 135-134.996093 135zm0 0" />
-      <path d="m215.320312 361.226562c-.703124 0-1.421874-.097656-2.132812-.300781-71.554688-20.511719-113.085938-95.414062-92.574219-166.96875 1.175781-4.101562 5.457031-6.472656 9.554688-5.300781 4.101562 1.175781 6.476562 5.457031 5.300781 9.558594-18.164062 63.363281 18.613281 129.691406 81.976562 147.855468 4.101563 1.175782 6.476563 5.453126 5.300782 9.554688-.972656 3.390625-4.066406 5.601562-7.425782 5.601562zm0 0" />
-      <path d="m301.976562 39.617188c-2.011718 0-4.015624.039062-6.015624.097656 71.449218 45.457031 120.574218 125.347656 118.855468 216.285156-2.136718 112.871094-55.625 176.253906-59.804687 181.214844-28.617188 33.960937-67.800781 58.71875-112.488281 69.214844-2.613282.609374-2.382813 4.414062.289062 4.664062 6.433594.597656 12.953125.90625 19.542969.90625 115.992187 0 210.023437-94.03125 210.023437-210.023438 0-50.425781-17.769531-96.695312-47.390625-132.894531-6.664062-8.144531 4.304688-18.777343 12.34375-11.992187 33.898438 28.605468 58.613281 67.753906 69.09375 112.386718.613281 2.613282 4.417969 2.378907 4.667969-.292968.597656-6.433594.902344-12.949219.902344-19.539063.003906-115.996093-94.027344-210.027343-210.019532-210.027343zm0 0" />
-    </g>
-  </svg>
-)
-const Tornado: React.FunctionComponent = () => (
-  <svg height="64" className="mr2" viewBox="0 0 512 512" width="64">
-    <g id="flat">
-      <path d="m328 392-24 16v32h64v-32z" fill="#e82f3e" />
-      <path d="m328 440a8 8 0 0 1 -8-8v-8a8 8 0 0 1 16 0v8a8 8 0 0 1 -8 8z" fill="#961b20" />
-      <path
-        d="m144 160 28.126 73.126a75 75 0 0 1 -2.919 60.46 75 75 0 0 0 16.21 88.645l62.583 57.769-14.867-59.467a74.993 74.993 0 0 1 14.713-65.678l24.308-29.71a74.993 74.993 0 0 0 14.713-65.678l-14.867-59.467-8-8h-128z"
-        fill="#eaeae8"
-      />
-      <path d="m48 144-24 80h40l-24 80 80-104h-40l24-56z" fill="#fbb540" />
-      <path d="m432 160-24 40h48l-96 96 24-72h-40l32-56 16-24z" fill="#fbb540" />
-      <path d="m72 312-16 24 16 24 40-24-16-24z" fill="#d18d28" />
-      <path
-        d="m367.992 392a7.964 7.964 0 0 1 -4.108-1.141l-36.845-22.107-20.509 6.836a8 8 0 1 1 -5.06-15.178l24-8a8 8 0 0 1 6.646.729l40 24a8 8 0 0 1 -4.124 14.861z"
-        fill="#961b20"
-      />
-      <path
-        d="m114.132 448a8.006 8.006 0 0 1 -7.59-10.532l8-24a8 8 0 1 1 15.178 5.06l-8 24a8 8 0 0 1 -7.588 5.472z"
-        fill="#5f4623"
-      />
-      <path
-        d="m416.005 448a8.007 8.007 0 0 1 -7.751-10l9.942-38.5a8 8 0 0 1 15.492 4l-9.942 38.5a8 8 0 0 1 -7.741 6z"
-        fill="#48351b"
-      />
-      <g fill="#cbcbcb">
-        <path d="m224 232h-56a8 8 0 0 1 0-16h56a8 8 0 0 1 0 16z" />
-        <path d="m264 232h-16a8 8 0 0 1 0-16h16a8 8 0 0 1 0 16z" />
-        <path d="m264 296h-24a8 8 0 0 1 0-16h24a8 8 0 0 1 0 16z" />
-        <path d="m208 296h-8a8 8 0 0 1 0-16h8a8 8 0 0 1 0 16z" />
-        <path d="m200 368h-24a8 8 0 0 1 0-16h24a8 8 0 0 1 0 16z" />
-        <path d="m280 336h-56a8 8 0 0 1 0-16h56a8 8 0 0 1 0 16z" />
-        <path d="m200 264h-48a8 8 0 0 1 0-16h48a8 8 0 0 1 0 16z" />
-      </g>
-      <path
-        d="m392 328a8 8 0 0 1 -5.657-13.657l8-8a8 8 0 0 1 11.314 11.314l-8 8a7.976 7.976 0 0 1 -5.657 2.343z"
-        fill="#8f6934"
-      />
-      <path
-        d="m328 320a7.976 7.976 0 0 1 -5.657-2.343l-8-8a8 8 0 0 1 11.314-11.314l8 8a8 8 0 0 1 -5.657 13.657z"
-        fill="#5f4623"
-      />
-      <path
-        d="m320 272a8 8 0 0 1 -5.657-13.657l8-8a8 8 0 0 1 11.314 11.314l-8 8a7.976 7.976 0 0 1 -5.657 2.343z"
-        fill="#5f4623"
-      />
-      <path
-        d="m64 408a8 8 0 0 1 -5.657-13.657l8-8a8 8 0 0 1 11.314 11.314l-8 8a7.976 7.976 0 0 1 -5.657 2.343z"
-        fill="#8f6934"
-      />
-      <path
-        d="m120 296a7.976 7.976 0 0 1 -5.657-2.343l-8-8a8 8 0 0 1 11.314-11.314l8 8a8 8 0 0 1 -5.657 13.657z"
-        fill="#8f6934"
-      />
-      <path
-        d="m488 112a32.006 32.006 0 0 0 -43.316-29.935 40 40 0 0 0 -44.684 13.935 40 40 0 0 0 -58.94 12.53 39.962 39.962 0 0 0 -50.778-6.113 47.968 47.968 0 0 0 -68.564 0 39.962 39.962 0 0 0 -50.778 6.113 40 40 0 0 0 -58.94-12.53 40 40 0 0 0 -44.684-13.935 32 32 0 1 0 -20.216 60.67 39.993 39.993 0 0 0 56.9 9.265 39.983 39.983 0 0 0 61.06 3.47 39.985 39.985 0 0 0 56.658 14.113 47.968 47.968 0 0 0 68.564 0 39.985 39.985 0 0 0 56.658-14.113 39.983 39.983 0 0 0 61.06-3.47 39.993 39.993 0 0 0 56.9-9.265 32.007 32.007 0 0 0 23.1-30.735z"
-        fill="#cbcbcb"
-      />
-      <path d="m488 448h-464a8 8 0 0 1 0-16h464a8 8 0 0 1 0 16z" fill="#48351b" />
-      <path
-        d="m127.191 416a15.178 15.178 0 0 1 -14.4-19.979l5.88-17.642a15.18 15.18 0 0 1 14.4-10.379 15.178 15.178 0 0 1 14.4 19.979l-5.88 17.642a15.18 15.18 0 0 1 -14.4 10.379z"
-        fill="#02a437"
-      />
-      <path d="m445.38 352-35.725 37.547a6 6 0 0 0 2.258 9.761l27.937 10.376a6 6 0 0 0 8.082-5.92z" fill="#aac16b" />
     </g>
   </svg>
 )
@@ -884,7 +799,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </div>
 
           <p>{t("section1.part17")}</p>
-          <PetitCarreJaune>
+          <PetitCarreColore>
             <p
               css={css`
                 @media (max-width: ${smallEnd}) {
@@ -895,7 +810,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               {t("section1.part18")}
             </p>
             <p>{t("section1.part19")}</p>
-          </PetitCarreJaune>
+          </PetitCarreColore>
           <p>{t("section1.part20")}</p>
         </Visa>
         <Divider />
@@ -904,14 +819,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <PrepareVietnamImages image="health" />
           </ImageAsLandscape>
           <p>{t("section2.part1")}</p>
-          <PetitCarreJaune>
+          <PetitCarreColore>
             <p className="ttu">{t("section2.part2")}</p>
             <p>{t("section2.part3")}</p>
             <p>{t("section2.part4")}</p>
             <p>
               <Dragon />
             </p>
-          </PetitCarreJaune>
+          </PetitCarreColore>
           <p>{t("section2.part5")}</p>
           <p>{t("section2.part6")}</p>
           <p>{t("section2.part7")}</p>
@@ -920,7 +835,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </Health>
         <Divider />
         <WhatTimeOfYear title={t("section3.title")} id="weather">
-          <SubTitle>{t("section3.part1")}</SubTitle>
+          <PrepareSubTitle>{t("section3.part1")}</PrepareSubTitle>
           <Weather entries={vietnamWeatherEntries(t)} />
           <p>{t("section3.part2")}</p>
           <p>{t("section3.part3")}</p>
@@ -932,13 +847,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </WhatTimeOfYear>
         <Divider />
         <HowLong title={t("section4.title")} id="how-long">
-          <SubTitle>{t("section4.part1")}</SubTitle>
+          <PrepareSubTitle>{t("section4.part1")}</PrepareSubTitle>
           <ImageAsLandscape>
             <PrepareVietnamImages image="duration" />
           </ImageAsLandscape>
           <p>{t("section4.part2")}</p>
           <p>{t("section4.part3")}</p>
-          <PetitCarreJaune>
+          <PetitCarreColore>
             <p>
               <Calendar />
             </p>
@@ -946,7 +861,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section4.part5")}</p>
             <p>{t("section4.part6")}</p>
             <p>{t("section4.part7")}</p>
-          </PetitCarreJaune>
+          </PetitCarreColore>
         </HowLong>
         <Divider />
         <Visit title={t("section5.title")} id="activities">
@@ -957,7 +872,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("section5.part2")}</p>
           <p>{t("section5.part3")}</p>
           <p>{t("section5.part4")}</p>
-          <PetitCarreJaune>
+          <PetitCarreColore>
             <p>
               <Pagoda />
               <BoatRide />
@@ -965,7 +880,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section5.part5")}</p>
             <p>{t("section5.part6")}</p>
             <p>{t("section5.part7")}</p>
-          </PetitCarreJaune>
+          </PetitCarreColore>
           <p>{t("section5.part8")}</p>
           <p>{t("section5.part9")}</p>
           <p>{t("section5.part10")}</p>
@@ -989,14 +904,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </How>
         <Divider />
         <WhereToStay title={t("section7.title")} id="accommodations">
-          <SubTitle>{t("section7.part1")}</SubTitle>
+          <PrepareSubTitle>{t("section7.part1")}</PrepareSubTitle>
           <p>{t("section7.part2")}</p>
           <p>{t("section7.part3")}</p>
-          <PetitCarreJaune>
+          <PetitCarreColore>
             <p>{t("section7.part4")}</p>
             <p>{t("section7.part5")}</p>
             <p>{t("section7.part6")}</p>
-          </PetitCarreJaune>
+          </PetitCarreColore>
           <p>{t("section7.part7")}</p>
           <ImageAsLandscape>
             <PrepareVietnamImages image="hammock" />
@@ -1048,12 +963,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </p>
             </li>
           </ul>
-          <PetitCarreJaune>
+          <PetitCarreColore>
             <p>{t("section8.part15")}</p>
             <p>
               <Lotus />
             </p>
-          </PetitCarreJaune>
+          </PetitCarreColore>
         </HowMuch>
         <Divider />
         <Phone id="phone">
@@ -1130,10 +1045,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("section11.part7")}</li>
           </ul>
           <p>{t("section11.part8")}</p>
-          <PetitCarreJaune>
+          <PetitCarreColore>
             <p className="ttu">{t("section11.part9")}</p>
             {t("section11.part10") && <p className="mt3">{t("section11.part10")}</p>}
-          </PetitCarreJaune>
+          </PetitCarreColore>
         </NaturalDisaster>
         <Divider />
         <Baggage id="baggage">
@@ -1166,9 +1081,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("section12.part15")}</li>
             <li>{t("section12.part16")}</li>
           </ul>
-          <PetitCarreJaune>
+          <PetitCarreColore>
             <p>{t("section12.part17")}</p>
-          </PetitCarreJaune>
+          </PetitCarreColore>
           <p className="flex items-center ">
             <FaLaptop />
             &nbsp;{t("section12.part18")}
