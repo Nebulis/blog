@@ -254,7 +254,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <p>{t("visit7.part4")}</p>
-              <p>{t("visit7.part5")}</p>
               <p>{t("visit7.part6")}</p>
               <GroupOfImages>
                 <TwoImagesSameSizeOrToGroup>
