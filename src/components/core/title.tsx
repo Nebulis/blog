@@ -69,3 +69,9 @@ export const PrepareSubTitle = styled.p`
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 `
+
+export const FakeList = styled.p`
+  display: list-item;
+  margin-left: 1rem; // ml3
+  margin-bottom: 0.5rem; // mb2
+`

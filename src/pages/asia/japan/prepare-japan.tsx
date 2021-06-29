@@ -35,7 +35,7 @@ import {
 import { Divider } from "../../../components/core/divider"
 import { Quote } from "../../../components/core/quote"
 import HomeImgUrl from "../../../images/asia/japan/prepare-japan/prepare-japan-main.jpg"
-import { MapContainer, PetitCarreColore } from "../../../components/layout/layout"
+import { MapContainer, PetitCarreColore, Table } from "../../../components/layout/layout"
 import { ApplicationContext } from "../../../components/application"
 import {
   BlueKimono,
@@ -53,10 +53,10 @@ import {
   Tori,
   Volcano,
 } from "../../../components/core/japan/japan.prepare"
-import { japanPrimaryColor } from "../../../components/core/japan/japan.variables"
+import { japanPrimaryColor, japanPrimaryColorWithOpacity } from "../../../components/core/japan/japan.variables"
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
-import { PrepareSubTitle } from "../../../components/core/title"
+import { FakeList, PrepareSubTitle } from "../../../components/core/title"
 import { Weather } from "../../../components/core/weather"
 import { ImageAsLandscape, ImageAsPortrait } from "../../../components/images/layout"
 import JapanMapActivitiesTransport from "../../../images/asia/japan/prepare-japan/prepare-japan-activities-transport.png"
@@ -71,16 +71,88 @@ import { Tornado } from "../../../components/icon/tornado"
 import { Hurricane } from "../../../components/icon/hurricane"
 import { Conclusion } from "../../../components/core/conclusion"
 import { Comments } from "../../../components/core/comments"
+import {
+  AndorraWithFlag,
+  ArgentinaWithFlag,
+  AustraliaWithFlag,
+  AustriaWithFlag,
+  BahamasWithFlag,
+  BarbadosWithFlag,
+  BelgiumWithFlag,
+  BruneiFlag,
+  CanadaWithFlag,
+  ChileWithFlag,
+  CostaRicaWithFlag,
+  CountryWithFlag,
+  CroatiaWithFlag,
+  CyprusWithFlag,
+  CzechRepublicWithFlag,
+  DenmarkWithFlag,
+  DominicaWithFlag,
+  ElSalvadorWithFlag,
+  EstoniaWithFlag,
+  FinlandWithFlag,
+  FranceWithFlag,
+  GermanyWithFlag,
+  GreeceWithFlag,
+  GuatemalaWithFlag,
+  HondurasWithFlag,
+  HongKongWithFlag,
+  HungaryWithFlag,
+  IndonesiaWithFlag,
+  IrelandWithFlag,
+  IsraelWithFlag,
+  ItalyWithFlag,
+  LatviaWithFlag,
+  LesothoWithFlag,
+  LiechtensteinWithFlag,
+  LithuaniaWithFlag,
+  LuxembourgWithFlag,
+  MacaoWithFlag,
+  MacedoniaWithFlag,
+  MalaysiaWithFlag,
+  MaltaWithFlag,
+  MauritiusWithFlag,
+  MexicoWithFlag,
+  MonacoWithFlag,
+  NetherlandsWithFlag,
+  NewZealandWithFlag,
+  NorwayWithFlag,
+  PolandWithFlag,
+  SerbiaWithFlag,
+  SingaporeWithFlag,
+  SlovakiaWithFlag,
+  SloveniaWithFlag,
+  SouthKoreaWithFlag,
+  SpainWithFlag,
+  SurinameWithFlag,
+  SwedenWithFlag,
+  SwitzerlandWithFlag,
+  TaiwanWithFlag,
+  ThailandFlag,
+  TunisiaWithFlag,
+  TurkeyWithFlag,
+  UaeFlag,
+  UKWithFlag,
+  UruguayWithFlag,
+  UsaWithFlag,
+} from "../../../components/icon/flags"
 
 const namespace = "asia/japan/prepare-japan"
 const id = "prepare-japan"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
-const VisaTitle = styled.span`
+const VisaTitle = styled.p`
   color: ${japanPrimaryColor};
   font-size: 1.1rem;
-  font-weight: bold;
+`
+
+const VisaHeaderRow = styled.tr`
+  background-color: ${japanPrimaryColorWithOpacity(0.4)};
+  &:hover {
+    background-color: ${japanPrimaryColorWithOpacity(0.3)};
+  }
 `
 
 // TODO sous titre pas les meme
@@ -178,46 +250,147 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("visa.part3")}</li>
             <li>{t("visa.part4")}</li>
           </ol>
+          <VisaTitle className="b list-item mb2 ml3">{t("visa.part5.title")}</VisaTitle>
+          <p>{t("visa.part5.part1")}</p>
+          <p>{t("visa.part5.part2")}</p>
+          <div className="flex justify-center mt3">
+            <Table
+              css={css`
+                max-width: 800px;
+              `}
+            >
+              <tbody>
+                <VisaHeaderRow>
+                  <th>{t("common:continent.europe")}</th>
+                </VisaHeaderRow>
+                <tr>
+                  <td>
+                    <GermanyWithFlag />
+                    <AndorraWithFlag />
+                    <AustriaWithFlag />
+                    <BelgiumWithFlag />
+                    <CroatiaWithFlag />
+                    <CyprusWithFlag />
+                    <DenmarkWithFlag />
+                    <SpainWithFlag />
+                    <EstoniaWithFlag />
+                    <FinlandWithFlag />
+                    <FranceWithFlag />
+                    <GreeceWithFlag />
+                    <HungaryWithFlag />
+                    <IrelandWithFlag />
+                    <ItalyWithFlag />
+                    <LatviaWithFlag />
+                    <LiechtensteinWithFlag />
+                    <LithuaniaWithFlag />
+                    <LuxembourgWithFlag />
+                    <MacedoniaWithFlag />
+                    <MaltaWithFlag />
+                    <MonacoWithFlag />
+                    <NetherlandsWithFlag />
+                    <NorwayWithFlag />
+                    <PolandWithFlag />
+                    <CzechRepublicWithFlag />
+                    <UKWithFlag />
+                    <SerbiaWithFlag />
+                    <SlovakiaWithFlag />
+                    <SloveniaWithFlag />
+                    <SwedenWithFlag />
+                    <SwitzerlandWithFlag />
+                  </td>
+                </tr>
+                <VisaHeaderRow>
+                  <th>{t("common:continent.north-america")}</th>
+                </VisaHeaderRow>
+                <tr>
+                  <td>
+                    <CanadaWithFlag />
+                    <UsaWithFlag />
+                  </td>
+                </tr>
+                <VisaHeaderRow>
+                  <th>{t("common:continent.south-america")}</th>
+                </VisaHeaderRow>
+                <tr>
+                  <td>
+                    <ArgentinaWithFlag />
+                    <BahamasWithFlag />
+                    <BarbadosWithFlag />
+                    <ChileWithFlag />
+                    <CostaRicaWithFlag />
+                    <DominicaWithFlag />
+                    <GuatemalaWithFlag />
+                    <HondurasWithFlag />
+                    <MexicoWithFlag />
+                    <ElSalvadorWithFlag />
+                    <SurinameWithFlag />
+                    <UruguayWithFlag />
+                  </td>
+                </tr>
+                <VisaHeaderRow>
+                  <th>{t("common:continent.asia")}</th>
+                </VisaHeaderRow>
+                <tr>
+                  <td>
+                    <CountryWithFlag
+                      text={`${t("common:country.brunei.title")} ${t("visa.part5.brunei")}`}
+                      flag={BruneiFlag}
+                    />
+                    <SouthKoreaWithFlag />
+                    <HongKongWithFlag />
+                    <IndonesiaWithFlag />
+                    <MacaoWithFlag />
+                    <MalaysiaWithFlag />
+                    <SingaporeWithFlag />
+                    <TaiwanWithFlag />
+                    <CountryWithFlag
+                      text={`${t("common:country.thailand.title")} ${t("visa.part5.thailand")}`}
+                      flag={ThailandFlag}
+                    />
+                  </td>
+                </tr>
+                <VisaHeaderRow>
+                  <th>{t("common:continent.oceania")}</th>
+                </VisaHeaderRow>
+                <tr>
+                  <td>
+                    <AustraliaWithFlag />
+                    <NewZealandWithFlag />
+                  </td>
+                </tr>
+                <VisaHeaderRow>
+                  <th>{t("common:continent.middle-east")}</th>
+                </VisaHeaderRow>
+                <tr>
+                  <td>
+                    <CountryWithFlag text={`${t("common:country.uae.title")} ${t("visa.part5.uae")}`} flag={UaeFlag} />
+                    <IsraelWithFlag />
+                    <TurkeyWithFlag />
+                  </td>
+                </tr>
+                <VisaHeaderRow>
+                  <th>{t("common:continent.africa")}</th>
+                </VisaHeaderRow>
+                <tr>
+                  <td>
+                    <LesothoWithFlag />
+                    <MauritiusWithFlag />
+                    <TunisiaWithFlag />
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+          </div>
+          <p> {t("visa.part5.part3")}</p>
+          <p>{t("visa.part5.part4")}</p>
+          <p>{t("visa.part5.part5")}</p>
+          <p>{t("visa.part5.part6")}</p>
           <ul>
-            <li>
-              <p className="mb0">
-                <VisaTitle>{t("visa.part5.title")}</VisaTitle>
-                <br />
-                {t("visa.part5.part1")}
-                <br />
-                {t("visa.part5.part2")}
-                <br />
-                {t("visa.part5.part3")}
-                <br />
-                {t("visa.part5.part4")}
-                <br />
-                {t("visa.part5.part5")}
-                <br />
-                {t("visa.part5.part6")}
-              </p>
-              <ul
-                className="mt0 mb0"
-                css={css`
-                  // using css because of priority issues
-                  li {
-                    margin-bottom: 0;
-                  }
-                `}
-              >
-                <li>{t("visa.part5.part7")}</li>
-              </ul>
-              <p>{t("visa.part5.part8")}</p>
-            </li>
-            <li>
-              <p className="mb0">
-                <VisaTitle>{t("visa.part6.title")}</VisaTitle>
-                <br />
-                {t("visa.part6.part1")}
-                <br />
-                {t("visa.part6.part2")}
-              </p>
-            </li>
+            <li>{t("visa.part5.part7")}</li>
           </ul>
+          <VisaTitle className="b list-item mb2 ml3">{t("visa.part6.title")}</VisaTitle>
+          <p>{t("visa.part6.part1")}</p>
+          <p>{t("visa.part6.part2")}</p>
           <PetitCarreColore>
             <p>{t("visa.part7")}</p>
             <p>{t("visa.part8")}</p>
@@ -255,7 +428,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </Health>
         <Divider />
         <WhatTimeOfYear title={t("weather.title")} id="weather">
-          <p>{t("weather.part1")}</p>
+          <PrepareSubTitle>{t("weather.part1")}</PrepareSubTitle>
           <Weather
             extraButton
             entries={japanWeatherEntries().filter((entry) => !defaultExcludedWeatherEntries.includes(entry.id ?? ""))}
@@ -296,12 +469,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PrepareSubTitle>{t("activities.part1")}</PrepareSubTitle>
           {i18n.languageCode === "fr" && (
             <ImageAsLandscape>
-              <PrepareJapanImages image="activities" />
+              <PrepareJapanImages image="activities" imgStyle={{ objectFit: "contain" }} />
             </ImageAsLandscape>
           )}
           {i18n.languageCode === "en" && (
             <ImageAsLandscape>
-              <PrepareJapanImages image="activities2" />
+              <PrepareJapanImages image="activities2" imgStyle={{ objectFit: "contain" }} />
             </ImageAsLandscape>
           )}
           <p>{t("activities.part2")}</p>
@@ -372,59 +545,30 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <HowMuch title={t("money.title")} id="money">
           <MapContainer
             css={css`
+              margin-bottom: 0;
               img {
                 max-width: 600px;
               }
             `}
           >
-            {i18n.languageCode === "fr" && <img src={JapanBudget} alt="Japan Budget" />}
-            {i18n.languageCode === "en" && <img src={JapanBudget2} alt="Japan Budget" />}
+            {i18n.languageCode === "fr" && <img src={JapanBudget} alt="Japan Budget" className="w-100" />}
+            {i18n.languageCode === "en" && <img src={JapanBudget2} alt="Japan Budget" className="w-100" />}
           </MapContainer>
           <p>{t("money.part1")}</p>
           <p>{t("money.part2")}</p>
           <p>{t("money.part3")}</p>
-          <ul>
-            <li>
-              <p>
-                {t("money.part4")}
-                <br />
-                {t("money.part5")}
-              </p>
-            </li>
-            <li>
-              <p>
-                {t("money.part6")}
-                <br />
-                {t("money.part7")}
-                <br />
-                {t("money.part8")}
-                <br />
-                {t("money.part9")}
-              </p>
-            </li>
-            <li>
-              <p>
-                {t("money.part10")}
-                <br />
-                {t("money.part11")}
-              </p>
-            </li>
-            <li>
-              <p>
-                {t("money.part12")}
-                <br />
-                {t("money.part13")}
-                <br />
-                {t("money.part14")}
-                {transportLinkPublished && (
-                  <>
-                    <br />
-                    {t("money.part15")}
-                  </>
-                )}
-              </p>
-            </li>
-          </ul>
+          <FakeList>{t("money.part4")}</FakeList>
+          <p>{t("money.part5")}</p>
+          <FakeList>{t("money.part6")}</FakeList>
+          <p>{t("money.part7")}</p>
+          <p>{t("money.part8")}</p>
+          <p>{t("money.part9")}</p>
+          <FakeList>{t("money.part10")}</FakeList>
+          <p>{t("money.part11")}</p>
+          <FakeList>{t("money.part12")}</FakeList>
+          <p>{t("money.part13")}</p>
+          <p>{t("money.part14")}</p>
+          {transportLinkPublished && <p>{t("money.part15")}</p>}
           <PetitCarreColore>
             <p>{t("money.part16")}</p>
             <p>
@@ -496,7 +640,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("natural-disasters.part14")}</p>
           <p>{t("natural-disasters.part15")}</p>
           <PetitCarreColore>
-            <p>{t("natural-disasters.part16")}</p>
+            <p className="ttu">{t("natural-disasters.part16")}</p>
+            <br />
             {t("natural-disasters.part17") && <p>{t("natural-disasters.part17")}</p>}
           </PetitCarreColore>
         </NaturalDisaster>
@@ -505,7 +650,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <ImageAsLandscape>
             <PrepareJapanImages image="baggage" />
           </ImageAsLandscape>
-          <PrepareSubTitle>{t("baggage.part1")}</PrepareSubTitle>
+          <p className="tc">{t("baggage.part1")}</p>
           <p className="flex items-center ">
             <FaTshirt />
             &nbsp;{t("baggage.clothing.title")}
@@ -561,24 +706,24 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Opinion title={t("opinion.title")} id="opinion">
           <p className="list-item ml3">{t("opinion.part1.title")}</p>
           <p>
-            <span className="underline">{t("opinion.part1.part1.title")}</span>
+            ➵ <span className="underline">{t("opinion.part1.part1.title")}</span>
           </p>
           <p>{t("opinion.part1.part1.part1")}</p>
           <ImageAsPortrait>
             <PrepareJapanImages image="opinion" />
           </ImageAsPortrait>
           <p>
-            <span className="underline">{t("opinion.part1.part2.title")}</span>
+            ➵ <span className="underline">{t("opinion.part1.part2.title")}</span>
           </p>
           <p>{t("opinion.part1.part2.part1")}</p>
           <p>{t("opinion.part1.part2.part2")}</p>
           <p>
-            <span className="underline">{t("opinion.part1.part3.title")}</span>
+            ➵ <span className="underline">{t("opinion.part1.part3.title")}</span>
           </p>
           <p>{t("opinion.part1.part3.part1")}</p>
           {foodLinkPublished && <p>{t("opinion.part1.part3.part2")}</p>}
           <p>
-            <span className="underline">{t("opinion.part1.part4.title")}</span>
+            ➵ <span className="underline">{t("opinion.part1.part4.title")}</span>
           </p>
           <p>{t("opinion.part1.part4.part1")}</p>
           <ImageAsLandscape
@@ -593,11 +738,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("opinion.part1.part4.part2")}</p>
           <p className="list-item ml3">{t("opinion.part2.title")}</p>
           <p>
-            <span className="underline">{t("opinion.part2.part1.title")}</span>
+            ➵ <span className="underline">{t("opinion.part2.part1.title")}</span>
           </p>
           <p>{t("opinion.part2.part1.part1")}</p>
+          <p>{t("opinion.part2.part1.part2")}</p>
           <p>
-            <span className="underline">{t("opinion.part2.part2.title")}</span>
+            ➵ <span className="underline">{t("opinion.part2.part2.title")}</span>
           </p>
           <p>{t("opinion.part2.part2.part1")}</p>
           <p>{t("opinion.part2.part2.part2")}</p>

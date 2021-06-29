@@ -20,16 +20,16 @@ export const continentLinks: ContinentLink[] = [
   {
     id: "africa",
     label: {
-      fr: "Afrique",
-      en: "Africa",
+      fr: commonFr.continent.africa,
+      en: commonEn.continent.africa,
     },
     countries: [],
   },
   {
     id: "south-america",
     label: {
-      fr: "Amérique du Sud",
-      en: "South America",
+      fr: commonFr.continent["south-america"],
+      en: commonEn.continent["south-america"],
     },
     countries: [
       {
@@ -43,8 +43,8 @@ export const continentLinks: ContinentLink[] = [
   {
     id: "north-america",
     label: {
-      fr: "Amérique du Nord",
-      en: "North America",
+      fr: commonFr.continent["north-america"],
+      en: commonEn.continent["north-america"],
     },
     countries: [
       {
@@ -64,8 +64,8 @@ export const continentLinks: ContinentLink[] = [
   {
     id: "europe",
     label: {
-      fr: "Europe",
-      en: "Europe",
+      fr: commonFr.continent.europe,
+      en: commonEn.continent.europe,
     },
     countries: [
       {
@@ -74,13 +74,19 @@ export const continentLinks: ContinentLink[] = [
         others: [],
         label: { fr: "Acores", en: "Azores" },
       },
+      {
+        id: "iceland",
+        cities: [],
+        others: [],
+        label: { fr: "", en: "" },
+      },
     ],
   },
   {
     id: "middle-east",
     label: {
-      fr: "Moyen-Orient",
-      en: "Middle-East",
+      fr: commonFr.continent["middle-east"],
+      en: commonEn.continent["middle-east"],
     },
     countries: [],
   },

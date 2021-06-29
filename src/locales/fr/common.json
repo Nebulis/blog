@@ -22,14 +22,37 @@
   },
   "continent": {
     "asia": "Asie",
-    "oceania": "Océanie"
+    "europe": "Europe",
+    "north-america": "Amérique du Nord",
+    "south-america": "Amérique du Sud",
+    "middle-east": "Moyen-Orient",
+    "oceania": "Océanie",
+    "africa": "Afrique"
   },
   "country": {
+    "andorra": {
+      "title": "Andorre"
+    },
+    "argentina": {
+      "title": "Argentina"
+    },
+    "austria": {
+      "title": "Autriche"
+    },
     "australia": {
       "title": "Australie"
     },
+    "bahamas": {
+      "title": "Bahamas"
+    },
+    "barbados": {
+      "title": "Barbade"
+    },
     "belarus": {
       "title": "Biélorussie"
+    },
+    "belgium": {
+      "title": "Belgique"
     },
     "brunei": {
       "title": "Brunei"
@@ -41,14 +64,38 @@
         "kampong-phluk": "Village flottant de Kampong Phluk"
       }
     },
+    "canada": {
+      "title": "Canada"
+    },
     "chile": {
       "title": "Chili"
     },
     "china": {
       "title": "Chine"
     },
+    "costa-rica": {
+      "title": "Costa Rica"
+    },
+    "croatia": {
+      "title": "Croatie"
+    },
+    "cyprus": {
+      "title": "Chypre"
+    },
+    "czech-republic": {
+      "title": "République Tchèque"
+    },
     "denmark": {
       "title": "Danemark"
+    },
+    "dominica": {
+      "title": "Dominica"
+    },
+    "el-salvador": {
+      "title": "Salvador"
+    },
+    "estonia": {
+      "title": "Estonie"
     },
     "finland": {
       "title": "Finlande"
@@ -59,11 +106,32 @@
     "germany": {
       "title": "Allemagne"
     },
+    "greece": {
+      "title": "Grèce"
+    },
+    "guatemala": {
+      "title": "Guatemala"
+    },
+    "honduras": {
+      "title": "Honduras"
+    },
+    "hong-kong": {
+      "title": "Hong Kong"
+    },
+    "hungary": {
+      "title": "Hongrie"
+    },
     "india": {
       "title": "Inde"
     },
     "indonesia": {
       "title": "Indonésie"
+    },
+    "israel": {
+      "title": "Israël"
+    },
+    "ireland": {
+      "title": "Irelande"
     },
     "italy": {
       "title": "Italie"
@@ -98,6 +166,24 @@
     "laos": {
       "title": "Laos"
     },
+    "latvia": {
+      "title": "Lettonie"
+    },
+    "lesotho": {
+      "title": "Lesotho"
+    },
+    "liechtenstein": {
+      "title": "Liechtenstein"
+    },
+    "lithuania": {
+      "title": "Lituanie"
+    },
+    "luxembourg": {
+      "title": "Luxembourg"
+    },
+    "macedonia": {
+      "title": "Macédoine du Nord"
+    },
     "malaysia": {
       "title": "Malaisie",
       "city": {
@@ -105,8 +191,29 @@
         "east-malaysia": "Orientale"
       }
     },
+    "macao": {
+      "title": "Macao"
+    },
+    "malta": {
+      "title": "Malte"
+    },
+    "mauritius": {
+      "title": "Maurice"
+    },
+    "mexico": {
+      "title": "Mexico"
+    },
+    "monaco": {
+      "title": "Monaco"
+    },
     "myanmar": {
       "title": "Birmanie"
+    },
+    "netherlands": {
+      "title": "Pays-Bas"
+    },
+    "new-zealand": {
+      "title": "Nouvelle-Zélande"
     },
     "norway": {
       "title": "Norvège"
@@ -123,14 +230,26 @@
         "el-nido-tour-b": "El Nido - Tour B : Récit et Photos"
       }
     },
+    "poland": {
+      "title": "Pologne"
+    },
     "russia": {
       "title": "Russie"
     },
     "senegal": {
       "title": "Sénégal"
     },
+    "serbia": {
+      "title": "Serbie"
+    },
     "singapore": {
       "title": "Singapour"
+    },
+    "slovakia": {
+      "title": "Slovaquie"
+    },
+    "slovenia": {
+      "title": "Slovénie"
     },
     "south-korea": {
       "title": "Corée du Sud"
@@ -141,8 +260,14 @@
     "sri-lanka": {
       "title": "Sri Lanka"
     },
+    "suriname": {
+      "title": "Suriname"
+    },
     "sweden": {
       "title": "Suède"
+    },
+    "switzerland": {
+      "title": "Suisse"
     },
     "taiwan": {
       "title": "Taiwan"
@@ -150,8 +275,23 @@
     "thailand": {
       "title": "Thaïlande"
     },
+    "tunisia": {
+      "title": "Tunisie"
+    },
+    "turkey": {
+      "title": "Turquie"
+    },
+    "uae": {
+      "title": "Émirats arabes unis"
+    },
     "uk": {
       "title": "Royaume-Uni"
+    },
+    "uruguay": {
+      "title": "Uruguay"
+    },
+    "usa": {
+      "title": "USA"
     },
     "united-states": {
       "title": "États-Unis"
