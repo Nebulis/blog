@@ -85,6 +85,7 @@ const southAmericaLinks = () => {
 const europeLinks = () => {
   // europe countries assertions
   expect(getLink("azores")).toMatchObject({ label: { fr: "Acores", en: "Azores" }, published: false })
+  expect(getLink("iceland")).toMatchObject({ label: { fr: "", en: "" }, published: false })
 }
 
 const asiaLinks = () => {
@@ -126,7 +127,7 @@ const japanLinks = () => {
   })
   expect(getLink("customs-in-japan")).toMatchObject({
     label: { en: "Customs to know before visiting Japan", fr: "Coutumes à connaître avant de vous rendre au Japon" },
-    published: false,
+    published: true,
   })
   expect(getLink("prepare-japan")).toMatchObject({
     label: { en: "Prepare your travel to Japan", fr: "Bien préparer son voyage au Japon" },

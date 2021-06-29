@@ -20,7 +20,9 @@
       "part5": "Lors d’un court séjour avec exemption de visa, il est #formellement interdit de travailler# sur place ni d’effectuer quelconque activité si elle est rémunérée.",
       "part6": "Seuls 6 pays peuvent prolonger leur séjour de 90 jours en faisant la demande auprès du bureau de l’immigration japonaise :",
       "part7": "Allemagne, Suisse, Autriche, Irlande, Angleterre et Mexique.",
-      "part8": "Pour les autres pays, il n’est pas possible de prolonger son séjour."
+      "brunei": "(15 jours)",
+      "thailand": "(15 jours)",
+      "uae": "(30 jours)"
     },
     "part6": {
       "title": "SÉJOUR LONGUE DURÉE",
@@ -49,7 +51,7 @@
   },
   "weather": {
     "title": "Météo",
-    "part1": "#À QUELLE PÉRIODE PARTIR ?#",
+    "part1": "À QUELLE PÉRIODE PARTIR ?",
     "part2": "En été, et en particulier au mois de juillet et d'août, il fait chaud et particulièrement humide, néanmoins vous pouvez aller à Hokkaido où contrairement au Sud du Japon, les températures en été sont plutôt favorables.",
     "part3": "En [hiver](winter-in-japan), vous avez peut-être envie de découvrir la fête de Noël dans un autre pays, vous pourrez profiter du charme des Onsen et des paysages enneigés. Vous avez également des stations de ski très prisées.",
     "part4": "En [automne](autumn-in-japan), saison avec des températures plutôt douces, le Japon est connu pour ses magnifiques paysages aux arbres rouges flamboyants, sous le nom de Momiji les érables vous laissent entrevoir toutes leurs beautés.",
@@ -60,7 +62,7 @@
   },
   "how-long": {
     "title": "Durée",
-    "part1": "#COMBIEN DE TEMPS PARTIR ?#",
+    "part1": "COMBIEN DE TEMPS PARTIR ?",
     "part2": "Comme pour tout, tout dépend de ce que vous comptez y faire. Mais si comme nous, vous n’aimez pas spécialement rester au même endroit mais plutôt bouger un peu partout comptez au #minimum deux semaines# pour voyager à votre rythme mais en voir un maximum.",
     "part3": "Rien n’est plus facile que de passer d’une ville à une autre au Japon, vous serez impressionné par les transports et plus particulièrement les Shinkansen (train à grande vitesse du Japon).",
     "part4": "Ceci est un minimum, nous savons très bien que tout le monde ne peut pas prendre un mois de vacances pour partir à l’autre bout du monde donc effectivement plus vous y restez, plus vous verrez de choses et plus vous pourrez prendre votre temps mais #15 jours au Japon représentent déjà un bon moyen de découvrir le pays#.",
@@ -75,7 +77,7 @@
   },
   "activities": {
     "title": "Itinéraire et Activités",
-    "part1": "#Quoi visiter ? Que faire ? Où aller ? Quelle ville visiter ?#",
+    "part1": "Quoi visiter ? Que faire ? Où aller ? Quelle ville visiter ?",
     "part2": "Voyager au Japon vous fera réfléchir sur ce que vous préférez visiter. Rester en ville ou plutôt aller dans les endroits reculés, lieux touristiques ou sentiers battus, le pays du soleil levant est typiquement #un pays où vous pourrez tout voir#.",
     "part3": "La question est justement de savoir ce que vous souhaitez faire.",
     "part4": "Ci-dessous, un petit exemple de ce que vous pouvez faire par ville, des lieux incontournables à visiter, n’hésitez pas à aller voir nos articles sur chacune de nos visites détaillées du Japon.",
@@ -96,7 +98,7 @@
     "part2": "Le #JR-Pass#, probablement le pass le plus populaire, permettant d'accéder de façon illimité sur une grande partie du réseau ferroviaire japonais, est bien souvent recommandé. Mais ce n'est pas une règle absolue.",
     "part3": "Si vous restez dans la même région ou bien si vous ne voyagez que peu fréquemment de ville en ville, cela peut se révéler comme n'étant pas la solution la moins onéreuse.",
     "part4": "Avant de partir, renseignez vous bien sur les prix et choisissez l'offre qui vous correspond le mieux.",
-    "part5": "Dans notre article sur [Les transports au Japon](transports-in-japan), on vous parle de tout ca plus en détails, ainsi que des différents autres moyens qui s’offrent à vous, #bus, car, train ou avion#."
+    "part5": "Dans notre article sur [Les transports au Japon](transports-in-japan), on vous parle de tout ça plus en détails, ainsi que des différents autres moyens qui s’offrent à vous, #bus, car, train ou avion#."
   },
   "accommodations": {
     "title": "Logements",
@@ -116,16 +118,16 @@
     "part1": "C’est toujours difficile de parler du coût d’un voyage, on ne dépense pas forcément tous de la même manière et on ne privilégie pas tous la même chose. Cela dit, on a quand même des prix assez fixes pour certaines catégories.",
     "part2": "Le plus gros du budget sera forcément l’avion, tout dépend d’où vous venez mais de la France par exemple comptez environ 1200€ par personne, aller-retour. Un vol dure environ 12h. Nous réservons le plus souvent nos billets sur le [site Expedia](expedia).",
     "part3": "On vous fait ici une petite liste pour vous donner un ordre d’idées, pour deux personnes :",
-    "part4": "#Hébergements# : ~ 6 700 YEN / par jour (50€)",
+    "part4": "#Hébergements# : ~ 6 700 ¥ / par jour (50€)",
     "part5": "Les prix varient en fonction de la période à laquelle vous venez ainsi que des services proposés. On considère qu’au printemps les prix sont plus chers, cela dépendra des endroits mais on a vu des hôtels qui doublent nettement leur prix pour cette période si attractive. Pour les logements, comptez entre 50€ et 100€ la nuit en fonction de l'emplacement.",
-    "part6": "#Repas# : ~  6 550 YEN / par jour (40€)",
+    "part6": "#Repas# : ~ 5 550 ¥ / par jour (40€)",
     "part7": "Le prix de la nourriture peut varier énormément en fonction des lieux et de la spécialité, la viande est généralement assez chère, mais vous pouvez trouver de tout, à tous les prix.",
     "part8": "Repas du midi souvent Bento, Onigiri dans des « 7-Eleven » qu'on trouve vraiment partout, comptez 5-10€ par personne avec boisson.",
     "part9": "Restaurant du soir où on se faisait généralement beaucoup plus plaisir, 30 - 40€ (mais attention les prix peuvent augmenter très vite).",
     "part10": "#Activités# :",
     "part11": "Les activités payantes ne sont généralement pas très chères, telles que les visites de châteaux, parcs ou temples. Comptez malgré tout environ #5 / 10€ pour deux par visite#.",
     "part12": "#Transports# : ",
-    "part13": "Pour une semaine et si vous avez pris le JR Pass pour l'utiliser sur l’ensemble du réseau Shinkansen, à payer une seule fois, 250€ par personne pour une semaine, 400€ par personne pour deux semaines, avec un pass national.",
+    "part13": "Si vous avez pris le JR Pass pour l'utiliser sur l’ensemble du réseau Shinkansen, à payer une seule fois, 250€ par personne pour une semaine, 400€ par personne pour deux semaines, avec un pass national.",
     "part14": "De notre côté, en plus du JR Pass, nous avions pris la carte suica pour bus et métro, que nous prenions assez régulièrement. Nous avons compté environ #5-10€ par jour, par personne#.",
     "part15": "On vous en parle plus dans notre article sur [Les transports au Japon](transports-in-japan), n’hésitez pas à y faire un tour, on vous parle également d’autres façons de voyager en fonction de votre budget.",
     "part16": "Le Japon fait partie des pays très prisés. En revanche, un voyage au Japon coûte très cher, que ce soit pour les transports, la nourriture ou bien le logement. On vous recommande vivement de bien étudier votre voyage pour l’adapter correctement à votre budget.",
@@ -160,9 +162,9 @@
     "part8": "Il n’existe pas de saison spécifique ou d’horaires particuliers. Un séisme peut arriver à tout moment de l'année. Les japonais sont entraînés à se protéger dès leur plus jeune âge, et les structures sont extrêmement bien adaptés à ces risques.",
     "part9": "Il est possible de suivre en temps réel, les derniers séismes survenus au Japon, sur le site de [l’agence météorologique japonaise](https://www.jma.go.jp/bosai/map.html#5/35.228/149.985/&elem=int&contents=earthquake_map&lang=en).",
     "part10": "Renseignez- vous : [En cas de séismes](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/informations-pratiques/risques/risques-naturels/article/seismes-93147)",
-    "part11": "Ce n’est pas forcément un danger auquel l’on pense souvent, quand on parle du Japon. Cependant, comme nous l’avons indiqué plus haut, le Japon se trouve sur la ceinture de feu du Pacifique, ce qui sous-entend une #présence massive de volcans en activité#. Et bien évidemment, le Japon n’est pas épargné. On dénombre pas moins de 110 volcans actifs, à l'heure actuelle.",
-    "part12": "Bien que les volcans ne soient pas à proximité directe des villes, il n’en reste pas moins très dangereux, et peuvent être la cause d'arrêt du trafic aérien, à cause de la projection des cendres. C’est d’ailleurs arrivé dans le monde ces dernières années, suite à l'éruption de l’Eyjafjallajökull en Islande ou bien du mont Agung à Bali en 2017.",
-    "part13": "Autre facteur aggravant, les tremblements de terre peuvent être source de réveil soudain et brutal de certains volcans. Par exemple, la dernière éruption du [Mont Fuji](fuji) (et oui, c’est un volcan actif), datant de 1707, a été précédée d’un séisme.",
+    "part11": "Ce n’est pas forcément un danger auquel l’on pense souvent quand on parle du Japon. Cependant, comme nous l’avons indiqué plus haut, le Japon se trouve sur la ceinture de feu du Pacifique, ce qui sous-entend une #présence massive de volcans en activité#. Et bien évidemment, le Japon n’est pas épargné. On dénombre pas moins de 110 volcans actifs, à l'heure actuelle.",
+    "part12": "Bien que les volcans ne soient pas à proximité directe des villes, il n’en reste pas moins très dangereux, et peuvent être la cause d'arrêt du trafic aérien, à cause de la projection des cendres. C’est d’ailleurs arrivé dans le monde ces dernières années, suite à l'éruption de l’Eyjafjallajökull en [Islande](iceland) ou bien du mont Agung à [Bali](bali) en 2017.",
+    "part13": "Autre facteur aggravant, les #tremblements de terre# peuvent être source de réveil soudain et brutal de certains volcans. Par exemple, la dernière éruption du [Mont Fuji](fuji) (et oui, c’est un volcan actif), datant de 1707, a été précédée d’un séisme.",
     "part14": "Pas de panique cela dit, il y a très peu de chance qu’un volcan vous cause des soucis. De plus, les volcans sont beaucoup moins actifs au japon, que dans d’autres endroits du monde, comme l'[Indonésie](indonesia).",
     "part15": "Il est possible de suivre en temps réel, l'activité volcanique au Japon, sur le site de [l’agence météorologique japonaise](https://www.jma.go.jp/bosai/map.html#5/34.507/137.021/&contents=volcano&lang=en).",
     "part16": "NE PARTEZ PAS SANS PRÉVENIR AU MOINS UNE PERSONNE DE VOTRE ENTOURAGE DE VOTRE DÉPART.",
@@ -182,7 +184,7 @@
       "part7": "Si vous partez 2 semaines ou plus, ne vous encombrez pas de trop de vêtements, vous trouverez des laveries assez régulièrement, les hôtels proposent également ce genre de service même si cela reste un peu cher. Et si vous louez un logement, vous pouvez demander à l’avance s’il y a une machine à laver, c’est d’ailleurs très souvent le cas."
     },
     "medical-kit": {
-      "title": "Trousse médicale",
+      "title": "#Trousse médicale#",
       "part1": "Répulsif à moustique",
       "part2": "Crème solaire",
       "part3": "Pansements",
@@ -191,13 +193,13 @@
       "part6": "Attention comme dans tous les pays, renseignez-vous bien avant d’emmener un médicament sur place."
     },
     "devices": {
-      "title": "Électronique",
+      "title": "#Électronique#",
       "part1": "Appareil photo + Chargeurs (et caméra, gopro, drone si vous avez)",
       "part2": "Téléphones + Chargeurs",
       "part3": "Adaptateur : prises de type A (américaines)"
     },
     "other": {
-      "title": "Autres",
+      "title": "#Autres#",
       "part1": "Lunettes de soleil (Utile à toutes les saisons)",
       "part2": "Petit sac à dos / sac à main (hors valise) pour emmener partout avec vous lors de vos visites",
       "part3": "Passeport",
@@ -209,36 +211,36 @@
   "opinion": {
     "title": "Notre avis sur le Japon",
     "part1": {
-      "title": "Les +",
+      "title": "#Les +#",
       "part1": {
-        "title": "➵ Les paysages",
-        "part1": "Ayant une superficie de 377 975 km², le Japon est composé de paysages fortement variés, d'une région à une autre. Les paysages culturels tels que les indénombrables temples, châteaux et monuments ainsi que les paysages naturels et leur changement de décor en fonction des saisons ne vous laisseront pas insensible. En tout cas, de notre côté nous avons été plus que éblouis par tant de diversité. On doit avouer que nous avions un peu peur de venir au Japon, car nous avions beaucoup de préjugés et finalement nous repartons avec une envie plus que pressante d’y retourner le plus vite possible."
+        "title": "Les paysages",
+        "part1": "Ayant une superficie de 377 975 km², le Japon est composé de paysages fortement variés, d'une région à une autre. Les paysages culturels tels que les indénombrables temples, châteaux et monuments ainsi que les paysages naturels et leur changement de décor en fonction des saisons ne vous laisseront pas insensible. En tout cas, de notre côté nous avons été plus que éblouis par tant de diversité. On doit avouer que nous avions un peu peur de venir au Japon, car nous avions beaucoup de préjugés et finalement nous repartons avec une envie plus que pressante d’y retourner le plus vite possible."
       },
       "part2": {
-        "title": "➵ Les transports",
+        "title": "Les transports",
         "part1": "Avec un nombre d'habitant supérieur à 126 millions, on pourrait s'attendre à ce que les transports en commun ne soient pas capables de supporter l’afflux supplémentaire de touristes. Mais il n'en est rien, bien au contraire. Le Japon est l’un des pays doté des meilleures infrastructures au monde, que ce soit pour les trains, le métro ou bien les bus. D’ailleurs de nombreux pays tentent de prendre exemple sur la rigueur japonaise, célèbre dans le monde entier. Pour se déplacer de ville en ville ou tout simplement à l'intérieur d'une même ville, vous avez à votre disposition différent moyen, tout aussi fiable les uns que les autres.",
         "part2": "En plus d’être pratiques, ils sont également très confortables."
       },
       "part3": {
-        "title": "➵ La nourriture",
+        "title": "La nourriture",
         "part1": "Pour nous un voyage se fait par la beauté des paysages et la découverte d’une nouvelle culture mais également par l’assiette. Un voyage sans goûter aux spécialités culinaires serait loin d’être un voyage abouti à nos yeux. Et encore une fois au Japon on a été servi, ce pays n’a rien à envier aux autres pays gustativement parlant. Nous nous sommes régalés à chaque repas et nous continuons d’ailleurs très souvent de manger japonais à Singapour.",
         "part2": "Notre article sur [Nos coups de cœur culinaires du Japon](food-in-japan)."
       },
       "part4": {
-        "title": "➵ Tokyo, capitale du Japon, et ses quartiers animés",
+        "title": "Tokyo, capitale du Japon, et ses quartiers animés",
         "part1": "Ce n’est pas ce que nous aimons d’habitude, quand on part en voyage on est plutôt du genre à s’éloigner le plus possible des grandes villes pour profiter pleinement de ce qu’on préfère, la nature. Mais venir au Japon sans savoir que la ville fait partie intégrante du pays serait se mentir et en ayant cette vision nous savions donc que nous ne pourrions pas passer à côté. Royaume des mangas, des geishas en kimono et des cosplays, Tokyo est véritablement tout ce que j’aime du Japon, tout ce que je m’imagine de ce pays - le mélange de multiples quartiers : branché, animé ou décalé, son côté zen en même temps que survolté.",
         "part2": "Découvre notre article sur [Nos deux jours à Tokyo](two-days-in-tokyo)."
       }
     },
     "part2": {
-      "title": "Les –",
+      "title": "#Les –#",
       "part1": {
-        "title": "➵ L’argent",
+        "title": "L’argent",
         "part1": "Un peu à contre-courant vis-à- vis de la plupart des autres pays asiatiques, un voyage au Japon coûte très cher. Que ce soit pour les transports en commun, la nourriture, les logements, sans oublier bien sûr les billets d’avions. Plus qu’ailleurs il s’agit de bien planifier son budget et d’adapter toutes ses activités en fonction de nos moyens disponibles. Il est bien évidemment possible de faire des économies, par exemple en prenant le bus plutôt que le shinkansen, ou en évitant les repas trop onéreux. Cependant il faut toujours veiller à ce que le voyage reste plaisant malgré tout. Le but final reste de passer un bon moment et d'apprécier son voyage.",
         "part2": "Voyager au Japon se mérite, on y va rarement sur un coup de tête."
       },
       "part2": {
-        "title": "➵ La barrière de la langue",
+        "title": "La barrière de la langue",
         "part1": "On s'y attendait mais sans trop y croire non plus. Au Japon, l’anglais est loin d'être roi, même dans les zones touristiques, hôtels, etc. Au choix, soit personne ne comprend l’anglais, soit c'est assez mal maîtrisé.",
         "part2": "Malgré tout, pas de panique, on arrive toujours à se faire comprendre. N'hésitez pas non plus à utiliser google translate, que ce soit en mode écrit, ou même en mode caméra, ce qui permet de traduire en direct des menus par exemple. Quelques restaurants proposent des cartes en anglais, la plupart du temps c'est indiqué sur la vitrine."
       }
@@ -247,16 +249,16 @@
   "currency": {
     "title": "Monnaie japonaise",
     "part1": "La monnaie locale est le Japanese Yen, appelé plus communément Yen tout simplement.",
-    "part2": "1€ vaut ~ 135 Yen",
-    "part3": "5€ vaut ~ 670 Yen",
-    "part4": "10€ vaut ~ 1 330 Yen",
-    "part5": "100€ vaut ~ 13 300 Yen",
+    "part2": "1€ vaut ~ 135 ¥",
+    "part3": "5€ vaut ~ 670 ¥",
+    "part4": "10€ vaut ~ 1 330 ¥",
+    "part5": "100€ vaut ~ 13 300 ¥",
     "part6": "Nous utilisons toujours l’[application Currency](http://www.currencyapp.com/), pour les conversions, clairement la meilleure à nos yeux et qui marche hors connexion."
   },
   "few-words": {
     "title": "Quelques mots en Japonais",
     "part1": "Bonjour (matin) = Ohayou Gozaimasu",
-    "part2": "Bonjour (après-midi) = Konichiwa",
+    "part2": "Bonjour (après-midi) = Konnichiwa",
     "part3": "Bonsoir = Konbanwa",
     "part4": "Excusez moi / Pardon = Sumimasen",
     "part5": "Merci = Arigatou Gozaimasu",
