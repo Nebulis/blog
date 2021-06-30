@@ -95,6 +95,10 @@ export const Introduction: React.FunctionComponent = ({ children }) => {
 const menuArticleStyle = css`
   text-align: center;
   font-weight: bold;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
   .menu-article-container {
     min-width: 250px;
     display: inline-block;

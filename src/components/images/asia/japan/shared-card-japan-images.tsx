@@ -2,7 +2,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import * as React from "react"
 import { ExtraImageProps } from "../../../../types/shared"
-import { useCustomTranslation } from "../../../../i18n-hook"
 
 const alt = {
   arashiyama: "Arashiyama Bamboo Forest",
@@ -32,9 +31,6 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
   fluidObject = {},
   imgStyle = {},
 }) => {
-  const { i18n } = useCustomTranslation()
-  const imageToDisplay =
-    image !== "foodInJapan" ? image : i18n.languageCode === "fr" ? "foodInJapanFr" : "foodInJapanEn"
   const data = useStaticQuery(graphql`
     query {
       arashiyama: file(relativePath: { eq: "asia/japan/carousel-japan.jpg" }) {
@@ -128,9 +124,9 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      foodInJapanEn: file(relativePath: { eq: "asia/japan/food-in-japan/food-in-japan-main-en.jpg" }) {
+      foodInJapan: file(relativePath: { eq: "asia/japan/food-in-japan/food-in-japan-main.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -181,7 +177,7 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
   `)
   return (
     <Img
-      fluid={{ ...data[imageToDisplay].childImageSharp.fluid, ...fluidObject }}
+      fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }}
       alt={alt[image]}
       className={className}
       imgStyle={imgStyle}

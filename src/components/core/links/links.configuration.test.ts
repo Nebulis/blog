@@ -123,7 +123,7 @@ const japanLinks = () => {
   })
   expect(getLink("transports-in-japan")).toMatchObject({
     label: { en: "All you need to know about transportation in Japan", fr: "Tout savoir sur les transports au Japon" },
-    published: false,
+    published: true,
   })
   expect(getLink("customs-in-japan")).toMatchObject({
     label: { en: "Customs to know before visiting Japan", fr: "Coutumes à connaître avant de vous rendre au Japon" },
@@ -131,7 +131,7 @@ const japanLinks = () => {
   })
   expect(getLink("prepare-japan")).toMatchObject({
     label: { en: "Prepare your travel to Japan", fr: "Bien préparer son voyage au Japon" },
-    published: false,
+    published: true,
   })
 
   expect(getLink("tokyo")).toMatchObject({ label: { fr: "Tokyo", en: "Tokyo" }, published: true })

@@ -117,18 +117,16 @@ const imageAsPortraitStyle = css`
   margin-left: auto;
   ${creditStyle}
 `
-export const ImageAsPortrait: FunctionComponent<HTMLAttributes<any> & { credit?: React.ReactNode }> = ({
-  children,
-  className = "",
-  credit,
-  title,
-}) => (
+export const ImageAsPortrait: FunctionComponent<
+  HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition }
+> = ({ children, className = "", credit, title, titlePosition = "bottom" }) => (
   <div css={imageAsPortraitStyle} className={`${className} image-layout`}>
+    {title && titlePosition === "top" && <div className="title tc ttu">{title}</div>}
     <div className="flex relative image-layout-image-container">
       {children}
       {credit && <div className="credit">{credit}</div>}
     </div>
-    {title && <div className="title tc underline ttu">{title}</div>}
+    {title && titlePosition === "bottom" && <div className="title tc ttu">{title}</div>}
   </div>
 )
 
@@ -252,18 +250,17 @@ const imageAsLandscapeStyle = css`
   }
   ${creditStyle}
 `
-export const ImageAsLandscape: FunctionComponent<HTMLAttributes<any> & { credit?: React.ReactNode }> = ({
-  children,
-  className = "",
-  credit,
-  title,
-}) => (
+type TitlePosition = "bottom" | "top"
+export const ImageAsLandscape: FunctionComponent<
+  HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition }
+> = ({ children, className = "", credit, title, titlePosition = "bottom" }) => (
   <div css={imageAsLandscapeStyle} className={`${className} image-layout`}>
+    {title && titlePosition === "top" && <div className="title tc ttu">{title}</div>}
     <div className="flex justify-center relative image-layout-image-container">
       {children}
       {credit && <div className="credit">{credit}</div>}
     </div>
-    {title && <div className="title tc underline ttu">{title}</div>}
+    {title && titlePosition === "bottom" && <div className="title tc ttu">{title}</div>}
   </div>
 )
 export const Panorama = styled(ImageAsLandscape)`
@@ -340,19 +337,17 @@ const imageAsLandscapeOnTheLeft = css`
   }
   ${creditStyle}
 `
-export const ImageAsLandscapeOnTheLeft: FunctionComponent<HTMLAttributes<any> & { credit?: React.ReactNode }> = ({
-  children,
-  className,
-  title,
-  credit,
-}) => {
+export const ImageAsLandscapeOnTheLeft: FunctionComponent<
+  HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition }
+> = ({ children, className, title, credit, titlePosition = "bottom" }) => {
   return (
     <div className={`image-layout ${className}`} css={imageAsLandscapeOnTheLeft}>
+      {title && titlePosition === "top" && <div className="title tc ttu">{title}</div>}
       <div className="flex relative image-layout-image-container">
         {children}
         {credit && <div className="credit">{credit}</div>}
       </div>
-      {title && <div className="title tc underline ttu">{title}</div>}
+      {title && titlePosition === "bottom" && <div className="title tc ttu">{title}</div>}
     </div>
   )
 }
