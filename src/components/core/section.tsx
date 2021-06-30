@@ -24,6 +24,8 @@ import {
   FaMoneyBill,
   FaPassport,
   FaShip,
+  FaTrain,
+  FaCog,
   FaSuitcaseRolling,
   FaUtensils,
   FaWalking,
@@ -189,10 +191,12 @@ export const Opinion = titleBuilder({ icon: FaComments, translationKey: "todo" }
 export const LocalCurrency = titleBuilder({ icon: FaMoneyBill, translationKey: "todo" })
 export const FewWords = titleBuilder({ icon: FaCommentDots, translationKey: "todo", icon2: SpeechBubble })
 export const Information = titleBuilder({ icon: FaInfoCircle, translationKey: "todo" })
+export const Operation = titleBuilder({ icon: FaCog, translationKey: "todo" })
 export const Booking = titleBuilder({ icon: FaCheckCircle, translationKey: "todo" })
 export const Company = titleBuilder({ icon: FaCopyright, translationKey: "todo" })
 export const Choice = titleBuilder({ icon: FaClipboardList, translationKey: "todo" })
 export const Boat = titleBuilder({ icon: FaShip, translationKey: "todo" })
+export const Train = titleBuilder({ icon: FaTrain, translationKey: "todo" })
 
 const homeSectionStyle = css`
   letter-spacing: 5px;
@@ -208,6 +212,10 @@ export const HomeSection: FunctionComponent<{ className?: string; id?: string }>
 )
 export const SubHomeSection = styled(HomeSection)`
   font-size: 1.38316rem; // h3
+`
+export const SubTitleTransport = styled(SectionTitle)`
+  font-size: 1.38316rem; // h3
+  margin-bottom: 1rem; // mb3
 `
 
 const subHomeSectionTwoLines = css`

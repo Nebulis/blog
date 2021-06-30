@@ -164,6 +164,41 @@ export const japanLinks: CountryLink = {
       label: { fr: "", en: "" },
       published: false,
     },
+    {
+      id: "okinawa",
+      label: { fr: "Okinawa", en: "Okinawa" },
+      published: false,
+    },
+    {
+      id: "biwa-lake",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "towada-lake",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "ashinoko-lake",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "ogasawara",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "hokkaido",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
+      id: "kyushu",
+      label: { fr: "", en: "" },
+      published: false,
+    },
   ],
   cities: [
     {
