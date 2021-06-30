@@ -4,6 +4,7 @@ import {
   How,
   HowLong,
   HowMuch,
+  Introduction,
   SectionContent,
   Visit,
   WhatTimeOfYear,
@@ -42,6 +43,7 @@ import bay from "../../../../images/asia/japan/tokyo/hamarikyu-garden/bay-tokyoh
 import villaFontaine from "../../../../images/asia/japan/tokyo/hamarikyu-garden/villa-fontaine-shiodome.jpg"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { buildPixabayUrl } from "../../../../utils"
+import { Quote } from "../../../../components/core/quote"
 
 const namespace = "asia/japan/tokyo/hamarikyu-garden"
 const id = "hamarikyu-garden"
@@ -68,6 +70,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <ImageAsLandscape>
           <SharedCardJapanImages image="hamarikyuGarden" />
         </ImageAsLandscape>
+        <Quote>{t("quote")}</Quote>
+        <Divider />
+        <Introduction>{t("introduction")}</Introduction>
+        <Divider />
         <Where title={t("where.title")}>
           <p>{t("where.part1")}</p>
         </Where>
