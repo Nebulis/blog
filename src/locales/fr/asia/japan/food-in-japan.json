@@ -3,29 +3,31 @@
   "introduction": {
     "part1": "#On vous propose un petit top 10 des spécialités culinaires du Japon en se basant sur nos coups de cœur.#",
     "part2": "Depuis que nous sommes en Asie, on découvre une nourriture locale dans chaque pays bien différente de nos restaurants asiatique d’Europe.",
-    "part3": "Si vous nous suivez depuis le début, vous savez que nous habitons depuis quelques années à [Singapour](todo), et même si forcément nous avons déjà eu la chance de goûter énormément de spécialités japonaises, il nous tardait d’aller au Japon pour en découvrir davantage.",
-    "part4": "Une bonne dégustation (avec les yeux) ..."
+    "part3": "Si vous nous suivez depuis le début, vous savez que nous habitons depuis quelques années à [Singapour](singapore), et même si forcément nous avons déjà eu la chance de goûter énormément de spécialités japonaises, il nous tardait d’aller au Japon pour en découvrir davantage.",
+    "part4": "On vous le disait d’ailleurs dans notre article sur [Bien préparer son voyage au Japon](prepare-japan), mais la nourriture au Japon n’a rien à envier aux autres pays. On vous nomme ici nos véritables coups de cœur mais vous pourrez découvrir de nombreuses autres spécialités au cours de votre voyage. ",
+    "part5": "On vous souhaite une bonne dégustation (avec les yeux) ..."
   },
+  "index": "Sommaire",
   "google-description": "Qu’est-ce qu’on mange au Japon ? On vous propose un top 10 des spécialités culinaires du Japon en se basant sur nos coups de cœur. Nous vous partageons notre avis avec nos photos et une description de chaque plat.",
   "social-network-description": "Le pays du Soleil Levant nous offre un patrimoine culturel impressionnant et des paysages époustouflants mais si vous venez au Japon vous y découvrirez également un patrimoine culinaire qui ne vous laissera pas insensible.",
   "full-title": "Que mange-t-on au Japon ? 10 spécialités culinaires à découvrir | Guide de Voyage",
   "section1": {
-    "title": "BARBECUE",
+    "title": "Barbecue",
     "part1": "On ne s’y attendait pas du tout en venant au Japon mais c’est véritablement notre plus gros coup de cœur. Un #repas convivial# où on vous sert de la #viande coupée très finement, le plus souvent marinée# que vous cuisez à votre convenance grâce au barbecue au centre de la table.",
     "part2": "Servi avec une soupe, du riz et des légumes.",
     "part3": "Un régal pour les amateurs de viandes.",
     "part4": "Il semblerait que ce genre de barbecue vienne tout droit de Corée sous le nom de Yakiniku.",
-    "part5": "Vous trouverez des restaurants de ce type un partout."
+    "part5": "Vous trouverez des restaurants de ce type un peu partout."
   },
   "section2": {
-    "title": "DONBURI",
-    "part1": "L’un des plats les plus basiques dans lequel on dispose au fond d’un bol du riz et par-dessus tous les ingrédients.",
+    "title": "Donburi",
+    "part1": "L’un des plats les plus basiques dans lequel on dispose au fond d’un bol :  du riz et par-dessus tous les ingrédients.",
     "part2": "Vous en avez de toutes sortes, les noms des plats sont particulièrement simple à reconnaître, les premiers mots étant le nom de la garniture suivi du mot Don qui signifie tout simplement « bol ».",
     "part3": "Les donburi les plus courants sont le #Katsudon# (au poulet) et le #Gyudon# (au bœuf), mais vous pouvez en trouver avec d'autres viandes, poissons ou même légumes.",
     "part4": "Ce #plat traditionnel# est souvent servi avec une petite soupe miso."
   },
   "section3": {
-    "title": "GYOZAS",
+    "title": "Gyozas",
     "part1": "Célèbres #raviolis farcis# en forme de demi-lune. Farcis traditionnellement au porc avec des champignons.",
     "part2": "Vous en trouverez de plusieurs façons :",
     "part3": "le basique est cuit à la vapeur",
@@ -35,82 +37,85 @@
     "part7": "Nous n’avons pas de réelle préférence entre tous, d’ailleurs nous prenons généralement une petite assiette de chaque, cela dépend du restaurant au final donc on vous conseille de prendre un assortiment si vous en avez la possibilité."
   },
   "section4": {
-    "title": "RAMEN",
+    "title": "Ramen",
     "part1": "Bien que les avis divergent et qu’on dit que les ramen viennent de Chine, ce plat est bien ancré dans la culture culinaire du Japon.",
     "part2": "Ce sont des #pâtes servies dans un bouillon#. Vous en trouverez à tous les goûts, avec toutes sortes de garnitures, viandes et légumes et bien souvent un œuf.",
     "part3": "Vous pouvez trouver différents types de bouillon :",
     "part4": "#Miso Ramen# ↠ fait avec de la pâte miso (pâte de soja fermenté)",
     "part5": "#Shoyu Ramen# ↠ à base de sauce soja",
-    "part6": "#Shio Ramen# ↠  à base d’eau salée",
-    "part7": "#Tonkotsu Ramen# ↠  à base d’os de porc"
+    "part6": "#Shio Ramen# ↠ à base d’eau salée",
+    "part7": "#Tonkotsu Ramen# ↠ à base d’os de porc",
+    "part8": "Nous avons un peu plus de mal avec la Miso Ramen mais nous n’avons pas de préférence entre les trois autres."
   },
   "section5": {
-    "title": "SOBA AU THÉ VERT",
+    "title": "Soba au thé vert",
     "part1": "Les soba sont les #troisièmes types de pâtes# qu’on peut croiser régulièrement au Japon.",
     "part2": "Ces pâtes sont faites avec de la farine de sarrasin contrairement aux autres qui sont faites avec de la farine de blé.",
     "part3": "Elles peuvent se consommer en bouillon mais également sèche, chaudes ou même froides.",
-    "part4": "Nous on vous parle ici de nos coups de cœur et du coup principalement des sobas au thé vert « #Cha Soba# » ↠ cha signifiant thé, qui prennent donc cette couleur verte, servie froide avec une salade cela change vraiment et c’est un régal."
+    "part4": "Nous on vous parle ici de nos coups de cœur et du coup principalement des sobas au thé vert « #Cha Soba# » ↠ cha signifiant thé, qui prennent donc cette couleur verte, servie froide avec une salade cela change vraiment et c’est un régal.",
+    "part5": "Des pâtes vertes cela peut faire peur on vous l’accorde mais vraiment si vous en avez l’occasion tentez !"
   },
   "section6": {
-    "title": "SUSHIS",
+    "title": "Sushis",
     "part1": "Certainement le plat le plus connu du Japon, un peu cliché mais quand même incontournable et on ne peut pas passer outre. On les sert généralement avec de la sauce soja.",
-    "part2": "On regroupe ici toutes les catégories du groupe qu’on appelle généralement « sushi » mais qui au final se différencie en plusieurs sous catégorie :",
+    "part2": "On regroupe ici toutes les catégories qu’on appelle généralement « sushi » mais qui au final se différencie en plusieurs sous catégorie :",
     "part3": "#Sashimi# ↠ Tranche de poissons cru",
     "part4": "#Nigiri# ↠ Tranche de poisson cru fine ou tamago (omelette japonaise) déposée sur une sorte de cylindre de riz",
     "part5": "#Maki# ↠ Rouleau de riz et de poisson / oeuf / légumes recouvert d’une algue nori (certains maki sont également entouré du poisson à la place de l’algue)",
     "part6": "#Gunkan# ↠ Un mélange de Nigiri et de Maki, cylindre de riz avec sur le dessus plusieurs ingrédients, le tout entouré d’une feuille d’algue nori. Vous en trouverez de différents goûts, principalement des œufs de saumon mais il en existe plusieurs dérivés, au crabe, au saumon, à l’avocat, au thon … Contrairement aux 3 catégories du dessus, le Gunkan ne se mange pas en une bouchée",
     "part7": "#Egg Roll# ↠ Rouleau de riz et de poisson / oeuf / légumes recouvert d’une très fine omelette japonaise",
     "part8": "#Temaki (Handroll)# ↠ Sorte de maki sauf que l’algue est sous forme de cône et se mange en plusieurs bouchées, un maki-sandwich",
-    "part9": "Après il existe plein de dérivés, les #California Rolls# par exemple, on été inventé par les Américains certainement pour ceux qui n’aiment pas le nori.",
-    "part10": "Depuis que nous vivons à Singapour, nous avons découvert également les maki entouré de #Soy Wrap#, un maki tout ce qu’il y a de plus basique sauf qu'à la place de la feuille de nori, il est entouré d’un wrap au soja, vous en avez des blanches toute simple, ou bien avec des graines de sésame … ou encore rose … tout dépend évidemment du restaurant dans lequel vous les commandez, mais pour ceux qui ont un peu de mal avec le nori c’est un autre dérivé vraiment délicieux."
+    "part9": "Après il existe plein de dérivés, les #California Rolls# par exemple, ont été inventés par les Américains certainement pour ceux qui n’aiment pas le nori.",
+    "part10": "Depuis que nous vivons à Singapour, nous avons découvert également les maki entouré de #Soy Wrap#, un maki tout ce qu’il y a de plus basique sauf qu'à la place de la feuille de nori, il est entouré d’un wrap au soja, vous en avez des blanches toute simple, ou bien avec des graines de sésame … ou encore rose … tout dépend évidemment du restaurant dans lequel vous les commandez, mais pour ceux qui ont un peu de mal avec le nori c’est un autre dérivé vraiment délicieux.",
+    "part11": "DE BAS EN HAUT / DE GAUCHE À DROITE ⤴"
   },
   "section7": {
-    "title": "TEMPURA",
+    "title": "Tempura",
     "part1": "Les tempura sont une sorte de #beignet# bien souvent connu avec des crevettes, vous pouvez également en avoir avec du poisson et il en existe même de plus en plus aux légumes.",
     "part2": "Loin d’être aussi copieux que notre friture habituelle, celle-ci est normalement très fine et légère.",
     "part3": "Cela dépendra du restaurant dans lequel vous commandez mais les tempura peuvent également être accompagné d’un bol de riz ou même servi en plat typique de Curry-rice."
   },
   "section8": {
-    "title": "TONKATSU & KARE-RICE (CURRY)",
+    "title": "Tonkatsu & Kare-rice (curry)",
     "part1": "Ah comment venir au Japon sans manger de #curry japonais#. LE PLAT préféré de tous les temps de Monsieur Magic, et même si on en mange déjà souvent à Singapour, on ne pouvait pas passer à côté.",
     "part2": "Vous en trouverez vraiment partout, le plus courant est au poulet mais vous en avez avec toutes sortes de viandes et de poissons.",
     "part3": "De notre côté nous le prenons le plus souvent avec du #Tonkatsu# (pork katsu - porc pané) et plus régulièrement avec du #Chicken Katsu# (poulet pané)."
   },
   "section9": {
-    "title": "UDON",
+    "title": "Udon",
     "part1": "Ce sont les #pâtes# les plus populaires et les plus servies du Japon.",
     "part2": "Elles se reconnaissent aisément par leur aspect blanc et surtout très épais.",
     "part3": "Elles peuvent vous être servies chaudes ou froides, mais sont principalement accompagnées de soupe/bouillon, de viande et de légumes.",
     "part4": "J’ai un peu de mal avec leur aspect mais Mr Magic en raffole."
   },
   "section10": {
-    "title": "YAKITORI",
+    "title": "Yakitori",
     "part1": "Vous en trouverez partout dans les rues. Idéal pour les #en-cas et les petits creux#, mais rarement utilisé dans des plats plus traditionnels.",
     "part2": "#Brochette# dont la viande est recouverte d’une sauce assez épaisse et brune, elle est faite généralement avec de la sauce soja et du sucre c’est ce qui donne donc un goût sucré à la viande.",
     "part3": "Principalement au poulet, vous en trouverez également au porc, au bœuf ou même au tofu.",
     "part4": "Pas forcément très appétissant à vu d'œil, on vous assure un régal culinaire, on vous conseille néanmoins de ne pas en commander trop d’un coup, car cela devient quand même vite écoeurant."
   },
   "section11": {
-    "title": "LES PETITS PLUS ...",
+    "title": "Les petits plus ...",
     "part1": {
-      "title": "SOUPE",
+      "title": "Soupe",
       "part1": "Nous en avions quasiment à chaque repas en accompagnement, avec ou sans nouille à l’intérieur.",
       "part2": "Elle servirait à se rincer la bouche entre chaque plat différent."
     },
     "part2": {
-      "title": "ONIGIRI",
+      "title": "Onigiri",
       "part1": "C’est l'un des encas préférés des japonais, rapide, simple et pas trop copieux, on le trouve souvent sous la forme triangulaire. Parfait pour un peu creux.",
       "part2": "Une sorte de boulette de riz entourée de nori et farcie.",
       "part3": "Vous pouvez en trouver à tous les goûts, le plus souvent au thon mais il en existe au saumon, viandes ou légumes."
     },
     "part3": {
-      "title": "ONIGIRAZU",
+      "title": "Onigirazu",
       "part1": "Mélange entre l’onigiri et le maki, on peut considérer que c’est comme un sandwich. Parfait pour le midi si vous n’avez pas vraiment le temps de vous arrêter et de vous poser.",
       "part2": "Feuille d’algue nori, riz et ensuite vous pouvez en trouver avec toutes sortes de déclinaison, crevettes, saumon, poulet, oeuf, légumes ...",
       "part3": "Beaucoup plus copieux et gros que l’onigiri."
     },
     "part4": {
-      "title": "TEPPANYAKI",
+      "title": "Teppanyaki",
       "part1": "Ce n’est pas un plat en soit, mais pour le côté festif et impressionnant de la chose, on ne pouvait pas ne pas vous le notifier.",
       "part2": "Les cuisiniers japonais vous font une démonstration spectaculaire de la cuisson, la découpe et la présentation de plats sur une plaque de cuisson avec leurs ustensiles.",
       "part3": "Une véritable œuvre d’art."
@@ -119,13 +124,13 @@
   "section12": {
     "title": "Notre avis",
     "part1": {
-      "title": "Le -",
+      "title": "#Le -#",
       "part1": "Le principal aspect négatif que nous avons trouvé au Japon, ce sont les restaurants où les gens peuvent fumer.",
       "part2": "C’est quand même assez bizarre qu'il y ai des coins fumeurs dans les rues donc interdiction de fumer en dehors de ses coins et par contre dans les restaurants les gens peuvent fumer, on a trouvé ça dingue et c’est clairement un énorme point négatif pour nous."
     },
     "part2": {
-      "title": "Le + ",
-      "part1": "Une chose que nous avons vraiment adoré au Japon, c’est le fait que dans la plupart des vitrines de restaurants on a une représentation énormément réaliste des plats que le restaurant sert, appelé #Sampuru#, ses plats sont tellement bien fait que ça attire encore plus l’œil. Un véritable business certes mais tellement bien fait !",
+      "title": "#Le +#",
+      "part1": "Une chose que nous avons vraiment adoré au Japon, c’est le fait que dans la plupart des vitrines de restaurants on a une représentation énormément réaliste des plats que le restaurant sert, appelé #Sampuru#, ses plats sont tellement bien fait que ça attire encore plus l’œil. Un véritable business certes mais agréable à regarder et qui nous donne encore plus l’eau à la bouche !",
       "part2": "D’ailleurs si un plat vous tente, n’hésitez pas à le prendre en photo avant de rentrer ou à noter son nom. Vous n’aurez ensuite plus qu’à attendre le serveur et lui montrer, sans avoir de grandes surprises."
     }
   },
