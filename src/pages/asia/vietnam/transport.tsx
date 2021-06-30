@@ -35,12 +35,11 @@ import {
   MenuArticle,
   Opinion,
   SectionContent,
-  SectionTitle,
+  SubTitleTransport,
 } from "../../../components/core/section"
 import { TransportVietnamImages } from "../../../components/images/asia/vietnam/transport-vietnam-images"
 import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
 import { css } from "@emotion/react"
-import styled from "@emotion/styled"
 import { buildBaolauUrl, buildPixabayUrl, convertTime } from "../../../utils"
 import VietnamRailwayIcon from "../../../images/asia/vietnam/transport/vietnam-railways.png"
 import VioletteIcon from "../../../images/asia/vietnam/transport/violette.png"
@@ -124,11 +123,6 @@ const Sleeping: React.FunctionComponent = () => (
     />
   </svg>
 )
-
-const BusTitle = styled(SectionTitle)`
-  font-size: 1.38316rem; // h3
-  margin-bottom: 1rem; // mb3
-`
 
 type BusType = "sitting" | "sleeping"
 interface BusSchedule extends Schedule<VietnamCity> {
@@ -480,10 +474,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Anchor id="bus" />
         <section>
-          <BusTitle>
+          <SubTitleTransport>
             <FaBus />
             &nbsp;{t("section3.bus.title")}
-          </BusTitle>
+          </SubTitleTransport>
           <Information title={t("information")}>
             <p>{t("section3.bus.information.part1")}</p>
             <p>{t("section3.bus.information.part2")}</p>
@@ -499,10 +493,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Anchor id="bus-car" />
         <section>
-          <BusTitle>
+          <SubTitleTransport>
             <FaBus />
             &nbsp;{t("section3.car.title")}
-          </BusTitle>
+          </SubTitleTransport>
           <Information title={t("information")}>
             <p>{t("section3.car.information.part1")}</p>
             <p>{t("section3.car.information.part2")}</p>
@@ -661,10 +655,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Anchor id="open-tour" />
         <section>
-          <BusTitle>
+          <SubTitleTransport>
             <FaBus />
             &nbsp;{t("section3.open-tour.title")}
-          </BusTitle>
+          </SubTitleTransport>
           <Information title={t("information")}>
             <p>{t("section3.open-tour.information.part1")}</p>
             <p>{t("section3.open-tour.information.part2")}</p>
@@ -726,10 +720,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Anchor id="guided-tour" />
         <section>
-          <BusTitle>
+          <SubTitleTransport>
             <FaBus />
             &nbsp;{t("section3.guided-tour.title")}
-          </BusTitle>
+          </SubTitleTransport>
           <Information title={t("information")}>
             <p>{t("section3.guided-tour.information.part1")}</p>
             <p>{t("section3.guided-tour.information.part2")}</p>

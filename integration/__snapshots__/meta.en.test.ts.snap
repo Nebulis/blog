@@ -216,10 +216,7 @@ exports[`english pages exports meta for public/en/asia/japan/tokyo/yasukuni-dori
 
 exports[`english pages exports meta for public/en/asia/japan/tokyo/yasukuni-dori/index.html correctly: title 1`] = `"Yasukuni-Dori: The street of a thousand lights in Shinjuku | Travel Guide"`;
 
-exports[`english pages exports meta for public/en/asia/japan/transports-in-japan/index.html correctly: meta-description 1`] = `
-"In this article, you will find our information and advice that will help you to choose the best mode of transport, depending on your needs. Price? How to book? We tell you all the information you need and share our opinion.
-"
-`;
+exports[`english pages exports meta for public/en/asia/japan/transports-in-japan/index.html correctly: meta-description 1`] = `"In this article, you will find our information and advice that will help you to choose the best mode of transport, depending on your needs. Price? How to book? We tell you all the information you need and share our opinion."`;
 
 exports[`english pages exports meta for public/en/asia/japan/transports-in-japan/index.html correctly: social-network 1`] = `"It is necessary to know which mode of transport you want to use to plan your trip to Japan. It will impact your budget as well as the speed and the duration of your travels from city to city."`;
 

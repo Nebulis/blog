@@ -350,7 +350,7 @@ export const Comments: FunctionComponent<CommentsProps> = ({
             </a>
           </span>
         </div>
-        {pinterest ? (
+        {pinterest && pinterest.nodes.length > 0 ? (
           <>
             <Divider />
             <PinterestImage

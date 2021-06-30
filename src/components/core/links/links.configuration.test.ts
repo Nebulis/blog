@@ -315,6 +315,34 @@ const japanLinks = () => {
     label: { en: "Nara", fr: "Nara" },
     published: false,
   })
+  expect(getLink("okinawa")).toMatchObject({
+    label: { en: "Okinawa", fr: "Okinawa" },
+    published: false,
+  })
+  expect(getLink("biwa-lake")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("towada-lake")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("ashinoko-lake")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("ogasawara")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("hokkaido")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("kyushu")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
 }
 
 const vietnamLinks = () => {
