@@ -46,6 +46,7 @@ import { BookingCard, BookingWarning } from "../../../../components/core/booking
 import sunMembersKyotoSaga from "../../../../images/asia/japan/kyoto/arashiyama/sun-members-kyoto-saga.jpg"
 import businessArashiyama from "../../../../images/asia/japan/kyoto/arashiyama/business-arashiyama.jpg"
 import binarioSagaArashiyama from "../../../../images/asia/japan/kyoto/arashiyama/binario-saga-arashiyama.jpg"
+import { FakeList } from "../../../../components/core/title"
 
 const namespace = "asia/japan/kyoto/arashiyama"
 const id = "arashiyama"
@@ -298,87 +299,46 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <img src={ArashiyamaMap} alt="Arashiyama Map" />
               </MapContainer>
               <p>{t("visit3.part3")}</p>
-              <ul>
-                <li>{t("visit3.part4")}</li>
-                <li>
-                  <p>
-                    {t("visit3.part5")}
-                    <br />
-                    {t("visit3.part6")}
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    {t("visit3.part7")}
-                    <br />
-                    {t("visit3.part8")}
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    {t("visit3.part9")}
-                    <br />
-                    {t("visit3.part10")}
-                  </p>
-                  <ImageAsPortrait
-                    credit={
-                      <ExternalLinkNotUnderlined
-                        href={buildPixabayUrl(i18n.languageCode)("users/michelleraponi-165491")}
-                      >
-                        michelleraponi
-                      </ExternalLinkNotUnderlined>
-                    }
-                  >
-                    <ArashiyamaImages image="monkey" />
-                  </ImageAsPortrait>
-                </li>
-                <li>
-                  <p>
-                    {t("visit3.part11")}
-                    <br />
-                    {t("visit3.part12")}
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    {t("visit3.part13")}
-                    <br />
-                    {t("visit3.part14")}
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    {t("visit3.part15")}
-                    <br />
-                    {t("visit3.part16")}
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    {t("visit3.part17")}
-                    <br />
-                    {t("visit3.part18")}
-                  </p>
-                  <ImageAsPortrait
-                    credit={
-                      <ExternalLinkNotUnderlined
-                        href={buildPixabayUrl(i18n.languageCode)("users/michelleraponi-165491")}
-                      >
-                        michelleraponi
-                      </ExternalLinkNotUnderlined>
-                    }
-                  >
-                    <ArashiyamaImages image="kimono" />
-                  </ImageAsPortrait>
-                </li>
-                <li>
-                  <p>
-                    {t("visit3.part19")}
-                    <br />
-                    {t("visit3.part20")}
-                  </p>
-                </li>
-              </ul>
+              <FakeList>{t("visit3.part4")}</FakeList>
+              <FakeList>{t("visit3.part5")}</FakeList>
+              <p>{t("visit3.part6")}</p>
+              <p>{t("visit3.part7")}</p>
+              <FakeList>{t("visit3.part8")}</FakeList>
+              <p>{t("visit3.part9")}</p>
+              <p>{t("visit3.part10")}</p>
+              <FakeList>{t("visit3.part11")}</FakeList>
+              <p>{t("visit3.part12")}</p>
+              <p>{t("visit3.part13")}</p>
+              <ImageAsPortrait
+                credit={
+                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/michelleraponi-165491")}>
+                    michelleraponi
+                  </ExternalLinkNotUnderlined>
+                }
+              >
+                <ArashiyamaImages image="monkey" />
+              </ImageAsPortrait>
+              <FakeList>{t("visit3.part14")}</FakeList>
+              <p>{t("visit3.part15")}</p>
+              <FakeList>{t("visit3.part16")}</FakeList>
+              <p>{t("visit3.part17")}</p>
+              <FakeList>{t("visit3.part18")}</FakeList>
+              <p>{t("visit3.part19")}</p>
+              <p>{t("visit3.part20")}</p>
+              <FakeList>{t("visit3.part21")}</FakeList>
+              <p>{t("visit3.part22")}</p>
+              <p>{t("visit3.part23")}</p>
+              <ImageAsPortrait
+                credit={
+                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/michelleraponi-165491")}>
+                    michelleraponi
+                  </ExternalLinkNotUnderlined>
+                }
+              >
+                <ArashiyamaImages image="kimono" />
+              </ImageAsPortrait>
+              <FakeList>{t("visit3.part24")}</FakeList>
+              <p>{t("visit3.part25")}</p>
             </SectionContent>
           </section>
         </Visit>

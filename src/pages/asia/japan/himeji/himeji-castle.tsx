@@ -361,10 +361,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit6.part2")}</p>
               <p>{t("visit6.part3")}</p>
               <GroupOfImages>
-                <TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSize>
                   <HimejiCastleImages image="bonus" />
                   <HimejiCastleImages image="bonus2" />
-                </TwoImagesSameSizeOrToGroup>
+                </TwoImagesSameSize>
                 <TwoImagesSameSize
                   css={css`
                     @media (min-width: ${mediumStart}) {

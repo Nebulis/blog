@@ -66,7 +66,7 @@ import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
 import { getLink } from "../../../components/core/links/links.utils"
 import HomeImgUrl from "../../../images/asia/vietnam/prepare/prepare-vietnam-main.jpg"
 import SouthernVietnamMapTransport from "../../../images/asia/vietnam/southern-vietnam-map-transport.png"
-import { PrepareSubTitle, Title } from "../../../components/core/title"
+import { FakeList, PrepareSubTitle, Title } from "../../../components/core/title"
 import { Quote } from "../../../components/core/quote"
 import { MapContainer, PetitCarreColore, Table } from "../../../components/layout/layout"
 import { Weather } from "../../../components/core/weather"
@@ -581,43 +581,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <PrepareVietnamImages image="visa" />
           </ImageAsLandscape>
           <p>{t("section1.part2")}</p>
-          <ul>
-            <li>
-              <p>
-                {t("section1.part3")}
-                <br />
-                {t("section1.part4")}
-              </p>
-            </li>
-            <li>
-              <p>
-                {t("section1.part5")}
-                <br />
-                {t("section1.part6")}
-                <br />
-                {t("section1.part7")}
-                <br />
-                {t("section1.part8")}
-                <br />
-                {t("section1.part9")}
-                <br />
-                {t("section1.part10")}
-              </p>
-            </li>
-            <li>
-              <p>
-                {t("section1.part11")}
-                <br />
-                {t("section1.part12")}
-                <br />
-                {t("section1.part13")}
-                <br />
-                {t("section1.part14")}
-                <br />
-                {t("section1.part15")}
-              </p>
-            </li>
-          </ul>
+          <FakeList>{t("section1.part3")}</FakeList>
+          <p>{t("section1.part4")}</p>
+          <p>{t("section1.part5")}</p>
+          <FakeList>{t("section1.part6")}</FakeList>
+          <p>{t("section1.part7")}</p>
+          <p>{t("section1.part8")}</p>
+          <p>{t("section1.part9")}</p>
+          <p>{t("section1.part10")}</p>
+          <p>{t("section1.part11")}</p>
+          <p>{t("section1.part12")}</p>
+          <FakeList>{t("section1.part13")}</FakeList>
+          <p>{t("section1.part14")}</p>
+          <p>{t("section1.part15")}</p>
+          <p>{t("section1.part16")}</p>
+          <p>{t("section1.part17")}</p>
+          <p>{t("section1.part18")}</p>
           <div
             className="flex"
             css={css`
@@ -687,7 +666,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </tbody>
             </Table>
           </div>
-          <p>{t("section1.part16")}</p>
+          <p>{t("section1.part19")}</p>
           <div
             className="flex flex-row-reverse"
             css={css`
@@ -798,7 +777,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </div>
           </div>
 
-          <p>{t("section1.part17")}</p>
+          <p>{t("section1.part20")}</p>
           <PetitCarreColore>
             <p
               css={css`
@@ -807,11 +786,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 }
               `}
             >
-              {t("section1.part18")}
+              {t("section1.part21")}
             </p>
-            <p>{t("section1.part19")}</p>
+            <p>{t("section1.part22")}</p>
           </PetitCarreColore>
-          <p>{t("section1.part20")}</p>
+          <p>{t("section1.part23")}</p>
         </Visa>
         <Divider />
         <Health id="health">
@@ -925,44 +904,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ImageAsLandscape>
           <p>{t("section8.part1")}</p>
           <p>{t("section8.part2")}</p>
-          <ul>
-            <li>
-              <p>
-                {t("section8.part3")}
-                <br />
-                {t("section8.part4")}
-              </p>
-            </li>
-            <li>
-              <p>
-                {t("section8.part5")}
-                <br />
-                {t("section8.part6")}
-                <br />
-                {t("section8.part7")}
-                <br />
-                {t("section8.part8")}
-              </p>
-            </li>
-            <li>
-              <p>
-                {t("section8.part9")}
-                <br />
-                {t("section8.part10")}
-              </p>
-            </li>
-            <li>
-              <p>
-                {t("section8.part11")}
-                <br />
-                {t("section8.part12")}
-                <br />
-                {t("section8.part13")}
-                <br />
-                {t("section8.part14")}
-              </p>
-            </li>
-          </ul>
+          <FakeList>{t("section8.part3")}</FakeList>
+          <p>{t("section8.part4")}</p>
+          <FakeList>{t("section8.part5")}</FakeList>
+          <p>{t("section8.part6")}</p>
+          <p>{t("section8.part7")}</p>
+          <p>{t("section8.part8")}</p>
+          <FakeList>{t("section8.part9")}</FakeList>
+          <p>{t("section8.part10")}</p>
+          <FakeList>{t("section8.part11")}</FakeList>
+          <p>{t("section8.part12")}</p>
+          <p>{t("section8.part13")}</p>
+          <p>{t("section8.part14")}</p>
           <PetitCarreColore>
             <p>{t("section8.part15")}</p>
             <p>

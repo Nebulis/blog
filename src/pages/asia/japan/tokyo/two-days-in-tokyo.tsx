@@ -32,6 +32,7 @@ import {
   YasukuniDoriCard,
 } from "../../../../components/core/japan/japan.cards"
 import { TwoDaysInTokyoImages } from "../../../../components/images/asia/japan/tokyo/two-days-in-tokyo"
+import { FakeList } from "../../../../components/core/title"
 
 const namespace = "asia/japan/tokyo/two-days-in-tokyo"
 const id = "two-days-in-tokyo"
@@ -102,24 +103,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <SectionContent>
               <p>{t("day1.visit1.part1")}</p>
               <p>{t("day1.visit1.part2")}</p>
-              <ul>
-                <li>
-                  {t("day1.visit1.part3")}
-                  <p>{t("day1.visit1.part4")}</p>
-                </li>
-                <li>
-                  {t("day1.visit1.part5")}
-                  <p>{t("day1.visit1.part6")}</p>
-                </li>
-                <li>
-                  {t("day1.visit1.part7")}
-                  <p>{t("day1.visit1.part8")}</p>
-                </li>
-                <li>
-                  {t("day1.visit1.part9")}
-                  <p>{t("day1.visit1.part10")}</p>
-                </li>
-              </ul>
+              <FakeList>{t("day1.visit1.part3")}</FakeList>
+              <p>{t("day1.visit1.part4")}</p>
+              <FakeList>{t("day1.visit1.part5")}</FakeList>
+              <p>{t("day1.visit1.part6")}</p>
+              <FakeList>{t("day1.visit1.part7")}</FakeList>
+              <p>{t("day1.visit1.part8")}</p>
+              <FakeList>{t("day1.visit1.part9")}</FakeList>
+              <p>{t("day1.visit1.part10")}</p>
               <ArticleCardContainer>
                 <ShibuyaDistrictCard card={{ showTags: false, showPublished: false, showMore: true }} />
               </ArticleCardContainer>
