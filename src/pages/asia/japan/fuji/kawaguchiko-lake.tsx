@@ -33,6 +33,7 @@ import { ApplicationContext } from "../../../../components/application"
 import { Comments } from "../../../../components/core/comments"
 import { KawaguchikoLakeImages } from "../../../../components/images/asia/japan/fuji/kawaguchiko-lake"
 import { MapContainer } from "../../../../components/layout/layout"
+import { FakeList } from "../../../../components/core/title"
 
 const namespace = "asia/japan/fuji/kawaguchiko-lake"
 const id = "kawaguchiko-lake"
@@ -150,46 +151,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <MapContainer>
                 <img src={KawaguchikoLakeMap} alt="Mount Fiju Lakes Map" />
               </MapContainer>
-              <ul>
-                <li>
-                  <p>
-                    {t("visit3.part4")}
-                    <br />
-                    {t("visit3.part5")}
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    {t("visit3.part6")}
-                    <br />
-                    {t("visit3.part7")}
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    {t("visit3.part8")}
-                    <br />
-                    {t("visit3.part9")}
-                  </p>
-                </li>
-              </ul>
+              <FakeList>{t("visit3.part4")}</FakeList>
+              <p>{t("visit3.part5")}</p>
+              <FakeList>{t("visit3.part6")}</FakeList>
+              <p>{t("visit3.part7")}</p>
+              <FakeList>{t("visit3.part8")}</FakeList>
+              <p>{t("visit3.part9")}</p>
               <p>{t("visit3.part10")}</p>
-              <ul>
-                <li>
-                  <p>
-                    {t("visit3.part11")}
-                    <br />
-                    {t("visit3.part12")}
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    {t("visit3.part13")}
-                    <br />
-                    {t("visit3.part14")}
-                  </p>
-                </li>
-              </ul>
+              <FakeList>{t("visit3.part11")}</FakeList>
+              <p>{t("visit3.part12")}</p>
+              <FakeList>{t("visit3.part13")}</FakeList>
+              <p>{t("visit3.part14")}</p>
             </SectionContent>
           </section>
           <Divider />

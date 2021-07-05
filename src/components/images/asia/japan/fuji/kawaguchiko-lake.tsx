@@ -176,14 +176,14 @@ export const KawaguchikoLakeImages: React.FunctionComponent<ExtraImageProps & { 
       }
       plane: file(relativePath: { eq: "asia/japan/fuji/kawaguchiko-lake/kawaguchiko-lake-plane.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 90, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       plane2: file(relativePath: { eq: "asia/japan/fuji/kawaguchiko-lake/kawaguchiko-lake-plane2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 90, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

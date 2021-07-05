@@ -50,6 +50,7 @@ import useDimensions from "react-use-dimensions"
 import { Quote } from "../../../../components/core/quote"
 import { TourAImages } from "../../../../components/images/asia/philippines/el-nido/tour-a"
 import { CarouselImageQuery } from "../../../../components/images/carousel"
+import { FakeList } from "../../../../components/core/title"
 
 const namespace = "asia/philippines/el-nido/which-tour"
 const id = "el-nido-which-tour"
@@ -123,41 +124,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </Booking>
         <Choice title={t("tour-category.title")}>
           <p>{t("tour-category.part1")}</p>
-          <ul>
-            <li>
-              <p>
-                {t("tour-category.part2")}
-                <br />
-                {t("tour-category.part3")}
-              </p>
-            </li>
-            <li>
-              <p>
-                {t("tour-category.part4")}
-                <br />
-                {t("tour-category.part5")}
-              </p>
-            </li>
-          </ul>
+          <FakeList>{t("tour-category.part2")}</FakeList>
+          <p>{t("tour-category.part3")}</p>
+          <FakeList>{t("tour-category.part4")}</FakeList>
+          <p>{t("tour-category.part5")}</p>
           <p>{t("tour-category.part6")}</p>
           <p>{t("tour-category.part7")}</p>
           <p>{t("tour-category.part8")}</p>
-          <ul>
-            <li>
-              <p>
-                {t("tour-category.part9")}
-                <br />
-                {t("tour-category.part10")}
-              </p>
-            </li>
-            <li>
-              <p>
-                {t("tour-category.part11")}
-                <br />
-                {t("tour-category.part12")}
-              </p>
-            </li>
-          </ul>
+          <FakeList>{t("tour-category.part9")}</FakeList>
+          <p>{t("tour-category.part10")}</p>
+          <FakeList>{t("tour-category.part11")}</FakeList>
+          <p>{t("tour-category.part12")}</p>
         </Choice>
         <HowMuch>
           <ul>
@@ -592,43 +569,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("opinion.part1")}</p>
           <p>{t("opinion.part2")}</p>
           <p>{t("opinion.part3")}</p>
-          <ol
-            css={css`
-              list-style: none;
-              counter-reset: custom-counter 0;
-              li {
-                counter-increment: custom-counter;
-              }
-              li::marker {
-                content: counter(custom-counter) ". ";
-                font-weight: bold;
-              }
-            `}
-          >
-            <li>
-              {t("opinion.part4")}
-              <br />
-              {t("opinion.part5")}
-            </li>
-            <li>
-              {t("opinion.part6")}
-              <br />
-              {t("opinion.part7")} <br />
-              {t("opinion.part8")}
-            </li>
-            <li>
-              {t("opinion.part9")}
-              <br />
-              {t("opinion.part10")} <br />
-              {t("opinion.part11")}
-            </li>
-            <li>
-              {t("opinion.part12")}
-              <br />
-              {t("opinion.part13")} <br />
-              {t("opinion.part14")}
-            </li>
-          </ol>
+          <FakeList>
+            <span className="b">1.</span> {t("opinion.part4")}
+          </FakeList>
+          <p>{t("opinion.part5")}</p>
+          <FakeList>
+            <span className="b">2.</span> {t("opinion.part6")}
+          </FakeList>
+          <p>{t("opinion.part7")}</p>
+          <p>{t("opinion.part8")}</p>
+          <FakeList>
+            <span className="b">3.</span> {t("opinion.part9")}
+          </FakeList>
+          <p>{t("opinion.part10")}</p>
+          <p>{t("opinion.part11")}</p>
+          <FakeList>
+            <span className="b">4.</span> {t("opinion.part12")}
+          </FakeList>
+          <p>{t("opinion.part13")}</p>
+          <p>{t("opinion.part14")}</p>
           <p>{t("opinion.part15")}</p>
         </Opinion>
         <Divider />
