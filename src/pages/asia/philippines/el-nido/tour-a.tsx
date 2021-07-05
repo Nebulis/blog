@@ -36,6 +36,8 @@ import {
 } from "../../../../components/images/layout"
 import { SharedCardPhilippinesImages } from "../../../../components/images/asia/philippines/shared-card-philippines-images"
 import ElNidoMap from "../../../../images/asia/philippines/el-nido/tour-a/tour-a-map.png"
+import SkipperCharters1 from "../../../../images/asia/philippines/el-nido/tour-a/skipper-charters-tour-a-1.jpg"
+import SkipperCharters2 from "../../../../images/asia/philippines/el-nido/tour-a/skipper-charters-tour-a-2.jpg"
 import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { TourAImages } from "../../../../components/images/asia/philippines/el-nido/tour-a"
 import {
@@ -148,7 +150,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               title={
                 i18n.languageCode === "fr" ? "El Nido Charters - Tour A - Privé" : "El Nido Charters - Private Tour A"
               }
-              image="http://www.skippercharters.ph/uploads/5/3/8/0/53809937/img-2884.jpg?284"
+              image={SkipperCharters1}
               price={400}
               duration={{ value: 1, unit: "day" }}
               groupType="private"
@@ -158,7 +160,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               title={
                 i18n.languageCode === "fr" ? "El Nido Charters - Tour A - Public" : "El Nido Charters - Public Tour A"
               }
-              image="http://www.skippercharters.ph/uploads/5/3/8/0/53809937/img-6068_orig.jpg"
+              image={SkipperCharters2}
               price={60}
               duration={{ value: 1, unit: "day" }}
               groupType="public"
