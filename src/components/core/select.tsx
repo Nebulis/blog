@@ -8,7 +8,8 @@ export const Select: React.FunctionComponent<{
   options: OptionTypeBase[]
   onChange: (value: string | undefined) => void
   placeholder: string
-}> = ({ options, onChange, placeholder }) => {
+  value?: OptionTypeBase
+}> = ({ options, onChange, placeholder, value }) => {
   return (
     <ReactSelect
       css={css`
@@ -20,6 +21,7 @@ export const Select: React.FunctionComponent<{
           box-shadow: 0 0 0 1px ${primaryDarkColor};
         }
       `}
+      value={value}
       isSearchable={false}
       styles={{
         clearIndicator: (provided) => ({
@@ -58,6 +60,7 @@ export const Select: React.FunctionComponent<{
       placeholder={placeholder}
       onChange={(element) => (element ? onChange(element.value) : onChange(undefined))}
       options={options}
+      se
     />
   )
 }
