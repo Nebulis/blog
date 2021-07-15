@@ -53,7 +53,7 @@ export const FoodJapanCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, 
   const { i18n } = useCustomTranslation()
   const common = i18n.languageCode === "fr" ? commonFr : commonEn
   return (
-    <JapanCard title={common.country.japan.card.transports} to="food-in-japan" {...card}>
+    <JapanCard title={common.country.japan.card.food} to="food-in-japan" {...card}>
       <SharedCardJapanImages image="foodInJapan" fluidObject={fluidObject} />
     </JapanCard>
   )
