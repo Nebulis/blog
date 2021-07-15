@@ -131,7 +131,7 @@ const japanLinks = () => {
   })
   expect(getLink("prepare-japan")).toMatchObject({
     label: { en: "Prepare your travel to Japan", fr: "Bien préparer son voyage au Japon" },
-    published: false,
+    published: true,
   })
 
   expect(getLink("tokyo")).toMatchObject({ label: { fr: "Tokyo", en: "Tokyo" }, published: true })

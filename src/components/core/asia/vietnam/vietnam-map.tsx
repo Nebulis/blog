@@ -7,6 +7,7 @@ import { vietnamCities, VietnamCity } from "./vietnam"
 import { useCustomTranslation } from "../../../../i18n-hook"
 import { convertTime, price } from "../../../../utils"
 import { Schedule, Step } from "../../search-itinerary"
+import { Airport, AirportKind } from "../../../../types/shared"
 
 const VietnamMap: React.FunctionComponent = () => (
   <g>
@@ -333,18 +334,11 @@ const VietnamMap: React.FunctionComponent = () => (
   </g>
 )
 
-type AirportKind = "international" | "domestic"
 const scales: { [key in AirportKind]: number } = {
   domestic: 0.1,
   international: 0.2,
 }
-interface Airport {
-  id: VietnamCity
-  label: string
-  type: AirportKind
-  position: { x: number; y: number }
-}
-const airports: Airport[] = [
+const airports: Airport<VietnamCity>[] = [
   {
     id: "haiphong",
     label: "Cat Bi International Airport\nHaiphong",

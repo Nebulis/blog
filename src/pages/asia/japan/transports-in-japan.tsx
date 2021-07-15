@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
 import SEO from "../../../components/layout/seo"
@@ -35,7 +35,7 @@ import { buildPixabayUrl, price } from "../../../utils"
 import { TransportsInJapanImages } from "../../../components/images/asia/japan/transports-in-japan"
 import TokyoIslands from "../../../images/asia/japan/transports-in-japan/transports-in-japan-tokyo-islands.jpg"
 import OkinawaMap from "../../../images/asia/japan/transports-in-japan/transports-in-japan-okinawa-map.jpg"
-import WillerExpressMap from "../../../images/asia/japan/transports-in-japan/transports-in-japan-willer-express-map.png"
+// import WillerExpressMap from "../../../images/asia/japan/transports-in-japan/transports-in-japan-willer-express-map.png"
 import JrPassMap from "../../../images/asia/japan/transports-in-japan/transports-in-japan-jrpass-map.jpg"
 import Suica from "../../../images/asia/japan/transports-in-japan/transports-in-japan-suica.jpg"
 import { MapContainer, Table } from "../../../components/layout/layout"
@@ -44,6 +44,8 @@ import { BookingWarning } from "../../../components/core/booking"
 import { Conclusion } from "../../../components/core/conclusion"
 import { Comments } from "../../../components/core/comments"
 import { css } from "@emotion/react"
+import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
+import { JapanPlaneSchedule } from "../../../components/core/japan/japan.schedules-plane"
 
 const namespace = "asia/japan/transports-in-japan"
 const id = "transports-in-japan"
@@ -53,6 +55,7 @@ i18n.addResourceBundle("en", namespace, translationEn)
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.transports`)
+  const [tooltipContent, setTooltipContent] = useState<string>()
 
   const buildTitle = (title: string) => {
     return i18n.languageCode === "fr" ? `${t("transport-in")} ${title}` : `${title} ${t("transport-in")}`
@@ -152,6 +155,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("plane.price.part2")}</p>
             <p>{t("plane.price.part3")}</p>
             <p>{t("plane.price.part4")}</p>
+            <JapanPlaneSchedule setTooltipContent={setTooltipContent} />
+            <BookingWarning>{t("plane.price.part5")}</BookingWarning>
           </HowMuch>
           <Opinion title={t("plane.opinion.title")}>
             <p>{t("plane.opinion.part1")}</p>
@@ -334,16 +339,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("bus.car.booking.part4")}</p>
             <p>{t("bus.car.booking.part5")}</p>
           </Booking>
-          <HowMuch title={t("bus.car.price.title")}>
-            <p>{t("bus.car.price.part1")}</p>
-            <p>{t("bus.car.price.part2")}</p>
-            <p>{t("bus.car.price.part3")}</p>
-            <p>{t("bus.car.price.part4")}</p>
-            <MapContainer>
-              <img src={WillerExpressMap} alt="Map of Willer Express Buses" />
-            </MapContainer>
-            <p>{t("bus.car.price.part5")}</p>
-          </HowMuch>
+          {/*<HowMuch title={t("bus.car.price.title")}>*/}
+          {/*  <p>{t("bus.car.price.part1")}</p>*/}
+          {/*  /!*<p>{t("bus.car.price.part2")}</p>*!/*/}
+          {/*  <p>{t("bus.car.price.part3")}</p>*/}
+          {/*  <p>{t("bus.car.price.part4")}</p>*/}
+          {/*  <MapContainer>*/}
+          {/*    <img src={WillerExpressMap} alt="Map of Willer Express Buses" />*/}
+          {/*  </MapContainer>*/}
+          {/*  /!*<p>{t("bus.car.price.part5")}</p>*!/*/}
+          {/*</HowMuch>*/}
           <Opinion title={t("bus.car.opinion.title")}>
             <p>{t("bus.car.opinion.part1")}</p>
             <p>{t("bus.car.opinion.part2")}</p>
@@ -527,6 +532,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <HowMuch title={t("train.price.title")}>
             <p>{t("train.price.part1")}</p>
             <p>{t("train.price.part2")}</p>
+            {/*<p>{t("train.price.part3")}</p>*/}
             <p>{t("train.price.part4")}</p>
             <p>{t("train.price.part5")}</p>
           </HowMuch>
@@ -761,6 +767,20 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes: i18n.languageCode === "fr" ? [] : [],
           }}
         />
+        <MouseToolTip>
+          {tooltipContent ? (
+            <TooltipContent>
+              {tooltipContent.split("\n").map((item, index) => {
+                return (
+                  <span key={index}>
+                    {item}
+                    <br />
+                  </span>
+                )
+              })}
+            </TooltipContent>
+          ) : null}
+        </MouseToolTip>
       </JapanBlogLayout>
     </>
   )

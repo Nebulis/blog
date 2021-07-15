@@ -1,12 +1,13 @@
 import React, { useState } from "react"
 import { VietnamAirportMap } from "./vietnam-map"
-import { MapAndTableContainer, MapAndTableTableContainer, vietnamCities, VietnamCity } from "./vietnam"
+import { vietnamCities, VietnamCity, VietnamMapAndTableTableContainer } from "./vietnam"
 import { Tree } from "../../../layout/menu"
 import { convertTime, price } from "../../../../utils"
 import { css } from "@emotion/react"
 import { BsArrowLeftRight } from "react-icons/bs"
 import { useCustomTranslation } from "../../../../i18n-hook"
 import { reverseSchedules, Schedules, SearchItinerary } from "../../search-itinerary"
+import { MapAndTableContainer } from "../../../layout/transports-layout"
 
 const tmpPlaneSchedules: Schedules<VietnamCity> = {
   "ho-chi-minh": {
@@ -334,7 +335,7 @@ export const PlaneSchedule: React.FunctionComponent<{ setTooltipContent: (value:
           }
           onSelect={(city: VietnamCity) => setSelectedAirport(selectedAirport === city ? undefined : city)}
         />
-        <MapAndTableTableContainer>
+        <VietnamMapAndTableTableContainer>
           {Object.entries(planeSchedules).map(([key, entry]) => {
             return (
               <Tree
@@ -364,7 +365,7 @@ export const PlaneSchedule: React.FunctionComponent<{ setTooltipContent: (value:
               </Tree>
             )
           })}
-        </MapAndTableTableContainer>
+        </VietnamMapAndTableTableContainer>
       </MapAndTableContainer>
       <SearchItinerary
         schedules={planeSchedules}

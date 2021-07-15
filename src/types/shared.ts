@@ -98,3 +98,12 @@ export type PointOfInterest =
   | "winter-activities"
 
 export type Season = "autumn" | "winter" | "spring" | "summer"
+
+export type AirportKind = "international" | "domestic"
+
+export interface Airport<T> {
+  id: T
+  label: string
+  type: AirportKind
+  position: { x: number; y: number }
+}

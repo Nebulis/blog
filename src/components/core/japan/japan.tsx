@@ -1,7 +1,7 @@
 import { css } from "@emotion/react"
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import styled from "@emotion/styled"
-import { ButtonLink, ExternalLink, linkBuilder } from "../links/link"
+import { ButtonLink, ExternalLink } from "../links/link"
 import { BlogLayout, IndexBlogLayout } from "../../layout/layout"
 import {
   japanCherryBlossom,
@@ -9,12 +9,11 @@ import {
   japanPrimaryColorDarker,
   japanPrimaryColorWithOpacity,
 } from "./japan.variables"
-import { Link } from "gatsby"
 import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
 import { City, Headline } from "../highlight"
 import { Title } from "../title"
-import { Divider } from "../divider"
 import { WeatherEntry } from "../../../types/shared"
+import { MapAndTableTableContainer } from "../../layout/transports-layout"
 
 const japanLineStyle = css`
   padding: 2px 5px;
@@ -31,13 +30,20 @@ export const JapanLine: FunctionComponent<HTMLAttributes<any> & JapanLineProps> 
   </ExternalLink>
 )
 
-// TODO delete
-export const JapanLink = linkBuilder(styled(Link)`
-  color: ${japanPrimaryColor};
-  &:visited {
-    color: ${japanPrimaryColor};
+export const JapanMapAndTableTableContainer = styled(MapAndTableTableContainer)`
+  .schedules {
+    border-left: 3px solid ${japanCherryBlossom};
   }
-`)
+  .menu-label {
+    border-left: 3px solid ${japanPrimaryColorDarker};
+  }
+  .schedule-entry:nth-of-type(even) {
+    background-color: ${japanPrimaryColorWithOpacity(0.2)};
+  }
+  .schedule-entry:hover {
+    background-color: ${japanPrimaryColorWithOpacity(0.3)};
+  }
+`
 export const JapanExternalLink = styled(ExternalLink)`
   color: ${japanPrimaryColor};
   &:visited {
@@ -80,6 +86,17 @@ const japanLayout = `
       background-color: ${japanPrimaryColorWithOpacity(0.2)};
       color: ${japanPrimaryColorDarker};
       border: 3px solid ${japanPrimaryColorDarker};
+    }
+    
+    .react-select-container {
+      .react-select__option--is-selected {
+        background-color: ${japanPrimaryColorDarker};
+      }
+      .react-select__control,
+      .react-select__control:hover {
+        border-color: ${japanPrimaryColorDarker};
+        box-shadow: 0 0 0 1px ${japanPrimaryColorDarker};
+      }
     }
     
     .point-of-interest-section {
@@ -186,10 +203,6 @@ export const JapanTitle = styled(Title)`
   a:hover {
     box-shadow: 0px 0px 2px 1px #ed5567;
   }
-`
-
-export const JapanDivider = styled(Divider)`
-  background-color: hsl(348, 41%, 53%, 0.2);
 `
 
 export const japanWeatherEntries = (): WeatherEntry[] => [
