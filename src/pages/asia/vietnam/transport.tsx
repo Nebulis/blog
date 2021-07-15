@@ -7,12 +7,11 @@ import translationEn from "../../../locales/en/asia/vietnam/transport.json"
 import { useCustomTranslation } from "../../../i18n-hook"
 import HomeImgUrl from "../../../images/asia/vietnam/transport/transport-vietnam-main.jpg"
 import {
-  MapAndTableContainer,
-  MapAndTableTableContainer,
   VietnamBlogLayout,
   vietnamCities,
   VietnamCity,
   VietnamHeadline,
+  VietnamMapAndTableTableContainer,
 } from "../../../components/core/asia/vietnam/vietnam"
 import { Title } from "../../../components/core/title"
 import {
@@ -58,6 +57,7 @@ import { FaBus } from "react-icons/fa"
 import { PlaneSchedule } from "../../../components/core/asia/vietnam/plane-schedule"
 import { reverseSchedules, Schedule, Schedules, SearchItinerary, Step } from "../../../components/core/search-itinerary"
 import { BookingWarning } from "../../../components/core/booking"
+import { MapAndTableContainer } from "../../../components/layout/transports-layout"
 
 const Sitting: React.FunctionComponent = () => (
   <svg viewBox="0 0 512 512" width="20px" height="20px">
@@ -573,7 +573,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   object-fit: contain;
                 `}
               />
-              <MapAndTableTableContainer>
+              <VietnamMapAndTableTableContainer>
                 {Object.entries(busSchedules).map(([key, entry]) => {
                   return (
                     <Tree
@@ -626,7 +626,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                     </Tree>
                   )
                 })}
-              </MapAndTableTableContainer>
+              </VietnamMapAndTableTableContainer>
             </MapAndTableContainer>
             <SearchItinerary
               schedules={busSchedules}
