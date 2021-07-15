@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
 import SEO from "../../../components/layout/seo"
@@ -44,6 +44,8 @@ import { BookingWarning } from "../../../components/core/booking"
 import { Conclusion } from "../../../components/core/conclusion"
 import { Comments } from "../../../components/core/comments"
 import { css } from "@emotion/react"
+import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
+import { JapanPlaneSchedule } from "../../../components/core/japan/japan.schedules-plane"
 
 const namespace = "asia/japan/transports-in-japan"
 const id = "transports-in-japan"
@@ -53,6 +55,7 @@ i18n.addResourceBundle("en", namespace, translationEn)
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.transports`)
+  const [tooltipContent, setTooltipContent] = useState<string>()
 
   const buildTitle = (title: string) => {
     return i18n.languageCode === "fr" ? `${t("transport-in")} ${title}` : `${title} ${t("transport-in")}`
@@ -152,6 +155,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("plane.price.part2")}</p>
             <p>{t("plane.price.part3")}</p>
             <p>{t("plane.price.part4")}</p>
+            <JapanPlaneSchedule setTooltipContent={setTooltipContent} />
+            <BookingWarning>{t("plane.price.part5")}</BookingWarning>
           </HowMuch>
           <Opinion title={t("plane.opinion.title")}>
             <p>{t("plane.opinion.part1")}</p>
@@ -761,6 +766,20 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes: i18n.languageCode === "fr" ? [] : [],
           }}
         />
+        <MouseToolTip>
+          {tooltipContent ? (
+            <TooltipContent>
+              {tooltipContent.split("\n").map((item, index) => {
+                return (
+                  <span key={index}>
+                    {item}
+                    <br />
+                  </span>
+                )
+              })}
+            </TooltipContent>
+          ) : null}
+        </MouseToolTip>
       </JapanBlogLayout>
     </>
   )
