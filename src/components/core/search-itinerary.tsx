@@ -177,6 +177,8 @@ interface Props<T extends string> {
   showNote?: boolean
   displayItinerary: (length: number) => string
   onSelectSteps?: (steps: Step<T>[]) => void
+  onSelectDeparture?: (city: T | undefined) => void
+  selectedDeparture?: T
 }
 
 const searchItineraryStyle = css`
@@ -229,7 +231,7 @@ const searchItineraryStyle = css`
     }
   }
 `
-const defaultOnSelectSteps = () => void 0
+const noop = () => void 0
 export function SearchItinerary<T extends string>({
   schedules,
   cities,
@@ -238,19 +240,21 @@ export function SearchItinerary<T extends string>({
   showNote = false,
   stepsLimit,
   displayItinerary,
-  onSelectSteps = defaultOnSelectSteps,
+  onSelectSteps = noop,
+  onSelectDeparture = noop,
+  selectedDeparture,
 }: Props<T>): React.ReactElement {
   const { i18n } = useCustomTranslation()
-  const [selectedDeparture, setSelectedDeparture] = useState<T>()
+  const [innerSelectedDeparture, setInnerSelectedDeparture] = useState<T | undefined>(selectedDeparture)
   const [selectedArrival, setSelectedArrival] = useState<T>()
   const [steps, setSteps] = useState<Step<T>[]>([])
   const [selectedSchedule, setSelectedSchedule] = useState<number>()
   useEffect(() => {
     setSelectedSchedule(undefined)
-    if (selectedDeparture && selectedArrival) {
+    if (innerSelectedDeparture && selectedArrival) {
       const steps = getSteps({
         schedules,
-        from: selectedDeparture,
+        from: innerSelectedDeparture,
         to: selectedArrival,
         stepsLimit,
         allowDifferentSteps,
@@ -261,7 +265,20 @@ export function SearchItinerary<T extends string>({
       setSteps([])
       onSelectSteps([])
     }
-  }, [onSelectSteps, selectedDeparture, selectedArrival, schedules, stepsLimit, allowDifferentSteps])
+  }, [onSelectSteps, innerSelectedDeparture, selectedArrival, schedules, stepsLimit, allowDifferentSteps])
+
+  useEffect(() => {
+    setInnerSelectedDeparture(selectedDeparture)
+  }, [selectedDeparture])
+
+  const entries = Object.entries(schedules).map(([, element]) => ({
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    value: element?.id ?? "",
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    label: cities[element?.id ?? ""],
+  }))
   return (
     <div css={searchItineraryStyle} className="mt3 mb2">
       {showNote && (
@@ -276,33 +293,19 @@ export function SearchItinerary<T extends string>({
       </SectionTitle>
       <div className="flex justify-center items-center content-center search-itinerary-container">
         <Select
-          options={Object.entries(schedules)
-            .map(([, element]) => ({
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              value: element?.id ?? "",
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              label: cities[element?.id ?? ""],
-            }))
+          options={entries
             .filter((element) => element.value !== selectedArrival)
             .sort((a, b) => a.label.localeCompare(b.label))}
           placeholder={i18n.languageCode === "fr" ? "Ville de départ" : "Departure City"}
           onChange={(value) => {
-            setSelectedDeparture(value as T | undefined)
+            setInnerSelectedDeparture(value as T | undefined)
+            onSelectDeparture(value as T | undefined)
           }}
+          value={entries.find((entry) => entry.value === selectedDeparture)}
         />
         <Select
-          options={Object.entries(schedules)
-            .map(([, element]) => ({
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              value: element?.id ?? "",
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              label: cities[element?.id ?? ""],
-            }))
-            .filter((element) => element.value !== selectedDeparture)
+          options={entries
+            .filter((element) => element.value !== innerSelectedDeparture)
             .sort((a, b) => a.label.localeCompare(b.label))}
           placeholder={i18n.languageCode === "fr" ? "Ville d'arrivée" : "Arrival City"}
           onChange={(value) => {
