@@ -4,6 +4,7 @@ import { asiaLinks } from "../asia/asia.links"
 import commonEn from "../../../locales/en/common.json"
 import commonFr from "../../../locales/fr/common.json"
 import { oceaniaLinks } from "../oceania/oceania.links"
+import { MovingAbroadWhyCard } from "../journal/journal.cards"
 
 export const isPublished = (element: { published: boolean | Date }) => {
   if (typeof element.published === "boolean") {
@@ -59,6 +60,12 @@ export const continentLinks: ContinentLink[] = [
         label: { fr: commonFr.country["united-states"].title, en: commonEn.country["united-states"].title },
         cities: [],
       },
+      {
+        id: "canada",
+        label: { fr: "", en: "" },
+        cities: [],
+        others: [],
+      },
     ],
   },
   {
@@ -76,6 +83,12 @@ export const continentLinks: ContinentLink[] = [
       },
       {
         id: "iceland",
+        cities: [],
+        others: [],
+        label: { fr: "", en: "" },
+      },
+      {
+        id: "russia",
         cities: [],
         others: [],
         label: { fr: "", en: "" },
@@ -194,9 +207,20 @@ export const menuLinks: NavigationLink[] = [
         sections: [],
       },
       {
-        id: "living-foreign-country",
-        label: { fr: "Vivre à l'étranger", en: "Living abroad" },
+        id: "living-abroad",
+        label: { fr: commonFr.link.journal["living-abroad"], en: commonEn.link.journal["living-abroad"] },
         sections: [],
+        articles: [
+          {
+            id: "moving-abroad-why",
+            label: {
+              fr: commonFr.journal["living-abroad"].card["moving-abroad-why"],
+              en: commonEn.journal["living-abroad"].card["moving-abroad-why"],
+            },
+            published: new Date("2021-07-31T17:00:00.000+08:00"),
+            card: MovingAbroadWhyCard,
+          },
+        ],
       },
       {
         id: "living-singapore",
@@ -344,6 +368,22 @@ menuLinks.forEach((menu) => {
         pointOfInterest: [],
         seasons: [],
         kind: "menu",
+      })
+    })
+    submenu.articles?.forEach((article) => {
+      cachedLinks.set(article.id, {
+        id: article.id,
+        label: article.label,
+        url: path.join("/", getUrl(menu), getUrl(submenu), getUrl(article)),
+        published: isPublished(article),
+        publishedDate: article.published instanceof Date ? article.published : undefined,
+        card: article.card,
+        // as of today, I didn't add menu.id for articles in living-abroad. Indeed I don't want the journal ta to be displayed
+        // if it needs to be changed, be careful on the living abroad articles
+        tags: [submenu.id],
+        pointOfInterest: [],
+        seasons: [],
+        kind: "other",
       })
     })
 

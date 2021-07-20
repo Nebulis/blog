@@ -1,6 +1,7 @@
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
+import { primaryColor } from "./variables"
 
 const style = css`
   position: relative;
@@ -20,6 +21,7 @@ const style = css`
     font-weight: 900;
     font-style: normal;
     margin-right: 0.5rem;
+    color: ${primaryColor};
   }
 `
 export const Quote: FunctionComponent<HTMLAttributes<any> & { position?: "before" | "none" }> = ({

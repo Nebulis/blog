@@ -408,6 +408,18 @@ exports[`english pages exports meta for public/en/index.html correctly: social-n
 
 exports[`english pages exports meta for public/en/index.html correctly: title 1`] = `"Magic of travels | Travel Blog"`;
 
+exports[`english pages exports meta for public/en/journal/living-abroad/index.html correctly: meta-description 1`] = `"Que de questions à se poser avant d’oser franchir le cap. Pourquoi ? Quel pays choisir ? Quelles sont les démarches à faire avant / pendant et après ? Quels sont les avantages et les inconvénients ? Combien de temps partir ? Quel métier vais-je pouvoir faire ? Grâce à notre expérience et nos ressentis, on tente de répondre au mieux à vos questions à travers nos différents articles."`;
+
+exports[`english pages exports meta for public/en/journal/living-abroad/index.html correctly: social-network 1`] = `"Que de questions à se poser avant d’oser franchir le cap. Pourquoi ? Quel pays choisir ? Quelles sont les démarches à faire avant / pendant et après ? Quels sont les avantages et les inconvénients ? Combien de temps partir ? Quel métier vais-je pouvoir faire ? Grâce à notre expérience et nos ressentis, on tente de répondre au mieux à vos questions à travers nos différents articles."`;
+
+exports[`english pages exports meta for public/en/journal/living-abroad/index.html correctly: title 1`] = `"Partir vivre à l’étranger | Guide pratique"`;
+
+exports[`english pages exports meta for public/en/journal/living-abroad/moving-abroad-why/index.html correctly: meta-description 1`] = `"What prompted us to leave everything behind to live abroad? In this article, we give you different reasons why you might decide to move abroad, whether for professional or personal reasons. We try to explain each reason as well as possible based on our own experience."`;
+
+exports[`english pages exports meta for public/en/journal/living-abroad/moving-abroad-why/index.html correctly: social-network 1`] = `"Every year, thousands of people decide to move to another country… But what is the trigger? What made us decide to leave everything behind to live abroad? And what is the difference with a simple trip?"`;
+
+exports[`english pages exports meta for public/en/journal/living-abroad/moving-abroad-why/index.html correctly: title 1`] = `"Moving abroad: Why? | Practical Guide"`;
+
 exports[`english pages exports meta for public/en/oceania/australia/index.html correctly: meta-description 1`] = `"If you love animals, nature, beautiful outdoors, and road trips, Australia is for you. Follow our guide from state to state to discover our selection of must-see places through our articles and photos. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/oceania/australia/index.html correctly: social-network 1`] = `"There is so much to discover in Australia that it would take years to visit everything thoroughly. If you love animals, nature, beautiful outdoors, and road trips, Australia is for you."`;

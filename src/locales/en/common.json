@@ -18,6 +18,9 @@
       "water-activities": "Water activities",
       "winter-activities": "Winter activities",
       "fruit": "Fruits from around the world"
+    },
+    "journal": {
+      "living-abroad": "Living abroad"
     }
   },
   "continent": {
@@ -308,6 +311,13 @@
         "transport": "All you need to know about transportation in Vietnam",
         "food": "Our Vietnamese Food Favorites",
         "prepare": "Prepare your travel to Vietnam"
+      }
+    }
+  },
+  "journal": {
+    "living-abroad": {
+      "card": {
+        "moving-abroad-why": "Moving abroad: Why?"
       }
     }
   },

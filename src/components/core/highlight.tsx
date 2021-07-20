@@ -2,6 +2,7 @@ import * as React from "react"
 import { FunctionComponent, HTMLAttributes } from "react"
 import { css } from "@emotion/react"
 import { TitleImage } from "../images/layout"
+import { primaryColor } from "./variables"
 
 const style = css`
   font-family: "Playfair Display", serif;
@@ -14,9 +15,12 @@ export const City: FunctionComponent<HTMLAttributes<any>> = ({ children, classNa
   </h2>
 )
 
+const headlineStyle = css`
+  color: ${primaryColor};
+`
 interface HeadlineProps extends HTMLAttributes<any> {
-  image: string
-  alt: string
+  image?: string
+  alt?: string
 }
 export const Headline: FunctionComponent<HeadlineProps> = ({ className = "", image, alt, children }) => {
   // get the last word so that me can make sure the last image and the last word wraps together
@@ -27,10 +31,10 @@ export const Headline: FunctionComponent<HeadlineProps> = ({ className = "", ima
     lastWord = otherWords.pop() ?? ""
   }
   return (
-    <City className={`headline ${className}`}>
-      <TitleImage src={image} alt={alt} /> {otherWords.length > 0 ? <>{otherWords.join(" ")} </> : ""}
+    <City className={`headline ${className}`} css={headlineStyle}>
+      {image && <TitleImage src={image} alt={alt} />} {otherWords.length > 0 ? <>{otherWords.join(" ")} </> : ""}
       <span className="nowrap">
-        {lastWord} <TitleImage src={image} alt={alt} />
+        {lastWord} {image && <TitleImage src={image} alt={alt} />}
       </span>
     </City>
   )
