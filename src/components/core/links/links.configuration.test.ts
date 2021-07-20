@@ -54,7 +54,7 @@ const categoriesLinks = () => {
   })
   expect(getLink("discovery")).toMatchObject({ label: { fr: "Découverte", en: "Discovery" }, published: true })
   expect(getLink("travelling")).toMatchObject({ label: { fr: "Voyage", en: "Travelling" }, published: false })
-  expect(getLink("living-foreign-country")).toMatchObject({
+  expect(getLink("living-abroad")).toMatchObject({
     label: { fr: "Vivre à l'étranger", en: "Living abroad" },
     published: false,
   })
@@ -63,6 +63,7 @@ const categoriesLinks = () => {
     published: false,
   })
   expect(getLink("journal")).toMatchObject({ label: { fr: "Journal", en: "Journal" }, published: false })
+  journalLinks()
   expect(getLink("who")).toMatchObject({ label: { fr: "Qui sommes nous ?", en: "About us?" }, published: true })
   expect(getLink("contact")).toMatchObject({ label: { fr: "Contact", en: "Contact" }, published: true })
   expect(getLink("devices")).toMatchObject({ label: { fr: "Notre matériel", en: "Our devices" }, published: false })
@@ -72,9 +73,17 @@ const categoriesLinks = () => {
   expect(getLink("404")).toMatchObject({ label: { fr: "404", en: "404" }, published: true })
 }
 
+const journalLinks = () => {
+  expect(getLink("moving-abroad-why")).toMatchObject({
+    label: { fr: "Partir vivre à l’étranger : Pourquoi ?", en: "Moving abroad: Why?" },
+    published: false,
+  })
+}
+
 const northAmericaLinks = () => {
-  // south-america countries assertions
+  // north-america countries assertions
   expect(getLink("united-states")).toMatchObject({ label: { fr: "États-Unis", en: "United States" }, published: false })
+  expect(getLink("canada")).toMatchObject({ label: { fr: "", en: "" }, published: false })
   expect(getLink("times-square")).toMatchObject({ label: { fr: "Times Square", en: "Times Square" }, published: false })
 }
 const southAmericaLinks = () => {
@@ -86,6 +95,7 @@ const europeLinks = () => {
   // europe countries assertions
   expect(getLink("azores")).toMatchObject({ label: { fr: "Acores", en: "Azores" }, published: false })
   expect(getLink("iceland")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+  expect(getLink("russia")).toMatchObject({ label: { fr: "", en: "" }, published: false })
 }
 
 const asiaLinks = () => {

@@ -18,6 +18,9 @@
       "water-activities": "Activités nautiques",
       "winter-activities": "Activités hivernales",
       "fruit": "Fruits d'ici et d'ailleurs"
+    },
+    "journal": {
+      "living-abroad": "Vivre à l'étranger"
     }
   },
   "continent": {
@@ -308,6 +311,13 @@
         "transport": "Tout savoir sur les transports au Vietnam",
         "food": "Nos coups de cœur culinaires du Vietnam",
         "prepare": "Bien préparer son voyage au Vietnam"
+      }
+    }
+  },
+  "journal": {
+    "living-abroad": {
+      "card": {
+        "moving-abroad-why": "Partir vivre à l’étranger : Pourquoi ?"
       }
     }
   },

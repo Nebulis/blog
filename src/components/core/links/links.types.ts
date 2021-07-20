@@ -49,6 +49,7 @@ export interface HighlightLink {
   published: boolean | Date
   card?: ComponentType<ExtraCardProps>
 }
+export type ArticleLink = HighlightLink
 export interface NavigationLink {
   id: string
   label: Label
@@ -56,6 +57,7 @@ export interface NavigationLink {
   published?: boolean | Date
   pointOfInterest?: PointOfInterest[]
   sections: NavigationLink[]
+  articles?: ArticleLink[]
 }
 
 export type HighlightWithCard = HighlightLink & { card: ComponentType<ExtraCardProps> }

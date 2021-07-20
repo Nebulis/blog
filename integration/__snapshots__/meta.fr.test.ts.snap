@@ -408,6 +408,18 @@ exports[`french pages exports meta for public/index.html correctly: social-netwo
 
 exports[`french pages exports meta for public/index.html correctly: title 1`] = `"Magic of travels | Blog Voyage"`;
 
+exports[`french pages exports meta for public/journal/living-abroad/index.html correctly: meta-description 1`] = `"Que de questions à se poser avant d’oser franchir le cap. Pourquoi ? Quel pays choisir ? Quelles sont les démarches à faire avant / pendant et après ? Quels sont les avantages et les inconvénients ? Combien de temps partir ? Quel métier vais-je pouvoir faire ? Grâce à notre expérience et nos ressentis, on tente de répondre au mieux à vos questions à travers nos différents articles."`;
+
+exports[`french pages exports meta for public/journal/living-abroad/index.html correctly: social-network 1`] = `"Que de questions à se poser avant d’oser franchir le cap. Pourquoi ? Quel pays choisir ? Quelles sont les démarches à faire avant / pendant et après ? Quels sont les avantages et les inconvénients ? Combien de temps partir ? Quel métier vais-je pouvoir faire ? Grâce à notre expérience et nos ressentis, on tente de répondre au mieux à vos questions à travers nos différents articles."`;
+
+exports[`french pages exports meta for public/journal/living-abroad/index.html correctly: title 1`] = `"Partir vivre à l’étranger | Guide pratique"`;
+
+exports[`french pages exports meta for public/journal/living-abroad/moving-abroad-why/index.html correctly: meta-description 1`] = `"Qu’est-ce qui nous a poussés à tout quitter pour vivre à l’étranger ? Dans cet article nous vous donnons différentes raisons pour lesquelles vous pourriez partir vous installer à l’étranger, que ce soit pour des raisons professionnelles ou personnelles. On tente de décrypter au mieux chaque point en se basant sur notre propre expérience."`;
+
+exports[`french pages exports meta for public/journal/living-abroad/moving-abroad-why/index.html correctly: social-network 1`] = `"Chaque année, des milliers de personnes décident de déménager dans un autre pays … Mais quel est cet élément déclencheur qui nous a poussés à partir ? Qu’est-ce qui nous a poussés à tout quitter pour vivre à l’étranger ? Et quelle est la différence avec un simple voyage ?"`;
+
+exports[`french pages exports meta for public/journal/living-abroad/moving-abroad-why/index.html correctly: title 1`] = `"Partir vivre à l’étranger : Pourquoi ? | Guide pratique"`;
+
 exports[`french pages exports meta for public/oceania/australia/index.html correctly: meta-description 1`] = `"Si comme nous vous aimez les animaux, la nature, les grands espaces et les Roads trips, l’Australie est faite pour vous. Suivez notre guide d’un État à l’autre pour découvrir notre sélection des lieux incontournables à travers nos articles et nos photos. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/oceania/australia/index.html correctly: social-network 1`] = `"L’Australie est un pays avec tellement de choses à découvrir qu’il faudrait des années pour réussir à tout visiter. Si comme nous vous aimez les animaux, la nature, les grands espaces et les Roads trips, l’Australie est faite pour vous."`;

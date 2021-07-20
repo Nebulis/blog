@@ -4,6 +4,7 @@ import { getLink, getLinkLabel } from "./links/links.utils"
 import { ApplicationLink } from "./links/link"
 import { useCustomTranslation } from "../../i18n-hook"
 import styled from "@emotion/styled"
+import { primaryColor } from "./variables"
 
 interface TitleProps {
   title: string
@@ -26,14 +27,19 @@ const titleStyle = css`
   a {
     border-radius: 3px;
     color: white;
+    background-color: ${primaryColor};
     padding: 0 2px;
     text-decoration: none;
+  }
+  a:hover {
+    box-shadow: 0px 0px 2px 1px ${primaryColor};
   }
 `
 export const Title: FunctionComponent<TitleProps> = ({ title, categories, className, linkId }) => {
   const { publishedDate, tags } = getLink(linkId)
   const { t, i18n } = useCustomTranslation("common")
   const computedCategories = categories || tags
+  console.log(getLink(linkId))
   return (
     <>
       <h1 className={`tc mb1 ${className}`}>{title}</h1>
