@@ -78,6 +78,10 @@ const journalLinks = () => {
     label: { fr: "Partir vivre à l’étranger : Pourquoi ?", en: "Moving abroad: Why?" },
     published: false,
   })
+  expect(getLink("living-abroad-where")).toMatchObject({
+    label: { fr: "Vivre à l’étranger : Oui mais où ?", en: "Living abroad: Where?" },
+    published: false,
+  })
 }
 
 const northAmericaLinks = () => {
@@ -96,6 +100,8 @@ const europeLinks = () => {
   expect(getLink("azores")).toMatchObject({ label: { fr: "Acores", en: "Azores" }, published: false })
   expect(getLink("iceland")).toMatchObject({ label: { fr: "", en: "" }, published: false })
   expect(getLink("russia")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+  expect(getLink("france")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+  expect(getLink("paris")).toMatchObject({ label: { fr: "", en: "" }, published: false })
 }
 
 const asiaLinks = () => {
@@ -105,6 +111,7 @@ const asiaLinks = () => {
   expect(getLink("thailand")).toMatchObject({ label: { fr: "Thaïlande", en: "Thailand" }, published: false })
   expect(getLink("myanmar")).toMatchObject({ label: { fr: "Birmanie", en: "Myanmar" }, published: false })
   expect(getLink("cambodia")).toMatchObject({ label: { fr: "Cambodge", en: "Cambodia" }, published: false })
+  expect(getLink("india")).toMatchObject({ label: { fr: "Inde", en: "India" }, published: false })
   expect(getLink("indonesia")).toMatchObject({ label: { fr: "Indonésie", en: "Indonesia" }, published: false })
   expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: true })
   expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: true })

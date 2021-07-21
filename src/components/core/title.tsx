@@ -39,7 +39,6 @@ export const Title: FunctionComponent<TitleProps> = ({ title, categories, classN
   const { publishedDate, tags } = getLink(linkId)
   const { t, i18n } = useCustomTranslation("common")
   const computedCategories = categories || tags
-  console.log(getLink(linkId))
   return (
     <>
       <h1 className={`tc mb1 ${className}`}>{title}</h1>

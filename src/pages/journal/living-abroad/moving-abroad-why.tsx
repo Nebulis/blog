@@ -8,18 +8,16 @@ import translationFr from "../../../locales/fr/journal/living-abroad/moving-abro
 import translationEn from "../../../locales/en/journal/living-abroad/moving-abroad-why.json"
 import { Introduction, SectionContent } from "../../../components/core/section"
 import { Conclusion } from "../../../components/core/conclusion"
-import { Divider } from "../../../components/core/divider"
+import { PrimaryDivider } from "../../../components/core/divider"
 import { Quote } from "../../../components/core/quote"
 import HomeImgUrl from "../../../images/journal/living-abroad/moving-abroad-why/moving-abroad-why-main.jpg"
 import { PrimaryBlogLayoutWithDrawer } from "../../../components/layout/main-layout"
 import { Title } from "../../../components/core/title"
-import { Headline } from "../../../components/core/highlight"
+import { PrimaryHeadline } from "../../../components/core/highlight"
 import { ImageAsLandscape, ImageAsPortrait } from "../../../components/images/layout"
 import { SharedJournalImages } from "../../../components/images/journal/shared-journal-images"
 import styled from "@emotion/styled"
 import { primaryDarkColor } from "../../../components/core/variables"
-import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
-import { buildPixabayUrl } from "../../../utils"
 import { MovingAbroadWhyImages } from "../../../components/images/journal/living-abroad/moving-abroad-why"
 
 const namespace = "journal/living-abroad/moving-abroad-why"
@@ -29,20 +27,23 @@ i18n.addResourceBundle("en", namespace, translationEn)
 
 const AuthorQuoteContainer = styled.div`
   color: ${primaryDarkColor};
+
   .quote-container {
     padding: 0;
   }
   blockquote {
     margin-bottom: 0.5rem;
+    font-family: "Courgette";
+    font-size: 1.2rem;
   }
 `
 
 const AuthorQuote: React.FunctionComponent<{ quote: string; author?: string }> = ({ quote, author }) => {
   return (
-    <AuthorQuoteContainer className="tc">
+    <AuthorQuoteContainer className="tc mt4">
       <div className="dib">
         <Quote position="none">{quote}</Quote>
-        {author && <p className="tr b">{author}</p>}
+        {author && <p className="tr mb0 b">{author}</p>}
       </div>
     </AuthorQuoteContainer>
   )
@@ -68,7 +69,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SharedJournalImages image="movingAbroadWhy" />
         </ImageAsLandscape>
         <Quote>{t("quote")}</Quote>
-        <Divider />
+        <PrimaryDivider />
         <Introduction>{t("introduction.part1")}</Introduction>
         <SectionContent>
           <p>{t("introduction.part2")}</p>
@@ -87,10 +88,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("introduction.part13")}</p>
           <p>{t("introduction.part14")}</p>
         </SectionContent>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section1.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section1.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section1.part1")}</p>
             <p>{t("section1.part2")}</p>
@@ -101,10 +102,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <AuthorQuote quote={t("section1.part7")} author={t("section1.part8")} />
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section2.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section2.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section2.part1")}</p>
             <p>{t("section2.part2")}</p>
@@ -114,10 +115,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <AuthorQuote quote={t("section2.part6")} author={t("section2.part7")} />
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section3.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section3.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section3.part1")}</p>
             <p>{t("section3.part2")}</p>
@@ -128,10 +129,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ImageAsLandscape>
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section4.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section4.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section4.part1")}</p>
             <p>{t("section4.part2")}</p>
@@ -142,10 +143,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <AuthorQuote quote={t("section4.part7")} author={t("section4.part8")} />
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section5.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section5.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section5.part1")}</p>
             <p>{t("section5.part2")}</p>
@@ -156,10 +157,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <AuthorQuote quote={t("section5.part7")} author={t("section5.part8")} />
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section6.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section6.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section6.part1")}</p>
             <p>{t("section6.part2")}</p>
@@ -173,10 +174,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p className="tc i">{t("section6.part7")}</p>
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section7.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section7.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section7.part1")}</p>
             <p>{t("section7.part2")}</p>
@@ -187,10 +188,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <AuthorQuote quote={t("section7.part7")} author={t("section7.part8")} />
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section8.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section8.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section8.part1")}</p>
             <p>{t("section8.part2")}</p>
@@ -199,10 +200,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <AuthorQuote quote={t("section8.part5")} author={t("section8.part6")} />
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section9.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section9.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section9.part1")}</p>
             <p>{t("section9.part2")}</p>
@@ -217,10 +218,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ImageAsLandscape>
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section10.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section10.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section10.part1")}</p>
             <p>{t("section10.part2")}</p>
@@ -231,10 +232,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <AuthorQuote quote={t("section10.part7")} />
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section11.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section11.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section11.part1")}</p>
             <p>{t("section11.part2")}</p>
@@ -243,10 +244,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section11.part5")}</p>
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section12.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section12.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section12.part1")}</p>
             <p>{t("section12.part2")}</p>
@@ -258,10 +259,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <AuthorQuote quote={t("section12.part8")} />
           </SectionContent>
         </section>
-        <Divider />
+        <PrimaryDivider />
         <section>
-          <Headline>{t("section13.title")}</Headline>
-          <Divider />
+          <PrimaryHeadline>{t("section13.title")}</PrimaryHeadline>
+          <PrimaryDivider />
           <SectionContent>
             <p>{t("section13.part1")}</p>
             <p>{t("section13.part2")}</p>
@@ -272,13 +273,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section13.part7")}</p>
             <p>{t("section13.part8")}</p>
             <p>{t("section13.part9")}</p>
-            <ImageAsPortrait
-              credit={
-                <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/mysticsartdesign-322497")}>
-                  mysticsartdesign
-                </ExternalLinkNotUnderlined>
-              }
-            >
+            <ImageAsPortrait>
               <MovingAbroadWhyImages image="movingAbroad4" />
             </ImageAsPortrait>
             <p>{t("section13.part10")}</p>
@@ -296,7 +291,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question2")}</li>
           </ul>
         </Conclusion>
-        <Divider />
+        <PrimaryDivider />
         <Comments
           collectionName={namespace}
           location={location}

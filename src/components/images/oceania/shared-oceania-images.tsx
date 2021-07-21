@@ -17,7 +17,7 @@ export const SharedOceaniaImages: React.FunctionComponent<ExtraImageProps & { im
     query {
       homeAustralia: file(relativePath: { eq: "oceania/australia/home-australia.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 60) {
+          fluid(maxWidth: 400, quality: 60, srcSetBreakpoints: [400]) {
             ...GatsbyImageSharpFluid
           }
         }

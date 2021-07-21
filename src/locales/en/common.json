@@ -317,7 +317,8 @@
   "journal": {
     "living-abroad": {
       "card": {
-        "moving-abroad-why": "Moving abroad: Why?"
+        "moving-abroad-why": "Moving abroad: Why?",
+        "living-abroad-where": "Living abroad: Where?"
       }
     }
   },

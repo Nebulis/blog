@@ -448,8 +448,11 @@ const petitCarreColoreStyle = css`
     margin-left: 0.5rem;
   }
 `
-export const PetitCarreColore: React.FunctionComponent = ({ children }) => (
-  <div css={petitCarreColoreStyle} className="petit-carre-colore ba bw1 bl-0 br-0 pv2 ph3 mh3 mb3 mt3 tc">
+export const PetitCarreColore: React.FunctionComponent<HTMLAttributes<any>> = ({ children, className = "" }) => (
+  <div
+    css={petitCarreColoreStyle}
+    className={`petit-carre-colore ba bw1 bl-0 br-0 pv2 ph3 mh3 mb3 mt3 tc ${className}`}
+  >
     {children}
   </div>
 )
