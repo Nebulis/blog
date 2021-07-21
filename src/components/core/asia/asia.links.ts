@@ -46,5 +46,11 @@ export const asiaLinks: ContinentLink = {
       others: [],
       label: { en: commonEn.country.laos.title, fr: commonFr.country.laos.title },
     },
+    {
+      id: "india",
+      cities: [],
+      others: [],
+      label: { en: commonEn.country.india.title, fr: commonFr.country.india.title },
+    },
   ],
 }

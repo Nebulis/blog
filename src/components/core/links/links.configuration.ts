@@ -4,7 +4,7 @@ import { asiaLinks } from "../asia/asia.links"
 import commonEn from "../../../locales/en/common.json"
 import commonFr from "../../../locales/fr/common.json"
 import { oceaniaLinks } from "../oceania/oceania.links"
-import { MovingAbroadWhyCard } from "../journal/journal.cards"
+import { LivingAbroadWhereCard, MovingAbroadWhyCard } from "../journal/journal.cards"
 
 export const isPublished = (element: { published: boolean | Date }) => {
   if (typeof element.published === "boolean") {
@@ -90,6 +90,18 @@ export const continentLinks: ContinentLink[] = [
       {
         id: "russia",
         cities: [],
+        others: [],
+        label: { fr: "", en: "" },
+      },
+      {
+        id: "france",
+        cities: [
+          {
+            id: "paris",
+            highlights: [],
+            label: { fr: "", en: "" },
+          },
+        ],
         others: [],
         label: { fr: "", en: "" },
       },
@@ -219,6 +231,15 @@ export const menuLinks: NavigationLink[] = [
             },
             published: new Date("2021-07-31T17:00:00.000+08:00"),
             card: MovingAbroadWhyCard,
+          },
+          {
+            id: "living-abroad-where",
+            label: {
+              fr: commonFr.journal["living-abroad"].card["living-abroad-where"],
+              en: commonEn.journal["living-abroad"].card["living-abroad-where"],
+            },
+            published: new Date("2021-08-07T17:00:00.000+08:00"),
+            card: LivingAbroadWhereCard,
           },
         ],
       },

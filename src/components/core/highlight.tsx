@@ -3,6 +3,7 @@ import { FunctionComponent, HTMLAttributes } from "react"
 import { css } from "@emotion/react"
 import { TitleImage } from "../images/layout"
 import { primaryColor } from "./variables"
+import styled from "@emotion/styled"
 
 const style = css`
   font-family: "Playfair Display", serif;
@@ -39,3 +40,7 @@ export const Headline: FunctionComponent<HeadlineProps> = ({ className = "", ima
     </City>
   )
 }
+
+export const PrimaryHeadline = styled(Headline)`
+  font-weight: bold;
+`

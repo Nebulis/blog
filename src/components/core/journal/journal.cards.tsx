@@ -15,3 +15,12 @@ export const MovingAbroadWhyCard: FunctionComponent<ExtraCardProps> = ({ fluidOb
     </JapanCard>
   )
 }
+export const LivingAbroadWhereCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <JapanCard title={common.journal["living-abroad"].card["living-abroad-where"]} to="living-abroad-where" {...card}>
+      <SharedJournalImages image="livingAbroadWhere" fluidObject={fluidObject} />
+    </JapanCard>
+  )
+}

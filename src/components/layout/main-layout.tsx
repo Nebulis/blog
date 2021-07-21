@@ -13,6 +13,21 @@ export const PrimaryBlogLayoutWithDrawer = styled(drawer(BlogLayout))`
   .card .tags a:hover {
     border-bottom: 1px solid ${primaryDarkColor};
   }
+  .comments {
+    .comments-social-network svg:hover {
+      color: ${primaryColor};
+    }
+  }
+  .index-blog-layout-content {
+    a.mdx-pseudo-processor-link {
+      color: ${primaryColor};
+      font-weight: bold;
+      text-decoration: underline;
+      &:visited {
+        color: ${primaryColor};
+      }
+    }
+  }
 `
 
 // layout to apply on articles
