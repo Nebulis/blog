@@ -75,8 +75,8 @@ const categoriesLinks = () => {
 
 const journalLinks = () => {
   expect(getLink("moving-abroad-why")).toMatchObject({
-    label: { fr: "Partir vivre à l’étranger : Pourquoi ?", en: "Moving abroad: Why?" },
-    published: false,
+    label: { fr: "Vivre à l’étranger : Pourquoi ?", en: "Moving abroad: Why?" },
+    published: true,
   })
   expect(getLink("living-abroad-where")).toMatchObject({
     label: { fr: "Vivre à l’étranger : Oui mais où ?", en: "Living abroad: Where?" },
@@ -262,7 +262,7 @@ const japanLinks = () => {
       en: "What to eat in Japan? Discover 10 famous Japanese food",
       fr: "Que mange-t-on au Japon ? 10 spécialités culinaires à découvrir",
     },
-    published: false,
+    published: true,
   })
   expect(getLink("osaka-castle")).toMatchObject({
     label: { en: "", fr: "" },
