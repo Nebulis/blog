@@ -242,6 +242,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section11.part3")}</p>
             <p>{t("section11.part4")}</p>
             <p>{t("section11.part5")}</p>
+            <AuthorQuote quote={t("section11.part6")} author={t("section11.part7")} />
           </SectionContent>
         </section>
         <PrimaryDivider />
