@@ -56,13 +56,13 @@ const categoriesLinks = () => {
   expect(getLink("travelling")).toMatchObject({ label: { fr: "Voyage", en: "Travelling" }, published: false })
   expect(getLink("living-abroad")).toMatchObject({
     label: { fr: "Vivre à l'étranger", en: "Living abroad" },
-    published: false,
+    published: true,
   })
   expect(getLink("living-singapore")).toMatchObject({
     label: { fr: "Vivre à Singapour", en: "Living in Singapore" },
     published: false,
   })
-  expect(getLink("journal")).toMatchObject({ label: { fr: "Journal", en: "Journal" }, published: false })
+  expect(getLink("journal")).toMatchObject({ label: { fr: "Journal", en: "Journal" }, published: true })
   journalLinks()
   expect(getLink("who")).toMatchObject({ label: { fr: "Qui sommes nous ?", en: "About us?" }, published: true })
   expect(getLink("contact")).toMatchObject({ label: { fr: "Contact", en: "Contact" }, published: true })

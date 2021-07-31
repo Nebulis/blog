@@ -413,7 +413,9 @@ menuLinks.forEach((menu) => {
       label: submenu.label,
       url: path.join("/", getUrl(menu), getUrl(submenu)),
       published:
-        submenu.sections.some((subsubmenu) => cachedLinks.get(subsubmenu.id)?.published) || !!submenu.published,
+        submenu.sections.some((subsubmenu) => cachedLinks.get(subsubmenu.id)?.published) ||
+        submenu.articles?.some((article) => cachedLinks.get(article.id)?.published) ||
+        !!submenu.published,
       tags: [],
       pointOfInterest: submenu.pointOfInterest ?? [],
       seasons: [],
