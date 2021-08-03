@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import * as React from "react"
+import React, { useEffect } from "react"
 import { ExtraImageProps } from "../../../../types/shared"
 
 const alt = {
@@ -30,6 +30,7 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
   image,
   fluidObject = {},
   imgStyle = {},
+  onLoad,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -175,6 +176,9 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
       }
     }
   `)
+  useEffect(() => {
+    if (onLoad) onLoad(data[image].childImageSharp.fluid.src)
+  }, [data, image, onLoad])
   return (
     <Img
       fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }}

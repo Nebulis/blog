@@ -4,9 +4,9 @@ const glob = require("glob")
 
 // const matches = glob.sync(`src/images/asia/vietnam/**/*.{png,jpg,jpeg}`)
 // const matches = glob.sync(`src/images/asia/philippines/el-nido/*.{png,jpg,jpeg}`)
-const matches1 = glob.sync(`Photos/h/*.{png,jpg,jpeg}`)
-const matches2 = glob.sync(`Photos/w/*.{png,jpg,jpeg}`)
-const matches3 = glob.sync(`Photos/p/*.{png,jpg,jpeg}`)
+const matches1 = glob.sync(`Photos/h/*.{png,jpg,jpeg,JPG}`)
+const matches2 = glob.sync(`Photos/w/*.{png,jpg,jpeg,JPG}`)
+const matches3 = glob.sync(`Photos/p/*.{png,jpg,jpeg,JPG}`)
 // const MAX_WIDTH = 1200 // portrait
 // const MAX_WIDTH = 1800
 const QUALITY = 60
@@ -19,7 +19,7 @@ Promise.all(
 
     const width = Math.min(1000, info.width)
 
-    const optimizedName = match.replace(/(\..+)$/, (match, ext) => `-optimized${ext}`)
+    const optimizedName = match.replace(/(\..+)$/, (match, ext) => `-optimized${ext.toLowerCase()}`)
     const method = info.format === "png" ? "png" : "jpeg"
 
     await stream.resize(width)[method]({ quality: QUALITY }).toFile(optimizedName)
@@ -36,8 +36,8 @@ Promise.all(
 
     const width = Math.min(1200, info.width)
 
-    const optimizedName1 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-60${ext}`)
-    const optimizedName2 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-80${ext}`)
+    const optimizedName1 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-60${ext.toLowerCase()}`)
+    const optimizedName2 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-80${ext.toLowerCase()}`)
     const method = info.format === "png" ? "png" : "jpeg"
 
     await stream.resize(width)[method]({ quality: 60, mozjpeg: true }).toFile(optimizedName1)
@@ -54,9 +54,9 @@ Promise.all(
 
     const width = Math.min(1800, info.width)
 
-    const optimizedName1 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-60${ext}`)
-    const optimizedName2 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-70${ext}`)
-    const optimizedName3 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-80${ext}`)
+    const optimizedName1 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-60${ext.toLowerCase()}`)
+    const optimizedName2 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-70${ext.toLowerCase()}`)
+    const optimizedName3 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-80${ext.toLowerCase()}`)
     const method = info.format === "png" ? "png" : "jpeg"
 
     await stream.resize(width)[method]({ quality: 60, mozjpeg: true }).toFile(optimizedName1)

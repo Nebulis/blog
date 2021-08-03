@@ -33,5 +33,5 @@ export const australiaLinks: CountryLink = {
       highlights: [],
     },
   ],
-  others: [],
+  others: [{ id: "kuranda", label: { fr: "", en: "" }, published: false }],
 }

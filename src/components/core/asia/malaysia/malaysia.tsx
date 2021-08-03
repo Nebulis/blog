@@ -1,8 +1,21 @@
+import React, { FunctionComponent } from "react"
 import styled from "@emotion/styled"
 import { BlogLayout, IndexBlogLayout } from "../../../layout/layout"
-import { malaysiaPrimaryColor, malaysiaPrimaryColorDarker } from "./malaysia.variables"
+import { malaysiaPrimaryColor, malaysiaPrimaryColorDarker, malaysiaPrimaryColorWithOpacity } from "./malaysia.variables"
 import { WeatherEntry } from "../../../../types/shared"
 import { Lang } from "../../links/links.types"
+import { Headline } from "../../highlight"
+import rafflesia from "../../../../images/asia/malaysia/rafflesia.svg"
+import { css } from "@emotion/react"
+
+const malaysiaHeadlineStyle = css`
+  color: ${malaysiaPrimaryColorDarker};
+`
+export const MalaysiaHeadline: FunctionComponent = ({ children }) => (
+  <Headline css={malaysiaHeadlineStyle} image={rafflesia} alt="rafflesia">
+    {children}
+  </Headline>
+)
 
 const buttonStyle = `
   button.btn,
@@ -64,8 +77,20 @@ const malaysiaLayout = `
     .divider {
       background-color: ${malaysiaPrimaryColor};
     }
+    a.title-tag {
+      background-color: ${malaysiaPrimaryColorDarker};
+    }
+    a.title-tag:hover {
+      box-shadow: 0px 0px 2px 1px ${malaysiaPrimaryColorDarker};
+    }
     .quote::before {
       color: ${malaysiaPrimaryColor};
+    }
+    table tbody tr:nth-of-type(even) {
+      background-color: ${malaysiaPrimaryColorWithOpacity(0.2)};
+    }
+    table tbody tr:hover {
+      background-color: ${malaysiaPrimaryColorWithOpacity(0.3)};
     }
     a.mdx-pseudo-processor-link{
       color: ${malaysiaPrimaryColor};

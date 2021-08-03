@@ -228,6 +228,12 @@ exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/in
 
 exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/index.html correctly: title 1`] = `"East Malaysia | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/semenggoh-nature-reserve/index.html correctly: meta-description 1`] = `"Join us to visit the Semenggoh nature reserve. We will share about our incredible encounter with the Orangutans. In addition to our travelogue and our photos, we answer all your questions: How to get there? How long and at what period? We also tell you its address, opening hours, and price."`;
+
+exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/semenggoh-nature-reserve/index.html correctly: social-network 1`] = `"Borneo is one of the few places in Asia where there are still a few animals in the wild, but it is not easy to see them. At Semenggoh Nature Reserve, you will have the chance to observe orangutans in semi-freedom in this jungle designed for them."`;
+
+exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/semenggoh-nature-reserve/index.html correctly: title 1`] = `"Semenggoh Nature Reserve: Meeting Orangutans | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/asia/malaysia/index.html correctly: meta-description 1`] = `"Discover Malaysia through our articles and our photos. From modern cities to tropical forests. Follow our guide from region to region to discover our selection of must-see places. For each visit, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/malaysia/index.html correctly: social-network 1`] = `"Malaysia is divided into two parts. West Malaysia (Peninsular or Malaya) includes most of the large modern cities, such as Kuala Lumpur, Johor, and Malacca. While East Malaysia, in the north of Borneo island, is mainly covered by rainforests, populated by animals. Follow our guide from region to region to discover our selection of must-see places."`;

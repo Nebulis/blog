@@ -50,6 +50,23 @@ export const indonesiaLinks: CountryLink = {
       highlights: [],
     },
   ],
-  others: [],
+  others: [
+    {
+      id: "sumatra",
+      label: {
+        en: "",
+        fr: "",
+      },
+      published: false,
+    },
+    {
+      id: "tapanuli",
+      label: {
+        en: "",
+        fr: "",
+      },
+      published: false,
+    },
+  ],
   label: { en: commonEn.country.indonesia.title, fr: commonFr.country.indonesia.title },
 }

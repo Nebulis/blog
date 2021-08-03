@@ -1,11 +1,13 @@
 import { CountryLink } from "../../links/links.types"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
+import { SemenggohNatureReserveCard } from "./malaysia.cards"
 
 export const malaysiaLinks: CountryLink = {
   id: "malaysia",
   label: { fr: commonFr.country.malaysia.title, en: commonEn.country.malaysia.title },
   pointOfInterest: ["lazy", "monument", "nature", "animals", "city", "water-activities"],
+  seasons: ["summer", "spring"],
   imageProps: {
     image: "homeMalaysia",
   },
@@ -32,8 +34,42 @@ export const malaysiaLinks: CountryLink = {
       imageProps: {
         image: "eastMalaysia",
       },
-      highlights: [],
+      highlights: [
+        {
+          id: "semenggoh-nature-reserve",
+          label: {
+            fr: commonFr.country.malaysia.card["semenggoh-nature-reserve"],
+            en: commonEn.country.malaysia.card["semenggoh-nature-reserve"],
+          },
+          card: SemenggohNatureReserveCard,
+          published: new Date("2021-08-21T17:00:00.000+08:00"),
+        },
+        {
+          id: "bako-national-park",
+          label: {
+            fr: "",
+            en: "",
+          },
+          published: new Date("2021-09-04T17:00:00.000+08:00"),
+        },
+      ],
     },
   ],
-  others: [],
+  others: [
+    {
+      id: "kuching",
+      label: { en: "", fr: "" },
+      published: false,
+    },
+    {
+      id: "sepilok",
+      label: { en: "", fr: "" },
+      published: false,
+    },
+    {
+      id: "labuk-kay",
+      label: { en: "", fr: "" },
+      published: false,
+    },
+  ],
 }
