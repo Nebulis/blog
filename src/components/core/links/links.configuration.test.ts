@@ -80,7 +80,7 @@ const journalLinks = () => {
   })
   expect(getLink("living-abroad-where")).toMatchObject({
     label: { fr: "Vivre à l’étranger : Oui mais où ?", en: "Living abroad: Where?" },
-    published: false,
+    published: true,
   })
 }
 
@@ -130,6 +130,7 @@ const australiaLinks = () => {
     published: false,
   })
   expect(getLink("outback")).toMatchObject({ label: { fr: "Outback", en: "Outback" }, published: false })
+  expect(getLink("kuranda")).toMatchObject({ label: { fr: "", en: "" }, published: false })
 }
 
 const japanLinks = () => {
@@ -463,6 +464,16 @@ const philippinesLinks = () => {
   })
 }
 
+const indonesiaLinks = () => {
+  expect(getLink("sumatra")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("tapanuli")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+}
 const malaysiaLinks = () => {
   expect(getLink("west-malaysia")).toMatchObject({
     label: { en: "West", fr: "Occidentale" },
@@ -470,6 +481,29 @@ const malaysiaLinks = () => {
   })
   expect(getLink("east-malaysia")).toMatchObject({
     label: { en: "East", fr: "Orientale" },
+    published: false,
+  })
+  expect(getLink("semenggoh-nature-reserve")).toMatchObject({
+    label: {
+      en: "Semenggoh Nature Reserve: Meeting Orangutans",
+      fr: "Réserve naturelle de Semenggoh : À la rencontre des Orangs-Outans de Bornéo",
+    },
+    published: false,
+  })
+  expect(getLink("bako-national-park")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("kuching")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("sepilok")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("labuk-kay")).toMatchObject({
+    label: { en: "", fr: "" },
     published: false,
   })
 }
@@ -491,6 +525,7 @@ describe("links", () => {
     vietnamLinks()
     philippinesLinks()
     malaysiaLinks()
+    indonesiaLinks()
     australiaLinks()
 
     // cambodia assertions
@@ -532,6 +567,10 @@ describe("links", () => {
     // other
     expect(getLink("green-pomelo")).toMatchObject({
       label: { en: "Green pomelo", fr: "Green pomelo" },
+      published: false,
+    })
+    expect(getLink("orangutan")).toMatchObject({
+      label: { en: "", fr: "" },
       published: false,
     })
 

@@ -8,6 +8,10 @@ import { MenuContext } from "../layout/menu.context"
 import { buildCurrentSharedUrl, buildPinterestUrl, buildSharedUrl } from "../../utils"
 import { PageProps } from "gatsby"
 
+const ImageTitle: React.FunctionComponent<HTMLAttributes<any>> = ({ children, className = "tc ttu" }) => {
+  return <div className={`image-title ${className}`}>{children}</div>
+}
+
 const creditStyle = css`
   .credit {
     position: absolute;
@@ -121,12 +125,12 @@ export const ImageAsPortrait: FunctionComponent<
   HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition }
 > = ({ children, className = "", credit, title, titlePosition = "bottom" }) => (
   <div css={imageAsPortraitStyle} className={`${className} image-layout`}>
-    {title && titlePosition === "top" && <div className="title tc ttu">{title}</div>}
+    {title && titlePosition === "top" && <ImageTitle>{title}</ImageTitle>}
     <div className="flex relative image-layout-image-container">
       {children}
       {credit && <div className="credit">{credit}</div>}
     </div>
-    {title && titlePosition === "bottom" && <div className="title tc ttu">{title}</div>}
+    {title && titlePosition === "bottom" && <ImageTitle>{title}</ImageTitle>}
   </div>
 )
 
@@ -252,15 +256,15 @@ const imageAsLandscapeStyle = css`
 `
 type TitlePosition = "bottom" | "top"
 export const ImageAsLandscape: FunctionComponent<
-  HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition }
-> = ({ children, className = "", credit, title, titlePosition = "bottom" }) => (
+  HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition; titleClassName?: string }
+> = ({ children, className = "", credit, title, titlePosition = "bottom", titleClassName }) => (
   <div css={imageAsLandscapeStyle} className={`${className} image-layout`}>
-    {title && titlePosition === "top" && <div className="title tc ttu">{title}</div>}
+    {title && titlePosition === "top" && <ImageTitle className={titleClassName}>{title}</ImageTitle>}
     <div className="flex justify-center relative image-layout-image-container">
       {children}
       {credit && <div className="credit">{credit}</div>}
     </div>
-    {title && titlePosition === "bottom" && <div className="title tc ttu">{title}</div>}
+    {title && titlePosition === "bottom" && <ImageTitle className={titleClassName}>{title}</ImageTitle>}
   </div>
 )
 export const Panorama = styled(ImageAsLandscape)`
@@ -277,7 +281,11 @@ export const Panorama = styled(ImageAsLandscape)`
 const twoImagesSameSizeStyles = css`
   margin-right: auto;
   margin-left: auto;
-  max-height: calc(100vh - 40px);
+  .panel-image {
+    // add min-height otherwise if there are two images with different dimensions, they don't take the same height
+    min-height: min(100%, calc(100vh - 40px));
+    max-height: calc(100vh - 40px);
+  }
   & .left-panel {
     flex-basis: 100%;
   }
@@ -286,13 +294,21 @@ const twoImagesSameSizeStyles = css`
   }
   ${margin}
 `
-export const TwoImagesSameSize: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
+export const TwoImagesSameSize: FunctionComponent<
+  HTMLAttributes<any> & { title1?: string; title2?: string; titleClassName?: string }
+> = ({ children, className, title1, title2, titleClassName }) => {
   if (!children || !Array.isArray(children) || children.length !== 2)
     throw new Error("This component expect 2 children")
   return (
     <div className={`flex image-layout ${className}`} css={twoImagesSameSizeStyles}>
-      {cloneElement(children[0], { className: "left-panel" })}
-      {cloneElement(children[1], { className: "right-panel" })}
+      <div className="left-panel">
+        <div className="flex panel-image">{children[0]}</div>
+        {title1 && <ImageTitle className={titleClassName}>{title1}</ImageTitle>}
+      </div>
+      <div className="right-panel">
+        <div className="flex panel-image">{children[1]}</div>
+        {title2 && <ImageTitle className={titleClassName}>{title2}</ImageTitle>}
+      </div>
     </div>
   )
 }
@@ -314,17 +330,23 @@ export const TwoImagesRightBigger = styled(TwoImagesSameSize)`
   }
 `
 // this component will adapt to smaller devices and display images in different rows when the device is too small
-export const TwoImagesSameSizeOrToGroup: FunctionComponent<HTMLAttributes<any>> = ({ children, className }) => {
+export const TwoImagesSameSizeOrToGroup: FunctionComponent<
+  HTMLAttributes<any> & { title1?: string; title2?: string; titleClassName?: string }
+> = ({ children, className = "", title1, title2, titleClassName }) => {
   const { windowWidth: width } = useWindowSize()
   if (!children || !Array.isArray(children) || children.length !== 2)
     throw new Error("This component expect 2 children")
   return width <= 768 ? (
     <GroupOfImages className={className}>
-      <ImageAsLandscape>{children[0]}</ImageAsLandscape>
-      <ImageAsLandscape>{children[1]}</ImageAsLandscape>
+      <ImageAsLandscape title={title1} titleClassName={titleClassName}>
+        {children[0]}
+      </ImageAsLandscape>
+      <ImageAsLandscape title={title2} titleClassName={titleClassName}>
+        {children[1]}
+      </ImageAsLandscape>
     </GroupOfImages>
   ) : (
-    <TwoImagesSameSize className={className}>
+    <TwoImagesSameSize className={className} title1={title1} title2={title2} titleClassName={titleClassName}>
       {children[0]}
       {children[1]}
     </TwoImagesSameSize>
@@ -342,12 +364,12 @@ export const ImageAsLandscapeOnTheLeft: FunctionComponent<
 > = ({ children, className, title, credit, titlePosition = "bottom" }) => {
   return (
     <div className={`image-layout ${className}`} css={imageAsLandscapeOnTheLeft}>
-      {title && titlePosition === "top" && <div className="title tc ttu">{title}</div>}
+      {title && titlePosition === "top" && <ImageTitle>{title}</ImageTitle>}
       <div className="flex relative image-layout-image-container">
         {children}
         {credit && <div className="credit">{credit}</div>}
       </div>
-      {title && titlePosition === "bottom" && <div className="title tc ttu">{title}</div>}
+      {title && titlePosition === "bottom" && <ImageTitle>{title}</ImageTitle>}
     </div>
   )
 }

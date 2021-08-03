@@ -194,11 +194,7 @@ export const JapanCity: FunctionComponent = ({ children }) => (
 
 export const JapanTitle = styled(Title)`
   a {
-    border-radius: 3px;
-    color: white;
     background-color: ${japanPrimaryColor};
-    padding: 0 2px;
-    text-decoration: none;
   }
   a:hover {
     box-shadow: 0px 0px 2px 1px #ed5567;

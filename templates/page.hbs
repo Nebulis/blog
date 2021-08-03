@@ -8,7 +8,6 @@ import translationFr from "{{upPath pagePath}}locales/fr/{{pagePath}}.json"
 import translationEn from "{{upPath pagePath}}locales/en/{{pagePath}}.json"
 import {
   {{uppercase (getCountry pagePath)}}BlogLayout,
-  {{uppercase (getCountry pagePath)}}Title,
   {{uppercase (getCountry pagePath)}}Headline,
 } from "{{upPath pagePath}}components/core/{{getContinent pagePath}}/{{getCountry pagePath}}/{{getCountry pagePath}}"
 import {
@@ -25,6 +24,7 @@ import {
 import { Conclusion } from "{{upPath pagePath}}components/core/conclusion"
 import { Divider } from "{{upPath pagePath}}components/core/divider"
 import { Quote } from "{{upPath pagePath}}components/core/quote"
+import { Title } from "{{upPath pagePath}}components/core/title"
 import HomeImgUrl from "{{upPath pagePath}}images/{{getContinent pagePath}}/{{getCountry pagePath}}/home-{{getCountry pagePath}}.jpg"
 
 const namespace = "{{pagePath}}"
@@ -40,13 +40,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     <>
       <SEO
         title={title}
+        fullTitle={t("full-title")}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
         image={HomeImgUrl}
         location={location}
       />
       <{{uppercase (getCountry pagePath)}}BlogLayout page={id} location={location}>
-        <{{uppercase (getCountry pagePath)}}Title title={title} linkId={id} />
+        <Title title={title} linkId={id} />
         <Quote>{t("quote")}</Quote>
         <Divider />
         <Introduction>{t("introduction")}</Introduction>

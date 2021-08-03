@@ -282,6 +282,12 @@ export const fruitLinks: OtherLink[] = [
     label: { fr: "Green pomelo", en: "Green pomelo" },
     published: false,
   },
+  // TODO to move :)
+  {
+    id: "orangutan",
+    label: { fr: "", en: "" },
+    published: false,
+  },
 ]
 
 export const noIdeaLinks: NavigationLink[] = [

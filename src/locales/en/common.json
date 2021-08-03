@@ -192,6 +192,9 @@
       "city": {
         "west-malaysia": "West",
         "east-malaysia": "East"
+      },
+      "card": {
+        "semenggoh-nature-reserve": "Semenggoh Nature Reserve: Meeting Orangutans"
       }
     },
     "macao": {
