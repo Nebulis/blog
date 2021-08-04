@@ -10,7 +10,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://magicoftravels.com`,
     title: `Magic of travels`,
-    author: `@gatsbyjs`,
+    author: `@_magicoftravels`,
     config: {
       context: process.env.CONTEXT || "local",
       comments: process.env.COMMENTS_FEATURE || "disabled",
