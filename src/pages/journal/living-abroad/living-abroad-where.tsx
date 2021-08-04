@@ -10,8 +10,6 @@ import { Introduction, SectionContent } from "../../../components/core/section"
 import { PrimaryDivider } from "../../../components/core/divider"
 import { Quote } from "../../../components/core/quote"
 import HomeImgUrl from "../../../images/journal/living-abroad/living-abroad-where/living-abroad-where-main.jpg"
-import LivingAbroadTable from "../../../images/journal/living-abroad/living-abroad-where/living-abroad-where-table.png"
-import LivingAbroadTableEn from "../../../images/journal/living-abroad/living-abroad-where/living-abroad-where-table-en.png"
 import { PrimaryHeadline } from "../../../components/core/highlight"
 import { Title } from "../../../components/core/title"
 import { PrimaryBlogLayoutWithDrawer } from "../../../components/layout/main-layout"
@@ -20,8 +18,6 @@ import { SharedJournalImages } from "../../../components/images/journal/shared-j
 import styled from "@emotion/styled"
 import { LivingAbroadWhereImages } from "../../../components/images/journal/living-abroad/living-abroad-where"
 import { Conclusion } from "../../../components/core/conclusion"
-import { MapContainer } from "../../../components/layout/layout"
-import { css } from "@emotion/react"
 
 const namespace = "journal/living-abroad/living-abroad-where"
 const id = "living-abroad-where"
@@ -334,15 +330,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsLandscape>
               <LivingAbroadWhereImages image="livingAbroadWhere8" />
             </ImageAsLandscape>
-            <MapContainer>
-              <img
-                css={css`
-                  max-width: 800px !important;
-                `}
-                src={i18n.languageCode === "fr" ? LivingAbroadTable : LivingAbroadTableEn}
-                alt="Living Abroad Table"
-              />
-            </MapContainer>
             <p>{t("section2.part5")}</p>
             <p>{t("section2.part6")}</p>
             <p>{t("section2.part7")}</p>
