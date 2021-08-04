@@ -27,7 +27,7 @@
     "part6": {
       "title": "LONG-TERM STAY",
       "part1": "The long-term stay corresponds to #travels that exceed 91 days#.",
-      "part2": "If you opted for this visa, you need to prove that your bank accounts have saved up to 30 million yen ($270,000). Suffice to say that it's not for everyone!"
+      "part2": "If you opted for this visa, you need to prove that you have ¥30,000,000 ($270,000) on your bank accounts. Suffice to say that it's not for everyone!"
     },
     "part7": "For both :",
     "part8": "Passport must be valid at least until the last day in Japan.",
@@ -248,11 +248,11 @@
   },
   "currency": {
     "title": "Japanese Currency",
-    "part1": "The local currency is the Japanese Yen, more commonly referred to as the Yen.",
-    "part2": "$1 is worth roughly 111 Yen",
-    "part3": "$5 is worth roughly 555 Yen",
-    "part4": "$10 is worth roughly 1 110 Yen",
-    "part5": "$100 is worth roughly 11 103 Yen",
+    "part1": "The local currency is the Japanese Yen, more commonly referred to as the Yen (¥).",
+    "part2": "$1 is worth roughly ¥111",
+    "part3": "$5 is worth roughly ¥555",
+    "part4": "$10 is worth roughly ¥1,110",
+    "part5": "$100 is worth roughly ¥11,103",
     "part6": "We use the [Currency application](http://www.currencyapp.com/), the best application in our opinion. And it works offline."
   },
   "few-words": {

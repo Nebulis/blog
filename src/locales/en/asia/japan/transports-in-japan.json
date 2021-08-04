@@ -27,10 +27,10 @@
       "title": "Companies",
       "part1": "The two best airlines are [Japan Airlines](https://www.jal.co.jp/uk/en/) and [ANA](https://www.ana.co.jp/en/us/) (All Nippon Airlines). More comfort and therefore more expensive. However, if you book on their site, you can benefit from offers/promotions:",
       "part2": "Japan Airlines offers:",
-      "part3": "#Japan Explorer Pass# ↠ These are reduced prices on specific domestic routes. The ticket price ranges from 5,500 to 11,000 YEN (~ $60 to $100) - It's possible to book from Japan on the internet - More information on their [website](https://www.jal.co.jp/frl/fr/world/japan_explorer_pass/fr/).",
-      "part4": "#Welcome to Japan Fare# ↠ Buy between 2 and 5 tickets from abroad (mandatory) - Each ticket costs 14,300 YEN (~ $130) and allows you to take any flight on a Japan Airlines or Japan Transocean plane Air - More information on their [website](https://www.jal.co.jp/yokosojapan/japanfare.html).",
+      "part3": "#Japan Explorer Pass# ↠ These are reduced prices on specific domestic routes. The ticket price ranges from ¥5,500 to ¥11,000 (~ $60 to $100) - It's possible to book from Japan on the internet - More information on their [website](https://www.jal.co.jp/frl/fr/world/japan_explorer_pass/fr/).",
+      "part4": "#Welcome to Japan Fare# ↠ Buy between 2 and 5 tickets from abroad (mandatory) - Each ticket costs ¥14,300 (~ $130) and allows you to take any flight on a Japan Airlines or Japan Transocean plane Air - More information on their [website](https://www.jal.co.jp/yokosojapan/japanfare.html).",
       "part5": "ANA offers:",
-      "part6": "#Visit Japan Fare# ↠ Buy between 2 and 5 tickets from abroad (mandatory) - Each ticket costs 14,300 YEN and allows you to take any flight on an All Nippon Airlines plane - More information on their [website](https://www.ana.co.jp/en/us/plan-book/promotions/special-fares/).",
+      "part6": "#Visit Japan Fare# ↠ Buy between 2 and 5 tickets from abroad (mandatory) - Each ticket costs ¥14,300 and allows you to take any flight on an All Nippon Airlines plane - More information on their [website](https://www.ana.co.jp/en/us/plan-book/promotions/special-fares/).",
       "part7": "You can also find low-cost companies which will offer cheaper prices. [Jetstar](https://www.jetstar.com/jp/en/home) is certainly the most famous in Asia and Oceania. There is also [Peach Aviation](https://www.flypeach.com/en), [StarFlyer](https://www.starflyer.jp/en/), or even [Skymark Airlines](https://www.skymark.co.jp/en/)."
     },
     "price": {
@@ -157,8 +157,8 @@
       "booking": {
         "title": "Booking / Companies / Price",
         "part1": "Once again, we will recommend Willer Express. You can even find the #Willer Express « Sleeper »# option on their website. No differences with other coaches except that there are curtains to separate you from your neighbors and reclining seats.",
-        "part2": "For a different and much more luxurious experience, there is the [Dream Sleeper](https://www.kanto-bus.co.jp/english/nightway/dream-sleeper/), launched in 2017, between Tokyo and Osaka. It costs between 18,000 and 20,000 YEN (~ $160) and is the most comfortable night bus you can find. This bus provides you with an individual cabin, much more intimate than a simple curtain. It's not really about saving a hotel night, but rather about trying a new experience.",
-        "part3": "In addition to the Dream Sleeper, the Kanto Bus company offers multiple [night trips](https://www.kanto-bus.co.jp/english/nightway/) from Tokyo. Much more affordable, they cost between 4,500 and 8,000 YEN ($40-$75).",
+        "part2": "For a different and much more luxurious experience, there is the [Dream Sleeper](https://www.kanto-bus.co.jp/english/nightway/dream-sleeper/), launched in 2017, between Tokyo and Osaka. It costs between ¥18,000 and ¥20,000 (~ $160) and is the most comfortable night bus you can find. This bus provides you with an individual cabin, much more intimate than a simple curtain. It's not really about saving a hotel night, but rather about trying a new experience.",
+        "part3": "In addition to the Dream Sleeper, the Kanto Bus company offers multiple [night trips](https://www.kanto-bus.co.jp/english/nightway/) from Tokyo. Much more affordable, they cost between ¥4,500 and ¥8,000 ($40-$75).",
         "part4": "In all cases, the price varies depending on the comfort. The more expensive it is, the more comfortable it will be with a wider seat, better separations, etc. That said, even the cheapest buses offer #very good services#, with WIFI, electrical outlets, and toilets."
       },
       "opinion": {
@@ -375,9 +375,9 @@
       },
       "price": {
         "title": "Price",
-        "part1": "When purchased, the card is worth #1,000 to 10,000 yen#, at your own decision. This amount will be available on the card directly, minus the 500 yen deposit.",
-        "part2": "The return fee is 220 yen (less than $2). Upon return, the deposit is returned to you as well as the amount remaining on the card. However, if you do not return your card, you will not get the deposit back, as well as the remaining money.",
-        "part3": "You can't have more than 20,000 yen on the card ($180).",
+        "part1": "When purchased, the card is worth #¥1,000 to ¥10,000#, at your own decision. This amount will be available on the card directly, minus the ¥500 deposit.",
+        "part2": "The return fee is ¥220 (less than $2). Upon return, the deposit is returned to you as well as the amount remaining on the card. However, if you do not return your card, you will not get the deposit back, as well as the remaining money.",
+        "part3": "You can't have more than ¥20,000 on the card ($180).",
         "part4": "For more information, check the [official website](https://www.jreast.co.jp/e/pass/suica.html)."
       }
     },
