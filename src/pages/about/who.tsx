@@ -14,6 +14,7 @@ import whoFr from "../../locales/fr/about/who.json"
 import whoEn from "../../locales/en/about/who.json"
 import { PageProps } from "gatsby"
 import { PrimaryBlogLayoutWithDrawer } from "../../components/layout/main-layout"
+import { Comments } from "../../components/core/comments"
 
 const namespace = "about/who"
 i18n.addResourceBundle("fr", namespace, whoFr)
@@ -76,6 +77,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             {t("contact")} <FaChevronRight />
           </PrimaryDarkButtonLink>
         </SectionContent>
+        <Comments collectionName={namespace} location={location} showLikes={false} showShare={false} />
       </PrimaryBlogLayoutWithDrawer>
     </>
   )

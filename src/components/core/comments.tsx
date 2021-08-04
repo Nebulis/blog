@@ -38,10 +38,12 @@ import { PinterestContext } from "../layout/pinterest.context"
 
 interface CommentsProps {
   collectionName: string
-  facebookQuote: string
+  facebookQuote?: string
   className?: string
   location: PageProps["location"]
   pinterest?: { description: string; nodes: React.ReactNode[] }
+  showLikes?: boolean
+  showShare?: boolean
 }
 
 interface CommentType {
@@ -99,14 +101,20 @@ const commentsStyle = css`
   font-size: 0.9rem;
   .comments-social-network {
     margin-bottom: calc(1.45rem - 1px);
+
+    & span:not(:last-of-type) {
+      border-right-style: solid;
+    }
   }
 `
 export const Comments: FunctionComponent<CommentsProps> = ({
   collectionName,
   className = "",
   location,
-  facebookQuote,
+  facebookQuote = "",
   pinterest,
+  showLikes = true,
+  showShare = true,
 }) => {
   const [comments, setComments] = useState<CommentProp[]>([])
   const [numberOfComments, setNumberOfComments] = useState(0)
@@ -288,67 +296,71 @@ export const Comments: FunctionComponent<CommentsProps> = ({
     <div className={`${className} comments`} css={commentsStyle}>
       <>
         <div className="flex justify-center mb3 comments-social-network">
-          <a href="#comments">
-            <span className="br bw1 pr2 mr2">
+          <span className="bw1 pr2 mr2">
+            <a href="#comments">
               {numberOfComments} {t("comments.comment")}
               {numberOfComments > 1 ? "s" : ""}
+            </a>
+          </span>
+          {showLikes && (
+            <span className="inline-flex bw1 pr2 mr2">
+              {!localLikes.includes(collectionName) ? (
+                <span className="pointer inline-flex" onClick={like}>
+                  {t("comments.like")}&nbsp;
+                  <FaHeart className="likes" />
+                </span>
+              ) : (
+                <span className="pointer inline-flex" onClick={unlike}>
+                  {likes}&nbsp;
+                  <FaHeart className="likes" />
+                </span>
+              )}
             </span>
-          </a>
-          <span className="inline-flex br bw1 pr2 mr2">
-            {!localLikes.includes(collectionName) ? (
-              <span className="pointer inline-flex" onClick={like}>
-                {t("comments.like")}&nbsp;
-                <FaHeart className="likes" />
-              </span>
-            ) : (
-              <span className="pointer inline-flex" onClick={unlike}>
-                {likes}&nbsp;
-                <FaHeart className="likes" />
-              </span>
-            )}
-          </span>
-          <span className="inline-flex">
-            {t("comments.share")}&nbsp;
-            <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}&quote=${encodeURI(facebookQuote)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-labelledby="facebook-label-comment"
-              className="inline-flex mr1"
-            >
-              <span id="facebook-label-comment" hidden>
-                Share on Facebook
-              </span>
-              <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
-            </a>
-            <a
-              href={`https://twitter.com/intent/tweet?text=${description}&url=${sharedUrl}&hashtags=${hashtags}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-labelledby="twitter-label-comment"
-              className="inline-flex mr1"
-            >
-              <span id="twitter-label-comment" hidden>
-                Share on Twitter
-              </span>
-              <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
-            </a>
-            <a
-              href={buildPinterestUrl({
-                url: sharedUrl,
-                description: pinterest?.description ?? descriptionPinterest,
-              })}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-labelledby="pinterest-label-comment"
-              className="inline-flex"
-            >
-              <span id="pinterest-label-comment" hidden>
-                Share on Pinterest
-              </span>
-              <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
-            </a>
-          </span>
+          )}
+          {showShare && (
+            <span className="inline-flex">
+              {t("comments.share")}&nbsp;
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl}&quote=${encodeURI(facebookQuote)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="facebook-label-comment"
+                className="inline-flex mr1"
+              >
+                <span id="facebook-label-comment" hidden>
+                  Share on Facebook
+                </span>
+                <FaFacebook className="facebook" aria-hidden="true" focusable="false" />
+              </a>
+              <a
+                href={`https://twitter.com/intent/tweet?text=${description}&url=${sharedUrl}&hashtags=${hashtags}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="twitter-label-comment"
+                className="inline-flex mr1"
+              >
+                <span id="twitter-label-comment" hidden>
+                  Share on Twitter
+                </span>
+                <FaTwitter className="twitter" aria-hidden="true" focusable="false" />
+              </a>
+              <a
+                href={buildPinterestUrl({
+                  url: sharedUrl,
+                  description: pinterest?.description ?? descriptionPinterest,
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-labelledby="pinterest-label-comment"
+                className="inline-flex"
+              >
+                <span id="pinterest-label-comment" hidden>
+                  Share on Pinterest
+                </span>
+                <FaPinterest className="pinterest" aria-hidden="true" focusable="false" />
+              </a>
+            </span>
+          )}
         </div>
         {pinterest && pinterest.nodes.length > 0 ? (
           <>
