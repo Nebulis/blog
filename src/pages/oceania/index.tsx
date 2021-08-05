@@ -5,7 +5,7 @@ import { ApplicationLink, ButtonLink } from "../../components/core/links/link"
 import { ImageAsMedallion } from "../../components/images/layout"
 import { getLinkLabel, isLinkPublished, sortByLabel } from "../../components/core/links/links.utils"
 import { ApplicationContext } from "../../components/application"
-import { PrimaryDivider } from "../../components/core/divider"
+import { Divider } from "../../components/core/divider"
 import { PageQuote } from "../../components/core/quote"
 import { HomeSection, HomeSubSection, MainTitleSection, SectionContent } from "../../components/core/section"
 import { PrimaryBlogLayoutWithDrawer } from "../../components/layout/main-layout"
@@ -39,13 +39,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <PrimaryBlogLayoutWithDrawer page="oceania" location={location}>
         <MainTitleSection>{t("common:continent.oceania")}</MainTitleSection>
-        <PrimaryDivider />
+        <Divider />
         <SectionContent>
           <PageQuote>{t("quote.part1")}</PageQuote>
           <PageQuote position="none">{t("quote.part2")}</PageQuote>
           <PageQuote position="none">{t("quote.part3")}</PageQuote>
         </SectionContent>
-        <PrimaryDivider />
+        <Divider />
 
         <HomeSection>{t("inspire.title")}</HomeSection>
         <HomeSubSection>{t("inspire.subtitle")}</HomeSubSection>
@@ -60,7 +60,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             ) : null
           )}
         </MedallionContainer>
-        <PrimaryDivider />
+        <Divider />
         <GoToAllArticlesContainer>
           <ButtonLink to="articles?continent=oceania">{t("common:allArticles")}</ButtonLink>
         </GoToAllArticlesContainer>

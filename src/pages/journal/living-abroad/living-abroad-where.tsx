@@ -7,7 +7,7 @@ import { Comments } from "../../../components/core/comments"
 import translationFr from "../../../locales/fr/journal/living-abroad/living-abroad-where.json"
 import translationEn from "../../../locales/en/journal/living-abroad/living-abroad-where.json"
 import { Introduction, SectionContent } from "../../../components/core/section"
-import { PrimaryDivider } from "../../../components/core/divider"
+import { Divider } from "../../../components/core/divider"
 import { Quote } from "../../../components/core/quote"
 import HomeImgUrl from "../../../images/journal/living-abroad/living-abroad-where/living-abroad-where-main.jpg"
 import { PrimaryHeadline } from "../../../components/core/highlight"
@@ -57,7 +57,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SharedJournalImages image="livingAbroadWhere" />
         </ImageAsLandscape>
         <Quote>{t("quote")}</Quote>
-        <PrimaryDivider />
+        <Divider />
         <Introduction>{t("introduction.part1")}</Introduction>
         <SectionContent>
           <p>{t("introduction.part2")}</p>
@@ -72,13 +72,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("introduction.part11")}</p>
           <p>{t("introduction.part12")}</p>
         </SectionContent>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <PrimaryHeadline>{t("section1.title")}</PrimaryHeadline>
-          <PrimaryDivider />
+          <Divider />
           <SubTitle>{t("section1.part1.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part1.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part1.part1")}</p>
             <p>{t("section1.part1.part2")}</p>
@@ -90,11 +90,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section1.part1.part8")}</p>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part2.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part2.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part2.part1")}</p>
             <p>{t("section1.part2.part2")}</p>
@@ -109,11 +109,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ImageAsLandscape>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part3.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part3.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part3.part1")}</p>
             <p>{t("section1.part3.part2")}</p>
@@ -124,11 +124,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section1.part3.part7")}</p>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part4.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part4.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part4.part1")}</p>
             <p>{t("section1.part4.part2")}</p>
@@ -140,11 +140,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ImageAsLandscape>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part5.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part5.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part5.part1")}</p>
             <p>{t("section1.part5.part2")}</p>
@@ -157,11 +157,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section1.part5.part9")}</p>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part6.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part6.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part6.part1")}</p>
             <p>{t("section1.part6.part2")}</p>
@@ -180,11 +180,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ImageAsLandscape>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part7.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part7.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part7.part1")}</p>
             <p>{t("section1.part7.part2")}</p>
@@ -195,11 +195,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section1.part7.part7")}</p>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part8.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part8.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part8.part1")}</p>
             <p>{t("section1.part8.part2")}</p>
@@ -211,11 +211,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ImageAsLandscape>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part9.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part9.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part9.part1")}</p>
             <p>{t("section1.part9.part2")}</p>
@@ -227,11 +227,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section1.part9.part8")}</p>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part10.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part10.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part10.part1")}</p>
             <p>{t("section1.part10.part2")}</p>
@@ -244,11 +244,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ImageAsLandscape>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part11.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part11.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part11.part1")}</p>
             <p>{t("section1.part11.part2")}</p>
@@ -261,11 +261,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section1.part11.part9")}</p>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part12.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part12.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part12.part1")}</p>
             <p>{t("section1.part12.part2")}</p>
@@ -279,11 +279,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ImageAsLandscape>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part13.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part13.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part13.part1")}</p>
             <p>{t("section1.part13.part2")}</p>
@@ -291,11 +291,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section1.part13.part4")}</p>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part14.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part14.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part14.part1")}</p>
             <p>{t("section1.part14.part2")}</p>
@@ -307,21 +307,21 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ImageAsLandscape>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <SubTitle>{t("section1.part15.title1")}</SubTitle>
           <SubSubTitle>{t("section1.part15.title2")}</SubSubTitle>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section1.part15.part1")}</p>
             <p>{t("section1.part15.part2")}</p>
             <p>{t("section1.part15.part3")}</p>
           </SectionContent>
         </section>
-        <PrimaryDivider />
+        <Divider />
         <section>
           <PrimaryHeadline>{t("section2.title")}</PrimaryHeadline>
-          <PrimaryDivider />
+          <Divider />
           <SectionContent>
             <p>{t("section2.part1")}</p>
             <p>{t("section2.part2")}</p>
@@ -342,7 +342,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question2")}</li>
           </ul>
         </Conclusion>
-        <PrimaryDivider />
+        <Divider />
         <Comments
           collectionName={namespace}
           location={location}

@@ -13,6 +13,14 @@ export const PrimaryBlogLayoutWithDrawer = styled(drawer(BlogLayout))`
   .card .tags a:hover {
     border-bottom: 1px solid ${primaryDarkColor};
   }
+  svg.likes {
+    fill: ${primaryColor};
+  }
+  .index-blog-layout-content {
+    .divider {
+      background-color: ${primaryColor};
+    }
+  }
   .comments {
     .comments-social-network svg:hover {
       color: ${primaryColor};

@@ -5,7 +5,7 @@ import { useCustomTranslation } from "../../../i18n-hook"
 import i18n from "i18next"
 import translationFr from "../../../locales/fr/organisation/when-to-go/winter.json"
 import translationEn from "../../../locales/en/organisation/when-to-go/winter.json"
-import { PrimaryDivider } from "../../../components/core/divider"
+import { Divider } from "../../../components/core/divider"
 import { PageQuote } from "../../../components/core/quote"
 import { PageProps } from "gatsby"
 import { CountriesContainer, CountryContainer } from "../../../components/layout/organisation-layout"
@@ -42,13 +42,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <PrimaryBlogLayoutWithDrawer page="autumn" location={location}>
         <MainTitleSection>{t("title")}</MainTitleSection>
-        <PrimaryDivider />
+        <Divider />
         <SectionContent>
           <PageQuote>{t("part1")}</PageQuote>
           <PageQuote position="none">{t("part2")}</PageQuote>
           <PageQuote position="none">{t("part3")}</PageQuote>
         </SectionContent>
-        <PrimaryDivider />
+        <Divider />
         <SelectByContinent continents={continents} onChange={(value) => setSelectedContinent(value)} />
         <CountriesContainer>
           {countries

@@ -5,7 +5,7 @@ import { useCustomTranslation } from "../../i18n-hook"
 import i18n from "i18next"
 import translationFr from "../../locales/fr/discovery/water-activities.json"
 import translationEn from "../../locales/en/discovery/water-activities.json"
-import { PrimaryDivider } from "../../components/core/divider"
+import { Divider } from "../../components/core/divider"
 import { PageQuote } from "../../components/core/quote"
 import { PageProps } from "gatsby"
 import { CountriesContainer, CountryContainer } from "../../components/layout/organisation-layout"
@@ -43,13 +43,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       />
       <PrimaryBlogLayoutWithDrawer page={currentPageId} location={location}>
         <MainTitleSection>{t("title")}</MainTitleSection>
-        <PrimaryDivider />
+        <Divider />
         <SectionContent>
           <PageQuote>{t("part1")}</PageQuote>
           <PageQuote position="none">{t("part2")}</PageQuote>
         </SectionContent>
         <PrimaryPointOfInterestSection fullTitle page={currentPageId} />
-        <PrimaryDivider />
+        <Divider />
         <SelectByContinent continents={continents} onChange={(value) => setSelectedContinent(value)} />
         <CountriesContainer>
           {countries
