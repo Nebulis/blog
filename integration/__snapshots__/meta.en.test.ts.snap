@@ -468,6 +468,12 @@ exports[`english pages exports meta for public/en/organisation/when-to-go/spring
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/spring/index.html correctly: title 1`] = `"Travel in spring | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/organisation/when-to-go/summer/index.html correctly: meta-description 1`] = `"The long-awaited summer vacation has finally arrived! But where to go during June, July and August? A relaxing trip to enjoy the sun or an adventure, the choice is yours. We guide you with the travels we made in different countries."`;
+
+exports[`english pages exports meta for public/en/organisation/when-to-go/summer/index.html correctly: social-network 1`] = `"Summer is not the best moment to go to Asia. However, you could take the opportunity to travel across Europe and discover little paradise or plan a road trip in America with its variety of destinations. A relaxing trip to enjoy the sun or an adventure, the choice is yours."`;
+
+exports[`english pages exports meta for public/en/organisation/when-to-go/summer/index.html correctly: title 1`] = `"Travel in summer | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: meta-description 1`] = `"Do you prefer snowy and magical Christmas? Or lack of sunlight make you feel low? So many places to spend your dream holidays during December, January or February."`;
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: social-network 1`] = `"Have holidays near astounding landscapes covered with a large white coat, or else escape cold winter for heavenly beaches and for the tropical sun. So many places to spend your dream holidays during December, January or February."`;
