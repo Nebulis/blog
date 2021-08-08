@@ -33,3 +33,13 @@ export const SemenggohNatureReserveCard: FunctionComponent<ExtraCardProps> = ({ 
     </MalaysiaCard>
   )
 }
+
+export const KubahNightFrogsTourCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <MalaysiaCard title={common.country.malaysia.card["kubah-night-frogs-tour"]} to="kubah-night-frogs-tour" {...card}>
+      <SharedCardMalaysiaImages image="kubahNightFrogsTour" fluidObject={fluidObject} />
+    </MalaysiaCard>
+  )
+}

@@ -6,7 +6,7 @@ import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/malaysia/east-malaysia/semenggoh-nature-reserve.json"
 import translationEn from "../../../../locales/en/asia/malaysia/east-malaysia/semenggoh-nature-reserve.json"
-import { MalaysiaBlogLayout, MalaysiaHeadline } from "../../../../components/core/asia/malaysia/malaysia"
+import { MalaysiaBlogLayout, MalaysiaHeadline, malaysiaPrice } from "../../../../components/core/asia/malaysia/malaysia"
 import {
   Booking,
   How,
@@ -48,16 +48,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.malaysia.card.${id}`)
   const orangutanLinkPublished = development || getLink("orangutan").published
-  const price = (value: number) =>
-    value
-      .toLocaleString(i18n.languageCode, {
-        style: "currency",
-        currency: "MYR",
-        currencyDisplay: "symbol",
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      })
-      .replace("MYR", "RM")
+  const malaysiaPriceWithLang = malaysiaPrice(i18n.languageCode)
   return (
     <>
       <SEO
@@ -111,23 +102,23 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <tbody>
               <tr>
                 <td>{i18n.languageCode === "fr" ? "Adulte" : "Adult"}</td>
-                <td>{price(10)}</td>
-                <td>{price(5)}</td>
+                <td>{malaysiaPriceWithLang(10)}</td>
+                <td>{malaysiaPriceWithLang(5)}</td>
               </tr>
               <tr>
                 <td>{i18n.languageCode === "fr" ? "Retraité" : "Senior Citizen"}</td>
-                <td>{price(10)}</td>
-                <td>{price(3)}</td>
+                <td>{malaysiaPriceWithLang(10)}</td>
+                <td>{malaysiaPriceWithLang(3)}</td>
               </tr>
               <tr>
                 <td>{i18n.languageCode === "fr" ? "Personne Handicapée" : "Disabled person"}</td>
-                <td>{price(5)}</td>
-                <td>{price(3)}</td>
+                <td>{malaysiaPriceWithLang(5)}</td>
+                <td>{malaysiaPriceWithLang(3)}</td>
               </tr>
               <tr>
                 <td>{i18n.languageCode === "fr" ? "Enfant (6-7 ans)" : "Children (6-7 years old)"}</td>
-                <td>{price(5)}</td>
-                <td>{price(2)}</td>
+                <td>{malaysiaPriceWithLang(5)}</td>
+                <td>{malaysiaPriceWithLang(2)}</td>
               </tr>
               <tr>
                 <td>{i18n.languageCode === "fr" ? "Enfant (moins de 6 ans)" : "Children ( below 6 years old)"}</td>

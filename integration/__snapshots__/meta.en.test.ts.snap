@@ -228,6 +228,12 @@ exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/in
 
 exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/index.html correctly: title 1`] = `"East Malaysia | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/kubah-night-frogs-tour/index.html correctly: meta-description 1`] = `"Join us to discover Kubah National Park's wildlife. We will focus on the frogs of Borneo, from the most common to the rarest. In addition to our travelogue and our photos, we answer all your questions: How to get there? How long? We also tell you the opening hours and the price."`;
+
+exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/kubah-night-frogs-tour/index.html correctly: social-network 1`] = `"Borneo is famous for its wild elephants, Orangutans, and proboscis monkeys. What if we shed some light on a smaller animal? With over 60 frogs species of all colors, shapes, and sizes, Kubah National Park is ideal for a night-time search for these small amphibians."`;
+
+exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/kubah-night-frogs-tour/index.html correctly: title 1`] = `"Kubah Park Night Walk: Search for Borneo Frogs | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/semenggoh-nature-reserve/index.html correctly: meta-description 1`] = `"Join us to visit the Semenggoh nature reserve. We will share about our incredible encounter with the Orangutans. In addition to our travelogue and our photos, we answer all your questions: How to get there? How long and at what period? We also tell you its address, opening hours, and price."`;
 
 exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/semenggoh-nature-reserve/index.html correctly: social-network 1`] = `"Borneo is one of the few places in Asia where there are still a few animals in the wild, but it is not easy to see them. At Semenggoh Nature Reserve, you will have the chance to observe orangutans in semi-freedom in this jungle designed for them."`;
