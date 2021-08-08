@@ -44,6 +44,18 @@ const malaysiaLayout = `
   }
 
   .index-blog-layout-content {
+    .petit-carre-colore {
+      background-color: ${malaysiaPrimaryColorWithOpacity(0.2)};
+      border-color: ${malaysiaPrimaryColor};
+    }
+    .booking-card, .get-your-guide-card {
+      .information, .photo-container {
+        border-color: ${malaysiaPrimaryColorDarker}
+      }
+      .activity {
+        background-color: ${malaysiaPrimaryColorDarker};
+      }
+    }
     .point-of-interest-section {
       svg {
         fill: ${malaysiaPrimaryColor};
@@ -279,3 +291,14 @@ export const malaysiaWeatherEntries = (lang: Lang): WeatherEntry[] => [
     ],
   },
 ]
+
+export const malaysiaPrice = (lang: Lang) => (value: number) =>
+  value
+    .toLocaleString(lang, {
+      style: "currency",
+      currency: "MYR",
+      currencyDisplay: "symbol",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })
+    .replace("MYR", "RM")

@@ -490,6 +490,13 @@ const malaysiaLinks = () => {
     },
     published: false,
   })
+  expect(getLink("kubah-night-frogs-tour")).toMatchObject({
+    label: {
+      en: "Kubah Park Night Walk: Search for Borneo Frogs",
+      fr: "Balade nocturne au Parc de Kubah : À la recherche des grenouilles de Bornéo",
+    },
+    published: false,
+  })
   expect(getLink("bako-national-park")).toMatchObject({
     label: { en: "", fr: "" },
     published: false,
@@ -567,6 +574,14 @@ describe("links", () => {
     // other
     expect(getLink("green-pomelo")).toMatchObject({
       label: { en: "Green pomelo", fr: "Green pomelo" },
+      published: false,
+    })
+    expect(getLink("durian")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("rambutan")).toMatchObject({
+      label: { en: "", fr: "" },
       published: false,
     })
     expect(getLink("orangutan")).toMatchObject({

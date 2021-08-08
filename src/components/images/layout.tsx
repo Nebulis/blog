@@ -116,6 +116,9 @@ export const GroupOfImages: FunctionComponent<{ className?: string }> = ({ child
 }
 
 const imageAsPortraitStyle = css`
+  .gatsby-image-wrapper {
+    max-height: calc(100vh - 40px);
+  }
   max-width: 600px;
   margin-right: auto;
   margin-left: auto;

@@ -1,7 +1,7 @@
 import { CountryLink } from "../../links/links.types"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
-import { SemenggohNatureReserveCard } from "./malaysia.cards"
+import { KubahNightFrogsTourCard, SemenggohNatureReserveCard } from "./malaysia.cards"
 
 export const malaysiaLinks: CountryLink = {
   id: "malaysia",
@@ -43,6 +43,15 @@ export const malaysiaLinks: CountryLink = {
           },
           card: SemenggohNatureReserveCard,
           published: new Date("2021-08-21T17:00:00.000+08:00"),
+        },
+        {
+          id: "kubah-night-frogs-tour",
+          label: {
+            fr: commonFr.country.malaysia.card["kubah-night-frogs-tour"],
+            en: commonEn.country.malaysia.card["kubah-night-frogs-tour"],
+          },
+          card: KubahNightFrogsTourCard,
+          published: new Date("2021-08-28T17:00:00.000+08:00"),
         },
         {
           id: "bako-national-park",
