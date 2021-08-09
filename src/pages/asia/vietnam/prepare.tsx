@@ -782,6 +782,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p
               css={css`
                 @media (max-width: ${smallEnd}) {
+                  // override the default style applied on petitcarrecolore paragraph
                   margin-bottom: 1rem !important;
                 }
               `}

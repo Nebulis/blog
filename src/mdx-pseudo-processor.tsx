@@ -123,14 +123,10 @@ const buildLink = ({ lang, url, text }: { lang: Lang; url: string; text: string 
         css={css`
           padding-right: 0.25rem; //p1
           padding-left: 0.25rem; //p1
-          color: ${elements[1]} !important;
-          background-color: ${elements[2]} !important;
-          &:visited {
-            color: ${elements[1]} !important;
-            background-color: ${elements[2]} !important;
-          }
         `}
         className="mdx-pseudo-processor-link japan-line"
+        // we use style to take priority over the default page color for links
+        style={{ color: elements[1], backgroundColor: elements[2] }}
       >
         {text}
       </ExternalLink>

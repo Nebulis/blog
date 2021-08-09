@@ -88,14 +88,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where.part1")}</p>
           <p>{t("where.part2")}</p>
         </Where>
-        <MapContainer>
-          <img
-            css={css`
-              max-height: 60vh !important;
-            `}
-            src={SouthernVietnamMap}
-            alt="Southern Vietnam Map"
-          />
+        <MapContainer
+          css={css`
+            img {
+              max-height: 60vh;
+            }
+          `}
+        >
+          <img src={SouthernVietnamMap} alt="Southern Vietnam Map" />
         </MapContainer>
         <Visit>
           <SectionContent>

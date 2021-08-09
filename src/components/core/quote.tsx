@@ -12,7 +12,6 @@ const style = css`
     font-family: "Playfair Display", serif;
   }
 
-  vertical-align: initial !important;
   .quote::before {
     vertical-align: bottom;
     content: "“";

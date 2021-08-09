@@ -32,7 +32,6 @@ import { indonesiaLinks } from "../../../../components/core/asia/indonesia/indon
 import { IndonesiaBlogLayout, indonesiaWeatherEntries } from "../../../../components/core/asia/indonesia/indonesia"
 import volcano from "../../../../images/asia/indonesia/volcano.svg"
 import { SharedIndonesiaImages } from "../../../../components/images/asia/indonesia/shared-indonesia-images"
-import { AustraliaBlogLayout } from "../../../../components/core/oceania/australia/australia"
 
 const namespace = "asia/indonesia/komodo-island/index"
 i18n.addResourceBundle("fr", namespace, translationFr)

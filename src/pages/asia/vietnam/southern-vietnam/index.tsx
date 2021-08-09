@@ -34,7 +34,6 @@ import { Divider } from "../../../../components/core/divider"
 import { WeatherForHomePage } from "../../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
 import { PointOfInterestSection } from "../../../../components/core/point-of-interest"
-import { AustraliaBlogLayout } from "../../../../components/core/oceania/australia/australia"
 
 const namespace = "asia/vietnam/southern-vietnam/index"
 i18n.addResourceBundle("fr", namespace, translationFr)

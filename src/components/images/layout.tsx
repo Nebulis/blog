@@ -463,13 +463,10 @@ const imageAsMedallionStyle = css`
     transition: all 300ms linear;
     font-family: auto;
   }
-  .gatsby-image-wrapper {
-    width: ${medallionDimension};
-    height: ${medallionDimension} !important;
-  }
+  .gatsby-image-wrapper,
   img {
     width: ${medallionDimension};
-    height: ${medallionDimension} !important;
+    height: ${medallionDimension};
   }
 `
 export const ImageAsMedallion: FunctionComponent<HTMLAttributes<any> & { title?: string }> = ({

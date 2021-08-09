@@ -18,7 +18,6 @@ import { PageProps } from "gatsby"
 import VietnamImage from "../../images/asia/vietnam/home-vietnam.jpg"
 import { jsx } from "@emotion/react"
 import { SharedAsiaImages } from "../../components/images/asia/shared-asia-images"
-import { AustraliaBlogLayout } from "../../components/core/oceania/australia/australia"
 
 const namespace = "asia/index"
 i18n.addResourceBundle("fr", namespace, asiaIndexFr)

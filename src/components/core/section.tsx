@@ -250,7 +250,7 @@ export const SubHomeSectionTwoLines: FunctionComponent<{ title: string; country:
 }
 export const SubSubHomeSection = styled(HomeSection)`
   font-size: 1.2rem; // h3.5
-  margin-bottom: 1.45rem !important;
+  margin-bottom: 1.45rem;
 `
 
 export const CityHomeSection: FunctionComponent = ({ children }) => (

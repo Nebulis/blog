@@ -809,7 +809,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p
               className="mb0 tc b"
               css={css`
-                margin-bottom: 0 !important;
                 color: ${vietnamPrimaryColorDarker};
               `}
             >

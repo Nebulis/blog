@@ -49,7 +49,7 @@ const philippinesLayout = `
   }
   header {
     .menu-entry {
-      border-top: 1px solid ${philippinesPrimaryColor}!important;
+      border-top: 1px solid ${philippinesPrimaryColor};
     }
   }
   .index-blog-layout-content {

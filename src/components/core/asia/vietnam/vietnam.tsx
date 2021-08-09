@@ -42,7 +42,7 @@ const vietnamLayout = `
   }
   header {
     .menu-entry {
-      border-top: 1px solid ${vietnamPrimaryColor}!important;
+      border-top: 1px solid ${vietnamPrimaryColor};
     }
   }
 
