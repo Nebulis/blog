@@ -504,6 +504,12 @@ describe("mdx-pseudo-processor", () => {
           <ExternalLink
             className="mdx-pseudo-processor-link japan-line"
             href="https://test.com"
+            style={
+              Object {
+                "backgroundColor": "blue",
+                "color": "red",
+              }
+            }
           >
             test
           </ExternalLink>
