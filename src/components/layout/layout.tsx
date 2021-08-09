@@ -360,8 +360,8 @@ export const MedallionContainer = styled.div`
 
 export const goToAllArticlesContainer = css`
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: calc(1.45rem - 1px); // like hr
+  margin-bottom: calc(1.45rem - 1px); // like hr
 `
 export const GoToAllArticlesContainer: FunctionComponent<HTMLAttributes<any>> = ({ children, ...props }) => (
   <div css={goToAllArticlesContainer} className="all-articles-container" {...props}>

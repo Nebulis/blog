@@ -39,6 +39,7 @@ import { PointOfInterestSection } from "../../../../components/core/point-of-int
 import HomeElNido from "../../../../images/asia/philippines/el-nido/home-el-nido.jpg"
 import { WeatherForHomePage } from "../../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
+import { AustraliaBlogLayout } from "../../../../components/core/oceania/australia/australia"
 
 const namespace = "asia/philippines/el-nido/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -128,6 +129,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <PhilippinesButtonLink to="articles?country=philippines">{t("common:allArticles")}</PhilippinesButtonLink>
         </GoToAllArticlesContainer>
+        <Divider />
         <MouseToolTip>
           {tooltipLabel ? (
             <TooltipContent>

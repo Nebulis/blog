@@ -115,6 +115,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <ButtonLink to="articles?country=australia">{t("common:allArticles")}</ButtonLink>
         </GoToAllArticlesContainer>
+        <Divider />
         <MouseToolTip>
           {tooltipLabel ? (
             <TooltipContent>

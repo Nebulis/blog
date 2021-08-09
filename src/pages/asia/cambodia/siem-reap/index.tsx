@@ -32,6 +32,7 @@ import { WeatherForHomePage } from "../../../../components/core/weather"
 import { cambodiaLinks } from "../../../../components/core/asia/cambodia/cambodia.links"
 import { CambodiaBlogLayout, cambodiaWeatherEntries } from "../../../../components/core/asia/cambodia/cambodia"
 import { SharedCambodiaImages } from "../../../../components/images/asia/cambodia/shared-cambodia-images"
+import { AustraliaBlogLayout } from "../../../../components/core/oceania/australia/australia"
 
 const namespace = "asia/cambodia/siem-reap/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -111,6 +112,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <ButtonLink to="articles?country=cambodia">{t("common:allArticles")}</ButtonLink>
         </GoToAllArticlesContainer>
+        <Divider />
         <MouseToolTip>
           {tooltipLabel ? (
             <TooltipContent>

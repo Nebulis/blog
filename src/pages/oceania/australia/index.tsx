@@ -101,16 +101,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </>
         )}
         <Divider />
-        <GoToAllArticlesContainer>
-          <ButtonLink to="articles?country=australia">{t("common:allArticles")}</ButtonLink>
-        </GoToAllArticlesContainer>
-        <Divider />
         <SubHomeSectionTwoLines title={t("weather")} country={t("weather-country")} />
         <WeatherForHomePage
           entries={australiaWeatherEntries(i18n.languageCode)}
           onMouseLeave={() => setTooltipLabel("")}
           onMouseEnter={setTooltipLabel}
         />
+        <Divider />
+        <GoToAllArticlesContainer>
+          <ButtonLink to="articles?country=australia">{t("common:allArticles")}</ButtonLink>
+        </GoToAllArticlesContainer>
         <Divider />
         <MouseToolTip>
           {tooltipLabel ? (

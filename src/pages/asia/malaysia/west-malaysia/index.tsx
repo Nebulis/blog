@@ -32,6 +32,7 @@ import rafflesia from "../../../../images/asia/malaysia/rafflesia.svg"
 import { SharedMalaysiaImages } from "../../../../components/images/asia/malaysia/shared-malaysia-images"
 import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
 import { WeatherForHomePage } from "../../../../components/core/weather"
+import { AustraliaBlogLayout } from "../../../../components/core/oceania/australia/australia"
 
 const namespace = "asia/malaysia/west-malaysia/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -112,6 +113,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <ButtonLink to="articles?country=malaysia">{t("common:allArticles")}</ButtonLink>
         </GoToAllArticlesContainer>
+        <Divider />
         <MouseToolTip>
           {tooltipLabel ? (
             <TooltipContent>

@@ -18,6 +18,7 @@ import AustraliaImage from "../../images/oceania/australia/home-australia.jpg"
 import { jsx } from "@emotion/react"
 import { oceaniaLinks } from "../../components/core/oceania/oceania.links"
 import { SharedOceaniaImages } from "../../components/images/oceania/shared-oceania-images"
+import { AustraliaBlogLayout } from "../../components/core/oceania/australia/australia"
 
 const namespace = "oceania/index"
 i18n.addResourceBundle("fr", namespace, translateFr)
@@ -64,6 +65,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <ButtonLink to="articles?continent=oceania">{t("common:allArticles")}</ButtonLink>
         </GoToAllArticlesContainer>
+        <Divider />
       </PrimaryBlogLayoutWithDrawer>
     </>
   )

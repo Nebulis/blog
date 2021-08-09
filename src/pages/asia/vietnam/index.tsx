@@ -115,10 +115,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </>
         )}
         <Divider />
-        <GoToAllArticlesContainer>
-          <ButtonLink to="articles?country=vietnam">{t("common:allArticles")}</ButtonLink>
-        </GoToAllArticlesContainer>
-        <Divider />
         <SubHomeSectionTwoLines title={t("weather")} country={t("weather-country")} />
         <WeatherForHomePage
           entries={vietnamWeatherEntries(t)}
@@ -130,6 +126,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <MapContainer>
           <img src={HomeVietnamImage} alt="Home Vietnam Image" />
         </MapContainer>
+        <Divider />
+        <GoToAllArticlesContainer>
+          <ButtonLink to="articles?country=vietnam">{t("common:allArticles")}</ButtonLink>
+        </GoToAllArticlesContainer>
         <Divider />
         <MouseToolTip>
           {tooltipLabel ? (

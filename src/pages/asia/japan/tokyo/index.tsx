@@ -35,6 +35,7 @@ import { TwoDaysInTokyoCard } from "../../../../components/core/japan/japan.card
 import { WeatherForHomePage } from "../../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
 import { PointOfInterestSection } from "../../../../components/core/point-of-interest"
+import { AustraliaBlogLayout } from "../../../../components/core/oceania/australia/australia"
 
 const namespace = "asia/japan/tokyo/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -123,6 +124,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <GoToAllArticlesContainer>
           <JapanButtonLink to="articles?country=japan">{t("common:allArticles")}</JapanButtonLink>
         </GoToAllArticlesContainer>
+        <Divider />
         <MouseToolTip>
           {tooltipLabel ? (
             <TooltipContent>

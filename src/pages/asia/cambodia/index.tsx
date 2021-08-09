@@ -98,10 +98,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </>
         )}
         <Divider />
-        <GoToAllArticlesContainer>
-          <ButtonLink to="articles?country=cambodia">{t("common:allArticles")}</ButtonLink>
-        </GoToAllArticlesContainer>
-        <Divider />
         <SubHomeSectionTwoLines title={t("weather")} country={t("weather-country")} />
         <WeatherForHomePage
           css={css`
@@ -114,6 +110,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           onMouseLeave={() => setTooltipLabel("")}
           onMouseEnter={setTooltipLabel}
         />
+        <Divider />
+        <GoToAllArticlesContainer>
+          <ButtonLink to="articles?country=cambodia">{t("common:allArticles")}</ButtonLink>
+        </GoToAllArticlesContainer>
         <Divider />
         <MouseToolTip>
           {tooltipLabel ? (
