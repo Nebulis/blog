@@ -498,7 +498,7 @@ const malaysiaLinks = () => {
     published: false,
   })
   expect(getLink("bako-national-park")).toMatchObject({
-    label: { en: "", fr: "" },
+    label: { en: "Bako National Park: One of Borneo's Gem", fr: "Parc national de Bako : Un des joyaux de Bornéo" },
     published: false,
   })
   expect(getLink("kuching")).toMatchObject({
@@ -585,6 +585,18 @@ describe("links", () => {
       published: false,
     })
     expect(getLink("orangutan")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("colugo")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("crab-eating-macaque")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("proboscis-monkey")).toMatchObject({
       label: { en: "", fr: "" },
       published: false,
     })

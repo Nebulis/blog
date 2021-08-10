@@ -222,6 +222,12 @@ exports[`english pages exports meta for public/en/asia/japan/transports-in-japan
 
 exports[`english pages exports meta for public/en/asia/japan/transports-in-japan/index.html correctly: title 1`] = `"All you need to know about transportation in Japan | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/bako-national-park/index.html correctly: meta-description 1`] = `"Join us on an unforgettable tour of this secluded pearl of Borneo, in Malaysia. In addition to our travelogue and our photos, we answer all your questions: How to get there? How long and at what period? We also tell you its address, opening hours and price."`;
+
+exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/bako-national-park/index.html correctly: social-network 1`] = `"Located on the Borneo island, Bako National Park is a real gem of biodiversity. Sumptuous landscapes with tropical forests, mangroves, cliffs, waterfalls, paradisiacal beaches, and hikes to search for unique animals."`;
+
+exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/bako-national-park/index.html correctly: title 1`] = `"Bako National Park: One of Borneo's Gem | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/index.html correctly: meta-description 1`] = `"Discover East Malaysia, a jungle landscape where some endemic and wild animals still reside. For each place, we try to transcribe our visit as best as possible by telling you how to get there? Why? When? How long and at what period?"`;
 
 exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/index.html correctly: social-network 1`] = `"Wild landscapes and jungles still exist despite excessive deforestation. The forests, mountains, and rivers of Borneo are home to wild or rehabilitated animals such as elephants, orangutans, or proboscis monkeys. Many of these animals are endemic to this island."`;

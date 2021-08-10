@@ -222,6 +222,12 @@ exports[`french pages exports meta for public/asia/japan/transports-in-japan/ind
 
 exports[`french pages exports meta for public/asia/japan/transports-in-japan/index.html correctly: title 1`] = `"Tout savoir sur les transports au Japon | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/asia/malaysia/east-malaysia/bako-national-park/index.html correctly: meta-description 1`] = `"Embarquez avec nous pour une visite inoubliable de cette perle isolée de Bornéo en Malaisie. En plus de notre récit de voyage et nos photos, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également son adresse, les horaires et le prix."`;
+
+exports[`french pages exports meta for public/asia/malaysia/east-malaysia/bako-national-park/index.html correctly: social-network 1`] = `"Situé sur l’île de Bornéo, le parc national de Bako est un véritable joyau de biodiversité. Des paysages somptueux entre forêts tropicales, mangroves, falaises, cascades et plages paradisiaques, le tout pour des randonnées exceptionnelles à la recherche d’animaux emblématiques."`;
+
+exports[`french pages exports meta for public/asia/malaysia/east-malaysia/bako-national-park/index.html correctly: title 1`] = `"Parc national de Bako : Un des joyaux de Bornéo | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/asia/malaysia/east-malaysia/index.html correctly: meta-description 1`] = `"Découvrez la Malaisie Orientale, un paysage junglissime où résident encore quelques animaux sauvages. Pour chaque lieu nous essayons de vous retranscrire au mieux notre visite en vous indiquant comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/malaysia/east-malaysia/index.html correctly: social-network 1`] = `"Cette partie de la Malaisie vous emmènera dans un paysage sauvage et dans la jungle encore présente malgré la déforestation abusive. Les forêts, montagnes et rivières de Bornéo vous feront découvrir une île où résident encore quelques animaux sauvages ou en réhabilitation tels que les éléphants, les orangs-outans ou les nasiques."`;

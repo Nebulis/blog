@@ -1,7 +1,7 @@
 import { CountryLink } from "../../links/links.types"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
-import { KubahNightFrogsTourCard, SemenggohNatureReserveCard } from "./malaysia.cards"
+import { BakoNationalParkCard, KubahNightFrogsTourCard, SemenggohNatureReserveCard } from "./malaysia.cards"
 
 export const malaysiaLinks: CountryLink = {
   id: "malaysia",
@@ -56,9 +56,10 @@ export const malaysiaLinks: CountryLink = {
         {
           id: "bako-national-park",
           label: {
-            fr: "",
-            en: "",
+            fr: commonFr.country.malaysia.card["bako-national-park"],
+            en: commonEn.country.malaysia.card["bako-national-park"],
           },
+          card: BakoNationalParkCard,
           published: new Date("2021-09-04T17:00:00.000+08:00"),
         },
       ],

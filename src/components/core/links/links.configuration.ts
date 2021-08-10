@@ -298,6 +298,21 @@ export const fruitLinks: OtherLink[] = [
     label: { fr: "", en: "" },
     published: false,
   },
+  {
+    id: "proboscis-monkey",
+    label: { fr: "", en: "" },
+    published: false,
+  },
+  {
+    id: "colugo",
+    label: { fr: "", en: "" },
+    published: false,
+  },
+  {
+    id: "crab-eating-macaque",
+    label: { fr: "", en: "" },
+    published: false,
+  },
 ]
 
 export const noIdeaLinks: NavigationLink[] = [
