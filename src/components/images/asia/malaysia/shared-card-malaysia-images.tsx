@@ -6,6 +6,7 @@ import { ExtraImageProps } from "../../../../types/shared"
 export const alt = {
   semenggohNatureReserve: "Semenggoh Nature Reserve",
   kubahNightFrogsTour: "Kubah Night Frogs Tour",
+  bakoNationalPark: "Bako National Park",
 }
 export const SharedCardMalaysiaImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
   className = "",
@@ -30,6 +31,15 @@ export const SharedCardMalaysiaImages: React.FunctionComponent<ExtraImageProps &
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      bakoNationalPark: file(
+        relativePath: { eq: "asia/malaysia/east-malaysia/bako-national-park/bako-national-park-main.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
