@@ -246,6 +246,12 @@ exports[`french pages exports meta for public/asia/malaysia/east-malaysia/semeng
 
 exports[`french pages exports meta for public/asia/malaysia/east-malaysia/semenggoh-nature-reserve/index.html correctly: title 1`] = `"Réserve naturelle de Semenggoh : À la rencontre des Orang Outan | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/asia/malaysia/east-malaysia/weekend-in-kuching/index.html correctly: meta-description 1`] = `"On vous emmène avec nous à la découverte de quelques joyaux de l’île de Bornéo pour un petit séjour à l'extrême sud de l’État de Sarawak. Quand partir ? Combien de jours ? Quel budget prévoir ? Des questions qu’on se pose souvent avant de concrétiser un projet de voyage. On vous répond en se basant sur notre propre expérience."`;
+
+exports[`french pages exports meta for public/asia/malaysia/east-malaysia/weekend-in-kuching/index.html correctly: social-network 1`] = `"Bornéo, une des terres les plus sauvages au monde, peuplée d’animaux que vous ne trouverez nulle part ailleurs. Oubliez les grandes villes, les buildings et la pollution et laissez-vous envoûter par cette nature unique au milieu d’une jungle verdoyante."`;
+
+exports[`french pages exports meta for public/asia/malaysia/east-malaysia/weekend-in-kuching/index.html correctly: title 1`] = `"Bornéo : Un week-end autour de Kuching | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/asia/malaysia/index.html correctly: meta-description 1`] = `"On vous laisse découvrir à travers nos articles et nos photos la Malaisie entre modernité et forêt tropicale. Suivez notre guide de région en région pour découvrir notre sélection des lieux incontournables. Pour chaque lieu visité nous essayons de vous retranscrire au mieux notre visite en vous indiquant : Où partir ? Comment y aller ? Pourquoi ? Quand ? Combien de temps et à quelle période ?"`;
 
 exports[`french pages exports meta for public/asia/malaysia/index.html correctly: social-network 1`] = `"La Malaisie est composée en deux parties. La Malaisie Occidentale (Péninsulaire ou Malaya) qui regroupe la plupart des grandes villes modernes et la Malaisie Orientale qui comprend le Nord de l’île de Bornéo et qui vous emmènera dans la jungle encore présente et peuplée d’animaux. Suivez notre guide de région en région pour découvrir notre sélection des lieux incontournables."`;

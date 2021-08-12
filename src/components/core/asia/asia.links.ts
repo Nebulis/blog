@@ -52,5 +52,11 @@ export const asiaLinks: ContinentLink = {
       others: [],
       label: { en: commonEn.country.india.title, fr: commonFr.country.india.title },
     },
+    {
+      id: "brunei",
+      cities: [],
+      others: [],
+      label: { en: commonEn.country.brunei.title, fr: commonFr.country.brunei.title },
+    },
   ],
 }

@@ -7,6 +7,7 @@ import commonEn from "../../../../locales/en/common.json"
 import styled from "@emotion/styled"
 import { malaysiaPrimaryColorDarker } from "./malaysia.variables"
 import { SharedCardMalaysiaImages } from "../../../images/asia/malaysia/shared-card-malaysia-images"
+import { CarouselImageQuery } from "../../../images/carousel"
 
 export const MalaysiaCard = styled(Card)`
   .tags a {
@@ -50,6 +51,15 @@ export const BakoNationalParkCard: FunctionComponent<ExtraCardProps> = ({ fluidO
   return (
     <MalaysiaCard title={common.country.malaysia.card["bako-national-park"]} to="bako-national-park" {...card}>
       <SharedCardMalaysiaImages image="bakoNationalPark" fluidObject={fluidObject} />
+    </MalaysiaCard>
+  )
+}
+export const WeekendKuchingCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <MalaysiaCard title={common.country.malaysia.card["weekend-in-kuching"]} to="weekend-in-kuching" {...card}>
+      <CarouselImageQuery image="malaysia2" fluidObject={fluidObject} />
     </MalaysiaCard>
   )
 }
