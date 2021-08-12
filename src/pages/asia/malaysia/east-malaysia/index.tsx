@@ -7,6 +7,7 @@ import { ApplicationContext } from "../../../../components/application"
 import {
   CityArticleContainer,
   GoToAllArticlesContainer,
+  MainCardContainer,
   MedallionContainer,
 } from "../../../../components/layout/layout"
 import { PageProps } from "gatsby"
@@ -32,6 +33,7 @@ import rafflesia from "../../../../images/asia/malaysia/rafflesia.svg"
 import { SharedMalaysiaImages } from "../../../../components/images/asia/malaysia/shared-malaysia-images"
 import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
 import { WeatherForHomePage } from "../../../../components/core/weather"
+import { WeekendKuchingCard } from "../../../../components/core/asia/malaysia/malaysia.cards"
 
 const namespace = "asia/malaysia/east-malaysia/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -47,6 +49,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     kind: "highlight",
     development,
     tags: ["east-malaysia"],
+    filter: (cachedLink) => cachedLink.id !== "weekend-in-kuching",
   })
   return (
     <>
@@ -73,6 +76,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
         <PointOfInterestSection page={currentPageId} />
+        <Divider />
+        <CityHomeSection>{t("section2")}</CityHomeSection>
+        <MainCardContainer>
+          <WeekendKuchingCard />
+        </MainCardContainer>
         {highlights.length > 0 && (
           <>
             <Divider className="mt2" />

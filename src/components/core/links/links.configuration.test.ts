@@ -107,6 +107,7 @@ const europeLinks = () => {
 const asiaLinks = () => {
   // asia countries assertions
   expect(getLink("china")).toMatchObject({ label: { fr: "Chine", en: "China" }, published: false })
+  expect(getLink("brunei")).toMatchObject({ label: { fr: "Brunei", en: "Brunei" }, published: false })
   expect(getLink("laos")).toMatchObject({ label: { fr: "Laos", en: "Laos" }, published: false })
   expect(getLink("thailand")).toMatchObject({ label: { fr: "Thaïlande", en: "Thailand" }, published: false })
   expect(getLink("myanmar")).toMatchObject({ label: { fr: "Birmanie", en: "Myanmar" }, published: false })
@@ -499,6 +500,10 @@ const malaysiaLinks = () => {
   })
   expect(getLink("bako-national-park")).toMatchObject({
     label: { en: "Bako National Park: One of Borneo's Gem", fr: "Parc national de Bako : Un des joyaux de Bornéo" },
+    published: false,
+  })
+  expect(getLink("weekend-in-kuching")).toMatchObject({
+    label: { en: "Borneo: A weekend around Kuching", fr: "Bornéo : Un week-end autour de Kuching" },
     published: false,
   })
   expect(getLink("kuching")).toMatchObject({

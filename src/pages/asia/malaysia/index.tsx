@@ -18,7 +18,12 @@ import { PageQuote } from "../../../components/core/quote"
 import i18n from "i18next"
 import indexFr from "../../../locales/fr/asia/malaysia/index.json"
 import indexEn from "../../../locales/en/asia/malaysia/index.json"
-import { ArticlesContainer, GoToAllArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
+import {
+  ArticlesContainer,
+  GoToAllArticlesContainer,
+  MapContainer,
+  MedallionContainer,
+} from "../../../components/layout/layout"
 import { ApplicationLink, ButtonLink } from "../../../components/core/links/link"
 import { jsx } from "@emotion/react"
 import MalaysiaImage from "../../../images/asia/malaysia/home-malaysia.jpg"
@@ -29,6 +34,7 @@ import { PointOfInterestSection } from "../../../components/core/point-of-intere
 import { ImageAsMedallion, TitleImage } from "../../../components/images/layout"
 import { MalaysiaBlogLayout, malaysiaWeatherEntries } from "../../../components/core/asia/malaysia/malaysia"
 import { SharedMalaysiaImages } from "../../../components/images/asia/malaysia/shared-malaysia-images"
+import MalaysiaMap from "../../../images/asia/malaysia/malaysia-map.png"
 
 const namespace = "asia/malaysia/index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -103,6 +109,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           onMouseLeave={() => setTooltipLabel("")}
           onMouseEnter={setTooltipLabel}
         />
+        <Divider />
+        <SubHomeSectionTwoLines title={t("map")} country={t("country")} />
+        <MapContainer>
+          <img src={MalaysiaMap} alt="Malaysia Map" />
+        </MapContainer>
         <Divider />
         <GoToAllArticlesContainer>
           <ButtonLink to="articles?country=malaysia">{t("common:allArticles")}</ButtonLink>
