@@ -486,7 +486,7 @@ const malaysiaLinks = () => {
   })
   expect(getLink("semenggoh-nature-reserve")).toMatchObject({
     label: {
-      en: "Semenggoh Nature Reserve: Meeting Orangutans",
+      en: "Semenggoh Nature Reserve: Meeting Orangutans in Borneo",
       fr: "Réserve naturelle de Semenggoh : À la rencontre des Orangs-Outans de Bornéo",
     },
     published: false,
