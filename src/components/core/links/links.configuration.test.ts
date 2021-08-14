@@ -117,7 +117,7 @@ const asiaLinks = () => {
   expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: true })
   expect(getLink("vietnam")).toMatchObject({ label: { fr: "Vietnam", en: "Vietnam" }, published: true })
   expect(getLink("philippines")).toMatchObject({ label: { fr: "Philippines", en: "Philippines" }, published: true })
-  expect(getLink("malaysia")).toMatchObject({ label: { fr: "Malaisie", en: "Malaysia" }, published: false })
+  expect(getLink("malaysia")).toMatchObject({ label: { fr: "Malaisie", en: "Malaysia" }, published: true })
   expect(getLink("taiwan")).toMatchObject({ label: { fr: "Taiwan", en: "Taiwan" }, published: false })
   expect(getLink("singapore")).toMatchObject({ label: { fr: "Singapour", en: "Singapore" }, published: false })
 }
@@ -482,7 +482,7 @@ const malaysiaLinks = () => {
   })
   expect(getLink("east-malaysia")).toMatchObject({
     label: { en: "East", fr: "Orientale" },
-    published: false,
+    published: true,
   })
   expect(getLink("semenggoh-nature-reserve")).toMatchObject({
     label: {
@@ -504,7 +504,7 @@ const malaysiaLinks = () => {
   })
   expect(getLink("weekend-in-kuching")).toMatchObject({
     label: { en: "Borneo: A weekend around Kuching", fr: "Bornéo : Un week-end autour de Kuching" },
-    published: false,
+    published: true,
   })
   expect(getLink("kuching")).toMatchObject({
     label: { en: "", fr: "" },

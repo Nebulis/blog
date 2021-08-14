@@ -135,6 +135,7 @@ export const menuLinks: NavigationLink[] = [
           {
             id: "summer",
             label: { fr: "Été", en: "Summer" },
+            published: true,
             sections: [],
           },
           {

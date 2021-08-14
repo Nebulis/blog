@@ -12,7 +12,7 @@ export const malaysiaLinks: CountryLink = {
   id: "malaysia",
   label: { fr: commonFr.country.malaysia.title, en: commonEn.country.malaysia.title },
   pointOfInterest: ["lazy", "monument", "nature", "animals", "city", "water-activities"],
-  seasons: ["summer", "spring"],
+  seasons: ["summer", "spring", "winter"],
   imageProps: {
     image: "homeMalaysia",
   },
