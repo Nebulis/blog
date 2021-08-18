@@ -34,6 +34,7 @@ const alt = {
   beach11: "Bako National Park Beach",
   beach12: "Bako National Park Beach",
   beach13: "Bako National Park Beach",
+  beach14: "Bako National Park Beach",
   flora: "Bako National Park Bridge",
   flora2: "Bako National Park Bridge",
   flora3: "Bako National Park Jungle",
@@ -345,6 +346,15 @@ export const BakoNationalParkImages: React.FunctionComponent<ExtraImageProps & {
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      beach14: file(
+        relativePath: { eq: "asia/malaysia/east-malaysia/bako-national-park/bako-national-park-beach14.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 95, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

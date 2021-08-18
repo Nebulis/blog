@@ -27,6 +27,7 @@ import {
   GroupOfImages,
   ImageAsLandscape,
   ImageAsPortrait,
+  Panorama,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { css } from "@emotion/react"
@@ -450,6 +451,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit.part5.part5")}</p>
             <p>{t("visit.part5.part6")}</p>
             <p>{t("visit.part5.part7")}</p>
+            <Panorama>
+              <BakoNationalParkImages image="beach14" />
+            </Panorama>
           </SectionContent>
         </section>
         <Divider />
