@@ -28,7 +28,7 @@ export const indonesiaLinks: CountryLink = {
       },
       highlights: [
         {
-          id: "ubud-monkey-park",
+          id: "ubud-monkey-forest",
           label: {
             en: "",
             fr: "",

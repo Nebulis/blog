@@ -27,7 +27,7 @@ const continentsLinks = () => {
 const categoriesLinks = () => {
   // categories assertions
   expect(getLink("spring")).toMatchObject({ label: { en: "Spring", fr: "Printemps" }, published: true })
-  expect(getLink("summer")).toMatchObject({ label: { fr: "Été", en: "Summer" }, published: false })
+  expect(getLink("summer")).toMatchObject({ label: { fr: "Été", en: "Summer" }, published: true })
   expect(getLink("winter")).toMatchObject({ label: { fr: "Hiver", en: "Winter" }, published: true })
   expect(getLink("autumn")).toMatchObject({ label: { fr: "Automne", en: "Autumn" }, published: true })
   expect(getLink("when-to-go")).toMatchObject({ label: { fr: "Quand Partir", en: "When to go" }, published: true })
@@ -567,7 +567,7 @@ describe("links", () => {
       label: { en: "Bali", fr: "Bali" },
       published: false,
     })
-    expect(getLink("ubud-monkey-park")).toMatchObject({
+    expect(getLink("ubud-monkey-forest")).toMatchObject({
       label: { en: "", fr: "" },
       published: false,
     })
