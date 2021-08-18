@@ -92,7 +92,7 @@ interface BaseProps {
   title: string
   image: string
   note?: string
-  price: number
+  price?: number
   people?: number
   kind?: Kind
   duration?: { value: number; unit: DurationUnit }
@@ -104,7 +104,7 @@ const InternalCard: React.FunctionComponent<BaseProps> = ({
   title,
   image,
   note,
-  price,
+  price = 0,
   people,
   kind,
   duration,
@@ -128,7 +128,7 @@ const InternalCard: React.FunctionComponent<BaseProps> = ({
               <span>&nbsp;{people}</span>
             </span>
           )}
-          <span className="activity">{computedPrice}</span>
+          {price > 0 && <span className="activity">{computedPrice}</span>}
           {note && (
             <span className="activity">
               <FaStar />

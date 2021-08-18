@@ -63,3 +63,12 @@ export const WeekendKuchingCard: FunctionComponent<ExtraCardProps> = ({ fluidObj
     </MalaysiaCard>
   )
 }
+export const LangkawiDreamHotelCard: FunctionComponent<ExtraCardProps> = ({ fluidObject, card = {} }) => {
+  const { i18n } = useCustomTranslation()
+  const common = i18n.languageCode === "fr" ? commonFr : commonEn
+  return (
+    <MalaysiaCard title={common.country.malaysia.card["langkawi-dream-hotel"]} to="langkawi-dream-hotel" {...card}>
+      <SharedCardMalaysiaImages image="langkawiDreamHotel" fluidObject={fluidObject} />
+    </MalaysiaCard>
+  )
+}

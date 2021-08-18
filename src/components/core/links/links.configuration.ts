@@ -295,6 +295,11 @@ export const fruitLinks: OtherLink[] = [
   },
   // TODO to move :)
   {
+    id: "beef-rendang",
+    label: { fr: "", en: "" },
+    published: false,
+  },
+  {
     id: "orangutan",
     label: { fr: "", en: "" },
     published: false,

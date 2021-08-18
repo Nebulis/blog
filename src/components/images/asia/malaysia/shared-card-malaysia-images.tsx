@@ -7,6 +7,7 @@ export const alt = {
   semenggohNatureReserve: "Semenggoh Nature Reserve",
   kubahNightFrogsTour: "Kubah Night Frogs Tour",
   bakoNationalPark: "Bako National Park",
+  langkawiDreamHotel: "Langkawi Dream Hotel",
 }
 export const SharedCardMalaysiaImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
   className = "",
@@ -40,6 +41,15 @@ export const SharedCardMalaysiaImages: React.FunctionComponent<ExtraImageProps &
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      langkawiDreamHotel: file(
+        relativePath: { eq: "asia/malaysia/west-malaysia/langkawi-dream-hotel/langkawi-dream-hotel-main.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

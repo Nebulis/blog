@@ -71,16 +71,21 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where-to-stay.part1")}</p>
         </WhereToStay>
         <Visit>
-          <p>{t("visit.part1")}</p>
+          <section>
+            <SectionContent>
+              <p>{t("visit.part1")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <{{uppercase (getCountry pagePath)}}Headline>{t("visit1.title")}</{{uppercase (getCountry pagePath)}}Headline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit1.part1")}</p>
+            </SectionContent>
+          </section>
         </Visit>
         <Divider />
-        <section>
-          <{{uppercase (getCountry pagePath)}}Headline>{t("visit1.title")}</{{uppercase (getCountry pagePath)}}Headline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit1.part1")}</p>
-          </SectionContent>
-        </section>
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

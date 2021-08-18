@@ -589,6 +589,10 @@ describe("links", () => {
       label: { en: "", fr: "" },
       published: false,
     })
+    expect(getLink("beef-rendang")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
     expect(getLink("orangutan")).toMatchObject({
       label: { en: "", fr: "" },
       published: false,
