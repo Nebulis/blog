@@ -264,6 +264,12 @@ exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/in
 
 exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/index.html correctly: title 1`] = `"West Malaysia | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/langkawi-dream-hotel/index.html correctly: meta-description 1`] = `"Discover this hotel located on a small private island in Langkawi. Relax, enjoy the sun and the hot sand while sipping cocktails. When to go? How long? What budget to plan? We respond to you based on our own experience."`;
+
+exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/langkawi-dream-hotel/index.html correctly: social-network 1`] = `"Located in the north of Malaysia, Langkawi is an archipelago of 99 islands. An ideal destination for a dream vacation. Hiking in the jungle or national parks but above all lazing on idyllic beaches to enjoy the sun and the hot sand while sipping a cocktail."`;
+
+exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/langkawi-dream-hotel/index.html correctly: title 1`] = `"Dream hotel in Langkawi | Travel Blog"`;
+
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly: meta-description 1`] = `"Breathtaking landscapes, white sands and turquoise water. We give you advice based on our own experience and tell you about our adventure on the island of Palawan. In this article we tell you when to go? How many days ? What budget to plan? How to get there ? And where to stay?"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly: social-network 1`] = `"Breathtaking landscapes, white sands and turquoise water ... El Nido must imperatively be part of your dream travel list for this new year."`;

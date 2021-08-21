@@ -3,10 +3,11 @@ import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
 import {
   BakoNationalParkCard,
-  KubahNightFrogsTourCard, LangkawiDreamHotelCard,
+  KubahNightFrogsTourCard,
+  LangkawiDreamHotelCard,
   SemenggohNatureReserveCard,
-  WeekendKuchingCard
-} from "./malaysia.cards";
+  WeekendKuchingCard,
+} from "./malaysia.cards"
 
 export const malaysiaLinks: CountryLink = {
   id: "malaysia",

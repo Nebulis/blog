@@ -480,6 +480,10 @@ const malaysiaLinks = () => {
     label: { en: "West", fr: "Occidentale" },
     published: false,
   })
+  expect(getLink("langkawi-dream-hotel")).toMatchObject({
+    label: { en: "Dream hotel in Langkawi", fr: "Un hôtel de rêve à Langkawi" },
+    published: false,
+  })
   expect(getLink("east-malaysia")).toMatchObject({
     label: { en: "East", fr: "Orientale" },
     published: true,
@@ -496,7 +500,7 @@ const malaysiaLinks = () => {
       en: "Kubah Park Night Walk: Search for Borneo Frogs",
       fr: "Balade nocturne au Parc de Kubah : À la recherche des grenouilles de Bornéo",
     },
-    published: false,
+    published: true,
   })
   expect(getLink("bako-national-park")).toMatchObject({
     label: { en: "Bako National Park: One of Borneo's Gem", fr: "Parc national de Bako : Un des joyaux de Bornéo" },

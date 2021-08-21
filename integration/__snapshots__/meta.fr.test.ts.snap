@@ -264,6 +264,12 @@ exports[`french pages exports meta for public/asia/malaysia/west-malaysia/index.
 
 exports[`french pages exports meta for public/asia/malaysia/west-malaysia/index.html correctly: title 1`] = `"Malaisie Occidentale | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/asia/malaysia/west-malaysia/langkawi-dream-hotel/index.html correctly: meta-description 1`] = `"On vous fait découvrir un complexe hôtelier situé sur une petite île privée de Langkawi. Farniente assurée, profiter du soleil et du sable chaud en sirotant des cocktails. Quand partir ? Combien de jours ? Quel budget prévoir ? On vous répond en se basant sur notre propre expérience."`;
+
+exports[`french pages exports meta for public/asia/malaysia/west-malaysia/langkawi-dream-hotel/index.html correctly: social-network 1`] = `"Situé tout au nord de la Malaisie, Langkawi est un archipel de 99 îles. Destination idéale pour passer des vacances de rêve. Randonnée dans la jungle ou dans les parcs nationaux mais surtout farniente sur des plages idylliques pour profiter du soleil et du sable chaud en sirotant des cocktails."`;
+
+exports[`french pages exports meta for public/asia/malaysia/west-malaysia/langkawi-dream-hotel/index.html correctly: title 1`] = `"Un hôtel de rêve à Langkawi | Blog Voyage"`;
+
 exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly: meta-description 1`] = `"Décor de carte postale, plage de sable blanc et eau turquoise, on vous raconte notre aventure sur l'île de Palawan. On vous donne des conseils en se fixant sur notre propre expérience. Quand partir ? Combien de jours ? Quel budget prévoir ? Comment s’y rendre ? et où loger ?"`;
 
 exports[`french pages exports meta for public/asia/philippines/el-nido/el-nido-paradise/index.html correctly: social-network 1`] = `"Décor de carte postale, plage de sable blanc et eau turquoise ... El Nido doit impérativement faire partie de votre « Dream List » de voyage pour cette nouvelle année."`;
