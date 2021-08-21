@@ -178,12 +178,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("accommodations.part2.part2")}</p>
               <p>{t("accommodations.part2.part3")}</p>
               <p>{t("accommodations.part2.part4")}</p>
-              <p>{t("accommodations.part1.part5")}</p>
-              <p>{t("accommodations.part1.part6")}</p>
-              <p>{t("accommodations.part1.part7")}</p>
-              <p>{t("accommodations.part1.part8")}</p>
-              <p>{t("accommodations.part1.part9")}</p>
-              <p>{t("accommodations.part1.part10")}</p>
+              <p>{t("accommodations.part2.part5")}</p>
+              <p>{t("accommodations.part2.part6")}</p>
+              <p>{t("accommodations.part2.part7")}</p>
+              <p>{t("accommodations.part2.part8")}</p>
+              <p>{t("accommodations.part2.part9")}</p>
+              <p>{t("accommodations.part2.part10")}</p>
               <TwoImagesSameSizeOrToGroup>
                 <LangkawiDreamHotelImages image="spa" />
                 <LangkawiDreamHotelImages image="spa2" />
