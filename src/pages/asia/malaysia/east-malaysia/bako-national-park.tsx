@@ -211,7 +211,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit.part1.part3")}</p>
             <GroupOfImages>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="jetty5" />
+                <BakoNationalParkImages image="jetty4" />
               </ImageAsLandscape>
               <ImageAsPortrait>
                 <BakoNationalParkImages image="jetty5" />
