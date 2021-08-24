@@ -8,6 +8,7 @@ import {
   backgroundPrimaryColor,
   bannerHeight,
   bannerHeightLandscape,
+  headerIconSize,
   largeStart,
   mediumEnd,
   mobileEnd,
@@ -37,6 +38,10 @@ const headerStyle = css`
     display: flex;
     align-items: center;
   }
+  svg {
+    width: ${headerIconSize};
+    height: ${headerIconSize};
+  }
   .header svg {
     fill: black;
     margin-left: 0.2rem;
@@ -56,7 +61,6 @@ const headerStyle = css`
   }
   .right-menu-container {
     display: flex;
-    justify-content: space-between;
   }
   .right-menu-container.development-fixed-header {
     position: fixed;
@@ -100,6 +104,10 @@ const headerStyle = css`
     #desktop-social-network-container,
     #desktop-banner {
       display: none;
+    }
+    .french-flag,
+    .uk-flag-border-only {
+      margin-right: 0.25rem;
     }
   }
 `
@@ -214,12 +222,15 @@ const StaticHeader: FunctionComponent<{
         </div>
         {context.initialDevelopmentValue ? (
           <div className="right-menu-container development-fixed-header">
-            <div className="right-menu-element" />
-            <div className="mr2">
-              <span onClick={() => i18n.changeLanguage("fr")} aria-label="Switch to French">
+            <div className="mr2 right-menu-element">
+              <span onClick={() => i18n.changeLanguage("fr")} aria-label="Switch to French" className="french-flag">
                 <FlagFrance selected={i18n.languageCode === "fr"} />
               </span>
-              <span onClick={() => i18n.changeLanguage("en")} aria-label="Switch to English">
+              <span
+                onClick={() => i18n.changeLanguage("en")}
+                aria-label="Switch to English"
+                className="uk-flag-border-only"
+              >
                 <FlagUK selected={i18n.languageCode === "en"} />
               </span>
               <FaCircle
@@ -230,12 +241,15 @@ const StaticHeader: FunctionComponent<{
           </div>
         ) : (
           <div className="right-menu-container">
-            <div className="right-menu-element" />
-            <div className="mr2">
-              <Link to={getPathForFrench(location)} aria-label="Switch to French">
+            <div className="mr2 ml-auto right-menu-element flex h-100">
+              <Link
+                to={getPathForFrench(location)}
+                aria-label="Switch to French"
+                className="flex h-100 items-center french-flag"
+              >
                 <FlagFrance selected={i18n.languageCode === "fr"} />
               </Link>
-              <Link to={getPathForEnglish(location)} aria-label="Switch to English">
+              <Link to={getPathForEnglish(location)} aria-label="Switch to English" className="flex h-100 items-center">
                 <FlagUK selected={i18n.languageCode === "en"} />
               </Link>
               {context.development && <FaSearch onClick={onSearch} className="search" />}

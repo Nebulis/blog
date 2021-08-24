@@ -489,7 +489,7 @@ const malaysiaLinks = () => {
       en: "Semenggoh Nature Reserve: Meeting Orangutans in Borneo",
       fr: "Réserve naturelle de Semenggoh : À la rencontre des Orangs-Outans de Bornéo",
     },
-    published: false,
+    published: true,
   })
   expect(getLink("kubah-night-frogs-tour")).toMatchObject({
     label: {

@@ -20,6 +20,7 @@ export const fillMap = "#d4edf5"
 
 /** sizes **/
 export const menuHeight = "35px"
+export const headerIconSize = "18px"
 export const bannerHeight = `calc(100vh / 9.425)`
 export const bannerHeightLandscape = `calc(100vh / 7)` // random :)
 export const pageDesktopHeightWithoutBanner = `calc(100vh - ${bannerHeight} - ${menuHeight})`
