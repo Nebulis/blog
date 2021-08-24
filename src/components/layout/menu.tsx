@@ -17,6 +17,7 @@ import {
   backgroundPrimaryColor,
   bannerHeight,
   bannerHeightLandscape,
+  headerIconSize,
   mediumEnd,
   menuHeight,
   mobileEnd,
@@ -75,7 +76,7 @@ const renderCountry = (continent: ContinentLink, country: CountryLink, inDevelop
   )
 }
 
-export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className }) => {
+export const Menu: FunctionComponent<HTMLAttributes<any>> = ({ className = "" }) => {
   const context = useContext(ApplicationContext)
   const inDevelopment = context.development
   const { t, i18n } = useCustomTranslation("common")
@@ -495,21 +496,28 @@ export const Tree: React.FunctionComponent<{
   const hasChildren = (!Array.isArray(children) && children) || (Array.isArray(children) && children.length > 0)
   return (
     <div className={`menu-entry ${isOpen ? "menu-entry-opened" : "menu-entry-closed"}`}>
-      <div
-        onClick={() => {
-          onClick()
-          !controlled && hasChildren && setOpen(!isOpen)
-          !hasChildren && onNavigate()
-        }}
-        className="menu-label relative"
-      >
-        <span className="menu-label-name">{to ? <ApplicationLink to={to}>{name}</ApplicationLink> : name}</span>
-        {!hideArrow && (
-          <ChevronContainer className="menu-label-chevron">
-            {hasChildren ? <FaChevronDown className={isOpen ? "chevron-open" : "chevron-closed"} /> : ""}
-          </ChevronContainer>
-        )}
-      </div>
+      {to && (
+        <ApplicationLink className="menu-label menu-label-name" to={to} onClick={onNavigate}>
+          {name}
+        </ApplicationLink>
+      )}
+      {!to && (
+        <div
+          onClick={() => {
+            onClick()
+            !controlled && hasChildren && setOpen(!isOpen)
+            !hasChildren && onNavigate()
+          }}
+          className="menu-label relative"
+        >
+          <span className="menu-label-name">{name}</span>
+          {!hideArrow && (
+            <ChevronContainer className="menu-label-chevron">
+              {hasChildren ? <FaChevronDown className={isOpen ? "chevron-open" : "chevron-closed"} /> : ""}
+            </ChevronContainer>
+          )}
+        </div>
+      )}
       <Content
         className="menu-content-container"
         style={{
@@ -549,12 +557,12 @@ const MobileMenuContainer = styled.div`
 const ScrollContainer = styled.div`
   // make sure the menu align with the bottom of the header
   // the second part is the position of the bottom of the social network icon
-  margin-top: calc(${bannerHeight} - calc(${bannerHeight} / 2 + 18px));
+  margin-top: calc(${bannerHeight} - calc(${bannerHeight} / 2 + ${headerIconSize}));
   height: calc(100vh - ${bannerHeight});
 
   // use max-height to check the mobile
   @media (orientation: landscape) and (max-height: ${mobileEnd}) {
-    margin-top: calc(${bannerHeightLandscape} - calc(${bannerHeightLandscape} / 2 + 18px));
+    margin-top: calc(${bannerHeightLandscape} - calc(${bannerHeightLandscape} / 2 + ${headerIconSize}));
     height: calc(100vh - ${bannerHeightLandscape});
   }
   padding: 0 50px 20px 50px;
@@ -567,9 +575,13 @@ const ScrollContainer = styled.div`
     text-transform: uppercase;
   }
   .menu-label {
-    padding: 10px 3px;
+    padding: 11px 3px;
     cursor: pointer;
     display: flex;
+  }
+  .menu-label-name {
+    line-height: 1;
+    vertical-align: middle;
   }
   .menu-label > span {
     display: inline-flex;
@@ -607,6 +619,7 @@ export const MobileMenu: React.FunctionComponent = () => {
   const { open, setOpen } = useContext(MenuContext)
   const { development } = useContext(ApplicationContext)
   const closeMenu = () => setOpen(false)
+
   const { i18n } = useCustomTranslation("common")
   return (
     <>
@@ -619,13 +632,13 @@ export const MobileMenu: React.FunctionComponent = () => {
             justify-content: center;
             & > * {
               margin: 5px;
-              // align with the burger, center the same way 9px is half the icon size
-              margin-top: calc(${bannerHeight} / 2 - 9px);
+              // align with the burger, center the same way minus half the icon size
+              margin-top: calc(${bannerHeight} / 2 - ${headerIconSize} / 2);
             }
 
             @media (orientation: landscape) and (max-height: ${mobileEnd}) {
               & > * {
-                margin-top: calc(${bannerHeightLandscape} / 2 - 9px);
+                margin-top: calc(${bannerHeightLandscape} / 2 - ${headerIconSize} / 2);
               }
             }
           `}
