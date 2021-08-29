@@ -136,7 +136,7 @@ interface TitleProps {
 type IconBuilder = { build: (lang: Lang) => React.ComponentType }
 interface TitleOptions {
   translationKey: string
-  icon: React.ComponentType | IconBuilder
+  icon?: React.ComponentType | IconBuilder
   icon2?: React.ComponentType
 }
 const isIconBuilder = (obj: unknown): obj is IconBuilder => {
@@ -158,8 +158,13 @@ export const titleBuilder = ({
       <>
         <Anchor id={id} />
         <SectionTitle className={titleClassName}>
-          <Icon />
-          &nbsp;{title || t(translationKey)}
+          {Icon && (
+            <>
+              <Icon />
+              &nbsp;
+            </>
+          )}
+          {title || t(translationKey)}
           {Icon2 ? (
             <>
               &nbsp;
@@ -201,6 +206,7 @@ export const Company = titleBuilder({ icon: FaCopyright, translationKey: "todo" 
 export const Choice = titleBuilder({ icon: FaClipboardList, translationKey: "todo" })
 export const Boat = titleBuilder({ icon: FaShip, translationKey: "todo" })
 export const Train = titleBuilder({ icon: FaTrain, translationKey: "todo" })
+export const NoIconTitle = titleBuilder({ translationKey: "todo" })
 
 const homeSectionStyle = css`
   letter-spacing: 5px;

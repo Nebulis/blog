@@ -5,6 +5,7 @@ import commonEn from "../../../locales/en/common.json"
 import commonFr from "../../../locales/fr/common.json"
 import { oceaniaLinks } from "../oceania/oceania.links"
 import { LivingAbroadWhereCard, MovingAbroadWhyCard } from "../journal/journal.cards"
+import { OrangutanCard } from "../animals/animals.cards"
 
 export const isPublished = (element: { published: boolean | Date }) => {
   if (typeof element.published === "boolean") {
@@ -299,10 +300,14 @@ export const fruitLinks: OtherLink[] = [
     label: { fr: "", en: "" },
     published: false,
   },
+]
+export const animalsLinks: OtherLink[] = [
   {
     id: "orangutan",
-    label: { fr: "", en: "" },
-    published: false,
+    label: { fr: commonFr.animals.orangutan, en: commonEn.animals.orangutan },
+    card: OrangutanCard,
+    additionalTags: ["asia", "malaysia", "indonesia"],
+    published: new Date("2021-09-18T17:00:00.000+08:00"),
   },
   {
     id: "proboscis-monkey",
@@ -490,9 +495,26 @@ fruitLinks.forEach((link) => {
     label: link.label,
     url: path.join("/", getUrl(link)),
     published: isPublished(link),
-    tags: [],
+    publishedDate: link.published instanceof Date ? link.published : undefined,
+    card: link.card,
+    tags: [...(link.additionalTags || [])],
     pointOfInterest: [],
     seasons: [],
     kind: "fruit",
+  })
+})
+
+animalsLinks.forEach((link) => {
+  cachedLinks.set(link.id, {
+    id: link.id,
+    label: link.label,
+    url: path.join("/animals", getUrl(link)),
+    published: isPublished(link),
+    publishedDate: link.published instanceof Date ? link.published : undefined,
+    card: link.card,
+    tags: [...(link.additionalTags || [])],
+    pointOfInterest: [],
+    seasons: [],
+    kind: "animal",
   })
 })

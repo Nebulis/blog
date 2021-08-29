@@ -97,7 +97,7 @@ export const malaysiaLinks: CountryLink = {
       published: false,
     },
     {
-      id: "sepilok",
+      id: "sepilok-rehabilitation-centre",
       label: { en: "", fr: "" },
       published: false,
     },
