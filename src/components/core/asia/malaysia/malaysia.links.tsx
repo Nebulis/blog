@@ -4,6 +4,7 @@ import commonEn from "../../../../locales/en/common.json"
 import {
   BakoNationalParkCard,
   KubahNightFrogsTourCard,
+  LangkawiDreamHotelCard,
   SemenggohNatureReserveCard,
   WeekendKuchingCard,
 } from "./malaysia.cards"
@@ -27,7 +28,17 @@ export const malaysiaLinks: CountryLink = {
       imageProps: {
         image: "westMalaysia",
       },
-      highlights: [],
+      highlights: [
+        {
+          id: "langkawi-dream-hotel",
+          label: {
+            fr: commonFr.country.malaysia.card["langkawi-dream-hotel"],
+            en: commonEn.country.malaysia.card["langkawi-dream-hotel"],
+          },
+          card: LangkawiDreamHotelCard,
+          published: new Date("2021-09-11T17:00:00.000+08:00"),
+        },
+      ],
     },
     {
       id: "east-malaysia",

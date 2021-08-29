@@ -1,2 +1,8 @@
 /firebase/functions/node_modules
 /firebase/functions/lib
+node_modules
+.cache
+.circleci
+public
+.idea
+src/images
