@@ -67,6 +67,30 @@ export const indonesiaLinks: CountryLink = {
       },
       published: false,
     },
+    {
+      id: "gunung-leuser-national-park",
+      label: {
+        en: "",
+        fr: "",
+      },
+      published: false,
+    },
+    {
+      id: "tanjung-puting-national-park",
+      label: {
+        en: "",
+        fr: "",
+      },
+      published: false,
+    },
+    {
+      id: "bukit-baka-bukit-raya-national-park",
+      label: {
+        en: "",
+        fr: "",
+      },
+      published: false,
+    },
   ],
   label: { en: commonEn.country.indonesia.title, fr: commonFr.country.indonesia.title },
 }

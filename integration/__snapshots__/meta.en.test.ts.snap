@@ -24,6 +24,12 @@ exports[`english pages exports meta for public/en/about/who/index.html correctly
 
 exports[`english pages exports meta for public/en/about/who/index.html correctly: title 1`] = `"About us? | Travel Blog"`;
 
+exports[`english pages exports meta for public/en/animals/orangutan/index.html correctly: meta-description 1`] = `"Let's discover this great ape and its characteristics together. Its lifestyle, its behavior, but we also tell you why this great ape is an endangered species and how to help to protect it."`;
+
+exports[`english pages exports meta for public/en/animals/orangutan/index.html correctly: social-network 1`] = `"Endemic to Malaysia and Indonesia, the Orangutan is the largest monkey living in trees. Its name means « Man of the forest » in Malaysian. It is also considered one of our closest relatives due to its behavior."`;
+
+exports[`english pages exports meta for public/en/animals/orangutan/index.html correctly: title 1`] = `"All about Orangutans | Practical Guide"`;
+
 exports[`english pages exports meta for public/en/articles/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
 exports[`english pages exports meta for public/en/articles/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;

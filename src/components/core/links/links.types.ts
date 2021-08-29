@@ -62,7 +62,7 @@ export interface NavigationLink {
 
 export type HighlightWithCard = HighlightLink & { card: ComponentType<ExtraCardProps> }
 
-const KIND_KEYS = ["continent", "country", "city", "highlight", "other", "menu", "noIdea", "fruit"] as const
+const KIND_KEYS = ["continent", "country", "city", "highlight", "other", "menu", "noIdea", "fruit", "animal"] as const
 export type Kind = typeof KIND_KEYS[number]
 export const isKind = (value: any): value is Kind => KIND_KEYS.includes(value)
 export interface CachedLinksMap {

@@ -466,6 +466,18 @@ const philippinesLinks = () => {
 }
 
 const indonesiaLinks = () => {
+  expect(getLink("gunung-leuser-national-park")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("tanjung-puting-national-park")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
+  expect(getLink("bukit-baka-bukit-raya-national-park")).toMatchObject({
+    label: { en: "", fr: "" },
+    published: false,
+  })
   expect(getLink("sumatra")).toMatchObject({
     label: { en: "", fr: "" },
     published: false,
@@ -514,7 +526,7 @@ const malaysiaLinks = () => {
     label: { en: "", fr: "" },
     published: false,
   })
-  expect(getLink("sepilok")).toMatchObject({
+  expect(getLink("sepilok-rehabilitation-centre")).toMatchObject({
     label: { en: "", fr: "" },
     published: false,
   })
@@ -598,7 +610,7 @@ describe("links", () => {
       published: false,
     })
     expect(getLink("orangutan")).toMatchObject({
-      label: { en: "", fr: "" },
+      label: { en: "All about Orangutans", fr: "Tout savoir sur les Orangs-Outans" },
       published: false,
     })
     expect(getLink("colugo")).toMatchObject({
