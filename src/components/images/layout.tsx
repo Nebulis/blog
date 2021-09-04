@@ -356,6 +356,16 @@ export const TwoImagesSameSizeOrToGroup: FunctionComponent<
   )
 }
 
+export const TwoImagesSameSizeOrToGroupContainOnSmallScreen = styled(TwoImagesSameSizeOrToGroup)`
+  @media (min-width: ${smallStart} and max-width: ${smallEnd}) {
+    img {
+      // applying this on mid-size screen (roughly screens where  height and width are close), because object-fit: cover zoom too much on the content
+      // using important because the object-fit is applied as style
+      object-fit: contain !important;
+    }
+  }
+`
+
 const imageAsLandscapeOnTheLeft = css`
   &.image-layout {
     max-width: 65%;

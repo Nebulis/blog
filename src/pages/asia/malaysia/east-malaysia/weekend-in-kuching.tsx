@@ -224,7 +224,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.visit3.part9")}</p>
               <p>{t("visit.visit3.part10")}</p>
               {orangutanLinkPublished && <p>{t("visit.visit3.part11")}</p>}
-              <p>{t("visit.visit3.part12")}</p>
               <ImageAsPortrait>
                 <WeekendInKuchingImages image="orangutan" />
               </ImageAsPortrait>

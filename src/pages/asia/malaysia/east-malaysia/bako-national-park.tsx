@@ -29,6 +29,7 @@ import {
   ImageAsPortrait,
   Panorama,
   TwoImagesSameSizeOrToGroup,
+  TwoImagesSameSizeOrToGroupContainOnSmallScreen,
 } from "../../../../components/images/layout"
 import { css } from "@emotion/react"
 import { BakoNationalParkImages } from "../../../../components/images/asia/malaysia/east-malaysia/bako-national-park"
@@ -199,7 +200,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit.part1.part2")}</p>
             <GroupOfImages>
               <ImageAsPortrait>
-                <BakoNationalParkImages image="jetty" />
+                <BakoNationalParkImages image="jetty" imgStyle={{ objectFit: "contain" }} />
               </ImageAsPortrait>
               <ImageAsLandscape>
                 <BakoNationalParkImages image="jetty2" />
@@ -219,10 +220,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <ImageAsLandscape>
                 <BakoNationalParkImages image="jetty6" />
               </ImageAsLandscape>
-              <TwoImagesSameSizeOrToGroup>
+              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <BakoNationalParkImages image="jetty7" />
                 <BakoNationalParkImages image="jetty8" />
-              </TwoImagesSameSizeOrToGroup>
+              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
             </GroupOfImages>
             <p>{t("visit.part1.part4")}</p>
             <p>{t("visit.part1.part5")}</p>
@@ -336,32 +337,32 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <ImageAsLandscape>
                 <BakoNationalParkImages image="flora3" />
               </ImageAsLandscape>
-              <TwoImagesSameSizeOrToGroup>
+              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <BakoNationalParkImages image="flora4" />
                 <BakoNationalParkImages image="flora5" />
-              </TwoImagesSameSizeOrToGroup>
-              <TwoImagesSameSizeOrToGroup>
+              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <BakoNationalParkImages image="flora6" />
                 <BakoNationalParkImages image="flora7" />
-              </TwoImagesSameSizeOrToGroup>
-              <TwoImagesSameSizeOrToGroup>
+              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <BakoNationalParkImages image="flora8" />
                 <BakoNationalParkImages image="flora9" />
-              </TwoImagesSameSizeOrToGroup>
-              <TwoImagesSameSizeOrToGroup>
+              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <BakoNationalParkImages image="flora10" />
                 <BakoNationalParkImages image="flora11" />
-              </TwoImagesSameSizeOrToGroup>
+              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
               <ImageAsLandscape>
                 <BakoNationalParkImages image="flora12" />
               </ImageAsLandscape>
             </GroupOfImages>
             <p>{t("visit.part4.part7")}</p>
             <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
+              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <BakoNationalParkImages image="flora13" />
                 <BakoNationalParkImages image="flora14" />
-              </TwoImagesSameSizeOrToGroup>
+              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
               <ImageAsLandscape>
                 <BakoNationalParkImages image="flora15" />
               </ImageAsLandscape>
@@ -389,10 +390,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit.part4.part12")}</p>
             <p>{t("visit.part4.part13")}</p>
             <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
+              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <BakoNationalParkImages image="flora20" />
                 <BakoNationalParkImages image="flora21" />
-              </TwoImagesSameSizeOrToGroup>
+              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
               <ImageAsLandscape>
                 <BakoNationalParkImages image="flora22" />
               </ImageAsLandscape>
@@ -416,10 +417,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <ImageAsLandscape>
                 <BakoNationalParkImages image="beach2" />
               </ImageAsLandscape>
-              <TwoImagesSameSizeOrToGroup>
+              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <BakoNationalParkImages image="beach3" />
                 <BakoNationalParkImages image="beach4" />
-              </TwoImagesSameSizeOrToGroup>
+              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
               <ImageAsPortrait>
                 <BakoNationalParkImages image="beach5" />
               </ImageAsPortrait>

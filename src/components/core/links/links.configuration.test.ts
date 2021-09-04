@@ -516,7 +516,7 @@ const malaysiaLinks = () => {
   })
   expect(getLink("bako-national-park")).toMatchObject({
     label: { en: "Bako National Park: One of Borneo's Gem", fr: "Parc national de Bako : Un des joyaux de Bornéo" },
-    published: false,
+    published: true,
   })
   expect(getLink("weekend-in-kuching")).toMatchObject({
     label: { en: "Borneo: A weekend around Kuching", fr: "Bornéo : Un week-end autour de Kuching" },
