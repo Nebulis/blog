@@ -132,7 +132,13 @@ export const ImageAsPortrait: FunctionComponent<
   const [style, setStyle] = useState(css``)
   useEffect(() => {
     if (instagramInAppBrowser)
-      setStyle(css`.gatsby-image-wrapper.gatsby-image-wrapper{max-height: ${window.innerHeight}`)
+      setStyle(
+        css`
+          .gatsby-image-wrapper.gatsby-image-wrapper {
+            max-height: ${window.innerHeight};
+          }
+        `
+      )
   }, [instagramInAppBrowser])
   return (
     <div css={[imageAsPortraitStyle, style]} className={`${className} image-layout`}>
