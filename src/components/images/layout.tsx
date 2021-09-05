@@ -1,4 +1,4 @@
-import React, { FunctionComponent, HTMLAttributes, useContext, useState } from "react"
+import React, { FunctionComponent, HTMLAttributes, useContext, useEffect, useRef, useState } from "react"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
@@ -7,6 +7,7 @@ import { mediumEnd, mediumStart, mobileEnd, primaryColor, smallEnd, smallStart }
 import { MenuContext } from "../layout/menu.context"
 import { buildCurrentSharedUrl, buildPinterestUrl, buildSharedUrl } from "../../utils"
 import { PageProps } from "gatsby"
+import { ApplicationContext } from "../application"
 
 const ImageTitle: React.FunctionComponent<HTMLAttributes<any>> = ({ children, className = "tc ttu" }) => {
   return <div className={`image-title ${className}`}>{children}</div>
@@ -126,17 +127,24 @@ const imageAsPortraitStyle = css`
 `
 export const ImageAsPortrait: FunctionComponent<
   HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition }
-> = ({ children, className = "", credit, title, titlePosition = "bottom" }) => (
-  <div css={imageAsPortraitStyle} className={`${className} image-layout`}>
-    {title && titlePosition === "top" && <ImageTitle>{title}</ImageTitle>}
-    <div className="flex relative image-layout-image-container">
-      {children}
-      {credit && <div className="credit">{credit}</div>}
+> = ({ children, className = "", credit, title, titlePosition = "bottom" }) => {
+  const { instagramInAppBrowser } = useContext(ApplicationContext)
+  const [style, setStyle] = useState(css``)
+  useEffect(() => {
+    if (instagramInAppBrowser)
+      setStyle(css`.gatsby-image-wrapper.gatsby-image-wrapper{max-height: ${window.innerHeight}`)
+  }, [instagramInAppBrowser])
+  return (
+    <div css={[imageAsPortraitStyle, style]} className={`${className} image-layout`}>
+      {title && titlePosition === "top" && <ImageTitle>{title}</ImageTitle>}
+      <div className="flex relative image-layout-image-container">
+        {children}
+        {credit && <div className="credit">{credit}</div>}
+      </div>
+      {title && titlePosition === "bottom" && <ImageTitle>{title}</ImageTitle>}
     </div>
-    {title && titlePosition === "bottom" && <ImageTitle>{title}</ImageTitle>}
-  </div>
-)
-
+  )
+}
 const pinterestImageStyle = css`
   ${margin}
   margin-bottom: 1.3rem;

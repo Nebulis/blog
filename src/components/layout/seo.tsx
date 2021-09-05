@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent, useContext } from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery, PageProps } from "gatsby"
 import FreestyleFont from "../../fonts/Freestyle-Script.woff2"
@@ -16,6 +16,7 @@ import RobotoFontBolder from "../../fonts/RobotoBolder.woff2"
 import { useCustomTranslation } from "../../i18n-hook"
 import DefaultImgUrl from "../../images/SocialNetworkDefault.jpg"
 import { getHostname, getPathForEnglish, getPathForFrench } from "../../utils"
+import { ApplicationContext } from "../application"
 
 interface SEOProps {
   socialNetworkDescription?: string
@@ -50,6 +51,7 @@ const SEO: FunctionComponent<SEOProps> = ({
     `
   )
   const { t, i18n } = useCustomTranslation("common")
+  const { instagramInAppBrowser } = useContext(ApplicationContext)
 
   const metaSocialNetworkDescription = socialNetworkDescription || t("description")
   const metaDescription = googleDescription || metaSocialNetworkDescription
@@ -60,6 +62,7 @@ const SEO: FunctionComponent<SEOProps> = ({
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore hreflang :(
     <Helmet
+      bodyAttributes={{ class: instagramInAppBrowser ? "body-instagram" : "" }}
       htmlAttributes={{
         lang: metaLang,
       }}

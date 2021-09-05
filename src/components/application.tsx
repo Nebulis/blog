@@ -43,6 +43,8 @@ export const Application: React.FunctionComponent<PageProps> = ({ children, loca
         ssrBuild: site.siteMetadata.config.ssrBuild === "enabled",
         toggle: () => setDevelopment(!development),
         covid: true,
+        instagramInAppBrowser:
+          typeof window !== "undefined" ? navigator.userAgent.toLowerCase().indexOf("instagram") !== -1 : false,
       }}
     >
       {children}
@@ -62,10 +64,12 @@ export const ApplicationContext = React.createContext<{
   initialDevelopmentValue?: boolean
   toggle?: () => void
   covid: boolean
+  instagramInAppBrowser: boolean
 }>({
   development: false,
   displayComments: false,
   ssrBuild: false,
   initialDevelopmentValue: false,
   covid: true,
+  instagramInAppBrowser: false,
 })
