@@ -19,6 +19,7 @@ import styled from "@emotion/styled"
 import { OrangutanImages } from "../../components/images/animals/orangutan"
 import { ExternalLinkNotUnderlined } from "../../components/core/links/link"
 import { buildPixabayUrl } from "../../utils"
+import { css } from "@emotion/react"
 
 const namespace = "animals/orangutan"
 const id = "orangutan"
@@ -237,7 +238,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("future.part10")}</p>
           <div className="tc">
             <iframe
-              width="560"
+              css={css`
+                max-width: 560px;
+              `}
+              width="100%"
               height="315"
               src={`https://www.youtube-nocookie.com/embed/${
                 i18n.languageCode === "fr" ? "7lM0HLdDmXc" : "TQQXstNh45g"
