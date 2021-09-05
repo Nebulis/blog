@@ -1,4 +1,4 @@
-import React, { FunctionComponent, HTMLAttributes, useContext, useEffect, useRef, useState } from "react"
+import React, { FunctionComponent, HTMLAttributes, useContext, useEffect, useState } from "react"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
@@ -135,7 +135,7 @@ export const ImageAsPortrait: FunctionComponent<
       setStyle(
         css`
           .gatsby-image-wrapper.gatsby-image-wrapper {
-            max-height: ${window.innerHeight};
+            max-height: ${window.innerHeight}px;
           }
         `
       )

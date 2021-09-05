@@ -10,7 +10,13 @@ describe("link", () => {
   it("should render a link when the article is published and mode is production", () => {
     const { getByText, container } = render(
       <ApplicationContext.Provider
-        value={{ development: false, displayComments: false, covid: false, ssrBuild: false }}
+        value={{
+          development: false,
+          displayComments: false,
+          covid: false,
+          ssrBuild: false,
+          instagramInAppBrowser: false,
+        }}
       >
         <ApplicationLink to="contact">Abc</ApplicationLink>
       </ApplicationContext.Provider>
@@ -22,7 +28,15 @@ describe("link", () => {
   })
   it("should render a link when the article is not published and mode is development", () => {
     const { container, getByText } = render(
-      <ApplicationContext.Provider value={{ development: true, displayComments: false, covid: false, ssrBuild: false }}>
+      <ApplicationContext.Provider
+        value={{
+          development: true,
+          displayComments: false,
+          covid: false,
+          ssrBuild: false,
+          instagramInAppBrowser: false,
+        }}
+      >
         <ApplicationLink to="osaka-castle">Abc</ApplicationLink>
       </ApplicationContext.Provider>
     )
@@ -35,7 +49,13 @@ describe("link", () => {
   it("should render a text when the article is not published and mode is production", () => {
     const { container, getByText } = render(
       <ApplicationContext.Provider
-        value={{ development: false, displayComments: false, covid: false, ssrBuild: false }}
+        value={{
+          development: false,
+          displayComments: false,
+          covid: false,
+          ssrBuild: false,
+          instagramInAppBrowser: false,
+        }}
       >
         <ApplicationLink to="osaka-castle">Abc</ApplicationLink>
       </ApplicationContext.Provider>
@@ -47,7 +67,13 @@ describe("link", () => {
   it("should render nothing when the article is not published, mode is production and action is hide", () => {
     const { container, queryByText } = render(
       <ApplicationContext.Provider
-        value={{ development: false, displayComments: false, covid: false, ssrBuild: false }}
+        value={{
+          development: false,
+          displayComments: false,
+          covid: false,
+          ssrBuild: false,
+          instagramInAppBrowser: false,
+        }}
       >
         <ApplicationLink to="osaka-castle" action="hide" />
       </ApplicationContext.Provider>
