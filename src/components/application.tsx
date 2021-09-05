@@ -68,7 +68,10 @@ export const ApplicationContext = React.createContext<{
    * There is a problem with instagram in-app browser. the browser menu and footer bar change the height of viewport,
    * which in turn change the maximum height of images, and triggers a very annoying layout shift
    * we use this boolean to detect whether we are inside instagram in-app browser. If that's the case, we will set the maximum-height
-   * with the current viewport height, so that it doesn't update when the browser bars appear or disappear.
+   * with the current viewport height, so that it doesn't update when the browser bars appear or disappear. Fixed elements
+   * - images (mainly portrait)
+   * - header (computed using 100vh)
+   * - carousel (computed using header)
    */
   instagramInAppBrowser: boolean
 }>({

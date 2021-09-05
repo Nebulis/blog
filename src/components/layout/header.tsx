@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext, useState } from "react"
+import React, { FunctionComponent, useContext, useEffect, useState } from "react"
 import { FaCircle, FaFacebook, FaInstagram, FaPinterest, FaSearch, FaTwitter } from "react-icons/all"
 import { css } from "@emotion/react"
 import banner from "../../images/logo-the-real.svg"
@@ -157,8 +157,20 @@ const StaticHeader: FunctionComponent<{
   const context = useContext(ApplicationContext)
   const { open, setOpen } = useContext(MenuContext)
   const { i18n } = useCustomTranslation()
+  const [style, setStyle] = useState(css``)
+  useEffect(() => {
+    // see application.tsx for explanations
+    if (context.instagramInAppBrowser)
+      setStyle(
+        css`
+          .header {
+            height: ${window.innerHeight / 9.425}px;
+          }
+        `
+      )
+  }, [context.instagramInAppBrowser])
   return (
-    <header css={headerStyle} className={className}>
+    <header css={[headerStyle, style]} className={className}>
       <div className="header">
         <div className="left-menu-container">
           <div className="social-network-container" id="desktop-social-network-container">

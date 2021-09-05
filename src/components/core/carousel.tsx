@@ -4,6 +4,7 @@ import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react
 import { backgroundPrimaryColor, mobileEnd } from "./variables"
 import { ApplicationLink } from "./links/link"
 import { MenuContext } from "../layout/menu.context"
+import { ApplicationContext } from "../application"
 
 const iconSize = 40
 const overlayBorderPadding = 15
@@ -105,6 +106,19 @@ const carouselStyle = css`
 export const Carousel: React.FunctionComponent = ({ children }) => {
   if (!Array.isArray(children)) throw new Error("Please add children to the carousell")
   const [currentElement, setCurrentElement] = useState(0)
+  const context = useContext(ApplicationContext)
+  const [instagramStyle, setInstagramStyle] = useState(css``)
+  useEffect(() => {
+    // see application.tsx for explanations
+    if (context.instagramInAppBrowser)
+      setInstagramStyle(
+        css`
+          .visible .gatsby-image-wrapper {
+            height: ${window.innerHeight - window.innerHeight / 9.425}px;
+          }
+        `
+      )
+  }, [context.instagramInAppBrowser])
   const { pageHeight } = useContext(MenuContext)
   const style = css`
     .visible .gatsby-image-wrapper {
@@ -125,7 +139,7 @@ export const Carousel: React.FunctionComponent = ({ children }) => {
     }
   }, [children.length, currentElement])
   return (
-    <div css={[carouselStyle, style]}>
+    <div css={[carouselStyle, style, instagramStyle]}>
       <div className="left">
         <FaChevronCircleLeft
           onClick={() => {
