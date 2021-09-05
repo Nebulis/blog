@@ -131,11 +131,12 @@ export const ImageAsPortrait: FunctionComponent<
   const { instagramInAppBrowser } = useContext(ApplicationContext)
   const [style, setStyle] = useState(css``)
   useEffect(() => {
+    // see application.tsx for explanations
     if (instagramInAppBrowser)
       setStyle(
         css`
           .gatsby-image-wrapper.gatsby-image-wrapper {
-            max-height: ${window.innerHeight}px;
+            max-height: ${window.innerHeight - 40}px;
           }
         `
       )
@@ -274,16 +275,32 @@ const imageAsLandscapeStyle = css`
 type TitlePosition = "bottom" | "top"
 export const ImageAsLandscape: FunctionComponent<
   HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition; titleClassName?: string }
-> = ({ children, className = "", credit, title, titlePosition = "bottom", titleClassName }) => (
-  <div css={imageAsLandscapeStyle} className={`${className} image-layout`}>
-    {title && titlePosition === "top" && <ImageTitle className={titleClassName}>{title}</ImageTitle>}
-    <div className="flex justify-center relative image-layout-image-container">
-      {children}
-      {credit && <div className="credit">{credit}</div>}
+> = ({ children, className = "", credit, title, titlePosition = "bottom", titleClassName }) => {
+  const { instagramInAppBrowser } = useContext(ApplicationContext)
+  const [style, setStyle] = useState(css``)
+  useEffect(() => {
+    // see application.tsx for explanations
+    if (instagramInAppBrowser)
+      setStyle(
+        css`
+          .gatsby-image-wrapper.gatsby-image-wrapper {
+            max-height: ${window.innerHeight - 40}px;
+          }
+        `
+      )
+  }, [instagramInAppBrowser])
+  return (
+    <div css={[imageAsLandscapeStyle, style]} className={`${className} image-layout`}>
+      {title && titlePosition === "top" && <ImageTitle className={titleClassName}>{title}</ImageTitle>}
+      <div className="flex justify-center relative image-layout-image-container">
+        {children}
+        {credit && <div className="credit">{credit}</div>}
+      </div>
+      {title && titlePosition === "bottom" && <ImageTitle className={titleClassName}>{title}</ImageTitle>}
     </div>
-    {title && titlePosition === "bottom" && <ImageTitle className={titleClassName}>{title}</ImageTitle>}
-  </div>
-)
+  )
+}
+
 export const Panorama = styled(ImageAsLandscape)`
   @media (min-width: ${mediumStart}) {
     width: 100vw;
@@ -316,8 +333,21 @@ export const TwoImagesSameSize: FunctionComponent<
 > = ({ children, className, title1, title2, titleClassName }) => {
   if (!children || !Array.isArray(children) || children.length !== 2)
     throw new Error("This component expect 2 children")
+  const { instagramInAppBrowser } = useContext(ApplicationContext)
+  const [style, setStyle] = useState(css``)
+  useEffect(() => {
+    // see application.tsx for explanations
+    if (instagramInAppBrowser)
+      setStyle(
+        css`
+          .panel-image.panel-image {
+            max-height: ${window.innerHeight - 40}px;
+          }
+        `
+      )
+  }, [instagramInAppBrowser])
   return (
-    <div className={`flex image-layout ${className}`} css={twoImagesSameSizeStyles}>
+    <div className={`flex image-layout ${className}`} css={[twoImagesSameSizeStyles, style]}>
       <div className="left-panel">
         <div className="flex panel-image">{children[0]}</div>
         {title1 && <ImageTitle className={titleClassName}>{title1}</ImageTitle>}
@@ -389,8 +419,21 @@ const imageAsLandscapeOnTheLeft = css`
 export const ImageAsLandscapeOnTheLeft: FunctionComponent<
   HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition }
 > = ({ children, className, title, credit, titlePosition = "bottom" }) => {
+  const { instagramInAppBrowser } = useContext(ApplicationContext)
+  const [style, setStyle] = useState(css``)
+  useEffect(() => {
+    // see application.tsx for explanations
+    if (instagramInAppBrowser)
+      setStyle(
+        css`
+          .gatsby-image-wrapper.gatsby-image-wrapper {
+            max-height: ${window.innerHeight - 40}px;
+          }
+        `
+      )
+  }, [instagramInAppBrowser])
   return (
-    <div className={`image-layout ${className}`} css={imageAsLandscapeOnTheLeft}>
+    <div className={`image-layout ${className}`} css={[imageAsLandscapeOnTheLeft, style]}>
       {title && titlePosition === "top" && <ImageTitle>{title}</ImageTitle>}
       <div className="flex relative image-layout-image-container">
         {children}
