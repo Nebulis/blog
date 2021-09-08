@@ -161,6 +161,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <ArticleCardContainer>
                 <YasukuniDoriCard card={{ showTags: false, showPublished: false, showMore: true }} />
               </ArticleCardContainer>
+              <Divider />
               <p>{t("day2.visit4.part3")}</p>
               {hamarikyuGardenPublished && <p>{t("day2.visit4.part4")}</p>}
               <p>{t("day2.visit4.part5")}</p>
@@ -173,6 +174,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question1")}</li>
             <li>{t("question2")}</li>
           </ul>
+          <p>{t("love")}</p>
         </Conclusion>
         <Divider />
         <Comments

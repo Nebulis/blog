@@ -1,11 +1,10 @@
 {
   "introduction": {
     "section1": "Traveling to the Land of the Rising Sun means discovering a mix of modernity and tradition. Admire the fascinating changes of scenery depending on the season. Discover bustling cities and neighborhoods.",
-    "section2": "Follow our city-to-city guide to discover our selection of must-see places.",
-    "section3": "We let you find through our articles and our photos, the magic of Japan, for the moment during spring, but we will share more about Japan during autumn and winter very soon, so stay tuned."
+    "section3": "We let you find through our articles and our photos, the magic of Japan, for the moment during spring, but we will share more about Japan during autumn and winter soon, so stay tuned."
   },
-  "google-description": "Discover through our articles and our photos, the magic of Japan. Follow our city-to-city guide to discover our selection of must-see places in the Land of the Rising Sun. For each place visited, we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?",
-  "social-network-description": "Traveling to the Land of the Rising Sun means discovering a mix of modernity and tradition. Admire the fascinating changes of scenery depending on the season. Discover bustling cities and neighborhoods. Follow our city-to-city guide to discover our selection of must-see places.",
+  "google-description": "Traveling to the Land of the Rising Sun means discovering a mix of modernity and tradition. Admire the fascinating changes of scenery depending on the season. Discover bustling cities and neighborhoods. Follow our city-to-city and season-to-season guide to discover our selection of must-see places. Our travelogue with photos, tips, and advice.",
+  "social-network-description": "Traveling to the Land of the Rising Sun means discovering a mix of modernity and tradition. Admire the fascinating changes of scenery depending on the season. Discover bustling cities and neighborhoods..",
   "full-title": "Japan | Travel Guide",
   "travel": {
     "title": "Travel",
@@ -21,7 +20,7 @@
   },
   "weather": "Best time to visit",
   "weather-country": "Japan?",
-  "section1": "Point of interest",
+  "section1": "Points of interest",
   "map": "Our map of",
   "country": "Japan"
 }

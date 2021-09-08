@@ -250,7 +250,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <GroupOfImages>
                 <TwoImagesSameSize
                   css={css`
-                    max-height: 80vh;
+                    .panel-image {
+                      max-height: 80vh;
+                    }
                   `}
                 >
                   <TourAImages image="secretLagoon4" />

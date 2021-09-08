@@ -4,7 +4,7 @@ import commonEn from "../../../../locales/en/common.json"
 
 export const singaporeLinks: CountryLink = {
   id: "singapore",
-  pointOfInterest: ["city"],
+  pointOfInterest: ["city", "nature"],
   imageProps: {
     image: "homeSingapore",
   },

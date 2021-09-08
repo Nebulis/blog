@@ -51,8 +51,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     tags: ["southern-vietnam"],
     filter: (cachedLink) => cachedLink.id !== "discover-southern-vietnam",
   })
-  const googleDescription = t("meta-description")
-  const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
     <>
       <SEO
@@ -60,8 +58,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         fullTitle={t("full-title")}
         location={location}
         image={SouthernVietnamImage}
-        socialNetworkDescription={description}
-        googleDescription={googleDescription}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("meta-description")}
       />
       <VietnamBlogLayout page={currentPageId} location={location}>
         <MainTitleSection>

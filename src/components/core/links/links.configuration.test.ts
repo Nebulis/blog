@@ -42,7 +42,7 @@ const categoriesLinks = () => {
   expect(getLink("animals")).toMatchObject({ label: { fr: "Animaux", en: "Animals" }, published: false })
   expect(getLink("winter-activities")).toMatchObject({
     label: { en: "Winter activities", fr: "Activités hivernales" },
-    published: true,
+    published: false,
   })
   expect(getLink("water-activities")).toMatchObject({
     label: { en: "Water activities", fr: "Activités nautiques" },

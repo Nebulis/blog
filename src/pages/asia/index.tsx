@@ -34,7 +34,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         fullTitle={t("full-title")}
         location={location}
         image={VietnamImage}
-        socialNetworkDescription={t("quote.part1")}
+        socialNetworkDescription={t("social-network-description")}
         googleDescription={t("meta-description")}
       />
       <PrimaryBlogLayoutWithDrawer page="asia" location={location}>

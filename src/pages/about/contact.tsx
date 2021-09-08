@@ -35,6 +35,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const [status, setStatus] = useState<Status>("INITIAL")
   const { t } = useCustomTranslation([namespace, "common"])
   const description = `${t("section1")} ${t("section2")}`
+  const { i18n } = useCustomTranslation()
+
   return (
     <>
       <SEO title={t("common:link.contact")} location={location} socialNetworkDescription={description} />
@@ -52,6 +54,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SectionContent>{t("section1")}</SectionContent>
           {/*<SectionContent>Un partenariat, un projet à nous proposer ?</SectionContent>*/}
           <SectionContent>{t("section2")}</SectionContent>
+          <SectionContent>
+            {i18n.languageCode === "fr"
+              ? "Soit via le formulaire ci-dessus, soit via"
+              : "Either via the form above, or via"}{" "}
+            <Hightlight>
+              <a href="mailto:contact@magicoftravels.com">contact@magicoftravels.com</a>
+            </Hightlight>
+            .
+          </SectionContent>
           <SectionContent>
             {t("section3.part1")}{" "}
             <Hightlight>
