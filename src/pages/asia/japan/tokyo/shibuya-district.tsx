@@ -280,6 +280,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <ShibuyaDistrictImages image="takeshitaStreet20" />
               </ImageAsLandscape>
             </GroupOfImages>
+            <Divider />
             <p>{t("visit4.part7")}</p>
           </SectionContent>
         </section>
@@ -289,6 +290,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question1")}</li>
             <li>{t("question2")}</li>
           </ul>
+          <p>{t("love")}</p>
         </Conclusion>
         <Divider />
         <Comments

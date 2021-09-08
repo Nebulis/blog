@@ -12,7 +12,7 @@
   },
   "tour": {
     "title": "Travel around",
-    "subtitle": "The country from region to region"
+    "subtitle": "The country from island to island"
   },
   "inform": {
     "title": "Get informed",
@@ -22,5 +22,5 @@
   "country": "the philippines",
   "weather": "Best time to visit",
   "weather-country": "The Philippines?",
-  "section1": "Point of interest"
+  "section1": "Points of interest"
 }

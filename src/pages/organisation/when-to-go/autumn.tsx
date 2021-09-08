@@ -22,7 +22,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const [selectedContinent, setSelectedContinent] = useState<string>()
-  const socialNetworkDescription = `${t("part2")} ${t("part3")}`
   const countries = getArticles({
     kind: "country",
     card: false,
@@ -36,7 +35,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         title={t("title")}
         fullTitle={t("full-title")}
         location={location}
-        socialNetworkDescription={socialNetworkDescription}
+        socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
       />
       <PrimaryBlogLayoutWithDrawer page="autumn" location={location}>
@@ -46,6 +45,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote>{t("part1")}</PageQuote>
           <PageQuote position="none">{t("part2")}</PageQuote>
           <PageQuote position="none">{t("part3")}</PageQuote>
+          <PageQuote position="none">{t("part4")}</PageQuote>
         </SectionContent>
         <Divider />
         <SelectByContinent continents={continents} onChange={(value) => setSelectedContinent(value)} />

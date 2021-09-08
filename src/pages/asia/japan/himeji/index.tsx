@@ -50,14 +50,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     tags: ["himeji"],
   })
   const [tooltipLabel, setTooltipLabel] = useState("")
-  const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
     <>
       <SEO
         title={t("title")}
         fullTitle={t("full-title")}
         location={location}
-        socialNetworkDescription={description}
+        socialNetworkDescription={t("social-network-description")}
         googleDescription={t("meta-description")}
         image={HomeImage}
       />

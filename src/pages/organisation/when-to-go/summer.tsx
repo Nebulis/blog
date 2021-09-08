@@ -46,6 +46,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <PageQuote>{t("part1")}</PageQuote>
           <PageQuote position="none">{t("part2")}</PageQuote>
           <PageQuote position="none">{t("part3")}</PageQuote>
+          <PageQuote position="none">{t("part4")}</PageQuote>
         </SectionContent>
         <Divider />
         <SelectByContinent continents={continents} onChange={(value) => setSelectedContinent(value)} />

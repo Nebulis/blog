@@ -277,6 +277,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsPortrait>
               <MovingAbroadWhyImages image="movingAbroad4" />
             </ImageAsPortrait>
+            <Divider />
+          </SectionContent>
+        </section>
+        <section>
+          <SectionContent>
             <p>{t("section13.part10")}</p>
             <p>{t("section13.part11")}</p>
             <p>{t("section13.part12")}</p>

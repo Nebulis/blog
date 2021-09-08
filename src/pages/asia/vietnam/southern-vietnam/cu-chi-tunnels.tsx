@@ -353,6 +353,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question1")}</li>
             <li>{t("question2")}</li>
           </ul>
+          <p>{t("love")}</p>
         </Conclusion>
         <Comments
           collectionName={namespace}

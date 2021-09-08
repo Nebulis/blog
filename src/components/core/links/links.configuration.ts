@@ -199,7 +199,7 @@ export const menuLinks: NavigationLink[] = [
         id: "winter-activities",
         label: { fr: commonFr.link.discovery["winter-activities"], en: commonEn.link.discovery["winter-activities"] },
         pointOfInterest: ["winter-activities"],
-        published: true,
+        published: false,
         sections: [],
       },
       {
