@@ -224,198 +224,202 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ul>
           <p>{t("baggage.part6")}</p>
         </Baggage>
-        <Visit title={t("visit.title")} />
-        <Divider />
-        <section>
-          <MalaysiaHeadline>{t("visit.part1.title")}</MalaysiaHeadline>
+        <Visit title={t("visit.title")}>
+          {/* just to have the correct space*/}
+          <SectionContent />
           <Divider />
-          <SectionContent>
-            <p>{t("visit.part1.part1")}</p>
-            <p>{t("visit.part1.part2")}</p>
-            <p>{t("visit.part1.part3")}</p>
-            <Table className="mb3">
-              <thead>
-                <tr>
-                  <th>{i18n.languageCode === "fr" ? "Nom du trek" : "Trek Name"}</th>
-                  <th>{i18n.languageCode === "fr" ? "Temps aller simple" : "One-way trek time"}</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Waterfall Trail</td>
-                  <td>1h30</td>
-                </tr>
-                <tr>
-                  <td>Rayu Trail</td>
-                  <td>3h30</td>
-                </tr>
-                <tr>
-                  <td>Main Trail</td>
-                  <td>1h15</td>
-                </tr>
-                <tr>
-                  <td>Selang Trail</td>
-                  <td>1h</td>
-                </tr>
-                <tr>
-                  <td>Summit Trail</td>
-                  <td>3h30</td>
-                </tr>
-                <tr>
-                  <td>Palmetum</td>
-                  <td>30min</td>
-                </tr>
-                <tr>
-                  <td>Belian Trail</td>
-                  <td>40min</td>
-                </tr>
-              </tbody>
-            </Table>
-            <p>{t("visit.part1.part4")}</p>
-            <ImageAsPortrait>
-              <KubahNightFrogsTourImages image="map" />
-            </ImageAsPortrait>
-            <p>{t("visit.part1.part5")}</p>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <MalaysiaHeadline>{t("visit.part2.title")}</MalaysiaHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit.part2.part1")}</p>
-            <p>{t("visit.part2.part2")}</p>
-            <p>{t("visit.part2.part3")}</p>
-            <p>{t("visit.part2.part4")}</p>
-            <p>{t("visit.part2.part5")}</p>
-            <p>{t("visit.part2.part6")}</p>
-            <p>{t("visit.part2.part7")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
-                <KubahNightFrogsTourImages image="microhyla" />
-                <KubahNightFrogsTourImages image="microhyla2" />
-              </TwoImagesSameSizeOrToGroup>
+          <section>
+            <MalaysiaHeadline>{t("visit.part1.title")}</MalaysiaHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit.part1.part1")}</p>
+              <p>{t("visit.part1.part2")}</p>
+              <p>{t("visit.part1.part3")}</p>
+              <Table className="mb3">
+                <thead>
+                  <tr>
+                    <th>{i18n.languageCode === "fr" ? "Nom du trek" : "Trek Name"}</th>
+                    <th>{i18n.languageCode === "fr" ? "Temps aller simple" : "One-way trek time"}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Waterfall Trail</td>
+                    <td>1h30</td>
+                  </tr>
+                  <tr>
+                    <td>Rayu Trail</td>
+                    <td>3h30</td>
+                  </tr>
+                  <tr>
+                    <td>Main Trail</td>
+                    <td>1h15</td>
+                  </tr>
+                  <tr>
+                    <td>Selang Trail</td>
+                    <td>1h</td>
+                  </tr>
+                  <tr>
+                    <td>Summit Trail</td>
+                    <td>3h30</td>
+                  </tr>
+                  <tr>
+                    <td>Palmetum</td>
+                    <td>30min</td>
+                  </tr>
+                  <tr>
+                    <td>Belian Trail</td>
+                    <td>40min</td>
+                  </tr>
+                </tbody>
+              </Table>
+              <p>{t("visit.part1.part4")}</p>
               <ImageAsPortrait>
-                <KubahNightFrogsTourImages image="microhyla3" />
+                <KubahNightFrogsTourImages image="map" />
               </ImageAsPortrait>
-            </GroupOfImages>
-            <p>{t("visit.part2.part8")}</p>
-            <p>{t("visit.part2.part9")}</p>
-            <p>{t("visit.part2.part10")}</p>
-            <TwoImagesSameSizeOrToGroup>
-              <KubahNightFrogsTourImages image="eggs" />
-              <KubahNightFrogsTourImages image="eggs2" />
-            </TwoImagesSameSizeOrToGroup>
-            <p>{t("visit.part2.part11")}</p>
-            <p>{t("visit.part2.part12")}</p>
-            <p>{t("visit.part2.part13")}</p>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <MalaysiaHeadline>{t("visit.part3.title")}</MalaysiaHeadline>
+              <p>{t("visit.part1.part5")}</p>
+            </SectionContent>
+          </section>
           <Divider />
-          <SectionContent>
-            <SectionTitle>{t("visit.part3.part1.title")}</SectionTitle>
-            <p>{t("visit.part3.part1.part1")}</p>
-            <TwoImagesSameSizeOrToGroup>
-              <KubahNightFrogsTourImages image="peatSwampFrog" />
-              <KubahNightFrogsTourImages image="peatSwampFrog2" />
-            </TwoImagesSameSizeOrToGroup>
-            <SectionTitle>{t("visit.part3.part2.title")}</SectionTitle>
-            <p>{t("visit.part3.part2.part1")}</p>
-            <TwoImagesSameSizeOrToGroup>
-              <KubahNightFrogsTourImages image="fileEaredTreeFrog" />
-              <KubahNightFrogsTourImages image="fileEaredTreeFrog2" />
-            </TwoImagesSameSizeOrToGroup>
-            <SectionTitle>{t("visit.part3.part3.title")}</SectionTitle>
-            <p>{t("visit.part3.part3.part1")}</p>
-            <GroupOfImages>
+          <section>
+            <MalaysiaHeadline>{t("visit.part2.title")}</MalaysiaHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit.part2.part1")}</p>
+              <p>{t("visit.part2.part2")}</p>
+              <p>{t("visit.part2.part3")}</p>
+              <p>{t("visit.part2.part4")}</p>
+              <p>{t("visit.part2.part5")}</p>
+              <p>{t("visit.part2.part6")}</p>
+              <p>{t("visit.part2.part7")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <KubahNightFrogsTourImages image="microhyla" />
+                  <KubahNightFrogsTourImages image="microhyla2" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <KubahNightFrogsTourImages image="microhyla3" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit.part2.part8")}</p>
+              <p>{t("visit.part2.part9")}</p>
+              <p>{t("visit.part2.part10")}</p>
               <TwoImagesSameSizeOrToGroup>
-                <KubahNightFrogsTourImages image="longNosedHornedFrog" />
-                <KubahNightFrogsTourImages image="longNosedHornedFrog2" />
+                <KubahNightFrogsTourImages image="eggs" />
+                <KubahNightFrogsTourImages image="eggs2" />
               </TwoImagesSameSizeOrToGroup>
+              <p>{t("visit.part2.part11")}</p>
+              <p>{t("visit.part2.part12")}</p>
+              <p>{t("visit.part2.part13")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <MalaysiaHeadline>{t("visit.part3.title")}</MalaysiaHeadline>
+            <Divider />
+            <SectionContent>
+              <SectionTitle>{t("visit.part3.part1.title")}</SectionTitle>
+              <p>{t("visit.part3.part1.part1")}</p>
               <TwoImagesSameSizeOrToGroup>
-                <KubahNightFrogsTourImages image="longNosedHornedFrog3" />
-                <KubahNightFrogsTourImages image="longNosedHornedFrog4" />
+                <KubahNightFrogsTourImages image="peatSwampFrog" />
+                <KubahNightFrogsTourImages image="peatSwampFrog2" />
               </TwoImagesSameSizeOrToGroup>
-            </GroupOfImages>
-            <SectionTitle>{t("visit.part3.part4.title")}</SectionTitle>
-            <p>{t("visit.part3.part4.part1")}</p>
-            <TwoImagesSameSizeOrToGroup>
-              <KubahNightFrogsTourImages image="mahoganyFrog" />
-              <KubahNightFrogsTourImages image="mahoganyFrog2" />
-            </TwoImagesSameSizeOrToGroup>
-            <p>{t("visit.part3.part4.part2")}</p>
-            <p>{t("visit.part3.part4.part3")}</p>
-            <p>{t("visit.part3.part4.part4")}</p>
-            <p>{t("visit.part3.part4.part5")}</p>
-            <GroupOfImages>
+              <SectionTitle>{t("visit.part3.part2.title")}</SectionTitle>
+              <p>{t("visit.part3.part2.part1")}</p>
               <TwoImagesSameSizeOrToGroup>
-                <KubahNightFrogsTourImages image="frog" />
-                <KubahNightFrogsTourImages image="frog2" />
+                <KubahNightFrogsTourImages image="fileEaredTreeFrog" />
+                <KubahNightFrogsTourImages image="fileEaredTreeFrog2" />
               </TwoImagesSameSizeOrToGroup>
+              <SectionTitle>{t("visit.part3.part3.title")}</SectionTitle>
+              <p>{t("visit.part3.part3.part1")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <KubahNightFrogsTourImages image="longNosedHornedFrog" />
+                  <KubahNightFrogsTourImages image="longNosedHornedFrog2" />
+                </TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSizeOrToGroup>
+                  <KubahNightFrogsTourImages image="longNosedHornedFrog3" />
+                  <KubahNightFrogsTourImages image="longNosedHornedFrog4" />
+                </TwoImagesSameSizeOrToGroup>
+              </GroupOfImages>
+              <SectionTitle>{t("visit.part3.part4.title")}</SectionTitle>
+              <p>{t("visit.part3.part4.part1")}</p>
               <TwoImagesSameSizeOrToGroup>
-                <KubahNightFrogsTourImages image="frog3" />
-                <KubahNightFrogsTourImages image="frog4" />
+                <KubahNightFrogsTourImages image="mahoganyFrog" />
+                <KubahNightFrogsTourImages image="mahoganyFrog2" />
               </TwoImagesSameSizeOrToGroup>
-              <TwoImagesSameSizeOrToGroup>
-                <KubahNightFrogsTourImages image="frog5" />
-                <KubahNightFrogsTourImages image="frog6" />
-              </TwoImagesSameSizeOrToGroup>
-              <TwoImagesSameSizeOrToGroup>
-                <KubahNightFrogsTourImages image="frog7" />
-                <KubahNightFrogsTourImages image="frog8" />
-              </TwoImagesSameSizeOrToGroup>
+              <p>{t("visit.part3.part4.part2")}</p>
+              <p>{t("visit.part3.part4.part3")}</p>
+              <p>{t("visit.part3.part4.part4")}</p>
+              <p>{t("visit.part3.part4.part5")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <KubahNightFrogsTourImages image="frog" />
+                  <KubahNightFrogsTourImages image="frog2" />
+                </TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSizeOrToGroup>
+                  <KubahNightFrogsTourImages image="frog3" />
+                  <KubahNightFrogsTourImages image="frog4" />
+                </TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSizeOrToGroup>
+                  <KubahNightFrogsTourImages image="frog5" />
+                  <KubahNightFrogsTourImages image="frog6" />
+                </TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSizeOrToGroup>
+                  <KubahNightFrogsTourImages image="frog7" />
+                  <KubahNightFrogsTourImages image="frog8" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <KubahNightFrogsTourImages image="frog9" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit.part3.part4.part6")}</p>
+              <p>{t("visit.part3.part4.part7")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <KubahNightFrogsTourImages image="frog10" />
+                  <KubahNightFrogsTourImages image="frog11" />
+                </TwoImagesSameSizeOrToGroup>
+                <TwoImagesSameSizeOrToGroup>
+                  <KubahNightFrogsTourImages image="frog12" />
+                  <KubahNightFrogsTourImages image="frog13" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <KubahNightFrogsTourImages image="frog14" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part3.part4.part8")}</p>
               <ImageAsPortrait>
-                <KubahNightFrogsTourImages image="frog9" />
+                <KubahNightFrogsTourImages image="frog15" />
               </ImageAsPortrait>
-            </GroupOfImages>
-            <p>{t("visit.part3.part4.part6")}</p>
-            <p>{t("visit.part3.part4.part7")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
-                <KubahNightFrogsTourImages image="frog10" />
-                <KubahNightFrogsTourImages image="frog11" />
-              </TwoImagesSameSizeOrToGroup>
-              <TwoImagesSameSizeOrToGroup>
-                <KubahNightFrogsTourImages image="frog12" />
-                <KubahNightFrogsTourImages image="frog13" />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsLandscape>
-                <KubahNightFrogsTourImages image="frog14" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part3.part4.part8")}</p>
-            <ImageAsPortrait>
-              <KubahNightFrogsTourImages image="frog15" />
-            </ImageAsPortrait>
-            <p>{t("visit.part3.part4.part9")}</p>
-            <p>{t("visit.part3.part4.part10")}</p>
-            <p>{t("visit.part3.part4.part11")}</p>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <MalaysiaHeadline>{t("visit.part4.title")}</MalaysiaHeadline>
+              <p>{t("visit.part3.part4.part9")}</p>
+              <p>{t("visit.part3.part4.part10")}</p>
+              <p>{t("visit.part3.part4.part11")}</p>
+            </SectionContent>
+          </section>
           <Divider />
-          <SectionContent>
-            <p>{t("visit.part4.part1")}</p>
-            <p>{t("visit.part4.part2")}</p>
-            <p>{t("visit.part4.part3")}</p>
-            <PetitCarreColore>
-              <p className="b ttu">{t("visit.part4.part4")}</p>
-              <p>{t("visit.part4.part5")}</p>
-              <p>{t("visit.part4.part6")}</p>
-              <p>{t("visit.part4.part7")}</p>
-              <p>{t("visit.part4.part8")}</p>
-              <p>{t("visit.part4.part9")}</p>
-              <p>
-                <Frog />
-              </p>
-            </PetitCarreColore>
-          </SectionContent>
-        </section>
+          <section>
+            <MalaysiaHeadline>{t("visit.part4.title")}</MalaysiaHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit.part4.part1")}</p>
+              <p>{t("visit.part4.part2")}</p>
+              <p>{t("visit.part4.part3")}</p>
+              <PetitCarreColore>
+                <p className="b ttu">{t("visit.part4.part4")}</p>
+                <p>{t("visit.part4.part5")}</p>
+                <p>{t("visit.part4.part6")}</p>
+                <p>{t("visit.part4.part7")}</p>
+                <p>{t("visit.part4.part8")}</p>
+                <p>{t("visit.part4.part9")}</p>
+                <p>
+                  <Frog />
+                </p>
+              </PetitCarreColore>
+            </SectionContent>
+          </section>
+        </Visit>
+        <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

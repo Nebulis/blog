@@ -129,161 +129,166 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where-to-stay.part5")}</p>
         </WhereToStay>
         <Visit>
-          <p>{t("visit.part1")}</p>
-          <p>{t("visit.part2")}</p>
-          <p>{t("visit.part3")}</p>
+          <section>
+            <SectionContent>
+              <p>{t("visit.part1")}</p>
+              <p>{t("visit.part2")}</p>
+              <p>{t("visit.part3")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit1.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit1.part1")}</p>
+              <p>{t("visit1.part2")}</p>
+              <p>{t("visit1.part3")}</p>
+              <p>{t("visit1.part4")}</p>
+              <p>{t("visit1.part5")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <ShibuyaDistrictImages image="crossing5" />
+                  <ShibuyaDistrictImages image="crossing6" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="crossing" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <ShibuyaDistrictImages image="crossing2" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="crossing3" />
+                </ImageAsPortrait>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="crossing4" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit2.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit2.part1")}</p>
+              <p>{t("visit2.part2")}</p>
+              <p>{t("visit2.part3")}</p>
+              <p>{t("visit2.part4")}</p>
+              <p>{t("visit2.part5")}</p>
+              <ImageAsLandscape>
+                <ShibuyaDistrictImages image="hachiko" />
+              </ImageAsLandscape>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit3.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit3.part1")}</p>
+              <p>{t("visit3.part2")}</p>
+              <p>{t("visit3.part3")}</p>
+              <ImageAsLandscape
+                credit={
+                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/kattyf-15108903")}>
+                    kattyf
+                  </ExternalLinkNotUnderlined>
+                }
+              >
+                <ShibuyaDistrictImages image="mall" />
+              </ImageAsLandscape>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <JapanHeadline>{t("visit4.title")}</JapanHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit4.part1")}</p>
+              <p>{t("visit4.part2")}</p>
+              <p>{t("visit4.part3")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="takeshitaStreet" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <ShibuyaDistrictImages image="takeshitaStreet2" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="takeshitaStreet3" />
+                </ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
+                  <ShibuyaDistrictImages image="takeshitaStreet4" />
+                  <ShibuyaDistrictImages image="takeshitaStreet5" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="takeshitaStreet6" />
+                </ImageAsPortrait>
+                <TwoImagesSameSizeOrToGroup>
+                  <ShibuyaDistrictImages image="takeshitaStreet7" />
+                  <ShibuyaDistrictImages image="takeshitaStreet8" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="takeshitaStreet9" />
+                </ImageAsPortrait>
+                <ImageAsLandscape
+                  credit={
+                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/kirahoffmann-1855684")}>
+                      kirahoffmann
+                    </ExternalLinkNotUnderlined>
+                  }
+                >
+                  <ShibuyaDistrictImages image="takeshitaStreet10" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="takeshitaStreet11" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit4.part4")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <ShibuyaDistrictImages image="takeshitaStreet12" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="takeshitaStreet13" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <ShibuyaDistrictImages image="takeshitaStreet14" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="takeshitaStreet15" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <ShibuyaDistrictImages image="takeshitaStreet16" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <ShibuyaDistrictImages image="takeshitaStreet17" />
+                </ImageAsPortrait>
+              </GroupOfImages>
+              <p>{t("visit4.part5")}</p>
+              <p>{t("visit4.part6")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <ShibuyaDistrictImages image="takeshitaStreet18" />
+                  <ShibuyaDistrictImages image="takeshitaStreet19" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape
+                  credit={
+                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/saesherra-5527002")}>
+                      saesherra
+                    </ExternalLinkNotUnderlined>
+                  }
+                >
+                  <ShibuyaDistrictImages image="takeshitaStreet20" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <Divider />
+              <p>{t("visit4.part7")}</p>
+            </SectionContent>
+          </section>
         </Visit>
         <Divider />
-        <section>
-          <JapanHeadline>{t("visit1.title")}</JapanHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit1.part1")}</p>
-            <p>{t("visit1.part2")}</p>
-            <p>{t("visit1.part3")}</p>
-            <p>{t("visit1.part4")}</p>
-            <p>{t("visit1.part5")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
-                <ShibuyaDistrictImages image="crossing5" />
-                <ShibuyaDistrictImages image="crossing6" />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="crossing" />
-              </ImageAsPortrait>
-              <ImageAsLandscape>
-                <ShibuyaDistrictImages image="crossing2" />
-              </ImageAsLandscape>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="crossing3" />
-              </ImageAsPortrait>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="crossing4" />
-              </ImageAsPortrait>
-            </GroupOfImages>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <JapanHeadline>{t("visit2.title")}</JapanHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit2.part1")}</p>
-            <p>{t("visit2.part2")}</p>
-            <p>{t("visit2.part3")}</p>
-            <p>{t("visit2.part4")}</p>
-            <p>{t("visit2.part5")}</p>
-            <ImageAsLandscape>
-              <ShibuyaDistrictImages image="hachiko" />
-            </ImageAsLandscape>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <JapanHeadline>{t("visit3.title")}</JapanHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit3.part1")}</p>
-            <p>{t("visit3.part2")}</p>
-            <p>{t("visit3.part3")}</p>
-            <ImageAsLandscape
-              credit={
-                <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/kattyf-15108903")}>
-                  kattyf
-                </ExternalLinkNotUnderlined>
-              }
-            >
-              <ShibuyaDistrictImages image="mall" />
-            </ImageAsLandscape>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <JapanHeadline>{t("visit4.title")}</JapanHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit4.part1")}</p>
-            <p>{t("visit4.part2")}</p>
-            <p>{t("visit4.part3")}</p>
-            <GroupOfImages>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="takeshitaStreet" />
-              </ImageAsPortrait>
-              <ImageAsLandscape>
-                <ShibuyaDistrictImages image="takeshitaStreet2" />
-              </ImageAsLandscape>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="takeshitaStreet3" />
-              </ImageAsPortrait>
-              <TwoImagesSameSizeOrToGroup>
-                <ShibuyaDistrictImages image="takeshitaStreet4" />
-                <ShibuyaDistrictImages image="takeshitaStreet5" />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="takeshitaStreet6" />
-              </ImageAsPortrait>
-              <TwoImagesSameSizeOrToGroup>
-                <ShibuyaDistrictImages image="takeshitaStreet7" />
-                <ShibuyaDistrictImages image="takeshitaStreet8" />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="takeshitaStreet9" />
-              </ImageAsPortrait>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/kirahoffmann-1855684")}>
-                    kirahoffmann
-                  </ExternalLinkNotUnderlined>
-                }
-              >
-                <ShibuyaDistrictImages image="takeshitaStreet10" />
-              </ImageAsLandscape>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="takeshitaStreet11" />
-              </ImageAsPortrait>
-            </GroupOfImages>
-            <p>{t("visit4.part4")}</p>
-            <GroupOfImages>
-              <ImageAsLandscape>
-                <ShibuyaDistrictImages image="takeshitaStreet12" />
-              </ImageAsLandscape>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="takeshitaStreet13" />
-              </ImageAsPortrait>
-              <ImageAsLandscape>
-                <ShibuyaDistrictImages image="takeshitaStreet14" />
-              </ImageAsLandscape>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="takeshitaStreet15" />
-              </ImageAsPortrait>
-              <ImageAsLandscape>
-                <ShibuyaDistrictImages image="takeshitaStreet16" />
-              </ImageAsLandscape>
-              <ImageAsPortrait>
-                <ShibuyaDistrictImages image="takeshitaStreet17" />
-              </ImageAsPortrait>
-            </GroupOfImages>
-            <p>{t("visit4.part5")}</p>
-            <p>{t("visit4.part6")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroup>
-                <ShibuyaDistrictImages image="takeshitaStreet18" />
-                <ShibuyaDistrictImages image="takeshitaStreet19" />
-              </TwoImagesSameSizeOrToGroup>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/saesherra-5527002")}>
-                    saesherra
-                  </ExternalLinkNotUnderlined>
-                }
-              >
-                <ShibuyaDistrictImages image="takeshitaStreet20" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <Divider />
-            <p>{t("visit4.part7")}</p>
-          </SectionContent>
-        </section>
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

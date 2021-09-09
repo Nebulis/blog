@@ -1006,6 +1006,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </PetitCarreColore>
           </SectionContent>
         </section>
+        <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

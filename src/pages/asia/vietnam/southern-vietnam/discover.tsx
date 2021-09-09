@@ -188,16 +188,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit4.part2")}</p>
             </SectionContent>
           </section>
-          <Divider />
-          <Conclusion>
-            <p>{t("conclusion")}</p>
-            <ul>
-              <li>{t("question1")}</li>
-              <li>{t("question2")}</li>
-            </ul>
-            <p>{t("love")}</p>
-          </Conclusion>
         </Visit>
+        <Divider />
+        <Conclusion>
+          <p>{t("conclusion")}</p>
+          <ul>
+            <li>{t("question1")}</li>
+            <li>{t("question2")}</li>
+          </ul>
+          <p>{t("love")}</p>
+        </Conclusion>
         <Divider />
         <Comments
           collectionName={namespace}

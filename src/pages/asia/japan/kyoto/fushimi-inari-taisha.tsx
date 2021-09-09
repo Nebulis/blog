@@ -289,6 +289,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where-to-have.part2")}</p>
           <p>{t("where-to-have.part3")}</p>
         </WhereToHave>
+        <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

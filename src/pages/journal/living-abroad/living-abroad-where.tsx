@@ -335,6 +335,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section2.part7")}</p>
           </SectionContent>
         </section>
+        <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>
