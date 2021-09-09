@@ -244,6 +244,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </SectionContent>
           </section>
         </Visit>
+        <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

@@ -431,6 +431,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("must-pack.part9")}</li>
           </ul>
         </Baggage>
+        <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

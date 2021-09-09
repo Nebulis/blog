@@ -304,6 +304,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Bonus title={t("bonus.title")}>
           <p>{t("bonus.part1")}</p>
         </Bonus>
+        <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>

@@ -565,6 +565,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             {tourDLinkPublished && <SectionContent>{t("tour-d.snorkeling.part1")}</SectionContent>}
           </section>
         </Visit>
+        <Divider />
         <Opinion title={t("opinion.title")}>
           <p>{t("opinion.part1")}</p>
           <p>{t("opinion.part2")}</p>

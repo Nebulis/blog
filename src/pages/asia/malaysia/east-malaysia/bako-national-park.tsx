@@ -190,379 +190,383 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ul>
           <p>{t("what-to-bring.part14")}</p>
         </Baggage>
-        <Visit title={t("visit.title")} />
-        <Divider />
-        <section>
-          <MalaysiaHeadline>{t("visit.part1.title")}</MalaysiaHeadline>
+        <Visit title={t("visit.title")}>
+          {/* just to have the correct space*/}
+          <SectionContent />
           <Divider />
-          <SectionContent>
-            <p>{t("visit.part1.part1")}</p>
-            <p>{t("visit.part1.part2")}</p>
-            <GroupOfImages>
+          <section>
+            <MalaysiaHeadline>{t("visit.part1.title")}</MalaysiaHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit.part1.part1")}</p>
+              <p>{t("visit.part1.part2")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <BakoNationalParkImages image="jetty" imgStyle={{ objectFit: "contain" }} />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="jetty2" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="jetty3" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part1.part3")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="jetty4" />
+                </ImageAsLandscape>
+                <ImageAsPortrait>
+                  <BakoNationalParkImages image="jetty5" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="jetty6" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                  <BakoNationalParkImages image="jetty7" />
+                  <BakoNationalParkImages image="jetty8" />
+                </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+              </GroupOfImages>
+              <p>{t("visit.part1.part4")}</p>
+              <p>{t("visit.part1.part5")}</p>
+              <p>{t("visit.part1.part6")}</p>
+              <ImageAsLandscape>
+                <BakoNationalParkImages image="jetty9" />
+              </ImageAsLandscape>
+              <p>{t("visit.part1.part7")}</p>
+              <p>{t("visit.part1.part8")}</p>
+              <ImageAsLandscape>
+                <BakoNationalParkImages image="jetty10" />
+              </ImageAsLandscape>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <MalaysiaHeadline>{t("visit.part2.title")}</MalaysiaHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit.part2.part1")}</p>
+              <p>{t("visit.part2.part2")}</p>
+              <p>{t("visit.part2.part3")}</p>
               <ImageAsPortrait>
-                <BakoNationalParkImages image="jetty" imgStyle={{ objectFit: "contain" }} />
+                <BakoNationalParkImages image="welcome" />
               </ImageAsPortrait>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="jetty2" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="jetty3" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part1.part3")}</p>
-            <GroupOfImages>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="jetty4" />
-              </ImageAsLandscape>
-              <ImageAsPortrait>
-                <BakoNationalParkImages image="jetty5" />
-              </ImageAsPortrait>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="jetty6" />
-              </ImageAsLandscape>
-              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                <BakoNationalParkImages image="jetty7" />
-                <BakoNationalParkImages image="jetty8" />
-              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-            </GroupOfImages>
-            <p>{t("visit.part1.part4")}</p>
-            <p>{t("visit.part1.part5")}</p>
-            <p>{t("visit.part1.part6")}</p>
-            <ImageAsLandscape>
-              <BakoNationalParkImages image="jetty9" />
-            </ImageAsLandscape>
-            <p>{t("visit.part1.part7")}</p>
-            <p>{t("visit.part1.part8")}</p>
-            <ImageAsLandscape>
-              <BakoNationalParkImages image="jetty10" />
-            </ImageAsLandscape>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <MalaysiaHeadline>{t("visit.part2.title")}</MalaysiaHeadline>
+              <p>{t("visit.part2.part4")}</p>
+              <p>{t("visit.part2.part5")}</p>
+              <p>{t("visit.part2.part6")}</p>
+            </SectionContent>
+          </section>
           <Divider />
-          <SectionContent>
-            <p>{t("visit.part2.part1")}</p>
-            <p>{t("visit.part2.part2")}</p>
-            <p>{t("visit.part2.part3")}</p>
-            <ImageAsPortrait>
-              <BakoNationalParkImages image="welcome" />
-            </ImageAsPortrait>
-            <p>{t("visit.part2.part4")}</p>
-            <p>{t("visit.part2.part5")}</p>
-            <p>{t("visit.part2.part6")}</p>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <MalaysiaHeadline>{t("visit.part3.title")}</MalaysiaHeadline>
+          <section>
+            <MalaysiaHeadline>{t("visit.part3.title")}</MalaysiaHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit.part3.part1")}</p>
+              <p>{t("visit.part3.part2")}</p>
+              <GroupOfImages>
+                <ImageAsPortrait>
+                  <BakoNationalParkImages image="trek" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="trek2" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part3.part3")}</p>
+              <p>{t("visit.part3.part4")}</p>
+              <p>{t("visit.part3.part5")}</p>
+              <p>{t("visit.part3.part6")}</p>
+              <p>{t("visit.part3.part7")}</p>
+              <p>{t("visit.part3.part8")}</p>
+              <p>{t("visit.part3.part9")}</p>
+              <p>{t("visit.part3.part10")}</p>
+              <p>{t("visit.part3.part11")}</p>
+              <p>{t("visit.part3.part12")}</p>
+              <p>{t("visit.part3.part13")}</p>
+              <p>{t("visit.part3.part14")}</p>
+              <p>{t("visit.part3.part15")}</p>
+              <p>{t("visit.part3.part16")}</p>
+              <p>{t("visit.part3.part17")}</p>
+              <p>{t("visit.part3.part18")}</p>
+              <p>{t("visit.part3.part19")}</p>
+              <p>{t("visit.part3.part20")}</p>
+              <p className="tc">{t("visit.part3.part21")}</p>
+              <p>{t("visit.part3.part22")}</p>
+              <p>{t("visit.part3.part23")}</p>
+              <p>{t("visit.part3.part24")}</p>
+              <p>{t("visit.part3.part25")}</p>
+              <p>{t("visit.part3.part26")}</p>
+              <p>{t("visit.part3.part27")}</p>
+              <p>{t("visit.part3.part28")}</p>
+              <p>{t("visit.part3.part29")}</p>
+              <p>{t("visit.part3.part30")}</p>
+              <p>{t("visit.part3.part31")}</p>
+              <p>{t("visit.part3.part32")}</p>
+              <p>{t("visit.part3.part33")}</p>
+              <p>{t("visit.part3.part34")}</p>
+              <p>{t("visit.part3.part35")}</p>
+              <ImageAsLandscape>
+                <BakoNationalParkImages image="trek3" />
+              </ImageAsLandscape>
+              <Divider
+                css={css`
+                  margin-top: calc(1.45rem - 1px);
+                `}
+              />
+              <p>{t("visit.part3.part36")}</p>
+              <p>{t("visit.part3.part37")}</p>
+              <p>{t("visit.part3.part38")}</p>
+              <p>{t("visit.part3.part39")}</p>
+              <p>{t("visit.part3.part40")}</p>
+              <p>{t("visit.part3.part41")}</p>
+            </SectionContent>
+          </section>
           <Divider />
-          <SectionContent>
-            <p>{t("visit.part3.part1")}</p>
-            <p>{t("visit.part3.part2")}</p>
-            <GroupOfImages>
-              <ImageAsPortrait>
-                <BakoNationalParkImages image="trek" />
-              </ImageAsPortrait>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="trek2" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part3.part3")}</p>
-            <p>{t("visit.part3.part4")}</p>
-            <p>{t("visit.part3.part5")}</p>
-            <p>{t("visit.part3.part6")}</p>
-            <p>{t("visit.part3.part7")}</p>
-            <p>{t("visit.part3.part8")}</p>
-            <p>{t("visit.part3.part9")}</p>
-            <p>{t("visit.part3.part10")}</p>
-            <p>{t("visit.part3.part11")}</p>
-            <p>{t("visit.part3.part12")}</p>
-            <p>{t("visit.part3.part13")}</p>
-            <p>{t("visit.part3.part14")}</p>
-            <p>{t("visit.part3.part15")}</p>
-            <p>{t("visit.part3.part16")}</p>
-            <p>{t("visit.part3.part17")}</p>
-            <p>{t("visit.part3.part18")}</p>
-            <p>{t("visit.part3.part19")}</p>
-            <p>{t("visit.part3.part20")}</p>
-            <p className="tc">{t("visit.part3.part21")}</p>
-            <p>{t("visit.part3.part22")}</p>
-            <p>{t("visit.part3.part23")}</p>
-            <p>{t("visit.part3.part24")}</p>
-            <p>{t("visit.part3.part25")}</p>
-            <p>{t("visit.part3.part26")}</p>
-            <p>{t("visit.part3.part27")}</p>
-            <p>{t("visit.part3.part28")}</p>
-            <p>{t("visit.part3.part29")}</p>
-            <p>{t("visit.part3.part30")}</p>
-            <p>{t("visit.part3.part31")}</p>
-            <p>{t("visit.part3.part32")}</p>
-            <p>{t("visit.part3.part33")}</p>
-            <p>{t("visit.part3.part34")}</p>
-            <p>{t("visit.part3.part35")}</p>
-            <ImageAsLandscape>
-              <BakoNationalParkImages image="trek3" />
-            </ImageAsLandscape>
-            <Divider
-              css={css`
-                margin-top: calc(1.45rem - 1px);
-              `}
-            />
-            <p>{t("visit.part3.part36")}</p>
-            <p>{t("visit.part3.part37")}</p>
-            <p>{t("visit.part3.part38")}</p>
-            <p>{t("visit.part3.part39")}</p>
-            <p>{t("visit.part3.part40")}</p>
-            <p>{t("visit.part3.part41")}</p>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <MalaysiaHeadline>{t("visit.part4.title")}</MalaysiaHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit.part4.part1")}</p>
-            <p>{t("visit.part4.part2")}</p>
-            <TwoImagesSameSizeOrToGroup>
-              <BakoNationalParkImages image="flora" />
-              <BakoNationalParkImages image="flora2" />
-            </TwoImagesSameSizeOrToGroup>
-            <p>{t("visit.part4.part3")}</p>
-            <p>{t("visit.part4.part4")}</p>
-            <p>{t("visit.part4.part5")}</p>
-            <p>{t("visit.part4.part6")}</p>
-            <GroupOfImages>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="flora3" />
-              </ImageAsLandscape>
-              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                <BakoNationalParkImages image="flora4" />
-                <BakoNationalParkImages image="flora5" />
-              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                <BakoNationalParkImages image="flora6" />
-                <BakoNationalParkImages image="flora7" />
-              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                <BakoNationalParkImages image="flora8" />
-                <BakoNationalParkImages image="flora9" />
-              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                <BakoNationalParkImages image="flora10" />
-                <BakoNationalParkImages image="flora11" />
-              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="flora12" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part4.part7")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                <BakoNationalParkImages image="flora13" />
-                <BakoNationalParkImages image="flora14" />
-              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="flora15" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="flora16" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part4.part8")}</p>
-            <p>{t("visit.part4.part9")}</p>
-            <ImageAsLandscape
-              credit={
-                <ExternalLinkNotUnderlined href="https://fr.wikipedia.org/wiki/Rafflesia#/media/Fichier:Rafflesia_80_cm.jpg">
-                  wikipedia
-                </ExternalLinkNotUnderlined>
-              }
-            >
-              <BakoNationalParkImages image="flora17" />
-            </ImageAsLandscape>
-            <p>{t("visit.part4.part10")}</p>
-            <TwoImagesSameSizeOrToGroup>
-              <BakoNationalParkImages image="flora18" />
-              <BakoNationalParkImages image="flora19" />
-            </TwoImagesSameSizeOrToGroup>
-            <p>{t("visit.part4.part11")}</p>
-            <p>{t("visit.part4.part12")}</p>
-            <p>{t("visit.part4.part13")}</p>
-            <GroupOfImages>
-              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                <BakoNationalParkImages image="flora20" />
-                <BakoNationalParkImages image="flora21" />
-              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="flora22" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part4.part14")}</p>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <MalaysiaHeadline>{t("visit.part5.title")}</MalaysiaHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit.part5.part1")}</p>
-            <ImageAsLandscape>
-              <BakoNationalParkImages image="beach" />
-            </ImageAsLandscape>
-            <p>{t("visit.part5.part2")}</p>
-            <p>{t("visit.part5.part3")}</p>
-            <p>{t("visit.part5.part4")}</p>
-            <GroupOfImages>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="beach2" />
-              </ImageAsLandscape>
-              <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                <BakoNationalParkImages image="beach3" />
-                <BakoNationalParkImages image="beach4" />
-              </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-              <ImageAsPortrait>
-                <BakoNationalParkImages image="beach5" />
-              </ImageAsPortrait>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="beach6" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="beach7" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="beach8" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="beach9" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="beach10" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="beach11" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="beach12" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="beach13" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part5.part5")}</p>
-            <p>{t("visit.part5.part6")}</p>
-            <p>{t("visit.part5.part7")}</p>
-            <Panorama>
-              <BakoNationalParkImages image="beach14" />
-            </Panorama>
-          </SectionContent>
-        </section>
-        <Divider />
-        <section>
-          <MalaysiaHeadline>{t("visit.part6.title")}</MalaysiaHeadline>
-          <Divider />
-          <SectionContent>
-            <p>{t("visit.part6.part1")}</p>
-            <p>{t("visit.part6.part2")}</p>
-            <p>{t("visit.part6.part3")}</p>
-            <p>{t("visit.part6.part4")}</p>
-            <p>{t("visit.part6.part5")}</p>
-            <p>{t("visit.part6.part6")}</p>
-            <p>{t("visit.part6.part7")}</p>
-            <GroupOfImages>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="proboscisMonkey" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="proboscisMonkey2" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="proboscisMonkey3" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="proboscisMonkey4" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part6.part8")}</p>
-            <p>{t("visit.part6.part9")}</p>
-            <p>{t("visit.part6.part10")}</p>
-            <p>{t("visit.part6.part11")}</p>
-            <GroupOfImages>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="crabEatingMacaque" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="crabEatingMacaque2" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="crabEatingMacaque3" />
-              </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="crabEatingMacaque4" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part6.part12")}</p>
-            <p>{t("visit.part6.part13")}</p>
-            <GroupOfImages>
+          <section>
+            <MalaysiaHeadline>{t("visit.part4.title")}</MalaysiaHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit.part4.part1")}</p>
+              <p>{t("visit.part4.part2")}</p>
               <TwoImagesSameSizeOrToGroup>
-                <BakoNationalParkImages image="boar" />
-                <BakoNationalParkImages image="boar2" />
+                <BakoNationalParkImages image="flora" />
+                <BakoNationalParkImages image="flora2" />
               </TwoImagesSameSizeOrToGroup>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="boar3" />
+              <p>{t("visit.part4.part3")}</p>
+              <p>{t("visit.part4.part4")}</p>
+              <p>{t("visit.part4.part5")}</p>
+              <p>{t("visit.part4.part6")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="flora3" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                  <BakoNationalParkImages image="flora4" />
+                  <BakoNationalParkImages image="flora5" />
+                </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                  <BakoNationalParkImages image="flora6" />
+                  <BakoNationalParkImages image="flora7" />
+                </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                  <BakoNationalParkImages image="flora8" />
+                  <BakoNationalParkImages image="flora9" />
+                </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                  <BakoNationalParkImages image="flora10" />
+                  <BakoNationalParkImages image="flora11" />
+                </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="flora12" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part4.part7")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                  <BakoNationalParkImages image="flora13" />
+                  <BakoNationalParkImages image="flora14" />
+                </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="flora15" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="flora16" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part4.part8")}</p>
+              <p>{t("visit.part4.part9")}</p>
+              <ImageAsLandscape
+                credit={
+                  <ExternalLinkNotUnderlined href="https://fr.wikipedia.org/wiki/Rafflesia#/media/Fichier:Rafflesia_80_cm.jpg">
+                    wikipedia
+                  </ExternalLinkNotUnderlined>
+                }
+              >
+                <BakoNationalParkImages image="flora17" />
               </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part6.part14")}</p>
-            <p>{t("visit.part6.part15")}</p>
-            <ImageAsLandscape>
-              <BakoNationalParkImages image="snake" />
-            </ImageAsLandscape>
-            <p>{t("visit.part6.part16")}</p>
-            <GroupOfImages>
+              <p>{t("visit.part4.part10")}</p>
+              <TwoImagesSameSizeOrToGroup>
+                <BakoNationalParkImages image="flora18" />
+                <BakoNationalParkImages image="flora19" />
+              </TwoImagesSameSizeOrToGroup>
+              <p>{t("visit.part4.part11")}</p>
+              <p>{t("visit.part4.part12")}</p>
+              <p>{t("visit.part4.part13")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                  <BakoNationalParkImages image="flora20" />
+                  <BakoNationalParkImages image="flora21" />
+                </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="flora22" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part4.part14")}</p>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <MalaysiaHeadline>{t("visit.part5.title")}</MalaysiaHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit.part5.part1")}</p>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="crab" />
+                <BakoNationalParkImages image="beach" />
               </ImageAsLandscape>
+              <p>{t("visit.part5.part2")}</p>
+              <p>{t("visit.part5.part3")}</p>
+              <p>{t("visit.part5.part4")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="beach2" />
+                </ImageAsLandscape>
+                <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                  <BakoNationalParkImages image="beach3" />
+                  <BakoNationalParkImages image="beach4" />
+                </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
+                <ImageAsPortrait>
+                  <BakoNationalParkImages image="beach5" />
+                </ImageAsPortrait>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="beach6" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="beach7" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="beach8" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="beach9" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="beach10" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="beach11" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="beach12" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="beach13" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part5.part5")}</p>
+              <p>{t("visit.part5.part6")}</p>
+              <p>{t("visit.part5.part7")}</p>
+              <Panorama>
+                <BakoNationalParkImages image="beach14" />
+              </Panorama>
+            </SectionContent>
+          </section>
+          <Divider />
+          <section>
+            <MalaysiaHeadline>{t("visit.part6.title")}</MalaysiaHeadline>
+            <Divider />
+            <SectionContent>
+              <p>{t("visit.part6.part1")}</p>
+              <p>{t("visit.part6.part2")}</p>
+              <p>{t("visit.part6.part3")}</p>
+              <p>{t("visit.part6.part4")}</p>
+              <p>{t("visit.part6.part5")}</p>
+              <p>{t("visit.part6.part6")}</p>
+              <p>{t("visit.part6.part7")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="proboscisMonkey" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="proboscisMonkey2" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="proboscisMonkey3" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="proboscisMonkey4" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part6.part8")}</p>
+              <p>{t("visit.part6.part9")}</p>
+              <p>{t("visit.part6.part10")}</p>
+              <p>{t("visit.part6.part11")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="crabEatingMacaque" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="crabEatingMacaque2" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="crabEatingMacaque3" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="crabEatingMacaque4" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part6.part12")}</p>
+              <p>{t("visit.part6.part13")}</p>
+              <GroupOfImages>
+                <TwoImagesSameSizeOrToGroup>
+                  <BakoNationalParkImages image="boar" />
+                  <BakoNationalParkImages image="boar2" />
+                </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="boar3" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part6.part14")}</p>
+              <p>{t("visit.part6.part15")}</p>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="crab2" />
+                <BakoNationalParkImages image="snake" />
               </ImageAsLandscape>
-            </GroupOfImages>
-            <p>{t("visit.part6.part17")}</p>
-            <p>{t("visit.part6.part18")}</p>
-            <GroupOfImages>
+              <p>{t("visit.part6.part16")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="crab" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="crab2" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <p>{t("visit.part6.part17")}</p>
+              <p>{t("visit.part6.part18")}</p>
+              <GroupOfImages>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="colugo" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <BakoNationalParkImages image="colugo2" />
+                </ImageAsLandscape>
+              </GroupOfImages>
+              <PetitCarreColore>
+                <p className="tc ttu">{t("visit.part6.part19")}</p>
+                <p>{t("visit.part6.part20")}</p>
+                <p>{t("visit.part6.part21")}</p>
+                <p>{t("visit.part6.part22")}</p>
+                <p>{t("visit.part6.part23")}</p>
+                <p>{t("visit.part6.part24")}</p>
+                <p>{t("visit.part6.part25")}</p>
+                <p>{t("visit.part6.part26")}</p>
+                <p>{t("visit.part6.part27")}</p>
+                <p>
+                  <Jungle />
+                </p>
+              </PetitCarreColore>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="colugo" />
+                <BakoNationalParkImages image="squirrel" />
               </ImageAsLandscape>
-              <ImageAsLandscape>
-                <BakoNationalParkImages image="colugo2" />
-              </ImageAsLandscape>
-            </GroupOfImages>
-            <PetitCarreColore>
-              <p className="tc ttu">{t("visit.part6.part19")}</p>
-              <p>{t("visit.part6.part20")}</p>
-              <p>{t("visit.part6.part21")}</p>
-              <p>{t("visit.part6.part22")}</p>
-              <p>{t("visit.part6.part23")}</p>
-              <p>{t("visit.part6.part24")}</p>
-              <p>{t("visit.part6.part25")}</p>
-              <p>{t("visit.part6.part26")}</p>
-              <p>{t("visit.part6.part27")}</p>
-              <p>
-                <Jungle />
-              </p>
-            </PetitCarreColore>
-            <ImageAsLandscape>
-              <BakoNationalParkImages image="squirrel" />
-            </ImageAsLandscape>
-            <Divider
-              css={css`
-                margin-top: calc(1.45rem - 1px);
-              `}
-            />
-            <p>{t("visit.part6.part28")}</p>
-            <p>{t("visit.part6.part29")}</p>
-            <p>{t("visit.part6.part30")}</p>
-          </SectionContent>
-        </section>
+              <Divider
+                css={css`
+                  margin-top: calc(1.45rem - 1px);
+                `}
+              />
+              <p>{t("visit.part6.part28")}</p>
+              <p>{t("visit.part6.part29")}</p>
+              <p>{t("visit.part6.part30")}</p>
+            </SectionContent>
+          </section>
+        </Visit>
+        <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>
           <ul>
