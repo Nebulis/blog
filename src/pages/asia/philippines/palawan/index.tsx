@@ -18,8 +18,8 @@ import {
 } from "../../../../components/layout/layout"
 import { useCustomTranslation } from "../../../../i18n-hook"
 import i18n from "i18next"
-import translationFr from "../../../../locales/fr/asia/philippines/el-nido/index.json"
-import translationEn from "../../../../locales/en/asia/philippines/el-nido/index.json"
+import translationFr from "../../../../locales/fr/asia/philippines/palawan/index.json"
+import translationEn from "../../../../locales/en/asia/philippines/palawan/index.json"
 import {
   PhilippinesBlogLayout,
   PhilippinesButtonLink,
@@ -36,15 +36,15 @@ import { SharedPhilippinesImages } from "../../../../components/images/asia/phil
 import { PageQuote } from "../../../../components/core/quote"
 import { Divider } from "../../../../components/core/divider"
 import { PointOfInterestSection } from "../../../../components/core/point-of-interest"
-import HomeElNido from "../../../../images/asia/philippines/el-nido/home-el-nido.jpg"
+import HomeElNido from "../../../../images/asia/philippines/palawan/home-el-nido.jpg"
 import { WeatherForHomePage } from "../../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../../components/core/tooltipPortal"
 
-const namespace = "asia/philippines/el-nido/index"
+const namespace = "asia/philippines/palawan/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
-const currentPageId = "el-nido"
+const currentPageId = "palawan"
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { development } = useContext(ApplicationContext)
@@ -54,19 +54,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const highlights = getArticles({
     kind: "highlight",
     development,
-    tags: ["el-nido"],
+    tags: [currentPageId],
     filter: (cachedLink) => cachedLink.id !== "el-nido-paradise",
   })
-  const googleDescription = t("meta-description")
-  const description = `${t("introduction.section1")} ${t("introduction.section2")}`
   return (
     <>
       <SEO
         title={t("title")}
         fullTitle={t("full-title")}
         location={location}
-        socialNetworkDescription={description}
-        googleDescription={googleDescription}
+        socialNetworkDescription={t("social-network-description")}
+        googleDescription={t("meta-description")}
         image={HomeElNido}
       />
       <PhilippinesBlogLayout page={currentPageId} location={location}>

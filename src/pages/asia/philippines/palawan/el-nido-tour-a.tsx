@@ -4,8 +4,8 @@ import i18n from "i18next"
 import SEO from "../../../../components/layout/seo"
 import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
-import translationFr from "../../../../locales/fr/asia/philippines/el-nido/tour-a.json"
-import translationEn from "../../../../locales/en/asia/philippines/el-nido/tour-a.json"
+import translationFr from "../../../../locales/fr/asia/philippines/palawan/el-nido-tour-a.json"
+import translationEn from "../../../../locales/en/asia/philippines/palawan/el-nido-tour-a.json"
 import {
   PhilippinesBlogLayout,
   PhilippinesHeadline,
@@ -23,7 +23,7 @@ import {
 } from "../../../../components/core/section"
 import { Conclusion } from "../../../../components/core/conclusion"
 import { Divider } from "../../../../components/core/divider"
-import HomeImgUrl from "../../../../images/asia/philippines/el-nido/tour-a/tour-a-main.jpg"
+import HomeImgUrl from "../../../../images/asia/philippines/palawan/el-nido-tour-a/tour-a-main.jpg"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -35,11 +35,11 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { SharedCardPhilippinesImages } from "../../../../components/images/asia/philippines/shared-card-philippines-images"
-import ElNidoMap from "../../../../images/asia/philippines/el-nido/tour-a/tour-a-map.png"
-import SkipperCharters1 from "../../../../images/asia/philippines/el-nido/tour-a/skipper-charters-tour-a-1.jpg"
-import SkipperCharters2 from "../../../../images/asia/philippines/el-nido/tour-a/skipper-charters-tour-a-2.jpg"
+import ElNidoMap from "../../../../images/asia/philippines/palawan/el-nido-tour-a/tour-a-map.png"
+import SkipperCharters1 from "../../../../images/asia/philippines/palawan/el-nido-tour-a/skipper-charters-tour-a-1.jpg"
+import SkipperCharters2 from "../../../../images/asia/philippines/palawan/el-nido-tour-a/skipper-charters-tour-a-2.jpg"
 import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
-import { TourAImages } from "../../../../components/images/asia/philippines/el-nido/tour-a"
+import { TourAImages } from "../../../../components/images/asia/philippines/palawan/el-nido-tour-a"
 import {
   philippinesPrimaryColor,
   philippinesPrimaryColorDarker,
@@ -48,7 +48,7 @@ import { css } from "@emotion/react"
 import { Quote } from "../../../../components/core/quote"
 import { TravelCardBookingStyle } from "../../../../components/core/booking"
 
-const namespace = "asia/philippines/el-nido/tour-a"
+const namespace = "asia/philippines/palawan/tour-a"
 const id = "el-nido-tour-a"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
@@ -438,6 +438,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question1")}</li>
             <li>{t("question2")}</li>
           </ul>
+          <p>{t("love")}</p>
         </Conclusion>
         <Divider />
         <Comments

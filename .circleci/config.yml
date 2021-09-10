@@ -3,6 +3,7 @@ defaults: &defaults
   docker:
     - image: "circleci/node:14"
   working_directory: ~/data
+  resource_class: medium
 
 aliases:
   - &restore_npm_cache

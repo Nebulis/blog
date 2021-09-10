@@ -40,14 +40,16 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
 }) => {
   const data = useStaticQuery(graphql`
     query {
-      boat: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-boat.jpg" }) {
+      boat: file(relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-boat.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      speedboat: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-speedboat.jpg" }) {
+      speedboat: file(
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-speedboat.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
@@ -55,7 +57,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       secretLagoon2: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-secret-lagoon2.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-secret-lagoon2.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -64,7 +66,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       commandoBeach2: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-commando-beach2.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-commando-beach2.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
@@ -73,7 +75,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       entalulaBeach: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-entalula-beach.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-entalula-beach.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -82,7 +84,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       snakeIsland1: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-snake-island1.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-snake-island1.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -91,7 +93,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       snakeIsland2: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-snake-island2.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-snake-island2.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -100,7 +102,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       pinagbuyutanIsland: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-pinagbuyutan-island.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-pinagbuyutan-island.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
@@ -109,7 +111,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       yumyumIsland: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-yumyum-island.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-yumyum-island.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
@@ -118,7 +120,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       cudugnonCave: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-cudugnon-cave.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-cudugnon-cave.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
@@ -127,7 +129,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       helicopterIsland: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-helicopter-island.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-helicopter-island.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -136,7 +138,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       matinlocShrine: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-matinloc-shrine.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-matinloc-shrine.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -145,7 +147,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       secretBeach: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-secret-beach.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-secret-beach.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -153,7 +155,9 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      starBeach: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-star-beach.jpg" }) {
+      starBeach: file(
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-star-beach.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
@@ -161,7 +165,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       hiddenBeach: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-hidden-beach.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-hidden-beach.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -169,7 +173,9 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      ipilBeach: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-ipil-beach.jpg" }) {
+      ipilBeach: file(
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-ipil-beach.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
@@ -177,7 +183,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       cadlaoIsland: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-cadlao-island.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-cadlao-island.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -186,7 +192,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       natNatBeach: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-nat-nat-beach.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-nat-nat-beach.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -195,7 +201,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       paradiseBeach: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-paradise-beach.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-paradise-beach.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -204,7 +210,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       pasandiganCove: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-pasandigan-cove.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-pasandigan-cove.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -213,7 +219,7 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
         }
       }
       smallLagoon: file(
-        relativePath: { eq: "asia/philippines/el-nido/which-tour/el-nido-which-tour-small-lagoon.jpg" }
+        relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/el-nido-which-tour-small-lagoon.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
@@ -221,28 +227,28 @@ export const ElNidoWhichTourImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      cardFr1: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/card-fr1.jpg" }) {
+      cardFr1: file(relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/card-fr1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 60, srcSetBreakpoints: [1000]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      cardFr2: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/card-fr2.jpg" }) {
+      cardFr2: file(relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/card-fr2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 60, srcSetBreakpoints: [1000]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      cardEn1: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/card-en1.jpg" }) {
+      cardEn1: file(relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/card-en1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 60, srcSetBreakpoints: [1000]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      cardEn2: file(relativePath: { eq: "asia/philippines/el-nido/which-tour/card-en2.jpg" }) {
+      cardEn2: file(relativePath: { eq: "asia/philippines/palawan/el-nido-which-tour/card-en2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 60, srcSetBreakpoints: [1000]) {
             ...GatsbyImageSharpFluid

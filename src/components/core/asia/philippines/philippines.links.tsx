@@ -14,8 +14,8 @@ export const philippinesLinks: CountryLink = {
   },
   cities: [
     {
-      id: "el-nido",
-      label: { fr: commonFr.country.philippines.city["el-nido"], en: commonEn.country.philippines.city["el-nido"] },
+      id: "palawan",
+      label: { fr: commonFr.country.philippines.city.palawan, en: commonEn.country.philippines.city.palawan },
       pointOfInterest: ["lazy", "nature", "animals", "water-activities"],
       imageProps: {
         image: "homeElNido",
@@ -35,7 +35,6 @@ export const philippinesLinks: CountryLink = {
         },
         {
           id: "el-nido-which-tour",
-          url: "which-tour",
           card: ElNidoWhichTourCard,
           label: {
             fr: commonFr.country.philippines.card["which-tour"],
@@ -45,7 +44,6 @@ export const philippinesLinks: CountryLink = {
         },
         {
           id: "el-nido-tour-a",
-          url: "tour-a",
           published: new Date("2021-03-06T17:00:00.000+08:00"),
           card: ElNidoTourACard,
           label: {
@@ -55,7 +53,6 @@ export const philippinesLinks: CountryLink = {
         },
         {
           id: "el-nido-tour-b",
-          url: "tour-b",
           published: new Date("2021-03-13T17:00:00.000+08:00"),
           card: ElNidoTourBCard,
           label: {

@@ -24,14 +24,14 @@ export const SharedCardPhilippinesImages: React.FunctionComponent<ExtraImageProp
           }
         }
       }
-      tourA: file(relativePath: { eq: "asia/philippines/el-nido/tour-a/tour-a-main.jpg" }) {
+      tourA: file(relativePath: { eq: "asia/philippines/palawan/el-nido-tour-a/tour-a-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      tourB: file(relativePath: { eq: "asia/philippines/el-nido/tour-b/tour-b-main.jpg" }) {
+      tourB: file(relativePath: { eq: "asia/philippines/palawan/el-nido-tour-b/tour-b-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
