@@ -4,8 +4,8 @@ import i18n from "i18next"
 import SEO from "../../../../components/layout/seo"
 import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
-import translationFr from "../../../../locales/fr/asia/philippines/el-nido/tour-b.json"
-import translationEn from "../../../../locales/en/asia/philippines/el-nido/tour-b.json"
+import translationFr from "../../../../locales/fr/asia/philippines/palawan/el-nido-tour-b.json"
+import translationEn from "../../../../locales/en/asia/philippines/palawan/el-nido-tour-b.json"
 import {
   PhilippinesBlogLayout,
   PhilippinesHeadline,
@@ -24,7 +24,7 @@ import {
 import { Conclusion } from "../../../../components/core/conclusion"
 import { Divider } from "../../../../components/core/divider"
 import { Quote } from "../../../../components/core/quote"
-import HomeImgUrl from "../../../../images/asia/philippines/el-nido/tour-b/tour-b-main.jpg"
+import HomeImgUrl from "../../../../images/asia/philippines/palawan/el-nido-tour-b/tour-b-main.jpg"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -35,10 +35,10 @@ import {
 } from "../../../../components/images/layout"
 import { SharedCardPhilippinesImages } from "../../../../components/images/asia/philippines/shared-card-philippines-images"
 import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
-import ElNidoMap from "../../../../images/asia/philippines/el-nido/tour-b/tour-b-map.png"
-import SkipperCharters1 from "../../../../images/asia/philippines/el-nido/tour-b/skipper-charters-tour-b-1.jpg"
-import SkipperCharters2 from "../../../../images/asia/philippines/el-nido/tour-b/skipper-charters-tour-b-2.jpg"
-import { TourBImages } from "../../../../components/images/asia/philippines/el-nido/tour-b"
+import ElNidoMap from "../../../../images/asia/philippines/palawan/el-nido-tour-b/tour-b-map.png"
+import SkipperCharters1 from "../../../../images/asia/philippines/palawan/el-nido-tour-b/skipper-charters-tour-b-1.jpg"
+import SkipperCharters2 from "../../../../images/asia/philippines/palawan/el-nido-tour-b/skipper-charters-tour-b-2.jpg"
+import { TourBImages } from "../../../../components/images/asia/philippines/palawan/el-nido-tour-b"
 import {
   philippinesPrimaryColor,
   philippinesPrimaryColorDarker,
@@ -47,7 +47,7 @@ import { css } from "@emotion/react"
 import { CarouselImageQuery } from "../../../../components/images/carousel"
 import { TravelCardBookingStyle } from "../../../../components/core/booking"
 
-const namespace = "asia/philippines/el-nido/tour-b"
+const namespace = "asia/philippines/palawan/tour-b"
 const id = "el-nido-tour-b"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
@@ -434,6 +434,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question1")}</li>
             <li>{t("question2")}</li>
           </ul>
+          <p>{t("love")}</p>
         </Conclusion>
         <Divider />
         <Comments

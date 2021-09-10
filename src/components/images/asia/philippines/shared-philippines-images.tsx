@@ -15,7 +15,7 @@ export const SharedPhilippinesImages: React.FunctionComponent<ExtraImageProps & 
 }) => {
   const data = useStaticQuery(graphql`
     query {
-      homeElNido: file(relativePath: { eq: "asia/philippines/el-nido/home-el-nido.jpg" }) {
+      homeElNido: file(relativePath: { eq: "asia/philippines/palawan/home-el-nido.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 75, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

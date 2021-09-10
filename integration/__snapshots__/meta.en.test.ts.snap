@@ -276,41 +276,41 @@ exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/la
 
 exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/langkawi-dream-hotel/index.html correctly: title 1`] = `"Dream hotel in Langkawi | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly: meta-description 1`] = `"Breathtaking landscapes, white sands and turquoise water. We give you advice based on our own experience and tell you about our adventure on the island of Palawan. In this article we tell you when to go? How many days ? What budget to plan? How to get there ? And where to stay?"`;
+exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: meta-description 1`] = `"The Philippines comprises more than 7,600 islands, which means that you are spoilt for choice for your dream vacation. Breathtaking landscapes, unique gorgeous islands and immense snorkeling and diving spots. Follow our guide to discover our selection of must-see places. Our travelogue with photos, tips, and advice."`;
 
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly: social-network 1`] = `"Breathtaking landscapes, white sands and turquoise water ... El Nido must imperatively be part of your dream travel list for this new year."`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/el-nido-paradise/index.html correctly: title 1`] = `"El Nido: A little paradise | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly: meta-description 1`] = `"Join us to discover the jewel of the Philippines. In each article, we answer to your questions: When to go? How many days ? What budget to plan? How to get there? Why ? When? How long and at what period? Without forgetting the addresses and prices."`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly: social-network 1`] = `"Do you want to join us to discover the jewel of the Philippines on the Palawan Island? Grab your mask and snorkel or dive in these crystal clear waters that will leave you a lasting impression. Take advantage of the different tours called \\"Island hopping\\" to choose what suits you best."`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/index.html correctly: title 1`] = `"El Nido | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: meta-description 1`] = `"In this article, we share in detail about our incredible day discovering the Tour A. A description of each island with our photos and opinion. We also tell you about the price and duration of the Tour."`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: social-network 1`] = `"Lagoons with crystal clear waters, secluded beaches just for you and still intact snorkeling and diving sites. Did you think that could only exist in your dreams? Welcome to El Nido Tour A."`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-a/index.html correctly: title 1`] = `"El Nido - Tour A: Travelogue and Photos | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-b/index.html correctly: meta-description 1`] = `"In this article, we share in detail about our incredible day discovering the Tour B. A description of each island with our photos and opinion. We also tell you about the price and duration of the Tour."`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-b/index.html correctly: social-network 1`] = `"A chaque arrêt on vous emmène dans un univers différent, banc de sable singulier, cave insolite, île déserte façon Koh Lanta ou à la Robinson Crusoé, chacun de ces endroits vous transportera."`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/tour-b/index.html correctly: title 1`] = `"El Nido - Tour B: Travelogue and Photos | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/which-tour/index.html correctly: meta-description 1`] = `"Join us to discover the islands of the Bacuit Archipelago in this article. For each tour, we share a lot of information, for instance, the price, the different boats available or even how to book a tour"`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/which-tour/index.html correctly: social-network 1`] = `"El Nido is one of the most famous destinations in the Philippines, mainly thanks to the Bacuit Archipelago, Dotted with paradisiacal islands and islets, it truly is the gem of Palawan."`;
-
-exports[`english pages exports meta for public/en/asia/philippines/el-nido/which-tour/index.html correctly: title 1`] = `"Bacuit Archipelago: Which tour to choose? | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: meta-description 1`] = `"Discover through our articles and our photos, our trip to the Philippines. Follow our guide from region to region. For each place visited we try to transcribe our visit as best as possible by telling you: Where to go? How to get there? Why? When? How long and at what period?"`;
-
-exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: social-network 1`] = `"There is no doubt this is the country that made us travel and dream the most, thanks to its breathtaking landscapes, its unique gorgeous islands and its immense snorkeling and diving spots. The Philippines comprises more than 7,600 islands, which means that you are spoilt for choice for your dream vacation. Enjoy discover through our articles and our photos, our trip to the Philippines."`;
+exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: social-network 1`] = `"The Philippines comprises more than 7,600 islands, which means that you are spoilt for choice for your dream vacation. Breathtaking landscapes, unique gorgeous islands and immense snorkeling and diving spots."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: title 1`] = `"Philippines | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-paradise/index.html correctly: meta-description 1`] = `"Breathtaking landscapes, white sands and turquoise water ... El Nido must imperatively be part of your dream travel list for this new year. Join us to discover this paradise. Our travelogue with photos, tips, and advice."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-paradise/index.html correctly: social-network 1`] = `"Breathtaking landscapes, white sands and turquoise water ... El Nido must imperatively be part of your dream travel list for this new year."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-paradise/index.html correctly: title 1`] = `"El Nido: A little paradise | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-tour-a/index.html correctly: meta-description 1`] = `"Lagoons with crystal clear waters, secluded beaches just for you and still intact snorkeling and diving sites. Did you think that could only exist in your dreams? Welcome to El Nido Tour A. Come with us for an excursion. Our travelogue with photos, tips, and advice."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-tour-a/index.html correctly: social-network 1`] = `"Lagoons with crystal clear waters, secluded beaches just for you and still intact snorkeling and diving sites. Did you think that could only exist in your dreams? Welcome to El Nido Tour A."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-tour-a/index.html correctly: title 1`] = `"El Nido - Tour A: Travelogue and Photos | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-tour-b/index.html correctly: meta-description 1`] = `"Due to the variety of sites it will bring you to, the Tour B is somewhat unique in El Nido: sandbank, cave, desert island... You will learn what the word travel means. Come with us for an excursion. Our travelogue with photos, tips, and advice."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-tour-b/index.html correctly: social-network 1`] = `"Due to the variety of sites it will bring you to, the Tour B is somewhat unique in El Nido: sandbank, cave, desert island... You will learn what the word travel means."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-tour-b/index.html correctly: title 1`] = `"El Nido - Tour B: Travelogue and Photos | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-which-tour/index.html correctly: meta-description 1`] = `"El Nido is one of the most famous destinations in the Philippines, mainly thanks to the Bacuit Archipelago, Dotted with paradisiacal islands and islets, it truly is the gem of Palawan. Come with us to discover these islands. Our travelogue with photos, tips, and advice."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-which-tour/index.html correctly: social-network 1`] = `"El Nido is one of the most famous destinations in the Philippines, mainly thanks to the Bacuit Archipelago, Dotted with paradisiacal islands and islets, it truly is the gem of Palawan."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-which-tour/index.html correctly: title 1`] = `"Bacuit Archipelago: Which tour to choose? | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/index.html correctly: meta-description 1`] = `"Do you want to join us to discover Palawan Island? And more particularly in one of its jewels: El Nido. Grab your mask and snorkel or dive in these crystal clear waters that will leave you a lasting impression. Take advantage of the different tours called \\"Island hopping\\" to choose what suits you best. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/index.html correctly: social-network 1`] = `"Do you want to join us to discover Palawan Island? And more particularly in one of its jewels: El Nido. Grab your mask and snorkel or dive in these crystal clear waters that will leave you a lasting impression. Take advantage of the different tours called \\"Island hopping\\" to choose what suits you best."`;
+
+exports[`english pages exports meta for public/en/asia/philippines/palawan/index.html correctly: title 1`] = `"Palawan | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/singapore/index.html correctly: meta-description 1`] = `"Singapore is a forgotten country. The transit between two flights, rarely visited. Yet if you take the trouble to stop there, you will discover gorgeous places with extraordinary flora and fauna that will make you forget the city. Walk in botanical garden or in the jungle to observe monitor lizards or hornbills. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
 

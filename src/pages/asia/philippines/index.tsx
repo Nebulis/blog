@@ -53,14 +53,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const cities = getCities({ links: philippinesLinks, development, lang: i18n.languageCode })
   const articles: React.ComponentType<ExtraCardProps>[] = []
   const country = t("common:country.philippines.title")
-  const description = `${t("introduction.section1")} ${t("introduction.section2")} ${t("introduction.section3")}`
   return (
     <>
       <SEO
         title={country}
         fullTitle={t("full-title")}
         location={location}
-        socialNetworkDescription={description}
+        socialNetworkDescription={t("social-network-description")}
         googleDescription={t("meta-description")}
       />
       <PhilippinesBlogLayout page={currentPageId} location={location}>

@@ -9,14 +9,14 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import HomeImgUrl from "../../../../images/asia/philippines/home-philippines.jpg"
-import frendzHostelElNido from "../../../../images/asia/philippines/el-nido/el-nido-paradise/frendz-hostel-el-nido.jpg"
-import cadlaoResort from "../../../../images/asia/philippines/el-nido/el-nido-paradise/cadlao-resort-and-restaurant.jpg"
-import velagoResort from "../../../../images/asia/philippines/el-nido/el-nido-paradise/velago-resort.jpg"
+import frendzHostelElNido from "../../../../images/asia/philippines/palawan/el-nido-paradise/frendz-hostel-el-nido.jpg"
+import cadlaoResort from "../../../../images/asia/philippines/palawan/el-nido-paradise/cadlao-resort-and-restaurant.jpg"
+import velagoResort from "../../../../images/asia/philippines/palawan/el-nido-paradise/velago-resort.jpg"
 import { PageProps } from "gatsby"
 import { useCustomTranslation } from "../../../../i18n-hook"
 import i18n from "i18next"
-import translationFr from "../../../../locales/fr/asia/philippines/el-nido/el-nido-paradise.json"
-import translationEn from "../../../../locales/en/asia/philippines/el-nido/el-nido-paradise.json"
+import translationFr from "../../../../locales/fr/asia/philippines/palawan/el-nido-paradise.json"
+import translationEn from "../../../../locales/en/asia/philippines/palawan/el-nido-paradise.json"
 import {
   PhilippinesBlogLayout,
   PhilippinesHeadline,
@@ -35,7 +35,7 @@ import {
 import { Conclusion } from "../../../../components/core/conclusion"
 import { Comments } from "../../../../components/core/comments"
 import { ElNidoWhichTourCard } from "../../../../components/core/asia/philippines/philippines.card"
-import { ElNidoParadiseImages } from "../../../../components/images/asia/philippines/el-nido/el-nido-paradise-images"
+import { ElNidoParadiseImages } from "../../../../components/images/asia/philippines/palawan/el-nido-paradise-images"
 import { philippinesPrimaryColor } from "../../../../components/core/asia/philippines/philippines.colors"
 import { css } from "@emotion/react"
 import { ArticleCardContainer, BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
@@ -45,7 +45,7 @@ import { Divider } from "../../../../components/core/divider"
 import { Quote } from "../../../../components/core/quote"
 import { BookingCard, BookingWarning } from "../../../../components/core/booking"
 
-const namespace = "asia/philippines/el-nido/el-nido-paradise"
+const namespace = "asia/philippines/palawan/el-nido-paradise"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
@@ -290,6 +290,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question1")}</li>
             <li>{t("question2")}</li>
           </ul>
+          <p>{t("love")}</p>
         </Conclusion>
         <Comments
           collectionName={namespace}

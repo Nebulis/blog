@@ -438,7 +438,7 @@ const philippinesLinks = () => {
     published: false,
   })
 
-  expect(getLink("el-nido")).toMatchObject({ label: { fr: "El Nido", en: "El Nido" }, published: true })
+  expect(getLink("palawan")).toMatchObject({ label: { fr: "Palawan", en: "Palawan" }, published: true })
   expect(getLink("el-nido-paradise")).toMatchObject({
     label: { fr: "El Nido : Un petit coin de Paradis", en: "El Nido: A little paradise" },
     published: true,

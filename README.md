@@ -4,7 +4,7 @@
 - jpg or webp ?
 
 - node reset
-- npm run plop -- -- --pagePath asia/philippines/el-nido/el-nido-which-tour
+- npm run plop -- -- --pagePath asia/philippines/palawan/el-nido-which-tour
 - node resize
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
