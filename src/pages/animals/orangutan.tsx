@@ -7,19 +7,39 @@ import { Comments } from "../../components/core/comments"
 import translationFr from "../../locales/fr/animals/orangutan.json"
 import translationEn from "../../locales/en/animals/orangutan.json"
 import { PrimaryBlogLayoutWithDrawer } from "../../components/layout/main-layout"
-import { Introduction, NoIconTitle, Note } from "../../components/core/section"
+import { Introduction, Note, titleBuilder } from "../../components/core/section"
 import { Conclusion } from "../../components/core/conclusion"
 import { Divider } from "../../components/core/divider"
 import { Quote } from "../../components/core/quote"
 import { Title } from "../../components/core/title"
 import HomeImgUrl from "../../images/animals/orangutan/orangutan-main.jpg"
-import { GroupOfImages, ImageAsLandscape, ImageAsPortrait } from "../../components/images/layout"
+import {
+  GroupOfImages,
+  ImageAsLandscape,
+  ImageAsPortrait,
+  TwoImagesSameSizeOrToGroup,
+} from "../../components/images/layout"
 import { SharedAnimalsImages } from "../../components/images/animals/shared-animals-images"
 import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 import { OrangutanImages } from "../../components/images/animals/orangutan"
 import { ExternalLinkNotUnderlined } from "../../components/core/links/link"
 import { buildPixabayUrl } from "../../utils"
-import { css } from "@emotion/react"
+import {
+  FaApple,
+  FaArrowsAltV,
+  FaBaby,
+  FaBookOpen,
+  FaCommentDots,
+  FaGlobeAfrica,
+  FaHistory,
+  FaHourglassEnd,
+  FaRadiationAlt,
+  FaTheaterMasks,
+  FaTree,
+  FaWeightHanging,
+} from "react-icons/fa"
+import { GiWolfHowl } from "react-icons/gi"
 
 const namespace = "animals/orangutan"
 const id = "orangutan"
@@ -30,6 +50,24 @@ const CustomList = styled.ul`
   margin-bottom: 0.5rem;
   li {
     list-style-type: "➵ ";
+  }
+`
+
+export const Description = titleBuilder({ icon: FaCommentDots, translationKey: "todo" })
+export const Height = titleBuilder({ icon: FaArrowsAltV, translationKey: "todo" })
+export const Weight = titleBuilder({ icon: FaWeightHanging, translationKey: "todo" })
+export const Food = titleBuilder({ icon: FaApple, translationKey: "todo" })
+export const Baby = titleBuilder({ icon: FaBaby, translationKey: "todo" })
+export const Lifestyle = titleBuilder({ icon: FaTree, translationKey: "todo" })
+export const Lifespan = titleBuilder({ icon: FaHourglassEnd, translationKey: "todo" })
+export const Behaviour = titleBuilder({ icon: FaTheaterMasks, translationKey: "todo" })
+export const Education = titleBuilder({ icon: FaBookOpen, translationKey: "todo" })
+export const Distribution = titleBuilder({ icon: FaGlobeAfrica, translationKey: "todo" })
+export const Threat = titleBuilder({ icon: FaRadiationAlt, translationKey: "todo" })
+export const Predator = titleBuilder({ icon: GiWolfHowl, translationKey: "todo" })
+export const Future = styled(titleBuilder({ icon: FaHistory, translationKey: "todo" }))`
+  svg {
+    transform: scaleX(-1);
   }
 `
 
@@ -56,7 +94,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
         <Divider />
-        <NoIconTitle title={t("description.title")}>
+        <Description title={t("description.title")}>
           <p>{t("description.part1")}</p>
           <p>{t("description.part2")}</p>
           <p>{t("description.part3")}</p>
@@ -72,19 +110,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <ImageAsLandscape>
             <OrangutanImages image="description3" />
           </ImageAsLandscape>
-        </NoIconTitle>
-        <NoIconTitle title={t("size.title")}>
+        </Description>
+        <Height title={t("size.title")}>
           <p>{t("size.part1")}</p>
           <p>{t("size.part2")}</p>
-        </NoIconTitle>
-        <NoIconTitle title={t("weight.title")}>
+        </Height>
+        <Weight title={t("weight.title")}>
           <p>{t("weight.part1")}</p>
-        </NoIconTitle>
-        <NoIconTitle title={t("lifespan.title")}>
+        </Weight>
+        <Lifespan title={t("lifespan.title")}>
           <p>{t("lifespan.part1")}</p>
           <p>{t("lifespan.part2")}</p>
-        </NoIconTitle>
-        <NoIconTitle title={t("distribution.title")}>
+        </Lifespan>
+        <Distribution title={t("distribution.title")}>
           <p>{t("distribution.part1")}</p>
           <ul>
             <li>{t("distribution.part2")}</li>
@@ -111,8 +149,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <OrangutanImages image="distribution2" />
             </ImageAsLandscape>
           </GroupOfImages>
-        </NoIconTitle>
-        <NoIconTitle title={t("diet.title")}>
+        </Distribution>
+        <Food title={t("diet.title")}>
           <p>{t("diet.part1")}</p>
           <p>{t("diet.part2")}</p>
           <GroupOfImages>
@@ -129,8 +167,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <OrangutanImages image="diet4" />
             </ImageAsLandscape>
           </GroupOfImages>
-        </NoIconTitle>
-        <NoIconTitle title={t("lifestyle.title")}>
+        </Food>
+        <Lifestyle title={t("lifestyle.title")}>
           <p>{t("lifestyle.part1")}</p>
           <p>{t("lifestyle.part2")}</p>
           <GroupOfImages>
@@ -144,6 +182,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("lifestyle.part3")}</p>
           <p>{t("lifestyle.part4")}</p>
           <p>{t("lifestyle.part5")}</p>
+          <p>{t("lifestyle.part6")}</p>
           <GroupOfImages>
             <ImageAsPortrait>
               <OrangutanImages image="lifestyle3" />
@@ -152,8 +191,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <OrangutanImages image="lifestyle4" />
             </ImageAsLandscape>
           </GroupOfImages>
-        </NoIconTitle>
-        <NoIconTitle title={t("behaviour.title")}>
+        </Lifestyle>
+        <Behaviour title={t("behaviour.title")}>
           <p>{t("behaviour.part1")}</p>
           <p>{t("behaviour.part2")}</p>
           <CustomList>
@@ -166,16 +205,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("behaviour.part8")}</p>
           <p>{t("behaviour.part9")}</p>
           <p>{t("behaviour.part10")}</p>
-        </NoIconTitle>
-        <NoIconTitle title={t("reproduction.title")}>
+        </Behaviour>
+        <Baby title={t("reproduction.title")}>
           <p>{t("reproduction.part1")}</p>
           <p>{t("reproduction.part2")}</p>
           <p>{t("reproduction.part3")}</p>
           <p>{t("reproduction.part4")}</p>
           <p>{t("reproduction.part5")}</p>
           <p>{t("reproduction.part6")}</p>
-        </NoIconTitle>
-        <NoIconTitle title={t("development.title")}>
+        </Baby>
+        <Education title={t("development.title")}>
           <p>{t("development.part1")}</p>
           <GroupOfImages>
             <ImageAsLandscape>
@@ -192,16 +231,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("development.part3")}</p>
           <p>{t("development.part4")}</p>
           <p>{t("development.part5")}</p>
+          <p>{t("development.part6")}</p>
           <ImageAsLandscape>
             <OrangutanImages image="development4" />
           </ImageAsLandscape>
-          <p>{t("development.part6")}</p>
-        </NoIconTitle>
-        <NoIconTitle title={t("predator.title")}>
+          <p>{t("development.part7")}</p>
+        </Education>
+        <Predator title={t("predator.title")}>
           <p>{t("predator.part1")}</p>
           <p>{t("predator.part2")}</p>
-        </NoIconTitle>
-        <NoIconTitle title={t("threat.title")}>
+        </Predator>
+        <Threat title={t("threat.title")}>
           <p>{t("threat.part1")}</p>
           <GroupOfImages>
             <ImageAsLandscape>
@@ -224,18 +264,29 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           >
             <OrangutanImages image="threat3" />
           </ImageAsLandscape>
-        </NoIconTitle>
-        <NoIconTitle title={t("future.title")}>
+        </Threat>
+        <Future title={t("future.title")}>
           <p>{t("future.part1")}</p>
           <p>{t("future.part2")}</p>
           <p>{t("future.part3")}</p>
           <p>{t("future.part4")}</p>
           <p>{t("future.part5")}</p>
+          <TwoImagesSameSizeOrToGroup>
+            <OrangutanImages image="future" />
+            <OrangutanImages image="future2" />
+          </TwoImagesSameSizeOrToGroup>
           <p>{t("future.part6")}</p>
           <p>{t("future.part7")}</p>
           <p>{t("future.part8")}</p>
+          <TwoImagesSameSizeOrToGroup>
+            <OrangutanImages image="future3" />
+            <OrangutanImages image="future4" />
+          </TwoImagesSameSizeOrToGroup>
           <p>{t("future.part9")}</p>
           <p>{t("future.part10")}</p>
+          <Note>{t("future.part11")}</Note>
+          <Divider />
+          <p>{t("future.part12")}</p>
           <div className="tc">
             <iframe
               css={css`
@@ -257,8 +308,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 : "By clicking on the video start button, you accept the data privacy rules of Google / YouTube"}
             </Note>
           </div>
-          <p>{t("future.part11")}</p>
-        </NoIconTitle>
+        </Future>
         <Divider />
         <Conclusion>
           <p>{t("conclusion")}</p>

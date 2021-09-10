@@ -151,13 +151,13 @@ export const titleBuilder = ({
   icon,
   icon2: Icon2,
 }: TitleOptions): React.FunctionComponent<TitleProps> =>
-  function Title({ children, title, id, titleClassName = "" }) {
+  function Title({ children, title, id, titleClassName = "", className = "" }) {
     const { t, i18n } = useCustomTranslation("common")
     const Icon = isIconBuilder(icon) ? icon.build(i18n.languageCode) : icon
     return (
       <>
         <Anchor id={id} />
-        <SectionTitle className={titleClassName}>
+        <SectionTitle className={`${titleClassName} ${className}`}>
           {Icon && (
             <>
               <Icon />

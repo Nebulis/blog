@@ -24,7 +24,7 @@ exports[`french pages exports meta for public/about/who/index.html correctly: so
 
 exports[`french pages exports meta for public/about/who/index.html correctly: title 1`] = `"Qui sommes nous ? | Blog Voyage"`;
 
-exports[`french pages exports meta for public/animals/orangutan/index.html correctly: meta-description 1`] = `"Partons à la découverte de l’Orang-Outan et découvrons ensemble ses caractéristiques. Son mode de vie, son comportement, mais on vous parle aussi de pourquoi ce grand singe est en danger d’extinction et comment réussir à le préserver."`;
+exports[`french pages exports meta for public/animals/orangutan/index.html correctly: meta-description 1`] = `"Animal endémique de Malaisie et d’Indonésie, l'Orang-Outan est le plus grand singe vivant dans les arbres. Son nom signifie « Homme de la forêt » en Malaisien. Il est d’ailleurs considéré comme l'un de nos plus proches cousins de par son physique mais surtout son comportement. Partons à la découverte de l’Orang-Outan et découvrons ensemble ses caractéristiques."`;
 
 exports[`french pages exports meta for public/animals/orangutan/index.html correctly: social-network 1`] = `"Animal endémique de Malaisie et d’Indonésie, l'Orang-Outan est le plus grand singe vivant dans les arbres. Son nom signifie « Homme de la forêt » en Malaisien. Il est d’ailleurs considéré comme l'un de nos plus proches cousins de par son physique mais surtout son comportement."`;
 

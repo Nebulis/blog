@@ -4,6 +4,10 @@ import React, { useEffect } from "react"
 import { ExtraImageProps } from "../../../types/shared"
 
 const alt = {
+  future: "WWF Card",
+  future2: "WWF Card",
+  future3: "Orangutan Plush",
+  future4: "Orangutan Plush",
   threat: "Orangutan",
   threat2: "Orangutan",
   threat3: "Orangutan",
@@ -39,6 +43,34 @@ export const OrangutanImages: React.FunctionComponent<ExtraImageProps & { image:
 }) => {
   const data = useStaticQuery(graphql`
     query {
+      future: file(relativePath: { eq: "animals/orangutan/orangutan-future.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      future2: file(relativePath: { eq: "animals/orangutan/orangutan-future2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      future3: file(relativePath: { eq: "animals/orangutan/orangutan-future3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      future4: file(relativePath: { eq: "animals/orangutan/orangutan-future4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       threat: file(relativePath: { eq: "animals/orangutan/orangutan-threat.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
