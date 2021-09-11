@@ -15,10 +15,21 @@ exports.onCreatePage = ({ page, actions }) => {
   createPage(newPage)
   // }
 }
-exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
   const PATTERN = /\.(eot|otf|ttf|woff(2)?)(\?.*)?$/
 
   const config = getConfig()
+  if (stage === "build-javascript" && process.env.CIRCLECI === "true") {
+    // setting manually the number of parallel in circle ci, because sometimes out of memory happens
+    // https://github.com/facebook/create-react-app/issues/8320
+    // https://github.com/webpack-contrib/terser-webpack-plugin/issues/143
+    // https://github.com/webpack-contrib/terser-webpack-plugin/issues/202#issuecomment-580704210
+    // https://webpack.js.org/plugins/terser-webpack-plugin/#parallel
+    console.log("DETECTED CIRCLE-CI - SETTING TERSER PARALLEL TO 8")
+    config.optimization.minimizer[0].options.parallel = 8
+  } else {
+    console.log(`DID NOT DETECT CIRCLE-CI => process.env.CIRCLECI=${process.env.CIRCLECI}`)
+  }
   const newConfig = {
     ...config,
     module: {

@@ -84,6 +84,12 @@ workflows:
     jobs:
       - version
       - bundle_dependencies
+      - build:
+          requires:
+            - bundle_dependencies
+      - build_with_ssr:
+          requires:
+            - bundle_dependencies
       - lint:
           requires:
             - bundle_dependencies
@@ -91,11 +97,5 @@ workflows:
           requires:
             - bundle_dependencies
       - test:
-          requires:
-            - bundle_dependencies
-      - build:
-          requires:
-            - bundle_dependencies
-      - build_with_ssr:
           requires:
             - bundle_dependencies

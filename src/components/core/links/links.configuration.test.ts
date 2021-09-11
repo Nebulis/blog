@@ -490,11 +490,11 @@ const indonesiaLinks = () => {
 const malaysiaLinks = () => {
   expect(getLink("west-malaysia")).toMatchObject({
     label: { en: "West", fr: "Occidentale" },
-    published: false,
+    published: true,
   })
   expect(getLink("langkawi-dream-hotel")).toMatchObject({
     label: { en: "Dream hotel in Langkawi", fr: "Un hôtel de rêve à Langkawi" },
-    published: false,
+    published: true,
   })
   expect(getLink("east-malaysia")).toMatchObject({
     label: { en: "East", fr: "Orientale" },
