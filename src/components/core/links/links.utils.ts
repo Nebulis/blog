@@ -176,7 +176,7 @@ export const getArticles = ({
   limit = Number.POSITIVE_INFINITY,
 }: {
   card?: boolean
-  kind?: Kind | "none"
+  kind?: Kind | "none" | Kind[]
   filter?: (cachedLink: CachedLinksMap) => boolean
   published?: boolean
   development: boolean
@@ -189,7 +189,9 @@ export const getArticles = ({
   return Array.from(cachedLinks.values())
     .filter((cachedLink) => (card ? cachedLink.card : true))
     .filter((cachedLink) => (published && !development ? cachedLink.published : true))
-    .filter((cachedLink) => (kind !== "none" ? cachedLink.kind === kind : true))
+    .filter((cachedLink) =>
+      kind === "none" ? true : Array.isArray(kind) ? kind.includes(cachedLink.kind) : cachedLink.kind === kind
+    )
     .filter((cachedLink) => (tags.length > 0 ? tags.some((t) => cachedLink.tags.includes(t)) : true))
     .filter((cachedLink) =>
       pointOfInterests.length > 0 ? pointOfInterests.some((p) => cachedLink.pointOfInterest.includes(p)) : true

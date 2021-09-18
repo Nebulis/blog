@@ -593,9 +593,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <ArticlesContainer>
             {getArticles({
               development,
-              kind: "other",
               limit: 3,
-              filter: (cachedLink) => cachedLink.id !== lastArticle.id,
+              filter: (cachedLink) => cachedLink.id !== lastArticle.id && cachedLink.kind !== "highlight",
             }).map(({ card: Card }, index) =>
               Card ? <Card key={index} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
             )}
