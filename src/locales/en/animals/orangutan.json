@@ -5,116 +5,118 @@
   "google-description": "Let's discover this great ape and its characteristics together. Its lifestyle, its behavior, but we also tell you why this great ape is an endangered species and how to help to protect it.",
   "social-network-description": "Endemic to Malaysia and Indonesia, the Orangutan is the largest monkey living in trees. Its name means « Man of the forest » in Malaysian. It is also considered one of our closest relatives due to its behavior.",
   "description": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": ""
+    "title": "Physical description",
+    "part1": "They are large apes covered with #characteristic reddish-orange hair#. His face, hands, and soles are mostly black and hairless.",
+    "part2": "We can differentiate two types of Orangutans. The Sumatran Orangutan is the strongest, and its coat is lighter in color. The Bornean Orangutan has a darker coat and is generally a little smaller. However, their body is still quite large. Moreover, it is the #largest arboreal animal#.",
+    "part3": "They have long, powerful arms that can reach a wingspan of over 2 meters. They are as agile with their arms as their legs. It's not inaccurate to describe orangutans as #four-handed#.",
+    "part4": "It's possible to distinguish females from males, as males possess large cheek pads, also known as flanges. These discs allow them to emit a powerful and loud shout to attract females and demonstrate their strength."
   },
   "size": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Size",
+    "part1": "The size of an adult male Orangutan varies between 100 and 140 cm (1 and 1.40 m).",
+    "part2": "The female size varies between 80 and 110 cm (0.80 and 1.10 m)."
   },
   "weight": {
-    "title": "",
-    "part1": ""
+    "title": "Weight",
+    "part1": "An adult male weighs between 90 and 115 kg, while an adult female weighs, on average, between 45 and 70 kg."
   },
   "lifespan": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Lifespan",
+    "part1": "Orangutans have a shorter life expectancy in the wild.",
+    "part2": "Captive orangutans could live up to be 50 years old. In the wild, An orangutan's lifespan is about 30 to 40 years."
   },
   "distribution": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": "",
-    "part8": "",
-    "part9": "",
-    "part10": "",
-    "part11": "",
-    "part12": ""
+    "title": "Distribution",
+    "part1": "There are currently #three different subspecies of Orangutans#, whether in reserves or their natural habitat:",
+    "part2": "[Bornean](east-malaysia) orangutans (Pongo pygmaeus): estimated at just over 100,000 individuals",
+    "part3": "[Sumatran](sumatra) orangutans (Pongo abelii): estimated at just over 14,000 individuals",
+    "part4": "[Tapanuli](tapanuli) orangutans (Pongo tapanuliensis) discovered only in 2017 in the Batang Toru region in North Sumatra: estimated at 800 individuals",
+    "part5": "These figures are an estimate. The exact population of Orangutans that live in the wild is, in reality, almost impossible to know because some live in places of the forest completely inaccessible by researchers. The only certain thing is that their population is drastically decreasing due to the destruction of their habitat.",
+    "part6": "Many years ago, Orangutans could be observed in southern China, northern Vietnam, and Laos. Unfortunately, these populations have disappeared.",
+    "part7": "In Indonesia, they can be observed in various protected natural parks.",
+    "part8": "In Sumatra at [Gunung Leuser National Park](gunung-leuser-national-park)",
+    "part9": "In Borneo at [Tanjung Puting National Park](tanjung-puting-national-park) and [Bukit Baka Bukit Raya National Park](bukit-baka-bukit-raya-national-park)",
+    "part10": "In Malaysia, on Borneo, they can be found mainly in nature reserves because of deforestation.",
+    "part11": "In Sarawak state at the [Semenggoh Nature Reserve](semenggoh-nature-reserve)",
+    "part12": "In Sabah state at the [Sepilok Rehabilitation Center](sepilok-rehabilitation-centre)"
   },
   "diet": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Diet",
+    "part1": "Fruit makes up about 60% of the orangutan's diet. They are not picky eaters and eat just about anything they can find: banana, coconut, mango, durian, jackfruit, mangosteen...",
+    "part2": "They also eat birds, insects, ants, termites... to make up their full dietary needs."
   },
   "lifestyle": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": ""
+    "title": "Lifestyle",
+    "part1": "The Orangutan lives mainly in tropical forests.",
+    "part2": "It spends most of its time in trees. It is considered the largest arboreal animal. It rarely descends from the trees to move around on the ground. It prefers to move #from branches to branches and from trees to trees#. However, it does not cover a lot of kilometers per day. It remains territorial and moves mainly to find food.",
+    "part3": "Orangutans are rather lonely. You will never see large family groups or clans like for the other apes. Only the mother and her babies can form a small group, but never more than three.",
+    "part4": "Every night, Orangutans #build their nest on top of trees# more than 20 meters high. Nests are made of branches, lianas, and the leaves they can find around them.",
+    "part5": "Thanks to these easily visible nests, researchers and scientists can find new unexplored places where Orangutans live.",
+    "part6": "Orangutans usually never sleep in the same nest, and every night they build their new tree bed."
   },
   "behaviour": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": "",
-    "part8": "",
-    "part9": "",
-    "part10": ""
+    "title": "Behaviour",
+    "part1": "Humans and orangutans share approximately 97% of their DNA. This is primarily why it is considered one of our closest cousins. Its behavior and intelligence are also very similar to ours.",
+    "part2": "#Known for making and using tools#, Orangutans are highly skilled and display extreme patience, intelligence, and thoughtfulness to make their daily lives easier.",
+    "part3": "They chew on leaves to form a sponge and collect water from the trees.",
+    "part4": "They use small twigs to extract insects, ants, or termites from holes and remove seeds from fruits.",
+    "part5": "They use large branches to test water depth before crossing as they are very poor swimmers.",
+    "part6": "They make an umbrella for themselves out of big tree leaves when it rains.",
+    "part7": "They use the leaves or even the coconuts in a bowl to collect water.",
+    "part8": "And there are many more.",
+    "part9": "Despite being lonely, they have similar behavior as human when there they are in a group, especially mothers and their children. They don't speak but communicate with sign language.",
+    "part10": "They express their emotions and feel joy, fear, sadness, pain... They are also particularly sensitive to the loss of a loved one."
   },
   "reproduction": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": ""
+    "title": "Reproduction",
+    "part1": "The sexual maturity of the Orangutan is reached at about 8-10 years old. They usually become sterile around 30-40 years old.",
+    "part2": "Orangutan shouts their « long-call » to attract females and show them their strength.",
+    "part3": "During the breeding season, the male and the female stay together for about 2-3 days. Males leave once the females become pregnant.",
+    "part4": "#The gestation lasts around nine months#. The female almost always gives birth to one baby. The birth of twins is rare, and if it happens, the chances of both surviving are low.",
+    "part5": "A female Orangutan will have an average of three or four young in her lifetime, and it is only when her child is weaned that she can procreate again.",
+    "part6": "#The slow reproductive process of Orangutans is also a reason they could become extinct.#"
   },
   "development": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": ""
+    "title": "Development",
+    "part1": "#Newborns are tiny, weighing only 1.5 kg at birth#, and will sleep most of the time for the first days. They are extremely fragile, and the mother Orangutan must be most vigilant in the first months because they don't hold onto their mother's body well.",
+    "part2": "A baby Orangutan is totally dependent on its mother and will stay hooked on her at least throughout its first year. It's only around 1-2 years old that it will start to not only hang onto its mother and move around, while remaining in any case very close to her, never moving more than 2/3 meters away.",
+    "part3": "It is only around the age of 3/4 that the young Orangutans are weaned and will now be able to feed almost on their own. However, they will still be with their mother for a few more years to learn even more about survival.",
+    "part4": "This is when they will become much more resourceful, developing their balance by playing in the trees or their intelligence by making tools and nests.",
+    "part5": "#Children stay with their mother until puberty, between 6 and 8 years old.#",
+    "part6": "During all his years, they will learn everything from her. The mother teaches them to climb trees, to swing from branch to branch, to find edible fruits and open them, to make their nests, and to protect themselves from the rain. She will teach their child everything there is to know for their survival. It may happen that during the birth of a newborn baby, the mother Orangutan is still in charge of her previous child. By watching their mother, Female children will learn what they must do when they become a mother.",
+    "part7": "#Orangutans have the longest infant development period of all the great apes.#"
   },
   "predator": {
-    "title": "",
-    "part1": "",
-    "part2": ""
+    "title": "Predators",
+    "part1": "Snakes, and in particular pythons, are the main predators of young Orangutans.",
+    "part2": "#Humans remain the biggest threat to adult Orangutans.#"
   },
   "threat": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": ""
+    "title": "Threats",
+    "part1": "For many years, the population of these iconic great apes of [Malaysia](malaysia) and [Indonesia](indonesia) has dramatically declined. Orangutans are considered an endangered species and could become extinct in the wild in the next few years if nothing changes.",
+    "part2": "Let’s start with one of the most important and problematic causes: #rainforest destruction#. Deforestation is no longer a secret. It has been raised for many years. Massive destruction for the benefit of logging and palm oil plantations. The destruction of their habitat would mean the disappearance of all wild orangutans. Many companies still illegally harvest the forest. Without authorization and shame, they clandestinely continue to cut wood and are responsible for this abusive deforestation.",
+    "part3": "The destruction of a forest involves many fires, giving rise to #gigantic fires# that spread without control. These fires are another cause of species extinction. Fires are not the only issue, the generated « #Haze# » is another huge problem. This mist that fills the whole atmosphere makes the air totally unbreathable. As Singaporean residents, we experienced the Haze in 2017, carried by the wind. We had to wear masks to go out because the air became unbreathable and stung our eyes. So we let you imagine what happens on the spot...",
+    "part4": "If deforestation of their natural habitat remains the main cause of Orangutans' disappearance, we can also mention #hunting and the black market#.",
+    "part5": "Orangutans are still affected by poaching. They can be traded as pets, laboratory animals, or they are sold in zoos, in places they should not live... The adult Orangutan is hunted for its meat and perhaps also for its fur. But most of the trafficks happens for infants or baby Orangutans. And it generally means that hunters will kill the mothers to capture them. Following endangered species regulations, the sale, purchase, or trade of Orangutans is strictly prohibited. However, despite an international ban, there is still trafficking in Orangutans, including illegal pet markets that keep them in cages for life."
   },
   "future": {
-    "title": "",
-    "part1": "",
-    "part2": "",
-    "part3": "",
-    "part4": "",
-    "part5": "",
-    "part6": "",
-    "part7": "",
-    "part8": "",
-    "part9": "",
-    "part10": "",
-    "part11": ""
+    "title": "Future",
+    "part1": "Today their future remains uncertain.",
+    "part2": "Like many animals, Orangutans are essential for the regeneration of forests and the maintenance of ecosystems. For instance, they help to scatter fruit seeds on the ground. They have a key role in the general balance of the tropical jungles of Borneo and Sumatra. For their action, Orangutans are known as « gardeners » of the forest.",
+    "part3": "The future and the preservation of the Orangutans depends above all on general awareness. #Learn and spread the message# to all generations and at all ages. Not to be just a simple consumer, to be an actor even on a small scale to make this world a better place.",
+    "part4": "It starts with #simple everyday actions#, reducing waste, avoiding plastic, consuming non-imported products, declining palm oil-based foods, etc. But also through education and information. Children are not too young to understand that we must preserve the animals and the world. At the end of the article, we share a video for children about Orangutans. It's a video that deeply moved me.",
+    "part5": "Against human threats, there are #rehabilitation centers and protected areas#. These solutions are unfortunately necessary for the survival of this great ape, but one can question their long-term viability. Rehabilitation centers play a major role in re-teaching Orangutans to live in their natural habitat. Quite often, the monkeys there have been victims of poaching, trafficking, or direct victim of deforestation. Often open to the public, those centers help to #make people aware of Orangutans' protection# and all animals in general.",
+    "part6": "Programs exist to restore forests. They consist of planting thousands of trees. The restoration takes time, but the first results are encouraging.",
+    "part7": "Some people are also directly involved in the protection of orangutans through associations. Some animal rights associations fight against traffickers. Others are involved in the creation of national parks and in raising awareness.",
+    "part8": "In addition to daily actions, it is also possible to support associations. Some specialize in saving Orangutans. Others support several endangered species and allow us to help them. It is the case with the [WWF](https://www.worldwildlife.org/), where you can « adopt an animal », buy a soft toy or simply make a donation. Every donation is important, regardless of its value. Everyone does according to their ability. Buying a plush through these associations, for example, can be a good way to learn and make children understand the importance of these animals. A fun and useful gift.",
+    "part9": "One way to get more directly involved in Orangutans protection is to participate in a #volunteer program at a center#, caring for the injured and orphans who have escaped hunting or captivity. Be careful though, to participate you will have to pay since accommodation and food will be provided. If you are interested, there are many centers in Malaysia or Indonesia. [The Volunteer World website](https://www.volunteerworld.com/) is handy to list them. For Orangutans, there are currently nine centers where you can volunteer. Find more information on this page: [Volunteering with Orangutans](https://www.volunteerworld.com/en/volunteer-abroad/orangutan).",
+    "part10": "But beyond orangutans, the various protection, awareness, and sharing measures benefit other animal and plant species, which are also affected by their natural habitat destruction.",
+    "part11": "* All our photos were taken at [Semenggoh Nature Reserve](semenggoh-nature-reserve) in Borneo. All Orangutans are free in a protected forest, and no animals are caged.",
+    "part12": "Here is the educational video I mentioned earlier, to watch as a family and especially with your children to educate them, produced by the Greenpeace association:"
   },
-  "conclusion": "",
-  "question 1": "",
-  "question 2": "",
+  "conclusion": "Sumatra and Borneo are the last refuges for wild Orangutans. Their disappearance would be dramatic for the ecosystem. Much needs to be done to remove them from the endangered species list.",
+  "question 1": "Do you have other actions to share to help animals?",
+  "question 2": "Have you ever volunteered in an Orangutan sanctuary?",
   "pinterest": "\uD83C\uDF0F Let's discover this great ape and its characteristics together. Its lifestyle, its behavior, but we also tell you why this great ape is an endangered species and how to help to protect it. Click on the image to learn more... \uD83C\uDF0F",
   "facebook": {
     "part1": "♡ Hello travellers! ♡",
