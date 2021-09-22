@@ -486,11 +486,12 @@ export const Tree: React.FunctionComponent<{
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore https://github.com/pmndrs/react-spring/issues/912
   const { height, opacity, transform } = useSpring({
+    reset: false,
     from: { height: 0, opacity: 0, transform: "translate3d(0,0,0)" },
     to: {
       height: isOpen ? bounds.height : 0,
       opacity: isOpen ? 1 : 0,
-      transform: `translate3d(${isOpen ? 0 : 200}px,0,0)`,
+      transform: `translate3d(0,0,0)`,
     },
   })
   const hasChildren = (!Array.isArray(children) && children) || (Array.isArray(children) && children.length > 0)
