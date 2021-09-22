@@ -77,21 +77,24 @@ const visitedCountries = [
   "united-states",
 ]
 // eslint-disable-next-line react/display-name
-const transform = (countriesWithArticles: string[]) => (country: Country): ReactElement => {
-  if (visitedCountries.includes(country.id)) {
-    if (country.id === "singapore") {
-      return <circle cx="1385" cy="565" r="6" className="visited" />
-    } else if (countriesWithArticles.includes(country.id)) {
-      return (
-        <ApplicationLink to={country.id}>
-          <CountryPath country={country} className="visited articles" />
-        </ApplicationLink>
-      )
+const transform =
+  (countriesWithArticles: string[]) =>
+  // eslint-disable-next-line react/display-name
+  (country: Country): ReactElement => {
+    if (visitedCountries.includes(country.id)) {
+      if (country.id === "singapore") {
+        return <circle cx="1385" cy="565" r="6" className="visited" />
+      } else if (countriesWithArticles.includes(country.id)) {
+        return (
+          <ApplicationLink to={country.id}>
+            <CountryPath country={country} className="visited articles" />
+          </ApplicationLink>
+        )
+      }
+      return <CountryPath country={country} className="visited" />
     }
-    return <CountryPath country={country} className="visited" />
+    return <CountryPath country={country} />
   }
-  return <CountryPath country={country} />
-}
 
 const MapContainer = styled.div`
   max-width: ${maxWidthExtraLargeContainer}px;
