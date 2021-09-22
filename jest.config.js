@@ -1,4 +1,5 @@
 module.exports = {
+  testEnvironment: "jsdom",
   testPathIgnorePatterns: [`node_modules`, `.cache`, `public`, "firebase", "integration"],
   watchPathIgnorePatterns: [`node_modules`, `.cache`, `public`, "firebase"],
   transform: {

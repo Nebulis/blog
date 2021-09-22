@@ -611,7 +611,7 @@ describe("links", () => {
     })
     expect(getLink("orangutan")).toMatchObject({
       label: { en: "All about Orangutans", fr: "Tout savoir sur les Orangs-Outans" },
-      published: false,
+      published: true,
     })
     expect(getLink("colugo")).toMatchObject({
       label: { en: "", fr: "" },
