@@ -5,12 +5,15 @@ import { ApplicationContext } from "../application"
 import styled from "@emotion/styled"
 
 // eslint-disable-next-line react/display-name
-const transformSelectedCountriesByContinent = (continent: string) => (country: Country): ReactElement => {
-  if (country.continent === continent) {
-    return <CountryPath country={country} className="selectedContinent" />
+const transformSelectedCountriesByContinent =
+  (continent: string) =>
+  // eslint-disable-next-line react/display-name
+  (country: Country): ReactElement => {
+    if (country.continent === continent) {
+      return <CountryPath country={country} className="selectedContinent" />
+    }
+    return <CountryPath country={country} />
   }
-  return <CountryPath country={country} />
-}
 
 const StyledWorld = styled(World)`
   stroke-line-join: round;

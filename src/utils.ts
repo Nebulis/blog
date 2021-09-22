@@ -43,7 +43,10 @@ export const buildCurrentSharedUrl = (location: PageProps["location"]) => {
   return buildSharedUrl(location, location.pathname)
 }
 
-export const buildPixabayUrl = (lang: Lang) => (slug = "") => `https://pixabay.com/${lang}/${slug}`
+export const buildPixabayUrl =
+  (lang: Lang) =>
+  (slug = "") =>
+    `https://pixabay.com/${lang}/${slug}`
 
 export const priceFactorEur = 1
 export const priceFactorUsd = 1.21
