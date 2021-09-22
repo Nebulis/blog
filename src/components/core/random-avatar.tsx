@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react"
 import { css } from "@emotion/react"
-import Avatars from "@dicebear/avatars"
-import sprites from "@dicebear/avatars-jdenticon-sprites"
+import { createAvatar } from "@dicebear/avatars"
+import * as avatarStyle from "@dicebear/avatars-jdenticon-sprites"
 
 const size = 60
 const style = css`
@@ -11,11 +11,10 @@ const style = css`
 `
 
 export const RandomAvatar: FunctionComponent<{ hash: string }> = ({ hash }) => {
-  const avatars = new Avatars(sprites, {
+  const svg = createAvatar(avatarStyle, {
+    seed: hash,
+    size,
     dataUri: true,
-    width: size,
-    height: size,
   })
-  const svg = avatars.create(hash)
   return <img src={svg} css={style} />
 }
