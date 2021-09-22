@@ -35,6 +35,7 @@ import { ApplicationContext } from "../application"
 import { Divider } from "./divider"
 import { PinterestImage } from "../images/layout"
 import { PinterestContext } from "../layout/pinterest.context"
+import { off, onValue, push, ref, set } from "firebase/database"
 
 interface CommentsProps {
   collectionName: string
@@ -157,10 +158,10 @@ export const Comments: FunctionComponent<CommentsProps> = ({
       setStatus("SUCCESS")
       return
     }
-    const reference = database.ref(`comments/${transformPath(collectionName)}`)
+    const reference = ref(database, `comments/${transformPath(collectionName)}`)
     setStatus("LOADING")
 
-    reference.on("value", (snapshot) => {
+    onValue(reference, (snapshot) => {
       const commentsAsObject = snapshot.val() as DatabaseComments | null
       if (commentsAsObject) {
         const commentsAsArray: CommentProp[] = Object.keys(commentsAsObject).map((key) => ({
@@ -188,7 +189,7 @@ export const Comments: FunctionComponent<CommentsProps> = ({
     })
 
     return () => {
-      reference.off()
+      off(reference)
     }
   }, [collectionName, displayComments])
 
@@ -197,9 +198,9 @@ export const Comments: FunctionComponent<CommentsProps> = ({
     if (!displayComments) {
       return
     }
-    const reference = database.ref(`likes/${transformPath(collectionName)}`)
+    const reference = ref(database, `likes/${transformPath(collectionName)}`)
 
-    reference.on("value", (snapshot) => {
+    onValue(reference, (snapshot) => {
       const likes = snapshot.val() as number | null
       if (likes || likes === 0) {
         setLikes(likes)
@@ -225,6 +226,7 @@ export const Comments: FunctionComponent<CommentsProps> = ({
       localStorage.removeItem("email")
       localStorage.removeItem("website")
     }
+    const newKey = push(ref(database, `comments/${transformPath(collectionName)}`)).key
     return Promise.all([
       subscribeToNewsletter
         ? subscribe({ mail: email })
@@ -235,17 +237,15 @@ export const Comments: FunctionComponent<CommentsProps> = ({
               setNewsletterStatus("ERROR")
             })
         : Promise.resolve(),
-      database
-        .ref(`comments/${transformPath(collectionName)}`)
-        .push()
-        .set({
-          name: name.trim(),
-          content: message.trim(),
-          timestamp: Date.now(),
-          website: website.trim(),
-          avatar: md5((email || name).trim().toLowerCase()),
-          ...(id ? { parent: id } : {}),
-        })
+
+      set(ref(database, `comments/${transformPath(collectionName)}/${newKey}`), {
+        name: name.trim(),
+        content: message.trim(),
+        timestamp: Date.now(),
+        website: website.trim(),
+        avatar: md5((email || name).trim().toLowerCase()),
+        ...(id ? { parent: id } : {}),
+      })
         .then(() => {
           setCommentStatus("SUCCESS")
           return true
@@ -259,12 +259,12 @@ export const Comments: FunctionComponent<CommentsProps> = ({
 
   const like = () => {
     const newLikes = likes + 1 < 0 ? 1 : likes + 1
-    database.ref(`likes/${transformPath(collectionName)}`).set(newLikes)
+    set(ref(database, `likes/${transformPath(collectionName)}`), newLikes)
     setLocalLikes([...localLikes, collectionName])
   }
   const unlike = () => {
     const newLikes = likes - 1 < 0 ? 0 : likes - 1
-    database.ref(`likes/${transformPath(collectionName)}`).set(newLikes)
+    set(ref(database, `likes/${transformPath(collectionName)}`), newLikes)
     setLocalLikes(localLikes.filter((like) => like !== collectionName))
   }
 
