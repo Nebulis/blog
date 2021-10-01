@@ -1,15 +1,12 @@
 import React from "react"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
-import SEO from "{{upPath pagePath}}components/layout/seo"
-import { useCustomTranslation } from "{{upPath pagePath}}i18n-hook"
-import { Comments } from "{{upPath pagePath}}components/core/comments"
-import translationFr from "{{upPath pagePath}}locales/fr/{{pagePath}}.json"
-import translationEn from "{{upPath pagePath}}locales/en/{{pagePath}}.json"
-import {
-  {{uppercase (getCountry pagePath)}}BlogLayout,
-  {{uppercase (getCountry pagePath)}}Headline,
-} from "{{upPath pagePath}}components/core/{{getContinent pagePath}}/{{getCountry pagePath}}/{{getCountry pagePath}}"
+import SEO from "../../../../components/layout/seo"
+import { useCustomTranslation } from "../../../../i18n-hook"
+import { Comments } from "../../../../components/core/comments"
+import translationFr from "../../../../locales/fr/oceania/australia/queensland/green-island.json"
+import translationEn from "../../../../locales/en/oceania/australia/queensland/green-island.json"
+import { AustraliaBlogLayout, AustraliaHeadline } from "../../../../components/core/oceania/australia/australia"
 import {
   How,
   HowLong,
@@ -20,21 +17,23 @@ import {
   WhatTimeOfYear,
   When,
   WhereToStay,
-} from "{{upPath pagePath}}components/core/section"
-import { Conclusion } from "{{upPath pagePath}}components/core/conclusion"
-import { Divider } from "{{upPath pagePath}}components/core/divider"
-import { Quote } from "{{upPath pagePath}}components/core/quote"
-import { Title } from "{{upPath pagePath}}components/core/title"
-import HomeImgUrl from "{{upPath pagePath}}images/{{getContinent pagePath}}/{{getCountry pagePath}}/home-{{getCountry pagePath}}.jpg"
+} from "../../../../components/core/section"
+import { Conclusion } from "../../../../components/core/conclusion"
+import { Divider } from "../../../../components/core/divider"
+import { Quote } from "../../../../components/core/quote"
+import { Title } from "../../../../components/core/title"
+import HomeImgUrl from "../../../../images/oceania/australia/queensland/green-island/green-island-main.jpg"
+import { SharedCardAustraliaImages } from "../../../../components/images/oceania/australia/shared-card-australia-images"
+import { ImageAsLandscape } from "../../../../components/images/layout"
 
-const namespace = "{{pagePath}}"
-const id = "{{getId pagePath}}"
+const namespace = "oceania/australia/queensland/green-island"
+const id = "green-island"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const title = t(`common:country.{{getCountry pagePath}}.card.${id}`)
+  const title = t(`common:country.australia.card.${id}`)
 
   return (
     <>
@@ -46,8 +45,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         image={HomeImgUrl}
         location={location}
       />
-      <{{uppercase (getCountry pagePath)}}BlogLayout page={id} location={location}>
+      <AustraliaBlogLayout page={id} location={location}>
         <Title title={title} linkId={id} />
+        <ImageAsLandscape>
+          <SharedCardAustraliaImages image="greenIsland" />
+        </ImageAsLandscape>
         <Quote>{t("quote")}</Quote>
         <Divider />
         <Introduction>{t("introduction")}</Introduction>
@@ -78,7 +80,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </section>
           <Divider />
           <section>
-            <{{uppercase (getCountry pagePath)}}Headline>{t("visit1.title")}</{{uppercase (getCountry pagePath)}}Headline>
+            <AustraliaHeadline>{t("visit1.title")}</AustraliaHeadline>
             <Divider />
             <SectionContent>
               <p>{t("visit1.part1")}</p>
@@ -92,22 +94,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <li>{t("question1")}</li>
             <li>{t("question2")}</li>
           </ul>
-          <p>{t("love")}</p>
         </Conclusion>
         <Divider />
         <Comments
           collectionName={namespace}
           location={location}
           facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}`}
-          pinterest=\{{
+          pinterest={{
             description: t("pinterest"),
-            nodes:
-              i18n.languageCode === "fr"
-                ? []
-                : [],
+            nodes: i18n.languageCode === "fr" ? [] : [],
           }}
         />
-      </{{uppercase (getCountry pagePath)}}BlogLayout>
+      </AustraliaBlogLayout>
     </>
   )
 }

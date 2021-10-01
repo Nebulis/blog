@@ -480,11 +480,35 @@ exports[`english pages exports meta for public/en/oceania/australia/outback/inde
 
 exports[`english pages exports meta for public/en/oceania/australia/outback/index.html correctly: title 1`] = `"Outback | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/oceania/australia/queensland/from-townsville-to-cairns/index.html correctly: meta-description 1`] = `"Queensland, a state situated in northeastern Australia, has wonderful places to discover. It's a paradise for surfers and famous for its coral reefs, sublime islands, and beaches. It's the perfect place to take some vacation and relax. The tropical forest and the aboriginal people make this destination unique. Finally, it's the perfect place to see koalas in their natural habitat. Come with us for a short trip from Townsville to Cairns. Our travelogue with photos, tips, and advice."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/from-townsville-to-cairns/index.html correctly: social-network 1`] = `"Queensland, a state situated in northeastern Australia, has wonderful places to discover. It's a paradise for surfers and famous for its coral reefs, sublime islands, and beaches. It's the perfect place to take some vacation and relax. The tropical forest and the aboriginal people make this destination unique. Finally, it's the perfect place to see koalas in their natural habitat."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/from-townsville-to-cairns/index.html correctly: title 1`] = `"Queensland: From Townsville to Cairns | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/green-island/index.html correctly: meta-description 1`] = `"Green Island is a totally isolated island. With its tropical forest and its magnificent beaches, it is the perfect place to discover the famous Great Barrier Reef in Australia. Join us for an excursion on this small tropical island. Our travelogue with photos, tips, and advice."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/green-island/index.html correctly: social-network 1`] = `"Green Island is a totally isolated island. With its tropical forest and its magnificent beaches, it is the perfect place to discover the famous Great Barrier Reef in Australia."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/green-island/index.html correctly: title 1`] = `"Green Island: Dive into the Great Barrier Reef | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/oceania/australia/queensland/index.html correctly: meta-description 1`] = `"A paradise for surfers, famous for the Great Barrier Reef, with a coastline full of sublime beaches, there are also endless plains or tropical rain forests. It is the perfect place to see koalas in their natural habitat. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
 
 exports[`english pages exports meta for public/en/oceania/australia/queensland/index.html correctly: social-network 1`] = `"A paradise for surfers, famous for the Great Barrier Reef, with a coastline full of sublime beaches, there are also endless plains or tropical rain forests. It is the perfect place to see koalas in their natural habitat."`;
 
 exports[`english pages exports meta for public/en/oceania/australia/queensland/index.html correctly: title 1`] = `"Queensland | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/kuranda-village/index.html correctly: meta-description 1`] = `"Located in the middle of a tropical forest, Kuranda Village is a huge park with many activities. A popular destination where you can meet the Djabugay aboriginal people and explore Australia’s emblematic wildlife. You can also experience unusual transportations, whether by cable car or aboard a historic train. You will be amazed. Join us to discover this touristy village. Our travelogue with photos, tips, and advice."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/kuranda-village/index.html correctly: social-network 1`] = `"Located in the middle of a tropical forest, Kuranda Village is a huge park with many activities. A popular destination where you can meet the Djabugay aboriginal people and explore Australia’s emblematic wildlife. You can also experience unusual transportations, whether by cable car or aboard a historic train. You will be amazed."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/kuranda-village/index.html correctly: title 1`] = `"Kuranda: Village in the rainforest near Cairns | Travel Guide"`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/magnetic-island/index.html correctly: meta-description 1`] = `"Located a few miles from Townsville, Queensland, Magnetic Island is a must-see place if you're coming to Eastern Australia. This little paradise is famous for its beaches and its many aquatic activities. Also known as  « Koala Island », there are more or less hard treks in the middle of a large eucalyptus forest to observe these small wild animals endemic to Australia. Come with us for this lovely discovery. Our travelogue with photos, tips, and advice."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/magnetic-island/index.html correctly: social-network 1`] = `"Located a few miles from Townsville, Queensland, Magnetic Island is a must-see place if you're coming to Eastern Australia. This little paradise is famous for its beaches and its many aquatic activities. Also known as  « Koala Island », there are more or less hard treks in the middle of a large eucalyptus forest to observe these small wild animals endemic to Australia."`;
+
+exports[`english pages exports meta for public/en/oceania/australia/queensland/magnetic-island/index.html correctly: title 1`] = `"Magnetic Island: the largest wild koala colony | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/oceania/index.html correctly: meta-description 1`] = `"There are so many things to discover in Oceania. Nature lovers, animal lovers, road trip enthusiasts... Find in our blog the most beautiful pearls of this continent for your dream vacation. Our travelogue with photos, tips, and advice."`;
 

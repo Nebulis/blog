@@ -7,6 +7,7 @@ import { ApplicationContext } from "../../../../components/application"
 import {
   CityArticleContainer,
   GoToAllArticlesContainer,
+  MainCardContainer,
   MedallionContainer,
 } from "../../../../components/layout/layout"
 import { PageProps } from "gatsby"
@@ -32,6 +33,7 @@ import { australiaLinks } from "../../../../components/core/oceania/australia/au
 import { AustraliaBlogLayout, australiaWeatherEntries } from "../../../../components/core/oceania/australia/australia"
 import kangaroo from "../../../../images/oceania/australia/kangaroo.svg"
 import { SharedAustraliaImages } from "../../../../components/images/oceania/australia/shared-australia-images"
+import { FromTownsvilleToCairnsCard } from "../../../../components/core/oceania/australia/australia.cards"
 
 const namespace = "oceania/australia/queensland/index"
 i18n.addResourceBundle("fr", namespace, translationFr)
@@ -47,6 +49,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
     kind: "highlight",
     development,
     tags: ["queensland"],
+    filter: (cachedLink) => cachedLink.id !== "from-townsville-to-cairns",
   })
   return (
     <>
@@ -73,6 +76,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
         <PointOfInterestSection page={currentPageId} />
+        <Divider />
+        <CityHomeSection>{t("section2")}</CityHomeSection>
+        <MainCardContainer>
+          <FromTownsvilleToCairnsCard />
+        </MainCardContainer>
         {highlights.length > 0 && (
           <>
             <Divider className="mt2" />

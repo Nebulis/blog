@@ -126,12 +126,35 @@ const oceaniaLinks = () => {
 }
 const australiaLinks = () => {
   expect(getLink("queensland")).toMatchObject({ label: { fr: "Queensland", en: "Queensland" }, published: false })
+  expect(getLink("from-townsville-to-cairns")).toMatchObject({
+    label: { fr: "Queensland : De Townsville à Cairns", en: "Queensland: From Townsville to Cairns" },
+    published: false,
+  })
+  expect(getLink("green-island")).toMatchObject({
+    label: {
+      fr: "Green Island : Plongez dans la Grande Barrière de Corail",
+      en: "Green Island: Dive into the Great Barrier Reef",
+    },
+    published: false,
+  })
+  expect(getLink("kuranda-village")).toMatchObject({
+    label: {
+      fr: "Kuranda : Un village en pleine forêt tropicale sur les hauteurs de Cairns",
+      en: "Kuranda: Village in the rainforest near Cairns",
+    },
+    published: false,
+  })
+  expect(getLink("magnetic-island")).toMatchObject({
+    label: { fr: "Magnetic Island : L'île aux koalas", en: "Magnetic Island: the largest wild koala colony" },
+    published: false,
+  })
+
   expect(getLink("northern-territory")).toMatchObject({
     label: { fr: "Territoire du Nord", en: "Northern Territory" },
     published: false,
   })
   expect(getLink("outback")).toMatchObject({ label: { fr: "Outback", en: "Outback" }, published: false })
-  expect(getLink("kuranda")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+  expect(getLink("three-weeks-road-trip-in-australia")).toMatchObject({ label: { fr: "", en: "" }, published: false })
 }
 
 const japanLinks = () => {

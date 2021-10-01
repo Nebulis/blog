@@ -1,8 +1,21 @@
+import React, { FunctionComponent } from "react"
 import styled from "@emotion/styled"
 import { BlogLayout, IndexBlogLayout } from "../../../layout/layout"
 import { australiaPrimaryColor, australiaPrimaryColorDarker } from "./australia.variables"
 import { WeatherEntry } from "../../../../types/shared"
 import { Lang } from "../../links/links.types"
+import { Headline } from "../../highlight"
+import kangaroo from "../../../../images/oceania/australia/kangaroo.svg"
+import { css } from "@emotion/react"
+
+const australiaHeadlineStyle = css`
+  color: ${australiaPrimaryColorDarker};
+`
+export const AustraliaHeadline: FunctionComponent = ({ children }) => (
+  <Headline css={australiaHeadlineStyle} image={kangaroo} alt="kangaroo">
+    {children}
+  </Headline>
+)
 
 const buttonStyle = `
   button.btn,
@@ -79,6 +92,12 @@ const australiaLayout = `
     }
     .divider {
       background-color: ${australiaPrimaryColor};
+    }
+    a.title-tag {
+      background-color: ${australiaPrimaryColorDarker};
+    }
+    a.title-tag:hover {
+      box-shadow: 0px 0px 2px 1px ${australiaPrimaryColorDarker};
     }
     .quote::before {
       color: ${australiaPrimaryColor};
