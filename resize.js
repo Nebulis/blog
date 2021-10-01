@@ -17,11 +17,13 @@ Promise.all(
     const stream = sharp(match)
     const info = await stream.metadata()
 
+    // const width = Math.min(200, info.width)
     const width = Math.min(1000, info.width)
 
     const optimizedName = match.replace(/(\..+)$/, (match, ext) => `-optimized${ext.toLowerCase()}`)
     const method = info.format === "png" ? "png" : "jpeg"
 
+    // await stream.resize(width)[method]({ quality: 50 }).toFile(optimizedName)
     await stream.resize(width)[method]({ quality: QUALITY }).toFile(optimizedName)
 
     // return fs.rename(optimizedName, match)

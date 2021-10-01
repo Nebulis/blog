@@ -46,7 +46,13 @@
       "title": "Autriche"
     },
     "australia": {
-      "title": "Australie"
+      "title": "Australie",
+      "card": {
+        "from-townsville-to-cairns": "Queensland : De Townsville à Cairns",
+        "green-island": "Green Island : Plongez dans la Grande Barrière de Corail",
+        "kuranda-village": "Kuranda : Un village en pleine forêt tropicale sur les hauteurs de Cairns",
+        "magnetic-island": "Magnetic Island : L'île aux koalas"
+      }
     },
     "bahamas": {
       "title": "Bahamas"

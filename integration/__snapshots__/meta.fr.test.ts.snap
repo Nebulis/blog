@@ -480,11 +480,35 @@ exports[`french pages exports meta for public/oceania/australia/outback/index.ht
 
 exports[`french pages exports meta for public/oceania/australia/outback/index.html correctly: title 1`] = `"Outback | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/oceania/australia/queensland/from-townsville-to-cairns/index.html correctly: meta-description 1`] = `"Le Queensland, État australien situé à l’est du pays, nous offre de magnifiques endroits à découvrir. Véritable paradis des surfeurs et connu également pour l’accès aux récifs coralliens, ses sublimes îles et plages en font un État de vacances et de farniente. Mais sa forêt tropicale et ses aborigènes en font également un voyage à part. C’est également l'endroit parfait pour voir les koalas dans leur habitat naturel. On vous embarque avec nous pour une petite visite de Townsville à Cairns. Notre récit de voyage avec photos, conseils et astuces."`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/from-townsville-to-cairns/index.html correctly: social-network 1`] = `"Le Queensland, État australien situé à l’est du pays, nous offre de magnifiques endroits à découvrir. Véritable paradis des surfeurs et connu également pour l’accès aux récifs coralliens, ses sublimes îles et plages en font un État de vacances et de farniente. Mais sa forêt tropicale et ses aborigènes en font également un voyage à part. C’est également l'endroit parfait pour voir les koalas dans leur habitat naturel."`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/from-townsville-to-cairns/index.html correctly: title 1`] = `"Queensland : De Townsville à Cairns | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/green-island/index.html correctly: meta-description 1`] = `"Green Island est une île totalement isolée du reste du monde, entre sa forêt tropicale et ses superbes plages, c’est l’endroit parfait pour découvrir la célèbre Grande Barrière de Corail en Australie. On vous embarque avec nous pour une excursion sur cette petite île tropicale. Notre récit de voyage avec photos, conseils et astuces."`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/green-island/index.html correctly: social-network 1`] = `"Green Island est une île totalement isolée du reste du monde, entre sa forêt tropicale et ses superbes plages, c’est l’endroit parfait pour découvrir la célèbre Grande Barrière de Corail en Australie."`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/green-island/index.html correctly: title 1`] = `"Green Island : Plongée dans la Grande Barrière de Corail | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/oceania/australia/queensland/index.html correctly: meta-description 1`] = `"Véritable paradis des surfeurs et connu pour la grande barrière de corail, en plus de son littoral de plages sublimes vous vous retrouverez également dans des plaines interminables ou des forêts tropicales humides. C’est également l'endroit parfait pour voir des koalas dans leur habitat naturel. À travers nos articles on vous fait découvrir différents endroits à visiter. Notre carnet de voyage avec photos, conseils et astuces."`;
 
 exports[`french pages exports meta for public/oceania/australia/queensland/index.html correctly: social-network 1`] = `"Véritable paradis des surfeurs et connu pour la grande barrière de corail, en plus de son littoral de plages sublimes vous vous retrouverez également dans des plaines interminables ou des forêts tropicales humides. C’est également l'endroit parfait pour voir des koalas dans leur habitat naturel."`;
 
 exports[`french pages exports meta for public/oceania/australia/queensland/index.html correctly: title 1`] = `"Queensland | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/kuranda-village/index.html correctly: meta-description 1`] = `"Situé au milieu d’une forêt tropicale, le village de Kuranda est un immense parc aux multiples activités. Destination populaire pour rencontrer des aborigènes et partir à la découverte de la faune emblématique d’Australie, cette destination fait également rêver par ses transports insolites, que ce soit en téléphérique ou à bord de son train historique vous en prendrez pleins les yeux. On vous embarque avec nous pour une découverte de ce village touristique. Notre récit de voyage avec photos, conseils et astuces."`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/kuranda-village/index.html correctly: social-network 1`] = `"Situé au milieu d’une forêt tropicale, le village de Kuranda est un immense parc aux multiples activités. Destination populaire pour rencontrer des aborigènes et partir à la découverte de la faune emblématique d’Australie, cette destination fait également rêver par ses transports insolites, que ce soit en téléphérique ou à bord de son train historique vous en prendrez pleins les yeux."`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/kuranda-village/index.html correctly: title 1`] = `"Kuranda : Un village en pleine forêt tropicale sur les hauteurs de Cairns | Guide de Voyage"`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/magnetic-island/index.html correctly: meta-description 1`] = `"Située à quelques kilomètres de Townsville dans le Queensland, Magnetic Island est sans conteste un incontournable si vous venez dans l’Est de l’Australie. Ce petit paradis est réputé pour ses plages et ses nombreuses activités aquatiques. Surnommée également « L’île aux koalas », sa grande forêt d’eucalyptus remplie de treks plus ou moins durs permet d’observer ses petits animaux sauvages endémiques d’Australie. Embarquez avec nous pour cette jolie découverte. Notre récit de voyage avec photos, conseils et astuces."`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/magnetic-island/index.html correctly: social-network 1`] = `"Située à quelques kilomètres de Townsville dans le Queensland, Magnetic Island est sans conteste un incontournable si vous venez dans l’Est de l’Australie. Ce petit paradis est réputé pour ses plages et ses nombreuses activités aquatiques. Surnommée également « L’île aux koalas », sa grande forêt d’eucalyptus remplie de treks plus ou moins durs permet d’observer ses petits animaux sauvages endémiques d’Australie."`;
+
+exports[`french pages exports meta for public/oceania/australia/queensland/magnetic-island/index.html correctly: title 1`] = `"Magnetic Island : L'île aux koalas | Guide de Voyage"`;
 
 exports[`french pages exports meta for public/oceania/index.html correctly: meta-description 1`] = `" L’Océanie nous offre tant de choses à découvrir. Amoureux de la nature, amoureux des animaux, adeptes des road trips... Retrouvez dans notre blog les plus belles perles de ce continent pour vos vacances de rêves. Nos récits de voyage, avec photos, conseils et astuces."`;
 

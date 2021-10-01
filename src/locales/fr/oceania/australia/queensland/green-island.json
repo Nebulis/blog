@@ -1,0 +1,104 @@
+{
+  "full-title": "Green Island : Plongée dans la Grande Barrière de Corail | Guide de Voyage",
+  "google-description": "Green Island est une île totalement isolée du reste du monde, entre sa forêt tropicale et ses superbes plages, c’est l’endroit parfait pour découvrir la célèbre Grande Barrière de Corail en Australie. On vous embarque avec nous pour une excursion sur cette petite île tropicale. Notre récit de voyage avec photos, conseils et astuces.",
+  "social-network-description": "Green Island est une île totalement isolée du reste du monde, entre sa forêt tropicale et ses superbes plages, c’est l’endroit parfait pour découvrir la célèbre Grande Barrière de Corail en Australie.",
+  "quote": "Green Island est une île totalement isolée du reste du monde, entre sa forêt tropicale et ses superbes plages, c’est l’endroit parfait pour découvrir la célèbre Grande Barrière de Corail en Australie.",
+  "introduction": "On vous embarque avec nous pour une excursion sur cette petite île tropicale.",
+  "where-to-book": {
+    "title": "Comment y aller et où réserver ?",
+    "part1": "L'accès à Green Island peut se faire #par ferry#, environ 45 minutes de bateau ou #par hélicoptère#, environ 20 minutes.",
+    "part2": "Pour venir par ferry, nous avons réservé via le site [Big Cat Green Island](todo) qui propose des tours qui comprennent le trajet en bateau + des activités. Comptez environ 99 $ aller / retour.",
+    "part3": "Pour venir par hélicoptère, vous pouvez réserver sur le site [Nautilus Aviation](todo), là aussi vous pouvez trouver des tours qui proposent le trajet + activités. Comptez environ 500 $ aller / retour."
+  },
+  "what-time-of-year": {
+    "title": "À quelle période ?",
+    "part1": "La meilleure saison pour vous rendre dans le Queensland en général, s’étend principalement de #juin à octobre#.",
+    "part2": "La saison des pluies est de décembre à mars.",
+    "part3": "La température de la mer est quant à elle idéale tout au long de l’année néanmoins il est dangereux de se baigner entre novembre et mai car les méduses sont présentes et leurs piqûres peuvent être mortelles. Des panneaux et des drapeaux indicatifs sont présents le plus souvent près des plages."
+  },
+  "how-long": {
+    "title": "Combien de temps ?",
+    "part1": "Vous avez le choix entre plusieurs options. Généralement les compagnies proposent à peu près la même chose : une demi-journée ou une journée.",
+    "part2": "Une demi-journée (Half Day Tour) avec un départ soit le matin soit l’après-midi",
+    "part3": "Une journée (Full Day Tour) avec deux départs au choix le matin",
+    "part4": "On vous conseille d’y rester #un jour#, pour nous c’était largement suffisant.",
+    "part5": "Vous avez également la possibilité de dormir sur place si vous le souhaitez."
+  },
+  "how-much": {
+    "title": "Combien d’argent prévoir ?",
+    "part1": "On ne va pas vous mentir, venir sur Green Island même juste pour une journée revient assez cher. Surtout si vous comptez faire le plus d’activités possible.",
+    "part2": "Pour les activités, on vous indique les prix du site [Big Cat Green Island](todo), on vous conseille d’ailleurs de bien réserver en avance. En sachant que vous avez déjà la possibilité de réserver votre aller / retour en ferry avec une activité à moindre coût.",
+    "part3": "Glass Bottom Boat Tour ↠ 20$ / personne",
+    "part4": "Snorkel Expérience ↠ 40$ / personne",
+    "part5": "Snorkel Equipment  ↠ 30$ / personne",
+    "part6": "Semi Submarine Tour ↠ 22$ / adulte et 11$ / enfant. Si vous réservez sur place le jour même 30$ / adulte et 15$ / enfant.",
+    "part7": "Si vous avez la possibilité d'emmener votre équipement de snorkeling, masque et tuba, par exemple, n’hésitez pas. Cela vous fera déjà un coût en moins dans votre budget.",
+    "part8": "Vous avez également des activités que vous pouvez réserver sur place.",
+    "part9": "Windsurfing Lesson ↠ 85$",
+    "part10": "Kayak Rental ↠ 30$",
+    "part11": "Sans compter les prix des transats et parasols ainsi que les bars et restaurants."
+  },
+  "where-to-stay": {
+    "title": "Où dormir ?",
+    "part1": "Si vous souhaitez dormir sur place, le #Green Island Resort# est la seule option d’hébergement sur l’île.",
+    "part2": "L’île est particulièrement touristique la journée, mais vous pourrez profiter du calme de la forêt tropicale le soir.",
+    "part3": "L’hôtel vous propose d’ailleurs le transfert en bateau."
+  },
+  "where-to-have": {
+    "title": "Où manger ?",
+    "part1": "Vous pouvez manger sur place, le restaurant de l’hôtel est ouvert au public le midi.",
+    "part2": "Certaines compagnies de bateau vous proposent également de vous préparer le repas, pour cela il faudra retourner à votre bateau à l’heure indiqué.",
+    "part3": "Vous avez également la possibilité d’emmener vous même votre pique nique ou vos collations."
+  },
+  "visit": {
+    "title": "La visite",
+    "part1": "On vous emmène donc avec nous pour une petite croisière sur cette île, sans forcément trop vous raconter notre journée car c’était surtout un jour de farniente, dernier jour de [notre road-trip en Australie](todo) et juste avant l’avion donc on avait envie d’en profiter un maximum. Et puis on doit l’avouer, la fatigue se ressentant après 3 semaines d’activités et de routes, une bonne sieste sur la plage fut de mise.",
+    "part2": "Mais à défaut de vous parler spécifiquement de notre journée, autant vous présenter quand même tout ce que vous pourrez faire sur cette île, très jolie bien que extrêmement touristique malheureusement.",
+    "part3": "Ah et notez bien d’emmener ABSOLUMENT du #répulsif à moustique#, en une journée je n’ai jamais été autant piqué de toute ma vie !!",
+    "part4": {
+      "title": "GREEN ISLAND",
+      "part1": "Renommée parc national en 1937 et déclarée comme parc maritime protégé en 1974, Green Island fait à peu près 12 hectares.",
+      "part2": "L’île est entourée de plages de sable blanc et d’une forêt tropicale, en son centre, vieille de 6 000 ans. C’est d’ailleurs #la seule île de la Barrière de Corail à être recouverte d’une forêt#.",
+      "part3": "En plus de ses superbes plages, l’île verte vous fera découvrir une petite partie de la Grande Barrière de Corail."
+    },
+    "part5": {
+      "title": "LA GRANDE BARRIÈRE DE CORAIL",
+      "part1": "Pourquoi petite partie ?",
+      "part2": "Parce que la Grande Barrière de Corail est #le plus vaste récif corallien de la planète#. Il s’étend sur plus de 2 300 kilomètres le long de la côte nord-est de l’Australie.",
+      "part3": "Green Island est l’un des endroits les plus accessibles depuis la ville de Cairns pour découvrir cette beauté naturelle.",
+      "part4": "Poissons de toutes les couleurs, tortues vertes … La Grande Barrière de Corail abrite une faune maritime exceptionnelle.",
+      "part5": "Destination très populaire pour les plongeurs sous-marins, vous rendre sur Green Island vous permettra de réaliser de nombreuses activités aquatiques."
+    },
+    "part6": {
+      "title": "LES ACTIVITÉS",
+      "part1": "Parlons d’abord des activités sur l’île.",
+      "part2": "Je passerai vite fait sur la visite du [Marineland Melanesia](todo) car nous ne sommes pas en adéquation avec ce genre de pratique : petit aquarium, collection d’artefacts mais surtout un spectacle de crocodiles … Je vous le nomme car cela fait partie de l’île mais ça ne m’enchante vraiment pas. Venez plutôt observer des crocodiles dans leur milieu naturel au parc national de Kakadu dans le [Territoire du Nord](todo). Une croisière sur la [Yellow Water](todo) vous permettra d’en observer pleins, vous y découvrirez d’immenses étendues marécageuses avec bien d’autres animaux pour un véritable spectacle cette fois-ci.",
+      "part3": "Vous pouvez également choisir de vous détendre un peu sur une des plages de l’île, louer un transat et parfaire votre bronzage.",
+      "part4": "Ou vous dégourdir les jambes en parcourant l’île. Promenade très rapide puisqu’elle ne dure pas plus de 20 / 25 minutes, mais vous aurez peut-être la chance de pouvoir observer de magnifiques oiseaux tropicaux. Et profitez-en, ce sera sûrement le seul moment où vous serez quasiment seul. C’était notre cas !",
+      "part5": "Vous avez également de nombreuses boutiques, bars et une piscine qui n’était d’ailleurs pas ouverte quand nous y étions.",
+      "part6": "Enfin quel intérêt d’aller dans une piscine quand vous avez toute cette magnifique baie de corail autour de vous.",
+      "part7": "Pour les activités aquatiques, on vous a déjà parlé des prix mais parlons de chaque activité plus en détail.",
+      "part8": "#- Glass Bottom Boat Tour# ↠ Faites un tour dans un bateau où le fond du bateau est vitré.",
+      "part9": "#- Semi Submarine Tour# ↠ Une vue encore plus panoramique et immersif car le bateau est à moitié immergé dans l’eau et vous vous trouvez au fond du bateau donc avec la sensation d’être dans l’eau.",
+      "part10": "C’est grâce à ces activités que nous avons vu une tortue verte et c’est également ici où nous avons vu le plus de poissons. Bon on vous l’avoue c’est un peu truqué car le guide lance de la nourriture ce qui attire forcément les poissons et les oiseaux aussi d’ailleurs. Et qui dit Glass Boat dit forcément des photos de moindre qualité que si nous les avions directement pris avec la gopro sous l’eau ...",
+      "part11": "#- Snorkel Expérience# ↠ Vous avez deux options :",
+      "part12": "- Snorkel Tour Experience ↠  pour les débutants, une session de snorkeling au niveau de la plage, avec un guide",
+      "part13": "- Snorkel Safari Tour ↠ un tour avec un marin biologiste dans un endroit moins touristique",
+      "part14": "#- Snorkel Equipment# ↠ Louez simplement votre équipement de snorkeling sur place et aventurez-vous tout seul.",
+      "part15": "#- Windsurfing Lesson# ↠ Prenez un cours de planche à voile. Le cours dure environ une heure.",
+      "part16": "#- Kayak Rental# ↠ Louer un kayak pendant une demi-heure.",
+      "part17": "En bref, tout un tas d’activités pour observer la vie sous l’eau.",
+      "part18": "Pour être tout à fait transparent avec vous, les activités sont très intéressantes, l’île est également très jolie et on a vraiment l’impression d’être dans un petit paradis … quand on est tout seul.",
+      "part19": "Mais justement être tout seul c’est limite impossible, #le tourisme de masse#, dont nous avons également fait partie en y allant, ne rend pas la journée aussi satisfaisante qu’elle ne pourrait l’être.",
+      "part20": "Les conditions de snorkeling varient en fonction de nombreux facteurs. Météo, saisons, courants, activités humaines, tempêtes. hausse de la température de l'eau ... tous vont influer sur la visibilité sous l’eau, la présence des différentes espèces voir même altérées les fonds marins (coraux blanchis, invasion d'algues ou méduses ...)."
+    }
+  },
+  "conclusion": "Bien que très touristique, Green Island reste l'île la plus accessible pour admirer la Grande Barrière de Corail et les nombreuses activités en font une attraction à part entière.",
+  "question1": "Êtes-vous déjà allé à la Grande Barrière de Corail ?",
+  "question2": "Quel est le plus bel endroit dans lequel vous avez fait du snorkeling ?",
+  "pinterest": "🌏 Découverte de Green Island, l’endroit parfait pour découvrir la célèbre Grande Barrière de Corail en Australie. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? On vous indique également toutes les activités que vous pouvez y faire. Le tout avec notre récit de voyage et nos photos. Cliquez sur l'image pour le guide complet ... 🌏",
+  "facebook": {
+    "part1": "♡ Coucou les voyageurs ! ♡",
+    "part2": "On vous embarque avec nous pour une excursion sur Green Island, cette petite île tropicale, pour découvrir la célèbre Grande Barrière de Corail en Australie."
+  }
+}
