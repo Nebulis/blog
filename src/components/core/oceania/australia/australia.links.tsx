@@ -7,6 +7,7 @@ export const australiaLinks: CountryLink = {
   id: "australia",
   label: { fr: commonFr.country.australia.title, en: commonEn.country.australia.title },
   pointOfInterest: ["animals", "city", "water-activities", "nature", "lazy"],
+  seasons: ["summer", "spring", "winter", "autumn"],
   imageProps: {
     image: "homeAustralia",
     imgStyle: { objectPosition: "-60px -12px" },
