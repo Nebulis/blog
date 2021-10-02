@@ -145,7 +145,7 @@ const australiaLinks = () => {
     published: false,
   })
   expect(getLink("magnetic-island")).toMatchObject({
-    label: { fr: "Magnetic Island : L'île aux koalas", en: "Magnetic Island: the largest wild koala colony" },
+    label: { fr: "Magnetic Island : L'île aux koalas", en: "Magnetic Island: Discover the largest wild koala colony" },
     published: false,
   })
 
