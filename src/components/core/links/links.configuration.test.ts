@@ -10,7 +10,7 @@ const getLink = (id: string) => {
 const continentsLinks = () => {
   // continents assertions
   expect(getLink("asia")).toMatchObject({ label: { en: "Asia", fr: "Asie" }, published: true })
-  expect(getLink("oceania")).toMatchObject({ label: { fr: "Océanie", en: "Oceania" }, published: false })
+  expect(getLink("oceania")).toMatchObject({ label: { fr: "Océanie", en: "Oceania" }, published: true })
   expect(getLink("middle-east")).toMatchObject({ label: { fr: "Moyen-Orient", en: "Middle-East" }, published: false })
   expect(getLink("europe")).toMatchObject({ label: { fr: "Europe", en: "Europe" }, published: false })
   expect(getLink("africa")).toMatchObject({ label: { fr: "Afrique", en: "Africa" }, published: false })
@@ -122,13 +122,13 @@ const asiaLinks = () => {
   expect(getLink("singapore")).toMatchObject({ label: { fr: "Singapour", en: "Singapore" }, published: false })
 }
 const oceaniaLinks = () => {
-  expect(getLink("australia")).toMatchObject({ label: { fr: "Australie", en: "Australia" }, published: false })
+  expect(getLink("australia")).toMatchObject({ label: { fr: "Australie", en: "Australia" }, published: true })
 }
 const australiaLinks = () => {
-  expect(getLink("queensland")).toMatchObject({ label: { fr: "Queensland", en: "Queensland" }, published: false })
+  expect(getLink("queensland")).toMatchObject({ label: { fr: "Queensland", en: "Queensland" }, published: true })
   expect(getLink("from-townsville-to-cairns")).toMatchObject({
     label: { fr: "Queensland : De Townsville à Cairns", en: "Queensland: From Townsville to Cairns" },
-    published: false,
+    published: true,
   })
   expect(getLink("green-island")).toMatchObject({
     label: {
@@ -155,6 +155,7 @@ const australiaLinks = () => {
   })
   expect(getLink("outback")).toMatchObject({ label: { fr: "Outback", en: "Outback" }, published: false })
   expect(getLink("three-weeks-road-trip-in-australia")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+  expect(getLink("yellow-water")).toMatchObject({ label: { fr: "", en: "" }, published: false })
 }
 
 const japanLinks = () => {

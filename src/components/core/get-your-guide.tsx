@@ -47,7 +47,7 @@ interface BaseProps {
   image: string
   rating?: number
   certified?: boolean
-  price: number
+  price?: number
   duration: { value: number; unit: DurationUnit }
   bestseller?: boolean
   groupSize?: "none" | "small"
@@ -57,8 +57,8 @@ interface BaseProps {
 const internalCardStyle = css`
   width: 320px;
   line-height: 1.15;
-
   .internal-travel-card-container {
+    transition: box-shadow 0.2s ease;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   }
   &:hover .internal-travel-card-container,
@@ -180,7 +180,7 @@ export const InternalCard: React.FunctionComponent<
   title,
   rating,
   certified,
-  price,
+  price = 0,
   duration,
   bestseller,
   Image,
@@ -238,10 +238,12 @@ export const InternalCard: React.FunctionComponent<
             &nbsp;{duration.value} {transformDurationUnit(duration.value, duration.unit, i18n.languageCode)}
           </span>
         </span>
-        <span className="activity">
-          <FaUser />
-          <span>&nbsp;{computedPrice}</span>
-        </span>
+        {price > 0 && (
+          <span className="activity">
+            <FaUser />
+            <span>&nbsp;{computedPrice}</span>
+          </span>
+        )}
         {groupSize === "small" && (
           <span className="activity">{i18n.languageCode === "fr" ? "petit groupe" : "small group"}</span>
         )}

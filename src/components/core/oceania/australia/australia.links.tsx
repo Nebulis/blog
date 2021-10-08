@@ -69,7 +69,16 @@ export const australiaLinks: CountryLink = {
       label: { en: "Northern Territory", fr: "Territoire du Nord" },
       pointOfInterest: ["animals", "city", "nature"],
       imageProps: { image: "northernTerritory" },
-      highlights: [],
+      highlights: [
+        {
+          id: "yellow-water",
+          label: {
+            fr: "",
+            en: "",
+          },
+          published: false,
+        },
+      ],
     },
   ],
   others: [{ id: "three-weeks-road-trip-in-australia", label: { fr: "", en: "" }, published: false }],
