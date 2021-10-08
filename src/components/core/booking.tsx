@@ -31,6 +31,7 @@ const bookingCardStyle = css`
   width: 320px;
   line-height: 1.15;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.2s ease;
   &:hover,
   &:focus {
     box-shadow: 0 17px 25px rgba(0, 0, 0, 0.5);

@@ -70,7 +70,7 @@ export const convertTime = (time: number) => {
   }
 }
 
-export type DurationUnit = "day" | "hour"
+export type DurationUnit = "day" | "hour" | "minute"
 
 export const transformDurationUnit = (value: number, unit: DurationUnit, lang: Lang) => {
   let duration = ""
@@ -79,6 +79,9 @@ export const transformDurationUnit = (value: number, unit: DurationUnit, lang: L
   }
   if (unit === "hour") {
     duration = lang === "fr" ? "Heure" : "Hour"
+  }
+  if (unit === "minute") {
+    duration = "Minute"
   }
   if (value > 1) duration += "s"
   return duration

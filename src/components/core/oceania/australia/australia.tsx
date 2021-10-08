@@ -44,6 +44,14 @@ const australiaLayout = `
   }
 
   .index-blog-layout-content {
+    .booking-card, .get-your-guide-card {
+      .information, .photo-container {
+        border-color: ${australiaPrimaryColorDarker}
+      }
+      .activity {
+        background-color: ${australiaPrimaryColorDarker};
+      }
+    }
     .point-of-interest-section {
       svg {
         fill: ${australiaPrimaryColor};
