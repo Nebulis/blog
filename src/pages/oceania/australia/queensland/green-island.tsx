@@ -207,7 +207,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </ul>
               <BookingGygCardContainer>
                 <BasicTourCard
-                  to="https://greenisland.com.au/great-barrier-reef-tours/"
+                  to="https://greenisland.com.au/great-barrier-reef-tours/glass-bottom-boat-tour/"
                   title="Glass Bottom Boat Tour"
                   image="https://greenisland.com.au/wp-content/uploads/2019/11/extras-gbb1.jpg"
                   duration={{ value: 30, unit: "minute" }}
@@ -219,7 +219,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </ul>
               <BookingGygCardContainer>
                 <BasicTourCard
-                  to="https://greenisland.com.au/great-barrier-reef-tours/"
+                  to="https://greenisland.com.au/great-barrier-reef-tours/submarine-tour/"
                   title="Semi-Submarine Tour"
                   image="https://greenisland.com.au/wp-content/uploads/2019/11/extras-semi-sub.jpg"
                   duration={{ value: 30, unit: "minute" }}
@@ -257,7 +257,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </ul>
               <BookingGygCardContainer>
                 <BasicTourCard
-                  to="https://greenisland.com.au/great-barrier-reef-tours/"
+                  to="https://greenisland.com.au/great-barrier-reef-tours/submarine-tour/"
                   title="Snorkelling"
                   image="https://greenisland.com.au/wp-content/uploads/2021/03/Untitled-design-4.jpg"
                   duration={{ value: 45, unit: "minute" }}
