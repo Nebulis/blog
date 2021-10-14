@@ -13,6 +13,9 @@ describe("getPathForFrench", () => {
   it("should work when url does not start by /en", () => {
     expect(getPathForFrench({ pathname: "/bar" })).toBe("/bar")
   })
+  it("should keep search", () => {
+    expect(getPathForFrench({ pathname: "/bar", search: "?country=australia" })).toBe("/bar?country=australia")
+  })
 })
 describe("getPathForEnglish(", () => {
   it("should work when url start with /en", () => {
@@ -26,5 +29,8 @@ describe("getPathForEnglish(", () => {
   })
   it("should work when url does not start by /en", () => {
     expect(getPathForEnglish({ pathname: "/bar" })).toBe("/en/bar")
+  })
+  it("should keep search", () => {
+    expect(getPathForEnglish({ pathname: "/bar", search: "?country=australia" })).toBe("/en/bar?country=australia")
   })
 })

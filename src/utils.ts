@@ -8,11 +8,11 @@ export const capitalize = (s: string) => {
 export const defaultHostname = "https://magicoftravels.com"
 export const getHostname = (location: PageProps["location"]) => location.origin || defaultHostname
 export const isEnglishPage = ({ pathname }: { pathname: string }) => pathname.startsWith("/en/") || pathname === "/en"
-export const getPathForFrench = ({ pathname }: { pathname: string }) => {
-  return pathname.replace("/en", "")
+export const getPathForFrench = ({ pathname, search = "" }: { pathname: string; search?: string }) => {
+  return pathname.replace("/en", "") + search
 }
-export const getPathForEnglish = ({ pathname }: { pathname: string }) => {
-  return isEnglishPage({ pathname }) ? pathname : `/en${pathname}`
+export const getPathForEnglish = ({ pathname, search = "" }: { pathname: string; search?: string }) => {
+  return (isEnglishPage({ pathname }) ? pathname : `/en${pathname}`) + search
 }
 export const twitter = "_magicoftravels"
 export const instagram = "magic_of_travels"
