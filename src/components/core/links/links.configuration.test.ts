@@ -135,7 +135,7 @@ const australiaLinks = () => {
       fr: "Green Island : Plongez dans la Grande Barrière de Corail",
       en: "Green Island: Dive into the Great Barrier Reef",
     },
-    published: false,
+    published: true,
   })
   expect(getLink("kuranda-village")).toMatchObject({
     label: {

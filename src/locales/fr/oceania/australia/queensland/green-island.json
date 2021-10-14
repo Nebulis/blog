@@ -7,8 +7,8 @@
   "where-to-book": {
     "title": "Comment y aller et où réserver ?",
     "part1": "L'accès à Green Island peut se faire #par ferry#, environ 45 minutes de bateau ou #par hélicoptère#, environ 20 minutes depuis Cairns.",
-    "part2": "Pour venir par ferry, nous avons réservé via le site [Big Cat Green Island](https://greenisland.com.au/green-island-tours/) qui propose des tours qui comprennent le trajet en bateau + des activités. Comptez environ 99 AUD aller / retour.",
-    "part3": "Pour venir par hélicoptère, vous pouvez réserver sur le site [Nautilus Aviation](https://www.nautilusaviation.com.au/experience/great-adventures-green-island/), là aussi vous pouvez trouver des tours qui proposent le trajet + activités. Comptez environ 500 AUD aller / retour."
+    "part2": "Pour venir par ferry, nous avons réservé via le site [Big Cat Green Island](https://greenisland.com.au/green-island-tours/) qui propose des tours qui comprennent le trajet en bateau + des activités. Comptez environ 99 AUD (65 €) aller / retour.",
+    "part3": "Pour venir par hélicoptère, vous pouvez réserver sur le site [Nautilus Aviation](https://www.nautilusaviation.com.au/experience/great-adventures-green-island/), là aussi vous pouvez trouver des tours qui proposent le trajet + activités. Comptez environ 500 AUD (320 €) aller / retour."
   },
   "what-time-of-year": {
     "title": "À quelle période ?",
@@ -28,14 +28,14 @@
     "title": "Combien d’argent prévoir ?",
     "part1": "On ne va pas vous mentir, venir sur Green Island même juste pour une journée revient assez cher. Surtout si vous comptez faire le plus d’activités possible.",
     "part2": "Pour les activités, on vous indique les prix du site [Big Cat Green Island](https://greenisland.com.au/green-island-tours/), on vous conseille d’ailleurs de bien réserver en avance. En sachant que vous avez déjà la possibilité de réserver votre aller / retour en ferry avec une activité à moindre coût.",
-    "part3": "Glass Bottom Boat Tour ↠ 20 AUD / personne",
-    "part4": "Snorkel Expérience ↠ 40 AUD / personne",
-    "part5": "Snorkel Equipment  ↠ 30 AUD / personne",
-    "part6": "Semi Submarine Tour ↠ 22 AUD / adulte et 11 AUD / enfant. Si vous réservez sur place le jour même 30 AUD / adulte et 15 AUD / enfant.",
+    "part3": "Glass Bottom Boat Tour ↠ 20 AUD (13 €) / personne",
+    "part4": "Snorkel Expérience ↠ 40 AUD (26 €) / personne",
+    "part5": "Snorkel Equipment  ↠ 30 AUD (20 €) / personne",
+    "part6": "Semi Submarine Tour ↠ 22 AUD (14 €) / adulte et 11 AUD (7 €) / enfant. Si vous réservez sur place le jour même 30 AUD (20 €) / adulte et 15 AUD (10 €) / enfant.",
     "part7": "Si vous avez la possibilité d'emmener votre équipement de snorkeling, masque et tuba, par exemple, n’hésitez pas. Cela vous fera déjà un coût en moins dans votre budget.",
     "part8": "Vous avez également des activités que vous pouvez réserver sur place.",
-    "part9": "Windsurfing Lesson ↠ 85 AUD",
-    "part10": "Kayak Rental ↠ 30 AUD",
+    "part9": "Windsurfing Lesson ↠ 85 AUD (55 €)",
+    "part10": "Kayak Rental ↠ 30 AUD (20 €)",
     "part11": "Sans compter les prix des transats et parasols ainsi que les bars et restaurants."
   },
   "where-to-stay": {
