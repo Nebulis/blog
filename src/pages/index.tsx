@@ -276,10 +276,15 @@ const NewArticleContainer = styled.div`
       display: flex;
       justify-content: center;
     }
+
+    .new-article-card-inner-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
   }
   @media (min-width: ${largeStart}) {
-    height: 60vh;
-    max-height: 60vh;
+    min-height: 60vh;
     .new-article-section-title-small-screen {
       display: none;
     }
@@ -289,6 +294,13 @@ const NewArticleContainer = styled.div`
     .new-article-content-container {
       padding-left: 1.5rem;
       flex-basis: 50%;
+    }
+    .new-article-card-inner-container {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      max-height: 60vh;
+      height: 60vh;
     }
   }
   @media (min-width: ${extraLargeStart}) {
@@ -304,6 +316,7 @@ const NewArticleContainer = styled.div`
   padding: 1.5rem;
   .new-article-card-container {
     display: flex;
+    align-items: center;
   }
   .new-article-content-container {
     display: flex;
@@ -463,7 +476,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </div>
             <Divider />
           </div>
-          <div className="new-article-card-container">{Card ? <Card card={{ imageOnly: true }} /> : null}</div>
+          <div className="new-article-card-container">
+            <div className="new-article-card-inner-container">{Card ? <Card card={{ imageOnly: true }} /> : null}</div>
+          </div>
           <div className="new-article-content-container">
             <div className="new-article-section-title-large-screen">
               <HomeSection>{t("new-article.title")}</HomeSection>
