@@ -52,6 +52,7 @@ interface BaseProps {
   bestseller?: boolean
   groupSize?: "none" | "small"
   groupType?: "public" | "private"
+  className?: string
 }
 
 const internalCardStyle = css`
@@ -187,6 +188,7 @@ export const InternalCard: React.FunctionComponent<
   linkBuilder,
   groupSize = "none",
   groupType,
+  className = "",
 }) => {
   const { i18n } = useCustomTranslation()
   const computedPrice = i18n.language === "fr" ? `${price}€` : `$${Math.trunc(price * 1.2)}`
@@ -198,7 +200,7 @@ export const InternalCard: React.FunctionComponent<
         lang: i18n.languageCode,
         slug: to,
       })}
-      className="get-your-guide-card inline-flex flex-column"
+      className={`get-your-guide-card inline-flex flex-column ${className}`}
     >
       <div className="internal-travel-card-container">
         <div className="information">

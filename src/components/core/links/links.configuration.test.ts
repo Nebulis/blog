@@ -156,6 +156,10 @@ const australiaLinks = () => {
   expect(getLink("outback")).toMatchObject({ label: { fr: "Outback", en: "Outback" }, published: false })
   expect(getLink("three-weeks-road-trip-in-australia")).toMatchObject({ label: { fr: "", en: "" }, published: false })
   expect(getLink("yellow-water")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+  expect(getLink("uluru")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+  expect(getLink("kakadu-national-park")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+  expect(getLink("alice-springs")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+  expect(getLink("alice-springs-kangaroo-sanctuary")).toMatchObject({ label: { fr: "", en: "" }, published: false })
 }
 
 const japanLinks = () => {
@@ -646,6 +650,26 @@ describe("links", () => {
       published: false,
     })
     expect(getLink("proboscis-monkey")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("cassowary")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("koala")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("black-flanked-rock-wallaby")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("quokka")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("wombat")).toMatchObject({
       label: { en: "", fr: "" },
       published: false,
     })

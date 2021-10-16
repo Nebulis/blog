@@ -5,6 +5,10 @@ import { ExtraImageProps } from "{{upPathImage pagePath}}types/shared"
 
 const alt = {
   name: "TODO",
+  cardFr1: "TODO Pinterest card",
+  cardFr2: "TODO Pinterest card",
+  cardEn1: "TODO Pinterest card",
+  cardEn2: "TODO Pinterest card",
 }
 
 export const {{getComponentImageName pagePath}}Images: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
@@ -17,6 +21,34 @@ export const {{getComponentImageName pagePath}}Images: React.FunctionComponent<E
   const data = useStaticQuery(graphql`
     query {
       name: file(relativePath: { eq: "{{pagePath}}/name.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cardFr1: file(relativePath: { eq: "{{pagePath}}/card-fr1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cardFr2: file(relativePath: { eq: "{{pagePath}}/card-fr2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cardEn1: file(relativePath: { eq: "{{pagePath}}/card-en1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cardEn2: file(relativePath: { eq: "{{pagePath}}/card-en2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
