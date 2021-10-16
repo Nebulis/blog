@@ -324,6 +324,31 @@ export const animalsLinks: OtherLink[] = [
     label: { fr: "", en: "" },
     published: false,
   },
+  {
+    id: "cassowary",
+    label: { fr: "", en: "" },
+    published: false,
+  },
+  {
+    id: "koala",
+    label: { fr: "", en: "" },
+    published: false,
+  },
+  {
+    id: "black-flanked-rock-wallaby",
+    label: { fr: "", en: "" },
+    published: false,
+  },
+  {
+    id: "quokka",
+    label: { fr: "", en: "" },
+    published: false,
+  },
+  {
+    id: "wombat",
+    label: { fr: "", en: "" },
+    published: false,
+  },
 ]
 
 export const noIdeaLinks: NavigationLink[] = [

@@ -81,5 +81,11 @@ export const australiaLinks: CountryLink = {
       ],
     },
   ],
-  others: [{ id: "three-weeks-road-trip-in-australia", label: { fr: "", en: "" }, published: false }],
+  others: [
+    { id: "three-weeks-road-trip-in-australia", label: { fr: "", en: "" }, published: false },
+    { id: "uluru", label: { fr: "", en: "" }, published: false },
+    { id: "kakadu-national-park", label: { fr: "", en: "" }, published: false },
+    { id: "alice-springs", label: { fr: "", en: "" }, published: false },
+    { id: "alice-springs-kangaroo-sanctuary", label: { fr: "", en: "" }, published: false },
+  ],
 }
