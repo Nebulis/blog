@@ -142,7 +142,7 @@ const australiaLinks = () => {
       fr: "Kuranda : Un village en pleine forêt tropicale sur les hauteurs de Cairns",
       en: "Kuranda: Village in the rainforest near Cairns",
     },
-    published: false,
+    published: true,
   })
   expect(getLink("magnetic-island")).toMatchObject({
     label: { fr: "Magnetic Island : L'île aux koalas", en: "Magnetic Island: Discover the largest wild koala colony" },

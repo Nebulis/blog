@@ -39,7 +39,7 @@ import { Title } from "../../../../components/core/title"
 import { Quote } from "../../../../components/core/quote"
 import { css } from "@emotion/react"
 import { GetYourGuideCard } from "../../../../components/core/get-your-guide"
-import { BookingGygCardContainer } from "../../../../components/layout/layout"
+import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { BookingCard, BookingWarning } from "../../../../components/core/booking"
 import thachTHaoHomestay from "../../../../images/asia/vietnam/southern-vietnam/my-tho/thach-thao-homestay.jpg"
 import mekongTasteBungalow from "../../../../images/asia/vietnam/southern-vietnam/my-tho/mekong-taste-bungalow.jpg"
@@ -249,7 +249,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <VietnamHeadline>{t("visit3.title")}</VietnamHeadline>
             <Divider />
             <SectionContent>
-              <MekongRiverMap />
+              <MapContainer>
+                <MekongRiverMap />
+              </MapContainer>
               <ImageDescription>{t("visit3.part1")}</ImageDescription>
               <p>{t("visit3.part2")}</p>
               <p>{t("visit3.part3")}</p>
