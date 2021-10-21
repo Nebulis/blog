@@ -11,11 +11,12 @@ import { DurationUnit, transformDurationUnit } from "../../utils"
 const buildBookingHotelUrl = ({ lang, hotel = "" }: { lang: Lang; hotel: string }) =>
   `https://www.booking.com/hotel/${hotel}.${lang}.html`
 
-type Kind = "low-cost" | "standard" | "deluxe" | "inn" | "hotel" | "flat"
+type Kind = "low-cost" | "standard" | "deluxe" | "inn" | "hotel" | "flat" | "chalet"
 
 const getKind = (lang: Lang, kind: Kind) => {
   if (lang === "fr" && kind === "inn") return "Auberge"
   else if (lang === "en" && kind === "inn") return "Inn"
+  else if (kind === "chalet") return "Chalet"
   else if (kind === "standard") return "Standard"
   else if (kind === "low-cost") return "Low-cost"
   else if (lang === "fr" && kind === "deluxe") return "De luxe"

@@ -3,7 +3,167 @@
   "google-description": "Located a few miles from Townsville, Queensland, Magnetic Island is a must-see place if you're coming to Eastern Australia. This little paradise is famous for its beaches and its many aquatic activities. Also known as  « Koala Island », there are more or less hard treks in the middle of a large eucalyptus forest to observe these small wild animals endemic to Australia. Come with us for this lovely discovery. Our travelogue with photos, tips, and advice.",
   "social-network-description": "Located a few miles from Townsville, Queensland, Magnetic Island is a must-see place if you're coming to Eastern Australia. This little paradise is famous for its beaches and its many aquatic activities. Also known as  « Koala Island », there are more or less hard treks in the middle of a large eucalyptus forest to observe these small wild animals endemic to Australia.",
   "quote": "Located a few miles from Townsville, Queensland, Magnetic Island is a must-see place if you're coming to Eastern Australia. This little paradise is famous for its beaches and its many aquatic activities. Also known as  « Koala Island », there are more or less hard treks in the middle of a large eucalyptus forest to observe these small wild animals endemic to Australia.",
-  "introduction": "Discover this small island with us through our travelogue, photos, tips, and advice.",
+  "introduction": {
+    "part1": "Discover this small island with us through our travelogue, photos, tips, and advice.",
+    "part2": "This morning we leave our van in the parking lot of the ferry for a day on Magnetic Island, one of our last stops on our [3-week road trip in Australia](three-weeks-road-trip-in-australia)."
+  },
+  "how": {
+    "title": "How to get there?",
+    "part1": "The island is accessible by ferry from Townsville.",
+    "part2": "Two companies travel to Magnetic Island: #SeaLink and Magnetic Island Ferries#. The main difference is that one is only for walk-on passengers while the other allows you to bring your vehicle.",
+    "part3": "[SeaLink](https://www.sealinkqld.com.au/timetables/magnetic-island): This company only accepts walk-on passengers, so you will need to leave your vehicle in the terminal parking lot.",
+    "part4": "The sailing takes about 20 minutes, and there is at least one departure per hour.",
+    "part5": "Townsville ➵ Magnetic Island, the earliest departure is at 5:30 a.m. and the latest departure is at 10:30 p.m.",
+    "part6": "Magnetic Island ➵ Townsville, the earliest departure is at 6 a.m. and the latest departure is at 11 p.m.",
+    "part7": "Price: AUD 32 per person round trip.",
+    "part8": "[Magnetic Island Ferries](https://magneticislandferries.com.au/ferry/timetablenew/): This company accepts vehicles.",
+    "part9": "The sailing lasts about 40/50 minutes, and there is a departure every 2 hours.",
+    "part10": "Price for a walk-on passenger: AUD 30 per person round trip.",
+    "part11": "Price for a vehicle: AUD 216.",
+    "part12": "Townsville ➵ Magnetic Island, the earliest departure is at 5 a.m. and the latest departure is at 7 p.m.",
+    "part13": "Magnetic Island ➵ Townsville, the earliest departure is at 6:05 am and the latest departure is at 8:00 pm.",
+    "part14": "Tickets are valid for 12 months. You can book your ticket online or book directly at the terminals.",
+    "part15": "Townsville Terminal: Open daily from 6 a.m. to 6 p.m.",
+    "part16": "Magnetic Island Terminal: Open daily from 8:15 a.m. to 4:25 p.m.",
+    "part17": "If you are on a road trip and you have a van, motorhome, or caravan, we advise you to leave your vehicle in Townsville and book transportation in Magnetic Island (you can book in advance, of course). 4X4s are the most recommended vehicles for touring the island."
+  },
+  "moving-around": {
+    "title": "How to get around?",
+    "part1": "Most of the hikes are easily accessible. However, there are isolated beaches for which you will need a vehicle. Some roads are closed to for cars. In other words, there is no best way to get around. It will depend on what you plan to do there.",
+    "part2": {
+      "title": "Bus",
+      "part1": "It's certainly the most practical and economical solution for getting around the island. However, the bus line only operates to the eastern part of the island, from the terminal to the Horseshoe bay via Arcadia. So you will not be able to reach remote parts of the island, located in the west. The main operator is [Sunbus](https://www.sunbus.com.au/magnetic-island).",
+      "part2": "Also, be careful, there is one bus every hour.  Make sure to get there in time.",
+      "part3": "Ticket price: AUD 3.80 per ticket / AUD 7.60 for the day - Sunbus Pass",
+      "part4": "Booking: The pass must be purchased on-site via an automatic distributor when you arrive."
+    },
+    "part3": {
+      "title": "Car",
+      "part1": "It's probably the most comfortable solution if you want to be independent and don't want to think during your visit.",
+      "part2": "You can bring your vehicle or rent one on-site. Be aware, however, that some parts of the island are closed to cars, while the western part is accessible only by 4X4s.",
+      "part3": "Price: 99 AUD for the day",
+      "part4": "Booking: [Isle Hire](https://www.islehire.com.au/)"
+    },
+    "part4": {
+      "title": "Scooter",
+      "part1": "You can rent a scooter to be more independent, especially you don't have to think about bus times.",
+      "part2": "Price: 40 AUD for the day",
+      "part3": "Booking: [Magnetic Informer](https://magneticinformer.com.au/tour/road-runner-scooter-hire/)"
+    },
+    "part5": {
+      "title": "Bike",
+      "part1": "Another solution for the more athletic and courageous. Take into account that the roads are hilly with more or less steep climbs and descents. Don't forget to keep energy for hikes, if needed.",
+      "part2": "Price: 30 AUD for the day",
+      "part3": "Booking: [Magnetic Adventure Hire](https://magneticadventurehire.com.au/magnetic-island-bike-hire/)"
+    },
+    "part6": "We only took the bus because it's suited our route perfectly. We didn't face any problem at all, buses were not crowded and right on time."
+  },
+  "what-time-of-year": {
+    "title": "Best time to visit?",
+    "part1": "Queensland has two seasons, a hot and humid summer (November to April) and a milder, drier winter (May to October). That said, it's also known as the « Sunshine State ». Even with more rain from December to March, it remains one of the sunniest states.",
+    "part2": "From December to February, you may be able to admire the sea turtles which come to lay eggs on the beaches.",
+    "part3": "In September, the Magnetic Island Festival kicks off for a month of events, with music, artists, and sports. Expect the island to be more crowded than usual.",
+    "part4": "The sea temperature is ideal all year round, but it is better to focus on the period without jellyfish, roughly from April to October. You will see signs and flags to warn you and explain precautions to take or if the sea is suitable for swimming.",
+    "part5": "The best time to go to avoid the crowd and the Australian school holidays is from #April to May and from September to October#."
+  },
+  "how-long": {
+    "title": "How long?",
+    "part1": "If you plan to do all the hikes and be able to rest a little, we recommend that you stay for #two days#.",
+    "part2": "It will allow you to do more things or even try your luck multiple times if you haven't seen koalas the day before, for example.",
+    "part3": "However, it is quite possible to visit most of the island in a single day. The island is extremely easy to access, thanks to the various ferry schedules."
+  },
+  "where-to-stay": {
+    "title": "Where to stay?",
+    "part1": "You will find everything, for different budgets and with different comfort. From a luxury hotel to a simple campsite, or even a hostel for several people.",
+    "part2": "We suggest below three different types of accommodation close to the beach. This criterion is important to us.",
+    "part3": "Prices vary depending on the period you book.",
+    "part4": "You can compare more offers on [Booking](booking-search:Magnetic+Island%2C+Australie) or on [Hostelworld](https://www.hostelworld.com/findabed.php/ChosenCity.Magnetic-Island/ChosenCountry.Australia)"
+  },
+  "visit": {
+    "part1": {
+      "title": "A bit of History",
+      "part1": "Legend says that when Captain James Cook sailed near the island in 1770, the compasses on the ship became dysfunctional. His theory was that the island's mass magnetically affected the compasses, hence the name « Magnetic Island ». However, it has never been proven.",
+      "part2": "But today it is more commonly referred to as « #Maggie Island# » or simply « Maggie ».",
+      "part3": "Magnetic Island is a #52 km2 tropical island located 8 km from Townsville#, in Queensland. It has become one of the best vacation spots, both for foreigners and for Australians.",
+      "part4": "It's also popular because it's near the Great Barrier Reef, although the island alone is well worth it."
+    },
+    "part2": {
+      "title": "Activities",
+      "part1": "Magnetic Island is a great place to hike. From a few minutes to a few hours, you will climb hills to enjoy spectacular views of the whole island and discover remote places and beaches.",
+      "part2": "#There is more than 25 km of hiking trails, from the simplest to the most arduous, and more than twenty beaches.#",
+      "part3": "Below is a small map of the island with all the hikes that you can do. However, I will only share about the one we have done. But feel free to find more information about the rest or to ask us questions. We can also ask for more information from our traveling friends, and we will be happy to inquire for you.",
+      "part4": "We mainly went to the southern, northern, and eastern parts of the island, as the western part was far too restrictive to get there. You can only access it by 4X4s.",
+      "part5": "We arrive by boat to the far south of the island, early in the morning, for an intense day of hiking.",
+      "part6": {
+        "title": "Picnic Bay ↠ Nelly Bay (Nº6)",
+        "part1": "Departure from the ferry terminal for a short walk to Nelly Bay. Here we find ourselves in the residential area, with cars, boats, and hotels. It's not very calm, but we headed towards Nelly Bay to take the bus. You could take it before, but you might as well walk a little to stretch your legs after the sailing.",
+        "part2": "But above all, we walked to take pictures of these impressive views of the bays that we will surely have the chance to discover during the day and that we can see from afar."
+      },
+      "part7": {
+        "title": "Geoffrey Bay ↠ Alma Bay (Nº5)",
+        "part1": "We then walk between Geoffrey Bay and Alma Bay.",
+        "part2": "Geoffrey Bay is an #ideal place if you want to go snorkeling#. One little piece of advice: buy a map that indicates the best place for diving and snorkeling. The map will also show you the most important and interesting points, such as the SS Yongala wreck, very famous for divers.",
+        "part3": "It is said that Geoffrey Bay is one of the best places on the island to observe wallabies. For that, you will have to venture near the rocks. Unfortunately, we did not see any here, but we still were able to spot some, in a different area.",
+        "part4": "Then head to #the magnificent Alma Bay beach#. This beach surrounded by rocks offers us an idyllic setting for a well-deserved break and a suntanning session.",
+        "part5": "This beach is supervised and there are warning signs to indicate whether it's safe to swim or not."
+      },
+      "part8": {
+        "title": "Arcadia : Forts Walk (Nº4 / Nº1)",
+        "part1": "We then are in the area called Arcadia. We move away from the beaches to climb into the hills. Deeper into the forest, we stop at multiple impressive and breathtaking viewpoints over the island.",
+        "part2": "Let's start with certainly one of the most well-known hikes: Forts Walk. #A hike of about an hour and a half will take you through historical remnants of World War II.#",
+        "part3": "The hike is also known as a popular place to see [koalas](koala).",
+        "part4": "We didn't do the entire hike because we veered off due to, or rather thanks to, walkers who told us they saw a koala. And of course, we went to the place they indicated.",
+        "part5": "Finally, we enjoyed the landscapes and impressive views of the bays below us.",
+        "part6": "We headed much further north, for the rest of what we planned."
+      },
+      "part9": {
+        "title": "Arcadia ↠ Horseshoe Bay (Nº3)",
+        "part1": "After our detour, we are going to Horseshoe Bay.",
+        "part2": "Before entering the Horseshoe Bay area, we walk along a small forest with multiple fruit and colorful trees. More importantly, it's where we will meet the more koalas, more or less visible, for our greatest pleasure.",
+        "part3": "Then we head to Horseshoe Bay, with also a supervised beach.",
+        "part4": "#Do not hesitate to do water activities here, including jet-skiing, sailing, or even kayaking.#",
+        "part5": "The beach is huge. On the west side, you will find all the shops, cafes, restaurants, and souvenir shops, as well as bicycle and diving equipment rentals. And the residential area too.",
+        "part6": "On the east side, a forest as far as the eye can see. After a delicious little ice cream, that's where we go."
+      },
+      "part10": {
+        "title": "Horseshoe Bay ↠ Balding Bay - Radical Bay (Nº2)",
+        "part1": "We walk along Horseshoe Bay beach to move towards a trail that splits in two.",
+        "part2": "#One goes down to Balding Bay (1.3 km), the other to Radical Bay (1.5 km)#. We are in a forest much denser than during our previous hikes.",
+        "part3": "Both are perfect swimming or relaxing spots on a fine sandy beach, where you can enjoy the beauty of turquoise water.",
+        "part4": "Despite the hikes being short, expect strenuous trails, especially because of the heat. But once you make it, you will not regret those few hard moments.",
+        "part5": "It was on these trails that we encountered wallabies. We couldn't move, even a little, because they were very fearful, contrary to what we had heard, but meeting them was still magical."
+      },
+      "part11": {
+        "title": "Arthur Bay - Florence Bay (Nº2)",
+        "part1": "We initially planned to go to Arthur Bay and Florence Bay. However it's only available on walking, and as we went there only for a day, we didn't have time to go. We still wanted to talk about them if you stay longer than us on Magnetic Island."
+      },
+      "part12": "For the hikes, #don't forget to bring walking shoes, water bottles, and a cap/hat#. You won't be protected by trees, most of the time. Although there are small grocery stores located all over the place, you can never be too careful.",
+      "part13": "Of course, let's not forget all the water activities you can do. You are spoilt for choice: swimming, jet skiing, diving, or even a boat trip.",
+      "part14": "For the romantic side, you can organize a #small horseback riding trip along the beaches at sunset#."
+    },
+    "part3": {
+      "title": "Animals",
+      "part1": "The forest is covered with eucalyptus trees, making it a haven for #koalas#.",
+      "part2": "It is mainly why we came here. Besides the beautiful scenery and the hikes we love so much, I was impatient to observe them in their natural habitat.",
+      "part3": "#Magnetic Island is home to Australia's largest colony of koalas. Around 800 koalas are living on the island.#",
+      "part4": "They hardly move, however, they are well camouflaged. You will have to look up and observe well to be sure to find them. Like us, you will probably end up with a little pain in the neck at the end of the day, but what an intense pleasure to find themselves like children looking for them in every nook and cranny.",
+      "part5": "Don't hesitate to ask other walkers and share your findings with them as well. Especially when you are on hiking trails, the best place to encounter some.",
+      "part6": "A real moving moment.",
+      "part7": "It's said that the best place to observe them is the « Forts Walk » hike. We only found one, however, it was indeed in the Arcadia area that we all the rest.",
+      "part8": "From December to January, you may have the pleasure of seeing #sea turtles# that come to lay their eggs on the beaches. They probably can be found on the most secluded beaches because we went there in December, and we didn't see any. We weren't focused on that either, so we maybe missed them.",
+      "part9": "The #Black-flanked rock-wallaby# is also one of the endemic animals of Magnetic Island. They are often found on top of rocks well hidden by vegetation, so it may be difficult to find them.",
+      "part10": "We read that the easiest to observe them and the largest population would be near Geoffrey Bay. We didn't see any there at all but we encountered some in our hike to Balding Bay. Don't be desperate to find some anywhere.",
+      "part11": "The island is a true refuge for wildlife. You can observe #many birds# there, whether near the beaches or in the forest.",
+      "part12": "We crossed a #rainbow lorikeet# near Horseshoe Bay, not disturbed at all by our presence, we spent several minutes watching it.",
+      "part13": "You may have the opportunity to admire many other species.",
+      "part14": "In short, take a good look, since, in addition to the landscape in front of you, wildlife is also present.",
+      "part15": "Here we are at the end of our little visit to Magnetic Island. With all the activities to do on the island, there is something for everyone, whether for a day or a few days.",
+      "part16": "If you are passing through the Australian east coast, we highly recommend that you take a trip there. It’s a must-see place in our opinion."
+    }
+  },
+  "conclusion": "Once there, you can't go back. From the paradisiacal beaches to the treks, to the animals, you will leave Magnetic Island full of memories.",
+  "question1": "Have you ever been to Magnetic Island?",
+  "question2": "What incredible animals have you come across?",
   "pinterest": "\uD83C\uDF0F Discovery of a small paradise. Hike in the eucalyptus forest, walk on splendid beaches and observe emblematic wild animals, including the koala, the attraction star of the island. In this article, we answer all your questions: How to get there? How long and at what period? All with our travelogue, our advice, and our photos. Click on the image for the complete guide... \uD83C\uDF0F",
   "love": "♡ See you soon for new adventures ♡",
   "facebook": {

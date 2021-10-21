@@ -3,7 +3,169 @@
   "google-description": "Située à quelques kilomètres de Townsville dans le Queensland, Magnetic Island est sans conteste un incontournable si vous venez dans l’Est de l’Australie. Ce petit paradis est réputé pour ses plages et ses nombreuses activités aquatiques. Surnommée également « L’île aux koalas », sa grande forêt d’eucalyptus remplie de treks plus ou moins durs permet d’observer ses petits animaux sauvages endémiques d’Australie. Embarquez avec nous pour cette jolie découverte. Notre récit de voyage avec photos, conseils et astuces.",
   "social-network-description": "Située à quelques kilomètres de Townsville dans le Queensland, Magnetic Island est sans conteste un incontournable si vous venez dans l’Est de l’Australie. Ce petit paradis est réputé pour ses plages et ses nombreuses activités aquatiques. Surnommée également « L’île aux koalas », sa grande forêt d’eucalyptus remplie de treks plus ou moins durs permet d’observer ses petits animaux sauvages endémiques d’Australie.",
   "quote": "Située à quelques kilomètres de Townsville dans le Queensland, Magnetic Island est sans conteste un incontournable si vous venez dans l’Est de l’Australie. Ce petit paradis est réputé pour ses plages et ses nombreuses activités aquatiques. Surnommée également « L’île aux koalas », sa grande forêt d’eucalyptus remplie de treks plus ou moins durs permet d’observer ses petits animaux sauvages endémiques d’Australie.",
-  "introduction": "Découvrez avec nous cette petite île à travers notre récit de voyage, nos photos, conseils et astuces.",
+  "introduction": {
+    "part1": "Découvrez avec nous cette petite île à travers notre récit de voyage, nos photos, conseils et astuces.",
+    "part2": "Ce matin nous laissons donc notre van sur le parking du ferry pour une journée sur Magnetic Island, l’une de notre dernière étape de notre [road trip de 3 semaines en Australie](three-weeks-road-trip-in-australia)."
+  },
+  "how": {
+    "title": "Comment y aller ?",
+    "part1": "L’île est accessible en ferry depuis Townsville.",
+    "part2": "Il existe deux compagnies qui assurent la liaison : #SeaLink et Magnetic Island Ferries#. La principale différence entre les deux est le fait que l’une est faite uniquement pour les piétons tandis que sur l’autre vous pouvez emmener votre propre véhicule.",
+    "part3": "[SeaLink](https://www.sealinkqld.com.au/timetables/magnetic-island) : Cette compagnie n’accepte que les piétons, vous devrez donc laisser votre véhicule sur le parking du terminal.",
+    "part4": "La traversée dure environ 20 minutes et il y a au moins un départ par heure.",
+    "part5": "Townsville ➵ Magnetic Island, le départ le plus tôt est 5h30 et le départ le plus tard est 22h30.",
+    "part6": "Magnetic Island ➵ Townsville, le départ le plus tôt est 6h et le départ le plus tard est 23h.",
+    "part7": "Prix : 32 AUD par personne aller/retour.",
+    "part8": "[Magnetic Island Ferries](https://magneticislandferries.com.au/ferry/timetablenew/) : Cette compagnie accepte les véhicules.",
+    "part9": "La traversée dure environ 40/50 minutes et il y a un départ toutes les 2h.",
+    "part10": "Prix pour un piéton : 30 AUD par personne aller/retour.",
+    "part11": "Prix pour votre véhicule : 216 AUD.",
+    "part12": "Townsville ➵ Magnetic Island, le départ le plus tôt est 5h et le départ le plus tard est à 19h.",
+    "part13": "Magnetic Island ➵ Townsville, le départ le plus tôt est 6h05 et le départ le plus tard est à 20h.",
+    "part14": "Les tickets sont valables 12 mois. Vous pouvez réserver votre ticket en ligne ou réserver directement aux terminaux.",
+    "part15": "Terminal de Townsville : Ouvert tous les jours de 6h à 18h.",
+    "part16": "Terminal de Magnetic Island : Ouvert tous les jours de 8h15 à 16h25.",
+    "part17": "Si comme nous vous faites un road trip et que vous avez un van, un camping-car ou une caravane, on vous conseille plutôt de laisser votre véhicule à Townsville et de gérer votre moyen de transport pour Magnetic Island sur place (en réservant en avance bien sûr). Les 4X4 sont les véhicules les plus recommandés pour parcourir l’île."
+  },
+  "moving-around": {
+    "title": "Comment se déplacer sur place ?",
+    "part1": "La plupart des randonnées sont accessibles assez facilement néanmoins vous aurez des plages totalement isolées et surtout particulièrement loin où il vous faudra un véhicule. Quant à d’autres chemins, ils sont totalement interdits aux véhicules. Autant dire qu'aucun moyen de transport n’est véritablement mieux que l’autre. Ce sera en fonction de ce que vous comptez faire sur place.",
+    "part2": {
+      "title": "#Bus#",
+      "part1": "Certainement la solution la plus pratique et économique pour se déplacer sur l’île. Néanmoins la ligne de bus ne fait que la partie Est de l’île, du terminal à la partie Horseshoe en passant par Arcadia, donc vous ne pourrez pas faire les parties les plus éloignées de l’île, située à l’Ouest. La ligne principale est opérée par [Sunbus](https://www.sunbus.com.au/magnetic-island).",
+      "part2": "Attention également, le bus ne passe que toutes les heures donc renseignez-vous bien pour arriver à tant et ne pas le louper.",
+      "part3": "Prix du ticket : 3,80 AUD unitaire / 7,60 AUD pour la journée - Pass Sunbus",
+      "part4": "Réservation : Il faut acheter le pass sur place via un distributeur automatique lors de votre arrivée."
+    },
+    "part3": {
+      "title": "#Voiture#",
+      "part1": "Certainement la solution la plus confortable si vous voulez être totalement autonome et ne pas réfléchir aux horaires tout au long de votre journée.",
+      "part2": "Vous avez le choix d’emmener votre propre véhicule ou d’en louer un sur place. Sachez néanmoins que certaines parties de l’île sont interdites aux véhicules, quant à la partie Ouest elle est accessible uniquement en 4X4.",
+      "part3": "Prix : 99 AUD pour la journée",
+      "part4": "Réservation : [Isle Hire](https://www.islehire.com.au/)"
+    },
+    "part4": {
+      "title": "#Scooter#",
+      "part1": "Vous pouvez louer un scooter pour là aussi être plus autonome sur l’île en particulier pour ce qui est des horaires.",
+      "part2": "Prix : 40 AUD pour la journée",
+      "part3": "Réservation : [Magnetic Informer](https://magneticinformer.com.au/tour/road-runner-scooter-hire/)"
+    },
+    "part5": {
+      "title": "#Vélo#",
+      "part1": "Une autre solution pour les plus sportifs et courageux. Prenez en compte que les routes sont vallonnées avec des montées et des descentes plus ou moins rudes. En plus de l’effort à fournir en vélo, vous aurez également l’effort des randonnées à faire.",
+      "part2": "Prix : 30 AUD pour la journée",
+      "part3": "Réservation : [Magnetic Adventure Hire](https://magneticadventurehire.com.au/magnetic-island-bike-hire/)"
+    },
+    "part6": "Nous concernant, nous n’avons utilisé que le bus qui convenait parfaitement à notre parcours et qui n’a pas du tout été un problème que ce soit niveau monde ou niveau horaire ... Et nos petites jambes bien sûr."
+  },
+  "what-time-of-year": {
+    "title": "À quelle période ?",
+    "part1": "Le Queensland a deux saisons, un été chaud et humide (novembre à avril) et un hiver plus doux et sec (mai à octobre). Cela dit, on ne le surnomme pas le « Sunshine State » pour rien, malgré une augmentation de la pluie de décembre à mars, il reste un des États avec le plus d’ensoleillement à l’année.",
+    "part2": "Durant les mois de décembre à février, vous pourrez peut-être admirer les tortues de mer qui viennent pondre sur les plages.",
+    "part3": "En septembre, le Magnetic Island Festival démarre pour un mois d'événements. Que ce soit musicaux, artistiques et surtout sportifs, donc attendez-vous à beaucoup de monde à cette période.",
+    "part4": "La température de la mer est idéale toute l’année mais il vaut mieux privilégier la période sans méduses, qui est de avril à octobre. Vous verrez des panneaux affichés et des drapeaux pour vous prévenir des moindres mesures à respecter ou si la période est propice à la baignade.",
+    "part5": "Les meilleurs moments pour y aller et éviter le plus la foule et surtout les vacances scolaires des australiens sont #de avril à mai et de septembre à octobre#."
+  },
+  "how-long": {
+    "title": "Combien de temps ?",
+    "part1": "Si vous voulez réussir à faire toutes les randonnées tout en profitant de petit moment de repos malgré tout, on vous conseille d’y rester #deux jours#.",
+    "part2": "Cela vous permettra de faire plus de choses ou bien même de repasser aux endroits phares si vous n’y avez pas vu de koalas la veille par exemple.",
+    "part3": "Néanmoins il est tout à fait possible de visiter l’île en une seule journée, l’île étant extrêmement facile d’accès notamment grâce aux horaires des ferrys variés."
+  },
+  "where-to-stay": {
+    "title": "Où dormir ?",
+    "part1": "Vous trouverez de tout, pour tous les budgets et en fonction du confort que vous souhaitez. De l’hôtel luxueux au simple camping, ou même dortoir pour plusieurs personnes.",
+    "part2": "On vous propose ici 3 différents types de logements. Nous avions choisi des résidences proches de la plage, ce critère étant important à nos yeux.",
+    "part3": "* Les prix varient en fonction de la saison à laquelle vous réservez.",
+    "part4": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:Magnetic+Island%2C+Australie) ou sur [Hostelworld](https://www.french.hostelworld.com/Auberges-de-Jeunesse/Magnetic-Island/Australie)."
+  },
+
+  "visit": {
+    "part1": {
+      "title": "UN PEU D’HISTOIRE",
+      "part1": "Selon la légende, lorsque le capitaine James Cook navigua près de l'île en 1770, les compas présents sur le navire se mirent à ne plus fonctionner correctement. Sa théorie fut que la masse de l'île affectait les compas magnétiquement ce qui donna son nom de “Magnetic Island” à l’île, cependant cela n’a jamais pu être prouvé.",
+      "part2": "Mais aujourd’hui elle est plus communément appelée « #Maggie Island# » ou tout simplement « Maggie ».",
+      "part3": "#Île tropicale de 52 km2 située à 8 km de Townsville#, dans l’État du Queensland, elle est devenue au fil des années un véritable lieu de vacances, que ce soit pour les étrangers mais également pour les Australiens.",
+      "part4": "Son accès facile à la Grande Barrière de Corail en fait également un endroit particulièrement populaire, même si l’île à elle seule en vaut largement la peine."
+    },
+    "part2": {
+      "title": "LES ACTIVITÉS",
+      "part1": "Magnetic Island est un endroit idéal pour faire de la randonnée, de quelques minutes à quelques heures, qui vous permet de grimper des collines pour avoir des vues spectaculaires sur l’ensemble de l’île, de découvrir des endroits reculés, de vous rendre sur les plages ou tout simplement de les longer.",
+      "part2": "#Elle compte plus de 25 km de sentiers de randonnée, que ce soit des plus simples au plus ardus et plus d’une vingtaine de plages.#",
+      "part3": "On vous met une petite map de l’île avec toutes les randonnées qu’il est possible de faire. Néanmoins je ne vous parlerai bien sûr que de celles que nous avons faites mais n’hésitez pas à vous renseigner davantage ou à nous poser des questions, on pourra nous aussi demander plus de renseignements pour vous à nos amis voyageurs et on se fera un plaisir de vous renseigner.",
+      "part4": "Nous nous sommes principalement concentré sur les parties Sud, Nord et Est de l’île, car la partie Ouest étant bien trop contraignante pour s’y rendre. Vous ne pouvez y accéder qu’en 4X4.",
+      "part5": "Nous arrivons donc en bateau tout au Sud de l’île, tôt le matin, pour une journée intense en randonnée.",
+      "part6": {
+        "title": "Picnic Bay ↠ Nelly Bay (Nº6)",
+        "part1": "Départ du bateau pour une courte promenade jusqu’à Nelly Bay. Ici on se retrouve en pleine zone résidentielle, voitures, bateaux et hôtels. Rien de bien calme mais on se dirige surtout vers Nelly Bay pour prendre le bus. On pouvait bien entendu le prendre avant mais autant marcher un peu pour se dégourdir les jambes après le bateau et surtout bien se réveiller pour cette longue journée qui se profile.",
+        "part2": "Mais surtout faire des photos de ces vues impressionnantes sur les baies qu’on aura surement la chance de découvrir dans la journée et qu’on peut observer de loin."
+      },
+      "part7": {
+        "title": "Geoffrey Bay ↠ Alma Bay (Nº5)",
+        "part1": "Nous nous promenons ensuite entre Geoffrey Bay et Alma Bay.",
+        "part2": "Geoffrey Bay est une #zone idéale si vous voulez faire du snorkeling#. N'hésitez d'ailleurs pas à acheter en boutique une carte qui représente tous les coins de l'île où faire de la plongée ou du snorkeling mais surtout les points les plus importants et intéressants tel que l'épave du SS Yongala, une épave très connu dans le monde de la plongée.",
+        "part3": "Il est dit que c'est à Geoffrey Bay que vous pourrez observer le plus facilement des wallabies. Pour ça il faudra vous aventurez près des rochers. Malheureusement nous n'en avons pas vu ici mais on en a croisé bien plus loin sur l'île.",
+        "part4": "Direction ensuite la #magnifique plage d’Alma Bay#. Cette plage entourée de rochers nous offre un cadre idyllique pour une petite pause bien méritée et une petite séance de bronzage.",
+        "part5": "Cette plage est surveillée et vous aurez des panneaux qui vous indiqueront si vous pouvez vous baigner ou non."
+      },
+      "part8": {
+        "title": "Arcadia : Forts Walk (Nº4 / Nº1)",
+        "part1": "Nous nous retrouvons ensuite dans la zone que nous appellerons Arcadia. Ici on s’éloigne des plages pour monter dans les collines et s’enfoncer dans la forêt pour s’arrêter à de multiples points de vue impressionnants et imprenables sur toute l’île.",
+        "part2": "Commençons par certainement l’une des randonnées les plus connues, Forts Walk, #une randonnée d'environ une heure et demie qui vous emmènera découvrir des vestiges historiques de la seconde guerre mondiale#.",
+        "part3": "Randonnée également connue comme endroit populaire pour observer les [koalas](koala).",
+        "part4": "Nous n’avons pas fait la randonnée en entier car nous avons dévié à cause, ou grâce plutôt à des promeneurs qui nous ont indiqués avoir vu un koala d’un côté. Et bien sûr pour ne pas louper cette chance nous y sommes allés.",
+        "part5": "Enfin nous avons quand même profité d’un avant goût de paysages et vues impressionnantes sur les baies situées en dessous de nous.",
+        "part6": "Ce qui nous a emmené à la suite de notre programme, bien plus au Nord cette fois- ci."
+      },
+      "part9": {
+        "title": "Arcadia ↠ Horseshoe Bay (Nº3)",
+        "part1": "Nous voici donc après avoir dévié, en direction de Horseshoe Bay.",
+        "part2": "Mais avant de rentrer dans la zone de Horseshoe Bay nous longeons une petite forêt avec de multiples arbres fruitiers, arbres colorés mais surtout c’est ici que nous rencontrerons pour notre plus grand plaisir le plus de koalas, plus ou moins visible d’ailleurs.",
+        "part3": "Direction ensuite la plage de Horseshoe Bay qui est elle aussi également une plage surveillée.",
+        "part4": "#N’hésitez pas à faire vos activités aquatiques ici, notamment le jet-ski, la voile ou pourquoi pas même du kayak.#",
+        "part5": "Immense plage où vous aurez du côté Ouest tous les commerces regroupés, cafés, restaurants et boutiques de souvenirs ou encore locations de vélos et matériels de plongée. Et l’espace résidentielle également.",
+        "part6": "De l’autre côté, côté Est, une forêt à perte de vue. Après une bonne petite glace, c'est vers là que nous nous rendons."
+      },
+      "part10": {
+        "title": "Horseshoe Bay ↠ Balding Bay - Radical Bay (Nº2)",
+        "part1": "On longe donc la plage de Horseshoe Bay pour se diriger vers un chemin qui se sépare en deux.",
+        "part2": "#L’un descend vers Balding Bay (1,3 km), l’autre vers Radical Bay (1,5 km)#. On se retrouve dans une forêt bien plus dense que nos précédentes randonnées.",
+        "part3": "Deux parfaits spots pour nager ou se détendre au calme sur une plage de sable fin et observer la beauté de l’eau turquoise.",
+        "part4": "Malgré le fait que les randonnées soient courtes sur le papier, attendez vous néanmoins à quelques sentiers ardus surtout en fonction de la chaleur, malgré le fait que le sentier ne soit pas en plein soleil. Mais l’arrivée ne vous fera pas regretter ces quelques moments plus durs de marche.",
+        "part5": "C’est d’ailleurs sur ces sentiers que nous avons croisé des wallabies. Bien trop peureux pour pouvoir vraiment les approcher contrairement à ce que nous avions entendu, mais la rencontre fut quand même magique."
+      },
+      "part11": {
+        "title": "Arthur Bay - Florence Bay (Nº2)",
+        "part1": "Arthur Bay et Florence Bay étaient de base dans nos projets de randonnées malheureusement en une journée et parce qu’elles sont uniquement accessibles à pied nous n’avons pas eu le temps de les faire. Mais on vous les indique où cas où vous restiez plus longtemps que nous sur Magnetic Island."
+      },
+      "part12": "Pour toutes les randonnées, #n’oubliez pas de prendre de bonnes chaussures de marche, des bouteilles d’eau et une casquette sur vous#, la plupart sont en plein soleil et même s'il y a des petites épiceries situées un peu partout sur les grands axes, on n'est jamais trop prudent.",
+      "part13": "Bien sûr, n'oublions pas les multiples activités aquatiques que vous pourrez faire. Si beaucoup de randonnées vous emmènent sur les plages, farniente, nage, jet ski ou plongée seront à votre portée, ou même excursion en bateau.",
+      "part14": "Pour le côté romantique, vous pouvez organiser une petite sortie #équitation le long des plages au coucher du soleil#."
+    },
+    "part3": {
+      "title": "LES ANIMAUX",
+      "part1": "La forêt de l’île est principalement recouverte d’arbres d'eucalyptus ce qui en fait un véritable paradis pour les petites boules de poils emblématiques de l’Australie, les #Koalas#.",
+      "part2": "C’est principalement pour cette raison que nous sommes venus ici, en plus des paysages magnifiques et des randonnées que nous affectionnons tant, j’avais plus que hâte de pouvoir les observer dans leur habitat naturel.",
+      "part3": "#Magnetic Island abrite la plus grande concentration de koalas d’Australie, on estime qu’environ 800 koalas vivent sur l’île.#",
+      "part4": "Ils ne bougent cela dit quasiment pas et ils sont bien camouflés, il vous faudra bien lever les yeux et bien observer pour être sûr d’en apercevoir. Vous finirez surement comme nous avec une petite douleur à la nuque en fin de journée mais quel plaisir intense de se retrouver comme des enfants à les chercher dans les moindres recoins.",
+      "part5": "N’hésitez pas à demander aux autres promeneurs et à leur partager vos découvertes également. Surtout lorsque vous êtes sur des sentiers de randonnées où les rencontres sont les plus propices.",
+      "part6": "Un véritable moment d’émotion.",
+      "part7": "Il est dit que le meilleur endroit pour pouvoir les observer est la randonnée « Forts Walk », nous avons eu du mal à en voir pendant la randonnée par contre c’est effectivement dans la zone de Arcadia que nous les avons vu.",
+      "part8": "Pendant les mois de décembre à janvier, vous aurez peut-être le plaisir de voir des #tortues de mer# qui viennent pondre sur les plages. Elles se retrouvent sûrement sur les plages les plus isolées car nous y sommes allés en décembre et de notre côté nous n’en avons pas vu, cela dit nous n’étions pas concentré sur ça non plus donc nous les avons peut-être loupés.",
+      "part9": "Le #Wallaby des rochers# est également un des animaux endémiques de Magnetic Island. Il peut être un peu compliqué de les observer si vous tombez sur des wallabys discrets car ils se trouvent souvent en haut des rochers bien cachés par la végétation.",
+      "part10": "Il est dit que le plus facile pour les observer et que la plus grande population serait du côté de Geoffrey Bay. Nous n’en n’avons pas du tout croisé ici et de notre côté, c’est lors de notre randonnée vers Balding Bay que nous en avons croisé, comme quoi, c’est quasiment à l’opposé des prédictions et nous les avons vu totalement par hasard.",
+      "part11": "L'île est un véritable refuge pour la vie sauvage. Vous pourrez y observer de #nombreux oiseaux#, que ce soit près des plages ou dans la forêt.",
+      "part12": "Nous avons croisé un #loriquet arc-en-ciel# près de Horseshoe Bay, pas perturbé du tout par notre présence, nous avons passé plusieurs minutes à l’observer faire sa petite vie.",
+      "part13": "Vous aurez peut-être l’occasion d’admirer bien d’autres espèces.",
+      "part14": "En bref, observez bien puisque en plus du paysage qui s’offre à vous, la faune sauvage est également bien présente.",
+      "part15": "Voilà pour notre petit passage par Magnetic Island. Avec toutes les activités à faire sur l'île, il y en a pour tous les goûts, que ce soit pour une journée ou pour quelques jours.",
+      "part16": "Si vous passez par la côte est australienne, on vous conseille vivement d’y faire un tour. C’est vraiment un indispensable à nos yeux."
+    }
+  },
+  "conclusion": "Une fois qu’on y est, impossible de repartir. Entre les plages paradisiaques, les treks et les animaux, vous en aurez plein les yeux et pleins la tête.",
+  "question1": "Êtes-vous déjà allé à Magnetic Island ?",
+  "question2": "Quels animaux incroyables avez-vous pu croiser ?",
+  "love": "♡ À bientôt pour de nouvelles aventures ♡",
   "pinterest": "🌏 Découverte d’un petit paradis. Randonnée dans la forêt d’eucalyptus, promenade sur les splendides plages, sans oublier des animaux sauvages emblématiques à observer dont le koala, la véritable star de l’île. Dans cet article, on répond à toutes vos questions : Comment y aller ? Combien de temps et à quelle période ? Le tout avec notre récit de voyage, nos conseils et nos photos. Cliquez sur l'image pour le guide complet ... 🌏",
   "facebook": {
     "part1": "♡ Coucou les voyageurs ! ♡",
