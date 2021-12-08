@@ -4,12 +4,7 @@ module.exports = {
     browser: true,
     jest: true,
   },
-  extends: [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:jest/all",
-    "plugin:prettier/recommended",
-  ],
+  extends: ["plugin:@typescript-eslint/recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
   plugins: ["react-hooks", "@emotion"],
   parserOptions: {
     ecmaVersion: 2018,
@@ -31,10 +26,19 @@ module.exports = {
     "@typescript-eslint/ban-ts-ignore": "off",
     "react/prop-types": "off",
     "react/self-closing-comp": "error",
-    "jest/prefer-expect-assertions": "off",
     "array-callback-return": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "@emotion/pkg-renaming": "error",
   },
+  overrides: [
+    {
+      files: ["**/*.test.ts", "**/*.test.tsx"],
+      extends: ["plugin:jest/all"],
+      rules: {
+        "jest/prefer-expect-assertions": "off",
+        "jest/require-hook": "off", // pissing me :)
+      },
+    },
+  ],
 }

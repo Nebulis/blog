@@ -20,10 +20,10 @@ describe("isPublished", () => {
   it("should work yeah I know it's a bad name", () => {
     const props = { id: "", label: { fr: "", en: "" } }
 
-    expect(isPublished({ published: createDate(21, "october", 2019), ...props })).toStrictEqual(true)
-    expect(isPublished({ published: createDate(21, "october", 2019, 23, 59, 59), ...props })).toStrictEqual(true)
-    expect(isPublished({ published: createDate(22, "october", 2019), ...props })).toStrictEqual(true)
-    expect(isPublished({ published: createDate(22, "october", 2019, 0, 0, 1), ...props })).toStrictEqual(false)
-    expect(isPublished({ published: createDate(23, "october", 2019), ...props })).toStrictEqual(false)
+    expect(isPublished({ published: createDate(21, "october", 2019), ...props })).toBe(true)
+    expect(isPublished({ published: createDate(21, "october", 2019, 23, 59, 59), ...props })).toBe(true)
+    expect(isPublished({ published: createDate(22, "october", 2019), ...props })).toBe(true)
+    expect(isPublished({ published: createDate(22, "october", 2019, 0, 0, 1), ...props })).toBe(false)
+    expect(isPublished({ published: createDate(23, "october", 2019), ...props })).toBe(false)
   })
 })
