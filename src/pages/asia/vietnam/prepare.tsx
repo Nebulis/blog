@@ -7,7 +7,7 @@ import translationEn from "../../../locales/en/asia/vietnam/prepare.json"
 import i18n from "i18next"
 import { useCustomTranslation } from "../../../i18n-hook"
 import { ImageAsLandscape, ImageAsPortrait } from "../../../components/images/layout"
-import { FaBriefcaseMedical, FaLaptop, FaShoppingBag, FaTshirt } from "react-icons/all"
+import { FaBriefcaseMedical, FaLaptop, FaShoppingBag, FaTshirt } from "react-icons/fa"
 import {
   Baggage,
   Covid,

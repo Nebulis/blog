@@ -17,7 +17,7 @@ import {
   FaSpinner,
   FaTwitter,
   FaUser,
-} from "react-icons/all"
+} from "react-icons/fa"
 import { Status } from "../../types/shared"
 import { ErrorAlert, SuccessAlert } from "./alert"
 import { subscribe } from "../../services/newsletter"

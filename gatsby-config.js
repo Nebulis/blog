@@ -3,9 +3,9 @@ const pages = (page) => {
 }
 module.exports = {
   flags: {
-    // FAST_DEV: true,
-    PRESERVE_WEBPACK_CACHE: true,
-    // DEV_SSR: false, // can't disable this fucker
+    FAST_DEV: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    DEV_SSR: false, // can't disable this fucker
   },
   siteMetadata: {
     siteUrl: `https://magicoftravels.com`,
@@ -76,18 +76,16 @@ module.exports = {
               ...pages("/asia/singapore/"),
               ...pages("/asia/taiwan/"),
               ...pages("/oceania/"),
-              ...pages("/asia/japan/tokyo/"),
-              ...pages("/asia/japan/fuji/"),
             ],
           },
-          {
-            userAgent: "twitterbot",
-            allow: [...pages("/asia/japan/")],
-          },
-          {
-            userAgent: "facebookexternalhit",
-            allow: [...pages("/asia/japan/")],
-          },
+          // {
+          //   userAgent: "twitterbot",
+          //   allow: [...pages("/asia/japan/")],
+          // },
+          // {
+          //   userAgent: "facebookexternalhit",
+          //   allow: [...pages("/asia/japan/")],
+          // },
         ],
       },
     },

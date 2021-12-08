@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useContext, useEffect, useState } from "react"
-import { FaCircle, FaFacebook, FaInstagram, FaPinterest, FaSearch, FaTwitter } from "react-icons/all"
+import { FaCircle, FaFacebook, FaInstagram, FaPinterest, FaSearch, FaTwitter } from "react-icons/fa"
 import { css } from "@emotion/react"
 import banner from "../../images/logo-the-real.svg"
 import bannerMobile from "../../images/logo-mobile-the-real.svg"
