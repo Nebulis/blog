@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from "react"
-import { FaSearch, FaTimesCircle } from "react-icons/all"
+import { FaSearch, FaTimesCircle } from "react-icons/fa"
 import { Input } from "../core/input"
 import { DarkButton } from "../core/button"
 import { css } from "@emotion/react"

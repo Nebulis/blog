@@ -31,7 +31,6 @@ export const configureI18n = () => {
         return <span className="b--red bw2 ba bg-purple white">{key}</span>
       },
       react: {
-        wait: true,
         useSuspense: false,
       },
     })

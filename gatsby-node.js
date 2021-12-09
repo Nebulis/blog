@@ -15,7 +15,7 @@ exports.onCreatePage = ({ page, actions }) => {
   createPage(newPage)
   // }
 }
-exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig, plugins }) => {
   const PATTERN = /\.(eot|otf|ttf|woff(2)?)(\?.*)?$/
 
   const config = getConfig()
@@ -30,8 +30,21 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
   } else {
     console.log(`DID NOT DETECT CIRCLE-CI => process.env.CIRCLECI=${process.env.CIRCLECI}`)
   }
+
+  // migration v2 to v3
+  if (stage === "build-javascript" || stage === "develop") {
+    config.plugins.push(plugins.provide({ process: "process/browser" }))
+  }
+
   const newConfig = {
     ...config,
+    resolve: {
+      ...config.resolve,
+      alias: {
+        ...config.resolve.alias,
+        path: require.resolve("path-browserify"),
+      },
+    },
     module: {
       // Manually swap out the rule who's test matches PATTERN
       rules: config.module.rules.map((rule) => {

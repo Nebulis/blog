@@ -23,7 +23,6 @@ describe("link", () => {
     )
     expect(container.querySelector("a")?.href).toMatch("/contact")
     expect(container.querySelector("span")).toBeNull()
-    // eslint-disable-next-line jest/no-truthy-falsy
     expect(getByText("Abc")).toBeTruthy()
   })
   it("should render a link when the article is not published and mode is development", () => {
@@ -41,9 +40,7 @@ describe("link", () => {
       </ApplicationContext.Provider>
     )
     expect(container.querySelector("a")?.href).toMatch("/asia/japan/osaka-castle")
-    // eslint-disable-next-line jest/no-truthy-falsy
     expect(container.querySelector("span")).toBeTruthy()
-    // eslint-disable-next-line jest/no-truthy-falsy
     expect(getByText("Abc")).toBeTruthy()
   })
   it("should render a text when the article is not published and mode is production", () => {
@@ -61,7 +58,6 @@ describe("link", () => {
       </ApplicationContext.Provider>
     )
     expect(container.querySelector("a")).toBeNull()
-    // eslint-disable-next-line jest/no-truthy-falsy
     expect(getByText("Abc")).toBeTruthy()
   })
   it("should render nothing when the article is not published, mode is production and action is hide", () => {

@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
 import React from "react"
-import { FaArrowCircleUp } from "react-icons/all"
+import { FaArrowCircleUp } from "react-icons/fa"
 import { useWindowSize } from "../hooks/useWindowSize"
 import { useScrollPosition } from "../hooks/useScrollPosition"
 import { mediumEnd } from "./variables"

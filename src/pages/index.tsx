@@ -72,7 +72,7 @@ const visitedCountries = [
   "india",
   "sri-lanka",
   "taiwan",
-  "thailand",
+  // "thailand",
   "senegal",
   "united-states",
 ]

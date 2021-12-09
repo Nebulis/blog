@@ -5,7 +5,7 @@ import SEO from "../../../components/layout/seo"
 import { useCustomTranslation } from "../../../i18n-hook"
 import translationFr from "../../../locales/fr/asia/japan/prepare-japan.json"
 import translationEn from "../../../locales/en/asia/japan/prepare-japan.json"
-import { FaBriefcaseMedical, FaLaptop, FaShoppingBag, FaTshirt } from "react-icons/all"
+import { FaBriefcaseMedical, FaLaptop, FaShoppingBag, FaTshirt } from "react-icons/fa"
 import {
   defaultExcludedWeatherEntries,
   JapanBlogLayout,

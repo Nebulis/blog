@@ -24,7 +24,7 @@ import {
   smallEnd,
   smallStart,
 } from "../core/variables"
-import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/all"
+import { FaCheck, FaEnvelope, FaSpinner, FaTimes } from "react-icons/fa"
 import { Status } from "../../types/shared"
 import { useCustomTranslation } from "../../i18n-hook"
 import { subscribe } from "../../services/newsletter"

@@ -12,7 +12,7 @@ import { getLinkLabel, isLinkPublished } from "../core/links/links.utils"
 import { ApplicationLink } from "../core/links/link"
 import { CityLink, ContinentLink, CountryLink, Lang } from "../core/links/links.types"
 import { ApplicationContext } from "../application"
-import { FaChevronDown, FaTwitter, FaFacebook, FaInstagram, FaPinterest } from "react-icons/all"
+import { FaChevronDown, FaTwitter, FaFacebook, FaInstagram, FaPinterest } from "react-icons/fa"
 import {
   backgroundPrimaryColor,
   bannerHeight,
@@ -524,7 +524,7 @@ export const Tree: React.FunctionComponent<{
         style={{
           opacity,
           height: animate
-            ? height.interpolate((height: any) => (isOpen && prev === isOpen ? "auto" : height))
+            ? height.to((height: any) => (isOpen && prev === isOpen ? "auto" : height))
             : isOpen
             ? "auto"
             : "0",

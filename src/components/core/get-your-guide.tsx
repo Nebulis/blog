@@ -3,7 +3,7 @@ import { useCustomTranslation } from "../../i18n-hook"
 import { css } from "@emotion/react"
 import React from "react"
 import { Lang } from "./links/links.types"
-import { FaClock, FaUser } from "react-icons/all"
+import { FaClock, FaUser } from "react-icons/fa"
 import { primaryDarkColor } from "./variables"
 import { DurationUnit, transformDurationUnit } from "../../utils"
 

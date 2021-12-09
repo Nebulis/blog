@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
 import React, { useContext, useEffect, useState } from "react"
-import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react-icons/all"
+import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react-icons/fa"
 import { backgroundPrimaryColor, mobileEnd } from "./variables"
 import { ApplicationLink } from "./links/link"
 import { MenuContext } from "../layout/menu.context"
@@ -103,6 +103,8 @@ const carouselStyle = css`
     }
   }
 `
+
+type Props = { className?: string; hide?: boolean }
 export const Carousel: React.FunctionComponent = ({ children }) => {
   if (!Array.isArray(children)) throw new Error("Please add children to the carousell")
   const [currentElement, setCurrentElement] = useState(0)
@@ -178,7 +180,7 @@ export const Carousel: React.FunctionComponent = ({ children }) => {
               index === currentElement + 1 ||
               index === currentElement - 1)
           ) {
-            return React.cloneElement(child, {
+            return React.cloneElement<Props>(child as any, {
               className: `${currentElement === index ? "visible" : "hidden"}`,
               hide: currentElement !== index,
             })
