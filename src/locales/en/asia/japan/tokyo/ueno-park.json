@@ -34,8 +34,9 @@
   },
   "where-to-stay": {
     "title": "Where to stay near Ueno Park?",
-    "part1": "We stayed a night at the [Ueno Touganeya Hotel](booking-hotel:jp/ueno-touganeya). Ideally located and very close to the train station in a quiet side street. It's also close to many restaurants. The bedroom and bathroom are a bit small but sufficient for our stay.",
-    "part2": "Compare more offers on [Booking](booking-search:Ueno)."
+    "part1": "We share three different accommodations to suit different budgets. We have chosen hotels more or less close to Ueno Park and the train station but be aware that this is not an obligation and that you can look for accommodation in quieter areas, even if we found the district calm enough.",
+    "part2": "The prices vary enormously depending on the seasons. For this article, we share hotels/prices for the tourist season in Spring, which means prices are higher than usual.",
+    "part3": "You can compare more offers on [Booking](booking-search:Ueno)."
   },
   "where-to-have": {
     "title": "Where to have?",

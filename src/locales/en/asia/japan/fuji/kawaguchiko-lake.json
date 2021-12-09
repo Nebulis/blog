@@ -15,7 +15,7 @@
     "title": "How to get there?",
     "part1": "After a lot of research, we found that going through Tokyo to go back down to the lake was the best solution.",
     "part2": "#From Tokyo, expect around 2h30#",
-    "part3": "From Shinjuku Station take the JR Chuo Line to Otsuki Station ↠ for around 1h10 ↠ covered by JR pass.\n",
+    "part3": "From Shinjuku Station take the JR Chuo Line to Otsuki Station ↠ for around 1h10 ↠ covered by JR pass.",
     "part4": "Once at Otsuki Station go to Fujikyu Railway ↠ for around 1 hour ↠ it's not covered by JR pass, so you will have to buy tickets (~ ¥ 1150 one way).",
     "part5": "More information about [Transports in Japan](transports-in-japan)."
   },
@@ -25,9 +25,10 @@
   },
   "where-to-stay": {
     "title": "Where to stay near Kawaguchiko Lake?",
-    "part1": "We booked our hotel a bit late and did not have a lot of choices.",
-    "part2": "We booked the [Shiki-No Yado Fujisan](booking-hotel:jp/shiki-no-yado-popura) hotel, which was reasonably priced. The rooms are a bit dated though, but the view of the lake or Mount Fuji is appreciable. It’s not luxury, but fine for few nights. Right in front of the lake, the location is perfect.",
-    "part3": "Compare and book your hotel on [Booking](booking-search:Fujikawaguchiko)."
+    "part1": "We booked our hotel a bit late and did not have a lot of choices. Remember to book well in advance to find the best hotel.",
+    "part2": "We share two hotels located on one side of the lake with Mt. Fuji behind you (but you can book a room with a lake or Mt. Fuji view), and a hotel on the opposite side, for which the price is necessarily higher.",
+    "part3": "The prices vary enormously depending on the seasons. For this article, we share hotels/prices for the tourist season in Spring, which means prices are higher than usual.",
+    "part4": "You can compare more offers on [Booking](booking-search:Fujikawaguchiko)."
   },
   "visit": {
     "title": "Visit",

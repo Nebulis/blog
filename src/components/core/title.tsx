@@ -31,6 +31,9 @@ const titleStyle = css`
     padding: 0 2px;
     text-decoration: none;
   }
+  a:visited {
+    color: white;
+  }
   a:hover {
     box-shadow: 0px 0px 2px 1px ${primaryColor};
   }
