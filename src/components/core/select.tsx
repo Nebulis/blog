@@ -1,11 +1,11 @@
 import React from "react"
 import { primaryColor, primaryDarkColor } from "./variables"
 import { css } from "@emotion/react"
-import ReactSelect, { OptionTypeBase } from "react-select"
+import ReactSelect from "react-select"
 import { useCustomTranslation } from "../../i18n-hook"
 
 export const Select: React.FunctionComponent<{
-  options: OptionTypeBase[]
+  options: any[] // no base type
   onChange: (value: string | undefined) => void
   placeholder: string
   value?: any
