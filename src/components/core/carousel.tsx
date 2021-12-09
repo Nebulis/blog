@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import React, { ReactNode, useContext, useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { FaChevronCircleLeft, FaChevronCircleRight, FaMapMarkerAlt } from "react-icons/fa"
 import { backgroundPrimaryColor, mobileEnd } from "./variables"
 import { ApplicationLink } from "./links/link"
