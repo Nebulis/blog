@@ -35,8 +35,12 @@ import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import { Comments } from "../../../../components/core/comments"
 import DaigojiMap from "../../../../images/asia/japan/kyoto/daigoji/daigoji-map.jpg"
-import { MapContainer } from "../../../../components/layout/layout"
+import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { DaigojiImages } from "../../../../components/images/asia/japan/kyoto/daigoji"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import daiwaRoynetHotel from "../../../../images/asia/japan/kyoto/daigoji/daiwa-roynet-hotel.jpg"
+import keihanHotel from "../../../../images/asia/japan/kyoto/daigoji/keihan-hotel.jpg"
+import miyakoHotel from "../../../../images/asia/japan/kyoto/daigoji/miyako-hotel.jpg"
 
 const namespace = "asia/japan/kyoto/daigoji"
 const id = "daigoji"
@@ -95,6 +99,37 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="jp/keihan-kyoto-hachijoguchi"
+              title="Hotel Keihan Kyoto Hachijoguchi"
+              image={keihanHotel}
+              note="8,6"
+              price={90}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/new-miyako"
+              title="Miyako Hotel Kyoto Hachijo"
+              image={miyakoHotel}
+              note="8,4"
+              price={120}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/daiwa-roynet-hotel-kyoto-ekimae"
+              title="Daiwa Roynet Hotel Kyoto Ekimae"
+              image={daiwaRoynetHotel}
+              note="8,7"
+              price={170}
+              people={2}
+              kind="hotel"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning>{t("where-to-stay.part3")}</BookingWarning>
+          <p>{t("where-to-stay.part4")}</p>
         </WhereToStay>
         <Visit title={t("visit.title")}>
           <section>

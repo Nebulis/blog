@@ -30,9 +30,10 @@
   },
   "where-to-stay": {
     "title": "Where to stay in Asakusa district?",
-    "part1": "Tokyo is vast. It's not easy to recommend a hotel in such a big city. We stayed two nights in Tokyo at two different hotels.",
-    "part2": "It all depends on what you are going to visit or do. We advise you to take a hotel in a quiet place, far from a busy street. [Japan's transport](transports-in-japan) is well-developed. You will have no problem getting around.",
-    "part3": "You can compare more offers on [Booking](booking-search:Asakusa)."
+    "part1": "Tokyo is vast. It's not easy to recommend a hotel in such a big city. ",
+    "part2": "If you want to visit the Senso-Ji temple, why not stay in the Asakusa district? Staying in the district you visit is not a priority as [transports in Japan](transports-in-japan) are very efficient and well-developed. You will have no problem getting around.",
+    "part3": "The prices vary enormously depending on the seasons. For this article, we share hotels/prices for the tourist season in Spring, which means prices are higher than usual.",
+    "part4": "You can compare more offers on [Booking](booking-search:Asakusa)."
   },
   "visit": {
     "title": "Visit",

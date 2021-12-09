@@ -34,8 +34,9 @@
   },
   "where-to-stay": {
     "title": "Où dormir dans le quartier Ueno, en particulier près du parc ?",
-    "part1": "Nous avons réservé une nuit à l’hôtel [Ueno Touganeya Hotel](booking-hotel:jp/ueno-touganeya), idéalement bien situé tout proche de la gare dans une petite rue au calme mais proche de nombreux restaurants, chambre et salle de bain un peu petite mais très clairement suffisante pour notre séjour.",
-    "part2": "Comparez d’autres offres sur [Booking](booking-search:Ueno)."
+    "part1": "On vous propose 3 différents logements, pour s’adapter à différents budgets. Nous avons choisi des hôtels plus ou moins proches du parc Ueno et de la gare mais sachez que ce n’est pas une obligation et que vous pouvez chercher des logements dans des quartiers plus calmes, bien que nous n'avons eu aucun souci de notre côté.",
+    "part2": "Les prix varient énormément en fonction des saisons, pour cet article on vous indique des hôtels / prix pour la saison touristique du printemps, ce qui équivaut à des prix normalement plus élevés.",
+    "part3": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:Ueno)."
   },
   "where-to-have": {
     "title": "Où manger ?",

@@ -40,11 +40,15 @@ import { ApplicationContext } from "../../../../components/application"
 import { Comments } from "../../../../components/core/comments"
 import { HimejiCastleImages } from "../../../../components/images/asia/japan/himeji/himeji-castle-images"
 import HimejiCastleMap from "../../../../images/asia/japan/himeji/castle/himeji-castle-map.jpg"
-import { MapContainer } from "../../../../components/layout/layout"
+import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { buildPixabayUrl } from "../../../../utils"
 import { css } from "@emotion/react"
 import { mediumStart } from "../../../../components/core/variables"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import richmondHotel from "../../../../images/asia/japan/himeji/castle/richmond-hotel.jpg"
+import montereyHotel from "../../../../images/asia/japan/himeji/castle/monterey-hotel.jpg"
+import daiwaRoynetHotel from "../../../../images/asia/japan/himeji/castle/daiwa-roynet-hotel.jpg"
 
 const namespace = "asia/japan/himeji/himeji-castle"
 const id = "himeji-castle"
@@ -117,7 +121,38 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
-          <p>{t("where-to-stay.part3")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="jp/daiwa-roynet-himeji"
+              title="Daiwa Roynet Hotel Himeji"
+              image={daiwaRoynetHotel}
+              note="9,0"
+              price={59}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/richmond-hotel-himeji"
+              title="Richmond Hotel Himeji"
+              image={richmondHotel}
+              note="8,8"
+              price={64}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/hoterumontoreji-lu"
+              title="Hotel Monterey Himeji"
+              image={montereyHotel}
+              note="8,9"
+              price={115}
+              people={2}
+              kind="hotel"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning>{t("where-to-stay.part3")}</BookingWarning>
+          <p>{t("where-to-stay.part4")}</p>
+          <p>{t("where-to-stay.part5")}</p>
         </WhereToStay>
         <WhereToHave title={t("where-to-have.title")}>
           <p>{t("where-to-have.part1")}</p>

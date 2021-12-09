@@ -37,7 +37,9 @@
   "where-to-stay": {
     "title": "Où dormir à Kyoto, près de Daigo-Ji ?",
     "part1": "Daigo-ji est dans un coin reculé de Kyoto, il n’y a pas d'hôtels vraiment juste à côté mais de notre point de vue pour la visite de Kyoto en général nous avons justement préféré être dans un coin reculé, plus calme et quand même particulièrement bien desservi par les transports.",
-    "part2": "[Kyoto Yamashina Hotel Sanraku](booking-hotel:jp/kyoto-yamashina-hotel-sanraku) est un hôtel plutôt sympa, moderne, chambre et salle de bain de taille standard pour le japon. Très bien situé et au niveau du prix on est dans la moyenne."
+    "part2": "On vous propose 3 différents types de logements, du plus basique au plus luxueux, pour s’adapter à différents budgets.",
+    "part3": "Les prix varient énormément en fonction des saisons, pour cet article on vous indique des hôtels / prix pour la saison touristique du printemps, ce qui équivaut à des prix normalement plus élevés.",
+    "part4": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:Kyoto)."
   },
   "visit": {
     "title": "La visite",

@@ -37,6 +37,11 @@ import { SharedCardJapanImages } from "../../../../components/images/asia/japan/
 import { UenoParkImages } from "../../../../components/images/asia/japan/tokyo/ueno-park"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { buildPixabayUrl } from "../../../../utils"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import { BookingGygCardContainer } from "../../../../components/layout/layout"
+import keiseiHotel from "../../../../images/asia/japan/tokyo/ueno-park/apa-hotel-keisei-ueno-ekimae.jpg"
+import inaricho from "../../../../images/asia/japan/tokyo/ueno-park/apa-hotel-ueno-inaricho-ekikita.jpg"
+import resolHotel from "../../../../images/asia/japan/tokyo/ueno-park/resol-hotel.jpg"
 
 const namespace = "asia/japan/tokyo/ueno-park"
 const id = "ueno-park"
@@ -92,7 +97,37 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </WhatTimeOfYear>
         <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>
-          <p>{t("where-to-stay.part2")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="jp/apahoteru-shang-ye-dao-he-ting-yi-bei"
+              title="APA Hotel Ueno Inaricho Ekikita"
+              image={inaricho}
+              note="8,4"
+              price={46}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/apa-keisei-ueno-ekimae"
+              title="APA Hotel Keisei Ueno Ekimae"
+              image={keiseiHotel}
+              note="8,1"
+              price={70}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/hotel-resol-ueno"
+              title="Hotel Resol Ueno"
+              image={resolHotel}
+              note="8,7"
+              price={100}
+              people={2}
+              kind="hotel"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning>{t("where-to-stay.part2")}</BookingWarning>
+          <p>{t("where-to-stay.part3")}</p>
         </WhereToStay>
         <WhereToHave title={t("where-to-have.title")}>
           <p>{t("where-to-have.part1")}</p>

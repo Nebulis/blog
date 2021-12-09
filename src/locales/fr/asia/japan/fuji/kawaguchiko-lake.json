@@ -25,9 +25,10 @@
   },
   "where-to-stay": {
     "title": "Où dormir près du lac Kawaguchiko ?",
-    "part1": "Nous nous y sommes pris un peu tard pour réserver notre hôtel et nous n’avons pas eu énormément de choix.",
-    "part2": "Nous avons réservé l’hôtel [Shiki-No Yado Fujisan](booking-hotel:jp/shiki-no-yado-popura), prix raisonnable. Les chambres sont un peu vieillottes par contre, mais la vue sur le lac ou le Mont Fuji est appréciable. Ce n’est clairement pas du grand luxe mais pour quelques nuits cela fait l’affaire. Pile en face du lac, il a vraiment un très bon emplacement.",
-    "part3": "Comparez et réservez votre hôtel sur [Booking](booking-search:Fujikawaguchiko)."
+    "part1": "Nous nous y sommes pris un peu tard pour réserver notre hôtel et nous n’avons pas eu énormément de choix. Pensez à bien réserver en avance pour être sûr d’avoir un hôtel idéalement placé.",
+    "part2": "On vous propose ici deux hôtels d’un côté du lac où le mont sera derrière vous (mais vous pouvez prendre une chambre avec vue soit sur le lac soit sur le mont au choix), et un hôtel en face, ce qui gonfle forcément le prix.",
+    "part3": "Les prix varient énormément en fonction des saisons, pour cet article on vous indique des hôtels / prix pour la saison touristique du printemps, ce qui équivaut à des prix normalement plus élevés.",
+    "part4": "Vous pouvez comparer vous-même les offres sur [Booking](booking-search:Fujikawaguchiko)."
   },
   "visit": {
     "title": "La visite",

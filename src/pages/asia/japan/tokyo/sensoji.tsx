@@ -32,6 +32,11 @@ import { Quote } from "../../../../components/core/quote"
 import { Divider } from "../../../../components/core/divider"
 import { Comments } from "../../../../components/core/comments"
 import { SensojiImages } from "../../../../components/images/asia/japan/tokyo/sensoji"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import { BookingGygCardContainer } from "../../../../components/layout/layout"
+import onyadoNono from "../../../../images/asia/japan/tokyo/sensoji/onyado-nono-asakusa-natural-hot-spring.jpg"
+import richmond from "../../../../images/asia/japan/tokyo/sensoji/richmond-hotel-asakusa.jpg"
+import richmondPremier from "../../../../images/asia/japan/tokyo/sensoji/richmond-hotel-premier-asakusa-international.jpg"
 
 const namespace = "asia/japan/tokyo/sensoji"
 const id = "sensoji"
@@ -81,7 +86,37 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
-          <p>{t("where-to-stay.part3")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="jp/onyado-nono-asakusa"
+              title="Onyado Nono Asakusa Natural Hot Spring"
+              image={onyadoNono}
+              note="9,0"
+              price={100}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/richmond-asakusa"
+              title="Richmond Hotel Asakusa"
+              image={richmond}
+              note="8,7"
+              price={140}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/richmond-premier-asakusa-international"
+              title="Richmond Hotel Premier Asakusa International"
+              image={richmondPremier}
+              note="9,0"
+              price={170}
+              people={2}
+              kind="deluxe"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning>{t("where-to-stay.part3")}</BookingWarning>
+          <p>{t("where-to-stay.part4")}</p>
         </WhereToStay>
         <Visit title={t("visit.title")}>
           <section>

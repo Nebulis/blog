@@ -37,9 +37,13 @@ import { ApplicationContext } from "../../../../components/application"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { Comments } from "../../../../components/core/comments"
 import { NagoyaCastleImages } from "../../../../components/images/asia/japan/nagoya/nagoya-castle-images"
-import { MapContainer } from "../../../../components/layout/layout"
+import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
+import { BookingCard, BookingWarning } from "../../../../components/core/booking"
+import apaHotel from "../../../../images/asia/japan/nagoya/castle/apa-hotel-sakae-kita.jpg"
+import androoms from "../../../../images/asia/japan/nagoya/castle/hotel-androoms-nagoya-sakae.jpg"
+import kuretake from "../../../../images/asia/japan/nagoya/castle/kuretake-inn-nagoya-hisayaodori.jpg"
 
 const namespace = "asia/japan/nagoya/nagoya-castle"
 const id = "nagoya-castle"
@@ -100,7 +104,37 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>
           <p>{t("where-to-stay.part2")}</p>
-          <p>{t("where-to-stay.part3")}</p>
+          <BookingGygCardContainer>
+            <BookingCard
+              hotel="jp/kuretake-inn-nagoya-hisayaodori"
+              title="Kuretake Inn Nagoya Hisayaodori"
+              image={kuretake}
+              note="8,3"
+              price={53}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/apahoteru-ming-gu-wu-rong-bei"
+              title="APA Hotel Nagoya Sakae Kita"
+              image={apaHotel}
+              note="8,2"
+              price={70}
+              people={2}
+              kind="hotel"
+            />
+            <BookingCard
+              hotel="jp/androoms-nagoya-sakae"
+              title="Hotel androoms Nagoya Sakae"
+              image={androoms}
+              note="8,8"
+              price={96}
+              people={2}
+              kind="hotel"
+            />
+          </BookingGygCardContainer>
+          <BookingWarning>{t("where-to-stay.part3")}</BookingWarning>
+          <p>{t("where-to-stay.part4")}</p>
         </WhereToStay>
         <WhereToHave title={t("where-to-have.title")}>
           <p>{t("where-to-have.part1")}</p>
