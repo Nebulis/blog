@@ -15,7 +15,7 @@ exports.onCreatePage = ({ page, actions }) => {
   createPage(newPage)
   // }
 }
-exports.onCreateWebpackConfig = ({ stage, actions, getConfig, plugins }) => {
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
   const PATTERN = /\.(eot|otf|ttf|woff(2)?)(\?.*)?$/
 
   const config = getConfig()
@@ -32,19 +32,20 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig, plugins }) => {
   }
 
   // migration v2 to v3
-  if (stage === "build-javascript" || stage === "develop") {
-    config.plugins.push(plugins.provide({ process: "process/browser" }))
-  }
+  // if (stage === "build-javascript" || stage === "develop") {
+  //   config.plugins.push(plugins.provide({ process: "process/browser" }))
+  // }
 
   const newConfig = {
     ...config,
-    resolve: {
-      ...config.resolve,
-      alias: {
-        ...config.resolve.alias,
-        path: require.resolve("path-browserify"),
-      },
-    },
+    // migration v2 to v3
+    // resolve: {
+    //   ...config.resolve,
+    //   alias: {
+    //     ...config.resolve.alias,
+    //     path: require.resolve("path-browserify"),
+    //   },
+    // },
     module: {
       // Manually swap out the rule who's test matches PATTERN
       rules: config.module.rules.map((rule) => {
