@@ -37,7 +37,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const [tooltipLabel, setTooltipLabel] = useState("")
   const country = t("common:country.singapore.title")
-  const articles = getArticles({ kind: "other", tags: ["singapore"], development })
+  const articles = getArticles({
+    tags: ["singapore"],
+    development,
+    filter: (cachedLink) => cachedLink.kind === "other" || cachedLink.id === "christmas-in-singapore",
+  })
   // const cities = getCities({ links: singaporeLinks, development, lang: i18n.languageCode })
   return (
     <>

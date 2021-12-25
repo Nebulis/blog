@@ -70,6 +70,7 @@ const visitedCountries = [
   "malaysia",
   "philippines",
   "india",
+  "singapore",
   "sri-lanka",
   "taiwan",
   // "thailand",
@@ -83,7 +84,11 @@ const transform =
   (country: Country): ReactElement => {
     if (visitedCountries.includes(country.id)) {
       if (country.id === "singapore") {
-        return <circle cx="1385" cy="565" r="6" className="visited" />
+        return (
+          <ApplicationLink to={country.id}>
+            <circle cx="1385" cy="565" r="6" className="visited articles" />
+          </ApplicationLink>
+        )
       } else if (countriesWithArticles.includes(country.id)) {
         return (
           <ApplicationLink to={country.id}>

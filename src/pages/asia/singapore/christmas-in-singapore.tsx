@@ -6,7 +6,6 @@ import { useCustomTranslation } from "../../../i18n-hook"
 import { Comments } from "../../../components/core/comments"
 import translationFr from "../../../locales/fr/asia/singapore/christmas-in-singapore.json"
 import translationEn from "../../../locales/en/asia/singapore/christmas-in-singapore.json"
-import { SingaporeBlogLayout, SingaporeHeadline } from "../../../components/core/asia/singapore/singapore"
 import { Introduction, PillTitle, SectionContent, Visit } from "../../../components/core/section"
 import { Conclusion } from "../../../components/core/conclusion"
 import { Divider } from "../../../components/core/divider"
@@ -24,6 +23,7 @@ import {
 } from "../../../components/images/layout"
 import { SharedCardSingaporeImages } from "../../../components/images/asia/singapore/shared-card-singapore-images"
 import { ChristmasInSingaporeImages } from "../../../components/images/asia/singapore/christmas-in-singapore"
+import { ChristmasBlogLayout, ChristmasHeadline } from "../../../components/core/christmas"
 
 const namespace = "asia/singapore/christmas-in-singapore"
 const id = "christmas-in-singapore"
@@ -44,7 +44,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         image={HomeImgUrl}
         location={location}
       />
-      <SingaporeBlogLayout page={id} location={location}>
+      <ChristmasBlogLayout page={id} location={location}>
         <Title title={title} linkId={id} />
         <ImageAsLandscape>
           <SharedCardSingaporeImages image="christmasInSingapore" />
@@ -95,7 +95,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <SectionContent />
           <Divider />
           <section>
-            <SingaporeHeadline>{t("visit.title")}</SingaporeHeadline>
+            <ChristmasHeadline>{t("visit.title")}</ChristmasHeadline>
             <Divider />
             <PillTitle title={t("visit.title1")}>
               <p>{t("visit.part1")}</p>
@@ -105,7 +105,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </section>
           <Divider />
           <section>
-            <SingaporeHeadline>{t("visit1.title")}</SingaporeHeadline>
+            <ChristmasHeadline>{t("visit1.title")}</ChristmasHeadline>
             <Divider />
             <SectionContent>
               <p>{t("visit1.part1")}</p>
@@ -234,7 +234,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </section>
           <Divider />
           <section>
-            <SingaporeHeadline>{t("visit2.title")}</SingaporeHeadline>
+            <ChristmasHeadline>{t("visit2.title")}</ChristmasHeadline>
             <Divider />
             <PillTitle title={t("visit2.title1")}>
               <p>{t("visit2.part1")}</p>
@@ -294,7 +294,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </section>
           <Divider />
           <section>
-            <SingaporeHeadline>{t("visit3.title")}</SingaporeHeadline>
+            <ChristmasHeadline>{t("visit3.title")}</ChristmasHeadline>
             <Divider />
             <SectionContent>
               <p>{t("visit3.part1")}</p>
@@ -320,7 +320,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </section>
           <Divider />
           <section>
-            <SingaporeHeadline>{t("visit4.title")}</SingaporeHeadline>
+            <ChristmasHeadline>{t("visit4.title")}</ChristmasHeadline>
             <Divider />
             <PillTitle title={t("visit4.part1.title")}>
               <p>{t("visit4.part1.part1")}</p>
@@ -350,7 +350,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </section>
           <Divider />
           <section>
-            <SingaporeHeadline>{t("visit5.title")}</SingaporeHeadline>
+            <ChristmasHeadline>{t("visit5.title")}</ChristmasHeadline>
             <Divider />
             <SectionContent>
               <p>{t("visit5.part1")}</p>
@@ -414,7 +414,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes: i18n.languageCode === "fr" ? [] : [],
           }}
         />
-      </SingaporeBlogLayout>
+      </ChristmasBlogLayout>
     </>
   )
 }

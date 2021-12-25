@@ -18,11 +18,11 @@ export const singaporeLinks: CountryLink = {
         en: commonEn.country.singapore.card["christmas-in-singapore"],
       },
       card: ChritmasInSingaporeCard,
-      published: false,
-      // published: new Date("2021-12-25T17:00:00.000+08:00"),
+      kind: "highlight",
+      published: new Date("2021-12-25T17:00:00.000+08:00"),
     },
     {
-      id: "marina-bays-sands",
+      id: "marina-bay-sands",
       label: {
         fr: "",
         en: "",
