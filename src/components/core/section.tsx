@@ -228,6 +228,14 @@ export const SubTitleTransport = styled(SectionTitle)`
   margin-bottom: 1rem; // mb3
 `
 
+export const PillTitle = styled(NoIconTitle)`
+  && {
+    list-style-type: disc;
+    list-style-position: inside;
+    display: list-item;
+  }
+`
+
 const subHomeSectionTwoLines = css`
   @media (min-width: ${mediumStart}) {
     &.sub-home-section-two-lines-break {

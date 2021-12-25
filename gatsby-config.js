@@ -78,14 +78,14 @@ module.exports = {
               ...pages("/oceania/"),
             ],
           },
-          // {
-          //   userAgent: "twitterbot",
-          //   allow: [...pages("/asia/japan/")],
-          // },
-          // {
-          //   userAgent: "facebookexternalhit",
-          //   allow: [...pages("/asia/japan/")],
-          // },
+          {
+            userAgent: "twitterbot",
+            allow: [...pages("/asia/singapore/")],
+          },
+          {
+            userAgent: "facebookexternalhit",
+            allow: [...pages("/asia/singapore/")],
+          },
         ],
       },
     },
