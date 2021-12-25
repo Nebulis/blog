@@ -119,16 +119,16 @@ const asiaLinks = () => {
   expect(getLink("philippines")).toMatchObject({ label: { fr: "Philippines", en: "Philippines" }, published: true })
   expect(getLink("malaysia")).toMatchObject({ label: { fr: "Malaisie", en: "Malaysia" }, published: true })
   expect(getLink("taiwan")).toMatchObject({ label: { fr: "Taiwan", en: "Taiwan" }, published: false })
-  expect(getLink("singapore")).toMatchObject({ label: { fr: "Singapour", en: "Singapore" }, published: false })
+  expect(getLink("singapore")).toMatchObject({ label: { fr: "Singapour", en: "Singapore" }, published: true })
   singaporeLinks()
 }
 
 const singaporeLinks = () => {
   expect(getLink("christmas-in-singapore")).toMatchObject({
     label: { fr: "Un Noël à Singapour", en: "A Christmas in Singapore" },
-    published: false,
+    published: true,
   })
-  expect(getLink("marina-bays-sands")).toMatchObject({
+  expect(getLink("marina-bay-sands")).toMatchObject({
     label: { fr: "", en: "" },
     published: false,
   })
