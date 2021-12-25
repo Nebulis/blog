@@ -262,7 +262,10 @@
       "title": "Serbia"
     },
     "singapore": {
-      "title": "Singapore"
+      "title": "Singapore",
+      "card": {
+        "christmas-in-singapore": "A Christmas in Singapore"
+      }
     },
     "slovakia": {
       "title": "Slovakia"

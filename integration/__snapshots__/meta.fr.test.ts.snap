@@ -312,6 +312,12 @@ exports[`french pages exports meta for public/asia/philippines/palawan/index.htm
 
 exports[`french pages exports meta for public/asia/philippines/palawan/index.html correctly: title 1`] = `"Palawan | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/asia/singapore/christmas-in-singapore/index.html correctly: meta-description 1`] = `"Célébrer Noël dans un pays étranger est l’occasion de vivre une expérience unique, souvent bien loin de nos habitudes et est donc l’occasion idéale de découvrir une nouvelle culture et de nouvelles traditions. On vous embarque avec nous pour la découverte des lieux incontournables à visiter pour cette période des fêtes. Notre récit de voyage avec photos, conseils et astuces."`;
+
+exports[`french pages exports meta for public/asia/singapore/christmas-in-singapore/index.html correctly: social-network 1`] = `"Célébrer Noël dans un pays étranger est l’occasion de vivre une expérience unique, souvent bien loin de nos habitudes et est donc l’occasion idéale de découvrir une nouvelle culture et de nouvelles traditions."`;
+
+exports[`french pages exports meta for public/asia/singapore/christmas-in-singapore/index.html correctly: title 1`] = `"Un Noël à Singapour | Blog Voyage"`;
+
 exports[`french pages exports meta for public/asia/singapore/index.html correctly: meta-description 1`] = `"Singapour est souvent le pays oublié, le transit entre deux vols mais rarement visité, pourtant si vous prenez la peine de vous y arrêter, vous y découvrirez des endroits grandioses à la faune et la flore extraordinaire qui vous fera oublier d’être en pleine ville. Jardin botanique ou promenade dans la jungle pour observer les varans ou les calaos. À travers nos articles on vous fait découvrir différents endroits à visiter. Notre carnet de voyage avec photos, conseils et astuces."`;
 
 exports[`french pages exports meta for public/asia/singapore/index.html correctly: social-network 1`] = `"Singapour est souvent le pays oublié, le transit entre deux vols mais rarement visité, pourtant si vous prenez la peine de vous y arrêter, vous y découvrirez des endroits grandioses à la faune et la flore extraordinaire qui vous fera oublier d’être en pleine ville. Jardin botanique ou promenade dans la jungle pour observer les varans ou les calaos."`;

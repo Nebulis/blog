@@ -312,6 +312,12 @@ exports[`english pages exports meta for public/en/asia/philippines/palawan/index
 
 exports[`english pages exports meta for public/en/asia/philippines/palawan/index.html correctly: title 1`] = `"Palawan | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/asia/singapore/christmas-in-singapore/index.html correctly: meta-description 1`] = `"Celebrating Christmas in a foreign country is the opportunity to live a unique experience, often very different from what we are used to. It is the ideal opportunity to discover a new culture and new traditions. Come with us to discover the best places to visit for the holiday season. Our travelogue with photos, tips, and advice."`;
+
+exports[`english pages exports meta for public/en/asia/singapore/christmas-in-singapore/index.html correctly: social-network 1`] = `"Celebrating Christmas in a foreign country is the opportunity to live a unique experience, often very different from what we are used to. It is the ideal opportunity to discover a new culture and new traditions."`;
+
+exports[`english pages exports meta for public/en/asia/singapore/christmas-in-singapore/index.html correctly: title 1`] = `"A Christmas in Singapore | Travel Blog"`;
+
 exports[`english pages exports meta for public/en/asia/singapore/index.html correctly: meta-description 1`] = `"Singapore is a forgotten country. The transit between two flights, rarely visited. Yet if you take the trouble to stop there, you will discover gorgeous places with extraordinary flora and fauna that will make you forget the city. Walk in botanical garden or in the jungle to observe monitor lizards or hornbills. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
 
 exports[`english pages exports meta for public/en/asia/singapore/index.html correctly: social-network 1`] = `"Singapore is a forgotten country. The transit between two flights, rarely visited. Yet if you take the trouble to stop there, you will discover gorgeous places with extraordinary flora and fauna that will make you forget the city. Walk in botanical garden or in the jungle to observe monitor lizards or hornbills."`;

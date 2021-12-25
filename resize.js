@@ -24,7 +24,7 @@ Promise.all(
     const method = info.format === "png" ? "png" : "jpeg"
 
     // await stream.resize(width)[method]({ quality: 50 }).toFile(optimizedName)
-    await stream.resize(width)[method]({ quality: QUALITY }).toFile(optimizedName)
+    await stream.resize(width)[method]({ quality: QUALITY }).withMetadata().toFile(optimizedName)
 
     // return fs.rename(optimizedName, match)
   })
@@ -42,8 +42,8 @@ Promise.all(
     const optimizedName2 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-80${ext.toLowerCase()}`)
     const method = info.format === "png" ? "png" : "jpeg"
 
-    await stream.resize(width)[method]({ quality: 60, mozjpeg: true }).toFile(optimizedName1)
-    await stream.resize(width)[method]({ quality: 80, mozjpeg: true }).toFile(optimizedName2)
+    await stream.resize(width)[method]({ quality: 60, mozjpeg: true }).withMetadata().toFile(optimizedName1)
+    await stream.resize(width)[method]({ quality: 80, mozjpeg: true }).withMetadata().toFile(optimizedName2)
 
     // return fs.rename(optimizedName, match)
   })
@@ -61,9 +61,9 @@ Promise.all(
     const optimizedName3 = match.replace(/(\..+)$/, (match, ext) => `-optimized-${width}-80${ext.toLowerCase()}`)
     const method = info.format === "png" ? "png" : "jpeg"
 
-    await stream.resize(width)[method]({ quality: 60, mozjpeg: true }).toFile(optimizedName1)
-    await stream.resize(width)[method]({ quality: 70, mozjpeg: true }).toFile(optimizedName2)
-    await stream.resize(width)[method]({ quality: 80, mozjpeg: true }).toFile(optimizedName3)
+    await stream.resize(width)[method]({ quality: 60, mozjpeg: true }).withMetadata().toFile(optimizedName1)
+    await stream.resize(width)[method]({ quality: 70, mozjpeg: true }).withMetadata().toFile(optimizedName2)
+    await stream.resize(width)[method]({ quality: 80, mozjpeg: true }).withMetadata().toFile(optimizedName3)
 
     // return fs.rename(optimizedName, match)
   })

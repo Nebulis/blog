@@ -3,6 +3,10 @@ import { BlogLayout, IndexBlogLayout } from "../../../layout/layout"
 import { singaporePrimaryColor, singaporePrimaryColorDarker } from "./singapore.variables"
 import { WeatherEntry } from "../../../../types/shared"
 import { Lang } from "../../links/links.types"
+import { Headline } from "../../highlight"
+import merlion from "../../../../images/asia/singapore/merlion.svg"
+import React, { FunctionComponent } from "react"
+import { css } from "@emotion/react"
 
 const buttonStyle = `
   button.btn,
@@ -75,6 +79,12 @@ const singaporeLayout = `
         color: ${singaporePrimaryColor};
       }
     }
+    a.title-tag {
+      background-color: ${singaporePrimaryColorDarker};
+    }
+    a.title-tag:hover {
+      box-shadow: 0px 0px 2px 1px ${singaporePrimaryColorDarker};
+    }
     .comments {
       ${buttonStyle}
       .form-control:focus {
@@ -100,6 +110,18 @@ export const IndexSingaporeBlogLayout = styled(IndexBlogLayout)`
 export const SingaporeBlogLayout = styled(BlogLayout)`
   ${singaporeLayout}
 `
+const singaporeHeadlineStyle = css`
+  color: ${singaporePrimaryColorDarker}; /* darker because it looks too light*/
+  img {
+    width: 20px;
+    height: 20px;
+  }
+`
+export const SingaporeHeadline: FunctionComponent = ({ children }) => (
+  <Headline css={singaporeHeadlineStyle} image={merlion} alt="merlion">
+    {children}
+  </Headline>
+)
 
 export const singaporeWeatherEntries = (lang: Lang): WeatherEntry[] => [
   {
