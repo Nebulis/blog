@@ -20,6 +20,11 @@ jobs:
   bundle_dependencies:
     <<: *defaults
     steps:
+      - run:
+          name: Install OS dependencies
+          command: |
+            sudo apt update
+            sudo apt install -y nasm
       - checkout
       - attach_workspace:
           at: ~/data
