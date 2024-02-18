@@ -1,0 +1,98 @@
+name: Nebulis/blog/build
+on: push
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    steps:
+    - run: node -v
+    - run: npm -v
+  bundle_dependencies:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    steps:
+#    - name: Install OS dependencies
+#      run: |-
+#        sudo apt update
+#        sudo apt install -y nasm
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'npm'
+    - run: npm ci
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    needs:
+    - bundle_dependencies
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'npm'
+    - run: npm ci
+    - name: build
+      run: GATSBY_CPU_COUNT=1 CONTEXT=production npm run build
+    - name: integration test
+      run: npm run test:integration
+  build_with_ssr:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    needs:
+    - bundle_dependencies
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'npm'
+    - run: npm ci
+    - run: GATSBY_CPU_COUNT=1 CONTEXT=production SSR_BUILD=enabled npm run build
+  lint:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    needs:
+    - bundle_dependencies
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run lint
+  types:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    needs:
+    - bundle_dependencies
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'npm'
+    - run: npm ci
+    - run: npx tsc --noEmit
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    needs:
+    - bundle_dependencies
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run test -- --runInBand
