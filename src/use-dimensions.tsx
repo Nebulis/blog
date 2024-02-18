@@ -22,7 +22,11 @@ export interface NoDimensionObject {
   bottom?: never
 }
 
-export type UseDimensionsHook = [(node: HTMLElement | null) => void, NoDimensionObject | DimensionObject, HTMLElement | null]
+export type UseDimensionsHook = [
+  (node: HTMLElement | null) => void,
+  NoDimensionObject | DimensionObject,
+  HTMLElement | null
+]
 
 export interface UseDimensionsArgs {
   liveMeasure?: boolean
@@ -66,7 +70,7 @@ function useDimensions({ liveMeasure = true }: UseDimensionsArgs = {}): UseDimen
         }
       }
     }
-  }, [node])
+  }, [node, liveMeasure])
 
   return [ref, dimensions, node]
 }
