@@ -34,7 +34,6 @@
     "react-popover": "^0.5.10",
     "react-select": "^5.2.1",
     "react-spring": "^9.3.2",
-    "react-use-dimensions": "^1.2.1",
     "resize-observer-polyfill": "^1.5.1",
     "smoothscroll-polyfill": "^0.4.4",
     "typescript": "^4.5.2"
@@ -83,7 +82,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build && cp _headers public/ && cp _redirects public/",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build && cp _headers public/ && cp _redirects public/",
     "develop": "DEV_SSR=false gatsby develop",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
     "lint": "eslint . --ext .ts,.tsx --max-warnings 0",

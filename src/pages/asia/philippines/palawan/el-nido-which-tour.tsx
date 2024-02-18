@@ -44,13 +44,11 @@ import { ApplicationContext } from "../../../../components/application"
 import { ElNidoWhichTourImages } from "../../../../components/images/asia/philippines/palawan/el-nido-which-tour"
 import { ApplicationLink, ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { css } from "@emotion/react"
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore https://github.com/Swizec/useDimensions/issues/16
-import useDimensions from "react-use-dimensions"
 import { Quote } from "../../../../components/core/quote"
 import { TourAImages } from "../../../../components/images/asia/philippines/palawan/el-nido-tour-a"
 import { CarouselImageQuery } from "../../../../components/images/carousel"
 import { FakeList } from "../../../../components/core/title"
+import useDimensions from "../../../../use-dimensions"
 
 const namespace = "asia/philippines/palawan/which-tour"
 const id = "el-nido-which-tour"
@@ -73,7 +71,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const tourCLinkPublished = development || getLink("el-nido-tour-c").published
   const tourDLinkPublished = development || getLink("el-nido-tour-d").published
   const [ref, { width }] = useDimensions()
-  const ratio = width / 800
+  const ratio = width ? width / 800 : 1
 
   return (
     <>
