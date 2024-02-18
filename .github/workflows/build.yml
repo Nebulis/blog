@@ -1,0 +1,120 @@
+name: Nebulis/blog/build
+on:
+  push:
+    branches:
+    - master
+jobs:
+  version:
+    defaults:
+      run:
+        working-directory: "~/data"
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    steps:
+    - run: node -v
+    - run: npm -v
+  bundle_dependencies:
+    defaults:
+      run:
+        working-directory: "~/data"
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    steps:
+    - name: Install OS dependencies
+      run: |-
+        sudo apt update
+        sudo apt install -y nasm
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/download-artifact@v4.1.0
+      with:
+        path: "~/data"
+    - name: restore_cache
+      uses: actions/cache@v3.3.2
+      with:
+        key: v1-npm-{{ checksum "package-lock.json" }}
+        path: "~/data/node_modules"
+    - run: npm ci
+    - uses: actions/upload-artifact@v4.0.0
+      with:
+        path: "./node_modules"
+  build:
+    defaults:
+      run:
+        working-directory: "~/data"
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    needs:
+    - bundle_dependencies
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/download-artifact@v4.1.0
+      with:
+        path: "~/data"
+    - name: build
+      run: GATSBY_CPU_COUNT=1 CONTEXT=production npm run build
+    - name: integration test
+      run: npm run test:integration
+  build_with_ssr:
+    defaults:
+      run:
+        working-directory: "~/data"
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    needs:
+    - bundle_dependencies
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/download-artifact@v4.1.0
+      with:
+        path: "~/data"
+    - name: build
+      run: GATSBY_CPU_COUNT=1 CONTEXT=production SSR_BUILD=enabled npm run build
+  lint:
+    defaults:
+      run:
+        working-directory: "~/data"
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    needs:
+    - bundle_dependencies
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/download-artifact@v4.1.0
+      with:
+        path: "~/data"
+    - run: npm run lint
+  types:
+    defaults:
+      run:
+        working-directory: "~/data"
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    needs:
+    - bundle_dependencies
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/download-artifact@v4.1.0
+      with:
+        path: "~/data"
+    - run: npx tsc --noEmit
+  test:
+    defaults:
+      run:
+        working-directory: "~/data"
+    runs-on: ubuntu-latest
+    container:
+      image: node:14
+    needs:
+    - bundle_dependencies
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/download-artifact@v4.1.0
+      with:
+        path: "~/data"
+    - run: npm run test -- --runInBand
