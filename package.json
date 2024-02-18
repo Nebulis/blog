@@ -34,7 +34,6 @@
     "react-popover": "^0.5.10",
     "react-select": "^5.2.1",
     "react-spring": "^9.3.2",
-    "react-use-dimensions": "^1.2.1",
     "resize-observer-polyfill": "^1.5.1",
     "smoothscroll-polyfill": "^0.4.4",
     "typescript": "^4.5.2"
