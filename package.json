@@ -82,7 +82,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build && cp _headers public/ && cp _redirects public/",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build && cp _headers public/ && cp _redirects public/",
     "develop": "DEV_SSR=false gatsby develop",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
     "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
