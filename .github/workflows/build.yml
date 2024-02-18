@@ -13,10 +13,10 @@ jobs:
     container:
       image: node:14
     steps:
-    - name: Install OS dependencies
-      run: |-
-        sudo apt update
-        sudo apt install -y nasm
+#    - name: Install OS dependencies
+#      run: |-
+#        sudo apt update
+#        sudo apt install -y nasm
     - uses: actions/checkout@v4.1.0
     - uses: actions/setup-node@v4
       with:
