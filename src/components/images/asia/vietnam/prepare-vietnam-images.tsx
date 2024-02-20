@@ -8,7 +8,7 @@ const alt = {
   hammock: "Prepare Vietnam Sleeping Hammock",
   baggage: "Prepare Vietnam Cat Baggage",
   landscape: "Prepare Vietnam Landscape Paddy Field",
-  laughing: "Prepare Vietnam Laughing Women",
+  people: "Prepare Vietnam Vietnamese People",
   scooter: "Prepare Vietnam Scooter Traffic Jam",
   currency: "Prepare Vietnam Currency",
   currency2: "Prepare Vietnam Currency",
@@ -57,7 +57,7 @@ export const PrepareVietnamImages: React.FunctionComponent<ExtraImageProps & { i
           }
         }
       }
-      laughing: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-laughing.jpg" }) {
+      people: file(relativePath: { eq: "asia/vietnam/prepare/prepare-vietnam-people.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

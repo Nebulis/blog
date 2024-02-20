@@ -22,8 +22,8 @@ i18n.addResourceBundle("en", namespace, whoEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
-  const description = t("section1")
-  const googleDescription = t("section3")
+  const description = t("description")
+  const googleDescription = t("section4")
   return (
     <>
       <SEO
@@ -54,17 +54,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <SectionContent>{t("section2")}</SectionContent>
         <SectionContent>{t("section3")}</SectionContent>
         <SectionContent>{t("section4")}</SectionContent>
+        <SectionContent>{t("section5")}</SectionContent>
         <h3
           className="tc"
           css={css`
             color: ${primaryColor};
           `}
         >
-          {t("section5")}
+          {t("section6")}
         </h3>
         <Divider />
-        <SectionContent>{t("section6")}</SectionContent>
         <SectionContent>{t("section7")}</SectionContent>
+        <SectionContent>{t("section8")}</SectionContent>
         <SectionContent
           className="tr"
           css={css`

@@ -6,7 +6,7 @@ import { useCustomTranslation } from "../../../i18n-hook"
 import { Comments } from "../../../components/core/comments"
 import translationFr from "../../../locales/fr/journal/living-abroad/living-abroad-where.json"
 import translationEn from "../../../locales/en/journal/living-abroad/living-abroad-where.json"
-import { Introduction, SectionContent } from "../../../components/core/section"
+import { ImageDescription, Introduction, SectionContent } from "../../../components/core/section"
 import { Divider } from "../../../components/core/divider"
 import { Quote } from "../../../components/core/quote"
 import HomeImgUrl from "../../../images/journal/living-abroad/living-abroad-where/living-abroad-where-main.jpg"
@@ -107,6 +107,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsLandscape>
               <LivingAbroadWhereImages image="livingAbroadWhere" />
             </ImageAsLandscape>
+            <ImageDescription>{t("section1.part2.part9")}</ImageDescription>
           </SectionContent>
         </section>
         <Divider />
@@ -138,6 +139,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsLandscape>
               <LivingAbroadWhereImages image="livingAbroadWhere2" />
             </ImageAsLandscape>
+            <ImageDescription>{t("section1.part4.part6")}</ImageDescription>
           </SectionContent>
         </section>
         <Divider />
@@ -178,6 +180,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsLandscape>
               <LivingAbroadWhereImages image="livingAbroadWhere3" />
             </ImageAsLandscape>
+            <ImageDescription>{t("section1.part6.part11")}</ImageDescription>
           </SectionContent>
         </section>
         <Divider />
@@ -242,6 +245,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsLandscape>
               <LivingAbroadWhereImages image="livingAbroadWhere5" />
             </ImageAsLandscape>
+            <ImageDescription>{t("section1.part10.part7")}</ImageDescription>
           </SectionContent>
         </section>
         <Divider />
@@ -277,6 +281,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsLandscape>
               <LivingAbroadWhereImages image="livingAbroadWhere6" />
             </ImageAsLandscape>
+            <ImageDescription>{t("section1.part12.part8")}</ImageDescription>
           </SectionContent>
         </section>
         <Divider />
@@ -305,6 +310,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsLandscape>
               <LivingAbroadWhereImages image="livingAbroadWhere7" />
             </ImageAsLandscape>
+            <ImageDescription>{t("section1.part14.part6")}</ImageDescription>
           </SectionContent>
         </section>
         <Divider />
