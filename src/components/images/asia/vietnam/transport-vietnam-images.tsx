@@ -37,7 +37,7 @@ export const TransportVietnamImages: React.FunctionComponent<ExtraImageProps & {
     query {
       plane: file(relativePath: { eq: "asia/vietnam/transport/transport-vietnam-plane.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -107,7 +107,7 @@ export const TransportVietnamImages: React.FunctionComponent<ExtraImageProps & {
       }
       moto: file(relativePath: { eq: "asia/vietnam/transport/transport-vietnam-moto.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

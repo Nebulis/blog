@@ -4,6 +4,7 @@ import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/
 import {
   HowLong,
   HowMuch,
+  ImageDescription,
   Introduction,
   SectionContent,
   Visit,
@@ -147,12 +148,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <SouthernVietnam image="calao2" />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
-              <p>{t("visit2.part5")}</p>
+              <ImageDescription>{t("visit2.part5")}</ImageDescription>
+              <p>{t("visit2.part6")}</p>
               <TwoImagesSameSize>
                 <SouthernVietnam image="market1" />
                 <SouthernVietnam image="market2" />
               </TwoImagesSameSize>
-              <p>{t("visit2.part6")}</p>
+              <p>{t("visit2.part7")}</p>
               <ImageAsLandscape>
                 <SouthernVietnam image="dragon" />
               </ImageAsLandscape>

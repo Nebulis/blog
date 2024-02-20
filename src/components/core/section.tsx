@@ -300,26 +300,6 @@ export const HomeSubSection: FunctionComponent = ({ children }) => (
     {children}
   </h3>
 )
-export const HighLight = styled.span`
-  font-weight: bold;
-`
-
-const covidStyle = css`
-  .covid-title {
-    background-color: rgba(245, 101, 101);
-  }
-  .covid-content {
-    background-color: rgba(255, 245, 245); // from tailwind
-    color: rgba(197, 48, 48);
-    border-color: rgba(252, 129, 129);
-  }
-`
-export const Covid: FunctionComponent = ({ children }) => (
-  <div role="alert" css={covidStyle} className="mb2 mt2">
-    <div className="covid-title white b pv2 ph3 mh3 br2 br--top ">Covid-19</div>
-    <div className="covid-content pv2 ph3 mh3 ba bt-0 br2 br--bottom ">{children}</div>
-  </div>
-)
 
 const noteStyle = css`
   font-size: 0.8rem;

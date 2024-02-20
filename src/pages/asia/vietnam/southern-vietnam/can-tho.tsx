@@ -8,7 +8,6 @@ import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/can-tho.json"
 import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
-  Covid,
   How,
   HowLong,
   HowMuch,
@@ -35,8 +34,6 @@ import { CanThoImages } from "../../../../components/images/asia/vietnam/souther
 import styled from "@emotion/styled"
 import { Title } from "../../../../components/core/title"
 import { Quote } from "../../../../components/core/quote"
-import { ApplicationContext } from "../../../../components/application"
-import { useContext } from "react"
 import { css } from "@emotion/react"
 import { GetYourGuideCard } from "../../../../components/core/get-your-guide"
 import { BookingGygCardContainer } from "../../../../components/layout/layout"
@@ -55,7 +52,6 @@ const InsideQuote = styled.p`
 `
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { covid } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.vietnam.card.${id}`)
   return (
@@ -150,7 +146,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           >
             {t("how-much.part6")}
           </p>
-          {covid && <Covid>{t("how-much.part7")}</Covid>}
         </HowMuch>
         <WhereToStay title={t("where-to-stay.title")}>
           <p>{t("where-to-stay.part1")}</p>

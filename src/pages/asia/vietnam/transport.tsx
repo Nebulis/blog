@@ -39,7 +39,7 @@ import {
 import { TransportVietnamImages } from "../../../components/images/asia/vietnam/transport-vietnam-images"
 import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
 import { css } from "@emotion/react"
-import { buildBaolauUrl, buildPixabayUrl, convertTime } from "../../../utils"
+import { buildBaolauUrl, convertTime } from "../../../utils"
 import VietnamRailwayIcon from "../../../images/asia/vietnam/transport/vietnam-railways.png"
 import VioletteIcon from "../../../images/asia/vietnam/transport/violette.png"
 import NewLivitransIcon from "../../../images/asia/vietnam/transport/new-livitrans-express.png"
@@ -377,13 +377,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <VietnamHeadline>{buildTitle(t("common:section:plane"))}</VietnamHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/biohacker76-9101824")}>
-                biohacker76
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportVietnamImages image="plane" />
           </ImageAsLandscape>
           <Information title={t("information")}>
@@ -771,13 +765,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <VietnamHeadline>{buildTitle(t("section5.title"))}</VietnamHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/viarami-13458823/")}>
-                viarami
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportVietnamImages image="moto" />
           </ImageAsLandscape>
           <Information title={t("information")}>
@@ -852,13 +840,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <VietnamHeadline>{buildTitle(t("common:section.train"))}</VietnamHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/bomhehe100-8743342")}>
-                bomhehe100
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportVietnamImages image="train" />
           </ImageAsLandscape>
           <Information title={t("information")}>

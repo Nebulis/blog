@@ -8,7 +8,6 @@ import translationFr from "../../../../locales/fr/asia/vietnam/southern-vietnam/
 import translationEn from "../../../../locales/en/asia/vietnam/southern-vietnam/my-tho.json"
 import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
-  Covid,
   How,
   HowLong,
   ImageDescription,
@@ -51,7 +50,6 @@ i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { covid } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const { development } = useContext(ApplicationContext)
   const title = t(`common:country.vietnam.card.${id}`)
@@ -131,7 +129,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           >
             {t("how.part6")}
           </p>
-          {covid && <Covid>{t("how.part7")}</Covid>}
         </How>
         <HowLong>
           <p>{t("how-long.part1")}</p>
