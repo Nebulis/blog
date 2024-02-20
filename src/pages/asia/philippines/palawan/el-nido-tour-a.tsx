@@ -227,6 +227,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <TourAImages image="bigLagoon5" />
                 </ImageAsLandscape>
               </GroupOfImages>
+              <ImageDescription>{t("visit.visit1.part9")}</ImageDescription>
             </SectionContent>
           </section>
           <Divider />
@@ -275,6 +276,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <TourAImages image="secretLagoon9" />
                 </ImageAsLandscape>
               </GroupOfImages>
+              <ImageDescription>{t("visit.visit2.part9")}</ImageDescription>
             </SectionContent>
           </section>
           <Divider />
@@ -316,15 +318,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.visit4.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <TourAImages image="payongBeach2" />
-                </ImageAsLandscape>
-                <ImageAsLandscape>
                   <TourAImages image="payongBeach3" />
                 </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <TourAImages image="payongBeach2" />
+                </ImageAsLandscape>
               </GroupOfImages>
-              <p>{t("visit.visit4.part4")}</p>
+              <ImageDescription>{t("visit.visit4.part4")}</ImageDescription>
               <p>{t("visit.visit4.part5")}</p>
               <p>{t("visit.visit4.part6")}</p>
+              <p>{t("visit.visit4.part7")}</p>
               <GroupOfImages>
                 <ImageAsLandscapeOnTheLeft>
                   <TourAImages image="payongBeach4" />
@@ -333,6 +336,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <TourAImages image="payongBeach5" />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
+              <ImageDescription>{t("visit.visit4.part8")}</ImageDescription>
             </SectionContent>
           </section>
           <Divider />

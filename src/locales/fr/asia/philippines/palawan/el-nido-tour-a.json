@@ -45,7 +45,8 @@
       "part5": "Au fur et à mesure, #l’eau se fait de moins en moins profonde#, on se retrouve alors entouré de grandes falaises karstiques dans un magnifique couloir qui nous amène au lagon où l’eau se retrouve à nouveau profonde.",
       "part6": "D’une eau translucide à #une eau turquoise impressionnante#. Puis de nouveau d’un bleu éclatant.",
       "part7": "#Tant de changement de décor en un rien de temps#.",
-      "part8": "Pour rejoindre votre bateau, vous avez juste à faire demi-tour et faire le chemin en sens inverse."
+      "part8": "Pour rejoindre votre bateau, vous avez juste à faire demi-tour et faire le chemin en sens inverse.",
+      "part9": "A la recherche des poissons ..."
     },
     "visit2": {
       "title": "SECRET LAGOON",
@@ -56,7 +57,8 @@
       "part5": "Pour accéder au secret lagoon, vous devez vous diriger vers la gauche de l’île, le secret lagoon est #accessible par un trou creusé dans la roche# (assez humide donc attention aux chutes).",
       "part6": "Là se trouve #un mini lagon entièrement entouré de falaises#, l’eau est très trouble. Sûrement très beau quand il n’y a personne, malheureusement pour nous c’est quasiment le seul endroit où il y avait pas mal de monde.",
       "part7": "Et encore nous n’avons eu aucune queue pour y accéder et nous avons quand même pu prendre quelques photos mais notre « guide » nous a dit que des fois il pouvait y avoir 10 minutes de queue voir plus …",
-      "part8": "On nous a également indiqué que lors de #la saison des méduses# cette plage pourrait en être rempli. Et effectivement pendant notre séjour on pouvait déjà en apercevoir pas mal alors que nous étions que début Mars et qu’elles sont censées arriver en Avril."
+      "part8": "On nous a également indiqué que lors de #la saison des méduses# cette plage pourrait en être rempli. Et effectivement pendant notre séjour on pouvait déjà en apercevoir pas mal alors que nous étions que début Mars et qu’elles sont censées arriver en Avril.",
+      "part9": "Attention aux piqûres ..."
     },
     "visit3": {
       "title": "SHIMIZU ISLAND",
@@ -71,9 +73,11 @@
       "part1": "Quant à nous, c'est sur cette toute petite île que nous nous sommes arrêtés pour manger, Payong-Payong beach.",
       "part2": "Notre guide nous avait laissé à un endroit à l’ombre et clairement isolé des autres bateaux. Nous nous sommes retrouvés uniquement notre groupe de 4 sur ce petit coin de plage.",
       "part3": "Un bonheur ! Sans parler du repas, qui était là aussi #un véritable festin#.",
-      "part4": "Après un repas plus que copieux, des milliers de photos prises de tout et n’importe quoi … Nous voilà donc repartis pour le reste de notre journée.",
-      "part5": "Si vous prenez un tour privé, n’hésitez pas à demander l’horaire du repas. Vous pourrez soit venir plus tard, soit venir plus tôt en fonction du monde sur place.",
-      "part6": "De notre côté, nous n’avons même pas eu besoin de demander. Notre guide nous a laissé d’abord sur Shimizu Island, et vu qu’il y avait du monde sur place il nous a proposé de nous emmener ici où il avait vu qu’il n’y avait personne pour manger."
+      "part4": "Miam, miam ...,",
+      "part5": "Après un repas plus que copieux, des milliers de photos prises de tout et n’importe quoi … Nous voilà donc repartis pour le reste de notre journée.",
+      "part6": "Si vous prenez un tour privé, n’hésitez pas à demander l’horaire du repas. Vous pourrez soit venir plus tard, soit venir plus tôt en fonction du monde sur place.",
+      "part7": "De notre côté, nous n’avons même pas eu besoin de demander. Notre guide nous a laissé d’abord sur Shimizu Island, et vu qu’il y avait du monde sur place il nous a proposé de nous emmener ici où il avait vu qu’il n’y avait personne pour manger.",
+      "part8": "Un peu d’ombre, ça fait du bien ..."
     },
     "visit5": {
       "title": "7 COMMANDO BEACH",

@@ -390,13 +390,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-c.helicopter-island.part1")}</p>
               <p>{t("tour-c.helicopter-island.part2")}</p>
               <p>{t("tour-c.helicopter-island.part3")}</p>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href="https://www.tikigo.com/palawan/palawan/helicopter-island">
-                    Tikigo
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsLandscape>
                 <ElNidoWhichTourImages image="helicopterIsland" />
               </ImageAsLandscape>
             </SectionContent>
@@ -407,13 +401,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-c.matinloc-shrine.part2")}</p>
               <p>{t("tour-c.matinloc-shrine.part3")}</p>
               <p>{t("tour-c.matinloc-shrine.part4")}</p>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href="https://www.routard.com/photos/philippines/1502975-matinloc_shrine.htm">
-                    Routard
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsLandscape>
                 <ElNidoWhichTourImages image="matinlocShrine" />
               </ImageAsLandscape>
             </SectionContent>
@@ -454,13 +442,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <SectionContent>
               <p>{t("tour-c.hidden-beach.part1")}</p>
               <p>{t("tour-c.hidden-beach.part2")}</p>
-              <ImageAsPortrait
-                credit={
-                  <ExternalLinkNotUnderlined href="https://www.travel-palawan.com/product/el-nido-tour-c/">
-                    travel-palawan
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsPortrait>
                 <ElNidoWhichTourImages image="hiddenBeach" />
               </ImageAsPortrait>
             </SectionContent>
@@ -479,13 +461,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-d.ipil-beach.part1")}</p>
               <p>{t("tour-d.ipil-beach.part2")}</p>
               <p>{t("tour-d.ipil-beach.part3")}</p>
-              <ImageAsPortrait
-                credit={
-                  <ExternalLinkNotUnderlined href="https://www.tikigo.com/palawan/palawan/ipil-beach">
-                    tikigo
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsPortrait>
                 <ElNidoWhichTourImages image="ipilBeach" />
               </ImageAsPortrait>
             </SectionContent>
@@ -495,13 +471,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-d.cadlao-lagoon.part1")}</p>
               <p>{t("tour-d.cadlao-lagoon.part2")}</p>
               <p>{t("tour-d.cadlao-lagoon.part3")}</p>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href="https://www.tikigo.com/palawan/palawan/cadlao-island">
-                    tikigo
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsLandscape>
                 <ElNidoWhichTourImages image="cadlaoIsland" />
               </ImageAsLandscape>
             </SectionContent>
@@ -512,33 +482,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-d.paradise-beach.part2")}</p>
               <p>{t("tour-d.paradise-beach.part3")}</p>
               <GroupOfImages>
-                <ImageAsLandscapeOnTheRight
-                  credit={
-                    <ExternalLinkNotUnderlined href="https://www.tikigo.com/palawan/palawan/nat-nat-beach">
-                      tikigo
-                    </ExternalLinkNotUnderlined>
-                  }
-                >
-                  <ElNidoWhichTourImages image="natNatBeach" />
-                </ImageAsLandscapeOnTheRight>
-                <ImageAsLandscapeOnTheLeft
-                  credit={
-                    <ExternalLinkNotUnderlined href="https://www.tikigo.com/palawan/palawan/paradise-beach">
-                      tikigo
-                    </ExternalLinkNotUnderlined>
-                  }
-                >
-                  <ElNidoWhichTourImages image="paradiseBeach" />
-                </ImageAsLandscapeOnTheLeft>
-                <ImageAsLandscapeOnTheRight
-                  credit={
-                    <ExternalLinkNotUnderlined href="https://www.tikigo.com/palawan/palawan/pasandigan-cove">
-                      tikigo
-                    </ExternalLinkNotUnderlined>
-                  }
-                >
+                <ImageAsLandscapeOnTheRight>
                   <ElNidoWhichTourImages image="pasandiganCove" />
                 </ImageAsLandscapeOnTheRight>
+                <ImageAsLandscapeOnTheLeft>
+                  <ElNidoWhichTourImages image="pasandiganCove2" />
+                </ImageAsLandscapeOnTheLeft>
               </GroupOfImages>
             </SectionContent>
             <Divider />
@@ -547,13 +496,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-d.small-lagoon.part1")}</p>
               <p>{t("tour-d.small-lagoon.part2")}</p>
               <p>{t("tour-d.small-lagoon.part3")}</p>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href="https://www.tikigo.com/palawan/palawan/small-lagoon">
-                    tikigo
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsLandscape>
                 <ElNidoWhichTourImages image="smallLagoon" />
               </ImageAsLandscape>
             </SectionContent>
