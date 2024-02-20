@@ -63,7 +63,6 @@ import {
   UKWithFlag,
 } from "../../../components/icon/flags"
 import { smallEnd } from "../../../components/core/variables"
-import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
 import { getLink } from "../../../components/core/links/links.utils"
 import HomeImgUrl from "../../../images/asia/vietnam/prepare/prepare-vietnam-main.jpg"
 import SouthernVietnamMapTransport from "../../../images/asia/vietnam/southern-vietnam-map-transport.png"

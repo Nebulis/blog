@@ -18,9 +18,9 @@ exports[`french pages exports meta for public/about/contact/index.html correctly
 
 exports[`french pages exports meta for public/about/contact/index.html correctly: title 1`] = `"Contact | Blog Voyage"`;
 
-exports[`french pages exports meta for public/about/who/index.html correctly: meta-description 1`] = `"Une sorte de journal intime que nous partageons avec vous, quelques astuces par ci par là mais surtout un carnet de souvenirs inoubliable que nous lirons nous-même dans le futur."`;
+exports[`french pages exports meta for public/about/who/index.html correctly: meta-description 1`] = `"Ce blog est une sorte de journal intime que nous partageons avec vous, quelques astuces par ci par là mais surtout un carnet de souvenirs inoubliable que nous lirons nous-même dans le futur."`;
 
-exports[`french pages exports meta for public/about/who/index.html correctly: social-network 1`] = `"Après 6 ans d’amour, une routine boulot dodo et un manque de dépaysement nous avons décidé en 2016 de changer de vie pour venir nous installer à Singapour avec nos 2 chats sans jamais y avoir mis les pieds."`;
+exports[`french pages exports meta for public/about/who/index.html correctly: social-network 1`] = `"Après 6 ans de vie à Singapour, une expérience unique qui nous a permis de faire tant de voyages en Asie et en Océanie, nous voilà de retour en France avec d’autres projets et rêves plein la tête."`;
 
 exports[`french pages exports meta for public/about/who/index.html correctly: title 1`] = `"Qui sommes nous ? | Blog Voyage"`;
 
