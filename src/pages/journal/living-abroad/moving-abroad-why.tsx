@@ -6,7 +6,7 @@ import { useCustomTranslation } from "../../../i18n-hook"
 import { Comments } from "../../../components/core/comments"
 import translationFr from "../../../locales/fr/journal/living-abroad/moving-abroad-why.json"
 import translationEn from "../../../locales/en/journal/living-abroad/moving-abroad-why.json"
-import { Introduction, SectionContent } from "../../../components/core/section"
+import { ImageDescription, Introduction, SectionContent } from "../../../components/core/section"
 import { Conclusion } from "../../../components/core/conclusion"
 import { Divider } from "../../../components/core/divider"
 import { Quote } from "../../../components/core/quote"
@@ -171,7 +171,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <ImageAsLandscape>
               <MovingAbroadWhyImages image="movingAbroad2" />
             </ImageAsLandscape>
-            <p className="tc i">{t("section6.part7")}</p>
+            <ImageDescription>{t("section6.part7")}</ImageDescription>
           </SectionContent>
         </section>
         <Divider />

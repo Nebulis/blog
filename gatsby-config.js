@@ -18,7 +18,13 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-emotion`,
+    // https://github.com/gatsbyjs/gatsby/issues/35911#issuecomment-1195569818
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        sourceMap: false,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

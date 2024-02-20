@@ -16,6 +16,7 @@ import {
   Booking,
   HowLong,
   HowMuch,
+  ImageDescription,
   Introduction,
   Opinion,
   SectionContent,
@@ -407,7 +408,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <TourAImages image="snorkeling9" />
                 </ImageAsLandscape>
               </GroupOfImages>
-              <p className="tc i">{t("visit.visit6.part6")}</p>
+              <ImageDescription>{t("visit.visit6.part6")}</ImageDescription>
             </SectionContent>
           </section>
         </Visit>

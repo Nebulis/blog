@@ -16,6 +16,7 @@ import {
   How,
   HowLong,
   HowMuch,
+  ImageDescription,
   Introduction,
   LocalCurrency,
   MenuArticle,
@@ -896,7 +897,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <ImageAsLandscape>
             <PrepareVietnamImages image="hammock" />
           </ImageAsLandscape>
-          <p className="tc i">{t("section7.part8")}</p>
+          <ImageDescription>{t("section7.part8")}</ImageDescription>
         </WhereToStay>
         <Divider />
         <HowMuch title={t("section8.title")} id="money">
@@ -1071,13 +1072,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             ➵ <span className="underline">{t("section13.part2")}</span>
           </p>
           <p>{t("section13.part3")}</p>
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/vietnguyenbui-12326427">
-                vietnguyenbui
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <PrepareVietnamImages image="landscape" />
           </ImageAsLandscape>
           <p>
@@ -1093,14 +1088,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             ➵ <span className="underline">{t("section13.part9")}</span>
           </p>
           <p>{t("section13.part10")}</p>
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/thangphan-11758907">
-                thangphan
-              </ExternalLinkNotUnderlined>
-            }
-          >
-            <PrepareVietnamImages image="laughing" />
+          <ImageAsLandscape>
+            <PrepareVietnamImages image="people" />
           </ImageAsLandscape>
           <p className="list-item ml3">{t("section13.part11")}</p>
           <p>
@@ -1111,13 +1100,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             ➵ <span className="underline">{t("section13.part14")}</span>
           </p>
           <p>{t("section13.part15")}</p>
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/harpenz-606632">
-                harpenz
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <PrepareVietnamImages image="scooter" />
           </ImageAsLandscape>
         </Opinion>
