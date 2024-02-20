@@ -10,7 +10,6 @@ import { ImageAsLandscape, ImageAsPortrait } from "../../../components/images/la
 import { FaBriefcaseMedical, FaLaptop, FaShoppingBag, FaTshirt } from "react-icons/fa"
 import {
   Baggage,
-  Covid,
   FewWords,
   Health,
   How,
@@ -493,7 +492,7 @@ const namespace = "asia/vietnam/prepare"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { development, covid } = useContext(ApplicationContext)
+  const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t("common:country.vietnam.card.prepare")
   const foodLinkPublished = development || getLink("food-vietnam").published
@@ -576,7 +575,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </MenuArticle>
         <Divider />
         <Visa id="visa">
-          {covid && <Covid>{t("section1.part1")}</Covid>}
           <ImageAsLandscape>
             <PrepareVietnamImages image="visa" />
           </ImageAsLandscape>

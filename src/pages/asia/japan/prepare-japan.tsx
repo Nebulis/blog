@@ -14,7 +14,6 @@ import {
 } from "../../../components/core/japan/japan"
 import {
   Baggage,
-  Covid,
   FewWords,
   Health,
   How,
@@ -158,7 +157,7 @@ const VisaHeaderRow = styled.tr`
 // TODO sous titre pas les meme
 // TODO dans opinion les fleches sont pas soulignes au vietnam
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { development, covid } = useContext(ApplicationContext)
+  const { development } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.japan.card.prepare`)
   const transportLinkPublished = development || getLink("transports-in-japan").published
@@ -242,7 +241,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </MenuArticle>
         <Divider />
         <Visa id="visa">
-          {covid && <Covid>{t("visa.part1")}</Covid>}
           <ImageAsLandscape>
             <PrepareJapanImages image="visa" />
           </ImageAsLandscape>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import SEO from "../../../../components/layout/seo"
 import { VietnamBlogLayout, VietnamHeadline } from "../../../../components/core/asia/vietnam/vietnam"
 import {
@@ -9,7 +9,6 @@ import {
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import {
-  Covid,
   How,
   HowLong,
   HowMuch,
@@ -39,7 +38,6 @@ import { BookingCard, BookingWarning } from "../../../../components/core/booking
 import pragueHotel from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/prague-hotel.jpg"
 import naNueHotel from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/na-nue-hotel.jpg"
 import yenTrangHotel from "../../../../images/asia/vietnam/southern-vietnam/war-remnants-museum/yen-trang-hotel.jpg"
-import { ApplicationContext } from "../../../../components/application"
 import { css } from "@emotion/react"
 
 const namespace = "asia/vietnam/southern-vietnam/cu-chi-tunnels"
@@ -57,7 +55,6 @@ the fastest way to fix it is to resize a bit the images to
  */
 
 const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
-  const { covid } = useContext(ApplicationContext)
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const title = t(`common:country.vietnam.card.${id}`)
 
@@ -155,7 +152,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           >
             {t("how-much.part4")}
           </p>
-          {covid && <Covid>{t("how-much.part5")}</Covid>}
         </HowMuch>
         <WhereToStay>
           <p>{t("where-to-stay.part1")}</p>
