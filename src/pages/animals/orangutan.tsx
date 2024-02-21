@@ -23,8 +23,6 @@ import { SharedAnimalsImages } from "../../components/images/animals/shared-anim
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 import { OrangutanImages } from "../../components/images/animals/orangutan"
-import { ExternalLinkNotUnderlined } from "../../components/core/links/link"
-import { buildPixabayUrl } from "../../utils"
 import {
   FaApple,
   FaArrowsAltV,
@@ -255,13 +253,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("threat.part3")}</p>
           <p>{t("threat.part4")}</p>
           <p>{t("threat.part5")}</p>
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/pixel-mixer-1197643")}>
-                pixel-mixer
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <OrangutanImages image="threat3" />
           </ImageAsLandscape>
         </Threat>

@@ -33,7 +33,6 @@ import {
 } from "../../../../components/images/layout"
 import { css } from "@emotion/react"
 import { BakoNationalParkImages } from "../../../../components/images/asia/malaysia/east-malaysia/bako-national-park"
-import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { SharedCardMalaysiaImages } from "../../../../components/images/asia/malaysia/shared-card-malaysia-images"
 import { PetitCarreColore } from "../../../../components/layout/layout"
 
@@ -374,13 +373,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </GroupOfImages>
               <p>{t("visit.part4.part8")}</p>
               <p>{t("visit.part4.part9")}</p>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href="https://fr.wikipedia.org/wiki/Rafflesia#/media/Fichier:Rafflesia_80_cm.jpg">
-                    wikipedia
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsLandscape>
                 <BakoNationalParkImages image="flora17" />
               </ImageAsLandscape>
               <p>{t("visit.part4.part10")}</p>

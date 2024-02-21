@@ -45,7 +45,8 @@
       "part5": "Gradually, #the water gets less and less deep#. You follow a magnificent corridor, surrounded by large karst cliffs, that brings you to the lagoon where the water gets deeper.",
       "part6": "From crystal clear water to #breath-taking turquoise water#.",
       "part7": "#So much change of scenery in no time#.",
-      "part8": "To get back to your boat, follow the path in the opposite direction."
+      "part8": "To get back to your boat, follow the path in the opposite direction.",
+      "part9": "Looking for fishes..."
     },
     "visit2": {
       "title": "SECRET LAGOON",
@@ -56,7 +57,8 @@
       "part5": "To access the secret lagoon, you must head to the left of the island, the secret lagoon is #accessible through a hole dug in the rock# (watch out, it's slippery).",
       "part6": "Inside, there is #a mini lagoon entirely surrounded by cliffs#, the water is very cloudy. Certainly very beautiful when there is nobody, unfortunately for us, it was the most crowded place that we visited here.",
       "part7": "We didn't wait that long to get in and we were able to take some pictures but our « guide » told us that sometimes you could queue for 10 minutes or more ...",
-      "part8": "We were also told that this beach might be completely filled with #jellyfish# during the least popular months. During our stay we could already spot a lot of small jellyfish even if it was only the beginning of March jellyfish are more common from April."
+      "part8": "We were also told that this beach might be completely filled with #jellyfish# during the least popular months. During our stay we could already spot a lot of small jellyfish even if it was only the beginning of March jellyfish are more common from April.",
+      "part9": "Watch out..."
     },
     "visit3": {
       "title": "SHIMIZU ISLAND",
@@ -71,9 +73,11 @@
       "part1": "We stopped on this very small beach for lunch, called Payong-Payong beach.",
       "part2": "Our guide left us in a shady place and completely isolated from the other people / boats. We felt completely alone on the beach.",
       "part3": "Pure Happiness ! Not to mention the meal, which was also #a real feast#.",
-      "part4": "After a hearty meal, and thousands of pictures taken, we are ready for the rest of the day.",
-      "part5": "If you book a private tour, feel free to ask what time lunch is planned. You can either come later or come earlier.",
-      "part6": "We didn't even have to ask. At first, our guide dropped us off on Shimizu Island, and when he noticed the crowd, he suggested to come here."
+      "part4": "Yummy!",
+      "part5": "After a hearty meal, and thousands of pictures taken, we are ready for the rest of the day.",
+      "part6": "If you book a private tour, feel free to ask what time lunch is planned. You can either come later or come earlier.",
+      "part7": "We didn't even have to ask. At first, our guide dropped us off on Shimizu Island, and when he noticed the crowd, he suggested to come here.",
+      "part8": "Cooling under the trees"
     },
     "visit5": {
       "title": "7 COMMANDO BEACH",

@@ -11,6 +11,7 @@ import {
   Booking,
   How,
   HowLong,
+  ImageDescription,
   Introduction,
   SectionContent,
   Visit,
@@ -142,10 +143,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <LangkawiDreamHotelImages image="island6" />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
-              <p>{t("accommodations.part1.part7")}</p>
+              <ImageDescription>{t("accommodations.part1.part7")}</ImageDescription>
               <p>{t("accommodations.part1.part8")}</p>
               <p>{t("accommodations.part1.part9")}</p>
               <p>{t("accommodations.part1.part10")}</p>
+              <p>{t("accommodations.part1.part11")}</p>
               <GroupOfImages>
                 <TwoImagesSameSizeOrToGroup>
                   <LangkawiDreamHotelImages image="beach" />
