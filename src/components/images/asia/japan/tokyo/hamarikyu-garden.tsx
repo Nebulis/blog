@@ -18,7 +18,6 @@ const alt = {
   hamarikyuGarden12: "Hamarikyu Gardens",
   hamarikyuGarden13: "Hamarikyu Gardens",
   hamarikyuGarden14: "Hamarikyu Gardens",
-  hamarikyuGarden15: "Hamarikyu Gardens",
   hamarikyuGarden16: "Hamarikyu Gardens",
   hamarikyuGarden17: "Hamarikyu Gardens",
   hamarikyuGarden18: "Hamarikyu Gardens",
@@ -142,13 +141,6 @@ export const HamarikyuGardensImages: React.FunctionComponent<ExtraImageProps & {
       hamarikyuGarden14: file(relativePath: { eq: "asia/japan/tokyo/hamarikyu-garden/hamarikyu-garden14.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      hamarikyuGarden15: file(relativePath: { eq: "asia/japan/tokyo/hamarikyu-garden/hamarikyu-garden15.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

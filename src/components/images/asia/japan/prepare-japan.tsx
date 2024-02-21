@@ -11,6 +11,7 @@ const alt = {
   activities2: "What Activities To Do In Japan",
   accommodations: "What Are The Best Accommodations In Japan",
   baggage: "What To Bring In Japan",
+  transports: "Tuk Tuk",
   opinion: "Opinion Japan",
   opinion2: "Opinion Japan",
   opinion3: "Opinion Japan",
@@ -54,6 +55,13 @@ export const PrepareJapanImages: React.FunctionComponent<ExtraImageProps & { ima
       activities2: file(relativePath: { eq: "asia/japan/prepare-japan/prepare-japan-activities2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      transports: file(relativePath: { eq: "asia/japan/prepare-japan/prepare-japan-transports.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

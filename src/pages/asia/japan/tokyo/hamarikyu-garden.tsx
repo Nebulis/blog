@@ -41,8 +41,6 @@ import { BookingGygCardContainer, MapContainer } from "../../../../components/la
 import hotelTavinos from "../../../../images/asia/japan/tokyo/hamarikyu-garden/hotel-tavinos-hamamatsucho.jpg"
 import bay from "../../../../images/asia/japan/tokyo/hamarikyu-garden/bay-tokyohamamatsucho.jpg"
 import villaFontaine from "../../../../images/asia/japan/tokyo/hamarikyu-garden/villa-fontaine-shiodome.jpg"
-import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
-import { buildPixabayUrl } from "../../../../utils"
 import { Quote } from "../../../../components/core/quote"
 
 const namespace = "asia/japan/tokyo/hamarikyu-garden"
@@ -192,15 +190,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <ImageAsLandscapeOnTheRight>
                   <HamarikyuGardensImages image="hamarikyuGarden14" />
                 </ImageAsLandscapeOnTheRight>
-                <ImageAsLandscape
-                  credit={
-                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/stocksnap-894430")}>
-                      StockSnap
-                    </ExternalLinkNotUnderlined>
-                  }
-                >
-                  <HamarikyuGardensImages image="hamarikyuGarden15" />
-                </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part9")}</p>
               <p>{t("visit.part10")}</p>

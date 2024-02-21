@@ -40,8 +40,6 @@ import { ApplicationContext } from "../../../../components/application"
 import { Comments } from "../../../../components/core/comments"
 import { ArashiyamaImages } from "../../../../components/images/asia/japan/kyoto/arashiyama"
 import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
-import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
-import { buildPixabayUrl } from "../../../../utils"
 import { BookingCard, BookingWarning } from "../../../../components/core/booking"
 import sunMembersKyotoSaga from "../../../../images/asia/japan/kyoto/arashiyama/sun-members-kyoto-saga.jpg"
 import businessArashiyama from "../../../../images/asia/japan/kyoto/arashiyama/business-arashiyama.jpg"
@@ -309,13 +307,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <FakeList>{t("visit3.part11")}</FakeList>
               <p>{t("visit3.part12")}</p>
               <p>{t("visit3.part13")}</p>
-              <ImageAsPortrait
-                credit={
-                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/michelleraponi-165491")}>
-                    michelleraponi
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsPortrait>
                 <ArashiyamaImages image="monkey" />
               </ImageAsPortrait>
               <FakeList>{t("visit3.part14")}</FakeList>
@@ -328,13 +320,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <FakeList>{t("visit3.part21")}</FakeList>
               <p>{t("visit3.part22")}</p>
               <p>{t("visit3.part23")}</p>
-              <ImageAsPortrait
-                credit={
-                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/michelleraponi-165491")}>
-                    michelleraponi
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsPortrait>
                 <ArashiyamaImages image="kimono" />
               </ImageAsPortrait>
               <FakeList>{t("visit3.part24")}</FakeList>

@@ -44,7 +44,7 @@ export const TransportsInJapanImages: React.FunctionComponent<ExtraImageProps & 
       }
       rickshaw: file(relativePath: { eq: "asia/japan/transports-in-japan/transports-in-japan-rickshaw.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -58,7 +58,7 @@ export const TransportsInJapanImages: React.FunctionComponent<ExtraImageProps & 
       }
       train: file(relativePath: { eq: "asia/japan/transports-in-japan/transports-in-japan-train.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

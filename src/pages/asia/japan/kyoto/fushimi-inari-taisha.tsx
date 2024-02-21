@@ -36,8 +36,6 @@ import { ApplicationContext } from "../../../../components/application"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { Comments } from "../../../../components/core/comments"
 import { FushimiInariTaishaImages } from "../../../../components/images/asia/japan/kyoto/fushimi-inari-taisha"
-import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
-import { buildPixabayUrl } from "../../../../utils"
 import { BookingCard, BookingWarning } from "../../../../components/core/booking"
 import urbanKyoto from "../../../../images/asia/japan/kyoto/fushimi/urban-kyoto-kyoto.jpg"
 import yamashinaHotel from "../../../../images/asia/japan/kyoto/fushimi/kyoto-yamashina-hotel-sanraku.jpg"
@@ -218,13 +216,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <JapanHeadline>{t("visit3.title")}</JapanHeadline>
             <Divider />
             <SectionContent>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/michelleraponi-165491")}>
-                    michelleraponi
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsLandscape>
                 <FushimiInariTaishaImages image="discovery" />
               </ImageAsLandscape>
               <p>{t("visit3.part1")}</p>
@@ -265,13 +257,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <ImageAsLandscapeOnTheRight>
                   <FushimiInariTaishaImages image="discovery10" />
                 </ImageAsLandscapeOnTheRight>
-                <ImageAsPortrait
-                  credit={
-                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/gadgetstou-17189958")}>
-                      gadgetstou
-                    </ExternalLinkNotUnderlined>
-                  }
-                >
+                <ImageAsPortrait>
                   <FushimiInariTaishaImages image="discovery11" />
                 </ImageAsPortrait>
                 <ImageAsLandscape>

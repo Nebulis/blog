@@ -189,13 +189,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit3.part1")}</p>
               <p>{t("visit3.part2")}</p>
               <p>{t("visit3.part3")}</p>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/kattyf-15108903")}>
-                    kattyf
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsLandscape>
                 <ShibuyaDistrictImages image="mall" />
               </ImageAsLandscape>
             </SectionContent>
@@ -273,13 +267,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <ShibuyaDistrictImages image="takeshitaStreet18" />
                   <ShibuyaDistrictImages image="takeshitaStreet19" />
                 </TwoImagesSameSizeOrToGroup>
-                <ImageAsLandscape
-                  credit={
-                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/saesherra-5527002")}>
-                      saesherra
-                    </ExternalLinkNotUnderlined>
-                  }
-                >
+                <ImageAsLandscape>
                   <ShibuyaDistrictImages image="takeshitaStreet20" />
                 </ImageAsLandscape>
               </GroupOfImages>

@@ -41,7 +41,7 @@ export const YasukuniDoriImages: React.FunctionComponent<ExtraImageProps & { ima
     query {
       yasukuniDoriNight: file(relativePath: { eq: "asia/japan/tokyo/yasukuni-dori/yasukuni-dori-night.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }
