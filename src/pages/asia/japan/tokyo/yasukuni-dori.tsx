@@ -29,8 +29,6 @@ import apahoteru from "../../../../images/asia/japan/tokyo/yasukuni-dori/apahote
 import bestWestern from "../../../../images/asia/japan/tokyo/yasukuni-dori/best-western-shinjuku-astina.jpg"
 import graceryShinjuku from "../../../../images/asia/japan/tokyo/yasukuni-dori/gracery-shinjuku.jpg"
 import { YasukuniDoriImages } from "../../../../components/images/asia/japan/tokyo/yasukuni-dori"
-import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
-import { buildPixabayUrl } from "../../../../utils"
 
 const namespace = "asia/japan/tokyo/yasukuni-dori"
 const id = "yasukuni-dori"
@@ -178,13 +176,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit2.part1")}</p>
               <p>{t("visit2.part2")}</p>
               <GroupOfImages>
-                <ImageAsLandscape
-                  credit={
-                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/937983-937983")}>
-                      937983
-                    </ExternalLinkNotUnderlined>
-                  }
-                >
+                <ImageAsLandscape>
                   <YasukuniDoriImages image="yasukuniDoriNight" />
                 </ImageAsLandscape>
                 <ImageAsPortrait>

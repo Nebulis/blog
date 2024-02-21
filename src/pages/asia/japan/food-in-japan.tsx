@@ -22,8 +22,6 @@ import {
 } from "../../../components/images/layout"
 import { SharedCardJapanImages } from "../../../components/images/asia/japan/shared-card-japan-images"
 import { FoodInJapanImages } from "../../../components/images/asia/japan/food-in-japan"
-import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
-import { buildPixabayUrl } from "../../../utils"
 import { FakeList } from "../../../components/core/title"
 import { Comments } from "../../../components/core/comments"
 import styled from "@emotion/styled"
@@ -1609,15 +1607,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section11.part4.part2")}</p>
             <p>{t("section11.part4.part3")}</p>
             <GroupOfImages>
-              <ImageAsPortrait
-                credit={
-                  <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("rajeeshtk-604255")}>
-                    rajeeshtk
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsLandscape>
                 <FoodInJapanImages image="teppanyaki" />
-              </ImageAsPortrait>
+              </ImageAsLandscape>
+              <ImageAsLandscape>
+                <FoodInJapanImages image="teppanyaki2" />
+              </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
         </section>

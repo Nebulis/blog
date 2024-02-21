@@ -116,13 +116,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <JapanHeadline>{buildTitle(t("plane.title"))}</JapanHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/mackwo7-1502685")}>
-                mackwo7
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportsInJapanImages image="plane" />
           </ImageAsLandscape>
           <Information title={t("plane.information.title")}>
@@ -229,13 +223,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <JapanHeadline>{buildTitle(t("bus.title"))}</JapanHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/cplz99atcsnilyk-8936637")}>
-                cplz99atcsnilyk
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportsInJapanImages image="bus" />
           </ImageAsLandscape>
           <p>{t("bus.part1")}</p>
@@ -386,13 +374,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <JapanHeadline>{buildTitle(t("mrt.title"))}</JapanHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("moritzklassen-2968734")}>
-                moritzklassen
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportsInJapanImages image="mrt" />
           </ImageAsLandscape>
           <Information title={t("mrt.information.title")}>
@@ -421,13 +403,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <JapanHeadline>{buildTitle(t("rickshaw.title"))}</JapanHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("michelleraponi-165491")}>
-                Michelleraponi
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportsInJapanImages image="rickshaw" />
           </ImageAsLandscape>
           <Information title={t("rickshaw.information.title")}>
@@ -484,13 +460,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <JapanHeadline>{buildTitle(t("train.title"))}</JapanHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("arminep-8300920")}>
-                ArminEP
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportsInJapanImages image="train" />
           </ImageAsLandscape>
           <Information title={t("train.information.title")}>

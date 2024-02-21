@@ -6,6 +6,7 @@ import { ExtraImageProps } from "../../../../types/shared"
 const alt = {
   soup: "Food In Japan Soup",
   teppanyaki: "Food In Japan Teppanyaki",
+  teppanyaki2: "Food In Japan Teppanyaki",
   onigirazu: "Food In Japan Onigirazu",
   onigirazu2: "Food In Japan Onigirazu",
   onigiri: "Food In Japan Onigiri",
@@ -79,7 +80,14 @@ export const FoodInJapanImages: React.FunctionComponent<ExtraImageProps & { imag
       }
       teppanyaki: file(relativePath: { eq: "asia/japan/food-in-japan/food-in-japan-teppanyaki.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      teppanyaki2: file(relativePath: { eq: "asia/japan/food-in-japan/food-in-japan-teppanyaki2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

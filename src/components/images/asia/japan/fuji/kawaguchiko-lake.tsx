@@ -26,6 +26,7 @@ const alt = {
   lake14: "Kawaguchiko Lake",
   lake15: "Kawaguchiko Lake",
   lake16: "Kawaguchiko Lake",
+  chureitoPagoda: "Kawaguchiko Lake Chureito Pagoda",
   cardFr1: "Kawaguchiko Lake Pinterest card",
   cardFr2: "Kawaguchiko Lake Pinterest card",
   cardEn1: "Kawaguchiko Lake Pinterest card",
@@ -184,6 +185,13 @@ export const KawaguchikoLakeImages: React.FunctionComponent<ExtraImageProps & { 
       plane2: file(relativePath: { eq: "asia/japan/fuji/kawaguchiko-lake/kawaguchiko-lake-plane2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 90, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      chureitoPagoda: file(relativePath: { eq: "asia/japan/fuji/kawaguchiko-lake/chureito-pagoda.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid
           }
         }

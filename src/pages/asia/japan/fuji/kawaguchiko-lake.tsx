@@ -276,6 +276,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <p>{t("visit5.part1")}</p>
+              <ImageAsLandscape>
+                <KawaguchikoLakeImages image="chureitoPagoda" />
+              </ImageAsLandscape>
               <p>{t("visit5.part2")}</p>
             </SectionContent>
           </section>

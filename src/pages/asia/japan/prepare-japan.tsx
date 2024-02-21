@@ -64,8 +64,6 @@ import JapanBudget2 from "../../../images/asia/japan/prepare-japan/prepare-japan
 import { getLink } from "../../../components/core/links/links.utils"
 import { SharedCardJapanImages } from "../../../components/images/asia/japan/shared-card-japan-images"
 import { PrepareJapanImages } from "../../../components/images/asia/japan/prepare-japan"
-import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
-import { buildPixabayUrl } from "../../../utils"
 import { Tornado } from "../../../components/icon/tornado"
 import { Hurricane } from "../../../components/icon/hurricane"
 import { Conclusion } from "../../../components/core/conclusion"
@@ -501,14 +499,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         </Visit>
         <Divider />
         <How title={t("transports.title")} id="transports">
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/michelleraponi-165491")}>
-                Michelleraponi
-              </ExternalLinkNotUnderlined>
-            }
-          >
-            <SharedCardJapanImages image="transportsInJapan" />
+          <ImageAsLandscape>
+            <PrepareJapanImages image="transports" />
           </ImageAsLandscape>
           <p>{t("transports.part1")}</p>
           <p>{t("transports.part2")}</p>
@@ -725,13 +717,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             ➵ <span className="underline">{t("opinion.part1.part4.title")}</span>
           </p>
           <p>{t("opinion.part1.part4.part1")}</p>
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/hitesh0141-2271740")}>
-                hitesh0141
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <PrepareJapanImages image="opinion2" />
           </ImageAsLandscape>
           <p>{t("opinion.part1.part4.part2")}</p>
@@ -746,13 +732,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </p>
           <p>{t("opinion.part2.part2.part1")}</p>
           <p>{t("opinion.part2.part2.part2")}</p>
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/evelyn_chai-8705727")}>
-                Evelyn_Chai
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <PrepareJapanImages image="opinion3" />
           </ImageAsLandscape>
         </Opinion>
