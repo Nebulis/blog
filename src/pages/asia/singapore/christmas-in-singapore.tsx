@@ -411,7 +411,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           facebookQuote={`${t("facebook.part1")}\n${t("facebook.part2")}\n${t("facebook.part3")}`}
           pinterest={{
             description: t("pinterest"),
-            nodes: i18n.languageCode === "fr" ? [] : [],
+            nodes:
+              i18n.languageCode === "fr"
+                ? [
+                    <ChristmasInSingaporeImages image="cardFr1" key="cardFr1" />,
+                    <ChristmasInSingaporeImages image="cardFr2" key="cardFr1" />,
+                  ]
+                : [
+                    <ChristmasInSingaporeImages image="cardEn1" key="cardEn1" />,
+                    <ChristmasInSingaporeImages image="cardEn2" key="cardEn1" />,
+                  ],
           }}
         />
       </ChristmasBlogLayout>

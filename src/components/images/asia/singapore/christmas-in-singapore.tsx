@@ -78,10 +78,10 @@ const alt = {
   singapore: "Christmas Decorations",
   singapore2: "Christmas Tree",
   singapore3: "Christmas Decorations",
-  cardFr1: "TODO Pinterest card",
-  cardFr2: "TODO Pinterest card",
-  cardEn1: "TODO Pinterest card",
-  cardEn2: "TODO Pinterest card",
+  cardFr1: "Christmas In Singapore Pinterest card",
+  cardFr2: "Christmas In Singapore Pinterest card",
+  cardEn1: "Christmas In Singapore Pinterest card",
+  cardEn2: "Christmas In Singapore Pinterest card",
 }
 
 export const ChristmasInSingaporeImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({

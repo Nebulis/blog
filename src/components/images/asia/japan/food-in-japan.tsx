@@ -60,6 +60,8 @@ const alt = {
   donburi5: "Food In Japan Donburi",
   donburi6: "Food In Japan Donburi",
   donburi7: "Food In Japan Donburi",
+  cardFr1: "Food In Japan Pinterest card",
+  cardEn1: "Food In Japan Pinterest card",
 }
 
 export const FoodInJapanImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
@@ -459,6 +461,20 @@ export const FoodInJapanImages: React.FunctionComponent<ExtraImageProps & { imag
       donburi7: file(relativePath: { eq: "asia/japan/food-in-japan/food-in-japan-donburi7.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cardFr1: file(relativePath: { eq: "asia/japan/food-in-japan/card-fr1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cardEn1: file(relativePath: { eq: "asia/japan/food-in-japan/card-en1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [1200]) {
             ...GatsbyImageSharpFluid
           }
         }
