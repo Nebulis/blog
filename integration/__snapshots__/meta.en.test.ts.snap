@@ -20,7 +20,7 @@ exports[`english pages exports meta for public/en/about/contact/index.html corre
 
 exports[`english pages exports meta for public/en/about/who/index.html correctly: meta-description 1`] = `"This blog is a sort of diary we share with you, with a few tips here and there. Above all, it's an unforgettable memory book that we will read in the future."`;
 
-exports[`english pages exports meta for public/en/about/who/index.html correctly: social-network 1`] = `"After living for 6 years Singapore, a unique experience which allowed us to have so many trips to Asia and Oceania, we are back in France with new projects and dreams in mind."`;
+exports[`english pages exports meta for public/en/about/who/index.html correctly: social-network 1`] = `"After living for 6 years in Singapore, a unique experience that allowed us to have so many trips to Asia and Oceania, we are back in France with new projects and dreams in mind."`;
 
 exports[`english pages exports meta for public/en/about/who/index.html correctly: title 1`] = `"About us? | Travel Blog"`;
 
@@ -450,9 +450,9 @@ exports[`english pages exports meta for public/en/index.html correctly: social-n
 
 exports[`english pages exports meta for public/en/index.html correctly: title 1`] = `"Magic of travels | Travel Blog"`;
 
-exports[`english pages exports meta for public/en/journal/living-abroad/index.html correctly: meta-description 1`] = `"So many questions without an answer before taking the plunge. Why moving abroad? Which country to choose? What are the processes to follow? What are the pros and cons? How long to stay abroad? What job will I be able to find? With our own experience, we try to answer your questions as well as possible through our articles."`;
+exports[`english pages exports meta for public/en/journal/living-abroad/index.html correctly: meta-description 1`] = `"So many questions without an answer before taking the plunge. Why? Which country to choose? What are the processes to follow? What are the pros and cons? How long to stay abroad? What job will I be able to find? With our own experience, we try to answer your questions as well as possible through our articles."`;
 
-exports[`english pages exports meta for public/en/journal/living-abroad/index.html correctly: social-network 1`] = `"So many questions without an answer before taking the plunge. Why moving abroad? Which country to choose? What are the processes to follow? What are the pros and cons? How long to stay abroad? What job will I be able to find? With our own experience, we try to answer your questions as well as possible through our articles."`;
+exports[`english pages exports meta for public/en/journal/living-abroad/index.html correctly: social-network 1`] = `"So many questions without an answer before taking the plunge. Why? Which country to choose? What are the processes to follow? What are the pros and cons? How long to stay abroad? What job will I be able to find? With our own experience, we try to answer your questions as well as possible through our articles."`;
 
 exports[`english pages exports meta for public/en/journal/living-abroad/index.html correctly: title 1`] = `"Living Abroad | Practical Guide"`;
 
@@ -540,8 +540,8 @@ exports[`english pages exports meta for public/en/organisation/when-to-go/summer
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/summer/index.html correctly: title 1`] = `"Travel in summer | Travel Guide"`;
 
-exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: meta-description 1`] = `"Do you prefer snowy and magical Christmas? Or lack of sunlight make you feel low? So many places to spend your dream holidays during December, January or February. We guide you with the travels we made in different countries."`;
+exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: meta-description 1`] = `"Do you prefer a snowy and magical Christmas? Or does the lack of sunlight make you feel low? There are many places to spend your dream holidays during December, January, or February. We guide you with the travels we made in different countries."`;
 
-exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: social-network 1`] = `"Do you prefer snowy and magical Christmas? Or lack of sunlight make you feel low? So many places to spend your dream holidays during December, January or February. We guide you with the travels we made in different countries."`;
+exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: social-network 1`] = `"Do you prefer a snowy and magical Christmas? Or does the lack of sunlight make you feel low? There are many places to spend your dream holidays during December, January, or February. We guide you with the travels we made in different countries."`;
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/winter/index.html correctly: title 1`] = `"Travel in winter | Travel Guide"`;
