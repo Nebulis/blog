@@ -36,6 +36,7 @@ import CourgetteFont from "../../fonts/Courgette-Regular.ttf"
 import CourgetteFontWoff from "../../fonts/Courgette-Regular.woff2"
 import PlayfairFont from "../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf"
 import PlayfairFontWoff from "../../fonts/PlayfairDisplay-Italic.woff2"
+import A from "../../fonts/Symbola.ttf"
 import Roboto from "../../fonts/Roboto-Regular.ttf"
 import RobotoWoff from "../../fonts/Roboto.woff2"
 import RobotoBolderWoff from "../../fonts/RobotoBolder.woff2"
@@ -168,6 +169,11 @@ export const IndexBlogLayout: FunctionComponent<{
             font-family: "Courgette";
             font-display: swap;
             src: url("${CourgetteFontWoff}") format("woff2"), url("${CourgetteFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+          }
+          @font-face {
+            font-family: "Emoji";
+            src: url(${A}) format("truetype");
+            unicode-range: U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+1F910-1F9EF, U+2600-26FF;
           }
         `}
       />
