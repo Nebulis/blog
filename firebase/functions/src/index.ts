@@ -28,20 +28,19 @@ exports.commentsNotification = functions.database
     <p>Delete comment: TODO</p>`,
     };
 
-    console.log("Send mail")
-      return new Promise<void>((resolve, reject) => {
-          mg.messages().send(data, function (error) {
-              if (error) {
-                  reject(error)
-                  console.error(JSON.stringify(error));
-              } else {
-                  resolve()
-                  console.log("Mail sent with success:", JSON.stringify(data));
-              }
-          });
+    console.log("Send mail");
 
-      })
-
+    return new Promise<void>((resolve, reject) => {
+      mg.messages().send(data, function (error) {
+        if (error) {
+          reject(error);
+          console.error(JSON.stringify(error));
+        } else {
+          resolve();
+          console.log("Mail sent with success:", JSON.stringify(data));
+        }
+      });
+    });
   });
 
 exports.contact = functions.https.onRequest(contactApp);

@@ -17,7 +17,6 @@ const alt = {
   park10: "Ueno Park",
   park11: "Ueno Park",
   park12: "Ueno Park",
-  park13: "Ueno Park",
   park14: "Ueno Park",
   park15: "Ueno Park",
   park16: "Ueno Park",
@@ -123,13 +122,6 @@ export const UenoParkImages: React.FunctionComponent<ExtraImageProps & { image: 
         }
       }
       park12: file(relativePath: { eq: "asia/japan/tokyo/ueno-park/ueno-park12.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      park13: file(relativePath: { eq: "asia/japan/tokyo/ueno-park/ueno-park13.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

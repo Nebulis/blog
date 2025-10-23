@@ -31,7 +31,7 @@ import {
 } from "../../../components/images/layout"
 import { SharedCardJapanImages } from "../../../components/images/asia/japan/shared-card-japan-images"
 import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
-import { buildPixabayUrl, price } from "../../../utils"
+import { price } from "../../../utils"
 import { TransportsInJapanImages } from "../../../components/images/asia/japan/transports-in-japan"
 import TokyoIslands from "../../../images/asia/japan/transports-in-japan/transports-in-japan-tokyo-islands.jpg"
 import OkinawaMap from "../../../images/asia/japan/transports-in-japan/transports-in-japan-okinawa-map.jpg"
@@ -163,13 +163,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <JapanHeadline>{buildTitle(t("boat.title"))}</JapanHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("nick115-10240673")}>
-                Nick115
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportsInJapanImages image="boat" />
           </ImageAsLandscape>
           <Information title={t("plane.information.title")}>
@@ -420,13 +414,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <JapanHeadline>{buildTitle(t("taxi.title"))}</JapanHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("rmsep4-12979322")}>
-                rmsep4
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportsInJapanImages image="taxi" />
           </ImageAsLandscape>
           <Information title={t("taxi.information.title")}>
@@ -546,13 +534,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <section>
           <JapanHeadline>{buildTitle(t("bike.title"))}</JapanHeadline>
           <Divider />
-          <ImageAsLandscape
-            credit={
-              <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("michelleraponi-165491")}>
-                michelleraponi
-              </ExternalLinkNotUnderlined>
-            }
-          >
+          <ImageAsLandscape>
             <TransportsInJapanImages image="bike" />
           </ImageAsLandscape>
           <Information title={t("bike.information.title")}>

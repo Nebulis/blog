@@ -114,7 +114,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               kind="hotel"
             />
             <BookingCard
-              hotel="jp/mitsui-garden-kyoto-sanjo"
+              hotel="jp/san-jing-gadenhoterujing-du-san-tiao-puremia"
               title="Mitsui Garden Hotel Kyoto Sanjo"
               image={mitsuiGarden}
               note="8,5"
