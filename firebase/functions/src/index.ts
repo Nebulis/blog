@@ -27,13 +27,21 @@ exports.commentsNotification = functions.database
     <p><a href="https://magicoftravels.com/${collection}#${context?.params?.key}" target="_blank">View</a></p>
     <p>Delete comment: TODO</p>`,
     };
-    mg.messages().send(data, function (error) {
-      if (error) {
-        console.error(JSON.stringify(error));
-      } else {
-        console.log("Mail sent with success:", JSON.stringify(data));
-      }
-    });
+
+    console.log("Send mail")
+      return new Promise<void>((resolve, reject) => {
+          mg.messages().send(data, function (error) {
+              if (error) {
+                  reject(error)
+                  console.error(JSON.stringify(error));
+              } else {
+                  resolve()
+                  console.log("Mail sent with success:", JSON.stringify(data));
+              }
+          });
+
+      })
+
   });
 
 exports.contact = functions.https.onRequest(contactApp);
