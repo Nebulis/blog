@@ -31,7 +31,7 @@ import {
 } from "../../../components/images/layout"
 import { SharedCardJapanImages } from "../../../components/images/asia/japan/shared-card-japan-images"
 import { ExternalLinkNotUnderlined } from "../../../components/core/links/link"
-import { buildPixabayUrl, price } from "../../../utils"
+import { price } from "../../../utils"
 import { TransportsInJapanImages } from "../../../components/images/asia/japan/transports-in-japan"
 import TokyoIslands from "../../../images/asia/japan/transports-in-japan/transports-in-japan-tokyo-islands.jpg"
 import OkinawaMap from "../../../images/asia/japan/transports-in-japan/transports-in-japan-okinawa-map.jpg"

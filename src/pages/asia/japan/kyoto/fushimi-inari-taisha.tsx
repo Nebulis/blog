@@ -39,7 +39,6 @@ import { FushimiInariTaishaImages } from "../../../../components/images/asia/jap
 import { BookingCard, BookingWarning } from "../../../../components/core/booking"
 import urbanKyoto from "../../../../images/asia/japan/kyoto/fushimi/urban-kyoto-kyoto.jpg"
 import yamashinaHotel from "../../../../images/asia/japan/kyoto/fushimi/kyoto-yamashina-hotel-sanraku.jpg"
-import jingTing from "../../../../images/asia/japan/kyoto/fushimi/jing-ting-wu-yu-wu-song.jpg"
 import { BookingGygCardContainer } from "../../../../components/layout/layout"
 
 const namespace = "asia/japan/kyoto/fushimi-inari-taisha"
@@ -122,15 +121,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               price={90}
               people={2}
               kind="hotel"
-            />
-            <BookingCard
-              hotel="jp/jing-ting-wu-yu-wu-song"
-              title="京町屋 御屋・松"
-              image={jingTing}
-              note="9,4"
-              price={230}
-              people={2}
-              kind="flat"
             />
           </BookingGygCardContainer>
           <BookingWarning>{t("where-to-stay.part4")}</BookingWarning>

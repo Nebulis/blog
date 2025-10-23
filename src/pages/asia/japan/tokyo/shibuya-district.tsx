@@ -35,8 +35,6 @@ import shibuyaExcelTokyo from "../../../../images/asia/japan/tokyo/shibuya-distr
 import ceruleanTowerTokyo from "../../../../images/asia/japan/tokyo/shibuya-district/cerulean-tower-tokyu.jpg"
 import { BookingGygCardContainer } from "../../../../components/layout/layout"
 import { ShibuyaDistrictImages } from "../../../../components/images/asia/japan/tokyo/shibuya-district"
-import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
-import { buildPixabayUrl } from "../../../../utils"
 
 const namespace = "asia/japan/tokyo/shibuya-district"
 const id = "shibuya-district"

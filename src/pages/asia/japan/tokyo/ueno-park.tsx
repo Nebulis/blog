@@ -35,8 +35,6 @@ import {
 } from "../../../../components/images/layout"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 import { UenoParkImages } from "../../../../components/images/asia/japan/tokyo/ueno-park"
-import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
-import { buildPixabayUrl } from "../../../../utils"
 import { BookingCard, BookingWarning } from "../../../../components/core/booking"
 import { BookingGygCardContainer } from "../../../../components/layout/layout"
 import keiseiHotel from "../../../../images/asia/japan/tokyo/ueno-park/apa-hotel-keisei-ueno-ekimae.jpg"
