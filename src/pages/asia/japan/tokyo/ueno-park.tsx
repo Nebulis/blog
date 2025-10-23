@@ -186,26 +186,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               </GroupOfImages>
               <p>{t("visit.part9")}</p>
               <p>{t("visit.part10")}</p>
-              <GroupOfImages>
-                <ImageAsLandscape
-                  credit={
-                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/yui_ma-406082")}>
-                      yui_ma
-                    </ExternalLinkNotUnderlined>
-                  }
-                >
-                  <UenoParkImages image="park12" />
-                </ImageAsLandscape>
-                <ImageAsLandscape
-                  credit={
-                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/yui_ma-406082")}>
-                      yui_ma
-                    </ExternalLinkNotUnderlined>
-                  }
-                >
-                  <UenoParkImages image="park13" />
-                </ImageAsLandscape>
-              </GroupOfImages>
+              <ImageAsLandscape>
+                <UenoParkImages image="park12" />
+              </ImageAsLandscape>
               <p>{t("visit.part11")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>

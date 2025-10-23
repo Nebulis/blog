@@ -226,13 +226,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <ImageAsPortrait>
                   <ShibuyaDistrictImages image="takeshitaStreet9" />
                 </ImageAsPortrait>
-                <ImageAsLandscape
-                  credit={
-                    <ExternalLinkNotUnderlined href={buildPixabayUrl(i18n.languageCode)("users/kirahoffmann-1855684")}>
-                      kirahoffmann
-                    </ExternalLinkNotUnderlined>
-                  }
-                >
+                <ImageAsLandscape>
                   <ShibuyaDistrictImages image="takeshitaStreet10" />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
