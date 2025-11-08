@@ -128,6 +128,10 @@ const singaporeLinks = () => {
     label: { fr: "Un Noël à Singapour", en: "A Christmas in Singapore" },
     published: true,
   })
+  expect(getLink("jewel-changi-airport")).toMatchObject({
+    label: { fr: "", en: "" },
+    published: false,
+  })
   expect(getLink("marina-bay-sands")).toMatchObject({
     label: { fr: "", en: "" },
     published: false,
