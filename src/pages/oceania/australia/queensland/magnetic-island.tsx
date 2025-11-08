@@ -113,6 +113,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("moving-around.part2.part2")}</p>
           <p>{t("moving-around.part2.part3")}</p>
           <p>{t("moving-around.part2.part4")}</p>
+          <p>{t("moving-around.part2.part5")}</p>
           <FakeList>{t("moving-around.part3.title")}</FakeList>
           <p>{t("moving-around.part3.part1")}</p>
           <p>{t("moving-around.part3.part2")}</p>
@@ -157,10 +158,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <BookingGygCardContainer>
             <BookingCard
               hotel="au/bungalow-bay-koala-village-horseshoe-bay"
-              title="Bungalow Bay Koala Village"
+              title="Bounce Magnetic Island and Koala Park"
               image={bungalooBayKoala}
               note="8,3"
-              price={24}
+              price={45}
               people={1}
               kind="inn"
             />

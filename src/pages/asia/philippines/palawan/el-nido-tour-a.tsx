@@ -147,22 +147,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           </ul>
           <BookingGygCardContainer>
             <TravelCardBookingStyle
-              to="http://www.skippercharters.ph/el-nido-charters.html"
-              title={
-                i18n.languageCode === "fr" ? "El Nido Charters - Tour A - Privé" : "El Nido Charters - Private Tour A"
-              }
+              to="https://lapecheuse.webflow.io/"
+              title={i18n.languageCode === "fr" ? "La Pecheuse - Tour A - Privé" : "La Pecheuse - Private Tour A"}
               image={SkipperCharters1}
-              price={400}
+              price={350}
               duration={{ value: 1, unit: "day" }}
               groupType="private"
             />
             <TravelCardBookingStyle
-              to="http://www.skippercharters.ph/el-nido-charters.html"
-              title={
-                i18n.languageCode === "fr" ? "El Nido Charters - Tour A - Public" : "El Nido Charters - Public Tour A"
-              }
+              to="https://lapecheuse.webflow.io/"
+              title={i18n.languageCode === "fr" ? "La Pecheuse - Tour A - Public" : "La Pecheuse - Public Tour A"}
               image={SkipperCharters2}
-              price={60}
+              price={45}
               duration={{ value: 1, unit: "day" }}
               groupType="public"
             />
