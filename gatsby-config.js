@@ -72,6 +72,7 @@ module.exports = {
               ...pages("/asia/vietnam/southern-vietnam/"),
               ...pages("/asia/philippines/"),
               ...pages("/asia/japan/"),
+              ...pages("/asia/singapore/"),
             ],
             disallow: [
               ...pages("/asia/vietnam/northern-vietnam/"),
@@ -79,19 +80,18 @@ module.exports = {
               ...pages("/asia/cambodia/"),
               ...pages("/asia/indonesia/"),
               ...pages("/asia/malaysia/"),
-              ...pages("/asia/singapore/"),
               ...pages("/asia/taiwan/"),
               ...pages("/oceania/"),
             ],
           },
-          {
-            userAgent: "twitterbot",
-            allow: [...pages("/asia/singapore/")],
-          },
-          {
-            userAgent: "facebookexternalhit",
-            allow: [...pages("/asia/singapore/")],
-          },
+          // {
+          //   userAgent: "twitterbot",
+          //   allow: [...pages("/asia/singapore/")],
+          // },
+          // {
+          //   userAgent: "facebookexternalhit",
+          //   allow: [...pages("/asia/singapore/")],
+          // },
         ],
       },
     },
