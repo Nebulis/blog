@@ -31,7 +31,6 @@ import { SharedCardVietnamImages } from "../../../../components/images/asia/viet
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import { MyThoImages } from "../../../../components/images/asia/vietnam/southern-vietnam/my-tho"
-import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { MekongRiverMap } from "../../../../components/core/asia/vietnam/mekong-river-map"
 import { Divider } from "../../../../components/core/divider"
 import { Title } from "../../../../components/core/title"
@@ -41,7 +40,6 @@ import { GetYourGuideCard } from "../../../../components/core/get-your-guide"
 import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { BookingCard, BookingWarning } from "../../../../components/core/booking"
 import thachTHaoHomestay from "../../../../images/asia/vietnam/southern-vietnam/my-tho/thach-thao-homestay.jpg"
-import mekongTasteBungalow from "../../../../images/asia/vietnam/southern-vietnam/my-tho/mekong-taste-bungalow.jpg"
 import theIslandLodge from "../../../../images/asia/vietnam/southern-vietnam/my-tho/the-island-logde.jpg"
 
 const namespace = "asia/vietnam/southern-vietnam/my-tho"
@@ -155,15 +153,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               kind="low-cost"
             />
             <BookingCard
-              hotel="vn/mekong-taste-bungalow"
-              title="Mekong Taste Bungalow"
-              image={mekongTasteBungalow}
-              note="8,1"
-              price={29}
-              people={2}
-              kind="standard"
-            />
-            <BookingCard
               hotel="vn/the-island-logde"
               title="The Island Lodge"
               image={theIslandLodge}
@@ -219,13 +208,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <SectionContent>
               <p>{t("visit2.part1")}</p>
               <p>{t("visit2.part2")}</p>
-              <ImageAsLandscape
-                credit={
-                  <ExternalLinkNotUnderlined href="https://pixabay.com/fr/users/dezalb-1045091">
-                    dezalb
-                  </ExternalLinkNotUnderlined>
-                }
-              >
+              <ImageAsLandscape>
                 <MyThoImages image="boat1" />
               </ImageAsLandscape>
               <p>{t("visit2.part3")}</p>

@@ -32,10 +32,11 @@
     "part1": "La plupart des randonnées sont accessibles assez facilement néanmoins vous aurez des plages totalement isolées et surtout particulièrement loin où il vous faudra un véhicule. Quant à d’autres chemins, ils sont totalement interdits aux véhicules. Autant dire qu'aucun moyen de transport n’est véritablement mieux que l’autre. Ce sera en fonction de ce que vous comptez faire sur place.",
     "part2": {
       "title": "#Bus#",
-      "part1": "Certainement la solution la plus pratique et économique pour se déplacer sur l’île. Néanmoins la ligne de bus ne fait que la partie Est de l’île, du terminal à la partie Horseshoe en passant par Arcadia, donc vous ne pourrez pas faire les parties les plus éloignées de l’île, située à l’Ouest. La ligne principale est opérée par [Sunbus](https://www.sunbus.com.au/magnetic-island).",
-      "part2": "Attention également, le bus ne passe que toutes les heures donc renseignez-vous bien pour arriver à tant et ne pas le louper.",
-      "part3": "Prix du ticket : 3,80 AUD unitaire / 7,60 AUD pour la journée - Pass Sunbus",
-      "part4": "Réservation : Il faut acheter le pass sur place via un distributeur automatique lors de votre arrivée."
+      "part1": "Certainement la solution la plus pratique et économique pour se déplacer sur l’île. Néanmoins la ligne de bus ne fait que la partie Est de l’île, du terminal à la partie Horseshoe en passant par Arcadia, donc vous ne pourrez pas faire les parties les plus éloignées de l’île, située à l’Ouest. La ligne principale est opérée par [Kinetic](https://www.wearekinetic.com/au/townsville).",
+      "part2": "Attention également, le bus ne passe que toutes les heures donc renseignez-vous bien pour arriver à tant et ne pas le louper. Vous pouvez trouver les horaires de la ligne de bus [ICI](https://jp.translink.com.au/plan-your-journey/timetables/bus/d/250).",
+      "part3": "Prix du ticket : 0.50 AUD unitaire / 1 AUD pour la journée",
+      "part4": "Réservation : Vous pouvez acheter le pass directement dans le bus en début de journée.",
+      "part5": "[Plan de la ligne de bus.](https://translink.widen.net/s/nj8p6hrftg/241202-magnetic-island-network-map)"
     },
     "part3": {
       "title": "#Voiture#",
@@ -52,9 +53,9 @@
     },
     "part5": {
       "title": "#Vélo#",
-      "part1": "Une autre solution pour les plus sportifs et courageux. Prenez en compte que les routes sont vallonnées avec des montées et des descentes plus ou moins rudes. En plus de l’effort à fournir en vélo, vous aurez également l’effort des randonnées à faire.",
-      "part2": "Prix : 30 AUD pour la journée",
-      "part3": "Réservation : [Magnetic Adventure Hire](https://magneticadventurehire.com.au/magnetic-island-bike-hire/)"
+      "part1": "Il vous est proposé des vélos avec assistance électrique : vous devrez donc quand même pédaler mais c’est une autre solution pour les plus sportifs et courageux. Prenez en compte que les routes sont vallonnées avec des montées et des descentes plus ou moins rudes. En plus de l’effort à fournir en vélo, vous aurez également l’effort des randonnées à faire.",
+      "part2": "Prix : 55 AUD pour la journée",
+      "part3": "Réservation : [e-Bike Pedal Assist Bicycle](https://magneticislandroaming.com.au/pedal-assist-e-bike-bicycle-with-pedals/)"
     },
     "part6": "Nous concernant, nous n’avons utilisé que le bus qui convenait parfaitement à notre parcours et qui n’a pas du tout été un problème que ce soit niveau monde ou niveau horaire ... Et nos petites jambes bien sûr."
   },

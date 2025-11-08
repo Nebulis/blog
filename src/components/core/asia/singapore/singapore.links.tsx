@@ -22,6 +22,11 @@ export const singaporeLinks: CountryLink = {
       published: new Date("2021-12-25T17:00:00.000+08:00"),
     },
     {
+      id: "jewel-changi-airport",
+      label: { fr: "", en: "" },
+      published: false,
+    },
+    {
       id: "marina-bay-sands",
       label: {
         fr: "",

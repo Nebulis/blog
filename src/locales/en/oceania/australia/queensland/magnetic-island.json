@@ -31,30 +31,31 @@
     "title": "How to get around?",
     "part1": "Most of the hikes are easily accessible. However, there are isolated beaches for which you will need a vehicle. Some roads are closed to for cars. In other words, there is no best way to get around. It will depend on what you plan to do there.",
     "part2": {
-      "title": "Bus",
-      "part1": "It's certainly the most practical and economical solution for getting around the island. However, the bus line only operates to the eastern part of the island, from the terminal to the Horseshoe bay via Arcadia. So you will not be able to reach remote parts of the island, located in the west. The main operator is [Sunbus](https://www.sunbus.com.au/magnetic-island).",
-      "part2": "Also, be careful, there is one bus every hour.  Make sure to get there in time.",
-      "part3": "Ticket price: AUD 3.80 per ticket / AUD 7.60 for the day - Sunbus Pass",
-      "part4": "Booking: The pass must be purchased on-site via an automatic distributor when you arrive."
+      "title": "#Bus#",
+      "part1": "It's certainly the most practical and economical solution for getting around the island. However, the bus line only operates to the eastern part of the island, from the terminal to the Horseshoe bay via Arcadia. So you will not be able to reach remote parts of the island, located in the west. The main operator is [Kinetic](https://www.wearekinetic.com/au/townsville).",
+      "part2": "Also, be careful, there is one bus every hour.  Make sure to get there in time. You can find the bus line timetable [HERE](https://jp.translink.com.au/plan-your-journey/timetables/bus/d/250).",
+      "part3": "Ticket price: AUD 0.50 per ticket / AUD 1 for the day",
+      "part4": "Booking: You can buy the pass directly on the bus at the start of the day.",
+      "part5": "[Bus route.](https://translink.widen.net/s/nj8p6hrftg/241202-magnetic-island-network-map)"
     },
     "part3": {
-      "title": "Car",
+      "title": "#Car#",
       "part1": "It's probably the most comfortable solution if you want to be independent and don't want to think during your visit.",
       "part2": "You can bring your vehicle or rent one on-site. Be aware, however, that some parts of the island are closed to cars, while the western part is accessible only by 4X4s.",
       "part3": "Price: 99 AUD for the day",
       "part4": "Booking: [Isle Hire](https://www.islehire.com.au/)"
     },
     "part4": {
-      "title": "Scooter",
+      "title": "#Scooter#",
       "part1": "You can rent a scooter to be more independent, especially you don't have to think about bus times.",
       "part2": "Price: 40 AUD for the day",
       "part3": "Booking: [Magnetic Informer](https://magneticinformer.com.au/tour/road-runner-scooter-hire/)"
     },
     "part5": {
-      "title": "Bike",
-      "part1": "Another solution for the more athletic and courageous. Take into account that the roads are hilly with more or less steep climbs and descents. Don't forget to keep energy for hikes, if needed.",
-      "part2": "Price: 30 AUD for the day",
-      "part3": "Booking: [Magnetic Adventure Hire](https://magneticadventurehire.com.au/magnetic-island-bike-hire/)"
+      "title": "#Bike#",
+      "part1": "You can find e-bikes (you still need to pedal): another solution for the more athletic and courageous. Take into account that the roads are hilly with more or less steep climbs and descents. Don't forget to keep energy for hikes, if needed.",
+      "part2": "Price: 55 AUD for the day",
+      "part3": "Booking: [e-Bike Pedal Assist Bicycle](https://magneticislandroaming.com.au/pedal-assist-e-bike-bicycle-with-pedals/)"
     },
     "part6": "We only took the bus because it's suited our route perfectly. We didn't face any problem at all, buses were not crowded and right on time."
   },

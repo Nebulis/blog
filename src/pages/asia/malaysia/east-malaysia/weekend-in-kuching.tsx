@@ -96,7 +96,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where-to-stay.part2")}</p>
           <BookingGygCardContainer>
             <BookingCard
-              hotel="my/nova-kuching"
+              hotel="my/po-nova-kuching-hotel-the-best-rated-area-in-kuching"
               title="Nova Kuching Hotel"
               image={novaHotel}
               note="7,7"

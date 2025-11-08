@@ -131,19 +131,6 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               price={68}
               duration={{ value: 5, unit: "hour" }}
             />
-            <GetYourGuideCard
-              to="h-chi-minh-ville-l272/excursion-au-temple-de-cao-i-et-dans-les-tunnels-de-c-chi-t69151"
-              title={
-                i18n.languageCode === "fr"
-                  ? "Temples de Củ Chi et Cao Đài : visite d’une journée"
-                  : "Cao Đài Temple and Củ Chi Tunnels Full-Day Tour"
-              }
-              rating={4.4}
-              image="https://cdn.getyourguide.com/img/tour/577b5bf87b8e7.jpeg/38"
-              certified
-              price={29}
-              duration={{ value: 1, unit: "day" }}
-            />
           </BookingGygCardContainer>
           <p
             css={css`
