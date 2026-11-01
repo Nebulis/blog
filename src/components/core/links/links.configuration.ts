@@ -83,6 +83,24 @@ export const continentLinks: ContinentLink[] = [
         label: { fr: commonFr.country.france.title, en: commonEn.country.france.title },
         imageProps: { image: "homeFrance" },
       },
+      {
+        id: "azores",
+        cities: [],
+        others: [],
+        label: { fr: "Acores", en: "Azores" },
+      },
+      {
+        id: "iceland",
+        cities: [],
+        others: [],
+        label: { fr: commonFr.country.iceland.title, en: commonEn.country.iceland.title },
+      },
+      {
+        id: "russia",
+        cities: [],
+        others: [],
+        label: { fr: commonFr.country.russia.title, en: commonEn.country.russia.title },
+      },
     ],
   },
   {
