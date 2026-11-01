@@ -444,6 +444,12 @@ exports[`french pages exports meta for public/discovery/winter-activities/index.
 
 exports[`french pages exports meta for public/discovery/winter-activities/index.html correctly: title 1`] = `"Activités hivernales | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/europe/index.html correctly: meta-description 1`] = `"L'Europe est un continent riche de cultures et d'histoire, de paysages à couper le souffle entre plages paradisiaques et montagnes majestueuses. Un continent avec de multiples facettes, qui offre des moments inoubliables à chaque saison … Retrouvez dans notre blog les plus beaux endroits de ce continent pour vos vacances de rêve. Nos récits de voyage avec photos, conseils et astuces."`;
+
+exports[`french pages exports meta for public/europe/index.html correctly: social-network 1`] = `"L'Europe est un continent riche de cultures et d'histoire, de paysages à couper le souffle entre plages paradisiaques et montagnes majestueuses. Un continent avec de multiples facettes, qui offre des moments inoubliables à chaque saison … Retrouvez dans notre blog les plus beaux endroits de ce continent pour vos vacances de rêve. Nos récits de voyage avec photos, conseils et astuces."`;
+
+exports[`french pages exports meta for public/europe/index.html correctly: title 1`] = `"Europe | Guide de Voyage"`;
+
 exports[`french pages exports meta for public/index.html correctly: meta-description 1`] = `"Passionnés de voyages, nous partageons sur notre blog nos aventures autour du monde. Entre astuces, conseils, récits de voyages, anecdotes ou coups de cœur, on espère que vous trouverez votre bonheur ! Un blog voyage et lifestyle d’un couple de voyageur qui a des rêves plein la tête !"`;
 
 exports[`french pages exports meta for public/index.html correctly: social-network 1`] = `"Passionnés de voyages, nous partageons sur notre blog nos aventures autour du monde. Entre astuces, conseils, récits de voyages, anecdotes ou coups de cœur, on espère que vous trouverez votre bonheur ! Un blog voyage et lifestyle d’un couple de voyageur qui a des rêves plein la tête !"`;
