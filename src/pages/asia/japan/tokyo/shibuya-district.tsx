@@ -6,7 +6,7 @@ import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/japan/tokyo/shibuya-district.json"
 import translationEn from "../../../../locales/en/asia/japan/tokyo/shibuya-district.json"
-import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/asia/japan/japan"
 import {
   How,
   HowLong,

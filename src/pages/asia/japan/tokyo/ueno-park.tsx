@@ -6,7 +6,7 @@ import { useCustomTranslation } from "../../../../i18n-hook"
 import { Comments } from "../../../../components/core/comments"
 import translationFr from "../../../../locales/fr/asia/japan/tokyo/ueno-park.json"
 import translationEn from "../../../../locales/en/asia/japan/tokyo/ueno-park.json"
-import { JapanBlogLayout, JapanTitle } from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanTitle } from "../../../../components/core/asia/japan/japan"
 import {
   How,
   HowLong,

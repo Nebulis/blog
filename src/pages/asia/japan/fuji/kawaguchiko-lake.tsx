@@ -17,7 +17,7 @@ import {
   WhereToStay,
 } from "../../../../components/core/section"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/asia/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 import i18n from "i18next"

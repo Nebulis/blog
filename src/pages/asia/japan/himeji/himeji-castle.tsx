@@ -25,7 +25,7 @@ import {
   TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/asia/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 import i18n from "i18next"

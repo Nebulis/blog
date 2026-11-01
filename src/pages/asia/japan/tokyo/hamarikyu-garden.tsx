@@ -20,7 +20,7 @@ import {
   ImageAsPortrait,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
-import { JapanBlogLayout, JapanTitle } from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanTitle } from "../../../../components/core/asia/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
 import { useCustomTranslation } from "../../../../i18n-hook"

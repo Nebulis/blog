@@ -8,8 +8,8 @@ import {
   JapanBlogLayout,
   JapanButtonLink,
   japanWeatherEntries,
-} from "../../../components/core/japan/japan"
-import { japanLinks } from "../../../components/core/japan/japan.links"
+} from "../../../components/core/asia/japan/japan"
+import { japanLinks } from "../../../components/core/asia/japan/japan.links"
 import {
   HomeSection,
   HomeSubSection,
@@ -35,8 +35,8 @@ import {
 import { ApplicationLink } from "../../../components/core/links/link"
 import { jsx } from "@emotion/react"
 import { SharedJapanImages } from "../../../components/images/asia/japan/shared-japan-images"
-import { JapanImageAsMedallion } from "../../../components/core/japan/japan.images"
-import { SpringInJapanCard } from "../../../components/core/japan/japan.cards"
+import { JapanImageAsMedallion } from "../../../components/core/asia/japan/japan.images"
+import { SpringInJapanCard } from "../../../components/core/asia/japan/japan.cards"
 import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
 import { WeatherForHomePage } from "../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"

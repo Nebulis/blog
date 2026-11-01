@@ -111,7 +111,7 @@ export const SharedCardJapanImages: React.FunctionComponent<ExtraImageProps & { 
           }
         }
       }
-      customsInJapan: file(relativePath: { eq: "asia/japan/home.jpg" }) {
+      customsInJapan: file(relativePath: { eq: "asia/japan/home-japan.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

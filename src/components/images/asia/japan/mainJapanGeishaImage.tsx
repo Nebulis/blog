@@ -5,7 +5,7 @@ import * as React from "react"
 export const MainJapanGeishaImage = ({ className = "" }: { className?: string }) => {
   const data = useStaticQuery(graphql`
     query {
-      file: file(relativePath: { eq: "asia/japan/home.jpg" }) {
+      file: file(relativePath: { eq: "asia/japan/home-japan.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid

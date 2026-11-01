@@ -15,7 +15,7 @@ import {
   WeatherIconType,
   WeatherType,
 } from "../../types/shared"
-import { japanCherryBlossom } from "./japan/japan.variables"
+import { japanCherryBlossom } from "./asia/japan/japan.variables"
 import { Lang } from "./links/links.types"
 // https://www.flaticon.com/free-icon/drop_2204430?related_id=2204430&origin=pack
 

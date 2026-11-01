@@ -10,7 +10,7 @@ import {
   WhereToStay,
 } from "../../../../components/core/section"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/asia/japan/japan"
 import { PageProps } from "gatsby"
 import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 import i18n from "i18next"
@@ -30,7 +30,7 @@ import {
   ShibuyaDistrictCard,
   UenoParkCard,
   YasukuniDoriCard,
-} from "../../../../components/core/japan/japan.cards"
+} from "../../../../components/core/asia/japan/japan.cards"
 import { TwoDaysInTokyoImages } from "../../../../components/images/asia/japan/tokyo/two-days-in-tokyo"
 import { FakeList } from "../../../../components/core/title"
 

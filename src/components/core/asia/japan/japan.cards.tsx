@@ -1,12 +1,12 @@
 import React, { FunctionComponent } from "react"
-import { Card } from "../../card"
+import { Card } from "../../../card"
 import { japanPrimaryColor, japanPrimaryColorDarker } from "./japan.variables"
 import styled from "@emotion/styled"
-import { ExtraCardProps } from "../../../types/shared"
-import { useCustomTranslation } from "../../../i18n-hook"
-import { SharedCardJapanImages } from "../../images/asia/japan/shared-card-japan-images"
-import commonFr from "../../../locales/fr/common.json"
-import commonEn from "../../../locales/en/common.json"
+import { ExtraCardProps } from "../../../../types/shared"
+import { useCustomTranslation } from "../../../../i18n-hook"
+import { SharedCardJapanImages } from "../../../images/asia/japan/shared-card-japan-images"
+import commonFr from "../../../../locales/fr/common.json"
+import commonEn from "../../../../locales/en/common.json"
 
 export const JapanCard = styled(Card)`
   .tags a {
