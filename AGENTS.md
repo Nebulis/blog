@@ -140,8 +140,10 @@ Template source: `plopfile.ts`, `templates/page.hbs`, `templates/translation.hbs
 8. **Update integration snapshots** (required for new pages):
 
    ```sh
-   npm run build && npm run test:integration -- -u
+   CONTEXT=production npm run build && npm run test:integration -- -u
    ```
+
+   **Important:** The build **must** run with `CONTEXT=production` (matches CI) for correct i18n rendering. Without it, English pages may render French content, causing snapshot mismatches.
 
    This records the new page's meta tags (title, description, social tags) for CI validation.
 
