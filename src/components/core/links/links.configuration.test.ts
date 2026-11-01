@@ -100,7 +100,7 @@ const europeLinks = () => {
   expect(getLink("azores")).toMatchObject({ label: { fr: "Acores", en: "Azores" }, published: false })
   expect(getLink("iceland")).toMatchObject({ label: { fr: "", en: "" }, published: false })
   expect(getLink("russia")).toMatchObject({ label: { fr: "", en: "" }, published: false })
-  expect(getLink("france")).toMatchObject({ label: { fr: "", en: "" }, published: false })
+  expect(getLink("france")).toMatchObject({ label: { fr: "France", en: "France" }, published: false })
   expect(getLink("paris")).toMatchObject({ label: { fr: "", en: "" }, published: false })
 }
 
