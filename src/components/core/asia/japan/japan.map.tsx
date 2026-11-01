@@ -1,9 +1,9 @@
 import React from "react"
 import { css } from "@emotion/react"
-import { defaultTextStyle, mapProps, PinAirport } from "../map"
-import { weatherBad, weatherGood } from "../variables"
+import { defaultTextStyle, mapProps, PinAirport } from "../../map"
+import { weatherBad, weatherGood } from "../../variables"
 import { JapanCity } from "./japan.cities"
-import { Airport, AirportKind } from "../../../types/shared"
+import { Airport, AirportKind } from "../../../../types/shared"
 
 export const JapanMap = () => {
   return (

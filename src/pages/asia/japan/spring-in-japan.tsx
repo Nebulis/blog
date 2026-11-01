@@ -11,7 +11,7 @@ import {
 } from "../../../components/core/section"
 import SEO from "../../../components/layout/seo"
 import { Conclusion } from "../../../components/core/conclusion"
-import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../components/core/asia/japan/japan"
 import {
   TwoDaysInTokyoCard,
   ArashiyamaCard,
@@ -23,7 +23,7 @@ import {
   KinkakujiCard,
   NagoyaCastleCard,
   ToganjiCard,
-} from "../../../components/core/japan/japan.cards"
+} from "../../../components/core/asia/japan/japan.cards"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
 import translationFr from "../../../locales/fr/asia/japan/spring-in-japan.json"
@@ -41,7 +41,7 @@ import { Quote } from "../../../components/core/quote"
 import { Divider } from "../../../components/core/divider"
 import { ArticleCardContainer, MapContainer } from "../../../components/layout/layout"
 import SpringInJapanMap from "../../../images/asia/japan/spring-in-japan/spring-in-japan-map.png"
-import { japanPrimaryColor } from "../../../components/core/japan/japan.variables"
+import { japanPrimaryColor } from "../../../components/core/asia/japan/japan.variables"
 import { Comments } from "../../../components/core/comments"
 import { SpringInJapanImages } from "../../../components/images/asia/japan/spring-in-japan-images"
 import { getLink } from "../../../components/core/links/links.utils"

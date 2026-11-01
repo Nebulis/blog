@@ -10,9 +10,9 @@ import {
   GoToAllArticlesContainer,
   MedallionContainer,
 } from "../../../../components/layout/layout"
-import { japanLinks } from "../../../../components/core/japan/japan.links"
-import { JapanBlogLayout, JapanButtonLink, japanWeatherEntries } from "../../../../components/core/japan/japan"
-import { JapanImageAsMedallion } from "../../../../components/core/japan/japan.images"
+import { japanLinks } from "../../../../components/core/asia/japan/japan.links"
+import { JapanBlogLayout, JapanButtonLink, japanWeatherEntries } from "../../../../components/core/asia/japan/japan"
+import { JapanImageAsMedallion } from "../../../../components/core/asia/japan/japan.images"
 import { PageProps } from "gatsby"
 import { SharedJapanImages } from "../../../../components/images/asia/japan/shared-japan-images"
 import { useCustomTranslation } from "../../../../i18n-hook"

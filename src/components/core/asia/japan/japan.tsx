@@ -1,19 +1,19 @@
 import { css } from "@emotion/react"
 import React, { FunctionComponent, HTMLAttributes } from "react"
 import styled from "@emotion/styled"
-import { ButtonLink, ExternalLink } from "../links/link"
-import { BlogLayout, IndexBlogLayout } from "../../layout/layout"
+import { ButtonLink, ExternalLink } from "../../links/link"
+import { BlogLayout, IndexBlogLayout } from "../../../layout/layout"
 import {
   japanCherryBlossom,
   japanPrimaryColor,
   japanPrimaryColorDarker,
   japanPrimaryColorWithOpacity,
 } from "./japan.variables"
-import cherryBlossom from "../../../images/asia/japan/cherry-blossom.png"
-import { City, Headline } from "../highlight"
-import { Title } from "../title"
-import { WeatherEntry } from "../../../types/shared"
-import { MapAndTableTableContainer } from "../../layout/transports-layout"
+import cherryBlossom from "../../../../images/asia/japan/cherry-blossom.png"
+import { City, Headline } from "../../highlight"
+import { Title } from "../../title"
+import { WeatherEntry } from "../../../../types/shared"
+import { MapAndTableTableContainer } from "../../../layout/transports-layout"
 
 const japanLineStyle = css`
   padding: 2px 5px;

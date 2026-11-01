@@ -5,7 +5,7 @@ import SEO from "../../../components/layout/seo"
 import { useCustomTranslation } from "../../../i18n-hook"
 import translationFr from "../../../locales/fr/asia/japan/transports-in-japan.json"
 import translationEn from "../../../locales/en/asia/japan/transports-in-japan.json"
-import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../components/core/asia/japan/japan"
 import {
   Booking,
   Company,
@@ -45,7 +45,7 @@ import { Conclusion } from "../../../components/core/conclusion"
 import { Comments } from "../../../components/core/comments"
 import { css } from "@emotion/react"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
-import { JapanPlaneSchedule } from "../../../components/core/japan/japan.schedules-plane"
+import { JapanPlaneSchedule } from "../../../components/core/asia/japan/japan.schedules-plane"
 
 const namespace = "asia/japan/transports-in-japan"
 const id = "transports-in-japan"

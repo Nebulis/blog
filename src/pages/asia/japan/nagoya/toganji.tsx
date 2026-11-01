@@ -21,7 +21,7 @@ import {
   WhereToStay,
 } from "../../../../components/core/section"
 import { Conclusion } from "../../../../components/core/conclusion"
-import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/japan/japan"
+import { JapanBlogLayout, JapanHeadline, JapanTitle } from "../../../../components/core/asia/japan/japan"
 import { PageProps } from "gatsby"
 import i18n from "i18next"
 import translationFr from "../../../../locales/fr/asia/japan/nagoya/toganji.json"

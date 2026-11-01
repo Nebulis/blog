@@ -71,7 +71,7 @@ export const HimejiCastleImages: React.FunctionComponent<ExtraImageProps & { ima
           }
         }
       }
-      history: file(relativePath: { eq: "asia/japan/home.jpg" }) {
+      history: file(relativePath: { eq: "asia/japan/home-japan.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

@@ -1,5 +1,5 @@
 import { ContinentLink } from "../links/links.types"
-import { japanLinks } from "../japan/japan.links"
+import { japanLinks } from "./japan/japan.links"
 import { vietnamLinks } from "./vietnam/vietnam.links"
 import commonFr from "../../../locales/fr/common.json"
 import commonEn from "../../../locales/en/common.json"

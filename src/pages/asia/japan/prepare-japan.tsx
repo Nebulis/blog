@@ -11,7 +11,7 @@ import {
   JapanBlogLayout,
   JapanTitle,
   japanWeatherEntries,
-} from "../../../components/core/japan/japan"
+} from "../../../components/core/asia/japan/japan"
 import {
   Baggage,
   FewWords,
@@ -51,8 +51,8 @@ import {
   Shinkansen,
   Tori,
   Volcano,
-} from "../../../components/core/japan/japan.prepare"
-import { japanPrimaryColor, japanPrimaryColorWithOpacity } from "../../../components/core/japan/japan.variables"
+} from "../../../components/core/asia/japan/japan.prepare"
+import { japanPrimaryColor, japanPrimaryColorWithOpacity } from "../../../components/core/asia/japan/japan.variables"
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 import { FakeList, PrepareSubTitle } from "../../../components/core/title"

@@ -1,4 +1,4 @@
-import { CountryLink } from "../links/links.types"
+import { CountryLink } from "../../links/links.types"
 import {
   TwoDaysInTokyoCard,
   ArashiyamaCard,
@@ -20,8 +20,8 @@ import {
   TransportsJapanCard,
   FoodJapanCard,
 } from "./japan.cards"
-import commonFr from "../../../locales/fr/common.json"
-import commonEn from "../../../locales/en/common.json"
+import commonFr from "../../../../locales/fr/common.json"
+import commonEn from "../../../../locales/en/common.json"
 
 export const japanLinks: CountryLink = {
   id: "japan",
