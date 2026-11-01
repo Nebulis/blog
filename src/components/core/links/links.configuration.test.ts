@@ -98,6 +98,7 @@ const southAmericaLinks = () => {
 const europeLinks = () => {
   // europe countries assertions
   expect(getLink("france")).toMatchObject({ label: { fr: "France", en: "France" }, published: false })
+  expect(getLink("paris")).toMatchObject({ label: { fr: "Paris", en: "Paris" }, published: false })
   expect(getLink("azores")).toMatchObject({ label: { fr: "Acores", en: "Azores" }, published: false })
   expect(getLink("iceland")).toMatchObject({ label: { fr: "Islande", en: "Iceland" }, published: false })
   expect(getLink("russia")).toMatchObject({ label: { fr: "Russie", en: "Russia" }, published: false })

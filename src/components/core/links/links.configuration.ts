@@ -78,7 +78,13 @@ export const continentLinks: ContinentLink[] = [
     countries: [
       {
         id: "france",
-        cities: [],
+        cities: [
+          {
+            id: "paris",
+            highlights: [],
+            label: { fr: "Paris", en: "Paris" },
+          },
+        ],
         others: [],
         label: { fr: commonFr.country.france.title, en: commonEn.country.france.title },
         imageProps: { image: "homeFrance" },
