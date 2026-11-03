@@ -5,7 +5,11 @@ import { ApplicationContext } from "../../application"
 
 describe("link", () => {
   it("should throw error when the link doesnt exist", () => {
-    expect(() => render(<ApplicationLink to="foo" />)).toThrow("No link for foo")
+    const consoleError = jest.spyOn(console, "error").mockImplementation(jest.fn())
+    expect(() => {
+      render(<ApplicationLink to="foo" />)
+    }).toThrow("No link for foo")
+    consoleError.mockRestore()
   })
   it("should render a link when the article is published and mode is production", () => {
     const { getByText, container } = render(

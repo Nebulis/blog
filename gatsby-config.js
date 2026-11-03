@@ -68,6 +68,7 @@ module.exports = {
               ...pages("/organisation/"),
               ...pages("/discovery/"),
               ...pages("/about/"),
+              ...pages("/europe/"),
               ...pages("/asia/vietnam/index.html"),
               ...pages("/asia/vietnam/southern-vietnam/"),
               ...pages("/asia/philippines/"),

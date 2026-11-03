@@ -444,6 +444,12 @@ exports[`english pages exports meta for public/en/discovery/winter-activities/in
 
 exports[`english pages exports meta for public/en/discovery/winter-activities/index.html correctly: title 1`] = `"Winter activities | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/europe/index.html correctly: meta-description 1`] = `"Europe is a continent rich in cultures and history, with breathtaking landscapes ranging from paradise beaches to majestic mountains. A continent with multiple facets, offering unforgettable moments in every season … Discover in our blog the most beautiful places of this continent for your dream vacation. Our travel stories with photos, tips and tricks."`;
+
+exports[`english pages exports meta for public/en/europe/index.html correctly: social-network 1`] = `"Europe is a continent rich in cultures and history, with breathtaking landscapes ranging from paradise beaches to majestic mountains. A continent with multiple facets, offering unforgettable moments in every season … Discover in our blog the most beautiful places of this continent for your dream vacation. Our travel stories with photos, tips and tricks."`;
+
+exports[`english pages exports meta for public/en/europe/index.html correctly: title 1`] = `"Europe | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/index.html correctly: meta-description 1`] = `"Passionate about travel, we share our adventures around the world on our blog. Tips, advice, journeys, journal, anecdotes, favorites... we hope you will find what you are looking for! A travel and lifestyle blog made by a traveling couple with their heads full of dreams!"`;
 
 exports[`english pages exports meta for public/en/index.html correctly: social-network 1`] = `"Passionate about travel, we share our adventures around the world on our blog. Tips, advice, journeys, journal, anecdotes, favorites... we hope you will find what you are looking for! A travel and lifestyle blog made by a traveling couple with their heads full of dreams!"`;
