@@ -11,126 +11,126 @@ export const CarouselImageQuery: React.FunctionComponent<ExtraImageProps & { ima
     query {
       vietnam1: file(relativePath: { eq: "asia/vietnam/carousel-vietnam.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 70, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       vietnam2: file(relativePath: { eq: "asia/vietnam/carousel-2-vietnam.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 70, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       philippines1: file(relativePath: { eq: "asia/philippines/carousel-philippines.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [1800]) {
+          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       philippines2: file(relativePath: { eq: "asia/philippines/carousel-philippines-2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 70, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 70, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       japan1: file(relativePath: { eq: "asia/japan/carousel-japan.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       japan2: file(relativePath: { eq: "asia/japan/carousel-japan-2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       malaysia1: file(relativePath: { eq: "asia/malaysia/carousel-malaysia.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       malaysia2: file(relativePath: { eq: "asia/malaysia/carousel-malaysia2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       indonesia1: file(relativePath: { eq: "asia/indonesia/carousel-indonesia.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       indonesia2: file(relativePath: { eq: "asia/indonesia/carousel-indonesia2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       singapore1: file(relativePath: { eq: "asia/singapore/carousel-singapore.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       singapore2: file(relativePath: { eq: "asia/singapore/carousel-singapore2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       cambodia1: file(relativePath: { eq: "asia/cambodia/cambodia-carousel.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       cambodia2: file(relativePath: { eq: "asia/cambodia/cambodia-carousel2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       taiwan1: file(relativePath: { eq: "asia/taiwan/carousel-taiwan.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       taiwan2: file(relativePath: { eq: "asia/taiwan/carousel-taiwan2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       australia1: file(relativePath: { eq: "oceania/australia/carousel-australia.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       australia2: file(relativePath: { eq: "oceania/australia/carousel-australia2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 80, srcSetBreakpoints: [1200]) {
+          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [1200, 1800]) {
             ...GatsbyImageSharpFluid
           }
         }
