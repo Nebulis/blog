@@ -34,6 +34,20 @@ Run everything from the repository root.
 Verification before claiming work is done: `npm run lint && npx tsc --noEmit && npm run test -- --runInBand`.
 Add `npm run build && npm run test:integration` when routes, SEO/meta, or page rendering changed.
 
+## GitHub CLI
+
+`gh` is installed and authenticated. Use it for PR operations:
+
+```sh
+# Open a PR for current branch
+gh pr create --title "feat: description" --body "..."
+
+# Or push and create in one step
+git push origin HEAD && gh pr create --fill
+```
+
+Do not claim you cannot open PRs — `gh` is available.
+
 ## Architecture map
 
 ```text
