@@ -137,7 +137,9 @@
         "part1": "Plus vous faites d’arrêt, plus le prix du ticket augmente et ce même si la station de départ et d'arrivée est identique.",
         "part2": "Prix au départ de Hô Chi Minh-Ville (Saigon) ↠ [ICI](https://www.thesinhtourist.vn/download/OpenBus-SG.pdf)",
         "part3": "Prix au départ de Hanoi ↠ [ICI](https://www.thesinhtourist.vn/download/OpenBus-HN.pdf)",
-        "part4": "Prix au départ de Hué ↠ [ICI](https://www.thesinhtourist.vn/download/OpenBus-Hue.pdf)"
+        "part4": "Prix au départ de Hué ↠ [ICI](https://www.thesinhtourist.vn/download/OpenBus-Hue.pdf)",
+        "part5": "Prix de Hô Chi Minh-Ville (Saigon) à Hanoi ↠ [ICI](https://www.thesinhtourist.vn/download/OpenBus-SG.pdf)",
+        "part6": "Prix de Hanoi à Hô Chi Minh-Ville ↠ [ICI](https://www.thesinhtourist.vn/download/OpenBus-HN.pdf)"
       },
       "opinion": {
         "part1": "L’Open Tour reste très intéressant notamment si vous n’aimez pas planifier vos voyages à l'avance. Vous choisissez seulement des destinations, pas besoin de vous fixer de dates à respecter et vous pouvez faire évoluer votre trajet en fonction de vos besoins (attention quand même certaines compagnies peuvent imposer des frais additionnels si vous choisissez de modifier votre trajet en cours de route).",

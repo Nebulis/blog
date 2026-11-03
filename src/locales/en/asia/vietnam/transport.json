@@ -136,7 +136,9 @@
       "price": {
         "part1": "The more you stop, the more the price of the ticket increases, even if the departure and arrival station are the same.",
         "part2": "Price from Ho Chi Minh City (Saigon) ↠ [HERE](https://www.thesinhtourist.vn/download/OpenBus-SG.pdf)",
+        "part3": "Price from Ho Chi Minh City (Saigon) to Hanoi ↠ [HERE](https://www.thesinhtourist.vn/download/OpenBus-SG.pdf)",
         "part4": "Price from Hanoi ↠ [HERE](https://www.thesinhtourist.vn/download/OpenBus-HN.pdf)",
+        "part5": "Price from Hanoi to Ho Chi Minh City ↠ [HERE](https://www.thesinhtourist.vn/download/OpenBus-HN.pdf)",
         "part6": "Price from Hue ↠ [HERE](https://www.thesinhtourist.vn/download/OpenBus-Hue.pdf)"
       },
       "opinion": {
