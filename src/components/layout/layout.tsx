@@ -1,4 +1,5 @@
 import React, { FunctionComponent, HTMLAttributes, useContext, useEffect, useLayoutEffect, useState } from "react"
+import { Helmet } from "react-helmet"
 import { Header } from "./header"
 import { ScrollToTop } from "../core/scrollTo"
 import { getLink } from "../core/links/links.utils"
@@ -136,102 +137,109 @@ export const IndexBlogLayout: FunctionComponent<{
     }
   }, [status])
   return typeof window !== `undefined` || ssrBuild ? (
-    <div className={`${className} index-blog-layout flex flex-column min-vh-100`} onClick={() => setSelectedPin("")}>
-      <Global
-        styles={css`
-          @font-face {
-            font-family: "Roboto";
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(${RobotoWoff}) format("woff2"), url(${Roboto}) format("truetype");
-          }
-          @font-face {
-            font-family: "Roboto";
-            font-style: bold;
-            font-weight: 900;
-            font-display: swap;
-            src: url(${RobotoBolderWoff}) format("woff2");
-          }
-          @font-face {
-            font-family: "Playfair Display";
-            font-display: swap;
-            font-weight: 400;
-            src: url(${PlayfairFontWoff}) format("woff2"), url("${PlayfairFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-          }
-          @font-face {
-            font-family: "Freestyle Script";
-            font-display: swap;
-            src: url("${FreestyleFontWoff}") format("woff2"), url("${FreestyleFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-          }
-          @font-face {
-            font-family: "Courgette";
-            font-display: swap;
-            src: url("${CourgetteFontWoff}") format("woff2"), url("${CourgetteFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-          }
-        `}
-      />
-      {development && !isPublished && <PageDevelopmentMark />}
-      <Header noStickyHeader={noStickyHeader} location={location} />
-      <ScrollToTop />
-      <div className="children-container index-blog-layout-content flex-grow-1">{children}</div>
+    <>
+      {!isPublished && (
+        <Helmet>
+          <meta name="robots" content="noindex" />
+        </Helmet>
+      )}
+      <div className={`${className} index-blog-layout flex flex-column min-vh-100`} onClick={() => setSelectedPin("")}>
+        <Global
+          styles={css`
+            @font-face {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: url(${RobotoWoff}) format("woff2"), url(${Roboto}) format("truetype");
+            }
+            @font-face {
+              font-family: "Roboto";
+              font-style: bold;
+              font-weight: 900;
+              font-display: swap;
+              src: url(${RobotoBolderWoff}) format("woff2");
+            }
+            @font-face {
+              font-family: "Playfair Display";
+              font-display: swap;
+              font-weight: 400;
+              src: url(${PlayfairFontWoff}) format("woff2"), url("${PlayfairFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+            }
+            @font-face {
+              font-family: "Freestyle Script";
+              font-display: swap;
+              src: url("${FreestyleFontWoff}") format("woff2"), url("${FreestyleFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+            }
+            @font-face {
+              font-family: "Courgette";
+              font-display: swap;
+              src: url("${CourgetteFontWoff}") format("woff2"), url("${CourgetteFont}") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+            }
+          `}
+        />
+        {development && !isPublished && <PageDevelopmentMark />}
+        <Header noStickyHeader={noStickyHeader} location={location} />
+        <ScrollToTop />
+        <div className="children-container index-blog-layout-content flex-grow-1">{children}</div>
 
-      <Footer className="pa2">
-        <div className="f6 copyright">© 2020 - {new Date().getFullYear()} Magic of Travels</div>
-        <div className="newsletter">
-          <div className="tc text">NEWSLETTER</div>
-          <div className="inline-flex">
-            <Input
-              placeholder={t("footer.email")}
-              className="inline-flex"
-              id="newsletter"
-              value={mail}
-              aria-label="Email"
-              onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
-            />
-            <div
-              className="inline-flex"
-              css={css`
-                margin-top: 0.6rem;
-                margin-bottom: 0.6rem;
-              `}
-            >
-              <PrimaryDarkButton
-                disabled={!mail || status === "LOADING"}
-                onClick={() => {
-                  setStatus("LOADING")
-                  subscribe({ mail })
-                    .then(() => {
-                      setMail("")
-                      setStatus("SUCCESS")
-                    })
-                    .catch(() => {
-                      setStatus("ERROR")
-                    })
-                }}
+        <Footer className="pa2">
+          <div className="f6 copyright">© 2020 - {new Date().getFullYear()} Magic of Travels</div>
+          <div className="newsletter">
+            <div className="tc text">NEWSLETTER</div>
+            <div className="inline-flex">
+              <Input
+                placeholder={t("footer.email")}
+                className="inline-flex"
+                id="newsletter"
+                value={mail}
+                aria-label="Email"
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setMail(event.target.value)}
+              />
+              <div
+                className="inline-flex"
+                css={css`
+                  margin-top: 0.6rem;
+                  margin-bottom: 0.6rem;
+                `}
               >
-                {status === "INITIAL" ? (
-                  <FaEnvelope />
-                ) : status === "LOADING" ? (
-                  <FaSpinner className="fa-spin" />
-                ) : status === "SUCCESS" ? (
-                  <FaCheck />
-                ) : (
-                  <FaTimes />
-                )}
-                &nbsp;{t("footer.subscribe")}
-              </PrimaryDarkButton>
+                <PrimaryDarkButton
+                  disabled={!mail || status === "LOADING"}
+                  onClick={() => {
+                    setStatus("LOADING")
+                    subscribe({ mail })
+                      .then(() => {
+                        setMail("")
+                        setStatus("SUCCESS")
+                      })
+                      .catch(() => {
+                        setStatus("ERROR")
+                      })
+                  }}
+                >
+                  {status === "INITIAL" ? (
+                    <FaEnvelope />
+                  ) : status === "LOADING" ? (
+                    <FaSpinner className="fa-spin" />
+                  ) : status === "SUCCESS" ? (
+                    <FaCheck />
+                  ) : (
+                    <FaTimes />
+                  )}
+                  &nbsp;{t("footer.subscribe")}
+                </PrimaryDarkButton>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="f6 made-by">
-          Made with ❤️ by&nbsp;
-          <a href="https://github.com/nebulis" target="_blank" rel="noopener noreferrer">
-            Nebulis
-          </a>
-        </div>
-      </Footer>
-    </div>
+          <div className="f6 made-by">
+            Made with ❤️ by&nbsp;
+            <a href="https://github.com/nebulis" target="_blank" rel="noopener noreferrer">
+              Nebulis
+            </a>
+          </div>
+        </Footer>
+      </div>
+    </>
   ) : null
 }
 

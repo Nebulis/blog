@@ -1,28 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`english pages exports meta for public/en/404.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
-
-exports[`english pages exports meta for public/en/404.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
-
-exports[`english pages exports meta for public/en/404.html correctly: title 1`] = `"404: Not found | Travel Blog"`;
-
 exports[`english pages exports meta for public/en/404/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
 exports[`english pages exports meta for public/en/404/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
 
 exports[`english pages exports meta for public/en/404/index.html correctly: title 1`] = `"404: Not found | Travel Blog"`;
-
-exports[`english pages exports meta for public/en/about/contact/index.html correctly: meta-description 1`] = `"Do you have questions? Advice to share? Or just few words for us? Feel free to send us a message, it will be our pleasure to talk with you. ❤️"`;
-
-exports[`english pages exports meta for public/en/about/contact/index.html correctly: social-network 1`] = `"Do you have questions? Advice to share? Or just few words for us? Feel free to send us a message, it will be our pleasure to talk with you. ❤️"`;
-
-exports[`english pages exports meta for public/en/about/contact/index.html correctly: title 1`] = `"Contact | Travel Blog"`;
-
-exports[`english pages exports meta for public/en/about/who/index.html correctly: meta-description 1`] = `"This blog is a sort of diary we share with you, with a few tips here and there. Above all, it's an unforgettable memory book that we will read in the future."`;
-
-exports[`english pages exports meta for public/en/about/who/index.html correctly: social-network 1`] = `"After living for 6 years in Singapore, a unique experience that allowed us to have so many trips to Asia and Oceania, we are back in France with new projects and dreams in mind."`;
-
-exports[`english pages exports meta for public/en/about/who/index.html correctly: title 1`] = `"About us? | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/animals/orangutan/index.html correctly: meta-description 1`] = `"Let's discover this great ape and its characteristics together. Its lifestyle, its behavior, but we also tell you why this great ape is an endangered species and how to help to protect it."`;
 
@@ -30,29 +12,11 @@ exports[`english pages exports meta for public/en/animals/orangutan/index.html c
 
 exports[`english pages exports meta for public/en/animals/orangutan/index.html correctly: title 1`] = `"All about Orangutans | Practical Guide"`;
 
-exports[`english pages exports meta for public/en/articles/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
-
-exports[`english pages exports meta for public/en/articles/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
-
-exports[`english pages exports meta for public/en/articles/index.html correctly: title 1`] = `"All our articles | Travel Guide"`;
-
 exports[`english pages exports meta for public/en/asia/cambodia/index.html correctly: meta-description 1`] = `"Famous for Siem Reap and the ruins of Angkor Wat, you can also sail on Tonle Sap Lake and observe the life of floating villages. In Phnom Penh, visit the royal palace and the former prison from the Khmer Rouge regime, a moving story that will make you discover Cambodia differently. Follow our city-to-city guide to discover our selection of must-see places. Our travelogue with photos, tips, and advice."`;
 
 exports[`english pages exports meta for public/en/asia/cambodia/index.html correctly: social-network 1`] = `"Famous for Siem Reap and the ruins of Angkor Wat, you can also sail on Tonle Sap Lake and observe the life of floating villages. In Phnom Penh, visit the royal palace and the former prison from the Khmer Rouge regime, a moving story that will make you discover Cambodia differently."`;
 
 exports[`english pages exports meta for public/en/asia/cambodia/index.html correctly: title 1`] = `"Cambodia | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/cambodia/phnom-penh/index.html correctly: meta-description 1`] = `"Phnom Penh is a modern city with many cultural monuments. Its sumptuous royal palace, its sublime national museum, and so many more. Besides, discover the overwhelming history of Cambodia with its former prison from the Khmer Rouge regime. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/cambodia/phnom-penh/index.html correctly: social-network 1`] = `"Phnom Penh is a modern city with many cultural monuments. Its sumptuous royal palace, its sublime national museum, and so many more. Besides, discover the overwhelming history of Cambodia with its former prison from the Khmer Rouge regime."`;
-
-exports[`english pages exports meta for public/en/asia/cambodia/phnom-penh/index.html correctly: title 1`] = `"Phnom Penh | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/cambodia/siem-reap/index.html correctly: meta-description 1`] = `"Siem Reap is famous for the Angkor Wat ruins which on its own makes a good reason to come to Cambodia You can also sail on Tonlé Sap Lake and observe the life of floating villages or take a walk in the markets at night. Discover these must-haves places with us. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/cambodia/siem-reap/index.html correctly: social-network 1`] = `"Siem Reap is famous for the Angkor Wat ruins which on its own makes a good reason to come to Cambodia You can also sail on Tonlé Sap Lake and observe the life of floating villages or take a walk in the markets at night. Discover these must-haves places with us."`;
-
-exports[`english pages exports meta for public/en/asia/cambodia/siem-reap/index.html correctly: title 1`] = `"Siem Reap | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/index.html correctly: meta-description 1`] = `"Asia has so much to offer. So many countries calling for evasion and making you dream. Wonderful beaches, traditional temples, treks in the jungle... Find in our blog the most beautiful wonders of this continent for your dream holidays. Our travelogue with photos, tips, and advice."`;
 
@@ -60,23 +24,11 @@ exports[`english pages exports meta for public/en/asia/index.html correctly: soc
 
 exports[`english pages exports meta for public/en/asia/index.html correctly: title 1`] = `"Asia | Travel Guide"`;
 
-exports[`english pages exports meta for public/en/asia/indonesia/bali/index.html correctly: meta-description 1`] = `"During the day, enjoy and rest on the immense beaches, or admire the landscapes in front of you, with rice terraces and impressive volcanoes. At night, Bali transforms into a party island, with its bars open all night long. Day and night, Discover this crazy island. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/indonesia/bali/index.html correctly: social-network 1`] = `"During the day, enjoy and rest on the immense beaches, or admire the landscapes in front of you, with rice terraces and impressive volcanoes. At night, Bali transforms into a party island, with its bars open all night long. Day and night, Discover this crazy island."`;
-
-exports[`english pages exports meta for public/en/asia/indonesia/bali/index.html correctly: title 1`] = `"Bali | Travel Guide"`;
-
 exports[`english pages exports meta for public/en/asia/indonesia/index.html correctly: meta-description 1`] = `"Indonesia is the largest archipelago in the world. Trek on the volcanoes of Java, rice fields and temples in Bali, hike in the tropical forests of Sumatra, rest on the beaches of Lombok or find out the dragons of Komodo Island. Follow our island-by-island guide to discover our selection of must-see places. Our travelogue with photos, tips, and advice."`;
 
 exports[`english pages exports meta for public/en/asia/indonesia/index.html correctly: social-network 1`] = `"Indonesia is the largest archipelago in the world. Trek on the volcanoes of Java, rice fields and temples in Bali, hike in the tropical forests of Sumatra, rest on the beaches of Lombok or find out the dragons of Komodo Island."`;
 
 exports[`english pages exports meta for public/en/asia/indonesia/index.html correctly: title 1`] = `"Indonesia | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/indonesia/komodo-island/index.html correctly: meta-description 1`] = `"Komodo is mainly famous for its huge lizard, the largest living in the world which owes its name from the island, the Komodo dragon. In addition to this National Park, you can also enjoy Flores Island, in Labuan Bajo, for accommodation or Rinca Island for diving or resting on the pink sand beaches. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/indonesia/komodo-island/index.html correctly: social-network 1`] = `"Komodo is mainly famous for its huge lizard, the largest living in the world which owes its name from the island, the Komodo dragon. In addition to this National Park, you can also enjoy Flores Island, in Labuan Bajo, for accommodation or Rinca Island for diving or resting on the pink sand beaches."`;
-
-exports[`english pages exports meta for public/en/asia/indonesia/komodo-island/index.html correctly: title 1`] = `"Komodo | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/japan/customs-in-japan/index.html correctly: meta-description 1`] = `"Here is a small list of the main customs and traditions of Japan to follow in transports, in the street, in restaurants, or for daily life. Good manners that are certainly different from the ones of your country of origin."`;
 
@@ -228,65 +180,17 @@ exports[`english pages exports meta for public/en/asia/japan/transports-in-japan
 
 exports[`english pages exports meta for public/en/asia/japan/transports-in-japan/index.html correctly: title 1`] = `"All you need to know about transportation in Japan | Travel Guide"`;
 
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/bako-national-park/index.html correctly: meta-description 1`] = `"Located on the Borneo island, Bako National Park is a true wonder of biodiversity. Stunning landscapes with tropical forests, mangroves, cliffs, waterfalls, and picturesque beaches. The park is also home to unique animals that you won't find anywhere else. Join us on an unforgettable tour of this secluded gem in Malaysia. Check out our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/bako-national-park/index.html correctly: social-network 1`] = `"Located on the Borneo island, Bako National Park is a true wonder of biodiversity. Stunning landscapes with tropical forests, mangroves, cliffs, waterfalls, and picturesque beaches. The park is also home to unique animals that you won't find anywhere else."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/bako-national-park/index.html correctly: title 1`] = `"Bako National Park: One of Borneo's Gem | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/index.html correctly: meta-description 1`] = `"Wild landscapes and jungles still exist despite excessive deforestation. The forests, mountains, and rivers of Borneo are home to wild or rehabilitated animals such as elephants, orangutans, or proboscis monkeys. Many of these animals are endemic to this island. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/index.html correctly: social-network 1`] = `"Wild landscapes and jungles still exist despite excessive deforestation. The forests, mountains, and rivers of Borneo are home to wild or rehabilitated animals such as elephants, orangutans, or proboscis monkeys. Many of these animals are endemic to this island."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/index.html correctly: title 1`] = `"East Malaysia | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/kubah-night-frogs-tour/index.html correctly: meta-description 1`] = `"Borneo is famous for its wild elephants, Orangutans, and proboscis monkeys. What if we shed some light on a smaller animal? With over 60 frogs species of all colors, shapes, and sizes, Kubah National Park is ideal for a night-time search for these small amphibians. Join us for a night walk. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/kubah-night-frogs-tour/index.html correctly: social-network 1`] = `"Borneo is famous for its wild elephants, Orangutans, and proboscis monkeys. What if we shed some light on a smaller animal? With over 60 frogs species of all colors, shapes, and sizes, Kubah National Park is ideal for a night-time search for these small amphibians."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/kubah-night-frogs-tour/index.html correctly: title 1`] = `"Kubah Park Night Walk: Search for Borneo Frogs | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/semenggoh-nature-reserve/index.html correctly: meta-description 1`] = `"Borneo is one of the few places in Asia where there are still a few animals in the wild, but it is not easy to see them. At Semenggoh Nature Reserve, you will have the chance to observe orangutans in semi-freedom in this jungle designed for them. Come with us to visit this nature reserve and discover our incredible encounter with the Orangutans. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/semenggoh-nature-reserve/index.html correctly: social-network 1`] = `"Borneo is one of the few places in Asia where there are still a few animals in the wild, but it is not easy to see them. At Semenggoh Nature Reserve, you will have the chance to observe orangutans in semi-freedom in this jungle designed for them."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/semenggoh-nature-reserve/index.html correctly: title 1`] = `"Semenggoh Nature Reserve: Meeting Bornean Orangutans | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/weekend-in-kuching/index.html correctly: meta-description 1`] = `"Borneo is one of the wildest lands in the world, with animals that you won't find anywhere else. Forget the big cities, the buildings, and the pollution and let you guide by this unique nature in the middle of a green jungle. Come with us to discover some of the gems of this island located in the south of Sarawak. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/weekend-in-kuching/index.html correctly: social-network 1`] = `"Borneo is one of the wildest lands in the world, with animals that you won't find anywhere else. Forget the big cities, the buildings, and the pollution and let you guide by this unique nature in the middle of a green jungle."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/east-malaysia/weekend-in-kuching/index.html correctly: title 1`] = `"Borneo: A weekend around Kuching | Travel Guide"`;
-
 exports[`english pages exports meta for public/en/asia/malaysia/index.html correctly: meta-description 1`] = `"Malaysia is divided into two parts. West Malaysia (Peninsular or Malaya) includes most of the large modern cities, such as Kuala Lumpur, Johor, and Malacca. While East Malaysia, in the north of Borneo island, is mainly covered by rainforests, populated by animals. Follow our region-by-region guide to discover our selection of must-see places. Our travelogue with photos, tips, and advice."`;
 
 exports[`english pages exports meta for public/en/asia/malaysia/index.html correctly: social-network 1`] = `"Malaysia is divided into two parts. West Malaysia (Peninsular or Malaya) includes most of the large modern cities, such as Kuala Lumpur, Johor, and Malacca. While East Malaysia, in the north of Borneo island, is mainly covered by rainforests, populated by animals."`;
 
 exports[`english pages exports meta for public/en/asia/malaysia/index.html correctly: title 1`] = `"Malaysia | Travel Guide"`;
 
-exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/index.html correctly: meta-description 1`] = `"Besides the modern and big cities like Kuala Lumpur, Johor, and Malacca, Malaysia hosts many parks, for instance in search of the famous rafflesia, or gorgeous landscape and tea plantations such as Cameron Highlands. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/index.html correctly: social-network 1`] = `"Besides the modern and big cities like Kuala Lumpur, Johor, and Malacca, Malaysia hosts many parks, for instance in search of the famous rafflesia, or gorgeous landscape and tea plantations such as Cameron Highlands."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/index.html correctly: title 1`] = `"West Malaysia | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/langkawi-dream-hotel/index.html correctly: meta-description 1`] = `"Located in the north of Malaysia, Langkawi is an archipelago of 99 islands. An ideal destination for a dream vacation. Hiking in the jungle or national parks but above all lazing on idyllic beaches to enjoy the sun and the hot sand while sipping a cocktail. Join us to discover a hotel located on a small private island. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/langkawi-dream-hotel/index.html correctly: social-network 1`] = `"Located in the north of Malaysia, Langkawi is an archipelago of 99 islands. An ideal destination for a dream vacation. Hiking in the jungle or national parks but above all lazing on idyllic beaches to enjoy the sun and the hot sand while sipping a cocktail. Join us to discover a hotel located on a small private island. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/malaysia/west-malaysia/langkawi-dream-hotel/index.html correctly: title 1`] = `"Dream hotel in Langkawi | Travel Blog"`;
-
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: meta-description 1`] = `"The Philippines comprises more than 7,600 islands, which means that you are spoilt for choice for your dream vacation. Breathtaking landscapes, unique gorgeous islands and immense snorkeling and diving spots. Follow our guide to discover our selection of must-see places. Our travelogue with photos, tips, and advice."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: social-network 1`] = `"The Philippines comprises more than 7,600 islands, which means that you are spoilt for choice for your dream vacation. Breathtaking landscapes, unique gorgeous islands and immense snorkeling and diving spots."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/index.html correctly: title 1`] = `"Philippines | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-paradise/index.html correctly: meta-description 1`] = `"Breathtaking landscapes, white sands and turquoise water ... El Nido must imperatively be part of your dream travel list for this new year. Join us to discover this paradise. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-paradise/index.html correctly: social-network 1`] = `"Breathtaking landscapes, white sands and turquoise water ... El Nido must imperatively be part of your dream travel list for this new year."`;
-
-exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-paradise/index.html correctly: title 1`] = `"El Nido: A little paradise | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/asia/philippines/palawan/el-nido-tour-a/index.html correctly: meta-description 1`] = `"Lagoons with crystal clear waters, secluded beaches just for you and still intact snorkeling and diving sites. Did you think that could only exist in your dreams? Welcome to El Nido Tour A. Come with us for an excursion. Our travelogue with photos, tips, and advice."`;
 
@@ -311,12 +215,6 @@ exports[`english pages exports meta for public/en/asia/philippines/palawan/index
 exports[`english pages exports meta for public/en/asia/philippines/palawan/index.html correctly: social-network 1`] = `"Do you want to join us to discover Palawan Island? And more particularly in one of its jewels: El Nido. Grab your mask and snorkel or dive in these crystal clear waters that will leave you a lasting impression. Take advantage of the different tours called \\"Island hopping\\" to choose what suits you best."`;
 
 exports[`english pages exports meta for public/en/asia/philippines/palawan/index.html correctly: title 1`] = `"Palawan | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/asia/singapore/christmas-in-singapore/index.html correctly: meta-description 1`] = `"Celebrating Christmas in a foreign country is the opportunity to live a unique experience, often very different from what we are used to. It is the ideal opportunity to discover a new culture and new traditions. Come with us to discover the best places to visit for the holiday season. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/asia/singapore/christmas-in-singapore/index.html correctly: social-network 1`] = `"Celebrating Christmas in a foreign country is the opportunity to live a unique experience, often very different from what we are used to. It is the ideal opportunity to discover a new culture and new traditions."`;
-
-exports[`english pages exports meta for public/en/asia/singapore/christmas-in-singapore/index.html correctly: title 1`] = `"A Christmas in Singapore | Travel Blog"`;
 
 exports[`english pages exports meta for public/en/asia/singapore/index.html correctly: meta-description 1`] = `"Singapore is a forgotten country. The transit between two flights, rarely visited. Yet if you take the trouble to stop there, you will discover gorgeous places with extraordinary flora and fauna that will make you forget the city. Walk in botanical garden or in the jungle to observe monitor lizards or hornbills. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
 
@@ -396,12 +294,6 @@ exports[`english pages exports meta for public/en/asia/vietnam/transport/index.h
 
 exports[`english pages exports meta for public/en/asia/vietnam/transport/index.html correctly: title 1`] = `"All you need to know about transportation in Vietnam | Travel Guide"`;
 
-exports[`english pages exports meta for public/en/credits/index.html correctly: meta-description 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
-
-exports[`english pages exports meta for public/en/credits/index.html correctly: social-network 1`] = `"Embark with us in this crazy adventure, a blog that reveals all our travels, and much more!"`;
-
-exports[`english pages exports meta for public/en/credits/index.html correctly: title 1`] = `"main | Travel Blog"`;
-
 exports[`english pages exports meta for public/en/discovery/animals/index.html correctly: meta-description 1`] = `"Each country is unique and full of discoveries and attractions. We will list, based on our experience and our visits, the countries where you can observe animals."`;
 
 exports[`english pages exports meta for public/en/discovery/animals/index.html correctly: social-network 1`] = `"In their habitat or protected reserves, observe the animals, get to know them, how to protect them, and preserve their natural environment."`;
@@ -461,72 +353,6 @@ exports[`english pages exports meta for public/en/journal/living-abroad/index.ht
 exports[`english pages exports meta for public/en/journal/living-abroad/index.html correctly: social-network 1`] = `"So many questions without an answer before taking the plunge. Why? Which country to choose? What are the processes to follow? What are the pros and cons? How long to stay abroad? What job will I be able to find? With our own experience, we try to answer your questions as well as possible through our articles."`;
 
 exports[`english pages exports meta for public/en/journal/living-abroad/index.html correctly: title 1`] = `"Living Abroad | Practical Guide"`;
-
-exports[`english pages exports meta for public/en/journal/living-abroad/living-abroad-where/index.html correctly: meta-description 1`] = `"You are ready to expatriate and try the adventure. However, there is a question without an answer: Which country to move to? It is not necessarily easy to choose your new country. We give you keys to successfully answer this essential question, based on our own experience."`;
-
-exports[`english pages exports meta for public/en/journal/living-abroad/living-abroad-where/index.html correctly: social-network 1`] = `"You are ready to expatriate and try the adventure. However, there is a question without an answer: Which country to move to? It is not necessarily easy to choose your new country."`;
-
-exports[`english pages exports meta for public/en/journal/living-abroad/living-abroad-where/index.html correctly: title 1`] = `"Living abroad: Where? | Practical Guide"`;
-
-exports[`english pages exports meta for public/en/journal/living-abroad/moving-abroad-why/index.html correctly: meta-description 1`] = `"Every year, thousands of people decide to move to another country… But what is the trigger? What made us decide to leave everything behind to live abroad? And what is the difference with a simple trip? We give you different reasons why you might decide to move abroad, whether for professional or personal reasons, based on our own experience."`;
-
-exports[`english pages exports meta for public/en/journal/living-abroad/moving-abroad-why/index.html correctly: social-network 1`] = `"Every year, thousands of people decide to move to another country… But what is the trigger? What made us decide to leave everything behind to live abroad? And what is the difference with a simple trip?"`;
-
-exports[`english pages exports meta for public/en/journal/living-abroad/moving-abroad-why/index.html correctly: title 1`] = `"Moving abroad: Why? | Practical Guide"`;
-
-exports[`english pages exports meta for public/en/oceania/australia/index.html correctly: meta-description 1`] = `"There is so much to discover in Australia that it would take years to visit everything thoroughly. If you love animals, nature, beautiful outdoors, and road trips as much as we do, Australia is a country made for you. Follow our state-by-state guide to discover our selection of must-see places. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/index.html correctly: social-network 1`] = `"There is so much to discover in Australia that it would take years to visit everything thoroughly. If you love animals, nature, beautiful outdoors, and road trips as much as we do, Australia is a country made for you."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/index.html correctly: title 1`] = `"Australia | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/oceania/australia/northern-territory/index.html correctly: meta-description 1`] = `"Discover the Northern Territory, a state located in the North of Australia. Darwin, lakes with crocodiles, Kakadu National Park, Katherine, Daly Waters' pubs. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/northern-territory/index.html correctly: social-network 1`] = `"With many lakes and parks, the largest and most famous being Kakadu National Park, as well as a tropical climate, this state is a perfect spot for crocodile sightseeing. You will also have the opportunity to visit many pubs."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/northern-territory/index.html correctly: title 1`] = `"Northern Territory | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/oceania/australia/outback/index.html correctly: meta-description 1`] = `"Discover Outback, a vast arid desert in central Australia. Alice Spring, Ayers Rock, Mount Olgas, and Kings Canyon, but also a lot of wild animals such as dingoes, kangaroos, camels, and reptiles. Through our articles discover the different places to visit. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/outback/index.html correctly: social-network 1`] = `"Outback is a vast arid desert home to the massive sandstone of Ayers Rock, composed of Mount Olgas and Kings Canyon and sacred for aborigines. In Alice Spring or on red sand roads, you may be able to see a lot of wild animals such as dingoes, kangaroos, camels, and of course many reptiles"`;
-
-exports[`english pages exports meta for public/en/oceania/australia/outback/index.html correctly: title 1`] = `"Outback | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/from-townsville-to-cairns/index.html correctly: meta-description 1`] = `"Queensland, a state situated in northeastern Australia, has wonderful places to discover. It's a paradise for surfers and famous for its coral reefs, sublime islands, and beaches. It's the perfect place to take some vacation and relax. The tropical forest and the aboriginal people make this destination unique. Finally, it's the perfect place to see koalas in their natural habitat. Come with us for a short trip from Townsville to Cairns. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/from-townsville-to-cairns/index.html correctly: social-network 1`] = `"Queensland, a state situated in northeastern Australia, has wonderful places to discover. It's a paradise for surfers and famous for its coral reefs, sublime islands, and beaches. It's the perfect place to take some vacation and relax. The tropical forest and the aboriginal people make this destination unique. Finally, it's the perfect place to see koalas in their natural habitat."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/from-townsville-to-cairns/index.html correctly: title 1`] = `"Queensland: From Townsville to Cairns | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/green-island/index.html correctly: meta-description 1`] = `"Green Island is a totally isolated island. With its tropical forest and its magnificent beaches, it is the perfect place to discover the famous Great Barrier Reef in Australia. Join us for an excursion on this small tropical island. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/green-island/index.html correctly: social-network 1`] = `"Green Island is a totally isolated island. With its tropical forest and its magnificent beaches, it is the perfect place to discover the famous Great Barrier Reef in Australia."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/green-island/index.html correctly: title 1`] = `"Green Island: Dive into the Great Barrier Reef | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/index.html correctly: meta-description 1`] = `"A paradise for surfers, famous for the Great Barrier Reef, with a coastline full of sublime beaches, there are also endless plains or tropical rain forests. It is the perfect place to see koalas in their natural habitat. Through our articles, discover different places to visit. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/index.html correctly: social-network 1`] = `"A paradise for surfers, famous for the Great Barrier Reef, with a coastline full of sublime beaches, there are also endless plains or tropical rain forests. It is the perfect place to see koalas in their natural habitat."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/index.html correctly: title 1`] = `"Queensland | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/kuranda-village/index.html correctly: meta-description 1`] = `"Located in the middle of a tropical forest, Kuranda Village is a huge park with many activities. A popular destination where you can meet the Djabugay aboriginal people and explore Australia’s emblematic wildlife. You can also experience unusual transportations, whether by cable car or aboard a historic train. You will be amazed. Join us to discover this touristy village. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/kuranda-village/index.html correctly: social-network 1`] = `"Located in the middle of a tropical forest, Kuranda Village is a huge park with many activities. A popular destination where you can meet the Djabugay aboriginal people and explore Australia’s emblematic wildlife. You can also experience unusual transportations, whether by cable car or aboard a historic train. You will be amazed."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/kuranda-village/index.html correctly: title 1`] = `"Kuranda: Village in the rainforest near Cairns | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/magnetic-island/index.html correctly: meta-description 1`] = `"Located a few miles from Townsville, Queensland, Magnetic Island is a must-see place if you're coming to Eastern Australia. This little paradise is famous for its beaches and its many aquatic activities. Also known as  « Koala Island », there are more or less hard treks in the middle of a large eucalyptus forest to observe these small wild animals endemic to Australia. Come with us for this lovely discovery. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/magnetic-island/index.html correctly: social-network 1`] = `"Located a few miles from Townsville, Queensland, Magnetic Island is a must-see place if you're coming to Eastern Australia. This little paradise is famous for its beaches and its many aquatic activities. Also known as  « Koala Island », there are more or less hard treks in the middle of a large eucalyptus forest to observe these small wild animals endemic to Australia."`;
-
-exports[`english pages exports meta for public/en/oceania/australia/queensland/magnetic-island/index.html correctly: title 1`] = `"Magnetic Island: Discover the largest wild koala colony | Travel Guide"`;
-
-exports[`english pages exports meta for public/en/oceania/index.html correctly: meta-description 1`] = `"There are so many things to discover in Oceania. Nature lovers, animal lovers, road trip enthusiasts... Find in our blog the most beautiful pearls of this continent for your dream vacation. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/oceania/index.html correctly: social-network 1`] = `"There are so many things to discover in Oceania. Nature lovers, animal lovers, road trip enthusiasts... Find in our blog the most beautiful pearls of this continent for your dream vacation. Our travelogue with photos, tips, and advice."`;
-
-exports[`english pages exports meta for public/en/oceania/index.html correctly: title 1`] = `"Oceania | Travel Guide"`;
 
 exports[`english pages exports meta for public/en/organisation/when-to-go/autumn/index.html correctly: meta-description 1`] = `"Take advantage of the start of the school year to discover countries near you without tourists ... Or go far from home for a total change of scenery, in Asia for example. You can also enjoy the season by admiring autumn leaf color changing the landscapes. We guide you with the travels we made in different countries."`;
 
