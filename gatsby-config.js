@@ -69,8 +69,7 @@ module.exports = {
               ...pages("/discovery/"),
               ...pages("/about/"),
               ...pages("/asia/japan/"),
-              ...pages("/asia/malaysia/index.html"),
-              ...pages("/asia/malaysia/east-malaysia/"),
+              ...pages("/asia/malaysia/"),
               ...pages("/asia/philippines/"),
               ...pages("/asia/vietnam/index.html"),
               ...pages("/asia/vietnam/southern-vietnam/"),
@@ -79,7 +78,6 @@ module.exports = {
               ...pages("/oceania/australia/queensland/"),
             ],
             disallow: [
-              ...pages("/asia/malaysia/west-malaysia/"),
               ...pages("/asia/vietnam/northern-vietnam/"),
               ...pages("/asia/vietnam/central-vietnam/"),
               ...pages("/asia/cambodia/"),
