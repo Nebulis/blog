@@ -3,7 +3,7 @@ import commonFr from "../../../locales/fr/common.json"
 import commonEn from "../../../locales/en/common.json"
 import { franceLinks } from "./france/france.links"
 
-export const europeLinks: ContinentLink =   {
+export const europeLinks: ContinentLink = {
   id: "europe",
   label: {
     fr: commonFr.continent.europe,
