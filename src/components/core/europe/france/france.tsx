@@ -112,12 +112,12 @@ const franceLayout = `
     }
   }
 `
-export const IndexFranceBlogLayout = styled(IndexBlogLayout)`
+export const IndexFranceBlogLayout = drawer(styled(IndexBlogLayout)`
   ${franceLayout}
-`
-export const FranceBlogLayout = styled(BlogLayout)`
+`)
+export const FranceBlogLayout = drawer(styled(BlogLayout)`
   ${franceLayout}
-`
+`)
 
 export const FranceButtonLink = styled(ButtonLink)`
   border: 2px solid ${francePrimaryColor};
