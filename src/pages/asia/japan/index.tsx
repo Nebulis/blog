@@ -37,7 +37,7 @@ import { jsx } from "@emotion/react"
 import { SharedJapanImages } from "../../../components/images/asia/japan/shared-japan-images"
 import { JapanImageAsMedallion } from "../../../components/core/asia/japan/japan.images"
 import { SpringInJapanCard } from "../../../components/core/asia/japan/japan.cards"
-import VietnamImage from "../../../images/asia/vietnam/home-vietnam.jpg"
+import JapanImage from "../../../images/asia/japan/home-japan.jpg"
 import { WeatherForHomePage } from "../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
 import JapanMap from "../../../images/asia/japan/japan-map.png"
@@ -60,7 +60,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         title={country}
         fullTitle={t("full-title")}
         location={location}
-        image={VietnamImage}
+        image={JapanImage}
         socialNetworkDescription={t("social-network-description")}
         googleDescription={t("google-description")}
       />
