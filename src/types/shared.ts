@@ -50,6 +50,7 @@ export type WeatherAltIconType =
   | "climb"
   | "swim"
   | "shower"
+  | "ski"
   | "surf"
   | "whale"
   | "floating-market"

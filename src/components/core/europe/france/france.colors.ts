@@ -1,4 +1,4 @@
-export const francePrimaryColor = "#795548"
-export const francePrimaryColorDarker = "#5e423a"
-export const francePrimaryColorLight = "#a0756d"
-export const francePrimaryColorWithOpacity = (opacity: number) => `rgba(121, 85, 72, ${opacity})`
+export const francePrimaryColor = "#907973"
+export const francePrimaryColorDarker = "#7a6762" // 15% darker
+export const francePrimaryColorLight = "#b1a19d" // 30% lighter
+export const francePrimaryColorWithOpacity = (opacity: number) => `rgba(144, 121, 115, ${opacity})`
