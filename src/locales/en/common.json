@@ -113,7 +113,12 @@
       "title": "Finland"
     },
     "france": {
-      "title": "France"
+      "title": "France",
+      "region": {
+        "corsica": {
+          "title": "Corsica"
+        }
+      }
     },
     "germany": {
       "title": "Germany"
@@ -400,5 +405,6 @@
   "footer": {
     "email": "Email Address",
     "subscribe": "Subscribe"
-  }
+  },
+  "corsica": "Corsica"
 }

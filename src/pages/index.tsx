@@ -368,20 +368,36 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const [carouselElement] = useState<CarouselElementType[]>(() => {
     const tmp: CarouselElementType[] = [
       {
-        to: "vietnam",
-        image: "vietnam1",
+        to: "australia",
+        image: "australia1",
       },
       {
-        to: "vietnam",
-        image: "vietnam2",
+        to: "australia",
+        image: "australia2",
       },
       {
-        to: "philippines",
-        image: "philippines1",
+        to: "cambodia",
+        image: "cambodia1",
       },
       {
-        to: "philippines",
-        image: "philippines2",
+        to: "cambodia",
+        image: "cambodia2",
+      },
+      {
+        to: "france",
+        image: "france1",
+      },
+      {
+        to: "france",
+        image: "france2",
+      },
+      {
+        to: "indonesia",
+        image: "indonesia1",
+      },
+      {
+        to: "indonesia",
+        image: "indonesia2",
       },
       {
         to: "japan",
@@ -400,20 +416,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         image: "malaysia2",
       },
       {
-        to: "indonesia",
-        image: "indonesia1",
+        to: "philippines",
+        image: "philippines1",
       },
       {
-        to: "indonesia",
-        image: "indonesia2",
-      },
-      {
-        to: "australia",
-        image: "australia1",
-      },
-      {
-        to: "australia",
-        image: "australia2",
+        to: "philippines",
+        image: "philippines2",
       },
       {
         to: "singapore",
@@ -424,20 +432,20 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         image: "singapore2",
       },
       {
-        to: "cambodia",
-        image: "cambodia1",
-      },
-      {
-        to: "cambodia",
-        image: "cambodia2",
-      },
-      {
         to: "taiwan",
         image: "taiwan1",
       },
       {
         to: "taiwan",
         image: "taiwan2",
+      },
+      {
+        to: "vietnam",
+        image: "vietnam1",
+      },
+      {
+        to: "vietnam",
+        image: "vietnam2",
       },
     ].filter(({ to }) => {
       // return to === "taiwan" && (development || isLinkPublished(to))

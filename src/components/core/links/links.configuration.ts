@@ -6,6 +6,7 @@ import commonFr from "../../../locales/fr/common.json"
 import { oceaniaLinks } from "../oceania/oceania.links"
 import { LivingAbroadWhereCard, MovingAbroadWhyCard } from "../journal/journal.cards"
 import { OrangutanCard } from "../animals/animals.cards"
+import { europeLinks } from "../europe/europe.links"
 
 export const isPublished = (element: { published: boolean | Date }) => {
   if (typeof element.published === "boolean") {
@@ -69,46 +70,7 @@ export const continentLinks: ContinentLink[] = [
       },
     ],
   },
-  {
-    id: "europe",
-    label: {
-      fr: commonFr.continent.europe,
-      en: commonEn.continent.europe,
-    },
-    countries: [
-      {
-        id: "france",
-        cities: [
-          {
-            id: "paris",
-            highlights: [],
-            label: { fr: "Paris", en: "Paris" },
-          },
-        ],
-        others: [],
-        label: { fr: commonFr.country.france.title, en: commonEn.country.france.title },
-        imageProps: { image: "homeFrance" },
-      },
-      {
-        id: "azores",
-        cities: [],
-        others: [],
-        label: { fr: "Acores", en: "Azores" },
-      },
-      {
-        id: "iceland",
-        cities: [],
-        others: [],
-        label: { fr: commonFr.country.iceland.title, en: commonEn.country.iceland.title },
-      },
-      {
-        id: "russia",
-        cities: [],
-        others: [],
-        label: { fr: commonFr.country.russia.title, en: commonEn.country.russia.title },
-      },
-    ],
-  },
+  europeLinks,
   {
     id: "middle-east",
     label: {

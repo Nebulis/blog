@@ -135,6 +135,20 @@ export const CarouselImageQuery: React.FunctionComponent<ExtraImageProps & { ima
           }
         }
       }
+      france1: file(relativePath: { eq: "europe/france/carousel-france1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [1200, 1800]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      france2: file(relativePath: { eq: "europe/france/carousel-france2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [1200, 1800]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return <Img fluid={{ ...data[image].childImageSharp.fluid, ...fluidObject }} alt="Landscape" className={className} />
