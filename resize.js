@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const sharp = require("sharp")
 const glob = require("glob")
+const fs = require("fs")
 
 // const matches = glob.sync(`src/images/asia/vietnam/**/*.{png,jpg,jpeg}`)
 // const matches = glob.sync(`src/images/asia/philippines/el-nido/*.{png,jpg,jpeg}`)
@@ -17,6 +18,7 @@ Promise.all(
     const stream = sharp(match)
     const info = await stream.metadata()
 
+    // use 600 for max width for google doc on w images, use 400 for h image and quality 50
     // const width = Math.min(200, info.width)
     const width = Math.min(1000, info.width)
 

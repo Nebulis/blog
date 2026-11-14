@@ -444,6 +444,12 @@ exports[`english pages exports meta for public/en/discovery/winter-activities/in
 
 exports[`english pages exports meta for public/en/discovery/winter-activities/index.html correctly: title 1`] = `"Winter activities | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/europe/france/grand-est/index.html correctly: meta-description 1`] = `"The Grand Est region, located in north-east France, offers a beautiful diversity of landscapes. From Alsace and its flower-filled villages with half-timbered houses to the vineyards of Champagne, passing through the Vosges mountains and the Lorraine plains, each territory has its own charm. Discover iconic cities like Strasbourg, Colmar, Nancy or Reims, without forgetting the famous Christmas markets that make the region known. Grand Est promises beautiful discoveries."`;
+
+exports[`english pages exports meta for public/en/europe/france/grand-est/index.html correctly: social-network 1`] = `"Discover the emblematic departments of the Grand Est region like Alsace with its half-timbered houses, the Champagne vineyards, the Vosges mountains and the Lorraine plains, each territory has its own charm. Grand Est promises beautiful discoveries."`;
+
+exports[`english pages exports meta for public/en/europe/france/grand-est/index.html correctly: title 1`] = `"Grand Est | Travel Guide"`;
+
 exports[`english pages exports meta for public/en/europe/france/index.html correctly: meta-description 1`] = `"While Paris is inevitably the first city that comes to mind, France has so much more to discover. Cities full of history with museums and majestic castles. Small perched villages in the South and sunny beaches, or simple hikes to discover superb remote corners... France is also famous for its gastronomy, taste French specialties while savoring a good wine. Follow our region-by-region guide to discover our selection of must-see places. Our travel stories with photos, tips and tricks."`;
 
 exports[`english pages exports meta for public/en/europe/france/index.html correctly: social-network 1`] = `"While Paris is inevitably the first city that comes to mind, France has so much more to discover. Cities full of history with museums and majestic castles. Small perched villages in the South and sunny beaches, or simple hikes to discover superb remote corners... France is also famous for its gastronomy, taste French specialties while savoring a good wine."`;
