@@ -14,7 +14,6 @@ export const franceLinks: CountryLink = {
     {
       id: "paris",
       label: { fr: "Paris", en: "Paris" },
-      highlights: [],
       published: false,
     },
   ],
