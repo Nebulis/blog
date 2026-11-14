@@ -27,5 +27,14 @@ export const franceLinks: CountryLink = {
       },
       highlights: [],
     },
+    {
+      id: "centre-val-de-loire",
+      label: { fr: "Centre-Val de Loire", en: "Centre-Val de Loire" },
+      pointOfInterest: ["nature", "monument", "city"],
+      imageProps: {
+        image: "homeCentreValDeLoire",
+      },
+      highlights: [],
+    },
   ],
 }

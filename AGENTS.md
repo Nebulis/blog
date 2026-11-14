@@ -48,6 +48,21 @@ git push origin HEAD && gh pr create --fill
 
 Do not claim you cannot open PRs — `gh` is available.
 
+## Branching Strategy
+
+**Always start new work from the latest `master` branch.** Create a new feature branch for each task:
+
+```sh
+git checkout master
+git pull origin master
+git checkout -b feat/your-feature-name
+```
+
+- Do **not** carry commits from other branches unless explicitly requested
+- Each PR should contain only the changes for one logical feature/fix
+- If you need changes from another branch, rebase onto master or cherry-pick specific commits
+- Keep branches focused and small for easier review
+
 ## Architecture map
 
 ```text
@@ -102,6 +117,128 @@ That produces:
 | `src/components/images/asia/philippines/palawan/my-new-article.tsx` | Image selector |
 
 Template source: `plopfile.ts`, `templates/page.hbs`, `templates/translation.hbs`, `templates/image.hbs`.
+
+## Creating a French region overview page (e.g., Grand Est, Centre-Val de Loire)
+
+Region pages are **not created via plop** — they are manually created following the country page pattern. A region page acts like a mini-country page under France.
+
+### Files to create/modify
+
+| File | Purpose |
+|---|---|
+| `src/pages/europe/france/<region-id>/index.tsx` | Region page component |
+| `src/locales/fr/europe/france/<region-id>/index.json` | French copy |
+| `src/locales/en/europe/france/<region-id>/index.json` | English copy |
+| `src/components/core/europe/france/france.links.tsx` | Add region to `cities` array |
+| `src/components/core/europe/france/france.tsx` | Add weather entry in `franceWeatherEntries` |
+| `src/components/images/europe/france/shared-europe-images.tsx` | Add GraphQL query for home image |
+| `src/images/europe/france/home-<region-id>.jpg` | Home image (required) |
+| `src/components/core/links/links.configuration.test.ts` | Add link assertion |
+| `src/pages/europe/france/index.tsx` | Update to filter weather entries (if needed) |
+
+### Steps
+
+1. **Create the page component** at `src/pages/europe/france/<region-id>/index.tsx` modeled after `grand-est/index.tsx`:
+   - Import locale files and register with i18n
+   - Use `FranceBlogLayout`, `FranceImageAsMedallion`, `SharedFranceImages`
+   - Include `PointOfInterestSection`, `WeatherForHomePage`
+   - Set `currentPageId = "<region-id>"`
+
+2. **Create locale files** with these required keys:
+   ```json
+   {
+     "introduction": { 
+       "section1": "...", 
+       "section2": "..." 
+     },
+     "meta-description": "...",
+     "social-network-description": "...",
+     "full-title": "<Region> | Guide de Voyage",
+     "tour": { "title": "Parcourir", "subtitle": "La région d'un département à l'autre ..." },
+     "inform": { "title": "S'informer", "subtitle": "À travers nos astuces, nos coups de cœur ..." },
+     "weather": "Quand partir dans le",
+     "weather-country": "<Region> ?",
+     "section1": "POINTS D'INTÉRÊTS À VOIR",
+     "section2": "NOTRE RÉCIT DE VOYAGE",
+     "section3": "NOS VISITES DÉTAILLÉES",
+     "section4": "QUAND PARTIR DANS LE <REGION> ?",
+     "section5": "DÉCOUVRE LA FRANCE",
+     "map": "Notre carte du",
+     "title": "<Region>",
+     "country": "<Region>"
+   }
+   ```
+   Duplicate for English with translated values.
+   
+   **Note:** The `introduction` object should have both `section1` (general description) and `section2` (call-to-action like "Join us to discover..."). The page component renders both.
+
+3. **Add link entry** in `france.links.tsx` under `cities`:
+   ```ts
+   {
+     id: "<region-id>",
+     label: { fr: "<Region>", en: "<Region>" },
+     pointOfInterest: ["nature", "monument", "city"],
+     imageProps: { image: "home<RegionPascalCase>" },
+     highlights: [
+       // Optional: add sub-regions/departments as highlights
+       // { id: "sub-region-id", label: { fr: "...", en: "..." }, published: false, imageProps: { image: "homeSubRegion" } }
+     ],
+   }
+   ```
+   Use PascalCase for the image key (e.g., `homeCentreValDeLoire`).
+   
+   **Note:** Ask the user if they want to define Points of Interest (POI) / sub-regions as `highlights` now, or leave empty (`[]`) to add later. Each highlight needs an `id`, `label`, `published` status, and optional `imageProps` for medallion display.
+
+4. **Add weather entry** in `france.tsx` in `franceWeatherEntries`:
+   ```ts
+   {
+     id: "<region-id>",
+     label: t("common:link.<region-id>"), // or hardcoded { fr: "...", en: "..." }
+     data: [ /* 12 months of { type, icon, temp, alt? } */ ],
+   }
+   ```
+
+5. **Add GraphQL query** in `shared-europe-images.tsx`:
+   ```graphql
+   home<RegionPascalCase>: file(relativePath: { eq: "europe/france/home-<region-id>.jpg" }) {
+     childImageSharp {
+       fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+         ...GatsbyImageSharpFluid
+       }
+     }
+   }
+   ```
+   Add to `alt` object: `home<RegionPascalCase>: "Home Image for <Region> Region"`
+
+6. **Add home image** at `src/images/europe/france/home-<region-id>.jpg`
+
+7. **Add test assertion** in `links.configuration.test.ts`:
+   ```ts
+   expect(getLink("<region-id>")).toMatchObject({ label: { fr: "<Region>", en: "<Region>" }, published: false })
+   ```
+
+8. **Update main France page** (`src/pages/europe/france/index.tsx`) to filter weather entries if you want to exclude the new region from the national weather widget.
+
+9. **Verify:**
+   ```sh
+   npm run lint && npx tsc --noEmit && npm run test -- --runInBand
+   ```
+
+10. **Update integration snapshots:**
+    ```sh
+    CONTEXT=production npm run build && npm run test:integration -- -u
+    ```
+
+11. **Add to robots.txt** in `gatsby-config.js` if public.
+
+### Key differences from articles
+
+- No plop generator — manual creation
+- Uses `FranceBlogLayout` not generated layout
+- No `Title` component with `linkId` — uses `MainTitleSection` directly
+- Weather data required (12 months)
+- Sub-regions/departments added as `highlights` later (optional)
+- Labels in `france.links.tsx` are hardcoded (not from common.json currently)
 
 ### Steps after generation
 

@@ -117,6 +117,12 @@
       "region": {
         "corsica": {
           "title": "Corse"
+        },
+        "grand-est": {
+          "title": "Grand Est"
+        },
+        "centre": {
+          "title": "Centre-Val de Loire"
         }
       }
     },

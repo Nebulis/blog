@@ -103,6 +103,24 @@ const franceLayout = `
         color: ${francePrimaryColor};
       }
     }
+    
+    .image-as-medallion {
+      // centre-val-de-loire is too long, the layout is different in french and english
+      &.centre-val-de-loire-fr,
+      &.centre-val-de-loire-en {
+        span {
+          padding-top: 3px;
+          padding-left: 50px;
+          padding-right: 50px;
+          font-size: 1.1rem;
+        }
+        &:hover span {
+          padding-left: 40px;
+          padding-right: 40px;
+          font-size: 1.3rem;
+        }
+      }
+    }
   }
 
   footer {
@@ -193,7 +211,7 @@ export const franceWeatherEntries = (t: TFunction): WeatherEntry[] => [
   },
   {
     id: "grand-est",
-    label: t("common:link.grand-est"),
+    label: t("common:country.france.region.grand-est.title"),
     data: [
       { type: "fair", icon: "snow", temp: 7, alt: ["cold", "ski"] },
       { type: "fair", icon: "snow", temp: 9, alt: ["cold", "ski"] },
@@ -201,12 +219,30 @@ export const franceWeatherEntries = (t: TFunction): WeatherEntry[] => [
       { type: "fair", icon: "sun-cloud", temp: 15 },
       { type: "good", icon: "sun-cloud", temp: 18 },
       { type: "good", icon: "sun-cloud", temp: 22 },
-      { type: "good", icon: "sunny", temp: 24, alt: "swim" },
-      { type: "good", icon: "sunny", temp: 24, alt: "swim" },
+      { type: "good", icon: "sunny", temp: 24 },
+      { type: "good", icon: "sunny", temp: 24 },
       { type: "good", icon: "sunny", temp: 21 },
       { type: "poor", icon: "sun-cloud", temp: 17 },
       { type: "poor", icon: "sun-cloud", temp: 11 },
       { type: "good", icon: "sun-cloud", temp: 8, alt: "cold" },
+    ],
+  },
+  {
+    id: "centre-val-de-loire",
+    label: t("common:country.france.region.centre.title"),
+    data: [
+      { type: "poor", icon: "sun-rain", temp: 7, alt: ["cold"] },
+      { type: "poor", icon: "sun-rain", temp: 9, alt: ["cold"] },
+      { type: "fair", icon: "sun-cloud", temp: 12, alt: ["cold"] },
+      { type: "fair", icon: "sun-cloud", temp: 15 },
+      { type: "good", icon: "sun-cloud", temp: 18 },
+      { type: "good", icon: "sun-cloud", temp: 22 },
+      { type: "good", icon: "sunny", temp: 24 },
+      { type: "good", icon: "sunny", temp: 24 },
+      { type: "good", icon: "sunny", temp: 21 },
+      { type: "poor", icon: "sun-cloud", temp: 17 },
+      { type: "poor", icon: "sun-cloud", temp: 11 },
+      { type: "poor", icon: "sun-cloud", temp: 8, alt: "cold" },
     ],
   },
 ]

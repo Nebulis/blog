@@ -33,7 +33,7 @@ import { PageQuote } from "../../../components/core/quote"
 import { Divider } from "../../../components/core/divider"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
 import { PointOfInterestSection } from "../../../components/core/point-of-interest"
-import { SharedFranceImages } from "../../../components/images/europe/france/shared-europe-images"
+import { SharedFranceImages } from "../../../components/images/europe/france/shared-france-images"
 
 const namespace = "europe/france/index"
 i18n.addResourceBundle("fr", namespace, franceIndexFr)
@@ -79,7 +79,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
                 return city.imageProps?.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
-                    <FranceImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
+                    <FranceImageAsMedallion
+                      title={getLinkLabel(i18n.languageCode)(city.id)}
+                      className={`${city.id}-${i18n.languageCode}`}
+                    >
                       {jsx(SharedFranceImages, city.imageProps)}
                     </FranceImageAsMedallion>
                   </ApplicationLink>
