@@ -4,7 +4,8 @@ import React, { useEffect } from "react"
 import { ExtraImageProps } from "../../../../types/shared"
 
 const alt = {
-  name: "Home Image for Grand Est Region",
+  homeGrandEst: "Home Image for Grand Est Region",
+  homeCentreValDeLoire: "Home Image for Centre-Val de Loire Region",
 }
 
 export const SharedFranceImages: React.FunctionComponent<ExtraImageProps & { image: keyof typeof alt }> = ({
@@ -17,6 +18,13 @@ export const SharedFranceImages: React.FunctionComponent<ExtraImageProps & { ima
   const data = useStaticQuery(graphql`
     query {
       homeGrandEst: file(relativePath: { eq: "europe/france/home-grand-est.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      homeCentreValDeLoire: file(relativePath: { eq: "europe/france/home-centre-val-de-loire.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 60, srcSetBreakpoints: [600]) {
             ...GatsbyImageSharpFluid

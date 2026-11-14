@@ -26,7 +26,7 @@ import { PageProps } from "gatsby"
 import { TitleImage } from "../../../../components/images/layout"
 import { ExtraCardProps } from "../../../../types/shared"
 import { jsx } from "@emotion/react"
-import { SharedFranceImages } from "../../../../components/images/europe/france/shared-europe-images"
+import { SharedFranceImages } from "../../../../components/images/europe/france/shared-france-images"
 import i18n from "i18next"
 import franceGrandEstFr from "../../../../locales/fr/europe/france/grand-est/index.json"
 import franceGrandEstEn from "../../../../locales/en/europe/france/grand-est/index.json"
@@ -95,7 +95,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               {cities.sort(sortByLabel(i18n.languageCode)).map((city: any) => {
                 return city.imageProps?.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
-                    <FranceImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
+                    <FranceImageAsMedallion
+                      title={getLinkLabel(i18n.languageCode)(city.id)}
+                      className={`${city.id}-${i18n.languageCode}`}
+                    >
                       {jsx(SharedFranceImages, city.imageProps)}
                     </FranceImageAsMedallion>
                   </ApplicationLink>

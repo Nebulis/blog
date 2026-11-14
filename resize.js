@@ -28,7 +28,7 @@ Promise.all(
     // await stream.resize(width)[method]({ quality: 50 }).toFile(optimizedName)
     await stream.resize(width)[method]({ quality: QUALITY }).withMetadata().toFile(optimizedName)
 
-    // return fs.rename(optimizedName, match)
+    //return await fs.promises.rename(optimizedName, match)
   })
 )
 
