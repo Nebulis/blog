@@ -10,12 +10,23 @@ export const franceLinks: CountryLink = {
   imageProps: {
     image: "homeFrance",
   },
-  others: [],
-  cities: [
+  others: [
     {
       id: "paris",
       label: { fr: "Paris", en: "Paris" },
       pointOfInterest: ["monument", "city"],
+      highlights: [],
+      published: false,
+    },
+  ],
+  cities: [
+    {
+      id: "grand-est",
+      label: { fr: "Grand Est", en: "Grand Est" },
+      pointOfInterest: ["nature", "monument", "city"],
+      imageProps: {
+        image: "homeGrandEst",
+      },
       highlights: [],
     },
   ],

@@ -26,7 +26,6 @@ import { PageProps } from "gatsby"
 import { TitleImage } from "../../../components/images/layout"
 import { ExtraCardProps } from "../../../types/shared"
 import { jsx } from "@emotion/react"
-import { SharedEuropeImages } from "../../../components/images/europe/shared-europe-images"
 import i18n from "i18next"
 import franceIndexFr from "../../../locales/fr/europe/france/index.json"
 import franceIndexEn from "../../../locales/en/europe/france/index.json"
@@ -34,6 +33,7 @@ import { PageQuote } from "../../../components/core/quote"
 import { Divider } from "../../../components/core/divider"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
 import { PointOfInterestSection } from "../../../components/core/point-of-interest"
+import { SharedFranceImages } from "../../../components/images/europe/france/shared-europe-images"
 
 const namespace = "europe/france/index"
 i18n.addResourceBundle("fr", namespace, franceIndexFr)
@@ -80,7 +80,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 return city.imageProps?.image ? (
                   <ApplicationLink to={city.id} key={city.id}>
                     <FranceImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
-                      {jsx(SharedEuropeImages, city.imageProps)}
+                      {jsx(SharedFranceImages, city.imageProps)}
                     </FranceImageAsMedallion>
                   </ApplicationLink>
                 ) : null
@@ -103,7 +103,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <SubHomeSectionTwoLines title={t("weather")} country={t("weather-country")} />
         <WeatherForHomePage
-          entries={franceWeatherEntries(t)}
+          entries={franceWeatherEntries(t).filter(
+            (entry) => entry.id === "north" || entry.id === "south" || entry.id === "corsica"
+          )}
           onMouseLeave={() => setTooltipLabel("")}
           onMouseEnter={setTooltipLabel}
         />

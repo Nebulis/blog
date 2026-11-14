@@ -191,4 +191,22 @@ export const franceWeatherEntries = (t: TFunction): WeatherEntry[] => [
       { type: "poor", icon: "sun-cloud", temp: 9, alt: "cold" },
     ],
   },
+  {
+    id: "grand-est",
+    label: t("common:link.grand-est"),
+    data: [
+      { type: "fair", icon: "snow", temp: 7, alt: ["cold", "ski"] },
+      { type: "fair", icon: "snow", temp: 9, alt: ["cold", "ski"] },
+      { type: "fair", icon: "snow", temp: 12, alt: ["cold", "ski"] },
+      { type: "fair", icon: "sun-cloud", temp: 15 },
+      { type: "good", icon: "sun-cloud", temp: 18 },
+      { type: "good", icon: "sun-cloud", temp: 22 },
+      { type: "good", icon: "sunny", temp: 24, alt: "swim" },
+      { type: "good", icon: "sunny", temp: 24, alt: "swim" },
+      { type: "good", icon: "sunny", temp: 21 },
+      { type: "poor", icon: "sun-cloud", temp: 17 },
+      { type: "poor", icon: "sun-cloud", temp: 11 },
+      { type: "good", icon: "sun-cloud", temp: 8, alt: "cold" },
+    ],
+  },
 ]
