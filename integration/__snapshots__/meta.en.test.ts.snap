@@ -444,9 +444,9 @@ exports[`english pages exports meta for public/en/discovery/winter-activities/in
 
 exports[`english pages exports meta for public/en/discovery/winter-activities/index.html correctly: title 1`] = `"Winter activities | Travel Guide"`;
 
-exports[`english pages exports meta for public/en/europe/france/centre-val-de-loire/index.html correctly: meta-description 1`] = `"The Centre-Val de Loire region invites you to discover an exceptional heritage in the heart of France. The region seduces with its famous Loire Valley châteaux. From Chambord to Chenonceau, via Amboise, Blois and Tours, set off to discover a region rich in history. Through our articles we show you different places to visit. Our travel journal with photos, tips and tricks."`;
+exports[`english pages exports meta for public/en/europe/france/centre-val-de-loire/index.html correctly: meta-description 1`] = `"The Centre-Val de Loire region invites you to discover an exceptional heritage in the heart of France. The region is charming, known for its famous Loire Valley châteaux. From Chambord to Chenonceau, via Amboise, Blois and Tours, set off to discover a region rich in history. Through our articles we show you different places to visit. Our travelogue with photos, tips, and advice."`;
 
-exports[`english pages exports meta for public/en/europe/france/centre-val-de-loire/index.html correctly: social-network 1`] = `"The Centre-Val de Loire region invites you to discover an exceptional heritage in the heart of France. The region seduces with its famous Loire Valley châteaux. From Chambord to Chenonceau, via Amboise, Blois and Tours, set off to discover a region rich in history."`;
+exports[`english pages exports meta for public/en/europe/france/centre-val-de-loire/index.html correctly: social-network 1`] = `"The Centre-Val de Loire region invites you to discover an exceptional heritage in the heart of France. The region is charming, known for its famous Loire Valley châteaux. From Chambord to Chenonceau, via Amboise, Blois and Tours, set off to discover a region rich in history."`;
 
 exports[`english pages exports meta for public/en/europe/france/centre-val-de-loire/index.html correctly: title 1`] = `"Centre-Val de Loire | Travel Guide"`;
 
