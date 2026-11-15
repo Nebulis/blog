@@ -72,8 +72,11 @@
     "cambodia": {
       "title": "Cambodge",
       "card": {
-        "s-21-prison": "Musée du génocide Tuol Sleng",
-        "kampong-phluk": "Village flottant de Kampong Phluk"
+        "discover-cambodia": "Découverte du Cambodge : Un voyage riche en émotions",
+        "angkor-wat": "Les temples d’Angkor : des temples enfouis dans la jungle",
+        "tuol-sleng-genocide-museum": "Histoire du Cambodge : Prison S-21, une visite bouleversante",
+        "kampong-phluk": "Une vie sur l’eau : Un village flottant au Cambodge",
+        "prepare": "Bien préparer son voyage au Cambodge"
       }
     },
     "canada": {
@@ -368,9 +371,10 @@
     "car": "Voiture",
     "health": "Santé",
     "how-long": "Combien de temps ?",
-    "how-much": "Combien d’argent prévoir ?",
+    "how-much": "Combien d'argent prévoir ?",
     "how-much2": "Prix ?",
     "how": "Comment y aller ?",
+    "moving-around": "Comment se déplacer sur place ?",
     "natural-disaster": "Catastrophes naturelles",
     "phone": "Téléphone et internet",
     "plane": "Avion",

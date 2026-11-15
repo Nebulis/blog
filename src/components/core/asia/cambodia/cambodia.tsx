@@ -1,6 +1,11 @@
+import { css } from "@emotion/react"
+import React, { FunctionComponent } from "react"
 import styled from "@emotion/styled"
 import { BlogLayout, IndexBlogLayout } from "../../../layout/layout"
 import { cambodiaPrimaryColor, cambodiaPrimaryColorDarker, cambodiaPrimaryColorLighter } from "./cambodia.variables"
+import angkorWat from "../../../../images/asia/cambodia/angkor-wat.svg"
+import { Headline } from "../../highlight"
+import { Title } from "../../title"
 import { WeatherEntry } from "../../../../types/shared"
 import { Lang } from "../../links/links.types"
 
@@ -180,3 +185,25 @@ export const cambodiaWeatherEntries = (lang: Lang): WeatherEntry[] => [
     ],
   },
 ]
+
+const cambodiaHeadlineStyle = css`
+  color: ${cambodiaPrimaryColor};
+  img {
+    width: 16px;
+    height: 16px;
+  }
+`
+export const CambodiaHeadline: FunctionComponent = ({ children }) => (
+  <Headline css={cambodiaHeadlineStyle} image={angkorWat} alt="angkor wat">
+    {children}
+  </Headline>
+)
+
+export const CambodiaTitle = styled(Title)`
+  a {
+    background-color: ${cambodiaPrimaryColor};
+  }
+  a:hover {
+    box-shadow: 0px 0px 2px 1px ${cambodiaPrimaryColorDarker};
+  }
+`

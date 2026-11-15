@@ -72,8 +72,11 @@
     "cambodia": {
       "title": "Cambodia",
       "card": {
-        "s-21-prison": "Tuol Sleng Genocide Museum",
-        "kampong-phluk": "Kampong Phluk Floating Village"
+        "discover-cambodia": "Discovering Cambodia: A Journey Rich in Emotions",
+        "angkor-wat": "The Temples of Angkor: temples buried in the jungle",
+        "tuol-sleng-genocide-museum": "History of Cambodia: S-21 Prison, an overwhelming visit",
+        "kampong-phluk": "A life on the water: A floating village in Cambodia",
+        "prepare": "Prepare your travel to Cambodia"
       }
     },
     "canada": {
@@ -371,6 +374,7 @@
     "how-much": "How much?",
     "how-much2": "Price ?",
     "how": "How to get there?",
+    "moving-around": "How to get around locally?",
     "natural-disaster": "Natural disasters",
     "phone": "Phone",
     "plane": "Airplane",

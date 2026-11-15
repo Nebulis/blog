@@ -18,7 +18,12 @@ import { PageQuote } from "../../../components/core/quote"
 import i18n from "i18next"
 import indexFr from "../../../locales/fr/asia/cambodia/index.json"
 import indexEn from "../../../locales/en/asia/cambodia/index.json"
-import { ArticlesContainer, GoToAllArticlesContainer, MedallionContainer } from "../../../components/layout/layout"
+import {
+  ArticlesContainer,
+  GoToAllArticlesContainer,
+  MainCardContainer,
+  MedallionContainer,
+} from "../../../components/layout/layout"
 import { ApplicationLink, ButtonLink } from "../../../components/core/links/link"
 import { css, jsx } from "@emotion/react"
 import CambodiaImage from "../../../images/asia/cambodia/home-cambodia.jpg"
@@ -29,6 +34,7 @@ import { ImageAsMedallion, TitleImage } from "../../../components/images/layout"
 import { cambodiaLinks } from "../../../components/core/asia/cambodia/cambodia.links"
 import { CambodiaBlogLayout, cambodiaWeatherEntries } from "../../../components/core/asia/cambodia/cambodia"
 import { SharedCambodiaImages } from "../../../components/images/asia/cambodia/shared-cambodia-images"
+import { DiscoverCambodiaCard } from "../../../components/core/asia/cambodia/cambodia.cards"
 
 const namespace = "asia/cambodia/index"
 i18n.addResourceBundle("fr", namespace, indexFr)
@@ -67,6 +73,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <Divider />
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
         <PointOfInterestSection page={currentPageId} />
+        <Divider />
+        <HomeSection>{t("travel.title")}</HomeSection>
+        <HomeSubSection>{t("travel.subtitle")}</HomeSubSection>
+        <MainCardContainer>
+          <DiscoverCambodiaCard fluidObject={{ aspectRatio: 4 / 3 }} />
+        </MainCardContainer>
         {cities.length > 0 && (
           <>
             <Divider />
