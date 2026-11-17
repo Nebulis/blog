@@ -36,6 +36,12 @@ exports[`french pages exports meta for public/articles/index.html correctly: soc
 
 exports[`french pages exports meta for public/articles/index.html correctly: title 1`] = `"Tous nos articles | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/asia/cambodia/discover-cambodia/index.html correctly: meta-description 1`] = `"Envie de partir à la découverte du Cambodge ? Des temples majestueux d'Angkor Wat, en passant par les paysages emblématiques des villages flottants du lac Tonlé Sap. Entre patrimoine culturel, nature et détente, le Cambodge a de quoi séduire tous les voyageurs.On vous embarque avec nous pour une petite découverte du Cambodge. Notre récit de voyage avec photos, conseils et astuces."`;
+
+exports[`french pages exports meta for public/asia/cambodia/discover-cambodia/index.html correctly: social-network 1`] = `"Le Cambodge est un pays plein de surprises. Entre la découverte des impressionnantes ruines d'Angkor Wat, la visite du musée du génocide à Phnom Penh et une croisière sur le Mékong à la découverte des villages flottants, le Cambodge offre une grande diversité d'expériences et de découvertes."`;
+
+exports[`french pages exports meta for public/asia/cambodia/discover-cambodia/index.html correctly: title 1`] = `"Découverte du Cambodge : Un voyage riche en émotions"`;
+
 exports[`french pages exports meta for public/asia/cambodia/index.html correctly: meta-description 1`] = `"Connu pour Siem Reap et ses multiples ruines d’Angkor Vat qui font à eux seuls une raison de venir au Cambodge, vous pouvez aussi naviguer sur le lac Tonlé Sap et observer la vie des villages flottants. A Phnom Penh, visiter son palais royal et l’ancienne prison de la période des Khmers rouges, histoire bouleversante qui vous fera découvrir le Cambodge autrement. Suivez notre guide de ville en ville pour découvrir notre sélection des lieux incontournables. Nos récits de voyage avec photos, conseils et astuces."`;
 
 exports[`french pages exports meta for public/asia/cambodia/index.html correctly: social-network 1`] = `"Connu pour Siem Reap et ses multiples ruines d’Angkor Vat qui font à eux seuls une raison de venir au Cambodge, vous pouvez aussi naviguer sur le lac Tonlé Sap et observer la vie des villages flottants. A Phnom Penh, visiter son palais royal et l’ancienne prison de la période des Khmers rouges, histoire bouleversante qui vous fera découvrir le Cambodge autrement."`;

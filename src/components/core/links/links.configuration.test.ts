@@ -116,7 +116,7 @@ const asiaLinks = () => {
   expect(getLink("laos")).toMatchObject({ label: { fr: "Laos", en: "Laos" }, published: false })
   expect(getLink("thailand")).toMatchObject({ label: { fr: "Thaïlande", en: "Thailand" }, published: false })
   expect(getLink("myanmar")).toMatchObject({ label: { fr: "Birmanie", en: "Myanmar" }, published: false })
-  expect(getLink("cambodia")).toMatchObject({ label: { fr: "Cambodge", en: "Cambodia" }, published: false })
+  expect(getLink("cambodia")).toMatchObject({ label: { fr: "Cambodge", en: "Cambodia" }, published: true })
   expect(getLink("india")).toMatchObject({ label: { fr: "Inde", en: "India" }, published: false })
   expect(getLink("indonesia")).toMatchObject({ label: { fr: "Indonésie", en: "Indonesia" }, published: false })
   expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: true })
@@ -610,12 +610,41 @@ describe("links", () => {
     australiaLinks()
 
     // cambodia assertions
-    expect(getLink("s-21-prison")).toMatchObject({
-      label: { en: "Tuol Sleng Genocide Museum", fr: "Musée du génocide Tuol Sleng" },
+    expect(getLink("discover-cambodia")).toMatchObject({
+      label: {
+        en: "Discovering Cambodia: A Journey Rich in Emotions",
+        fr: "Découverte du Cambodge : Un voyage riche en émotions",
+      },
+      published: true,
+    })
+    expect(getLink("prepare-cambodia")).toMatchObject({
+      label: { en: "Prepare your travel to Cambodia", fr: "Bien préparer son voyage au Cambodge" },
+      published: false,
+    })
+    expect(getLink("tuol-sleng-genocide-museum")).toMatchObject({
+      label: {
+        en: "History of Cambodia: S-21 Prison, an overwhelming visit",
+        fr: "Histoire du Cambodge : Prison S-21, une visite bouleversante",
+      },
       published: false,
     })
     expect(getLink("kampong-phluk")).toMatchObject({
-      label: { en: "Kampong Phluk Floating Village", fr: "Village flottant de Kampong Phluk" },
+      label: {
+        en: "A life on the water: A floating village in Cambodia",
+        fr: "Une vie sur l’eau : Un village flottant au Cambodge",
+      },
+      published: false,
+    })
+    expect(getLink("khmer-red-curry")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("lok-lak")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("amok-trei")).toMatchObject({
+      label: { en: "", fr: "" },
       published: false,
     })
     expect(getLink("angkor-wat")).toMatchObject({

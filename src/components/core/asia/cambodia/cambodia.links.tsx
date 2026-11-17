@@ -1,6 +1,7 @@
 import { CountryLink } from "../../links/links.types"
 import commonFr from "../../../../locales/fr/common.json"
 import commonEn from "../../../../locales/en/common.json"
+import { DiscoverCambodiaCard } from "./cambodia.cards"
 
 export const cambodiaLinks: CountryLink = {
   id: "cambodia",
@@ -40,10 +41,25 @@ export const cambodiaLinks: CountryLink = {
   ],
   others: [
     {
-      id: "s-21-prison",
+      id: "discover-cambodia",
       label: {
-        en: commonEn.country.cambodia.card["s-21-prison"],
-        fr: commonFr.country.cambodia.card["s-21-prison"],
+        en: commonEn.country.cambodia.card["discover-cambodia"],
+        fr: commonFr.country.cambodia.card["discover-cambodia"],
+      },
+      published: new Date("2024-01-03T17:00:00.000+07:00"),
+      card: DiscoverCambodiaCard,
+    },
+    {
+      id: "prepare-cambodia",
+      label: { fr: commonFr.country.cambodia.card.prepare, en: commonEn.country.cambodia.card.prepare },
+      published: false,
+      additionalTags: ["prepare"],
+    },
+    {
+      id: "tuol-sleng-genocide-museum",
+      label: {
+        en: commonEn.country.cambodia.card["tuol-sleng-genocide-museum"],
+        fr: commonFr.country.cambodia.card["tuol-sleng-genocide-museum"],
       },
       published: false,
     },
@@ -57,6 +73,30 @@ export const cambodiaLinks: CountryLink = {
     },
     {
       id: "angkor-wat",
+      label: {
+        en: "",
+        fr: "",
+      },
+      published: false,
+    },
+    {
+      id: "khmer-red-curry",
+      label: {
+        en: "",
+        fr: "",
+      },
+      published: false,
+    },
+    {
+      id: "lok-lak",
+      label: {
+        en: "",
+        fr: "",
+      },
+      published: false,
+    },
+    {
+      id: "amok-trei",
       label: {
         en: "",
         fr: "",

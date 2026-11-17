@@ -228,6 +228,7 @@ Region pages are **not created via plop** — they are manually created followin
     ```sh
     CONTEXT=production npm run build && npm run test:integration -- -u
     ```
+    It should ONLY be run once the content is ready to commit and once ordered to do so. Never run this on your own.
 
 11. **Add to robots.txt** in `gatsby-config.js` if public.
 
@@ -297,6 +298,8 @@ Region pages are **not created via plop** — they are manually created followin
    **Important:** The build **must** run with `CONTEXT=production` (matches CI) for correct i18n rendering. Without it, English pages may render French content, causing snapshot mismatches.
 
    This records the new page's meta tags (title, description, social tags) for CI validation.
+
+   It should ONLY be run once the content is ready to commit and once ordered to do so. Never run this on your own.
 
 9. **If the page is public**, add the route to the robots allow list in `gatsby-config.js` (both locales):
 
