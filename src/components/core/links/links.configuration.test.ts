@@ -621,12 +621,30 @@ describe("links", () => {
       label: { en: "Prepare your travel to Cambodia", fr: "Bien préparer son voyage au Cambodge" },
       published: false,
     })
-    expect(getLink("s-21-prison")).toMatchObject({
-      label: { en: "Tuol Sleng Genocide Museum", fr: "Musée du génocide Tuol Sleng" },
+    expect(getLink("tuol-sleng-genocide-museum")).toMatchObject({
+      label: {
+        en: "History of Cambodia: S-21 Prison, an overwhelming visit",
+        fr: "Histoire du Cambodge : Prison S-21, une visite bouleversante",
+      },
       published: false,
     })
     expect(getLink("kampong-phluk")).toMatchObject({
-      label: { en: "Kampong Phluk Floating Village", fr: "Village flottant de Kampong Phluk" },
+      label: {
+        en: "A life on the water: A floating village in Cambodia",
+        fr: "Une vie sur l’eau : Un village flottant au Cambodge",
+      },
+      published: false,
+    })
+    expect(getLink("khmer-red-curry")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("lok-lak")).toMatchObject({
+      label: { en: "", fr: "" },
+      published: false,
+    })
+    expect(getLink("amok-trei")).toMatchObject({
+      label: { en: "", fr: "" },
       published: false,
     })
     expect(getLink("angkor-wat")).toMatchObject({

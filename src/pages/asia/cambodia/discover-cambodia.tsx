@@ -171,9 +171,9 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <DiscoverCambodiaImages image="redCurry" />
               </ImageAsPortrait>
               <p>{t("visit1.part6")}</p>
-              <ImageAsLandscape>
+              <ImageAsPortrait>
                 <DiscoverCambodiaImages image="lokLak" />
-              </ImageAsLandscape>
+              </ImageAsPortrait>
               <p>{t("visit1.part7")}</p>
               <ImageAsPortrait>
                 <DiscoverCambodiaImages image="amokTrei" />
@@ -235,9 +235,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <DiscoverCambodiaImages image="kampongPhluk5" />
                 </ImageAsLandscape>
               </GroupOfImages>
+              <p>{t("visit3.part11")}</p>
               <ArticleCardContainer>
                 <KampongPhlukCard card={{ showTags: false, showPublished: false, showMore: true }} />
               </ArticleCardContainer>
+              <p>{t("visit3.part12")}</p>
             </SectionContent>
           </section>
           <Divider />

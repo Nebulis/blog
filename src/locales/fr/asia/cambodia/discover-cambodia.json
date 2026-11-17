@@ -60,7 +60,7 @@
         "part1": "Le Cambodge est un pays d'Asie du Sud-Est. Il est entouré par la Thaïlande, le Laos et le Vietnam.",
         "part2": "Notre itinéraire de voyage sur 6 jours.",
         "part3": "D'ailleurs je le rappelle ici, mais quand nous vous proposons un nombre de jours de visites, cela ne compte évidemment pas le décalage horaire, si vous en avez et que vous avez besoin d'un petit temps d'adaptation, ainsi que le temps de trajet d'avion.",
-        "part4": "Pour rappel, nous habitons à [Singapour](singapore) et voyager en Asie est très simple pour nous. Rejoindre le Cambodge par exemple ne nous aura pris que 2h, forcément bien plus que si vous venez de [France](france) par exemple.",
+        "part4": "Pour rappel, nous habitons à [Singapour](singapore) et voyager en Asie est très simple pour nous. Rejoindre le Cambodge par exemple ne nous aura pris que 2h, forcément bien moins que si vous venez de [France](france) par exemple.",
         "part5": "Siem Reap ↠ [Temple d'Angkor](angkor-wat) ↠ [Village flottant](kampong-phluk) ↠ [Phnom Penh](phnom-penh)"
     },
     "visit": {
@@ -104,7 +104,9 @@
         "part7": "Il existe plusieurs villages qui sont ouverts au tourisme : Me Chreay, Chong Kneas, Kampong Phluk, Kampong Luong et Kampong Khleang.",
         "part8": "Pour notre voyage au Cambodge, nous avons visité #le village de Kampong Phluk#.",
         "part9": "La route pour s'y rendre est déserte. On aperçoit quelques petits stands de nourriture sur le bord du chemin, mais pas une seule voiture à l'horizon. Le trajet est assez chaotique : on est loin d'une route classique, il s'agit plutôt d'un chemin de sable rouge.",
-        "part10": "Enfin, quand on dit qu'il n'y avait personne sur la route, ce n'est pas tout à fait vrai ! Ouvrez l'œil, car de petites créatures peuvent surgir et traverser sans prévenir !"
+        "part10": "Enfin, quand on dit qu'il n'y avait personne sur la route, ce n'est pas tout à fait vrai ! Ouvrez l'œil, car de petites créatures peuvent surgir et traverser sans prévenir !",
+        "part11": "Après avoir emprunté ce long chemin de terre, nous arrivons enfin à destination et découvrons ces maisons sur pilotis. Un paysage aussi surprenant que fascinant, qui témoigne de la capacité d’adaptation remarquable de ses habitants face à leur environnement.",
+        "part12": "Après notre découverte de Siem Reap et de ses environs, partons ensemble à la découverte de cette autre ville incontournable du Cambodge."
     },
     "visit4": {
         "title": "PHNOM PENH",
@@ -113,7 +115,7 @@
     },
     "visit5": {
         "title": "#✓ Le palais royal#",
-        "part1": "Véritable emblème de [Phnom Penh](todo), le Palais Royal est une visite incontournable lors de votre séjour. ",
+        "part1": "Véritable emblème de [Phnom Penh](phnom-penh), le Palais Royal est une visite incontournable lors de votre séjour. ",
         "part2": "Résidence officielle du roi et de la famille royale cambodgienne, il impressionne par son architecture traditionnelle khmère, #ses toitures dorées et son élégante enceinte blanche#.",
         "part3": "Ce magnifique ensemble abrite plusieurs pavillons, dont la célèbre #Pagode d'Argent#, reconnaissable par son sol recouvert de carreaux d'argent et ses précieux Bouddhas, ainsi que de superbes jardins.",
         "part4": "Une visite qui permet de #découvrir toute la richesse du patrimoine et des traditions du Cambodge#.",
@@ -146,7 +148,7 @@
     "question1": "Avez-vous déjà visité le Cambodge ? Quels sont les endroits que vous avez préférés ou que vous aimeriez absolument découvrir ?",
     "question2": "N'hésitez pas à partager vos coups de cœur et vos conseils avec nous !",
     "love": "♡ À bientôt pour de nouvelles aventures ♡",
-    "pinterest": "🌏 On vous embarque avec nous pour découvrir le Cambodge. Quand partir ? Combien de jours ? Quel budget prévoir ? Comment s'y rendre ? et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure. Récit de voyage avec photos, conseils et astuces. Cliquez sur l'image pour le guide complet … 🌏",
+    "pinterest": "🌏 On vous embarque avec nous pour découvrir le Cambodge. Quand partir ? Combien de jours ? Quel budget prévoir ? Comment s'y rendre ? et où loger ? On vous donne des conseils en se fixant sur notre propre expérience et en vous racontant notre aventure. Récit de voyage avec photos, conseils et astuces. Cliquez sur l'image pour le guide complet... 🌏",
     "facebook": {
         "part1": "♡ Coucou les voyageurs ! ♡",
         "part2": "Venez découvrir le Cambodge avec nous : des temples empreints de sérénité, une histoire bouleversante et des habitants dont le sourire et la gentillesse vous marquent."
