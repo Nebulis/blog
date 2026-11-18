@@ -46,7 +46,7 @@ export const cambodiaLinks: CountryLink = {
         en: commonEn.country.cambodia.card["discover-cambodia"],
         fr: commonFr.country.cambodia.card["discover-cambodia"],
       },
-      published: new Date("2024-01-03T17:00:00.000+07:00"),
+      published: new Date("2024-01-02T17:00:00.000+07:00"),
       card: DiscoverCambodiaCard,
     },
     {

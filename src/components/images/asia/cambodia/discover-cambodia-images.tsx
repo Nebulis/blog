@@ -16,6 +16,8 @@ const alt = {
   nationalMuseum1: "National Museum Of Cambodia in Phnom Penh",
   nationalMuseum2: "National Museum Of Cambodia in Phnom Penh",
   nationalMuseum3: "National Museum Of Cambodia in Phnom Penh",
+  nationalMuseum4: "National Museum Of Cambodia in Phnom Penh",
+  nationalMuseum5: "National Museum Of Cambodia in Phnom Penh",
   royalPalace1: "Royal Palace in Phnom Penh",
   royalPalace2: "Royal Palace in Phnom Penh",
   royalPalace3: "Royal Palace in Phnom Penh",
