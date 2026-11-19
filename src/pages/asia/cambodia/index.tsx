@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react"
 import SEO from "../../../components/layout/seo"
 import angkorWat from "../../../images/asia/cambodia/angkor-wat.svg"
-import { getArticles, getCities, getLinkLabel, sortByLabel } from "../../../components/core/links/links.utils"
+import { getArticles } from "../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../components/application"
 import {
+  CityHomeSection,
   HomeSection,
   HomeSubSection,
   MainTitleSection,
@@ -20,20 +21,18 @@ import indexFr from "../../../locales/fr/asia/cambodia/index.json"
 import indexEn from "../../../locales/en/asia/cambodia/index.json"
 import {
   ArticlesContainer,
+  CityArticleContainer,
   GoToAllArticlesContainer,
   MainCardContainer,
-  MedallionContainer,
 } from "../../../components/layout/layout"
-import { ApplicationLink, ButtonLink } from "../../../components/core/links/link"
-import { css, jsx } from "@emotion/react"
+import { ButtonLink } from "../../../components/core/links/link"
+import { css } from "@emotion/react"
 import CambodiaImage from "../../../images/asia/cambodia/home-cambodia.jpg"
 import { WeatherForHomePage } from "../../../components/core/weather"
 import { MouseToolTip, TooltipContent } from "../../../components/core/tooltipPortal"
 import { PointOfInterestSection } from "../../../components/core/point-of-interest"
-import { ImageAsMedallion, TitleImage } from "../../../components/images/layout"
-import { cambodiaLinks } from "../../../components/core/asia/cambodia/cambodia.links"
+import { TitleImage } from "../../../components/images/layout"
 import { CambodiaBlogLayout, cambodiaWeatherEntries } from "../../../components/core/asia/cambodia/cambodia"
-import { SharedCambodiaImages } from "../../../components/images/asia/cambodia/shared-cambodia-images"
 import { DiscoverCambodiaCard } from "../../../components/core/asia/cambodia/cambodia.cards"
 
 const namespace = "asia/cambodia/index"
@@ -46,8 +45,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
   const { t, i18n } = useCustomTranslation([namespace, "common"])
   const [tooltipLabel, setTooltipLabel] = useState("")
   const country = t("common:country.cambodia.title")
-  const articles = getArticles({ kind: "other", tags: ["cambodia"], development })
-  const cities = getCities({ links: cambodiaLinks, development, lang: i18n.languageCode })
+  const articles = getArticles({
+    kind: "other",
+    tags: ["cambodia"],
+    development,
+    filter: (cachedLink) => cachedLink.id !== "discover-cambodia",
+  })
+  const highlights = getArticles({
+    kind: "highlight",
+    development,
+    tags: ["cambodia"],
+  })
   return (
     <>
       <SEO
@@ -74,27 +82,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
         <SubSubHomeSection>{t("section1")}</SubSubHomeSection>
         <PointOfInterestSection page={currentPageId} />
         <Divider />
-        <HomeSection>{t("travel.title")}</HomeSection>
-        <HomeSubSection>{t("travel.subtitle")}</HomeSubSection>
+        <CityHomeSection>{t("section2")}</CityHomeSection>
         <MainCardContainer>
           <DiscoverCambodiaCard fluidObject={{ aspectRatio: 4 / 3 }} />
         </MainCardContainer>
-        {cities.length > 0 && (
+        {highlights.length > 0 && (
           <>
             <Divider />
-            <HomeSection>{t("tour.title")}</HomeSection>
-            <HomeSubSection>{t("tour.subtitle")}</HomeSubSection>
-            <MedallionContainer>
-              {cities.sort(sortByLabel(i18n.languageCode)).map((city) => {
-                return city.imageProps?.image ? (
-                  <ApplicationLink to={city.id} key={city.id}>
-                    <ImageAsMedallion title={getLinkLabel(i18n.languageCode)(city.id)}>
-                      {jsx(SharedCambodiaImages, city.imageProps)}
-                    </ImageAsMedallion>
-                  </ApplicationLink>
-                ) : null
-              })}
-            </MedallionContainer>
+            <CityHomeSection>{t("section3")}</CityHomeSection>
+            <CityArticleContainer>
+              {highlights.map(({ card: Card, id }) =>
+                Card ? <Card key={id} fluidObject={{ aspectRatio: 4 / 3 }} /> : null
+              )}
+            </CityArticleContainer>
           </>
         )}
         {articles.length > 0 && (

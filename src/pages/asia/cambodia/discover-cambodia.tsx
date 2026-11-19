@@ -276,6 +276,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 <ImageAsLandscape>
                   <DiscoverCambodiaImages image="royalPalace7" />
                 </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <DiscoverCambodiaImages image="royalPalace8" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <DiscoverCambodiaImages image="royalPalace9" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <DiscoverCambodiaImages image="royalPalace10" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <DiscoverCambodiaImages image="royalPalace11" />
+                </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
           </section>
@@ -296,6 +308,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <DiscoverCambodiaImages image="nationalMuseum2" />
                   <DiscoverCambodiaImages image="nationalMuseum3" />
                 </TwoImagesSameSizeOrToGroup>
+                <ImageAsLandscape>
+                  <DiscoverCambodiaImages image="nationalMuseum4" />
+                </ImageAsLandscape>
+                <ImageAsLandscape>
+                  <DiscoverCambodiaImages image="nationalMuseum5" />
+                </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
           </section>

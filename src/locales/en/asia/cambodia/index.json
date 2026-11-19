@@ -7,14 +7,6 @@
   "google-description": "Famous for Siem Reap and the ruins of Angkor Wat, you can also sail on Tonle Sap Lake and observe the life of floating villages. In Phnom Penh, visit the royal palace and the former prison from the Khmer Rouge regime, a moving story that will make you discover Cambodia differently. Follow our city-to-city guide to discover our selection of must-see places. Our travelogue with photos, tips, and advice.",
   "social-network-description": "Famous for Siem Reap and the ruins of Angkor Wat, you can also sail on Tonle Sap Lake and observe the life of floating villages. In Phnom Penh, visit the royal palace and the former prison from the Khmer Rouge regime, a moving story that will make you discover Cambodia differently.",
   "full-title": "Cambodia | Travel Guide",
-  "travel": {
-    "title": "Travel",
-    "subtitle": "By following our journey ..."
-  },
-  "tour": {
-    "title": "Travel around",
-    "subtitle": "The country from city to city"
-  },
   "inform": {
     "title": "Get informed",
     "subtitle": "With our advice, favorites ..."
@@ -22,6 +14,8 @@
   "weather": "Best time to visit",
   "weather-country": "Cambodia?",
   "section1": "Points of interest",
+  "section2": "Our travelogue",
+  "section3": "Our detailed visits",
   "map": "Our map of",
   "country": "Cambodia"
 }

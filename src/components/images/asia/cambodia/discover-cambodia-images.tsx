@@ -16,6 +16,8 @@ const alt = {
   nationalMuseum1: "National Museum Of Cambodia in Phnom Penh",
   nationalMuseum2: "National Museum Of Cambodia in Phnom Penh",
   nationalMuseum3: "National Museum Of Cambodia in Phnom Penh",
+  nationalMuseum4: "National Museum Of Cambodia in Phnom Penh",
+  nationalMuseum5: "National Museum Of Cambodia in Phnom Penh",
   royalPalace1: "Royal Palace in Phnom Penh",
   royalPalace2: "Royal Palace in Phnom Penh",
   royalPalace3: "Royal Palace in Phnom Penh",
@@ -23,6 +25,10 @@ const alt = {
   royalPalace5: "Royal Palace in Phnom Penh",
   royalPalace6: "Royal Palace in Phnom Penh",
   royalPalace7: "Royal Palace in Phnom Penh",
+  royalPalace8: "Royal Palace in Phnom Penh",
+  royalPalace9: "Royal Palace in Phnom Penh",
+  royalPalace10: "Royal Palace in Phnom Penh",
+  royalPalace11: "Royal Palace in Phnom Penh",
   kampongPhluk1: "Road to Kampong Phluk With Red Sand",
   kampongPhluk2: "Road to Kampong Phluk With Red Sand",
   kampongPhluk3: "Foor Stand On The Road to Kampong Phluk",
@@ -173,6 +179,20 @@ export const DiscoverCambodiaImages: React.FunctionComponent<ExtraImageProps & {
           }
         }
       }
+      nationalMuseum4: file(relativePath: { eq: "asia/cambodia/discover-cambodia/national-museum4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [600, 1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      nationalMuseum5: file(relativePath: { eq: "asia/cambodia/discover-cambodia/national-museum5.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [600, 1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       royalPalace1: file(relativePath: { eq: "asia/cambodia/discover-cambodia/royal-palace1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1800, quality: 70, srcSetBreakpoints: [600, 1200]) {
@@ -218,6 +238,34 @@ export const DiscoverCambodiaImages: React.FunctionComponent<ExtraImageProps & {
       royalPalace7: file(relativePath: { eq: "asia/cambodia/discover-cambodia/royal-palace7.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1800, quality: 70, srcSetBreakpoints: [600, 1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      royalPalace8: file(relativePath: { eq: "asia/cambodia/discover-cambodia/royal-palace8.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800, quality: 80, srcSetBreakpoints: [600, 1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      royalPalace9: file(relativePath: { eq: "asia/cambodia/discover-cambodia/royal-palace9.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800, quality: 70, srcSetBreakpoints: [600, 1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      royalPalace10: file(relativePath: { eq: "asia/cambodia/discover-cambodia/royal-palace10.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800, quality: 70, srcSetBreakpoints: [600, 1200]) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      royalPalace11: file(relativePath: { eq: "asia/cambodia/discover-cambodia/royal-palace11.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800, quality: 60, srcSetBreakpoints: [600, 1200]) {
             ...GatsbyImageSharpFluid
           }
         }
