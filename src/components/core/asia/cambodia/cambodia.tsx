@@ -2,7 +2,12 @@ import { css } from "@emotion/react"
 import React, { FunctionComponent } from "react"
 import styled from "@emotion/styled"
 import { BlogLayout, IndexBlogLayout } from "../../../layout/layout"
-import { cambodiaPrimaryColor, cambodiaPrimaryColorDarker, cambodiaPrimaryColorLighter } from "./cambodia.variables"
+import {
+  cambodiaPrimaryColor,
+  cambodiaPrimaryColorDarker,
+  cambodiaPrimaryColorLighter,
+  cambodiaPrimaryColorWithOpacity,
+} from "./cambodia.variables"
 import angkorWat from "../../../../images/asia/cambodia/angkor-wat.svg"
 import { Headline } from "../../highlight"
 import { Title } from "../../title"
@@ -36,6 +41,12 @@ const cambodiaLayout = `
   }
 
   .index-blog-layout-content {
+  
+    .menu-article .menu-article-container {
+      background-color: ${cambodiaPrimaryColorWithOpacity(0.2)};
+      color: ${cambodiaPrimaryColorDarker};
+      border: 3px solid ${cambodiaPrimaryColorDarker};
+    }
     .point-of-interest-section {
       svg {
         fill: ${cambodiaPrimaryColor};

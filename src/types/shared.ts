@@ -22,6 +22,7 @@ export type ExtraImageProps = {
   imgStyle?: GatsbyImageOptionalProps["imgStyle"]
   css?: SerializedStyles
   onLoad?: (path: string) => void
+  loading?: "eager" | "lazy"
 }
 
 export type ExtraImageLinkProps = ExtraImageProps & {

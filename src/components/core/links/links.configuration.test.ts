@@ -648,7 +648,10 @@ describe("links", () => {
       published: false,
     })
     expect(getLink("angkor-wat")).toMatchObject({
-      label: { en: "", fr: "" },
+      label: {
+        en: "The Temples of Angkor: temples buried in the jungle",
+        fr: "Les temples d’Angkor : des temples enfouis dans la jungle",
+      },
       published: false,
     })
     expect(getLink("phnom-penh")).toMatchObject({

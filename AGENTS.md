@@ -19,17 +19,17 @@ Treat the image pipeline as expensive.
 
 Run everything from the repository root.
 
-| Task | Command | Notes |
-|---|---|---|
-| Install | `npm ci` | Node 20, see `.nvmrc` |
-| Dev server | `npm run develop` | `DEV_SSR=false` |
-| Build | `npm run build` | Heavy: ~180 pages + Sharp |
-| Unit tests | `npm run test -- --runInBand` | Jest, includes snapshots |
-| Integration tests | `npm run build && npm run test:integration` | Reads `public/**/*.html` |
-| Update integration snapshots | `npm run test:integration -- -u` | Run after adding a page |
-| Lint | `npm run lint` | ESLint, `--max-warnings 0` |
-| Types | `npx tsc --noEmit` | `npm run type-check` is the same |
-| Format | `npm run format` | Prettier |
+| Task                         | Command                                     | Notes                            |
+| ---------------------------- | ------------------------------------------- | -------------------------------- |
+| Install                      | `npm ci`                                    | Node 20, see `.nvmrc`            |
+| Dev server                   | `npm run develop`                           | `DEV_SSR=false`                  |
+| Build                        | `npm run build`                             | Heavy: ~180 pages + Sharp        |
+| Unit tests                   | `npm run test -- --runInBand`               | Jest, includes snapshots         |
+| Integration tests            | `npm run build && npm run test:integration` | Reads `public/**/*.html`         |
+| Update integration snapshots | `npm run test:integration -- -u`            | Run after adding a page          |
+| Lint                         | `npm run lint`                              | ESLint, `--max-warnings 0`       |
+| Types                        | `npx tsc --noEmit`                          | `npm run type-check` is the same |
+| Format                       | `npm run format`                            | Prettier                         |
 
 Verification before claiming work is done: `npm run lint && npx tsc --noEmit && npm run test -- --runInBand`.
 Add `npm run build && npm run test:integration` when routes, SEO/meta, or page rendering changed.
@@ -109,12 +109,12 @@ npx plop page -- --pagePath asia/philippines/palawan/my-new-article
 
 That produces:
 
-| File | Purpose |
-|---|---|
-| `src/pages/asia/philippines/palawan/my-new-article.tsx` | French page (English is auto-generated) |
-| `src/locales/fr/asia/philippines/palawan/my-new-article.json` | French copy |
-| `src/locales/en/asia/philippines/palawan/my-new-article.json` | English copy |
-| `src/components/images/asia/philippines/palawan/my-new-article.tsx` | Image selector |
+| File                                                                | Purpose                                 |
+| ------------------------------------------------------------------- | --------------------------------------- |
+| `src/pages/asia/philippines/palawan/my-new-article.tsx`             | French page (English is auto-generated) |
+| `src/locales/fr/asia/philippines/palawan/my-new-article.json`       | French copy                             |
+| `src/locales/en/asia/philippines/palawan/my-new-article.json`       | English copy                            |
+| `src/components/images/asia/philippines/palawan/my-new-article.tsx` | Image selector                          |
 
 Template source: `plopfile.ts`, `templates/page.hbs`, `templates/translation.hbs`, `templates/image.hbs`.
 
@@ -124,32 +124,34 @@ Region pages are **not created via plop** — they are manually created followin
 
 ### Files to create/modify
 
-| File | Purpose |
-|---|---|
-| `src/pages/europe/france/<region-id>/index.tsx` | Region page component |
-| `src/locales/fr/europe/france/<region-id>/index.json` | French copy |
-| `src/locales/en/europe/france/<region-id>/index.json` | English copy |
-| `src/components/core/europe/france/france.links.tsx` | Add region to `cities` array |
-| `src/components/core/europe/france/france.tsx` | Add weather entry in `franceWeatherEntries` |
-| `src/components/images/europe/france/shared-europe-images.tsx` | Add GraphQL query for home image |
-| `src/images/europe/france/home-<region-id>.jpg` | Home image (required) |
-| `src/components/core/links/links.configuration.test.ts` | Add link assertion |
-| `src/pages/europe/france/index.tsx` | Update to filter weather entries (if needed) |
+| File                                                           | Purpose                                      |
+| -------------------------------------------------------------- | -------------------------------------------- |
+| `src/pages/europe/france/<region-id>/index.tsx`                | Region page component                        |
+| `src/locales/fr/europe/france/<region-id>/index.json`          | French copy                                  |
+| `src/locales/en/europe/france/<region-id>/index.json`          | English copy                                 |
+| `src/components/core/europe/france/france.links.tsx`           | Add region to `cities` array                 |
+| `src/components/core/europe/france/france.tsx`                 | Add weather entry in `franceWeatherEntries`  |
+| `src/components/images/europe/france/shared-europe-images.tsx` | Add GraphQL query for home image             |
+| `src/images/europe/france/home-<region-id>.jpg`                | Home image (required)                        |
+| `src/components/core/links/links.configuration.test.ts`        | Add link assertion                           |
+| `src/pages/europe/france/index.tsx`                            | Update to filter weather entries (if needed) |
 
 ### Steps
 
 1. **Create the page component** at `src/pages/europe/france/<region-id>/index.tsx` modeled after `grand-est/index.tsx`:
+
    - Import locale files and register with i18n
    - Use `FranceBlogLayout`, `FranceImageAsMedallion`, `SharedFranceImages`
    - Include `PointOfInterestSection`, `WeatherForHomePage`
    - Set `currentPageId = "<region-id>"`
 
 2. **Create locale files** with these required keys:
+
    ```json
    {
-     "introduction": { 
-       "section1": "...", 
-       "section2": "..." 
+     "introduction": {
+       "section1": "...",
+       "section2": "..."
      },
      "meta-description": "...",
      "social-network-description": "...",
@@ -168,11 +170,13 @@ Region pages are **not created via plop** — they are manually created followin
      "country": "<Region>"
    }
    ```
+
    Duplicate for English with translated values.
-   
+
    **Note:** The `introduction` object should have both `section1` (general description) and `section2` (call-to-action like "Join us to discover..."). The page component renders both.
 
 3. **Add link entry** in `france.links.tsx` under `cities`:
+
    ```ts
    {
      id: "<region-id>",
@@ -185,11 +189,13 @@ Region pages are **not created via plop** — they are manually created followin
      ],
    }
    ```
+
    Use PascalCase for the image key (e.g., `homeCentreValDeLoire`).
-   
+
    **Note:** Ask the user if they want to define Points of Interest (POI) / sub-regions as `highlights` now, or leave empty (`[]`) to add later. Each highlight needs an `id`, `label`, `published` status, and optional `imageProps` for medallion display.
 
 4. **Add weather entry** in `france.tsx` in `franceWeatherEntries`:
+
    ```ts
    {
      id: "<region-id>",
@@ -199,6 +205,7 @@ Region pages are **not created via plop** — they are manually created followin
    ```
 
 5. **Add GraphQL query** in `shared-europe-images.tsx`:
+
    ```graphql
    home<RegionPascalCase>: file(relativePath: { eq: "europe/france/home-<region-id>.jpg" }) {
      childImageSharp {
@@ -208,11 +215,13 @@ Region pages are **not created via plop** — they are manually created followin
      }
    }
    ```
+
    Add to `alt` object: `home<RegionPascalCase>: "Home Image for <Region> Region"`
 
 6. **Add home image** at `src/images/europe/france/home-<region-id>.jpg`
 
 7. **Add test assertion** in `links.configuration.test.ts`:
+
    ```ts
    expect(getLink("<region-id>")).toMatchObject({ label: { fr: "<Region>", en: "<Region>" }, published: false })
    ```
@@ -220,14 +229,17 @@ Region pages are **not created via plop** — they are manually created followin
 8. **Update main France page** (`src/pages/europe/france/index.tsx`) to filter weather entries if you want to exclude the new region from the national weather widget.
 
 9. **Verify:**
+
    ```sh
    npm run lint && npx tsc --noEmit && npm run test -- --runInBand
    ```
 
 10. **Update integration snapshots:**
+
     ```sh
     CONTEXT=production npm run build && npm run test:integration -- -u
     ```
+
     It should ONLY be run once the content is ready to commit and once ordered to do so. Never run this on your own.
 
 11. **Add to robots.txt** in `gatsby-config.js` if public.
@@ -331,7 +343,7 @@ Region pages are **not created via plop** — they are manually created followin
 
 ### Do not run these casually
 
-- `node reset.js` **deletes every file under `src/pages/asia/**/*.tsx`** if more than 10 exist. It is a legacy scaffolding helper, not a cleanup task.
+- `node reset.js` **deletes every file under `src/pages/asia/**/\*.tsx`\*\* if more than 10 exist. It is a legacy scaffolding helper, not a cleanup task.
 - `node resize.js` expects local `Photos/h`, `Photos/w`, `Photos/p` folders that are not in the repository. It is a manual pre-processing step for new photography.
 
 ## Locales
