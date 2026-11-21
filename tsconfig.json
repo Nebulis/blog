@@ -12,7 +12,10 @@
     "noUnusedLocals": false,
     "allowJs": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@google/genai": ["./src/types/google-genai.d.ts"]
+    }
   },
   "exclude": ["node_modules", "public", ".cache", "firebase"]
 }
