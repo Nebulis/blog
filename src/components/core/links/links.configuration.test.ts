@@ -116,7 +116,7 @@ const asiaLinks = () => {
   expect(getLink("laos")).toMatchObject({ label: { fr: "Laos", en: "Laos" }, published: false })
   expect(getLink("thailand")).toMatchObject({ label: { fr: "Thaïlande", en: "Thailand" }, published: false })
   expect(getLink("myanmar")).toMatchObject({ label: { fr: "Birmanie", en: "Myanmar" }, published: false })
-  expect(getLink("cambodia")).toMatchObject({ label: { fr: "Cambodge", en: "Cambodia" }, published: true })
+  expect(getLink("cambodia")).toMatchObject({ label: { fr: "Cambodge", en: "Cambodia" }, published: false })
   expect(getLink("india")).toMatchObject({ label: { fr: "Inde", en: "India" }, published: false })
   expect(getLink("indonesia")).toMatchObject({ label: { fr: "Indonésie", en: "Indonesia" }, published: false })
   expect(getLink("japan")).toMatchObject({ label: { fr: "Japon", en: "Japan" }, published: true })
@@ -615,7 +615,7 @@ describe("links", () => {
         en: "Discovering Cambodia: A Journey Rich in Emotions",
         fr: "Découverte du Cambodge : Un voyage riche en émotions",
       },
-      published: true,
+      published: false,
     })
     expect(getLink("prepare-cambodia")).toMatchObject({
       label: { en: "Prepare your travel to Cambodia", fr: "Bien préparer son voyage au Cambodge" },
