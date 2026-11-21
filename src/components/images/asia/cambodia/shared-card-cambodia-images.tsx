@@ -15,6 +15,7 @@ export const SharedCardCambodiaImages: React.FunctionComponent<ExtraImageProps &
   image,
   fluidObject = {},
   imgStyle = {},
+  loading = "lazy",
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -56,6 +57,7 @@ export const SharedCardCambodiaImages: React.FunctionComponent<ExtraImageProps &
       alt={alt[image]}
       className={className}
       imgStyle={imgStyle}
+      loading={loading}
     />
   )
 }

@@ -74,10 +74,10 @@ export const cambodiaLinks: CountryLink = {
     {
       id: "angkor-wat",
       label: {
-        en: "",
-        fr: "",
+        en: commonEn.country.cambodia.card["angkor-wat"],
+        fr: commonFr.country.cambodia.card["angkor-wat"],
       },
-      published: false,
+      published: new Date("2027-01-16T17:00:00.000+07:00"),
     },
     {
       id: "khmer-red-curry",

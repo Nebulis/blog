@@ -1,4 +1,4 @@
-import React, { FunctionComponent, HTMLAttributes, useContext, useEffect, useState } from "react"
+import React, { FunctionComponent, HTMLAttributes, useContext, useEffect, useState, ImgHTMLAttributes } from "react"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import { useWindowSize } from "../hooks/useWindowSize"
@@ -8,6 +8,150 @@ import { MenuContext } from "../layout/menu.context"
 import { buildCurrentSharedUrl, buildPinterestUrl, buildSharedUrl } from "../../utils"
 import { PageProps } from "gatsby"
 import { ApplicationContext } from "../application"
+import { useCustomTranslation } from "../../i18n-hook"
+
+// R2 public base URL - configure via env or constant
+const R2_PUBLIC_BASE = process.env.GATSBY_R2_PUBLIC_BASE || "https://img.magicoftravels.com"
+
+type Orientation = "landscape" | "portrait" | "panorama"
+
+const BREAKPOINTS: Record<Orientation, number[]> = {
+  landscape: [1800, 1200, 600],
+  portrait: [1200, 600],
+  panorama: [2400, 1800, 1200, 600],
+}
+
+const BREAKPOINT_SUFFIXES: Record<number, string> = { 2400: "xxl", 1800: "xl", 1200: "lg", 600: "md" }
+
+const DEFAULT_RATIOS: Record<Orientation, number> = {
+  landscape: 1.5, // 3:2
+  portrait: 2 / 3, // 2:3 = 0.667
+  panorama: 2.0, // 2:1 typical panorama
+}
+
+// Portrait sizes: cap at 800px to avoid downloading huge 1200w files for narrow columns
+// Panorama: full viewport width
+const DEFAULT_SIZES: Record<Orientation, string> = {
+  landscape: "(max-width: 1800px) 100vw, 1800px",
+  portrait: "(max-width: 800px) 100vw, 800px",
+  panorama: "100vw",
+}
+
+function buildSrcSet(basePath: string, breakpoints: number[]): string {
+  return breakpoints.map((w) => `${R2_PUBLIC_BASE}/${basePath}-${BREAKPOINT_SUFFIXES[w]}.webp ${w}w`).join(",\n")
+}
+
+// Shared helper: inject orientation into R2Image children
+function injectOrientation(children: React.ReactNode, orientation: Orientation) {
+  return React.Children.map(children, (child) => {
+    if (React.isValidElement(child) && child.type === R2Image) {
+      return React.cloneElement(child, { orientation })
+    }
+    return child
+  })
+}
+
+interface R2ImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, "src" | "srcSet" | "sizes"> {
+  /** Namespace/path prefix in R2 (e.g., "asia/cambodia/angkor-wat") - also used for i18n namespace */
+  namespace?: string
+  /** Photo name/slug (e.g., "angkor-wat-spires") - combined with namespace to form full path */
+  name?: string
+  /** Legacy: full image path (used if namespace/name not provided) */
+  image?: string
+  /** Alt text for accessibility (if not using translation) */
+  alt?: string
+  /** Orientation - auto-sets breakpoints, ratio, and sizes */
+  orientation?: Orientation
+  /** Breakpoint widths (overrides orientation default) */
+  breakpoints?: number[]
+  /** Custom sizes attribute (overrides orientation default) */
+  sizes?: string
+  /** Loading strategy */
+  loading?: "lazy" | "eager"
+  /** Aspect ratio for placeholder (width/height) - overrides orientation default */
+  aspectRatio?: number
+}
+
+export const R2Image: FunctionComponent<R2ImageProps> = ({
+  namespace,
+  name,
+  image,
+  alt,
+  orientation = "landscape",
+  breakpoints,
+  sizes,
+  loading = "lazy",
+  aspectRatio,
+  className = "",
+  style,
+  ...imgProps
+}) => {
+  // Build image path from namespace + name, or use legacy image prop
+  const imagePath = image ?? (namespace && name ? `${namespace}/${name}` : "")
+  if (!imagePath) {
+    throw new Error("R2Image requires either `image` prop or both `namespace` and `name` props")
+  }
+
+  // Use custom translation hook with namespace + common
+  const { t } = useCustomTranslation(namespace ? [namespace, "common"] : ["common"])
+
+  // Auto-generate alt from translation if name provided (keys are under "photos" namespace)
+  const effectiveAlt = alt ?? (name ? t(`photos.${name}`) : "") ?? ""
+
+  const effectiveBreakpoints = breakpoints ?? BREAKPOINTS[orientation]
+  const effectiveSizes = sizes ?? DEFAULT_SIZES[orientation]
+  const effectiveRatio = aspectRatio ?? DEFAULT_RATIOS[orientation]
+  const srcSet = buildSrcSet(imagePath, effectiveBreakpoints)
+
+  // Dynamic fallback: prefer 1200w (-lg) if available, else largest breakpoint
+  const fallbackWidth = effectiveBreakpoints.includes(1200) ? 1200 : Math.max(...effectiveBreakpoints)
+  const fallbackSrc = `${R2_PUBLIC_BASE}/${imagePath}-${BREAKPOINT_SUFFIXES[fallbackWidth]}.webp`
+
+  // Width/height for crawlers & early layout (match fallbackSrc dimensions)
+  const fallbackHeight = Math.round(fallbackWidth / effectiveRatio)
+
+  const placeholderStyle = { paddingBottom: `${(1 / effectiveRatio) * 100}%` }
+  const fetchPriority = loading === "eager" ? "high" : undefined
+  const finalImgProps = fetchPriority ? { ...imgProps, fetchPriority } : imgProps
+
+  return (
+    <div
+      className={`r2-image-wrapper ${className}`}
+      style={{
+        position: "relative",
+        overflow: "hidden",
+        width: "100%",
+        ...style,
+      }}
+    >
+      {/* Aspect ratio placeholder */}
+      <div aria-hidden="true" style={placeholderStyle} />
+      {/* Responsive WebP - simple img with srcSet, no picture/noscript needed */}
+      <img
+        src={fallbackSrc}
+        srcSet={srcSet}
+        sizes={effectiveSizes}
+        alt={effectiveAlt}
+        loading={loading}
+        decoding="async"
+        width={fallbackWidth}
+        height={fallbackHeight}
+        {...finalImgProps}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center center",
+          opacity: 1,
+          transition: "opacity 0.3s ease",
+        }}
+      />
+    </div>
+  )
+}
 
 const ImageTitle: React.FunctionComponent<HTMLAttributes<any>> = ({ children, className = "tc ttu" }) => {
   return <div className={`image-title ${className}`}>{children}</div>
@@ -117,7 +261,8 @@ export const GroupOfImages: FunctionComponent<{ className?: string }> = ({ child
 }
 
 const imageAsPortraitStyle = css`
-  .gatsby-image-wrapper {
+  .gatsby-image-wrapper,
+  .r2-image-wrapper {
     max-height: calc(100vh - 40px);
   }
   max-width: 600px;
@@ -135,7 +280,8 @@ export const ImageAsPortrait: FunctionComponent<
     if (instagramInAppBrowser)
       setStyle(
         css`
-          .gatsby-image-wrapper.gatsby-image-wrapper {
+          .gatsby-image-wrapper.gatsby-image-wrapper,
+          .r2-image-wrapper {
             max-height: ${window.innerHeight - 40}px;
           }
         `
@@ -145,7 +291,12 @@ export const ImageAsPortrait: FunctionComponent<
     <div css={[imageAsPortraitStyle, style]} className={`${className} image-layout`}>
       {title && titlePosition === "top" && <ImageTitle>{title}</ImageTitle>}
       <div className="flex relative image-layout-image-container">
-        {children}
+        {React.Children.map(children, (child) => {
+          if (React.isValidElement(child) && child.type === R2Image) {
+            return React.cloneElement(child, { orientation: "portrait" })
+          }
+          return child
+        })}
         {credit && <div className="credit">{credit}</div>}
       </div>
       {title && titlePosition === "bottom" && <ImageTitle>{title}</ImageTitle>}
@@ -267,7 +418,8 @@ export const PinterestImage: FunctionComponent<HTMLAttributes<any> & PinterestIm
 }
 
 const imageAsLandscapeStyle = css`
-  .gatsby-image-wrapper {
+  .gatsby-image-wrapper,
+  .r2-image-wrapper {
     max-height: calc(100vh - 40px);
   }
   ${creditStyle}
@@ -283,17 +435,27 @@ export const ImageAsLandscape: FunctionComponent<
     if (instagramInAppBrowser)
       setStyle(
         css`
-          .gatsby-image-wrapper.gatsby-image-wrapper {
+          .gatsby-image-wrapper.gatsby-image-wrapper,
+          .r2-image-wrapper {
             max-height: ${window.innerHeight - 40}px;
           }
         `
       )
   }, [instagramInAppBrowser])
+
+  // Auto-inject orientation="landscape" into R2Image children
+  const childrenWithOrientation = React.Children.map(children, (child) => {
+    if (React.isValidElement(child) && child.type === R2Image) {
+      return React.cloneElement(child, { orientation: "landscape" })
+    }
+    return child
+  })
+
   return (
     <div css={[imageAsLandscapeStyle, style]} className={`${className} image-layout`}>
       {title && titlePosition === "top" && <ImageTitle className={titleClassName}>{title}</ImageTitle>}
       <div className="flex justify-center relative image-layout-image-container">
-        {children}
+        {childrenWithOrientation}
         {credit && <div className="credit">{credit}</div>}
       </div>
       {title && titlePosition === "bottom" && <ImageTitle className={titleClassName}>{title}</ImageTitle>}
@@ -301,12 +463,42 @@ export const ImageAsLandscape: FunctionComponent<
   )
 }
 
-export const Panorama = styled(ImageAsLandscape)`
+export const Panorama: FunctionComponent<
+  HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition; titleClassName?: string }
+> = ({ children, className = "", credit, title, titlePosition = "bottom", titleClassName }) => {
+  const { instagramInAppBrowser } = useContext(ApplicationContext)
+  const [style, setStyle] = useState(css``)
+  useEffect(() => {
+    if (instagramInAppBrowser)
+      setStyle(
+        css`
+          .gatsby-image-wrapper.gatsby-image-wrapper,
+          .r2-image-wrapper {
+            max-height: ${window.innerHeight - 40}px;
+          }
+        `
+      )
+  }, [instagramInAppBrowser])
+
+  return (
+    <div css={[imageAsLandscapeStyle, panoramaStyle, style]} className={`${className} image-layout`}>
+      {title && titlePosition === "top" && <ImageTitle className={titleClassName}>{title}</ImageTitle>}
+      <div className="flex justify-center relative image-layout-image-container">
+        {injectOrientation(children, "panorama")}
+        {credit && <div className="credit">{credit}</div>}
+      </div>
+      {title && titlePosition === "bottom" && <ImageTitle className={titleClassName}>{title}</ImageTitle>}
+    </div>
+  )
+}
+
+const panoramaStyle = css`
   @media (min-width: ${mediumStart}) {
     width: 100vw;
     margin-left: 50%;
     transform: translateX(-50%);
-    .gatsby-image-wrapper {
+    .gatsby-image-wrapper,
+    .r2-image-wrapper {
       max-height: 70vh;
     }
   }
@@ -349,11 +541,11 @@ export const TwoImagesSameSize: FunctionComponent<
   return (
     <div className={`flex image-layout ${className}`} css={[twoImagesSameSizeStyles, style]}>
       <div className="left-panel">
-        <div className="flex panel-image">{children[0]}</div>
+        <div className="flex panel-image">{injectOrientation(children[0], "portrait")}</div>
         {title1 && <ImageTitle className={titleClassName}>{title1}</ImageTitle>}
       </div>
       <div className="right-panel">
-        <div className="flex panel-image">{children[1]}</div>
+        <div className="flex panel-image">{injectOrientation(children[1], "portrait")}</div>
         {title2 && <ImageTitle className={titleClassName}>{title2}</ImageTitle>}
       </div>
     </div>
@@ -386,16 +578,16 @@ export const TwoImagesSameSizeOrToGroup: FunctionComponent<
   return width <= 768 ? (
     <GroupOfImages className={className}>
       <ImageAsLandscape title={title1} titleClassName={titleClassName}>
-        {children[0]}
+        {injectOrientation(children[0], "portrait")}
       </ImageAsLandscape>
       <ImageAsLandscape title={title2} titleClassName={titleClassName}>
-        {children[1]}
+        {injectOrientation(children[1], "portrait")}
       </ImageAsLandscape>
     </GroupOfImages>
   ) : (
     <TwoImagesSameSize className={className} title1={title1} title2={title2} titleClassName={titleClassName}>
-      {children[0]}
-      {children[1]}
+      {injectOrientation(children[0], "portrait")}
+      {injectOrientation(children[1], "portrait")}
     </TwoImagesSameSize>
   )
 }
@@ -426,7 +618,8 @@ export const ImageAsLandscapeOnTheLeft: FunctionComponent<
     if (instagramInAppBrowser)
       setStyle(
         css`
-          .gatsby-image-wrapper.gatsby-image-wrapper {
+          .gatsby-image-wrapper.gatsby-image-wrapper,
+          .r2-image-wrapper {
             max-height: ${window.innerHeight - 40}px;
           }
         `
@@ -436,7 +629,12 @@ export const ImageAsLandscapeOnTheLeft: FunctionComponent<
     <div className={`image-layout ${className}`} css={[imageAsLandscapeOnTheLeft, style]}>
       {title && titlePosition === "top" && <ImageTitle>{title}</ImageTitle>}
       <div className="flex relative image-layout-image-container">
-        {children}
+        {React.Children.map(children, (child) => {
+          if (React.isValidElement(child) && child.type === R2Image) {
+            return React.cloneElement(child, { orientation: "landscape" })
+          }
+          return child
+        })}
         {credit && <div className="credit">{credit}</div>}
       </div>
       {title && titlePosition === "bottom" && <ImageTitle>{title}</ImageTitle>}
@@ -448,11 +646,36 @@ export const ImageAsLandscapeOnTheRight = styled(ImageAsLandscapeOnTheLeft)`
     margin-left: auto;
   }
 `
-export const ImageAsPortraitOnTheLeft = styled(ImageAsLandscapeOnTheLeft)`
-  .gatsby-image-wrapper {
-    max-height: calc(100vh - 40px);
-  }
-`
+
+export const ImageAsPortraitOnTheLeft: FunctionComponent<
+  HTMLAttributes<any> & { credit?: React.ReactNode; titlePosition?: TitlePosition }
+> = ({ children, className, title, credit, titlePosition = "bottom" }) => {
+  const { instagramInAppBrowser } = useContext(ApplicationContext)
+  const [style, setStyle] = useState(css``)
+  useEffect(() => {
+    if (instagramInAppBrowser)
+      setStyle(
+        css`
+          .gatsby-image-wrapper.gatsby-image-wrapper,
+          .r2-image-wrapper {
+            max-height: ${window.innerHeight - 40}px;
+          }
+        `
+      )
+  }, [instagramInAppBrowser])
+
+  return (
+    <div className={`image-layout ${className}`} css={[imageAsLandscapeOnTheLeft, style]}>
+      {title && titlePosition === "top" && <ImageTitle>{title}</ImageTitle>}
+      <div className="flex relative image-layout-image-container">
+        {injectOrientation(children, "portrait")}
+        {credit && <div className="credit">{credit}</div>}
+      </div>
+      {title && titlePosition === "bottom" && <ImageTitle>{title}</ImageTitle>}
+    </div>
+  )
+}
+
 export const ImageAsPortraitOnTheRight = styled(ImageAsPortraitOnTheLeft)`
   &.image-layout {
     margin-left: auto;

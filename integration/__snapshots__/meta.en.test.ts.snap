@@ -36,6 +36,12 @@ exports[`english pages exports meta for public/en/articles/index.html correctly:
 
 exports[`english pages exports meta for public/en/articles/index.html correctly: title 1`] = `"All our articles | Travel Guide"`;
 
+exports[`english pages exports meta for public/en/asia/cambodia/angkor-wat/index.html correctly: meta-description 1`] = `"From the majestic Angkor Wat to the mysterious Ta Prohm, via the impressive faces of the Bayon and the more confidential temples, each site has its own atmosphere and reserves its share of discoveries. We take you with us to explore the Angkor temples. Our travel story with photos, tips and tricks."`;
+
+exports[`english pages exports meta for public/en/asia/cambodia/angkor-wat/index.html correctly: social-network 1`] = `"From the majestic Angkor Wat to the mysterious Ta Prohm, via the impressive faces of the Bayon and the more confidential temples, each site has its own atmosphere and reserves its share of discoveries."`;
+
+exports[`english pages exports meta for public/en/asia/cambodia/angkor-wat/index.html correctly: title 1`] = `"The Temples of Angkor: Temples Buried in the Jungle"`;
+
 exports[`english pages exports meta for public/en/asia/cambodia/discover-cambodia/index.html correctly: meta-description 1`] = `"Want to discover Cambodia? From the majestic temples of Angkor Wat to the iconic landscapes of floating villages on Tonle Sap Lake. Between cultural heritage, nature and relaxation, Cambodia has something to charm all travelers. Come with us for a little discovery of Cambodia. Our travelogue with photos, tips and advice."`;
 
 exports[`english pages exports meta for public/en/asia/cambodia/discover-cambodia/index.html correctly: social-network 1`] = `"Cambodia is a country full of surprises. Between the discovery of the impressive ruins of Angkor Wat, the visit to the genocide museum in Phnom Penh and a cruise on the Mekong to discover floating villages, Cambodia offers a great diversity of experiences and discoveries."`;

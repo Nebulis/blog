@@ -8,8 +8,11 @@ import { primaryDarkColor } from "./variables"
 import { Note } from "./section"
 import { DurationUnit, transformDurationUnit } from "../../utils"
 
-const buildBookingHotelUrl = ({ lang, hotel = "" }: { lang: Lang; hotel: string }) =>
-  `https://www.booking.com/hotel/${hotel}.${lang}.html`
+const buildBookingHotelUrl = ({ lang, hotel = "" }: { lang: Lang; hotel: string }) => {
+  const date = new Date()
+  const formattedDate = date.toISOString().split("T")[0]
+  return `https://www.booking.com/hotel/${hotel}.${lang}.html?checkin=${formattedDate}`
+}
 
 type Kind = "low-cost" | "standard" | "deluxe" | "inn" | "hotel" | "flat" | "chalet"
 

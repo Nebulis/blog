@@ -36,6 +36,12 @@ exports[`french pages exports meta for public/articles/index.html correctly: soc
 
 exports[`french pages exports meta for public/articles/index.html correctly: title 1`] = `"Tous nos articles | Guide de Voyage"`;
 
+exports[`french pages exports meta for public/asia/cambodia/angkor-wat/index.html correctly: meta-description 1`] = `"Du majestueux Angkor Wat au mystérieux Ta Prohm, en passant par les impressionnants visages du Bayon et les temples plus confidentiels, chaque site possède sa propre atmosphère et réserve son lot de découvertes. On vous embarque avec nous explorer les temples d'Angkor. Notre récit de voyage avec photos, conseils et astuces."`;
+
+exports[`french pages exports meta for public/asia/cambodia/angkor-wat/index.html correctly: social-network 1`] = `"Du majestueux Angkor Wat au mystérieux Ta Prohm, en passant par les impressionnants visages du Bayon et les temples plus confidentiels, chaque site possède sa propre atmosphère et réserve son lot de découvertes."`;
+
+exports[`french pages exports meta for public/asia/cambodia/angkor-wat/index.html correctly: title 1`] = `"Les temples d'Angkor : des temples enfouis dans la jungle"`;
+
 exports[`french pages exports meta for public/asia/cambodia/discover-cambodia/index.html correctly: meta-description 1`] = `"Envie de partir à la découverte du Cambodge ? Des temples majestueux d'Angkor Wat, en passant par les paysages emblématiques des villages flottants du lac Tonlé Sap. Entre patrimoine culturel, nature et détente, le Cambodge a de quoi séduire tous les voyageurs.On vous embarque avec nous pour une petite découverte du Cambodge. Notre récit de voyage avec photos, conseils et astuces."`;
 
 exports[`french pages exports meta for public/asia/cambodia/discover-cambodia/index.html correctly: social-network 1`] = `"Le Cambodge est un pays plein de surprises. Entre la découverte des impressionnantes ruines d'Angkor Wat, la visite du musée du génocide à Phnom Penh et une croisière sur le Mékong à la découverte des villages flottants, le Cambodge offre une grande diversité d'expériences et de découvertes."`;
