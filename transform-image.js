@@ -127,7 +127,7 @@ function deduplicateSlugs(results) {
 const MODELS = [
   'gemini-3.6-flash',
   'gemini-3.8-flash',
-  'gemini-3.5-flash-lite',
+  'gemini-3.6-flash-lite',
 ];
 
 // Gemini response schema
@@ -238,12 +238,8 @@ Return ONLY the JSON array matching the schema.`;
     return parsed;
   } catch (err) {
     console.error(`  ❌ Gemini batch failed: ${err.message}`);
-    return batch.map(b => ({
-      originalFile: b.originalFile,
-      slug: sanitizeSlug(path.parse(b.originalFile).name),
-      alt_en: '',
-      alt_fr: '',
-    }));
+    // Re-throw with batch info so caller can handle failed images
+    throw new Error(`GEMINI_BATCH_FAILED:${JSON.stringify(batch.map(b => b.originalFile))}:${err.message}`);
   }
 }
 
@@ -282,6 +278,31 @@ async function processImages() {
       
       const ratio = metadata.width / metadata.height;
       const simpleRatio = simplifyRatio(metadata.width, metadata.height);
+      
+      // Early validation: count breakpoints that will actually be generated
+      // Rule: number of generated breakpoints MUST equal number of configured breakpoints
+      // - Breakpoints ≤ source width are used directly
+      // - If source < max configured, add custom breakpoint at source width
+      // - Total count must equal configured breakpoints count
+      const smallestBreakpoint = Math.min(...config.breakpoints);
+      const maxConfigured = Math.max(...config.breakpoints);
+      const configuredCount = config.breakpoints.length;
+      
+      // Count breakpoints that will be generated
+      let generatedBreakpoints = config.breakpoints.filter(w => w <= metadata.width || w === smallestBreakpoint);
+      
+      // Add custom source width breakpoint if source is between min and max
+      if (metadata.width < maxConfigured && metadata.width > smallestBreakpoint) {
+        if (!generatedBreakpoints.includes(metadata.width)) {
+          generatedBreakpoints.push(metadata.width);
+        }
+      }
+      
+      const generatedCount = generatedBreakpoints.length;
+      
+      if (generatedCount !== configuredCount) {
+        throw new Error(`❌ ${file}: ${metadata.width}px wide, generates ${generatedCount} breakpoints (${generatedBreakpoints.join(',')}) but ${configuredCount} required (${config.breakpoints.join(',')}). Fix or remove this image.`);
+      }
       
       // Generate fallback slug early for consistent dedup
       const fallbackSlug = sanitizeSlug(path.parse(file).name);
@@ -335,7 +356,29 @@ async function processGeminiBatches(images) {
       thumbnailBuffer: img.thumbnailBuffer,
     }));
     
-    const geminiResults = await callGeminiBatch(geminiBatch, CLI_CONTEXT);
+    let geminiResults;
+    try {
+      geminiResults = await callGeminiBatch(geminiBatch, CLI_CONTEXT);
+    } catch (err) {
+      // Batch failed - mark all images in this batch as failed, do NOT add to results
+      const failedFiles = batch.map(b => b.originalFile);
+      console.error(`  ❌ Batch failed, marking ${failedFiles.length} images as failed`);
+      
+      // Write failed files to failed.json for retry
+      const failedPath = path.join(UPLOAD_DIR, 'failed.json');
+      let existingFailed = [];
+      if (fs.existsSync(failedPath)) {
+        try {
+          existingFailed = JSON.parse(fs.readFileSync(failedPath, 'utf-8'));
+        } catch {}
+      }
+      const updatedFailed = [...new Set([...existingFailed, ...failedFiles])];
+      fs.writeFileSync(path.join(UPLOAD_DIR, 'failed.json'), JSON.stringify(updatedFailed, null, 2));
+      console.log(`  📝 Added ${failedFiles.length} images to failed.json`);
+      
+      // DO NOT add failed images to results - they should not be processed further
+      continue;
+    }
     
     // Map results back to images (with index fallback in case Gemini trims extension)
     for (let j = 0; j < batch.length; j++) {
@@ -626,21 +669,43 @@ async function main() {
     return;
   }
   
-  const results = await processGeminiBatches(imagesToProcess);
-  const manifest = await writeOutputs(results, existingManifest);
-  
-  // Update failed.json - remove succeeded, keep failed
-  const succeededSlugs = new Set(results.map(r => r.slug));
-  const currentFailed = failedImages.filter(f => !succeededSlugs.has(f));
-  if (currentFailed.length > 0) {
-    fs.writeFileSync(path.join(UPLOAD_DIR, 'failed.json'), JSON.stringify(currentFailed, null, 2));
-    console.log(`⚠️  ${currentFailed.length} images failed (saved to failed.json)`);
-  } else if (fs.existsSync(path.join(UPLOAD_DIR, 'failed.json'))) {
-    fs.rmSync(path.join(UPLOAD_DIR, 'failed.json'));
+  try {
+    const results = await processGeminiBatches(imagesToProcess);
+    const manifest = await writeOutputs(results, existingManifest);
+    
+    // Update failed.json - track which files actually got AI results
+    // Reload failed.json to include any newly failed images from this run
+    const failedPath = path.join(UPLOAD_DIR, 'failed.json');
+    let currentFailed = [];
+    if (fs.existsSync(failedPath)) {
+      try {
+        currentFailed = JSON.parse(fs.readFileSync(failedPath, 'utf-8'));
+      } catch {}
+    }
+    
+    // Track which files got actual AI results (have alt_en or alt_fr)
+    const succeededFiles = new Set(results.filter(r => r.alt_en || r.alt_fr).map(r => r.originalFile));
+    const currentFailedFiltered = currentFailed.filter(f => !succeededFiles.has(f));
+    
+    // Also add any newly failed files from this run (those without AI results)
+    const newlyFailed = results
+      .filter(r => !r.alt_en && !r.alt_fr)
+      .map(r => r.originalFile);
+    const allFailed = [...new Set([...currentFailedFiltered, ...newlyFailed])];
+    
+    if (allFailed.length > 0) {
+      fs.writeFileSync(path.join(UPLOAD_DIR, 'failed.json'), JSON.stringify(allFailed, null, 2));
+      console.log(`⚠️  ${allFailed.length} images failed (saved to failed.json)`);
+    } else if (fs.existsSync(failedPath)) {
+      fs.rmSync(failedPath);
+    }
+    
+    console.log('\n✅ All images processed. Output in:', UPLOAD_DIR);
+    console.log(`   ${manifest.length} images with AI-generated names and alt texts`);
+  } catch (err) {
+    console.error('\n❌ Fatal error:', err.message);
+    process.exit(1);
   }
-  
-  console.log('\n✅ All images processed. Output in:', UPLOAD_DIR);
-  console.log(`   ${manifest.length} images with AI-generated names and alt texts`);
 }
 
 main().catch(console.error);
