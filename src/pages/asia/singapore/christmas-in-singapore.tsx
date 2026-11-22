@@ -11,18 +11,22 @@ import { Conclusion } from "../../../components/core/conclusion"
 import { Divider } from "../../../components/core/divider"
 import { Title } from "../../../components/core/title"
 import HomeImgUrl from "../../../images/asia/singapore/christmas-in-singapore/christmas-in-singapore-main.jpg"
+import cardFr1 from "../../../images/asia/singapore/christmas-in-singapore/card-fr1.jpg"
+import cardFr2 from "../../../images/asia/singapore/christmas-in-singapore/card-fr2.jpg"
+import cardEn1 from "../../../images/asia/singapore/christmas-in-singapore/card-en1.jpg"
+import cardEn2 from "../../../images/asia/singapore/christmas-in-singapore/card-en2.jpg"
 import {
   GroupOfImages,
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
+  R2Image,
   TwoImagesLeftBigger,
   TwoImagesRightBigger,
   TwoImagesSameSizeOrToGroup,
 } from "../../../components/images/layout"
 import { SharedCardSingaporeImages } from "../../../components/images/asia/singapore/shared-card-singapore-images"
-import { ChristmasInSingaporeImages } from "../../../components/images/asia/singapore/christmas-in-singapore"
 import { ChristmasBlogLayout, ChristmasHeadline } from "../../../components/core/christmas"
 
 const namespace = "asia/singapore/christmas-in-singapore"
@@ -59,7 +63,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("part1.part1")}</p>
           <p>{t("part1.part2")}</p>
           <ImageAsLandscape>
-            <ChristmasInSingaporeImages image="tradition" />
+            <R2Image namespace={namespace} name="singapore-christmas-cozy-fireplace-socks" aspectRatio={3 / 2} />
           </ImageAsLandscape>
           <p>{t("part1.part3")}</p>
           <p>{t("part1.part4")}</p>
@@ -77,13 +81,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("part3.part3")}</p>
           <GroupOfImages>
             <ImageAsLandscape>
-              <ChristmasInSingaporeImages image="singapore" />
+              <R2Image namespace={namespace} name="chijmes-singapore-entrance-arch-decorations" aspectRatio={4 / 3} />
             </ImageAsLandscape>
             <ImageAsPortrait>
-              <ChristmasInSingaporeImages image="singapore2" />
+              <R2Image namespace={namespace} name="capitol-kempinski-singing-christmas-tree" aspectRatio={3 / 4} />
             </ImageAsPortrait>
             <ImageAsLandscape>
-              <ChristmasInSingaporeImages image="singapore3" />
+              <R2Image namespace={namespace} name="capitol-kempinski-floral-backdrop-decorations" aspectRatio={4 / 3} />
             </ImageAsLandscape>
           </GroupOfImages>
           <p>{t("part3.part4")}</p>
@@ -119,7 +123,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit1.part4.part2")}</p>
               <p>{t("visit1.part4.part3")}</p>
               <ImageAsLandscape>
-                <ChristmasInSingaporeImages image="mbs" />
+                <R2Image namespace={namespace} name="marina-bay-sands-christmas-lights" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </PillTitle>
             <PillTitle title={t("visit1.part5.title")}>
@@ -128,105 +132,129 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit1.part5.part3")}</p>
               <p>{t("visit1.part5.part4")}</p>
               <ImageAsLandscape>
-                <ChristmasInSingaporeImages image="garden" />
+                <R2Image namespace={namespace} name="gardens-bay-supertree-grove-skyway" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit1.part5.part5")}</p>
               <p>{t("visit1.part5.part6")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden2" />
+                  <R2Image namespace={namespace} name="gardens-bay-christmas-market-stall" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscapeOnTheLeft>
-                  <ChristmasInSingaporeImages image="garden3" />
+                  <R2Image namespace={namespace} name="gardens-bay-giftbox-display-tables" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <ChristmasInSingaporeImages image="garden4" />
+                  <R2Image namespace={namespace} name="gardens-bay-picnic-lawn-balloon" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheRight>
                 <ImageAsPortrait>
-                  <ChristmasInSingaporeImages image="garden5" />
+                  <R2Image namespace={namespace} name="gardens-bay-gazebo-supertree-skywalk" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden6" />
+                  <R2Image namespace={namespace} name="gardens-bay-reindeer-sleigh-decor" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden7" />
+                  <R2Image namespace={namespace} name="gardens-bay-illuminated-bridge-night" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscapeOnTheLeft>
-                  <ChristmasInSingaporeImages image="garden8" />
+                  <R2Image namespace={namespace} name="gardens-bay-illuminated-trees-underpass" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <ChristmasInSingaporeImages image="garden9" />
+                  <R2Image namespace={namespace} name="gardens-bay-market-wooden-huts" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheRight>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden10" />
+                  <R2Image namespace={namespace} name="gardens-bay-glowing-trees-courtyard" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
-                <TwoImagesSameSizeOrToGroup>
-                  <ChristmasInSingaporeImages image="garden11" />
-                  <ChristmasInSingaporeImages image="garden12" />
+                <TwoImagesSameSizeOrToGroup orientation="landscape">
+                  <R2Image namespace={namespace} name="gardens-bay-illuminated-bridge-balloon" aspectRatio={4 / 3} />
+                  <R2Image namespace={namespace} name="gardens-bay-gift-archway-lights" aspectRatio={4 / 3} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsPortrait>
-                  <ChristmasInSingaporeImages image="garden13" />
+                  <R2Image namespace={namespace} name="supertree-grove-lighted-carriage-display" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden14" />
+                  <R2Image namespace={namespace} name="gardens-bay-glowing-carriage-supertrees" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit1.part5.part7")}</p>
               <p>{t("visit1.part5.part8")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden15" />
+                  <R2Image namespace={namespace} name="flower-dome-recipe-book-display" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <TwoImagesRightBigger>
-                  <ChristmasInSingaporeImages image="garden16" />
-                  <ChristmasInSingaporeImages image="garden17" />
+                  <R2Image
+                    namespace={namespace}
+                    name="flower-dome-whisk-poinsettia-display"
+                    aspectRatio={3 / 4}
+                    orientation="portrait"
+                  />
+                  <R2Image
+                    namespace={namespace}
+                    name="flower-dome-wooden-kitchen-utensils"
+                    aspectRatio={4 / 3}
+                    orientation="landscape"
+                  />
                 </TwoImagesRightBigger>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden28" />
+                  <R2Image namespace={namespace} name="flower-dome-candy-canes-decor" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden19" />
+                  <R2Image namespace={namespace} name="flower-dome-festive-carriage-display" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <ChristmasInSingaporeImages image="garden20" />
-                  <ChristmasInSingaporeImages image="garden21" />
+                  <R2Image namespace={namespace} name="flower-dome-gingerbread-moose-presents" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="flower-dome-decorated-tree-poinsettias" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
-                  <ChristmasInSingaporeImages image="garden22" />
-                  <ChristmasInSingaporeImages image="garden23" />
+                  <R2Image namespace={namespace} name="flower-dome-gnome-cupcake-carriage" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="flower-dome-gnome-gift-boxes" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden24" />
+                  <R2Image namespace={namespace} name="flower-dome-armchair-gift-display" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
-                <TwoImagesSameSizeOrToGroup>
-                  <ChristmasInSingaporeImages image="garden25" />
-                  <ChristmasInSingaporeImages image="garden26" />
+                <TwoImagesSameSizeOrToGroup orientation="landscape">
+                  <R2Image namespace={namespace} name="flower-dome-vintage-television-scene" aspectRatio={4 / 3} />
+                  <R2Image namespace={namespace} name="flower-dome-toy-steam-train" aspectRatio={3 / 2} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden27" />
+                  <R2Image
+                    namespace={namespace}
+                    name="flower-dome-christmas-presents-poinsettias"
+                    aspectRatio={4 / 3}
+                  />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden18" />
+                  <R2Image namespace={namespace} name="flower-dome-candy-canes-decorations" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
-                <TwoImagesSameSizeOrToGroup>
-                  <ChristmasInSingaporeImages image="garden29" />
-                  <ChristmasInSingaporeImages image="garden30" />
+                <TwoImagesSameSizeOrToGroup orientation="landscape">
+                  <R2Image namespace={namespace} name="flower-dome-marshmallow-snowman-display" aspectRatio={3 / 2} />
+                  <R2Image namespace={namespace} name="flower-dome-gingerbread-moose-decor" aspectRatio={3 / 2} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsPortrait>
-                  <ChristmasInSingaporeImages image="garden31" />
+                  <R2Image namespace={namespace} name="flower-dome-gingerbread-tree-squirrel" aspectRatio={2 / 3} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden32" />
+                  <R2Image namespace={namespace} name="flower-dome-christmas-lights-decorations" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden33" />
+                  <R2Image namespace={namespace} name="flower-dome-ferris-wheel-lights" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="garden34" />
+                  <R2Image namespace={namespace} name="flower-dome-gingerbread-trees-lights" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <TwoImagesRightBigger>
-                  <ChristmasInSingaporeImages image="garden35" />
-                  <ChristmasInSingaporeImages image="garden36" />
+                  <R2Image
+                    namespace={namespace}
+                    name="flower-dome-christmas-trees-poinsettias"
+                    aspectRatio={3 / 4}
+                    orientation="portrait"
+                  />
+                  <R2Image
+                    namespace={namespace}
+                    name="flower-dome-illuminated-trees-walkway"
+                    aspectRatio={4 / 3}
+                    orientation="landscape"
+                  />
                 </TwoImagesRightBigger>
               </GroupOfImages>
               <p>{t("visit1.part5.part9")}</p>
@@ -240,54 +268,74 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit2.part1")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <ChristmasInSingaporeImages image="jewel" />
+                  <R2Image namespace={namespace} name="jewel-changi-christmas-tree-tunnel" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="jewel2" />
+                  <R2Image namespace={namespace} name="jewel-changi-christmas-sign-baubles" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <ChristmasInSingaporeImages image="jewel3" />
-                  <ChristmasInSingaporeImages image="jewel4" />
+                  <R2Image namespace={namespace} name="jewel-changi-suitcase-display-stickers" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="jewel-changi-trunks-backpack-display" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
               <p>{t("visit2.part2")}</p>
               <p>{t("visit2.part3")}</p>
               <p>{t("visit2.part4")}</p>
               <ImageAsPortrait>
-                <ChristmasInSingaporeImages image="jewel5" />
+                <R2Image namespace={namespace} name="jewel-changi-purple-tree-tunnel" aspectRatio={3 / 4} />
               </ImageAsPortrait>
               <p>{t("visit2.part5")}</p>
               <GroupOfImages>
                 <TwoImagesRightBigger>
-                  <ChristmasInSingaporeImages image="jewel6" />
-                  <ChristmasInSingaporeImages image="jewel7" />
+                  <R2Image
+                    namespace={namespace}
+                    name="jewel-changi-tree-waterfall-view"
+                    aspectRatio={3 / 4}
+                    orientation="portrait"
+                  />
+                  <R2Image
+                    namespace={namespace}
+                    name="jewel-changi-waterfall-christmas-tree"
+                    aspectRatio={4 / 3}
+                    orientation="landscape"
+                  />
                 </TwoImagesRightBigger>
                 <TwoImagesLeftBigger>
-                  <ChristmasInSingaporeImages image="jewel9" />
-                  <ChristmasInSingaporeImages image="jewel8" />
+                  <R2Image
+                    namespace={namespace}
+                    name="changi-mall-train-booth-seating"
+                    aspectRatio={4 / 3}
+                    orientation="landscape"
+                  />
+                  <R2Image
+                    namespace={namespace}
+                    name="jewel-changi-toy-train-display"
+                    aspectRatio={3 / 4}
+                    orientation="portrait"
+                  />
                 </TwoImagesLeftBigger>
                 <ImageAsPortrait>
-                  <ChristmasInSingaporeImages image="jewel10" />
+                  <R2Image namespace={namespace} name="jewel-changi-nutcracker-british-guard" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <TwoImagesSameSizeOrToGroup>
-                  <ChristmasInSingaporeImages image="jewel11" />
-                  <ChristmasInSingaporeImages image="jewel12" />
+                  <R2Image namespace={namespace} name="jewel-changi-indoor-christmas-tree" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="jewel-changi-garland-purple-baubles" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscapeOnTheLeft>
-                  <ChristmasInSingaporeImages image="jewel13" />
+                  <R2Image namespace={namespace} name="jewel-changi-snowflake-ornament-tree" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <ChristmasInSingaporeImages image="jewel14" />
+                  <R2Image namespace={namespace} name="jewel-changi-purple-glitter-bauble" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
               <p>{t("visit2.part6")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="jewel15" />
+                  <R2Image namespace={namespace} name="jewel-changi-indoor-waterfall-dome" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <ChristmasInSingaporeImages image="jewel16" />
-                  <ChristmasInSingaporeImages image="jewel17" />
+                  <R2Image namespace={namespace} name="jewel-changi-rain-vortex-green" aspectRatio={2 / 3} />
+                  <R2Image namespace={namespace} name="jewel-changi-rain-vortex-yellow" aspectRatio={2 / 3} />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
             </PillTitle>
@@ -302,19 +350,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit3.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="meal" />
+                  <R2Image namespace={namespace} name="cluny-court-plush-toys-display" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="meal2" />
+                  <R2Image namespace={namespace} name="cluny-court-snowman-santa-plush" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <ChristmasInSingaporeImages image="meal3" />
-                  <ChristmasInSingaporeImages image="meal4" />
+                  <R2Image namespace={namespace} name="cluny-court-wooden-snowman-ornament" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="cluny-court-santa-gifts-ornament" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
               <p>{t("visit3.part4")}</p>
               <ImageAsLandscape>
-                <ChristmasInSingaporeImages image="meal5" />
+                <R2Image namespace={namespace} name="singapore-christmas-table-setting-decor" aspectRatio={3 / 2} />
               </ImageAsLandscape>
             </SectionContent>
           </section>
@@ -335,10 +383,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit4.part3.part3")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <ChristmasInSingaporeImages image="snow" />
+                  <R2Image namespace={namespace} name="singapore-christmas-nutcracker-snow-dome" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="snow2" />
+                  <R2Image namespace={namespace} name="tanglin-mall-igloo-christmas-decorations" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </PillTitle>
@@ -359,29 +407,33 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit5.part4")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <ChristmasInSingaporeImages image="orientExpress" />
+                  <R2Image namespace={namespace} name="gardens-bay-orient-express-locomotive" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="orientExpress2" />
+                  <R2Image namespace={namespace} name="orient-express-steam-locomotive-train" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="orientExpress3" />
+                  <R2Image namespace={namespace} name="orient-express-carriage-dining-table" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <ChristmasInSingaporeImages image="orientExpress4" />
-                  <ChristmasInSingaporeImages image="orientExpress5" />
+                  <R2Image namespace={namespace} name="orient-express-carriage-corridor-interior" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="orient-express-table-playing-cards" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="orientExpress6" />
+                  <R2Image namespace={namespace} name="orient-express-armchair-red-jacket" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="orientExpress7" />
+                  <R2Image namespace={namespace} name="orient-express-table-fez-artifacts" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="orientExpress8" />
+                  <R2Image namespace={namespace} name="orient-express-dining-car-aisle" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <ChristmasInSingaporeImages image="orientExpress9" />
+                  <R2Image
+                    namespace={namespace}
+                    name="orient-express-newspaper-armistice-exhibit"
+                    aspectRatio={4 / 3}
+                  />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -414,12 +466,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes:
               i18n.languageCode === "fr"
                 ? [
-                    <ChristmasInSingaporeImages image="cardFr1" key="cardFr1" />,
-                    <ChristmasInSingaporeImages image="cardFr2" key="cardFr1" />,
+                    <img src={cardFr1} key="cardFr1" alt="Carte Pinterest : Noël à Singapour" />,
+                    <img src={cardFr2} key="cardFr2" alt="Carte Pinterest : Noël à Singapour" />,
                   ]
                 : [
-                    <ChristmasInSingaporeImages image="cardEn1" key="cardEn1" />,
-                    <ChristmasInSingaporeImages image="cardEn2" key="cardEn1" />,
+                    <img src={cardEn1} key="cardFr1" alt="Pinterest Card: Christmas in Singapore" />,
+                    <img src={cardEn2} key="cardFr1" alt="Pinterest Card: Christmas in Singapore" />,
                   ],
           }}
         />

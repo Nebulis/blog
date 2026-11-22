@@ -38,26 +38,30 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 // Parse CLI args
 const args = process.argv.slice(2);
 const CLI_CONTEXT = args.find(a => !a.startsWith('--')) || '';
+const RETRY_FAILED = args.includes('--retry-failed');
 
 const LOCALE_PATH_ARG = args.find(a => a.startsWith('--locale-path='));
 const rawLocalePath = LOCALE_PATH_ARG ? LOCALE_PATH_ARG.split('=')[1] : null;
 const LOCALE_PATH = rawLocalePath ? rawLocalePath.replace(/^\/+|\/+$/g, '') : null;
 
 // Validate required args
-if (!LOCALE_PATH) {
-  console.error('❌ --locale-path is required');
+if (!LOCALE_PATH && !RETRY_FAILED) {
+  console.error('❌ --locale-path is required (unless using --retry-failed)');
   console.error('');
   console.error('Usage:');
   console.error('  node transform-image.js "Location context" --locale-path=<path>');
+  console.error('  node transform-image.js --retry-failed');
   console.error('');
   console.error('Arguments:');
   console.error('  "Location context"     Context for Gemini (e.g., "Angkor Wat, Cambodia")');
   console.error('  --locale-path           Path for locale files (src/locales/en/{path}.json)');
   console.error('                          Also used as R2 URL prefix for snippets.txt');
+  console.error('  --retry-failed          Retry only images that failed in previous run');
   console.error('');
   console.error('Example:');
   console.error('  node transform-image.js "Angkor Wat, Cambodia" \\');
   console.error('    --locale-path=asia/cambodia/angkor-wat');
+  console.error('  node transform-image.js --retry-failed');
   process.exit(1);
 }
 
@@ -279,6 +283,9 @@ async function processImages() {
       const ratio = metadata.width / metadata.height;
       const simpleRatio = simplifyRatio(metadata.width, metadata.height);
       
+      // Generate fallback slug early for consistent dedup
+      const fallbackSlug = sanitizeSlug(path.parse(file).name);
+      
       allImages.push({
         originalFile: file,
         folderName,
@@ -289,6 +296,7 @@ async function processImages() {
         inputStats,
         simpleRatio,
         inputPath,
+        slug: fallbackSlug,  // Store fallback slug for consistent dedup
       });
       
       console.log(`  ${file}: ${metadata.width}x${metadata.height} (ratio: ${ratio.toFixed(3)} ≈ ${simpleRatio})`);
@@ -351,16 +359,23 @@ async function processGeminiBatches(images) {
   return deduplicateSlugs(results);
 }
 
-async function writeOutputs(results) {
+async function writeOutputs(results, existingManifest = []) {
   console.log('\n=== PASS 3: Write Outputs ===');
   
   if (!fs.existsSync(UPLOAD_DIR)) {
     fs.mkdirSync(UPLOAD_DIR, { recursive: true });
   }
   
-  const manifest = [];
-  const snippets = [];
-  const localeData = { en: {}, fr: {} };
+  // Load existing snippets for merging
+  const snippetsPath = path.join(UPLOAD_DIR, 'snippets.txt');
+  let existingSnippets = [];
+  if (fs.existsSync(snippetsPath)) {
+    existingSnippets = fs.readFileSync(snippetsPath, 'utf-8').split('\n\n').filter(Boolean);
+  }
+  const existingSnippetSlugs = new Set(existingSnippets.map(s => {
+    const match = s.match(/name="([^"]+)"/);
+    return match ? match[1] : null;
+  }).filter(Boolean));
   
   // Custom breakpoint mapping for small images
   // Maps source width to desired suffix (e.g., 1080 -> 'lg')
@@ -374,6 +389,10 @@ async function writeOutputs(results) {
     1600: 'lg',
     1200: 'lg',
   };
+  
+  const newManifest = [];
+  const newSnippets = [];
+  const localeData = { en: {}, fr: {} };
   
   for (const img of results) {
     const { slug, folderName, config, rotatedBuffer, metadata, simpleRatio, alt_en, alt_fr, originalFile } = img;
@@ -444,7 +463,7 @@ async function writeOutputs(results) {
     const needsAspectRatio = Math.abs(aspectRatio - (orientation === 'landscape' ? 1.5 : 2/3)) > 0.02;
     const needsBreakpoints = validBreakpoints.length !== breakpoints.length;
     
-    manifest.push({
+    const manifestEntry = {
       slug,
       originalFile,
       orientation,
@@ -458,20 +477,23 @@ async function writeOutputs(results) {
       alt_fr,
       needsAspectRatio,
       needsBreakpoints,
-    });
+    };
+    newManifest.push(manifestEntry);
     
-    // Generate R2Image snippet
-    const props = [];
-    const imagePath = LOCALE_PATH ? `${LOCALE_PATH}/${slug}` : slug;
-    props.push(`image="${imagePath}"`);
-    props.push(`alt={t("photos.${slug}")}`); // Use translation key
-    props.push(`orientation="${orientation}"`);
-    if (needsAspectRatio) props.push(`aspectRatio=${aspectRatio.toFixed(3)}`);
-    if (validBreakpoints.length !== breakpoints.length) {
-      props.push(`breakpoints={[${validBreakpoints.join(', ')}]}`);
+    // Generate R2Image snippet (only if new)
+    if (!existingSnippetSlugs.has(slug)) {
+      const props = [];
+      const imagePath = LOCALE_PATH ? `${LOCALE_PATH}/${slug}` : slug;
+      props.push(`image="${imagePath}"`);
+      props.push(`alt={t("photos.${slug}")}`); // Use translation key
+      props.push(`orientation="${orientation}"`);
+      if (needsAspectRatio) props.push(`aspectRatio=${aspectRatio.toFixed(3)}`);
+      if (validBreakpoints.length !== breakpoints.length) {
+        props.push(`breakpoints={[${validBreakpoints.join(', ')}]}`);
+      }
+      
+      newSnippets.push(`<R2Image\n  ${props.join('\n  ')}\n/>`);
     }
-    
-    snippets.push(`<R2Image\n  ${props.join('\n  ')}\n/>`);
     
     // Locale data for translation files
     if (LOCALE_PATH) {
@@ -480,19 +502,33 @@ async function writeOutputs(results) {
     }
   }
   
+  // Merge manifests (dedupe by slug)
+  const allManifest = [...existingManifest, ...newManifest];
+  const dedupedManifest = [];
+  const seenSlugs = new Set();
+  for (const entry of allManifest) {
+    if (!seenSlugs.has(entry.slug)) {
+      dedupedManifest.push(entry);
+      seenSlugs.add(entry.slug);
+    }
+  }
+  
+  // Merge snippets
+  const allSnippets = [...existingSnippets, ...newSnippets];
+  
   // Write manifest.json
   fs.writeFileSync(
     path.join(UPLOAD_DIR, 'manifest.json'),
-    JSON.stringify(manifest, null, 2)
+    JSON.stringify(dedupedManifest, null, 2)
   );
-  console.log(`  ✅ manifest.json written`);
+  console.log(`  ✅ manifest.json written (${dedupedManifest.length} entries)`);
   
   // Write snippets.txt
   fs.writeFileSync(
     path.join(UPLOAD_DIR, 'snippets.txt'),
-    snippets.join('\n\n')
+    allSnippets.join('\n\n')
   );
-  console.log(`  ✅ snippets.txt written`);
+  console.log(`  ✅ snippets.txt written (${allSnippets.length} entries)`);
   
   // Write locale JSON files - merge into main page JSON (e.g., angkor-wat.json) under "photos" key
   if (LOCALE_PATH && (Object.keys(localeData.en).length > 0 || Object.keys(localeData.fr).length > 0)) {
@@ -532,23 +568,76 @@ async function writeOutputs(results) {
     }
   }
   
-  return manifest;
+  return dedupedManifest;
 }
 
 async function main() {
-  // Clean upload directory
-  if (fs.existsSync(UPLOAD_DIR)) {
-    fs.rmSync(UPLOAD_DIR, { recursive: true });
+  // Create upload directory if not exists (don't clean)
+  if (!fs.existsSync(UPLOAD_DIR)) {
+    fs.mkdirSync(UPLOAD_DIR, { recursive: true });
   }
-  fs.mkdirSync(UPLOAD_DIR, { recursive: true });
   
   console.log('🚀 Transform + AI Naming Pipeline');
   if (CLI_CONTEXT) console.log(`📍 Context: ${CLI_CONTEXT}`);
   if (LOCALE_PATH) console.log(`📝 Locale path (also R2 prefix): ${LOCALE_PATH}`);
+  if (RETRY_FAILED) console.log(`🔁 Retry mode: processing failed images only`);
+  
+  // Load existing manifest to skip already processed
+  const manifestPath = path.join(UPLOAD_DIR, 'manifest.json');
+  let existingManifest = [];
+  if (fs.existsSync(manifestPath)) {
+    try {
+      existingManifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+    } catch {}
+  }
+  // Map originalFile -> slug from existing manifest for accurate dedup
+  const existingFileToSlug = new Map(existingManifest.map(m => [m.originalFile, m.slug]));
+  
+  // Load failed.json for retry mode
+  const failedPath = path.join(UPLOAD_DIR, 'failed.json');
+  let failedImages = [];
+  if (RETRY_FAILED && fs.existsSync(failedPath)) {
+    try {
+      failedImages = JSON.parse(fs.readFileSync(failedPath, 'utf-8'));
+      console.log(`🔁 Retry mode: ${failedImages.length} failed images to retry`);
+    } catch {}
+  }
   
   const images = await processImages();
-  const results = await processGeminiBatches(images);
-  const manifest = await writeOutputs(results);
+  
+  // Filter images based on mode
+  let imagesToProcess = images;
+  if (RETRY_FAILED) {
+    // Only process images that failed previously
+    imagesToProcess = images.filter(img => failedImages.includes(img.originalFile));
+    if (imagesToProcess.length === 0) {
+      console.log('✅ No failed images to retry');
+      return;
+    }
+  } else {
+    // Skip already processed using originalFile -> slug mapping from manifest
+    imagesToProcess = images.filter(img => !existingFileToSlug.has(img.originalFile));
+    const skipped = images.length - imagesToProcess.length;
+    if (skipped > 0) console.log(`⏭️  Skipped ${skipped} already processed images`);
+  }
+  
+  if (imagesToProcess.length === 0) {
+    console.log('✅ Nothing to process');
+    return;
+  }
+  
+  const results = await processGeminiBatches(imagesToProcess);
+  const manifest = await writeOutputs(results, existingManifest);
+  
+  // Update failed.json - remove succeeded, keep failed
+  const succeededSlugs = new Set(results.map(r => r.slug));
+  const currentFailed = failedImages.filter(f => !succeededSlugs.has(f));
+  if (currentFailed.length > 0) {
+    fs.writeFileSync(path.join(UPLOAD_DIR, 'failed.json'), JSON.stringify(currentFailed, null, 2));
+    console.log(`⚠️  ${currentFailed.length} images failed (saved to failed.json)`);
+  } else if (fs.existsSync(path.join(UPLOAD_DIR, 'failed.json'))) {
+    fs.rmSync(path.join(UPLOAD_DIR, 'failed.json'));
+  }
   
   console.log('\n✅ All images processed. Output in:', UPLOAD_DIR);
   console.log(`   ${manifest.length} images with AI-generated names and alt texts`);
