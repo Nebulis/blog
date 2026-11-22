@@ -42,9 +42,15 @@ function buildSrcSet(basePath: string, breakpoints: number[]): string {
 }
 
 // Shared helper: inject orientation into R2Image children
+// Only injects if orientation not already explicitly set on the child
 function injectOrientation(children: React.ReactNode, orientation: Orientation) {
   return React.Children.map(children, (child) => {
     if (React.isValidElement(child) && child.type === R2Image) {
+      // Only inject if orientation not already explicitly set
+      const hasExplicitOrientation = child.props.orientation !== undefined
+      if (hasExplicitOrientation) {
+        return child
+      }
       return React.cloneElement(child, { orientation })
     }
     return child
@@ -570,24 +576,24 @@ export const TwoImagesRightBigger = styled(TwoImagesSameSize)`
 `
 // this component will adapt to smaller devices and display images in different rows when the device is too small
 export const TwoImagesSameSizeOrToGroup: FunctionComponent<
-  HTMLAttributes<any> & { title1?: string; title2?: string; titleClassName?: string }
-> = ({ children, className = "", title1, title2, titleClassName }) => {
+  HTMLAttributes<any> & { title1?: string; title2?: string; titleClassName?: string; orientation?: Orientation }
+> = ({ children, className = "", title1, title2, titleClassName, orientation = "portrait" }) => {
   const { windowWidth: width } = useWindowSize()
   if (!children || !Array.isArray(children) || children.length !== 2)
     throw new Error("This component expect 2 children")
   return width <= 768 ? (
     <GroupOfImages className={className}>
       <ImageAsLandscape title={title1} titleClassName={titleClassName}>
-        {injectOrientation(children[0], "portrait")}
+        {injectOrientation(children[0], orientation)}
       </ImageAsLandscape>
       <ImageAsLandscape title={title2} titleClassName={titleClassName}>
-        {injectOrientation(children[1], "portrait")}
+        {injectOrientation(children[1], orientation)}
       </ImageAsLandscape>
     </GroupOfImages>
   ) : (
     <TwoImagesSameSize className={className} title1={title1} title2={title2} titleClassName={titleClassName}>
-      {injectOrientation(children[0], "portrait")}
-      {injectOrientation(children[1], "portrait")}
+      {injectOrientation(children[0], orientation)}
+      {injectOrientation(children[1], orientation)}
     </TwoImagesSameSize>
   )
 }
