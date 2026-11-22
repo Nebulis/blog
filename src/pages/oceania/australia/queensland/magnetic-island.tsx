@@ -465,8 +465,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                     <img src={cardFr2} key="cardFr2" alt="Carte Pinterest : Magnetic Island" />,
                   ]
                 : [
-                    <img src={cardEn1} key="cardFr1" alt="Pinterest Card: Magnetic Island" />,
-                    <img src={cardEn2} key="cardFr1" alt="Pinterest Card: Magnetic Island" />,
+                    <img src={cardEn1} key="cardEn1" alt="Pinterest Card: Magnetic Island" />,
+                    <img src={cardEn2} key="cardEn2" alt="Pinterest Card: Magnetic Island" />,
                   ],
           }}
         />
