@@ -470,8 +470,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                     <img src={cardFr2} key="cardFr2" alt="Carte Pinterest : Noël à Singapour" />,
                   ]
                 : [
-                    <img src={cardEn1} key="cardFr1" alt="Pinterest Card: Christmas in Singapore" />,
-                    <img src={cardEn2} key="cardFr1" alt="Pinterest Card: Christmas in Singapore" />,
+                    <img src={cardEn1} key="cardEn1" alt="Pinterest Card: Christmas in Singapore" />,
+                    <img src={cardEn2} key="cardEn2" alt="Pinterest Card: Christmas in Singapore" />,
                   ],
           }}
         />

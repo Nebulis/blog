@@ -127,7 +127,7 @@ function deduplicateSlugs(results) {
 const MODELS = [
   'gemini-3.6-flash',
   'gemini-3.8-flash',
-  'gemini-3.6-flash-lite',
+  'gemini-3.5-flash-lite',
 ];
 
 // Gemini response schema
@@ -182,8 +182,8 @@ async function generateWithFallback(genai, contentParts, config) {
         }
         if (!isTransient) throw err;
 
-        console.warn(`  ⚠️  ${model} busy (attempt ${attempt}), retrying in ${3 * attempt}s...`);
-        await new Promise((r) => setTimeout(r, 3000 * attempt));
+        console.warn(`  ⚠️  ${model} busy (attempt ${attempt}), retrying in ${10 * attempt}s...`);
+        await new Promise((r) => setTimeout(r, 10000 * attempt));
       }
     }
   }

@@ -11,6 +11,8 @@ import { Conclusion } from "../../../components/core/conclusion"
 import { Divider } from "../../../components/core/divider"
 import { Quote } from "../../../components/core/quote"
 import HomeImgUrl from "../../../images/asia/japan/food-in-japan/food-in-japan-main.jpg"
+import cardFr1 from "../../../images/asia/japan/food-in-japan/card-fr1.jpg"
+import cardEn1 from "../../../images/asia/japan/food-in-japan/card-en1.jpg"
 import {
   Anchor,
   GroupOfImages,
@@ -18,10 +20,10 @@ import {
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
+  R2Image,
   TwoImagesSameSizeOrToGroup,
 } from "../../../components/images/layout"
 import { SharedCardJapanImages } from "../../../components/images/asia/japan/shared-card-japan-images"
-import { FoodInJapanImages } from "../../../components/images/asia/japan/food-in-japan"
 import { FakeList } from "../../../components/core/title"
 import { Comments } from "../../../components/core/comments"
 import styled from "@emotion/styled"
@@ -1256,16 +1258,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section1.part5")}</p>
             <GroupOfImages>
               <ImageAsLandscape>
-                <FoodInJapanImages image="barbecue" />
+                <R2Image namespace={namespace} name="japanese-bbq-meat-grill" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsPortrait>
-                <FoodInJapanImages image="barbecue2" />
+                <R2Image namespace={namespace} name="yakiniku-barbecue-table-meats" aspectRatio={0.9} />
               </ImageAsPortrait>
               <ImageAsPortrait>
-                <FoodInJapanImages image="barbecue3" />
+                <R2Image namespace={namespace} name="japan-yakiniku-bbq-meat-feast" aspectRatio={3 / 4} />
               </ImageAsPortrait>
               <ImageAsLandscape>
-                <FoodInJapanImages image="barbecue4" />
+                <R2Image namespace={namespace} name="japanese-bbq-table-spread" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -1282,23 +1284,23 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section2.part4")}</p>
             <GroupOfImages>
               <ImageAsLandscape title="Gyudon ⤵" titlePosition="top">
-                <FoodInJapanImages image="donburi" />
+                <R2Image namespace={namespace} name="japanese-gyudon-beef-soup" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape>
-                <FoodInJapanImages image="donburi2" />
+                <R2Image namespace={namespace} name="japanese-beef-bowl-gyudon" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape title="Katsudon ⤵" titlePosition="top">
-                <FoodInJapanImages image="donburi3" />
+                <R2Image namespace={namespace} name="japanese-katsudon-pork-bowl" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape>
-                <FoodInJapanImages image="donburi4" />
+                <R2Image namespace={namespace} name="japanese-katsudon-pork-cutlet" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape title="Chicken Teriyaki Don ⤵" titlePosition="top">
-                <FoodInJapanImages image="donburi5" />
+                <R2Image namespace={namespace} name="japanese-chicken-teriyaki-bowl" aspectRatio={3 / 2} />
               </ImageAsLandscape>
               <TwoImagesSameSizeOrToGroup>
-                <FoodInJapanImages image="donburi6" />
-                <FoodInJapanImages image="donburi7" />
+                <R2Image namespace={namespace} name="teriyaki-chicken-donburi-chopsticks" aspectRatio={2 / 3} />
+                <R2Image namespace={namespace} name="teriyaki-chicken-donburi-bowl" aspectRatio={2 / 3} />
               </TwoImagesSameSizeOrToGroup>
             </GroupOfImages>
           </SectionContent>
@@ -1320,19 +1322,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section3.part7")}</p>
             <GroupOfImages>
               <ImageAsLandscape>
-                <FoodInJapanImages image="gyozas" />
+                <R2Image namespace={namespace} name="japanese-dumplings-gyoza-spread" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape>
-                <FoodInJapanImages image="gyozas2" />
+                <R2Image namespace={namespace} name="japanese-pan-fried-gyozas" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape>
-                <FoodInJapanImages image="gyozas3" />
+                <R2Image namespace={namespace} name="japanese-fried-gyoza-dumplings" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscapeOnTheLeft title="Gyoza Crispy ⤵" titlePosition="top">
-                <FoodInJapanImages image="gyozas4" />
+                <R2Image namespace={namespace} name="eating-japanese-gyoza-dumpling" aspectRatio={4 / 3} />
               </ImageAsLandscapeOnTheLeft>
               <ImageAsLandscapeOnTheRight title="Gyoza Original ⤵" titlePosition="top">
-                <FoodInJapanImages image="gyozas5" />
+                <R2Image namespace={namespace} name="holding-japanese-gyoza-dumpling" aspectRatio={4 / 3} />
               </ImageAsLandscapeOnTheRight>
             </GroupOfImages>
           </SectionContent>
@@ -1355,19 +1357,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section4.part8")}</p>
             <GroupOfImages>
               <ImageAsLandscape>
-                <FoodInJapanImages image="ramen" />
+                <R2Image namespace={namespace} name="japanese-ramen-soup-bowls" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscapeOnTheLeft title="Chashu Ramen - Original Tonkotsu ⤵" titlePosition="top">
-                <FoodInJapanImages image="ramen2" />
+                <R2Image namespace={namespace} name="japan-tonkotsu-ramen-chashu-pork" aspectRatio={4 / 3} />
               </ImageAsLandscapeOnTheLeft>
               <ImageAsLandscapeOnTheRight title="Pork Chop Ramen - Original Tonkotsu ⤵" titlePosition="top">
-                <FoodInJapanImages image="ramen3" />
+                <R2Image namespace={namespace} name="tonkotsu-ramen-pork-chop" aspectRatio={4 / 3} />
               </ImageAsLandscapeOnTheRight>
               <ImageAsLandscape title="Shoyu Ajitama Ramen ⤵" titlePosition="top">
-                <FoodInJapanImages image="ramen4" />
+                <R2Image namespace={namespace} name="shoyu-ramen-corn-egg" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape title="Beef Ramen - Shio Base ⤵" titlePosition="top">
-                <FoodInJapanImages image="ramen5" />
+                <R2Image namespace={namespace} name="japan-ramen-beef-egg-bowl" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -1385,16 +1387,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section5.part5")}</p>
             <GroupOfImages>
               <ImageAsLandscapeOnTheLeft title="Cha Soba - Chilled green tea noodles ⤵" titlePosition="top">
-                <FoodInJapanImages image="soba" />
+                <R2Image namespace={namespace} name="japan-chasoba-noodles-black-bowl" aspectRatio={3 / 2} />
               </ImageAsLandscapeOnTheLeft>
               <ImageAsLandscapeOnTheRight>
-                <FoodInJapanImages image="soba2" />
+                <R2Image namespace={namespace} name="japan-chasoba-greentea-noodles-bowl" aspectRatio={3 / 2} />
               </ImageAsLandscapeOnTheRight>
               <ImageAsLandscapeOnTheLeft title="Cha Soba + Chicken Teriyaki Salad ⤵" titlePosition="top">
-                <FoodInJapanImages image="soba3" />
+                <R2Image namespace={namespace} name="japan-chasoba-noodles-teriyaki-chicken" aspectRatio={3 / 2} />
               </ImageAsLandscapeOnTheLeft>
               <ImageAsLandscapeOnTheRight>
-                <FoodInJapanImages image="soba4" />
+                <R2Image namespace={namespace} name="japan-teriyaki-chicken-chasoba-salad" aspectRatio={3 / 2} />
               </ImageAsLandscapeOnTheRight>
             </GroupOfImages>
           </SectionContent>
@@ -1419,10 +1421,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section6.part10")}</p>
             <GroupOfImages>
               <ImageAsLandscape title="Salmon Sashimi ⤵" titlePosition="top">
-                <FoodInJapanImages image="sushis" />
+                <R2Image namespace={namespace} name="salmon-sashimi-plate-fresh" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape>
-                <FoodInJapanImages image="sushis2" />
+                <R2Image namespace={namespace} name="japanese-sushi-platter-variety" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </GroupOfImages>
             <p className="tc ttu">{t("section6.part11")}</p>
@@ -1444,25 +1446,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             </ol>
             <GroupOfImages>
               <ImageAsLandscapeOnTheLeft>
-                <FoodInJapanImages image="sushis3" />
+                <R2Image namespace={namespace} name="japanese-sushi-roll-platter" aspectRatio={4 / 3} />
               </ImageAsLandscapeOnTheLeft>
               <ImageAsLandscapeOnTheRight>
-                <FoodInJapanImages image="sushis4" />
+                <R2Image namespace={namespace} name="japanese-sushi-maki-nigiri" aspectRatio={4 / 3} />
               </ImageAsLandscapeOnTheRight>
               <ImageAsLandscape>
-                <FoodInJapanImages image="sushis5" />
+                <R2Image namespace={namespace} name="japanese-sushi-roll-selection" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscapeOnTheLeft
                 title="California Handroll (Rice, Cucumber, Crab Stick, Egg, Mayo, Shrimp Roe, Avocado)  -  Salmon Handroll (Rice, Salmon) ⤵"
                 titlePosition="top"
               >
-                <FoodInJapanImages image="sushis6" />
+                <R2Image namespace={namespace} name="japan-temaki-sushi-handroll-nori" aspectRatio={4 / 3} />
               </ImageAsLandscapeOnTheLeft>
               <ImageAsLandscapeOnTheRight>
-                <FoodInJapanImages image="sushis7" />
+                <R2Image namespace={namespace} name="japan-temaki-handroll-salmon-sushi" aspectRatio={4 / 3} />
               </ImageAsLandscapeOnTheRight>
               <ImageAsPortrait title="Maki with Soy Wrap ⤵" titlePosition="top">
-                <FoodInJapanImages image="sushis8" />
+                <R2Image namespace={namespace} name="japanese-pink-soy-maki-rolls" aspectRatio={4 / 3} />
               </ImageAsPortrait>
             </GroupOfImages>
           </SectionContent>
@@ -1478,10 +1480,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section7.part3")}</p>
             <GroupOfImages>
               <ImageAsLandscape title="Shrimp Tempura ⤵" titlePosition="top">
-                <FoodInJapanImages image="tempura" />
+                <R2Image namespace={namespace} name="shrimp-tempura-rice-bowl" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape>
-                <FoodInJapanImages image="tempura2" />
+                <R2Image namespace={namespace} name="shrimp-tempura-bowl-rice" aspectRatio={3 / 2} />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -1497,19 +1499,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section8.part3")}</p>
             <GroupOfImages>
               <ImageAsLandscape title="Tonkatsu curry rice ⤵" titlePosition="top">
-                <FoodInJapanImages image="curry" />
+                <R2Image namespace={namespace} name="tonkatsu-curry-rice-plate" aspectRatio={1.17} />
               </ImageAsLandscape>
               <ImageAsLandscapeOnTheLeft title="Chicken Katsu curry rice ⤵" titlePosition="top">
-                <FoodInJapanImages image="curry2" />
+                <R2Image namespace={namespace} name="japanese-chicken-katsu-curry-sauce" aspectRatio={4 / 3} />
               </ImageAsLandscapeOnTheLeft>
               <ImageAsLandscapeOnTheRight>
-                <FoodInJapanImages image="curry3" />
+                <R2Image namespace={namespace} name="japanese-curry-chicken-katsu-dish" aspectRatio={4 / 3} />
               </ImageAsLandscapeOnTheRight>
               <ImageAsPortrait>
-                <FoodInJapanImages image="curry4" />
+                <R2Image namespace={namespace} name="japanese-chicken-katsu-rice-bowl" aspectRatio={4 / 3} />
               </ImageAsPortrait>
               <ImageAsLandscape>
-                <FoodInJapanImages image="curry5" />
+                <R2Image namespace={namespace} name="japanese-chicken-katsu-curry-set" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -1526,13 +1528,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section9.part4")}</p>
             <GroupOfImages>
               <ImageAsLandscape title="Chicken Katsu Don + Udon ⤵" titlePosition="top">
-                <FoodInJapanImages image="udon" />
+                <R2Image namespace={namespace} name="japan-katsudon-udon-noodle-set" aspectRatio={4 / 3} />
               </ImageAsLandscape>
-              <ImageAsLandscape title="Niku Udon - Japanese noodles with black pepper beef ⤵" titlePosition="top">
-                <FoodInJapanImages image="udon2" />
-              </ImageAsLandscape>
+              <ImageAsPortrait title="Niku Udon - Japanese noodles with black pepper beef ⤵" titlePosition="top">
+                <R2Image namespace={namespace} name="japanese-niku-udon-beef-noodles" aspectRatio={3 / 4} />
+              </ImageAsPortrait>
               <ImageAsLandscape>
-                <FoodInJapanImages image="udon3" />
+                <R2Image namespace={namespace} name="japanese-beef-udon-bowl-table" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -1549,10 +1551,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section10.part4")}</p>
             <GroupOfImages>
               <ImageAsLandscape title="Yakitori + Rice ⤵" titlePosition="top">
-                <FoodInJapanImages image="yakitori" />
+                <R2Image namespace={namespace} name="japanese-yakitori-skewers-rice" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape>
-                <FoodInJapanImages image="yakitori2" />
+                <R2Image namespace={namespace} name="japanese-yakitori-rice-bowl" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -1567,7 +1569,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section11.part1.part1")}</p>
             <p>{t("section11.part1.part2")}</p>
             <ImageAsLandscape>
-              <FoodInJapanImages image="soup" />
+              <R2Image namespace={namespace} name="japanese-ramen-soup-bowl" aspectRatio={4 / 3} />
             </ImageAsLandscape>
           </SectionContent>
           <Divider />
@@ -1578,10 +1580,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section11.part2.part3")}</p>
             <GroupOfImages>
               <ImageAsLandscape title="Grilled Salmon Onigiri ⤵" titlePosition="top">
-                <FoodInJapanImages image="onigiri" />
+                <R2Image namespace={namespace} name="japanese-salmon-onigiri-rice-ball" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape>
-                <FoodInJapanImages image="onigiri2" />
+                <R2Image namespace={namespace} name="japanese-salmon-onigiri-sliced-filling" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -1593,10 +1595,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section11.part3.part3")}</p>
             <GroupOfImages>
               <ImageAsLandscape title="Chicken Katsu Onigirazu - Ebi Onigirazu ⤵" titlePosition="top">
-                <FoodInJapanImages image="onigirazu" />
+                <R2Image namespace={namespace} name="japanese-onigirazu-rice-sandwich-filling" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <ImageAsLandscape>
-                <FoodInJapanImages image="onigirazu2" />
+                <R2Image namespace={namespace} name="japan-onigirazu-katsu-rice-sandwich" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -1608,10 +1610,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section11.part4.part3")}</p>
             <GroupOfImages>
               <ImageAsLandscape>
-                <FoodInJapanImages image="teppanyaki" />
+                <R2Image namespace={namespace} name="teppanyaki-chef-flame-grill" aspectRatio={3 / 2} />
               </ImageAsLandscape>
               <ImageAsLandscape>
-                <FoodInJapanImages image="teppanyaki2" />
+                <R2Image namespace={namespace} name="teppanyaki-chef-vegetables-spatula" aspectRatio={3 / 2} />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -1629,14 +1631,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("section12.part2.part2")}</p>
             <GroupOfImages>
               <ImageAsLandscape>
-                <FoodInJapanImages image="fakeFood" />
+                <R2Image namespace={namespace} name="japanese-food-display-sampuru" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <TwoImagesSameSizeOrToGroup>
-                <FoodInJapanImages image="fakeFood2" />
-                <FoodInJapanImages image="fakeFood3" />
+                <R2Image namespace={namespace} name="sushi-display-restaurant-window" aspectRatio={4 / 3} />
+                <R2Image namespace={namespace} name="sushi-rolls-plastic-display" aspectRatio={4 / 3} />
               </TwoImagesSameSizeOrToGroup>
               <ImageAsLandscape>
-                <FoodInJapanImages image="fakeFood4" />
+                <R2Image namespace={namespace} name="restaurant-window-food-display" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </GroupOfImages>
           </SectionContent>
@@ -1658,8 +1660,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             description: t("pinterest"),
             nodes:
               i18n.languageCode === "fr"
-                ? [<FoodInJapanImages image="cardFr1" key="cardFr1" />]
-                : [<FoodInJapanImages image="cardEn1" key="cardEn1" />],
+                ? [<img src={cardFr1} key="cardFr1" alt="Carte Pinterest : Spécialités culinaires du Japon" />]
+                : [<img src={cardEn1} key="cardEn1" alt="Pinterest Card: Best traditional Japanese food" />],
           }}
         />
       </JapanBlogLayout>
