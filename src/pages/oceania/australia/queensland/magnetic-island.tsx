@@ -23,16 +23,20 @@ import { Divider } from "../../../../components/core/divider"
 import { Quote } from "../../../../components/core/quote"
 import { FakeList, Title } from "../../../../components/core/title"
 import HomeImgUrl from "../../../../images/oceania/australia/queensland/magnetic-island/magnetic-island-main.jpg"
+import cardFr1 from "../../../../images/oceania/australia/queensland/magnetic-island/card-fr1.jpg"
+import cardFr2 from "../../../../images/oceania/australia/queensland/magnetic-island/card-fr2.jpg"
+import cardEn1 from "../../../../images/oceania/australia/queensland/magnetic-island/card-en1.jpg"
+import cardEn2 from "../../../../images/oceania/australia/queensland/magnetic-island/card-en2.jpg"
 import {
   GroupOfImages,
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
+  R2Image,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { SharedCardAustraliaImages } from "../../../../components/images/oceania/australia/shared-card-australia-images"
-import { MagneticIslandImages } from "../../../../components/images/oceania/australia/queensland/magnetic-island"
 import { FaHiking } from "react-icons/fa"
 import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { BookingCard, BookingWarning } from "../../../../components/core/booking"
@@ -74,13 +78,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("introduction.part2")}</p>
           <GroupOfImages>
             <ImageAsLandscape>
-              <MagneticIslandImages image="magneticIsland" />
+              <R2Image namespace={namespace} name="magnetic-island-welcome-sign" aspectRatio={3 / 2} />
             </ImageAsLandscape>
             <ImageAsLandscape>
-              <MagneticIslandImages image="magneticIsland2" />
+              <R2Image namespace={namespace} name="magnetic-island-coastline-sea" aspectRatio={4 / 3} />
             </ImageAsLandscape>
             <ImageAsLandscape>
-              <MagneticIslandImages image="magneticIsland3" />
+              <R2Image namespace={namespace} name="magnetic-island-beach-water" aspectRatio={4 / 3} />
             </ImageAsLandscape>
           </GroupOfImages>
         </SectionContent>
@@ -137,12 +141,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("what-time-of-year.part3")}</p>
           <p>{t("what-time-of-year.part4")}</p>
           <GroupOfImages>
-            <TwoImagesSameSizeOrToGroup>
-              <MagneticIslandImages image="stinger" />
-              <MagneticIslandImages image="stinger2" />
+            <TwoImagesSameSizeOrToGroup orientation="landscape">
+              <R2Image namespace={namespace} name="alma-bay-beach-report" aspectRatio={3 / 2} />
+              <R2Image namespace={namespace} name="alma-bay-warning-flag" aspectRatio={3 / 2} />
             </TwoImagesSameSizeOrToGroup>
             <ImageAsPortrait>
-              <MagneticIslandImages image="stinger3" />
+              <R2Image namespace={namespace} name="magnetic-island-marine-stingers-sign" aspectRatio={3 / 4} />
             </ImageAsPortrait>
           </GroupOfImages>
           <p>{t("what-time-of-year.part5")}</p>
@@ -222,16 +226,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part2.part6.part2")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="nellyBay" />
+                  <R2Image namespace={namespace} name="magnetic-island-granite-rocks" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="nellyBay2" />
+                  <R2Image namespace={namespace} name="magnetic-island-forest-shore" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="nellyBay3" />
+                  <R2Image namespace={namespace} name="magnetic-island-hills-sky" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="nellyBay4" />
+                  <R2Image namespace={namespace} name="magnetic-island-coastal-landscape" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <SectionTitle>{t("visit.part2.part7.title")}</SectionTitle>
@@ -242,22 +246,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part2.part7.part5")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="geoffreyBay" />
+                  <R2Image namespace={namespace} name="geoffrey-bay-national-park-sign" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="almaBay" />
+                  <R2Image namespace={namespace} name="alma-bay-beach-ocean-view" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="almaBay2" />
+                  <R2Image namespace={namespace} name="alma-bay-tropical-beach-coastline" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="almaBay3" />
+                  <R2Image namespace={namespace} name="alma-bay-granite-rocks-coastline" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="almaBay4" />
+                  <R2Image namespace={namespace} name="alma-bay-boulders-tropical-trees" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="almaBay5" />
+                  <R2Image namespace={namespace} name="alma-bay-ocean-waves-shore" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <SectionTitle>{t("visit.part2.part8.title")}</SectionTitle>
@@ -268,16 +272,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part2.part8.part5")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="fortsWalk" />
+                  <R2Image namespace={namespace} name="magnetic-island-forts-walk-boulder" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="fortsWalk2" />
+                  <R2Image namespace={namespace} name="magnetic-island-ocean-horizon-view" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="fortsWalk3" />
+                  <R2Image namespace={namespace} name="magnetic-island-lush-bay-coastline" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="fortsWalk4" />
+                  <R2Image namespace={namespace} name="magnetic-island-pine-bay-vistas" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part2.part8.part6")}</p>
@@ -286,26 +290,26 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part2.part9.part2")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <MagneticIslandImages image="fortsWalk5" />
+                  <R2Image namespace={namespace} name="arcadia-horseshoe-bay-trail" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="fortsWalk6" />
+                  <R2Image namespace={namespace} name="magnetic-island-pink-fruit-tree" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
-                <TwoImagesSameSizeOrToGroup>
-                  <MagneticIslandImages image="fortsWalk7" />
-                  <MagneticIslandImages image="fortsWalk8" />
+                <TwoImagesSameSizeOrToGroup orientation="landscape">
+                  <R2Image namespace={namespace} name="magnetic-island-white-flowers-tree" aspectRatio={3 / 2} />
+                  <R2Image namespace={namespace} name="magnetic-island-tree-fruit-ocean" aspectRatio={3 / 2} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="fortsWalk9" />
+                  <R2Image namespace={namespace} name="magnetic-island-koala-tree-canopy" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscapeOnTheLeft>
-                  <MagneticIslandImages image="fortsWalk10" />
+                  <R2Image namespace={namespace} name="magnetic-island-koala-sleeping-branch" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <MagneticIslandImages image="fortsWalk11" />
+                  <R2Image namespace={namespace} name="magnetic-island-koala-resting-trunk" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheRight>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="fortsWalk12" />
+                  <R2Image namespace={namespace} name="magnetic-island-koala-tree" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part2.part9.part3")}</p>
@@ -314,16 +318,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part2.part9.part6")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="horseshoeBay" />
+                  <R2Image namespace={namespace} name="magnetic-island-horseshoe-bay-beach" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="horseshoeBay2" />
+                  <R2Image namespace={namespace} name="magnetic-island-rowboat-dog-bay" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="horseshoeBay3" />
+                  <R2Image namespace={namespace} name="magnetic-island-horseshoe-bay-hills" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="horseshoeBay4" />
+                  <R2Image namespace={namespace} name="magnetic-island-anchored-sailboat-beach" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <SectionTitle>{t("visit.part2.part10.title")}</SectionTitle>
@@ -334,35 +338,35 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part2.part10.part5")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="baldingBay" />
+                  <R2Image namespace={namespace} name="magnetic-island-trail-signpost-forest" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
-                  <MagneticIslandImages image="baldingBay2" />
+                  <R2Image namespace={namespace} name="balding-bay-trek-path" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="baldingBay3" />
+                  <R2Image namespace={namespace} name="magnetic-island-boulders-beach-coast" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="baldingBay4" />
+                  <R2Image namespace={namespace} name="magnetic-island-trail-forest-ocean" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <MagneticIslandImages image="baldingBay5" />
-                  <MagneticIslandImages image="baldingBay6" />
+                  <R2Image namespace={namespace} name="balding-bay-trek-forest" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="magnetic-island-balding-bay-boulder" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsPortrait>
-                  <MagneticIslandImages image="baldingBay7" />
+                  <R2Image namespace={namespace} name="magnetic-island-balding-bay-tree" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="baldingBay8" />
+                  <R2Image namespace={namespace} name="magnetic-island-wallaby-rock-coast" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="baldingBay9" />
+                  <R2Image namespace={namespace} name="magnetic-island-rock-wallaby-woods" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="baldingBay10" />
+                  <R2Image namespace={namespace} name="magnetic-island-balding-bay-beach" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="baldingBay11" />
+                  <R2Image namespace={namespace} name="magnetic-island-bay-yachts-anchored" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <SectionTitle>{t("visit.part2.part11.title")}</SectionTitle>
@@ -388,38 +392,38 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part3.part6")}</p>
               <p>{t("visit.part3.part7")}</p>
               <ImageAsLandscape>
-                <MagneticIslandImages image="koala" />
+                <R2Image namespace={namespace} name="magnetic-island-koala-tree-2" aspectRatio={3 / 2} />
               </ImageAsLandscape>
               <p>{t("visit.part3.part8")}</p>
               <p>{t("visit.part3.part9")}</p>
               <p>{t("visit.part3.part10")}</p>
               <ImageAsLandscape>
-                <MagneticIslandImages image="wallaby" />
+                <R2Image namespace={namespace} name="magnetic-island-rock-wallaby" aspectRatio={3 / 2} />
               </ImageAsLandscape>
               <p>{t("visit.part3.part11")}</p>
               <p>{t("visit.part3.part12")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="rainbowLorikeet" />
+                  <R2Image namespace={namespace} name="magnetic-island-lorikeet-branch" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="rainbowLorikeet2" />
+                  <R2Image namespace={namespace} name="magnetic-island-lorikeet-feeding" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="rainbowLorikeet3" />
+                  <R2Image namespace={namespace} name="magnetic-island-lorikeet-hiding" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part3.part13")}</p>
               <p>{t("visit.part3.part14")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="snake" />
+                  <R2Image namespace={namespace} name="magnetic-island-small-snake" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="snake2" />
+                  <R2Image namespace={namespace} name="magnetic-island-snake-ground" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="lizard" />
+                  <R2Image namespace={namespace} name="magnetic-island-lizard-rock" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -429,10 +433,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part3.part16")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="magneticIsland4" />
+                  <R2Image namespace={namespace} name="magnetic-island-ocean-wake-ferry" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <MagneticIslandImages image="magneticIsland5" />
+                  <R2Image namespace={namespace} name="townsville-waterfront-mountain-coastline" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -457,12 +461,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes:
               i18n.languageCode === "fr"
                 ? [
-                    <MagneticIslandImages image="cardFr1" key="cardFr1" />,
-                    <MagneticIslandImages image="cardFr2" key="cardFr1" />,
+                    <img src={cardFr1} key="cardFr1" alt="Carte Pinterest : Magnetic Island" />,
+                    <img src={cardFr2} key="cardFr2" alt="Carte Pinterest : Magnetic Island" />,
                   ]
                 : [
-                    <MagneticIslandImages image="cardEn1" key="cardEn1" />,
-                    <MagneticIslandImages image="cardEn2" key="cardEn1" />,
+                    <img src={cardEn1} key="cardFr1" alt="Pinterest Card: Magnetic Island" />,
+                    <img src={cardEn2} key="cardFr1" alt="Pinterest Card: Magnetic Island" />,
                   ],
           }}
         />
