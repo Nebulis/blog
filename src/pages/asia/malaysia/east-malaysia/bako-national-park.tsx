@@ -23,6 +23,10 @@ import { Divider } from "../../../../components/core/divider"
 import { Quote } from "../../../../components/core/quote"
 import { FakeList, Title } from "../../../../components/core/title"
 import HomeImgUrl from "../../../../images/asia/malaysia/east-malaysia/bako-national-park/bako-national-park-main.jpg"
+import cardFr1 from "../../../../images/asia/malaysia/east-malaysia/bako-national-park/card-fr1.jpg"
+import cardFr2 from "../../../../images/asia/malaysia/east-malaysia/bako-national-park/card-fr2.jpg"
+import cardEn1 from "../../../../images/asia/malaysia/east-malaysia/bako-national-park/card-en1.jpg"
+import cardEn2 from "../../../../images/asia/malaysia/east-malaysia/bako-national-park/card-en2.jpg"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -30,9 +34,9 @@ import {
   Panorama,
   TwoImagesSameSizeOrToGroup,
   TwoImagesSameSizeOrToGroupContainOnSmallScreen,
+  R2Image,
 } from "../../../../components/images/layout"
 import { css } from "@emotion/react"
-import { BakoNationalParkImages } from "../../../../components/images/asia/malaysia/east-malaysia/bako-national-park"
 import { SharedCardMalaysiaImages } from "../../../../components/images/asia/malaysia/shared-card-malaysia-images"
 import { PetitCarreColore } from "../../../../components/layout/layout"
 
@@ -113,7 +117,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
       <MalaysiaBlogLayout page={id} location={location}>
         <Title title={title} linkId={id} />
         <ImageAsLandscape>
-          <SharedCardMalaysiaImages image="bakoNationalPark" />
+          <SharedCardMalaysiaImages image="bakoNationalPark" loading="eager" />
         </ImageAsLandscape>
         <Quote>{t("quote")}</Quote>
         <Divider />
@@ -201,41 +205,41 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part1.part2")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <BakoNationalParkImages image="jetty" imgStyle={{ objectFit: "contain" }} />
+                  <R2Image namespace={namespace} name="bako-tabby-cat-tiles" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="jetty2" />
+                  <R2Image namespace={namespace} name="bako-stilt-houses-riverbank-mudflat" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="jetty3" />
+                  <R2Image namespace={namespace} name="bako-coastal-village-wooden-stilts" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part1.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="jetty4" />
+                  <R2Image namespace={namespace} name="bako-ocean-boat-splash" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
-                  <BakoNationalParkImages image="jetty5" />
+                  <R2Image namespace={namespace} name="bako-national-park-coastal-boat" aspectRatio={9 / 16} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="jetty6" />
+                  <R2Image namespace={namespace} name="bako-estuary-mountain-landscape" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                  <BakoNationalParkImages image="jetty7" />
-                  <BakoNationalParkImages image="jetty8" />
+                  <R2Image namespace={namespace} name="bako-sea-stack-rock-water" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="bako-national-park-sea-spray" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
               </GroupOfImages>
               <p>{t("visit.part1.part4")}</p>
               <p>{t("visit.part1.part5")}</p>
               <p>{t("visit.part1.part6")}</p>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="jetty9" />
+                <R2Image namespace={namespace} name="bako-national-park-coastal-cliffs" aspectRatio={16 / 9} />
               </ImageAsLandscape>
               <p>{t("visit.part1.part7")}</p>
               <p>{t("visit.part1.part8")}</p>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="jetty10" />
+                <R2Image namespace={namespace} name="bako-national-park-conservation-sign" aspectRatio={16 / 9} />
               </ImageAsLandscape>
             </SectionContent>
           </section>
@@ -248,7 +252,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part2.part2")}</p>
               <p>{t("visit.part2.part3")}</p>
               <ImageAsPortrait>
-                <BakoNationalParkImages image="welcome" />
+                <R2Image namespace={namespace} name="bako-entrance-welcome-sign" aspectRatio={2 / 3} />
               </ImageAsPortrait>
               <p>{t("visit.part2.part4")}</p>
               <p>{t("visit.part2.part5")}</p>
@@ -264,10 +268,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part3.part2")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <BakoNationalParkImages image="trek" />
+                  <R2Image namespace={namespace} name="bako-national-park-trail-map" aspectRatio={9 / 16} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="trek2" />
+                  <R2Image namespace={namespace} name="bako-national-park-trail-board" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part3.part3")}</p>
@@ -304,7 +308,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part3.part34")}</p>
               <p>{t("visit.part3.part35")}</p>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="trek3" />
+                <R2Image namespace={namespace} name="bako-trail-wooden-signpost-directions" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <Divider
                 css={css`
@@ -327,8 +331,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part4.part1")}</p>
               <p>{t("visit.part4.part2")}</p>
               <TwoImagesSameSizeOrToGroup>
-                <BakoNationalParkImages image="flora" />
-                <BakoNationalParkImages image="flora2" />
+                <R2Image namespace={namespace} name="bako-park-wooden-bridge-walkway" aspectRatio={3 / 4} />
+                <R2Image namespace={namespace} name="bako-rainforest-boardwalk-bridge" aspectRatio={3 / 4} />
               </TwoImagesSameSizeOrToGroup>
               <p>{t("visit.part4.part3")}</p>
               <p>{t("visit.part4.part4")}</p>
@@ -336,61 +340,61 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part4.part6")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="flora3" />
+                  <R2Image namespace={namespace} name="bako-rainforest-hiking-trail-markers" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                  <BakoNationalParkImages image="flora4" />
-                  <BakoNationalParkImages image="flora5" />
+                  <R2Image namespace={namespace} name="bako-hiking-staircase-trail" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="bako-jungle-trail-tree-roots" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                  <BakoNationalParkImages image="flora6" />
-                  <BakoNationalParkImages image="flora7" />
+                  <R2Image namespace={namespace} name="bako-jungle-twisted-liana-vine" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="bako-trail-handrail-jungle-steps" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                  <BakoNationalParkImages image="flora8" />
-                  <BakoNationalParkImages image="flora9" />
+                  <R2Image namespace={namespace} name="bako-national-park-root-trail" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="bako-national-park-root-path" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                  <BakoNationalParkImages image="flora10" />
-                  <BakoNationalParkImages image="flora11" />
+                  <R2Image namespace={namespace} name="bako-park-wooden-boardwalk-footprints" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="bako-jungle-trail-log" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="flora12" />
+                  <R2Image namespace={namespace} name="bako-national-park-jungle-roots" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part4.part7")}</p>
               <GroupOfImages>
                 <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                  <BakoNationalParkImages image="flora13" />
-                  <BakoNationalParkImages image="flora14" />
+                  <R2Image namespace={namespace} name="bako-mangrove-roots-mudflat" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="bako-national-park-coastal-creek" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="flora15" />
+                  <R2Image namespace={namespace} name="bako-national-park-mangrove-trees" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="flora16" />
+                  <R2Image namespace={namespace} name="bako-mangrove-trees-coastal-water" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part4.part8")}</p>
               <p>{t("visit.part4.part9")}</p>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="flora17" />
+                <R2Image namespace={namespace} name="bako-rafflesia-flower-jungle-floor" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit.part4.part10")}</p>
               <TwoImagesSameSizeOrToGroup>
-                <BakoNationalParkImages image="flora18" />
-                <BakoNationalParkImages image="flora19" />
+                <R2Image namespace={namespace} name="bako-jungle-yellow-flowers-tree" aspectRatio={9 / 16} />
+                <R2Image namespace={namespace} name="bako-pandanus-tree-red-fruit" aspectRatio={9 / 16} />
               </TwoImagesSameSizeOrToGroup>
               <p>{t("visit.part4.part11")}</p>
               <p>{t("visit.part4.part12")}</p>
               <p>{t("visit.part4.part13")}</p>
               <GroupOfImages>
                 <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                  <BakoNationalParkImages image="flora20" />
-                  <BakoNationalParkImages image="flora21" />
+                  <R2Image namespace={namespace} name="bako-national-park-canopy-cliff" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="bako-national-park-jungle-trees" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="flora22" />
+                  <R2Image namespace={namespace} name="bako-trail-sign-ferns" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part4.part14")}</p>
@@ -403,52 +407,52 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <SectionContent>
               <p>{t("visit.part5.part1")}</p>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="beach" />
+                <R2Image namespace={namespace} name="bako-coastal-jungle-palm-trees" aspectRatio={16 / 9} />
               </ImageAsLandscape>
               <p>{t("visit.part5.part2")}</p>
               <p>{t("visit.part5.part3")}</p>
               <p>{t("visit.part5.part4")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="beach2" />
+                  <R2Image namespace={namespace} name="bako-national-park-sandstone-beach" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroupContainOnSmallScreen>
-                  <BakoNationalParkImages image="beach3" />
-                  <BakoNationalParkImages image="beach4" />
+                  <R2Image namespace={namespace} name="bako-beach-sand-rock-cliff" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="bako-national-park-sandstone-cliff" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroupContainOnSmallScreen>
                 <ImageAsPortrait>
-                  <BakoNationalParkImages image="beach5" />
+                  <R2Image namespace={namespace} name="bako-national-park-rock-stack" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="beach6" />
+                  <R2Image namespace={namespace} name="bako-rock-formation-sea-stack" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="beach7" />
+                  <R2Image namespace={namespace} name="bako-sandstone-cliffs-rocky-beach" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="beach8" />
+                  <R2Image namespace={namespace} name="bako-sandstone-cliff-jungle-beach" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="beach9" />
+                  <R2Image namespace={namespace} name="bako-beach-sandstone-cliff" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="beach10" />
+                  <R2Image namespace={namespace} name="bako-national-park-sea-stacks" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="beach11" />
+                  <R2Image namespace={namespace} name="bako-coastal-mangrove-tree" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="beach12" />
+                  <R2Image namespace={namespace} name="bako-beach-rock-formation-coast" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="beach13" />
+                  <R2Image namespace={namespace} name="bako-national-park-sea-stacks-2" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part5.part5")}</p>
               <p>{t("visit.part5.part6")}</p>
               <p>{t("visit.part5.part7")}</p>
               <Panorama>
-                <BakoNationalParkImages image="beach14" />
+                <R2Image namespace={namespace} name="bako-national-park-beach-panorama" aspectRatio={6.607} />
               </Panorama>
             </SectionContent>
           </section>
@@ -466,16 +470,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part6.part7")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="proboscisMonkey" />
+                  <R2Image namespace={namespace} name="bako-proboscis-monkey-canopy" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="proboscisMonkey2" />
+                  <R2Image namespace={namespace} name="bako-proboscis-monkey-tree-branch" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="proboscisMonkey3" />
+                  <R2Image namespace={namespace} name="bako-proboscis-monkey-tree-canopy-2" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="proboscisMonkey4" />
+                  <R2Image namespace={namespace} name="bako-proboscis-monkey-tree" aspectRatio={1.56} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part6.part8")}</p>
@@ -484,51 +488,51 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part6.part11")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="crabEatingMacaque" />
+                  <R2Image namespace={namespace} name="bako-macaques-grassy-clearing-trees" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="crabEatingMacaque2" />
+                  <R2Image namespace={namespace} name="bako-national-park-macaque-monkeys" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="crabEatingMacaque3" />
+                  <R2Image namespace={namespace} name="bako-macaque-monkeys-grassy-pathway" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="crabEatingMacaque4" />
+                  <R2Image namespace={namespace} name="bako-macaque-monkey-green-grass" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part6.part12")}</p>
               <p>{t("visit.part6.part13")}</p>
               <GroupOfImages>
                 <TwoImagesSameSizeOrToGroup>
-                  <BakoNationalParkImages image="boar" />
-                  <BakoNationalParkImages image="boar2" />
+                  <R2Image namespace={namespace} name="bako-bearded-pig-jungle-undergrowth" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="bako-bearded-pig-forest-foliage" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="boar3" />
+                  <R2Image namespace={namespace} name="bako-bearded-pig-underbrush" aspectRatio={1.17} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part6.part14")}</p>
               <p>{t("visit.part6.part15")}</p>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="snake" />
+                <R2Image namespace={namespace} name="bako-whip-snake-foliage" aspectRatio={3 / 2} />
               </ImageAsLandscape>
               <p>{t("visit.part6.part16")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="crab" />
+                  <R2Image namespace={namespace} name="bako-fiddler-crab-mangrove-mudflat" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="crab2" />
+                  <R2Image namespace={namespace} name="bako-fiddler-crab-orange-claw" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part6.part17")}</p>
               <p>{t("visit.part6.part18")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="colugo" />
+                  <R2Image namespace={namespace} name="bako-colugo-rainforest-canopy" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <BakoNationalParkImages image="colugo2" />
+                  <R2Image namespace={namespace} name="bako-flying-lemur-trunk" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <PetitCarreColore>
@@ -546,7 +550,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 </p>
               </PetitCarreColore>
               <ImageAsLandscape>
-                <BakoNationalParkImages image="squirrel" />
+                <R2Image namespace={namespace} name="bako-squirrel-tree-branch" aspectRatio={3 / 2} />
               </ImageAsLandscape>
               <Divider
                 css={css`
@@ -578,12 +582,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes:
               i18n.languageCode === "fr"
                 ? [
-                    <BakoNationalParkImages image="cardFr1" key="cardFr1" />,
-                    <BakoNationalParkImages image="cardFr2" key="cardFr1" />,
+                    <img src={cardFr1} key="cardFr1" alt="Carte Pinterest : Parc National de Bako" />,
+                    <img src={cardFr2} key="cardFr2" alt="Carte Pinterest : Parc National de Bako" />,
                   ]
                 : [
-                    <BakoNationalParkImages image="cardEn1" key="cardEn1" />,
-                    <BakoNationalParkImages image="cardEn2" key="cardEn1" />,
+                    <img src={cardEn1} key="cardFr1" alt="Pinterest Card: Bako National Park" />,
+                    <img src={cardEn2} key="cardFr1" alt="Pinterest Card: Bako National Park" />,
                   ],
           }}
         />

@@ -211,7 +211,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <p>{t("visit.part3")}</p>
             <p>{t("visit.part4")}</p>
             <ImageAsLandscape>
-              <R2Image namespace="asia/cambodia/angkor-wat" name="angkor-wat-hot-air-balloon" aspectRatio={3 / 2} />
+              <R2Image namespace={namespace} name="angkor-wat-hot-air-balloon" aspectRatio={3 / 2} />
             </ImageAsLandscape>
             <p>{t("visit.part5")}</p>
           </SectionContent>
@@ -229,89 +229,37 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit1.part6")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-temple-towers-palms"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="angkor-wat-temple-towers-palms" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-wooden-walkway-sanctuary"
-                    aspectRatio={9 / 16}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-entrance-staircase-lions"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="angkor-wat-wooden-walkway-sanctuary" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="angkor-wat-entrance-staircase-lions" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-staircase-lion-statues"
-                    aspectRatio={4 / 3}
-                  />
+                  <R2Image namespace={namespace} name="angkor-wat-staircase-lion-statues" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-stone-library-pavilion"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-stone-gallery-tower"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="angkor-wat-stone-library-pavilion" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="angkor-wat-stone-gallery-tower" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <Panorama>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-outer-gallery-courtyard"
-                    aspectRatio={3.628}
-                  />
+                  <R2Image namespace={namespace} name="angkor-wat-outer-gallery-courtyard" aspectRatio={3.628} />
                 </Panorama>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-apsara-wall-carvings"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="angkor-wat-apsara-wall-carvings" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-corbelled-stone-archway"
-                    aspectRatio={5 / 9}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-apsara-wall-relief"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="angkor-wat-corbelled-stone-archway" aspectRatio={5 / 9} />
+                  <R2Image namespace={namespace} name="angkor-wat-apsara-wall-relief" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-apsara-carvings-relief"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="angkor-wat-apsara-carvings-relief" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-bas-relief-battle-carvings"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="angkor-wat-bas-relief-battle-carvings" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-wat-macaque-monkeys-roof"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="angkor-wat-macaque-monkeys-roof" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -330,25 +278,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   <SharedCardCambodiaImages image="angkorWat" />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-thom-stone-face-gate"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="angkor-thom-stone-face-gate" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-thom-moat-jungle-reflection"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="angkor-thom-moat-jungle-reflection" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-thom-asura-statues-causeway"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="angkor-thom-asura-statues-causeway" aspectRatio={9 / 16} />
                 </ImageAsPortrait>
               </GroupOfImages>
             </SectionContent>
@@ -366,51 +302,23 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit3.part5")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bayon-temple-smiling-face-tower"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="bayon-temple-smiling-face-tower" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bayon-temple-towers-stone-faces"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="bayon-temple-towers-stone-faces" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bayon-temple-tower-face-carvings"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="bayon-temple-tower-face-carvings" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bayon-temple-carved-face-closeup"
-                    aspectRatio={9 / 16}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bayon-temple-wooden-stairs-tower"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="bayon-temple-carved-face-closeup" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="bayon-temple-wooden-stairs-tower" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bayon-apsara-carvings-stone-pillar"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="bayon-apsara-carvings-stone-pillar" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="phimeanakas-temple-stepped-pyramid-ruins"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="phimeanakas-temple-stepped-pyramid-ruins" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -425,23 +333,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit4.part2")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-temple-ruins-jungle-clearing"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="angkor-temple-ruins-jungle-clearing" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-temple-stone-carved-tower"
-                    aspectRatio={9 / 16}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="angkor-temple-sand-courtyard-pavilions"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="angkor-temple-stone-carved-tower" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="angkor-temple-sand-courtyard-pavilions" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
             </SectionContent>
@@ -457,25 +353,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit5.part3")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="ta-keo-temple-mountain-pyramid"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="ta-keo-temple-mountain-pyramid" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="ta-keo-sandstone-temple-terraces"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="ta-keo-sandstone-temple-terraces" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="ta-keo-stone-staircase-entrance"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="ta-keo-stone-staircase-entrance" aspectRatio={9 / 16} />
                 </ImageAsPortrait>
               </GroupOfImages>
             </SectionContent>
@@ -494,28 +378,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit6.part6")}</p>
               <GroupOfImages>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="ta-prohm-tree-growing-wall"
-                    aspectRatio={9 / 16}
-                  />
-                  <R2Image namespace="asia/cambodia/angkor-wat" name="ta-prohm-tree-stump-ruins" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="ta-prohm-tree-growing-wall" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="ta-prohm-tree-stump-ruins" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image namespace="asia/cambodia/angkor-wat" name="ta-prohm-tree-roots-ruins" aspectRatio={9 / 16} />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="ta-prohm-lion-guardian-statue"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="ta-prohm-tree-roots-ruins" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="ta-prohm-lion-guardian-statue" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image namespace="asia/cambodia/angkor-wat" name="ta-prohm-spung-tree-roots" aspectRatio={3 / 4} />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="ta-prohm-stone-tower-roots"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="ta-prohm-spung-tree-roots" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="ta-prohm-stone-tower-roots" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
             </SectionContent>
@@ -531,54 +403,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit7.part3")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="preah-khan-stone-entrance-gopura-tower"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="preah-khan-stone-entrance-gopura-tower" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="preah-khan-entrance-stone-causeway"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="preah-khan-tree-roots-ruins"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="preah-khan-entrance-stone-causeway" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="preah-khan-tree-roots-ruins" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="preah-khan-headless-statue-guardian"
-                    aspectRatio={9 / 16}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="preah-khan-headless-sculpture-pedestal"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="preah-khan-headless-statue-guardian" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="preah-khan-headless-sculpture-pedestal" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="preah-khan-deity-bas-relief"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="preah-khan-deity-bas-relief" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="preah-khan-ruined-corridor-mossy-stone"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="preah-khan-corridor-stone-doorways"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="preah-khan-ruined-corridor-mossy-stone" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="preah-khan-corridor-stone-doorways" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
             </SectionContent>
@@ -593,47 +433,23 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit8.part2")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="neak-pean-pond-temple-reflection"
-                    aspectRatio={2}
-                  />
+                  <R2Image namespace={namespace} name="neak-pean-pond-temple-reflection" aspectRatio={2} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="neak-pean-sacred-pool-reflections"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image namespace="asia/cambodia/angkor-wat" name="neak-pean-palm-tree-pond" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="neak-pean-sacred-pool-reflections" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="neak-pean-palm-tree-pond" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsPortrait>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="neak-pean-flooded-reservoir-trees"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="neak-pean-flooded-reservoir-trees" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="neak-pean-baray-submerged-trees"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="neak-pean-baray-submerged-trees" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="neak-pean-lotus-flower-reflection"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="neak-pean-lotus-flower-reflection" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="neak-pean-stone-shrine-roots"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="neak-pean-stone-shrine-roots" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -649,29 +465,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit9.part3")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <R2Image namespace="asia/cambodia/angkor-wat" name="ta-som-gopura-gate-roots" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="ta-som-gopura-gate-roots" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsPortrait>
-                  <R2Image namespace="asia/cambodia/angkor-wat" name="ta-som-tree-face-tower" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="ta-som-tree-face-tower" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="ta-som-carved-stone-figures"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="ta-som-carved-stone-figures" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="ta-som-courtyard-carved-doorway"
-                    aspectRatio={9 / 16}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="ta-som-apsara-carving-niche"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="ta-som-courtyard-carved-doorway" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="ta-som-apsara-carving-niche" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
             </SectionContent>
@@ -686,35 +490,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit10.part2")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="east-mebon-stone-elephant-sculpture"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="east-mebon-stone-elephant-sculpture" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="east-mebon-elephant-statue-towers"
-                    aspectRatio={9 / 16}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="east-mebon-sanctuary-tower-terrace"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="east-mebon-elephant-statue-towers" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="east-mebon-sanctuary-tower-terrace" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="east-mebon-guardian-lion-statue"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="east-mebon-laterite-balustraded-windows"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="east-mebon-guardian-lion-statue" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="east-mebon-laterite-balustraded-windows" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
             </SectionContent>
@@ -729,49 +513,21 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit11.part2")}</p>
               <GroupOfImages>
                 <Panorama>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="pre-rup-upper-terrace-towers"
-                    aspectRatio={3.348}
-                  />
+                  <R2Image namespace={namespace} name="pre-rup-upper-terrace-towers" aspectRatio={3.348} />
                 </Panorama>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="pre-rup-dirt-pathway-stone-walls"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="pre-rup-brick-tower-courtyard"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="pre-rup-dirt-pathway-stone-walls" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="pre-rup-brick-tower-courtyard" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="pre-rup-brick-tower-stone-doorway"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="pre-rup-wooden-walkway-ruined-gateways"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="pre-rup-brick-tower-stone-doorway" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="pre-rup-wooden-walkway-ruined-gateways" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="pre-rup-temple-ruins-overlook"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="pre-rup-temple-ruins-overlook" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="pre-rup-temple-jungle-surroundings"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="pre-rup-temple-jungle-surroundings" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -786,47 +542,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit12.part2")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="banteay-kdei-temple-tree-roots"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="banteay-kdei-temple-tree-roots" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="banteay-kdei-tree-tower-roots"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="banteay-kdei-sand-courtyard-ruins"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="banteay-kdei-tree-tower-roots" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="banteay-kdei-sand-courtyard-ruins" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="banteay-kdei-tree-root-ruins"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="banteay-kdei-doorway-stone-corridor"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="banteay-kdei-tree-root-ruins" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="banteay-kdei-doorway-stone-corridor" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="banteay-kdei-stone-corridor-pillars"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="banteay-kdei-apsara-dancing-carvings"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="banteay-kdei-stone-corridor-pillars" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="banteay-kdei-apsara-dancing-carvings" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
             </SectionContent>
@@ -841,49 +569,21 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit13.part2")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="prasat-kravan-brick-towers-terrace"
-                    aspectRatio={4 / 3}
-                  />
+                  <R2Image namespace={namespace} name="prasat-kravan-brick-towers-terrace" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="prasat-kravan-brick-towers-platform"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="prasat-kravan-red-brick-towers"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="prasat-kravan-brick-towers-platform" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="prasat-kravan-red-brick-towers" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsPortrait>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="prasat-kravan-brick-tower-corridor"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="prasat-kravan-brick-tower-corridor" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="prasat-kravan-stone-carved-lintel"
-                    aspectRatio={16 / 9}
-                  />
+                  <R2Image namespace={namespace} name="prasat-kravan-stone-carved-lintel" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="prasat-kravan-brick-bas-relief-lakshmi"
-                    aspectRatio={9 / 16}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="prasat-kravan-female-deity-wall-carving"
-                    aspectRatio={9 / 16}
-                  />
+                  <R2Image namespace={namespace} name="prasat-kravan-brick-bas-relief-lakshmi" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="prasat-kravan-female-deity-wall-carving" aspectRatio={9 / 16} />
                 </TwoImagesSameSizeOrToGroup>
               </GroupOfImages>
               <p>{t("visit13.part3")}</p>
@@ -901,42 +601,18 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit14.part4")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bakong-temple-stone-gopura-entrance"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="bakong-temple-stone-gopura-entrance" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bakong-temple-paved-stone-terrace"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bakong-temple-courtyard-stone-lion"
-                    aspectRatio={3 / 4}
-                  />
+                  <R2Image namespace={namespace} name="bakong-temple-paved-stone-terrace" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="bakong-temple-courtyard-stone-lion" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bakong-temple-brick-prasat-tower"
-                    aspectRatio={3 / 4}
-                  />
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bakong-temple-devata-sculpture-carving"
-                    aspectRatio={2 / 3}
-                  />
+                  <R2Image namespace={namespace} name="bakong-temple-brick-prasat-tower" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="bakong-temple-devata-sculpture-carving" aspectRatio={2 / 3} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <R2Image
-                    namespace="asia/cambodia/angkor-wat"
-                    name="bakong-temple-devata-brick-niche"
-                    aspectRatio={3 / 2}
-                  />
+                  <R2Image namespace={namespace} name="bakong-temple-devata-brick-niche" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
