@@ -29,15 +29,19 @@ import KoalaGardens from "../../../../images/oceania/australia/queensland/kurand
 import Riverboat from "../../../../images/oceania/australia/queensland/kuranda-village/riverboat.jpg"
 import ScenicRailway from "../../../../images/oceania/australia/queensland/kuranda-village/scenic-railway.jpg"
 import Skyrail from "../../../../images/oceania/australia/queensland/kuranda-village/skyrail.jpg"
+import cardFr1 from "../../../../images/oceania/australia/queensland/kuranda-village/card-fr1.jpg"
+import cardFr2 from "../../../../images/oceania/australia/queensland/kuranda-village/card-fr2.jpg"
+import cardEn1 from "../../../../images/oceania/australia/queensland/kuranda-village/card-en1.jpg"
+import cardEn2 from "../../../../images/oceania/australia/queensland/kuranda-village/card-en2.jpg"
 import {
   GroupOfImages,
   ImageAsLandscape,
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
+  R2Image,
 } from "../../../../components/images/layout"
 import { SharedCardAustraliaImages } from "../../../../components/images/oceania/australia/shared-card-australia-images"
-import { KurandaVillageImages } from "../../../../components/images/oceania/australia/queensland/kuranda-village"
 import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { BasicTourCard } from "../../../../components/core/get-your-guide"
 import { css } from "@emotion/react"
@@ -98,7 +102,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where-to-have.part1")}</p>
           <p>{t("where-to-have.part2")}</p>
           <ImageAsLandscape>
-            <KurandaVillageImages image="restaurant" />
+            <R2Image namespace={namespace} name="kuranda-french-crepes-sign-foliage" aspectRatio={3 / 2} />
           </ImageAsLandscape>
           <p>{t("where-to-have.part3")}</p>
         </WhereToHave>
@@ -125,7 +129,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part2.part2")}</p>
               <p>{t("visit.part2.part3")}</p>
               <ImageAsLandscape>
-                <KurandaVillageImages image="railway" />
+                <R2Image namespace={namespace} name="kuranda-scenic-railway-train-bridge" aspectRatio={3 / 2} />
               </ImageAsLandscape>
             </SectionContent>
           </section>
@@ -138,7 +142,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part3.part2")}</p>
               <p>{t("visit.part3.part3")}</p>
               <ImageAsLandscape>
-                <KurandaVillageImages image="skyrail" />
+                <R2Image namespace={namespace} name="kuranda-skyrail-gondola-barron-river" aspectRatio={1.6} />
               </ImageAsLandscape>
             </SectionContent>
           </section>
@@ -152,52 +156,60 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part4.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="butterfly" />
+                  <R2Image
+                    namespace={namespace}
+                    name="butterfly-sanctuary-kuranda-black-butterfly"
+                    aspectRatio={3 / 2}
+                  />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="butterfly2" />
+                  <R2Image namespace={namespace} name="kuranda-butterfly-blue-spots-log" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscapeOnTheLeft>
-                  <KurandaVillageImages image="butterfly3" />
+                  <R2Image namespace={namespace} name="kuranda-butterfly-hanging-silk-thread" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <KurandaVillageImages image="butterfly4" />
+                  <R2Image namespace={namespace} name="kuranda-butterfly-electric-blue-rock" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheRight>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="butterfly5" />
+                  <R2Image namespace={namespace} name="kuranda-butterfly-orange-patterned-leaf" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part4.part4")}</p>
               <p>{t("visit.part4.part5")}</p>
               <GroupOfImages>
                 <ImageAsLandscapeOnTheLeft>
-                  <KurandaVillageImages image="butterfly6" />
+                  <R2Image namespace={namespace} name="kuranda-cairns-birdwing-green-wing" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <KurandaVillageImages image="butterfly7" />
+                  <R2Image namespace={namespace} name="kuranda-cairns-birdwing-macro-foliage" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
               <p>{t("visit.part4.part6")}</p>
               <p>{t("visit.part4.part7")}</p>
-              <ImageAsLandscapeOnTheLeft>
-                <KurandaVillageImages image="butterfly8" />
-              </ImageAsLandscapeOnTheLeft>
+              <ImageAsLandscape>
+                <R2Image namespace={namespace} name="kuranda-swallowtail-butterflies-mating-fern" aspectRatio={3 / 2} />
+              </ImageAsLandscape>
               <p>{t("visit.part4.part8")}</p>
               <p>{t("visit.part4.part9")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="butterfly9" />
+                  <R2Image namespace={namespace} name="kuranda-butterfly-dark-wings-fern" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="butterfly10" />
+                  <R2Image
+                    namespace={namespace}
+                    name="butterfly-sanctuary-kuranda-lacewing-butterfly"
+                    aspectRatio={3 / 2}
+                  />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="butterfly11" />
+                  <R2Image namespace={namespace} name="kuranda-butterfly-orange-striped-leaf" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part4.part10")}</p>
               <ImageAsLandscape>
-                <KurandaVillageImages image="butterfly12" />
+                <R2Image namespace={namespace} name="kuranda-butterfly-resting-visitor-shoulder" aspectRatio={3 / 2} />
               </ImageAsLandscape>
             </SectionContent>
           </section>
@@ -210,71 +222,71 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part5.part2")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird" />
+                  <R2Image namespace={namespace} name="kuranda-birdworld-macaw-eating-nut" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird2" />
+                  <R2Image namespace={namespace} name="birdworld-kuranda-rainbow-lorikeet-perch" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part5.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird4" />
+                  <R2Image namespace={namespace} name="birdworld-kuranda-galah-cockatoo-feeder" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird5" />
+                  <R2Image namespace={namespace} name="birdworld-kuranda-pink-galah-branches" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscapeOnTheLeft>
-                  <KurandaVillageImages image="bird3" />
+                  <R2Image namespace={namespace} name="birdworld-kuranda-black-cockatoo-roof" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <KurandaVillageImages image="bird6" />
+                  <R2Image namespace={namespace} name="birdworld-kuranda-pink-cockatoos-trunk" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
               <p>{t("visit.part5.part4")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird7" />
+                  <R2Image namespace={namespace} name="birdworld-kuranda-green-parrot-perch" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird8" />
+                  <R2Image namespace={namespace} name="birdworld-kuranda-sun-conure-branch" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscapeOnTheLeft>
-                  <KurandaVillageImages image="bird9" />
+                  <R2Image namespace={namespace} name="birdworld-kuranda-black-capped-lory" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <KurandaVillageImages image="bird10" />
+                  <R2Image namespace={namespace} name="kuranda-birdworld-green-parrot-perched" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheRight>
                 <ImageAsLandscapeOnTheLeft>
-                  <KurandaVillageImages image="bird11" />
+                  <R2Image namespace={namespace} name="kuranda-birdworld-blue-parakeet-branch" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <KurandaVillageImages image="bird12" />
+                  <R2Image namespace={namespace} name="kuranda-birdworld-yellow-parrot-preening" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheRight>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird13" />
+                  <R2Image namespace={namespace} name="kuranda-birdworld-dark-bowerbird-leaves" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird14" />
+                  <R2Image namespace={namespace} name="kuranda-birdworld-black-swan-ducks" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird15" />
+                  <R2Image namespace={namespace} name="kuranda-birdworld-radjah-shelduck-sand" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird16" />
+                  <R2Image namespace={namespace} name="kuranda-birdworld-glossy-ibis-log" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="bird17" />
+                  <R2Image namespace={namespace} name="kuranda-birdworld-sun-conure-hollow" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part5.part5")}</p>
               <ImageAsLandscape>
-                <KurandaVillageImages image="bird18" />
+                <R2Image namespace={namespace} name="kuranda-birdworld-cassowary-lush-foliage" aspectRatio={3 / 2} />
               </ImageAsLandscape>
               <p>{t("visit.part5.part6")}</p>
               <p>{t("visit.part5.part7")}</p>
               <ImageAsPortrait>
-                <KurandaVillageImages image="bird19" />
+                <R2Image namespace={namespace} name="kuranda-birdworld-rail-stone-path" aspectRatio={3 / 4} />
               </ImageAsPortrait>
             </SectionContent>
           </section>
@@ -289,46 +301,50 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part6.part4")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="animal" />
+                  <R2Image
+                    namespace={namespace}
+                    name="kuranda-koala-gardens-freshwater-crocodile"
+                    aspectRatio={3 / 2}
+                  />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="animal2" />
+                  <R2Image namespace={namespace} name="kuranda-koala-gardens-crocodiles-rocks" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part6.part5")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="animal3" />
+                  <R2Image namespace={namespace} name="kuranda-koala-gardens-water-dragon" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="animal4" />
+                  <R2Image namespace={namespace} name="kuranda-koala-gardens-lizard-log" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="animal5" />
+                  <R2Image namespace={namespace} name="kuranda-koala-gardens-turtle-rock" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit.part6.part6")}</p>
               <p>{t("visit.part6.part7")}</p>
               <ImageAsLandscape>
-                <KurandaVillageImages image="animal6" />
+                <R2Image namespace={namespace} name="kuranda-koala-gardens-sleeping-koalas" aspectRatio={3 / 2} />
               </ImageAsLandscape>
               <p>{t("visit.part6.part8")}</p>
               <p>{t("visit.part6.part9")}</p>
               <p>{t("visit.part6.part10")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <KurandaVillageImages image="animal7" />
+                  <R2Image namespace={namespace} name="kuranda-koala-gardens-quokka-sleeping" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscapeOnTheLeft>
-                  <KurandaVillageImages image="animal8" />
+                  <R2Image namespace={namespace} name="kuranda-koala-gardens-wombat-log" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <KurandaVillageImages image="animal9" />
+                  <R2Image namespace={namespace} name="kuranda-gardens-wombat-mossy-burrow" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
               <p>{t("visit.part6.part11")}</p>
               <ImageAsLandscape>
-                <KurandaVillageImages image="animal10" />
+                <R2Image namespace={namespace} name="kuranda-koala-gardens-wallabies-enclosure" aspectRatio={3 / 2} />
               </ImageAsLandscape>
               <p>{t("visit.part6.part12")}</p>
             </SectionContent>
@@ -457,13 +473,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("how-much.part23")}</p>
           <GroupOfImages>
             <ImageAsLandscape>
-              <KurandaVillageImages image="overview" />
+              <R2Image namespace={namespace} name="kuranda-lookout-hinterland-coast-view" aspectRatio={4 / 3} />
             </ImageAsLandscape>
             <ImageAsLandscape>
-              <KurandaVillageImages image="overview2" />
+              <R2Image namespace={namespace} name="kuranda-lookout-mountain-valley-view" aspectRatio={4 / 3} />
             </ImageAsLandscape>
             <ImageAsLandscape>
-              <KurandaVillageImages image="overview3" />
+              <R2Image namespace={namespace} name="kuranda-lookout-coastal-ocean-view" aspectRatio={4 / 3} />
             </ImageAsLandscape>
           </GroupOfImages>
           <p>{t("how-much.part24")}</p>
@@ -485,12 +501,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes:
               i18n.languageCode === "fr"
                 ? [
-                    <KurandaVillageImages image="cardFr1" key="cardFr1" />,
-                    <KurandaVillageImages image="cardFr2" key="cardFr1" />,
+                    <img src={cardFr1} key="cardFr1" alt="Carte Pinterest : Kuranda Village" />,
+                    <img src={cardFr2} key="cardFr2" alt="Carte Pinterest : Kuranda Village" />,
                   ]
                 : [
-                    <KurandaVillageImages image="cardEn1" key="cardEn1" />,
-                    <KurandaVillageImages image="cardEn2" key="cardEn1" />,
+                    <img src={cardEn1} key="cardEn1" alt="Pinterest Card: Kuranda Village" />,
+                    <img src={cardEn2} key="cardEn2" alt="Pinterest Card: Kuranda Village" />,
                   ],
           }}
         />
