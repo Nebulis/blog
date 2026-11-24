@@ -110,15 +110,26 @@ function sanitizeSlug(slug) {
     .replace(/^-|-$/g, '');
 }
 
-function deduplicateSlugs(results) {
+function deduplicateSlugs(results, existingManifest = []) {
   const seen = new Map();
+
+  // Pre-populate with slugs from existing manifest to prevent collisions across runs
+  for (const entry of existingManifest) {
+    if (entry.slug) {
+      seen.set(entry.slug, 1);
+    }
+  }
+
   return results.map(r => {
     let slug = r.slug;
-    const count = seen.get(slug) || 0;
-    if (count > 0) {
-      slug = `${slug}-${count + 1}`;
+    if (seen.has(slug)) {
+      let count = 2;
+      while (seen.has(`${slug}-${count}`)) {
+        count++;
+      }
+      slug = `${slug}-${count}`;
     }
-    seen.set(r.slug, count + 1);
+    seen.set(slug, 1);
     return { ...r, slug };
   });
 }
@@ -148,12 +159,14 @@ const GEMINI_SCHEMA = {
 const GEMINI_TIMEOUT_MS = 60000; // 60 second timeout per request
 
 function withTimeout(promise, ms, label) {
-  return Promise.race([
-    promise,
-    new Promise((_, reject) =>
-      setTimeout(() => reject(new Error(`${label} timeout after ${ms}ms`)), ms)
-    ),
-  ]);
+  let timer;
+  const timeoutPromise = new Promise((_, reject) => {
+    timer = setTimeout(() => reject(new Error(`${label} timeout after ${ms}ms`)), ms);
+  });
+
+  return Promise.race([promise, timeoutPromise]).finally(() => {
+    clearTimeout(timer);
+  });
 }
 
 async function generateWithFallback(genai, contentParts, config) {
@@ -173,7 +186,7 @@ async function generateWithFallback(genai, contentParts, config) {
         const isTransient =
           err.status === 503 ||
           err.status === 429 ||
-          /503|429|UNAVAILABLE|high demand|RESOURCE_EXHAUSTED/i.test(err.message);
+          /503|429|UNAVAILABLE|high demand|RESOURCE_EXHAUSTED|timeout/i.test(err.message);
         const isNotFound = err.status === 404 || /404|NOT_FOUND/i.test(err.message);
 
         if (isNotFound) {
@@ -327,7 +340,7 @@ async function processImages() {
   return allImages;
 }
 
-async function processGeminiBatches(images) {
+async function processGeminiBatches(images, existingManifest = []) {
   console.log('\n=== PASS 2: Batched Gemini API Calls ===');
   
   if (!genai) {
@@ -341,6 +354,7 @@ async function processGeminiBatches(images) {
   }
   
   const results = [];
+  const failedFiles = []; // Track all failed files across batches
   const batches = [];
   
   for (let i = 0; i < images.length; i += BATCH_SIZE) {
@@ -361,8 +375,11 @@ async function processGeminiBatches(images) {
       geminiResults = await callGeminiBatch(geminiBatch, CLI_CONTEXT);
     } catch (err) {
       // Batch failed - mark all images in this batch as failed, do NOT add to results
-      const failedFiles = batch.map(b => b.originalFile);
-      console.error(`  ❌ Batch failed, marking ${failedFiles.length} images as failed`);
+      const batchFailedFiles = batch.map(b => b.originalFile);
+      console.error(`  ❌ Batch failed, marking ${batchFailedFiles.length} images as failed`);
+      
+      // Add to failed files array
+      failedFiles.push(...batchFailedFiles);
       
       // Write failed files to failed.json for retry
       const failedPath = path.join(UPLOAD_DIR, 'failed.json');
@@ -374,21 +391,50 @@ async function processGeminiBatches(images) {
       }
       const updatedFailed = [...new Set([...existingFailed, ...failedFiles])];
       fs.writeFileSync(path.join(UPLOAD_DIR, 'failed.json'), JSON.stringify(updatedFailed, null, 2));
-      console.log(`  📝 Added ${failedFiles.length} images to failed.json`);
+      console.log(`  📝 Added ${batchFailedFiles.length} images to failed.json`);
       
       // DO NOT add failed images to results - they should not be processed further
       continue;
     }
     
-    // Map results back to images (with index fallback in case Gemini trims extension)
-    for (let j = 0; j < batch.length; j++) {
-      const result = geminiResults.find(r => r.originalFile === batch[j].originalFile) || geminiResults[j];
+    // Map Gemini response items back to each image in the batch
+    // Reject images with missing or empty AI slug instead of using fallback
+    const batchMissing = [];
+    for (let idx = 0; idx < batch.length; idx++) {
+      const img = batch[idx];
+      const item =
+        geminiResults.find((p) => p.originalFile === img.originalFile) ||
+        geminiResults[idx];
+
+      const cleanSlug = item && item.slug ? sanitizeSlug(item.slug) : '';
+
+      // Reject missing or empty AI entries instead of using fallbackSlug
+      if (!item || !cleanSlug) {
+        console.log(`  ⚠️  Missing AI metadata for ${img.originalFile}, marking as failed`);
+        batchMissing.push(img.originalFile);
+        continue;
+      }
+
       results.push({
-        ...batch[j],
-        slug: result?.slug || sanitizeSlug(path.parse(batch[j].originalFile).name),
-        alt_en: result?.alt_en || '',
-        alt_fr: result?.alt_fr || '',
+        ...img,
+        slug: cleanSlug,
+        alt_en: (item.alt_en || '').trim(),
+        alt_fr: (item.alt_fr || '').trim(),
       });
+    }
+
+    if (batchMissing.length > 0) {
+      failedFiles.push(...batchMissing);
+      const failedPath = path.join(UPLOAD_DIR, 'failed.json');
+      let existingFailed = [];
+      if (fs.existsSync(failedPath)) {
+        try {
+          existingFailed = JSON.parse(fs.readFileSync(failedPath, 'utf-8'));
+        } catch {}
+      }
+      const updatedFailed = [...new Set([...existingFailed, ...batchMissing])];
+      fs.writeFileSync(path.join(UPLOAD_DIR, 'failed.json'), JSON.stringify(updatedFailed, null, 2));
+      console.log(`  📝 Added ${batchMissing.length} missing-metadata image(s) to failed.json`);
     }
     
     // Delay between batches to avoid rate limits
@@ -398,12 +444,13 @@ async function processGeminiBatches(images) {
     }
   }
   
-  // Deduplicate slugs
-  return deduplicateSlugs(results);
+  // Deduplicate slugs (including against existing manifest)
+  return deduplicateSlugs(results, existingManifest);
 }
 
 async function writeOutputs(results, existingManifest = []) {
   console.log('\n=== PASS 3: Write Outputs ===');
+  console.log(`  📝 Processing ${results.length} images...`);
   
   if (!fs.existsSync(UPLOAD_DIR)) {
     fs.mkdirSync(UPLOAD_DIR, { recursive: true });
@@ -415,10 +462,14 @@ async function writeOutputs(results, existingManifest = []) {
   if (fs.existsSync(snippetsPath)) {
     existingSnippets = fs.readFileSync(snippetsPath, 'utf-8').split('\n\n').filter(Boolean);
   }
+  // Fix: snippets use image="..." not name="..."
   const existingSnippetSlugs = new Set(existingSnippets.map(s => {
-    const match = s.match(/name="([^"]+)"/);
+    const match = s.match(/image="([^"]+)"/);
     return match ? match[1] : null;
   }).filter(Boolean));
+  
+  console.log(`  📂 Existing manifest: ${existingManifest.length} entries`);
+  console.log(`  📄 Existing snippets: ${existingSnippetSlugs.size} entries`);
   
   // Custom breakpoint mapping for small images
   // Maps source width to desired suffix (e.g., 1080 -> 'lg')
@@ -437,7 +488,10 @@ async function writeOutputs(results, existingManifest = []) {
   const newSnippets = [];
   const localeData = { en: {}, fr: {} };
   
-  for (const img of results) {
+  console.log(`  🔄 Generating WebP variants for ${results.length} images...`);
+  
+  for (let i = 0; i < results.length; i++) {
+    const img = results[i];
     const { slug, folderName, config, rotatedBuffer, metadata, simpleRatio, alt_en, alt_fr, originalFile } = img;
     const orientation = config.orientation;
     const breakpoints = config.breakpoints;
@@ -491,6 +545,7 @@ async function writeOutputs(results, existingManifest = []) {
     const skippedBreakpoints = breakpoints.filter(w => !validBreakpoints.includes(w));
     
     // Generate WebP variants
+    console.log(`  🖼️  [${i+1}/${results.length}] ${slug}: Generating ${validBreakpoints.length} WebP variants (${validBreakpoints.join(', ')}px)...`);
     for (const width of validBreakpoints) {
       const suffix = effectiveSuffixes[width];
       const outputPath = path.join(UPLOAD_DIR, `${slug}-${suffix}.webp`);
@@ -500,6 +555,7 @@ async function writeOutputs(results, existingManifest = []) {
         .webp({ quality: QUALITY })
         .toFile(outputPath);
     }
+    console.log(`  ✅ [${i+1}/${results.length}] ${slug}: WebP variants generated`);
     
     // Manifest entry
     const aspectRatio = metadata.width / metadata.height;
@@ -524,9 +580,9 @@ async function writeOutputs(results, existingManifest = []) {
     newManifest.push(manifestEntry);
     
     // Generate R2Image snippet (only if new)
-    if (!existingSnippetSlugs.has(slug)) {
+    const imagePath = LOCALE_PATH ? `${LOCALE_PATH}/${slug}` : slug;
+    if (!existingSnippetSlugs.has(imagePath)) {
       const props = [];
-      const imagePath = LOCALE_PATH ? `${LOCALE_PATH}/${slug}` : slug;
       props.push(`image="${imagePath}"`);
       props.push(`alt={t("photos.${slug}")}`); // Use translation key
       props.push(`orientation="${orientation}"`);
@@ -560,6 +616,7 @@ async function writeOutputs(results, existingManifest = []) {
   const allSnippets = [...existingSnippets, ...newSnippets];
   
   // Write manifest.json
+  console.log(`  💾 Writing manifest.json (${dedupedManifest.length} entries)...`);
   fs.writeFileSync(
     path.join(UPLOAD_DIR, 'manifest.json'),
     JSON.stringify(dedupedManifest, null, 2)
@@ -567,6 +624,7 @@ async function writeOutputs(results, existingManifest = []) {
   console.log(`  ✅ manifest.json written (${dedupedManifest.length} entries)`);
   
   // Write snippets.txt
+  console.log(`  💾 Writing snippets.txt (${allSnippets.length} entries)...`);
   fs.writeFileSync(
     path.join(UPLOAD_DIR, 'snippets.txt'),
     allSnippets.join('\n\n')
@@ -606,6 +664,7 @@ async function writeOutputs(results, existingManifest = []) {
         ...existing, 
         photos: sortObjectKeys(mergedPhotos) 
       };
+      console.log(`  💾 Writing ${lang}/${pageDir}/${pageFileName}...`);
       fs.writeFileSync(localeFile, JSON.stringify(merged, null, 2));
       console.log(`  ✅ ${lang}/${pageDir}/${pageFileName} updated with photos`);
     }
@@ -655,7 +714,7 @@ async function main() {
     imagesToProcess = images.filter(img => failedImages.includes(img.originalFile));
     if (imagesToProcess.length === 0) {
       console.log('✅ No failed images to retry');
-      return;
+      process.exit(0);
     }
   } else {
     // Skip already processed using originalFile -> slug mapping from manifest
@@ -666,16 +725,15 @@ async function main() {
   
   if (imagesToProcess.length === 0) {
     console.log('✅ Nothing to process');
-    return;
+    process.exit(0);
   }
   
   try {
-    const results = await processGeminiBatches(imagesToProcess);
+    const results = await processGeminiBatches(imagesToProcess, existingManifest);
     const manifest = await writeOutputs(results, existingManifest);
     
     // Update failed.json - track which files actually got AI results
     // Reload failed.json to include any newly failed images from this run
-    const failedPath = path.join(UPLOAD_DIR, 'failed.json');
     let currentFailed = [];
     if (fs.existsSync(failedPath)) {
       try {
@@ -700,8 +758,12 @@ async function main() {
       fs.rmSync(failedPath);
     }
     
-    console.log('\n✅ All images processed. Output in:', UPLOAD_DIR);
-    console.log(`   ${manifest.length} images with AI-generated names and alt texts`);
+    console.log('\n✅ All images processed successfully!');
+    console.log(`   📁 Output: ${UPLOAD_DIR}`);
+    console.log(`   📋 Manifest: ${manifest.length} entries`);
+    console.log(`   🖼️  Images with AI alt texts: ${manifest.filter(m => m.alt_en && m.alt_fr).length}`);
+    console.log(`   ⚠️  Failed images: ${allFailed.length} (see failed.json)`);
+    process.exit(0);
   } catch (err) {
     console.error('\n❌ Fatal error:', err.message);
     process.exit(1);

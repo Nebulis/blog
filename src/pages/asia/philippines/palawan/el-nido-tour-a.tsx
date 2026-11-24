@@ -25,6 +25,10 @@ import {
 import { Conclusion } from "../../../../components/core/conclusion"
 import { Divider } from "../../../../components/core/divider"
 import HomeImgUrl from "../../../../images/asia/philippines/palawan/el-nido-tour-a/tour-a-main.jpg"
+import cardFr1 from "../../../../images/asia/philippines/palawan/el-nido-tour-a/card-fr1.jpg"
+import cardFr2 from "../../../../images/asia/philippines/palawan/el-nido-tour-a/card-fr2.jpg"
+import cardEn1 from "../../../../images/asia/philippines/palawan/el-nido-tour-a/card-en1.jpg"
+import cardEn2 from "../../../../images/asia/philippines/palawan/el-nido-tour-a/card-en2.jpg"
 import {
   GroupOfImages,
   ImageAsLandscape,
@@ -32,6 +36,7 @@ import {
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
   Panorama,
+  R2Image,
   TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
@@ -40,7 +45,6 @@ import ElNidoMap from "../../../../images/asia/philippines/palawan/el-nido-tour-
 import SkipperCharters1 from "../../../../images/asia/philippines/palawan/el-nido-tour-a/skipper-charters-tour-a-1.jpg"
 import SkipperCharters2 from "../../../../images/asia/philippines/palawan/el-nido-tour-a/skipper-charters-tour-a-2.jpg"
 import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
-import { TourAImages } from "../../../../components/images/asia/philippines/palawan/el-nido-tour-a"
 import {
   philippinesPrimaryColor,
   philippinesPrimaryColorDarker,
@@ -49,7 +53,7 @@ import { css } from "@emotion/react"
 import { Quote } from "../../../../components/core/quote"
 import { TravelCardBookingStyle } from "../../../../components/core/booking"
 
-const namespace = "asia/philippines/palawan/tour-a"
+const namespace = "asia/philippines/palawan/el-nido-tour-a"
 const id = "el-nido-tour-a"
 i18n.addResourceBundle("fr", namespace, translationFr)
 i18n.addResourceBundle("en", namespace, translationEn)
@@ -187,7 +191,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <ImageAsLandscape>
-                <TourAImages image="bigLagoon" />
+                <R2Image namespace={namespace} name="el-nido-big-lagoon-limestone" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p
                 className="tc b"
@@ -202,25 +206,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.visit1.part4")}</p>
               <GroupOfImages>
                 <ImageAsLandscapeOnTheLeft>
-                  <TourAImages image="bigLagoon2" />
+                  <R2Image namespace={namespace} name="el-nido-big-lagoon-coral" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <TourAImages image="bigLagoon3" />
+                  <R2Image namespace={namespace} name="el-nido-big-lagoon-kayak" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
               <p>{t("visit.visit1.part5")}</p>
               <p>{t("visit.visit1.part6")}</p>
               <ImageAsLandscape>
-                <TourAImages image="bigLagoon4" />
+                <R2Image namespace={namespace} name="el-nido-big-lagoon-passage" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit.visit1.part7")}</p>
               <p>{t("visit.visit1.part8")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <TourAImages image="bigLagoon6" />
+                  <R2Image namespace={namespace} name="el-nido-big-lagoon-panoramic" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <TourAImages image="bigLagoon5" />
+                  <R2Image namespace={namespace} name="el-nido-lagoon-underwater-coral" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <ImageDescription>{t("visit.visit1.part9")}</ImageDescription>
@@ -232,15 +236,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <ImageAsLandscape>
-                <TourAImages image="secretLagoon" />
+                <R2Image namespace={namespace} name="secret-lagoon-karst-cliff-water" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit.visit2.part1")}</p>
               <p>{t("visit.visit2.part2")}</p>
               <p>{t("visit.visit2.part3")}</p>
               <p>{t("visit.visit2.part4")}</p>
               <TwoImagesSameSizeOrToGroup>
-                <TourAImages image="secretLagoon2" />
-                <TourAImages image="secretLagoon3" />
+                <R2Image namespace={namespace} name="secret-lagoon-palms-karst-cliffs" aspectRatio={3 / 4} />
+                <R2Image namespace={namespace} name="secret-lagoon-karst-rock-beach" aspectRatio={3 / 4} />
               </TwoImagesSameSizeOrToGroup>
               <p>{t("visit.visit2.part5")}</p>
               <p>{t("visit.visit2.part6")}</p>
@@ -253,23 +257,27 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                     }
                   `}
                 >
-                  <TourAImages image="secretLagoon4" />
-                  <TourAImages image="secretLagoon5" />
+                  <R2Image namespace={namespace} name="secret-lagoon-cave-entrance-tourist" aspectRatio={9 / 16} />
+                  <R2Image namespace={namespace} name="secret-lagoon-limestone-walls-water" aspectRatio={9 / 16} />
                 </TwoImagesSameSize>
                 <ImageAsPortrait>
-                  <TourAImages image="secretLagoon6" />
+                  <R2Image namespace={namespace} name="secret-lagoon-emerald-water-cave" aspectRatio={1.07} />
                 </ImageAsPortrait>
               </GroupOfImages>
               <p>{t("visit.visit2.part8")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <TourAImages image="secretLagoon7" />
+                  <R2Image namespace={namespace} name="secret-lagoon-banca-boats-cliffs" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <TourAImages image="secretLagoon8" />
+                  <R2Image namespace={namespace} name="secret-lagoon-underwater-fish-reef" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <TourAImages image="secretLagoon9" />
+                  <R2Image
+                    namespace={namespace}
+                    name="secret-lagoon-underwater-siphonophore-jellyfish"
+                    aspectRatio={16 / 9}
+                  />
                 </ImageAsLandscape>
               </GroupOfImages>
               <ImageDescription>{t("visit.visit2.part9")}</ImageDescription>
@@ -281,20 +289,25 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <ImageAsLandscape>
-                <TourAImages image="shimizuIsland" />
+                <R2Image namespace={namespace} name="shimizu-island-turquoise-water-lagoon" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit.visit3.part1")}</p>
               <p>{t("visit.visit3.part2")}</p>
               <p>{t("visit.visit3.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscapeOnTheLeft>
-                  <TourAImages image="shimizuIsland2" />
+                  <R2Image namespace={namespace} name="shimizu-island-limestone-rocks-sea" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <TourAImages image="shimizuIsland3" />
+                  <R2Image namespace={namespace} name="shimizu-island-shallow-water-cove" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheRight>
                 <Panorama>
-                  <TourAImages image="shimizuIsland4" />
+                  <R2Image
+                    namespace={namespace}
+                    name="shimizu-island-rock-arch-lagoon"
+                    aspectRatio={3.85}
+                    breakpoints={[1800, 1200, 600]}
+                  />
                 </Panorama>
               </GroupOfImages>
               <p>{t("visit.visit3.part4")}</p>
@@ -307,17 +320,17 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <ImageAsLandscape>
-                <TourAImages image="payongBeach" />
+                <R2Image namespace={namespace} name="el-nido-payong-beach-boat" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit.visit4.part1")}</p>
               <p>{t("visit.visit4.part2")}</p>
               <p>{t("visit.visit4.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <TourAImages image="payongBeach3" />
+                  <R2Image namespace={namespace} name="el-nido-payong-beach-plant" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <TourAImages image="payongBeach2" />
+                  <R2Image namespace={namespace} name="el-nido-payong-beach-lunch" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <ImageDescription>{t("visit.visit4.part4")}</ImageDescription>
@@ -326,10 +339,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.visit4.part7")}</p>
               <GroupOfImages>
                 <ImageAsLandscapeOnTheLeft>
-                  <TourAImages image="payongBeach4" />
+                  <R2Image namespace={namespace} name="payong-beach-limestone-cliffs-boats" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <TourAImages image="payongBeach5" />
+                  <R2Image namespace={namespace} name="payong-beach-limestone-rocks-shadows" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
               <ImageDescription>{t("visit.visit4.part8")}</ImageDescription>
@@ -341,29 +354,39 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <ImageAsLandscape>
-                <TourAImages image="sevenCommandoBeach" />
+                <R2Image namespace={namespace} name="seven-commando-beach-sea-mountains" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit.visit5.part1")}</p>
               <p>{t("visit.visit5.part2")}</p>
               <ImageAsLandscape>
-                <TourAImages image="sevenCommandoBeach2" />
+                <R2Image namespace={namespace} name="seven-commando-beach-huts-loungers" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit.visit5.part3")}</p>
               <p>{t("visit.visit5.part4")}</p>
               <GroupOfImages>
                 <Panorama>
-                  <TourAImages image="sevenCommandoBeach3" />
+                  <R2Image
+                    namespace={namespace}
+                    name="seven-commando-beach-panoramic-shore"
+                    aspectRatio={2.51}
+                    breakpoints={[1800, 1200, 600]}
+                  />
                 </Panorama>
                 <ImageAsLandscapeOnTheLeft>
-                  <TourAImages image="sevenCommandoBeach4" />
+                  <R2Image namespace={namespace} name="seven-commando-beach-boats-shoreline" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <TourAImages image="sevenCommandoBeach5" />
+                  <R2Image namespace={namespace} name="seven-commando-beach-clear-sea-horizon" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
               <p>{t("visit.visit5.part5")}</p>
               <Panorama>
-                <TourAImages image="sevenCommandoBeach6" />
+                <R2Image
+                  namespace={namespace}
+                  name="seven-commando-beach-statues-palms"
+                  aspectRatio={2.687}
+                  breakpoints={[1800, 1200, 600]}
+                />
               </Panorama>
             </SectionContent>
           </section>
@@ -373,7 +396,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <Divider />
             <SectionContent>
               <ImageAsLandscape>
-                <TourAImages image="snorkeling" />
+                <R2Image namespace={namespace} name="el-nido-underwater-pink-corals" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit.visit6.part1")}</p>
               <p>{t("visit.visit6.part2")}</p>
@@ -381,31 +404,31 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p className="tc ttu b">{t("visit.visit6.part4")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <TourAImages image="snorkeling2" />
+                  <R2Image namespace={namespace} name="el-nido-coral-reef-underwater" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <TourAImages image="snorkeling3" />
+                  <R2Image namespace={namespace} name="el-nido-butterflyfish-coral-seabed" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <TourAImages image="snorkeling4" />
+                  <R2Image namespace={namespace} name="el-nido-wrasse-purple-corals" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <TourAImages image="snorkeling5" />
+                  <R2Image namespace={namespace} name="el-nido-coral-reef-garden" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p className="tc ttu b">{t("visit.visit6.part5")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <TourAImages image="snorkeling6" />
+                  <R2Image namespace={namespace} name="el-nido-damselfish-shallow-reef" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <TourAImages image="snorkeling7" />
+                  <R2Image namespace={namespace} name="el-nido-tropical-fish-reef" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <TourAImages image="snorkeling8" />
+                  <R2Image namespace={namespace} name="el-nido-damselfish-blue-ocean" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <TourAImages image="snorkeling9" />
+                  <R2Image namespace={namespace} name="el-nido-blue-starfish-seabed" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <ImageDescription>{t("visit.visit6.part6")}</ImageDescription>
@@ -450,8 +473,14 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             description: t("pinterest"),
             nodes:
               i18n.languageCode === "fr"
-                ? [<TourAImages image="cardFr1" key="cardFr1" />, <TourAImages image="cardFr2" key="cardFr1" />]
-                : [<TourAImages image="cardEn1" key="cardEn1" />, <TourAImages image="cardEn2" key="cardEn1" />],
+                ? [
+                    <img src={cardFr1} key="cardFr1" alt="Carte Pinterest : El Nido Tour A" />,
+                    <img src={cardFr2} key="cardFr2" alt="Carte Pinterest : El Nido Tour A" />,
+                  ]
+                : [
+                    <img src={cardEn1} key="cardEn1" alt="Pinterest Card: El Nido Tour A" />,
+                    <img src={cardEn2} key="cardEn2" alt="Pinterest Card: El Nido Tour A" />,
+                  ],
           }}
         />
       </PhilippinesBlogLayout>

@@ -34,6 +34,7 @@ import {
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
+  R2Image,
 } from "../../../../components/images/layout"
 import { SharedCardPhilippinesImages } from "../../../../components/images/asia/philippines/shared-card-philippines-images"
 import { ArticleCardContainer } from "../../../../components/layout/layout"
@@ -45,7 +46,6 @@ import { ElNidoWhichTourImages } from "../../../../components/images/asia/philip
 import { ApplicationLink, ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { css } from "@emotion/react"
 import { Quote } from "../../../../components/core/quote"
-import { TourAImages } from "../../../../components/images/asia/philippines/palawan/el-nido-tour-a"
 import { CarouselImageQuery } from "../../../../components/images/carousel"
 import { FakeList } from "../../../../components/core/title"
 import useDimensions from "../../../../use-dimensions"
@@ -277,7 +277,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-a.secret-lagoon.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <TourAImages image="secretLagoon" />
+                  <R2Image
+                    namespace="asia/philippines/palawan/el-nido-tour-a"
+                    name="secret-lagoon-karst-cliff-water"
+                    aspectRatio={4 / 3}
+                  />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
                   <ElNidoWhichTourImages image="secretLagoon2" />
@@ -291,7 +295,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-a.shimizu-island.part2")}</p>
               <p>{t("tour-a.shimizu-island.part3")}</p>
               <ImageAsLandscape>
-                <TourAImages image="shimizuIsland" />
+                <R2Image
+                  namespace="asia/philippines/palawan/el-nido-tour-a"
+                  name="shimizu-island-turquoise-water-lagoon"
+                  aspectRatio={4 / 3}
+                />
               </ImageAsLandscape>
             </SectionContent>
             <Divider />
@@ -302,7 +310,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("tour-a.commando-beach.part3")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <TourAImages image="sevenCommandoBeach" />
+                  {" "}
+                  <R2Image
+                    namespace="asia/philippines/palawan/el-nido-tour-a"
+                    name="seven-commando-beach-sea-mountains"
+                    aspectRatio={4 / 3}
+                  />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
                   <ElNidoWhichTourImages image="commandoBeach2" />
