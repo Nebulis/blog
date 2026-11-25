@@ -22,6 +22,7 @@ import {
   ImageAsPortrait,
   ImageAsPortraitOnTheLeft,
   ImageAsPortraitOnTheRight,
+  R2Image,
   TwoImagesSameSize,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
@@ -38,8 +39,11 @@ import { Divider } from "../../../../components/core/divider"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 import { Comments } from "../../../../components/core/comments"
-import { HimejiCastleImages } from "../../../../components/images/asia/japan/himeji/himeji-castle-images"
 import HimejiCastleMap from "../../../../images/asia/japan/himeji/castle/himeji-castle-map.jpg"
+import cardFr1 from "../../../../images/asia/japan/himeji/castle/card-fr1.jpg"
+import cardFr2 from "../../../../images/asia/japan/himeji/castle/card-fr2.jpg"
+import cardEn1 from "../../../../images/asia/japan/himeji/castle/card-en1.jpg"
+import cardEn2 from "../../../../images/asia/japan/himeji/castle/card-en2.jpg"
 import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { buildPixabayUrl } from "../../../../utils"
@@ -166,7 +170,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             `}
             className="no-reset-image"
           >
-            <HimejiCastleImages image="gyuKaku" />
+            <R2Image namespace={namespace} name="himeji-yakiniku-bbq-spread" aspectRatio={0.71} />
           </ImageAsPortrait>
           {foodLinkPublished && <p>{t("where-to-have.part3")}</p>}
         </WhereToHave>
@@ -177,7 +181,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit.part2")}</p>
               <p>{t("visit.part3")}</p>
               <ImageAsLandscape>
-                <HimejiCastleImages image="visit" />
+                <R2Image namespace={namespace} name="himeji-castle-keep-sky" aspectRatio={4 / 3} />
               </ImageAsLandscape>
             </SectionContent>
           </section>
@@ -193,7 +197,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit1.part5")}</p>
               <p>{t("visit1.part6")}</p>
               <ImageAsLandscape>
-                <HimejiCastleImages image="history" />
+                <R2Image namespace={namespace} name="himeji-castle-traditional-costume" aspectRatio={1.6} />
               </ImageAsLandscape>
             </SectionContent>
           </section>
@@ -204,10 +208,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <SectionContent>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <HimejiCastleImages image="garden" />
+                  <R2Image namespace={namespace} name="himeji-castle-stone-moat" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="garden2" />
+                  <R2Image namespace={namespace} name="himeji-castle-moat-boat" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit2.part1")}</p>
@@ -216,24 +220,24 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit2.part4")}</p>
               <p>{t("visit2.part5")}</p>
               <ImageAsLandscape>
-                <HimejiCastleImages image="garden3" />
+                <R2Image namespace={namespace} name="himeji-castle-cherry-blossoms" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit2.part6")}</p>
               <ImageAsLandscape>
-                <HimejiCastleImages image="garden4" />
+                <R2Image namespace={namespace} name="himeji-castle-park-gardens" aspectRatio={3 / 2} />
               </ImageAsLandscape>
               <p>{t("visit2.part7")}</p>
               <p>{t("visit2.part8")}</p>
               <p>{t("visit2.part9")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="garden5" />
+                  <R2Image namespace={namespace} name="himeji-castle-spring-sky" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscapeOnTheLeft>
-                  <HimejiCastleImages image="garden6" />
+                  <R2Image namespace={namespace} name="himeji-castle-sakura-branches" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <HimejiCastleImages image="garden7" />
+                  <R2Image namespace={namespace} name="himeji-castle-cherry-blooms" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
             </SectionContent>
@@ -251,27 +255,27 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit3.part3")}</p>
               <GroupOfImages>
                 <TwoImagesSameSizeOrToGroup>
-                  <HimejiCastleImages image="maze" />
-                  <HimejiCastleImages image="maze2" />
+                  <R2Image namespace={namespace} name="himeji-castle-wooden-entrance" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="himeji-castle-sakura-tree" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="maze3" />
+                  <R2Image namespace={namespace} name="himeji-castle-gate-blossoms" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit3.part4")}</p>
               <p>{t("visit3.part5")}</p>
               <p>{t("visit3.part6")}</p>
               <ImageAsLandscape>
-                <HimejiCastleImages image="maze4" />
+                <R2Image namespace={namespace} name="himeji-castle-stone-walls" aspectRatio={4 / 3} />
               </ImageAsLandscape>
               <p>{t("visit3.part7")}</p>
               <p>{t("visit3.part8")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="maze5" />
+                  <R2Image namespace={namespace} name="himeji-castle-roof-tiles" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
-                  <HimejiCastleImages image="maze6" />
+                  <R2Image namespace={namespace} name="himeji-castle-bonsai-pine" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
               </GroupOfImages>
               <p>{t("visit3.part9")}</p>
@@ -279,22 +283,22 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit3.part11")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="maze7" />
+                  <R2Image namespace={namespace} name="himeji-cherry-blossom-closeup" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
-                  <HimejiCastleImages image="maze8" />
+                  <R2Image namespace={namespace} name="himeji-cherry-blossom-petals" aspectRatio={3 / 2} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="maze9" />
+                  <R2Image namespace={namespace} name="himeji-castle-weeping-cherry" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsPortraitOnTheLeft>
-                  <HimejiCastleImages image="maze10" />
+                  <R2Image namespace={namespace} name="himeji-castle-pink-sakura" aspectRatio={3 / 4} />
                 </ImageAsPortraitOnTheLeft>
                 <ImageAsPortraitOnTheRight>
-                  <HimejiCastleImages image="maze11" />
+                  <R2Image namespace={namespace} name="himeji-castle-cherry-blossoms-2" aspectRatio={3 / 4} />
                 </ImageAsPortraitOnTheRight>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="maze12" />
+                  <R2Image namespace={namespace} name="himeji-castle-cherry-blossom" aspectRatio={1.36} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -309,13 +313,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit4.part3")}</p>
               <GroupOfImages>
                 <ImageAsPortrait>
-                  <HimejiCastleImages image="inside" />
+                  <R2Image namespace={namespace} name="himeji-castle-shachihoko-sculpture" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscapeOnTheLeft>
-                  <HimejiCastleImages image="inside2" />
+                  <R2Image namespace={namespace} name="himeji-castle-city-view" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <HimejiCastleImages image="inside3" />
+                  <R2Image namespace={namespace} name="himeji-castle-walls-cityscape" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheRight>
               </GroupOfImages>
               <p>{t("visit4.part4")}</p>
@@ -328,7 +332,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                     </ExternalLinkNotUnderlined>
                   }
                 >
-                  <HimejiCastleImages image="inside4" />
+                  <R2Image
+                    namespace={namespace}
+                    name="himeji-castle-wooden-corridor"
+                    aspectRatio={4 / 3}
+                    breakpoints={[1200, 600]}
+                  />
                 </ImageAsLandscape>
                 <ImageAsPortrait
                   credit={
@@ -337,31 +346,31 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                     </ExternalLinkNotUnderlined>
                   }
                 >
-                  <HimejiCastleImages image="inside5" />
+                  <R2Image namespace={namespace} name="himeji-castle-tatami-room" aspectRatio={2 / 3} />
                 </ImageAsPortrait>
               </GroupOfImages>
               <p>{t("visit4.part6")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="inside6" />
+                  <R2Image namespace={namespace} name="himeji-castle-architecture-facade" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="inside7" />
+                  <R2Image namespace={namespace} name="himeji-castle-courtyard-view" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="inside8" />
+                  <R2Image namespace={namespace} name="himeji-castle-historic-gateway" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit4.part7")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="inside9" />
+                  <R2Image namespace={namespace} name="himeji-castle-keep-architecture" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <HimejiCastleImages image="inside10" />
+                  <R2Image namespace={namespace} name="himeji-castle-roof-details" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
-                  <HimejiCastleImages image="inside11" />
+                  <R2Image namespace={namespace} name="himeji-castle-courtyard-roofs" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
               </GroupOfImages>
             </SectionContent>
@@ -383,7 +392,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   </ExternalLinkNotUnderlined>
                 }
               >
-                <HimejiCastleImages image="kokoEn" />
+                <R2Image namespace={namespace} name="himeji-castle-kokoen-garden" aspectRatio={1.59} />
               </ImageAsLandscape>
             </SectionContent>
           </section>
@@ -397,8 +406,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit6.part3")}</p>
               <GroupOfImages>
                 <TwoImagesSameSize>
-                  <HimejiCastleImages image="bonus" />
-                  <HimejiCastleImages image="bonus2" />
+                  <R2Image namespace={namespace} name="himeji-market-stalls-plaza" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="himeji-castle-food-market" aspectRatio={3 / 4} />
                 </TwoImagesSameSize>
                 <TwoImagesSameSize
                   css={css`
@@ -407,8 +416,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                     }
                   `}
                 >
-                  <HimejiCastleImages image="bonus3" />
-                  <HimejiCastleImages image="bonus4" />
+                  <R2Image namespace={namespace} name="himeji-street-food-vendor" aspectRatio={0.776} />
+                  <R2Image namespace={namespace} name="himeji-festival-traditional-dancers" aspectRatio={0.727} />
                 </TwoImagesSameSize>
               </GroupOfImages>
             </SectionContent>
@@ -433,12 +442,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes:
               i18n.languageCode === "fr"
                 ? [
-                    <HimejiCastleImages image="cardFr1" key="cardFr1" />,
-                    <HimejiCastleImages image="cardFr2" key="cardFr1" />,
+                    <img src={cardFr1} key="cardFr1" alt="Carte Pinterest : Le Château de Himeji" />,
+                    <img src={cardFr2} key="cardFr2" alt="Carte Pinterest : Le Château de Himeji" />,
                   ]
                 : [
-                    <HimejiCastleImages image="cardEn1" key="cardEn1" />,
-                    <HimejiCastleImages image="cardEn2" key="cardEn1" />,
+                    <img src={cardEn1} key="cardEn1" alt="Pinterest Card: Himeji Castle" />,
+                    <img src={cardEn2} key="cardEn2" alt="Pinterest Card: Himeji Castle" />,
                   ],
           }}
         />
