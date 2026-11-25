@@ -23,18 +23,22 @@ import { Divider } from "../../../../components/core/divider"
 import { Quote } from "../../../../components/core/quote"
 import HomeImgUrl from "../../../../images/asia/malaysia/east-malaysia/semenggoh-nature-reserve/semenggoh-nature-reserve-main.jpg"
 import SemenggohMap from "../../../../images/asia/malaysia/east-malaysia/semenggoh-nature-reserve/semenggoh-nature-reserve-map.jpg"
+import cardFr1 from "../../../../images/asia/malaysia/east-malaysia/semenggoh-nature-reserve/card-fr1.jpg"
+import cardFr2 from "../../../../images/asia/malaysia/east-malaysia/semenggoh-nature-reserve/card-fr2.jpg"
+import cardEn1 from "../../../../images/asia/malaysia/east-malaysia/semenggoh-nature-reserve/card-en1.jpg"
+import cardEn2 from "../../../../images/asia/malaysia/east-malaysia/semenggoh-nature-reserve/card-en2.jpg"
 import { Title } from "../../../../components/core/title"
 import {
   GroupOfImages,
   ImageAsLandscape,
   ImageAsPortrait,
+  R2Image,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import { SharedCardMalaysiaImages } from "../../../../components/images/asia/malaysia/shared-card-malaysia-images"
 import { MapContainer, Table } from "../../../../components/layout/layout"
 import { css } from "@emotion/react"
 import { malaysiaPrimaryColor } from "../../../../components/core/asia/malaysia/malaysia.variables"
-import { SemenggohNatureReserveImages } from "../../../../components/images/asia/malaysia/east-malaysia/semenggoh-nature-reserve"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { ApplicationContext } from "../../../../components/application"
 
@@ -141,7 +145,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <SectionContent>
               <p>{t("visit1.part1")}</p>
               <ImageAsLandscape>
-                <SemenggohNatureReserveImages image="history" />
+                <R2Image
+                  namespace={namespace}
+                  name="semenggoh-wildlife-centre-entrance-pavilion"
+                  aspectRatio={16 / 9}
+                />
               </ImageAsLandscape>
               <p>{t("visit1.part2")}</p>
               <p>{t("visit1.part3")}</p>
@@ -153,7 +161,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit1.part7")}</p>
               <p>{t("visit1.part8")}</p>
               <ImageAsPortrait>
-                <SemenggohNatureReserveImages image="history2" />
+                <R2Image namespace={namespace} name="semenggoh-wildlife-centre-entrance-sign" aspectRatio={16 / 9} />
               </ImageAsPortrait>
               <p>{t("visit1.part9")}</p>
               <p>{t("visit1.part10")}</p>
@@ -178,8 +186,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit2.part1")}</p>
               <p>{t("visit2.part2")}</p>
               <TwoImagesSameSizeOrToGroup>
-                <SemenggohNatureReserveImages image="briefing" />
-                <SemenggohNatureReserveImages image="briefing2" />
+                <R2Image namespace={namespace} name="sarawak-protected-wildlife-poster" aspectRatio={9 / 16} />
+                <R2Image namespace={namespace} name="semenggoh-wildlife-protection-sign-sarawak" aspectRatio={9 / 16} />
               </TwoImagesSameSizeOrToGroup>
               <p>{t("visit2.part3")}</p>
               <p>{t("visit2.part4")}</p>
@@ -200,40 +208,52 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                     max-width: 900px;
                   `}
                 >
-                  <SemenggohNatureReserveImages image="briefing3" imgStyle={{ objectFit: "contain" }} />
-                  <SemenggohNatureReserveImages image="briefing4" imgStyle={{ objectFit: "contain" }} />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-high-rope-canopy" aspectRatio={0.59} />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-rope-treetop-sky" aspectRatio={0.59} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup
                   css={css`
                     max-width: 900px;
                   `}
                 >
-                  <SemenggohNatureReserveImages image="briefing5" imgStyle={{ objectFit: "contain" }} />
-                  <SemenggohNatureReserveImages image="briefing6" imgStyle={{ objectFit: "contain" }} />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-crossing-rope-canopy" aspectRatio={0.59} />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-canopy-rope" aspectRatio={0.59} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup
                   css={css`
                     max-width: 900px;
                   `}
                 >
-                  <SemenggohNatureReserveImages image="briefing7" imgStyle={{ objectFit: "contain" }} />
-                  <SemenggohNatureReserveImages image="briefing8" imgStyle={{ objectFit: "contain" }} />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-swinging-rope-canopy" aspectRatio={9 / 16} />
+                  <R2Image
+                    namespace={namespace}
+                    name="semenggoh-orangutan-hanging-jungle-canopy"
+                    aspectRatio={9 / 16}
+                  />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="briefing9" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-climbing-tree-trunk" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsPortrait>
-                  <SemenggohNatureReserveImages image="briefing10" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-hanging-rope" aspectRatio={2 / 3} />
                 </ImageAsPortrait>
                 <TwoImagesSameSizeOrToGroup>
-                  <SemenggohNatureReserveImages image="briefing11" />
-                  <SemenggohNatureReserveImages image="briefing12" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-relaxing-wooden-deck" aspectRatio={9 / 16} />
+                  <R2Image
+                    namespace={namespace}
+                    name="semenggoh-orangutan-resting-wooden-platform-2"
+                    aspectRatio={2 / 3}
+                  />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="briefing13" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-sleeping-wooden-deck" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="briefing14" />
+                  <R2Image
+                    namespace={namespace}
+                    name="semenggoh-orangutan-resting-wooden-platform"
+                    aspectRatio={3 / 2}
+                  />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit2.part9")}</p>
@@ -261,7 +281,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit4.part1")}</p>
               <p>{t("visit4.part2")}</p>
               <ImageAsPortrait>
-                <SemenggohNatureReserveImages image="feeding" />
+                <R2Image namespace={namespace} name="semenggoh-coconut-shells-feeding-ground" aspectRatio={1.01} />
               </ImageAsPortrait>
               <p>{t("visit4.part3")}</p>
               <p>{t("visit4.part4")}</p>
@@ -273,19 +293,19 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit4.part10")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding2" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-mother-baby" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding3" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-tree-trunk-rope" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding4" />
+                  <R2Image namespace={namespace} name="semenggoh-baby-orangutan-rope" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding5" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-infant-climbing-rope" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding19" />
+                  <R2Image namespace={namespace} name="semenggoh-juvenile-orangutan-eating-fruit" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit4.part11")}</p>
@@ -294,52 +314,52 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit4.part14")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding6" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-eating-coconut-rope" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding7" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-mother-baby-ropes" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding8" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-mother-baby-rope" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding9" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutans-canopy-rope-network" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding10" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutans-hanging-upside-down" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding11" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-rope-canopy" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding12" />
+                  <R2Image namespace={namespace} name="semenggoh-baby-orangutan-rope-canopy" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit4.part15")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding13" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-climbing-rope-canopy" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding14" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-eating-fruit" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding15" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-acrobatic-feeding" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding16" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-climbing-thick-rope" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding17" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-climbing-rope" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding18" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-swinging-rope-foliage" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding20" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutans-canopy-ropes" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="feeding21" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-hanging-tree" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit4.part16")}</p>
@@ -360,13 +380,13 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit5.part7")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="family" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-family-tree-board" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="family2" />
+                  <R2Image namespace={namespace} name="semenggoh-orangutan-family-tree" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <SemenggohNatureReserveImages image="family3" />
+                  <R2Image namespace={namespace} name="semenggoh-information-board-profiles" aspectRatio={16 / 9} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit5.part8")}</p>
@@ -388,8 +408,8 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                 title2={i18n.languageCode === "fr" ? "Mr Magic" : "Mr. Magic"}
                 titleClassName="tc"
               >
-                <SemenggohNatureReserveImages image="bonus" imgStyle={{ objectFit: "contain" }} />
-                <SemenggohNatureReserveImages image="bonus2" imgStyle={{ objectFit: "contain" }} />
+                <R2Image namespace={namespace} name="semenggoh-orangutans-swinging-ropes-forest" aspectRatio={9 / 16} />
+                <R2Image namespace={namespace} name="semenggoh-orangutan-hanging-forest-canopy" aspectRatio={9 / 16} />
               </TwoImagesSameSizeOrToGroup>
             </SectionContent>
           </section>
@@ -413,12 +433,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes:
               i18n.languageCode === "fr"
                 ? [
-                    <SemenggohNatureReserveImages image="cardFr1" key="cardFr1" />,
-                    <SemenggohNatureReserveImages image="cardFr2" key="cardFr1" />,
+                    <img src={cardFr1} key="cardFr1" alt="Carte Pinterest : Semenggoh Nature Reserve" />,
+                    <img src={cardFr2} key="cardFr2" alt="Carte Pinterest : Semenggoh Nature Reserve" />,
                   ]
                 : [
-                    <SemenggohNatureReserveImages image="cardEn1" key="cardEn1" />,
-                    <SemenggohNatureReserveImages image="cardEn2" key="cardEn1" />,
+                    <img src={cardEn1} key="cardEn1" alt="Pinterest Card: Semenggoh Nature Reserve" />,
+                    <img src={cardEn2} key="cardEn2" alt="Pinterest Card: Semenggoh Nature Reserve" />,
                   ],
           }}
         />
