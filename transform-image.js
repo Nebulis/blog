@@ -27,6 +27,25 @@ const FOLDER_CONFIG = {
   },
 };
 
+// Shared helper: resolve breakpoints and suffixes for a given image width and folder config
+function resolveBreakpoints(width, config, label) {
+  const sortedConfig = [...config.breakpoints].sort((a, b) => b - a);
+  const secondLargest = sortedConfig[1];
+
+  // Throw if image is smaller than the second-largest breakpoint (bypasses 2+ breakpoints)
+  if (width < secondLargest) {
+    throw new Error(
+      `❌ ${label}: ${width}px wide is below ${secondLargest}px (bypasses 2+ breakpoints from [${sortedConfig.join(', ')}]). Fix or remove this image.`
+    );
+  }
+
+  // Always return standard breakpoints and suffixes (with withoutEnlargement: true keeping native width)
+  return {
+    breakpoints: [...config.breakpoints].sort((a, b) => b - a),
+    suffixMap: { ...config.suffixes },
+  };
+}
+
 const QUALITY = 75;
 const THUMBNAIL_WIDTH = 600;
 const THUMBNAIL_QUALITY = 70;
@@ -292,30 +311,8 @@ async function processImages() {
       const ratio = metadata.width / metadata.height;
       const simpleRatio = simplifyRatio(metadata.width, metadata.height);
       
-      // Early validation: count breakpoints that will actually be generated
-      // Rule: number of generated breakpoints MUST equal number of configured breakpoints
-      // - Breakpoints ≤ source width are used directly
-      // - If source < max configured, add custom breakpoint at source width
-      // - Total count must equal configured breakpoints count
-      const smallestBreakpoint = Math.min(...config.breakpoints);
-      const maxConfigured = Math.max(...config.breakpoints);
-      const configuredCount = config.breakpoints.length;
-      
-      // Count breakpoints that will be generated
-      let generatedBreakpoints = config.breakpoints.filter(w => w <= metadata.width || w === smallestBreakpoint);
-      
-      // Add custom source width breakpoint if source is between min and max
-      if (metadata.width < maxConfigured && metadata.width > smallestBreakpoint) {
-        if (!generatedBreakpoints.includes(metadata.width)) {
-          generatedBreakpoints.push(metadata.width);
-        }
-      }
-      
-      const generatedCount = generatedBreakpoints.length;
-      
-      if (generatedCount !== configuredCount) {
-        throw new Error(`❌ ${file}: ${metadata.width}px wide, generates ${generatedCount} breakpoints (${generatedBreakpoints.join(',')}) but ${configuredCount} required (${config.breakpoints.join(',')}). Fix or remove this image.`);
-      }
+      // Early validation using shared helper
+      const { breakpoints: validBreakpoints } = resolveBreakpoints(metadata.width, config, file);
       
       // Generate fallback slug early for consistent dedup
       const fallbackSlug = sanitizeSlug(path.parse(file).name);
@@ -471,19 +468,6 @@ async function writeOutputs(results, existingManifest = []) {
   console.log(`  📂 Existing manifest: ${existingManifest.length} entries`);
   console.log(`  📄 Existing snippets: ${existingSnippetSlugs.size} entries`);
   
-  // Custom breakpoint mapping for small images
-  // Maps source width to desired suffix (e.g., 1080 -> 'lg')
-  const CUSTOM_BREAKPOINT_SUFFIXES = {
-    // Landscape-ish
-    1080: 'lg',
-    900: 'lg',
-    800: 'md',
-    // Portrait-ish
-    1920: 'lg',
-    1600: 'lg',
-    1200: 'lg',
-  };
-  
   const newManifest = [];
   const newSnippets = [];
   const localeData = { en: {}, fr: {} };
@@ -494,55 +478,9 @@ async function writeOutputs(results, existingManifest = []) {
     const img = results[i];
     const { slug, folderName, config, rotatedBuffer, metadata, simpleRatio, alt_en, alt_fr, originalFile } = img;
     const orientation = config.orientation;
-    const breakpoints = config.breakpoints;
-    const suffixes = config.suffixes;
     
-    // Determine valid breakpoints from config
-    const smallestBreakpoint = Math.min(...breakpoints);
-    let validBreakpoints = breakpoints.filter(w => w <= metadata.width || w === smallestBreakpoint);
-    
-    // If source is smaller than largest configured breakpoint, add source width as custom breakpoint
-    const maxConfigured = Math.max(...breakpoints);
-    if (metadata.width < maxConfigured && metadata.width > smallestBreakpoint) {
-      if (!validBreakpoints.includes(metadata.width)) {
-        validBreakpoints.push(metadata.width);
-        validBreakpoints.sort((a, b) => b - a); // descending
-        console.log(`  ⚡ ${slug}: Added custom breakpoint ${metadata.width}px (source width)`);
-      }
-    }
-    
-    // Remove duplicates and ensure smallest is included
-    validBreakpoints = [...new Set(validBreakpoints)].sort((a, b) => b - a);
-    if (!validBreakpoints.includes(smallestBreakpoint)) {
-      validBreakpoints.push(smallestBreakpoint);
-      validBreakpoints.sort((a, b) => b - a);
-    }
-    
-    // Validate: require at least 2 breakpoints
-    if (validBreakpoints.length < 2) {
-      throw new Error(`❌ ${slug}: Only ${validBreakpoints.length} breakpoint(s) generated (need ≥2). Source: ${metadata.width}px. Add a larger source image or adjust config.`);
-    }
-    
-    // Build suffix map including custom breakpoints
-    const effectiveSuffixes = { ...suffixes };
-    for (const bp of validBreakpoints) {
-      if (!effectiveSuffixes[bp]) {
-        // Try custom mapping first
-        if (CUSTOM_BREAKPOINT_SUFFIXES[bp]) {
-          effectiveSuffixes[bp] = CUSTOM_BREAKPOINT_SUFFIXES[bp];
-        } else {
-          // Fallback: generate suffix based on position
-          const sorted = validBreakpoints.sort((a, b) => b - a);
-          const idx = sorted.indexOf(bp);
-          if (idx === 0) effectiveSuffixes[bp] = 'xl';
-          else if (idx === 1) effectiveSuffixes[bp] = 'lg';
-          else if (idx === 2) effectiveSuffixes[bp] = 'md';
-          else effectiveSuffixes[bp] = `w${bp}`;
-        }
-      }
-    }
-    
-    const skippedBreakpoints = breakpoints.filter(w => !validBreakpoints.includes(w));
+    // Resolve breakpoints and suffixes using shared helper
+    const { breakpoints: validBreakpoints, suffixMap: effectiveSuffixes } = resolveBreakpoints(metadata.width, config, slug);
     
     // Generate WebP variants
     console.log(`  🖼️  [${i+1}/${results.length}] ${slug}: Generating ${validBreakpoints.length} WebP variants (${validBreakpoints.join(', ')}px)...`);
@@ -560,7 +498,6 @@ async function writeOutputs(results, existingManifest = []) {
     // Manifest entry
     const aspectRatio = metadata.width / metadata.height;
     const needsAspectRatio = Math.abs(aspectRatio - (orientation === 'landscape' ? 1.5 : 2/3)) > 0.02;
-    const needsBreakpoints = validBreakpoints.length !== breakpoints.length;
     
     const manifestEntry = {
       slug,
@@ -575,7 +512,6 @@ async function writeOutputs(results, existingManifest = []) {
       alt_en,
       alt_fr,
       needsAspectRatio,
-      needsBreakpoints,
     };
     newManifest.push(manifestEntry);
     
@@ -587,9 +523,6 @@ async function writeOutputs(results, existingManifest = []) {
       props.push(`alt={t("photos.${slug}")}`); // Use translation key
       props.push(`orientation="${orientation}"`);
       if (needsAspectRatio) props.push(`aspectRatio=${aspectRatio.toFixed(3)}`);
-      if (validBreakpoints.length !== breakpoints.length) {
-        props.push(`breakpoints={[${validBreakpoints.join(', ')}]}`);
-      }
       
       newSnippets.push(`<R2Image\n  ${props.join('\n  ')}\n/>`);
     }
