@@ -6,6 +6,7 @@ import {
   ImageAsLandscapeOnTheLeft,
   ImageAsLandscapeOnTheRight,
   ImageAsPortrait,
+  R2Image,
   TwoImagesSameSizeOrToGroup,
 } from "../../../../components/images/layout"
 import {
@@ -36,7 +37,6 @@ import { Divider } from "../../../../components/core/divider"
 import { ApplicationContext } from "../../../../components/application"
 import { getLink } from "../../../../components/core/links/links.utils"
 import { Comments } from "../../../../components/core/comments"
-import { NagoyaCastleImages } from "../../../../components/images/asia/japan/nagoya/nagoya-castle-images"
 import { BookingGygCardContainer, MapContainer } from "../../../../components/layout/layout"
 import { ExternalLinkNotUnderlined } from "../../../../components/core/links/link"
 import { SharedCardJapanImages } from "../../../../components/images/asia/japan/shared-card-japan-images"
@@ -44,6 +44,10 @@ import { BookingCard, BookingWarning } from "../../../../components/core/booking
 import apaHotel from "../../../../images/asia/japan/nagoya/castle/apa-hotel-sakae-kita.jpg"
 import androoms from "../../../../images/asia/japan/nagoya/castle/hotel-androoms-nagoya-sakae.jpg"
 import kuretake from "../../../../images/asia/japan/nagoya/castle/kuretake-inn-nagoya-hisayaodori.jpg"
+import cardFr1 from "../../../../images/asia/japan/nagoya/castle/card-fr1.jpg"
+import cardFr2 from "../../../../images/asia/japan/nagoya/castle/card-fr2.jpg"
+import cardEn1 from "../../../../images/asia/japan/nagoya/castle/card-en1.jpg"
+import cardEn2 from "../../../../images/asia/japan/nagoya/castle/card-en2.jpg"
 
 const namespace = "asia/japan/nagoya/nagoya-castle"
 const id = "nagoya-castle"
@@ -140,7 +144,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
           <p>{t("where-to-have.part1")}</p>
           <p>{t("where-to-have.part2")}</p>
           <ImageAsLandscape>
-            <NagoyaCastleImages image="food" />
+            <R2Image namespace={namespace} name="nagoya-yakiniku-barbecue-table" aspectRatio={4 / 3} />
           </ImageAsLandscape>
         </WhereToHave>
         <Visit title={t("visit.title")}>
@@ -157,7 +161,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <SectionContent>
               <p>{t("visit1.part1")}</p>
               <ImageAsLandscape>
-                <NagoyaCastleImages image="history" />
+                <R2Image namespace={namespace} name="nagoya-castle-main-keep-skyline" aspectRatio={1.36} />
               </ImageAsLandscape>
               <p>{t("visit1.part2")}</p>
               <p>{t("visit1.part3")}</p>
@@ -176,16 +180,16 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit2.part1")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="entrance" />
+                  <R2Image namespace={namespace} name="nagoya-castle-moat-sakura-blossoms" aspectRatio={1.97} />
                 </ImageAsLandscape>
                 <ImageAsLandscapeOnTheLeft>
-                  <NagoyaCastleImages image="entrance2" />
+                  <R2Image namespace={namespace} name="nagoya-castle-dry-moat-lawn" aspectRatio={1.285} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <NagoyaCastleImages image="entrance3" />
+                  <R2Image namespace={namespace} name="nagoya-castle-wall-sakura" aspectRatio={4 / 3} />
                 </ImageAsLandscapeOnTheRight>
                 <ImageAsPortrait>
-                  <NagoyaCastleImages image="entrance4" />
+                  <R2Image namespace={namespace} name="nagoya-castle-turret-manicured-bushes" aspectRatio={0.815} />
                 </ImageAsPortrait>
               </GroupOfImages>
               <p>{t("visit2.part2")}</p>
@@ -197,15 +201,15 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit2.part5")}</p>
               <GroupOfImages>
                 <TwoImagesSameSizeOrToGroup>
-                  <NagoyaCastleImages image="entrance5" />
-                  <NagoyaCastleImages image="entrance6" />
+                  <R2Image namespace={namespace} name="nagoya-castle-turret-stone-wall" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="nagoya-castle-moat-stone-walls" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <TwoImagesSameSizeOrToGroup>
-                  <NagoyaCastleImages image="entrance7" />
-                  <NagoyaCastleImages image="entrance8" />
+                  <R2Image namespace={namespace} name="nagoya-castle-stone-wall-turret" aspectRatio={0.78} />
+                  <R2Image namespace={namespace} name="nagoya-castle-rampart-hedge-pathway" aspectRatio={0.78} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="entrance9" />
+                  <R2Image namespace={namespace} name="nagoya-castle-turret-cherry-blossoms" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -217,10 +221,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             <SectionContent>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="honmaru" />
+                  <R2Image namespace={namespace} name="nagoya-castle-honmaru-palace-roof" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="honmaru2" />
+                  <R2Image namespace={namespace} name="nagoya-castle-honmaru-palace-exterior" aspectRatio={1.23} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit3.part1")}</p>
@@ -233,7 +237,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
                   </ExternalLinkNotUnderlined>
                 }
               >
-                <NagoyaCastleImages image="honmaru3" />
+                <R2Image namespace={namespace} name="nagoya-castle-honmaru-palace-gold-screen" aspectRatio={1.23} />
               </ImageAsPortrait>
               <p>{t("visit3.part3")}</p>
             </SectionContent>
@@ -252,10 +256,10 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit4.part7")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="castle" />
+                  <R2Image namespace={namespace} name="nagoya-castle-main-keep-architecture" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="castle2" />
+                  <R2Image namespace={namespace} name="nagoya-castle-roof-golden-shachihoko" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -271,65 +275,65 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
               <p>{t("visit5.part4")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="garden" />
+                  <R2Image namespace={namespace} name="nagoya-castle-park-moat-view" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="garden2" />
+                  <R2Image namespace={namespace} name="nagoya-castle-cherry-blossom-tree" aspectRatio={1.29} />
                 </ImageAsLandscape>
                 <ImageAsLandscapeOnTheLeft>
-                  <NagoyaCastleImages image="garden3" />
+                  <R2Image namespace={namespace} name="nagoya-castle-moat-stone-wall" aspectRatio={3 / 2} />
                 </ImageAsLandscapeOnTheLeft>
                 <ImageAsLandscapeOnTheRight>
-                  <NagoyaCastleImages image="garden4" />
+                  <R2Image namespace={namespace} name="nagoya-castle-swimming-swan-koi" aspectRatio={1.43} />
                 </ImageAsLandscapeOnTheRight>
                 <TwoImagesSameSizeOrToGroup>
-                  <NagoyaCastleImages image="garden5" />
-                  <NagoyaCastleImages image="garden6" />
+                  <R2Image namespace={namespace} name="nagoya-castle-moat-cherry-blossoms" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="nagoya-castle-cherry-blossoms-moat" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsPortrait>
-                  <NagoyaCastleImages image="garden7" />
+                  <R2Image namespace={namespace} name="nagoya-castle-cherry-tree-bloom" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <TwoImagesSameSizeOrToGroup>
-                  <NagoyaCastleImages image="garden8" />
-                  <NagoyaCastleImages image="garden9" />
+                  <R2Image namespace={namespace} name="nagoya-castle-gnarled-cherry-tree" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="nagoya-castle-cherry-blossom-branches" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="garden10" />
+                  <R2Image namespace={namespace} name="nagoya-castle-cherry-blossoms-dense" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit5.part5")}</p>
               <p>{t("visit5.part6")}</p>
               <GroupOfImages>
                 <TwoImagesSameSizeOrToGroup>
-                  <NagoyaCastleImages image="garden11" />
-                  <NagoyaCastleImages image="garden12" />
+                  <R2Image namespace={namespace} name="nagoya-castle-kato-kiyomasa-statue" aspectRatio={3 / 4} />
+                  <R2Image namespace={namespace} name="nagoya-castle-dry-moat-topiary" aspectRatio={3 / 4} />
                 </TwoImagesSameSizeOrToGroup>
                 <ImageAsPortrait>
-                  <NagoyaCastleImages image="garden13" />
+                  <R2Image namespace={namespace} name="nagoya-castle-camellia-garden-blooms" aspectRatio={1.02} />
                 </ImageAsPortrait>
                 <ImageAsPortrait>
-                  <NagoyaCastleImages image="garden14" />
+                  <R2Image namespace={namespace} name="nagoya-castle-camellia-cherry-blossoms" aspectRatio={3 / 4} />
                 </ImageAsPortrait>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="garden15" />
+                  <R2Image namespace={namespace} name="nagoya-castle-sakura-tree-blooms" aspectRatio={1.43} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="garden16" />
+                  <R2Image namespace={namespace} name="nagoya-castle-garden-grassy-mound" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="garden17" />
+                  <R2Image namespace={namespace} name="nagoya-castle-garden-rock-formation" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="garden18" />
+                  <R2Image namespace={namespace} name="nagoya-castle-red-azalea-flowers" aspectRatio={4 / 3} />
                 </ImageAsLandscape>
               </GroupOfImages>
               <p>{t("visit5.part7")}</p>
               <GroupOfImages>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="garden19" />
+                  <R2Image namespace={namespace} name="nagoya-castle-roof-spring-trees" aspectRatio={1.44} />
                 </ImageAsLandscape>
                 <ImageAsLandscape>
-                  <NagoyaCastleImages image="garden20" />
+                  <R2Image namespace={namespace} name="nagoya-castle-keep-golden-shachihoko" aspectRatio={3 / 2} />
                 </ImageAsLandscape>
               </GroupOfImages>
             </SectionContent>
@@ -357,12 +361,12 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ location }) => {
             nodes:
               i18n.languageCode === "fr"
                 ? [
-                    <NagoyaCastleImages image="cardFr1" key="cardFr1" />,
-                    <NagoyaCastleImages image="cardFr2" key="cardFr1" />,
+                    <img src={cardFr1} key="cardFr1" alt="Carte Pinterest : Château de Nagoya" />,
+                    <img src={cardFr2} key="cardFr2" alt="Carte Pinterest : Château de Nagoya" />,
                   ]
                 : [
-                    <NagoyaCastleImages image="cardEn1" key="cardEn1" />,
-                    <NagoyaCastleImages image="cardEn2" key="cardEn1" />,
+                    <img src={cardEn1} key="cardEn1" alt="Pinterest Card: Nagoya Castle" />,
+                    <img src={cardEn2} key="cardEn2" alt="Pinterest Card: Nagoya Castle" />,
                   ],
           }}
         />
